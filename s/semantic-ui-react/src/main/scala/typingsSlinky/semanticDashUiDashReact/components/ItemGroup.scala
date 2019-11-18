@@ -1,0 +1,45 @@
+package typingsSlinky.semanticDashUiDashReact.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandCollection
+import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandContent
+import typingsSlinky.semanticDashUiDashReact.distCommonjsViewsItemItemGroupMod.ItemGroupProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsViewsItemItemMod.ItemProps
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.very
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* The following DOM/SVG props were specified: className */
+object ItemGroup
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsViewsItemItemGroupMod.default.asInstanceOf[String | js.Object]
+  def apply(
+    StringDictionary: /* key */ StringDictionary[js.Any] = null,
+    as: js.Any = null,
+    content: SemanticShorthandContent = null,
+    divided: js.UndefOr[Boolean] = js.undefined,
+    items: SemanticShorthandCollection[ItemProps] = null,
+    link: js.UndefOr[Boolean] = js.undefined,
+    relaxed: Boolean | very = null,
+    unstackable: js.UndefOr[Boolean] = js.undefined,
+    overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(divided)) __obj.updateDynamic("divided")(divided.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (relaxed != null) __obj.updateDynamic("relaxed")(relaxed.asInstanceOf[js.Any])
+    if (!js.isUndefined(unstackable)) __obj.updateDynamic("unstackable")(unstackable.asInstanceOf[js.Any])
+    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = ItemGroupProps
+}
+

@@ -1,0 +1,34 @@
+package typingsSlinky.materialDashUi.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.materialDashUi.internalCircleRippleMod.CircleRippleProps
+import typingsSlinky.materialDashUi.internalCircleRippleMod.default
+import typingsSlinky.react.reactMod.CSSProperties
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object CircleRipple
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.internalCircleRippleMod.default].asInstanceOf[String | js.Object]
+  def apply(
+    aborted: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    opacity: Int | Double = null,
+    style: CSSProperties = null,
+    overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(aborted)) __obj.updateDynamic("aborted")(aborted.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = CircleRippleProps
+}
+

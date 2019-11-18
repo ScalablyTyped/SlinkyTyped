@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ImageImageAspectRatio
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageImageAspectRatio] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageImageAspectRatio].asInstanceOf[String | js.Object]
+}
+

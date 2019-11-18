@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import typingsSlinky.materialDashUi.svgDashIconsAvPlaylistDashPlayMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object PlaylistDashPlay extends SharedApply_SvgIconProps657215518[default] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsAvPlaylistDashPlayMod.default].asInstanceOf[String | js.Object]
+}
+

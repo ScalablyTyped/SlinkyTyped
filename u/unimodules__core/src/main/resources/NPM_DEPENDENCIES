@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@unimodules/core" : "4.0.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@unimodules/core" : "4.0.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

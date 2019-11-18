@@ -1,0 +1,26 @@
+package typingsSlinky.materialDashUi.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.materialDashUi.__MaterialUI.Toolbar.ToolbarSeparatorProps
+import typingsSlinky.materialDashUi.toolbarToolbarSeparatorMod.default
+import typingsSlinky.react.reactMod.CSSProperties
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* The following DOM/SVG props were specified: className */
+object ToolbarSeparator
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.toolbarToolbarSeparatorMod.default].asInstanceOf[String | js.Object]
+  def apply(style: CSSProperties = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = ToolbarSeparatorProps
+}
+

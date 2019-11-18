@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import typingsSlinky.materialDashUi.svgDashIconsMapsLayersDashClearMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object LayersDashClear extends SharedApply_SvgIconProps657215518[default] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMapsLayersDashClearMod.default].asInstanceOf[String | js.Object]
+}
+

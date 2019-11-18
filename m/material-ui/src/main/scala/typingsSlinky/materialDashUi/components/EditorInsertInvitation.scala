@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object EditorInsertInvitation
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorInsertInvitation] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorInsertInvitation].asInstanceOf[String | js.Object]
+}
+

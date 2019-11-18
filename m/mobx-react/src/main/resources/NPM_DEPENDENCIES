@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "mobx-react" : "6.1.4"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "mobx-react" : "6.1.4"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

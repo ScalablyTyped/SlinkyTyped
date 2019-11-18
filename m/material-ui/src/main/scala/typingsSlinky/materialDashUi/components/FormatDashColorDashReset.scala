@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import typingsSlinky.materialDashUi.svgDashIconsEditorFormatDashColorDashResetMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object FormatDashColorDashReset extends SharedApply_SvgIconProps657215518[default] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsEditorFormatDashColorDashResetMod.default].asInstanceOf[String | js.Object]
+}
+

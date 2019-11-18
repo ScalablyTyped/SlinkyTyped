@@ -1,0 +1,97 @@
+package typingsSlinky.atMaterialDashUiCore.selectSelectInputMod
+
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSelectElement
+import slinky.core.ReactComponentClass
+import slinky.core.TagMod
+import slinky.web.SyntheticFocusEvent
+import typingsSlinky.atMaterialDashUiCore.Anon_NodeValue
+import typingsSlinky.atMaterialDashUiCore.PartialMenuProps
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.filled
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.outlined
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.standard
+import typingsSlinky.react.reactMod.ChangeEvent
+import typingsSlinky.react.reactMod.FocusEventHandler
+import typingsSlinky.react.reactMod.HTMLAttributes
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait SelectInputProps extends js.Object {
+  var IconComponent: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var MenuProps: js.UndefOr[PartialMenuProps] = js.undefined
+  var SelectDisplayProps: js.UndefOr[HTMLAttributes[HTMLDivElement]] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var autoWidth: Boolean
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | Anon_NodeValue, Unit]] = js.undefined
+  var multiple: Boolean
+  var name: js.UndefOr[String] = js.undefined
+  var native: Boolean
+  var onBlur: js.UndefOr[FocusEventHandler[_]] = js.undefined
+  var onChange: js.UndefOr[
+    js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any], Unit]
+  ] = js.undefined
+  var onClose: js.UndefOr[js.Function1[/* event */ ChangeEvent[js.Object], Unit]] = js.undefined
+  var onFocus: js.UndefOr[FocusEventHandler[_]] = js.undefined
+  var onOpen: js.UndefOr[js.Function1[/* event */ ChangeEvent[js.Object], Unit]] = js.undefined
+  var open: js.UndefOr[Boolean] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var renderValue: js.UndefOr[
+    js.Function1[
+      /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]), 
+      TagMod[Any]
+    ]
+  ] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.undefined
+  var value: String | Double | Boolean | (js.Array[String | Double | Boolean])
+  var variant: js.UndefOr[standard | outlined | filled] = js.undefined
+}
+
+object SelectInputProps {
+  @scala.inline
+  def apply(
+    autoWidth: Boolean,
+    multiple: Boolean,
+    native: Boolean,
+    value: String | Double | Boolean | (js.Array[String | Double | Boolean]),
+    IconComponent: ReactComponentClass[_] = null,
+    MenuProps: PartialMenuProps = null,
+    SelectDisplayProps: HTMLAttributes[HTMLDivElement] = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    inputRef: /* ref */ HTMLSelectElement | Anon_NodeValue => Unit = null,
+    name: String = null,
+    onBlur: SyntheticFocusEvent[_] => Unit = null,
+    onChange: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit = null,
+    onClose: /* event */ ChangeEvent[js.Object] => Unit = null,
+    onFocus: SyntheticFocusEvent[_] => Unit = null,
+    onOpen: /* event */ ChangeEvent[js.Object] => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    renderValue: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => TagMod[Any] = null,
+    tabIndex: Int | Double = null,
+    variant: standard | outlined | filled = null
+  ): SelectInputProps = {
+    val __obj = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (IconComponent != null) __obj.updateDynamic("IconComponent")(IconComponent.asInstanceOf[js.Any])
+    if (MenuProps != null) __obj.updateDynamic("MenuProps")(MenuProps.asInstanceOf[js.Any])
+    if (SelectDisplayProps != null) __obj.updateDynamic("SelectDisplayProps")(SelectDisplayProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (inputRef != null) __obj.updateDynamic("inputRef")(js.Any.fromFunction1(inputRef))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
+    if (renderValue != null) __obj.updateDynamic("renderValue")(js.Any.fromFunction1(renderValue))
+    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SelectInputProps]
+  }
+}
+

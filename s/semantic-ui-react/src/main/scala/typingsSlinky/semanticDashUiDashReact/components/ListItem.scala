@@ -1,0 +1,53 @@
+package typingsSlinky.semanticDashUiDashReact.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLAnchorElement
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.`*`.tag
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsImageImageMod.ImageProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListContentMod.ListContentProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListDescriptionMod.ListDescriptionProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListHeaderMod.ListHeaderProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListIconMod.ListIconProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListItemMod.ListItemProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandItem
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* The following DOM/SVG props were specified: className, disabled */
+object ListItem
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListItemMod.default.asInstanceOf[String | js.Object]
+  def apply(
+    StringDictionary: /* key */ StringDictionary[js.Any] = null,
+    active: js.UndefOr[Boolean] = js.undefined,
+    as: js.Any = null,
+    content: SemanticShorthandItem[ListContentProps] = null,
+    description: SemanticShorthandItem[ListDescriptionProps] = null,
+    header: SemanticShorthandItem[ListHeaderProps] = null,
+    icon: SemanticShorthandItem[ListIconProps] = null,
+    image: SemanticShorthandItem[ImageProps] = null,
+    onClick: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ListItemProps) => Unit = null,
+    value: String = null,
+    overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = ListItemProps
+}
+

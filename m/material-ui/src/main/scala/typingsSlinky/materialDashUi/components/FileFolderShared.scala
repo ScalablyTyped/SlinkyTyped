@@ -1,0 +1,11 @@
+package typingsSlinky.materialDashUi.components
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object FileFolderShared
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.FileFolderShared] {
+  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.FileFolderShared].asInstanceOf[String | js.Object]
+}
+

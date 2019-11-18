@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@angular/common" : "8.2.14"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@angular/common" : "8.2.14"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}
