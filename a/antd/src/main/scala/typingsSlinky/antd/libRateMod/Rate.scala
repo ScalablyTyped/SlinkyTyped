@@ -1,9 +1,9 @@
 package typingsSlinky.antd.libRateMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Rate
   def blur(): Unit = js.native
   def characterRender(node: TagMod[Any], hasIndex: RateNodeProps): js.UndefOr[js.Object | Null] = js.native
   def focus(): Unit = js.native
-  def renderRate(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderRate(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def saveRate(node: js.Any): Unit = js.native
 }
 

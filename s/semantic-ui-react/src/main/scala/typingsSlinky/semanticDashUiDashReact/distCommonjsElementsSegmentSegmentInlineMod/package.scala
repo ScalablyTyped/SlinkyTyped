@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsSegmentSegmentInlineMod {
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type SegmentInlineComponent = StatelessComponent[SegmentInlineProps]
+  type SegmentInlineComponent = ReactComponentClass[SegmentInlineProps]
 }

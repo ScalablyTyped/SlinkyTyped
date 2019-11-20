@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsPlaceholderPlaceholderImageMod {
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type PlaceholderImageComponent = StatelessComponent[PlaceholderImageProps]
+  type PlaceholderImageComponent = ReactComponentClass[PlaceholderImageProps]
 }

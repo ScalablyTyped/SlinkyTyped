@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object esMessageMod {
-  import typingsSlinky.react.reactMod.ReactNode
+  import slinky.core.TagMod
 
-  type ConfigContent = ReactNode | String
+  type ConfigContent = TagMod[Any] | String
   type ConfigDuration = Double | js.Function0[Unit]
   type ConfigOnClose = js.Function0[Unit]
   type JointContent = ConfigContent | ArgsProps

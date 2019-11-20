@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libCalendarHeaderMod {
-  import typingsSlinky.react.reactMod.ReactNode
+  import slinky.core.TagMod
 
-  type HeaderRender = js.Function1[/* headerRender */ RenderHeader, ReactNode]
+  type HeaderRender = js.Function1[/* headerRender */ RenderHeader, TagMod[Any]]
 }

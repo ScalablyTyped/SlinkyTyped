@@ -2,11 +2,11 @@ package typingsSlinky.antd.libButtonButtonMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.facade.ReactElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.MouseEventHandler
-import typingsSlinky.std.HTMLElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait Button
   def componentWillUnmount_MButton(): Unit = js.native
   def fixTwoCNChar(): Unit = js.native
   def isNeedInserted(): Boolean = js.native
-  def renderButton(hasGetPrefixClsAutoInsertSpaceInButton: ConfigConsumerProps): ReactElement = js.native
+  def renderButton(hasGetPrefixClsAutoInsertSpaceInButton: ConfigConsumerProps): Element = js.native
   def saveButtonRef(): Unit = js.native
   def saveButtonRef(node: HTMLElement): Unit = js.native
 }

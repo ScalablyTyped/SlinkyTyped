@@ -2,7 +2,6 @@ package typingsSlinky.mobx
 
 import typingsSlinky.mobx.libApiActionMod.IActionFactory
 import typingsSlinky.mobx.libCoreActionMod.IAction
-import typingsSlinky.std.PropertyDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,15 +18,15 @@ object libApiActionMod extends js.Object {
         Unit
       ] = js.native
     def apply(target: js.Object, propertyKey: String): Unit = js.native
-    def apply(target: js.Object, propertyKey: String, descriptor: PropertyDescriptor): Unit = js.native
+    def apply(target: js.Object, propertyKey: String, descriptor: js.PropertyDescriptor): Unit = js.native
     def apply(target: js.Object, propertyKey: js.Symbol): Unit = js.native
-    def apply(target: js.Object, propertyKey: js.Symbol, descriptor: PropertyDescriptor): Unit = js.native
+    def apply(target: js.Object, propertyKey: js.Symbol, descriptor: js.PropertyDescriptor): Unit = js.native
     def apply[T /* <: js.Function */](fn: T): T with IAction = js.native
     def apply[T /* <: js.Function */](name: String, fn: T): T with IAction = js.native
     def bound(target: js.Object, propertyKey: String): Unit = js.native
-    def bound(target: js.Object, propertyKey: String, descriptor: PropertyDescriptor): Unit = js.native
+    def bound(target: js.Object, propertyKey: String, descriptor: js.PropertyDescriptor): Unit = js.native
     def bound(target: js.Object, propertyKey: js.Symbol): Unit = js.native
-    def bound(target: js.Object, propertyKey: js.Symbol, descriptor: PropertyDescriptor): Unit = js.native
+    def bound(target: js.Object, propertyKey: js.Symbol, descriptor: js.PropertyDescriptor): Unit = js.native
   }
   
   val action: IActionFactory = js.native

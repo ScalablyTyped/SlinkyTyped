@@ -286,7 +286,7 @@ trait JQuery_[TElement]
     * @see \`{@link https://api.jquery.com/add/ }\`
     * @since 1.4
     */
-  def add(selector: Selector, context: Element): this.type = js.native
+  def add(selector: Selector, context: org.scalajs.dom.raw.Element): this.type = js.native
   /**
     * Add the previous set of elements on the stack to the current set, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match the current set of elements against.
@@ -2154,7 +2154,7 @@ trait JQuery_[TElement]
     * @see \`{@link https://api.jquery.com/closest/ }\`
     * @since 1.4
     */
-  def closest(selector: Selector, context: Element): this.type = js.native
+  def closest(selector: Selector, context: org.scalajs.dom.raw.Element): this.type = js.native
   /**
     * Get the children of each element in the set of matched elements, including text and comment nodes.
     * @see \`{@link https://api.jquery.com/contents/ }\`
@@ -9533,7 +9533,7 @@ trait JQuery_[TElement]
     .end();
   ```
     */
-  def pushStack(elements: ArrayLike[Element]): this.type = js.native
+  def pushStack(elements: ArrayLike[org.scalajs.dom.raw.Element]): this.type = js.native
   /**
     * Add a collection of DOM elements onto the jQuery stack.
     * @param elements An array of elements to push onto the stack and make into a new jQuery object.
@@ -9542,7 +9542,7 @@ trait JQuery_[TElement]
     * @see \`{@link https://api.jquery.com/pushStack/ }\`
     * @since 1.3
     */
-  def pushStack(elements: ArrayLike[Element], name: String, args: js.Array[_]): this.type = js.native
+  def pushStack(elements: ArrayLike[org.scalajs.dom.raw.Element], name: String, args: js.Array[_]): this.type = js.native
   /**
     * Show the queue of functions to be executed on the matched elements.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.

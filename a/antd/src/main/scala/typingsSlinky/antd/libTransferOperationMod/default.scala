@@ -1,6 +1,6 @@
 package typingsSlinky.antd.libTransferOperationMod
 
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object default extends js.Object {
   def apply(
     hasDisabledMoveToLeftMoveToRightLeftArrowTextRightArrowTextLeftActiveRightActiveClassNameStyle: TransferOperationProps
-  ): ReactElement = js.native
+  ): Element = js.native
 }
 

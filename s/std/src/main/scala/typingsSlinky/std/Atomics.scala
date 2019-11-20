@@ -115,8 +115,8 @@ trait Atomics extends js.Object {
     * `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
     * `"not-equal"`.
     */
-  def wait(typedArray: Int32Array, index: Double, value: Double): ok | `not-equal` | `timed-out` = js.native
-  def wait(typedArray: Int32Array, index: Double, value: Double, timeout: Double): ok | `not-equal` | `timed-out` = js.native
+  def wait(typedArray: scala.scalajs.js.typedarray.Int32Array, index: Double, value: Double): ok | `not-equal` | `timed-out` = js.native
+  def wait(typedArray: scala.scalajs.js.typedarray.Int32Array, index: Double, value: Double, timeout: Double): ok | `not-equal` | `timed-out` = js.native
   def xor(typedArray: Int16Array, index: Double, value: Double): Double = js.native
   def xor(typedArray: Int32Array, index: Double, value: Double): Double = js.native
   /**

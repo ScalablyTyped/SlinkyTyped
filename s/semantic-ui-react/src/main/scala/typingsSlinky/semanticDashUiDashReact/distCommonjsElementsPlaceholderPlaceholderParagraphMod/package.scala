@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsPlaceholderPlaceholderParagraphMod {
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type PlaceholderParagraphComponent = StatelessComponent[PlaceholderParagraphProps]
+  type PlaceholderParagraphComponent = ReactComponentClass[PlaceholderParagraphProps]
 }

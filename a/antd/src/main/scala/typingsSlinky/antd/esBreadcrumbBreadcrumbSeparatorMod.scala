@@ -1,9 +1,9 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esBreadcrumbBreadcrumbSeparatorMod.BreadcrumbSeparator
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object esBreadcrumbBreadcrumbSeparatorMod extends js.Object {
   @js.native
   trait BreadcrumbSeparator
     extends Component[js.Any, js.Object, js.Any] {
-    def renderSeparator(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+    def renderSeparator(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   }
   
   @js.native

@@ -6,20 +6,20 @@ import scala.scalajs.js.annotation._
 
 package object JQuery {
   import org.scalablytyped.runtime.StringDictionary
+  import org.scalajs.dom.raw.Comment
+  import org.scalajs.dom.raw.DocumentFragment
+  import org.scalajs.dom.raw.Element
+  import org.scalajs.dom.raw.EventTarget
+  import org.scalajs.dom.raw.HTMLElement
+  import org.scalajs.dom.raw.Text
   import typingsSlinky.jquery.Anon_0
   import typingsSlinky.jquery.jqueryStrings.get
   import typingsSlinky.jquery.jqueryStrings.left
   import typingsSlinky.jquery.jqueryStrings.set
   import typingsSlinky.jquery.jqueryStrings.top
-  import typingsSlinky.std.Comment
-  import typingsSlinky.std.DocumentFragment
-  import typingsSlinky.std.Element
-  import typingsSlinky.std.EventTarget
   import typingsSlinky.std.HTMLAllCollection
-  import typingsSlinky.std.HTMLElement
   import typingsSlinky.std.Partial
   import typingsSlinky.std.Pick
-  import typingsSlinky.std.Text
 
   /**
     * @deprecated ​ Deprecated since 1.8. Use \`{@link Tween.propHooks jQuery.Tween.propHooks}\`.

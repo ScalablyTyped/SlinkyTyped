@@ -10,9 +10,17 @@ trait Geolocation extends js.Object {
   def clearWatch(watchId: Double): Unit = js.native
   def getCurrentPosition(successCallback: PositionCallback): Unit = js.native
   def getCurrentPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Unit = js.native
-  def getCurrentPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback, options: PositionOptions): Unit = js.native
+  def getCurrentPosition(
+    successCallback: PositionCallback,
+    errorCallback: PositionErrorCallback,
+    options: org.scalajs.dom.raw.PositionOptions
+  ): Unit = js.native
   def watchPosition(successCallback: PositionCallback): Double = js.native
   def watchPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Double = js.native
-  def watchPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback, options: PositionOptions): Double = js.native
+  def watchPosition(
+    successCallback: PositionCallback,
+    errorCallback: PositionErrorCallback,
+    options: org.scalajs.dom.raw.PositionOptions
+  ): Double = js.native
 }
 

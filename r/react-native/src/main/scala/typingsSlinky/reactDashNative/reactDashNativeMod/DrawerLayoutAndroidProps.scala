@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Dragging
@@ -103,13 +103,13 @@ trait DrawerLayoutAndroidProps extends ViewProps {
     * The navigation view that will be rendered to the side of the
     * screen and can be pulled in.
     */
-  def renderNavigationView(): ReactElement
+  def renderNavigationView(): Element
 }
 
 object DrawerLayoutAndroidProps {
   @scala.inline
   def apply(
-    renderNavigationView: () => ReactElement,
+    renderNavigationView: () => Element,
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
     accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,

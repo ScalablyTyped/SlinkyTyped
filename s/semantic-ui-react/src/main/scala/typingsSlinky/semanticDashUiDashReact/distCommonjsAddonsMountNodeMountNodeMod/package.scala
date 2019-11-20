@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsAddonsMountNodeMountNodeMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type MountNode = Component[MountNodeProps, js.Object, js.Any]
+  type MountNode = ReactComponentClass[MountNodeProps]
 }

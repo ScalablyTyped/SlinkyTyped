@@ -1,9 +1,9 @@
 package typingsSlinky.antd.esAvatarMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_IsImgExist
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait Avatar
   @JSName("componentDidUpdate")
   def componentDidUpdate_MAvatar(prevProps: AvatarProps): Unit = js.native
   def handleImgLoadError(): Unit = js.native
-  def renderAvatar(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderAvatar(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def setScale(): Unit = js.native
 }
 

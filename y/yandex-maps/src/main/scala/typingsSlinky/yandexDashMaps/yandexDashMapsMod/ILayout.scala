@@ -15,6 +15,6 @@ trait ILayout extends IEventEmitter {
   def isEmpty(): Boolean = js.native
   def setData(data: js.Object): Unit = js.native
   def setParentElement(): Unit = js.native
-  def setParentElement(parent: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setParentElement(parent: HTMLElement): Unit = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.std.Event
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

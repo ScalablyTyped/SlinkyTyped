@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashBigDashCalendar.Anon_Date
 import typingsSlinky.reactDashBigDashCalendar.Anon_DateHeader
 import typingsSlinky.reactDashBigDashCalendar.Anon_Event
@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 
 trait Components[TEvent /* <: js.Object */] extends js.Object {
   var agenda: js.UndefOr[Anon_Date] = js.undefined
-  var dateCellWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
+  var dateCellWrapper: js.UndefOr[ReactComponentClass[js.Object] | Element] = js.undefined
   var day: js.UndefOr[Anon_Event] = js.undefined
   var event: js.UndefOr[ReactComponentClass[EventProps[TEvent]]] = js.undefined
-  var eventContainerWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
+  var eventContainerWrapper: js.UndefOr[ReactComponentClass[js.Object] | Element] = js.undefined
   var eventWrapper: js.UndefOr[ReactComponentClass[EventWrapperProps[TEvent]]] = js.undefined
   /**
     * component used as a header for each column in the TimeGridHeader
@@ -22,9 +22,9 @@ trait Components[TEvent /* <: js.Object */] extends js.Object {
   var header: js.UndefOr[ReactComponentClass[HeaderProps]] = js.undefined
   var month: js.UndefOr[Anon_DateHeader] = js.undefined
   var resourceHeader: js.UndefOr[ReactComponentClass[ResourceHeaderProps]] = js.undefined
-  var timeGutterHeader: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
-  var timeGutterWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
-  var timeSlotWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
+  var timeGutterHeader: js.UndefOr[ReactComponentClass[js.Object] | Element] = js.undefined
+  var timeGutterWrapper: js.UndefOr[ReactComponentClass[js.Object] | Element] = js.undefined
+  var timeSlotWrapper: js.UndefOr[ReactComponentClass[js.Object] | Element] = js.undefined
   var toolbar: js.UndefOr[ReactComponentClass[ToolbarProps]] = js.undefined
   var week: js.UndefOr[Anon_Event] = js.undefined
 }
@@ -33,17 +33,17 @@ object Components {
   @scala.inline
   def apply[TEvent /* <: js.Object */](
     agenda: Anon_Date = null,
-    dateCellWrapper: ReactComponentClass[js.Object] | ReactElement = null,
+    dateCellWrapper: ReactComponentClass[js.Object] | Element = null,
     day: Anon_Event = null,
     event: ReactComponentClass[EventProps[TEvent]] = null,
-    eventContainerWrapper: ReactComponentClass[js.Object] | ReactElement = null,
+    eventContainerWrapper: ReactComponentClass[js.Object] | Element = null,
     eventWrapper: ReactComponentClass[EventWrapperProps[TEvent]] = null,
     header: ReactComponentClass[HeaderProps] = null,
     month: Anon_DateHeader = null,
     resourceHeader: ReactComponentClass[ResourceHeaderProps] = null,
-    timeGutterHeader: ReactComponentClass[js.Object] | ReactElement = null,
-    timeGutterWrapper: ReactComponentClass[js.Object] | ReactElement = null,
-    timeSlotWrapper: ReactComponentClass[js.Object] | ReactElement = null,
+    timeGutterHeader: ReactComponentClass[js.Object] | Element = null,
+    timeGutterWrapper: ReactComponentClass[js.Object] | Element = null,
+    timeSlotWrapper: ReactComponentClass[js.Object] | Element = null,
     toolbar: ReactComponentClass[ToolbarProps] = null,
     week: Anon_Event = null
   ): Components[TEvent] = {

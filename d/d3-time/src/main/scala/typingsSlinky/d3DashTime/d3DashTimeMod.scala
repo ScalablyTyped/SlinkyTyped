@@ -2,7 +2,6 @@ package typingsSlinky.d3DashTime
 
 import typingsSlinky.d3DashTime.d3DashTimeMod.CountableTimeInterval
 import typingsSlinky.d3DashTime.d3DashTimeMod.TimeInterval
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -117,8 +116,8 @@ object d3DashTimeMod extends js.Object {
       * If step is negative, then the returned date will be before the specified date;
       * if step is zero, then a copy of the specified date is returned; if step is not an integer, it is floored.
       */
-    def offset(date: Date): js.Date = js.native
-    def offset(date: Date, step: Double): js.Date = js.native
+    def offset(date: js.Date): js.Date = js.native
+    def offset(date: js.Date, step: Double): js.Date = js.native
     /**
       * Returns an array of dates representing every interval boundary after or equal to start (inclusive) and before stop (exclusive).
       *
@@ -136,8 +135,8 @@ object d3DashTimeMod extends js.Object {
       * @param stop A stop date object for the range.
       * @param step An optional number of steps to apply when calculating the dates in the range.
       */
-    def range(start: Date, stop: Date): js.Array[js.Date] = js.native
-    def range(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
+    def range(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+    def range(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
     /**
       * Returns a new date representing the closest interval boundary date to date.
       *
@@ -181,80 +180,80 @@ object d3DashTimeMod extends js.Object {
   val utcWednesday: CountableTimeInterval = js.native
   val utcWeek: CountableTimeInterval = js.native
   val utcYear: CountableTimeInterval = js.native
-  def timeDays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeDays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeFridays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeFridays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeHours(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeHours(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
+  def timeDays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeDays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeFridays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeFridays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeHours(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeHours(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
   def timeInterval(
-    floor: js.Function1[/* date */ Date, Unit],
-    offset: js.Function2[/* date */ Date, /* step */ Double, Unit]
+    floor: js.Function1[/* date */ js.Date, Unit],
+    offset: js.Function2[/* date */ js.Date, /* step */ Double, Unit]
   ): TimeInterval = js.native
   def timeInterval(
-    floor: js.Function1[/* date */ Date, Unit],
-    offset: js.Function2[/* date */ Date, /* step */ Double, Unit],
-    count: js.Function2[/* start */ Date, /* end */ Date, Double]
+    floor: js.Function1[/* date */ js.Date, Unit],
+    offset: js.Function2[/* date */ js.Date, /* step */ Double, Unit],
+    count: js.Function2[/* start */ js.Date, /* end */ js.Date, Double]
   ): CountableTimeInterval = js.native
   def timeInterval(
-    floor: js.Function1[/* date */ Date, Unit],
-    offset: js.Function2[/* date */ Date, /* step */ Double, Unit],
-    count: js.Function2[/* start */ Date, /* end */ Date, Double],
-    field: js.Function1[/* date */ Date, Double]
+    floor: js.Function1[/* date */ js.Date, Unit],
+    offset: js.Function2[/* date */ js.Date, /* step */ Double, Unit],
+    count: js.Function2[/* start */ js.Date, /* end */ js.Date, Double],
+    field: js.Function1[/* date */ js.Date, Double]
   ): CountableTimeInterval = js.native
-  def timeMilliseconds(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeMilliseconds(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeMinutes(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeMinutes(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeMondays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeMondays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeMonths(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeMonths(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeSaturdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeSaturdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeSeconds(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeSeconds(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeSundays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeSundays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeThursdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeThursdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeTuesdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeTuesdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeWednesdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeWednesdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeWeeks(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeWeeks(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def timeYears(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def timeYears(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcDays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcDays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcFridays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcFridays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcHours(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcHours(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcMilliseconds(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcMilliseconds(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcMinutes(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcMinutes(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcMondays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcMondays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcMonths(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcMonths(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcSaturdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcSaturdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcSeconds(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcSeconds(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcSundays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcSundays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcThursdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcThursdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcTuesdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcTuesdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcWednesdays(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcWednesdays(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcWeeks(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcWeeks(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
-  def utcYears(start: Date, stop: Date): js.Array[js.Date] = js.native
-  def utcYears(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
+  def timeMilliseconds(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeMilliseconds(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeMinutes(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeMinutes(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeMondays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeMondays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeMonths(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeMonths(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeSaturdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeSaturdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeSeconds(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeSeconds(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeSundays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeSundays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeThursdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeThursdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeTuesdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeTuesdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeWednesdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeWednesdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeWeeks(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeWeeks(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def timeYears(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def timeYears(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcDays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcDays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcFridays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcFridays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcHours(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcHours(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcMilliseconds(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcMilliseconds(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcMinutes(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcMinutes(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcMondays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcMondays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcMonths(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcMonths(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcSaturdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcSaturdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcSeconds(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcSeconds(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcSundays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcSundays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcThursdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcThursdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcTuesdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcTuesdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcWednesdays(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcWednesdays(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcWeeks(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcWeeks(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
+  def utcYears(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+  def utcYears(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
 }
 

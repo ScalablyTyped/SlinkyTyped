@@ -1,6 +1,6 @@
 package typingsSlinky.atFortawesomeReactDashFontawesome.atFortawesomeReactDashFontawesomeMod
 
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@fortawesome/react-fontawesome", "FontAwesomeIcon")
 @js.native
 object FontAwesomeIcon extends js.Object {
-  def apply(props: FontAwesomeIconProps): ReactElement = js.native
+  def apply(props: FontAwesomeIconProps): Element = js.native
 }
 

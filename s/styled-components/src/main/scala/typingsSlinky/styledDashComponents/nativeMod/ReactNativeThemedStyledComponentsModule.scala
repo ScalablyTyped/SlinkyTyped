@@ -1,7 +1,7 @@
 package typingsSlinky.styledDashComponents.nativeMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.reactMod.ConsumerProps
+import typingsSlinky.react.reactMod.Consumer
 import typingsSlinky.react.reactMod.Context
 import typingsSlinky.react.reactMod.ForwardRefExoticComponent
 import typingsSlinky.styledDashComponents.WithOptionalThemeComponentPropsWithRefCT
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ReactNativeThemedStyledComponentsModule[T /* <: js.Object */, U /* <: js.Object */] extends js.Object {
-  var ThemeConsumer: ReactComponentClass[ConsumerProps[T]]
+  var ThemeConsumer: Consumer[T]
   var ThemeContext: Context[T]
   var ThemeProvider: ReactComponentClass[
     ThemeProviderProps[
@@ -34,7 +34,7 @@ trait ReactNativeThemedStyledComponentsModule[T /* <: js.Object */, U /* <: js.O
 object ReactNativeThemedStyledComponentsModule {
   @scala.inline
   def apply[T /* <: js.Object */, U /* <: js.Object */](
-    ThemeConsumer: ReactComponentClass[ConsumerProps[T]],
+    ThemeConsumer: Consumer[T],
     ThemeContext: Context[T],
     ThemeProvider: ReactComponentClass[
       ThemeProviderProps[

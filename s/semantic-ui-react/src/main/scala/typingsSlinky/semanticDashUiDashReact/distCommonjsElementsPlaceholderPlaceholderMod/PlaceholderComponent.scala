@@ -1,20 +1,19 @@
 package typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderMod
 
-import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.FunctionComponent
-import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderHeaderMod.PlaceholderHeaderProps
-import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderImageMod.PlaceholderImageProps
-import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderLineMod.PlaceholderLineProps
-import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderParagraphMod.PlaceholderParagraphProps
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderHeaderMod.PlaceholderHeaderComponent
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderImageMod.PlaceholderImageComponent
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderLineMod.PlaceholderLineComponent
+import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsPlaceholderPlaceholderParagraphMod.PlaceholderParagraphComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PlaceholderComponent extends FunctionComponent[PlaceholderProps] {
-  var Header: ReactComponentClass[PlaceholderHeaderProps] = js.native
-  var Image: ReactComponentClass[PlaceholderImageProps] = js.native
-  var Line: ReactComponentClass[PlaceholderLineProps] = js.native
-  var Paragraph: ReactComponentClass[PlaceholderParagraphProps] = js.native
+  var Header: PlaceholderHeaderComponent = js.native
+  var Image: PlaceholderImageComponent = js.native
+  var Line: PlaceholderLineComponent = js.native
+  var Paragraph: PlaceholderParagraphComponent = js.native
 }
 

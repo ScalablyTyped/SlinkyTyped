@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait SimplePaletteColorOptions extends js.Object {
+trait SimplePaletteColorOptions extends PaletteColorOptions {
   var contrastText: js.UndefOr[String] = js.undefined
   var dark: js.UndefOr[String] = js.undefined
   var light: js.UndefOr[String] = js.undefined

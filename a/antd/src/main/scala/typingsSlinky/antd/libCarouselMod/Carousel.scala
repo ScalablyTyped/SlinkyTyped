@@ -1,8 +1,8 @@
 package typingsSlinky.antd.libCarouselMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait Carousel
   def next(): Unit = js.native
   def onWindowResized(): Unit = js.native
   def prev(): Unit = js.native
-  def renderCarousel(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderCarousel(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def saveSlick(node: js.Any): Unit = js.native
 }
 

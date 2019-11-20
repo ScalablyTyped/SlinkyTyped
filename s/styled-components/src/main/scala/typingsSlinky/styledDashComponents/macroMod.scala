@@ -3,7 +3,7 @@ package typingsSlinky.styledDashComponents
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
-import typingsSlinky.react.reactMod.ConsumerProps
+import typingsSlinky.react.reactMod.Consumer
 import typingsSlinky.react.reactMod.Context
 import typingsSlinky.std.TemplateStringsArray
 import typingsSlinky.styledDashComponents.styledDashComponentsMod.AnyIfEmpty
@@ -50,7 +50,7 @@ object macroMod extends js.Object {
     ) = this()
   }
   
-  val ThemeConsumer: ReactComponentClass[ConsumerProps[AnyIfEmpty[DefaultTheme]]] = js.native
+  val ThemeConsumer: Consumer[AnyIfEmpty[DefaultTheme]] = js.native
   val ThemeContext: Context[AnyIfEmpty[DefaultTheme]] = js.native
   val ThemeProvider: ReactComponentClass[
     ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]

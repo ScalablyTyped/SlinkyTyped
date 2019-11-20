@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object momentMod {
   import typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
-  import typingsSlinky.std.Date
 
   /* Rewritten from type alias, can be one of: 
     - typings.moment.momentStrings.sameDay
@@ -47,7 +46,7 @@ package object momentMod {
     - typings.moment.momentMod.MomentInputObject
     - scala.Unit
   */
-  type MomentInput = _MomentInput | (js.Array[Double | String]) | Date | String | Double | Unit
+  type MomentInput = _MomentInput | (js.Array[Double | String]) | js.Date | String | Double | Unit
   type MonthWeekdayFn = js.Function2[/* momentToFormat */ Moment, /* format */ js.UndefOr[String], String]
   type RelativeTimeFuturePastVal = String | (js.Function1[/* relTime */ String, String])
   type RelativeTimeSpecVal = String | (js.Function4[

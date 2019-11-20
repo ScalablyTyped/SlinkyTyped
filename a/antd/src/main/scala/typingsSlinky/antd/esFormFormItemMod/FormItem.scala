@@ -8,6 +8,7 @@ import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.validating
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,12 +30,12 @@ trait FormItem
   def isRequired(): js.Any = js.native
   def onHelpAnimEnd(_key: String, helpShow: Boolean): Unit = js.native
   def onLabelClick(): Unit = js.native
-  def renderChildren(prefixCls: String): js.Array[ReactElement] = js.native
-  def renderExtra(prefixCls: String): ReactElement | Null = js.native
-  def renderFormItem(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
-  def renderHelp(prefixCls: String): ReactElement = js.native
-  def renderLabel(prefixCls: String): ReactElement = js.native
-  def renderValidateWrapper(prefixCls: String, c1: TagMod[Any], c2: TagMod[Any], c3: TagMod[Any]): ReactElement = js.native
-  def renderWrapper(prefixCls: String, children: TagMod[Any]): ReactElement = js.native
+  def renderChildren(prefixCls: String): js.Array[Element] = js.native
+  def renderExtra(prefixCls: String): Element | Null = js.native
+  def renderFormItem(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
+  def renderHelp(prefixCls: String): Element = js.native
+  def renderLabel(prefixCls: String): Element = js.native
+  def renderValidateWrapper(prefixCls: String, c1: TagMod[Any], c2: TagMod[Any], c3: TagMod[Any]): Element = js.native
+  def renderWrapper(prefixCls: String, children: TagMod[Any]): Element = js.native
 }
 

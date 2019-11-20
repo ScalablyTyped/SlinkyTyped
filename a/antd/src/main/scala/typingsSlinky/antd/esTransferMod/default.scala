@@ -1,12 +1,12 @@
 package typingsSlinky.antd.esTransferMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_ArgsBody
 import typingsSlinky.antd.Anon_DataSourceLocale
 import typingsSlinky.antd.Anon_SourceSelectedKeys
 import typingsSlinky.antd.TypeofClassList
 import typingsSlinky.antd.TypeofClassSearchDefaultProps
 import typingsSlinky.antd.esTransferOperationMod.TransferOperationProps
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ object default extends js.Object {
   var propTypes: Anon_ArgsBody = js.native
   def Operation(
     hasDisabledMoveToLeftMoveToRightLeftArrowTextRightArrowTextLeftActiveRightActiveClassNameStyle: TransferOperationProps
-  ): ReactElement = js.native
+  ): Element = js.native
   def getDerivedStateFromProps(nextProps: TransferProps): Anon_SourceSelectedKeys | Null = js.native
 }
 

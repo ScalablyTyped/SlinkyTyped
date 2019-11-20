@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_ItemUnit
 import typingsSlinky.antd.Anon_LeftDataSourceRightDataSource
 import typingsSlinky.antd.antdStrings.sourceSelectedKeys
@@ -13,6 +12,7 @@ import typingsSlinky.antd.antdStrings.targetSelectedKeys
 import typingsSlinky.antd.libCollapseCollapseMod.ExpandIconPosition
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +52,7 @@ trait Transfer
   def onLeftItemSelectAll(selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
   def onRightItemSelect(selectedKey: String, checked: Boolean): Unit = js.native
   def onRightItemSelectAll(selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
-  def renderTransfer(transferLocale: TransferLocale): ReactElement = js.native
+  def renderTransfer(transferLocale: TransferLocale): Element = js.native
   def separateDataSource(): Anon_LeftDataSourceRightDataSource = js.native
 }
 

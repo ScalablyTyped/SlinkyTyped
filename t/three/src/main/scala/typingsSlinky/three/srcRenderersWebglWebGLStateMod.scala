@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.three.srcConstantsMod.Blending
 import typingsSlinky.three.srcConstantsMod.BlendingDstFactor
 import typingsSlinky.three.srcConstantsMod.BlendingEquation
@@ -111,7 +110,7 @@ object srcRenderersWebglWebGLStateMod extends js.Object {
       border: Double,
       format: Double,
       `type`: Double,
-      pixels: ArrayBufferView
+      pixels: scala.scalajs.js.typedarray.ArrayBufferView
     ): Unit = js.native
     def texImage3D(
       target: Double,

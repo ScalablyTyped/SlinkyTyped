@@ -1,6 +1,5 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.bottom
 import typingsSlinky.antd.antdStrings.bottomLeft
 import typingsSlinky.antd.antdStrings.bottomRight
@@ -23,13 +22,14 @@ import typingsSlinky.antd.antdStrings.rightTop
 import typingsSlinky.antd.antdStrings.top
 import typingsSlinky.antd.antdStrings.topLeft
 import typingsSlinky.antd.antdStrings.topRight
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_Bottom extends js.Object {
   var disabled: Boolean
-  var icon: ReactElement
+  var icon: Element
   var okType: js.UndefOr[link | default | dashed | primary | ghost | danger] = js.undefined
   var placement: js.UndefOr[
     left | right | top | bottom | bottomRight | topLeft | topRight | bottomLeft | leftTop | leftBottom | rightTop | rightBottom
@@ -42,7 +42,7 @@ object Anon_Bottom {
   @scala.inline
   def apply(
     disabled: Boolean,
-    icon: ReactElement,
+    icon: Element,
     transitionName: String,
     okType: link | default | dashed | primary | ghost | danger = null,
     placement: left | right | top | bottom | bottomRight | topLeft | topRight | bottomLeft | leftTop | leftBottom | rightTop | rightBottom = null,

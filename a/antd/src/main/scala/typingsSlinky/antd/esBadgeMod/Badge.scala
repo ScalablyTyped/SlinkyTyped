@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,9 @@ trait Badge
   def isDot(): Boolean = js.native
   def isHidden(): Boolean = js.native
   def isZero(): Boolean = js.native
-  def renderBadge(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
-  def renderBadgeNumber(prefixCls: String, scrollNumberPrefixCls: String): ReactElement | Null = js.native
+  def renderBadge(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
+  def renderBadgeNumber(prefixCls: String, scrollNumberPrefixCls: String): Element | Null = js.native
   def renderDispayComponent(): js.UndefOr[ReactElement] = js.native
-  def renderStatusText(prefixCls: String): ReactElement | Null = js.native
+  def renderStatusText(prefixCls: String): Element | Null = js.native
 }
 

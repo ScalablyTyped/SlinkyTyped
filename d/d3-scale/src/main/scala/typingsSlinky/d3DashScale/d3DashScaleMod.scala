@@ -1019,7 +1019,7 @@ object d3DashScaleMod extends js.Object {
       *
       * @param domain Array of temporal domain values. Numeric values will be coerced to dates.
       */
-    def domain(domain: js.Array[Date | Double | Anon_ValueOf]): this.type = js.native
+    def domain(domain: js.Array[js.Date | Double | Anon_ValueOf]): this.type = js.native
     /**
       * Returns the scale’s current interpolator factory, which defaults to interpolate.
       */

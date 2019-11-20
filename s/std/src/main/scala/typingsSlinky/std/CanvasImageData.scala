@@ -9,9 +9,9 @@ trait CanvasImageData extends js.Object {
   def createImageData(imagedata: ImageData): org.scalajs.dom.raw.ImageData = js.native
   def createImageData(sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
   def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
-  def putImageData(imagedata: ImageData, dx: Double, dy: Double): Unit = js.native
+  def putImageData(imagedata: org.scalajs.dom.raw.ImageData, dx: Double, dy: Double): Unit = js.native
   def putImageData(
-    imagedata: ImageData,
+    imagedata: org.scalajs.dom.raw.ImageData,
     dx: Double,
     dy: Double,
     dirtyX: Double,

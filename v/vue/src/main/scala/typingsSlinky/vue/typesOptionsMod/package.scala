@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object typesOptionsMod {
   import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.std.HTMLElement
+  import org.scalajs.dom.raw.HTMLElement
   import typingsSlinky.std.Record
   import typingsSlinky.std.ThisType
   import typingsSlinky.vue.Anon_Component

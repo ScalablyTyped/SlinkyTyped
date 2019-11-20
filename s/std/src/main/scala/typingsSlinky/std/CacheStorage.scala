@@ -12,7 +12,7 @@ trait CacheStorage extends js.Object {
   def has(cacheName: java.lang.String): js.Promise[scala.Boolean] = js.native
   def keys(): js.Promise[js.Array[java.lang.String]] = js.native
   def `match`(request: RequestInfo): js.Promise[js.UndefOr[org.scalajs.dom.experimental.Response]] = js.native
-  def `match`(request: RequestInfo, options: CacheQueryOptions): js.Promise[js.UndefOr[org.scalajs.dom.experimental.Response]] = js.native
+  def `match`(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.UndefOr[org.scalajs.dom.experimental.Response]] = js.native
   def open(cacheName: java.lang.String): js.Promise[org.scalajs.dom.experimental.serviceworkers.Cache] = js.native
 }
 

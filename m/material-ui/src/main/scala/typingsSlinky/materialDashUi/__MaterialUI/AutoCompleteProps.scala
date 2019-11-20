@@ -1,9 +1,6 @@
 package typingsSlinky.materialDashUi.__MaterialUI
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -12,6 +9,7 @@ import typingsSlinky.materialDashUi.__MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialDashUi.__MaterialUI.Popover.PopoverProps
 import typingsSlinky.materialDashUi.__MaterialUI.propTypes.origin
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +78,7 @@ object AutoCompleteProps {
     multiLine: js.UndefOr[Boolean] = js.undefined,
     name: String = null,
     onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String) => Unit = null,
+    onChange: (/* e */ FormEvent[js.Object], /* newValue */ String) => Unit = null,
     onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[js.Object] => Unit = null,

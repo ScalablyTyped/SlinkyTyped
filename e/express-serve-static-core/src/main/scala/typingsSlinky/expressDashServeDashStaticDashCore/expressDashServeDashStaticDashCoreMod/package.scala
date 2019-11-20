@@ -7,12 +7,10 @@ import scala.scalajs.js.annotation._
 package object expressDashServeDashStaticDashCoreMod {
   import org.scalablytyped.runtime.StringDictionary
   import typingsSlinky.rangeDashParser.rangeDashParserMod.Ranges
-  import typingsSlinky.std.Error
-  import typingsSlinky.std.RegExp
 
   type ApplicationRequestHandler[T] = IRouterHandler[T] with IRouterMatcher[T] with (js.Function1[/* repeated */ RequestHandlerParams[ParamsDictionary], T])
   type Dictionary[T] = StringDictionary[T]
-  type Errback = js.Function1[/* err */ Error, Unit]
+  type Errback = js.Function1[/* err */ js.Error, Unit]
   type ErrorRequestHandler[P /* <: Params */] = js.Function4[
     /* err */ js.Any, 
     /* req */ Request[P], 
@@ -25,7 +23,7 @@ package object expressDashServeDashStaticDashCoreMod {
   type Params = ParamsDictionary | ParamsArray
   type ParamsArray = js.Array[String]
   type ParamsDictionary = StringDictionary[String]
-  type PathParams = String | RegExp | (js.Array[String | RegExp])
+  type PathParams = String | js.RegExp | (js.Array[String | js.RegExp])
   type RequestHandler[P /* <: Params */] = js.Function3[/* req */ Request[P], /* res */ Response, /* next */ NextFunction, js.Any]
   type RequestHandlerParams[P /* <: Params */] = RequestHandler[P] | ErrorRequestHandler[P] | (js.Array[RequestHandler[P] | ErrorRequestHandler[P]])
   type RequestParamHandler = js.Function5[

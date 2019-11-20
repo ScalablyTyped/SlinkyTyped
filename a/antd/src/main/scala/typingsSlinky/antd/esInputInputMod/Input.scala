@@ -8,6 +8,7 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,12 +28,12 @@ trait Input
   def handleChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def handleKeyDown(e: SyntheticKeyboardEvent[HTMLInputElement]): Unit = js.native
   def handleReset(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderClearIcon(prefixCls: String): ReactElement | Null = js.native
-  def renderComponent(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
-  def renderInput(prefixCls: String): ReactElement = js.native
-  def renderLabeledIcon(prefixCls: String, children: ReactElement): ReactElement = js.native
-  def renderLabeledInput(prefixCls: String, children: ReactElement): ReactElement = js.native
-  def renderSuffix(prefixCls: String): ReactElement | Null = js.native
+  def renderClearIcon(prefixCls: String): Element | Null = js.native
+  def renderComponent(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
+  def renderInput(prefixCls: String): Element = js.native
+  def renderLabeledIcon(prefixCls: String, children: ReactElement): Element = js.native
+  def renderLabeledInput(prefixCls: String, children: ReactElement): Element = js.native
+  def renderSuffix(prefixCls: String): Element | Null = js.native
   def saveInput(node: HTMLInputElement): Unit = js.native
   def select(): Unit = js.native
   def setValue(value: String, e: ChangeEvent[typingsSlinky.std.HTMLInputElement]): Unit = js.native

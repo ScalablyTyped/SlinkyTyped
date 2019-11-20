@@ -1,12 +1,12 @@
 package typingsSlinky.antd.esInputTextAreaMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.antd.Anon_Resizing
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait TextArea
   def focus(): Unit = js.native
   def handleKeyDown(e: SyntheticKeyboardEvent[HTMLTextAreaElement]): Unit = js.native
   def handleTextareaChange(e: ChangeEvent[HTMLTextAreaElement]): Unit = js.native
-  def renderTextArea(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderTextArea(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def resizeOnNextFrame(): Unit = js.native
   def resizeTextarea(): Unit = js.native
   def saveTextAreaRef(textArea: HTMLTextAreaElement): Unit = js.native

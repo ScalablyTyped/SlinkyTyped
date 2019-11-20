@@ -13,7 +13,7 @@ trait IObjectDidChange extends js.Object {
   var newValue: js.UndefOr[js.Any] = js.undefined
   var `object`: js.UndefOr[js.Any] = js.undefined
   var oldValue: js.UndefOr[js.Any] = js.undefined
-  var `type`: js.UndefOr[add | remove | update] = js.undefined
+  var `type`: js.UndefOr[add with update with remove] = js.undefined
 }
 
 object IObjectDidChange {
@@ -23,7 +23,7 @@ object IObjectDidChange {
     newValue: js.Any = null,
     `object`: js.Any = null,
     oldValue: js.Any = null,
-    `type`: add | remove | update = null
+    `type`: add with update with remove = null
   ): IObjectDidChange = {
     val __obj = js.Dynamic.literal()
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])

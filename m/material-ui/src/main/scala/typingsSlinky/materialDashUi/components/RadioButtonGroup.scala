@@ -1,16 +1,15 @@
 package typingsSlinky.materialDashUi.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.materialDashUi.__MaterialUI.Switches.RadioButtonGroupProps
 import typingsSlinky.materialDashUi.materialDashUiStrings.left
 import typingsSlinky.materialDashUi.materialDashUiStrings.right
 import typingsSlinky.materialDashUi.radioButtonRadioButtonGroupMod.default
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ object RadioButtonGroup
   def apply(
     defaultSelected: js.Any = null,
     labelPosition: left | right = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* selected */ String) => Unit = null,
+    onChange: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
     style: CSSProperties = null,
     valueSelected: js.Any = null,
     overrides: StringDictionary[js.Any] = null

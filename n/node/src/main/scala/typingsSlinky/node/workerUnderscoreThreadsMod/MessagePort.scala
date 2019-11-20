@@ -3,7 +3,6 @@ package typingsSlinky.node.workerUnderscoreThreadsMod
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.message
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,7 @@ class MessagePort () extends EventEmitter {
   @JSName("once")
   def once_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   def postMessage(value: js.Any): Unit = js.native
-  def postMessage(value: js.Any, transferList: js.Array[ArrayBuffer | MessagePort]): Unit = js.native
+  def postMessage(value: js.Any, transferList: js.Array[scala.scalajs.js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")

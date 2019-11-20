@@ -1,5 +1,6 @@
 package typingsSlinky.p5.globalMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.p5.p5Mod.ANGLE_MODE
 import typingsSlinky.p5.p5Mod.ARC_MODE
 import typingsSlinky.p5.p5Mod.BEGIN_KIND
@@ -40,7 +41,6 @@ import typingsSlinky.p5.p5Mod.Vector
 import typingsSlinky.p5.p5Mod.WRAP_X
 import typingsSlinky.p5.p5Mod.WRAP_Y
 import typingsSlinky.p5.p5Mod.^
-import typingsSlinky.std.Event
 import typingsSlinky.std.HTMLCanvasElement
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
@@ -4264,7 +4264,7 @@ object _Global_ extends js.Object {
   def loadModel(
     path: String,
     successCallback: js.Function1[/* p1 */ Geometry, _],
-    failureCallback: js.Function1[/* p1 */ Event, _]
+    failureCallback: js.Function1[/* p1 */ typingsSlinky.std.Event, _]
   ): Geometry = js.native
   /**
     *   Loads the pixel data for the display window into

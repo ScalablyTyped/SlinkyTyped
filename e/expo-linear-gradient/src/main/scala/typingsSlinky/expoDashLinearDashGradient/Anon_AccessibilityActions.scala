@@ -1,6 +1,5 @@
 package typingsSlinky.expoDashLinearDashGradient
 
-import slinky.core.SyntheticEvent
 import typingsSlinky.expoDashLinearDashGradient.expoDashLinearDashGradientStrings.`box-none`
 import typingsSlinky.expoDashLinearDashGradient.expoDashLinearDashGradientStrings.`box-only`
 import typingsSlinky.expoDashLinearDashGradient.expoDashLinearDashGradientStrings.`no-hide-descendants`
@@ -48,13 +47,12 @@ import typingsSlinky.expoDashLinearDashGradient.expoDashLinearDashGradientString
 import typingsSlinky.expoDashLinearDashGradient.expoDashLinearDashGradientStrings.yes
 import typingsSlinky.propDashTypes.propDashTypesMod.Requireable
 import typingsSlinky.propDashTypes.propDashTypesMod.Validator
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityTrait
+import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
-import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.TVParallaxProperties
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
@@ -104,57 +102,23 @@ trait Anon_AccessibilityActions extends js.Object {
   var onAccessibilityTap: js.UndefOr[Validator[js.UndefOr[js.Function0[Unit]]]] = js.undefined
   var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.undefined
   var onMagicTap: js.UndefOr[Validator[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var onMoveShouldSetResponder: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]
-  ] = js.undefined
-  var onMoveShouldSetResponderCapture: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]
-  ] = js.undefined
-  var onResponderEnd: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderGrant: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderMove: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderReject: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderRelease: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderStart: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderTerminate: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onResponderTerminationRequest: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]
-  ] = js.undefined
-  var onStartShouldSetResponder: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]
-  ] = js.undefined
-  var onStartShouldSetResponderCapture: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]
-  ] = js.undefined
-  var onTouchCancel: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onTouchEnd: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onTouchEndCapture: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onTouchMove: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
-  var onTouchStart: js.UndefOr[
-    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
-  ] = js.undefined
+  var onMoveShouldSetResponder: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]]] = js.undefined
+  var onMoveShouldSetResponderCapture: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]]] = js.undefined
+  var onResponderEnd: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderGrant: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderMove: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderReject: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderRelease: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderStart: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderTerminate: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onResponderTerminationRequest: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]]] = js.undefined
+  var onStartShouldSetResponder: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]]] = js.undefined
+  var onStartShouldSetResponderCapture: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]]] = js.undefined
+  var onTouchCancel: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onTouchEnd: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onTouchEndCapture: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onTouchMove: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
+  var onTouchStart: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]]] = js.undefined
   var pointerEvents: js.UndefOr[Validator[js.UndefOr[`box-none` | none | `box-only` | auto]]] = js.undefined
   var removeClippedSubviews: js.UndefOr[Validator[js.UndefOr[Boolean]]] = js.undefined
   var renderToHardwareTextureAndroid: js.UndefOr[Validator[js.UndefOr[Boolean]]] = js.undefined
@@ -208,23 +172,23 @@ object Anon_AccessibilityActions {
     onAccessibilityTap: Validator[js.UndefOr[js.Function0[Unit]]] = null,
     onLayout: Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]] = null,
     onMagicTap: Validator[js.UndefOr[js.Function0[Unit]]] = null,
-    onMoveShouldSetResponder: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onMoveShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onResponderEnd: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderGrant: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderMove: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderReject: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderRelease: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderStart: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderTerminate: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderTerminationRequest: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onStartShouldSetResponder: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onStartShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onTouchCancel: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchEnd: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchEndCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchMove: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchStart: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
+    onMoveShouldSetResponder: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]] = null,
+    onMoveShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]] = null,
+    onResponderEnd: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderGrant: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderMove: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderReject: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderRelease: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderStart: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderTerminate: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onResponderTerminationRequest: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]] = null,
+    onStartShouldSetResponder: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]] = null,
+    onStartShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Boolean]]] = null,
+    onTouchCancel: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onTouchEnd: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onTouchEndCapture: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onTouchMove: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
+    onTouchStart: Validator[js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]]] = null,
     pointerEvents: Validator[js.UndefOr[`box-none` | none | `box-only` | auto]] = null,
     removeClippedSubviews: Validator[js.UndefOr[Boolean]] = null,
     renderToHardwareTextureAndroid: Validator[js.UndefOr[Boolean]] = null,

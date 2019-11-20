@@ -1,7 +1,6 @@
 package typingsSlinky.electron.Electron
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ trait DesktopCapturer extends EventEmitter {
     */
   def getSources(
     options: SourcesOptions,
-    callback: js.Function2[/* error */ Error, /* sources */ js.Array[DesktopCapturerSource], Unit]
+    callback: js.Function2[/* error */ js.Error, /* sources */ js.Array[DesktopCapturerSource], Unit]
   ): Unit = js.native
 }
 

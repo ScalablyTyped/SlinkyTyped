@@ -37,7 +37,7 @@ trait WebGLRenderingContextOverloads extends js.Object {
     height: GLsizei,
     format: GLenum,
     `type`: GLenum,
-    pixels: ArrayBufferView
+    pixels: scala.scalajs.js.typedarray.ArrayBufferView
   ): Unit = js.native
   def texImage2D(
     target: GLenum,
@@ -66,7 +66,7 @@ trait WebGLRenderingContextOverloads extends js.Object {
     border: GLint,
     format: GLenum,
     `type`: GLenum,
-    pixels: ArrayBufferView
+    pixels: scala.scalajs.js.typedarray.ArrayBufferView
   ): Unit = js.native
   def texSubImage2D(
     target: GLenum,
@@ -96,7 +96,7 @@ trait WebGLRenderingContextOverloads extends js.Object {
     height: GLsizei,
     format: GLenum,
     `type`: GLenum,
-    pixels: ArrayBufferView
+    pixels: scala.scalajs.js.typedarray.ArrayBufferView
   ): Unit = js.native
   def uniform1fv(location: Null, v: Float32List): Unit = js.native
   def uniform1fv(location: Null, v: Iterable[GLfloat]): Unit = js.native

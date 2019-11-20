@@ -5,13 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libDrawerMod {
-  import typingsSlinky.react.NativeMouseEvent
-  import typingsSlinky.react.reactMod.KeyboardEvent
-  import typingsSlinky.react.reactMod.MouseEvent
-  import typingsSlinky.std.HTMLButtonElement
-  import typingsSlinky.std.HTMLDivElement
-  import typingsSlinky.std.HTMLElement
+  import org.scalajs.dom.raw.HTMLButtonElement
+  import org.scalajs.dom.raw.HTMLDivElement
+  import org.scalajs.dom.raw.HTMLElement
+  import slinky.web.SyntheticKeyboardEvent
+  import slinky.web.SyntheticMouseEvent
 
-  type EventType = KeyboardEvent[HTMLDivElement] | (MouseEvent[HTMLDivElement | HTMLButtonElement, NativeMouseEvent])
+  type EventType = SyntheticKeyboardEvent[HTMLDivElement] | (SyntheticMouseEvent[HTMLDivElement | HTMLButtonElement])
   type getContainerFunc = js.Function0[HTMLElement]
 }

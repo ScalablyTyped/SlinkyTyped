@@ -289,7 +289,11 @@ trait Response
   def render(view: String): Unit = js.native
   def render(view: String, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
   def render(view: String, options: js.Object): Unit = js.native
-  def render(view: String, options: js.Object, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
+  def render(
+    view: String,
+    options: js.Object,
+    callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]
+  ): Unit = js.native
   /**
     * Send a response.
     *

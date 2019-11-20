@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 package object reactDashBigDashCalendarMod {
   import typingsSlinky.reactDashBigDashCalendar.Anon_Agenda
   import typingsSlinky.reactDashBigDashCalendar.Anon_ClassName
-  import typingsSlinky.std.Date
 
   type Culture = String | js.Array[String]
   type DateFormat = String | DateFormatFunction
   type DateFormatFunction = js.Function3[
-    /* date */ Date, 
+    /* date */ js.Date, 
     /* culture */ js.UndefOr[String], 
     /* localizer */ js.UndefOr[js.Object], 
     String
@@ -23,7 +22,7 @@ package object reactDashBigDashCalendarMod {
     /* localizer */ js.UndefOr[js.Object], 
     String
   ]
-  type DayPropGetter = js.Function1[/* date */ Date, Anon_ClassName]
+  type DayPropGetter = js.Function1[/* date */ js.Date, Anon_ClassName]
   type EventPropGetter[T] = js.Function4[
     /* event */ T, 
     /* start */ stringOrDate, 
@@ -31,8 +30,8 @@ package object reactDashBigDashCalendarMod {
     /* isSelected */ Boolean, 
     Anon_ClassName
   ]
-  type FormatInput = Double | String | Date
-  type SlotPropGetter = js.Function1[/* date */ Date, Anon_ClassName]
+  type FormatInput = Double | String | js.Date
+  type SlotPropGetter = js.Function1[/* date */ js.Date, Anon_ClassName]
   type ViewsProps = js.Array[View] | Anon_Agenda
-  type stringOrDate = String | Date
+  type stringOrDate = String | js.Date
 }

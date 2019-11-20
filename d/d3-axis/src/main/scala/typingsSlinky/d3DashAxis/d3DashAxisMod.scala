@@ -6,7 +6,6 @@ import typingsSlinky.d3DashAxis.d3DashAxisMod.AxisScale
 import typingsSlinky.d3DashAxis.d3DashAxisMod.AxisTimeInterval
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.Selection
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.TransitionLike
-import typingsSlinky.std.Date
 import typingsSlinky.std.SVGGElement
 import typingsSlinky.std.SVGSVGElement
 import scala.scalajs.js
@@ -244,15 +243,15 @@ object d3DashAxisMod extends js.Object {
   
   @js.native
   trait AxisTimeInterval extends js.Object {
-    def range(start: Date, stop: Date): js.Array[js.Date] = js.native
-    def range(start: Date, stop: Date, step: Double): js.Array[js.Date] = js.native
+    def range(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
+    def range(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
   }
   
   def axisBottom[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   def axisLeft[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   def axisRight[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   def axisTop[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
-  type AxisContainerElement = SVGSVGElement | SVGGElement
-  type AxisDomain = Double | String | Date | Anon_ValueOf
+  type AxisContainerElement = org.scalajs.dom.raw.SVGSVGElement | org.scalajs.dom.raw.SVGGElement
+  type AxisDomain = Double | String | js.Date | Anon_ValueOf
 }
 

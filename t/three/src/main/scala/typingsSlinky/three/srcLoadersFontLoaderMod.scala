@@ -1,8 +1,7 @@
 package typingsSlinky.three
 
-import typingsSlinky.std.ErrorEvent
-import typingsSlinky.std.EventTarget
-import typingsSlinky.std.ProgressEvent
+import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.srcExtrasCoreFontMod.Font
 import typingsSlinky.three.srcLoadersLoaderMod.Loader
 import typingsSlinky.three.srcLoadersLoadingManagerMod.LoadingManager
@@ -21,12 +20,12 @@ object srcLoadersFontLoaderMod extends js.Object {
     def load(
       url: String,
       onLoad: js.Function1[/* responseFont */ Font, Unit],
-      onProgress: js.Function1[/* event */ ProgressEvent[EventTarget], Unit]
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit]
     ): Unit = js.native
     def load(
       url: String,
       onLoad: js.Function1[/* responseFont */ Font, Unit],
-      onProgress: js.Function1[/* event */ ProgressEvent[EventTarget], Unit],
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit],
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): Unit = js.native
     def parse(json: js.Any): Font = js.native

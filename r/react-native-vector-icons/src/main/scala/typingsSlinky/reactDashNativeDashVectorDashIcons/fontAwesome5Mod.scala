@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashVectorDashIcons
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.AllowOnlyOne
 import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.FontAwesome5IconProps
@@ -46,7 +47,7 @@ object fontAwesome5Mod extends js.Object {
   }
   
   type AllowOnlyOne[T, Keys /* <: String */] = (Omit[T, Keys]) with (/* import warning: importer.ImportType#apply Failed type conversion: {[ K in Keys ]: -? std.Partial<std.Pick<T, K>> & std.Partial<std.Record<std.Exclude<Keys, K>, undefined>>}[Keys] */ js.Any)
-  type FontAwesome5Icon = Component[FontAwesome5IconProps, js.Any, js.Any]
+  type FontAwesome5Icon = ReactComponentClass[FontAwesome5IconProps]
   type FontAwesome5IconProps = AllowOnlyOne[
     typingsSlinky.reactDashNativeDashVectorDashIcons.reactDashNativeDashVectorDashIconsStrings.FontAwesome5IconProps with js.Any with IconProps, 
     FontAwesome5IconVariants

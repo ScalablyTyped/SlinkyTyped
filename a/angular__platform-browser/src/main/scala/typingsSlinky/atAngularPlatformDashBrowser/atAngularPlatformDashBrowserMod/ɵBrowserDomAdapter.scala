@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularPlatformDashBrowser.atAngularPlatformDashBrowserMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
@@ -10,7 +11,6 @@ import org.scalajs.dom.raw.HTMLStyleElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.std.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,13 +24,13 @@ class ɵBrowserDomAdapter () extends ɵangular_packages_platform_browser_platfor
   def content(node: Node): Node = js.native
   def createElement(tagName: String): HTMLElement = js.native
   def createElement(tagName: String, doc: Document): HTMLElement = js.native
-  def createElementNS(ns: String, tagName: String, doc: org.scalajs.dom.raw.Document): Element = js.native
+  def createElementNS(ns: String, tagName: String, doc: Document): Element = js.native
   def createEvent(eventType: js.Any): Event = js.native
   def createMouseEvent(eventType: String): MouseEvent = js.native
-  def createScriptTag(attrName: String, attrValue: String, doc: org.scalajs.dom.raw.Document): HTMLScriptElement = js.native
+  def createScriptTag(attrName: String, attrValue: String, doc: Document): HTMLScriptElement = js.native
   def createShadowRoot(el: HTMLElement): DocumentFragment = js.native
-  def createStyleElement(css: String, doc: org.scalajs.dom.raw.Document): HTMLStyleElement = js.native
-  def createTextNode(text: String, doc: org.scalajs.dom.raw.Document): Text = js.native
+  def createStyleElement(css: String, doc: Document): HTMLStyleElement = js.native
+  def createTextNode(text: String, doc: Document): Text = js.native
   def dispatchEvent(el: Node, evt: js.Any): Unit = js.native
   def firstChild(el: Node): Node | Null = js.native
   def getAttribute(element: Element, attribute: String): String | Null = js.native

@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object esAutoDashCompleteMod {
-  import typingsSlinky.react.reactMod.ReactElement
-  import typingsSlinky.std.HTMLInputElement
-  import typingsSlinky.std.HTMLTextAreaElement
+  import org.scalajs.dom.raw.HTMLInputElement
+  import org.scalajs.dom.raw.HTMLTextAreaElement
+  import slinky.core.facade.ReactElement
 
   type DataSourceItemType = String | DataSourceItemObject | ReactElement
   type ValidInputElement = HTMLInputElement | HTMLTextAreaElement | ReactElement

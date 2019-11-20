@@ -19,37 +19,43 @@ trait ServiceWorkerRegistration extends EventTarget {
   val updateViaCache: ServiceWorkerUpdateViaCache = js.native
   val waiting: org.scalajs.dom.experimental.serviceworkers.ServiceWorker | Null = js.native
   @JSName("addEventListener")
-  def addEventListener_updatefound(`type`: updatefound, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def addEventListener_updatefound(
+    `type`: updatefound,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def getNotifications(): js.Promise[js.Array[org.scalajs.dom.experimental.Notification]] = js.native
-  def getNotifications(filter: GetNotificationOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Notification]] = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_updatefound(`type`: updatefound, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def getNotifications(filter: org.scalajs.dom.experimental.serviceworkers.GetNotificationOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Notification]] = js.native
   @JSName("removeEventListener")
   def removeEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_updatefound(
+    `type`: updatefound,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   def showNotification(title: java.lang.String): js.Promise[Unit] = js.native
-  def showNotification(title: java.lang.String, options: NotificationOptions): js.Promise[Unit] = js.native
+  def showNotification(title: java.lang.String, options: org.scalajs.dom.experimental.NotificationOptions): js.Promise[Unit] = js.native
   def unregister(): js.Promise[scala.Boolean] = js.native
   def update(): js.Promise[Unit] = js.native
 }

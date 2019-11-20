@@ -312,7 +312,7 @@ trait App extends EventEmitter {
   def getFileIcon(
     path: String,
     options: FileIconOptions,
-    callback: js.Function2[/* error */ Error, /* icon */ NativeImage, Unit]
+    callback: js.Function2[/* error */ js.Error, /* icon */ NativeImage, Unit]
   ): Unit = js.native
   def getGPUFeatureStatus(): GPUFeatureStatus = js.native
   /**

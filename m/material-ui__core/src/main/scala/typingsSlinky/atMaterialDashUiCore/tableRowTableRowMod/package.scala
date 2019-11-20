@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object tableRowTableRowMod {
+  import org.scalajs.dom.raw.HTMLTableRowElement
   import typingsSlinky.react.reactMod.HTMLAttributes
-  import typingsSlinky.std.HTMLTableRowElement
 
   type TableRowBaseProps = HTMLAttributes[HTMLTableRowElement]
 }

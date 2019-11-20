@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation._
 package object reactDashReduxMod {
   import slinky.core.ReactComponentClass
   import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsMod.NonReactStatics
-  import typingsSlinky.react.reactMod.ComponentType
-  import typingsSlinky.react.reactMod.NamedExoticComponent
   import typingsSlinky.react.reactMod._Global_.JSX.LibraryManagedAttributes
   import typingsSlinky.reactDashRedux.Anon_WrappedComponent
   import typingsSlinky.redux.reduxMod.Action
@@ -16,8 +14,8 @@ package object reactDashReduxMod {
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Pick
 
-  type AdvancedComponentDecorator[TProps, TOwnProps] = js.Function1[/* component */ ComponentType[TProps], NamedExoticComponent[TOwnProps]]
-  type ConnectedComponent[C /* <: ReactComponentClass[_] */, P] = (NamedExoticComponent[LibraryManagedAttributes[C, P]]) with (NonReactStatics[C, js.Object]) with Anon_WrappedComponent[C]
+  type AdvancedComponentDecorator[TProps, TOwnProps] = js.Function1[/* component */ ReactComponentClass[TProps], ReactComponentClass[TOwnProps]]
+  type ConnectedComponent[C /* <: ReactComponentClass[_] */, P] = (ReactComponentClass[LibraryManagedAttributes[C, P]]) with (NonReactStatics[C, js.Object]) with Anon_WrappedComponent[C]
   type ConnectedProps[TConnector] = js.Any
   type GetProps[C] = js.Any
   type HandleThunkActionCreator[TActionCreator] = TActionCreator | InferThunkActionCreatorType[TActionCreator]

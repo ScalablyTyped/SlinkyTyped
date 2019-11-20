@@ -2,8 +2,8 @@ package typingsSlinky.reactDashDom.testDashUtilsMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.ClassType
-import typingsSlinky.react.reactMod.ReactElement
 import typingsSlinky.react.reactMod.SFC
 import scala.scalajs.js
 import scala.scalajs.js.`|`

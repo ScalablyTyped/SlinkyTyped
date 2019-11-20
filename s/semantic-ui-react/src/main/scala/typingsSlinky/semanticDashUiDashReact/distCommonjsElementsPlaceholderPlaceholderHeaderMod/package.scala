@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsPlaceholderPlaceholderHeaderMod {
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type PlaceholderHeaderComponent = StatelessComponent[PlaceholderHeaderProps]
+  type PlaceholderHeaderComponent = ReactComponentClass[PlaceholderHeaderProps]
 }

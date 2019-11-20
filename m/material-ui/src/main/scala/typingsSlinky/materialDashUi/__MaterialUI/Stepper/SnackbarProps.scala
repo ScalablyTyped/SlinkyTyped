@@ -1,7 +1,6 @@
 package typingsSlinky.materialDashUi.__MaterialUI.Stepper
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.materialDashUi.__MaterialUI.Snackbar
 import typingsSlinky.react.reactMod.CSSProperties
@@ -9,6 +8,7 @@ import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.react.reactMod.MouseEventHandler
 import typingsSlinky.react.reactMod.Props
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait SnackbarProps extends Props[Snackbar] {
   var autoHideDuration: js.UndefOr[Double] = js.undefined
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var message: String | ReactElement
+  var message: String | Element
   var onActionClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
   /** @deprecated Use the open property to control the component instead */
   var onDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
@@ -35,7 +35,7 @@ trait SnackbarProps extends Props[Snackbar] {
 object SnackbarProps {
   @scala.inline
   def apply(
-    message: String | ReactElement,
+    message: String | Element,
     onRequestClose: String => Unit,
     open: Boolean,
     action: String = null,

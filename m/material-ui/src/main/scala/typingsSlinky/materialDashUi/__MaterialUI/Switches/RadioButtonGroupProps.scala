@@ -1,11 +1,9 @@
 package typingsSlinky.materialDashUi.__MaterialUI.Switches
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
-import slinky.core.SyntheticEvent
 import typingsSlinky.materialDashUi.materialDashUiStrings.left
 import typingsSlinky.materialDashUi.materialDashUiStrings.right
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +13,7 @@ trait RadioButtonGroupProps extends js.Object {
   var defaultSelected: js.UndefOr[js.Any] = js.undefined
   var labelPosition: js.UndefOr[left | right] = js.undefined
   var name: String
-  var onChange: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String, Unit]
-  ] = js.undefined
+  var onChange: js.UndefOr[js.Function2[/* e */ FormEvent[js.Object], /* selected */ String, Unit]] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var valueSelected: js.UndefOr[js.Any] = js.undefined
 }
@@ -29,7 +25,7 @@ object RadioButtonGroupProps {
     className: String = null,
     defaultSelected: js.Any = null,
     labelPosition: left | right = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String) => Unit = null,
+    onChange: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
     style: CSSProperties = null,
     valueSelected: js.Any = null
   ): RadioButtonGroupProps = {

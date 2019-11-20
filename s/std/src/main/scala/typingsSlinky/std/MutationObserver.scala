@@ -17,8 +17,8 @@ trait MutationObserver extends js.Object {
     * 
     * The options argument allows for setting mutation observation options via object members.
     */
-  def observe(target: Node): Unit = js.native
-  def observe(target: Node, options: MutationObserverInit): Unit = js.native
+  def observe(target: org.scalajs.dom.raw.Node): Unit = js.native
+  def observe(target: org.scalajs.dom.raw.Node, options: org.scalajs.dom.raw.MutationObserverInit): Unit = js.native
   /**
     * Empties the record queue and returns what was in there.
     */

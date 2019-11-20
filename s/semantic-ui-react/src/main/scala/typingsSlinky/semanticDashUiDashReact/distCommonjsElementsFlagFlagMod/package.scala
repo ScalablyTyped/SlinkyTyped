@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsFlagFlagMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type Flag = Component[FlagProps, js.Object, js.Any]
+  type Flag = ReactComponentClass[FlagProps]
 }

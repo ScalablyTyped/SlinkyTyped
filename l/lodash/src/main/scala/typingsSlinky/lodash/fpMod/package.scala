@@ -60,11 +60,9 @@ package object fpMod {
   import typingsSlinky.lodash.lodashStrings.Empty
   import typingsSlinky.lodash.lodashStrings.asc
   import typingsSlinky.lodash.lodashStrings.desc
-  import typingsSlinky.std.Error
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.NonNullable
   import typingsSlinky.std.Pick
-  import typingsSlinky.std.RegExp
 
   type LodashAdd1x1 = js.Function1[/* addend */ Double, Double]
   type LodashAdd1x2 = js.Function1[/* augend */ Double, Double]
@@ -113,7 +111,7 @@ package object fpMod {
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
   ]
-  type LodashAttempt = js.Function1[/* func */ js.Function1[/* repeated */ js.Any, js.Any], js.Any | Error]
+  type LodashAttempt = js.Function1[/* func */ js.Function1[/* repeated */ js.Any, js.Any], js.Any | js.Error]
   type LodashBefore1x1[TFunc] = js.Function1[/* n */ Double, TFunc]
   type LodashBefore1x2 = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
@@ -1306,7 +1304,7 @@ package object fpMod {
   type LodashRepeat1x2 = js.Function1[/* n */ Double, String]
   type LodashReplace1x3 = js.Function1[/* string */ String, String]
   type LodashReplace1x5 = js.Function1[/* replacement */ ReplaceFunction | String, String]
-  type LodashReplace1x6 = js.Function1[/* pattern */ RegExp | String, String]
+  type LodashReplace1x6 = js.Function1[/* pattern */ js.RegExp | String, String]
   type LodashRest = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
     js.Function1[/* repeated */ js.Any, js.Any]
@@ -1380,7 +1378,7 @@ package object fpMod {
   type LodashSortedUniqBy1x1[T] = js.Function1[/* array */ js.UndefOr[List[T] | Null], js.Array[T]]
   type LodashSortedUniqBy1x2[T] = js.Function1[/* iteratee */ ValueIteratee[T], js.Array[T]]
   type LodashSplit1x1 = js.Function1[/* string */ String, js.Array[String]]
-  type LodashSplit1x2 = js.Function1[/* separator */ RegExp | String, js.Array[String]]
+  type LodashSplit1x2 = js.Function1[/* separator */ js.RegExp | String, js.Array[String]]
   type LodashSpread = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
     js.Function1[/* repeated */ js.Any, js.Any]

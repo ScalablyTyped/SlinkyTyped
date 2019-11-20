@@ -1,8 +1,8 @@
 package typingsSlinky.antd.libCardMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ trait Card
   def getCompatibleHoverable(): js.UndefOr[Boolean] = js.native
   def isContainGrid(): js.UndefOr[scala.Nothing] = js.native
   def onTabChange(key: String): Unit = js.native
-  def renderCard(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderCard(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
 }
 

@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object buildSQLiteDotTypesMod {
-  import typingsSlinky.std.Error
-
   type DatabaseCallback = js.Function1[/* database */ Database, Unit]
   type SQLStatementCallback = js.Function2[/* transaction */ SQLTransaction, /* resultSet */ SQLResultSet, Unit]
   type SQLStatementErrorCallback = js.Function2[/* transaction */ SQLTransaction, /* error */ SQLError, Boolean]
@@ -14,7 +12,7 @@ package object buildSQLiteDotTypesMod {
   type SQLTransactionErrorCallback = js.Function1[/* error */ SQLError, Unit]
   type SQLVoidCallback = js.Function0[Unit]
   type SQLiteCallback = js.Function2[
-    /* error */ js.UndefOr[Error | Null], 
+    /* error */ js.UndefOr[js.Error | Null], 
     /* resultSet */ js.UndefOr[js.Array[ResultSetError | ResultSet]], 
     Unit
   ]

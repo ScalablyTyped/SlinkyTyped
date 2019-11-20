@@ -37,7 +37,7 @@ class Map protected () extends Evented {
   def containerPointToLatLng(point: PointExpression): LatLng = js.native
   def containerPointToLayerPoint(point: PointExpression): Point = js.native
   def createPane(name: String): HTMLElement = js.native
-  def createPane(name: String, container: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def createPane(name: String, container: HTMLElement): HTMLElement = js.native
   def distance(latlng1: LatLngExpression, latlng2: LatLngExpression): Double = js.native
   def eachLayer(fn: js.Function1[/* layer */ Layer, Unit]): this.type = js.native
   def eachLayer(fn: js.Function1[/* layer */ Layer, Unit], context: js.Any): this.type = js.native

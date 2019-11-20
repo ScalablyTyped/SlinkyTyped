@@ -1,6 +1,6 @@
 package typingsSlinky.rcDashMenu
 
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Anon_BuiltinPlacements extends js.Object {
   var onDeselect: js.Function0[Unit]
   var onOpenChange: js.Function0[Unit]
   var onSelect: js.Function0[Unit]
-  var overflowedIndicator: ReactElement
+  var overflowedIndicator: Element
   var prefixCls: String
   var selectable: Boolean
   var subMenuCloseDelay: Double
@@ -33,7 +33,7 @@ object Anon_BuiltinPlacements {
     onDeselect: () => Unit,
     onOpenChange: () => Unit,
     onSelect: () => Unit,
-    overflowedIndicator: ReactElement,
+    overflowedIndicator: Element,
     prefixCls: String,
     selectable: Boolean,
     subMenuCloseDelay: Double,

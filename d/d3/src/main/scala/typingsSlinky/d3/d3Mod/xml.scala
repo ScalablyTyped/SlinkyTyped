@@ -1,6 +1,6 @@
 package typingsSlinky.d3.d3Mod
 
-import typingsSlinky.std.RequestInit
+import org.scalajs.dom.experimental.RequestInit
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`

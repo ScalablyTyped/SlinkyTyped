@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object transitionGroupMod {
   import slinky.core.ReactComponentClass
-  import typingsSlinky.react.reactMod.Component
   import typingsSlinky.reactDashTransitionDashGroup.Anon_Child
   import typingsSlinky.reactDashTransitionDashGroup.reactDashTransitionDashGroupStrings.div
 
@@ -67,6 +66,6 @@ package object transitionGroupMod {
     * components. This means you can mix and match animations across different
     * list items.
     */
-  type TransitionGroup = Component[TransitionGroupProps[div, js.Any], js.Object, js.Any]
+  type TransitionGroup = ReactComponentClass[TransitionGroupProps[div, js.Any]]
   type TransitionGroupProps[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 174 */ js.Any */, V /* <: ReactComponentClass[_] */] = (IntrinsicTransitionGroupProps[T] with (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] */ js.Any)) | (ComponentTransitionGroupProps[V] with Anon_Child)
 }

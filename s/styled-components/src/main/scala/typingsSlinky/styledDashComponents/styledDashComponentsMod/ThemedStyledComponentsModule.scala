@@ -2,7 +2,7 @@ package typingsSlinky.styledDashComponents.styledDashComponentsMod
 
 import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.reactMod.ConsumerProps
+import typingsSlinky.react.reactMod.Consumer
 import typingsSlinky.react.reactMod.Context
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait ThemedStyledComponentsModule[T /* <: js.Object */, U /* <: js.Object */] extends js.Object {
   var ServerStyleSheet: Instantiable0[typingsSlinky.styledDashComponents.styledDashComponentsMod.ServerStyleSheet] = js.native
   var StyleSheetManager: Instantiable0[typingsSlinky.styledDashComponents.styledDashComponentsMod.StyleSheetManager] = js.native
-  var ThemeConsumer: ReactComponentClass[ConsumerProps[T]] = js.native
+  var ThemeConsumer: Consumer[T] = js.native
   var ThemeContext: Context[T] = js.native
   var ThemeProvider: ReactComponentClass[ThemeProviderProps[AnyIfEmpty[T], AnyIfEmpty[U]]] = js.native
   var css: ThemedCssFunction[T] = js.native

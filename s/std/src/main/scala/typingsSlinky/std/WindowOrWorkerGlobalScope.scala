@@ -20,7 +20,7 @@ trait WindowOrWorkerGlobalScope extends js.Object {
   def createImageBitmap(image: ImageBitmapSource): js.Promise[ImageBitmap] = js.native
   def createImageBitmap(image: ImageBitmapSource, sx: Double, sy: Double, sw: Double, sh: Double): js.Promise[ImageBitmap] = js.native
   def fetch(input: RequestInfo): js.Promise[org.scalajs.dom.experimental.Response] = js.native
-  def fetch(input: RequestInfo, init: RequestInit): js.Promise[org.scalajs.dom.experimental.Response] = js.native
+  def fetch(input: RequestInfo, init: org.scalajs.dom.experimental.RequestInit): js.Promise[org.scalajs.dom.experimental.Response] = js.native
   def queueMicrotask(callback: js.Function): Unit = js.native
   def setInterval(handler: TimerHandler): Double = js.native
   def setInterval(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native

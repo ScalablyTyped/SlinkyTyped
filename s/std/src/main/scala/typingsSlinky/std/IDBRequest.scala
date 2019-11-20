@@ -34,63 +34,69 @@ trait IDBRequest[T] extends EventTarget {
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_success(`type`: success, listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _]): Unit = js.native
+  def addEventListener_success(
+    `type`: success,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_success(`type`: success, listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _]): Unit = js.native
+  def removeEventListener_success(
+    `type`: success,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ IDBRequest[T], /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

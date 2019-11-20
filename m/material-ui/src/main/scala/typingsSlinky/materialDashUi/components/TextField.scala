@@ -1,15 +1,14 @@
 package typingsSlinky.materialDashUi.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.materialDashUi.__MaterialUI.TextFieldProps
 import typingsSlinky.materialDashUi.textFieldMod.default
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,7 @@ object TextField
     min: Int | Double = null,
     minlength: String = null,
     multiLine: js.UndefOr[Boolean] = js.undefined,
-    onChange: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* newValue */ String) => Unit = null,
+    onChange: (/* e */ FormEvent[js.Object], /* newValue */ String) => Unit = null,
     rowsMax: Int | Double = null,
     step: Int | Double = null,
     style: CSSProperties = null,

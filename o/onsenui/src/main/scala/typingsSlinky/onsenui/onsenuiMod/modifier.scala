@@ -36,7 +36,7 @@ object modifier extends js.Object {
     * @param {String} modifier Name of the modifier.
     * @param {Boolean} force If it evaluates to true, add specified modifier value, and if it evaluates to false, remove it.
     */
-  def toggle(element: typingsSlinky.std.HTMLElement, modifier: String): Unit = js.native
-  def toggle(element: typingsSlinky.std.HTMLElement, modifier: String, force: Boolean): Unit = js.native
+  def toggle(element: HTMLElement, modifier: String): Unit = js.native
+  def toggle(element: HTMLElement, modifier: String, force: Boolean): Unit = js.native
 }
 

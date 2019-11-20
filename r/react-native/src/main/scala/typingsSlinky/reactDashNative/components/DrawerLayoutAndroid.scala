@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.NodeHandle
@@ -48,7 +47,7 @@ object DrawerLayoutAndroid
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.DrawerLayoutAndroid] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.DrawerLayoutAndroid].asInstanceOf[String | js.Object]
   def apply(
-    renderNavigationView: () => ReactElement,
+    renderNavigationView: () => typingsSlinky.react.reactMod._Global_.JSX.Element,
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
     accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,

@@ -33,7 +33,7 @@ trait MouseEvent extends UIEvent {
     typeArg: java.lang.String,
     canBubbleArg: scala.Boolean,
     cancelableArg: scala.Boolean,
-    viewArg: Window,
+    viewArg: org.scalajs.dom.raw.Window,
     detailArg: Double,
     screenXArg: Double,
     screenYArg: Double,
@@ -49,7 +49,7 @@ trait MouseEvent extends UIEvent {
     typeArg: java.lang.String,
     canBubbleArg: scala.Boolean,
     cancelableArg: scala.Boolean,
-    viewArg: Window,
+    viewArg: org.scalajs.dom.raw.Window,
     detailArg: Double,
     screenXArg: Double,
     screenYArg: Double,
@@ -60,7 +60,7 @@ trait MouseEvent extends UIEvent {
     shiftKeyArg: scala.Boolean,
     metaKeyArg: scala.Boolean,
     buttonArg: Double,
-    relatedTargetArg: EventTarget
+    relatedTargetArg: org.scalajs.dom.raw.EventTarget
   ): Unit = js.native
 }
 

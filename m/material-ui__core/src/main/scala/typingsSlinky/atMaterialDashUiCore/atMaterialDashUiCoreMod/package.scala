@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object atMaterialDashUiCoreMod {
+  import slinky.core.ReactComponentClass
   import typingsSlinky.atMaterialDashUiCore.Anon_ClassName
   import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.classes
   import typingsSlinky.atMaterialDashUiCore.stylesWithStylesMod.StyledComponentProps
-  import typingsSlinky.react.reactMod.ComponentType
   import typingsSlinky.react.reactMod._Global_.JSX.LibraryManagedAttributes
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Pick
@@ -20,7 +20,7 @@ package object atMaterialDashUiCoreMod {
   type Overwrite[T, U] = (Omit[T, String]) with U
   type PropInjector[InjectedProps, AdditionalProps] = js.Function1[
     /* component */ js.Any, 
-    ComponentType[(Omit[LibraryManagedAttributes[_, PropsOf[_]], String]) with AdditionalProps]
+    ReactComponentClass[(Omit[LibraryManagedAttributes[_, PropsOf[_]], String]) with AdditionalProps]
   ]
   type PropsOf[C] = /* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[C] */ js.Any
   type StandardProps[C, ClassKey /* <: String */, Removals /* <: String */] = (Omit[C, classes | Removals]) with StyledComponentProps[ClassKey] with Anon_ClassName

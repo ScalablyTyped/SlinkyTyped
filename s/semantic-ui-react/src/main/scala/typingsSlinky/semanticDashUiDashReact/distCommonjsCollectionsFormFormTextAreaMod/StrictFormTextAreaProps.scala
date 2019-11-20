@@ -19,6 +19,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -192,7 +193,7 @@ object StrictFormTextAreaProps {
     onBlur: SyntheticFocusEvent[HTMLTextAreaElement] => Unit = null,
     onCanPlay: SyntheticEvent[Event, HTMLTextAreaElement] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, HTMLTextAreaElement] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
+    onChange: (/* event */ FormEvent[HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
     onClick: SyntheticMouseEvent[HTMLTextAreaElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[HTMLTextAreaElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[HTMLTextAreaElement] => Unit = null,
@@ -215,7 +216,7 @@ object StrictFormTextAreaProps {
     onEnded: SyntheticEvent[Event, HTMLTextAreaElement] => Unit = null,
     onError: SyntheticEvent[Event, HTMLTextAreaElement] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLTextAreaElement] => Unit = null,
-    onInput: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
+    onInput: (/* event */ FormEvent[HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
     onInvalid: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit = null,

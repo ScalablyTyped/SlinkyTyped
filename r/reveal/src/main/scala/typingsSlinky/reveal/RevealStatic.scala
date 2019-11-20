@@ -16,7 +16,7 @@ trait RevealStatic extends js.Object {
   def getConfig(): RevealOptions = js.native
   def getCurrentSlide(): Element = js.native
   def getIndices(): Anon_H = js.native
-  def getIndices(slide: typingsSlinky.std.Element): Anon_H = js.native
+  def getIndices(slide: Element): Anon_H = js.native
   // Retrieves the previous and current slide elements
   def getPreviousSlide(): Element = js.native
   def getProgress(): Double = js.native
@@ -26,7 +26,7 @@ trait RevealStatic extends js.Object {
   def getSlide(x: Double, y: Double): Element = js.native
   // Returns the speaker notes for the current slide
   def getSlideNotes(): String = js.native
-  def getSlideNotes(slide: typingsSlinky.std.Element): String = js.native
+  def getSlideNotes(slide: Element): String = js.native
   def getState(): js.Any = js.native
   def getTotalSlides(): Double = js.native
   def initialize(config: RevealOptions): Unit = js.native

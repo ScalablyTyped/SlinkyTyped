@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery"
-version := "3.3-dt-20190815Z-8a90bb"
+version := "3.3-dt-20190815Z-df13ed"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-87866e",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-41c436")
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-5dfe9b",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-5d968d")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

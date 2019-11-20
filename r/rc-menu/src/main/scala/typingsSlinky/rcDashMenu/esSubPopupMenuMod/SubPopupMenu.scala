@@ -42,8 +42,8 @@ class SubPopupMenu protected ()
     */
   def onKeyDown(e: SyntheticKeyboardEvent[HTMLElement], callback: js.Function1[/* item */ MenuItem, Unit]): Double = js.native
   def renderCommonMenuItem(child: ReactElement, i: Double, extraProps: MenuItemProps): ReactElement = js.native
-  def renderMenuItem(c: typingsSlinky.react.reactMod.ReactElement, i: Double, subMenuKey: String): ReactElement = js.native
-  def renderMenuItem(c: typingsSlinky.react.reactMod.ReactElement, i: Double, subMenuKey: Double): ReactElement = js.native
+  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: String): ReactElement = js.native
+  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: Double): ReactElement = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MSubPopupMenu(nextProps: SubPopupMenuProps): Boolean = js.native
   def step(direction: Double): MenuItem = js.native

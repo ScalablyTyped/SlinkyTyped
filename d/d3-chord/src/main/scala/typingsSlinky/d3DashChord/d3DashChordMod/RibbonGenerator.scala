@@ -30,7 +30,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     *
     * @param context The rendering context.
     */
-  def context(context: typingsSlinky.std.CanvasRenderingContext2D): this.type = js.native
+  def context(context: CanvasRenderingContext2D): this.type = js.native
   /**
     * Sets the rendering context to null and returns this ribbon generator.
     *

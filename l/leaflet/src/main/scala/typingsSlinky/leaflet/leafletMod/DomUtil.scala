@@ -15,7 +15,7 @@ object DomUtil extends js.Object {
   def addClass(el: HTMLElement, name: String): Unit = js.native
   def create(tagName: String): HTMLElement = js.native
   def create(tagName: String, className: String): HTMLElement = js.native
-  def create(tagName: String, className: String, container: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def create(tagName: String, className: String, container: HTMLElement): HTMLElement = js.native
   def disableImageDrag(): Unit = js.native
   def disableTextSelection(): Unit = js.native
   def empty(el: HTMLElement): Unit = js.native
@@ -37,8 +37,8 @@ object DomUtil extends js.Object {
   def setClass(el: HTMLElement, name: String): Unit = js.native
   def setOpacity(el: HTMLElement, opacity: Double): Unit = js.native
   def setPosition(el: HTMLElement, position: Point): Unit = js.native
-  def setTransform(el: typingsSlinky.std.HTMLElement, offset: Point): Unit = js.native
-  def setTransform(el: typingsSlinky.std.HTMLElement, offset: Point, scale: Double): Unit = js.native
+  def setTransform(el: HTMLElement, offset: Point): Unit = js.native
+  def setTransform(el: HTMLElement, offset: Point, scale: Double): Unit = js.native
   def testProp(props: js.Array[String]): String | `false` = js.native
   def toBack(el: HTMLElement): Unit = js.native
   def toFront(el: HTMLElement): Unit = js.native

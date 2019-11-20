@@ -12,7 +12,7 @@ trait IMapDidChange[K, V] extends js.Object {
   var newValue: js.UndefOr[V] = js.undefined
   var `object`: js.UndefOr[ObservableMap[K, V]] = js.undefined
   var oldValue: js.UndefOr[V] = js.undefined
-  var `type`: js.UndefOr[add | delete | update] = js.undefined
+  var `type`: js.UndefOr[update with add with delete] = js.undefined
 }
 
 object IMapDidChange {
@@ -22,7 +22,7 @@ object IMapDidChange {
     newValue: V = null,
     `object`: ObservableMap[K, V] = null,
     oldValue: V = null,
-    `type`: add | delete | update = null
+    `type`: update with add with delete = null
   ): IMapDidChange[K, V] = {
     val __obj = js.Dynamic.literal()
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])

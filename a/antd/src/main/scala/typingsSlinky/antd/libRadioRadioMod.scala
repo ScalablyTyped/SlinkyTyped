@@ -1,12 +1,12 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libRadioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupContext
 import typingsSlinky.antd.libRadioInterfaceMod.RadioProps
 import typingsSlinky.antd.libRadioRadioMod.Radio
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ object libRadioRadioMod extends js.Object {
     def blur(): Unit = js.native
     def focus(): Unit = js.native
     def onChange(e: RadioChangeEvent): Unit = js.native
-    def renderRadio(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+    def renderRadio(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
     def saveCheckbox(node: js.Any): Unit = js.native
     @JSName("shouldComponentUpdate")
     def shouldComponentUpdate_MRadio(nextProps: RadioProps, nextState: js.Object, nextContext: RadioGroupContext): Boolean = js.native

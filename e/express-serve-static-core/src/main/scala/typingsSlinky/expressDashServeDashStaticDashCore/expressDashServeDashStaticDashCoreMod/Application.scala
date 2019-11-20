@@ -355,7 +355,11 @@ trait Application
   def render(name: String): Unit = js.native
   def render(name: String, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
   def render(name: String, options: js.Object): Unit = js.native
-  def render(name: String, options: js.Object, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
+  def render(
+    name: String,
+    options: js.Object,
+    callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]
+  ): Unit = js.native
   def report(path: PathParams, subApplication: Application): this.type = js.native
   // tslint:disable-next-line no-unnecessary-generics (This generic is meant to be passed explicitly.)
   def report[P /* <: Params */](path: PathParams, handlers: (RequestHandler[P] | RequestHandlerParams[P])*): this.type = js.native

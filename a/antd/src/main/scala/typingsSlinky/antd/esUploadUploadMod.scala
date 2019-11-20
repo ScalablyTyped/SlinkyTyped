@@ -2,7 +2,6 @@ package typingsSlinky.antd
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.esUploadInterfaceMod.RcFile
 import typingsSlinky.antd.esUploadInterfaceMod.UploadChangeParam
@@ -13,6 +12,7 @@ import typingsSlinky.antd.esUploadInterfaceMod.UploadState
 import typingsSlinky.antd.esUploadUploadMod.Upload
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,8 +38,8 @@ object esUploadUploadMod extends js.Object {
     def onProgress(e: Anon_Percent, file: UploadFile): Unit = js.native
     def onStart(file: RcFile): Unit = js.native
     def onSuccess(response: js.Any, file: UploadFile): Unit = js.native
-    def renderUpload(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
-    def renderUploadList(locale: UploadLocale): ReactElement = js.native
+    def renderUpload(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
+    def renderUploadList(locale: UploadLocale): Element = js.native
     def saveUpload(node: js.Any): Unit = js.native
   }
   

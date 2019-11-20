@@ -3,7 +3,6 @@ package typingsSlinky.mobx
 import typingsSlinky.mobx.libUtilsDecoratorsMod.BabelDescriptor
 import typingsSlinky.mobx.libUtilsDecoratorsMod.PropertyCreator
 import typingsSlinky.std.IArguments
-import typingsSlinky.std.PropertyDescriptor
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +16,7 @@ object libUtilsDecoratorsMod extends js.Object {
   def createPropDecorator(propertyInitiallyEnumerable: Boolean, propertyCreator: PropertyCreator): js.Function = js.native
   def initializeInstance(target: js.Any): js.Any = js.native
   def quacksLikeADecorator(args: IArguments): Boolean = js.native
-  type BabelDescriptor = PropertyDescriptor with Anon_Initializer
+  type BabelDescriptor = js.PropertyDescriptor with Anon_Initializer
   type PropertyCreator = js.Function5[
     /* instance */ js.Any, 
     /* propertyName */ PropertyKey, 

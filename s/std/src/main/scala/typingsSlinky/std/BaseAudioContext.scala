@@ -16,17 +16,20 @@ trait BaseAudioContext extends EventTarget {
   val sampleRate: Double = js.native
   val state: AudioContextState = js.native
   @JSName("addEventListener")
-  def addEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def addEventListener_statechange(
+    `type`: statechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def createAnalyser(): org.scalajs.dom.raw.AnalyserNode = js.native
@@ -63,22 +66,33 @@ trait BaseAudioContext extends EventTarget {
   def createScriptProcessor(bufferSize: Double, numberOfInputChannels: Double, numberOfOutputChannels: Double): ScriptProcessorNode = js.native
   def createStereoPanner(): org.scalajs.dom.raw.StereoPannerNode = js.native
   def createWaveShaper(): org.scalajs.dom.raw.WaveShaperNode = js.native
-  def decodeAudioData(audioData: ArrayBuffer): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
-  def decodeAudioData(audioData: ArrayBuffer, successCallback: Null, errorCallback: DecodeErrorCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
-  def decodeAudioData(audioData: ArrayBuffer, successCallback: DecodeSuccessCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
-  def decodeAudioData(audioData: ArrayBuffer, successCallback: DecodeSuccessCallback, errorCallback: DecodeErrorCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def decodeAudioData(audioData: scala.scalajs.js.typedarray.ArrayBuffer): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
+  def decodeAudioData(
+    audioData: scala.scalajs.js.typedarray.ArrayBuffer,
+    successCallback: Null,
+    errorCallback: DecodeErrorCallback
+  ): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
+  def decodeAudioData(audioData: scala.scalajs.js.typedarray.ArrayBuffer, successCallback: DecodeSuccessCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
+  def decodeAudioData(
+    audioData: scala.scalajs.js.typedarray.ArrayBuffer,
+    successCallback: DecodeSuccessCallback,
+    errorCallback: DecodeErrorCallback
+  ): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_statechange(
+    `type`: statechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

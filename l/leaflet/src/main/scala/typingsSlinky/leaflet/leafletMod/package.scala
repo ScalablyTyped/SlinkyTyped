@@ -6,19 +6,18 @@ import scala.scalajs.js.annotation._
 
 package object leafletMod {
   import org.scalablytyped.runtime.StringDictionary
+  import org.scalajs.dom.raw.HTMLElement
   import typingsSlinky.geojson.geojsonMod.Feature
   import typingsSlinky.geojson.geojsonMod.GeometryObject
   import typingsSlinky.leaflet.Anon_Active
   import typingsSlinky.leaflet.leafletStrings.center
-  import typingsSlinky.std.Error
-  import typingsSlinky.std.HTMLElement
 
   type BoundsExpression = Bounds | BoundsLiteral
   type BoundsLiteral = js.Tuple2[PointTuple, PointTuple]
   type Content = String | HTMLElement
   type Control = Control_
   type CrossOrigin = Boolean | String
-  type DoneCallback = js.Function2[/* error */ js.UndefOr[Error], /* tile */ js.UndefOr[HTMLElement], Unit]
+  type DoneCallback = js.Function2[/* error */ js.UndefOr[js.Error], /* tile */ js.UndefOr[HTMLElement], Unit]
   type DragEndEventHandlerFn = js.Function1[/* event */ DragEndEvent, Unit]
   type ErrorEventHandlerFn = js.Function1[/* event */ ErrorEvent, Unit]
   type Icon[T /* <: BaseIconOptions */] = Icon_[T]

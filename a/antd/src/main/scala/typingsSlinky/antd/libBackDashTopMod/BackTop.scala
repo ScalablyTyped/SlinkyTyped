@@ -1,10 +1,10 @@
 package typingsSlinky.antd.libBackDashTopMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait BackTop
   @JSName("componentWillUnmount")
   def componentWillUnmount_MBackTop(): Unit = js.native
   def handleScroll(): Unit = js.native
-  def renderBackTop(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderBackTop(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def scrollToTop(e: SyntheticMouseEvent[HTMLDivElement]): Unit = js.native
 }
 

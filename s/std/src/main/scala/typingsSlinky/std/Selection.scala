@@ -22,12 +22,12 @@ trait Selection extends js.Object {
   def collapse(node: Node, offset: Double): Unit = js.native
   def collapseToEnd(): Unit = js.native
   def collapseToStart(): Unit = js.native
-  def containsNode(node: Node): scala.Boolean = js.native
-  def containsNode(node: Node, allowPartialContainment: scala.Boolean): scala.Boolean = js.native
+  def containsNode(node: org.scalajs.dom.raw.Node): scala.Boolean = js.native
+  def containsNode(node: org.scalajs.dom.raw.Node, allowPartialContainment: scala.Boolean): scala.Boolean = js.native
   def deleteFromDocument(): Unit = js.native
   def empty(): Unit = js.native
-  def extend(node: Node): Unit = js.native
-  def extend(node: Node, offset: Double): Unit = js.native
+  def extend(node: org.scalajs.dom.raw.Node): Unit = js.native
+  def extend(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
   def getRangeAt(index: Double): org.scalajs.dom.raw.Range = js.native
   def removeAllRanges(): Unit = js.native
   def removeRange(range: org.scalajs.dom.raw.Range): Unit = js.native

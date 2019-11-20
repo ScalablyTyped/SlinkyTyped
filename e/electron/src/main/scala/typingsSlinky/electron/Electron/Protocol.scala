@@ -3,7 +3,6 @@ package typingsSlinky.electron.Electron
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* buffer */ js.UndefOr[Buffer], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Intercepts scheme protocol and uses handler as the protocol's new handler which
@@ -51,7 +50,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* filePath */ String, Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Intercepts scheme protocol and uses handler as the protocol's new handler which
@@ -72,7 +71,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* redirectRequest */ RedirectRequest, Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Same as protocol.registerStreamProtocol, except that it replaces an existing
@@ -93,7 +92,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* stream */ js.UndefOr[ReadableStream | StreamProtocolResponse], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Intercepts scheme protocol and uses handler as the protocol's new handler which
@@ -114,7 +113,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* data */ js.UndefOr[String], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   def isProtocolHandled(scheme: String): js.Promise[Boolean] = js.native
   /**
@@ -143,7 +142,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* buffer */ js.UndefOr[Buffer | MimeTypedBuffer], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Registers a protocol of scheme that will send the file as a response. The
@@ -176,7 +175,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* filePath */ js.UndefOr[String], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Registers a protocol of scheme that will send an HTTP request as a response. The
@@ -201,7 +200,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* redirectRequest */ RedirectRequest, Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Note: This method can only be used before the ready event of the app module gets
@@ -251,7 +250,7 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* stream */ js.UndefOr[ReadableStream | StreamProtocolResponse], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Registers a protocol of scheme that will send a String as a response. The usage
@@ -274,18 +273,18 @@ trait Protocol extends EventEmitter {
       /* callback */ js.Function1[/* data */ js.UndefOr[String], Unit], 
       Unit
     ],
-    completion: js.Function1[/* error */ Error, Unit]
+    completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
   /**
     * Remove the interceptor installed for scheme and restore its original handler.
     */
   def uninterceptProtocol(scheme: String): Unit = js.native
-  def uninterceptProtocol(scheme: String, completion: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def uninterceptProtocol(scheme: String, completion: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Unregisters the custom protocol of scheme.
     */
   def unregisterProtocol(scheme: String): Unit = js.native
-  def unregisterProtocol(scheme: String, completion: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def unregisterProtocol(scheme: String, completion: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
 }
 
 @JSGlobal("Electron.protocol")

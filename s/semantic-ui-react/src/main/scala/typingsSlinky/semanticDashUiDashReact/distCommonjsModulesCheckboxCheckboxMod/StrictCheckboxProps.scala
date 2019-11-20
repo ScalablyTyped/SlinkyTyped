@@ -18,6 +18,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactMod.InputHTMLAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -93,7 +94,7 @@ trait StrictCheckboxProps extends InputHTMLAttributes[HTMLInputElement] {
   @JSName("onChange")
   var onChange_StrictCheckboxProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLInputElement, Event], 
+      /* event */ FormEvent[org.scalajs.dom.raw.HTMLInputElement], 
       /* data */ CheckboxProps, 
       Unit
     ]
@@ -271,7 +272,7 @@ object StrictCheckboxProps {
     onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
     onCanPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLInputElement, Event], /* data */ CheckboxProps) => Unit = null,
+    onChange: (/* event */ FormEvent[org.scalajs.dom.raw.HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onClick: (/* event */ SyntheticMouseEvent[org.scalajs.dom.raw.HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLInputElement] => Unit = null,

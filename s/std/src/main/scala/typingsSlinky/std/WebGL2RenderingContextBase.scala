@@ -272,7 +272,7 @@ trait WebGL2RenderingContextBase extends js.Object {
   def beginQuery(target: GLenum, query: WebGLQuery): Unit = js.native
   def beginTransformFeedback(primitiveMode: GLenum): Unit = js.native
   def bindBufferBase(target: GLenum, index: GLuint): Unit = js.native
-  def bindBufferBase(target: GLenum, index: GLuint, buffer: WebGLBuffer): Unit = js.native
+  def bindBufferBase(target: GLenum, index: GLuint, buffer: org.scalajs.dom.raw.WebGLBuffer): Unit = js.native
   def bindBufferRange(target: GLenum, index: GLuint, buffer: Null, offset: GLintptr, size: GLsizeiptr): Unit = js.native
   def bindBufferRange(target: GLenum, index: GLuint, buffer: WebGLBuffer, offset: GLintptr, size: GLsizeiptr): Unit = js.native
   def bindSampler(unit: GLuint): Unit = js.native
@@ -447,14 +447,19 @@ trait WebGL2RenderingContextBase extends js.Object {
   def framebufferTextureLayer(target: GLenum, attachment: GLenum, texture: WebGLTexture, level: GLint, layer: GLint): Unit = js.native
   def getActiveUniformBlockName(program: org.scalajs.dom.raw.WebGLProgram, uniformBlockIndex: GLuint): java.lang.String | Null = js.native
   def getActiveUniformBlockParameter(program: org.scalajs.dom.raw.WebGLProgram, uniformBlockIndex: GLuint, pname: GLenum): js.Any = js.native
-  def getActiveUniforms(program: WebGLProgram, uniformIndices: js.Array[GLuint], pname: GLenum): js.Any = js.native
-  def getActiveUniforms(program: WebGLProgram, uniformIndices: Iterable[GLuint], pname: GLenum): js.Any = js.native
-  def getBufferSubData(target: GLenum, srcByteOffset: GLintptr, dstBuffer: ArrayBufferView): Unit = js.native
-  def getBufferSubData(target: GLenum, srcByteOffset: GLintptr, dstBuffer: ArrayBufferView, dstOffset: GLuint): Unit = js.native
+  def getActiveUniforms(program: org.scalajs.dom.raw.WebGLProgram, uniformIndices: js.Array[GLuint], pname: GLenum): js.Any = js.native
+  def getActiveUniforms(program: org.scalajs.dom.raw.WebGLProgram, uniformIndices: Iterable[GLuint], pname: GLenum): js.Any = js.native
+  def getBufferSubData(target: GLenum, srcByteOffset: GLintptr, dstBuffer: scala.scalajs.js.typedarray.ArrayBufferView): Unit = js.native
   def getBufferSubData(
     target: GLenum,
     srcByteOffset: GLintptr,
-    dstBuffer: ArrayBufferView,
+    dstBuffer: scala.scalajs.js.typedarray.ArrayBufferView,
+    dstOffset: GLuint
+  ): Unit = js.native
+  def getBufferSubData(
+    target: GLenum,
+    srcByteOffset: GLintptr,
+    dstBuffer: scala.scalajs.js.typedarray.ArrayBufferView,
     dstOffset: GLuint,
     length: GLuint
   ): Unit = js.native
@@ -467,8 +472,8 @@ trait WebGL2RenderingContextBase extends js.Object {
   def getSyncParameter(sync: WebGLSync, pname: GLenum): js.Any = js.native
   def getTransformFeedbackVarying(program: org.scalajs.dom.raw.WebGLProgram, index: GLuint): org.scalajs.dom.raw.WebGLActiveInfo | Null = js.native
   def getUniformBlockIndex(program: org.scalajs.dom.raw.WebGLProgram, uniformBlockName: java.lang.String): GLuint = js.native
-  def getUniformIndices(program: WebGLProgram, uniformNames: js.Array[java.lang.String]): js.Array[GLuint] | Null = js.native
-  def getUniformIndices(program: WebGLProgram, uniformNames: Iterable[java.lang.String]): js.Iterable[GLuint] | Null = js.native
+  def getUniformIndices(program: org.scalajs.dom.raw.WebGLProgram, uniformNames: js.Array[java.lang.String]): js.Array[GLuint] | Null = js.native
+  def getUniformIndices(program: org.scalajs.dom.raw.WebGLProgram, uniformNames: Iterable[java.lang.String]): js.Iterable[GLuint] | Null = js.native
   def invalidateFramebuffer(target: GLenum, attachments: js.Array[GLenum]): Unit = js.native
   def invalidateFramebuffer(target: GLenum, attachments: Iterable[GLenum]): Unit = js.native
   def invalidateSubFramebuffer(target: GLenum, attachments: js.Array[GLenum], x: GLint, y: GLint, width: GLsizei, height: GLsizei): Unit = js.native
@@ -637,8 +642,16 @@ trait WebGL2RenderingContextBase extends js.Object {
     srcData: ArrayBufferView,
     srcOffset: GLuint
   ): Unit = js.native
-  def transformFeedbackVaryings(program: WebGLProgram, varyings: js.Array[java.lang.String], bufferMode: GLenum): Unit = js.native
-  def transformFeedbackVaryings(program: WebGLProgram, varyings: Iterable[java.lang.String], bufferMode: GLenum): Unit = js.native
+  def transformFeedbackVaryings(
+    program: org.scalajs.dom.raw.WebGLProgram,
+    varyings: js.Array[java.lang.String],
+    bufferMode: GLenum
+  ): Unit = js.native
+  def transformFeedbackVaryings(
+    program: org.scalajs.dom.raw.WebGLProgram,
+    varyings: Iterable[java.lang.String],
+    bufferMode: GLenum
+  ): Unit = js.native
   def uniform1ui(location: Null, v0: GLuint): Unit = js.native
   def uniform1ui(location: WebGLUniformLocation, v0: GLuint): Unit = js.native
   def uniform1uiv(location: Null, data: Iterable[GLuint]): Unit = js.native

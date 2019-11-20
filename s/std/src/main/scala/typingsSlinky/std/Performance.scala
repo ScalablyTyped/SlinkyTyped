@@ -19,18 +19,18 @@ trait Performance extends EventTarget {
   @JSName("addEventListener")
   def addEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def clearMarks(): Unit = js.native
@@ -50,18 +50,18 @@ trait Performance extends EventTarget {
   @JSName("removeEventListener")
   def removeEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   def setResourceTimingBufferSize(maxSize: Double): Unit = js.native

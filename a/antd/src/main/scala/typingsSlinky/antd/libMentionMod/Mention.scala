@@ -1,10 +1,10 @@
 package typingsSlinky.antd.libMentionMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +20,6 @@ trait Mention
   def onChange(editorState: js.Any): Unit = js.native
   def onFocus(ev: SyntheticFocusEvent[HTMLElement]): Unit = js.native
   def onSearchChange(value: String, prefix: String): js.Any = js.native
-  def renderMention(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderMention(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
 }
 

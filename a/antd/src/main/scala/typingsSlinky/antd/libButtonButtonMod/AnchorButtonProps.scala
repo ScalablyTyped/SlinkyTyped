@@ -150,7 +150,7 @@ trait AnchorButtonProps extends js.Object {
   var draggable: js.UndefOr[Boolean] = js.undefined
   var ghost: js.UndefOr[Boolean] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
-  var href: js.UndefOr[String]
+  var href: js.UndefOr[String] = js.undefined
   var hrefLang: js.UndefOr[String] = js.undefined
   var icon: js.UndefOr[String] = js.undefined
   var id: js.UndefOr[String] = js.undefined

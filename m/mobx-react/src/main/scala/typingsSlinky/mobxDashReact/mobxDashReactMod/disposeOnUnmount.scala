@@ -1,6 +1,6 @@
 package typingsSlinky.mobxDashReact.mobxDashReactMod
 
-import typingsSlinky.react.reactMod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("mobx-react", "disposeOnUnmount")
 @js.native
 object disposeOnUnmount extends js.Object {
-  def apply(target: Component[_, _, _], propertyKey: String): Unit = js.native
-  def apply[TF /* <: Disposer | js.Array[Disposer] */](target: Component[_, _, _], fn: TF): TF = js.native
+  def apply(target: ReactComponentClass[_], propertyKey: String): Unit = js.native
+  def apply[TF /* <: Disposer | js.Array[Disposer] */](target: ReactComponentClass[_], fn: TF): TF = js.native
 }
 

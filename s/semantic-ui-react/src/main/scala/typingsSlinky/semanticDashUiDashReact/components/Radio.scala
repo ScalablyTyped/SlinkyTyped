@@ -10,6 +10,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -149,7 +150,7 @@ object Radio
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with HTMLInputElement, Event], /* data */ CheckboxProps) => Unit = null,
+    onChange: (/* event */ FormEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onClick: (/* event */ SyntheticMouseEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onMouseDown: (/* event */ SyntheticMouseEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onMouseUp: (/* event */ SyntheticMouseEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,

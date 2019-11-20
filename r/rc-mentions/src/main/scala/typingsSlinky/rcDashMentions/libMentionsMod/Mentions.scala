@@ -2,10 +2,10 @@ package typingsSlinky.rcDashMentions.libMentionsMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
+import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
 import typingsSlinky.react.reactMod.ChangeEventHandler
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.react.reactMod.FocusEvent
 import typingsSlinky.react.reactMod.FocusEventHandler
 import typingsSlinky.react.reactMod.KeyboardEventHandler
 import scala.scalajs.js
@@ -42,11 +42,11 @@ trait Mentions
   def getOptions(): js.Array[OptionProps] = js.native
   def getOptions(measureText: String): js.Array[OptionProps] = js.native
   def onBlur(): Unit = js.native
-  def onBlur(event: FocusEvent[typingsSlinky.std.HTMLTextAreaElement]): Unit = js.native
+  def onBlur(event: SyntheticFocusEvent[HTMLTextAreaElement]): Unit = js.native
   def onDropdownBlur(): Unit = js.native
   def onDropdownFocus(): Unit = js.native
   def onFocus(): Unit = js.native
-  def onFocus(event: FocusEvent[typingsSlinky.std.HTMLTextAreaElement]): Unit = js.native
+  def onFocus(event: SyntheticFocusEvent[HTMLTextAreaElement]): Unit = js.native
   def selectOption(option: OptionProps): Unit = js.native
   def setActiveIndex(activeIndex: Double): Unit = js.native
   def setMeasureRef(element: HTMLDivElement): Unit = js.native

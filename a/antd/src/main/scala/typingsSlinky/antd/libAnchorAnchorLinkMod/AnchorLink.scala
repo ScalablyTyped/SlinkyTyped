@@ -1,11 +1,11 @@
 package typingsSlinky.antd.libAnchorAnchorLinkMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.Anon_AntAnchor_1899638441
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,6 @@ trait AnchorLink
   @JSName("componentWillUnmount")
   def componentWillUnmount_MAnchorLink(): Unit = js.native
   def handleClick(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderAnchorLink(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderAnchorLink(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
 }
 

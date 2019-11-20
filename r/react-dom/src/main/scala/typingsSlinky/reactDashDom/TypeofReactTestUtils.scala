@@ -3,11 +3,11 @@ package typingsSlinky.reactDashDom
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.CElement
 import typingsSlinky.react.reactMod.ClassType
 import typingsSlinky.react.reactMod.DOMAttributes
 import typingsSlinky.react.reactMod.DOMElement
-import typingsSlinky.react.reactMod.ReactElement
 import typingsSlinky.react.reactMod.ReactInstance
 import typingsSlinky.react.reactMod.SFC
 import typingsSlinky.react.reactMod.SFCElement
@@ -37,12 +37,12 @@ trait TypeofReactTestUtils extends js.Object {
   def isElementOfType[P](element: ReactElement, `type`: SFC[P]): /* is react.react.SFCElement<P> */ Boolean = js.native
   def isElementOfType[P, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](element: ReactElement, `type`: ClassType[P, T, C]): /* is react.react.CElement<P, T> */ Boolean = js.native
   @JSName("isElementOfType")
-  def isElementOfType_P_DOMAttributesObjectT_Element[P /* <: DOMAttributes[js.Object] */, T /* <: Element */](element: slinky.core.facade.ReactElement, `type`: String): /* is react.react.DOMElement<P, T> */ Boolean = js.native
+  def isElementOfType_P_DOMAttributesObjectT_Element[P /* <: DOMAttributes[js.Object] */, T /* <: Element */](element: ReactElement, `type`: String): /* is react.react.DOMElement<P, T> */ Boolean = js.native
   def mockComponent(mocked: MockedComponentClass): /* import warning: importer.ImportType#apply Failed type conversion: typeof ReactTestUtils */ js.Any = js.native
   def mockComponent(mocked: MockedComponentClass, mockTagName: String): /* import warning: importer.ImportType#apply Failed type conversion: typeof ReactTestUtils */ js.Any = js.native
   def renderIntoDocument(element: SFCElement[_]): Unit = js.native
   def renderIntoDocument[T /* <: Element */](element: DOMElement[_, T]): T = js.native
-  def renderIntoDocument[P](element: ReactElement): ReactComponentClass[P] | Element | Unit = js.native
+  def renderIntoDocument[P](element: typingsSlinky.react.reactMod.ReactElement): ReactComponentClass[P] | Element | Unit = js.native
   def renderIntoDocument[P, T /* <: ReactComponentClass[P] */](element: CElement[P, T]): T = js.native
   def scryRenderedComponentsWithType[T /* <: ReactComponentClass[_] */, C /* <: ReactComponentClass[_] */](root: ReactComponentClass[_], `type`: ClassType[_, T, C]): js.Array[T] = js.native
   def scryRenderedDOMComponentsWithClass(root: ReactComponentClass[_], className: String): js.Array[Element] = js.native

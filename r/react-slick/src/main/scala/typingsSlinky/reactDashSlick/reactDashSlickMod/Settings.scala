@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashSlick.reactDashSlickMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Settings extends js.Object {
   var accessibility: js.UndefOr[Boolean] = js.undefined
   var adaptiveHeight: js.UndefOr[Boolean] = js.undefined
   var afterChange: js.UndefOr[js.Function1[/* currentSlide */ Double, Unit]] = js.undefined
-  var appendDots: js.UndefOr[js.Function1[/* dots */ TagMod[Any], ReactElement]] = js.undefined
+  var appendDots: js.UndefOr[js.Function1[/* dots */ TagMod[Any], Element]] = js.undefined
   var arrows: js.UndefOr[Boolean] = js.undefined
   var asNavFor: js.UndefOr[Slider] = js.undefined
   var autoplay: js.UndefOr[Boolean] = js.undefined
@@ -20,7 +20,7 @@ trait Settings extends js.Object {
   var centerPadding: js.UndefOr[String] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var cssEase: js.UndefOr[String] = js.undefined
-  var customPaging: js.UndefOr[js.Function1[/* index */ Double, ReactElement]] = js.undefined
+  var customPaging: js.UndefOr[js.Function1[/* index */ Double, Element]] = js.undefined
   var dots: js.UndefOr[Boolean] = js.undefined
   var dotsClass: js.UndefOr[String] = js.undefined
   var draggable: js.UndefOr[Boolean] = js.undefined
@@ -31,7 +31,7 @@ trait Settings extends js.Object {
   var infinite: js.UndefOr[Boolean] = js.undefined
   var initialSlide: js.UndefOr[Double] = js.undefined
   var lazyLoad: js.UndefOr[LazyLoadTypes] = js.undefined
-  var nextArrow: js.UndefOr[ReactElement] = js.undefined
+  var nextArrow: js.UndefOr[Element] = js.undefined
   var onEdge: js.UndefOr[js.Function1[/* swipeDirection */ SwipeDirection, Unit]] = js.undefined
   var onInit: js.UndefOr[js.Function0[Unit]] = js.undefined
   var onLazyLoad: js.UndefOr[js.Function1[/* slidesToLoad */ js.Array[Double], Unit]] = js.undefined
@@ -40,7 +40,7 @@ trait Settings extends js.Object {
   var pauseOnDotsHover: js.UndefOr[Boolean] = js.undefined
   var pauseOnFocus: js.UndefOr[Boolean] = js.undefined
   var pauseOnHover: js.UndefOr[Boolean] = js.undefined
-  var prevArrow: js.UndefOr[ReactElement] = js.undefined
+  var prevArrow: js.UndefOr[Element] = js.undefined
   var responsive: js.UndefOr[js.Array[ResponsiveObject]] = js.undefined
   var rows: js.UndefOr[Double] = js.undefined
   var rtl: js.UndefOr[Boolean] = js.undefined
@@ -68,7 +68,7 @@ object Settings {
     accessibility: js.UndefOr[Boolean] = js.undefined,
     adaptiveHeight: js.UndefOr[Boolean] = js.undefined,
     afterChange: /* currentSlide */ Double => Unit = null,
-    appendDots: /* dots */ TagMod[Any] => ReactElement = null,
+    appendDots: /* dots */ TagMod[Any] => Element = null,
     arrows: js.UndefOr[Boolean] = js.undefined,
     asNavFor: Slider = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
@@ -78,7 +78,7 @@ object Settings {
     centerPadding: String = null,
     className: String = null,
     cssEase: String = null,
-    customPaging: /* index */ Double => ReactElement = null,
+    customPaging: /* index */ Double => Element = null,
     dots: js.UndefOr[Boolean] = js.undefined,
     dotsClass: String = null,
     draggable: js.UndefOr[Boolean] = js.undefined,
@@ -89,7 +89,7 @@ object Settings {
     infinite: js.UndefOr[Boolean] = js.undefined,
     initialSlide: Int | Double = null,
     lazyLoad: LazyLoadTypes = null,
-    nextArrow: ReactElement = null,
+    nextArrow: Element = null,
     onEdge: /* swipeDirection */ SwipeDirection => Unit = null,
     onInit: () => Unit = null,
     onLazyLoad: /* slidesToLoad */ js.Array[Double] => Unit = null,
@@ -98,7 +98,7 @@ object Settings {
     pauseOnDotsHover: js.UndefOr[Boolean] = js.undefined,
     pauseOnFocus: js.UndefOr[Boolean] = js.undefined,
     pauseOnHover: js.UndefOr[Boolean] = js.undefined,
-    prevArrow: ReactElement = null,
+    prevArrow: Element = null,
     responsive: js.Array[ResponsiveObject] = null,
     rows: Int | Double = null,
     rtl: js.UndefOr[Boolean] = js.undefined,

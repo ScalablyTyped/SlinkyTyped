@@ -309,13 +309,13 @@ trait WebGLRenderingContextBase extends js.Object {
   def attachShader(program: org.scalajs.dom.raw.WebGLProgram, shader: org.scalajs.dom.raw.WebGLShader): Unit = js.native
   def bindAttribLocation(program: org.scalajs.dom.raw.WebGLProgram, index: GLuint, name: java.lang.String): Unit = js.native
   def bindBuffer(target: GLenum): Unit = js.native
-  def bindBuffer(target: GLenum, buffer: WebGLBuffer): Unit = js.native
+  def bindBuffer(target: GLenum, buffer: org.scalajs.dom.raw.WebGLBuffer): Unit = js.native
   def bindFramebuffer(target: GLenum): Unit = js.native
-  def bindFramebuffer(target: GLenum, framebuffer: WebGLFramebuffer): Unit = js.native
+  def bindFramebuffer(target: GLenum, framebuffer: org.scalajs.dom.raw.WebGLFramebuffer): Unit = js.native
   def bindRenderbuffer(target: GLenum): Unit = js.native
-  def bindRenderbuffer(target: GLenum, renderbuffer: WebGLRenderbuffer): Unit = js.native
+  def bindRenderbuffer(target: GLenum, renderbuffer: org.scalajs.dom.raw.WebGLRenderbuffer): Unit = js.native
   def bindTexture(target: GLenum): Unit = js.native
-  def bindTexture(target: GLenum, texture: WebGLTexture): Unit = js.native
+  def bindTexture(target: GLenum, texture: org.scalajs.dom.raw.WebGLTexture): Unit = js.native
   def blendColor(red: GLclampf, green: GLclampf, blue: GLclampf, alpha: GLclampf): Unit = js.native
   def blendEquation(mode: GLenum): Unit = js.native
   def blendEquationSeparate(modeRGB: GLenum, modeAlpha: GLenum): Unit = js.native
@@ -356,17 +356,17 @@ trait WebGLRenderingContextBase extends js.Object {
   def createTexture(): org.scalajs.dom.raw.WebGLTexture | Null = js.native
   def cullFace(mode: GLenum): Unit = js.native
   def deleteBuffer(): Unit = js.native
-  def deleteBuffer(buffer: WebGLBuffer): Unit = js.native
+  def deleteBuffer(buffer: org.scalajs.dom.raw.WebGLBuffer): Unit = js.native
   def deleteFramebuffer(): Unit = js.native
-  def deleteFramebuffer(framebuffer: WebGLFramebuffer): Unit = js.native
+  def deleteFramebuffer(framebuffer: org.scalajs.dom.raw.WebGLFramebuffer): Unit = js.native
   def deleteProgram(): Unit = js.native
-  def deleteProgram(program: WebGLProgram): Unit = js.native
+  def deleteProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def deleteRenderbuffer(): Unit = js.native
-  def deleteRenderbuffer(renderbuffer: WebGLRenderbuffer): Unit = js.native
+  def deleteRenderbuffer(renderbuffer: org.scalajs.dom.raw.WebGLRenderbuffer): Unit = js.native
   def deleteShader(): Unit = js.native
-  def deleteShader(shader: WebGLShader): Unit = js.native
+  def deleteShader(shader: org.scalajs.dom.raw.WebGLShader): Unit = js.native
   def deleteTexture(): Unit = js.native
-  def deleteTexture(texture: WebGLTexture): Unit = js.native
+  def deleteTexture(texture: org.scalajs.dom.raw.WebGLTexture): Unit = js.native
   def depthFunc(func: GLenum): Unit = js.native
   def depthMask(flag: GLboolean): Unit = js.native
   def depthRange(zNear: GLclampf, zFar: GLclampf): Unit = js.native
@@ -380,7 +380,12 @@ trait WebGLRenderingContextBase extends js.Object {
   def finish(): Unit = js.native
   def flush(): Unit = js.native
   def framebufferRenderbuffer(target: GLenum, attachment: GLenum, renderbuffertarget: GLenum): Unit = js.native
-  def framebufferRenderbuffer(target: GLenum, attachment: GLenum, renderbuffertarget: GLenum, renderbuffer: WebGLRenderbuffer): Unit = js.native
+  def framebufferRenderbuffer(
+    target: GLenum,
+    attachment: GLenum,
+    renderbuffertarget: GLenum,
+    renderbuffer: org.scalajs.dom.raw.WebGLRenderbuffer
+  ): Unit = js.native
   def framebufferTexture2D(target: GLenum, attachment: GLenum, textarget: GLenum, texture: Null, level: GLint): Unit = js.native
   def framebufferTexture2D(target: GLenum, attachment: GLenum, textarget: GLenum, texture: WebGLTexture, level: GLint): Unit = js.native
   def frontFace(mode: GLenum): Unit = js.native
@@ -454,19 +459,19 @@ trait WebGLRenderingContextBase extends js.Object {
   def getVertexAttribOffset(index: GLuint, pname: GLenum): GLintptr = js.native
   def hint(target: GLenum, mode: GLenum): Unit = js.native
   def isBuffer(): GLboolean = js.native
-  def isBuffer(buffer: WebGLBuffer): GLboolean = js.native
+  def isBuffer(buffer: org.scalajs.dom.raw.WebGLBuffer): GLboolean = js.native
   def isContextLost(): scala.Boolean = js.native
   def isEnabled(cap: GLenum): GLboolean = js.native
   def isFramebuffer(): GLboolean = js.native
-  def isFramebuffer(framebuffer: WebGLFramebuffer): GLboolean = js.native
+  def isFramebuffer(framebuffer: org.scalajs.dom.raw.WebGLFramebuffer): GLboolean = js.native
   def isProgram(): GLboolean = js.native
-  def isProgram(program: WebGLProgram): GLboolean = js.native
+  def isProgram(program: org.scalajs.dom.raw.WebGLProgram): GLboolean = js.native
   def isRenderbuffer(): GLboolean = js.native
-  def isRenderbuffer(renderbuffer: WebGLRenderbuffer): GLboolean = js.native
+  def isRenderbuffer(renderbuffer: org.scalajs.dom.raw.WebGLRenderbuffer): GLboolean = js.native
   def isShader(): GLboolean = js.native
-  def isShader(shader: WebGLShader): GLboolean = js.native
+  def isShader(shader: org.scalajs.dom.raw.WebGLShader): GLboolean = js.native
   def isTexture(): GLboolean = js.native
-  def isTexture(texture: WebGLTexture): GLboolean = js.native
+  def isTexture(texture: org.scalajs.dom.raw.WebGLTexture): GLboolean = js.native
   def lineWidth(width: GLfloat): Unit = js.native
   def linkProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def pixelStorei(pname: GLenum, param: GLboolean): Unit = js.native
@@ -501,7 +506,7 @@ trait WebGLRenderingContextBase extends js.Object {
   def uniform4i(location: Null, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
   def uniform4i(location: WebGLUniformLocation, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
   def useProgram(): Unit = js.native
-  def useProgram(program: WebGLProgram): Unit = js.native
+  def useProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def validateProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def vertexAttrib1f(index: GLuint, x: GLfloat): Unit = js.native
   def vertexAttrib1fv(index: GLuint, values: Float32List): Unit = js.native

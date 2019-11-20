@@ -12,6 +12,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.materialDashUi.__MaterialUI.Switches.RadioButtonProps
 import typingsSlinky.materialDashUi.radioButtonMod.default
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -143,7 +144,7 @@ object RadioButton
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[js.Object] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event] => Unit = null,
-    onCheck: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* selected */ String) => Unit = null,
+    onCheck: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
     onReset: SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event] => Unit = null,
     prefix: String = null,
     property: String = null,

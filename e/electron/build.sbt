@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "electron"
-version := "6.1.4-263a7b"
+version := "6.1.4-becf21"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191108Z-eb88fe",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-41c436")
+  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191108Z-ac59bd",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-5d968d")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

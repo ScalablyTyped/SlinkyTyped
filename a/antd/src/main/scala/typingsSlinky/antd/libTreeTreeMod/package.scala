@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libTreeTreeMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type AntTreeNode = Component[AntTreeNodeProps, js.Object, js.Any]
+  type AntTreeNode = ReactComponentClass[AntTreeNodeProps]
 }

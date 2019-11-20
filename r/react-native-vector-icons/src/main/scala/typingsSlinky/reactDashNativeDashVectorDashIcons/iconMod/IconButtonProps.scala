@@ -9,8 +9,10 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityTrait
 import typingsSlinky.reactDashNative.reactDashNativeMod.BackgroundPropType
+import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NativeSyntheticEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.TVParallaxProperties
 import typingsSlinky.reactDashNative.reactDashNativeMod.TargetedEvent
@@ -115,20 +117,20 @@ import scala.scalajs.js.annotation._
     * the OS-specific concept of "blur" occurs, meaning the element lost focus.
     * Some platforms may not have the concept of blur.
     */
-  var onBlur: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* e */ NativeSyntheticEvent[TargetedEvent], Unit]] = js.undefined
   /**
     * When `accessible` is true (which is the default) this may be called when
     * the OS-specific concept of "focus" occurs. Some platforms may not have
     * the concept of focus.
     */
-  var onFocus: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* e */ NativeSyntheticEvent[TargetedEvent], Unit]] = js.undefined
   /**
     *
     * Called immediately after the underlay is hidden
     */
   var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
-  var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onPressIn: js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]] = js.undefined
+  var onPressOut: js.UndefOr[js.Function1[/* event */ GestureResponderEvent, Unit]] = js.undefined
   /**
     * Called immediately after the underlay is shown
     */
@@ -196,15 +198,15 @@ object IconButtonProps {
     numberOfLines: Int | Double = null,
     onAccessibilityAction: SyntheticEvent[NodeHandle, Anon_ActionName] => Unit = null,
     onAccessibilityTap: () => Unit = null,
-    onBlur: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
-    onFocus: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
+    onBlur: /* e */ NativeSyntheticEvent[TargetedEvent] => Unit = null,
+    onFocus: /* e */ NativeSyntheticEvent[TargetedEvent] => Unit = null,
     onHideUnderlay: () => Unit = null,
     onLayout: /* event */ LayoutChangeEvent => Unit = null,
     onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
     onMagicTap: () => Unit = null,
     onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressIn: /* event */ GestureResponderEvent => Unit = null,
+    onPressOut: /* event */ GestureResponderEvent => Unit = null,
     onShowUnderlay: () => Unit = null,
     pressRetentionOffset: Insets = null,
     selectable: js.UndefOr[Boolean] = js.undefined,

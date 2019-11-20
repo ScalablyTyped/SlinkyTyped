@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object cSSTransitionMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type CSSTransition = Component[CSSTransitionProps, js.Object, js.Any]
+  type CSSTransition = ReactComponentClass[CSSTransitionProps]
 }

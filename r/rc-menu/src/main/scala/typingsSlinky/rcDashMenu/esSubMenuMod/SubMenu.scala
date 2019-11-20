@@ -2,7 +2,6 @@ package typingsSlinky.rcDashMenu.esSubMenuMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.rcDashMenu.Anon_DomEventItem
 import typingsSlinky.rcDashMenu.Anon_ManualRefMode
 import typingsSlinky.rcDashMenu.esInterfaceMod.MenuInfo
@@ -13,6 +12,7 @@ import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.KeyboardEvent
 import typingsSlinky.react.reactMod.KeyboardEventHandler
 import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,7 +69,7 @@ class SubMenu protected ()
   def onSubMenuClick(info: MenuInfo): Unit = js.native
   def onTitleClick(e: KeyboardEvent[typingsSlinky.std.HTMLElement]): Unit = js.native
   def onTitleClick(e: typingsSlinky.react.reactMod.MouseEvent[typingsSlinky.std.HTMLElement, MouseEvent]): Unit = js.native
-  def renderChildren(children: TagMod[Any]): ReactElement = js.native
+  def renderChildren(children: TagMod[Any]): Element = js.native
   def saveMenuInstance(c: MenuItem): Unit = js.native
   def saveSubMenuTitle(subMenuTitle: HTMLElement): Unit = js.native
   def triggerOpenChange(open: Boolean): Unit = js.native

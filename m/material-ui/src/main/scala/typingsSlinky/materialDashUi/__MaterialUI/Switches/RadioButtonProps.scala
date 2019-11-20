@@ -20,6 +20,7 @@ import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.react.reactStrings.`additions text`
@@ -74,9 +75,7 @@ trait RadioButtonProps extends CommonEnhancedSwitchProps[RadioButton] {
   var iconStyle: js.UndefOr[CSSProperties] = js.undefined
   var inputStyle: js.UndefOr[CSSProperties] = js.undefined
   var labelStyle: js.UndefOr[CSSProperties] = js.undefined
-  var onCheck: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String, Unit]
-  ] = js.undefined
+  var onCheck: js.UndefOr[js.Function2[/* e */ FormEvent[js.Object], /* selected */ String, Unit]] = js.undefined
   var uncheckedIcon: js.UndefOr[ReactElement] = js.undefined
    // Normally an SvgIcon
   @JSName("value")
@@ -199,7 +198,7 @@ object RadioButtonProps {
     onCanPlay: SyntheticEvent[Event, js.Object] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, js.Object] => Unit = null,
     onChange: ChangeEvent[js.Object] => Unit = null,
-    onCheck: (SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String) => Unit = null,
+    onCheck: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
     onClick: SyntheticMouseEvent[js.Object] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[js.Object] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[js.Object] => Unit = null,

@@ -10,6 +10,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.form.tag
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -137,7 +138,7 @@ object Form
     onAuxClick: SyntheticMouseEvent[HTMLFormElement] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit = null,
     onReset: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit = null,
-    onSubmit: (SyntheticEvent[EventTarget with HTMLFormElement, Event], /* data */ FormProps) => Unit = null,
+    onSubmit: (/* event */ FormEvent[HTMLFormElement], /* data */ FormProps) => Unit = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,

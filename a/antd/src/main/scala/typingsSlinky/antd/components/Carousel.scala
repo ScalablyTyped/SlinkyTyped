@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.esCarouselMod.CarouselEffect
 import typingsSlinky.antd.esCarouselMod.CarouselProps
@@ -26,7 +25,7 @@ object Carousel
     accessibility: js.UndefOr[Boolean] = js.undefined,
     adaptiveHeight: js.UndefOr[Boolean] = js.undefined,
     afterChange: /* currentSlide */ Double => Unit = null,
-    appendDots: /* dots */ TagMod[Any] => ReactElement = null,
+    appendDots: /* dots */ TagMod[Any] => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     arrows: js.UndefOr[Boolean] = js.undefined,
     asNavFor: typingsSlinky.reactDashSlick.reactDashSlickMod.Slider = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
@@ -35,7 +34,7 @@ object Carousel
     centerMode: js.UndefOr[Boolean] = js.undefined,
     centerPadding: String = null,
     cssEase: String = null,
-    customPaging: /* index */ Double => ReactElement = null,
+    customPaging: /* index */ Double => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     dotPosition: DotPosition = null,
     dots: js.UndefOr[Boolean] = js.undefined,
     dotsClass: String = null,
@@ -47,7 +46,7 @@ object Carousel
     infinite: js.UndefOr[Boolean] = js.undefined,
     initialSlide: Int | Double = null,
     lazyLoad: LazyLoadTypes = null,
-    nextArrow: ReactElement = null,
+    nextArrow: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     onEdge: /* swipeDirection */ SwipeDirection => Unit = null,
     onInit: () => Unit = null,
     onLazyLoad: /* slidesToLoad */ js.Array[Double] => Unit = null,
@@ -57,7 +56,7 @@ object Carousel
     pauseOnFocus: js.UndefOr[Boolean] = js.undefined,
     pauseOnHover: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
-    prevArrow: ReactElement = null,
+    prevArrow: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     responsive: js.Array[ResponsiveObject] = null,
     rtl: js.UndefOr[Boolean] = js.undefined,
     slickGoTo: Int | Double = null,

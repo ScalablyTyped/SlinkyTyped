@@ -1,8 +1,8 @@
 package typingsSlinky.antd.esCarouselMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashSlick.reactDashSlickMod.LazyLoadTypes
 import typingsSlinky.reactDashSlick.reactDashSlickMod.ResponsiveObject
 import typingsSlinky.reactDashSlick.reactDashSlickMod.Settings
@@ -27,7 +27,7 @@ object CarouselProps {
     accessibility: js.UndefOr[Boolean] = js.undefined,
     adaptiveHeight: js.UndefOr[Boolean] = js.undefined,
     afterChange: /* currentSlide */ Double => Unit = null,
-    appendDots: /* dots */ TagMod[Any] => ReactElement = null,
+    appendDots: /* dots */ TagMod[Any] => Element = null,
     arrows: js.UndefOr[Boolean] = js.undefined,
     asNavFor: Slider = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
@@ -38,7 +38,7 @@ object CarouselProps {
     children: TagMod[Any] = null,
     className: String = null,
     cssEase: String = null,
-    customPaging: /* index */ Double => ReactElement = null,
+    customPaging: /* index */ Double => Element = null,
     dotPosition: DotPosition = null,
     dots: js.UndefOr[Boolean] = js.undefined,
     dotsClass: String = null,
@@ -51,7 +51,7 @@ object CarouselProps {
     infinite: js.UndefOr[Boolean] = js.undefined,
     initialSlide: Int | Double = null,
     lazyLoad: LazyLoadTypes = null,
-    nextArrow: ReactElement = null,
+    nextArrow: Element = null,
     onEdge: /* swipeDirection */ SwipeDirection => Unit = null,
     onInit: () => Unit = null,
     onLazyLoad: /* slidesToLoad */ js.Array[Double] => Unit = null,
@@ -61,7 +61,7 @@ object CarouselProps {
     pauseOnFocus: js.UndefOr[Boolean] = js.undefined,
     pauseOnHover: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
-    prevArrow: ReactElement = null,
+    prevArrow: Element = null,
     responsive: js.Array[ResponsiveObject] = null,
     rows: Int | Double = null,
     rtl: js.UndefOr[Boolean] = js.undefined,

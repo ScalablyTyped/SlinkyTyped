@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait AuthSessionResult extends js.Object {
   var errorCode: js.UndefOr[String | Null] = js.undefined
   var params: js.UndefOr[StringDictionary[String]] = js.undefined
-  var `type`: js.UndefOr[cancel | dismiss | error | locked | success] = js.undefined
+  var `type`: js.UndefOr[(cancel | dismiss | locked) with (error | success)] = js.undefined
   var url: js.UndefOr[String] = js.undefined
 }
 
@@ -22,7 +22,7 @@ object AuthSessionResult {
   def apply(
     errorCode: String = null,
     params: StringDictionary[String] = null,
-    `type`: cancel | dismiss | error | locked | success = null,
+    `type`: (cancel | dismiss | locked) with (error | success) = null,
     url: String = null
   ): AuthSessionResult = {
     val __obj = js.Dynamic.literal()

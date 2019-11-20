@@ -12,7 +12,9 @@ import scala.scalajs.js.annotation._
 trait UpdateEvent extends js.Object {
   var manifest: js.UndefOr[Manifest] = js.undefined
   var message: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[downloadFinished | downloadProgress | downloadStart | error | noUpdateAvailable] = js.undefined
+  var `type`: js.UndefOr[
+    (downloadStart | downloadProgress | noUpdateAvailable) with downloadFinished with error
+  ] = js.undefined
 }
 
 object UpdateEvent {
@@ -20,7 +22,7 @@ object UpdateEvent {
   def apply(
     manifest: Manifest = null,
     message: String = null,
-    `type`: downloadFinished | downloadProgress | downloadStart | error | noUpdateAvailable = null
+    `type`: (downloadStart | downloadProgress | noUpdateAvailable) with downloadFinished with error = null
   ): UpdateEvent = {
     val __obj = js.Dynamic.literal()
     if (manifest != null) __obj.updateDynamic("manifest")(manifest.asInstanceOf[js.Any])

@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object esInputTextAreaMod {
+  import org.scalajs.dom.raw.HTMLTextAreaElement
   import typingsSlinky.react.reactMod.TextareaHTMLAttributes
-  import typingsSlinky.std.HTMLTextAreaElement
 
   type HTMLTextareaProps = TextareaHTMLAttributes[HTMLTextAreaElement]
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.antd.libDropdownDropdownDashButtonMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DropdownButton
   extends Component[DropdownButtonProps, js.Any, js.Any] {
-  def renderButton(hasGetPopupContainerGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderButton(hasGetPopupContainerGetPrefixCls: ConfigConsumerProps): Element = js.native
 }
 

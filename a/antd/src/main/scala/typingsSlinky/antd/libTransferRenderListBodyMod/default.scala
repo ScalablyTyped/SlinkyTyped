@@ -1,6 +1,6 @@
 package typingsSlinky.antd.libTransferRenderListBodyMod
 
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/transfer/renderListBody", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(props: TransferListBodyProps): ReactElement = js.native
+  def apply(props: TransferListBodyProps): Element = js.native
 }
 

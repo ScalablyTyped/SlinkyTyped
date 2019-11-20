@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object testDashUtilsMod {
-  import typingsSlinky.react.reactMod.Component
-  import typingsSlinky.std.Element
+  import org.scalajs.dom.raw.Element
+  import slinky.core.ReactComponentClass
 
   type EventSimulator = js.Function2[
-    /* element */ Element | (Component[js.Any, js.Object, js.Any]), 
+    /* element */ Element | ReactComponentClass[js.Any], 
     /* eventData */ js.UndefOr[SyntheticEventData], 
     Unit
   ]

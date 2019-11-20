@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object libUploadInterfaceMod {
   import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.std.Blob
-  import typingsSlinky.std.File
+  import org.scalajs.dom.raw.Blob
+  import org.scalajs.dom.raw.File
 
   type HttpRequestHeader = StringDictionary[String]
   type PreviewFileHandler = js.Function1[/* file */ File | Blob, js.Thenable[String]]

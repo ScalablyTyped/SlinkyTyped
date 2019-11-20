@@ -1,12 +1,12 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.esTreeDashSelectInterfaceMod.TreeNodeValue
 import typingsSlinky.antd.esTreeDashSelectInterfaceMod.TreeSelectProps
 import typingsSlinky.antd.esTreeDashSelectMod.TreeSelect
 import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +20,8 @@ object esTreeDashSelectMod extends js.Object {
     var rcTreeSelect: js.Any = js.native
     def blur(): Unit = js.native
     def focus(): Unit = js.native
-    def renderSwitcherIcon(prefixCls: String, hasIsLeafLoading: AntTreeNodeProps): ReactElement | Null = js.native
-    def renderTreeSelect(hasGetPopupContainerGetPrefixClsRenderEmpty: ConfigConsumerProps): ReactElement = js.native
+    def renderSwitcherIcon(prefixCls: String, hasIsLeafLoading: AntTreeNodeProps): Element | Null = js.native
+    def renderTreeSelect(hasGetPopupContainerGetPrefixClsRenderEmpty: ConfigConsumerProps): Element = js.native
     def saveTreeSelect(node: js.Any): Unit = js.native
   }
   

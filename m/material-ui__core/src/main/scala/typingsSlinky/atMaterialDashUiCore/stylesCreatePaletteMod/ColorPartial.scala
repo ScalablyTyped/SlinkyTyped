@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@material-ui/core.@material-ui/core.Color> */
-trait ColorPartial extends js.Object {
+trait ColorPartial extends PaletteColorOptions {
   var `100`: js.UndefOr[String] = js.undefined
   var `200`: js.UndefOr[String] = js.undefined
   var `300`: js.UndefOr[String] = js.undefined

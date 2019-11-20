@@ -6,10 +6,10 @@ import scala.scalajs.js.annotation._
 
 package object jssMod {
   import org.scalablytyped.runtime.StringDictionary
+  import org.scalajs.dom.raw.HTMLElement
   import typingsSlinky.csstype.csstypeMod.StandardProperties
   import typingsSlinky.jss.jssNumbers.`false`
   import typingsSlinky.jss.jssStrings.`!important`
-  import typingsSlinky.std.HTMLElement
   import typingsSlinky.std.Record
 
   type Classes[Name /* <: String | Double | js.Symbol */] = Record[Name, String]

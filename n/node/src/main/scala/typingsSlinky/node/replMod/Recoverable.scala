@@ -1,7 +1,6 @@
 package typingsSlinky.node.replMod
 
 import typingsSlinky.node.Error
-import typingsSlinky.std.SyntaxError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,8 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("repl", "Recoverable")
 @js.native
-class Recoverable protected () extends SyntaxError {
+class Recoverable protected ()
+  extends typingsSlinky.std.Error {
   def this(err: Error) = this()
   var err: Error = js.native
   /* CompleteClass */

@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashNative.Anon_Animated
 import typingsSlinky.reactDashNative.Anon_AnimatedBoolean_1238086454
 import scala.scalajs.js
@@ -25,7 +25,7 @@ class ScrollView ()
     * implement this method so that they can be composed while providing access
     * to the underlying scroll responder's methods.
     */
-  def getScrollResponder(): ReactElement = js.native
+  def getScrollResponder(): Element = js.native
   def getScrollableNode(): js.Any = js.native
   /**
     * Scrolls to a given x, y offset, either immediately or with a smooth animation.

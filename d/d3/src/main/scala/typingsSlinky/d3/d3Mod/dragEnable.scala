@@ -1,6 +1,6 @@
 package typingsSlinky.d3.d3Mod
 
-import typingsSlinky.std.Window
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

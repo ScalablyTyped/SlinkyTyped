@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
@@ -14,6 +15,6 @@ object libTableColumnMod extends js.Object {
   class default[T] ()
     extends Component[ColumnProps[T], ComponentState, js.Any]
   
-  type Column[T] = Component[ColumnProps[T], ComponentState, js.Any]
+  type Column[T] = ReactComponentClass[ColumnProps[T]]
 }
 

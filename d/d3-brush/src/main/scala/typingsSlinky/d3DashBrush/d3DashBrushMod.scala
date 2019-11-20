@@ -76,7 +76,7 @@ object d3DashBrushMod extends js.Object {
       * in order, being passed the current datum (d), the current index (i), and the current group (nodes),
       * with this as the current DOM element. The function returns a boolean value.
       */
-    def filter(filterFn: ValueFn[typingsSlinky.std.SVGGElement, Datum, Boolean]): this.type = js.native
+    def filter(filterFn: ValueFn[SVGGElement, Datum, Boolean]): this.type = js.native
     /**
       * Returns the current handle size, which defaults to six.
       */
@@ -177,7 +177,7 @@ object d3DashBrushMod extends js.Object {
       * in order, being passed the current datum (d), the current index (i), and the current group (nodes),
       * with this as the current DOM element.
       */
-    def on(typenames: String, listener: ValueFn[typingsSlinky.std.SVGGElement, Datum, Unit]): this.type = js.native
+    def on(typenames: String, listener: ValueFn[SVGGElement, Datum, Unit]): this.type = js.native
     /**
       * Removes the current event listeners for the specified typenames, if any.
       *

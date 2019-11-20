@@ -1,13 +1,11 @@
 package typingsSlinky.materialDashUi.__MaterialUI
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.FocusEventHandler
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactMod.KeyboardEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,9 +36,7 @@ trait TextFieldProps extends js.Object {
   var multiLine: js.UndefOr[Boolean] = js.undefined
   var name: js.UndefOr[String] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[js.Object]] = js.undefined
-  var onChange: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String, Unit]
-  ] = js.undefined
+  var onChange: js.UndefOr[js.Function2[/* e */ FormEvent[js.Object], /* newValue */ String, Unit]] = js.undefined
   var onFocus: js.UndefOr[FocusEventHandler[js.Object]] = js.undefined
   var onKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.undefined
   var onKeyPress: js.UndefOr[KeyboardEventHandler[js.Object]] = js.undefined
@@ -88,7 +84,7 @@ object TextFieldProps {
     multiLine: js.UndefOr[Boolean] = js.undefined,
     name: String = null,
     onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String) => Unit = null,
+    onChange: (/* e */ FormEvent[js.Object], /* newValue */ String) => Unit = null,
     onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[js.Object] => Unit = null,

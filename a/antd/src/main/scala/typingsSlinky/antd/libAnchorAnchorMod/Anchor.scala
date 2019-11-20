@@ -1,11 +1,11 @@
 package typingsSlinky.antd.libAnchorAnchorMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_ActiveLink
 import typingsSlinky.antd.Anon_AntAnchor_1899638441
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait Anchor
   def getCurrentAnchor(offsetTop: Double, bounds: Double): String = js.native
   def handleScroll(): Unit = js.native
   def handleScrollTo(link: String): Unit = js.native
-  def renderAnchor(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderAnchor(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def saveInkNode(node: HTMLSpanElement): Unit = js.native
   def setCurrentActiveLink(link: String): Unit = js.native
   def updateInk(): Unit = js.native

@@ -1,10 +1,8 @@
 package typingsSlinky.materialDashUi.__MaterialUI.Tabs
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
-import slinky.core.SyntheticEvent
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +14,7 @@ trait TabsProps extends js.Object {
   var initialSelectedIndex: js.UndefOr[Double] = js.undefined
   var inkBarStyle: js.UndefOr[CSSProperties] = js.undefined
   var onChange: js.UndefOr[
-    js.Function3[
-      /* value */ js.Any, 
-      SyntheticEvent[EventTarget with js.Object, Event], 
-      /* tab */ Tab, 
-      Unit
-    ]
+    js.Function3[/* value */ js.Any, /* e */ FormEvent[js.Object], /* tab */ Tab, Unit]
   ] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tabItemContainerStyle: js.UndefOr[CSSProperties] = js.undefined
@@ -38,7 +31,7 @@ object TabsProps {
     contentContainerStyle: CSSProperties = null,
     initialSelectedIndex: Int | Double = null,
     inkBarStyle: CSSProperties = null,
-    onChange: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event], /* tab */ Tab) => Unit = null,
+    onChange: (/* value */ js.Any, /* e */ FormEvent[js.Object], /* tab */ Tab) => Unit = null,
     style: CSSProperties = null,
     tabItemContainerStyle: CSSProperties = null,
     tabTemplate: ReactComponentClass[_] = null,

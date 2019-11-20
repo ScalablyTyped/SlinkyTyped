@@ -16,32 +16,38 @@ trait TextTrackList
   val length: Double = js.native
   var onaddtrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
   @JSName("addEventListener")
-  def addEventListener_addtrack(`type`: addtrack, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _]): Unit = js.native
+  def addEventListener_addtrack(
+    `type`: addtrack,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_addtrack(
     `type`: addtrack,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_addtrack(
     `type`: addtrack,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def item(index: Double): org.scalajs.dom.raw.TextTrack = js.native
   @JSName("removeEventListener")
-  def removeEventListener_addtrack(`type`: addtrack, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _]): Unit = js.native
+  def removeEventListener_addtrack(
+    `type`: addtrack,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_addtrack(
     `type`: addtrack,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_addtrack(
     `type`: addtrack,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ TrackEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

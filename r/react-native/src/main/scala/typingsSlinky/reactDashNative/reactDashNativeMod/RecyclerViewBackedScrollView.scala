@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashNative.Anon_Animated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class RecyclerViewBackedScrollView ()
     * implement this method so that they can be composed while providing access
     * to the underlying scroll responder's methods.
     */
-  def getScrollResponder(): ReactElement = js.native
+  def getScrollResponder(): Element = js.native
   /**
     * A helper function to scroll to a specific point  in the scrollview.
     * This is currently used to help focus on child textviews, but can also

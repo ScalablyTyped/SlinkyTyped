@@ -8,10 +8,7 @@ package object styledDashComponentsMod {
   import org.scalablytyped.runtime.StringDictionary
   import slinky.core.ReactComponentClass
   import typingsSlinky.csstype.csstypeMod.Properties
-  import typingsSlinky.react.reactMod.ComponentClass
   import typingsSlinky.react.reactMod.ComponentPropsWithRef
-  import typingsSlinky.react.reactMod.ComponentState
-  import typingsSlinky.react.reactMod.ComponentType
   import typingsSlinky.react.reactMod.ForwardRefExoticComponent
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Extract
@@ -28,9 +25,9 @@ package object styledDashComponentsMod {
   type AnyIfEmpty[T /* <: js.Object */] = T
   type AnyStyledComponent = StyledComponent[js.Any, js.Any, js.Any, js.Any | scala.Nothing]
   type Attrs[P, A /* <: Partial[P] */, T] = (js.Function1[/* props */ ThemedStyledProps[P, T], A]) | A
-  type BaseThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = ComponentClass[ThemeProviderProps[T, U], ComponentState]
+  type BaseThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = ReactComponentClass[ThemeProviderProps[T, U]]
   type BaseWithThemeFnInterface[T /* <: js.Object */] = js.Function1[
-    /* component */ ComponentType[js.Any], 
+    /* component */ ReactComponentClass[js.Any], 
     ForwardRefExoticComponent[WithOptionalThemeComponentPropsWithRefCT[T]]
   ]
   type CSSKeyframes = js.Object with StringDictionary[CSSObject]
@@ -45,7 +42,7 @@ package object styledDashComponentsMod {
   {[ K in keyof A ]: (props : styled-components.styled-components.ThemedStyledProps<P, T>): A[K] | A[K]}
     */ typingsSlinky.styledDashComponents.styledDashComponentsStrings.DeprecatedAttrs with js.Any
   type FalseyValue = js.UndefOr[Null | `false`]
-  type GlobalStyleComponent[P, T] = ComponentClass[ThemedGlobalStyledClassProps[P, T], ComponentState]
+  type GlobalStyleComponent[P, T] = ReactComponentClass[ThemedGlobalStyledClassProps[P, T]]
   /* Rewritten from type alias, can be one of: 
     - typings.styledDashComponents.styledDashComponentsMod.InterpolationValue
     - typings.styledDashComponents.styledDashComponentsMod.FlattenInterpolation[P]
@@ -87,7 +84,7 @@ package object styledDashComponentsMod {
   type StyledComponentPropsWithRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = ComponentPropsWithRef[C | StyledComponentInnerComponent[C]]
   type StyledFunction[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = ThemedStyledFunction[C, js.Any, js.Object, scala.Nothing]
   type StyledProps[P] = ThemedStyledProps[P, AnyIfEmpty[DefaultTheme]]
-  type ThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = BaseThemeProviderComponent[AnyIfEmpty[T], AnyIfEmpty[U]]
+  type ThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = ReactComponentClass[ThemeProviderProps[AnyIfEmpty[T], AnyIfEmpty[U]]]
   type ThemedCssFunction[T /* <: js.Object */] = BaseThemedCssFunction[AnyIfEmpty[T]]
   type ThemedGlobalStyledClassProps[P, T] = (WithOptionalTheme[P, T]) with Anon_SuppressMultiMountWarning
   type ThemedStyledInterface[T /* <: js.Object */] = ThemedBaseStyledInterface[AnyIfEmpty[T]]

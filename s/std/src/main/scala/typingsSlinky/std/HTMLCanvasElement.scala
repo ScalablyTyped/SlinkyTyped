@@ -63,11 +63,11 @@ trait HTMLCanvasElement
   @JSName("getContext")
   def getContext_webgl(contextId: webgl): org.scalajs.dom.raw.WebGLRenderingContext | Null = js.native
   @JSName("getContext")
-  def getContext_webgl(contextId: webgl, options: WebGLContextAttributes): org.scalajs.dom.raw.WebGLRenderingContext | Null = js.native
+  def getContext_webgl(contextId: webgl, options: org.scalajs.dom.raw.WebGLContextAttributes): org.scalajs.dom.raw.WebGLRenderingContext | Null = js.native
   @JSName("getContext")
   def getContext_webgl2(contextId: webgl2): WebGL2RenderingContext | Null = js.native
   @JSName("getContext")
-  def getContext_webgl2(contextId: webgl2, options: WebGLContextAttributes): WebGL2RenderingContext | Null = js.native
+  def getContext_webgl2(contextId: webgl2, options: org.scalajs.dom.raw.WebGLContextAttributes): WebGL2RenderingContext | Null = js.native
   /**
     * Removes the event listener in target's event listener list with the same type, callback, and options.
     */

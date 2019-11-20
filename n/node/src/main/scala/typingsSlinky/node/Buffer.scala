@@ -68,21 +68,31 @@ class Buffer protected ()
   def this(str: java.lang.String) = this()
   def this(str: java.lang.String, encoding: BufferEncoding) = this()
   var constructor: TypeofClassBuffer = js.native
-  def compare(otherBuffer: Uint8Array): Double = js.native
-  def compare(otherBuffer: Uint8Array, targetStart: Double): Double = js.native
-  def compare(otherBuffer: Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
-  def compare(otherBuffer: Uint8Array, targetStart: Double, targetEnd: Double, sourceStart: Double): Double = js.native
+  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double): Double = js.native
+  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
   def compare(
-    otherBuffer: Uint8Array,
+    otherBuffer: scala.scalajs.js.typedarray.Uint8Array,
+    targetStart: Double,
+    targetEnd: Double,
+    sourceStart: Double
+  ): Double = js.native
+  def compare(
+    otherBuffer: scala.scalajs.js.typedarray.Uint8Array,
     targetStart: Double,
     targetEnd: Double,
     sourceStart: Double,
     sourceEnd: Double
   ): Double = js.native
-  def copy(targetBuffer: Uint8Array): Double = js.native
-  def copy(targetBuffer: Uint8Array, targetStart: Double): Double = js.native
-  def copy(targetBuffer: Uint8Array, targetStart: Double, sourceStart: Double): Double = js.native
-  def copy(targetBuffer: Uint8Array, targetStart: Double, sourceStart: Double, sourceEnd: Double): Double = js.native
+  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double): Double = js.native
+  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double, sourceStart: Double): Double = js.native
+  def copy(
+    targetBuffer: scala.scalajs.js.typedarray.Uint8Array,
+    targetStart: Double,
+    sourceStart: Double,
+    sourceEnd: Double
+  ): Double = js.native
   def equals(otherBuffer: scala.scalajs.js.typedarray.Uint8Array): Boolean = js.native
   def fill(value: java.lang.String): this.type = js.native
   def fill(value: java.lang.String, offset: Double): this.type = js.native
@@ -241,8 +251,8 @@ object Buffer extends js.Object {
     * @param totalLength Total length of the buffers when concatenated.
     *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
     */
-  def concat(list: js.Array[Uint8Array]): Buffer = js.native
-  def concat(list: js.Array[Uint8Array], totalLength: Double): Buffer = js.native
+  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array]): Buffer = js.native
+  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native

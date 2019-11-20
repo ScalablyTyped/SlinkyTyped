@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsAddonsPortalPortalInnerMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type PortalInner = Component[PortalInnerProps, js.Object, js.Any]
+  type PortalInner = ReactComponentClass[PortalInnerProps]
 }

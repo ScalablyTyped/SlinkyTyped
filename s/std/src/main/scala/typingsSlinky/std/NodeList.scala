@@ -24,9 +24,11 @@ trait NodeList extends /* index */ NumberDictionary[Node] {
     * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the list.
     * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
     */
-  def forEach(callbackfn: js.Function3[/* value */ Node, /* key */ Double, /* parent */ this.type, Unit]): Unit = js.native
   def forEach(
-    callbackfn: js.Function3[/* value */ Node, /* key */ Double, /* parent */ this.type, Unit],
+    callbackfn: js.Function3[/* value */ org.scalajs.dom.raw.Node, /* key */ Double, /* parent */ this.type, Unit]
+  ): Unit = js.native
+  def forEach(
+    callbackfn: js.Function3[/* value */ org.scalajs.dom.raw.Node, /* key */ Double, /* parent */ this.type, Unit],
     thisArg: js.Any
   ): Unit = js.native
   /**

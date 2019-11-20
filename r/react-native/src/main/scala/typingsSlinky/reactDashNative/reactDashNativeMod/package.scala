@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 package object reactDashNativeMod {
   import org.scalablytyped.runtime.Instantiable1
   import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.react.reactMod.BaseSyntheticEvent
-  import typingsSlinky.react.reactMod.Component
-  import typingsSlinky.react.reactMod.ComponentType
-  import typingsSlinky.react.reactMod.ReactElement
+  import slinky.core.ReactComponentClass
+  import slinky.core.SyntheticEvent
+  import slinky.core.facade.ReactElement
   import typingsSlinky.reactDashNative.AccessibilityChangeEvent
   import typingsSlinky.reactDashNative.Anon_ActionName
   import typingsSlinky.reactDashNative.Anon_Label
@@ -21,12 +20,12 @@ package object reactDashNativeMod {
   import typingsSlinky.reactDashNative.reactDashNativeStrings.hardwareBackPress
 
   type ART = ARTStatic
-  type AccessibilityActionEvent = NativeSyntheticEvent[Anon_ActionName]
+  type AccessibilityActionEvent = SyntheticEvent[NodeHandle, Anon_ActionName]
   type AccessibilityActionInfo = Anon_Label
   type AccessibilityEvent = AccessibilityChangeEvent | AccessibilityAnnoucementFinishedEvent
   type AccessibilityInfo = AccessibilityInfoStatic
   type ActionSheetIOS = ActionSheetIOSStatic
-  type ActivityIndicatorComponent = Component[ActivityIndicatorProps, js.Object, js.Any]
+  type ActivityIndicatorComponent = ReactComponentClass[ActivityIndicatorProps]
   type Alert = AlertStatic
   type AppState = AppStateStatic
   type AsyncStorage = AsyncStorageStatic
@@ -34,21 +33,21 @@ package object reactDashNativeMod {
   type BackPressEventName = hardwareBackPress
   type CameraRoll = CameraRollStatic
   type Clipboard = ClipboardStatic
-  type ComponentProvider = js.Function0[ComponentType[js.Any]]
+  type ComponentProvider = js.Function0[ReactComponentClass[js.Any]]
   type Constructor[T] = Instantiable1[/* args (repeated) */ js.Any, T]
   type DatePickerAndroid = DatePickerAndroidStatic
-  type DatePickerIOSComponent = Component[DatePickerIOSProps, js.Object, js.Any]
-  type DrawerLayoutAndroidComponent = Component[DrawerLayoutAndroidProps, js.Object, js.Any]
-  type DrawerSlideEvent = BaseSyntheticEvent[NativeTouchEvent, NodeHandle, NodeHandle]
+  type DatePickerIOSComponent = ReactComponentClass[DatePickerIOSProps]
+  type DrawerLayoutAndroidComponent = ReactComponentClass[DrawerLayoutAndroidProps]
+  type DrawerSlideEvent = SyntheticEvent[NodeHandle, NativeTouchEvent]
   type Easing = EasingStatic
   type EasingFunction = js.Function1[/* value */ Double, Double]
   type ErrorHandlerCallback = js.Function2[/* error */ js.Any, /* isFatal */ js.UndefOr[Boolean], Unit]
   type Falsy = js.UndefOr[Null | `false`]
-  type GestureResponderEvent = BaseSyntheticEvent[NativeTouchEvent, NodeHandle, NodeHandle]
+  type GestureResponderEvent = SyntheticEvent[NodeHandle, NativeTouchEvent]
   type Handle = Double
   type I18nManager = I18nManagerStatic
-  type ImageBackgroundComponent = Component[ImageBackgroundProps, js.Object, js.Any]
-  type ImageComponent = Component[ImageProps, js.Object, js.Any]
+  type ImageBackgroundComponent = ReactComponentClass[ImageBackgroundProps]
+  type ImageComponent = ReactComponentClass[ImageProps]
   type ImageEditor = ImageEditorStatic
   type ImagePickerIOS = ImagePickerIOSStatic
   type ImagePickerResult = js.Tuple3[String, Double, Double]
@@ -59,7 +58,7 @@ package object reactDashNativeMod {
     * It is a component to solve the common problem of views that need to move out of the way of the virtual keyboard.
     * It can automatically adjust either its position or bottom padding based on the position of the keyboard.
     */
-  type KeyboardAvoidingViewComponent = Component[KeyboardAvoidingViewProps, js.Object, js.Any]
+  type KeyboardAvoidingViewComponent = ReactComponentClass[KeyboardAvoidingViewProps]
   type KeyboardEventListener = js.Function1[/* event */ KeyboardEvent, Unit]
   type KeyboardTypeAndroid = `visible-password`
   /* Rewritten from type alias, can be one of: 
@@ -71,11 +70,11 @@ package object reactDashNativeMod {
   type LayoutAnimation = LayoutAnimationStatic
   type Linking = LinkingStatic
   type ListRenderItem[ItemT] = js.Function1[/* info */ ListRenderItemInfo[ItemT], ReactElement | Null]
-  type ListViewComponent = Component[ListViewProps, js.Object, js.Any]
+  type ListViewComponent = ReactComponentClass[ListViewProps]
   /**
     * @see https://facebook.github.io/react-native/docs/maskedviewios.html
     */
-  type MaskedViewComponent = Component[MaskedViewIOSProps, js.Object, js.Any]
+  type MaskedViewComponent = ReactComponentClass[MaskedViewIOSProps]
   type MeasureInWindowOnSuccessCallback = js.Function4[/* x */ Double, /* y */ Double, /* width */ Double, /* height */ Double, Unit]
   type MeasureLayoutOnSuccessCallback = js.Function4[/* left */ Double, /* top */ Double, /* width */ Double, /* height */ Double, Unit]
   type MeasureOnSuccessCallback = js.Function6[
@@ -96,20 +95,20 @@ package object reactDashNativeMod {
     * See react-native-sensor-manager for example.
     */
   type NativeModulesStatic = StringDictionary[js.Any]
-  type NativeSyntheticEvent[T] = BaseSyntheticEvent[T, NodeHandle, NodeHandle]
+  type NativeSyntheticEvent[T] = SyntheticEvent[NodeHandle, T]
   type PanResponder = PanResponderStatic
   type PermissionsAndroid = PermissionsAndroidStatic
   /**
     * @see https://facebook.github.io/react-native/docs/pickerios.html
     * @see PickerIOS.ios.js
     */
-  type PickerIOSComponent = Component[PickerIOSProps, js.Object, js.Any]
+  type PickerIOSComponent = ReactComponentClass[PickerIOSProps]
   /**
     * React component that wraps the Android-only `ProgressBar`. This component is used to indicate
     * that the app is loading or there is some activity in the app.
     */
-  type ProgressBarAndroidComponent = Component[ProgressBarAndroidProps, js.Object, js.Any]
-  type ProgressViewIOSComponent = Component[ProgressViewIOSProps, js.Object, js.Any]
+  type ProgressBarAndroidComponent = ReactComponentClass[ProgressBarAndroidProps]
+  type ProgressViewIOSComponent = ReactComponentClass[ProgressViewIOSProps]
   type PushNotificationIOS = PushNotificationIOSStatic
   /**
     * Receive events from native-code
@@ -133,7 +132,7 @@ package object reactDashNativeMod {
     * use it pass this component as `renderScrollComponent` to the list view. For
     * now only horizontal scrolling is supported.
     */
-  type RecyclerViewBackedScrollViewComponent = Component[RecyclerViewBackedScrollViewProps, js.Object, js.Any]
+  type RecyclerViewBackedScrollViewComponent = ReactComponentClass[RecyclerViewBackedScrollViewProps]
   type RecyclerViewBackedScrollViewProps = ScrollViewProps
   /**
     * This component is used inside a ScrollView or ListView to add pull to refresh
@@ -143,7 +142,7 @@ package object reactDashNativeMod {
     * __Note:__ `refreshing` is a controlled prop, this is why it needs to be set to true
     * in the `onRefresh` function otherwise the refresh indicator will stop immediately.
     */
-  type RefreshControlComponent = Component[RefreshControlProps, js.Object, js.Any]
+  type RefreshControlComponent = ReactComponentClass[RefreshControlProps]
   /** Keep a brand of 'T' so that calls to `StyleSheet.flatten` can take `RegisteredStyle<T>` and return `T`. */
   type RegisteredStyle[T] = Double with Anon_RegisteredStyleBrand[T]
   type Runnable = js.Function1[/* appParameters */ js.Any, Unit]
@@ -153,9 +152,9 @@ package object reactDashNativeMod {
     * Moreover, and most importantly, Safe Area's paddings reflect physical limitation of the screen,
     * such as rounded corners or camera notches (aka sensor housing area on iPhone X).
     */
-  type SafeAreaViewComponent = Component[ViewProps, js.Object, js.Any]
-  type ScrollResponderEvent = BaseSyntheticEvent[NativeTouchEvent, NodeHandle, NodeHandle]
-  type ScrollViewComponent = Component[ScrollViewProps, js.Object, js.Any]
+  type SafeAreaViewComponent = ReactComponentClass[ViewProps]
+  type ScrollResponderEvent = SyntheticEvent[NodeHandle, NativeTouchEvent]
+  type ScrollViewComponent = ReactComponentClass[ScrollViewProps]
   type SectionList[ItemT] = SectionListStatic[ItemT]
   type SectionListRenderItem[ItemT] = js.Function1[/* info */ SectionListRenderItemInfo[ItemT], ReactElement | Null]
   /**
@@ -178,17 +177,17 @@ package object reactDashNativeMod {
     * />
     * ````
     */
-  type SegmentedControlIOSComponent = Component[SegmentedControlIOSProps, js.Object, js.Any]
+  type SegmentedControlIOSComponent = ReactComponentClass[SegmentedControlIOSProps]
   type Settings = SettingsStatic
   type Share = ShareStatic
   /**
     * A component used to select a single value from a range of values.
     */
-  type SliderComponent = Component[SliderProps, js.Object, js.Any]
+  type SliderComponent = ReactComponentClass[SliderProps]
   type SliderIOS = Slider
-  type SnapshotViewIOSComponent = Component[SnapshotViewIOSProps, js.Object, js.Any]
+  type SnapshotViewIOSComponent = ReactComponentClass[SnapshotViewIOSProps]
   type StatusBarIOS = StatusBarIOSStatic
-  type StatusBarIOSStatic = EventEmitter
+  type StatusBarIOSStatic = NativeEventEmitter
   type StyleProp[T] = T | RegisteredStyle[T] | (RecursiveArray[T | RegisteredStyle[T] | Falsy]) | Falsy
   /**
     * Renders a boolean input.
@@ -198,18 +197,18 @@ package object reactDashNativeMod {
     * If the `value` prop is not updated, the component will continue to render
     * the supplied `value` prop instead of the expected result of any user actions.
     */
-  type SwitchComponent = Component[SwitchProps, js.Object, js.Any]
+  type SwitchComponent = ReactComponentClass[SwitchProps]
   type Systrace = SystraceStatic
   type Task = js.Function1[/* taskData */ js.Any, js.Promise[Unit]]
   type TaskProvider = js.Function0[Task]
   /**
     * A React component for displaying text which supports nesting, styling, and touch handling.
     */
-  type TextComponent = Component[TextProps, js.Object, js.Any]
+  type TextComponent = ReactComponentClass[TextProps]
   /**
     * @see https://facebook.github.io/react-native/docs/textinput.html#methods
     */
-  type TextInputComponent = Component[TextInputProps, js.Object, js.Any]
+  type TextInputComponent = ReactComponentClass[TextInputProps]
   type TimePickerAndroid = TimePickerAndroidStatic
   type ToastAndroid = ToastAndroidStatic
   /**
@@ -228,7 +227,7 @@ package object reactDashNativeMod {
     *
     * [0]: https://developer.android.com/reference/android/support/v7/widget/Toolbar.html
     */
-  type ToolbarAndroidComponent = Component[ToolbarAndroidProps, js.Object, js.Any]
+  type ToolbarAndroidComponent = ReactComponentClass[ToolbarAndroidProps]
   /**
     * A wrapper for making views respond properly to touches.
     * On press down, the opacity of the wrapped view is decreased,
@@ -242,7 +241,7 @@ package object reactDashNativeMod {
     *
     * @see https://facebook.github.io/react-native/docs/touchablehighlight.html
     */
-  type TouchableHighlightComponent = Component[TouchableHighlightProps, js.Object, js.Any]
+  type TouchableHighlightComponent = ReactComponentClass[TouchableHighlightProps]
   /**
     * A wrapper for making views respond properly to touches (Android only).
     * On Android this component uses native state drawable to display touch feedback.
@@ -253,7 +252,7 @@ package object reactDashNativeMod {
     *
     * @see https://facebook.github.io/react-native/docs/touchablenativefeedback.html#content
     */
-  type TouchableNativeFeedbackComponent = Component[TouchableNativeFeedbackProps, js.Object, js.Any]
+  type TouchableNativeFeedbackComponent = ReactComponentClass[TouchableNativeFeedbackProps]
   /**
     * A wrapper for making views respond properly to touches.
     * On press down, the opacity of the wrapped view is decreased, dimming it.
@@ -262,7 +261,7 @@ package object reactDashNativeMod {
     *
     * @see https://facebook.github.io/react-native/docs/touchableopacity.html
     */
-  type TouchableOpacityComponent = Component[TouchableOpacityProps, js.Object, js.Any]
+  type TouchableOpacityComponent = ReactComponentClass[TouchableOpacityProps]
   /**
     * Do not use unless you have a very good reason.
     * All the elements that respond to press should have a visual feedback when touched.
@@ -270,7 +269,7 @@ package object reactDashNativeMod {
     *
     * @see https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html
     */
-  type TouchableWithoutFeedbackComponent = Component[TouchableWithoutFeedbackProps, js.Object, js.Any]
+  type TouchableWithoutFeedbackComponent = ReactComponentClass[TouchableWithoutFeedbackProps]
   type UIManager = UIManagerStatic
   type Vibration = VibrationStatic
   /**
@@ -279,7 +278,7 @@ package object reactDashNativeMod {
     * View maps directly to the native view equivalent on whatever platform React is running on,
     * whether that is a UIView, <div>, android.view, etc.
     */
-  type ViewComponent = Component[ViewProps, js.Object, js.Any]
-  type ViewPagerAndroidComponent = Component[ViewPagerAndroidProps, js.Object, js.Any]
+  type ViewComponent = ReactComponentClass[ViewProps]
+  type ViewPagerAndroidComponent = ReactComponentClass[ViewPagerAndroidProps]
   type ViewabilityConfigCallbackPairs = js.Array[ViewabilityConfigCallbackPair]
 }

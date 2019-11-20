@@ -2,13 +2,13 @@ package typingsSlinky.antd.libTreeDirectoryTreeMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeExpandedEvent
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeSelectedEvent
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait DirectoryTree
   def onDoubleClick(event: SyntheticMouseEvent[HTMLElement], node: ReactComponentClass[AntTreeNodeProps]): Unit = js.native
   def onExpand(expandedKeys: js.Array[String], info: AntTreeNodeExpandedEvent): Unit | js.Thenable[Unit] = js.native
   def onSelect(keys: js.Array[String], event: AntTreeNodeSelectedEvent): Unit = js.native
-  def renderDirectoryTree(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderDirectoryTree(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def setTreeRef(node: typingsSlinky.antd.libTreeTreeMod.default): Unit = js.native
   def setUncontrolledState(state: DirectoryTreeState): Unit = js.native
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsAddonsResponsiveResponsiveMod {
-  import typingsSlinky.react.reactMod.Component
+  import slinky.core.ReactComponentClass
 
-  type Responsive = Component[ResponsiveProps, js.Object, js.Any]
+  type Responsive = ReactComponentClass[ResponsiveProps]
 }

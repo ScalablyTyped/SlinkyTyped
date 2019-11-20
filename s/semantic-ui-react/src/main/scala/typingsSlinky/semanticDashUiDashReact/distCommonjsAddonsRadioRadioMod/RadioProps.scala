@@ -20,6 +20,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -190,7 +191,7 @@ object RadioProps {
     onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onCanPlay: SyntheticEvent[Event, HTMLInputElement] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, HTMLInputElement] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with HTMLInputElement, Event], /* data */ CheckboxProps) => Unit = null,
+    onChange: (/* event */ FormEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onClick: (/* event */ SyntheticMouseEvent[HTMLInputElement], /* data */ CheckboxProps) => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[HTMLInputElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[HTMLInputElement] => Unit = null,

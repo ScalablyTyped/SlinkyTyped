@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object chartDotJsMod {
   import org.scalablytyped.runtime.StringDictionary
+  import org.scalajs.dom.raw.CanvasGradient
+  import org.scalajs.dom.raw.CanvasPattern
   import typingsSlinky.chartDotJs.Anon_Chart
-  import typingsSlinky.std.CanvasGradient
-  import typingsSlinky.std.CanvasPattern
 
   type BorderWidth = Double | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in chart.js.chart.js.PositionType ]:? number}

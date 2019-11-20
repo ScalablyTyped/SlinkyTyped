@@ -18,6 +18,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactMod.FormHTMLAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -80,7 +81,7 @@ trait StrictFormProps extends FormHTMLAttributes[HTMLFormElement] {
   @JSName("onSubmit")
   var onSubmit_StrictFormProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLFormElement, Event], 
+      /* event */ FormEvent[org.scalajs.dom.raw.HTMLFormElement], 
       /* data */ FormProps, 
       Unit
     ]
@@ -256,7 +257,7 @@ object StrictFormProps {
     onSeeking: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLFormElement] => Unit = null,
     onSelect: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLFormElement] => Unit = null,
     onStalled: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLFormElement] => Unit = null,
-    onSubmit: (SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLFormElement, Event], /* data */ FormProps) => Unit = null,
+    onSubmit: (/* event */ FormEvent[org.scalajs.dom.raw.HTMLFormElement], /* data */ FormProps) => Unit = null,
     onSuspend: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLFormElement] => Unit = null,
     onTimeUpdate: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLFormElement] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLFormElement] => Unit = null,

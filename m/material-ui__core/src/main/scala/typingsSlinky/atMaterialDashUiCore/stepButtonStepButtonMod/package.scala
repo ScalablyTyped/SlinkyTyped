@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object stepButtonStepButtonMod {
-  import typingsSlinky.react.reactMod.ReactElement
+  import slinky.core.facade.ReactElement
 
   type StepButtonIcon = ReactElement | String | Double | Null
 }

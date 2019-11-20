@@ -10,6 +10,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -134,8 +135,8 @@ object TextArea
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[HTMLTextAreaElement] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
-    onInput: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
+    onChange: (/* event */ FormEvent[HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
+    onInput: (/* event */ FormEvent[HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
     onReset: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit = null,
     prefix: String = null,
     property: String = null,

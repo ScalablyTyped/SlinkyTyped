@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object distCommonjsElementsPlaceholderPlaceholderLineMod {
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type PlaceholderLineComponent = StatelessComponent[PlaceholderLineProps]
+  type PlaceholderLineComponent = ReactComponentClass[PlaceholderLineProps]
 }

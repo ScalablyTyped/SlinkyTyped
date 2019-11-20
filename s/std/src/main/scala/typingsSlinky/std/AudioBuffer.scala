@@ -12,10 +12,14 @@ trait AudioBuffer extends js.Object {
   val length: Double = js.native
   val numberOfChannels: Double = js.native
   val sampleRate: Double = js.native
-  def copyFromChannel(destination: Float32Array, channelNumber: Double): Unit = js.native
-  def copyFromChannel(destination: Float32Array, channelNumber: Double, startInChannel: Double): Unit = js.native
-  def copyToChannel(source: Float32Array, channelNumber: Double): Unit = js.native
-  def copyToChannel(source: Float32Array, channelNumber: Double, startInChannel: Double): Unit = js.native
+  def copyFromChannel(destination: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
+  def copyFromChannel(
+    destination: scala.scalajs.js.typedarray.Float32Array,
+    channelNumber: Double,
+    startInChannel: Double
+  ): Unit = js.native
+  def copyToChannel(source: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
+  def copyToChannel(source: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double, startInChannel: Double): Unit = js.native
   def getChannelData(channel: Double): scala.scalajs.js.typedarray.Float32Array = js.native
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.antd.libTransferListMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_FilteredItemsFilteredRenderItems
 import typingsSlinky.antd.antdNumbers.`false`
 import typingsSlinky.antd.antdStrings.all
@@ -11,7 +10,7 @@ import typingsSlinky.antd.antdStrings.part
 import typingsSlinky.antd.libTransferMod.TransferItem
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.react.reactMod.ReactNode
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,18 +25,18 @@ trait TransferList
   def getCheckBox(
     filteredItems: js.Array[TransferItem],
     onItemSelectAll: js.Function2[/* dataSource */ js.Array[String], /* checkAll */ Boolean, Unit]
-  ): `false` | ReactElement = js.native
+  ): `false` | Element = js.native
   def getCheckBox(
     filteredItems: js.Array[TransferItem],
     onItemSelectAll: js.Function2[/* dataSource */ js.Array[String], /* checkAll */ Boolean, Unit],
     showSelectAll: Boolean
-  ): `false` | ReactElement = js.native
+  ): `false` | Element = js.native
   def getCheckBox(
     filteredItems: js.Array[TransferItem],
     onItemSelectAll: js.Function2[/* dataSource */ js.Array[String], /* checkAll */ Boolean, Unit],
     showSelectAll: Boolean,
     disabled: Boolean
-  ): `false` | ReactElement = js.native
+  ): `false` | Element = js.native
   def getCheckStatus(filteredItems: js.Array[TransferItem]): all | none | part = js.native
   def getFilteredItems(dataSource: js.Array[TransferItem], filterValue: String): Anon_FilteredItemsFilteredRenderItems = js.native
   def getListBody(
@@ -45,8 +44,8 @@ trait TransferList
     searchPlaceholder: String,
     filterValue: String,
     filteredItems: js.Array[TransferItem],
-    notFoundContent: ReactNode,
-    bodyDom: ReactNode,
+    notFoundContent: TagMod[Any],
+    bodyDom: TagMod[Any],
     filteredRenderItems: js.Array[RenderedItem],
     checkedKeys: js.Array[String]
   ): TagMod[Any] = js.native
@@ -55,8 +54,8 @@ trait TransferList
     searchPlaceholder: String,
     filterValue: String,
     filteredItems: js.Array[TransferItem],
-    notFoundContent: ReactNode,
-    bodyDom: ReactNode,
+    notFoundContent: TagMod[Any],
+    bodyDom: TagMod[Any],
     filteredRenderItems: js.Array[RenderedItem],
     checkedKeys: js.Array[String],
     renderList: RenderListFunction
@@ -66,8 +65,8 @@ trait TransferList
     searchPlaceholder: String,
     filterValue: String,
     filteredItems: js.Array[TransferItem],
-    notFoundContent: ReactNode,
-    bodyDom: ReactNode,
+    notFoundContent: TagMod[Any],
+    bodyDom: TagMod[Any],
     filteredRenderItems: js.Array[RenderedItem],
     checkedKeys: js.Array[String],
     renderList: RenderListFunction,
@@ -78,8 +77,8 @@ trait TransferList
     searchPlaceholder: String,
     filterValue: String,
     filteredItems: js.Array[TransferItem],
-    notFoundContent: ReactNode,
-    bodyDom: ReactNode,
+    notFoundContent: TagMod[Any],
+    bodyDom: TagMod[Any],
     filteredRenderItems: js.Array[RenderedItem],
     checkedKeys: js.Array[String],
     renderList: RenderListFunction,

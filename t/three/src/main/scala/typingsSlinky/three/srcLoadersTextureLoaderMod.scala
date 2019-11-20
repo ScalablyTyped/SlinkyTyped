@@ -1,8 +1,7 @@
 package typingsSlinky.three
 
-import typingsSlinky.std.ErrorEvent
-import typingsSlinky.std.EventTarget
-import typingsSlinky.std.ProgressEvent
+import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.srcLoadersLoaderMod.Loader
 import typingsSlinky.three.srcLoadersLoadingManagerMod.LoadingManager
 import typingsSlinky.three.srcTexturesTextureMod.Texture
@@ -21,12 +20,12 @@ object srcLoadersTextureLoaderMod extends js.Object {
     def load(
       url: String,
       onLoad: js.Function1[/* texture */ Texture, Unit],
-      onProgress: js.Function1[/* event */ ProgressEvent[EventTarget], Unit]
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit]
     ): Texture = js.native
     def load(
       url: String,
       onLoad: js.Function1[/* texture */ Texture, Unit],
-      onProgress: js.Function1[/* event */ ProgressEvent[EventTarget], Unit],
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit],
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): Texture = js.native
   }

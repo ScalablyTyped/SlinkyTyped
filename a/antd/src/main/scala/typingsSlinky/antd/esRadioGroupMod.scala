@@ -1,12 +1,12 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.esRadioGroupMod.RadioGroup
 import typingsSlinky.antd.esRadioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.esRadioInterfaceMod.RadioGroupProps
 import typingsSlinky.antd.esRadioInterfaceMod.RadioGroupState
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object esRadioGroupMod extends js.Object {
     extends Component[RadioGroupProps, RadioGroupState, js.Any] {
     def getChildContext(): Anon_RadioGroupAnonDisabledEv = js.native
     def onRadioChange(ev: RadioChangeEvent): Unit = js.native
-    def renderGroup(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+    def renderGroup(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
     @JSName("shouldComponentUpdate")
     def shouldComponentUpdate_MRadioGroup(nextProps: RadioGroupProps, nextState: RadioGroupState): Boolean = js.native
   }

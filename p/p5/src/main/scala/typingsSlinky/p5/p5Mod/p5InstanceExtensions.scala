@@ -1,6 +1,6 @@
 package typingsSlinky.p5.p5Mod
 
-import typingsSlinky.std.Event
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.HTMLCanvasElement
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
@@ -4175,7 +4175,7 @@ trait p5InstanceExtensions extends js.Object {
   def loadModel(
     path: String,
     successCallback: js.Function1[/* p1 */ Geometry, _],
-    failureCallback: js.Function1[/* p1 */ Event, _]
+    failureCallback: js.Function1[/* p1 */ typingsSlinky.std.Event, _]
   ): Geometry = js.native
   /**
     *   Loads the pixel data for the display window into

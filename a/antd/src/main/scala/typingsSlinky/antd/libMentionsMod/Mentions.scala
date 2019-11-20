@@ -1,12 +1,12 @@
 package typingsSlinky.antd.libMentionsMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_Focused
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libConfigDashProviderRenderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.FocusEventHandler
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait Mentions
   def getFilterOption(): js.Any = js.native
   def getNotFoundContent(renderEmpty: RenderEmptyHandler): js.UndefOr[js.Object | Null] = js.native
   def getOptions(): js.UndefOr[js.Object | Null] = js.native
-  def renderMentions(hasGetPrefixClsRenderEmpty: ConfigConsumerProps): ReactElement = js.native
+  def renderMentions(hasGetPrefixClsRenderEmpty: ConfigConsumerProps): Element = js.native
   def saveMentions(node: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof RcMentions */ js.Any): Unit = js.native
 }
 

@@ -96,7 +96,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent @material-ui/core.@material-ui/core/TextField/TextField.BaseTextFieldProps */
-trait OutlinedTextFieldProps extends js.Object {
+trait OutlinedTextFieldProps extends TextFieldProps {
   var FormHelperTextProps: js.UndefOr[PartialFormHelperTextProps] = js.undefined
   var InputLabelProps: js.UndefOr[PartialInputLabelProps] = js.undefined
   var InputProps: js.UndefOr[PartialOutlinedInputProps] = js.undefined

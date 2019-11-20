@@ -62,7 +62,7 @@ trait Hot extends js.Object {
   @JSName("apply")
   def apply(
     options: AcceptOptions,
-    callback: js.Function2[/* err */ Error, /* outdatedModules */ js.Array[ModuleId], Unit]
+    callback: js.Function2[/* err */ js.Error, /* outdatedModules */ js.Array[ModuleId], Unit]
   ): Unit = js.native
   /**
     * Throws an exceptions if status() is not idle.
@@ -76,7 +76,7 @@ trait Hot extends js.Object {
     */
   def check(
     autoApply: Boolean,
-    callback: js.Function2[/* err */ Error, /* outdatedModules */ js.Array[ModuleId], Unit]
+    callback: js.Function2[/* err */ js.Error, /* outdatedModules */ js.Array[ModuleId], Unit]
   ): Unit = js.native
   /**
     * Throws an exceptions if status() is not idle.

@@ -15,7 +15,7 @@ trait RTCRtpSender extends js.Object {
   def getParameters(): RTCRtpSendParameters = js.native
   def getStats(): js.Promise[org.scalajs.dom.experimental.webrtc.RTCStatsReport] = js.native
   def replaceTrack(): js.Promise[Unit] = js.native
-  def replaceTrack(withTrack: MediaStreamTrack): js.Promise[Unit] = js.native
+  def replaceTrack(withTrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): js.Promise[Unit] = js.native
   def setParameters(parameters: RTCRtpSendParameters): js.Promise[Unit] = js.native
   def setStreams(streams: org.scalajs.dom.experimental.mediastream.MediaStream*): Unit = js.native
 }

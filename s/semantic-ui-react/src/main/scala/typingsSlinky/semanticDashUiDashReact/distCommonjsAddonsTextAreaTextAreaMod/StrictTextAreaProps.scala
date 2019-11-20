@@ -18,6 +18,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
+import typingsSlinky.react.reactMod.FormEvent
 import typingsSlinky.react.reactMod.TextareaHTMLAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -78,7 +79,7 @@ trait StrictTextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
   @JSName("onChange")
   var onChange_StrictTextAreaProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event], 
+      /* event */ FormEvent[org.scalajs.dom.raw.HTMLTextAreaElement], 
       /* data */ TextAreaProps, 
       Unit
     ]
@@ -92,7 +93,7 @@ trait StrictTextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
   @JSName("onInput")
   var onInput_StrictTextAreaProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event], 
+      /* event */ FormEvent[org.scalajs.dom.raw.HTMLTextAreaElement], 
       /* data */ TextAreaProps, 
       Unit
     ]
@@ -202,7 +203,7 @@ object StrictTextAreaProps {
     onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onCanPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
+    onChange: (/* event */ FormEvent[org.scalajs.dom.raw.HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
     onClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
@@ -225,7 +226,7 @@ object StrictTextAreaProps {
     onEnded: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onError: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onInput: (SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit = null,
+    onInput: (/* event */ FormEvent[org.scalajs.dom.raw.HTMLTextAreaElement], /* data */ TextAreaProps) => Unit = null,
     onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,

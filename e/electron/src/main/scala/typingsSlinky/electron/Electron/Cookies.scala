@@ -6,7 +6,6 @@ import typingsSlinky.electron.electronStrings.evicted
 import typingsSlinky.electron.electronStrings.expired
 import typingsSlinky.electron.electronStrings.explicit
 import typingsSlinky.electron.electronStrings.overwrite
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +40,7 @@ class Cookies () extends EventEmitter {
     * Sends a request to get all cookies matching filter, callback will be called with
     * callback(error, cookies) on complete. Deprecated Soon
     */
-  def get(filter: Filter, callback: js.Function2[/* error */ Error, /* cookies */ js.Array[Cookie], Unit]): Unit = js.native
+  def get(filter: Filter, callback: js.Function2[/* error */ js.Error, /* cookies */ js.Array[Cookie], Unit]): Unit = js.native
   // Docs: http://electronjs.org/docs/api/cookies
   /**
     * Emitted when a cookie is changed because it was added, edited, removed, or
@@ -94,6 +93,6 @@ class Cookies () extends EventEmitter {
     * Sets a cookie with details, callback will be called with callback(error) on
     * complete. Deprecated Soon
     */
-  def set(details: Details, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def set(details: Details, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
 }
 

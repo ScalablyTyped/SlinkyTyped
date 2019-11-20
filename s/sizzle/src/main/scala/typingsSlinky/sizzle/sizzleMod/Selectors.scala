@@ -1,6 +1,8 @@
 package typingsSlinky.sizzle.sizzleMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Element
 import typingsSlinky.sizzle.sizzleMod.Selectors.AttrHandleFunction
 import typingsSlinky.sizzle.sizzleMod.Selectors.AttrHandleFunctions
 import typingsSlinky.sizzle.sizzleMod.Selectors.CreatePseudoFunction
@@ -15,9 +17,6 @@ import typingsSlinky.sizzle.sizzleMod.Selectors.PseudoFunction
 import typingsSlinky.sizzle.sizzleMod.Selectors.PseudoFunctions
 import typingsSlinky.sizzle.sizzleMod.Selectors.SetFilterFunction
 import typingsSlinky.sizzle.sizzleMod.Selectors.SetFilterFunctions
-import typingsSlinky.std.Document
-import typingsSlinky.std.Element
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpMatchArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -50,7 +49,7 @@ object Selectors extends js.Object {
     js.Array[Element] | Unit
   ]
   type FindFunctions = StringDictionary[FindFunction]
-  type Matches = StringDictionary[RegExp]
+  type Matches = StringDictionary[js.RegExp]
   type PreFilterFunction = js.Function1[/* match */ RegExpMatchArray, js.Array[String]]
   type PreFilterFunctions = StringDictionary[PreFilterFunction]
   type PseudoFunction = js.Function1[/* elem */ Element, Boolean]

@@ -1,15 +1,14 @@
 package typingsSlinky.materialDashUi.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.materialDashUi.__MaterialUI.Tabs.TabsProps
 import typingsSlinky.materialDashUi.tabsMod.default
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.FormEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ object Tabs
     contentContainerStyle: CSSProperties = null,
     initialSelectedIndex: Int | Double = null,
     inkBarStyle: CSSProperties = null,
-    onChange: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* tab */ typingsSlinky.materialDashUi.__MaterialUI.Tabs.Tab) => Unit = null,
+    onChange: (/* value */ js.Any, /* e */ FormEvent[js.Object], /* tab */ typingsSlinky.materialDashUi.__MaterialUI.Tabs.Tab) => Unit = null,
     style: CSSProperties = null,
     tabItemContainerStyle: CSSProperties = null,
     tabTemplate: ReactComponentClass[_] = null,

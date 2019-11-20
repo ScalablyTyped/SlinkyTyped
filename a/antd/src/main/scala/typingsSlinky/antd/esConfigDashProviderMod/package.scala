@@ -5,10 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object esConfigDashProviderMod {
-  import typingsSlinky.react.reactMod.ClassicComponentClass
-  import typingsSlinky.react.reactMod.ComponentClass
-  import typingsSlinky.react.reactMod.ComponentState
-  import typingsSlinky.react.reactMod.StatelessComponent
+  import slinky.core.ReactComponentClass
 
-  type IReactComponent[P] = StatelessComponent[P] | (ComponentClass[P, ComponentState]) | ClassicComponentClass[P]
+  type IReactComponent[P] = ReactComponentClass[P] | ReactComponentClass[P] | ReactComponentClass[P]
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.antd.libListItemMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_Grid
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ class default () extends Item
 @JSImport("antd/lib/list/Item", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var Meta: js.Function1[/* props */ ListItemMetaProps, ReactElement] = js.native
+  var Meta: js.Function1[/* props */ ListItemMetaProps, Element] = js.native
   var contextTypes: Anon_Grid = js.native
 }
 

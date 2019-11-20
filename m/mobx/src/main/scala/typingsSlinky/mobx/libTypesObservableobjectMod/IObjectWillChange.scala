@@ -12,7 +12,7 @@ trait IObjectWillChange extends js.Object {
   var name: js.UndefOr[PropertyKey] = js.undefined
   var newValue: js.UndefOr[js.Any] = js.undefined
   var `object`: js.UndefOr[js.Any] = js.undefined
-  var `type`: js.UndefOr[add | remove | update] = js.undefined
+  var `type`: js.UndefOr[(update | add) with remove] = js.undefined
 }
 
 object IObjectWillChange {
@@ -21,7 +21,7 @@ object IObjectWillChange {
     name: PropertyKey = null,
     newValue: js.Any = null,
     `object`: js.Any = null,
-    `type`: add | remove | update = null
+    `type`: (update | add) with remove = null
   ): IObjectWillChange = {
     val __obj = js.Dynamic.literal()
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])

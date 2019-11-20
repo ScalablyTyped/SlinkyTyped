@@ -12,7 +12,7 @@ object quantile extends js.Object {
   def apply[T](
     array: Iterable[T],
     p: Double,
-    accessor: js.Function3[/* element */ T, /* i */ Double, /* array */ Iterable[T], js.UndefOr[Double | Null]]
+    accessor: js.Function3[/* element */ T, /* i */ Double, /* array */ js.Iterable[T], js.UndefOr[Double | Null]]
   ): js.UndefOr[Double] = js.native
 }
 

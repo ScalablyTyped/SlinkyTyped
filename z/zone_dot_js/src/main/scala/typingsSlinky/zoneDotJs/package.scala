@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object zoneDotJs {
-  import typingsSlinky.std.Window
+  import org.scalajs.dom.raw.Window
 
   /**
     * Patch Function to allow user define their own monkey patch module.

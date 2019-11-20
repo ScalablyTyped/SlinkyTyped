@@ -60,31 +60,37 @@ trait SVGSVGElement
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_SVGUnload(`type`: SVGUnload, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def addEventListener_SVGUnload(
+    `type`: SVGUnload,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]): Unit = js.native
+  def addEventListener_SVGZoom(
+    `type`: SVGZoom,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def animationsPaused(): scala.Boolean = js.native
@@ -101,8 +107,8 @@ trait SVGSVGElement
   def deselectAll(): Unit = js.native
   /** @deprecated */
   def forceRedraw(): Unit = js.native
-  def getComputedStyle(elt: Element): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
-  def getComputedStyle(elt: Element, pseudoElt: java.lang.String): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
+  def getComputedStyle(elt: org.scalajs.dom.raw.Element): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
+  def getComputedStyle(elt: org.scalajs.dom.raw.Element, pseudoElt: java.lang.String): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
   def getCurrentTime(): Double = js.native
   def getElementById(elementId: java.lang.String): org.scalajs.dom.raw.Element = js.native
   def getEnclosureList(rect: org.scalajs.dom.raw.SVGRect, referenceElement: org.scalajs.dom.raw.SVGElement): org.scalajs.dom.raw.NodeListOf[
@@ -126,31 +132,37 @@ trait SVGSVGElement
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_SVGUnload(`type`: SVGUnload, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def removeEventListener_SVGUnload(
+    `type`: SVGUnload,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]): Unit = js.native
+  def removeEventListener_SVGZoom(
+    `type`: SVGZoom,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.SVGZoomEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
   def setCurrentTime(seconds: Double): Unit = js.native

@@ -10,7 +10,7 @@ trait ISetDidChange[T] extends js.Object {
   var newValue: js.UndefOr[T] = js.undefined
   var `object`: js.UndefOr[ObservableSet[T]] = js.undefined
   var oldValue: js.UndefOr[T] = js.undefined
-  var `type`: js.UndefOr[add | delete] = js.undefined
+  var `type`: js.UndefOr[add with delete] = js.undefined
 }
 
 object ISetDidChange {
@@ -19,7 +19,7 @@ object ISetDidChange {
     newValue: T = null,
     `object`: ObservableSet[T] = null,
     oldValue: T = null,
-    `type`: add | delete = null
+    `type`: add with delete = null
   ): ISetDidChange[T] = {
     val __obj = js.Dynamic.literal()
     if (newValue != null) __obj.updateDynamic("newValue")(newValue.asInstanceOf[js.Any])

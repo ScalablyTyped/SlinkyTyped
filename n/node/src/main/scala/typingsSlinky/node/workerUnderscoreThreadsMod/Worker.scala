@@ -9,7 +9,6 @@ import typingsSlinky.node.nodeStrings.online
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.vmMod.Context
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,7 +78,7 @@ class Worker protected () extends EventEmitter {
   @JSName("once")
   def once_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   def postMessage(value: js.Any): Unit = js.native
-  def postMessage(value: js.Any, transferList: js.Array[ArrayBuffer | MessagePort]): Unit = js.native
+  def postMessage(value: js.Any, transferList: js.Array[scala.scalajs.js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
   @JSName("prependListener")

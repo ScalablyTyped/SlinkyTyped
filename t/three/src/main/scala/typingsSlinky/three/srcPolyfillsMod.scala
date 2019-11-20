@@ -1,14 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.Float64Array
-import typingsSlinky.std.Int16Array
-import typingsSlinky.std.Int32Array
-import typingsSlinky.std.Int8Array
-import typingsSlinky.std.Uint16Array
-import typingsSlinky.std.Uint32Array
-import typingsSlinky.std.Uint8Array
-import typingsSlinky.std.Uint8ClampedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +13,6 @@ object srcPolyfillsMod extends js.Object {
   def log(message: js.Any, optionalParams: js.Any*): Unit = js.native
   def warn(): Unit = js.native
   def warn(message: js.Any, optionalParams: js.Any*): Unit = js.native
-  type TypedArray = Int8Array | Uint8Array | Uint8ClampedArray | Int16Array | Uint16Array | Int32Array | Uint32Array | Float32Array | Float64Array
+  type TypedArray = scala.scalajs.js.typedarray.Int8Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Int16Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint32Array | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Float64Array
 }
 

@@ -11,11 +11,9 @@ package object libFormInterfaceMod {
   import typingsSlinky.antd.antdNumbers.`true`
   import typingsSlinky.antd.libFormFormMod.WrappedFormInternalProps
   import typingsSlinky.antd.libUnderscoreUtilTypeMod.Omit
-  import typingsSlinky.react.reactMod.ComponentClass
-  import typingsSlinky.react.reactMod.ComponentState
   import typingsSlinky.react.reactMod._Global_.JSX.LibraryManagedAttributes
 
-  type ConnectedComponentClass[C /* <: ReactComponentClass[_] */, P] = (ComponentClass[LibraryManagedAttributes[C, P], ComponentState]) with (NonReactStatics[C, js.Object]) with Anon_WrappedComponent[C]
+  type ConnectedComponentClass[C /* <: ReactComponentClass[_] */, P] = (ReactComponentClass[LibraryManagedAttributes[C, P]]) with (NonReactStatics[C, js.Object]) with Anon_WrappedComponent[C]
   type FormWrappedProps[TOwnProps /* <: WrappedFormInternalProps[_] */] = js.Function1[/* component */ js.Any, ConnectedComponentClass[js.Any, Omit[TOwnProps, String]]]
   type GetProps[C] = js.Any
   type Matching[InjectedProps, DecorationTargetProps] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 

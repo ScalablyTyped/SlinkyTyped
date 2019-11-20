@@ -1,8 +1,8 @@
 package typingsSlinky.antd.esSpinMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.esConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Spin
   def debouncifyUpdateSpinning(props: SpinProps): Unit = js.native
   def isNestedPattern(): Boolean = js.native
   def originalUpdateSpinning(): Unit = js.native
-  def renderSpin(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderSpin(hasGetPrefixCls: ConfigConsumerProps): Element = js.native
   def updateSpinning(): Unit = js.native
 }
 

@@ -1,25 +1,20 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_JumpNextIcon extends js.Object {
-  var jumpNextIcon: ReactElement
-  var jumpPrevIcon: ReactElement
-  var nextIcon: ReactElement
-  var prevIcon: ReactElement
+  var jumpNextIcon: Element
+  var jumpPrevIcon: Element
+  var nextIcon: Element
+  var prevIcon: Element
 }
 
 object Anon_JumpNextIcon {
   @scala.inline
-  def apply(
-    jumpNextIcon: ReactElement,
-    jumpPrevIcon: ReactElement,
-    nextIcon: ReactElement,
-    prevIcon: ReactElement
-  ): Anon_JumpNextIcon = {
+  def apply(jumpNextIcon: Element, jumpPrevIcon: Element, nextIcon: Element, prevIcon: Element): Anon_JumpNextIcon = {
     val __obj = js.Dynamic.literal(jumpNextIcon = jumpNextIcon.asInstanceOf[js.Any], jumpPrevIcon = jumpPrevIcon.asInstanceOf[js.Any], nextIcon = nextIcon.asInstanceOf[js.Any], prevIcon = prevIcon.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[Anon_JumpNextIcon]

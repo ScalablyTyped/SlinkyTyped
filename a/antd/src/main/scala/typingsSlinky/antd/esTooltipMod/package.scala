@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object esTooltipMod {
-  import typingsSlinky.react.reactMod.ReactNode
+  import slinky.core.TagMod
 
-  type RenderFunction = js.Function0[ReactNode]
+  type RenderFunction = js.Function0[TagMod[Any]]
 }

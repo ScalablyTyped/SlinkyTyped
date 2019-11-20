@@ -14,6 +14,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityTrait
 import typingsSlinky.reactDashNative.reactDashNativeMod.BackgroundPropType
+import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
@@ -85,8 +86,8 @@ abstract class SharedApply_IconButtonProps_562613305[ComponentRef <: js.Object] 
     onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
     onMagicTap: () => Unit = null,
     onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressIn: /* event */ GestureResponderEvent => Unit = null,
+    onPressOut: /* event */ GestureResponderEvent => Unit = null,
     onShowUnderlay: () => Unit = null,
     pressRetentionOffset: Insets = null,
     selectable: js.UndefOr[Boolean] = js.undefined,

@@ -11,35 +11,41 @@ import scala.scalajs.js.annotation._
 trait MediaDevices extends EventTarget {
   var ondevicechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   @JSName("addEventListener")
-  def addEventListener_devicechange(`type`: devicechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def addEventListener_devicechange(
+    `type`: devicechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_devicechange(
     `type`: devicechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_devicechange(
     `type`: devicechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def enumerateDevices(): js.Promise[js.Array[org.scalajs.dom.experimental.mediastream.MediaDeviceInfo]] = js.native
   def getSupportedConstraints(): org.scalajs.dom.experimental.mediastream.MediaTrackSupportedConstraints = js.native
   def getUserMedia(): js.Promise[org.scalajs.dom.experimental.mediastream.MediaStream] = js.native
-  def getUserMedia(constraints: MediaStreamConstraints): js.Promise[org.scalajs.dom.experimental.mediastream.MediaStream] = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_devicechange(`type`: devicechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
+  def getUserMedia(constraints: org.scalajs.dom.experimental.mediastream.MediaStreamConstraints): js.Promise[org.scalajs.dom.experimental.mediastream.MediaStream] = js.native
   @JSName("removeEventListener")
   def removeEventListener_devicechange(
     `type`: devicechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_devicechange(
+    `type`: devicechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_devicechange(
     `type`: devicechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

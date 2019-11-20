@@ -131,7 +131,7 @@ trait Node extends EventTarget {
   /**
     * Returns true if other is an inclusive descendant of node, and false otherwise.
     */
-  def contains(other: Node): scala.Boolean = js.native
+  def contains(other: org.scalajs.dom.raw.Node): scala.Boolean = js.native
   /**
     * Returns node's root.
     */
@@ -142,16 +142,16 @@ trait Node extends EventTarget {
     */
   def hasChildNodes(): scala.Boolean = js.native
   def insertBefore[T /* <: org.scalajs.dom.raw.Node */](newChild: T): T = js.native
-  def insertBefore[T /* <: org.scalajs.dom.raw.Node */](newChild: T, refChild: Node): T = js.native
+  def insertBefore[T /* <: org.scalajs.dom.raw.Node */](newChild: T, refChild: org.scalajs.dom.raw.Node): T = js.native
   def isDefaultNamespace(): scala.Boolean = js.native
   def isDefaultNamespace(namespace: java.lang.String): scala.Boolean = js.native
   def isEqualNode(): scala.Boolean = js.native
   /**
     * Returns whether node and otherNode have the same properties.
     */
-  def isEqualNode(otherNode: Node): scala.Boolean = js.native
+  def isEqualNode(otherNode: org.scalajs.dom.raw.Node): scala.Boolean = js.native
   def isSameNode(): scala.Boolean = js.native
-  def isSameNode(otherNode: Node): scala.Boolean = js.native
+  def isSameNode(otherNode: org.scalajs.dom.raw.Node): scala.Boolean = js.native
   def lookupNamespaceURI(): java.lang.String | Null = js.native
   def lookupNamespaceURI(prefix: java.lang.String): java.lang.String | Null = js.native
   def lookupPrefix(): java.lang.String | Null = js.native

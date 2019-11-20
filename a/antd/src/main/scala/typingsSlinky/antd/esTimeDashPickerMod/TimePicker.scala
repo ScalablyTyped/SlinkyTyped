@@ -1,10 +1,10 @@
 package typingsSlinky.antd.esTimeDashPickerMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.Anon_Open
 import typingsSlinky.antd.Anon_Placeholder
 import typingsSlinky.moment.momentMod.Moment
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +20,9 @@ trait TimePicker
   def getDefaultLocale(): Anon_Placeholder = js.native
   def handleChange(value: Moment): Unit = js.native
   def handleOpenClose(hasOpen: Anon_Open): Unit = js.native
-  def renderClearIcon(prefixCls: String): ReactElement = js.native
-  def renderInputIcon(prefixCls: String): ReactElement = js.native
-  def renderTimePicker(locale: TimePickerLocale): ReactElement = js.native
+  def renderClearIcon(prefixCls: String): Element = js.native
+  def renderInputIcon(prefixCls: String): Element = js.native
+  def renderTimePicker(locale: TimePickerLocale): Element = js.native
   def saveTimePicker(timePickerRef: js.Any): Unit = js.native
 }
 
