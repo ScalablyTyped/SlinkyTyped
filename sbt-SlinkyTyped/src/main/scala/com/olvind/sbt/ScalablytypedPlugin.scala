@@ -75,6 +75,7 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val expo = "org.scalablytyped.slinky" % "expo_sjs0.6_2.12" % "35.0.1-d693e4"
         val `expo-asset` = "org.scalablytyped.slinky" % "expo-asset_sjs0.6_2.12" % "7.0.0-3ffba0"
         val `expo-constants` = "org.scalablytyped.slinky" % "expo-constants_sjs0.6_2.12" % "7.0.1-c70e9b"
+        val `expo-file-system` = "org.scalablytyped.slinky" % "expo-file-system_sjs0.6_2.12" % "7.0.0-c14952"
         val `expo-font` = "org.scalablytyped.slinky" % "expo-font_sjs0.6_2.12" % "7.0.0-1d4609"
         val `expo-keep-awake` = "org.scalablytyped.slinky" % "expo-keep-awake_sjs0.6_2.12" % "7.0.0-834aa5"
         val `expo-linear-gradient` = "org.scalablytyped.slinky" % "expo-linear-gradient_sjs0.6_2.12" % "7.0.1-096673"

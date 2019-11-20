@@ -112,6 +112,7 @@
 | 18 | [express-serve-static-core](./e/express-serve-static-core) | only here to make types work
 | 17 | [d3-contour](./d/d3-contour) | Compute contour polygons using marching squares.
 | 15 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod
+| 14 | [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de
 | 13 | [mobx-react-lite](./m/mobx-react-lite) | Lightweight React bindings for MobX based on React
 | 12 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components
 | 10 | [d3-fetch](./d/d3-fetch) | Convenient parsing for Fetch.

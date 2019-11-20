@@ -118,6 +118,7 @@
 | 0.37350654328165894 | [react-transition-group](./r/react-transition-group) | A react component toolset for managing animations
 | 0.297688377530792 | [webpack-env](./w/webpack-env) | read variables from a .env.js file and make them a
 | 0.2863432487598562 | [material-ui](./m/material-ui) | React Components that Implement Google's Material 
+| 0.2660196288285239 | [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de
 | 0.2642997114552468 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa
 | 0.2638860131798402 | [expo-permissions](./e/expo-permissions) | Allows you prompt for various permissions to acces
 | 0.2637256505476768 | [expo-constants](./e/expo-constants) | Provides system information that remains constant 

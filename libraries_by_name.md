@@ -54,6 +54,7 @@
 | [expo](./e/expo) | The Expo SDK | expo |
 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa | react-native, expo, asset |
 | [expo-constants](./e/expo-constants) | Provides system information that remains constant  | react-native, expo, constants |
+| [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de | react-native, expo, file-system, file |
 | [expo-font](./e/expo-font) | Load fonts at runtime and use them in React Native | react-native, expo, font |
 | [expo-keep-awake](./e/expo-keep-awake) | Provides a React component that prevents the scree | react-native, expo, awake, keep-awake |
 | [expo-linear-gradient](./e/expo-linear-gradient) | Provides a React component that renders a gradient | react-native, expo, gradient |
