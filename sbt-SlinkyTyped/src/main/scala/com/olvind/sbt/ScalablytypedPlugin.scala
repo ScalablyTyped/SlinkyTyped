@@ -15,11 +15,11 @@ object SlinkyTypedPlugin extends AutoPlugin {
     object SlinkyTyped {
       object A {
         val angular__common = "org.scalablytyped.slinky" % "angular__common_sjs0.6_2.12" % "8.2.14-7ed894"
-        val angular__compiler = "org.scalablytyped.slinky" % "angular__compiler_sjs0.6_2.12" % "8.2.14-4c1079"
+        val angular__compiler = "org.scalablytyped.slinky" % "angular__compiler_sjs0.6_2.12" % "8.2.14-6bac98"
         val angular__core = "org.scalablytyped.slinky" % "angular__core_sjs0.6_2.12" % "8.2.14-f85740"
         val angular__forms = "org.scalablytyped.slinky" % "angular__forms_sjs0.6_2.12" % "8.2.14-471ad5"
         val `angular__platform-browser` = "org.scalablytyped.slinky" % "angular__platform-browser_sjs0.6_2.12" % "8.2.14-b2eae3"
-        val `angular__platform-browser-dynamic` = "org.scalablytyped.slinky" % "angular__platform-browser-dynamic_sjs0.6_2.12" % "8.2.14-8f5737"
+        val `angular__platform-browser-dynamic` = "org.scalablytyped.slinky" % "angular__platform-browser-dynamic_sjs0.6_2.12" % "8.2.14-415c53"
         val angular__router = "org.scalablytyped.slinky" % "angular__router_sjs0.6_2.12" % "8.2.14-27ac52"
         val `ant-design__create-react-context` = "org.scalablytyped.slinky" % "ant-design__create-react-context_sjs0.6_2.12" % "0.2.4-6ccba0"
         val antd = "org.scalablytyped.slinky" % "antd_sjs0.6_2.12" % "3.25.1-dd7950"
@@ -72,18 +72,18 @@ object SlinkyTypedPlugin extends AutoPlugin {
       object E {
         val electron = "org.scalablytyped.slinky" % "electron_sjs0.6_2.12" % "6.1.4-becf21"
         val exenv = "org.scalablytyped.slinky" % "exenv_sjs0.6_2.12" % "1.2-dt-20180321Z-5ef5c8"
-        val expo = "org.scalablytyped.slinky" % "expo_sjs0.6_2.12" % "35.0.1-d693e4"
+        val expo = "org.scalablytyped.slinky" % "expo_sjs0.6_2.12" % "35.0.1-7738e8"
         val `expo-asset` = "org.scalablytyped.slinky" % "expo-asset_sjs0.6_2.12" % "7.0.0-3ffba0"
         val `expo-constants` = "org.scalablytyped.slinky" % "expo-constants_sjs0.6_2.12" % "7.0.1-c70e9b"
-        val `expo-file-system` = "org.scalablytyped.slinky" % "expo-file-system_sjs0.6_2.12" % "7.0.0-c14952"
+        val `expo-file-system` = "org.scalablytyped.slinky" % "expo-file-system_sjs0.6_2.12" % "7.0.0-f96ebc"
         val `expo-font` = "org.scalablytyped.slinky" % "expo-font_sjs0.6_2.12" % "7.0.0-1d4609"
         val `expo-keep-awake` = "org.scalablytyped.slinky" % "expo-keep-awake_sjs0.6_2.12" % "7.0.0-834aa5"
-        val `expo-linear-gradient` = "org.scalablytyped.slinky" % "expo-linear-gradient_sjs0.6_2.12" % "7.0.1-096673"
-        val `expo-location` = "org.scalablytyped.slinky" % "expo-location_sjs0.6_2.12" % "7.0.0-cffdf1"
+        val `expo-linear-gradient` = "org.scalablytyped.slinky" % "expo-linear-gradient_sjs0.6_2.12" % "7.0.1-076215"
+        val `expo-location` = "org.scalablytyped.slinky" % "expo-location_sjs0.6_2.12" % "7.0.0-1cf4d1"
         val `expo-permissions` = "org.scalablytyped.slinky" % "expo-permissions_sjs0.6_2.12" % "7.0.0-7229cc"
         val `expo-sqlite` = "org.scalablytyped.slinky" % "expo-sqlite_sjs0.6_2.12" % "7.0.0-d507e8"
         val `expo-web-browser` = "org.scalablytyped.slinky" % "expo-web-browser_sjs0.6_2.12" % "7.0.1-6ff874"
-        val `expo__vector-icons` = "org.scalablytyped.slinky" % "expo__vector-icons_sjs0.6_2.12" % "9.0-dt-20190213Z-a46c0c"
+        val `expo__vector-icons` = "org.scalablytyped.slinky" % "expo__vector-icons_sjs0.6_2.12" % "9.0-dt-20190213Z-2b6b43"
         val express = "org.scalablytyped.slinky" % "express_sjs0.6_2.12" % "4.17-dt-20191101Z-51baa9"
         val `express-serve-static-core` = "org.scalablytyped.slinky" % "express-serve-static-core_sjs0.6_2.12" % "4.16-dt-20191101Z-595890"
         val `extract-zip` = "org.scalablytyped.slinky" % "extract-zip_sjs0.6_2.12" % "1.6-dt-20180214Z-4b0615"
@@ -108,8 +108,8 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `is-buffer` = "org.scalablytyped.slinky" % "is-buffer_sjs0.6_2.12" % "2.0-dt-20181210Z-85e7cb"
       }
       object J {
-        val jquery = "org.scalablytyped.slinky" % "jquery_sjs0.6_2.12" % "3.3-dt-20190815Z-df13ed"
-        val jqueryui = "org.scalablytyped.slinky" % "jqueryui_sjs0.6_2.12" % "1.12-dt-20191104Z-04b7e6"
+        val jquery = "org.scalablytyped.slinky" % "jquery_sjs0.6_2.12" % "3.3-dt-20190815Z-e4ae29"
+        val jqueryui = "org.scalablytyped.slinky" % "jqueryui_sjs0.6_2.12" % "1.12-dt-20191104Z-4e06ff"
         val jss = "org.scalablytyped.slinky" % "jss_sjs0.6_2.12" % "10.0.0-9a9978"
       }
       object L {
@@ -121,7 +121,7 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `material-ui__core` = "org.scalablytyped.slinky" % "material-ui__core_sjs0.6_2.12" % "3.9.3-24beb2"
         val `material-ui__icons` = "org.scalablytyped.slinky" % "material-ui__icons_sjs0.6_2.12" % "4.5.1-83325c"
         val mime = "org.scalablytyped.slinky" % "mime_sjs0.6_2.12" % "2.0-dt-20190205Z-943153"
-        val mobx = "org.scalablytyped.slinky" % "mobx_sjs0.6_2.12" % "5.14.2-97d2f1"
+        val mobx = "org.scalablytyped.slinky" % "mobx_sjs0.6_2.12" % "5.14.2-fb3a0a"
         val `mobx-react` = "org.scalablytyped.slinky" % "mobx-react_sjs0.6_2.12" % "6.1.4-814f89"
         val `mobx-react-lite` = "org.scalablytyped.slinky" % "mobx-react-lite_sjs0.6_2.12" % "1.5.0-407731"
         val moment = "org.scalablytyped.slinky" % "moment_sjs0.6_2.12" % "2.24.0-a82e98"
@@ -147,10 +147,10 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `react-dom` = "org.scalablytyped.slinky" % "react-dom_sjs0.6_2.12" % "16.9-dt-20191106Z-f466bf"
         val `react-is` = "org.scalablytyped.slinky" % "react-is_sjs0.6_2.12" % "16.7-dt-20190212Z-abe0a3"
         val `react-lifecycles-compat` = "org.scalablytyped.slinky" % "react-lifecycles-compat_sjs0.6_2.12" % "3.0-dt-20190116Z-3ef69b"
-        val `react-native` = "org.scalablytyped.slinky" % "react-native_sjs0.6_2.12" % "0.60-dt-20191028Z-3b382c"
-        val `react-native-gesture-handler` = "org.scalablytyped.slinky" % "react-native-gesture-handler_sjs0.6_2.12" % "1.5.0-a06e28"
-        val `react-native-vector-icons` = "org.scalablytyped.slinky" % "react-native-vector-icons_sjs0.6_2.12" % "6.4-dt-20190930Z-d9082a"
-        val `react-navigation` = "org.scalablytyped.slinky" % "react-navigation_sjs0.6_2.12" % "4.0.10-32486b"
+        val `react-native` = "org.scalablytyped.slinky" % "react-native_sjs0.6_2.12" % "0.60-dt-20191028Z-da99e7"
+        val `react-native-gesture-handler` = "org.scalablytyped.slinky" % "react-native-gesture-handler_sjs0.6_2.12" % "1.5.0-eeb9d4"
+        val `react-native-vector-icons` = "org.scalablytyped.slinky" % "react-native-vector-icons_sjs0.6_2.12" % "6.4-dt-20190930Z-2273ce"
+        val `react-navigation` = "org.scalablytyped.slinky" % "react-navigation_sjs0.6_2.12" % "4.0.10-0b145f"
         val `react-redux` = "org.scalablytyped.slinky" % "react-redux_sjs0.6_2.12" % "7.1-dt-20191018Z-03bf24"
         val `react-router` = "org.scalablytyped.slinky" % "react-router_sjs0.6_2.12" % "5.1-dt-20191113Z-a3db2c"
         val `react-router-dom` = "org.scalablytyped.slinky" % "react-router-dom_sjs0.6_2.12" % "5.1-dt-20191101Z-fa29ab"
@@ -170,7 +170,7 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `stardust-ui__react-component-ref` = "org.scalablytyped.slinky" % "stardust-ui__react-component-ref_sjs0.6_2.12" % "0.38.0-27d456"
         val std = "org.scalablytyped.slinky" % "std_sjs0.6_2.12" % "3.7-5d968d"
         val storybook__react = "org.scalablytyped.slinky" % "storybook__react_sjs0.6_2.12" % "4.0-dt-20190605Z-aa9126"
-        val `styled-components` = "org.scalablytyped.slinky" % "styled-components_sjs0.6_2.12" % "4.4-dt-20191109Z-6d7f03"
+        val `styled-components` = "org.scalablytyped.slinky" % "styled-components_sjs0.6_2.12" % "4.4-dt-20191109Z-df0a39"
         val `symbol-observable` = "org.scalablytyped.slinky" % "symbol-observable_sjs0.6_2.12" % "1.2.0-4c1e7f"
       }
       object T {
@@ -179,8 +179,8 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val typescript = "org.scalablytyped.slinky" % "typescript_sjs0.6_2.12" % "3.7.2-ef0434"
       }
       object U {
-        val unimodules__core = "org.scalablytyped.slinky" % "unimodules__core_sjs0.6_2.12" % "4.0.0-6f6211"
-        val `unimodules__react-native-adapter` = "org.scalablytyped.slinky" % "unimodules__react-native-adapter_sjs0.6_2.12" % "4.0.0-2dd136"
+        val unimodules__core = "org.scalablytyped.slinky" % "unimodules__core_sjs0.6_2.12" % "4.0.0-e2cc4e"
+        val `unimodules__react-native-adapter` = "org.scalablytyped.slinky" % "unimodules__react-native-adapter_sjs0.6_2.12" % "4.0.0-e7aeef"
       }
       object V {
         val vue = "org.scalablytyped.slinky" % "vue_sjs0.6_2.12" % "2.6.10-37aa6a"

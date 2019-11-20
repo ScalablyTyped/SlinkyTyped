@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery"
-version := "3.3-dt-20190815Z-df13ed"
+version := "3.3-dt-20190815Z-e4ae29"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

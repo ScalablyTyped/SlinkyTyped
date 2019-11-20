@@ -22,13 +22,11 @@ object buildLaunchAppLoadingMod extends js.Object {
     def componentWillUnmount_MAppLoading(): Unit = js.native
   }
   
-  @js.native
-  trait Props extends js.Object {
-    var autoHideSplash: js.UndefOr[Boolean] = js.native
-    var onError: js.UndefOr[(js.Function1[/* error */ js.Error, Unit]) | Null] = js.native
-    var onFinish: js.UndefOr[js.Function0[Unit] | Null] = js.native
-    var startAsync: js.UndefOr[js.Function0[js.Promise[Unit]] | Null] = js.native
-  }
+  /* Rewritten from type alias, can be one of: 
+    - typings.expo.Anon_AutoHideSplash
+    - typings.expo.Anon_OnError
+  */
+  trait Props extends js.Object
   
   @js.native
   class default () extends AppLoading

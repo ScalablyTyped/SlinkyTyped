@@ -15151,9 +15151,8 @@ trait JQueryStatic extends js.Object {
     * @since 1.1
     */
   def speed[TElement /* <: Element */](): EffectsOptions[TElement] = js.native
+  def speed[TElement /* <: Element */](duration_complete_settings: Duration | SpeedSettings[TElement]): EffectsOptions[TElement] = js.native
   def speed[TElement /* <: Element */](duration_complete_settings: js.ThisFunction0[/* this */ TElement, Unit]): EffectsOptions[TElement] = js.native
-  def speed[TElement /* <: Element */](duration_complete_settings: Duration): EffectsOptions[TElement] = js.native
-  def speed[TElement /* <: Element */](duration_complete_settings: SpeedSettings[TElement]): EffectsOptions[TElement] = js.native
   /**
     * Creates an object containing a set of properties ready to be used in the definition of custom animations.
     * @param duration A string or number determining how long the animation will run.

@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "angular__platform-browser-dynamic"
-version := "8.2.14-8f5737"
+version := "8.2.14-415c53"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-4c1079",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-6bac98",
   "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-f85740",
   "org.scalablytyped.slinky" %%% "rxjs" % "6.5.3-8be359",
   "org.scalablytyped.slinky" %%% "std" % "3.7-5d968d")
