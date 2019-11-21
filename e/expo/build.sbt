@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "expo"
-version := "35.0.1-7738e8"
+version := "35.0.1-c41465"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -12,9 +12,9 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "fbemitter" % "2.0.0-dt-20190503Z-d05665",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-1735fa",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191025Z-c3107a",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.60-dt-20191028Z-da99e7",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.60-dt-20191028Z-df5406",
   "org.scalablytyped.slinky" %%% "std" % "3.7-5d968d",
-  "org.scalablytyped.slinky" %%% "unimodules__react-native-adapter" % "4.0.0-e7aeef")
+  "org.scalablytyped.slinky" %%% "unimodules__react-native-adapter" % "4.0.0-72c44b")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

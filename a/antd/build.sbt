@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "antd"
-version := "3.25.1-dd7950"
+version := "3.25.1-cfb094"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

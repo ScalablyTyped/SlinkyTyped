@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "mobx-react"
-version := "6.1.4-814f89"
+version := "6.1.4-61f687"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

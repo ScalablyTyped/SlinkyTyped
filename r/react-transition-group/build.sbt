@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-transition-group"
-version := "4.2-dt-20191002Z-eacb23"
+version := "4.2-dt-20191002Z-4834c5"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
