@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
 object Provider
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mobxDashReact.mobxDashReactMod.Provider] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.mobxDashReact.mobxDashReactMod.Provider].asInstanceOf[String | js.Object]

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NotificationAirlineSeatFlatAngled
-  extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatFlatAngled] {
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatFlatAngled] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatFlatAngled].asInstanceOf[String | js.Object]
 }
 

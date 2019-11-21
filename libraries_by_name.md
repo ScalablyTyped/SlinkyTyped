@@ -105,6 +105,7 @@
 | [react-is](./r/react-is) | Brand checking of React Elements. | react |
 | [react-lifecycles-compat](./r/react-lifecycles-compat) | Backwards compatibility polyfill for React class c | - |
 | [react-native](./r/react-native) | A framework for building native apps using React | - |
+| [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A | - |
 | [react-native-vector-icons](./r/react-native-vector-icons) | Customizable Icons for React Native with support f | react-native, react-component, react-native-component, react, mobile, ios, android, osx, windows, macos, ui, icon, icons, vector, retina, font |
 | [react-navigation](./r/react-navigation) | Routing and navigation for your React Native apps | - |
 | [react-redux](./r/react-redux) | Official React bindings for Redux | react, reactjs, redux |

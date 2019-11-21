@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AvRecentActors
-  extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.AvRecentActors] {
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.AvRecentActors] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.AvRecentActors].asInstanceOf[String | js.Object]
 }
 

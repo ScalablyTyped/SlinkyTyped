@@ -10,6 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
 object ThemedTextInput
   extends ExternalComponentWithAttributesWithRefType[tag.type, TextInput] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.Themed.TextInput].asInstanceOf[String | js.Object]

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MapsLocalMall
-  extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.MapsLocalMall] {
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.MapsLocalMall] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.MapsLocalMall].asInstanceOf[String | js.Object]
 }
 

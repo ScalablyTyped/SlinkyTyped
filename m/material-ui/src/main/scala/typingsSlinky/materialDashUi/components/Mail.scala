@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Mail extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[default] {
+object Mail extends SharedApply_SvgIconProps657215518[default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsContentMailMod.default].asInstanceOf[String | js.Object]
 }
 

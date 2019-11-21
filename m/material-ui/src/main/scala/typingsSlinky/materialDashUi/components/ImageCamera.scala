@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageCamera
-  extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageCamera] {
+  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageCamera] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageCamera].asInstanceOf[String | js.Object]
 }
 

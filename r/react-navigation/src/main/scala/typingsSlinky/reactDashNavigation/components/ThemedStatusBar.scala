@@ -10,6 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
 object ThemedStatusBar
   extends ExternalComponentWithAttributesWithRefType[tag.type, StatusBar] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.Themed.StatusBar].asInstanceOf[String | js.Object]

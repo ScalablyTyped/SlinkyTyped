@@ -97,6 +97,7 @@
 | 69 | [d3-zoom](./d/d3-zoom) | Pan and zoom SVG, HTML or Canvas using mouse or to
 | 64 | [d3-path](./d/d3-path) | Serialize Canvas path commands to SVG.
 | 64 | [d3-timer](./d/d3-timer) | An efficient queue capable of managing thousands o
+| 60 | [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A
 | 51 | [d3-voronoi](./d/d3-voronoi) | Compute the Voronoi diagram of a set of two-dimens
 | 40 | [p5](./p/p5) | -
 | 36 | [expo__vector-icons](./e/expo__vector-icons) | Built-in support for popular icon fonts and the to

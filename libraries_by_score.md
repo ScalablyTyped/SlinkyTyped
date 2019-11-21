@@ -72,6 +72,7 @@
 | 0.7420278635883741 | [d3-polygon](./d/d3-polygon) | Operations for two-dimensional polygons.
 | 0.7410988657029798 | [d3-chord](./d/d3-chord) | Visualize relationships or network flow with an ae
 | 0.7349616109339006 | [zone_dot_js](./z/zone_dot_js) | Zones for JavaScript
+| 0.7335005328784803 | [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A
 | 0.7325183174699612 | [fbemitter](./f/fbemitter) | Facebook's EventEmitter is a simple emitter implem
 | 0.7268676036804045 | [semantic-ui-react__event-](./s/semantic-ui-react__event-stack) |  Event Stack
 | 0.7209447659381857 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components

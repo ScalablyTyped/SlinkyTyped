@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
 object Modal
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.Modal] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.Modal].asInstanceOf[String | js.Object]
