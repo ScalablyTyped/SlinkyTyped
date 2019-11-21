@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AccountDashCircle extends SharedApply_SvgIconProps657215518[default] {
+object AccountDashCircle extends SharedApply_typingsSlinkymaterialDashUiMaterialUISvgIconProps657215518[default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsActionAccountDashCircleMod.default].asInstanceOf[String | js.Object]
 }
 

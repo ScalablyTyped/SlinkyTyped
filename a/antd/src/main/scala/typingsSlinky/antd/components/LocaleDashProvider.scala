@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocaleDashProvider extends SharedApply_LocaleProviderProps_1159056697[default] {
+object LocaleDashProvider extends SharedApply_typingsSlinkyantdesLocaleDashProviderModLocaleProviderProps_1159056697[default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esLocaleDashProviderMod.default].asInstanceOf[String | js.Object]
 }
 

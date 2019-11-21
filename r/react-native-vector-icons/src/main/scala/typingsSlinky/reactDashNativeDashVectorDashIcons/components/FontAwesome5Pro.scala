@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FontAwesome5Pro extends SharedApply_Object152536094[default] {
+object FontAwesome5Pro extends SharedApply_jsObject152536094[default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5ProMod.default].asInstanceOf[String | js.Object]
 }
 

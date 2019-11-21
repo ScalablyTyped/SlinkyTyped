@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RefFindNode extends SharedApply_RefProps_896306386[default] {
+object RefFindNode extends SharedApply_typingsSlinkyatStardustDashUiReactDashComponentDashRefdistEsTypesModRefProps_896306386[default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.atStardustDashUiReactDashComponentDashRef.distEsRefFindNodeMod.default].asInstanceOf[String | js.Object]
 }
 
