@@ -48,10 +48,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, selected */
 object TabBarIOSItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.TabBarIOSItem] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.TabBarIOSItem].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, selected */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,

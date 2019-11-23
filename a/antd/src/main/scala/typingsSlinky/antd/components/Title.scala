@@ -18,10 +18,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, id */
 object Title
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.antd.esTypographyTitleMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     `aria-label`: String = null,
     code: js.UndefOr[Boolean] = js.undefined,

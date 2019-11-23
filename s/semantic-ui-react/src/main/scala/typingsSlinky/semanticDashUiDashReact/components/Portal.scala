@@ -13,12 +13,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: open */
 object Portal
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsPortalMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: open */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     closeOnDocumentClick: js.UndefOr[Boolean] = js.undefined,
     closeOnEscape: js.UndefOr[Boolean] = js.undefined,
     closeOnPortalMouseLeave: js.UndefOr[Boolean] = js.undefined,
@@ -42,7 +41,6 @@ object Portal
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(closeOnDocumentClick)) __obj.updateDynamic("closeOnDocumentClick")(closeOnDocumentClick.asInstanceOf[js.Any])
     if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.asInstanceOf[js.Any])
     if (!js.isUndefined(closeOnPortalMouseLeave)) __obj.updateDynamic("closeOnPortalMouseLeave")(closeOnPortalMouseLeave.asInstanceOf[js.Any])

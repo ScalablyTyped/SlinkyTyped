@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: disabled */
 object Button
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.Button] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.Button].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit,
     title: String,

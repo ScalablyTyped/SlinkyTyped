@@ -53,6 +53,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.middle
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.none
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.numeric
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.off
@@ -73,6 +74,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.top
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.tree
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.url
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
 import typingsSlinky.react.reactMod.CSSProperties
@@ -277,6 +279,7 @@ trait TableCellProps extends js.Object {
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var title: js.UndefOr[String] = js.undefined
+  var translate: js.UndefOr[yes | no] = js.undefined
   var typeof: js.UndefOr[String] = js.undefined
   var unselectable: js.UndefOr[on | off] = js.undefined
   var valign: js.UndefOr[top | middle | bottom | baseline] = js.undefined
@@ -467,6 +470,7 @@ object TableCellProps {
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     tabIndex: Int | Double = null,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     valign: top | middle | bottom | baseline = null,
@@ -654,6 +658,7 @@ object TableCellProps {
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])

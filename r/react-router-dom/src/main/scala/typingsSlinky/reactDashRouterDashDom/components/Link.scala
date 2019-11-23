@@ -38,6 +38,7 @@ import typingsSlinky.react.reactStrings.location
 import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
@@ -56,18 +57,19 @@ import typingsSlinky.react.reactStrings.time
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
+import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.LinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, download, draggable, hidden, href, id, lang, media, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rel, spellCheck, suppressContentEditableWarning, tabIndex, target, type */
 object Link
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
       typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Link[js.Any]
     ] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Link[js.Any]].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, download, draggable, hidden, href, id, lang, media, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rel, spellCheck, suppressContentEditableWarning, tabIndex, target, type */
   def apply[S](
     to: LocationDescriptor[S] | (js.Function1[/* location */ Location[S], LocationDescriptor[S]]),
     about: String = null,
@@ -154,6 +156,7 @@ object Link
     style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
@@ -247,6 +250,7 @@ object Link
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])

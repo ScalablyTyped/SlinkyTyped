@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_TreeSelectProps47308460[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: autoFocus, className, defaultValue, disabled, id, multiple, onBlur, onFocus, onSelect, open, tabIndex, value */
   def apply(
     allowClear: js.UndefOr[Boolean] = js.undefined,
     autoClearSearchValue: js.UndefOr[Boolean] = js.undefined,

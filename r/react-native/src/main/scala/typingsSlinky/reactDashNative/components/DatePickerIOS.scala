@@ -49,10 +49,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object DatePickerIOS
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.DatePickerIOS] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.DatePickerIOS].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     date: js.Date,
     onDateChange: js.Date => Unit,

@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_ButtonGroupProps_1279699987 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className */
   def apply(
     prefixCls: String = null,
     size: ButtonSize = null,

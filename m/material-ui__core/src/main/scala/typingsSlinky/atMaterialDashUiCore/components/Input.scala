@@ -39,6 +39,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.location
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.none
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.numeric
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.off
@@ -57,6 +58,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.time
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.tree
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.url
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.inputBaseInputBaseMod.InputBaseComponentProps
 import typingsSlinky.atMaterialDashUiCore.inputInputMod.InputProps
 import typingsSlinky.atMaterialDashUiCore.inputMod.default
@@ -66,10 +68,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoComplete, autoFocus, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, hidden, id, lang, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, readOnly, required, spellCheck, suppressContentEditableWarning, tabIndex, type, value */
 object Input
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.inputMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoComplete, autoFocus, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, hidden, id, lang, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, readOnly, required, spellCheck, suppressContentEditableWarning, tabIndex, type, value */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -165,6 +167,7 @@ object Input
     style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
@@ -265,6 +268,7 @@ object Input
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])

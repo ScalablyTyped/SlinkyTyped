@@ -21,12 +21,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled */
 object Rating
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesRatingMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     as: js.Any = null,
     clearable: Boolean | auto = null,
     defaultRating: Double | String = null,
@@ -38,7 +37,6 @@ object Rating
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (clearable != null) __obj.updateDynamic("clearable")(clearable.asInstanceOf[js.Any])
     if (defaultRating != null) __obj.updateDynamic("defaultRating")(defaultRating.asInstanceOf[js.Any])

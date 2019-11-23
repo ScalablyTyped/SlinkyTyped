@@ -17,10 +17,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, multiple, onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp, open, value */
 object IconMenu
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.iconMenuMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, multiple, onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp, open, value */
   def apply(
     iconButtonElement: ReactElement,
     anchorOrigin: origin = null,

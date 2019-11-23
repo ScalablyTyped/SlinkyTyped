@@ -18,12 +18,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object List
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     animated: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
     bulleted: js.UndefOr[Boolean] = js.undefined,
@@ -44,7 +43,6 @@ object List
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(bulleted)) __obj.updateDynamic("bulleted")(bulleted.asInstanceOf[js.Any])

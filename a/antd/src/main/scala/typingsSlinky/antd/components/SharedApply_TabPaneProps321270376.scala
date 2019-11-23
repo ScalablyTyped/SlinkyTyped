@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_TabPaneProps321270376 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     closable: js.UndefOr[Boolean] = js.undefined,
     forceRender: js.UndefOr[Boolean] = js.undefined,

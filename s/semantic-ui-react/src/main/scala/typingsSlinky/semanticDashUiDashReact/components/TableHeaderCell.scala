@@ -41,6 +41,7 @@ import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.middle
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
@@ -61,6 +62,7 @@ import typingsSlinky.react.reactStrings.top
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
+import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsTableTableHeaderCellMod.TableHeaderCellProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsIconIconMod.IconProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandContent
@@ -71,12 +73,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, colSpan, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, headers, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rowSpan, scope, spellCheck, suppressContentEditableWarning, tabIndex */
 object TableHeaderCell
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsTableTableHeaderCellMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, colSpan, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, headers, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rowSpan, scope, spellCheck, suppressContentEditableWarning, tabIndex */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     about: String = null,
     accessKey: String = null,
     active: js.UndefOr[Boolean] = js.undefined,
@@ -168,6 +169,7 @@ object TableHeaderCell
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     textAlign: typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.center | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.left | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.right = null,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     valign: top | middle | bottom | baseline = null,
@@ -178,7 +180,6 @@ object TableHeaderCell
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -270,6 +271,7 @@ object TableHeaderCell
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])

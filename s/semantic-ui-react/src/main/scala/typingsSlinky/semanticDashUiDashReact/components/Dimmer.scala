@@ -14,13 +14,11 @@ object Dimmer
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesDimmerMod.default].asInstanceOf[String | js.Object]
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     active: js.UndefOr[Boolean] = js.undefined,
     page: js.UndefOr[Boolean] = js.undefined,
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

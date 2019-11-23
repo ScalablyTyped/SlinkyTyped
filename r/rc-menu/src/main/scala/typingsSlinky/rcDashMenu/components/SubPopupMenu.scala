@@ -22,10 +22,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, id, multiple, onClick, onSelect */
 object SubPopupMenu
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.rcDashMenu.esSubPopupMenuMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, id, multiple, onClick, onSelect */
   def apply(
     activeKey: String = null,
     builtinPlacements: BuiltinPlacements = null,

@@ -24,12 +24,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, width */
 object Sidebar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesSidebarMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, width */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     animation: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`) = null,
     as: js.Any = null,
     content: SemanticShorthandContent = null,
@@ -43,7 +42,6 @@ object Sidebar
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])

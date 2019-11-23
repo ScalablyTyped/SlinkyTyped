@@ -46,6 +46,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.location
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.none
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.numeric
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.off
@@ -64,6 +65,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.time
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.tree
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.url
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
 import typingsSlinky.atMaterialDashUiCore.buttonBaseTouchRippleMod.TouchRippleProps
 import typingsSlinky.react.Anon_Html
@@ -300,6 +302,7 @@ trait ListItemProps extends js.Object {
   var tabIndex: js.UndefOr[Double] = js.undefined
   var target: js.UndefOr[String] = js.undefined
   var title: js.UndefOr[String] = js.undefined
+  var translate: js.UndefOr[yes | no] = js.undefined
   var `type`: js.UndefOr[String] = js.undefined
   var typeof: js.UndefOr[String] = js.undefined
   var unselectable: js.UndefOr[on | off] = js.undefined
@@ -516,6 +519,7 @@ object ListItemProps {
     tabIndex: Int | Double = null,
     target: String = null,
     title: String = null,
+    translate: yes | no = null,
     `type`: String = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -729,6 +733,7 @@ object ListItemProps {
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])

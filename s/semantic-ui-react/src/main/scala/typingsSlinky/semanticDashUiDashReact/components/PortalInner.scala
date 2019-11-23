@@ -14,7 +14,6 @@ object PortalInner
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsPortalPortalInnerMod.default].asInstanceOf[String | js.Object]
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     innerRef: typingsSlinky.react.reactMod.Ref[_] = null,
     mountNode: js.Any = null,
     onMount: (/* nothing */ Null, /* data */ PortalInnerProps) => Unit = null,
@@ -22,7 +21,6 @@ object PortalInner
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
     if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
     if (onMount != null) __obj.updateDynamic("onMount")(js.Any.fromFunction2(onMount))

@@ -18,10 +18,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, htmlFor, id, required */
 object FormItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esFormFormItemMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, htmlFor, id, required */
   def apply(
     colon: js.UndefOr[Boolean] = js.undefined,
     extra: TagMod[Any] = null,

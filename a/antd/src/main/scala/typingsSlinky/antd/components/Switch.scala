@@ -14,10 +14,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoFocus, checked, className, defaultChecked, disabled */
 object Switch
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSwitchMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoFocus, checked, className, defaultChecked, disabled */
   def apply(
     checkedChildren: TagMod[Any] = null,
     loading: js.UndefOr[Boolean] = js.undefined,

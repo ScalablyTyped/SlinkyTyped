@@ -1,7 +1,7 @@
 package typingsSlinky.node.moduleMod
 
 import typingsSlinky.node.NodeJS.Module
-import typingsSlinky.node.NodeRequireFunction
+import typingsSlinky.node.NodeRequire
 import typingsSlinky.node.TypeofClassModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,11 +19,11 @@ class ^ protected () extends Module {
 object ^ extends js.Object {
   var Module: TypeofClassModule = js.native
   var builtinModules: js.Array[java.lang.String] = js.native
-  def createRequire(path: java.lang.String): NodeRequireFunction = js.native
+  def createRequire(path: java.lang.String): NodeRequire = js.native
   /**
     * @deprecated Deprecated since: v12.2.0. Please use createRequire() instead.
     */
-  def createRequireFromPath(path: java.lang.String): NodeRequireFunction = js.native
+  def createRequireFromPath(path: java.lang.String): NodeRequire = js.native
   def runMain(): Unit = js.native
   def wrap(code: java.lang.String): java.lang.String = js.native
 }

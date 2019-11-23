@@ -18,12 +18,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, hidden, href */
 object Image
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsImageMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, hidden, href */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     as: js.Any = null,
     avatar: js.UndefOr[Boolean] = js.undefined,
     bordered: js.UndefOr[Boolean] = js.undefined,
@@ -44,7 +43,6 @@ object Image
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(avatar)) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
     if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])

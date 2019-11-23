@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(typingsSlinky), Name(reactDashNavigation), Name(reactDashNavigationMod), Name(ThemedStatusBarProps))) was not a @ScalaJSDefined trait */
 object ThemedStatusBar
   extends ExternalComponentWithAttributesWithRefType[tag.type, StatusBar] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.Themed.StatusBar].asInstanceOf[String | js.Object]
@@ -20,6 +20,6 @@ object ThemedStatusBar
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = js.Object
+  type Props = ThemedStatusBarProps
 }
 

@@ -26,6 +26,7 @@ import typingsSlinky.antd.antdStrings.location
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.numeric
 import typingsSlinky.antd.antdStrings.off
@@ -44,6 +45,7 @@ import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
 import typingsSlinky.react.reactMod.CSSProperties
@@ -242,6 +244,7 @@ trait WeakValidationMapBasicProps extends js.Object {
   var suppressHydrationWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var tabIndex: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
   var title: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var translate: js.UndefOr[Validator[js.UndefOr[yes | no | Null]]] = js.undefined
   var typeof: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var unselectable: js.UndefOr[Validator[js.UndefOr[on | off | Null]]] = js.undefined
   var vocab: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
@@ -421,6 +424,7 @@ object WeakValidationMapBasicProps {
     suppressHydrationWarning: Validator[js.UndefOr[Boolean | Null]] = null,
     tabIndex: Validator[js.UndefOr[Double | Null]] = null,
     title: Validator[js.UndefOr[Null | String]] = null,
+    translate: Validator[js.UndefOr[yes | no | Null]] = null,
     typeof: Validator[js.UndefOr[Null | String]] = null,
     unselectable: Validator[js.UndefOr[on | off | Null]] = null,
     vocab: Validator[js.UndefOr[Null | String]] = null
@@ -597,6 +601,7 @@ object WeakValidationMapBasicProps {
     if (suppressHydrationWarning != null) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])

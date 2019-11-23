@@ -14,13 +14,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: disabled */
 object Pagination
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsPaginationMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     totalPages: Double | String,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     activePage: Double | String = null,
     `aria-label`: String = null,
     boundaryRange: Double | String = null,
@@ -36,7 +35,6 @@ object Pagination
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(totalPages = totalPages.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (activePage != null) __obj.updateDynamic("activePage")(activePage.asInstanceOf[js.Any])
     if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
     if (boundaryRange != null) __obj.updateDynamic("boundaryRange")(boundaryRange.asInstanceOf[js.Any])

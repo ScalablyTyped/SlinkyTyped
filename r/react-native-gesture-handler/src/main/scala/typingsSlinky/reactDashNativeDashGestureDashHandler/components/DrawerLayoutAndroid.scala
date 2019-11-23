@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(<intersection>))) was not a @ScalaJSDefined trait */
 object DrawerLayoutAndroid
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
@@ -28,6 +28,6 @@ object DrawerLayoutAndroid
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = js.Object
+  type Props = js.Any with js.Any
 }
 

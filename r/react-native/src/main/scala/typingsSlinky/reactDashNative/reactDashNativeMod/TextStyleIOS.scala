@@ -11,7 +11,6 @@ import typingsSlinky.reactDashNative.reactDashNativeStrings.`space-evenly`
 import typingsSlinky.reactDashNative.reactDashNativeStrings.`wrap-reverse`
 import typingsSlinky.reactDashNative.reactDashNativeStrings.absolute
 import typingsSlinky.reactDashNative.reactDashNativeStrings.auto
-import typingsSlinky.reactDashNative.reactDashNativeStrings.capitalize
 import typingsSlinky.reactDashNative.reactDashNativeStrings.center
 import typingsSlinky.reactDashNative.reactDashNativeStrings.column
 import typingsSlinky.reactDashNative.reactDashNativeStrings.dashed
@@ -20,7 +19,6 @@ import typingsSlinky.reactDashNative.reactDashNativeStrings.double
 import typingsSlinky.reactDashNative.reactDashNativeStrings.flex
 import typingsSlinky.reactDashNative.reactDashNativeStrings.hidden
 import typingsSlinky.reactDashNative.reactDashNativeStrings.inherit
-import typingsSlinky.reactDashNative.reactDashNativeStrings.lowercase
 import typingsSlinky.reactDashNative.reactDashNativeStrings.ltr
 import typingsSlinky.reactDashNative.reactDashNativeStrings.none
 import typingsSlinky.reactDashNative.reactDashNativeStrings.nowrap
@@ -30,7 +28,6 @@ import typingsSlinky.reactDashNative.reactDashNativeStrings.rtl
 import typingsSlinky.reactDashNative.reactDashNativeStrings.scroll
 import typingsSlinky.reactDashNative.reactDashNativeStrings.solid
 import typingsSlinky.reactDashNative.reactDashNativeStrings.stretch
-import typingsSlinky.reactDashNative.reactDashNativeStrings.uppercase
 import typingsSlinky.reactDashNative.reactDashNativeStrings.visible
 import typingsSlinky.reactDashNative.reactDashNativeStrings.wrap
 import scala.scalajs.js
@@ -42,7 +39,6 @@ trait TextStyleIOS extends ViewStyle {
   var letterSpacing: js.UndefOr[Double] = js.undefined
   var textDecorationColor: js.UndefOr[String] = js.undefined
   var textDecorationStyle: js.UndefOr[solid | double | dotted | dashed] = js.undefined
-  var textTransform: js.UndefOr[none | capitalize | uppercase | lowercase] = js.undefined
   var writingDirection: js.UndefOr[auto | ltr | rtl] = js.undefined
 }
 
@@ -132,7 +128,6 @@ object TextStyleIOS {
     testID: String = null,
     textDecorationColor: String = null,
     textDecorationStyle: solid | double | dotted | dashed = null,
-    textTransform: none | capitalize | uppercase | lowercase = null,
     top: Double | String = null,
     transform: js.Array[
       PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
@@ -228,7 +223,6 @@ object TextStyleIOS {
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (textDecorationColor != null) __obj.updateDynamic("textDecorationColor")(textDecorationColor.asInstanceOf[js.Any])
     if (textDecorationStyle != null) __obj.updateDynamic("textDecorationStyle")(textDecorationStyle.asInstanceOf[js.Any])
-    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
     if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     if (transformMatrix != null) __obj.updateDynamic("transformMatrix")(transformMatrix.asInstanceOf[js.Any])

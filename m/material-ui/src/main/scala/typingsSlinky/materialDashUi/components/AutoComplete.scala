@@ -18,10 +18,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoComplete, autoFocus, className, defaultValue, disabled, id, name, onBlur, onFocus, onKeyDown, onKeyPress, onKeyUp, open, placeholder, required, rows, type, value */
 object AutoComplete
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.autoCompleteMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoComplete, autoFocus, className, defaultValue, disabled, id, name, onBlur, onFocus, onKeyDown, onKeyPress, onKeyUp, open, placeholder, required, rows, type, value */
   def apply(
     dataSource: js.Array[js.Any],
     anchorOrigin: origin = null,

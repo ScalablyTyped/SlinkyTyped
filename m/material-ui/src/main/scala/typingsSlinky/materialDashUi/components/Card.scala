@@ -11,10 +11,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object Card
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.cardMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
     actAsExpander: js.UndefOr[Boolean] = js.undefined,
     containerStyle: CSSProperties = null,

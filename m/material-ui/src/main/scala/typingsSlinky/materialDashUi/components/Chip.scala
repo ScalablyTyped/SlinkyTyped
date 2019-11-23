@@ -13,10 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, onClick */
 object Chip
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.chipMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, onClick */
   def apply(
     backgroundColor: String = null,
     containerElement: TagMod[Any] | String = null,

@@ -23,6 +23,8 @@
 | 0.8686256042686501 | [classnames](./c/classnames) | A simple utility for conditionally joining classNa
 | 0.8559662710609182 | [mobx](./m/mobx) | Simple, scalable state management.
 | 0.8480957376901669 | [range-parser](./r/range-parser) | Range header field string parser
+| 0.8456781801176817 | [emotion__core](./e/emotion__core) | > Simple styling in React.
+| 0.8413993878960144 | [emotion__styled](./e/emotion__styled) | styled API for emotion
 | 0.8412487726084428 | [is-buffer](./i/is-buffer) | Determine if an object is a Buffer
 | 0.8408400059319283 | [jquery](./j/jquery) | JavaScript library for DOM operations
 | 0.8402478775232729 | [styled-components](./s/styled-components) | Visual primitives for the component age. Use the b
@@ -35,7 +37,9 @@
 | 0.8137741944295251 | [semantic-ui-react](./s/semantic-ui-react) | The official Semantic-UI-React integration.
 | 0.8109971390672888 | [react-navigation](./r/react-navigation) | Routing and navigation for your React Native apps
 | 0.8103451979597169 | [prop-types](./p/prop-types) | Runtime type checking for React props and similar 
+| 0.8083117948168715 | [storybook__addons](./s/storybook__addons) | Storybook addons store
 | 0.8045981137930154 | [react-lifecycles-compat](./r/react-lifecycles-compat) | Backwards compatibility polyfill for React class c
+| 0.8035359109143616 | [emotion-theming](./e/emotion-theming) | A CSS-in-JS theming solution, inspired by styled-c
 | 0.8019434198206964 | [d3-array](./d/d3-array) | Array manipulation, ordering, searching, summarizi
 | 0.8014389835044692 | [csstype](./c/csstype) | Strict TypeScript and Flow types for style based o
 | 0.796272689202419 | [d3-selection](./d/d3-selection) | Data-driven DOM manipulation: select elements and 
@@ -43,13 +47,16 @@
 | 0.791408308924628 | [storybook__react](./s/storybook__react) | Storybook for React: Develop React Component in is
 | 0.7907942063863884 | [d3-interpolate](./d/d3-interpolate) | Interpolate numbers, colors, strings, arrays, obje
 | 0.7898015764398297 | [d3-format](./d/d3-format) | Format numbers for human consumption.
+| 0.7894599487886123 | [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C
 | 0.7878327988545798 | [mobx-react](./m/mobx-react) | React bindings for MobX. Create fully reactive com
 | 0.7853542877264458 | [d3-color](./d/d3-color) | Color spaces
 | 0.7802463412849392 | [rc-menu](./r/rc-menu) | menu ui component for react
+| 0.7784652963964236 | [reach__router](./r/reach__router) | Next generation Routing for React.
 | 0.7774844147408719 | [d3-ease](./d/d3-ease) | Easing functions for smooth animation.
 | 0.7771644222938678 | [chart_dot_js](./c/chart_dot_js) | Simple HTML5 charts using the canvas element.
 | 0.7757477817485094 | [fortawesome__react-fontaw](./f/fortawesome__react-fontawesome) | Official React component for Font Awesome 5
 | 0.7755962872277395 | [d3-collection](./d/d3-collection) | Handy data structures for elements keyed by string
+| 0.774939492270841 | [emotion__styled-base](./e/emotion__styled-base) | base styled API for emotion
 | 0.7748906908678601 | [jss](./j/jss) | A lib for generating Style Sheets with JavaScript.
 | 0.7726783181650779 | [d3-time](./d/d3-time) | A calculator for humanity’s peculiar conventions o
 | 0.771600176918632 | [d3-dsv](./d/d3-dsv) | A parser and formatter for delimiter-separated val
@@ -62,8 +69,11 @@
 | 0.7645665618937796 | [d3-axis](./d/d3-axis) | Displays automatic reference lines for scales.
 | 0.7638553887397809 | [react-native-vector-icons](./r/react-native-vector-icons) | Customizable Icons for React Native with support f
 | 0.7636806693465898 | [d3-voronoi](./d/d3-voronoi) | Compute the Voronoi diagram of a set of two-dimens
+| 0.7628056673817432 | [emotion__serialize](./e/emotion__serialize) | serialization utils for emotion
 | 0.7612463398174641 | [d3-scale-chromatic](./d/d3-scale-chromatic) | Sequential, diverging and categorical color scheme
+| 0.7590703322234311 | [emotion__utils](./e/emotion__utils) | internal utils for emotion
 | 0.7588797608747706 | [d3-dispatch](./d/d3-dispatch) | Register named callbacks and call them with argume
+| 0.7541159974021516 | [storybook__theming](./s/storybook__theming) | Core Storybook Components
 | 0.7520508763189195 | [d3-quadtree](./d/d3-quadtree) | Two-dimensional recursive spatial subdivision.
 | 0.7499719932821403 | [axios](./a/axios) | Promise based HTTP client for the browser and node
 | 0.745658295104639 | [three](./t/three) | JavaScript 3D library
@@ -105,6 +115,7 @@
 | 0.4459310706705006 | [geojson](./g/geojson) | Turn your geo data into GeoJSON
 | 0.4369727257081056 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-svg-core) | The iconic font, CSS, and SVG framework
 | 0.4319382928610536 | [fortawesome__free-solid-s](./f/fortawesome__free-solid-svg-icons) | The iconic font, CSS, and SVG framework
+| 0.4209512976787247 | [storybook__router](./s/storybook__router) | Core Storybook Router
 | 0.4150271819811402 | [node](./n/node) | node
 | 0.3903397716692805 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod
 | 0.38986961382447155 | [angular__core](./a/angular__core) | Angular - the core framework
@@ -125,6 +136,7 @@
 | 0.2612288492689746 | [expo](./e/expo) | The Expo SDK
 | 0.2593881852719644 | [expo-location](./e/expo-location) | Allows reading geolocation information from the de
 | 0.2575282187715448 | [expo-font](./e/expo-font) | Load fonts at runtime and use them in React Native
+| 0.23611292077675586 | [storybook__api](./s/storybook__api) | Core Storybook API & Context
 | 0.2206836177885578 | [expo-sqlite](./e/expo-sqlite) | Provides access to a database that can be queried 
 | 0.220364097752757 | [expo-linear-gradient](./e/expo-linear-gradient) | Provides a React component that renders a gradient
 | 0.2200783110698394 | [expo-web-browser](./e/expo-web-browser) | Provides access to the system's web browser and su

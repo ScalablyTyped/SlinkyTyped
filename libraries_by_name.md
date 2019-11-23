@@ -50,6 +50,12 @@
 | [d3-voronoi](./d/d3-voronoi) | Compute the Voronoi diagram of a set of two-dimens | d3, d3-module, voronoi, delaunay |
 | [d3-zoom](./d/d3-zoom) | Pan and zoom SVG, HTML or Canvas using mouse or to | d3, d3-module, zoom, behavior, interaction |
 | [electron](./e/electron) | Build cross platform desktop apps with JavaScript, | electron |
+| [emotion-theming](./e/emotion-theming) | A CSS-in-JS theming solution, inspired by styled-c | react, theme, theming, emotion, cssinjs, css-in-js |
+| [emotion__core](./e/emotion__core) | > Simple styling in React. | - |
+| [emotion__serialize](./e/emotion__serialize) | serialization utils for emotion | - |
+| [emotion__styled](./e/emotion__styled) | styled API for emotion | - |
+| [emotion__styled-base](./e/emotion__styled-base) | base styled API for emotion | - |
+| [emotion__utils](./e/emotion__utils) | internal utils for emotion | - |
 | [exenv](./e/exenv) | React's ExecutionEnvironment module extracted for  | react, browser, server, environment, env, execution, executionenvironment |
 | [expo](./e/expo) | The Expo SDK | expo |
 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa | react-native, expo, asset |
@@ -98,6 +104,7 @@
 | [range-parser](./r/range-parser) | Range header field string parser | range, parser, http |
 | [rc-mentions](./r/rc-mentions) | React Mentions | react, react-component, react-mentions, mentions |
 | [rc-menu](./r/rc-menu) | menu ui component for react | react, react-component, menu, ui, react-menu |
+| [reach__router](./r/reach__router) | Next generation Routing for React. | react, react router |
 | [react](./r/react) | React is a JavaScript library for building user in | react |
 | [react-addons-linked-state](./r/react-addons-linked-state-mixin) | >**Note:** >This is a legacy React addon, and is n | react, react-addon |
 | [react-big-calendar](./r/react-big-calendar) | Calendar | scheduler, react-component, react, calendar, events, full calendar |
@@ -124,7 +131,12 @@
 | [sizzle](./s/sizzle) | A pure-JavaScript, bottom-up CSS selector engine d | sizzle, javascript, CSS, selector, jquery |
 | [stardust-ui__react-compon](./s/stardust-ui__react-component-ref) | A set of components and utils to deal with React r | - |
 | [std](./s/std) | TypeScript is a language for application scale Jav | TypeScript, Microsoft, compiler, language, javascript |
+| [storybook__addons](./s/storybook__addons) | Storybook addons store | storybook |
+| [storybook__api](./s/storybook__api) | Core Storybook API & Context | storybook |
+| [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C | storybook |
 | [storybook__react](./s/storybook__react) | Storybook for React: Develop React Component in is | storybook |
+| [storybook__router](./s/storybook__router) | Core Storybook Router | storybook |
+| [storybook__theming](./s/storybook__theming) | Core Storybook Components | storybook |
 | [styled-components](./s/styled-components) | Visual primitives for the component age. Use the b | react, css, css-in-js, styled-components, babel-macro, babel-macros, styling |
 | [symbol-observable](./s/symbol-observable) | Symbol.observable ponyfill | symbol, observable, observables, ponyfill, polyfill, shim |
 | [three](./t/three) | JavaScript 3D library | three, three.js, 3d, webgl |

@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object Comment
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCommentMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
     content: TagMod[Any],
     actions: js.Array[TagMod[Any]] = null,

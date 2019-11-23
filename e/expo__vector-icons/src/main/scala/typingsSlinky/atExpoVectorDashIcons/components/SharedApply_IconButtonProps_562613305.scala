@@ -45,6 +45,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_IconButtonProps_562613305[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: disabled, name, onBlur, onFocus, size */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,

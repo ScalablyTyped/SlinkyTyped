@@ -17,7 +17,6 @@ object Transition
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesTransitionMod.default].asInstanceOf[String | js.Object]
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     animation: SemanticTRANSITIONS | String = null,
     directional: js.UndefOr[Boolean] = js.undefined,
     duration: Double | String | TransitionPropDuration = null,
@@ -33,7 +32,6 @@ object Transition
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
     if (!js.isUndefined(directional)) __obj.updateDynamic("directional")(directional.asInstanceOf[js.Any])
     if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])

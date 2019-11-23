@@ -10,10 +10,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object AutoCompleteDivider
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.materialDashUi.autoCompleteMod.default.Divider.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
     inset: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,

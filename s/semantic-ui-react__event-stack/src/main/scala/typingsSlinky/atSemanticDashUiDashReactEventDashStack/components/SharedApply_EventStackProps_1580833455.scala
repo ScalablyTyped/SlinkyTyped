@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_EventStackProps_1580833455[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: name */
   def apply(
     on: InputEventListener,
     pool: String = null,

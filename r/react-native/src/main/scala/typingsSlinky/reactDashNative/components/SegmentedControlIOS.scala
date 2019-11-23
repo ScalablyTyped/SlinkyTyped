@@ -35,10 +35,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onChange, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object SegmentedControlIOS
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.SegmentedControlIOS] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.SegmentedControlIOS].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onChange, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,

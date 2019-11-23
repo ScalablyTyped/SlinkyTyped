@@ -42,10 +42,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object DrawerLayoutAndroid
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.DrawerLayoutAndroid] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.DrawerLayoutAndroid].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     renderNavigationView: () => typingsSlinky.react.reactMod._Global_.JSX.Element,
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,

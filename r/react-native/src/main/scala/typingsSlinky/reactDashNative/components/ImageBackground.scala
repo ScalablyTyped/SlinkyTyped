@@ -37,10 +37,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onError, onLoad, onProgress */
 object ImageBackground
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.ImageBackground] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.ImageBackground].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onError, onLoad, onProgress */
   def apply(
     source: ImageSourcePropType,
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,

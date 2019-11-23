@@ -10,10 +10,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled */
 object MenuDivider
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.antd.esMod.Menu.Divider.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     rootPrefixCls: String = null,
     style: CSSProperties = null,

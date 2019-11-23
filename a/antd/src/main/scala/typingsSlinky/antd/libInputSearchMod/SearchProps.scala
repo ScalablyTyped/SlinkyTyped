@@ -42,6 +42,7 @@ import typingsSlinky.antd.antdStrings.location
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.numeric
 import typingsSlinky.antd.antdStrings.off
@@ -61,6 +62,7 @@ import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
 import typingsSlinky.react.reactMod.CSSProperties
@@ -301,6 +303,7 @@ trait SearchProps extends js.Object {
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var title: js.UndefOr[String] = js.undefined
+  var translate: js.UndefOr[yes | no] = js.undefined
   var `type`: js.UndefOr[String] = js.undefined
   var typeof: js.UndefOr[String] = js.undefined
   var unselectable: js.UndefOr[on | off] = js.undefined
@@ -521,6 +524,7 @@ object SearchProps {
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     tabIndex: Int | Double = null,
     title: String = null,
+    translate: yes | no = null,
     `type`: String = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -736,6 +740,7 @@ object SearchProps {
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])

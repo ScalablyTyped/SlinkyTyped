@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(scala), Name(scalajs), Name(js), Name(Any))) was not a @ScalaJSDefined trait */
 object BreadcrumbSeparator
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esBreadcrumbBreadcrumbSeparatorMod.default].asInstanceOf[String | js.Object]
@@ -19,6 +19,6 @@ object BreadcrumbSeparator
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = js.Object
+  type Props = js.Any
 }
 

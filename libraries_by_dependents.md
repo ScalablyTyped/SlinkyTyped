@@ -64,11 +64,13 @@
 | 322 | [semantic-ui-react](./s/semantic-ui-react) | The official Semantic-UI-React integration.
 | 319 | [react-slick](./r/react-slick) | React port of slick carousel
 | 293 | [range-parser](./r/range-parser) | Range header field string parser
+| 288 | [emotion__core](./e/emotion__core) | > Simple styling in React.
 | 280 | [jss](./j/jss) | A lib for generating Style Sheets with JavaScript.
 | 226 | [d3-interpolate](./d/d3-interpolate) | Interpolate numbers, colors, strings, arrays, obje
 | 224 | [redux-devtools-extension](./r/redux-devtools-extension) | Wrappers for Redux DevTools Extension.
 | 221 | [is-buffer](./i/is-buffer) | Determine if an object is a Buffer
 | 214 | [exenv](./e/exenv) | React's ExecutionEnvironment module extracted for 
+| 213 | [emotion__styled](./e/emotion__styled) | styled API for emotion
 | 210 | [symbol-observable](./s/symbol-observable) | Symbol.observable ponyfill
 | 202 | [d3-format](./d/d3-format) | Format numbers for human consumption.
 | 196 | [react-navigation](./r/react-navigation) | Routing and navigation for your React Native apps
@@ -80,6 +82,8 @@
 | 151 | [expo](./e/expo) | The Expo SDK
 | 136 | [react-is](./r/react-is) | Brand checking of React Elements.
 | 135 | [d3-axis](./d/d3-axis) | Displays automatic reference lines for scales.
+| 135 | [storybook__addons](./s/storybook__addons) | Storybook addons store
+| 127 | [emotion-theming](./e/emotion-theming) | A CSS-in-JS theming solution, inspired by styled-c
 | 120 | [d3-hierarchy](./d/d3-hierarchy) | Layout algorithms for visualizing hierarchical dat
 | 120 | [fbemitter](./f/fbemitter) | Facebook's EventEmitter is a simple emitter implem
 | 119 | [d3-collection](./d/d3-collection) | Handy data structures for elements keyed by string
@@ -99,9 +103,11 @@
 | 64 | [d3-timer](./d/d3-timer) | An efficient queue capable of managing thousands o
 | 60 | [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A
 | 51 | [d3-voronoi](./d/d3-voronoi) | Compute the Voronoi diagram of a set of two-dimens
+| 50 | [reach__router](./r/reach__router) | Next generation Routing for React.
 | 40 | [p5](./p/p5) | -
 | 36 | [expo__vector-icons](./e/expo__vector-icons) | Built-in support for popular icon fonts and the to
 | 33 | [geojson](./g/geojson) | Turn your geo data into GeoJSON
+| 31 | [storybook__theming](./s/storybook__theming) | Core Storybook Components
 | 27 | [d3-random](./d/d3-random) | Generate random numbers from various distributions
 | 26 | [react-big-calendar](./r/react-big-calendar) | Calendar
 | 24 | [sizzle](./s/sizzle) | A pure-JavaScript, bottom-up CSS selector engine d
@@ -109,18 +115,24 @@
 | 22 | [d3-chord](./d/d3-chord) | Visualize relationships or network flow with an ae
 | 22 | [d3-quadtree](./d/d3-quadtree) | Two-dimensional recursive spatial subdivision.
 | 22 | [jqueryui](./j/jqueryui) | A curated set of user interface interactions, effe
+| 18 | [emotion__utils](./e/emotion__utils) | internal utils for emotion
 | 18 | [express-serve-static-core](./e/express-serve-static-core) | only here to make types work
 | 17 | [d3-contour](./d/d3-contour) | Compute contour polygons using marching squares.
 | 15 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod
 | 14 | [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de
+| 14 | [storybook__api](./s/storybook__api) | Core Storybook API & Context
 | 13 | [mobx-react-lite](./m/mobx-react-lite) | Lightweight React bindings for MobX based on React
 | 12 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components
+| 11 | [emotion__serialize](./e/emotion__serialize) | serialization utils for emotion
 | 10 | [d3-fetch](./d/d3-fetch) | Convenient parsing for Fetch.
 | 10 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa
 | 10 | [expo-permissions](./e/expo-permissions) | Allows you prompt for various permissions to acces
 | 10 | [react-addons-linked-state](./r/react-addons-linked-state-mixin) | >**Note:** >This is a legacy React addon, and is n
+| 10 | [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C
 | 9 | [expo-constants](./e/expo-constants) | Provides system information that remains constant 
 | 9 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-common-types) | The iconic font, CSS, and SVG framework
+| 7 | [emotion__styled-base](./e/emotion__styled-base) | base styled API for emotion
+| 7 | [storybook__router](./s/storybook__router) | Core Storybook Router
 | 5 | [semantic-ui-react__event-](./s/semantic-ui-react__event-stack) |  Event Stack
 | 4 | [expo-location](./e/expo-location) | Allows reading geolocation information from the de
 | 4 | [unimodules__react-native-](./u/unimodules__react-native-adapter) | The adapter to use universal modules with the Reac

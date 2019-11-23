@@ -46,6 +46,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.location
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.none
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.numeric
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.off
@@ -64,6 +65,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.time
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.tree
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.url
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.transitionsTransitionMod.TransitionProps
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
@@ -282,6 +284,7 @@ trait SnackbarProps extends js.Object {
   var tabIndex: js.UndefOr[Double] = js.undefined
   var title: js.UndefOr[String] = js.undefined
   var transitionDuration: js.UndefOr[Double | Anon_Appear] = js.undefined
+  var translate: js.UndefOr[yes | no] = js.undefined
   var typeof: js.UndefOr[String] = js.undefined
   var unselectable: js.UndefOr[on | off] = js.undefined
   var vocab: js.UndefOr[String] = js.undefined
@@ -480,6 +483,7 @@ object SnackbarProps {
     tabIndex: Int | Double = null,
     title: String = null,
     transitionDuration: Double | Anon_Appear = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null
@@ -674,6 +678,7 @@ object SnackbarProps {
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])

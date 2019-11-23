@@ -48,6 +48,7 @@ import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.middle
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
@@ -67,6 +68,7 @@ import typingsSlinky.react.reactStrings.top
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
+import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsIconIconMod.IconProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandContent
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandItem
@@ -302,6 +304,7 @@ object StrictTableCellProps {
     tabIndex: Int | Double = null,
     textAlign: center | left | right = null,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     valign: top | middle | bottom | baseline = null,
@@ -497,6 +500,7 @@ object StrictTableCellProps {
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])

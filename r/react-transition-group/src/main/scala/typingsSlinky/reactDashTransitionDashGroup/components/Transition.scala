@@ -17,7 +17,6 @@ object Transition
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashTransitionDashGroup.transitionMod.default].asInstanceOf[String | js.Object]
   def apply(
     timeout: Double | Anon_Appear,
-    StringDictionary: /* prop */ StringDictionary[js.Any] = null,
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,
     appear: js.UndefOr[Boolean] = js.undefined,
     enter: js.UndefOr[Boolean] = js.undefined,
@@ -34,7 +33,6 @@ object Transition
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (addEndListener != null) __obj.updateDynamic("addEndListener")(js.Any.fromFunction2(addEndListener))
     if (!js.isUndefined(appear)) __obj.updateDynamic("appear")(appear.asInstanceOf[js.Any])
     if (!js.isUndefined(enter)) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])

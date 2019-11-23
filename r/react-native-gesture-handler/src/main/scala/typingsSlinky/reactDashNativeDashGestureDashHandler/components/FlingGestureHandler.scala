@@ -17,13 +17,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: id */
 object FlingGestureHandler
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.FlingGestureHandler
     ] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.FlingGestureHandler].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: id */
   def apply(
     direction: Int | Double = null,
     enabled: js.UndefOr[Boolean] = js.undefined,

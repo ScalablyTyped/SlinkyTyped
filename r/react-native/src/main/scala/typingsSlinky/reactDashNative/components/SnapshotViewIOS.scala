@@ -35,10 +35,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object SnapshotViewIOS
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.SnapshotViewIOS] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.SnapshotViewIOS].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     onSnapshotReady: () => js.Any,
     testIdentifier: String,

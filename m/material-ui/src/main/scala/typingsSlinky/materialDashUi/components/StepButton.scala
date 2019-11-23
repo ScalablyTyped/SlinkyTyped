@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: disabled, href, onBlur, onClick, onFocus, onKeyDown, onKeyUp, onMouseEnter, onMouseLeave, onTouchStart, tabIndex, target, type */
 object StepButton
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.materialDashUi.stepperMod.StepButton] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.stepperMod.StepButton].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: disabled, href, onBlur, onClick, onFocus, onKeyDown, onKeyUp, onMouseEnter, onMouseLeave, onTouchStart, tabIndex, target, type */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     centerRipple: js.UndefOr[Boolean] = js.undefined,

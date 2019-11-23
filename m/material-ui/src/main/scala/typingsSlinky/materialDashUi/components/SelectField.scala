@@ -14,10 +14,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, id, multiple, name, onBlur, onFocus */
 object SelectField
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.selectFieldMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, id, multiple, name, onBlur, onFocus */
   def apply(
     autoWidth: js.UndefOr[Boolean] = js.undefined,
     dropDownMenuProps: DropDownMenuProps = null,

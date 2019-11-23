@@ -15,10 +15,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, draggable, rows */
 object ReactDashSlick
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashSlick.reactDashSlickMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, draggable, rows */
   def apply(
     accessibility: js.UndefOr[Boolean] = js.undefined,
     adaptiveHeight: js.UndefOr[Boolean] = js.undefined,

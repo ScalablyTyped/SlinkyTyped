@@ -28,12 +28,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object Label
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsElementsLabelMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     active: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
     attached: top | bottom | (`top right`) | (`top left`) | (`bottom left`) | (`bottom right`) = null,
@@ -59,7 +58,6 @@ object Label
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[slinky.web.html.`*`.tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])

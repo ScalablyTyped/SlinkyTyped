@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_MentionsProps_206533355[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: autoFocus, className, onBlur, onChange, onFocus */
   def apply(
     defaultValue: String = null,
     filterOption: `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean]) = null,

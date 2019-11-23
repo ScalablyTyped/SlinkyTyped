@@ -10,3 +10,18 @@ import scala.scalajs.js.annotation._
 */
 trait JSDocTag extends js.Object
 
+object JSDocTag {
+  @scala.inline
+  def Anon_TagName(tagName: JSDocTagName | String, text: String = null): JSDocTag = {
+    val __obj = js.Dynamic.literal(tagName = tagName.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JSDocTag]
+  }
+  @scala.inline
+  def Anon_TagNameText(text: String, tagName: js.UndefOr[scala.Nothing] = js.undefined): JSDocTag = {
+    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    if (!js.isUndefined(tagName)) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JSDocTag]
+  }
+}
+

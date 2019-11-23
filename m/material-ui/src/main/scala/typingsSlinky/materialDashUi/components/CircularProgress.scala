@@ -13,10 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: size */
 object CircularProgress
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.circularProgressMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: size */
   def apply(
     color: String = null,
     innerStyle: CSSProperties = null,

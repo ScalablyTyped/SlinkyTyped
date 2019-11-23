@@ -3,6 +3,7 @@ package typingsSlinky.chartDotJs.chartDotJsMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import typingsSlinky.chartDotJs.Anon_DisableCSSInjection
 import typingsSlinky.chartDotJs.Anon_Global
 import typingsSlinky.chartDotJs.TypeofClassChart
 import typingsSlinky.std.ArrayLike
@@ -28,6 +29,7 @@ object ^ extends js.Object {
   var controllers: StringDictionary[js.Any] = js.native
   var defaults: Anon_Global = js.native
   var helpers: StringDictionary[js.Any] = js.native
+  var platform: Anon_DisableCSSInjection = js.native
   var pluginService: PluginServiceStatic = js.native
   var plugins: PluginServiceStatic = js.native
 }

@@ -24,6 +24,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_MenuProps_1656120519[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: className, multiple, onClick, onSelect */
   def apply(
     activeKey: String = null,
     builtinPlacements: BuiltinPlacements = null,

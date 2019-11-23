@@ -18,10 +18,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: disabled, name, value */
 object NativeSelectInput
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.nativeSelectNativeSelectInputMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: disabled, name, value */
   def apply(
     IconComponent: ReactComponentClass[_] = null,
     inputRef: /* ref */ HTMLSelectElement | Anon_Node => Unit = null,

@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_GroupProps_1881669981 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className, onBlur, onFocus, onMouseEnter, onMouseLeave */
   def apply(
     compact: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,

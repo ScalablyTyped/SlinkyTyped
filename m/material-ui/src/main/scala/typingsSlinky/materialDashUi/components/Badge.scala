@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object Badge
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.badgeMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
     badgeContent: TagMod[Any],
     badgeStyle: CSSProperties = null,

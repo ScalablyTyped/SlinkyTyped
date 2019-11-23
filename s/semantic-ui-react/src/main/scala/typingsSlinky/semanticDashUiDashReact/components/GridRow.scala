@@ -16,12 +16,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object GridRow
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsGridGridRowMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     as: js.Any = null,
     centered: js.UndefOr[Boolean] = js.undefined,
     color: SemanticCOLORS = null,
@@ -35,7 +34,6 @@ object GridRow
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])

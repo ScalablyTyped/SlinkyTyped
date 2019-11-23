@@ -12,12 +12,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object LabelGroup
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsLabelLabelGroupMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     as: js.Any = null,
     circular: js.UndefOr[Boolean] = js.undefined,
     color: SemanticCOLORS = null,
@@ -27,7 +26,6 @@ object LabelGroup
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[slinky.web.html.`*`.tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])

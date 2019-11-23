@@ -22,6 +22,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_TimePickerProps_1133119179[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: className, defaultValue, disabled, open, placeholder */
   def apply(
     addon: js.Function = null,
     allowClear: js.UndefOr[Boolean] = js.undefined,

@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_BackTopProps_643396676[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: className, onClick */
   def apply(
     prefixCls: String = null,
     style: CSSProperties = null,

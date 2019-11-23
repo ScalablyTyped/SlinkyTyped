@@ -15,10 +15,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, onChange, onSelect */
 object Calendar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCalendarMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, onChange, onSelect */
   def apply(
     dateCellRender: /* date */ Moment => TagMod[Any] = null,
     dateFullCellRender: /* date */ Moment => TagMod[Any] = null,

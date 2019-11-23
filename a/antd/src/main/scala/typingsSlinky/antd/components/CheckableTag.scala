@@ -11,10 +11,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: checked, className, onChange */
 object CheckableTag
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTagCheckableTagMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: checked, className, onChange */
   def apply(prefixCls: String = null, style: CSSProperties = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])

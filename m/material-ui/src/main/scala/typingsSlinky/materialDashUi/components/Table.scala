@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object Table
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.tableMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(
     allRowsSelected: js.UndefOr[Boolean] = js.undefined,
     bodyStyle: CSSProperties = null,

@@ -19,13 +19,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: id */
 object BorderlessButton
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton
     ] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: id */
   def apply(
     activeOpacity: Int | Double = null,
     borderless: js.UndefOr[Boolean] = js.undefined,

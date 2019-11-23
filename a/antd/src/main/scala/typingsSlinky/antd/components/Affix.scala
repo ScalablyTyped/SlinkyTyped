@@ -13,10 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, onChange */
 object Affix
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esAffixMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, onChange */
   def apply(
     offset: Int | Double = null,
     offsetBottom: Int | Double = null,

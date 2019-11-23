@@ -12,10 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, id */
 object CollapsePanel
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCollapseCollapsePanelMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     header: TagMod[Any],
     extra: TagMod[Any] = null,

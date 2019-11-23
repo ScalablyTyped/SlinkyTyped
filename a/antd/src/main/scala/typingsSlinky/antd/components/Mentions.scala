@@ -16,10 +16,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoFocus, className, onBlur, onChange, onFocus */
 object Mentions
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esMentionsMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoFocus, className, onBlur, onChange, onFocus */
   def apply(
     defaultValue: String = null,
     filterOption: `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean]) = null,

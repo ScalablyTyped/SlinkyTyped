@@ -10,10 +10,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: disabled */
 object Step
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.materialDashUi.stepperMod.Step] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.stepperMod.Step].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     completed: js.UndefOr[Boolean] = js.undefined,

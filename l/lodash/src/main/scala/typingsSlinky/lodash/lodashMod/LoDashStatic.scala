@@ -5240,6 +5240,7 @@ trait LoDashStatic extends js.Object {
     func: js.Function1[/* repeated */ js.Any, _],
     transforms: (Many[js.Function1[/* repeated */ _, _]])*
   ): js.Function1[/* repeated */ js.Any, _] = js.native
+  def overEvery[T](predicates: (Many[js.Function1[/* repeated */ T, Boolean]])*): js.Function1[/* repeated */ T, Boolean] = js.native
   /**
     * Creates a function that checks if all of the predicates return truthy when invoked with the arguments
     * provided to the created function.
@@ -5247,7 +5248,11 @@ trait LoDashStatic extends js.Object {
     * @param predicates The predicates to check.
     * @return Returns the new function.
     */
-  def overEvery[T](predicates: (Many[js.Function1[/* repeated */ T, Boolean]])*): js.Function1[/* repeated */ T, Boolean] = js.native
+  def overEvery[T, Result1 /* <: T */, Result2 /* <: T */](
+    a: js.Function1[/* arg */ T, /* is Result1 */ Boolean],
+    b: js.Function1[/* arg */ T, /* is Result2 */ Boolean]
+  ): js.Function1[/* arg */ T, Boolean] = js.native
+  def overSome[T](predicates: (Many[js.Function1[/* repeated */ T, Boolean]])*): js.Function1[/* repeated */ T, Boolean] = js.native
   /**
     * Creates a function that checks if any of the predicates return truthy when invoked with the arguments
     * provided to the created function.
@@ -5255,7 +5260,10 @@ trait LoDashStatic extends js.Object {
     * @param predicates The predicates to check.
     * @return Returns the new function.
     */
-  def overSome[T](predicates: (Many[js.Function1[/* repeated */ T, Boolean]])*): js.Function1[/* repeated */ T, Boolean] = js.native
+  def overSome[T, Result1 /* <: T */, Result2 /* <: T */](
+    a: js.Function1[/* arg */ T, /* is Result1 */ Boolean],
+    b: js.Function1[/* arg */ T, /* is Result2 */ Boolean]
+  ): js.Function1[/* arg */ T, Boolean] = js.native
   /**
     * Pads string on the left and right sides if it’s shorter than length. Padding characters are truncated if
     * they can’t be evenly divided by length.

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@emotion/styled-base" : "10.0.24"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@emotion/styled-base" : "10.0.24"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

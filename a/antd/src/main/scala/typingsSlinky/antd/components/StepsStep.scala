@@ -15,10 +15,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, onClick */
 object StepsStep
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.antd.esMod.Steps.Step.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, onClick */
   def apply(
     description: TagMod[Any] = null,
     icon: TagMod[Any] = null,

@@ -27,7 +27,9 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.ascending
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.assertive
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.auto
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.baseline
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.bevel
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.both
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.butt
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.central
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.copy
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.date
@@ -55,6 +57,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mathematic
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.medial
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.middle
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.miter
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
@@ -67,9 +70,11 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.polite
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.popup
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.removals
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.replace
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.round
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.sRGB
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.small
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.spelling
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.square
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.step
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.sum
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.terminal
@@ -80,15 +85,16 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.svgIconMod.default
 import typingsSlinky.atMaterialDashUiCore.svgIconSvgIconMod.SvgIconProps
+import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, dangerouslySetInnerHTML, height, href, id, lang, max, media, method, min, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate */
 object SvgIcon
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.svgIconMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, dangerouslySetInnerHTML, height, href, id, lang, max, media, method, min, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, tabIndex, target, type, width */
   def apply(
     accentHeight: Double | String = null,
     accumulate: none | sum = null,
@@ -263,6 +269,84 @@ object SvgIcon
     onAuxClick: SyntheticMouseEvent[SVGSVGElement] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit = null,
     onReset: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit = null,
+    opacity: Double | String = null,
+    operator: Double | String = null,
+    order: Double | String = null,
+    orient: Double | String = null,
+    orientation: Double | String = null,
+    origin: Double | String = null,
+    overflow: Double | String = null,
+    overlinePosition: Double | String = null,
+    overlineThickness: Double | String = null,
+    paintOrder: Double | String = null,
+    panose1: Double | String = null,
+    pathLength: Double | String = null,
+    patternContentUnits: String = null,
+    patternTransform: Double | String = null,
+    patternUnits: String = null,
+    pointerEvents: Double | String = null,
+    points: String = null,
+    pointsAtX: Double | String = null,
+    pointsAtY: Double | String = null,
+    pointsAtZ: Double | String = null,
+    preserveAlpha: Double | String = null,
+    preserveAspectRatio: String = null,
+    primitiveUnits: Double | String = null,
+    r: Double | String = null,
+    radius: Double | String = null,
+    refX: Double | String = null,
+    refY: Double | String = null,
+    renderingIntent: Double | String = null,
+    repeatCount: Double | String = null,
+    repeatDur: Double | String = null,
+    requiredExtensions: Double | String = null,
+    requiredFeatures: Double | String = null,
+    restart: Double | String = null,
+    result: String = null,
+    role: String = null,
+    rotate: Double | String = null,
+    rx: Double | String = null,
+    ry: Double | String = null,
+    scale: Double | String = null,
+    seed: Double | String = null,
+    shapeRendering: String = null,
+    slope: Double | String = null,
+    spacing: Double | String = null,
+    specularConstant: Double | String = null,
+    specularExponent: Double | String = null,
+    speed: Double | String = null,
+    spreadMethod: String = null,
+    startOffset: Double | String = null,
+    stdDeviation: Double | String = null,
+    stemh: Double | String = null,
+    stemv: Double | String = null,
+    stitchTiles: Double | String = null,
+    stopColor: String = null,
+    stopOpacity: Double | String = null,
+    strikethroughPosition: Double | String = null,
+    strikethroughThickness: Double | String = null,
+    string: Double | String = null,
+    stroke: String = null,
+    strokeDasharray: String | Double = null,
+    strokeDashoffset: String | Double = null,
+    strokeLinecap: butt | round | square | inherit = null,
+    strokeLinejoin: miter | round | bevel | inherit = null,
+    strokeMiterlimit: Double | String = null,
+    strokeOpacity: Double | String = null,
+    strokeWidth: Double | String = null,
+    style: CSSProperties = null,
+    surfaceScale: Double | String = null,
+    systemLanguage: Double | String = null,
+    tableValues: Double | String = null,
+    targetX: Double | String = null,
+    targetY: Double | String = null,
+    textAnchor: String = null,
+    textDecoration: Double | String = null,
+    textLength: Double | String = null,
+    textRendering: Double | String = null,
+    titleAccess: String = null,
+    to: Double | String = null,
+    transform: String = null,
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -439,6 +523,84 @@ object SvgIcon
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+    if (overlinePosition != null) __obj.updateDynamic("overlinePosition")(overlinePosition.asInstanceOf[js.Any])
+    if (overlineThickness != null) __obj.updateDynamic("overlineThickness")(overlineThickness.asInstanceOf[js.Any])
+    if (paintOrder != null) __obj.updateDynamic("paintOrder")(paintOrder.asInstanceOf[js.Any])
+    if (panose1 != null) __obj.updateDynamic("panose1")(panose1.asInstanceOf[js.Any])
+    if (pathLength != null) __obj.updateDynamic("pathLength")(pathLength.asInstanceOf[js.Any])
+    if (patternContentUnits != null) __obj.updateDynamic("patternContentUnits")(patternContentUnits.asInstanceOf[js.Any])
+    if (patternTransform != null) __obj.updateDynamic("patternTransform")(patternTransform.asInstanceOf[js.Any])
+    if (patternUnits != null) __obj.updateDynamic("patternUnits")(patternUnits.asInstanceOf[js.Any])
+    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (pointsAtX != null) __obj.updateDynamic("pointsAtX")(pointsAtX.asInstanceOf[js.Any])
+    if (pointsAtY != null) __obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
+    if (pointsAtZ != null) __obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
+    if (preserveAlpha != null) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
+    if (primitiveUnits != null) __obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
+    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
+    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
+    if (refX != null) __obj.updateDynamic("refX")(refX.asInstanceOf[js.Any])
+    if (refY != null) __obj.updateDynamic("refY")(refY.asInstanceOf[js.Any])
+    if (renderingIntent != null) __obj.updateDynamic("renderingIntent")(renderingIntent.asInstanceOf[js.Any])
+    if (repeatCount != null) __obj.updateDynamic("repeatCount")(repeatCount.asInstanceOf[js.Any])
+    if (repeatDur != null) __obj.updateDynamic("repeatDur")(repeatDur.asInstanceOf[js.Any])
+    if (requiredExtensions != null) __obj.updateDynamic("requiredExtensions")(requiredExtensions.asInstanceOf[js.Any])
+    if (requiredFeatures != null) __obj.updateDynamic("requiredFeatures")(requiredFeatures.asInstanceOf[js.Any])
+    if (restart != null) __obj.updateDynamic("restart")(restart.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
+    if (rx != null) __obj.updateDynamic("rx")(rx.asInstanceOf[js.Any])
+    if (ry != null) __obj.updateDynamic("ry")(ry.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
+    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+    if (slope != null) __obj.updateDynamic("slope")(slope.asInstanceOf[js.Any])
+    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+    if (specularConstant != null) __obj.updateDynamic("specularConstant")(specularConstant.asInstanceOf[js.Any])
+    if (specularExponent != null) __obj.updateDynamic("specularExponent")(specularExponent.asInstanceOf[js.Any])
+    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+    if (spreadMethod != null) __obj.updateDynamic("spreadMethod")(spreadMethod.asInstanceOf[js.Any])
+    if (startOffset != null) __obj.updateDynamic("startOffset")(startOffset.asInstanceOf[js.Any])
+    if (stdDeviation != null) __obj.updateDynamic("stdDeviation")(stdDeviation.asInstanceOf[js.Any])
+    if (stemh != null) __obj.updateDynamic("stemh")(stemh.asInstanceOf[js.Any])
+    if (stemv != null) __obj.updateDynamic("stemv")(stemv.asInstanceOf[js.Any])
+    if (stitchTiles != null) __obj.updateDynamic("stitchTiles")(stitchTiles.asInstanceOf[js.Any])
+    if (stopColor != null) __obj.updateDynamic("stopColor")(stopColor.asInstanceOf[js.Any])
+    if (stopOpacity != null) __obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
+    if (strikethroughPosition != null) __obj.updateDynamic("strikethroughPosition")(strikethroughPosition.asInstanceOf[js.Any])
+    if (strikethroughThickness != null) __obj.updateDynamic("strikethroughThickness")(strikethroughThickness.asInstanceOf[js.Any])
+    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
+    if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
+    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
+    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
+    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (surfaceScale != null) __obj.updateDynamic("surfaceScale")(surfaceScale.asInstanceOf[js.Any])
+    if (systemLanguage != null) __obj.updateDynamic("systemLanguage")(systemLanguage.asInstanceOf[js.Any])
+    if (tableValues != null) __obj.updateDynamic("tableValues")(tableValues.asInstanceOf[js.Any])
+    if (targetX != null) __obj.updateDynamic("targetX")(targetX.asInstanceOf[js.Any])
+    if (targetY != null) __obj.updateDynamic("targetY")(targetY.asInstanceOf[js.Any])
+    if (textAnchor != null) __obj.updateDynamic("textAnchor")(textAnchor.asInstanceOf[js.Any])
+    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+    if (textLength != null) __obj.updateDynamic("textLength")(textLength.asInstanceOf[js.Any])
+    if (textRendering != null) __obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
+    if (titleAccess != null) __obj.updateDynamic("titleAccess")(titleAccess.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

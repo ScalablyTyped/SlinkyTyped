@@ -17,10 +17,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, tabIndex */
 object FontAwesomeIcon
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.atFortawesomeReactDashFontawesome.atFortawesomeReactDashFontawesomeMod.FontAwesomeIcon.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, tabIndex */
   def apply(
     icon: IconProp,
     border: js.UndefOr[Boolean] = js.undefined,

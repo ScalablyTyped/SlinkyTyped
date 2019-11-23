@@ -17,12 +17,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled */
 object ListItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsListListItemMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     active: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
     content: SemanticShorthandItem[ListContentProps] = null,
@@ -35,7 +34,6 @@ object ListItem
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])

@@ -64,10 +64,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object SectionList
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.reactDashNavigation.reactDashNavigationMod.SectionList.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     sections: js.Array[SectionListData[js.Any]],
     ItemSeparatorComponent: ReactComponentClass[_] = null,

@@ -25,10 +25,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, draggable, multiple, onDragEnd, onDragEnter, onDragLeave, onDragOver, onDragStart, onDrop, onMouseEnter, onMouseLeave */
 object Tree
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTreeMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, draggable, multiple, onDragEnd, onDragEnter, onDragLeave, onDragOver, onDragStart, onDrop, onMouseEnter, onMouseLeave */
   def apply(
     autoExpandParent: js.UndefOr[Boolean] = js.undefined,
     blockNode: js.UndefOr[Boolean] = js.undefined,

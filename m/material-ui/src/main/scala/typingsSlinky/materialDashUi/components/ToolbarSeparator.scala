@@ -11,10 +11,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className */
 object ToolbarSeparator
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.toolbarToolbarSeparatorMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className */
   def apply(style: CSSProperties = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])

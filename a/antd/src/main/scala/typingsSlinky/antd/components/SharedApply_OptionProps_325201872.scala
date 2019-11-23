@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_OptionProps_325201872 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className, disabled, value */
   def apply(style: CSSProperties = null, title: String = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])

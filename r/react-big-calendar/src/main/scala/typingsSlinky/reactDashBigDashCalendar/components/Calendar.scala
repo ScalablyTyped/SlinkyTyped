@@ -26,13 +26,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, max, min */
 object Calendar
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
       typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]
     ] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, max, min */
   def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](
     localizer: DateLocalizer,
     allDayAccessor: String | (js.Function1[TEvent, Boolean]) = null,

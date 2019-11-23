@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_CardMetaProps1100116954 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className */
   def apply(
     avatar: TagMod[Any] = null,
     description: TagMod[Any] = null,

@@ -22,10 +22,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoFocus, className, disabled, id, onBlur, onMouseEnter, onMouseLeave, open, tabIndex */
 object Select
   extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSelectMod.default[js.Any]].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoFocus, className, disabled, id, onBlur, onMouseEnter, onMouseLeave, open, tabIndex */
   def apply[T](
     allowClear: js.UndefOr[Boolean] = js.undefined,
     autoClearSearchValue: js.UndefOr[Boolean] = js.undefined,

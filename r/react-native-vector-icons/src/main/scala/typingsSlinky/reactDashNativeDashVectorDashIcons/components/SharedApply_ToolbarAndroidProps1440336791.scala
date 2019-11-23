@@ -40,6 +40,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_ToolbarAndroidProps1440336791[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     iconColor: String,
     iconSize: Double,

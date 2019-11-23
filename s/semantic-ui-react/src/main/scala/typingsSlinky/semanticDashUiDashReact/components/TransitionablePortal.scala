@@ -14,12 +14,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: open */
 object TransitionablePortal
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsTransitionablePortalMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: open */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     onClose: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
     onHide: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
     onOpen: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
@@ -28,7 +27,6 @@ object TransitionablePortal
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
     if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
     if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))

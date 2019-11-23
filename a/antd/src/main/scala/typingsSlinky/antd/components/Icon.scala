@@ -13,10 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, onClick, onKeyUp, tabIndex, type */
 object Icon
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.antd.esIconMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, onClick, onKeyUp, tabIndex, type */
   def apply(
     component: ReactComponentClass[CustomIconComponentProps] = null,
     prefixCls: String = null,

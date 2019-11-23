@@ -31,13 +31,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, defaultValue, disabled, multiple, open, placeholder, type, value */
 object FormSelect
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsFormFormSelectMod.default.asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, defaultValue, disabled, multiple, open, placeholder, type, value */
   def apply(
     options: js.Array[DropdownItemProps],
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     additionLabel: Double | String | TagMod[Any] = null,
     additionPosition: top | bottom = null,
     allowAdditions: js.UndefOr[Boolean] = js.undefined,
@@ -106,7 +105,6 @@ object FormSelect
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (additionLabel != null) __obj.updateDynamic("additionLabel")(additionLabel.asInstanceOf[js.Any])
     if (additionPosition != null) __obj.updateDynamic("additionPosition")(additionPosition.asInstanceOf[js.Any])
     if (!js.isUndefined(allowAdditions)) __obj.updateDynamic("allowAdditions")(allowAdditions.asInstanceOf[js.Any])

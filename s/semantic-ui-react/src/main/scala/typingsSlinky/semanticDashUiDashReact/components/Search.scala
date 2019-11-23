@@ -27,12 +27,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, open */
 object Search
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesSearchMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, open */
   def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
     aligned: String = null,
     as: js.Any = null,
     category: js.UndefOr[Boolean] = js.undefined,
@@ -61,7 +60,6 @@ object Search
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (aligned != null) __obj.updateDynamic("aligned")(aligned.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])

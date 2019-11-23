@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-random"
-version := "1.1-dt-20190212Z-b0401d"
+version := "1.1-dt-20190212Z-3f1e4e"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

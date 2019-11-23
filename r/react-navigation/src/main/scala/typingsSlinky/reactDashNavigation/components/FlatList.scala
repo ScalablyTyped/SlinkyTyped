@@ -61,13 +61,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
 object FlatList
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
       typingsSlinky.reactDashNavigation.reactDashNavigationMod.FlatList[js.Any]
     ] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.FlatList[js.Any]].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply[ItemT](
     renderItem: /* info */ ListRenderItemInfo[ItemT] => ReactElement | Null,
     ItemSeparatorComponent: ReactComponentClass[_] = null,

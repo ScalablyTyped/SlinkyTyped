@@ -97,10 +97,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: autoFocus, onBlur, onChange, onFocus, onKeyPress, onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, placeholder, spellCheck */
 object TextInput
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.TextInput] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.TextInput].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: autoFocus, onBlur, onChange, onFocus, onKeyPress, onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, placeholder, spellCheck */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,

@@ -17,10 +17,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, placeholder */
 object Cascader
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCascaderMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, placeholder */
   def apply(
     options: js.Array[CascaderOptionType],
     allowClear: js.UndefOr[Boolean] = js.undefined,

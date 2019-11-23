@@ -22,6 +22,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_AutoCompleteProps_1424629805[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: autoFocus, className, defaultValue, disabled, id, onBlur, onChange, open, tabIndex, value */
   def apply(
     allowClear: js.UndefOr[Boolean] = js.undefined,
     autoClearSearchValue: js.UndefOr[Boolean] = js.undefined,

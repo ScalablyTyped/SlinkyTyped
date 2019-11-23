@@ -22,6 +22,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_DatePickerProps_309839290[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: autoFocus, className, disabled, name, open, placeholder */
   def apply(
     allowClear: js.UndefOr[Boolean] = js.undefined,
     dateRender: (/* current */ Moment, /* today */ Moment) => TagMod[Any] = null,

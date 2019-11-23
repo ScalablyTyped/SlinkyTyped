@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(<intersection>))) was not a @ScalaJSDefined trait */
 object FlatList
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
@@ -30,6 +30,6 @@ object FlatList
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.FlatList[js.Any]]]
   }
-  type Props = js.Object
+  type Props = js.Any with js.Any
 }
 

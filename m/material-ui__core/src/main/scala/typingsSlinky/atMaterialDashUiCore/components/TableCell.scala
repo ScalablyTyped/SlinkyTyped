@@ -46,6 +46,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.menu
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.middle
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.mixed
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.move
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.no
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.none
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.numeric
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.off
@@ -66,6 +67,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.top
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.tree
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.url
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.tableCellMod.default
 import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.SortDirection
@@ -77,10 +79,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, colSpan, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, headers, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rowSpan, scope, spellCheck, suppressContentEditableWarning, tabIndex */
 object TableCell
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.tableCellMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, colSpan, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, headers, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rowSpan, scope, spellCheck, suppressContentEditableWarning, tabIndex */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -167,6 +169,7 @@ object TableCell
     style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     title: String = null,
+    translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     valign: top | middle | bottom | baseline = null,
@@ -260,6 +263,7 @@ object TableCell
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])

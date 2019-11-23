@@ -19,6 +19,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_PageHeaderProps_538936525 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className */
   def apply(
     title: TagMod[Any],
     avatar: AvatarProps = null,

@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_TransferOperationProps707185675 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     leftActive: js.UndefOr[Boolean] = js.undefined,
     leftArrowText: String = null,

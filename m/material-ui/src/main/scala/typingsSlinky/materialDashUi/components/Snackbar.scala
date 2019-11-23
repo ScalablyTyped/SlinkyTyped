@@ -13,10 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, open */
 object Snackbar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.snackbarMod.default].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, open */
   def apply(
     message: TagMod[Any],
     action: TagMod[Any] = null,

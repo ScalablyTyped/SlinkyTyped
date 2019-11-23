@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble it yourself using js.Dynamic.literal(...) or similar */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(typingsSlinky), Name(reactDashNativeDashVectorDashIcons), Name(fontAwesome5Mod), Name(FontAwesome5IconProps))) was not a @ScalaJSDefined trait */
 object FontAwesome5Pro
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5ProMod.default].asInstanceOf[String | js.Object]
@@ -20,6 +20,6 @@ object FontAwesome5Pro
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = js.Object
+  type Props = FontAwesome5IconProps
 }
 

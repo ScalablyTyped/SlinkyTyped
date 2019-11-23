@@ -25,10 +25,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The following DOM/SVG props were specified: className, disabled, multiple, onClick, onMouseEnter, onMouseLeave, onSelect */
 object SubMenu
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcDashMenu.esSubMenuMod.SubMenu] {
   override val component: String | js.Object = js.constructorOf[typingsSlinky.rcDashMenu.esSubMenuMod.SubMenu].asInstanceOf[String | js.Object]
+  /* The following DOM/SVG props were specified: className, disabled, multiple, onClick, onMouseEnter, onMouseLeave, onSelect */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     builtinPlacements: BuiltinPlacements = null,

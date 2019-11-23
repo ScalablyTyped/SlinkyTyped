@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_MenuItemGroupProps_921616913[ComponentRef <: js.Object] (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, ComponentRef] {
+  /* The following DOM/SVG props were specified: className, disabled, onClick */
   def apply(
     index: Int | Double = null,
     renderMenuItem: (/* item */ ReactElement, /* index */ Double, /* key */ String) => ReactElement = null,

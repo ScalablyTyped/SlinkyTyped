@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_AntTreeNodeProps_1362244111 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  /* The following DOM/SVG props were specified: checked, className, disabled, selected */
   def apply(
-    StringDictionary: /* customProp */ StringDictionary[js.Any] = null,
     checkable: js.UndefOr[Boolean] = js.undefined,
     disableCheckbox: js.UndefOr[Boolean] = js.undefined,
     eventKey: String = null,
@@ -28,7 +28,6 @@ abstract class SharedApply_AntTreeNodeProps_1362244111 (implicit pw: ExternalPro
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     if (!js.isUndefined(checkable)) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
     if (!js.isUndefined(disableCheckbox)) __obj.updateDynamic("disableCheckbox")(disableCheckbox.asInstanceOf[js.Any])
     if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
