@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object Group
   extends SharedApply_ARTGroupProps_107905800[typingsSlinky.reactDashNative.reactDashNativeMod.Group] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.Group].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "Group")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

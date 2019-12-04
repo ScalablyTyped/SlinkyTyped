@@ -7,7 +7,6 @@ import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.Anon_EndStart
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -19,6 +18,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.KeyboardTypeOptions
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.ReturnKeyTypeOptions
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.TVParallaxProperties
@@ -99,7 +99,11 @@ import scala.scalajs.js.annotation._
 
 object TextInput
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.TextInput] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.TextInput].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "TextInput")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus, onBlur, onChange, onFocus, onKeyPress, onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, placeholder, spellCheck */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,

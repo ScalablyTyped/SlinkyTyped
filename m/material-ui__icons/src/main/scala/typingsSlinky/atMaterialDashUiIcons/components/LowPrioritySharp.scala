@@ -1,11 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.lowPrioritySharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LowPrioritySharp
-  extends SharedApply_SvgIconProps1025744599[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.LowPrioritySharp] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.LowPrioritySharp].asInstanceOf[String | js.Object]
+object LowPrioritySharp extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/LowPrioritySharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

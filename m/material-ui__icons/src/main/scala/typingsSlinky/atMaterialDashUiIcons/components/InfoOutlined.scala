@@ -1,11 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.infoOutlinedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InfoOutlined
-  extends SharedApply_SvgIconProps1025744599[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.InfoOutlined] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.InfoOutlined].asInstanceOf[String | js.Object]
+object InfoOutlined extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/InfoOutlined", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

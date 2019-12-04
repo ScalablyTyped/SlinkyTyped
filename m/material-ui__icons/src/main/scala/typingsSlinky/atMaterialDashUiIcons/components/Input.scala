@@ -1,11 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.inputMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Input
-  extends SharedApply_SvgIconProps1025744599[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.Input] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.Input].asInstanceOf[String | js.Object]
+object Input extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/Input", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

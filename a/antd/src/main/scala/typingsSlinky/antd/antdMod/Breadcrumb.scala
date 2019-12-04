@@ -2,8 +2,8 @@ package typingsSlinky.antd.antdMod
 
 import typingsSlinky.antd.Anon_PrefixCls
 import typingsSlinky.antd.Anon_Separator
-import typingsSlinky.antd.TypeofClassBreadcrumbItemANTBREADCRUMBITEM
-import typingsSlinky.antd.TypeofClassBreadcrumbSeparatorANTBREADCRUMBSEPARATOR
+import typingsSlinky.antd.TypeofClassBreadcrumbItem
+import typingsSlinky.antd.TypeofClassBreadcrumbSeparator
 import typingsSlinky.antd.libBreadcrumbMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,8 +17,8 @@ class Breadcrumb () extends default
 @JSImport("antd", "Breadcrumb")
 @js.native
 object Breadcrumb extends js.Object {
-  var Item: TypeofClassBreadcrumbItemANTBREADCRUMBITEM = js.native
-  var Separator: TypeofClassBreadcrumbSeparatorANTBREADCRUMBSEPARATOR = js.native
+  var Item: TypeofClassBreadcrumbItem = js.native
+  var Separator: TypeofClassBreadcrumbSeparator = js.native
   var defaultProps: Anon_Separator = js.native
   var propTypes: Anon_PrefixCls = js.native
 }

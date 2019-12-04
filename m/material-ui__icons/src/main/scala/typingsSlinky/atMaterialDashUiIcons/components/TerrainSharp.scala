@@ -1,11 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.terrainSharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TerrainSharp
-  extends SharedApply_SvgIconProps1025744599[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TerrainSharp] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TerrainSharp].asInstanceOf[String | js.Object]
+object TerrainSharp extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/TerrainSharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

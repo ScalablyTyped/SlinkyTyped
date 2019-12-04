@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RadioDashButtonDashChecked extends SharedApply_SvgIconProps657215518[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsToggleRadioDashButtonDashCheckedMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons/toggle/radio-button-checked", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

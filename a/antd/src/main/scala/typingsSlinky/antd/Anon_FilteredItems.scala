@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esTransferListMod.RenderedItem
-import typingsSlinky.antd.esTransferMod.TransferItem
+import typingsSlinky.antd.libTransferListMod.RenderedItem
+import typingsSlinky.antd.libTransferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

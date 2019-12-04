@@ -6,13 +6,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTooltipMod.RenderFunction
-import typingsSlinky.antd.esTooltipMod.TooltipAlignConfig
-import typingsSlinky.antd.esTooltipMod.TooltipPlacement
-import typingsSlinky.antd.esTooltipMod.TooltipProps
-import typingsSlinky.antd.esTooltipMod.TooltipTrigger
-import typingsSlinky.antd.esTooltipMod.default
-import typingsSlinky.antd.esTooltipPlacementsMod.AdjustOverflow
+import typingsSlinky.antd.libTooltipMod.RenderFunction
+import typingsSlinky.antd.libTooltipMod.TooltipAlignConfig
+import typingsSlinky.antd.libTooltipMod.TooltipPlacement
+import typingsSlinky.antd.libTooltipMod.TooltipProps
+import typingsSlinky.antd.libTooltipMod.TooltipTrigger
+import typingsSlinky.antd.libTooltipMod.default
+import typingsSlinky.antd.libTooltipPlacementsMod.AdjustOverflow
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,8 +20,12 @@ import scala.scalajs.js.annotation._
 
 object Tooltip
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTooltipMod.default].asInstanceOf[String | js.Object]
-  /* The following DOM/SVG props were specified: className, className, className, className */
+  @JSImport("antd/lib/tooltip", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
   def TooltipPropsWithTitle(
     title: TagMod[Any] | RenderFunction,
     align: TooltipAlignConfig = null,
@@ -72,7 +76,7 @@ object Tooltip
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  /* The following DOM/SVG props were specified: className, className, className, className, className */
+  /* The following DOM/SVG props were specified: className */
   def TooltipPropsWithOverlay(
     overlay: TagMod[Any] | RenderFunction,
     align: TooltipAlignConfig = null,

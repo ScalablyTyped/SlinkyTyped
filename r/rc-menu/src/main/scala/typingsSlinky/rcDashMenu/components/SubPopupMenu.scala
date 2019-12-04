@@ -6,15 +6,15 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.rcDashMenu.Anon_Item
-import typingsSlinky.rcDashMenu.esInterfaceMod.BuiltinPlacements
-import typingsSlinky.rcDashMenu.esInterfaceMod.MenuMode
-import typingsSlinky.rcDashMenu.esInterfaceMod.MiniStore
-import typingsSlinky.rcDashMenu.esInterfaceMod.MotionType
-import typingsSlinky.rcDashMenu.esInterfaceMod.RenderIconType
-import typingsSlinky.rcDashMenu.esInterfaceMod.SelectInfo
-import typingsSlinky.rcDashMenu.esInterfaceMod.TriggerSubMenuAction
-import typingsSlinky.rcDashMenu.esSubPopupMenuMod.SubPopupMenuProps
-import typingsSlinky.rcDashMenu.esSubPopupMenuMod.default
+import typingsSlinky.rcDashMenu.libInterfaceMod.BuiltinPlacements
+import typingsSlinky.rcDashMenu.libInterfaceMod.MenuMode
+import typingsSlinky.rcDashMenu.libInterfaceMod.MiniStore
+import typingsSlinky.rcDashMenu.libInterfaceMod.MotionType
+import typingsSlinky.rcDashMenu.libInterfaceMod.RenderIconType
+import typingsSlinky.rcDashMenu.libInterfaceMod.SelectInfo
+import typingsSlinky.rcDashMenu.libInterfaceMod.TriggerSubMenuAction
+import typingsSlinky.rcDashMenu.libSubPopupMenuMod.SubPopupMenuProps
+import typingsSlinky.rcDashMenu.libSubPopupMenuMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.ReactInstance
@@ -24,7 +24,11 @@ import scala.scalajs.js.annotation._
 
 object SubPopupMenu
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.rcDashMenu.esSubPopupMenuMod.default].asInstanceOf[String | js.Object]
+  @JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, id, multiple, onClick, onSelect */
   def apply(
     activeKey: String = null,

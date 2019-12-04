@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.textRotationAngleupOutlinedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextRotationAngleupOutlined
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TextRotationAngleupOutlined
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TextRotationAngleupOutlined].asInstanceOf[String | js.Object]
+object TextRotationAngleupOutlined extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/TextRotationAngleupOutlined", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

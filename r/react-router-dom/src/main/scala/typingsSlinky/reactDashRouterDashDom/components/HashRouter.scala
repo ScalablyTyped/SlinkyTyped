@@ -17,7 +17,11 @@ object HashRouter
       tag.type, 
       typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.HashRouter
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.HashRouter].asInstanceOf[String | js.Object]
+  @JSImport("react-router-dom", "HashRouter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     basename: String = null,
     getUserConfirmation: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit = null,

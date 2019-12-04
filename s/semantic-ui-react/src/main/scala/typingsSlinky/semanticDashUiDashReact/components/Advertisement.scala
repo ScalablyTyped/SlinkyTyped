@@ -35,7 +35,11 @@ import scala.scalajs.js.annotation._
 
 object Advertisement
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsViewsAdvertisementMod.default.asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/views/Advertisement", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     unit: (`medium rectangle`) | (`large rectangle`) | (`vertical rectangle`) | (`small rectangle`) | (`mobile banner`) | banner | (`vertical banner`) | (`top banner`) | (`half banner`) | button | (`square button`) | (`small button`) | skyscraper | (`wide skyscraper`) | leaderboard | (`large leaderboard`) | (`mobile leaderboard`) | billboard | panorama | netboard | (`half page`) | square | (`small square`),

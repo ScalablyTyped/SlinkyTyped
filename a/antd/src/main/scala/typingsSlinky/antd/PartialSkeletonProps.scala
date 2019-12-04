@@ -1,14 +1,14 @@
 package typingsSlinky.antd
 
 import slinky.core.TagMod
-import typingsSlinky.antd.esSkeletonAvatarMod.SkeletonAvatarProps
-import typingsSlinky.antd.esSkeletonParagraphMod.SkeletonParagraphProps
-import typingsSlinky.antd.esSkeletonTitleMod.SkeletonTitleProps
+import typingsSlinky.antd.libSkeletonAvatarMod.SkeletonAvatarProps
+import typingsSlinky.antd.libSkeletonParagraphMod.SkeletonParagraphProps
+import typingsSlinky.antd.libSkeletonTitleMod.SkeletonTitleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<antd.antd/es/skeleton.SkeletonProps> */
+/* Inlined std.Partial<antd.antd/lib/skeleton.SkeletonProps> */
 trait PartialSkeletonProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   var avatar: js.UndefOr[SkeletonAvatarProps | Boolean] = js.undefined

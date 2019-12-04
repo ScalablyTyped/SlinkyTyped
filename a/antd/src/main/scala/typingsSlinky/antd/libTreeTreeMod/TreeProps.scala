@@ -5,8 +5,8 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.Anon_Checked
-import typingsSlinky.antd.Anon_EventLoad
+import typingsSlinky.antd.Anon_CheckedHalfChecked
+import typingsSlinky.antd.Anon_Event
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait TreeProps extends js.Object {
   /** 是否支持选中 */
   var checkable: js.UndefOr[Boolean] = js.undefined
   /** （受控）选中复选框的树节点 */
-  var checkedKeys: js.UndefOr[js.Array[String] | Anon_Checked] = js.undefined
+  var checkedKeys: js.UndefOr[js.Array[String] | Anon_CheckedHalfChecked] = js.undefined
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   /** 默认选中复选框的树节点 */
@@ -52,7 +52,7 @@ trait TreeProps extends js.Object {
   /** 点击复选框触发 */
   var onCheck: js.UndefOr[
     js.Function2[
-      /* checkedKeys */ js.Array[String] | Anon_Checked, 
+      /* checkedKeys */ js.Array[String] | Anon_CheckedHalfChecked, 
       /* e */ AntTreeNodeCheckedEvent, 
       Unit
     ]
@@ -87,7 +87,7 @@ trait TreeProps extends js.Object {
       Unit | js.Thenable[Unit]
     ]
   ] = js.undefined
-  var onLoad: js.UndefOr[js.Function2[/* loadedKeys */ js.Array[String], /* info */ Anon_EventLoad, Unit]] = js.undefined
+  var onLoad: js.UndefOr[js.Function2[/* loadedKeys */ js.Array[String], /* info */ Anon_Event, Unit]] = js.undefined
   var onMouseEnter: js.UndefOr[js.Function1[/* options */ AntTreeNodeMouseEvent, Unit]] = js.undefined
   var onMouseLeave: js.UndefOr[js.Function1[/* options */ AntTreeNodeMouseEvent, Unit]] = js.undefined
   /** 响应右键点击 */
@@ -114,7 +114,7 @@ object TreeProps {
     blockNode: js.UndefOr[Boolean] = js.undefined,
     checkStrictly: js.UndefOr[Boolean] = js.undefined,
     checkable: js.UndefOr[Boolean] = js.undefined,
-    checkedKeys: js.Array[String] | Anon_Checked = null,
+    checkedKeys: js.Array[String] | Anon_CheckedHalfChecked = null,
     children: TagMod[Any] = null,
     className: String = null,
     defaultCheckedKeys: js.Array[String] = null,
@@ -131,7 +131,7 @@ object TreeProps {
     loadData: ReactComponentClass[AntTreeNodeProps] => js.Thenable[Unit] = null,
     loadedKeys: js.Array[String] = null,
     multiple: js.UndefOr[Boolean] = js.undefined,
-    onCheck: (/* checkedKeys */ js.Array[String] | Anon_Checked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
+    onCheck: (/* checkedKeys */ js.Array[String] | Anon_CheckedHalfChecked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
     onClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onDoubleClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onDragEnd: /* options */ AntTreeNodeMouseEvent => Unit = null,
@@ -141,7 +141,7 @@ object TreeProps {
     onDragStart: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onDrop: /* options */ AntTreeNodeDropEvent => Unit = null,
     onExpand: (/* expandedKeys */ js.Array[String], /* info */ AntTreeNodeExpandedEvent) => Unit | js.Thenable[Unit] = null,
-    onLoad: (/* loadedKeys */ js.Array[String], /* info */ Anon_EventLoad) => Unit = null,
+    onLoad: (/* loadedKeys */ js.Array[String], /* info */ Anon_Event) => Unit = null,
     onMouseEnter: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onMouseLeave: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onRightClick: /* options */ AntTreeNodeMouseEvent => Unit = null,

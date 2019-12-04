@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object ThemeWrapper
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.materialDashUi.__MaterialUI.ThemeWrapper] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.__MaterialUI.ThemeWrapper].asInstanceOf[String | js.Object]
+  @JSGlobal("__MaterialUI.ThemeWrapper")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(theme: MuiTheme, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.materialDashUi.__MaterialUI.ThemeWrapper] = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

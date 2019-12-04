@@ -3,13 +3,14 @@ package typingsSlinky.antd.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdStrings.circle
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.square
-import typingsSlinky.antd.esAvatarMod.AvatarProps
-import typingsSlinky.antd.esAvatarMod.default
+import typingsSlinky.antd.libAvatarMod.AvatarProps
+import typingsSlinky.antd.libAvatarMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,10 +18,14 @@ import scala.scalajs.js.annotation._
 
 object Avatar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esAvatarMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/avatar", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: alt, className, src */
   def apply(
-    icon: String = null,
+    icon: String | TagMod[Any] = null,
     onError: () => Boolean = null,
     prefixCls: String = null,
     shape: circle | square = null,

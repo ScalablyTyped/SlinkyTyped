@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionFingerprint
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionFingerprint] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionFingerprint].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionFingerprint")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

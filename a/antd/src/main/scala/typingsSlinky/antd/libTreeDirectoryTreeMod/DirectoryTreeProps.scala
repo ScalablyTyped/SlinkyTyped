@@ -5,8 +5,8 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.Anon_Checked
-import typingsSlinky.antd.Anon_EventLoad
+import typingsSlinky.antd.Anon_CheckedHalfChecked
+import typingsSlinky.antd.Anon_Event
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeCheckedEvent
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeDragEnterEvent
 import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeDropEvent
@@ -33,7 +33,7 @@ object DirectoryTreeProps {
     blockNode: js.UndefOr[Boolean] = js.undefined,
     checkStrictly: js.UndefOr[Boolean] = js.undefined,
     checkable: js.UndefOr[Boolean] = js.undefined,
-    checkedKeys: js.Array[String] | Anon_Checked = null,
+    checkedKeys: js.Array[String] | Anon_CheckedHalfChecked = null,
     children: TagMod[Any] = null,
     className: String = null,
     defaultCheckedKeys: js.Array[String] = null,
@@ -51,7 +51,7 @@ object DirectoryTreeProps {
     loadData: ReactComponentClass[AntTreeNodeProps] => js.Thenable[Unit] = null,
     loadedKeys: js.Array[String] = null,
     multiple: js.UndefOr[Boolean] = js.undefined,
-    onCheck: (/* checkedKeys */ js.Array[String] | Anon_Checked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
+    onCheck: (/* checkedKeys */ js.Array[String] | Anon_CheckedHalfChecked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
     onClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onDoubleClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onDragEnd: /* options */ AntTreeNodeMouseEvent => Unit = null,
@@ -61,7 +61,7 @@ object DirectoryTreeProps {
     onDragStart: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onDrop: /* options */ AntTreeNodeDropEvent => Unit = null,
     onExpand: (/* expandedKeys */ js.Array[String], /* info */ AntTreeNodeExpandedEvent) => Unit | js.Thenable[Unit] = null,
-    onLoad: (/* loadedKeys */ js.Array[String], /* info */ Anon_EventLoad) => Unit = null,
+    onLoad: (/* loadedKeys */ js.Array[String], /* info */ Anon_Event) => Unit = null,
     onMouseEnter: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onMouseLeave: /* options */ AntTreeNodeMouseEvent => Unit = null,
     onRightClick: /* options */ AntTreeNodeMouseEvent => Unit = null,

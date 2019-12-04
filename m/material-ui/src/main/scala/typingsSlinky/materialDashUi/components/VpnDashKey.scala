@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VpnDashKey extends SharedApply_SvgIconProps657215518[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsCommunicationVpnDashKeyMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons/communication/vpn-key", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

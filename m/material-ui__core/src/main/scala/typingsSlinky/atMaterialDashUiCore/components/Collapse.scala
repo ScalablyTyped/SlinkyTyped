@@ -21,7 +21,11 @@ import scala.scalajs.js.annotation._
 
 object Collapse
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.collapseMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/Collapse", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,

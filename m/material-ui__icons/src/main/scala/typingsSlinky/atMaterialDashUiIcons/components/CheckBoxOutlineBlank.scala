@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.checkBoxOutlineBlankMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CheckBoxOutlineBlank
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.CheckBoxOutlineBlank
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.CheckBoxOutlineBlank].asInstanceOf[String | js.Object]
+object CheckBoxOutlineBlank extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/CheckBoxOutlineBlank", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

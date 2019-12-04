@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ClippingRectangle
   extends SharedApply_ARTClippingRectangleProps_1632069124[typingsSlinky.reactDashNative.reactDashNativeMod.ClippingRectangle] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.ClippingRectangle].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "ClippingRectangle")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

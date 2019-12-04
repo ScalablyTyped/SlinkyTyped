@@ -14,7 +14,11 @@ object BrowserRouter
       tag.type, 
       typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.BrowserRouter
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.BrowserRouter].asInstanceOf[String | js.Object]
+  @JSImport("react-router-dom", "BrowserRouter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     basename: String = null,
     forceRefresh: js.UndefOr[Boolean] = js.undefined,

@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esListItemMod.ListItemMetaProps
+import typingsSlinky.antd.libListItemMod.ListItemMetaProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object ItemMeta
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esListItemMod.default.asInstanceOf[js.Dynamic].selectDynamic("Meta").asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/list/Item", "default.Meta")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     avatar: TagMod[Any] = null,

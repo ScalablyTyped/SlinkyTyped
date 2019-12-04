@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCheckboxCheckboxMod.CheckboxProps
-import typingsSlinky.antd.esCheckboxMod.default
+import typingsSlinky.antd.libCheckboxCheckboxMod.CheckboxProps
+import typingsSlinky.antd.libCheckboxMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object Checkbox
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCheckboxMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/checkbox", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus, checked, className, defaultChecked, disabled, id, name, onChange, onClick, onKeyDown, onKeyPress, onMouseEnter, onMouseLeave, tabIndex */
   def apply(
     indeterminate: js.UndefOr[Boolean] = js.undefined,

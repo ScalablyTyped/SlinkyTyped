@@ -6,14 +6,14 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdNumbers.`false`
-import typingsSlinky.antd.esListMod.ListGridType
-import typingsSlinky.antd.esListMod.ListItemLayout
-import typingsSlinky.antd.esListMod.ListLocale
-import typingsSlinky.antd.esListMod.ListProps
-import typingsSlinky.antd.esListMod.ListSize
-import typingsSlinky.antd.esListMod.default
-import typingsSlinky.antd.esPaginationPaginationMod.PaginationConfig
-import typingsSlinky.antd.esSpinMod.SpinProps
+import typingsSlinky.antd.libListMod.ListGridType
+import typingsSlinky.antd.libListMod.ListItemLayout
+import typingsSlinky.antd.libListMod.ListLocale
+import typingsSlinky.antd.libListMod.ListProps
+import typingsSlinky.antd.libListMod.ListSize
+import typingsSlinky.antd.libListMod.default
+import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
+import typingsSlinky.antd.libSpinMod.SpinProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,11 @@ import scala.scalajs.js.annotation._
 
 object List
   extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esListMod.default[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/list", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, id */
   def apply[T](
     bordered: js.UndefOr[Boolean] = js.undefined,
@@ -62,7 +66,7 @@ object List
     if (!js.isUndefined(split)) __obj.updateDynamic("split")(split.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.esListMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libListMod.default[js.Any]]]
   }
   type Props = ListProps[js.Any]
 }

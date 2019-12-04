@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object Surface
   extends SharedApply_ARTSurfaceProps2055821533[typingsSlinky.reactDashNative.reactDashNativeMod.Surface] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.Surface].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "Surface")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

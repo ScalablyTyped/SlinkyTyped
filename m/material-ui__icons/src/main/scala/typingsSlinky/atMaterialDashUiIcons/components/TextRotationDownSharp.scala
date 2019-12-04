@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.textRotationDownSharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextRotationDownSharp
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TextRotationDownSharp
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.TextRotationDownSharp].asInstanceOf[String | js.Object]
+object TextRotationDownSharp extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/TextRotationDownSharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

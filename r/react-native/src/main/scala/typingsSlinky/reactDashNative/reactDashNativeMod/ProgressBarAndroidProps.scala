@@ -2,7 +2,6 @@ package typingsSlinky.reactDashNative.reactDashNativeMod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Horizontal
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Inverse
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Large

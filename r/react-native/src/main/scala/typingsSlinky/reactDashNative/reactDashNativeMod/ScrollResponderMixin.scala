@@ -3,7 +3,6 @@ package typingsSlinky.reactDashNative.reactDashNativeMod
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactDashNative.Anon_Animated
 import typingsSlinky.reactDashNative.Anon_AnimatedHeight
-import typingsSlinky.reactDashNative.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

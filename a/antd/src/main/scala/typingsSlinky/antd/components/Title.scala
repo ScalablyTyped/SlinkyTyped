@@ -8,11 +8,11 @@ import typingsSlinky.antd.antdNumbers.`1`
 import typingsSlinky.antd.antdNumbers.`2`
 import typingsSlinky.antd.antdNumbers.`3`
 import typingsSlinky.antd.antdNumbers.`4`
-import typingsSlinky.antd.esTypographyBaseMod.BaseType
-import typingsSlinky.antd.esTypographyBaseMod.CopyConfig
-import typingsSlinky.antd.esTypographyBaseMod.EditConfig
-import typingsSlinky.antd.esTypographyBaseMod.EllipsisConfig
-import typingsSlinky.antd.esTypographyTitleMod.TitleProps
+import typingsSlinky.antd.libTypographyBaseMod.BaseType
+import typingsSlinky.antd.libTypographyBaseMod.CopyConfig
+import typingsSlinky.antd.libTypographyBaseMod.EditConfig
+import typingsSlinky.antd.libTypographyBaseMod.EllipsisConfig
+import typingsSlinky.antd.libTypographyTitleMod.TitleProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object Title
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esTypographyTitleMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/typography/Title", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     `aria-label`: String = null,

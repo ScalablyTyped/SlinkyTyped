@@ -13,7 +13,6 @@ import typingsSlinky.reactDashNative.Anon_Changed
 import typingsSlinky.reactDashNative.Anon_DistanceFromEnd
 import typingsSlinky.reactDashNative.Anon_Index
 import typingsSlinky.reactDashNative.Anon_Section
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -23,6 +22,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeScrollEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.PointPropType
 import typingsSlinky.reactDashNative.reactDashNativeMod.ScrollViewProps
 import typingsSlinky.reactDashNative.reactDashNativeMod.SectionListData
@@ -66,7 +66,11 @@ import scala.scalajs.js.annotation._
 
 object SectionList
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.reactDashNative.reactDashNativeMod.SectionList.asInstanceOf[String | js.Object]
+  @JSImport("react-native", "SectionList")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     sections: js.Array[SectionListData[js.Any]],

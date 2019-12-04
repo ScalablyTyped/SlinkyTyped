@@ -10,20 +10,24 @@ import typingsSlinky.antd.Anon_Filters
 import typingsSlinky.antd.antdStrings.center
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
-import typingsSlinky.antd.esTableColumnMod.default
-import typingsSlinky.antd.esTableInterfaceMod.ColumnFilterItem
-import typingsSlinky.antd.esTableInterfaceMod.ColumnProps
-import typingsSlinky.antd.esTableInterfaceMod.CompareFn
-import typingsSlinky.antd.esTableInterfaceMod.FilterDropdownProps
-import typingsSlinky.antd.esTableInterfaceMod.SortOrder
-import typingsSlinky.antd.esTableInterfaceMod.TableEventListeners
+import typingsSlinky.antd.libTableColumnMod.default
+import typingsSlinky.antd.libTableInterfaceMod.ColumnFilterItem
+import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
+import typingsSlinky.antd.libTableInterfaceMod.CompareFn
+import typingsSlinky.antd.libTableInterfaceMod.FilterDropdownProps
+import typingsSlinky.antd.libTableInterfaceMod.SortOrder
+import typingsSlinky.antd.libTableInterfaceMod.TableEventListeners
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Column
   extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTableColumnMod.default[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/table/Column", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, colSpan, width */
   def apply[T](
     align: left | right | center = null,
@@ -72,7 +76,7 @@ object Column
     if (sorter != null) __obj.updateDynamic("sorter")(sorter.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.esTableColumnMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableColumnMod.default[js.Any]]]
   }
   type Props = ColumnProps[js.Any]
 }

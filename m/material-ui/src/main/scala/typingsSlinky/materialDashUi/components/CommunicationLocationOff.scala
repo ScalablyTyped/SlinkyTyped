@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object CommunicationLocationOff
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.CommunicationLocationOff] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.CommunicationLocationOff].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "CommunicationLocationOff")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.antd
 
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.esListMod.ListGridType
+import typingsSlinky.antd.libListMod.ListGridType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

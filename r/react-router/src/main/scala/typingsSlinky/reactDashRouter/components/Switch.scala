@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object Switch
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.Switch] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouter.reactDashRouterMod.Switch].asInstanceOf[String | js.Object]
+  @JSImport("react-router", "Switch")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(location: Location[LocationState] = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.Switch] = {
     val __obj = js.Dynamic.literal()
     if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])

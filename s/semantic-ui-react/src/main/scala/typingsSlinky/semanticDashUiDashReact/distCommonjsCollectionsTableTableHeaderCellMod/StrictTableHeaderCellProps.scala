@@ -90,6 +90,7 @@ trait StrictTableHeaderCellProps extends StrictTableCellProps {
 object StrictTableHeaderCellProps {
   @scala.inline
   def apply(
+    abbr: String = null,
     about: String = null,
     accessKey: String = null,
     active: js.UndefOr[Boolean] = js.undefined,
@@ -287,6 +288,7 @@ object StrictTableHeaderCellProps {
     width: SemanticWIDTHS = null
   ): StrictTableHeaderCellProps = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])

@@ -11,7 +11,11 @@ import scala.scalajs.js.annotation._
 
 object PickerIOSItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.PickerIOSItem] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.PickerIOSItem].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "PickerIOSItem")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: value */
   def apply(label: String = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.PickerIOSItem] = {
     val __obj = js.Dynamic.literal()

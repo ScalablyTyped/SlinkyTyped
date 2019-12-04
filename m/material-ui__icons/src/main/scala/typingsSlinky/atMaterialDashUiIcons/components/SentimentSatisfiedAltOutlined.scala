@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.sentimentSatisfiedAltOutlinedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SentimentSatisfiedAltOutlined
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.SentimentSatisfiedAltOutlined
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.SentimentSatisfiedAltOutlined].asInstanceOf[String | js.Object]
+object SentimentSatisfiedAltOutlined extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/SentimentSatisfiedAltOutlined", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object GridTile
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.gridListGridTileMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/GridList/GridTile", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: cols, onClick, rows */
   def apply(
     actionIcon: ReactElement = null,

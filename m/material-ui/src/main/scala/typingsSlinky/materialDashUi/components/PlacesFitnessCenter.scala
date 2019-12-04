@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object PlacesFitnessCenter
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.PlacesFitnessCenter] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.PlacesFitnessCenter].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "PlacesFitnessCenter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

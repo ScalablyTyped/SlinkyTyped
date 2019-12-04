@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageFilter8
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilter8] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilter8].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageFilter8")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

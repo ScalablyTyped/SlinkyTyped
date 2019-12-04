@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.antd.esTableColumnGroupMod.default
+import typingsSlinky.antd.libTableColumnGroupMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

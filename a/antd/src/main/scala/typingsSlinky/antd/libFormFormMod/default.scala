@@ -2,7 +2,7 @@ package typingsSlinky.antd.libFormFormMod
 
 import typingsSlinky.antd.Anon_ArgsChildren
 import typingsSlinky.antd.Anon_Colon
-import typingsSlinky.antd.TypeofClassFormItemDefaultProps
+import typingsSlinky.antd.TypeofClassFormItem
 import typingsSlinky.antd.libFormInterfaceMod.FormWrappedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class default protected () extends Form {
 @JSImport("antd/lib/form/Form", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var Item: TypeofClassFormItemDefaultProps = js.native
+  var Item: TypeofClassFormItem = js.native
   var createFormField: js.Any = js.native
   var defaultProps: Anon_Colon = js.native
   var propTypes: Anon_ArgsChildren = js.native

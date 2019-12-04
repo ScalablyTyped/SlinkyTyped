@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.hourglassEmptyRoundedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HourglassEmptyRounded
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.HourglassEmptyRounded
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.HourglassEmptyRounded].asInstanceOf[String | js.Object]
+object HourglassEmptyRounded extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/HourglassEmptyRounded", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

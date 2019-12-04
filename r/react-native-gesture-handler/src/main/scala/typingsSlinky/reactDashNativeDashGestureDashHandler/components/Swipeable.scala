@@ -6,7 +6,6 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.Animated.AnimatedInterpolation
-import typingsSlinky.reactDashNative.reactDashNativeMod.Animated.Value
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
 import typingsSlinky.reactDashNativeDashGestureDashHandler.swipeableMod.SwipeableProperties
@@ -17,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Swipeable
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.swipeableMod.default].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler/Swipeable", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     childrenContainerStyle: StyleProp[ViewStyle] = null,
     containerStyle: StyleProp[ViewStyle] = null,
@@ -34,8 +37,8 @@ object Swipeable
     overshootFriction: Int | Double = null,
     overshootLeft: js.UndefOr[Boolean] = js.undefined,
     overshootRight: js.UndefOr[Boolean] = js.undefined,
-    renderLeftActions: (/* progressAnimatedValue */ Value | AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
-    renderRightActions: (/* progressAnimatedValue */ Value | AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
+    renderLeftActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
+    renderRightActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
     rightThreshold: Int | Double = null,
     useNativeAnimations: js.UndefOr[Boolean] = js.undefined,
     overrides: StringDictionary[js.Any] = null

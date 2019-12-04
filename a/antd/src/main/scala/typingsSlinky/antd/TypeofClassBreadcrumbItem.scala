@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.antd.esBreadcrumbBreadcrumbItemMod.default
+import typingsSlinky.antd.libBreadcrumbBreadcrumbItemMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

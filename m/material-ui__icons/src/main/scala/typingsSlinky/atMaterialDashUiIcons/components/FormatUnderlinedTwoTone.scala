@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.formatUnderlinedTwoToneMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormatUnderlinedTwoTone
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.FormatUnderlinedTwoTone
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.FormatUnderlinedTwoTone].asInstanceOf[String | js.Object]
+object FormatUnderlinedTwoTone extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/FormatUnderlinedTwoTone", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

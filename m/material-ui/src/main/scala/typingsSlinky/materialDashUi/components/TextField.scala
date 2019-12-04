@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object TextField
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.textFieldMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/TextField", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoComplete, autoFocus, className, defaultValue, disabled, id, name, onBlur, onFocus, onKeyDown, onKeyPress, onKeyUp, placeholder, required, rows, type, value */
   def apply(
     errorStyle: CSSProperties = null,

@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object LinearProgress
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.linearProgressMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/LinearProgress", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     color: String = null,
     max: Int | Double = null,

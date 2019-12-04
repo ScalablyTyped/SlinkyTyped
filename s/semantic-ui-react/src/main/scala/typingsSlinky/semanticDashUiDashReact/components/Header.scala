@@ -22,7 +22,11 @@ import scala.scalajs.js.annotation._
 
 object Header
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsHeaderMod.default.asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/elements/Header", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     as: js.Any = null,

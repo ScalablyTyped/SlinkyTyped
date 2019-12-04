@@ -22,7 +22,11 @@ object PanGestureHandler
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.PanGestureHandler
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.PanGestureHandler].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler", "PanGestureHandler")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
     activeOffsetX: Double | js.Array[Double] = null,

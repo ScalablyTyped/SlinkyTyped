@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object CommunicationInvertColorsOff
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.CommunicationInvertColorsOff] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.CommunicationInvertColorsOff].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "CommunicationInvertColorsOff")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

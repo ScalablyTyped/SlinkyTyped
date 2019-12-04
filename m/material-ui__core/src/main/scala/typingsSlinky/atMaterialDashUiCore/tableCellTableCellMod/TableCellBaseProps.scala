@@ -78,6 +78,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined react.react.ThHTMLAttributes<std.HTMLTableHeaderCellElement> & react.react.TdHTMLAttributes<std.HTMLTableDataCellElement> */
 trait TableCellBaseProps extends js.Object {
+  var abbr: js.UndefOr[String] = js.undefined
   // RDFa Attributes
   var about: js.UndefOr[String] = js.undefined
   // Standard HTML Attributes
@@ -588,6 +589,7 @@ trait TableCellBaseProps extends js.Object {
 object TableCellBaseProps {
   @scala.inline
   def apply(
+    abbr: String = null,
     about: String = null,
     accessKey: String = null,
     align: left | center | right | justify | char = null,
@@ -769,6 +771,7 @@ object TableCellBaseProps {
     vocab: String = null
   ): TableCellBaseProps = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])

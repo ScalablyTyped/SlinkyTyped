@@ -6,7 +6,6 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -14,6 +13,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityTrait
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.TextProps
 import typingsSlinky.reactDashNative.reactDashNativeMod.TextStyle
@@ -40,7 +40,11 @@ import scala.scalajs.js.annotation._
 
 object Text
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.Text] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.Text].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "Text")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,

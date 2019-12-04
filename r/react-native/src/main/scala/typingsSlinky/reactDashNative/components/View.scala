@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object View
   extends SharedApply_ViewProps2092493819[typingsSlinky.reactDashNative.reactDashNativeMod.View] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.View].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "View")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

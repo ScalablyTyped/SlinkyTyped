@@ -9,14 +9,14 @@ import slinky.web.html.button.tag
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
-import typingsSlinky.antd.esButtonButtonMod.ButtonHTMLType
-import typingsSlinky.antd.esButtonButtonMod.ButtonSize
-import typingsSlinky.antd.esDropdownDropdownDashButtonMod.DropdownButtonProps
-import typingsSlinky.antd.esDropdownDropdownDashButtonMod.DropdownButtonType
-import typingsSlinky.antd.esDropdownDropdownDashButtonMod.default
-import typingsSlinky.antd.esDropdownDropdownMod.Align
-import typingsSlinky.antd.esDropdownDropdownMod.OverlayFunc
-import typingsSlinky.antd.esDropdownDropdownMod.Placement
+import typingsSlinky.antd.libButtonButtonMod.ButtonHTMLType
+import typingsSlinky.antd.libButtonButtonMod.ButtonSize
+import typingsSlinky.antd.libDropdownDropdownDashButtonMod.DropdownButtonProps
+import typingsSlinky.antd.libDropdownDropdownDashButtonMod.DropdownButtonType
+import typingsSlinky.antd.libDropdownDropdownDashButtonMod.default
+import typingsSlinky.antd.libDropdownDropdownMod.Align
+import typingsSlinky.antd.libDropdownDropdownMod.OverlayFunc
+import typingsSlinky.antd.libDropdownDropdownMod.Placement
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,11 @@ import scala.scalajs.js.annotation._
 
 object DropdownDashButton
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esDropdownDropdownDashButtonMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/dropdown/dropdown-button", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, href, onClick */
   def apply(
     overlay: TagMod[Any] | OverlayFunc,

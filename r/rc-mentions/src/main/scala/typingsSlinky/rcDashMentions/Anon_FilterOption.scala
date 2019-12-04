@@ -1,7 +1,7 @@
 package typingsSlinky.rcDashMentions
 
-import typingsSlinky.rcDashMentions.esMentionsMod.MentionsProps
-import typingsSlinky.rcDashMentions.esOptionMod.OptionProps
+import typingsSlinky.rcDashMentions.libMentionsMod.MentionsProps
+import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -22,7 +22,11 @@ object NativeViewGestureHandler
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.NativeViewGestureHandler
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.NativeViewGestureHandler].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler", "NativeViewGestureHandler")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
     disallowInterruption: js.UndefOr[Boolean] = js.undefined,

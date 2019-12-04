@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object StaticRouter
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.StaticRouter] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouter.reactDashRouterMod.StaticRouter].asInstanceOf[String | js.Object]
+  @JSImport("react-router", "StaticRouter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     basename: String = null,
     context: StaticRouterContext = null,

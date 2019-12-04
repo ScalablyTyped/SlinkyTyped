@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionDelete
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionDelete] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionDelete].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionDelete")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object HardwareKeyboardHide
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardHide] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardHide].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "HardwareKeyboardHide")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

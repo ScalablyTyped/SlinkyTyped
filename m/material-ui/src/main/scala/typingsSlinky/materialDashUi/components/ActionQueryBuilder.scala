@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionQueryBuilder
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionQueryBuilder] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionQueryBuilder].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionQueryBuilder")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

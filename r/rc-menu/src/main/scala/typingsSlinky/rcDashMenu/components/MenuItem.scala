@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import typingsSlinky.rcDashMenu.Anon_Hover
-import typingsSlinky.rcDashMenu.esInterfaceMod.MenuMode
-import typingsSlinky.rcDashMenu.esInterfaceMod.RenderIconType
-import typingsSlinky.rcDashMenu.esInterfaceMod.SelectInfo
-import typingsSlinky.rcDashMenu.esMenuItemMod.MenuItemProps
+import typingsSlinky.rcDashMenu.libInterfaceMod.MenuMode
+import typingsSlinky.rcDashMenu.libInterfaceMod.RenderIconType
+import typingsSlinky.rcDashMenu.libInterfaceMod.SelectInfo
+import typingsSlinky.rcDashMenu.libMenuItemMod.MenuItemProps
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.ReactInstance
@@ -18,8 +18,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MenuItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcDashMenu.esMenuItemMod.MenuItem] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.rcDashMenu.esMenuItemMod.MenuItem].asInstanceOf[String | js.Object]
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcDashMenu.libMenuItemMod.MenuItem] {
+  @JSImport("rc-menu/lib/MenuItem", "MenuItem")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, multiple, onClick, onMouseEnter, onMouseLeave, onSelect */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
@@ -41,7 +45,7 @@ object MenuItem
     style: CSSProperties = null,
     title: String = null,
     overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.rcDashMenu.esMenuItemMod.MenuItem] = {
+  ): BuildingComponent[tag.type, typingsSlinky.rcDashMenu.libMenuItemMod.MenuItem] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])

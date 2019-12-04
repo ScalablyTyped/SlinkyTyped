@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageBlurLinear
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurLinear] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurLinear].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageBlurLinear")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

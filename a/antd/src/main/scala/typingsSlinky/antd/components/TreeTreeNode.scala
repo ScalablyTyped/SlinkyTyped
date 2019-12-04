@@ -4,7 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TreeTreeNode extends SharedApply_AntTreeNodeProps_1362244111 {
-  override val component: String | js.Object = typingsSlinky.antd.esMod.Tree.TreeNode.asInstanceOf[String | js.Object]
+object TreeTreeNode extends SharedApply_AntTreeNodeProps_1322051974 {
+  @JSImport("antd", "Tree.TreeNode")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

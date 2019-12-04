@@ -4,20 +4,38 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.atReachRouter.atReachRouterMod.NavigateFn
+import typingsSlinky.atStorybookApi.WindowLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(typingsSlinky), Name(atStorybookApi), Name(atStorybookApiMod), Name(Props))) was not a @ScalaJSDefined trait */
 object Provider
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atStorybookApi.atStorybookApiMod.Provider] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atStorybookApi.atStorybookApiMod.Provider].asInstanceOf[String | js.Object]
+  @JSImport("@storybook/api", "Provider")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: default */
   def apply(
-    props: typingsSlinky.atStorybookApi.atStorybookApiMod.Props with js.Object,
+    docsMode: Boolean,
+    provider: typingsSlinky.atStorybookApi.distInitDashProviderDashApiMod.Provider,
+    location: WindowLocation = null,
+    navigate: NavigateFn = null,
+    path: String = null,
+    storyId: String = null,
+    uri: String = null,
+    viewMode: String = null,
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.atStorybookApi.atStorybookApiMod.Provider] = {
-    val __obj = js.Dynamic.literal()
-    js.Dynamic.global.Object.assign(__obj, props)
+    val __obj = js.Dynamic.literal(docsMode = docsMode.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (navigate != null) __obj.updateDynamic("navigate")(navigate.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (storyId != null) __obj.updateDynamic("storyId")(storyId.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
+    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

@@ -1,13 +1,15 @@
 package typingsSlinky.atMaterialDashUiIcons.components
 
+import typingsSlinky.atMaterialDashUiIcons.airlineSeatLegroomExtraSharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AirlineSeatLegroomExtraSharp
-  extends SharedApply_SvgIconProps1025744599[
-      typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.AirlineSeatLegroomExtraSharp
-    ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiIcons.atMaterialDashUiIconsMod.AirlineSeatLegroomExtraSharp].asInstanceOf[String | js.Object]
+object AirlineSeatLegroomExtraSharp extends SharedApply_SvgIconProps1025744599[default] {
+  @JSImport("@material-ui/icons/AirlineSeatLegroomExtraSharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

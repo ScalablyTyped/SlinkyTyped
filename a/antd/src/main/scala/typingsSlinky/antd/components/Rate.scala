@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esRateMod.RateProps
-import typingsSlinky.antd.esRateMod.default
+import typingsSlinky.antd.libRateMod.RateProps
+import typingsSlinky.antd.libRateMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object Rate
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esRateMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/rate", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, onChange */
   def apply(
     allowClear: js.UndefOr[Boolean] = js.undefined,

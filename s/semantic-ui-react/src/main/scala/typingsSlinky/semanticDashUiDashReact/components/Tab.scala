@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Tab
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesTabMod.default].asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/modules/Tab", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     activeIndex: Double | String = null,
     as: js.Any = null,

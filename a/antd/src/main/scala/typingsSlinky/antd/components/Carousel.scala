@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCarouselMod.CarouselEffect
-import typingsSlinky.antd.esCarouselMod.CarouselProps
-import typingsSlinky.antd.esCarouselMod.DotPosition
-import typingsSlinky.antd.esCarouselMod.default
+import typingsSlinky.antd.libCarouselMod.CarouselEffect
+import typingsSlinky.antd.libCarouselMod.CarouselProps
+import typingsSlinky.antd.libCarouselMod.DotPosition
+import typingsSlinky.antd.libCarouselMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.reactDashSlick.reactDashSlickMod.LazyLoadTypes
 import typingsSlinky.reactDashSlick.reactDashSlickMod.ResponsiveObject
@@ -19,7 +19,11 @@ import scala.scalajs.js.annotation._
 
 object Carousel
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCarouselMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/carousel", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, draggable, rows */
   def apply(
     accessibility: js.UndefOr[Boolean] = js.undefined,

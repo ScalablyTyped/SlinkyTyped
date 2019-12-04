@@ -1,9 +1,8 @@
 package typingsSlinky.reactDashNativeDashGestureDashHandler.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashNative.reactDashNativeMod.SwitchProperties
 import typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.NativeViewGestureHandlerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,19 +14,11 @@ object Switch
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Switch
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Switch].asInstanceOf[String | js.Object]
-  def apply(
-    props: NativeViewGestureHandlerProperties with (/* import warning: QualifyReferences.resolveTypeRef many Couldn't qualify DrawerLayoutAndroidProperties */ js.Any) with js.Object,
-    overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Switch
-  ] = {
-    val __obj = js.Dynamic.literal()
-    js.Dynamic.global.Object.assign(__obj, props)
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  type Props = js.Any with js.Any
+  @JSImport("react-native-gesture-handler", "Switch")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  type Props = NativeViewGestureHandlerProperties with SwitchProperties
 }
 

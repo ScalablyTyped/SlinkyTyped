@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object HardwareCast
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareCast] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareCast].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "HardwareCast")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -9,8 +9,8 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.processing
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
-import typingsSlinky.antd.esBadgeMod.BadgeProps
-import typingsSlinky.antd.esBadgeMod.default
+import typingsSlinky.antd.libBadgeMod.BadgeProps
+import typingsSlinky.antd.libBadgeMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,11 @@ import scala.scalajs.js.annotation._
 
 object Badge
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esBadgeMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/badge", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     color: String = null,

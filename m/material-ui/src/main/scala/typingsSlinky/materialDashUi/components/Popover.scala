@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Popover
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.popoverMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Popover", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, open */
   def apply(
     anchorEl: ReactInstance = null,

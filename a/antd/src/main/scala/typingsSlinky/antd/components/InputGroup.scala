@@ -4,7 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InputGroup extends SharedApply_GroupProps_1881669981 {
-  override val component: String | js.Object = typingsSlinky.antd.esMod.Input.Group.asInstanceOf[String | js.Object]
+object InputGroup extends SharedApply_GroupProps940133887 {
+  @JSImport("antd", "Input.Group")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

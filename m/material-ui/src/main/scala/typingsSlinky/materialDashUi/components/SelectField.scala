@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object SelectField
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.selectFieldMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/SelectField", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, id, multiple, name, onBlur, onFocus */
   def apply(
     autoWidth: js.UndefOr[Boolean] = js.undefined,

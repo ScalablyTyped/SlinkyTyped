@@ -6,9 +6,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esSwitchMod.SwitchProps
-import typingsSlinky.antd.esSwitchMod.SwitchSize
-import typingsSlinky.antd.esSwitchMod.default
+import typingsSlinky.antd.libSwitchMod.SwitchProps
+import typingsSlinky.antd.libSwitchMod.SwitchSize
+import typingsSlinky.antd.libSwitchMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Switch
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSwitchMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/switch", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus, checked, className, defaultChecked, disabled */
   def apply(
     checkedChildren: TagMod[Any] = null,

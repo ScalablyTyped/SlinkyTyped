@@ -11,7 +11,11 @@ import scala.scalajs.js.annotation._
 
 object PickerItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.PickerItem] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.PickerItem].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "PickerItem")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     label: String,
     color: String = null,

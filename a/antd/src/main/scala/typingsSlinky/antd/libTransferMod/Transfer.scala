@@ -5,11 +5,12 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import typingsSlinky.antd.Anon_ItemUnit
-import typingsSlinky.antd.Anon_LeftDataSourceRightDataSource
+import typingsSlinky.antd.Anon_ItemUnitItemsUnitNotFoundContentSearchPlaceholderTitles
+import typingsSlinky.antd.Anon_LeftDataSource
 import typingsSlinky.antd.antdStrings.sourceSelectedKeys
 import typingsSlinky.antd.antdStrings.targetSelectedKeys
 import typingsSlinky.antd.libCollapseCollapseMod.ExpandIconPosition
+import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
@@ -20,11 +21,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Transfer
   extends Component[TransferProps, js.Any, js.Any] {
-  var separatedDataSource: Anon_LeftDataSourceRightDataSource | Null = js.native
+  var separatedDataSource: Anon_LeftDataSource | Null = js.native
   def getLocale(
     transferLocale: TransferLocale,
     renderEmpty: js.Function1[/* componentName */ js.UndefOr[String], TagMod[Any]]
-  ): Anon_ItemUnit = js.native
+  ): Anon_ItemUnitItemsUnitNotFoundContentSearchPlaceholderTitles = js.native
   def getSelectedKeysName(direction: TransferDirection): sourceSelectedKeys | targetSelectedKeys = js.native
   def getTitles(transferLocale: TransferLocale): js.Array[String] = js.native
   def handleClear(direction: ExpandIconPosition): Unit = js.native
@@ -34,6 +35,8 @@ trait Transfer
   def handleLeftScroll(e: SyntheticEvent[Event, HTMLDivElement]): Unit = js.native
   def handleLeftSelect(selectedItem: TransferItem, checked: Boolean): Unit = js.native
   def handleLeftSelectAll(filteredDataSource: js.Array[TransferItem], checkAll: Boolean): Unit = js.native
+  def handleListStyle(listStyle: js.Function1[/* style */ ListStyle, CSSProperties], direction: ExpandIconPosition): CSSProperties = js.native
+  def handleListStyle(listStyle: CSSProperties, direction: ExpandIconPosition): CSSProperties = js.native
   def handleRightClear(): Unit = js.native
   def handleRightFilter(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def handleRightScroll(e: SyntheticEvent[Event, HTMLDivElement]): Unit = js.native
@@ -53,6 +56,6 @@ trait Transfer
   def onRightItemSelect(selectedKey: String, checked: Boolean): Unit = js.native
   def onRightItemSelectAll(selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
   def renderTransfer(transferLocale: TransferLocale): Element = js.native
-  def separateDataSource(): Anon_LeftDataSourceRightDataSource = js.native
+  def separateDataSource(): Anon_LeftDataSource = js.native
 }
 

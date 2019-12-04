@@ -4,18 +4,22 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esSkeletonAvatarMod.SkeletonAvatarProps
-import typingsSlinky.antd.esSkeletonMod.SkeletonProps
-import typingsSlinky.antd.esSkeletonMod.default
-import typingsSlinky.antd.esSkeletonParagraphMod.SkeletonParagraphProps
-import typingsSlinky.antd.esSkeletonTitleMod.SkeletonTitleProps
+import typingsSlinky.antd.libSkeletonAvatarMod.SkeletonAvatarProps
+import typingsSlinky.antd.libSkeletonMod.SkeletonProps
+import typingsSlinky.antd.libSkeletonMod.default
+import typingsSlinky.antd.libSkeletonParagraphMod.SkeletonParagraphProps
+import typingsSlinky.antd.libSkeletonTitleMod.SkeletonTitleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Skeleton
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSkeletonMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/skeleton", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,

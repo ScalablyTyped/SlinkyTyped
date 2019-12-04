@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object Transition
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashTransitionDashGroup.transitionMod.default].asInstanceOf[String | js.Object]
+  @JSImport("react-transition-group/Transition", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     timeout: Double | Anon_Appear,
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,

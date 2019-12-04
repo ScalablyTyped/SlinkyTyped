@@ -1,7 +1,7 @@
 package typingsSlinky.antd.antdMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.antd.TypeofClassColumnGroupANTTABLECOLUMNGROUP
+import typingsSlinky.antd.TypeofClassColumnGroup
 import typingsSlinky.antd.libTableInterfaceMod.TableProps
 import typingsSlinky.antd.libTableMod.default
 import scala.scalajs.js
@@ -19,7 +19,7 @@ class Table[T] protected () extends default[T] {
 @js.native
 object Table extends js.Object {
   var Column: Instantiable0[typingsSlinky.antd.libTableColumnMod.default[js.Object]] = js.native
-  var ColumnGroup: TypeofClassColumnGroupANTTABLECOLUMNGROUP = js.native
+  var ColumnGroup: TypeofClassColumnGroup = js.native
   var displayName: String = js.native
 }
 

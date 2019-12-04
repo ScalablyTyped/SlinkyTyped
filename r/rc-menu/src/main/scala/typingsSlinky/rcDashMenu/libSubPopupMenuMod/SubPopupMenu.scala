@@ -3,7 +3,7 @@ package typingsSlinky.rcDashMenu.libSubPopupMenuMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.rcDashMenu.Anon_ClassName
+import typingsSlinky.rcDashMenu.Anon_ClassNameFocusable
 import typingsSlinky.rcDashMenu.libInterfaceMod.DestroyEventHandler
 import typingsSlinky.rcDashMenu.libInterfaceMod.HoverEventHandler
 import typingsSlinky.rcDashMenu.libInterfaceMod.MenuClickEventHandler
@@ -53,6 +53,6 @@ class SubPopupMenu protected ()
 @JSImport("rc-menu/lib/SubPopupMenu", "SubPopupMenu")
 @js.native
 object SubPopupMenu extends js.Object {
-  var defaultProps: Anon_ClassName = js.native
+  var defaultProps: Anon_ClassNameFocusable = js.native
 }
 

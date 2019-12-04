@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object ScaleIn
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.internalScaleInMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/internal/ScaleIn", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     childStyle: CSSProperties = null,
     enterDelay: Int | Double = null,

@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LocalDashGroceryDashStore extends SharedApply_SvgIconProps657215518[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMapsLocalDashGroceryDashStoreMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons/maps/local-grocery-store", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

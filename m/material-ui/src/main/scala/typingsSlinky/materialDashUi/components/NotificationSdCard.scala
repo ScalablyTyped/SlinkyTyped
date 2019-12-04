@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object NotificationSdCard
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationSdCard] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationSdCard].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "NotificationSdCard")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionSettingsBackupRestore
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsBackupRestore] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsBackupRestore].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionSettingsBackupRestore")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

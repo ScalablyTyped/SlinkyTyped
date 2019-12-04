@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.fade
 import typingsSlinky.reactDashNative.reactDashNativeStrings.none
 import typingsSlinky.reactDashNative.reactDashNativeStrings.slide

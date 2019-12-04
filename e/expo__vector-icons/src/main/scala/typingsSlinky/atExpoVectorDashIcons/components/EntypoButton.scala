@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EntypoButton extends SharedApply_IconButtonProps_562613305[Button] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atExpoVectorDashIcons.atExpoVectorDashIconsMod.Entypo.Button].asInstanceOf[String | js.Object]
+  @JSImport("@expo/vector-icons", "Entypo.Button")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

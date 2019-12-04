@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WbDashIridescent extends SharedApply_SvgIconProps657215518[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsImageWbDashIridescentMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons/image/wb-iridescent", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

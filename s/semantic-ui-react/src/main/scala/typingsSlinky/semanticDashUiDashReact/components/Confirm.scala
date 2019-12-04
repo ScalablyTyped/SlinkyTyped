@@ -31,7 +31,11 @@ import scala.scalajs.js.annotation._
 
 object Confirm
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsConfirmMod.default].asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/addons/Confirm", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, open */
   def apply(
     actions: SemanticShorthandItem[ModalActionsProps] = null,

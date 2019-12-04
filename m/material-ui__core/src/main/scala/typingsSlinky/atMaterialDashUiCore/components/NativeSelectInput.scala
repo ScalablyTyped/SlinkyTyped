@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object NativeSelectInput
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.nativeSelectNativeSelectInputMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/NativeSelect/NativeSelectInput", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: disabled, name, value */
   def apply(
     IconComponent: ReactComponentClass[_] = null,

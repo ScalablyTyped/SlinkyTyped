@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IndeterminateDashCheckDashBox extends SharedApply_SvgIconProps657215518[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsToggleIndeterminateDashCheckDashBoxMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons/toggle/indeterminate-check-box", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

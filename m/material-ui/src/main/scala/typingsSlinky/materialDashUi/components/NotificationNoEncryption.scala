@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object NotificationNoEncryption
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationNoEncryption] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationNoEncryption].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "NotificationNoEncryption")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

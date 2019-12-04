@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCommentMod.CommentProps
-import typingsSlinky.antd.esCommentMod.default
+import typingsSlinky.antd.libCommentMod.CommentProps
+import typingsSlinky.antd.libCommentMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object Comment
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCommentMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/comment", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     content: TagMod[Any],

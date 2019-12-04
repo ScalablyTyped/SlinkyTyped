@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object Redirect
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Redirect] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Redirect].asInstanceOf[String | js.Object]
+  @JSImport("react-router-dom", "Redirect")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     to: LocationDescriptor[LocationState],
     exact: js.UndefOr[Boolean] = js.undefined,

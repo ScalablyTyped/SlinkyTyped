@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object NavigationArrowDropDownCircle
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NavigationArrowDropDownCircle] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NavigationArrowDropDownCircle].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "NavigationArrowDropDownCircle")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

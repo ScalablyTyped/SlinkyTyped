@@ -9,7 +9,7 @@ import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.esDividerMod.DividerProps
+import typingsSlinky.antd.libDividerMod.DividerProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Divider
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esDividerMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/divider", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     dashed: js.UndefOr[Boolean] = js.undefined,

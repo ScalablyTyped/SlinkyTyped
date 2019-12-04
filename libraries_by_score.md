@@ -20,6 +20,7 @@
 | 0.8778825172242066 | [antd](./a/antd) | An enterprise-class UI design language and React-b
 | 0.8770464530772917 | [d3](./d/d3) | Data-Driven Documents
 | 0.873278264344804 | [history](./h/history) | Manage session history with JavaScript
+| 0.8711238642211334 | [through](./t/through) | simplified stream construction
 | 0.8686256042686501 | [classnames](./c/classnames) | A simple utility for conditionally joining classNa
 | 0.8559662710609182 | [mobx](./m/mobx) | Simple, scalable state management.
 | 0.8480957376901669 | [range-parser](./r/range-parser) | Range header field string parser
@@ -38,10 +39,12 @@
 | 0.8109971390672888 | [react-navigation](./r/react-navigation) | Routing and navigation for your React Native apps
 | 0.8103451979597169 | [prop-types](./p/prop-types) | Runtime type checking for React props and similar 
 | 0.8083117948168715 | [storybook__addons](./s/storybook__addons) | Storybook addons store
+| 0.8062795000054035 | [enzyme](./e/enzyme) | JavaScript Testing utilities for React
 | 0.8045981137930154 | [react-lifecycles-compat](./r/react-lifecycles-compat) | Backwards compatibility polyfill for React class c
 | 0.8035359109143616 | [emotion-theming](./e/emotion-theming) | A CSS-in-JS theming solution, inspired by styled-c
 | 0.8019434198206964 | [d3-array](./d/d3-array) | Array manipulation, ordering, searching, summarizi
 | 0.8014389835044692 | [csstype](./c/csstype) | Strict TypeScript and Flow types for style based o
+| 0.8009207615388453 | [inquirer](./i/inquirer) | A collection of common interactive command line us
 | 0.796272689202419 | [d3-selection](./d/d3-selection) | Data-driven DOM manipulation: select elements and 
 | 0.7922944598078044 | [electron](./e/electron) | Build cross platform desktop apps with JavaScript,
 | 0.791408308924628 | [storybook__react](./s/storybook__react) | Storybook for React: Develop React Component in is
@@ -85,18 +88,22 @@
 | 0.7335005328784803 | [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A
 | 0.7325183174699612 | [fbemitter](./f/fbemitter) | Facebook's EventEmitter is a simple emitter implem
 | 0.7268676036804045 | [semantic-ui-react__event-](./s/semantic-ui-react__event-stack) |  Event Stack
+| 0.72628413612101 | [react-navigation-drawer](./r/react-navigation-drawer) | Drawer navigator component for React Navigation
 | 0.7209447659381857 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components
 | 0.7181450274400816 | [mobx-react-lite](./m/mobx-react-lite) | Lightweight React bindings for MobX based on React
 | 0.7135767963694328 | [p5](./p/p5) | -
 | 0.7039209671544598 | [react-big-calendar](./r/react-big-calendar) | Calendar
 | 0.7008706092255725 | [d3-shape](./d/d3-shape) | Graphical primitives for visualization, such as li
 | 0.692810458594609 | [redux-devtools-extension](./r/redux-devtools-extension) | Wrappers for Redux DevTools Extension.
+| 0.6918077296776101 | [react-navigation-stack](./r/react-navigation-stack) | Stack navigator component for React Navigation
 | 0.6737882670668693 | [d3-drag](./d/d3-drag) | Drag and drop SVG, HTML or Canvas using mouse or t
 | 0.6729511795589236 | [exenv](./e/exenv) | React's ExecutionEnvironment module extracted for 
 | 0.6681088866685262 | [d3-brush](./d/d3-brush) | Select a one- or two-dimensional region using the 
 | 0.6526646025757323 | [react-slick](./r/react-slick) | React port of slick carousel
 | 0.6444883374301853 | [d3-fetch](./d/d3-fetch) | Convenient parsing for Fetch.
 | 0.6393040769253351 | [expo__vector-icons](./e/expo__vector-icons) | Built-in support for popular icon fonts and the to
+| 0.6346063259633421 | [cheerio](./c/cheerio) | Tiny, fast, and elegant implementation of core jQu
+| 0.6325980191863104 | [react-native-view-shot](./r/react-native-view-shot) | Capture a React Native view to an image
 | 0.629391896019107 | [rc-mentions](./r/rc-mentions) | React Mentions
 | 0.6264095430753216 | [stardust-ui__react-compon](./s/stardust-ui__react-component-ref) | A set of components and utils to deal with React r
 | 0.6249861353063749 | [react-dom](./r/react-dom) | React package for working with the DOM.
@@ -115,7 +122,7 @@
 | 0.4459310706705006 | [geojson](./g/geojson) | Turn your geo data into GeoJSON
 | 0.4369727257081056 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-svg-core) | The iconic font, CSS, and SVG framework
 | 0.4319382928610536 | [fortawesome__free-solid-s](./f/fortawesome__free-solid-svg-icons) | The iconic font, CSS, and SVG framework
-| 0.4209512976787247 | [storybook__router](./s/storybook__router) | Core Storybook Router
+| 0.4153683934082883 | [rxjs-compat](./r/rxjs-compat) |  RxJS: Reactive Extensions For JavaScript ========
 | 0.4150271819811402 | [node](./n/node) | node
 | 0.3903397716692805 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod
 | 0.38986961382447155 | [angular__core](./a/angular__core) | Angular - the core framework
@@ -127,6 +134,7 @@
 | 0.3778114008481209 | [angular__platform-browser](./a/angular__platform-browser) | Angular - library for using Angular in a web brows
 | 0.37719103766585427 | [angular__platform-browser](./a/angular__platform-browser-dynamic) | Angular - library for using Angular in a web brows
 | 0.37350654328165894 | [react-transition-group](./r/react-transition-group) | A react component toolset for managing animations
+| 0.3702850166214429 | [angular__animations](./a/angular__animations) | Angular - animations integration with web-animatio
 | 0.297688377530792 | [webpack-env](./w/webpack-env) | read variables from a .env.js file and make them a
 | 0.2863432487598562 | [material-ui](./m/material-ui) | React Components that Implement Google's Material 
 | 0.2660196288285239 | [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de

@@ -4,11 +4,11 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTypographyBaseMod.BaseType
-import typingsSlinky.antd.esTypographyBaseMod.CopyConfig
-import typingsSlinky.antd.esTypographyBaseMod.EditConfig
-import typingsSlinky.antd.esTypographyBaseMod.EllipsisConfig
-import typingsSlinky.antd.esTypographyBaseMod.InternalBlockProps
+import typingsSlinky.antd.libTypographyBaseMod.BaseType
+import typingsSlinky.antd.libTypographyBaseMod.CopyConfig
+import typingsSlinky.antd.libTypographyBaseMod.EditConfig
+import typingsSlinky.antd.libTypographyBaseMod.EllipsisConfig
+import typingsSlinky.antd.libTypographyBaseMod.InternalBlockProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Base
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esTypographyBaseMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/typography/Base", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     component: String,

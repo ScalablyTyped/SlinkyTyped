@@ -8,6 +8,10 @@ object DeviceSignalCellularConnectedNoInternet1Bar
   extends SharedApply_SvgIconProps657215518[
       typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalCellularConnectedNoInternet1Bar
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalCellularConnectedNoInternet1Bar].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "DeviceSignalCellularConnectedNoInternet1Bar")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

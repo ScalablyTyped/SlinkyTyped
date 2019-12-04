@@ -7,9 +7,9 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.Anon_Href
-import typingsSlinky.antd.esAnchorAnchorMod.AnchorContainer
-import typingsSlinky.antd.esAnchorAnchorMod.AnchorProps
-import typingsSlinky.antd.esAnchorMod.default
+import typingsSlinky.antd.libAnchorAnchorMod.AnchorContainer
+import typingsSlinky.antd.libAnchorAnchorMod.AnchorProps
+import typingsSlinky.antd.libAnchorMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Anchor
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esAnchorMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/anchor", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onChange */
   def apply(
     affix: js.UndefOr[Boolean] = js.undefined,

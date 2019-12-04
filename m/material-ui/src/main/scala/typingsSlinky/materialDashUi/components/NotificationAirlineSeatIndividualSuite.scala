@@ -8,6 +8,10 @@ object NotificationAirlineSeatIndividualSuite
   extends SharedApply_SvgIconProps657215518[
       typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatIndividualSuite
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatIndividualSuite].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "NotificationAirlineSeatIndividualSuite")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

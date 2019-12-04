@@ -31,7 +31,11 @@ object Calendar
       tag.type, 
       typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("react-big-calendar", "Calendar")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, max, min */
   def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](
     localizer: DateLocalizer,

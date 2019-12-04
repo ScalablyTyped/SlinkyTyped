@@ -3,6 +3,7 @@ package typingsSlinky.node.childUnderscoreProcessMod
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.NodeJS.Signals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +21,7 @@ object ExecFileSyncOptionsWithStringEncoding {
     env: ProcessEnv = null,
     gid: Int | Double = null,
     input: java.lang.String | ArrayBufferView = null,
-    killSignal: java.lang.String | Double = null,
+    killSignal: Signals | Double = null,
     maxBuffer: Int | Double = null,
     shell: Boolean | java.lang.String = null,
     stdio: StdioOptions = null,

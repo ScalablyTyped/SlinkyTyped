@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object BottomNavigation
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.bottomNavigationMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/BottomNavigation", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     selectedIndex: Int | Double = null,

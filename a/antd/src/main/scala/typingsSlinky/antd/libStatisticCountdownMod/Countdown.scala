@@ -3,6 +3,7 @@ package typingsSlinky.antd.libStatisticCountdownMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.libStatisticUtilsMod.FormatConfig
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.ReactText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +18,7 @@ trait Countdown
   def componentDidUpdate_MCountdown(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCountdown(): Unit = js.native
-  def formatCountdown(value: String, config: FormatConfig): String = js.native
-  def formatCountdown(value: Double, config: FormatConfig): String = js.native
+  def formatCountdown(value: ReactText, config: FormatConfig): String = js.native
   def startTimer(): Unit = js.native
   def stopTimer(): Unit = js.native
   def syncTimer(): Unit = js.native

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object DeviceBattery30
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceBattery30] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceBattery30].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "DeviceBattery30")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

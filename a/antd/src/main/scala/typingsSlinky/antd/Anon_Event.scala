@@ -2,7 +2,7 @@ package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.antd.antdStrings.load
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeProps
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

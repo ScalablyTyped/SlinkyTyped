@@ -5,14 +5,18 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esDescriptionsMod.DescriptionsItemProps
+import typingsSlinky.antd.libDescriptionsMod.DescriptionsItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DescriptionsItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esMod.Descriptions.Item.asInstanceOf[String | js.Object]
+  @JSImport("antd", "Descriptions.Item")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     label: TagMod[Any] = null,

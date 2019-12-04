@@ -12,8 +12,8 @@ import typingsSlinky.antd.antdStrings.`jump-prev`
 import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.prev
-import typingsSlinky.antd.esPaginationMod.default
-import typingsSlinky.antd.esPaginationPaginationMod.PaginationProps
+import typingsSlinky.antd.libPaginationMod.default
+import typingsSlinky.antd.libPaginationPaginationMod.PaginationProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,11 @@ import scala.scalajs.js.annotation._
 
 object Pagination
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esPaginationMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/pagination", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     current: Int | Double = null,

@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object AppCanvas
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.internalAppCanvasMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/internal/AppCanvas", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

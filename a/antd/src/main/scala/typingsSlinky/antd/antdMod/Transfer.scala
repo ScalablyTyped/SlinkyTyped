@@ -1,10 +1,10 @@
 package typingsSlinky.antd.antdMod
 
-import typingsSlinky.antd.Anon_ArgsBodyClassName
-import typingsSlinky.antd.Anon_DataSourceLocale
+import typingsSlinky.antd.Anon_ArgsBody
+import typingsSlinky.antd.Anon_DataSourceListStyle
 import typingsSlinky.antd.Anon_SourceSelectedKeys
-import typingsSlinky.antd.TypeofClassListDefaultProps
-import typingsSlinky.antd.TypeofClassSearchDefaultPropsAnonPlaceholder
+import typingsSlinky.antd.TypeofClassList
+import typingsSlinky.antd.TypeofClassSearchDefaultProps
 import typingsSlinky.antd.libTransferMod.TransferProps
 import typingsSlinky.antd.libTransferMod.default
 import typingsSlinky.antd.libTransferOperationMod.TransferOperationProps
@@ -23,10 +23,10 @@ class Transfer protected () extends default {
 @JSImport("antd", "Transfer")
 @js.native
 object Transfer extends js.Object {
-  var List: TypeofClassListDefaultProps = js.native
-  var Search: TypeofClassSearchDefaultPropsAnonPlaceholder = js.native
-  var defaultProps: Anon_DataSourceLocale = js.native
-  var propTypes: Anon_ArgsBodyClassName = js.native
+  var List: TypeofClassList = js.native
+  var Search: TypeofClassSearchDefaultProps = js.native
+  var defaultProps: Anon_DataSourceListStyle = js.native
+  var propTypes: Anon_ArgsBody = js.native
   def Operation(
     hasDisabledMoveToLeftMoveToRightLeftArrowTextRightArrowTextLeftActiveRightActiveClassNameStyle: TransferOperationProps
   ): Element = js.native

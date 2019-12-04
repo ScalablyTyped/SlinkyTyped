@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod.Animated
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactDashNative.NodeHandle
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

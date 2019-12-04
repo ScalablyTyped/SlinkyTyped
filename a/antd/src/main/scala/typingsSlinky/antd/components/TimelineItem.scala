@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTimelineTimelineItemMod.TimeLineItemProps
+import typingsSlinky.antd.libTimelineTimelineItemMod.TimeLineItemProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object TimelineItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esTimelineTimelineItemMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/timeline/TimelineItem", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     color: String = null,

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageTimer10
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageTimer10] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageTimer10].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageTimer10")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

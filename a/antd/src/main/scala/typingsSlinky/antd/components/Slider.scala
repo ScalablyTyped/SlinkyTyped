@@ -6,11 +6,11 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esSliderMod.SliderMarks
-import typingsSlinky.antd.esSliderMod.SliderProps
-import typingsSlinky.antd.esSliderMod.SliderValue
-import typingsSlinky.antd.esSliderMod.default
-import typingsSlinky.antd.esTooltipMod.TooltipPlacement
+import typingsSlinky.antd.libSliderMod.SliderMarks
+import typingsSlinky.antd.libSliderMod.SliderProps
+import typingsSlinky.antd.libSliderMod.SliderValue
+import typingsSlinky.antd.libSliderMod.default
+import typingsSlinky.antd.libTooltipMod.TooltipPlacement
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,11 @@ import scala.scalajs.js.annotation._
 
 object Slider
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSliderMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/slider", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, defaultValue, disabled, id, onChange, value */
   def apply(
     dots: js.UndefOr[Boolean] = js.undefined,
@@ -30,6 +34,7 @@ object Slider
     onAfterChange: /* value */ SliderValue => Unit = null,
     prefixCls: String = null,
     range: js.UndefOr[Boolean] = js.undefined,
+    reverse: js.UndefOr[Boolean] = js.undefined,
     step: Int | Double = null,
     style: CSSProperties = null,
     tipFormatter: /* value */ Double => TagMod[Any] = null,
@@ -49,6 +54,7 @@ object Slider
     if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction1(tipFormatter))

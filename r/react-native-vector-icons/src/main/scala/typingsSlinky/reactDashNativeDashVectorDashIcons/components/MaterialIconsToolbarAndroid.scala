@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MaterialIconsToolbarAndroid extends SharedApply_ToolbarAndroidProps1440336791[ToolbarAndroid] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.materialIconsMod.default.ToolbarAndroid].asInstanceOf[String | js.Object]
+  @JSImport("react-native-vector-icons/MaterialIcons", "default.ToolbarAndroid")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

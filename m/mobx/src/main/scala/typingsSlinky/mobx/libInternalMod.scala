@@ -9,7 +9,6 @@ import typingsSlinky.mobx.libApiComputedMod.IComputed
 import typingsSlinky.mobx.libApiExtrasMod.IDependencyTree
 import typingsSlinky.mobx.libApiExtrasMod.IObserverTree
 import typingsSlinky.mobx.libApiFlowMod.CancellablePromise
-import typingsSlinky.mobx.libApiFlowMod.FlowReturnType
 import typingsSlinky.mobx.libApiInterceptDashReadMod.ReadInterceptor
 import typingsSlinky.mobx.libApiObservableMod.CreateObservableOptions
 import typingsSlinky.mobx.libApiObservableMod.IObservableFactories
@@ -59,6 +58,8 @@ import typingsSlinky.mobx.libUtilsUtilsMod.Lambda
 import typingsSlinky.mobx.mobxNumbers.`false`
 import typingsSlinky.mobx.mobxNumbers.`true`
 import typingsSlinky.mobx.mobxStrings.`An invariant failed, however the error is obfuscated because this is an production buildDOT`
+import typingsSlinky.std.AsyncGenerator
+import typingsSlinky.std.Generator
 import typingsSlinky.std.IArguments
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
@@ -104,6 +105,10 @@ object libInternalMod extends js.Object {
       */
     def this(options: IComputedValueOptions[T]) = this()
   }
+  
+  @js.native
+  class FlowCancellationError ()
+    extends typingsSlinky.mobx.libApiFlowMod.FlowCancellationError
   
   @js.native
   class MobXGlobals ()
@@ -244,6 +249,7 @@ object libInternalMod extends js.Object {
   ): T = js.native
   def deepEnhancer(v: js.Any, `_`: js.Any, name: js.Any): js.Any = js.native
   def deepEqual(a: js.Any, b: js.Any): Boolean = js.native
+  def deepEqual(a: js.Any, b: js.Any, depth: Double): Boolean = js.native
   def defineBoundAction(target: js.Any, propertyName: String, fn: js.Function): Unit = js.native
   def deprecated(msg: String): Boolean = js.native
   def deprecated(thing: String, replacement: String): Boolean = js.native
@@ -280,7 +286,7 @@ object libInternalMod extends js.Object {
   def extendObservableObjectWithProperties(target: js.Any, properties: js.Any, decorators: js.Any, defaultDecorator: js.Any): Unit = js.native
   def fail(message: String): scala.Nothing = js.native
   def fail(message: Boolean): scala.Nothing = js.native
-  def flow[R, Args /* <: js.Array[_] */](generator: js.Function1[/* args */ Args, IterableIterator[R]]): js.Function1[/* args */ Args, CancellablePromise[FlowReturnType[R]]] = js.native
+  def flow[R, Args /* <: js.Array[_] */](generator: js.Function1[/* args */ Args, (Generator[_, R, _]) | (AsyncGenerator[_, R, _])]): js.Function1[/* args */ Args, CancellablePromise[R]] = js.native
   def generateComputedPropConfig(propName: js.Any): js.Any = js.native
   def generateObservablePropConfig(propName: js.Any): js.Any = js.native
   def get[T /* <: js.Object */](obj: T, key: String): js.Any = js.native
@@ -351,10 +357,11 @@ object libInternalMod extends js.Object {
   def isCaughtException(e: js.Any): /* is mobx.mobx/lib/core/derivation.CaughtException */ Boolean = js.native
   def isComputed(value: js.Any): Boolean = js.native
   def isComputedProp(value: js.Any, propName: String): Boolean = js.native
-  def isComputedValue(x: js.Any): /* is mobx.mobx/lib/core/computedvalue.ComputedValue<{}> */ Boolean = js.native
+  def isComputedValue(x: js.Any): /* is mobx.mobx/lib/core/computedvalue.ComputedValue<unknown> */ Boolean = js.native
   def isComputingDerivation(): Boolean = js.native
   def isES6Map(thing: js.Any): Boolean = js.native
   def isES6Set(thing: js.Any): /* is std.Set<any> */ Boolean = js.native
+  def isFlowCancellationError(error: js.Error): Boolean = js.native
   def isObject(value: js.Any): Boolean = js.native
   def isObservable(value: js.Any): Boolean = js.native
   def isObservableArray(thing: js.Any): /* is mobx.mobx/lib/types/observablearray.IObservableArray<any> */ Boolean = js.native
@@ -567,10 +574,13 @@ object libInternalMod extends js.Object {
     var default_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     @JSName("identity")
     var identity_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
+    @JSName("shallow")
+    var shallow_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     @JSName("structural")
     var structural_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     def default(a: js.Any, b: js.Any): Boolean = js.native
     def identity(a: js.Any, b: js.Any): Boolean = js.native
+    def shallow(a: js.Any, b: js.Any): Boolean = js.native
     def structural(a: js.Any, b: js.Any): Boolean = js.native
   }
   

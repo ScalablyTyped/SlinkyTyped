@@ -8,8 +8,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
-import typingsSlinky.antd.esTimelineMod.default
-import typingsSlinky.antd.esTimelineTimelineMod.TimelineProps
+import typingsSlinky.antd.libTimelineMod.default
+import typingsSlinky.antd.libTimelineTimelineMod.TimelineProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Timeline
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTimelineMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/timeline", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     mode: left | alternate | right = null,

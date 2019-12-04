@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.`landscape-left`
 import typingsSlinky.reactDashNative.reactDashNativeStrings.`landscape-right`
 import typingsSlinky.reactDashNative.reactDashNativeStrings.`portrait-upside-down`

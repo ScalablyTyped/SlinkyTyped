@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object StyleSheetManager
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.styledDashComponents.macroMod.StyleSheetManager].asInstanceOf[String | js.Object]
+  @JSImport("styled-components/macro", "StyleSheetManager")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def Anon_Sheet(sheet: ServerStyleSheet, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] = {
     val __obj = js.Dynamic.literal(sheet = sheet.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

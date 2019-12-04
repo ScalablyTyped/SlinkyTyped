@@ -7,7 +7,6 @@ import typingsSlinky.antd.Anon_ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdNumbers.`false`
 import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.libSpinMod.SpinProps
-import typingsSlinky.antd.libTableCreateStoreMod.Store
 import typingsSlinky.csstype.csstypeMod.TableLayoutProperty
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.std.Record
@@ -15,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TableProps[T] extends WithStore {
+trait TableProps[T] extends js.Object {
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var bordered: js.UndefOr[Boolean] = js.undefined
   var children: js.UndefOr[TagMod[Any]] = js.undefined
@@ -78,9 +77,6 @@ trait TableProps[T] extends WithStore {
 object TableProps {
   @scala.inline
   def apply[T](
-    checkboxPropsCache: CheckboxPropsCache,
-    setCheckboxPropsCache: CheckboxPropsCache => Unit,
-    store: Store,
     bodyStyle: CSSProperties = null,
     bordered: js.UndefOr[Boolean] = js.undefined,
     children: TagMod[Any] = null,
@@ -123,7 +119,7 @@ object TableProps {
     title: /* currentPageData */ js.Array[T] => TagMod[Any] = null,
     useFixedHeader: js.UndefOr[Boolean] = js.undefined
   ): TableProps[T] = {
-    val __obj = js.Dynamic.literal(checkboxPropsCache = checkboxPropsCache.asInstanceOf[js.Any], setCheckboxPropsCache = js.Any.fromFunction1(setCheckboxPropsCache), store = store.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal()
     if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])

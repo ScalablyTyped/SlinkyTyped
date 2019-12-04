@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCollapseCollapseMod.CollapseProps
-import typingsSlinky.antd.esCollapseCollapseMod.ExpandIconPosition
-import typingsSlinky.antd.esCollapseCollapseMod.PanelProps
-import typingsSlinky.antd.esCollapseMod.default
+import typingsSlinky.antd.libCollapseCollapseMod.CollapseProps
+import typingsSlinky.antd.libCollapseCollapseMod.ExpandIconPosition
+import typingsSlinky.antd.libCollapseCollapseMod.PanelProps
+import typingsSlinky.antd.libCollapseMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Collapse
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCollapseMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/collapse", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onChange */
   def apply(
     accordion: js.UndefOr[Boolean] = js.undefined,

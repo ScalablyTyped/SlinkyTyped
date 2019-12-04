@@ -9,7 +9,6 @@ import typingsSlinky.mobx.libApiComputedMod.IComputed
 import typingsSlinky.mobx.libApiExtrasMod.IDependencyTree
 import typingsSlinky.mobx.libApiExtrasMod.IObserverTree
 import typingsSlinky.mobx.libApiFlowMod.CancellablePromise
-import typingsSlinky.mobx.libApiFlowMod.FlowReturnType
 import typingsSlinky.mobx.libApiInterceptDashReadMod.ReadInterceptor
 import typingsSlinky.mobx.libApiObservableMod.CreateObservableOptions
 import typingsSlinky.mobx.libApiObservableMod.IObservableFactories
@@ -43,8 +42,9 @@ import typingsSlinky.mobx.libTypesObservablevalueMod.IObservableValue
 import typingsSlinky.mobx.libTypesObservablevalueMod.IValueDidChange
 import typingsSlinky.mobx.libTypesObservablevalueMod.IValueWillChange
 import typingsSlinky.mobx.libUtilsUtilsMod.Lambda
+import typingsSlinky.std.AsyncGenerator
+import typingsSlinky.std.Generator
 import typingsSlinky.std.IArguments
-import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,6 +53,10 @@ import scala.scalajs.js.annotation._
 @JSImport("mobx", JSImport.Namespace)
 @js.native
 object mobxMod extends js.Object {
+  @js.native
+  class FlowCancellationError ()
+    extends typingsSlinky.mobx.libInternalMod.FlowCancellationError
+  
   @js.native
   class ObservableMap[K, V] ()
     extends typingsSlinky.mobx.libInternalMod.ObservableMap[K, V] {
@@ -160,7 +164,7 @@ object mobxMod extends js.Object {
     */ typingsSlinky.mobx.mobxStrings.extendObservable with js.Any,
     options: CreateObservableOptions
   ): A with B = js.native
-  def flow[R, Args /* <: js.Array[_] */](generator: js.Function1[/* args */ Args, IterableIterator[R]]): js.Function1[/* args */ Args, CancellablePromise[FlowReturnType[R]]] = js.native
+  def flow[R, Args /* <: js.Array[_] */](generator: js.Function1[/* args */ Args, (Generator[_, R, _]) | (AsyncGenerator[_, R, _])]): js.Function1[/* args */ Args, CancellablePromise[R]] = js.native
   def get[T /* <: js.Object */](obj: T, key: String): js.Any = js.native
   def get[T](obj: IObservableArray[T], index: Double): js.UndefOr[T] = js.native
   def get[K, V](obj: typingsSlinky.mobx.libInternalMod.ObservableMap[K, V], key: K): js.UndefOr[V] = js.native
@@ -201,6 +205,7 @@ object mobxMod extends js.Object {
   def isBoxedObservable(x: js.Any): /* is mobx.mobx/lib/types/observablevalue.IObservableValue<any> */ Boolean = js.native
   def isComputed(value: js.Any): Boolean = js.native
   def isComputedProp(value: js.Any, propName: String): Boolean = js.native
+  def isFlowCancellationError(error: js.Error): Boolean = js.native
   def isObservable(value: js.Any): Boolean = js.native
   def isObservableArray(thing: js.Any): /* is mobx.mobx/lib/types/observablearray.IObservableArray<any> */ Boolean = js.native
   def isObservableMap(thing: js.Any): /* is mobx.mobx/lib/types/observablemap.ObservableMap<any, any> */ Boolean = js.native
@@ -363,10 +368,13 @@ object mobxMod extends js.Object {
     var default_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     @JSName("identity")
     var identity_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
+    @JSName("shallow")
+    var shallow_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     @JSName("structural")
     var structural_Original: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
     def default(a: js.Any, b: js.Any): Boolean = js.native
     def identity(a: js.Any, b: js.Any): Boolean = js.native
+    def shallow(a: js.Any, b: js.Any): Boolean = js.native
     def structural(a: js.Any, b: js.Any): Boolean = js.native
   }
   

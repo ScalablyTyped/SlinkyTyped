@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object Prompt
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.Prompt] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouter.reactDashRouterMod.Prompt].asInstanceOf[String | js.Object]
+  @JSImport("react-router", "Prompt")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     message: String | (js.Function1[/* location */ Location[LocationState], String | Boolean]),
     when: js.UndefOr[Boolean] = js.undefined,

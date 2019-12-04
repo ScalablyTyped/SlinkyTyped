@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageFlashAuto
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFlashAuto] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFlashAuto].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageFlashAuto")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object ListItemSecondaryAction
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.listItemSecondaryActionMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/ListItemSecondaryAction", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     classes: PartialClassNameMapListItemSecondaryActionClassKey = null,

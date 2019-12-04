@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageBrightness1
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBrightness1] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBrightness1].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageBrightness1")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

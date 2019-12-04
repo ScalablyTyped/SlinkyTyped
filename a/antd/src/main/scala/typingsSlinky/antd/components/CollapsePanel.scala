@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCollapseCollapsePanelMod.CollapsePanelProps
-import typingsSlinky.antd.esCollapseCollapsePanelMod.default
+import typingsSlinky.antd.libCollapseCollapsePanelMod.CollapsePanelProps
+import typingsSlinky.antd.libCollapseCollapsePanelMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object CollapsePanel
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCollapseCollapsePanelMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/collapse/CollapsePanel", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     header: TagMod[Any],

@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esTransferMod.TransferItem
+import typingsSlinky.antd.libTransferMod.TransferItem
 import typingsSlinky.propDashTypes.propDashTypesMod.ReactNodeLike
 import typingsSlinky.propDashTypes.propDashTypesMod.Requireable
 import typingsSlinky.propDashTypes.propDashTypesMod.Validator

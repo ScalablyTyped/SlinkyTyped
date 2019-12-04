@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 
 trait RendererInterface extends CommonInterface {
   var BrowserWindowProxy: Instantiable0[typingsSlinky.electron.Electron.BrowserWindowProxy]
+  var contextBridge: ContextBridge
   var desktopCapturer: DesktopCapturer
   var ipcRenderer: IpcRenderer
   var remote: Remote
@@ -20,6 +21,7 @@ object RendererInterface {
   def apply(
     BrowserWindowProxy: Instantiable0[BrowserWindowProxy],
     clipboard: Clipboard,
+    contextBridge: ContextBridge,
     crashReporter: CrashReporter,
     desktopCapturer: DesktopCapturer,
     ipcRenderer: IpcRenderer,
@@ -29,7 +31,7 @@ object RendererInterface {
     webFrame: WebFrame,
     webviewTag: WebviewTag
   ): RendererInterface = {
-    val __obj = js.Dynamic.literal(BrowserWindowProxy = BrowserWindowProxy.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], desktopCapturer = desktopCapturer.asInstanceOf[js.Any], ipcRenderer = ipcRenderer.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], remote = remote.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], webFrame = webFrame.asInstanceOf[js.Any], webviewTag = webviewTag.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(BrowserWindowProxy = BrowserWindowProxy.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contextBridge = contextBridge.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], desktopCapturer = desktopCapturer.asInstanceOf[js.Any], ipcRenderer = ipcRenderer.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], remote = remote.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], webFrame = webFrame.asInstanceOf[js.Any], webviewTag = webviewTag.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[RendererInterface]
   }

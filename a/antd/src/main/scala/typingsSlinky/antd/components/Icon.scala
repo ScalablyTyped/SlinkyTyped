@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esIconMod.CustomIconComponentProps
-import typingsSlinky.antd.esIconMod.IconProps
-import typingsSlinky.antd.esIconMod.ThemeType
+import typingsSlinky.antd.libIconMod.CustomIconComponentProps
+import typingsSlinky.antd.libIconMod.IconProps
+import typingsSlinky.antd.libIconMod.ThemeType
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Icon
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esIconMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/icon", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onClick, onKeyUp, tabIndex, type */
   def apply(
     component: ReactComponentClass[CustomIconComponentProps] = null,

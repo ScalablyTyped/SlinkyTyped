@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esModalModalMod.ModalFuncProps
+import typingsSlinky.antd.libModalModalMod.ModalFuncProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -11,9 +11,11 @@
 | 12955 | [axios](./a/axios) | Promise based HTTP client for the browser and node
 | 12768 | [vue](./v/vue) | Reactive, component-oriented view layer for modern
 | 10668 | [body-parser](./b/body-parser) | Node.js body parsing middleware
+| 10603 | [inquirer](./i/inquirer) | A collection of common interactive command line us
 | 10141 | [classnames](./c/classnames) | A simple utility for conditionally joining classNa
 | 9934 | [jquery](./j/jquery) | JavaScript library for DOM operations
 | 9934 | [rxjs](./r/rxjs) | Reactive Extensions for modern JavaScript
+| 7745 | [cheerio](./c/cheerio) | Tiny, fast, and elegant implementation of core jQu
 | 6731 | [core-js](./c/core-js) | Standard library
 | 6541 | [angular__core](./a/angular__core) | Angular - the core framework
 | 6012 | [angular__common](./a/angular__common) | Angular - commonly needed directives and services
@@ -27,12 +29,14 @@
 | 5009 | [angular__platform-browser](./a/angular__platform-browser-dynamic) | Angular - library for using Angular in a web brows
 | 4649 | [angular__router](./a/angular__router) | Angular - the routing library
 | 4580 | [react-redux](./r/react-redux) | Official React bindings for Redux
+| 3565 | [angular__animations](./a/angular__animations) | Angular - animations integration with web-animatio
 | 3496 | [mime](./m/mime) | A comprehensive library for mime-type mapping
 | 3152 | [styled-components](./s/styled-components) | Visual primitives for the component age. Use the b
 | 3007 | [react-router-dom](./r/react-router-dom) | DOM bindings for React Router
 | 2788 | [react-router](./r/react-router) | Declarative routing for React
 | 2034 | [d3](./d/d3) | Data-Driven Documents
 | 1905 | [connect](./c/connect) | High performance middleware framework
+| 1904 | [through](./t/through) | simplified stream construction
 | 1790 | [highlight_dot_js](./h/highlight_dot_js) | Syntax highlighting with language autodetection.
 | 1672 | [history](./h/history) | Manage session history with JavaScript
 | 1566 | [serve-static](./s/serve-static) | Serve static files
@@ -44,6 +48,7 @@
 | 927 | [material-ui](./m/material-ui) | React Components that Implement Google's Material 
 | 893 | [material-ui__core](./m/material-ui__core) | React components that implement Google's Material 
 | 812 | [mobx](./m/mobx) | Simple, scalable state management.
+| 645 | [enzyme](./e/enzyme) | JavaScript Testing utilities for React
 | 628 | [leaflet](./l/leaflet) | JavaScript library for mobile-friendly interactive
 | 603 | [three](./t/three) | JavaScript 3D library
 | 575 | [mobx-react](./m/mobx-react) | React bindings for MobX. Create fully reactive com
@@ -54,6 +59,7 @@
 | 542 | [chart_dot_js](./c/chart_dot_js) | Simple HTML5 charts using the canvas element.
 | 451 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-svg-core) | The iconic font, CSS, and SVG framework
 | 450 | [d3-selection](./d/d3-selection) | Data-driven DOM manipulation: select elements and 
+| 435 | [rxjs-compat](./r/rxjs-compat) |  RxJS: Reactive Extensions For JavaScript ========
 | 413 | [d3-array](./d/d3-array) | Array manipulation, ordering, searching, summarizi
 | 405 | [fortawesome__free-solid-s](./f/fortawesome__free-solid-svg-icons) | The iconic font, CSS, and SVG framework
 | 387 | [react-native-vector-icons](./r/react-native-vector-icons) | Customizable Icons for React Native with support f
@@ -112,6 +118,7 @@
 | 26 | [react-big-calendar](./r/react-big-calendar) | Calendar
 | 24 | [sizzle](./s/sizzle) | A pure-JavaScript, bottom-up CSS selector engine d
 | 23 | [d3-polygon](./d/d3-polygon) | Operations for two-dimensional polygons.
+| 23 | [react-navigation-stack](./r/react-navigation-stack) | Stack navigator component for React Navigation
 | 22 | [d3-chord](./d/d3-chord) | Visualize relationships or network flow with an ae
 | 22 | [d3-quadtree](./d/d3-quadtree) | Two-dimensional recursive spatial subdivision.
 | 22 | [jqueryui](./j/jqueryui) | A curated set of user interface interactions, effe
@@ -120,6 +127,7 @@
 | 17 | [d3-contour](./d/d3-contour) | Compute contour polygons using marching squares.
 | 15 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod
 | 14 | [expo-file-system](./e/expo-file-system) | Provides access to the local file system on the de
+| 14 | [react-native-view-shot](./r/react-native-view-shot) | Capture a React Native view to an image
 | 14 | [storybook__api](./s/storybook__api) | Core Storybook API & Context
 | 13 | [mobx-react-lite](./m/mobx-react-lite) | Lightweight React bindings for MobX based on React
 | 12 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components
@@ -131,8 +139,8 @@
 | 10 | [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C
 | 9 | [expo-constants](./e/expo-constants) | Provides system information that remains constant 
 | 9 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-common-types) | The iconic font, CSS, and SVG framework
+| 8 | [react-navigation-drawer](./r/react-navigation-drawer) | Drawer navigator component for React Navigation
 | 7 | [emotion__styled-base](./e/emotion__styled-base) | base styled API for emotion
-| 7 | [storybook__router](./s/storybook__router) | Core Storybook Router
 | 5 | [semantic-ui-react__event-](./s/semantic-ui-react__event-stack) |  Event Stack
 | 4 | [expo-location](./e/expo-location) | Allows reading geolocation information from the de
 | 4 | [unimodules__react-native-](./u/unimodules__react-native-adapter) | The adapter to use universal modules with the Reac

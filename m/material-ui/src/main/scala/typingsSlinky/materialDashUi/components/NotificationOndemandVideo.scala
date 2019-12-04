@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object NotificationOndemandVideo
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationOndemandVideo] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationOndemandVideo].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "NotificationOndemandVideo")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

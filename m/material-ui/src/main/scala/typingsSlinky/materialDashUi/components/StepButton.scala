@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object StepButton
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.materialDashUi.stepperMod.StepButton] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.stepperMod.StepButton].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Stepper", "StepButton")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: disabled, href, onBlur, onClick, onFocus, onKeyDown, onKeyUp, onMouseEnter, onMouseLeave, onTouchStart, tabIndex, target, type */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object EditorBorderLeft
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorBorderLeft] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorBorderLeft].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "EditorBorderLeft")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

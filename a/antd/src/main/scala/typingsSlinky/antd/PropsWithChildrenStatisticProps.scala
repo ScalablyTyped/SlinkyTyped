@@ -1,14 +1,14 @@
 package typingsSlinky.antd
 
 import slinky.core.TagMod
-import typingsSlinky.antd.esStatisticUtilsMod.Formatter
-import typingsSlinky.antd.esStatisticUtilsMod.valueType
+import typingsSlinky.antd.libStatisticUtilsMod.Formatter
+import typingsSlinky.antd.libStatisticUtilsMod.valueType
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.PropsWithChildren<antd.antd/es/statistic/Statistic.StatisticProps> */
+/* Inlined react.react.PropsWithChildren<antd.antd/lib/statistic/Statistic.StatisticProps> */
 trait PropsWithChildrenStatisticProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var className: js.UndefOr[String] = js.undefined

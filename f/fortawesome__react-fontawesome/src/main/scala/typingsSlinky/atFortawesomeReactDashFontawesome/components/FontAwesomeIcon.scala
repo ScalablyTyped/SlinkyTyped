@@ -19,7 +19,11 @@ import scala.scalajs.js.annotation._
 
 object FontAwesomeIcon
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.atFortawesomeReactDashFontawesome.atFortawesomeReactDashFontawesomeMod.FontAwesomeIcon.asInstanceOf[String | js.Object]
+  @JSImport("@fortawesome/react-fontawesome", "FontAwesomeIcon")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, tabIndex */
   def apply(
     icon: IconProp,

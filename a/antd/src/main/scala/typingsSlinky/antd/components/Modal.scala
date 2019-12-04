@@ -8,11 +8,11 @@ import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdNumbers.`false`
-import typingsSlinky.antd.esButtonButtonMod.ButtonType
-import typingsSlinky.antd.esButtonButtonMod.NativeButtonProps
-import typingsSlinky.antd.esModalMod.default
-import typingsSlinky.antd.esModalModalMod.ModalProps
-import typingsSlinky.antd.esModalModalMod.getContainerFunc
+import typingsSlinky.antd.libButtonButtonMod.ButtonType
+import typingsSlinky.antd.libButtonButtonMod.NativeButtonProps
+import typingsSlinky.antd.libModalMod.default
+import typingsSlinky.antd.libModalModalMod.ModalProps
+import typingsSlinky.antd.libModalModalMod.getContainerFunc
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object Modal
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esModalMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/modal", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, width */
   def apply(
     afterClose: () => Unit = null,

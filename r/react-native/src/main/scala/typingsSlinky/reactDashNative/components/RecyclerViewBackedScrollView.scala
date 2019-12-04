@@ -7,7 +7,6 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -17,6 +16,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeScrollEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.PointPropType
 import typingsSlinky.reactDashNative.reactDashNativeMod.RecyclerViewBackedScrollViewProps
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
@@ -58,7 +58,11 @@ object RecyclerViewBackedScrollView
       tag.type, 
       typingsSlinky.reactDashNative.reactDashNativeMod.RecyclerViewBackedScrollView
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.RecyclerViewBackedScrollView].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "RecyclerViewBackedScrollView")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,

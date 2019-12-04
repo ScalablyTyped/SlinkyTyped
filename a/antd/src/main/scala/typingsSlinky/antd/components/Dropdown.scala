@@ -9,11 +9,11 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
-import typingsSlinky.antd.esDropdownDropdownMod.Align
-import typingsSlinky.antd.esDropdownDropdownMod.DropDownProps
-import typingsSlinky.antd.esDropdownDropdownMod.OverlayFunc
-import typingsSlinky.antd.esDropdownDropdownMod.Placement
-import typingsSlinky.antd.esDropdownMod.default
+import typingsSlinky.antd.libDropdownDropdownMod.Align
+import typingsSlinky.antd.libDropdownDropdownMod.DropDownProps
+import typingsSlinky.antd.libDropdownDropdownMod.OverlayFunc
+import typingsSlinky.antd.libDropdownDropdownMod.Placement
+import typingsSlinky.antd.libDropdownMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,11 @@ import scala.scalajs.js.annotation._
 
 object Dropdown
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esDropdownMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/dropdown", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     overlay: TagMod[Any] | OverlayFunc,

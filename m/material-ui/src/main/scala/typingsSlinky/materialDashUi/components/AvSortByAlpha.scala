@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object AvSortByAlpha
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.AvSortByAlpha] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.AvSortByAlpha].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "AvSortByAlpha")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

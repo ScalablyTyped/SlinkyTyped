@@ -7,14 +7,14 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esButtonButtonMod.ButtonType
-import typingsSlinky.antd.esButtonButtonMod.NativeButtonProps
-import typingsSlinky.antd.esPopconfirmMod.PopconfirmProps
-import typingsSlinky.antd.esPopconfirmMod.default
-import typingsSlinky.antd.esTooltipMod.TooltipAlignConfig
-import typingsSlinky.antd.esTooltipMod.TooltipPlacement
-import typingsSlinky.antd.esTooltipMod.TooltipTrigger
-import typingsSlinky.antd.esTooltipPlacementsMod.AdjustOverflow
+import typingsSlinky.antd.libButtonButtonMod.ButtonType
+import typingsSlinky.antd.libButtonButtonMod.NativeButtonProps
+import typingsSlinky.antd.libPopconfirmMod.PopconfirmProps
+import typingsSlinky.antd.libPopconfirmMod.default
+import typingsSlinky.antd.libTooltipMod.TooltipAlignConfig
+import typingsSlinky.antd.libTooltipMod.TooltipPlacement
+import typingsSlinky.antd.libTooltipMod.TooltipTrigger
+import typingsSlinky.antd.libTooltipPlacementsMod.AdjustOverflow
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,11 @@ import scala.scalajs.js.annotation._
 
 object Popconfirm
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esPopconfirmMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/popconfirm", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     title: TagMod[Any],

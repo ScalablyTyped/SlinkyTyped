@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object EditorFormatAlignCenter
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatAlignCenter] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatAlignCenter].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "EditorFormatAlignCenter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

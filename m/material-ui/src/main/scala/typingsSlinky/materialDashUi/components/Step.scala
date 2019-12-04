@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object Step
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.materialDashUi.stepperMod.Step] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.stepperMod.Step].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Stepper", "Step")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: disabled */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,

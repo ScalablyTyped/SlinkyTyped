@@ -6,7 +6,6 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -15,6 +14,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityTrait
 import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.TVParallaxProperties
 import typingsSlinky.reactDashNative.reactDashNativeMod.TouchableWithoutFeedbackProps
@@ -38,7 +38,11 @@ object TouchableWithoutFeedback
       tag.type, 
       typingsSlinky.reactDashNative.reactDashNativeMod.TouchableWithoutFeedback
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.TouchableWithoutFeedback].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "TouchableWithoutFeedback")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: disabled, onBlur, onFocus */
   def apply(
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,

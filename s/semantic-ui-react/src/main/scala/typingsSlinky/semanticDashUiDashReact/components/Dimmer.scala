@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object Dimmer
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesDimmerMod.default].asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/modules/Dimmer", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     page: js.UndefOr[Boolean] = js.undefined,

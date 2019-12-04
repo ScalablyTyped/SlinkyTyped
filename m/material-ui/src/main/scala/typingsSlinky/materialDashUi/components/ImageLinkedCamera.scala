@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageLinkedCamera
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageLinkedCamera] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageLinkedCamera].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageLinkedCamera")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

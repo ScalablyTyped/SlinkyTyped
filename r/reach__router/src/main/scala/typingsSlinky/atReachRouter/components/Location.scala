@@ -11,7 +11,11 @@ import scala.scalajs.js.annotation._
 
 object Location
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.Location] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atReachRouter.atReachRouterMod.Location].asInstanceOf[String | js.Object]
+  @JSImport("@reach/router", "Location")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.Location] = {
     val __obj = js.Dynamic.literal()
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

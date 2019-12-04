@@ -2,7 +2,7 @@ package typingsSlinky.antd.libTableInterfaceMod
 
 import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.antd.Anon_FiltersSortColumn
+import typingsSlinky.antd.Anon_Filters
 import typingsSlinky.antd.antdStrings.center
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
@@ -23,7 +23,7 @@ trait ColumnProps[T] extends js.Object {
   var filterDropdownVisible: js.UndefOr[Boolean] = js.undefined
   var filterIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])] = js.undefined
   var filterMultiple: js.UndefOr[Boolean] = js.undefined
-  var filteredValue: js.UndefOr[js.Array[_]] = js.undefined
+  var filteredValue: js.UndefOr[js.Array[_] | Null] = js.undefined
   var filters: js.UndefOr[js.Array[ColumnFilterItem]] = js.undefined
   var fixed: js.UndefOr[Boolean | left | right] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
@@ -36,9 +36,7 @@ trait ColumnProps[T] extends js.Object {
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.undefined
   var sortOrder: js.UndefOr[SortOrder | Boolean] = js.undefined
   var sorter: js.UndefOr[Boolean | CompareFn[T]] = js.undefined
-  var title: js.UndefOr[
-    TagMod[Any] | (js.Function1[/* options */ Anon_FiltersSortColumn[T], TagMod[Any]])
-  ] = js.undefined
+  var title: js.UndefOr[TagMod[Any] | (js.Function1[/* options */ Anon_Filters[T], TagMod[Any]])] = js.undefined
   var width: js.UndefOr[String | Double] = js.undefined
 }
 
@@ -69,7 +67,7 @@ object ColumnProps {
     sortDirections: js.Array[SortOrder] = null,
     sortOrder: SortOrder | Boolean = null,
     sorter: Boolean | CompareFn[T] = null,
-    title: TagMod[Any] | (js.Function1[/* options */ Anon_FiltersSortColumn[T], TagMod[Any]]) = null,
+    title: TagMod[Any] | (js.Function1[/* options */ Anon_Filters[T], TagMod[Any]]) = null,
     width: String | Double = null
   ): ColumnProps[T] = {
     val __obj = js.Dynamic.literal()

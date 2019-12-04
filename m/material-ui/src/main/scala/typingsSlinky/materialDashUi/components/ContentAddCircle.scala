@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ContentAddCircle
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ContentAddCircle] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ContentAddCircle].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ContentAddCircle")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

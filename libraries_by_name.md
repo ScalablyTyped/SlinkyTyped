@@ -1,6 +1,7 @@
 # All Libraries
  Library | Description | keywords
  --- | --- | ---
+| [angular__animations](./a/angular__animations) | Angular - animations integration with web-animatio | - |
 | [angular__common](./a/angular__common) | Angular - commonly needed directives and services | - |
 | [angular__compiler](./a/angular__compiler) | Angular - the compiler library | - |
 | [angular__core](./a/angular__core) | Angular - the core framework | - |
@@ -13,6 +14,7 @@
 | [axios](./a/axios) | Promise based HTTP client for the browser and node | xhr, http, ajax, promise, node |
 | [body-parser](./b/body-parser) | Node.js body parsing middleware | - |
 | [chart_dot_js](./c/chart_dot_js) | Simple HTML5 charts using the canvas element. | canvas, charts, data, graphs, html5, responsive |
+| [cheerio](./c/cheerio) | Tiny, fast, and elegant implementation of core jQu | htmlparser, jquery, selector, scraper, parser, html |
 | [classnames](./c/classnames) | A simple utility for conditionally joining classNa | react, css, classes, classname, classnames, util, utility |
 | [connect](./c/connect) | High performance middleware framework | framework, web, middleware, connect, rack |
 | [core-js](./c/core-js) | Standard library | ES3, ES5, ES6, ES7, ES2015, ES2016, ES2017, ES2018, ES2019, ECMAScript 3, ECMAScript 5, ECMAScript 6, ECMAScript 7, ECMAScript 2015, ECMAScript 2016, ECMAScript 2017, ECMAScript 2018, ECMAScript 2019, Harmony, Strawman, Map, Set, WeakMap, WeakSet, Promise, Observable, Symbol, TypedArray, URL, URLSearchParams, queueMicrotask, setImmediate, polyfill, ponyfill, shim |
@@ -56,6 +58,7 @@
 | [emotion__styled](./e/emotion__styled) | styled API for emotion | - |
 | [emotion__styled-base](./e/emotion__styled-base) | base styled API for emotion | - |
 | [emotion__utils](./e/emotion__utils) | internal utils for emotion | - |
+| [enzyme](./e/enzyme) | JavaScript Testing utilities for React | javascript, shallow rendering, shallowRender, test, reactjs, react, flux, testing, test utils, assertion helpers, tdd, mocha |
 | [exenv](./e/exenv) | React's ExecutionEnvironment module extracted for  | react, browser, server, environment, env, execution, executionenvironment |
 | [expo](./e/expo) | The Expo SDK | expo |
 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa | react-native, expo, asset |
@@ -82,6 +85,7 @@
 | [highlight_dot_js](./h/highlight_dot_js) | Syntax highlighting with language autodetection. | highlight, syntax |
 | [history](./h/history) | Manage session history with JavaScript | history, location |
 | [hoist-non-react-statics](./h/hoist-non-react-statics) | Copies non-react specific statics from a child com | react |
+| [inquirer](./i/inquirer) | A collection of common interactive command line us | command, prompt, stdin, cli, tty, menu |
 | [is-buffer](./i/is-buffer) | Determine if an object is a Buffer | arraybuffer, browser, browser buffer, browserify, buffer, buffers, core buffer, dataview, float32array, float64array, int16array, int32array, type, typed array, uint32array |
 | [jquery](./j/jquery) | JavaScript library for DOM operations | jquery, javascript, browser, library |
 | [jqueryui](./j/jqueryui) | A curated set of user interface interactions, effe | - |
@@ -114,7 +118,10 @@
 | [react-native](./r/react-native) | A framework for building native apps using React | - |
 | [react-native-gesture-hand](./r/react-native-gesture-handler) | Experimental implementation of a new declarative A | - |
 | [react-native-vector-icons](./r/react-native-vector-icons) | Customizable Icons for React Native with support f | react-native, react-component, react-native-component, react, mobile, ios, android, osx, windows, macos, ui, icon, icons, vector, retina, font |
+| [react-native-view-shot](./r/react-native-view-shot) | Capture a React Native view to an image | react-native, screenshot, viewshot, view-snapshot, snapshot, rasterize |
 | [react-navigation](./r/react-navigation) | Routing and navigation for your React Native apps | - |
+| [react-navigation-drawer](./r/react-navigation-drawer) | Drawer navigator component for React Navigation | react-native-component, react-component, react-native, ios, android, drawer, material |
+| [react-navigation-stack](./r/react-navigation-stack) | Stack navigator component for React Navigation | react-native-component, react-component, react-native, ios, android, stack |
 | [react-redux](./r/react-redux) | Official React bindings for Redux | react, reactjs, redux |
 | [react-router](./r/react-router) | Declarative routing for React | react, router, route, routing, history, link |
 | [react-router-dom](./r/react-router-dom) | DOM bindings for React Router | react, router, route, routing, history, link |
@@ -124,6 +131,7 @@
 | [redux-devtools-extension](./r/redux-devtools-extension) | Wrappers for Redux DevTools Extension. | - |
 | [reveal](./r/reveal) | The HTML presentation framework | - |
 | [rxjs](./r/rxjs) | Reactive Extensions for modern JavaScript | Rx, RxJS, ReactiveX, ReactiveExtensions, Streams, Observables, Observable, Stream, ES6, ES2015 |
+| [rxjs-compat](./r/rxjs-compat) |  RxJS: Reactive Extensions For JavaScript ======== | - |
 | [semantic-ui-react](./s/semantic-ui-react) | The official Semantic-UI-React integration. | - |
 | [semantic-ui-react__event-](./s/semantic-ui-react__event-stack) |  Event Stack | - |
 | [serve-static](./s/serve-static) | Serve static files | - |
@@ -135,11 +143,11 @@
 | [storybook__api](./s/storybook__api) | Core Storybook API & Context | storybook |
 | [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C | storybook |
 | [storybook__react](./s/storybook__react) | Storybook for React: Develop React Component in is | storybook |
-| [storybook__router](./s/storybook__router) | Core Storybook Router | storybook |
 | [storybook__theming](./s/storybook__theming) | Core Storybook Components | storybook |
 | [styled-components](./s/styled-components) | Visual primitives for the component age. Use the b | react, css, css-in-js, styled-components, babel-macro, babel-macros, styling |
 | [symbol-observable](./s/symbol-observable) | Symbol.observable ponyfill | symbol, observable, observables, ponyfill, polyfill, shim |
 | [three](./t/three) | JavaScript 3D library | three, three.js, 3d, webgl |
+| [through](./t/through) | simplified stream construction | stream, streams, user-streams, pipe |
 | [tslib](./t/tslib) | Runtime library for TypeScript helper functions | TypeScript, Microsoft, compiler, language, javascript, tslib, runtime |
 | [typescript](./t/typescript) | TypeScript is a language for application scale Jav | TypeScript, Microsoft, compiler, language, javascript |
 | [unimodules__core](./u/unimodules__core) | Universal modules core | unimodules |

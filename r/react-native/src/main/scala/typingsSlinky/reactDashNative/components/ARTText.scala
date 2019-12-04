@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object ARTText
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.ARTText] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.ARTText].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "ARTText")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     alignment: String = null,
     fill: String = null,

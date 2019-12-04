@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object ThemeProvider
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.styledDashComponents.macroMod.ThemeProvider] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.styledDashComponents.macroMod.ThemeProvider].asInstanceOf[String | js.Object]
+  @JSImport("styled-components/macro", "ThemeProvider")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     theme: AnyIfEmpty[AnyIfEmpty[DefaultTheme]] | (js.Function1[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]),
     overrides: StringDictionary[js.Any] = null
@@ -22,6 +26,6 @@ object ThemeProvider
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = ThemeProviderProps[js.Any, js.Any]
+  type Props = ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]
 }
 

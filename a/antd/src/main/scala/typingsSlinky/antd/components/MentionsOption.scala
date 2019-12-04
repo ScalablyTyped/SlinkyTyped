@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object MentionsOption
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esMod.Mentions.Option.asInstanceOf[String | js.Object]
+  @JSImport("antd", "Mentions.Option")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(style: CSSProperties = null, value: String = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()

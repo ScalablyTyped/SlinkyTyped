@@ -16,7 +16,11 @@ object MemoryRouter
       tag.type, 
       typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.MemoryRouter
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.MemoryRouter].asInstanceOf[String | js.Object]
+  @JSImport("react-router-dom", "MemoryRouter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     getUserConfirmation: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit = null,
     initialEntries: js.Array[LocationDescriptor[LocationState]] = null,

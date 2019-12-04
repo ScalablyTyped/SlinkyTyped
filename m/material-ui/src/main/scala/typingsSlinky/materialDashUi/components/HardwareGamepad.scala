@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object HardwareGamepad
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareGamepad] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareGamepad].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "HardwareGamepad")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

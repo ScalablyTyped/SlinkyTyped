@@ -8,21 +8,21 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.Anon_ScrollToFirstRowOnChange
-import typingsSlinky.antd.OmitTablePropsTkeyofWithStore
 import typingsSlinky.antd.antdNumbers.`false`
-import typingsSlinky.antd.esPaginationPaginationMod.PaginationConfig
-import typingsSlinky.antd.esSpinMod.SpinProps
-import typingsSlinky.antd.esTableInterfaceMod.ColumnProps
-import typingsSlinky.antd.esTableInterfaceMod.ExpandIconProps
-import typingsSlinky.antd.esTableInterfaceMod.SortOrder
-import typingsSlinky.antd.esTableInterfaceMod.SorterResult
-import typingsSlinky.antd.esTableInterfaceMod.TableComponents
-import typingsSlinky.antd.esTableInterfaceMod.TableCurrentDataSource
-import typingsSlinky.antd.esTableInterfaceMod.TableEventListeners
-import typingsSlinky.antd.esTableInterfaceMod.TableLocale
-import typingsSlinky.antd.esTableInterfaceMod.TableRowSelection
-import typingsSlinky.antd.esTableInterfaceMod.TableSize
-import typingsSlinky.antd.esTableMod.default
+import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
+import typingsSlinky.antd.libSpinMod.SpinProps
+import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
+import typingsSlinky.antd.libTableInterfaceMod.ExpandIconProps
+import typingsSlinky.antd.libTableInterfaceMod.SortOrder
+import typingsSlinky.antd.libTableInterfaceMod.SorterResult
+import typingsSlinky.antd.libTableInterfaceMod.TableComponents
+import typingsSlinky.antd.libTableInterfaceMod.TableCurrentDataSource
+import typingsSlinky.antd.libTableInterfaceMod.TableEventListeners
+import typingsSlinky.antd.libTableInterfaceMod.TableLocale
+import typingsSlinky.antd.libTableInterfaceMod.TableProps
+import typingsSlinky.antd.libTableInterfaceMod.TableRowSelection
+import typingsSlinky.antd.libTableInterfaceMod.TableSize
+import typingsSlinky.antd.libTableMod.default
 import typingsSlinky.csstype.csstypeMod.TableLayoutProperty
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.std.Record
@@ -32,7 +32,11 @@ import scala.scalajs.js.annotation._
 
 object Table
   extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTableMod.default[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/table", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply[T](
     bodyStyle: CSSProperties = null,
@@ -117,8 +121,8 @@ object Table
     if (title != null) __obj.updateDynamic("title")(js.Any.fromFunction1(title))
     if (!js.isUndefined(useFixedHeader)) __obj.updateDynamic("useFixedHeader")(useFixedHeader.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.esTableMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]]]
   }
-  type Props = OmitTablePropsTkeyofWithStore[js.Any]
+  type Props = TableProps[js.Any]
 }
 

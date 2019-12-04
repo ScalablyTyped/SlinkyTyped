@@ -1,15 +1,12 @@
 package typingsSlinky.atStorybookApi
 
 import typingsSlinky.atReachRouter.atReachRouterMod.NavigateFn
-import typingsSlinky.atReachRouter.atReachRouterMod.WindowLocation
 import typingsSlinky.atStorybookApi.distModulesLayoutMod.Layout
 import typingsSlinky.atStorybookApi.distModulesLayoutMod.UI
 import typingsSlinky.atStorybookApi.distModulesNotificationsMod.Notification
 import typingsSlinky.atStorybookApi.distModulesShortcutsMod.Shortcuts
 import typingsSlinky.atStorybookApi.distModulesStoriesMod.StoriesHash
 import typingsSlinky.atStorybookApi.distModulesUrlMod.QueryParams
-import typingsSlinky.atStorybookApi.distModulesVersionsMod.UnknownEntries
-import typingsSlinky.atStorybookApi.distModulesVersionsMod.Versions
 import typingsSlinky.atStorybookTheming.distTypesMod.ThemeVars
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +30,7 @@ trait Anon_CustomQueryParams extends js.Object {
   var theme: ThemeVars
   var ui: UI
   var uri: js.UndefOr[String] = js.undefined
-  var versions: Versions with UnknownEntries
+  var versions: VersionsUnknownEntries
   var viewMode: String
 }
 
@@ -54,7 +51,7 @@ object Anon_CustomQueryParams {
     storyId: String,
     theme: ThemeVars,
     ui: UI,
-    versions: Versions with UnknownEntries,
+    versions: VersionsUnknownEntries,
     viewMode: String,
     default: js.UndefOr[Boolean] = js.undefined,
     navigate: NavigateFn = null,

@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Transition
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.semanticDashUiDashReact.distCommonjsModulesTransitionMod.default].asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/modules/Transition", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     animation: SemanticTRANSITIONS | String = null,
     directional: js.UndefOr[Boolean] = js.undefined,

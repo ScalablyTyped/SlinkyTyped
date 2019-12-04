@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageBlurOff
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurOff] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurOff].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageBlurOff")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

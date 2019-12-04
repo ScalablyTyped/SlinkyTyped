@@ -6,12 +6,12 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esPopoverMod.PopoverProps
-import typingsSlinky.antd.esPopoverMod.default
-import typingsSlinky.antd.esTooltipMod.TooltipAlignConfig
-import typingsSlinky.antd.esTooltipMod.TooltipPlacement
-import typingsSlinky.antd.esTooltipMod.TooltipTrigger
-import typingsSlinky.antd.esTooltipPlacementsMod.AdjustOverflow
+import typingsSlinky.antd.libPopoverMod.PopoverProps
+import typingsSlinky.antd.libPopoverMod.default
+import typingsSlinky.antd.libTooltipMod.TooltipAlignConfig
+import typingsSlinky.antd.libTooltipMod.TooltipPlacement
+import typingsSlinky.antd.libTooltipMod.TooltipTrigger
+import typingsSlinky.antd.libTooltipPlacementsMod.AdjustOverflow
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,11 @@ import scala.scalajs.js.annotation._
 
 object Popover
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esPopoverMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/popover", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     align: TooltipAlignConfig = null,

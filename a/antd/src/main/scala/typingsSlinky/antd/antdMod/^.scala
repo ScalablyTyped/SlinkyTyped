@@ -1,6 +1,6 @@
 package typingsSlinky.antd.antdMod
 
-import typingsSlinky.antd.antdStrings.`3DOT24DOT2`
+import typingsSlinky.antd.antdStrings.`3DOT25DOT2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("antd", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  var version: `3DOT24DOT2` = js.native
+  var version: `3DOT25DOT2` = js.native
 }
 

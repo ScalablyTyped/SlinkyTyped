@@ -7,7 +7,6 @@ import slinky.core.ExternalPropsWriterProvider
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -18,6 +17,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.Insets
 import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.TVParallaxProperties
 import typingsSlinky.reactDashNative.reactDashNativeMod.TextStyle
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle

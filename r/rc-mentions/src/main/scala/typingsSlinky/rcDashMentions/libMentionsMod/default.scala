@@ -1,7 +1,7 @@
 package typingsSlinky.rcDashMentions.libMentionsMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.rcDashMentions.Anon_FilterOptionHasValue
+import typingsSlinky.rcDashMentions.Anon_FilterOption
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -19,7 +19,7 @@ class default protected () extends Mentions {
 @js.native
 object default extends js.Object {
   var Option: ReactComponentClass[OptionProps] = js.native
-  var defaultProps: Anon_FilterOptionHasValue = js.native
+  var defaultProps: Anon_FilterOption = js.native
   def getDerivedStateFromProps(props: MentionsProps, prevState: MentionsState): Partial[MentionsState] = js.native
 }
 

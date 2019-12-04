@@ -2,6 +2,7 @@ package typingsSlinky.atStorybookApi.distInitDashProviderDashApiMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import typingsSlinky.atStorybookApi.atStorybookApiMod.API
 import typingsSlinky.atStorybookChannels.atStorybookChannelsMod.Channel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +12,13 @@ trait Provider
   extends /* key */ StringDictionary[js.Any] {
   var channel: js.UndefOr[Channel] = js.undefined
   var renderPreview: js.UndefOr[js.Function0[ReactElement]] = js.undefined
-  def handleAPI(api: /* import warning: QualifyReferences.resolveTypeRef many Couldn't qualify API */ js.Any): Unit
+  def handleAPI(api: API): Unit
 }
 
 object Provider {
   @scala.inline
   def apply(
-    handleAPI: /* import warning: QualifyReferences.resolveTypeRef many Couldn't qualify API */ js.Any => Unit,
+    handleAPI: API => Unit,
     StringDictionary: /* key */ StringDictionary[js.Any] = null,
     channel: Channel = null,
     renderPreview: () => ReactElement = null

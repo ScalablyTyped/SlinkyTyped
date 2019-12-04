@@ -1,7 +1,6 @@
 package typingsSlinky.atStorybookApi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atReachRouter.atReachRouterMod.WindowLocation
 import typingsSlinky.atStorybookApi.atStorybookApiStrings.info
 import typingsSlinky.atStorybookApi.atStorybookApiStrings.settings
 import typingsSlinky.atStorybookApi.atStorybookApiStrings.story

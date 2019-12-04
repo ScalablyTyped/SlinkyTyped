@@ -18,7 +18,6 @@ package object styledDashComponentsMod {
   import typingsSlinky.styledDashComponents.Anon_Children
   import typingsSlinky.styledDashComponents.Anon_SuppressMultiMountWarning
   import typingsSlinky.styledDashComponents.Anon_ThemeT
-  import typingsSlinky.styledDashComponents.Omit
   import typingsSlinky.styledDashComponents.WithOptionalThemeComponentPropsWithRefCT
   import typingsSlinky.styledDashComponents.styledDashComponentsNumbers.`false`
 
@@ -58,6 +57,8 @@ package object styledDashComponentsMod {
     - typings.styledDashComponents.styledDashComponentsMod.CSSObject
   */
   type InterpolationValue = _InterpolationValue | String | Double | FalseyValue
+  // Helper type operators
+  type Omit[T, K /* <: String */] = Pick[T, Exclude[String, K]]
   // extracts React defaultProps
   type ReactDefaultProps[C] = js.Any
   type ReactDefaultizedProps[C, P] = P | (Defaultize[P, js.Any])

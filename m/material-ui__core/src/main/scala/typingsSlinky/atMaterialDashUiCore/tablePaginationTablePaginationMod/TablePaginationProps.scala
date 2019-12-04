@@ -69,7 +69,6 @@ import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.atMaterialDashUiCore.tablePaginationTablePaginationActionsMod.TablePaginationActionsProps
 import typingsSlinky.react.Anon_Html
-import typingsSlinky.react.NativeMouseEvent
 import typingsSlinky.react.reactMod.AnimationEventHandler
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEventHandler
@@ -81,6 +80,7 @@ import typingsSlinky.react.reactMod.FormEventHandler
 import typingsSlinky.react.reactMod.KeyboardEventHandler
 import typingsSlinky.react.reactMod.MouseEvent
 import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.reactMod.NativeMouseEvent
 import typingsSlinky.react.reactMod.PointerEventHandler
 import typingsSlinky.react.reactMod.ReactEventHandler
 import typingsSlinky.react.reactMod.Ref
@@ -98,6 +98,7 @@ import scala.scalajs.js.annotation._
 trait TablePaginationProps extends js.Object {
   var ActionsComponent: js.UndefOr[ReactComponentClass[TablePaginationActionsProps]] = js.native
   var SelectProps: js.UndefOr[PartialSelectProps] = js.native
+  var abbr: js.UndefOr[String] = js.native
   var about: js.UndefOr[String] = js.native
   var accessKey: js.UndefOr[String] = js.native
   var align: js.UndefOr[inherit | left | center | right | justify] = js.native

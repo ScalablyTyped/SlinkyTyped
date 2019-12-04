@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esSpinMod.SpinProps
-import typingsSlinky.antd.esSpinMod.SpinSize
-import typingsSlinky.antd.esSpinMod.default
+import typingsSlinky.antd.libSpinMod.SpinProps
+import typingsSlinky.antd.libSpinMod.SpinSize
+import typingsSlinky.antd.libSpinMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Spin
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSpinMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/spin", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     delay: Int | Double = null,

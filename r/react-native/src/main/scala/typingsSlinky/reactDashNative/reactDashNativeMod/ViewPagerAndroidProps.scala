@@ -2,7 +2,6 @@ package typingsSlinky.reactDashNative.reactDashNativeMod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactDashNative.Anon_ActionName
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Dragging
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Idle
 import typingsSlinky.reactDashNative.reactDashNativeStrings.Settling

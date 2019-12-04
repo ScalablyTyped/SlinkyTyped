@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionPermCameraMic
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermCameraMic] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermCameraMic].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionPermCameraMic")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

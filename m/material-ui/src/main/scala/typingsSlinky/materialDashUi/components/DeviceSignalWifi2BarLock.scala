@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object DeviceSignalWifi2BarLock
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalWifi2BarLock] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalWifi2BarLock].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "DeviceSignalWifi2BarLock")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

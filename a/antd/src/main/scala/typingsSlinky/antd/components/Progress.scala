@@ -16,11 +16,11 @@ import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.top
-import typingsSlinky.antd.esProgressMod.default
-import typingsSlinky.antd.esProgressProgressMod.ProgressGradient
-import typingsSlinky.antd.esProgressProgressMod.ProgressProps
-import typingsSlinky.antd.esProgressProgressMod.ProgressSize
-import typingsSlinky.antd.esProgressProgressMod.ProgressType
+import typingsSlinky.antd.libProgressMod.default
+import typingsSlinky.antd.libProgressProgressMod.ProgressGradient
+import typingsSlinky.antd.libProgressProgressMod.ProgressProps
+import typingsSlinky.antd.libProgressProgressMod.ProgressSize
+import typingsSlinky.antd.libProgressProgressMod.ProgressType
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,11 @@ import scala.scalajs.js.annotation._
 
 object Progress
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esProgressMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/progress", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     format: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any] = null,

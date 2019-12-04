@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Fade
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.fadeMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/Fade", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,
     appear: js.UndefOr[Boolean] = js.undefined,

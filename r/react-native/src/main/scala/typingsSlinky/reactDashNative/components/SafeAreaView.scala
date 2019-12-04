@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object SafeAreaView
   extends SharedApply_ViewProps2092493819[typingsSlinky.reactDashNative.reactDashNativeMod.SafeAreaView] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.SafeAreaView].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "SafeAreaView")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

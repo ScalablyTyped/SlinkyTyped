@@ -9,10 +9,10 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.validating
 import typingsSlinky.antd.antdStrings.warning
-import typingsSlinky.antd.esFormFormItemMod.FormItemProps
-import typingsSlinky.antd.esFormFormItemMod.FormLabelAlign
-import typingsSlinky.antd.esFormFormItemMod.default
-import typingsSlinky.antd.esGridColMod.ColProps
+import typingsSlinky.antd.libFormFormItemMod.FormItemProps
+import typingsSlinky.antd.libFormFormItemMod.FormLabelAlign
+import typingsSlinky.antd.libFormFormItemMod.default
+import typingsSlinky.antd.libGridColMod.ColProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object FormItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esFormFormItemMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/form/FormItem", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, htmlFor, id, required */
   def apply(
     colon: js.UndefOr[Boolean] = js.undefined,

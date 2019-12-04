@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object NavigatorIOS
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.NavigatorIOS] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.NavigatorIOS].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "NavigatorIOS")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     initialRoute: Route,
     barTintColor: String = null,

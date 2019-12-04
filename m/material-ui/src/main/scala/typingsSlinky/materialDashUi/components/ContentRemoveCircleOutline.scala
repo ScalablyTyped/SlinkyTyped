@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ContentRemoveCircleOutline
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ContentRemoveCircleOutline] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ContentRemoveCircleOutline].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ContentRemoveCircleOutline")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

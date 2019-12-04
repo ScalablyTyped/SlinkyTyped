@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object Subheader
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.subheaderMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Subheader", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     inset: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,

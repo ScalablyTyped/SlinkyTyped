@@ -9,17 +9,17 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.Anon_Checked
+import typingsSlinky.antd.Anon_CheckedHalfChecked
 import typingsSlinky.antd.Anon_Event
-import typingsSlinky.antd.esTreeMod.default
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeCheckedEvent
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeExpandedEvent
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeMouseEvent
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeProps
-import typingsSlinky.antd.esTreeTreeMod.AntTreeNodeSelectedEvent
-import typingsSlinky.antd.esTreeTreeMod.AntdTreeNodeAttribute
-import typingsSlinky.antd.esTreeTreeMod.TreeNodeNormal
-import typingsSlinky.antd.esTreeTreeMod.TreeProps
+import typingsSlinky.antd.libTreeMod.default
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeCheckedEvent
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeExpandedEvent
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeMouseEvent
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeProps
+import typingsSlinky.antd.libTreeTreeMod.AntTreeNodeSelectedEvent
+import typingsSlinky.antd.libTreeTreeMod.AntdTreeNodeAttribute
+import typingsSlinky.antd.libTreeTreeMod.TreeNodeNormal
+import typingsSlinky.antd.libTreeTreeMod.TreeProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,14 +27,18 @@ import scala.scalajs.js.annotation._
 
 object Tree
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTreeMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/tree", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, draggable, multiple, onDragEnd, onDragEnter, onDragLeave, onDragOver, onDragStart, onDrop, onMouseEnter, onMouseLeave */
   def apply(
     autoExpandParent: js.UndefOr[Boolean] = js.undefined,
     blockNode: js.UndefOr[Boolean] = js.undefined,
     checkStrictly: js.UndefOr[Boolean] = js.undefined,
     checkable: js.UndefOr[Boolean] = js.undefined,
-    checkedKeys: js.Array[String] | Anon_Checked = null,
+    checkedKeys: js.Array[String] | Anon_CheckedHalfChecked = null,
     defaultCheckedKeys: js.Array[String] = null,
     defaultExpandAll: js.UndefOr[Boolean] = js.undefined,
     defaultExpandParent: js.UndefOr[Boolean] = js.undefined,
@@ -46,7 +50,7 @@ object Tree
     icon: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any] = null,
     loadData: ReactComponentClass[AntTreeNodeProps] => js.Thenable[Unit] = null,
     loadedKeys: js.Array[String] = null,
-    onCheck: (/* checkedKeys */ js.Array[String] | Anon_Checked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
+    onCheck: (/* checkedKeys */ js.Array[String] | Anon_CheckedHalfChecked, /* e */ AntTreeNodeCheckedEvent) => Unit = null,
     onClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onDoubleClick: (/* e */ SyntheticMouseEvent[HTMLElement], ReactComponentClass[AntTreeNodeProps]) => Unit = null,
     onExpand: (/* expandedKeys */ js.Array[String], /* info */ AntTreeNodeExpandedEvent) => Unit | js.Thenable[Unit] = null,

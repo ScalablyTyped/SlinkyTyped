@@ -1,8 +1,11 @@
 package typingsSlinky.antd.libDateDashPickerInterfaceMod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.web.SyntheticFocusEvent
 import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.small
@@ -37,9 +40,13 @@ object MonthPickerProps {
     locale: js.Any = null,
     monthCellContentRender: (/* date */ Moment, /* locale */ js.Any) => TagMod[Any] = null,
     name: String = null,
+    onBlur: /* e */ SyntheticEvent[Event, Element] => Unit = null,
     onChange: (/* date */ Moment | Null, /* dateString */ String) => Unit = null,
+    onFocus: SyntheticFocusEvent[Element] => Unit = null,
     onOpenChange: /* status */ Boolean => Unit = null,
     open: js.UndefOr[Boolean] = js.undefined,
+    pickerClass: String = null,
+    pickerInputClass: String = null,
     placeholder: String = null,
     popupStyle: CSSProperties = null,
     prefixCls: String = null,
@@ -66,9 +73,13 @@ object MonthPickerProps {
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     if (monthCellContentRender != null) __obj.updateDynamic("monthCellContentRender")(js.Any.fromFunction2(monthCellContentRender))
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
     if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
     if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (pickerClass != null) __obj.updateDynamic("pickerClass")(pickerClass.asInstanceOf[js.Any])
+    if (pickerInputClass != null) __obj.updateDynamic("pickerInputClass")(pickerInputClass.asInstanceOf[js.Any])
     if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (popupStyle != null) __obj.updateDynamic("popupStyle")(popupStyle.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])

@@ -4,7 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Option extends SharedApply_OptionProps_325201872 {
-  override val component: String | js.Object = typingsSlinky.antd.esSelectMod.default.Option.asInstanceOf[String | js.Object]
+object Option extends SharedApply_OptionProps755128378 {
+  @JSImport("antd/lib/select", "default.Option")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

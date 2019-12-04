@@ -24,7 +24,11 @@ object BaseButton
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BaseButton
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BaseButton].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler", "BaseButton")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
     disallowInterruption: js.UndefOr[Boolean] = js.undefined,

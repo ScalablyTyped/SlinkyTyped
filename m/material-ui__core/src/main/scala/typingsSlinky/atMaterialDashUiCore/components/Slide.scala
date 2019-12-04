@@ -20,7 +20,11 @@ import scala.scalajs.js.annotation._
 
 object Slide
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.slideMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/Slide", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     direction: left | right | up | down,
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,

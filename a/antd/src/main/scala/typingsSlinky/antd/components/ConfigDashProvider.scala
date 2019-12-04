@@ -1,11 +1,15 @@
 package typingsSlinky.antd.components
 
-import typingsSlinky.antd.esConfigDashProviderMod.default
+import typingsSlinky.antd.libConfigDashProviderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ConfigDashProvider extends SharedApply_ConfigProviderProps_1838576949[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esConfigDashProviderMod.default].asInstanceOf[String | js.Object]
+object ConfigDashProvider extends SharedApply_ConfigProviderProps_1246503107[default] {
+  @JSImport("antd/lib/config-provider", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

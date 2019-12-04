@@ -43,16 +43,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Window
   extends EventTarget
-     with WindowTimers
-     with WindowSessionStorage
-     with WindowLocalStorage
-     with WindowConsole
+     with AnimationFrameProvider
      with GlobalEventHandlers
      with IDBEnvironment
      with WindowBase64
-     with AnimationFrameProvider
-     with WindowOrWorkerGlobalScope
+     with WindowConsole
      with WindowEventHandlers
+     with WindowLocalStorage
+     with WindowOrWorkerGlobalScope
+     with WindowSessionStorage
+     with WindowTimers
      with /* index */ NumberDictionary[Window] {
   val applicationCache: org.scalajs.dom.raw.ApplicationCache = js.native
   val clientInformation: org.scalajs.dom.raw.Navigator = js.native

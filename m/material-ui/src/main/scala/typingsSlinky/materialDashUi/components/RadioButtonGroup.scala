@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object RadioButtonGroup
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.radioButtonRadioButtonGroupMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/RadioButton/RadioButtonGroup", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, name */
   def apply(
     defaultSelected: js.Any = null,

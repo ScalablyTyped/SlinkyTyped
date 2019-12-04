@@ -1,9 +1,5 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
-import typingsSlinky.atAngularCore.DirectiveDefList
-import typingsSlinky.atAngularCore.HookData
-import typingsSlinky.atAngularCore.PipeDefList
-import typingsSlinky.atAngularCore.TData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

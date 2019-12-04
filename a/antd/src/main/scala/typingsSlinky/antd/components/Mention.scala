@@ -6,10 +6,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esMentionMod.MentionPlacement
-import typingsSlinky.antd.esMentionMod.MentionProps
-import typingsSlinky.antd.esMentionMod.SuggestionItme
-import typingsSlinky.antd.esMentionMod.default
+import typingsSlinky.antd.libMentionMod.MentionPlacement
+import typingsSlinky.antd.libMentionMod.MentionProps
+import typingsSlinky.antd.libMentionMod.SuggestionItme
+import typingsSlinky.antd.libMentionMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Mention
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esMentionMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/mention", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, onBlur, onChange, onFocus, placeholder, readOnly */
   def apply(
     defaultSuggestions: js.Array[SuggestionItme] = null,

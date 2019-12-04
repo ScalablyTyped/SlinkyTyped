@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object EditorFormatLineSpacing
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatLineSpacing] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatLineSpacing].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "EditorFormatLineSpacing")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

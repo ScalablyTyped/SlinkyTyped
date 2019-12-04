@@ -5,7 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeSelect
-  extends SharedApply_TreeSelectProps47308460[typingsSlinky.antd.esMod.TreeSelect[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esMod.TreeSelect[js.Any]].asInstanceOf[String | js.Object]
+  extends SharedApply_TreeSelectProps809525229[typingsSlinky.antd.antdMod.TreeSelect[js.Any]] {
+  @JSImport("antd", "TreeSelect")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

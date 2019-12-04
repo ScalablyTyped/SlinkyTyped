@@ -1,7 +1,7 @@
 package typingsSlinky.antd.antdMod
 
 import typingsSlinky.antd.Anon_AllowClear
-import typingsSlinky.antd.PartialCascaderStateFlattenOptions
+import typingsSlinky.antd.PartialCascaderState
 import typingsSlinky.antd.libCascaderMod.CascaderProps
 import typingsSlinky.antd.libCascaderMod.CascaderState
 import typingsSlinky.antd.libCascaderMod.default
@@ -20,6 +20,6 @@ class Cascader protected () extends default {
 @js.native
 object Cascader extends js.Object {
   var defaultProps: Anon_AllowClear = js.native
-  def getDerivedStateFromProps(nextProps: CascaderProps, hasPrevProps: CascaderState): PartialCascaderStateFlattenOptions = js.native
+  def getDerivedStateFromProps(nextProps: CascaderProps, hasPrevProps: CascaderState): PartialCascaderState = js.native
 }
 

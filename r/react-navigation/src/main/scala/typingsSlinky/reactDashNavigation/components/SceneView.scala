@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object SceneView
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNavigation.reactDashNavigationMod.SceneView] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.SceneView].asInstanceOf[String | js.Object]
+  @JSImport("react-navigation", "SceneView")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     component: ReactComponentClass[js.Object],
     navigation: NavigationProp[_],

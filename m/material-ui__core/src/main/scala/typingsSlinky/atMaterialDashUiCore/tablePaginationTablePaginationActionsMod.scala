@@ -2,11 +2,11 @@ package typingsSlinky.atMaterialDashUiCore
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.atMaterialDashUiCore.tablePaginationTablePaginationActionsMod.TablePaginationActionsProps
-import typingsSlinky.react.NativeMouseEvent
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.react.reactMod.HTMLAttributes
 import typingsSlinky.react.reactMod.MouseEvent
+import typingsSlinky.react.reactMod.NativeMouseEvent
 import typingsSlinky.std.HTMLButtonElement
 import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js

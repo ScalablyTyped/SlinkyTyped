@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object MemoryRouter
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.MemoryRouter] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashRouter.reactDashRouterMod.MemoryRouter].asInstanceOf[String | js.Object]
+  @JSImport("react-router", "MemoryRouter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     getUserConfirmation: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit = null,
     initialEntries: js.Array[LocationDescriptor[LocationState]] = null,

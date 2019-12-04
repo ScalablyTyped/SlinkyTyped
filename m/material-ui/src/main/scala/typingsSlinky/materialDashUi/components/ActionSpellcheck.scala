@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionSpellcheck
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSpellcheck] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSpellcheck].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionSpellcheck")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Foundation extends SharedApply_IconProps_1525323211[default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.foundationMod.default].asInstanceOf[String | js.Object]
+  @JSImport("react-native-vector-icons/Foundation", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTypographyTypographyMod.TypographyProps
+import typingsSlinky.antd.libTypographyTypographyMod.TypographyProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object Typography
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esTypographyTypographyMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/typography/Typography", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, id */
   def apply(
     `aria-label`: String = null,

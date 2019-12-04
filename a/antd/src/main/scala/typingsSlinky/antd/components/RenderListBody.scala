@@ -4,16 +4,20 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTransferListMod.RenderedItem
-import typingsSlinky.antd.esTransferMod.TransferItem
-import typingsSlinky.antd.esTransferRenderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.libTransferListMod.RenderedItem
+import typingsSlinky.antd.libTransferMod.TransferItem
+import typingsSlinky.antd.libTransferRenderListBodyMod.TransferListBodyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RenderListBody
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esTransferRenderListBodyMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/transfer/renderListBody", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     filteredItems: js.Array[TransferItem],
     filteredRenderItems: js.Array[RenderedItem],

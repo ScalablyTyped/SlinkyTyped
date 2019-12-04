@@ -2,6 +2,7 @@ package typingsSlinky.antd
 
 import typingsSlinky.propDashTypes.propDashTypesMod.ReactNodeLike
 import typingsSlinky.propDashTypes.propDashTypesMod.Requireable
+import typingsSlinky.react.reactMod.ReactText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +20,7 @@ trait Anon_ArgsCancelText extends js.Object {
   var prefixCls: Requireable[String]
   var title: Requireable[ReactNodeLike]
   var visible: Requireable[Boolean]
-  var width: Requireable[String | Double]
+  var width: Requireable[ReactText]
 }
 
 object Anon_ArgsCancelText {
@@ -37,7 +38,7 @@ object Anon_ArgsCancelText {
     prefixCls: Requireable[String],
     title: Requireable[ReactNodeLike],
     visible: Requireable[Boolean],
-    width: Requireable[String | Double]
+    width: Requireable[ReactText]
   ): Anon_ArgsCancelText = {
     val __obj = js.Dynamic.literal(cancelText = cancelText.asInstanceOf[js.Any], centered = centered.asInstanceOf[js.Any], closable = closable.asInstanceOf[js.Any], closeIcon = closeIcon.asInstanceOf[js.Any], confirmLoading = confirmLoading.asInstanceOf[js.Any], footer = footer.asInstanceOf[js.Any], okText = okText.asInstanceOf[js.Any], onCancel = onCancel.asInstanceOf[js.Any], onOk = onOk.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
   

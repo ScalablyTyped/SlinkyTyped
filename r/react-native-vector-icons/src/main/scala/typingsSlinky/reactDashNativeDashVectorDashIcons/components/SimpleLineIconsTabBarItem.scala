@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SimpleLineIconsTabBarItem extends SharedApply_TabBarItemIOSProps929810654[TabBarItem] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.simpleLineIconsMod.default.TabBarItem].asInstanceOf[String | js.Object]
+  @JSImport("react-native-vector-icons/SimpleLineIcons", "default.TabBarItem")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

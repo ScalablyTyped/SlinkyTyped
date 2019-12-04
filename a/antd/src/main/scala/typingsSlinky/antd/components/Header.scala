@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCalendarHeaderMod.HeaderProps
-import typingsSlinky.antd.esCalendarHeaderMod.RenderHeader
-import typingsSlinky.antd.esCalendarHeaderMod.default
+import typingsSlinky.antd.libCalendarHeaderMod.HeaderProps
+import typingsSlinky.antd.libCalendarHeaderMod.RenderHeader
+import typingsSlinky.antd.libCalendarHeaderMod.default
 import typingsSlinky.moment.momentMod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Header
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCalendarHeaderMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/calendar/Header", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: type */
   def apply(
     value: Moment,

@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esStatisticCountdownMod.CountdownProps
-import typingsSlinky.antd.esStatisticCountdownMod.default
-import typingsSlinky.antd.esStatisticUtilsMod.Formatter
+import typingsSlinky.antd.libStatisticCountdownMod.CountdownProps
+import typingsSlinky.antd.libStatisticCountdownMod.default
+import typingsSlinky.antd.libStatisticUtilsMod.Formatter
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Countdown
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esStatisticCountdownMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/statistic/Countdown", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, value */
   def apply(
     decimalSeparator: String = null,

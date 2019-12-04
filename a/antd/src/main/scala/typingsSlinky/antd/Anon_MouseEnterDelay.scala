@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esTooltipMod.TooltipPlacement
-import typingsSlinky.antd.esTooltipMod.TooltipTrigger
+import typingsSlinky.antd.libTooltipMod.TooltipPlacement
+import typingsSlinky.antd.libTooltipMod.TooltipTrigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

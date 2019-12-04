@@ -2,8 +2,13 @@ package typingsSlinky.antd.libDateDashPickerInterfaceMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLSpanElement
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.Anon_DisabledHours
 import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.large
@@ -28,6 +33,8 @@ trait RangePickerProps extends PickerProps {
   var onChange: js.UndefOr[
     js.Function2[/* dates */ RangePickerValue, /* dateStrings */ js.Tuple2[String, String], Unit]
   ] = js.undefined
+  var onMouseEnter: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLSpanElement], Unit]] = js.undefined
+  var onMouseLeave: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLSpanElement], Unit]] = js.undefined
   var onOk: js.UndefOr[js.Function1[/* selectedTime */ RangePickerPresetRange, Unit]] = js.undefined
   var onPanelChange: js.UndefOr[
     js.Function2[
@@ -42,6 +49,8 @@ trait RangePickerProps extends PickerProps {
   var separator: js.UndefOr[TagMod[Any]] = js.undefined
   var showTime: js.UndefOr[TimePickerProps | Boolean] = js.undefined
   var showToday: js.UndefOr[Boolean] = js.undefined
+  var tagPrefixCls: js.UndefOr[String] = js.undefined
+  var timePicker: js.UndefOr[TagMod[Any]] = js.undefined
   var value: js.UndefOr[RangePickerValue] = js.undefined
 }
 
@@ -65,12 +74,18 @@ object RangePickerProps {
     locale: js.Any = null,
     mode: String | js.Array[String] = null,
     name: String = null,
+    onBlur: /* e */ SyntheticEvent[Event, Element] => Unit = null,
     onCalendarChange: (/* dates */ RangePickerValue, /* dateStrings */ js.Tuple2[String, String]) => Unit = null,
     onChange: (/* dates */ RangePickerValue, /* dateStrings */ js.Tuple2[String, String]) => Unit = null,
+    onFocus: SyntheticFocusEvent[Element] => Unit = null,
+    onMouseEnter: /* e */ SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
+    onMouseLeave: /* e */ SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
     onOk: /* selectedTime */ RangePickerPresetRange => Unit = null,
     onOpenChange: /* status */ Boolean => Unit = null,
     onPanelChange: (/* value */ js.UndefOr[RangePickerValue], /* mode */ js.UndefOr[String | js.Array[String]]) => Unit = null,
     open: js.UndefOr[Boolean] = js.undefined,
+    pickerClass: String = null,
+    pickerInputClass: String = null,
     placeholder: js.Tuple2[String, String] = null,
     popupStyle: CSSProperties = null,
     prefixCls: String = null,
@@ -82,6 +97,8 @@ object RangePickerProps {
     size: large | small | default = null,
     style: CSSProperties = null,
     suffixIcon: TagMod[Any] = null,
+    tagPrefixCls: String = null,
+    timePicker: TagMod[Any] = null,
     value: RangePickerValue = null
   ): RangePickerProps = {
     val __obj = js.Dynamic.literal()
@@ -102,12 +119,18 @@ object RangePickerProps {
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
     if (onCalendarChange != null) __obj.updateDynamic("onCalendarChange")(js.Any.fromFunction2(onCalendarChange))
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
     if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
     if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
     if (onPanelChange != null) __obj.updateDynamic("onPanelChange")(js.Any.fromFunction2(onPanelChange))
     if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (pickerClass != null) __obj.updateDynamic("pickerClass")(pickerClass.asInstanceOf[js.Any])
+    if (pickerInputClass != null) __obj.updateDynamic("pickerInputClass")(pickerInputClass.asInstanceOf[js.Any])
     if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (popupStyle != null) __obj.updateDynamic("popupStyle")(popupStyle.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
@@ -119,6 +142,8 @@ object RangePickerProps {
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
+    if (tagPrefixCls != null) __obj.updateDynamic("tagPrefixCls")(tagPrefixCls.asInstanceOf[js.Any])
+    if (timePicker != null) __obj.updateDynamic("timePicker")(timePicker.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangePickerProps]
   }

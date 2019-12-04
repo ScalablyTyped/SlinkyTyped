@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esRadioInterfaceMod.RadioGroupButtonStyle
+import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupButtonStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

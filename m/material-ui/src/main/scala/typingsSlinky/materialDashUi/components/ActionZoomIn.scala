@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionZoomIn
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionZoomIn] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionZoomIn].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionZoomIn")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

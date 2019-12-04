@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object SuspenseList
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.react.reactMod.SuspenseList.asInstanceOf[String | js.Object]
+  @JSImport("react", "SuspenseList")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def DirectionalSuspenseListProps(
     revealOrder: forwards | backwards,
     tail: SuspenseListTailMode = null,

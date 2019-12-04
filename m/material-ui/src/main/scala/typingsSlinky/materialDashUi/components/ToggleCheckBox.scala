@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ToggleCheckBox
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ToggleCheckBox] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ToggleCheckBox].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ToggleCheckBox")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

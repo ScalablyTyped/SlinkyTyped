@@ -2,6 +2,10 @@ package typingsSlinky.antd.libUploadDraggerMod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
+import typingsSlinky.antd.antdStrings.POST
+import typingsSlinky.antd.antdStrings.PUT
+import typingsSlinky.antd.antdStrings.post_
+import typingsSlinky.antd.antdStrings.put_
 import typingsSlinky.antd.libUploadInterfaceMod.HttpRequestHeader
 import typingsSlinky.antd.libUploadInterfaceMod.PreviewFileHandler
 import typingsSlinky.antd.libUploadInterfaceMod.RcCustomRequestOptions
@@ -27,23 +31,24 @@ trait DraggerProps extends js.Object {
   ] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var customRequest: js.UndefOr[js.Function1[/* options */ RcCustomRequestOptions, Unit]] = js.undefined
-  var data: js.UndefOr[js.Object | (js.Function1[/* file */ UploadFile, js.Object])] = js.undefined
-  var defaultFileList: js.UndefOr[js.Array[UploadFile]] = js.undefined
+  var data: js.UndefOr[js.Object | (js.Function1[/* file */ UploadFile[_], js.Object])] = js.undefined
+  var defaultFileList: js.UndefOr[js.Array[UploadFile[_]]] = js.undefined
   var directory: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var fileList: js.UndefOr[js.Array[UploadFile]] = js.undefined
+  var fileList: js.UndefOr[js.Array[UploadFile[_]]] = js.undefined
   var headers: js.UndefOr[HttpRequestHeader] = js.undefined
   var height: js.UndefOr[Double] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var listType: js.UndefOr[UploadListType] = js.undefined
   var locale: js.UndefOr[UploadLocale] = js.undefined
+  var method: js.UndefOr[POST | PUT | post_ | put_] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var name: js.UndefOr[String] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* info */ UploadChangeParam[UploadFile], Unit]] = js.undefined
-  var onDownload: js.UndefOr[js.Function1[/* file */ UploadFile, Unit]] = js.undefined
-  var onPreview: js.UndefOr[js.Function1[/* file */ UploadFile, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* info */ UploadChangeParam[UploadFile[_]], Unit]] = js.undefined
+  var onDownload: js.UndefOr[js.Function1[/* file */ UploadFile[_], Unit]] = js.undefined
+  var onPreview: js.UndefOr[js.Function1[/* file */ UploadFile[_], Unit]] = js.undefined
   var onRemove: js.UndefOr[
-    js.Function1[/* file */ UploadFile, Unit | Boolean | (js.Promise[Unit | Boolean])]
+    js.Function1[/* file */ UploadFile[_], Unit | Boolean | (js.Promise[Unit | Boolean])]
   ] = js.undefined
   var openFileDialogOnClick: js.UndefOr[Boolean] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -64,22 +69,23 @@ object DraggerProps {
     beforeUpload: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit] = null,
     className: String = null,
     customRequest: /* options */ RcCustomRequestOptions => Unit = null,
-    data: js.Object | (js.Function1[/* file */ UploadFile, js.Object]) = null,
-    defaultFileList: js.Array[UploadFile] = null,
+    data: js.Object | (js.Function1[/* file */ UploadFile[_], js.Object]) = null,
+    defaultFileList: js.Array[UploadFile[_]] = null,
     directory: js.UndefOr[Boolean] = js.undefined,
     disabled: js.UndefOr[Boolean] = js.undefined,
-    fileList: js.Array[UploadFile] = null,
+    fileList: js.Array[UploadFile[_]] = null,
     headers: HttpRequestHeader = null,
     height: Int | Double = null,
     id: String = null,
     listType: UploadListType = null,
     locale: UploadLocale = null,
+    method: POST | PUT | post_ | put_ = null,
     multiple: js.UndefOr[Boolean] = js.undefined,
     name: String = null,
-    onChange: /* info */ UploadChangeParam[UploadFile] => Unit = null,
-    onDownload: /* file */ UploadFile => Unit = null,
-    onPreview: /* file */ UploadFile => Unit = null,
-    onRemove: /* file */ UploadFile => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
+    onChange: /* info */ UploadChangeParam[UploadFile[_]] => Unit = null,
+    onDownload: /* file */ UploadFile[_] => Unit = null,
+    onPreview: /* file */ UploadFile[_] => Unit = null,
+    onRemove: /* file */ UploadFile[_] => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
     openFileDialogOnClick: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
     previewFile: /* file */ File | Blob => js.Thenable[String] = null,
@@ -106,6 +112,7 @@ object DraggerProps {
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))

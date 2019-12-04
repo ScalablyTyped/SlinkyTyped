@@ -3,7 +3,7 @@ package typingsSlinky.rcDashMenu.libMenuMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.rcDashMenu.Anon_GetWrappedInstanceSubPopupMenu
+import typingsSlinky.rcDashMenu.Anon_GetWrappedInstance
 import typingsSlinky.rcDashMenu.libInterfaceMod.MenuClickEventHandler
 import typingsSlinky.rcDashMenu.libInterfaceMod.MiniStore
 import typingsSlinky.rcDashMenu.libInterfaceMod.SelectInfo
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Menu
   extends Component[MenuProps, js.Object, js.Any] {
-  var innerMenu: ReactComponentClass[SubPopupMenuProps] with Anon_GetWrappedInstanceSubPopupMenu = js.native
+  var innerMenu: ReactComponentClass[SubPopupMenuProps] with Anon_GetWrappedInstance = js.native
   var isRootMenu: Boolean = js.native
   var onClick: MenuClickEventHandler = js.native
   var store: MiniStore = js.native

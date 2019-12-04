@@ -11,14 +11,14 @@ import typingsSlinky.rcDashMenu.Anon_DomEventKey
 import typingsSlinky.rcDashMenu.Anon_Hover
 import typingsSlinky.rcDashMenu.Anon_IsRootMenu
 import typingsSlinky.rcDashMenu.Anon_Item
-import typingsSlinky.rcDashMenu.esInterfaceMod.BuiltinPlacements
-import typingsSlinky.rcDashMenu.esInterfaceMod.MenuMode
-import typingsSlinky.rcDashMenu.esInterfaceMod.MiniStore
-import typingsSlinky.rcDashMenu.esInterfaceMod.MotionType
-import typingsSlinky.rcDashMenu.esInterfaceMod.RenderIconType
-import typingsSlinky.rcDashMenu.esInterfaceMod.SelectInfo
-import typingsSlinky.rcDashMenu.esInterfaceMod.TriggerSubMenuAction
-import typingsSlinky.rcDashMenu.esSubMenuMod.SubMenuProps
+import typingsSlinky.rcDashMenu.libInterfaceMod.BuiltinPlacements
+import typingsSlinky.rcDashMenu.libInterfaceMod.MenuMode
+import typingsSlinky.rcDashMenu.libInterfaceMod.MiniStore
+import typingsSlinky.rcDashMenu.libInterfaceMod.MotionType
+import typingsSlinky.rcDashMenu.libInterfaceMod.RenderIconType
+import typingsSlinky.rcDashMenu.libInterfaceMod.SelectInfo
+import typingsSlinky.rcDashMenu.libInterfaceMod.TriggerSubMenuAction
+import typingsSlinky.rcDashMenu.libSubMenuMod.SubMenuProps
 import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.ReactInstance
 import scala.scalajs.js
@@ -26,8 +26,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SubMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcDashMenu.esSubMenuMod.SubMenu] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.rcDashMenu.esSubMenuMod.SubMenu].asInstanceOf[String | js.Object]
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcDashMenu.libSubMenuMod.SubMenu] {
+  @JSImport("rc-menu/lib/SubMenu", "SubMenu")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, multiple, onClick, onMouseEnter, onMouseLeave, onSelect */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
@@ -61,7 +65,7 @@ object SubMenu
     title: TagMod[Any] = null,
     triggerSubMenuAction: TriggerSubMenuAction = null,
     overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.rcDashMenu.esSubMenuMod.SubMenu] = {
+  ): BuildingComponent[tag.type, typingsSlinky.rcDashMenu.libSubMenuMod.SubMenu] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])

@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FoundationTabBarItem extends SharedApply_TabBarItemIOSProps929810654[TabBarItem] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atExpoVectorDashIcons.atExpoVectorDashIconsMod.Foundation.TabBarItem].asInstanceOf[String | js.Object]
+  @JSImport("@expo/vector-icons", "Foundation.TabBarItem")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

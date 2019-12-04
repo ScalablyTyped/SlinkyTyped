@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object Avatar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.avatarMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Avatar", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onClick, size, src */
   def apply(
     backgroundColor: String = null,

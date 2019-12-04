@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object AutoLockScrolling
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.internalAutoLockScrollingMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/internal/AutoLockScrolling", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(lock: Boolean, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(lock = lock.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

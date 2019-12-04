@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esBreadcrumbBreadcrumbMod.BreadcrumbProps
-import typingsSlinky.antd.esBreadcrumbBreadcrumbMod.Route
-import typingsSlinky.antd.esBreadcrumbMod.default
+import typingsSlinky.antd.libBreadcrumbBreadcrumbMod.BreadcrumbProps
+import typingsSlinky.antd.libBreadcrumbBreadcrumbMod.Route
+import typingsSlinky.antd.libBreadcrumbMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ import scala.scalajs.js.annotation._
 
 object Breadcrumb
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esBreadcrumbMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/breadcrumb", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     itemRender: (/* route */ Route, /* params */ js.Any, /* routes */ js.Array[Route], /* paths */ js.Array[String]) => TagMod[Any] = null,

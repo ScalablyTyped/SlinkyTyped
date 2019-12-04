@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImagePhotoSizeSelectSmall
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePhotoSizeSelectSmall] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePhotoSizeSelectSmall].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImagePhotoSizeSelectSmall")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

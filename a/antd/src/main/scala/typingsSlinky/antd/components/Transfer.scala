@@ -9,12 +9,13 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esTransferListMod.TransferListProps
-import typingsSlinky.antd.esTransferMod.RenderResult
-import typingsSlinky.antd.esTransferMod.TransferDirection
-import typingsSlinky.antd.esTransferMod.TransferItem
-import typingsSlinky.antd.esTransferMod.TransferProps
-import typingsSlinky.antd.esTransferMod.default
+import typingsSlinky.antd.libTransferListMod.TransferListProps
+import typingsSlinky.antd.libTransferMod.ListStyle
+import typingsSlinky.antd.libTransferMod.RenderResult
+import typingsSlinky.antd.libTransferMod.TransferDirection
+import typingsSlinky.antd.libTransferMod.TransferItem
+import typingsSlinky.antd.libTransferMod.TransferProps
+import typingsSlinky.antd.libTransferMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEvent
 import scala.scalajs.js
@@ -23,15 +24,19 @@ import scala.scalajs.js.annotation._
 
 object Transfer
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTransferMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/transfer", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     dataSource: js.Array[TransferItem],
+    listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties,
     body: /* props */ TransferListProps => TagMod[Any] = null,
     filterOption: (/* inputValue */ String, /* item */ TransferItem) => Boolean = null,
     footer: /* props */ TransferListProps => TagMod[Any] = null,
     `lazy`: js.Object | Boolean = null,
-    listStyle: CSSProperties = null,
     locale: js.Object = null,
     notFoundContent: TagMod[Any] = null,
     onChange: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit = null,
@@ -53,12 +58,11 @@ object Transfer
     titles: js.Array[String] = null,
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
     if (body != null) __obj.updateDynamic("body")(js.Any.fromFunction1(body))
     if (filterOption != null) __obj.updateDynamic("filterOption")(js.Any.fromFunction2(filterOption))
     if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction1(footer))
     if (`lazy` != null) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))

@@ -22,7 +22,11 @@ import scala.scalajs.js.annotation._
 
 object DatePickerDialog
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.datePickerDatePickerDialogMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/DatePicker/DatePickerDialog", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     DateTimeFormat: Anon_Locales = null,
     animation: ReactComponentClass[PopoverAnimationProps] = null,

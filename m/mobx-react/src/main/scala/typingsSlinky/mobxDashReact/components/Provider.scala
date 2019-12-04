@@ -1,7 +1,5 @@
 package typingsSlinky.mobxDashReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import scala.scalajs.js
@@ -11,13 +9,11 @@ import scala.scalajs.js.annotation._
 /* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(scala), Name(scalajs), Name(js), Name(Any))) was not a @ScalaJSDefined trait */
 object Provider
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mobxDashReact.mobxDashReactMod.Provider] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.mobxDashReact.mobxDashReactMod.Provider].asInstanceOf[String | js.Object]
-  def apply(props: js.Any with js.Object, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.mobxDashReact.mobxDashReactMod.Provider] = {
-    val __obj = js.Dynamic.literal()
-    js.Dynamic.global.Object.assign(__obj, props)
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
+  @JSImport("mobx-react", "Provider")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   type Props = js.Any
 }
 

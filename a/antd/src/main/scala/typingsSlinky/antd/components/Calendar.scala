@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esCalendarHeaderMod.RenderHeader
-import typingsSlinky.antd.esCalendarMod.CalendarMode
-import typingsSlinky.antd.esCalendarMod.CalendarProps
-import typingsSlinky.antd.esCalendarMod.default
+import typingsSlinky.antd.libCalendarHeaderMod.RenderHeader
+import typingsSlinky.antd.libCalendarMod.CalendarMode
+import typingsSlinky.antd.libCalendarMod.CalendarProps
+import typingsSlinky.antd.libCalendarMod.default
 import typingsSlinky.moment.momentMod.Moment
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object Calendar
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esCalendarMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/calendar", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onChange, onSelect */
   def apply(
     dateCellRender: /* date */ Moment => TagMod[Any] = null,

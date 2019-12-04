@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esBadgeScrollNumberMod.ScrollNumberProps
-import typingsSlinky.antd.esBadgeScrollNumberMod.default
+import typingsSlinky.antd.libBadgeScrollNumberMod.ScrollNumberProps
+import typingsSlinky.antd.libBadgeScrollNumberMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object ScrollNumber
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esBadgeScrollNumberMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/badge/ScrollNumber", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
     component: String = null,

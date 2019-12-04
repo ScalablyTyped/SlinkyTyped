@@ -15,7 +15,11 @@ object NavigationProvider
       tag.type, 
       typingsSlinky.reactDashNavigation.reactDashNavigationMod.NavigationProvider
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNavigation.reactDashNavigationMod.NavigationProvider].asInstanceOf[String | js.Object]
+  @JSImport("react-navigation", "NavigationProvider")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(value: NavigationProp[_], overrides: StringDictionary[js.Any] = null): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNavigation.reactDashNavigationMod.NavigationProvider

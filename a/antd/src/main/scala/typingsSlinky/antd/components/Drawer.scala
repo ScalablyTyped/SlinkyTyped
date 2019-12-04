@@ -7,10 +7,10 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdNumbers.`false`
-import typingsSlinky.antd.esDrawerMod.DrawerProps
-import typingsSlinky.antd.esDrawerMod.EventType
-import typingsSlinky.antd.esDrawerMod.getContainerFunc
-import typingsSlinky.antd.esDrawerMod.placementType
+import typingsSlinky.antd.libDrawerMod.DrawerProps
+import typingsSlinky.antd.libDrawerMod.EventType
+import typingsSlinky.antd.libDrawerMod.getContainerFunc
+import typingsSlinky.antd.libDrawerMod.placementType
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,11 @@ import scala.scalajs.js.annotation._
 
 object Drawer
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esDrawerMod.default.asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/drawer", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, height, width */
   def apply(
     afterVisibleChange: /* visible */ Boolean => Unit = null,

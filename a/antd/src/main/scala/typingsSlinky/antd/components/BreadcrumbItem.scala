@@ -5,16 +5,20 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.a.tag
-import typingsSlinky.antd.esBreadcrumbBreadcrumbItemMod.BreadcrumbItemProps
-import typingsSlinky.antd.esBreadcrumbBreadcrumbItemMod.default
-import typingsSlinky.antd.esDropdownDropdownMod.OverlayFunc
+import typingsSlinky.antd.libBreadcrumbBreadcrumbItemMod.BreadcrumbItemProps
+import typingsSlinky.antd.libBreadcrumbBreadcrumbItemMod.default
+import typingsSlinky.antd.libDropdownDropdownMod.OverlayFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BreadcrumbItem
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esBreadcrumbBreadcrumbItemMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/breadcrumb/BreadcrumbItem", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: href, onClick */
   def apply(
     overlay: TagMod[Any] | OverlayFunc = null,

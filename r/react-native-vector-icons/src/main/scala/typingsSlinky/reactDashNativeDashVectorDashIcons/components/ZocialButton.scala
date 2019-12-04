@@ -6,6 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ZocialButton extends SharedApply_IconButtonProps_562613305[Button] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashVectorDashIcons.zocialMod.default.Button].asInstanceOf[String | js.Object]
+  @JSImport("react-native-vector-icons/Zocial", "default.Button")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

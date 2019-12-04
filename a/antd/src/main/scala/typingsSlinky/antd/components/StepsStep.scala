@@ -9,7 +9,7 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.finish
 import typingsSlinky.antd.antdStrings.process
 import typingsSlinky.antd.antdStrings.wait
-import typingsSlinky.antd.esStepsMod.StepProps
+import typingsSlinky.antd.libStepsMod.StepProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,11 @@ import scala.scalajs.js.annotation._
 
 object StepsStep
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.antd.esMod.Steps.Step.asInstanceOf[String | js.Object]
+  @JSImport("antd", "Steps.Step")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled, onClick */
   def apply(
     description: TagMod[Any] = null,

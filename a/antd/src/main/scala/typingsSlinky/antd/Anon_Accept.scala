@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.esUploadInterfaceMod.UploadListType
-import typingsSlinky.antd.esUploadInterfaceMod.UploadType
+import typingsSlinky.antd.libUploadInterfaceMod.UploadListType
+import typingsSlinky.antd.libUploadInterfaceMod.UploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

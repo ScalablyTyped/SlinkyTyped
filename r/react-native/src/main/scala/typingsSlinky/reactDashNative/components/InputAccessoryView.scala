@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object InputAccessoryView
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.InputAccessoryView] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.InputAccessoryView].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "InputAccessoryView")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     backgroundColor: String = null,
     nativeID: String = null,

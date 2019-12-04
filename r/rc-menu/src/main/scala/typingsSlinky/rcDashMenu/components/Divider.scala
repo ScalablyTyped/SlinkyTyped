@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.rcDashMenu.esDividerMod.DividerProps
+import typingsSlinky.rcDashMenu.libDividerMod.DividerProps
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object Divider
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.rcDashMenu.esDividerMod.default.asInstanceOf[String | js.Object]
+  @JSImport("rc-menu/lib/Divider", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     rootPrefixCls: String = null,

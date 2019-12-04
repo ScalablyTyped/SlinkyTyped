@@ -22,10 +22,14 @@ import scala.scalajs.js.annotation._
 
 object DrawerLayout
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.drawerLayoutMod.default].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler/DrawerLayout", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     renderNavigationView: Value => TagMod[Any],
-    containerStyle: StyleProp[ViewStyle] = null,
+    contentContainerStyle: StyleProp[ViewStyle] = null,
     drawerBackgroundColor: String = null,
     drawerLockMode: DrawerLockMode = null,
     drawerPosition: DrawerPosition = null,
@@ -44,7 +48,7 @@ object DrawerLayout
     overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(renderNavigationView = js.Any.fromFunction1(renderNavigationView))
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (contentContainerStyle != null) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
     if (drawerBackgroundColor != null) __obj.updateDynamic("drawerBackgroundColor")(drawerBackgroundColor.asInstanceOf[js.Any])
     if (drawerLockMode != null) __obj.updateDynamic("drawerLockMode")(drawerLockMode.asInstanceOf[js.Any])
     if (drawerPosition != null) __obj.updateDynamic("drawerPosition")(drawerPosition.asInstanceOf[js.Any])

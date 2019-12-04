@@ -19,9 +19,9 @@ import typingsSlinky.antd.antdStrings.middle
 import typingsSlinky.antd.antdStrings.start
 import typingsSlinky.antd.antdStrings.stretch
 import typingsSlinky.antd.antdStrings.top
-import typingsSlinky.antd.esGridRowMod.Gutter
-import typingsSlinky.antd.esGridRowMod.RowProps
-import typingsSlinky.antd.esRowMod.default
+import typingsSlinky.antd.libGridRowMod.Gutter
+import typingsSlinky.antd.libGridRowMod.RowProps
+import typingsSlinky.antd.libRowMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -73,7 +73,11 @@ import scala.scalajs.js.annotation._
 
 object Row
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esRowMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/row", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
   def apply(
     about: String = null,

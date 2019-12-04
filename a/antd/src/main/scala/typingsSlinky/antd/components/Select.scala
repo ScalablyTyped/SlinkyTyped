@@ -13,10 +13,10 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.html.input.tag
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.small
-import typingsSlinky.antd.esSelectMod.ModeOption
-import typingsSlinky.antd.esSelectMod.SelectProps
-import typingsSlinky.antd.esSelectMod.SelectValue
-import typingsSlinky.antd.esSelectMod.default
+import typingsSlinky.antd.libSelectMod.ModeOption
+import typingsSlinky.antd.libSelectMod.SelectProps
+import typingsSlinky.antd.libSelectMod.SelectValue
+import typingsSlinky.antd.libSelectMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,11 @@ import scala.scalajs.js.annotation._
 
 object Select
   extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esSelectMod.default[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/select", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus, className, disabled, id, onBlur, onMouseEnter, onMouseLeave, open, tabIndex */
   def apply[T](
     allowClear: js.UndefOr[Boolean] = js.undefined,
@@ -123,7 +127,7 @@ object Select
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.antd.esSelectMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.antd.libSelectMod.default[js.Any]]]
   }
   type Props = SelectProps[js.Any]
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.rcDashMenu
 
-import typingsSlinky.rcDashMenu.esSubPopupMenuMod.SubPopupMenu
+import typingsSlinky.rcDashMenu.libSubPopupMenuMod.SubPopupMenu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

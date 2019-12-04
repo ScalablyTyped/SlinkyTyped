@@ -1,6 +1,6 @@
 package typingsSlinky.antd.libDescriptionsMod
 
-import typingsSlinky.antd.Anon_ScreensBreakpointMap
+import typingsSlinky.antd.Anon_Screens
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Descriptions
-  extends Component[DescriptionsProps, Anon_ScreensBreakpointMap, js.Any] {
+  extends Component[DescriptionsProps, Anon_Screens, js.Any] {
   var token: String = js.native
   @JSName("componentDidMount")
   def componentDidMount_MDescriptions(): Unit = js.native

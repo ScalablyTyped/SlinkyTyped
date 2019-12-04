@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object HardwareKeyboardArrowDown
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardArrowDown] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardArrowDown].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "HardwareKeyboardArrowDown")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

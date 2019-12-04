@@ -16,7 +16,11 @@ import scala.scalajs.js.annotation._
 
 object Zoom
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atMaterialDashUiCore.zoomMod.default].asInstanceOf[String | js.Object]
+  @JSImport("@material-ui/core/Zoom", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,
     appear: js.UndefOr[Boolean] = js.undefined,

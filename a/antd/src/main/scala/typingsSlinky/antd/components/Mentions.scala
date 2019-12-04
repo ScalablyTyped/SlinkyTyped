@@ -6,8 +6,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esMentionsMod.MentionProps
-import typingsSlinky.antd.esMentionsMod.default
+import typingsSlinky.antd.libMentionsMod.MentionProps
+import typingsSlinky.antd.libMentionsMod.default
 import typingsSlinky.rcDashMentions.libMentionsMod.Placement
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
 import typingsSlinky.rcDashMentions.rcDashMentionsNumbers.`false`
@@ -18,7 +18,11 @@ import scala.scalajs.js.annotation._
 
 object Mentions
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esMentionsMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/mentions", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus, className, onBlur, onChange, onFocus */
   def apply(
     defaultValue: String = null,

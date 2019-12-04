@@ -12,7 +12,6 @@ import typingsSlinky.reactDashNative.Anon_AverageItemLength
 import typingsSlinky.reactDashNative.Anon_Changed
 import typingsSlinky.reactDashNative.Anon_DistanceFromEnd
 import typingsSlinky.reactDashNative.Anon_Index
-import typingsSlinky.reactDashNative.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
@@ -24,6 +23,7 @@ import typingsSlinky.reactDashNative.reactDashNativeMod.LayoutChangeEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.ListRenderItemInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeScrollEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
+import typingsSlinky.reactDashNative.reactDashNativeMod.NodeHandle
 import typingsSlinky.reactDashNative.reactDashNativeMod.PointPropType
 import typingsSlinky.reactDashNative.reactDashNativeMod.ScrollViewProps
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
@@ -63,7 +63,11 @@ import scala.scalajs.js.annotation._
 
 object FlatList
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.FlatList[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNative.reactDashNativeMod.FlatList[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("react-native", "FlatList")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
   def apply[ItemT](
     renderItem: /* info */ ListRenderItemInfo[ItemT] => ReactElement | Null,

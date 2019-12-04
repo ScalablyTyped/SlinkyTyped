@@ -1,8 +1,8 @@
 package typingsSlinky.antd
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.antd.esRadioGroupMod.default
-import typingsSlinky.antd.esRadioInterfaceMod.RadioGroupProps
+import typingsSlinky.antd.libRadioGroupMod.default
+import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

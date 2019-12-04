@@ -6,16 +6,20 @@ import org.scalajs.dom.raw.File
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esUploadDraggerMod.DraggerProps
-import typingsSlinky.antd.esUploadDraggerMod.default
-import typingsSlinky.antd.esUploadInterfaceMod.HttpRequestHeader
-import typingsSlinky.antd.esUploadInterfaceMod.RcCustomRequestOptions
-import typingsSlinky.antd.esUploadInterfaceMod.RcFile
-import typingsSlinky.antd.esUploadInterfaceMod.ShowUploadListInterface
-import typingsSlinky.antd.esUploadInterfaceMod.UploadFile
-import typingsSlinky.antd.esUploadInterfaceMod.UploadListType
-import typingsSlinky.antd.esUploadInterfaceMod.UploadLocale
-import typingsSlinky.antd.esUploadInterfaceMod.UploadType
+import typingsSlinky.antd.antdStrings.POST
+import typingsSlinky.antd.antdStrings.PUT
+import typingsSlinky.antd.antdStrings.post_
+import typingsSlinky.antd.antdStrings.put_
+import typingsSlinky.antd.libUploadDraggerMod.DraggerProps
+import typingsSlinky.antd.libUploadDraggerMod.default
+import typingsSlinky.antd.libUploadInterfaceMod.HttpRequestHeader
+import typingsSlinky.antd.libUploadInterfaceMod.RcCustomRequestOptions
+import typingsSlinky.antd.libUploadInterfaceMod.RcFile
+import typingsSlinky.antd.libUploadInterfaceMod.ShowUploadListInterface
+import typingsSlinky.antd.libUploadInterfaceMod.UploadFile
+import typingsSlinky.antd.libUploadInterfaceMod.UploadListType
+import typingsSlinky.antd.libUploadInterfaceMod.UploadLocale
+import typingsSlinky.antd.libUploadInterfaceMod.UploadType
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,23 +27,28 @@ import scala.scalajs.js.annotation._
 
 object Dragger
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esUploadDraggerMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/upload/Dragger", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: accept, className, disabled, id, multiple, name, onChange */
   def apply(
     action: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]]) = null,
     beforeUpload: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit] = null,
     customRequest: /* options */ RcCustomRequestOptions => Unit = null,
-    data: js.Object | (js.Function1[/* file */ UploadFile, js.Object]) = null,
-    defaultFileList: js.Array[UploadFile] = null,
+    data: js.Object | (js.Function1[/* file */ UploadFile[_], js.Object]) = null,
+    defaultFileList: js.Array[UploadFile[_]] = null,
     directory: js.UndefOr[Boolean] = js.undefined,
-    fileList: js.Array[UploadFile] = null,
+    fileList: js.Array[UploadFile[_]] = null,
     headers: HttpRequestHeader = null,
     height: Int | Double = null,
     listType: UploadListType = null,
     locale: UploadLocale = null,
-    onDownload: /* file */ UploadFile => Unit = null,
-    onPreview: /* file */ UploadFile => Unit = null,
-    onRemove: /* file */ UploadFile => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
+    method: POST | PUT | post_ | put_ = null,
+    onDownload: /* file */ UploadFile[_] => Unit = null,
+    onPreview: /* file */ UploadFile[_] => Unit = null,
+    onRemove: /* file */ UploadFile[_] => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
     openFileDialogOnClick: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
     previewFile: /* file */ File | Blob => js.Thenable[String] = null,
@@ -63,6 +72,7 @@ object Dragger
     if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction1(onDownload))
     if (onPreview != null) __obj.updateDynamic("onPreview")(js.Any.fromFunction1(onPreview))
     if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))

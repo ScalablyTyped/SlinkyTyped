@@ -22,7 +22,11 @@ object LongPressGestureHandler
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.LongPressGestureHandler
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.LongPressGestureHandler].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler", "LongPressGestureHandler")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
     enabled: js.UndefOr[Boolean] = js.undefined,

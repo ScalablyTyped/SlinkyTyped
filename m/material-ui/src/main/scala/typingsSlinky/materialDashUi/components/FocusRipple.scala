@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
 
 object FocusRipple
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.internalFocusRippleMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/internal/FocusRipple", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     color: String = null,
     innerStyle: CSSProperties = null,

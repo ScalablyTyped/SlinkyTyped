@@ -5,6 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IconGroup extends SharedApply_IconGroupProps1625835420 {
-  override val component: String | js.Object = typingsSlinky.semanticDashUiDashReact.distCommonjsElementsIconIconGroupMod.default.asInstanceOf[String | js.Object]
+  @JSImport("semantic-ui-react/dist/commonjs/elements/Icon/IconGroup", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

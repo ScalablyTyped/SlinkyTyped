@@ -14,7 +14,11 @@ import scala.scalajs.js.annotation._
 
 object CardMedia
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.cardCardMediaMod.default].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/Card/CardMedia", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply(
     actAsExpander: js.UndefOr[Boolean] = js.undefined,
     expandable: js.UndefOr[Boolean] = js.undefined,

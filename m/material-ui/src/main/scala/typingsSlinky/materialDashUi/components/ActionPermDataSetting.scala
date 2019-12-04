@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ActionPermDataSetting
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermDataSetting] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermDataSetting].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ActionPermDataSetting")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

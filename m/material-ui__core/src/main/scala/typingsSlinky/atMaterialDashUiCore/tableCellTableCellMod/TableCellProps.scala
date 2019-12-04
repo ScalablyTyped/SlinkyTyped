@@ -99,6 +99,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent @material-ui/core.@material-ui/core.StandardProps<@material-ui/core.@material-ui/core/TableCell/TableCell.TableCellBaseProps, @material-ui/core.@material-ui/core/TableCell/TableCell.TableCellClassKey, 'align'> */
 trait TableCellProps extends js.Object {
+  var abbr: js.UndefOr[String] = js.undefined
   var about: js.UndefOr[String] = js.undefined
   var accessKey: js.UndefOr[String] = js.undefined
   var align: js.UndefOr[inherit | left | center | right | justify] = js.undefined
@@ -290,6 +291,7 @@ trait TableCellProps extends js.Object {
 object TableCellProps {
   @scala.inline
   def apply(
+    abbr: String = null,
     about: String = null,
     accessKey: String = null,
     align: inherit | left | center | right | justify = null,
@@ -478,6 +480,7 @@ object TableCellProps {
     vocab: String = null
   ): TableCellProps = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])

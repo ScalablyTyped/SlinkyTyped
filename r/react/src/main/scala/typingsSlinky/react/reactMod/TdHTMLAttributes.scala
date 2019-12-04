@@ -73,6 +73,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TdHTMLAttributes[T] extends HTMLAttributes[T] {
+  var abbr: js.UndefOr[String] = js.undefined
   var align: js.UndefOr[left | center | right | justify | char] = js.undefined
   var colSpan: js.UndefOr[Double] = js.undefined
   var headers: js.UndefOr[String] = js.undefined
@@ -84,6 +85,7 @@ trait TdHTMLAttributes[T] extends HTMLAttributes[T] {
 object TdHTMLAttributes {
   @scala.inline
   def apply[T](
+    abbr: String = null,
     about: String = null,
     accessKey: String = null,
     align: left | center | right | justify | char = null,
@@ -265,6 +267,7 @@ object TdHTMLAttributes {
     vocab: String = null
   ): TdHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])

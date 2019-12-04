@@ -2,7 +2,7 @@ package typingsSlinky.antd.libTransferListMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
-import typingsSlinky.antd.Anon_FilteredItemsFilteredRenderItems
+import typingsSlinky.antd.Anon_FilteredItems
 import typingsSlinky.antd.antdNumbers.`false`
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.none
@@ -37,8 +37,8 @@ trait TransferList
     showSelectAll: Boolean,
     disabled: Boolean
   ): `false` | Element = js.native
-  def getCheckStatus(filteredItems: js.Array[TransferItem]): all | none | part = js.native
-  def getFilteredItems(dataSource: js.Array[TransferItem], filterValue: String): Anon_FilteredItemsFilteredRenderItems = js.native
+  def getCheckStatus(filteredItems: js.Array[TransferItem]): none | all | part = js.native
+  def getFilteredItems(dataSource: js.Array[TransferItem], filterValue: String): Anon_FilteredItems = js.native
   def getListBody(
     prefixCls: String,
     searchPlaceholder: String,

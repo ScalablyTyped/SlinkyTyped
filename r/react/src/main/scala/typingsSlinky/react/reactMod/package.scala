@@ -30,7 +30,6 @@ package object reactMod {
   import typingsSlinky.react.Anon_RefAny
   import typingsSlinky.react.Anon_Result
   import typingsSlinky.react.Anon_Type
-  import typingsSlinky.react.NotExactlyAnyPropertyKeys
   import typingsSlinky.react.reactStrings.mount
   import typingsSlinky.react.reactStrings.ref
   import typingsSlinky.react.reactStrings.update
@@ -147,6 +146,19 @@ package object reactMod {
   // Try to resolve ill-defined props like for JS users: props can be any, or sometimes objects with properties of type any
   type MergePropTypes[P, T] = ((Pick[P, NotExactlyAnyPropertyKeys[P]]) with (Pick[T, Exclude[String, NotExactlyAnyPropertyKeys[P]]]) with (Pick[P, Exclude[String, String]])) | P | T
   type MouseEventHandler[T] = EventHandler[SyntheticMouseEvent[T]]
+  type NativeAnimationEvent = org.scalajs.dom.raw.AnimationEvent
+  type NativeClipboardEvent = org.scalajs.dom.raw.ClipboardEvent
+  type NativeCompositionEvent = org.scalajs.dom.raw.CompositionEvent
+  type NativeDragEvent = org.scalajs.dom.raw.DragEvent
+  type NativeFocusEvent = org.scalajs.dom.raw.FocusEvent
+  type NativeKeyboardEvent = org.scalajs.dom.raw.KeyboardEvent
+  type NativeMouseEvent = org.scalajs.dom.raw.MouseEvent
+  type NativePointerEvent = org.scalajs.dom.raw.PointerEvent
+  type NativeTouchEvent = org.scalajs.dom.raw.TouchEvent
+  type NativeTransitionEvent = org.scalajs.dom.raw.TransitionEvent
+  type NativeUIEvent = org.scalajs.dom.raw.UIEvent
+  type NativeWheelEvent = org.scalajs.dom.raw.WheelEvent
+  type NotExactlyAnyPropertyKeys[T] = Exclude[String, ExactlyAnyPropertyKeys[T]]
   type PointerEventHandler[T] = EventHandler[SyntheticPointerEvent[T]]
   /**
     * {@link https://github.com/bvaughn/rfcs/blob/profiler/text/0000-profiler.md#detailed-design | API}

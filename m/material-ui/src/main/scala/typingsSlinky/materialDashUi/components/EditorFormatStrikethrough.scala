@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object EditorFormatStrikethrough
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatStrikethrough] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatStrikethrough].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "EditorFormatStrikethrough")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object EditorFormatClear
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatClear] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatClear].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "EditorFormatClear")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

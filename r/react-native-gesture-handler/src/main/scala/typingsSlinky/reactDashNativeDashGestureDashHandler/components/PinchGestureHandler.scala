@@ -22,7 +22,11 @@ object PinchGestureHandler
       tag.type, 
       typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.PinchGestureHandler
     ] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.PinchGestureHandler].asInstanceOf[String | js.Object]
+  @JSImport("react-native-gesture-handler", "PinchGestureHandler")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
     enabled: js.UndefOr[Boolean] = js.undefined,

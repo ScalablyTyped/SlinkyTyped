@@ -4,17 +4,21 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.esButtonButtonMod.ButtonType
-import typingsSlinky.antd.esButtonButtonMod.NativeButtonProps
-import typingsSlinky.antd.esModalActionButtonMod.ActionButtonProps
-import typingsSlinky.antd.esModalActionButtonMod.default
+import typingsSlinky.antd.libButtonButtonMod.ButtonType
+import typingsSlinky.antd.libButtonButtonMod.NativeButtonProps
+import typingsSlinky.antd.libModalActionButtonMod.ActionButtonProps
+import typingsSlinky.antd.libModalActionButtonMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionButton
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esModalActionButtonMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/modal/ActionButton", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: autoFocus */
   def apply(
     closeModal: js.Function,

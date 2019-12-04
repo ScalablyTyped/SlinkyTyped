@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 object ImageRotate90DegreesCcw
   extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageRotate90DegreesCcw] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.materialDashUi.svgDashIconsMod.ImageRotate90DegreesCcw].asInstanceOf[String | js.Object]
+  @JSImport("material-ui/svg-icons", "ImageRotate90DegreesCcw")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

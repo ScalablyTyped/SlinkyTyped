@@ -1,6 +1,5 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
-import typingsSlinky.atAngularCore.TData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

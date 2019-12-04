@@ -1,6 +1,7 @@
 package typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod
 
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.reactDashNative.reactDashNativeMod.TextInputProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +9,5 @@ import scala.scalajs.js.annotation._
 @JSImport("react-native-gesture-handler", "TextInput")
 @js.native
 class TextInput ()
-  extends Component[
-      NativeViewGestureHandlerProperties with (/* import warning: QualifyReferences.resolveTypeRef many Couldn't qualify TextInputProperties */ js.Any), 
-      js.Object, 
-      js.Any
-    ]
+  extends Component[NativeViewGestureHandlerProperties with TextInputProperties, js.Object, js.Any]
 

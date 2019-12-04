@@ -1,15 +1,15 @@
 package typingsSlinky.antd
 
 import slinky.core.TagMod
-import typingsSlinky.antd.esStatisticUtilsMod.Formatter
-import typingsSlinky.antd.esStatisticUtilsMod.valueType
+import typingsSlinky.antd.libStatisticUtilsMod.Formatter
+import typingsSlinky.antd.libStatisticUtilsMod.valueType
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.WeakValidationMap<antd.antd/es/statistic/Statistic.StatisticProps> */
+/* Inlined react.react.WeakValidationMap<antd.antd/lib/statistic/Statistic.StatisticProps> */
 trait WeakValidationMapStatisticProps extends js.Object {
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var decimalSeparator: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined

@@ -12,8 +12,8 @@ import typingsSlinky.antd.antdStrings.process
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.wait
-import typingsSlinky.antd.esStepsMod.StepsProps
-import typingsSlinky.antd.esStepsMod.default
+import typingsSlinky.antd.libStepsMod.StepsProps
+import typingsSlinky.antd.libStepsMod.default
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,11 @@ import scala.scalajs.js.annotation._
 
 object Steps
   extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esStepsMod.default].asInstanceOf[String | js.Object]
+  @JSImport("antd/lib/steps", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onChange */
   def apply(
     current: Int | Double = null,

@@ -11,7 +11,11 @@ import scala.scalajs.js.annotation._
 
 object ClassNames
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.atStorybookTheming.atStorybookThemingMod.ClassNames.asInstanceOf[String | js.Object]
+  @JSImport("@storybook/theming", "ClassNames")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply[Theme](overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)

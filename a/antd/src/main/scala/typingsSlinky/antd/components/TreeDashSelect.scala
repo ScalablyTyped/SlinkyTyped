@@ -1,12 +1,16 @@
 package typingsSlinky.antd.components
 
-import typingsSlinky.antd.esTreeDashSelectMod.default
+import typingsSlinky.antd.libTreeDashSelectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeDashSelect
-  extends SharedApply_TreeSelectProps47308460[default[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.antd.esTreeDashSelectMod.default[js.Any]].asInstanceOf[String | js.Object]
+  extends SharedApply_TreeSelectProps809525229[default[js.Any]] {
+  @JSImport("antd/lib/tree-select", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
 }
 

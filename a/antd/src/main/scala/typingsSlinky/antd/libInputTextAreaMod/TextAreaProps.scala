@@ -15,6 +15,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.antd.libInputResizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEvent
@@ -71,6 +72,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
+  var allowClear: js.UndefOr[Boolean] = js.undefined
   var autoSize: js.UndefOr[Boolean | AutoSizeType] = js.undefined
   var autosize: js.UndefOr[Boolean | AutoSizeType] = js.undefined
   var onPressEnter: js.UndefOr[KeyboardEventHandler[org.scalajs.dom.raw.HTMLTextAreaElement]] = js.undefined
@@ -82,6 +84,7 @@ object TextAreaProps {
   def apply(
     about: String = null,
     accessKey: String = null,
+    allowClear: js.UndefOr[Boolean] = js.undefined,
     `aria-activedescendant`: String = null,
     `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
     `aria-autocomplete`: none | `inline` | list | both = null,
@@ -275,6 +278,7 @@ object TextAreaProps {
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
     if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
     if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])

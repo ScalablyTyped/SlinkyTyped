@@ -29,8 +29,8 @@ trait Range extends AbstractRange {
   def deleteContents(): Unit = js.native
   def detach(): Unit = js.native
   def extractContents(): org.scalajs.dom.raw.DocumentFragment = js.native
-  def getBoundingClientRect(): org.scalajs.dom.raw.ClientRect | DOMRect = js.native
-  def getClientRects(): org.scalajs.dom.raw.ClientRectList | DOMRectList = js.native
+  def getBoundingClientRect(): DOMRect = js.native
+  def getClientRects(): DOMRectList = js.native
   def insertNode(node: org.scalajs.dom.raw.Node): Unit = js.native
   /**
     * Returns whether range intersects node.

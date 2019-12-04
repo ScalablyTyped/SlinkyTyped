@@ -101,6 +101,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@material-ui/core.@material-ui/core/TableCell.TableCellProps> */
 trait PartialTableCellProps extends js.Object {
+  var abbr: js.UndefOr[String] = js.undefined
   var about: js.UndefOr[String] = js.undefined
   var accessKey: js.UndefOr[String] = js.undefined
   var align: js.UndefOr[inherit | left | center | right | justify] = js.undefined
@@ -292,6 +293,7 @@ trait PartialTableCellProps extends js.Object {
 object PartialTableCellProps {
   @scala.inline
   def apply(
+    abbr: String = null,
     about: String = null,
     accessKey: String = null,
     align: inherit | left | center | right | justify = null,
@@ -480,6 +482,7 @@ object PartialTableCellProps {
     vocab: String = null
   ): PartialTableCellProps = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])

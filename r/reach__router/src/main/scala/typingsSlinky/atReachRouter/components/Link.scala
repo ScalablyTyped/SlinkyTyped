@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 
 object Link
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.Link[js.Any]] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atReachRouter.atReachRouterMod.Link[js.Any]].asInstanceOf[String | js.Object]
+  @JSImport("@reach/router", "Link")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
   def apply[TState](
     to: String,
     getProps: /* props */ LinkGetProps => js.Object = null,

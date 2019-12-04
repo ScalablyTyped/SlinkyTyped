@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SVGElement
   extends Element
-     with GlobalEventHandlers
      with DocumentAndElementEventHandlers
-     with SVGElementInstance
+     with ElementCSSInlineStyle
+     with GlobalEventHandlers
      with HTMLOrSVGElement
-     with ElementCSSInlineStyle {
+     with SVGElementInstance {
   val ownerSVGElement: org.scalajs.dom.raw.SVGSVGElement | Null = js.native
   val viewportElement: org.scalajs.dom.raw.SVGElement | Null = js.native
   /**
