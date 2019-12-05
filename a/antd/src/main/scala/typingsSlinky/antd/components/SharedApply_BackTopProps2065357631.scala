@@ -22,7 +22,7 @@ abstract class SharedApply_BackTopProps2065357631[ComponentRef <: js.Object] (im
     target: () => HTMLElement | Window = null,
     visibilityHeight: Int | Double = null,
     visible: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
@@ -30,7 +30,7 @@ abstract class SharedApply_BackTopProps2065357631[ComponentRef <: js.Object] (im
     if (target != null) __obj.updateDynamic("target")(js.Any.fromFunction0(target))
     if (visibilityHeight != null) __obj.updateDynamic("visibilityHeight")(visibilityHeight.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = BackTopProps

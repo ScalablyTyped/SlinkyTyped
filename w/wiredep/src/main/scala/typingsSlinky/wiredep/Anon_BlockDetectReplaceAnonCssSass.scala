@@ -1,0 +1,25 @@
+package typingsSlinky.wiredep
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_BlockDetectReplaceAnonCssSass extends js.Object {
+  /**
+    * @example:
+    *  /(([ \t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi
+    */
+  var block: js.RegExp
+  var detect: Anon_CssSass
+  var replace: Anon_CssSassScss
+}
+
+object Anon_BlockDetectReplaceAnonCssSass {
+  @scala.inline
+  def apply(block: js.RegExp, detect: Anon_CssSass, replace: Anon_CssSassScss): Anon_BlockDetectReplaceAnonCssSass = {
+    val __obj = js.Dynamic.literal(block = block.asInstanceOf[js.Any], detect = detect.asInstanceOf[js.Any], replace = replace.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_BlockDetectReplaceAnonCssSass]
+  }
+}
+

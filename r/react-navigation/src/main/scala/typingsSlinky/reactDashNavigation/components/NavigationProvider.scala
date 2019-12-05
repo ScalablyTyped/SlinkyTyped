@@ -20,12 +20,12 @@ object NavigationProvider
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(value: NavigationProp[_], overrides: StringDictionary[js.Any] = null): BuildingComponent[
+  def apply(value: NavigationProp[_], _overrides: StringDictionary[js.Any] = null): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNavigation.reactDashNavigationMod.NavigationProvider
   ] = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = Anon_Value

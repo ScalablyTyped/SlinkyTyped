@@ -1,0 +1,12 @@
+package typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscoreGrpcUnderscorePbMod
+
+import typingsSlinky.grpc.grpcMod.MethodDefinition
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.HealthCheckRequest
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.HealthCheckResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IMempoolService_IHealthCheck extends MethodDefinition[HealthCheckRequest, HealthCheckResponse]
+

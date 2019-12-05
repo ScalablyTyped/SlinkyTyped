@@ -1,0 +1,24 @@
+package typingsSlinky.baseui
+
+import typingsSlinky.baseui.baseuiStrings.SC
+import typingsSlinky.baseui.baseuiStrings.Seychelles
+import typingsSlinky.baseui.baseuiStrings.`+248`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_248 extends js.Object {
+  var dialCode: `+248`
+  var id: SC
+  var label: Seychelles
+}
+
+object Anon_248 {
+  @scala.inline
+  def apply(dialCode: `+248`, id: SC, label: Seychelles): Anon_248 = {
+    val __obj = js.Dynamic.literal(dialCode = dialCode.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_248]
+  }
+}
+

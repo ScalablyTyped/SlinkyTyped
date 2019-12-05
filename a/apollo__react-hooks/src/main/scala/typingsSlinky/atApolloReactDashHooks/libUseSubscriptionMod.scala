@@ -1,0 +1,15 @@
+package typingsSlinky.atApolloReactDashHooks
+
+import typingsSlinky.atApolloReactDashHooks.libTypesMod.SubscriptionHookOptions
+import typingsSlinky.graphql.languageAstMod.DocumentNode
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@apollo/react-hooks/lib/useSubscription", JSImport.Namespace)
+@js.native
+object libUseSubscriptionMod extends js.Object {
+  def useSubscription[TData, TVariables](subscription: DocumentNode): Anon_DataError[TVariables, TData] = js.native
+  def useSubscription[TData, TVariables](subscription: DocumentNode, options: SubscriptionHookOptions[TData, TVariables]): Anon_DataError[TVariables, TData] = js.native
+}
+

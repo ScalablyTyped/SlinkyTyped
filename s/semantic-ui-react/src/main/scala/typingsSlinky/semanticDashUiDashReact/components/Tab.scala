@@ -32,7 +32,7 @@ object Tab
     onTabChange: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ TabProps) => Unit = null,
     panes: js.Array[Anon_MenuItem] = null,
     renderActiveOnly: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (activeIndex != null) __obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
@@ -44,7 +44,7 @@ object Tab
     if (onTabChange != null) __obj.updateDynamic("onTabChange")(js.Any.fromFunction2(onTabChange))
     if (panes != null) __obj.updateDynamic("panes")(panes.asInstanceOf[js.Any])
     if (!js.isUndefined(renderActiveOnly)) __obj.updateDynamic("renderActiveOnly")(renderActiveOnly.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TabProps

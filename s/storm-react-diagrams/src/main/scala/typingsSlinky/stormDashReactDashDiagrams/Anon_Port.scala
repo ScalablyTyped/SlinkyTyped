@@ -1,0 +1,20 @@
+package typingsSlinky.stormDashReactDashDiagrams
+
+import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsPortModelMod.PortModel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Port extends js.Object {
+  var port: Null | PortModel
+}
+
+object Anon_Port {
+  @scala.inline
+  def apply(port: PortModel = null): Anon_Port = {
+    val __obj = js.Dynamic.literal()
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_Port]
+  }
+}
+

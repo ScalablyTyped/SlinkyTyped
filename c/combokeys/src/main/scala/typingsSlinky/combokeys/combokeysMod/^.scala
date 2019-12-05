@@ -1,0 +1,20 @@
+package typingsSlinky.combokeys.combokeysMod
+
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Element
+import typingsSlinky.combokeys.Combokeys.CombokeysStatic
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("combokeys", JSImport.Namespace)
+@js.native
+class ^ protected ()
+  extends typingsSlinky.combokeys.Combokeys.Combokeys {
+  def this(element: Element) = this()
+}
+
+@JSImport("combokeys", JSImport.Namespace)
+@js.native
+object ^ extends TopLevel[CombokeysStatic]
+

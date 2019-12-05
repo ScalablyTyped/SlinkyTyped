@@ -78,7 +78,7 @@ object Table
     tableLayout: TableLayoutProperty = null,
     title: /* currentPageData */ js.Array[T] => TagMod[Any] = null,
     useFixedHeader: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
     val __obj = js.Dynamic.literal()
     if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
@@ -120,7 +120,7 @@ object Table
     if (tableLayout != null) __obj.updateDynamic("tableLayout")(tableLayout.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(js.Any.fromFunction1(title))
     if (!js.isUndefined(useFixedHeader)) __obj.updateDynamic("useFixedHeader")(useFixedHeader.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]]]
   }
   type Props = TableProps[js.Any]

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "cross-fetch" : "3.0.4"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "cross-fetch" : "3.0.4"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

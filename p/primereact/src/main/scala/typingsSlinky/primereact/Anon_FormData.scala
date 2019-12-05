@@ -1,0 +1,21 @@
+package typingsSlinky.primereact
+
+import org.scalajs.dom.raw.XMLHttpRequest
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_FormData extends js.Object {
+  var formData: js.Any
+  var xhr: XMLHttpRequest
+}
+
+object Anon_FormData {
+  @scala.inline
+  def apply(formData: js.Any, xhr: XMLHttpRequest): Anon_FormData = {
+    val __obj = js.Dynamic.literal(formData = formData.asInstanceOf[js.Any], xhr = xhr.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_FormData]
+  }
+}
+

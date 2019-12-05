@@ -20,11 +20,11 @@ object RootRef
   override val component: String | js.Object = this.componentImport
   def apply(
     rootRef: (js.Function1[/* instance */ js.Any | Null, Unit]) | ReactRef[js.Any] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (rootRef != null) __obj.updateDynamic("rootRef")(rootRef.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RootRefProps[js.Any]

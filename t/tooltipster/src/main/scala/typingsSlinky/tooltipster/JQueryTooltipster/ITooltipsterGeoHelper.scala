@@ -1,0 +1,24 @@
+package typingsSlinky.tooltipster.JQueryTooltipster
+
+import typingsSlinky.tooltipster.Anon_FixedLineage
+import typingsSlinky.tooltipster.Anon_Scroll
+import typingsSlinky.tooltipster.Anon_Size
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ITooltipsterGeoHelper extends js.Object {
+  var document: Anon_Size
+  var origin: Anon_FixedLineage
+  var window: Anon_Scroll
+}
+
+object ITooltipsterGeoHelper {
+  @scala.inline
+  def apply(document: Anon_Size, origin: Anon_FixedLineage, window: Anon_Scroll): ITooltipsterGeoHelper = {
+    val __obj = js.Dynamic.literal(document = document.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], window = window.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[ITooltipsterGeoHelper]
+  }
+}
+

@@ -58,7 +58,7 @@ object StepGroup
     unstackable: js.UndefOr[Boolean] = js.undefined,
     vertical: js.UndefOr[Boolean] = js.undefined,
     widths: `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`1` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`2` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`3` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`4` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`5` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`6` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`7` | typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`8` | one | two | three | four | five | six | seven | eight = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -72,7 +72,7 @@ object StepGroup
     if (!js.isUndefined(unstackable)) __obj.updateDynamic("unstackable")(unstackable.asInstanceOf[js.Any])
     if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     if (widths != null) __obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = StepGroupProps

@@ -1,0 +1,136 @@
+package typingsSlinky.chrome
+
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.chrome.chrome.cast.Volume
+import typingsSlinky.chrome.chrome.cast.media.EditTracksInfoRequest
+import typingsSlinky.chrome.chrome.cast.media.GenericMediaMetadata
+import typingsSlinky.chrome.chrome.cast.media.GetStatusRequest
+import typingsSlinky.chrome.chrome.cast.media.LoadRequest
+import typingsSlinky.chrome.chrome.cast.media.Media
+import typingsSlinky.chrome.chrome.cast.media.MediaInfo
+import typingsSlinky.chrome.chrome.cast.media.MovieMediaMetadata
+import typingsSlinky.chrome.chrome.cast.media.MusicTrackMediaMetadata
+import typingsSlinky.chrome.chrome.cast.media.PauseRequest
+import typingsSlinky.chrome.chrome.cast.media.PhotoMediaMetadata
+import typingsSlinky.chrome.chrome.cast.media.PlayRequest
+import typingsSlinky.chrome.chrome.cast.media.QueueInsertItemsRequest
+import typingsSlinky.chrome.chrome.cast.media.QueueItem
+import typingsSlinky.chrome.chrome.cast.media.QueueLoadRequest
+import typingsSlinky.chrome.chrome.cast.media.QueueRemoveItemsRequest
+import typingsSlinky.chrome.chrome.cast.media.QueueReorderItemsRequest
+import typingsSlinky.chrome.chrome.cast.media.QueueUpdateItemsRequest
+import typingsSlinky.chrome.chrome.cast.media.SeekRequest
+import typingsSlinky.chrome.chrome.cast.media.StopRequest
+import typingsSlinky.chrome.chrome.cast.media.TextTrackStyle
+import typingsSlinky.chrome.chrome.cast.media.Track
+import typingsSlinky.chrome.chrome.cast.media.TrackType
+import typingsSlinky.chrome.chrome.cast.media.TvShowMediaMetadata
+import typingsSlinky.chrome.chrome.cast.media.VolumeRequest
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Typeofmedia extends js.Object {
+  var DEFAULT_MEDIA_RECEIVER_APP_ID: String
+  var EditTracksInfoRequest: Instantiable2[
+    js.UndefOr[/* activeTrackIds */ js.Array[Double]], 
+    js.UndefOr[/* textTrackStyle */ TextTrackStyle], 
+    typingsSlinky.chrome.chrome.cast.media.EditTracksInfoRequest
+  ]
+  var GenericMediaMetadata: Instantiable0[typingsSlinky.chrome.chrome.cast.media.GenericMediaMetadata]
+  var GetStatusRequest: Instantiable0[typingsSlinky.chrome.chrome.cast.media.GetStatusRequest]
+  var LoadRequest: Instantiable1[/* mediaInfo */ MediaInfo, typingsSlinky.chrome.chrome.cast.media.LoadRequest]
+  var Media: Instantiable2[
+    /* sessionId */ String, 
+    /* mediaSessionId */ Double, 
+    typingsSlinky.chrome.chrome.cast.media.Media
+  ]
+  var MediaInfo: Instantiable2[
+    /* contentId */ String, 
+    /* contentType */ String, 
+    typingsSlinky.chrome.chrome.cast.media.MediaInfo
+  ]
+  var MovieMediaMetadata: Instantiable0[typingsSlinky.chrome.chrome.cast.media.MovieMediaMetadata]
+  var MusicTrackMediaMetadata: Instantiable0[typingsSlinky.chrome.chrome.cast.media.MusicTrackMediaMetadata]
+  var PauseRequest: Instantiable0[typingsSlinky.chrome.chrome.cast.media.PauseRequest]
+  var PhotoMediaMetadata: Instantiable0[typingsSlinky.chrome.chrome.cast.media.PhotoMediaMetadata]
+  var PlayRequest: Instantiable0[typingsSlinky.chrome.chrome.cast.media.PlayRequest]
+  var QueueInsertItemsRequest: Instantiable1[
+    /* itemsToInsert */ js.Array[QueueItem], 
+    typingsSlinky.chrome.chrome.cast.media.QueueInsertItemsRequest
+  ]
+  var QueueItem: Instantiable1[/* mediaInfo */ MediaInfo, typingsSlinky.chrome.chrome.cast.media.QueueItem]
+  var QueueLoadRequest: Instantiable1[
+    /* items */ js.Array[QueueItem], 
+    typingsSlinky.chrome.chrome.cast.media.QueueLoadRequest
+  ]
+  var QueueRemoveItemsRequest: Instantiable1[
+    /* itemIdsToRemove */ js.Array[Double], 
+    typingsSlinky.chrome.chrome.cast.media.QueueRemoveItemsRequest
+  ]
+  var QueueReorderItemsRequest: Instantiable1[
+    /* itemIdsToReorder */ js.Array[Double], 
+    typingsSlinky.chrome.chrome.cast.media.QueueReorderItemsRequest
+  ]
+  var QueueUpdateItemsRequest: Instantiable1[
+    /* itemsToUpdate */ js.Array[QueueItem], 
+    typingsSlinky.chrome.chrome.cast.media.QueueUpdateItemsRequest
+  ]
+  var SeekRequest: Instantiable0[typingsSlinky.chrome.chrome.cast.media.SeekRequest]
+  var StopRequest: Instantiable0[typingsSlinky.chrome.chrome.cast.media.StopRequest]
+  var TextTrackStyle: Instantiable0[typingsSlinky.chrome.chrome.cast.media.TextTrackStyle]
+  var Track: Instantiable2[
+    /* trackId */ Double, 
+    /* trackType */ TrackType, 
+    typingsSlinky.chrome.chrome.cast.media.Track
+  ]
+  var TvShowMediaMetadata: Instantiable0[typingsSlinky.chrome.chrome.cast.media.TvShowMediaMetadata]
+  var VolumeRequest: Instantiable1[/* volume */ Volume, typingsSlinky.chrome.chrome.cast.media.VolumeRequest]
+  /**
+    * @namespace
+    * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.timeout
+    */
+  val timeout: Typeoftimeout
+}
+
+object Typeofmedia {
+  @scala.inline
+  def apply(
+    DEFAULT_MEDIA_RECEIVER_APP_ID: String,
+    EditTracksInfoRequest: Instantiable2[
+      js.UndefOr[/* activeTrackIds */ js.Array[Double]], 
+      js.UndefOr[/* textTrackStyle */ TextTrackStyle], 
+      EditTracksInfoRequest
+    ],
+    GenericMediaMetadata: Instantiable0[GenericMediaMetadata],
+    GetStatusRequest: Instantiable0[GetStatusRequest],
+    LoadRequest: Instantiable1[/* mediaInfo */ MediaInfo, LoadRequest],
+    Media: Instantiable2[/* sessionId */ String, /* mediaSessionId */ Double, Media],
+    MediaInfo: Instantiable2[/* contentId */ String, /* contentType */ String, MediaInfo],
+    MovieMediaMetadata: Instantiable0[MovieMediaMetadata],
+    MusicTrackMediaMetadata: Instantiable0[MusicTrackMediaMetadata],
+    PauseRequest: Instantiable0[PauseRequest],
+    PhotoMediaMetadata: Instantiable0[PhotoMediaMetadata],
+    PlayRequest: Instantiable0[PlayRequest],
+    QueueInsertItemsRequest: Instantiable1[/* itemsToInsert */ js.Array[QueueItem], QueueInsertItemsRequest],
+    QueueItem: Instantiable1[/* mediaInfo */ MediaInfo, QueueItem],
+    QueueLoadRequest: Instantiable1[/* items */ js.Array[QueueItem], QueueLoadRequest],
+    QueueRemoveItemsRequest: Instantiable1[/* itemIdsToRemove */ js.Array[Double], QueueRemoveItemsRequest],
+    QueueReorderItemsRequest: Instantiable1[/* itemIdsToReorder */ js.Array[Double], QueueReorderItemsRequest],
+    QueueUpdateItemsRequest: Instantiable1[/* itemsToUpdate */ js.Array[QueueItem], QueueUpdateItemsRequest],
+    SeekRequest: Instantiable0[SeekRequest],
+    StopRequest: Instantiable0[StopRequest],
+    TextTrackStyle: Instantiable0[TextTrackStyle],
+    Track: Instantiable2[/* trackId */ Double, /* trackType */ TrackType, Track],
+    TvShowMediaMetadata: Instantiable0[TvShowMediaMetadata],
+    VolumeRequest: Instantiable1[/* volume */ Volume, VolumeRequest],
+    timeout: Typeoftimeout
+  ): Typeofmedia = {
+    val __obj = js.Dynamic.literal(DEFAULT_MEDIA_RECEIVER_APP_ID = DEFAULT_MEDIA_RECEIVER_APP_ID.asInstanceOf[js.Any], EditTracksInfoRequest = EditTracksInfoRequest.asInstanceOf[js.Any], GenericMediaMetadata = GenericMediaMetadata.asInstanceOf[js.Any], GetStatusRequest = GetStatusRequest.asInstanceOf[js.Any], LoadRequest = LoadRequest.asInstanceOf[js.Any], Media = Media.asInstanceOf[js.Any], MediaInfo = MediaInfo.asInstanceOf[js.Any], MovieMediaMetadata = MovieMediaMetadata.asInstanceOf[js.Any], MusicTrackMediaMetadata = MusicTrackMediaMetadata.asInstanceOf[js.Any], PauseRequest = PauseRequest.asInstanceOf[js.Any], PhotoMediaMetadata = PhotoMediaMetadata.asInstanceOf[js.Any], PlayRequest = PlayRequest.asInstanceOf[js.Any], QueueInsertItemsRequest = QueueInsertItemsRequest.asInstanceOf[js.Any], QueueItem = QueueItem.asInstanceOf[js.Any], QueueLoadRequest = QueueLoadRequest.asInstanceOf[js.Any], QueueRemoveItemsRequest = QueueRemoveItemsRequest.asInstanceOf[js.Any], QueueReorderItemsRequest = QueueReorderItemsRequest.asInstanceOf[js.Any], QueueUpdateItemsRequest = QueueUpdateItemsRequest.asInstanceOf[js.Any], SeekRequest = SeekRequest.asInstanceOf[js.Any], StopRequest = StopRequest.asInstanceOf[js.Any], TextTrackStyle = TextTrackStyle.asInstanceOf[js.Any], Track = Track.asInstanceOf[js.Any], TvShowMediaMetadata = TvShowMediaMetadata.asInstanceOf[js.Any], VolumeRequest = VolumeRequest.asInstanceOf[js.Any], timeout = timeout.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Typeofmedia]
+  }
+}
+

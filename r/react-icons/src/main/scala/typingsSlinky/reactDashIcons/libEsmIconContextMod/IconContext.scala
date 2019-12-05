@@ -1,0 +1,23 @@
+package typingsSlinky.reactDashIcons.libEsmIconContextMod
+
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.SVGElement
+import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.Context
+import typingsSlinky.react.reactMod.SVGAttributes
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait IconContext extends js.Object {
+  var attr: js.UndefOr[SVGAttributes[SVGElement]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+}
+
+@JSImport("react-icons/lib/esm/iconContext", "IconContext")
+@js.native
+object IconContext extends TopLevel[Context[IconContext]]
+

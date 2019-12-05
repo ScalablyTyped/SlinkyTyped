@@ -97,7 +97,7 @@ object SwitchIOS
     tvParallaxShiftDistanceY: Int | Double = null,
     tvParallaxTiltAngle: Int | Double = null,
     value: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.SwitchIOS] = {
     val __obj = js.Dynamic.literal()
     if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
@@ -153,7 +153,7 @@ object SwitchIOS
     if (tvParallaxShiftDistanceY != null) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.asInstanceOf[js.Any])
     if (tvParallaxTiltAngle != null) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.asInstanceOf[js.Any])
     if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SwitchIOSProps

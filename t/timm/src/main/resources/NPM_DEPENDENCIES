@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "timm" : "1.6.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "timm" : "1.6.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

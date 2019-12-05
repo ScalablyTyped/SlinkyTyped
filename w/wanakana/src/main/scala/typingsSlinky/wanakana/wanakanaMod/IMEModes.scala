@@ -1,0 +1,27 @@
+package typingsSlinky.wanakana.wanakanaMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typings.wanakana.wanakanaNumbers.`true`
+  - typings.wanakana.wanakanaNumbers.`false`
+  - typings.wanakana.wanakanaStrings.toHiragana
+  - typings.wanakana.wanakanaStrings.toKatakana
+*/
+trait IMEModes extends js.Object
+
+object IMEModes {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def `false`: typingsSlinky.wanakana.wanakanaNumbers.`false` = this.cast(false)
+  @scala.inline
+  def toHiragana: typingsSlinky.wanakana.wanakanaStrings.toHiragana = this.cast("toHiragana")
+  @scala.inline
+  def toKatakana: typingsSlinky.wanakana.wanakanaStrings.toKatakana = this.cast("toKatakana")
+  @scala.inline
+  def `true`: typingsSlinky.wanakana.wanakanaNumbers.`true` = this.cast(true)
+}
+

@@ -20,12 +20,12 @@ object MentionsContextProvider
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(value: MentionsContextProps, overrides: StringDictionary[js.Any] = null): BuildingComponent[
+  def apply(value: MentionsContextProps, _overrides: StringDictionary[js.Any] = null): BuildingComponent[
     tag.type, 
     typingsSlinky.rcDashMentions.libMentionsContextMod.MentionsContextProvider
   ] = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ProviderProps[MentionsContextProps]

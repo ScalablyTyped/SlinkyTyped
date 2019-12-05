@@ -16,10 +16,10 @@ object AppLoadingNativeWrapper
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(autoHideSplash: js.UndefOr[Boolean] = js.undefined, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
+  def apply(autoHideSplash: js.UndefOr[Boolean] = js.undefined, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoHideSplash)) __obj.updateDynamic("autoHideSplash")(autoHideSplash.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = typingsSlinky.expo.buildLaunchAppLoadingNativeWrapperMod.Props

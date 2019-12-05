@@ -1,0 +1,15 @@
+package typingsSlinky.atTensorflowTfjsDashConverter
+
+import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.matrices
+import typingsSlinky.atTensorflowTfjsDashConverter.distSrcOperationsTypesMod.InternalOpExecutor
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-converter/dist/src/operations/executors/matrices_executor", JSImport.Namespace)
+@js.native
+object distSrcOperationsExecutorsMatricesUnderscoreExecutorMod extends js.Object {
+  val CATEGORY: matrices = js.native
+  var executeOp: InternalOpExecutor = js.native
+}
+

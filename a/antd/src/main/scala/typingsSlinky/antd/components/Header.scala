@@ -32,7 +32,7 @@ object Header
     validRange: js.Tuple2[Moment, Moment] = null,
     yearSelectOffset: Int | Double = null,
     yearSelectTotal: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     if (!js.isUndefined(fullscreen)) __obj.updateDynamic("fullscreen")(fullscreen.asInstanceOf[js.Any])
@@ -44,7 +44,7 @@ object Header
     if (validRange != null) __obj.updateDynamic("validRange")(validRange.asInstanceOf[js.Any])
     if (yearSelectOffset != null) __obj.updateDynamic("yearSelectOffset")(yearSelectOffset.asInstanceOf[js.Any])
     if (yearSelectTotal != null) __obj.updateDynamic("yearSelectTotal")(yearSelectTotal.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = HeaderProps

@@ -1,0 +1,16 @@
+package typingsSlinky.esriDashLeafletDashGeocoder.leafletMod.esri.Geocoding
+
+import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.Task
+import typingsSlinky.leaflet.leafletMod.LatLngBoundsExpression
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GeosearchProvider extends js.Object {
+  def results(text: String, key: String, bounds: js.UndefOr[LatLngBoundsExpression], callback: GeosearchCallback): Task = js.native
+  def results(text: String, key: String, bounds: Null, callback: GeosearchCallback): Task = js.native
+  def suggestions(text: String, bounds: js.UndefOr[LatLngBoundsExpression], callback: GeosearchCallback): Task = js.native
+  def suggestions(text: String, bounds: Null, callback: GeosearchCallback): Task = js.native
+}
+

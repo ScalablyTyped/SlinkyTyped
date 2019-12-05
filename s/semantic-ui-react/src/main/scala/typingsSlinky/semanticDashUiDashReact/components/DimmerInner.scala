@@ -33,7 +33,7 @@ object DimmerInner
     page: js.UndefOr[Boolean] = js.undefined,
     simple: js.UndefOr[Boolean] = js.undefined,
     verticalAlign: bottom | top = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object DimmerInner
     if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
     if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
     if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = DimmerInnerProps

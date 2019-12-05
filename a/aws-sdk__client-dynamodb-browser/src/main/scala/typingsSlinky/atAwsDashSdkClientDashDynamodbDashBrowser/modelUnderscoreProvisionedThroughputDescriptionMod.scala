@@ -1,0 +1,13 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser
+
+import typingsSlinky.atAwsDashSdkTypes.buildProtocolMod.Structure
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-dynamodb-browser/model/_ProvisionedThroughputDescription", JSImport.Namespace)
+@js.native
+object modelUnderscoreProvisionedThroughputDescriptionMod extends js.Object {
+  val _ProvisionedThroughputDescription: Structure = js.native
+}
+

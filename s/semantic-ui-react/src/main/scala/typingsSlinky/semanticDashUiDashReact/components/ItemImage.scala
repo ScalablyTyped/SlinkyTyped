@@ -44,7 +44,7 @@ object ItemImage
     ui: js.UndefOr[Boolean] = js.undefined,
     verticalAlign: SemanticVERTICALALIGNMENTS = null,
     wrapped: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object ItemImage
     if (!js.isUndefined(ui)) __obj.updateDynamic("ui")(ui.asInstanceOf[js.Any])
     if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     if (!js.isUndefined(wrapped)) __obj.updateDynamic("wrapped")(wrapped.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ItemImageProps

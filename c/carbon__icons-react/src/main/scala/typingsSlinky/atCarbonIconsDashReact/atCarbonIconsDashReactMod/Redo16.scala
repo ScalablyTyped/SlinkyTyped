@@ -1,0 +1,11 @@
+package typingsSlinky.atCarbonIconsDashReact.atCarbonIconsDashReactMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@carbon/icons-react", "Redo16")
+@js.native
+object Redo16 extends TopLevel[CarbonIconType]
+

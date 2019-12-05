@@ -1,0 +1,11 @@
+package typingsSlinky.antdDashMobileDashRn.libTabDashBarTabBarItemDotNativeMod
+
+import typingsSlinky.react.reactMod.Component
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TabBarItem
+  extends Component[TabBarItemProps, js.Any, js.Any]
+

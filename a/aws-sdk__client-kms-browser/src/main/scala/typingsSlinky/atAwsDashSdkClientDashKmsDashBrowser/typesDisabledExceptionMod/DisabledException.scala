@@ -1,0 +1,30 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesDisabledExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesCreateGrantExceptionsUnionMod.CreateGrantExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesDecryptExceptionsUnionMod.DecryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesDisableKeyRotationExceptionsUnionMod.DisableKeyRotationExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesEnableKeyRotationExceptionsUnionMod.EnableKeyRotationExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesEncryptExceptionsUnionMod.EncryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesGenerateDataKeyExceptionsUnionMod.GenerateDataKeyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesGenerateDataKeyWithoutPlaintextExceptionsUnionMod.GenerateDataKeyWithoutPlaintextExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesReEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DisabledException
+  extends ServiceException[_DisabledExceptionDetails]
+     with CreateGrantExceptionsUnion
+     with DecryptExceptionsUnion
+     with DisableKeyRotationExceptionsUnion
+     with EnableKeyRotationExceptionsUnion
+     with EncryptExceptionsUnion
+     with GenerateDataKeyExceptionsUnion
+     with GenerateDataKeyWithoutPlaintextExceptionsUnion
+     with ReEncryptExceptionsUnion {
+  @JSName("name")
+  var name_DisabledException: typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.atAwsDashSdkClientDashKmsDashBrowserStrings.DisabledException = js.native
+}
+

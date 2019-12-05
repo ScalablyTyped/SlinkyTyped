@@ -182,7 +182,7 @@ object Snackbar
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (ClickAwayListenerProps != null) __obj.updateDynamic("ClickAwayListenerProps")(ClickAwayListenerProps.asInstanceOf[js.Any])
@@ -287,7 +287,7 @@ object Snackbar
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SnackbarProps

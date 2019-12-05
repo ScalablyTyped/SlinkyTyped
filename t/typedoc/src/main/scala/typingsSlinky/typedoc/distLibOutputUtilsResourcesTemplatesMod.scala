@@ -1,0 +1,33 @@
+package typingsSlinky.typedoc
+
+import typingsSlinky.handlebars.Handlebars.TemplateDelegate
+import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.Resource
+import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceStack
+import typingsSlinky.typedoc.distLibOutputUtilsResourcesTemplatesMod.Template
+import typingsSlinky.typedoc.distLibOutputUtilsResourcesTemplatesMod.TemplateStack
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc/dist/lib/output/utils/resources/templates", JSImport.Namespace)
+@js.native
+object distLibOutputUtilsResourcesTemplatesMod extends js.Object {
+  @js.native
+  class PartialStack () extends TemplateStack {
+    var registeredNames: js.Any = js.native
+  }
+  
+  @js.native
+  class Template[T] () extends Resource {
+    var template: js.UndefOr[js.Any] = js.native
+    def getTemplate(): TemplateDelegate[T] = js.native
+    def render(context: js.Any): String = js.native
+    def render(context: js.Any, options: js.Any): String = js.native
+  }
+  
+  @js.native
+  class TemplateStack ()
+    extends ResourceStack[Template[js.Any]]
+  
+}
+

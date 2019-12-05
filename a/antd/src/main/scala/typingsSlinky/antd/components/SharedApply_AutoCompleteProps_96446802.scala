@@ -52,7 +52,7 @@ abstract class SharedApply_AutoCompleteProps_96446802[ComponentRef <: js.Object]
     size: default | large | small = null,
     style: CSSProperties = null,
     transitionName: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
@@ -83,7 +83,7 @@ abstract class SharedApply_AutoCompleteProps_96446802[ComponentRef <: js.Object]
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = AutoCompleteProps

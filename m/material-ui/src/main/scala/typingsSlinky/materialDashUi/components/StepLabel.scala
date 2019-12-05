@@ -25,7 +25,7 @@ object StepLabel
     icon: TagMod[Any] | String | Double = null,
     iconContainerStyle: CSSProperties = null,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.materialDashUi.stepperMod.StepLabel] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -33,7 +33,7 @@ object StepLabel
     if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
     if (iconContainerStyle != null) __obj.updateDynamic("iconContainerStyle")(iconContainerStyle.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = StepLabelProps

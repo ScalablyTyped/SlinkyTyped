@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesRepositoryNameExistsExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreateRepositoryExceptionsUnionMod.CreateRepositoryExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateRepositoryNameExceptionsUnionMod.UpdateRepositoryNameExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait RepositoryNameExistsException
+  extends ServiceException[_RepositoryNameExistsExceptionDetails]
+     with CreateRepositoryExceptionsUnion
+     with UpdateRepositoryNameExceptionsUnion {
+  @JSName("name")
+  var name_RepositoryNameExistsException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.RepositoryNameExistsException = js.native
+}
+

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "csw-aas-js" : "1.0.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "csw-aas-js" : "1.0.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

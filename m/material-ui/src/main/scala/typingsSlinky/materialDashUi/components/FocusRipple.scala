@@ -24,7 +24,7 @@ object FocusRipple
     opacity: Int | Double = null,
     show: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
@@ -32,7 +32,7 @@ object FocusRipple
     if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
     if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FocusRippleProps

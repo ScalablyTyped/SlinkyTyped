@@ -1,0 +1,14 @@
+package typingsSlinky.astDashTypes.genBuildersMod
+
+import typingsSlinky.astDashTypes.Anon_CommentsLoc
+import typingsSlinky.astDashTypes.genNamedTypesMod.namedTypes.JSXIdentifier
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait JSXIdentifierBuilder extends js.Object {
+  def apply(name: String): JSXIdentifier = js.native
+  def from(params: Anon_CommentsLoc): JSXIdentifier = js.native
+}
+

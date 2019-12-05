@@ -76,7 +76,7 @@ object TouchableNativeFeedback
     testID: String = null,
     tvParallaxProperties: TVParallaxProperties = null,
     useForeground: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.TouchableNativeFeedback] = {
     val __obj = js.Dynamic.literal()
     if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
@@ -112,7 +112,7 @@ object TouchableNativeFeedback
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
     if (!js.isUndefined(useForeground)) __obj.updateDynamic("useForeground")(useForeground.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TouchableNativeFeedbackProps

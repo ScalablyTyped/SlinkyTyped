@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "react-native-fs" : "2.16.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "react-native-fs" : "2.16.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

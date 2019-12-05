@@ -1,0 +1,40 @@
+package typingsSlinky.reactDashNativeDashPopupDashDialog.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
+import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
+import typingsSlinky.reactDashNativeDashPopupDashDialog.reactDashNativeDashPopupDashDialogMod.DialogFooterProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object DialogFooter
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.reactDashNativeDashPopupDashDialog.reactDashNativeDashPopupDashDialogMod.DialogFooter
+    ] {
+  @JSImport("react-native-popup-dialog", "DialogFooter")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    bordered: js.UndefOr[Boolean] = js.undefined,
+    style: StyleProp[ViewStyle] = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashPopupDashDialog.reactDashNativeDashPopupDashDialogMod.DialogFooter
+  ] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = DialogFooterProps
+}
+

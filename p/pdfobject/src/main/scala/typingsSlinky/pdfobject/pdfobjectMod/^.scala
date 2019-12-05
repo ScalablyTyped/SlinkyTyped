@@ -1,0 +1,11 @@
+package typingsSlinky.pdfobject.pdfobjectMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("pdfobject", JSImport.Namespace)
+@js.native
+object ^ extends TopLevel[PDFObject]
+

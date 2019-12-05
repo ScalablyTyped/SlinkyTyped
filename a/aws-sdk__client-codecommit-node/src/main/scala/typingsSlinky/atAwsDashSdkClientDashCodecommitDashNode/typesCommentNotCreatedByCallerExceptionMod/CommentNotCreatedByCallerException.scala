@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCommentNotCreatedByCallerExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommentNotCreatedByCallerException
+  extends ServiceException[_CommentNotCreatedByCallerExceptionDetails]
+     with UpdateCommentExceptionsUnion {
+  @JSName("name")
+  var name_CommentNotCreatedByCallerException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.CommentNotCreatedByCallerException = js.native
+}
+

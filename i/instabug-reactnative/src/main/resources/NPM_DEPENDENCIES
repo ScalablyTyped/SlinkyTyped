@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "instabug-reactnative" : "8.7.3"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "instabug-reactnative" : "8.7.3"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

@@ -1,0 +1,27 @@
+package typingsSlinky.winrt.Windows.Media.Capture
+
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.Windows.Storage.StorageFile
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ICameraCaptureUI extends js.Object {
+  var photoSettings: CameraCaptureUIPhotoCaptureSettings
+  var videoSettings: CameraCaptureUIVideoCaptureSettings
+  def captureFileAsync(mode: CameraCaptureUIMode): IAsyncOperation[StorageFile]
+}
+
+object ICameraCaptureUI {
+  @scala.inline
+  def apply(
+    captureFileAsync: CameraCaptureUIMode => IAsyncOperation[StorageFile],
+    photoSettings: CameraCaptureUIPhotoCaptureSettings,
+    videoSettings: CameraCaptureUIVideoCaptureSettings
+  ): ICameraCaptureUI = {
+    val __obj = js.Dynamic.literal(captureFileAsync = js.Any.fromFunction1(captureFileAsync), photoSettings = photoSettings.asInstanceOf[js.Any], videoSettings = videoSettings.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[ICameraCaptureUI]
+  }
+}
+

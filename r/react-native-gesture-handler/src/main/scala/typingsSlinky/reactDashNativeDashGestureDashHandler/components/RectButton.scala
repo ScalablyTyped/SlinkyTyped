@@ -48,7 +48,7 @@ object RectButton
     testID: String = null,
     underlayColor: String = null,
     waitFor: Ref[_] | js.Array[Ref[_]] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.RectButton
@@ -71,7 +71,7 @@ object RectButton
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
     if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RectButtonProperties

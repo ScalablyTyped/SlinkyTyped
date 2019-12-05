@@ -39,7 +39,7 @@ object Steps
     status: wait | process | finish | error = null,
     style: CSSProperties = null,
     `type`: typingsSlinky.antd.antdStrings.default | navigation = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
@@ -53,7 +53,7 @@ object Steps
     if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = StepsProps

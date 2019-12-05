@@ -53,7 +53,7 @@ abstract class SharedApply_TimePickerProps_721348724[ComponentRef <: js.Object] 
     suffixIcon: TagMod[Any] = null,
     use12Hours: js.UndefOr[Boolean] = js.undefined,
     value: Moment = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (addon != null) __obj.updateDynamic("addon")(addon.asInstanceOf[js.Any])
@@ -85,7 +85,7 @@ abstract class SharedApply_TimePickerProps_721348724[ComponentRef <: js.Object] 
     if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TimePickerProps

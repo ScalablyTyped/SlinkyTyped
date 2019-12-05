@@ -1,0 +1,13 @@
+package typingsSlinky.atAwsDashSdkClientDashPinpointDashBrowser
+
+import typingsSlinky.atAwsDashSdkTypes.buildProtocolMod.OperationModel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-pinpoint-browser/model/GetApnsVoipSandboxChannel", JSImport.Namespace)
+@js.native
+object modelGetApnsVoipSandboxChannelMod extends js.Object {
+  val GetApnsVoipSandboxChannel: OperationModel = js.native
+}
+

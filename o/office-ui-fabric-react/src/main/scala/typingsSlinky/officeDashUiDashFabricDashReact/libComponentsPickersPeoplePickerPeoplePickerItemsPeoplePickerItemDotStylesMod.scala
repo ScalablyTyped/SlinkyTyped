@@ -1,0 +1,14 @@
+package typingsSlinky.officeDashUiDashFabricDashReact
+
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPickersPeoplePickerPeoplePickerItemsPeoplePickerItemDotTypesMod.IPeoplePickerItemSelectedStyleProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPickersPeoplePickerPeoplePickerItemsPeoplePickerItemDotTypesMod.IPeoplePickerItemSelectedStyles
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/components/pickers/PeoplePicker/PeoplePickerItems/PeoplePickerItem.styles", JSImport.Namespace)
+@js.native
+object libComponentsPickersPeoplePickerPeoplePickerItemsPeoplePickerItemDotStylesMod extends js.Object {
+  def getStyles(props: IPeoplePickerItemSelectedStyleProps): IPeoplePickerItemSelectedStyles = js.native
+}
+

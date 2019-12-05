@@ -1,0 +1,15 @@
+package typingsSlinky.atUirouterAngularjs.atUirouterAngularjsMod.core
+
+import typingsSlinky.atUirouterCore.libCommonCommonMod.Predicate
+import typingsSlinky.atUirouterCore.libCommonCommonMod.TypedMap
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@uirouter/angularjs", "core.find")
+@js.native
+object find extends js.Object {
+  def apply[T](collection: js.Array[T], callback: Predicate[T]): T = js.native
+  def apply[T](collection: TypedMap[T], callback: Predicate[T]): T = js.native
+}
+

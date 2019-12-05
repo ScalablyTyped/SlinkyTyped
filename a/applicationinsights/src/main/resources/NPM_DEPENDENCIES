@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "applicationinsights" : "1.6.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "applicationinsights" : "1.6.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

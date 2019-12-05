@@ -1,0 +1,24 @@
+package typingsSlinky.braintree.braintreeMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typings.braintree.braintreeStrings.Yes
+  - typings.braintree.braintreeStrings.No
+  - typings.braintree.braintreeStrings.Unknown
+*/
+trait HealthCare extends js.Object
+
+object HealthCare {
+  @scala.inline
+  def No: typingsSlinky.braintree.braintreeStrings.No = this.cast("No")
+  @scala.inline
+  def Unknown: typingsSlinky.braintree.braintreeStrings.Unknown = this.cast("Unknown")
+  @scala.inline
+  def Yes: typingsSlinky.braintree.braintreeStrings.Yes = this.cast("Yes")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

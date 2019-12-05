@@ -39,7 +39,7 @@ object Mention
     suggestionStyle: CSSProperties = null,
     suggestions: js.Array[ReactElement] = null,
     value: js.Any = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (defaultSuggestions != null) __obj.updateDynamic("defaultSuggestions")(defaultSuggestions.asInstanceOf[js.Any])
@@ -57,7 +57,7 @@ object Mention
     if (suggestionStyle != null) __obj.updateDynamic("suggestionStyle")(suggestionStyle.asInstanceOf[js.Any])
     if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = MentionProps

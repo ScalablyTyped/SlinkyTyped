@@ -58,7 +58,7 @@ object Dragger
     transformFile: /* file */ RcFile => String | Blob | File | (js.Thenable[String | Blob | File]) = null,
     `type`: UploadType = null,
     withCredentials: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
@@ -85,7 +85,7 @@ object Dragger
     if (transformFile != null) __obj.updateDynamic("transformFile")(js.Any.fromFunction1(transformFile))
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = DraggerProps

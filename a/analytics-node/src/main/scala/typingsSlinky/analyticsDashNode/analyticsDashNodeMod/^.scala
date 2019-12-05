@@ -1,0 +1,15 @@
+package typingsSlinky.analyticsDashNode.analyticsDashNodeMod
+
+import typingsSlinky.analyticsDashNode.Anon_Enable
+import typingsSlinky.analyticsDashNode.analyticsDashNodeMod.AnalyticsNode.Analytics
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("analytics-node", JSImport.Namespace)
+@js.native
+class ^ protected () extends Analytics {
+  def this(writeKey: String) = this()
+  def this(writeKey: String, opts: Anon_Enable) = this()
+}
+

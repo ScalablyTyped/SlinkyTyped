@@ -1,0 +1,35 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait PickerValuesLayout extends js.Object
+
+/**
+  * An enumeration of how to display selected values in picker widget.
+  */
+@JSGlobal("GoogleAppsScript.Charts.PickerValuesLayout")
+@js.native
+object PickerValuesLayout extends js.Object {
+  @js.native
+  sealed trait ASIDE extends PickerValuesLayout
+  
+  @js.native
+  sealed trait BELOW extends PickerValuesLayout
+  
+  @js.native
+  sealed trait BELOW_STACKED extends PickerValuesLayout
+  
+  @js.native
+  sealed trait BELOW_WRAPPING extends PickerValuesLayout
+  
+  /* 0 */ val ASIDE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.PickerValuesLayout.ASIDE with Double = js.native
+  /* 1 */ val BELOW: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.PickerValuesLayout.BELOW with Double = js.native
+  /* 3 */ val BELOW_STACKED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.PickerValuesLayout.BELOW_STACKED with Double = js.native
+  /* 2 */ val BELOW_WRAPPING: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.PickerValuesLayout.BELOW_WRAPPING with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[PickerValuesLayout with Double] = js.native
+}
+

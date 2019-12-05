@@ -1,0 +1,13 @@
+package typingsSlinky.djv.djvMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("djv", JSImport.Namespace)
+@js.native
+class Class ()
+  extends typingsSlinky.djv.djvMod.djv {
+  def this(options: DjvConfig) = this()
+}
+

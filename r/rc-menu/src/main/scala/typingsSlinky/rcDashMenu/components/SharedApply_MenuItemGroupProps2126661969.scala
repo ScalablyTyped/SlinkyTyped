@@ -20,7 +20,7 @@ abstract class SharedApply_MenuItemGroupProps2126661969[ComponentRef <: js.Objec
     rootPrefixCls: String = null,
     subMenuKey: String = null,
     title: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
@@ -28,7 +28,7 @@ abstract class SharedApply_MenuItemGroupProps2126661969[ComponentRef <: js.Objec
     if (rootPrefixCls != null) __obj.updateDynamic("rootPrefixCls")(rootPrefixCls.asInstanceOf[js.Any])
     if (subMenuKey != null) __obj.updateDynamic("subMenuKey")(subMenuKey.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = MenuItemGroupProps

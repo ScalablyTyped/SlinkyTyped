@@ -1,0 +1,20 @@
+package typingsSlinky.jestDashSnapshot
+
+import typingsSlinky.jestDashSnapshot.buildStateMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_SnapshotState extends js.Object {
+  var snapshotState: default
+}
+
+object Anon_SnapshotState {
+  @scala.inline
+  def apply(snapshotState: default): Anon_SnapshotState = {
+    val __obj = js.Dynamic.literal(snapshotState = snapshotState.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_SnapshotState]
+  }
+}
+

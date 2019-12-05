@@ -42,7 +42,7 @@ object Grid
     stretched: js.UndefOr[Boolean] = js.undefined,
     textAlign: SemanticTEXTALIGNMENTS = null,
     verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Grid
     if (!js.isUndefined(stretched)) __obj.updateDynamic("stretched")(stretched.asInstanceOf[js.Any])
     if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = GridProps

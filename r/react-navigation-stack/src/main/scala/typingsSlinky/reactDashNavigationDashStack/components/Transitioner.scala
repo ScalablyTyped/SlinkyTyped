@@ -31,14 +31,14 @@ object Transitioner
     onTransitionEnd: (/* current */ TransitionProps, /* previous */ js.UndefOr[TransitionProps]) => Unit | js.Promise[_] = null,
     onTransitionStart: (/* current */ TransitionProps, /* previous */ js.UndefOr[TransitionProps]) => Unit | js.Promise[_] = null,
     screenProps: js.Any = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], render = js.Any.fromFunction2(render))
     if (configureTransition != null) __obj.updateDynamic("configureTransition")(js.Any.fromFunction2(configureTransition))
     if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction2(onTransitionEnd))
     if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction2(onTransitionStart))
     if (screenProps != null) __obj.updateDynamic("screenProps")(screenProps.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = typingsSlinky.reactDashNavigationDashStack.libTypescriptViewsTransitionerMod.Props

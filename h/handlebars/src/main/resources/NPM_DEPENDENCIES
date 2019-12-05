@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "handlebars" : "4.5.3"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "handlebars" : "4.5.3"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

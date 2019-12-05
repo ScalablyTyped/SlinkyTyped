@@ -1,0 +1,28 @@
+package typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesResourceConflictExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesAddPermissionExceptionsUnionMod.AddPermissionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesCreateAliasExceptionsUnionMod.CreateAliasExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesCreateEventSourceMappingExceptionsUnionMod.CreateEventSourceMappingExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesCreateFunctionExceptionsUnionMod.CreateFunctionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesDeleteFunctionExceptionsUnionMod.DeleteFunctionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ResourceConflictException
+  extends ServiceException[_ResourceConflictExceptionDetails]
+     with AddPermissionExceptionsUnion
+     with CreateAliasExceptionsUnion
+     with CreateEventSourceMappingExceptionsUnion
+     with CreateFunctionExceptionsUnion
+     with DeleteFunctionExceptionsUnion
+     with UpdateEventSourceMappingExceptionsUnion
+     with UpdateFunctionConfigurationExceptionsUnion {
+  @JSName("name")
+  var name_ResourceConflictException: typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.atAwsDashSdkClientDashLambdaDashNodeStrings.ResourceConflictException = js.native
+}
+

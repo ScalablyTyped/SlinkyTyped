@@ -29,7 +29,7 @@ object Chip
     labelStyle: CSSProperties = null,
     onRequestDelete: SyntheticTouchEvent[typingsSlinky.materialDashUi.__MaterialUI.Chip] => Unit = null,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
@@ -39,7 +39,7 @@ object Chip
     if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
     if (onRequestDelete != null) __obj.updateDynamic("onRequestDelete")(js.Any.fromFunction1(onRequestDelete))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ChipProps

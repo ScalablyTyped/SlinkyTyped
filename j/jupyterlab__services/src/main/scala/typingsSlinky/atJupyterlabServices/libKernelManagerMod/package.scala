@@ -1,0 +1,9 @@
+package typingsSlinky.atJupyterlabServices
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object libKernelManagerMod {
+  type KernelManager = KernelManager_
+}

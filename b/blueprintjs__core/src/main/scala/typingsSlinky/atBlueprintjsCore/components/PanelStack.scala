@@ -1,0 +1,40 @@
+package typingsSlinky.atBlueprintjsCore.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.atBlueprintjsCore.libEsmComponentsPanelDashStackPanelPropsMod.IPanel
+import typingsSlinky.atBlueprintjsCore.libEsmComponentsPanelDashStackPanelStackMod.IPanelStackProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object PanelStack
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atBlueprintjsCore.libEsmComponentsMod.PanelStack] {
+  @JSImport("@blueprintjs/core/lib/esm/components", "PanelStack")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    initialPanel: IPanel[_] = null,
+    onClose: /* removedPanel */ IPanel[js.Object] => Unit = null,
+    onOpen: /* addedPanel */ IPanel[js.Object] => Unit = null,
+    showPanelHeader: js.UndefOr[Boolean] = js.undefined,
+    stack: js.Array[IPanel[_]] = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.atBlueprintjsCore.libEsmComponentsMod.PanelStack] = {
+    val __obj = js.Dynamic.literal()
+    if (initialPanel != null) __obj.updateDynamic("initialPanel")(initialPanel.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
+    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
+    if (!js.isUndefined(showPanelHeader)) __obj.updateDynamic("showPanelHeader")(showPanelHeader.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = IPanelStackProps
+}
+

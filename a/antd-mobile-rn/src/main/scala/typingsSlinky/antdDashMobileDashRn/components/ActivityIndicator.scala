@@ -1,0 +1,49 @@
+package typingsSlinky.antdDashMobileDashRn.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.large
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.small
+import typingsSlinky.antdDashMobileDashRn.libActivityDashIndicatorIndexDotNativeMod.ActivityIndicatorNativeProps
+import typingsSlinky.antdDashMobileDashRn.libActivityDashIndicatorStyleIndexDotNativeMod.IActivityIndicatorStyle
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ActivityIndicator
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnMod.ActivityIndicator
+    ] {
+  @JSImport("antd-mobile-rn", "ActivityIndicator")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    animating: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    size: large | small = null,
+    styles: IActivityIndicatorStyle = null,
+    text: String = null,
+    toast: js.UndefOr[Boolean] = js.undefined,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnMod.ActivityIndicator
+  ] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animating)) __obj.updateDynamic("animating")(animating.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(toast)) __obj.updateDynamic("toast")(toast.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = ActivityIndicatorNativeProps
+}
+

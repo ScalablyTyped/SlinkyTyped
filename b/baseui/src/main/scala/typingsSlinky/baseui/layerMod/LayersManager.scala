@@ -1,0 +1,16 @@
+package typingsSlinky.baseui.layerMod
+
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.Ref
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("baseui/layer", "LayersManager")
+@js.native
+class LayersManager ()
+  extends Component[LayersManagerProps, js.Object, js.Any] {
+  var host: Ref[HTMLElement] = js.native
+}
+

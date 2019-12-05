@@ -1,0 +1,24 @@
+package typingsSlinky.openlayers.openlayersMod.olx.interaction
+
+import typingsSlinky.openlayers.openlayersMod.EventsConditionType
+import typingsSlinky.openlayers.openlayersMod.Kinetic
+import typingsSlinky.openlayers.openlayersMod.MapBrowserEvent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait DragPanOptions extends js.Object {
+  var condition: js.UndefOr[EventsConditionType] = js.undefined
+  var kinetic: js.UndefOr[Kinetic] = js.undefined
+}
+
+object DragPanOptions {
+  @scala.inline
+  def apply(condition: /* event */ MapBrowserEvent => Boolean = null, kinetic: Kinetic = null): DragPanOptions = {
+    val __obj = js.Dynamic.literal()
+    if (condition != null) __obj.updateDynamic("condition")(js.Any.fromFunction1(condition))
+    if (kinetic != null) __obj.updateDynamic("kinetic")(kinetic.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DragPanOptions]
+  }
+}
+

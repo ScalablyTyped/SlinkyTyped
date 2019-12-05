@@ -1,0 +1,12 @@
+package typingsSlinky.extjs.Ext
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Ext.emptyString")
+@js.native
+object emptyString
+  extends TopLevel[js.Any]
+

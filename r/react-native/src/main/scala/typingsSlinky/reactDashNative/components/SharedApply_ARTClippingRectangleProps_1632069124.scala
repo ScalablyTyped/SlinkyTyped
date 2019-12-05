@@ -25,7 +25,7 @@ abstract class SharedApply_ARTClippingRectangleProps_1632069124[ComponentRef <: 
     width: Int | Double = null,
     x: Int | Double = null,
     y: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
@@ -40,7 +40,7 @@ abstract class SharedApply_ARTClippingRectangleProps_1632069124[ComponentRef <: 
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
     if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ARTClippingRectangleProps

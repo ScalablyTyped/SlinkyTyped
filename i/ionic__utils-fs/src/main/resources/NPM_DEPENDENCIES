@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@ionic/utils-fs" : "2.0.8"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@ionic/utils-fs" : "2.0.8"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

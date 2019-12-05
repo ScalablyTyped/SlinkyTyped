@@ -43,7 +43,7 @@ object Visibility
     onUpdate: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
     once: js.UndefOr[Boolean] = js.undefined,
     updateOn: events | repaint = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -67,7 +67,7 @@ object Visibility
     if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction2(onUpdate))
     if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.asInstanceOf[js.Any])
     if (updateOn != null) __obj.updateDynamic("updateOn")(updateOn.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = VisibilityProps

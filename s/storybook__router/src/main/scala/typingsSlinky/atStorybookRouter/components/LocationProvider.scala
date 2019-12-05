@@ -12,11 +12,15 @@ import scala.scalajs.js.annotation._
 
 object LocationProvider
   extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atStorybookRouter.distRouterMod.LocationProvider] {
-  override val component: String | js.Object = js.constructorOf[typingsSlinky.atStorybookRouter.distRouterMod.LocationProvider].asInstanceOf[String | js.Object]
-  def apply(history: History = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atStorybookRouter.distRouterMod.LocationProvider] = {
+  @JSImport("@storybook/router/dist/router", "LocationProvider")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(history: History = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atStorybookRouter.distRouterMod.LocationProvider] = {
     val __obj = js.Dynamic.literal()
     if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = LocationProviderProps

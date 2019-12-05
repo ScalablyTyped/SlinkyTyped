@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesTargetsRequiredExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreatePullRequestExceptionsUnionMod.CreatePullRequestExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TargetsRequiredException
+  extends ServiceException[_TargetsRequiredExceptionDetails]
+     with CreatePullRequestExceptionsUnion {
+  @JSName("name")
+  var name_TargetsRequiredException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.TargetsRequiredException = js.native
+}
+

@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesExpiredNextTokenExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesListShardsExceptionsUnionMod.ListShardsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesListStreamConsumersExceptionsUnionMod.ListStreamConsumersExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ExpiredNextTokenException
+  extends ServiceException[_ExpiredNextTokenExceptionDetails]
+     with ListShardsExceptionsUnion
+     with ListStreamConsumersExceptionsUnion {
+  @JSName("name")
+  var name_ExpiredNextTokenException: typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.atAwsDashSdkClientDashKinesisDashBrowserStrings.ExpiredNextTokenException = js.native
+}
+

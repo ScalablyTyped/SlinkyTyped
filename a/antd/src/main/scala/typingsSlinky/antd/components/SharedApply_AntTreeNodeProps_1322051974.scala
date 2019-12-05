@@ -25,7 +25,7 @@ abstract class SharedApply_AntTreeNodeProps_1322051974 (implicit pw: ExternalPro
     loading: js.UndefOr[Boolean] = js.undefined,
     selectable: js.UndefOr[Boolean] = js.undefined,
     title: String | TagMod[Any] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(checkable)) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
@@ -37,7 +37,7 @@ abstract class SharedApply_AntTreeNodeProps_1322051974 (implicit pw: ExternalPro
     if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
     if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = AntTreeNodeProps

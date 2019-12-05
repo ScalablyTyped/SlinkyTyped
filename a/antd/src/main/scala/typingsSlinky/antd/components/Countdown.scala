@@ -35,7 +35,7 @@ object Countdown
     title: TagMod[Any] = null,
     valueRender: /* node */ TagMod[Any] => TagMod[Any] = null,
     valueStyle: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
@@ -51,7 +51,7 @@ object Countdown
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (valueRender != null) __obj.updateDynamic("valueRender")(js.Any.fromFunction1(valueRender))
     if (valueStyle != null) __obj.updateDynamic("valueStyle")(valueStyle.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = CountdownProps

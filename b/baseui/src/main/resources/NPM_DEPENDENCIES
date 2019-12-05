@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "baseui" : "9.23.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "baseui" : "9.23.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

@@ -1,0 +1,17 @@
+package typingsSlinky.rotDashJs.rotDashJsMod
+
+import typingsSlinky.rotDashJs.libLightingMod.Options
+import typingsSlinky.rotDashJs.libLightingMod.ReflectivityCallback
+import typingsSlinky.rotDashJs.libLightingMod.default
+import typingsSlinky.std.Partial
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("rot-js", "Lighting")
+@js.native
+class Lighting protected () extends default {
+  def this(reflectivityCallback: ReflectivityCallback) = this()
+  def this(reflectivityCallback: ReflectivityCallback, options: Partial[Options]) = this()
+}
+

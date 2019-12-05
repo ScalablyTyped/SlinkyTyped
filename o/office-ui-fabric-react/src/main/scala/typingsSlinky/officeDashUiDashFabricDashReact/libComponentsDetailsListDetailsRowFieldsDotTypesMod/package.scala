@@ -1,0 +1,16 @@
+package typingsSlinky.officeDashUiDashFabricDashReact
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object libComponentsDetailsListDetailsRowFieldsDotTypesMod {
+  import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.IDetailsListProps
+  import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsRowDotTypesMod.IDetailsRowProps
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.cellsByColumn
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.getCellValueKey
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.onRenderItemColumn
+  import typingsSlinky.std.Pick
+
+  type IOverrideColumnRenderProps = (Pick[IDetailsListProps, onRenderItemColumn | getCellValueKey]) with (Pick[IDetailsRowProps, cellsByColumn])
+}

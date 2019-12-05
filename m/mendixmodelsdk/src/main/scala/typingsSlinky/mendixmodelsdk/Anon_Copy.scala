@@ -1,0 +1,23 @@
+package typingsSlinky.mendixmodelsdk
+
+import typingsSlinky.mendixmodelsdk.distSdkInternalElementsMod.Element
+import typingsSlinky.mendixmodelsdk.distSdkInternalStructuresMod.Structure
+import typingsSlinky.mendixmodelsdk.distSdkUtilsMod.utils.IMap
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Copy extends js.Object {
+  var copy: Element
+  var idMap: IMap[Structure]
+}
+
+object Anon_Copy {
+  @scala.inline
+  def apply(copy: Element, idMap: IMap[Structure]): Anon_Copy = {
+    val __obj = js.Dynamic.literal(copy = copy.asInstanceOf[js.Any], idMap = idMap.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Copy]
+  }
+}
+

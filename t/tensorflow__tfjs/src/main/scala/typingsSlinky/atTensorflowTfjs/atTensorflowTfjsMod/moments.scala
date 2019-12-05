@@ -1,0 +1,21 @@
+package typingsSlinky.atTensorflowTfjs.atTensorflowTfjsMod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.atTensorflowTfjsDashCore.Anon_Mean
+import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TensorLike
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs", "moments")
+@js.native
+object moments
+  extends TopLevel[
+      js.Function3[
+        /* x */ typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor[typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank] | TensorLike, 
+        /* axis */ js.UndefOr[Double | js.Array[Double]], 
+        /* keepDims */ js.UndefOr[Boolean], 
+        Anon_Mean
+      ]
+    ]
+

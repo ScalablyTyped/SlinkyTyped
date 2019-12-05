@@ -1,0 +1,26 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesLimitExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesCreateAliasExceptionsUnionMod.CreateAliasExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesCreateGrantExceptionsUnionMod.CreateGrantExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesCreateKeyExceptionsUnionMod.CreateKeyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesEnableKeyExceptionsUnionMod.EnableKeyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesPutKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesTagResourceExceptionsUnionMod.TagResourceExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait LimitExceededException
+  extends ServiceException[_LimitExceededExceptionDetails]
+     with CreateAliasExceptionsUnion
+     with CreateGrantExceptionsUnion
+     with CreateKeyExceptionsUnion
+     with EnableKeyExceptionsUnion
+     with PutKeyPolicyExceptionsUnion
+     with TagResourceExceptionsUnion {
+  @JSName("name")
+  var name_LimitExceededException: typingsSlinky.atAwsDashSdkClientDashKmsDashNode.atAwsDashSdkClientDashKmsDashNodeStrings.LimitExceededException = js.native
+}
+

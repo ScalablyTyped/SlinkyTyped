@@ -21,12 +21,12 @@ object Consumer
   def apply(
     filter: Combo => SubState = null,
     pure: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.atStorybookApi.atStorybookApiMod.Consumer] = {
     val __obj = js.Dynamic.literal()
     if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
     if (!js.isUndefined(pure)) __obj.updateDynamic("pure")(pure.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ConsumerProps[SubState, Combo]

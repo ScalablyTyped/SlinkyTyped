@@ -1,0 +1,67 @@
+package typingsSlinky.chromeDashApps
+
+import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.authentication_required
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.disabled_
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.initializing
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.running
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.temporary_unavailable
+import typingsSlinky.std.Exclude
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_AUTHENTICATIONREQUIRED extends js.Object {
+  var AUTHENTICATION_REQUIRED: authentication_required
+  var DISABLED: disabled_
+  var INITIALIZING: initializing
+  var RUNNING: running
+  var TEMPORARY_UNAVAILABLE: temporary_unavailable
+}
+
+object Anon_AUTHENTICATIONREQUIRED {
+  @scala.inline
+  def apply(
+    AUTHENTICATION_REQUIRED: authentication_required,
+    DISABLED: disabled_,
+    INITIALIZING: initializing,
+    RUNNING: running,
+    TEMPORARY_UNAVAILABLE: temporary_unavailable
+  ): Anon_AUTHENTICATIONREQUIRED = {
+    val __obj = js.Dynamic.literal(AUTHENTICATION_REQUIRED = AUTHENTICATION_REQUIRED.asInstanceOf[js.Any], DISABLED = DISABLED.asInstanceOf[js.Any], INITIALIZING = INITIALIZING.asInstanceOf[js.Any], RUNNING = RUNNING.asInstanceOf[js.Any], TEMPORARY_UNAVAILABLE = TEMPORARY_UNAVAILABLE.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_AUTHENTICATIONREQUIRED]
+  }
+}
+
+trait Anon_Authenticationrequired extends js.Object {
+  var description: String
+  var state: ToStringLiteral[
+    Anon_AUTHENTICATIONREQUIRED, 
+    String, 
+    Exclude[
+      String, 
+      initializing | running | temporary_unavailable | authentication_required | disabled_
+    ]
+  ]
+}
+
+object Anon_Authenticationrequired {
+  @scala.inline
+  def apply(
+    description: String,
+    state: ToStringLiteral[
+      Anon_AUTHENTICATIONREQUIRED, 
+      String, 
+      Exclude[
+        String, 
+        initializing | running | temporary_unavailable | authentication_required | disabled_
+      ]
+    ]
+  ): Anon_Authenticationrequired = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Authenticationrequired]
+  }
+}
+

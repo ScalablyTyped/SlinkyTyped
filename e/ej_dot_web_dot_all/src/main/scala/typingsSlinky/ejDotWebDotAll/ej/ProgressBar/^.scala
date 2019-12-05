@@ -1,0 +1,13 @@
+package typingsSlinky.ejDotWebDotAll.ej.ProgressBar
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("ej.ProgressBar")
+@js.native
+object ^ extends js.Object {
+  var Locale: js.Any = js.native
+  var fn: typingsSlinky.ejDotWebDotAll.ej.ProgressBar = js.native
+}
+

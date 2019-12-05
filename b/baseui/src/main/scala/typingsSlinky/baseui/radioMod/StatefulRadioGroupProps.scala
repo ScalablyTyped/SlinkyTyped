@@ -1,0 +1,47 @@
+package typingsSlinky.baseui.radioMod
+
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import typingsSlinky.baseui.baseuiStrings.horizontal
+import typingsSlinky.baseui.baseuiStrings.vertical
+import typingsSlinky.react.reactMod.FormEventHandler
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait StatefulRadioGroupProps extends js.Object {
+  var align: js.UndefOr[horizontal | vertical] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var initialState: js.UndefOr[State] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
+  var overrides: js.UndefOr[RadioOverrides with RadioGroupOverrides] = js.undefined
+}
+
+object StatefulRadioGroupProps {
+  @scala.inline
+  def apply(
+    align: horizontal | vertical = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    initialState: State = null,
+    name: String = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    overrides: RadioOverrides with RadioGroupOverrides = null
+  ): StatefulRadioGroupProps = {
+    val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StatefulRadioGroupProps]
+  }
+}
+

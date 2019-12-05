@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "phonegap-plugin-push" : "2.3.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "phonegap-plugin-push" : "2.3.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

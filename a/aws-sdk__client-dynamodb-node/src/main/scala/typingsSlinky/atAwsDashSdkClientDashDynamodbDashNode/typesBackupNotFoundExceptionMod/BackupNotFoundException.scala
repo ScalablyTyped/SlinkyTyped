@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesBackupNotFoundExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesDeleteBackupExceptionsUnionMod.DeleteBackupExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesDescribeBackupExceptionsUnionMod.DescribeBackupExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesRestoreTableFromBackupExceptionsUnionMod.RestoreTableFromBackupExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait BackupNotFoundException
+  extends ServiceException[_BackupNotFoundExceptionDetails]
+     with DeleteBackupExceptionsUnion
+     with DescribeBackupExceptionsUnion
+     with RestoreTableFromBackupExceptionsUnion {
+  @JSName("name")
+  var name_BackupNotFoundException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.atAwsDashSdkClientDashDynamodbDashNodeStrings.BackupNotFoundException = js.native
+}
+

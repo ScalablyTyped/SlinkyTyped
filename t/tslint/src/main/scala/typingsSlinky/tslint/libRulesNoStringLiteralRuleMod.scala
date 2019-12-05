@@ -1,0 +1,24 @@
+package typingsSlinky.tslint
+
+import typingsSlinky.tslint.libLanguageRuleRuleMod.IRuleMetadata
+import typingsSlinky.tslint.tslintMod.Rules.AbstractRule
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("tslint/lib/rules/noStringLiteralRule", JSImport.Namespace)
+@js.native
+object libRulesNoStringLiteralRuleMod extends js.Object {
+  @js.native
+  class Rule () extends AbstractRule
+  
+  /* static members */
+  @js.native
+  object Rule extends js.Object {
+    var FAILURE_STRING: String = js.native
+    var metadata: IRuleMetadata = js.native
+    def id(input: String): String = js.native
+  }
+  
+}
+

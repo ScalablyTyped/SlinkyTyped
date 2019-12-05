@@ -100,7 +100,7 @@ object TabBarIOS
     tvParallaxTiltAngle: Int | Double = null,
     unselectedItemTintColor: String = null,
     unselectedTintColor: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.TabBarIOS] = {
     val __obj = js.Dynamic.literal()
     if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
@@ -157,7 +157,7 @@ object TabBarIOS
     if (tvParallaxTiltAngle != null) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.asInstanceOf[js.Any])
     if (unselectedItemTintColor != null) __obj.updateDynamic("unselectedItemTintColor")(unselectedItemTintColor.asInstanceOf[js.Any])
     if (unselectedTintColor != null) __obj.updateDynamic("unselectedTintColor")(unselectedTintColor.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TabBarIOSProps

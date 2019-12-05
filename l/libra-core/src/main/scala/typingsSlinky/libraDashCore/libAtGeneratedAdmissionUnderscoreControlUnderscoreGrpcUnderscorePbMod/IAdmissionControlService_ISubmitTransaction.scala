@@ -1,0 +1,12 @@
+package typingsSlinky.libraDashCore.libAtGeneratedAdmissionUnderscoreControlUnderscoreGrpcUnderscorePbMod
+
+import typingsSlinky.grpc.grpcMod.MethodDefinition
+import typingsSlinky.libraDashCore.libAtGeneratedAdmissionUnderscoreControlUnderscorePbMod.SubmitTransactionRequest
+import typingsSlinky.libraDashCore.libAtGeneratedAdmissionUnderscoreControlUnderscorePbMod.SubmitTransactionResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IAdmissionControlService_ISubmitTransaction extends MethodDefinition[SubmitTransactionRequest, SubmitTransactionResponse]
+

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "global-dirs" : "2.0.1"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "global-dirs" : "2.0.1"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

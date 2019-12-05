@@ -1,0 +1,19 @@
+package typingsSlinky.petitDashDom.petitDashDomMod
+
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.petitDashDom.petitDashDomMod.PetitDom.Content
+import typingsSlinky.petitDashDom.petitDashDomMod.PetitDom.ElementNode
+import typingsSlinky.petitDashDom.petitDashDomMod.PetitDom.Props
+import typingsSlinky.petitDashDom.petitDashDomStrings.figure
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("petit-dom", "h")
+@js.native
+object h_figure extends js.Object {
+  def apply[E /* <: HTMLElement */](`type`: figure): ElementNode[figure, E] = js.native
+  def apply[E /* <: HTMLElement */](`type`: figure, children: Content*): ElementNode[figure, E] = js.native
+  def apply[E /* <: HTMLElement */](`type`: figure, props: Props[E], children: Content*): ElementNode[figure, E] = js.native
+}
+

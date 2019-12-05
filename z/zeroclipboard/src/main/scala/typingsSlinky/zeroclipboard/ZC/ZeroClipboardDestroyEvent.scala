@@ -1,0 +1,32 @@
+package typingsSlinky.zeroclipboard.ZC
+
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLObjectElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ZeroClipboardDestroyEvent extends ZeroClipboardEvent {
+  var data: Dictionary[String]
+  var success: Dictionary[Boolean]
+}
+
+object ZeroClipboardDestroyEvent {
+  @scala.inline
+  def apply(
+    currentTarget: HTMLObjectElement,
+    data: Dictionary[String],
+    relatedTarget: HTMLElement,
+    success: Dictionary[Boolean],
+    target: HTMLElement,
+    timeStamp: Double,
+    `type`: String,
+    client: ZeroClipboardClient = null
+  ): ZeroClipboardDestroyEvent = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], relatedTarget = relatedTarget.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ZeroClipboardDestroyEvent]
+  }
+}
+

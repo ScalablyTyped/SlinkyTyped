@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@redux-saga/deferred" : "1.1.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@redux-saga/deferred" : "1.1.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

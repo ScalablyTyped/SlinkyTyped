@@ -1,0 +1,11 @@
+package typingsSlinky.shelljs.shelljsMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("shelljs", "uniq")
+@js.native
+object uniq extends TopLevel[UniqFunction]
+

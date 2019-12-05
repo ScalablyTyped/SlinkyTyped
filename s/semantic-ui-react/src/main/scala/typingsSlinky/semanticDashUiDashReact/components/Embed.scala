@@ -44,7 +44,7 @@ object Embed
     onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ EmbedProps) => Unit = null,
     source: youtube | vimeo = null,
     url: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -61,7 +61,7 @@ object Embed
     if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
     if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = EmbedProps

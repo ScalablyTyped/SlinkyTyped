@@ -1,0 +1,28 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesInvalidGrantTokenExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesCreateGrantExceptionsUnionMod.CreateGrantExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesDecryptExceptionsUnionMod.DecryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesEncryptExceptionsUnionMod.EncryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesGenerateDataKeyExceptionsUnionMod.GenerateDataKeyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesGenerateDataKeyWithoutPlaintextExceptionsUnionMod.GenerateDataKeyWithoutPlaintextExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesReEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesRetireGrantExceptionsUnionMod.RetireGrantExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidGrantTokenException
+  extends ServiceException[_InvalidGrantTokenExceptionDetails]
+     with CreateGrantExceptionsUnion
+     with DecryptExceptionsUnion
+     with EncryptExceptionsUnion
+     with GenerateDataKeyExceptionsUnion
+     with GenerateDataKeyWithoutPlaintextExceptionsUnion
+     with ReEncryptExceptionsUnion
+     with RetireGrantExceptionsUnion {
+  @JSName("name")
+  var name_InvalidGrantTokenException: typingsSlinky.atAwsDashSdkClientDashKmsDashNode.atAwsDashSdkClientDashKmsDashNodeStrings.InvalidGrantTokenException = js.native
+}
+

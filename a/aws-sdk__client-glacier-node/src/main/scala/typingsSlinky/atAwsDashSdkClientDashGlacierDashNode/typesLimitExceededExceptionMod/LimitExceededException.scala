@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesLimitExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesAddTagsToVaultExceptionsUnionMod.AddTagsToVaultExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesCreateVaultExceptionsUnionMod.CreateVaultExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesPurchaseProvisionedCapacityExceptionsUnionMod.PurchaseProvisionedCapacityExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait LimitExceededException
+  extends ServiceException[_LimitExceededExceptionDetails]
+     with AddTagsToVaultExceptionsUnion
+     with CreateVaultExceptionsUnion
+     with PurchaseProvisionedCapacityExceptionsUnion {
+  @JSName("name")
+  var name_LimitExceededException: typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.atAwsDashSdkClientDashGlacierDashNodeStrings.LimitExceededException = js.native
+}
+

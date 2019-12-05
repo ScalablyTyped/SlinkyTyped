@@ -1,0 +1,28 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesResourceInUseExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesCreateTableExceptionsUnionMod.CreateTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesDeleteTableExceptionsUnionMod.DeleteTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesTagResourceExceptionsUnionMod.TagResourceExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesUntagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesUpdateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesUpdateTableExceptionsUnionMod.UpdateTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesUpdateTimeToLiveExceptionsUnionMod.UpdateTimeToLiveExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ResourceInUseException
+  extends ServiceException[_ResourceInUseExceptionDetails]
+     with CreateTableExceptionsUnion
+     with DeleteTableExceptionsUnion
+     with TagResourceExceptionsUnion
+     with UntagResourceExceptionsUnion
+     with UpdateGlobalTableSettingsExceptionsUnion
+     with UpdateTableExceptionsUnion
+     with UpdateTimeToLiveExceptionsUnion {
+  @JSName("name")
+  var name_ResourceInUseException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.atAwsDashSdkClientDashDynamodbDashNodeStrings.ResourceInUseException = js.native
+}
+

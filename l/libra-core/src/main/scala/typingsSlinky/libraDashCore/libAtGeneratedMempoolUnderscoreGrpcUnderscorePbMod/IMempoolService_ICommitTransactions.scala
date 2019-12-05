@@ -1,0 +1,12 @@
+package typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscoreGrpcUnderscorePbMod
+
+import typingsSlinky.grpc.grpcMod.MethodDefinition
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.CommitTransactionsRequest
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.CommitTransactionsResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IMempoolService_ICommitTransactions extends MethodDefinition[CommitTransactionsRequest, CommitTransactionsResponse]
+

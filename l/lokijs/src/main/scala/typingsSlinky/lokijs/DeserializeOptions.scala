@@ -1,0 +1,43 @@
+package typingsSlinky.lokijs
+
+import typingsSlinky.lokijs.lokijsNumbers.`false`
+import typingsSlinky.lokijs.lokijsNumbers.`true`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typings.lokijs.Anon_Delimited
+  - typings.lokijs.Anon_DelimitedDelimiter
+*/
+trait DeserializeOptions extends js.Object
+
+object DeserializeOptions {
+  @scala.inline
+  def Anon_Delimited(
+    delimited: `false`,
+    delimiter: String = null,
+    partition: Int | Double = null,
+    partitioned: js.UndefOr[Boolean] = js.undefined
+  ): DeserializeOptions = {
+    val __obj = js.Dynamic.literal(delimited = delimited.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
+    if (!js.isUndefined(partitioned)) __obj.updateDynamic("partitioned")(partitioned.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeserializeOptions]
+  }
+  @scala.inline
+  def Anon_DelimitedDelimiter(
+    delimiter: String,
+    delimited: `true` = null,
+    partition: Int | Double = null,
+    partitioned: js.UndefOr[Boolean] = js.undefined
+  ): DeserializeOptions = {
+    val __obj = js.Dynamic.literal(delimiter = delimiter.asInstanceOf[js.Any])
+    if (delimited != null) __obj.updateDynamic("delimited")(delimited.asInstanceOf[js.Any])
+    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
+    if (!js.isUndefined(partitioned)) __obj.updateDynamic("partitioned")(partitioned.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeserializeOptions]
+  }
+}
+

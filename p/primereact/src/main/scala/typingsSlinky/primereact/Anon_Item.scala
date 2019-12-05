@@ -1,0 +1,21 @@
+package typingsSlinky.primereact
+
+import org.scalajs.dom.raw.Event
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Item extends js.Object {
+  var item: this.type
+  var originalEvent: Event
+}
+
+object Anon_Item {
+  @scala.inline
+  def apply(item: Anon_Item, originalEvent: Event): Anon_Item = {
+    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], originalEvent = originalEvent.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Item]
+  }
+}
+

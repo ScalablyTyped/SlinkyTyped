@@ -1,0 +1,19 @@
+package typingsSlinky.atNodelibFsDotScandir
+
+import typingsSlinky.atNodelibFsDotScandir.outProvidersAsyncMod.AsyncCallback
+import typingsSlinky.atNodelibFsDotScandir.outSettingsMod.default
+import typingsSlinky.atNodelibFsDotScandir.outTypesMod.Entry
+import typingsSlinky.node.NodeJS.ErrnoException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@nodelib/fs.scandir/out/providers/async", JSImport.Namespace)
+@js.native
+object outProvidersAsyncMod extends js.Object {
+  def read(dir: String, settings: default, callback: AsyncCallback): Unit = js.native
+  def readdir(dir: String, settings: default, callback: AsyncCallback): Unit = js.native
+  def readdirWithFileTypes(dir: String, settings: default, callback: AsyncCallback): Unit = js.native
+  type AsyncCallback = js.Function2[/* err */ ErrnoException, /* entries */ js.Array[Entry], Unit]
+}
+

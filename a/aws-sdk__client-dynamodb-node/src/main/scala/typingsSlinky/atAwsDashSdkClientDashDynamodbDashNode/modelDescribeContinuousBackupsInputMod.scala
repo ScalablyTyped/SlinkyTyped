@@ -1,0 +1,13 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode
+
+import typingsSlinky.atAwsDashSdkTypes.buildProtocolMod.Structure
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-dynamodb-node/model/DescribeContinuousBackupsInput", JSImport.Namespace)
+@js.native
+object modelDescribeContinuousBackupsInputMod extends js.Object {
+  val DescribeContinuousBackupsInput: Structure = js.native
+}
+

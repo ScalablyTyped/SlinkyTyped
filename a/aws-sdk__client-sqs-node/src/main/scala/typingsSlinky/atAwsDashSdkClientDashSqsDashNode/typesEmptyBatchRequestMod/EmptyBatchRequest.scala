@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesEmptyBatchRequestMod
+
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesChangeMessageVisibilityBatchExceptionsUnionMod.ChangeMessageVisibilityBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesDeleteMessageBatchExceptionsUnionMod.DeleteMessageBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesSendMessageBatchExceptionsUnionMod.SendMessageBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait EmptyBatchRequest
+  extends ServiceException[_EmptyBatchRequestDetails]
+     with ChangeMessageVisibilityBatchExceptionsUnion
+     with DeleteMessageBatchExceptionsUnion
+     with SendMessageBatchExceptionsUnion {
+  @JSName("name")
+  var name_EmptyBatchRequest: typingsSlinky.atAwsDashSdkClientDashSqsDashNode.atAwsDashSdkClientDashSqsDashNodeStrings.EmptyBatchRequest = js.native
+}
+

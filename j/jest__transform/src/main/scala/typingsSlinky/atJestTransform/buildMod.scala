@@ -1,0 +1,28 @@
+package typingsSlinky.atJestTransform
+
+import typingsSlinky.atJestTransform.atJestTransformStrings.`ObjectDOT<anonymous>`
+import typingsSlinky.atJestTransform.buildScriptTransformerMod.default
+import typingsSlinky.atJestTransform.buildTypesMod.ShouldInstrumentOptions
+import typingsSlinky.atJestTypes.buildConfigMod.Path
+import typingsSlinky.atJestTypes.buildConfigMod.ProjectConfig
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@jest/transform/build", JSImport.Namespace)
+@js.native
+object buildMod extends js.Object {
+  @js.native
+  class ScriptTransformer protected () extends default {
+    def this(config: ProjectConfig) = this()
+  }
+  
+  def shouldInstrument(filename: Path, options: ShouldInstrumentOptions, config: ProjectConfig): Boolean = js.native
+  /* static members */
+  @js.native
+  object ScriptTransformer extends js.Object {
+    var EVAL_RESULT_VARIABLE: `ObjectDOT<anonymous>` = js.native
+  }
+  
+}
+

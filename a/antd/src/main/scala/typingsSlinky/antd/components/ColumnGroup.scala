@@ -19,10 +19,10 @@ object ColumnGroup
   
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
-  def apply(title: TagMod[Any] = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
+  def apply(title: TagMod[Any] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ColumnGroupProps

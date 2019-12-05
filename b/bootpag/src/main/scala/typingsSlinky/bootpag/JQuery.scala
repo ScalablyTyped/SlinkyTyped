@@ -1,0 +1,32 @@
+package typingsSlinky.bootpag
+
+import typingsSlinky.bootpag.JqueryBootpag.Options
+import typingsSlinky.bootpag.JqueryBootpag.PageEventHandler
+import typingsSlinky.bootpag.bootpagStrings.page
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait JQuery extends js.Object {
+  /**
+    * jQuery Bootpag plugin main method
+    */
+  def bootpag(options: Options): JQuery
+  /**
+    * jQuery Bootpag "page" event occurring on page click.
+    * @param eventName : always "page"
+    * @param handler : A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
+    */
+  @JSName("on")
+  def on_page(eventName: page, handler: PageEventHandler): JQuery
+}
+
+object JQuery {
+  @scala.inline
+  def apply(bootpag: Options => JQuery, on: (page, PageEventHandler) => JQuery): JQuery = {
+    val __obj = js.Dynamic.literal(bootpag = js.Any.fromFunction1(bootpag), on = js.Any.fromFunction2(on))
+  
+    __obj.asInstanceOf[JQuery]
+  }
+}
+

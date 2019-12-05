@@ -204,7 +204,7 @@ object FlatList
     viewabilityConfigCallbackPairs: ViewabilityConfigCallbackPairs = null,
     windowSize: Int | Double = null,
     zoomScale: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNavigation.reactDashNavigationMod.FlatList[js.Any]
@@ -340,7 +340,7 @@ object FlatList
     if (viewabilityConfigCallbackPairs != null) __obj.updateDynamic("viewabilityConfigCallbackPairs")(viewabilityConfigCallbackPairs.asInstanceOf[js.Any])
     if (windowSize != null) __obj.updateDynamic("windowSize")(windowSize.asInstanceOf[js.Any])
     if (zoomScale != null) __obj.updateDynamic("zoomScale")(zoomScale.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashNavigation.reactDashNavigationMod.FlatList[js.Any]]]

@@ -1,0 +1,29 @@
+package typingsSlinky.katex.contribCopyDashTexKatex2texMod
+
+import typingsSlinky.katex.katexStrings.DOLLAR
+import typingsSlinky.katex.katexStrings.DOLLARDOLLAR
+import typingsSlinky.katex.katexStrings.`(`
+import typingsSlinky.katex.katexStrings.`)`
+import typingsSlinky.katex.katexStrings.`[`
+import typingsSlinky.katex.katexStrings.`]`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait CopyDelimiters extends js.Object {
+  var display: js.Tuple2[DOLLARDOLLAR | `[`, DOLLARDOLLAR | `]`]
+  var `inline`: js.Tuple2[DOLLAR | `(`, DOLLAR | `)`]
+}
+
+object CopyDelimiters {
+  @scala.inline
+  def apply(
+    display: js.Tuple2[DOLLARDOLLAR | `[`, DOLLARDOLLAR | `]`],
+    `inline`: js.Tuple2[DOLLAR | `(`, DOLLAR | `)`]
+  ): CopyDelimiters = {
+    val __obj = js.Dynamic.literal(display = display.asInstanceOf[js.Any])
+    __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CopyDelimiters]
+  }
+}
+

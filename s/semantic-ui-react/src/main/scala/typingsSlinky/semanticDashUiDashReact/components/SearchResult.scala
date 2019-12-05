@@ -33,7 +33,7 @@ object SearchResult
     onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit = null,
     price: String = null,
     renderer: /* props */ SearchResultProps => js.Array[ReactElement] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object SearchResult
     if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
     if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
     if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SearchResultProps

@@ -17,10 +17,10 @@ object PickerIOSItem
   
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: value */
-  def apply(label: String = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.PickerIOSItem] = {
+  def apply(label: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.PickerIOSItem] = {
     val __obj = js.Dynamic.literal()
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PickerIOSItemProps

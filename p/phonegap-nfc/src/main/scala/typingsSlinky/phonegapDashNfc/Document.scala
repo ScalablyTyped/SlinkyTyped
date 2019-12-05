@@ -1,0 +1,16 @@
+package typingsSlinky.phonegapDashNfc
+
+import org.scalajs.dom.raw.Event
+import typingsSlinky.phonegapDashNfc.phonegapDashNfcStrings.deviceready
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Document extends js.Object {
+  @JSName("addEventListener")
+  def addEventListener_deviceready(`type`: deviceready, listener: js.Function1[/* ev */ Event, _]): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_deviceready(`type`: deviceready, listener: js.Function1[/* ev */ Event, _], useCapture: Boolean): Unit = js.native
+}
+

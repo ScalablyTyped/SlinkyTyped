@@ -1,0 +1,31 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait AlignmentPosition extends js.Object
+
+/**
+  * The alignment position to apply.
+  */
+@JSGlobal("GoogleAppsScript.Slides.AlignmentPosition")
+@js.native
+object AlignmentPosition extends js.Object {
+  @js.native
+  sealed trait CENTER extends AlignmentPosition
+  
+  @js.native
+  sealed trait HORIZONTAL_CENTER extends AlignmentPosition
+  
+  @js.native
+  sealed trait VERTICAL_CENTER extends AlignmentPosition
+  
+  /* 0 */ val CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.AlignmentPosition.CENTER with Double = js.native
+  /* 1 */ val HORIZONTAL_CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.AlignmentPosition.HORIZONTAL_CENTER with Double = js.native
+  /* 2 */ val VERTICAL_CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.AlignmentPosition.VERTICAL_CENTER with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[AlignmentPosition with Double] = js.native
+}
+

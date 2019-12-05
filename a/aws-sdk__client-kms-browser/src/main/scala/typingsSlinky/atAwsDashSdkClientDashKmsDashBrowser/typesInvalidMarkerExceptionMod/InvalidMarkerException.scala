@@ -1,0 +1,24 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesInvalidMarkerExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesListAliasesExceptionsUnionMod.ListAliasesExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesListGrantsExceptionsUnionMod.ListGrantsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesListKeysExceptionsUnionMod.ListKeysExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesListResourceTagsExceptionsUnionMod.ListResourceTagsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesListRetirableGrantsExceptionsUnionMod.ListRetirableGrantsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidMarkerException
+  extends ServiceException[_InvalidMarkerExceptionDetails]
+     with ListAliasesExceptionsUnion
+     with ListGrantsExceptionsUnion
+     with ListKeysExceptionsUnion
+     with ListResourceTagsExceptionsUnion
+     with ListRetirableGrantsExceptionsUnion {
+  @JSName("name")
+  var name_InvalidMarkerException: typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.atAwsDashSdkClientDashKmsDashBrowserStrings.InvalidMarkerException = js.native
+}
+

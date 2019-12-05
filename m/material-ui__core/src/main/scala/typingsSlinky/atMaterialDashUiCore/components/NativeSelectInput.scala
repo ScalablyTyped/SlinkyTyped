@@ -31,14 +31,14 @@ object NativeSelectInput
     inputRef: /* ref */ HTMLSelectElement | Anon_Node => Unit = null,
     onChange: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit = null,
     variant: standard | outlined | filled = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (IconComponent != null) __obj.updateDynamic("IconComponent")(IconComponent.asInstanceOf[js.Any])
     if (inputRef != null) __obj.updateDynamic("inputRef")(js.Any.fromFunction1(inputRef))
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = NativeSelectInputProps

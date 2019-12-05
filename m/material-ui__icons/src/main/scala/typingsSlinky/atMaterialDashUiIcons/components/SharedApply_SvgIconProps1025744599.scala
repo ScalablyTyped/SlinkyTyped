@@ -346,7 +346,7 @@ abstract class SharedApply_SvgIconProps1025744599[ComponentRef <: js.Object] (im
     titleAccess: String = null,
     to: Double | String = null,
     transform: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (accentHeight != null) __obj.updateDynamic("accentHeight")(accentHeight.asInstanceOf[js.Any])
@@ -600,7 +600,7 @@ abstract class SharedApply_SvgIconProps1025744599[ComponentRef <: js.Object] (im
     if (titleAccess != null) __obj.updateDynamic("titleAccess")(titleAccess.asInstanceOf[js.Any])
     if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
     if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SvgIconProps

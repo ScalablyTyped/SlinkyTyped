@@ -1,0 +1,14 @@
+package typingsSlinky.jsfl
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("$")
+@js.native
+object $ extends js.Object {
+  // http://www.xjsfl.com/support/guides/working-with-flash/introduction-to-selectors
+  // http://www.xjsfl.com/support/api/elements/ElementSelector
+  def apply(selector: String): ElementCollection = js.native
+}
+

@@ -22,13 +22,13 @@ object Portal
     container: ReactInstance | js.Function0[ReactInstance] = null,
     disablePortal: js.UndefOr[Boolean] = js.undefined,
     onRendered: () => Unit = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
     if (!js.isUndefined(disablePortal)) __obj.updateDynamic("disablePortal")(disablePortal.asInstanceOf[js.Any])
     if (onRendered != null) __obj.updateDynamic("onRendered")(js.Any.fromFunction0(onRendered))
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PortalProps

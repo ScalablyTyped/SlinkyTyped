@@ -1,0 +1,31 @@
+package typingsSlinky.styledDashTheming
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.styledDashComponents.styledDashComponentsMod.FlattenInterpolation
+import typingsSlinky.styledDashComponents.styledDashComponentsMod.ThemeProps
+import typingsSlinky.styledDashComponents.styledDashComponentsMod.ThemedStyledProps
+import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeMap
+import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeSet
+import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValue
+import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValueFn
+import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValueResult
+import typingsSlinky.styledDashTheming.styledDashThemingMod.VariantMap
+import typingsSlinky.styledDashTheming.styledDashThemingMod.VariantSet
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("styled-theming", JSImport.Namespace)
+@js.native
+object styledDashThemingMod extends js.Object {
+  def apply(name: String, values: ThemeMap): ThemeSet = js.native
+  def variants(name: String, prop: String, values: VariantMap): VariantSet = js.native
+  type ThemeMap = StringDictionary[ThemeValue]
+  type ThemeSet = js.Function1[/* props */ js.Object, String]
+  type ThemeValue = ThemeValueFn | ThemeValueResult
+  type ThemeValueFn = js.Function1[/* props */ js.Object, ThemeValueResult]
+  type ThemeValueResult = String | (FlattenInterpolation[ThemeProps[js.Any] | (ThemedStyledProps[js.Any, js.Any])])
+  type VariantMap = StringDictionary[ThemeMap]
+  type VariantSet = js.Function1[/* props */ js.Object, String]
+}
+

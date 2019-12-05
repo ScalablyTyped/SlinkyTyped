@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesGlobalTableAlreadyExistsExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesCreateGlobalTableExceptionsUnionMod.CreateGlobalTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GlobalTableAlreadyExistsException
+  extends ServiceException[_GlobalTableAlreadyExistsExceptionDetails]
+     with CreateGlobalTableExceptionsUnion {
+  @JSName("name")
+  var name_GlobalTableAlreadyExistsException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.atAwsDashSdkClientDashDynamodbDashBrowserStrings.GlobalTableAlreadyExistsException = js.native
+}
+

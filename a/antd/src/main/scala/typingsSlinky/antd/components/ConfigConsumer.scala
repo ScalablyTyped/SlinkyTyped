@@ -17,10 +17,10 @@ object ConfigConsumer
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(observedBits: Int | Double = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.antd.libConfigDashProviderMod.ConfigConsumer] = {
+  def apply(observedBits: Int | Double = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.antd.libConfigDashProviderMod.ConfigConsumer] = {
     val __obj = js.Dynamic.literal()
     if (observedBits != null) __obj.updateDynamic("observedBits")(observedBits.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ConsumerProps[ConfigConsumerProps]

@@ -86,7 +86,7 @@ object Calendar
     tooltipAccessor: String | (js.Function1[TEvent, String]) = null,
     view: View = null,
     views: ViewsProps = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]
@@ -139,7 +139,7 @@ object Calendar
     if (tooltipAccessor != null) __obj.updateDynamic("tooltipAccessor")(tooltipAccessor.asInstanceOf[js.Any])
     if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Calendar[js.Any, js.Any]]]

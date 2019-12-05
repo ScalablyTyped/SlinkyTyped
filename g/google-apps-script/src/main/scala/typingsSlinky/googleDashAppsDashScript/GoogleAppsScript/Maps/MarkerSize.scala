@@ -1,0 +1,34 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait MarkerSize extends js.Object
+
+/**
+  * An enum representing the size of a marker added to a map.
+  * See also
+  *
+  * Google Static Maps API
+  */
+@JSGlobal("GoogleAppsScript.Maps.MarkerSize")
+@js.native
+object MarkerSize extends js.Object {
+  @js.native
+  sealed trait MID extends MarkerSize
+  
+  @js.native
+  sealed trait SMALL extends MarkerSize
+  
+  @js.native
+  sealed trait TINY extends MarkerSize
+  
+  /* 1 */ val MID: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.MarkerSize.MID with Double = js.native
+  /* 2 */ val SMALL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.MarkerSize.SMALL with Double = js.native
+  /* 0 */ val TINY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.MarkerSize.TINY with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[MarkerSize with Double] = js.native
+}
+

@@ -1,0 +1,34 @@
+package typingsSlinky.arcgisDashJsDashApi.__esri
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.text
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TextContent
+  extends Content
+     with typingsSlinky.arcgisDashJsDashApi.__esri.content.Content
+     with contentContent {
+  /**
+    * The formatted string content to display. This may contain a field name enclosed in `{}`, such as `{FIELDNAME}`, or an [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression name, referenced as `{expression/EXPRESSIONNAME}`. Text content may also leverage HTML tags such as `<b></b>`, `<p></p>`, and `<table></table>` for formatting the look and feel of the content.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-TextContent.html#text)
+    */
+  var text: String = js.native
+  /**
+    * The type of popup element displayed.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-TextContent.html#type)
+    *
+    * @default text
+    */
+  @JSName("type")
+  val type_TextContent: text = js.native
+}
+
+@JSGlobal("__esri.TextContent")
+@js.native
+object TextContent extends TopLevel[TextContentConstructor]
+

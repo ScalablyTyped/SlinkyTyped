@@ -1,0 +1,21 @@
+package typingsSlinky.antdDashMobile.antdDashMobileMod
+
+import typingsSlinky.antdDashMobile.Anon_AlignPlacement
+import typingsSlinky.antdDashMobile.TypeofClassItemDefaultProps
+import typingsSlinky.antdDashMobile.libPopoverMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("antd-mobile", "Popover")
+@js.native
+class Popover () extends default
+
+/* static members */
+@JSImport("antd-mobile", "Popover")
+@js.native
+object Popover extends js.Object {
+  var Item: TypeofClassItemDefaultProps = js.native
+  var defaultProps: Anon_AlignPlacement = js.native
+}
+

@@ -1,0 +1,138 @@
+package typingsSlinky.samchon
+
+import typingsSlinky.samchon.protocolCommunicatorIClientDriverMod.IClientDriver
+import typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke
+import typingsSlinky.samchon.templatesDistributedInterfacesIDistributedServerMod.IDistributedServer
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("samchon/templates/distributed", JSImport.Namespace)
+@js.native
+object templatesDistributedMod extends js.Object {
+  @js.native
+  class DSInvokeHistory protected ()
+    extends typingsSlinky.samchon.templatesDistributedDSInvokeHistoryMod.DSInvokeHistory {
+    /**
+      * Construct from a DistributedSystem.
+      *
+      * @param system The {@link DistributedSystem} object who sent the {@link Invoke} message.
+      */
+    def this(system: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem) = this()
+    /**
+      * Initilizer Constructor.
+      *
+      * @param system The {@link DistributedSystem} object who sent the {@link Invoke} message.
+      * @param process The {@link DistributedProcess} object who sent the {@link Invoke} message.
+      * @param invoke An {@link Invoke} message requesting the *distributed process*.
+      * @param weight Weight of resource which indicates how heavy this {@link Invoke} message is.
+      */
+    def this(
+      system: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem,
+      process: typingsSlinky.samchon.templatesDistributedDistributedProcessMod.DistributedProcess,
+      invoke: Invoke,
+      weight: Double
+    ) = this()
+  }
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedClientArray[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedClientArrayMod.DistributedClientArray[System]
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedClientArrayMediator[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedClientArrayMediatorMod.DistributedClientArrayMediator[System]
+  
+  @js.native
+  abstract class DistributedProcess protected ()
+    extends typingsSlinky.samchon.templatesDistributedDistributedProcessMod.DistributedProcess {
+    /**
+      * Constrct from parent {@link DistributedSystemArray} object.
+      *
+      * @param systemArray The parent {@link DistributedSystemArray} object.
+      */
+    def this(systemArray: typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray[typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem]) = this()
+  }
+  
+  @js.native
+  abstract class DistributedServer protected ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedServerMod.DistributedServer {
+    /**
+      * Construct from parent {@link DistributedSystemArray}.
+      *
+      * @param systemArray The parent {@link DistributedSystemArray} object.
+      */
+    def this(systemArray: typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray[typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem]) = this()
+  }
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedServerArray[System /* <: IDistributedServer */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedServerArrayMod.DistributedServerArray[System]
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedServerArrayMediator[System /* <: IDistributedServer */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedServerArrayMediatorMod.DistributedServerArrayMediator[System]
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedServerClientArray[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedServerClientArrayMod.DistributedServerClientArray[System]
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedServerClientArrayMediator[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDerivedDistributedServerClientArrayMediatorMod.DistributedServerClientArrayMediator[System]
+  
+  @js.native
+  abstract class DistributedSystem protected ()
+    extends typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem {
+    /**
+      * Construct from parent {@link DistributedSystemArray}.
+      *
+      * @param systemArray The parent {@link DistributedSystemArray} object.
+      */
+    def this(systemArray: typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray[typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem]) = this()
+    /**
+      * Constrct from parent {@link DistributedSystemArray} and communicator.
+      *
+      * @param systemArray The parent {@link DistributedSystemArray} object.
+      * @param communicator A communicator communicates with remote, the external system.
+      */
+    def this(
+      systemArray: typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray[typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem],
+      communicator: IClientDriver
+    ) = this()
+  }
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedSystemArray[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray[System]
+  
+  @js.native
+  /**
+    * Default Constructor.
+    */
+  abstract class DistributedSystemArrayMediator[System /* <: typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem */] ()
+    extends typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMediatorMod.DistributedSystemArrayMediator[System]
+  
+}
+

@@ -1,0 +1,39 @@
+package typingsSlinky.reactDashNativeDashMaterialDashUi.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashNativeDashMaterialDashUi.reactDashNativeDashMaterialDashUiMod.RadioButtonProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object RadioButton
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.reactDashNativeDashMaterialDashUi.reactDashNativeDashMaterialDashUiMod.RadioButton
+    ] {
+  @JSImport("react-native-material-ui", "RadioButton")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: checked, disabled, value */
+  def apply(
+    label: String,
+    onSelect: String => Unit,
+    theme: String = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashMaterialDashUi.reactDashNativeDashMaterialDashUiMod.RadioButton
+  ] = {
+    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onSelect = js.Any.fromFunction1(onSelect))
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = RadioButtonProps
+}
+

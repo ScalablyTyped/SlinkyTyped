@@ -1,0 +1,25 @@
+package typingsSlinky.mdast.mdastMod
+
+import typingsSlinky.mdast.mdastStrings.yaml
+import typingsSlinky.unist.unistMod.Data
+import typingsSlinky.unist.unistMod.Position
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait YAML extends Literal {
+  @JSName("type")
+  var type_YAML: yaml
+}
+
+object YAML {
+  @scala.inline
+  def apply(`type`: yaml, value: js.Any, data: Data = null, position: Position = null): YAML = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    __obj.asInstanceOf[YAML]
+  }
+}
+

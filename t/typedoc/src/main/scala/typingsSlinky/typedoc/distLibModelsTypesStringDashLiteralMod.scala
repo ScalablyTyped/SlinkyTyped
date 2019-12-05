@@ -1,0 +1,20 @@
+package typingsSlinky.typedoc
+
+import typingsSlinky.typedoc.distLibModelsTypesAbstractMod.Type
+import typingsSlinky.typedoc.distLibModelsTypesStringDashLiteralMod.StringLiteralType
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc/dist/lib/models/types/string-literal", JSImport.Namespace)
+@js.native
+object distLibModelsTypesStringDashLiteralMod extends js.Object {
+  @js.native
+  class StringLiteralType protected () extends Type {
+    def this(value: String) = this()
+    var value: String = js.native
+    def equals(`type`: StringLiteralType): Boolean = js.native
+  }
+  
+}
+

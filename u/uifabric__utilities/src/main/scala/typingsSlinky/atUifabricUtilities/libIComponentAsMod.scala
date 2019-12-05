@@ -1,0 +1,15 @@
+package typingsSlinky.atUifabricUtilities
+
+import slinky.core.ReactComponentClass
+import typingsSlinky.atUifabricUtilities.libIComponentAsMod.IComponentAsProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@uifabric/utilities/lib/IComponentAs", JSImport.Namespace)
+@js.native
+object libIComponentAsMod extends js.Object {
+  type IComponentAs[T] = ReactComponentClass[IComponentAsProps[T]]
+  type IComponentAsProps[T] = T with Anon_DefaultRender[T]
+}
+

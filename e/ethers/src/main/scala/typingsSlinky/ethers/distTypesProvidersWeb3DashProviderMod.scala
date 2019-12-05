@@ -1,0 +1,21 @@
+package typingsSlinky.ethers
+
+import typingsSlinky.ethers.distTypesProvidersJsonDashRpcDashProviderMod.JsonRpcProvider
+import typingsSlinky.ethers.distTypesUtilsTypesMod.AsyncProvider
+import typingsSlinky.ethers.distTypesUtilsTypesMod.Networkish
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("ethers/dist/types/providers/web3-provider", JSImport.Namespace)
+@js.native
+object distTypesProvidersWeb3DashProviderMod extends js.Object {
+  @js.native
+  class Web3Provider protected () extends JsonRpcProvider {
+    def this(web3Provider: AsyncProvider) = this()
+    def this(web3Provider: AsyncProvider, network: Networkish) = this()
+    val _web3Provider: AsyncProvider = js.native
+  }
+  
+}
+

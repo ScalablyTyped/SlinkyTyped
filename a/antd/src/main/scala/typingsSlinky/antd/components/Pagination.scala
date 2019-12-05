@@ -49,7 +49,7 @@ object Pagination
     size: String = null,
     style: CSSProperties = null,
     total: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
@@ -73,7 +73,7 @@ object Pagination
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PaginationProps

@@ -40,7 +40,7 @@ object Alert
     showIcon: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,
     `type`: success | info | warning | error = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     if (afterClose != null) __obj.updateDynamic("afterClose")(js.Any.fromFunction0(afterClose))
@@ -55,7 +55,7 @@ object Alert
     if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = AlertProps

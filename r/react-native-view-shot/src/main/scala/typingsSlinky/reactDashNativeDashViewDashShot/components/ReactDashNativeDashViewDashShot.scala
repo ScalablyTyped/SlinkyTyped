@@ -28,7 +28,7 @@ object ReactDashNativeDashViewDashShot
     onCaptureFailure: /* error */ js.Error => Unit = null,
     options: CaptureOptions = null,
     style: ViewStyle = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (captureMode != null) __obj.updateDynamic("captureMode")(captureMode.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object ReactDashNativeDashViewDashShot
     if (onCaptureFailure != null) __obj.updateDynamic("onCaptureFailure")(js.Any.fromFunction1(onCaptureFailure))
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ViewShotProperties

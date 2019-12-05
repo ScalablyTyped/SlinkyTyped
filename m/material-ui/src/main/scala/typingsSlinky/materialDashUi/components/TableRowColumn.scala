@@ -27,7 +27,7 @@ object TableRowColumn
     onHover: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
     onHoverExit: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (columnNumber != null) __obj.updateDynamic("columnNumber")(columnNumber.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object TableRowColumn
     if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction2(onHover))
     if (onHoverExit != null) __obj.updateDynamic("onHoverExit")(js.Any.fromFunction2(onHoverExit))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TableRowColumnProps

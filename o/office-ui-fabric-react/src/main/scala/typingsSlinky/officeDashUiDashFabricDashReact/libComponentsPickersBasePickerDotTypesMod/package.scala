@@ -1,0 +1,36 @@
+package typingsSlinky.officeDashUiDashFabricDashReact
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object libComponentsPickersBasePickerDotTypesMod {
+  import typingsSlinky.officeDashUiDashFabricDashReact.Anon_InputClassName
+  import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPickersSuggestionsSuggestionsDotTypesMod.ISuggestionsProps
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.className
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.disabled
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.forceResolveText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.loadingText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.mostRecentlyUsedHeaderText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.noResultsFoundText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.onRenderNoResultFound
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.resultsFooter
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.resultsFooterFull
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.resultsMaximumNumber
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.searchForMoreText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.searchingText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.showRemoveButtons
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsAvailableAlertText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsClassName
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsContainerAriaLabel
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsHeaderText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsItemClassName
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.theme
+  import typingsSlinky.std.Pick
+
+  type IBasePickerStyleProps = (Pick[IBasePickerProps[_], theme | className | disabled]) with Anon_InputClassName
+  type IBasePickerSuggestionsProps[T] = Pick[
+    ISuggestionsProps[T], 
+    onRenderNoResultFound | suggestionsHeaderText | mostRecentlyUsedHeaderText | noResultsFoundText | className | suggestionsClassName | suggestionsItemClassName | searchForMoreText | forceResolveText | loadingText | searchingText | resultsFooterFull | resultsFooter | resultsMaximumNumber | showRemoveButtons | suggestionsAvailableAlertText | suggestionsContainerAriaLabel
+  ]
+}

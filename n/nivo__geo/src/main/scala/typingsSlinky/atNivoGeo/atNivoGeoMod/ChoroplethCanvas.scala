@@ -1,0 +1,13 @@
+package typingsSlinky.atNivoGeo.atNivoGeoMod
+
+import typingsSlinky.atNivoGeo.ChoroplethCanvasPropsDimensions
+import typingsSlinky.react.reactMod.Component
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@nivo/geo", "ChoroplethCanvas")
+@js.native
+class ChoroplethCanvas ()
+  extends Component[ChoroplethCanvasPropsDimensions, js.Object, js.Any]
+

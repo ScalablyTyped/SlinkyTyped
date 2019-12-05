@@ -1,0 +1,19 @@
+package typingsSlinky.ejDotWebDotAll
+
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.ejDotWebDotAll.ej.Tooltip
+import typingsSlinky.ejDotWebDotAll.ej.Tooltip.Model
+import typingsSlinky.std.Element
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofClassTooltip
+  extends Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, Tooltip]
+     with Instantiable1[(/* element */ Element) | (/* element */ JQuery), Tooltip] {
+  var Locale: js.Any = js.native
+  var fn: Tooltip = js.native
+}
+

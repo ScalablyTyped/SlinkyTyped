@@ -1,0 +1,12 @@
+package typingsSlinky.dojo
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dojo.dojox.drawing.tools.Arrow.setup
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("dojox/drawing/tools/Arrow.setup", JSImport.Namespace)
+@js.native
+object dojoxDrawingToolsArrowDotSetupMod extends TopLevel[setup]
+

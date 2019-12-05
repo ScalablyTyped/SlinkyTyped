@@ -1,0 +1,22 @@
+package typingsSlinky.gyronorm.gyronormMod
+
+import typingsSlinky.gyronorm.Anon_Absolute
+import typingsSlinky.gyronorm.Anon_Alpha
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait MotionAndOrientationPayload extends js.Object {
+  var dm: Anon_Alpha
+  var `do`: Anon_Absolute
+}
+
+object MotionAndOrientationPayload {
+  @scala.inline
+  def apply(dm: Anon_Alpha, `do`: Anon_Absolute): MotionAndOrientationPayload = {
+    val __obj = js.Dynamic.literal(dm = dm.asInstanceOf[js.Any])
+    __obj.updateDynamic("do")(`do`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MotionAndOrientationPayload]
+  }
+}
+

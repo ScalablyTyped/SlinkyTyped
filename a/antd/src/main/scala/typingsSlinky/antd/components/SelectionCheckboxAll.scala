@@ -34,14 +34,14 @@ object SelectionCheckboxAll
     hideDefaultSelections: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
     selections: js.Array[SelectionItem] | Boolean = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], getCheckboxPropsByItem = js.Any.fromFunction2(getCheckboxPropsByItem), getRecordKey = js.Any.fromFunction2(getRecordKey), locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction3(onSelect), store = store.asInstanceOf[js.Any])
     if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
     if (!js.isUndefined(hideDefaultSelections)) __obj.updateDynamic("hideDefaultSelections")(hideDefaultSelections.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (selections != null) __obj.updateDynamic("selections")(selections.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.antd.libTableSelectionCheckboxAllMod.default[js.Any]]]

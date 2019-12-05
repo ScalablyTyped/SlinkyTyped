@@ -1,0 +1,13 @@
+package typingsSlinky.rcDashTable
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.rcDashTable.libColumnGroupMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofClassColumnGroup extends Instantiable0[default] {
+  var isTableColumnGroup: Boolean = js.native
+}
+

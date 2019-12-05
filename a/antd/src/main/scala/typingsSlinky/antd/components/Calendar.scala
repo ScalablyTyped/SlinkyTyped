@@ -39,7 +39,7 @@ object Calendar
     style: CSSProperties = null,
     validRange: js.Tuple2[Moment, Moment] = null,
     value: Moment = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (dateCellRender != null) __obj.updateDynamic("dateCellRender")(js.Any.fromFunction1(dateCellRender))
@@ -57,7 +57,7 @@ object Calendar
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (validRange != null) __obj.updateDynamic("validRange")(validRange.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = CalendarProps

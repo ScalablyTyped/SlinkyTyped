@@ -1,0 +1,36 @@
+package typingsSlinky.reactabularDashTable.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.CSSStyleDeclaration
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactabularDashTable.reactabularDashTableMod.Column
+import typingsSlinky.reactabularDashTable.reactabularDashTableMod.HeaderProps
+import typingsSlinky.std.Partial
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Header
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactabularDashTable.reactabularDashTableMod.Header] {
+  @JSImport("reactabular-table", "Header")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    headerRows: js.Array[Column] = null,
+    style: Partial[CSSStyleDeclaration] = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.reactabularDashTable.reactabularDashTableMod.Header] = {
+    val __obj = js.Dynamic.literal()
+    if (headerRows != null) __obj.updateDynamic("headerRows")(headerRows.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = HeaderProps
+}
+

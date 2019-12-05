@@ -1,0 +1,61 @@
+package typingsSlinky.devexpressDashWeb
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait FloatingObjectRelativeHeightType extends js.Object
+
+/**
+  * Lists values specifying to what element the floating object height is relative.
+  */
+@JSGlobal("FloatingObjectRelativeHeightType")
+@js.native
+object FloatingObjectRelativeHeightType extends js.Object {
+  /**
+    * Relative to bottom margin.
+    */
+  @js.native
+  sealed trait BottomMargin extends FloatingObjectRelativeHeightType
+  
+  /**
+    * Relative to inside margin.
+    */
+  @js.native
+  sealed trait InsideMargin extends FloatingObjectRelativeHeightType
+  
+  /**
+    * Relative to margin.
+    */
+  @js.native
+  sealed trait Margin extends FloatingObjectRelativeHeightType
+  
+  /**
+    * Relative to outside margin.
+    */
+  @js.native
+  sealed trait OutsideMargin extends FloatingObjectRelativeHeightType
+  
+  /**
+    * Relative to page.
+    */
+  @js.native
+  sealed trait Page extends FloatingObjectRelativeHeightType
+  
+  /**
+    * Relative to top margin.
+    */
+  @js.native
+  sealed trait TopMargin extends FloatingObjectRelativeHeightType
+  
+  /* 3 */ val BottomMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.BottomMargin with Double = js.native
+  /* 4 */ val InsideMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.InsideMargin with Double = js.native
+  /* 0 */ val Margin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.Margin with Double = js.native
+  /* 5 */ val OutsideMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.OutsideMargin with Double = js.native
+  /* 1 */ val Page: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.Page with Double = js.native
+  /* 2 */ val TopMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeHeightType.TopMargin with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[FloatingObjectRelativeHeightType with Double] = js.native
+}
+

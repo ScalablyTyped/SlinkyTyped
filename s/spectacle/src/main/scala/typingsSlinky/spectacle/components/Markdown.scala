@@ -1,0 +1,32 @@
+package typingsSlinky.spectacle.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.spectacle.spectacleMod.MarkdownProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Markdown
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.Markdown] {
+  @JSImport("spectacle", "Markdown")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    mdastConfig: StringDictionary[Double | String] = null,
+    source: String = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Markdown] = {
+    val __obj = js.Dynamic.literal()
+    if (mdastConfig != null) __obj.updateDynamic("mdastConfig")(mdastConfig.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = MarkdownProps
+}
+

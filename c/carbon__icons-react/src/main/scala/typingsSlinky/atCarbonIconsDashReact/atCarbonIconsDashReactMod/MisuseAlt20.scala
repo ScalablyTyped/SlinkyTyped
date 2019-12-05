@@ -1,0 +1,11 @@
+package typingsSlinky.atCarbonIconsDashReact.atCarbonIconsDashReactMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@carbon/icons-react", "MisuseAlt20")
+@js.native
+object MisuseAlt20 extends TopLevel[CarbonIconType]
+

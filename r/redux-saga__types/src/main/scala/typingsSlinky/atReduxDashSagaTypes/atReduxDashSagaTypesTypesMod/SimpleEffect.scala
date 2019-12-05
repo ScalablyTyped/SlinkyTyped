@@ -1,0 +1,25 @@
+package typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesTypesMod
+
+import typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesNumbers.`false`
+import typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesNumbers.`true`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait SimpleEffect[T, P] extends js.Object {
+  var `@@redux-saga/IO`: `true`
+  var combinator: `false`
+  var payload: P
+  var `type`: T
+}
+
+object SimpleEffect {
+  @scala.inline
+  def apply[T, P](`@@redux-saga/IO`: `true`, combinator: `false`, payload: P, `type`: T): SimpleEffect[T, P] = {
+    val __obj = js.Dynamic.literal(combinator = combinator.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("@@redux-saga/IO")(`@@redux-saga/IO`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SimpleEffect[T, P]]
+  }
+}
+

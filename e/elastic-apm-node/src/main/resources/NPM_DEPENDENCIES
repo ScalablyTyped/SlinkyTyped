@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "elastic-apm-node" : "3.2.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "elastic-apm-node" : "3.2.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

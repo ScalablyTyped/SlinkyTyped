@@ -1,0 +1,19 @@
+package typingsSlinky.atEmberRouting.routerMod.atEmberServiceMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Registry extends js.Object {
+  var router: typingsSlinky.atEmberRouting.routerDashServiceMod.default
+}
+
+object Registry {
+  @scala.inline
+  def apply(router: typingsSlinky.atEmberRouting.routerDashServiceMod.default): Registry = {
+    val __obj = js.Dynamic.literal(router = router.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Registry]
+  }
+}
+

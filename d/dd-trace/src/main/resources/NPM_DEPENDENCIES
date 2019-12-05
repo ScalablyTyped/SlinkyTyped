@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "dd-trace" : "0.15.5"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "dd-trace" : "0.15.5"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

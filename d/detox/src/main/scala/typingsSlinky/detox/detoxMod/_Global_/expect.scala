@@ -1,0 +1,13 @@
+package typingsSlinky.detox.detoxMod._Global_
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.detox.detoxMod._Global_.Detox.Expect
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("expect")
+@js.native
+object expect
+  extends TopLevel[Expect[Expect[js.Any]]]
+

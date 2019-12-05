@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 
 abstract class SharedApply_OptGroupProps146253203 (implicit pw: ExternalPropsWriterProvider)
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  def apply(label: TagMod[Any] = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+  def apply(label: TagMod[Any] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = OptGroupProps

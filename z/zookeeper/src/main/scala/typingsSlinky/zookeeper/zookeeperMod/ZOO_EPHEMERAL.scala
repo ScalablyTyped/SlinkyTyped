@@ -1,0 +1,13 @@
+package typingsSlinky.zookeeper.zookeeperMod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.zookeeper.zookeeperNumbers.`1`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+// Dunno
+@JSImport("zookeeper", "ZOO_EPHEMERAL")
+@js.native
+object ZOO_EPHEMERAL extends TopLevel[`1`]
+

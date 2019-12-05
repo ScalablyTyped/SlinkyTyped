@@ -1,0 +1,39 @@
+package typingsSlinky.interpret
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.interpret.interpretMod.Extension
+import typingsSlinky.interpret.interpretMod.ExtensionDescriptor
+import typingsSlinky.interpret.interpretMod.Extensions
+import typingsSlinky.interpret.interpretMod.Hook
+import typingsSlinky.interpret.interpretMod.RegisterFn
+import typingsSlinky.node.NodeModule
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("interpret", JSImport.Namespace)
+@js.native
+object interpretMod extends js.Object {
+  @js.native
+  trait ExtensionDescriptor extends js.Object {
+    var module: String = js.native
+    @JSName("register")
+    var register_Original: RegisterFn = js.native
+    def register(hook: Hook): Unit = js.native
+  }
+  
+  @js.native
+  trait Hook extends js.Object {
+    def apply(m: Anon_Extensions): js.Any = js.native
+    def apply(m: NodeModule): js.Any = js.native
+    def install(): Unit = js.native
+    def install(m: Anon_Extension): Unit = js.native
+  }
+  
+  val extensions: Extensions = js.native
+  val jsVariants: Extensions = js.native
+  type Extension = String | ExtensionDescriptor | (js.Array[String | ExtensionDescriptor])
+  type Extensions = StringDictionary[Extension | Null]
+  type RegisterFn = js.Function1[/* hook */ Hook, Unit]
+}
+

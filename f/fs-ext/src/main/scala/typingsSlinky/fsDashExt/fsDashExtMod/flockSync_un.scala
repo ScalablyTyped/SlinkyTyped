@@ -1,0 +1,13 @@
+package typingsSlinky.fsDashExt.fsDashExtMod
+
+import typingsSlinky.fsDashExt.fsDashExtStrings.un
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("fs-ext", "flockSync")
+@js.native
+object flockSync_un extends js.Object {
+  def apply(fd: Double, flags: un): Unit = js.native
+}
+

@@ -1,0 +1,21 @@
+package typingsSlinky.chrome.chrome.webRequest
+
+import typingsSlinky.chrome.chrome.events.Event
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait WebResponseHeadersEvent
+  extends Event[js.Function1[/* details */ WebResponseHeadersDetails, BlockingResponse | Unit]] {
+  def addListener(
+    callback: js.Function1[/* details */ WebResponseHeadersDetails, BlockingResponse | Unit],
+    filter: RequestFilter
+  ): Unit = js.native
+  def addListener(
+    callback: js.Function1[/* details */ WebResponseHeadersDetails, BlockingResponse | Unit],
+    filter: RequestFilter,
+    opt_extraInfoSpec: js.Array[String]
+  ): Unit = js.native
+}
+

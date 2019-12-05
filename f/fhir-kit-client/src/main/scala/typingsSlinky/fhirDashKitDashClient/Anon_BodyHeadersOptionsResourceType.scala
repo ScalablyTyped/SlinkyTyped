@@ -1,0 +1,31 @@
+package typingsSlinky.fhirDashKitDashClient
+
+import typingsSlinky.fhir.fhir.RiskAssessment
+import typingsSlinky.request.requestMod.Headers
+import typingsSlinky.request.requestMod.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_BodyHeadersOptionsResourceType extends js.Object {
+  var body: RiskAssessment
+  var headers: js.UndefOr[Headers] = js.undefined
+  var options: js.UndefOr[Options] = js.undefined
+  var resourceType: typingsSlinky.fhirDashKitDashClient.fhirDashKitDashClientStrings.RiskAssessment
+}
+
+object Anon_BodyHeadersOptionsResourceType {
+  @scala.inline
+  def apply(
+    body: RiskAssessment,
+    resourceType: typingsSlinky.fhirDashKitDashClient.fhirDashKitDashClientStrings.RiskAssessment,
+    headers: Headers = null,
+    options: Options = null
+  ): Anon_BodyHeadersOptionsResourceType = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_BodyHeadersOptionsResourceType]
+  }
+}
+

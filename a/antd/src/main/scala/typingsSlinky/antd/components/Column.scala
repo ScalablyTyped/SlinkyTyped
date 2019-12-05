@@ -51,7 +51,7 @@ object Column
     sortOrder: SortOrder | Boolean = null,
     sorter: Boolean | CompareFn[T] = null,
     title: TagMod[Any] | (js.Function1[/* options */ Anon_Filters[T], TagMod[Any]]) = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
     val __obj = js.Dynamic.literal()
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
@@ -75,7 +75,7 @@ object Column
     if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
     if (sorter != null) __obj.updateDynamic("sorter")(sorter.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableColumnMod.default[js.Any]]]
   }
   type Props = ColumnProps[js.Any]

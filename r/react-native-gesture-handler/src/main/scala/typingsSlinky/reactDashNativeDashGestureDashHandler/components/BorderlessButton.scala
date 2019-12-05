@@ -48,7 +48,7 @@ object BorderlessButton
     style: StyleProp[ViewStyle] = null,
     testID: String = null,
     waitFor: Ref[_] | js.Array[Ref[_]] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton
@@ -71,7 +71,7 @@ object BorderlessButton
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = BorderlessButtonProperties

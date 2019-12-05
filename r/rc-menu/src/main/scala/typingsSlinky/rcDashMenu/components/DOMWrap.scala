@@ -30,7 +30,7 @@ object DOMWrap
     tag: String = null,
     theme: String = null,
     visible: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[slinky.web.html.`*`.tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
@@ -41,7 +41,7 @@ object DOMWrap
     if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = DOMWrapProps

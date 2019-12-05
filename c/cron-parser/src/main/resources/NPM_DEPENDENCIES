@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "cron-parser" : "2.13.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "cron-parser" : "2.13.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

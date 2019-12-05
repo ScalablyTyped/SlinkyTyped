@@ -30,7 +30,7 @@ object Spin
     style: CSSProperties = null,
     tip: String = null,
     wrapperClassName: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
@@ -41,7 +41,7 @@ object Spin
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (tip != null) __obj.updateDynamic("tip")(tip.asInstanceOf[js.Any])
     if (wrapperClassName != null) __obj.updateDynamic("wrapperClassName")(wrapperClassName.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SpinProps

@@ -1,0 +1,973 @@
+package typingsSlinky.atBlueprintjsIcons
+
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-column-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-column-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-row-bottom`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-row-top`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-to-artifact`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`add-to-folder`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`align-center`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`align-justify`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`align-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`align-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-bottom`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-horizontal-center`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-top`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`alignment-vertical-center`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-bottom-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-bottom-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-top-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-top-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrow-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrows-horizontal`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`arrows-vertical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`automatic-updates`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`ban-circle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`bank-account`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`blocked-person`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`caret-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`caret-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`caret-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`caret-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`cell-tower`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-backward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-forward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`chevron-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`circle-arrow-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`circle-arrow-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`circle-arrow-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`circle-arrow-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`cloud-download`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`cloud-upload`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`code-block`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`collapse-all`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`column-layout`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`credit-card`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`cube-add`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`cube-remove`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`curved-range-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`data-lineage`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`derive-column`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`diagram-tree`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`direction-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`direction-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`document-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`document-share`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-caret-horizontal`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-caret-vertical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-chevron-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-chevron-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-chevron-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`double-chevron-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`doughnut-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`drag-handle-horizontal`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`drag-handle-vertical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`drive-time`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`exclude-row`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`expand-all`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`eye-off`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`eye-on`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`eye-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`fast-backward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`fast-forward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`feed-subscribed`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`filter-keep`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`filter-list`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`filter-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`filter-remove`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`floppy-disk`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`flow-branch`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`flow-end`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`flow-linear`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`flow-review-branch`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`flow-review`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`folder-close`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`folder-new`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`folder-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`folder-shared-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`folder-shared`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`full-circle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`full-stacked-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`gantt-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-branch`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-commit`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-merge`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-new-branch`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-pull`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-push`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`git-repo`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`globe-network`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`graph-remove`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`greater-than-or-equal-to`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`greater-than`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`grid-view`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`group-objects`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`grouped-bar-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`hand-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`hand-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`hand-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`hand-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`header-one`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`header-two`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`heart-broken`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`heat-grid`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`helper-management`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`horizontal-bar-chart-asc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`horizontal-bar-chart-desc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`horizontal-bar-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`horizontal-distribution`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`id-number`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`image-rotate-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`image-rotate-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`import`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`inbox-filtered`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`inbox-geo`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`inbox-search`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`inbox-update`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`info-sign`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`inner-join`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`ip-address`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`issue-closed`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`issue-new`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`join-table`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-backspace`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-command`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-control`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-delete`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-enter`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-escape`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-option`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-shift`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`key-tab`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`known-vehicle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-auto`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-balloon`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-circle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-grid`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-group-by`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-hierarchy`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-linear`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-skew-grid`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`layout-sorted-clusters`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`left-join`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`less-than-or-equal-to`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`less-than`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`list-columns`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`list-detail-view`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`log-in`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`log-out`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`manually-entered-data`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`map-create`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`map-marker`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`menu-closed`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`menu-open`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`merge-columns`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`merge-links`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`mobile-phone`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`mobile-video`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`multi-select`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-drawing`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-grid-item`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-layer`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-layers`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-link`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-object`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-person`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-prescription`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`new-text-box`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`not-equal-to`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`notifications-updated`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`numbered-list`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`oil-field`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`one-column`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`page-layout`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`panel-stats`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`panel-table`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`path-search`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`pie-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`pivot-table`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`polygon-filter`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`predictive-analysis`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`publish-function`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`regression-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`remove-column-left`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`remove-column-right`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`remove-column`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`remove-row-bottom`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`remove-row-top`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`right-join`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`rotate-document`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`rotate-page`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`scatter-plot`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`search-around`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`search-template`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`search-text`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`segmented-control`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`send-to-graph`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`send-to-map`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`send-to`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`series-add`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`series-configuration`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`series-derived`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`series-filtered`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`series-search`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`shopping-cart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`signal-search`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sim-card`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`small-cross`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`small-minus`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`small-plus`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`small-tick`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`social-media`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-alphabetical-desc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-alphabetical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-asc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-desc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-numerical-desc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`sort-numerical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`split-columns`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`stacked-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`star-empty`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`step-backward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`step-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`step-forward`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`swap-horizontal`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`swap-vertical`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-circle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-cross`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-diamond`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-square`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-triangle-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`symbol-triangle-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`take-action`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`text-highlight`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`th-derived`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`th-disconnect`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`th-filtered`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`th-list`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`thumbs-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`thumbs-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`tick-circle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`timeline-area-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`timeline-bar-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`timeline-events`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`timeline-line-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`trending-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`trending-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`two-columns`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`ungroup-objects`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`unknown-vehicle`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`vertical-bar-chart-asc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`vertical-bar-chart-desc`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`vertical-distribution`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`volume-down`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`volume-off`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`volume-up`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`warning-sign`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`waterfall-chart`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`widget-button`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`widget-footer`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`widget-header`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`zoom-in`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`zoom-out`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.`zoom-to-fit`
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.add
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.airplane
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.annotation
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.application
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.applications
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.archive
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.asterisk
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.badge
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.barcode
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.blank
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.bold
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.book
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.bookmark
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.box
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.briefcase
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.build
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.calculator
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.calendar
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.camera
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.changes
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.chart
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.chat
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.circle
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.citation
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.clean
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.clipboard
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.cloud
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.code
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.cog
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.comment
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.comparison
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.compass
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.compressed
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.confirm
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.console
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.contrast
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.control
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.cross
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.crown
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.cube
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.cut
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.dashboard
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.database
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.delete
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.delta
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.desktop
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.disable
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.document
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.dollar
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.dot
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.download
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.draw
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.duplicate
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.edit
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.eject
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.endorsed
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.envelope
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.equals
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.eraser
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.error
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.euro
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.exchange
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.export
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.feed
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.film
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.filter
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.flag
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.flame
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.flash
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.flows
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.follower
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.following
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.font
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.fork
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.form
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.fullscreen
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.function
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.geolocation
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.geosearch
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.glass
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.globe
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.graph
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.grid
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.hand
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.header
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.headset
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.heart
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.heatmap
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.help
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.highlight
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.history
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.home
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.inbox
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.inheritance
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.insert
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.intersection
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.issue
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.italic
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.key
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.label
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.layer
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.layers
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.layout
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.learning
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.lifesaver
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.lightbulb
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.link
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.list
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.locate
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.lock
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.manual
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.map
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.maximize
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.media
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.menu
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.minimize
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.minus
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.moon
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.more
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.mountain
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.move
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.mugshot
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.music
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.ninja
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.notifications
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.numerical
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.office
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.offline
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.outdated
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.paperclip
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.paragraph
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.path
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.pause
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.people
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.percentage
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.person
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.phone
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.pin
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.pivot
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.play
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.plus
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.power
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.prescription
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.presentation
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.print
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.projects
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.properties
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.property
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.pulse
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.random
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.record
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.redo
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.refresh
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.remove
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.repeat
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.reset
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.resolve
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.rig
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.ring
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.satellite
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.saved
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.search
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.select
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.selection
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.settings
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.share
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.shield
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.shop
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.slash
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.snowflake
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.sort
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.square
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.star
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.stop
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.stopwatch
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.strikethrough
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.style
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.tag
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.taxi
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.th
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.tick
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.time
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.tint
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.torch
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.train
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.translate
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.trash
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.tree
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.unarchive
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.underline
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.undo
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.unlock
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.unpin
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.unresolve
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.updated
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.upload
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.user
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.variable
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.video
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.walk
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.widget
+import typingsSlinky.atBlueprintjsIcons.atBlueprintjsIconsStrings.wrench
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@blueprintjs/icons/lib/esm/generated/iconNames", JSImport.Namespace)
+@js.native
+object libEsmGeneratedIconNamesMod extends js.Object {
+  val ADD: add = js.native
+  val ADD_COLUMN_LEFT: `add-column-left` = js.native
+  val ADD_COLUMN_RIGHT: `add-column-right` = js.native
+  val ADD_ROW_BOTTOM: `add-row-bottom` = js.native
+  val ADD_ROW_TOP: `add-row-top` = js.native
+  val ADD_TO_ARTIFACT: `add-to-artifact` = js.native
+  val ADD_TO_FOLDER: `add-to-folder` = js.native
+  val AIRPLANE: airplane = js.native
+  val ALIGNMENT_BOTTOM: `alignment-bottom` = js.native
+  val ALIGNMENT_HORIZONTAL_CENTER: `alignment-horizontal-center` = js.native
+  val ALIGNMENT_LEFT: `alignment-left` = js.native
+  val ALIGNMENT_RIGHT: `alignment-right` = js.native
+  val ALIGNMENT_TOP: `alignment-top` = js.native
+  val ALIGNMENT_VERTICAL_CENTER: `alignment-vertical-center` = js.native
+  val ALIGN_CENTER: `align-center` = js.native
+  val ALIGN_JUSTIFY: `align-justify` = js.native
+  val ALIGN_LEFT: `align-left` = js.native
+  val ALIGN_RIGHT: `align-right` = js.native
+  val ANNOTATION: annotation = js.native
+  val APPLICATION: application = js.native
+  val APPLICATIONS: applications = js.native
+  val ARCHIVE: archive = js.native
+  val ARROWS_HORIZONTAL: `arrows-horizontal` = js.native
+  val ARROWS_VERTICAL: `arrows-vertical` = js.native
+  val ARROW_BOTTOM_LEFT: `arrow-bottom-left` = js.native
+  val ARROW_BOTTOM_RIGHT: `arrow-bottom-right` = js.native
+  val ARROW_DOWN: `arrow-down` = js.native
+  val ARROW_LEFT: `arrow-left` = js.native
+  val ARROW_RIGHT: `arrow-right` = js.native
+  val ARROW_TOP_LEFT: `arrow-top-left` = js.native
+  val ARROW_TOP_RIGHT: `arrow-top-right` = js.native
+  val ARROW_UP: `arrow-up` = js.native
+  val ASTERISK: asterisk = js.native
+  val AUTOMATIC_UPDATES: `automatic-updates` = js.native
+  val BADGE: badge = js.native
+  val BANK_ACCOUNT: `bank-account` = js.native
+  val BAN_CIRCLE: `ban-circle` = js.native
+  val BARCODE: barcode = js.native
+  val BLANK: blank = js.native
+  val BLOCKED_PERSON: `blocked-person` = js.native
+  val BOLD: bold = js.native
+  val BOOK: book = js.native
+  val BOOKMARK: bookmark = js.native
+  val BOX: box = js.native
+  val BRIEFCASE: briefcase = js.native
+  val BUILD: build = js.native
+  val CALCULATOR: calculator = js.native
+  val CALENDAR: calendar = js.native
+  val CAMERA: camera = js.native
+  val CARET_DOWN: `caret-down` = js.native
+  val CARET_LEFT: `caret-left` = js.native
+  val CARET_RIGHT: `caret-right` = js.native
+  val CARET_UP: `caret-up` = js.native
+  val CELL_TOWER: `cell-tower` = js.native
+  val CHANGES: changes = js.native
+  val CHART: chart = js.native
+  val CHAT: chat = js.native
+  val CHEVRON_BACKWARD: `chevron-backward` = js.native
+  val CHEVRON_DOWN: `chevron-down` = js.native
+  val CHEVRON_FORWARD: `chevron-forward` = js.native
+  val CHEVRON_LEFT: `chevron-left` = js.native
+  val CHEVRON_RIGHT: `chevron-right` = js.native
+  val CHEVRON_UP: `chevron-up` = js.native
+  val CIRCLE: circle = js.native
+  val CIRCLE_ARROW_DOWN: `circle-arrow-down` = js.native
+  val CIRCLE_ARROW_LEFT: `circle-arrow-left` = js.native
+  val CIRCLE_ARROW_RIGHT: `circle-arrow-right` = js.native
+  val CIRCLE_ARROW_UP: `circle-arrow-up` = js.native
+  val CITATION: citation = js.native
+  val CLEAN: clean = js.native
+  val CLIPBOARD: clipboard = js.native
+  val CLOUD: cloud = js.native
+  val CLOUD_DOWNLOAD: `cloud-download` = js.native
+  val CLOUD_UPLOAD: `cloud-upload` = js.native
+  val CODE: code = js.native
+  val CODE_BLOCK: `code-block` = js.native
+  val COG: cog = js.native
+  val COLLAPSE_ALL: `collapse-all` = js.native
+  val COLUMN_LAYOUT: `column-layout` = js.native
+  val COMMENT: comment = js.native
+  val COMPARISON: comparison = js.native
+  val COMPASS: compass = js.native
+  val COMPRESSED: compressed = js.native
+  val CONFIRM: confirm = js.native
+  val CONSOLE: console = js.native
+  val CONTRAST: contrast = js.native
+  val CONTROL: control = js.native
+  val CREDIT_CARD: `credit-card` = js.native
+  val CROSS: cross = js.native
+  val CROWN: crown = js.native
+  val CUBE: cube = js.native
+  val CUBE_ADD: `cube-add` = js.native
+  val CUBE_REMOVE: `cube-remove` = js.native
+  val CURVED_RANGE_CHART: `curved-range-chart` = js.native
+  val CUT: cut = js.native
+  val DASHBOARD: dashboard = js.native
+  val DATABASE: database = js.native
+  val DATA_LINEAGE: `data-lineage` = js.native
+  val DELETE: delete = js.native
+  val DELTA: delta = js.native
+  val DERIVE_COLUMN: `derive-column` = js.native
+  val DESKTOP: desktop = js.native
+  val DIAGRAM_TREE: `diagram-tree` = js.native
+  val DIRECTION_LEFT: `direction-left` = js.native
+  val DIRECTION_RIGHT: `direction-right` = js.native
+  val DISABLE: disable = js.native
+  val DOCUMENT: document = js.native
+  val DOCUMENT_OPEN: `document-open` = js.native
+  val DOCUMENT_SHARE: `document-share` = js.native
+  val DOLLAR: dollar = js.native
+  val DOT: dot = js.native
+  val DOUBLE_CARET_HORIZONTAL: `double-caret-horizontal` = js.native
+  val DOUBLE_CARET_VERTICAL: `double-caret-vertical` = js.native
+  val DOUBLE_CHEVRON_DOWN: `double-chevron-down` = js.native
+  val DOUBLE_CHEVRON_LEFT: `double-chevron-left` = js.native
+  val DOUBLE_CHEVRON_RIGHT: `double-chevron-right` = js.native
+  val DOUBLE_CHEVRON_UP: `double-chevron-up` = js.native
+  val DOUGHNUT_CHART: `doughnut-chart` = js.native
+  val DOWNLOAD: download = js.native
+  val DRAG_HANDLE_HORIZONTAL: `drag-handle-horizontal` = js.native
+  val DRAG_HANDLE_VERTICAL: `drag-handle-vertical` = js.native
+  val DRAW: draw = js.native
+  val DRIVE_TIME: `drive-time` = js.native
+  val DUPLICATE: duplicate = js.native
+  val EDIT: edit = js.native
+  val EJECT: eject = js.native
+  val ENDORSED: endorsed = js.native
+  val ENVELOPE: envelope = js.native
+  val EQUALS: equals = js.native
+  val ERASER: eraser = js.native
+  val ERROR: error = js.native
+  val EURO: euro = js.native
+  val EXCHANGE: exchange = js.native
+  val EXCLUDE_ROW: `exclude-row` = js.native
+  val EXPAND_ALL: `expand-all` = js.native
+  val EXPORT: export = js.native
+  val EYE_OFF: `eye-off` = js.native
+  val EYE_ON: `eye-on` = js.native
+  val EYE_OPEN: `eye-open` = js.native
+  val FAST_BACKWARD: `fast-backward` = js.native
+  val FAST_FORWARD: `fast-forward` = js.native
+  val FEED: feed = js.native
+  val FEED_SUBSCRIBED: `feed-subscribed` = js.native
+  val FILM: film = js.native
+  val FILTER: filter = js.native
+  val FILTER_KEEP: `filter-keep` = js.native
+  val FILTER_LIST: `filter-list` = js.native
+  val FILTER_OPEN: `filter-open` = js.native
+  val FILTER_REMOVE: `filter-remove` = js.native
+  val FLAG: flag = js.native
+  val FLAME: flame = js.native
+  val FLASH: flash = js.native
+  val FLOPPY_DISK: `floppy-disk` = js.native
+  val FLOWS: flows = js.native
+  val FLOW_BRANCH: `flow-branch` = js.native
+  val FLOW_END: `flow-end` = js.native
+  val FLOW_LINEAR: `flow-linear` = js.native
+  val FLOW_REVIEW: `flow-review` = js.native
+  val FLOW_REVIEW_BRANCH: `flow-review-branch` = js.native
+  val FOLDER_CLOSE: `folder-close` = js.native
+  val FOLDER_NEW: `folder-new` = js.native
+  val FOLDER_OPEN: `folder-open` = js.native
+  val FOLDER_SHARED: `folder-shared` = js.native
+  val FOLDER_SHARED_OPEN: `folder-shared-open` = js.native
+  val FOLLOWER: follower = js.native
+  val FOLLOWING: following = js.native
+  val FONT: font = js.native
+  val FORK: fork = js.native
+  val FORM: form = js.native
+  val FULLSCREEN: fullscreen = js.native
+  val FULL_CIRCLE: `full-circle` = js.native
+  val FULL_STACKED_CHART: `full-stacked-chart` = js.native
+  val FUNCTION: function = js.native
+  val GANTT_CHART: `gantt-chart` = js.native
+  val GEOLOCATION: geolocation = js.native
+  val GEOSEARCH: geosearch = js.native
+  val GIT_BRANCH: `git-branch` = js.native
+  val GIT_COMMIT: `git-commit` = js.native
+  val GIT_MERGE: `git-merge` = js.native
+  val GIT_NEW_BRANCH: `git-new-branch` = js.native
+  val GIT_PULL: `git-pull` = js.native
+  val GIT_PUSH: `git-push` = js.native
+  val GIT_REPO: `git-repo` = js.native
+  val GLASS: glass = js.native
+  val GLOBE: globe = js.native
+  val GLOBE_NETWORK: `globe-network` = js.native
+  val GRAPH: graph = js.native
+  val GRAPH_REMOVE: `graph-remove` = js.native
+  val GREATER_THAN: `greater-than` = js.native
+  val GREATER_THAN_OR_EQUAL_TO: `greater-than-or-equal-to` = js.native
+  val GRID: grid = js.native
+  val GRID_VIEW: `grid-view` = js.native
+  val GROUPED_BAR_CHART: `grouped-bar-chart` = js.native
+  val GROUP_OBJECTS: `group-objects` = js.native
+  val HAND: hand = js.native
+  val HAND_DOWN: `hand-down` = js.native
+  val HAND_LEFT: `hand-left` = js.native
+  val HAND_RIGHT: `hand-right` = js.native
+  val HAND_UP: `hand-up` = js.native
+  val HEADER: header = js.native
+  val HEADER_ONE: `header-one` = js.native
+  val HEADER_TWO: `header-two` = js.native
+  val HEADSET: headset = js.native
+  val HEART: heart = js.native
+  val HEART_BROKEN: `heart-broken` = js.native
+  val HEATMAP: heatmap = js.native
+  val HEAT_GRID: `heat-grid` = js.native
+  val HELP: help = js.native
+  val HELPER_MANAGEMENT: `helper-management` = js.native
+  val HIGHLIGHT: highlight = js.native
+  val HISTORY: history = js.native
+  val HOME: home = js.native
+  val HORIZONTAL_BAR_CHART: `horizontal-bar-chart` = js.native
+  val HORIZONTAL_BAR_CHART_ASC: `horizontal-bar-chart-asc` = js.native
+  val HORIZONTAL_BAR_CHART_DESC: `horizontal-bar-chart-desc` = js.native
+  val HORIZONTAL_DISTRIBUTION: `horizontal-distribution` = js.native
+  val ID_NUMBER: `id-number` = js.native
+  val IMAGE_ROTATE_LEFT: `image-rotate-left` = js.native
+  val IMAGE_ROTATE_RIGHT: `image-rotate-right` = js.native
+  val IMPORT: `import` = js.native
+  val INBOX: inbox = js.native
+  val INBOX_FILTERED: `inbox-filtered` = js.native
+  val INBOX_GEO: `inbox-geo` = js.native
+  val INBOX_SEARCH: `inbox-search` = js.native
+  val INBOX_UPDATE: `inbox-update` = js.native
+  val INFO_SIGN: `info-sign` = js.native
+  val INHERITANCE: inheritance = js.native
+  val INNER_JOIN: `inner-join` = js.native
+  val INSERT: insert = js.native
+  val INTERSECTION: intersection = js.native
+  val IP_ADDRESS: `ip-address` = js.native
+  val ISSUE: issue = js.native
+  val ISSUE_CLOSED: `issue-closed` = js.native
+  val ISSUE_NEW: `issue-new` = js.native
+  val ITALIC: italic = js.native
+  val JOIN_TABLE: `join-table` = js.native
+  val KEY: key = js.native
+  val KEY_BACKSPACE: `key-backspace` = js.native
+  val KEY_COMMAND: `key-command` = js.native
+  val KEY_CONTROL: `key-control` = js.native
+  val KEY_DELETE: `key-delete` = js.native
+  val KEY_ENTER: `key-enter` = js.native
+  val KEY_ESCAPE: `key-escape` = js.native
+  val KEY_OPTION: `key-option` = js.native
+  val KEY_SHIFT: `key-shift` = js.native
+  val KEY_TAB: `key-tab` = js.native
+  val KNOWN_VEHICLE: `known-vehicle` = js.native
+  val LABEL: label = js.native
+  val LAYER: layer = js.native
+  val LAYERS: layers = js.native
+  val LAYOUT: layout = js.native
+  val LAYOUT_AUTO: `layout-auto` = js.native
+  val LAYOUT_BALLOON: `layout-balloon` = js.native
+  val LAYOUT_CIRCLE: `layout-circle` = js.native
+  val LAYOUT_GRID: `layout-grid` = js.native
+  val LAYOUT_GROUP_BY: `layout-group-by` = js.native
+  val LAYOUT_HIERARCHY: `layout-hierarchy` = js.native
+  val LAYOUT_LINEAR: `layout-linear` = js.native
+  val LAYOUT_SKEW_GRID: `layout-skew-grid` = js.native
+  val LAYOUT_SORTED_CLUSTERS: `layout-sorted-clusters` = js.native
+  val LEARNING: learning = js.native
+  val LEFT_JOIN: `left-join` = js.native
+  val LESS_THAN: `less-than` = js.native
+  val LESS_THAN_OR_EQUAL_TO: `less-than-or-equal-to` = js.native
+  val LIFESAVER: lifesaver = js.native
+  val LIGHTBULB: lightbulb = js.native
+  val LINK: link = js.native
+  val LIST: list = js.native
+  val LIST_COLUMNS: `list-columns` = js.native
+  val LIST_DETAIL_VIEW: `list-detail-view` = js.native
+  val LOCATE: locate = js.native
+  val LOCK: lock = js.native
+  val LOG_IN: `log-in` = js.native
+  val LOG_OUT: `log-out` = js.native
+  val MANUAL: manual = js.native
+  val MANUALLY_ENTERED_DATA: `manually-entered-data` = js.native
+  val MAP: map = js.native
+  val MAP_CREATE: `map-create` = js.native
+  val MAP_MARKER: `map-marker` = js.native
+  val MAXIMIZE: maximize = js.native
+  val MEDIA: media = js.native
+  val MENU: menu = js.native
+  val MENU_CLOSED: `menu-closed` = js.native
+  val MENU_OPEN: `menu-open` = js.native
+  val MERGE_COLUMNS: `merge-columns` = js.native
+  val MERGE_LINKS: `merge-links` = js.native
+  val MINIMIZE: minimize = js.native
+  val MINUS: minus = js.native
+  val MOBILE_PHONE: `mobile-phone` = js.native
+  val MOBILE_VIDEO: `mobile-video` = js.native
+  val MOON: moon = js.native
+  val MORE: more = js.native
+  val MOUNTAIN: mountain = js.native
+  val MOVE: move = js.native
+  val MUGSHOT: mugshot = js.native
+  val MULTI_SELECT: `multi-select` = js.native
+  val MUSIC: music = js.native
+  val NEW_DRAWING: `new-drawing` = js.native
+  val NEW_GRID_ITEM: `new-grid-item` = js.native
+  val NEW_LAYER: `new-layer` = js.native
+  val NEW_LAYERS: `new-layers` = js.native
+  val NEW_LINK: `new-link` = js.native
+  val NEW_OBJECT: `new-object` = js.native
+  val NEW_PERSON: `new-person` = js.native
+  val NEW_PRESCRIPTION: `new-prescription` = js.native
+  val NEW_TEXT_BOX: `new-text-box` = js.native
+  val NINJA: ninja = js.native
+  val NOTIFICATIONS: notifications = js.native
+  val NOTIFICATIONS_UPDATED: `notifications-updated` = js.native
+  val NOT_EQUAL_TO: `not-equal-to` = js.native
+  val NUMBERED_LIST: `numbered-list` = js.native
+  val NUMERICAL: numerical = js.native
+  val OFFICE: office = js.native
+  val OFFLINE: offline = js.native
+  val OIL_FIELD: `oil-field` = js.native
+  val ONE_COLUMN: `one-column` = js.native
+  val OUTDATED: outdated = js.native
+  val PAGE_LAYOUT: `page-layout` = js.native
+  val PANEL_STATS: `panel-stats` = js.native
+  val PANEL_TABLE: `panel-table` = js.native
+  val PAPERCLIP: paperclip = js.native
+  val PARAGRAPH: paragraph = js.native
+  val PATH: path = js.native
+  val PATH_SEARCH: `path-search` = js.native
+  val PAUSE: pause = js.native
+  val PEOPLE: people = js.native
+  val PERCENTAGE: percentage = js.native
+  val PERSON: person = js.native
+  val PHONE: phone = js.native
+  val PIE_CHART: `pie-chart` = js.native
+  val PIN: pin = js.native
+  val PIVOT: pivot = js.native
+  val PIVOT_TABLE: `pivot-table` = js.native
+  val PLAY: play = js.native
+  val PLUS: plus = js.native
+  val POLYGON_FILTER: `polygon-filter` = js.native
+  val POWER: power = js.native
+  val PREDICTIVE_ANALYSIS: `predictive-analysis` = js.native
+  val PRESCRIPTION: prescription = js.native
+  val PRESENTATION: presentation = js.native
+  val PRINT: print = js.native
+  val PROJECTS: projects = js.native
+  val PROPERTIES: properties = js.native
+  val PROPERTY: property = js.native
+  val PUBLISH_FUNCTION: `publish-function` = js.native
+  val PULSE: pulse = js.native
+  val RANDOM: random = js.native
+  val RECORD: record = js.native
+  val REDO: redo = js.native
+  val REFRESH: refresh = js.native
+  val REGRESSION_CHART: `regression-chart` = js.native
+  val REMOVE: remove = js.native
+  val REMOVE_COLUMN: `remove-column` = js.native
+  val REMOVE_COLUMN_LEFT: `remove-column-left` = js.native
+  val REMOVE_COLUMN_RIGHT: `remove-column-right` = js.native
+  val REMOVE_ROW_BOTTOM: `remove-row-bottom` = js.native
+  val REMOVE_ROW_TOP: `remove-row-top` = js.native
+  val REPEAT: repeat = js.native
+  val RESET: reset = js.native
+  val RESOLVE: resolve = js.native
+  val RIG: rig = js.native
+  val RIGHT_JOIN: `right-join` = js.native
+  val RING: ring = js.native
+  val ROTATE_DOCUMENT: `rotate-document` = js.native
+  val ROTATE_PAGE: `rotate-page` = js.native
+  val SATELLITE: satellite = js.native
+  val SAVED: saved = js.native
+  val SCATTER_PLOT: `scatter-plot` = js.native
+  val SEARCH: search = js.native
+  val SEARCH_AROUND: `search-around` = js.native
+  val SEARCH_TEMPLATE: `search-template` = js.native
+  val SEARCH_TEXT: `search-text` = js.native
+  val SEGMENTED_CONTROL: `segmented-control` = js.native
+  val SELECT: select = js.native
+  val SELECTION: selection = js.native
+  val SEND_TO: `send-to` = js.native
+  val SEND_TO_GRAPH: `send-to-graph` = js.native
+  val SEND_TO_MAP: `send-to-map` = js.native
+  val SERIES_ADD: `series-add` = js.native
+  val SERIES_CONFIGURATION: `series-configuration` = js.native
+  val SERIES_DERIVED: `series-derived` = js.native
+  val SERIES_FILTERED: `series-filtered` = js.native
+  val SERIES_SEARCH: `series-search` = js.native
+  val SETTINGS: settings = js.native
+  val SHARE: share = js.native
+  val SHIELD: shield = js.native
+  val SHOP: shop = js.native
+  val SHOPPING_CART: `shopping-cart` = js.native
+  val SIGNAL_SEARCH: `signal-search` = js.native
+  val SIM_CARD: `sim-card` = js.native
+  val SLASH: slash = js.native
+  val SMALL_CROSS: `small-cross` = js.native
+  val SMALL_MINUS: `small-minus` = js.native
+  val SMALL_PLUS: `small-plus` = js.native
+  val SMALL_TICK: `small-tick` = js.native
+  val SNOWFLAKE: snowflake = js.native
+  val SOCIAL_MEDIA: `social-media` = js.native
+  val SORT: sort = js.native
+  val SORT_ALPHABETICAL: `sort-alphabetical` = js.native
+  val SORT_ALPHABETICAL_DESC: `sort-alphabetical-desc` = js.native
+  val SORT_ASC: `sort-asc` = js.native
+  val SORT_DESC: `sort-desc` = js.native
+  val SORT_NUMERICAL: `sort-numerical` = js.native
+  val SORT_NUMERICAL_DESC: `sort-numerical-desc` = js.native
+  val SPLIT_COLUMNS: `split-columns` = js.native
+  val SQUARE: square = js.native
+  val STACKED_CHART: `stacked-chart` = js.native
+  val STAR: star = js.native
+  val STAR_EMPTY: `star-empty` = js.native
+  val STEP_BACKWARD: `step-backward` = js.native
+  val STEP_CHART: `step-chart` = js.native
+  val STEP_FORWARD: `step-forward` = js.native
+  val STOP: stop = js.native
+  val STOPWATCH: stopwatch = js.native
+  val STRIKETHROUGH: strikethrough = js.native
+  val STYLE: style = js.native
+  val SWAP_HORIZONTAL: `swap-horizontal` = js.native
+  val SWAP_VERTICAL: `swap-vertical` = js.native
+  val SYMBOL_CIRCLE: `symbol-circle` = js.native
+  val SYMBOL_CROSS: `symbol-cross` = js.native
+  val SYMBOL_DIAMOND: `symbol-diamond` = js.native
+  val SYMBOL_SQUARE: `symbol-square` = js.native
+  val SYMBOL_TRIANGLE_DOWN: `symbol-triangle-down` = js.native
+  val SYMBOL_TRIANGLE_UP: `symbol-triangle-up` = js.native
+  val TAG: tag = js.native
+  val TAKE_ACTION: `take-action` = js.native
+  val TAXI: taxi = js.native
+  val TEXT_HIGHLIGHT: `text-highlight` = js.native
+  val TH: th = js.native
+  val THUMBS_DOWN: `thumbs-down` = js.native
+  val THUMBS_UP: `thumbs-up` = js.native
+  val TH_DERIVED: `th-derived` = js.native
+  val TH_DISCONNECT: `th-disconnect` = js.native
+  val TH_FILTERED: `th-filtered` = js.native
+  val TH_LIST: `th-list` = js.native
+  val TICK: tick = js.native
+  val TICK_CIRCLE: `tick-circle` = js.native
+  val TIME: time = js.native
+  val TIMELINE_AREA_CHART: `timeline-area-chart` = js.native
+  val TIMELINE_BAR_CHART: `timeline-bar-chart` = js.native
+  val TIMELINE_EVENTS: `timeline-events` = js.native
+  val TIMELINE_LINE_CHART: `timeline-line-chart` = js.native
+  val TINT: tint = js.native
+  val TORCH: torch = js.native
+  val TRAIN: train = js.native
+  val TRANSLATE: translate = js.native
+  val TRASH: trash = js.native
+  val TREE: tree = js.native
+  val TRENDING_DOWN: `trending-down` = js.native
+  val TRENDING_UP: `trending-up` = js.native
+  val TWO_COLUMNS: `two-columns` = js.native
+  val UNARCHIVE: unarchive = js.native
+  val UNDERLINE: underline = js.native
+  val UNDO: undo = js.native
+  val UNGROUP_OBJECTS: `ungroup-objects` = js.native
+  val UNKNOWN_VEHICLE: `unknown-vehicle` = js.native
+  val UNLOCK: unlock = js.native
+  val UNPIN: unpin = js.native
+  val UNRESOLVE: unresolve = js.native
+  val UPDATED: updated = js.native
+  val UPLOAD: upload = js.native
+  val USER: user = js.native
+  val VARIABLE: variable = js.native
+  val VERTICAL_BAR_CHART_ASC: `vertical-bar-chart-asc` = js.native
+  val VERTICAL_BAR_CHART_DESC: `vertical-bar-chart-desc` = js.native
+  val VERTICAL_DISTRIBUTION: `vertical-distribution` = js.native
+  val VIDEO: video = js.native
+  val VOLUME_DOWN: `volume-down` = js.native
+  val VOLUME_OFF: `volume-off` = js.native
+  val VOLUME_UP: `volume-up` = js.native
+  val WALK: walk = js.native
+  val WARNING_SIGN: `warning-sign` = js.native
+  val WATERFALL_CHART: `waterfall-chart` = js.native
+  val WIDGET: widget = js.native
+  val WIDGET_BUTTON: `widget-button` = js.native
+  val WIDGET_FOOTER: `widget-footer` = js.native
+  val WIDGET_HEADER: `widget-header` = js.native
+  val WRENCH: wrench = js.native
+  val ZOOM_IN: `zoom-in` = js.native
+  val ZOOM_OUT: `zoom-out` = js.native
+  val ZOOM_TO_FIT: `zoom-to-fit` = js.native
+}
+

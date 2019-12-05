@@ -1,0 +1,18 @@
+package typingsSlinky.instagramDashPrivateDashApi
+
+import typingsSlinky.instagramDashPrivateDashApi.distErrorsIgDashResponseDotErrorMod.IgResponseError
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesSpamDotResponseMod.SpamResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("instagram-private-api/dist/errors/ig-action-spam.error", JSImport.Namespace)
+@js.native
+object distErrorsIgDashActionDashSpamDotErrorMod extends js.Object {
+  @js.native
+  class IgActionSpamError () extends IgResponseError[SpamResponse] {
+    val expirationDate: String | Null = js.native
+  }
+  
+}
+

@@ -1,0 +1,24 @@
+package typingsSlinky.screeps
+
+import typingsSlinky.screeps.screepsStrings.LH
+import typingsSlinky.screeps.screepsStrings.LO
+import typingsSlinky.screeps.screepsStrings.UL
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_HLH extends js.Object {
+  var H: LH
+  var O: LO
+  var U: UL
+}
+
+object Anon_HLH {
+  @scala.inline
+  def apply(H: LH, O: LO, U: UL): Anon_HLH = {
+    val __obj = js.Dynamic.literal(H = H.asInstanceOf[js.Any], O = O.asInstanceOf[js.Any], U = U.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_HLH]
+  }
+}
+

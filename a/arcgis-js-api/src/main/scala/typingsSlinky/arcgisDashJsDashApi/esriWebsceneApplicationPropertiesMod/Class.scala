@@ -1,0 +1,14 @@
+package typingsSlinky.arcgisDashJsDashApi.esriWebsceneApplicationPropertiesMod
+
+import typingsSlinky.arcgisDashJsDashApi.__esri.ApplicationProperties
+import typingsSlinky.arcgisDashJsDashApi.__esri.ApplicationPropertiesProperties
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("esri/webscene/ApplicationProperties", JSImport.Namespace)
+@js.native
+class Class () extends ApplicationProperties {
+  def this(properties: ApplicationPropertiesProperties) = this()
+}
+

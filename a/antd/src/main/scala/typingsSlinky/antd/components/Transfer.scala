@@ -56,7 +56,7 @@ object Transfer
     style: CSSProperties = null,
     targetKeys: js.Array[String] = null,
     titles: js.Array[String] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
     if (body != null) __obj.updateDynamic("body")(js.Any.fromFunction1(body))
@@ -82,7 +82,7 @@ object Transfer
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (targetKeys != null) __obj.updateDynamic("targetKeys")(targetKeys.asInstanceOf[js.Any])
     if (titles != null) __obj.updateDynamic("titles")(titles.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TransferProps

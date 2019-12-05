@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesTooManyEntriesInBatchRequestMod
+
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesChangeMessageVisibilityBatchExceptionsUnionMod.ChangeMessageVisibilityBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesDeleteMessageBatchExceptionsUnionMod.DeleteMessageBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashSqsDashNode.typesSendMessageBatchExceptionsUnionMod.SendMessageBatchExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TooManyEntriesInBatchRequest
+  extends ServiceException[_TooManyEntriesInBatchRequestDetails]
+     with ChangeMessageVisibilityBatchExceptionsUnion
+     with DeleteMessageBatchExceptionsUnion
+     with SendMessageBatchExceptionsUnion {
+  @JSName("name")
+  var name_TooManyEntriesInBatchRequest: typingsSlinky.atAwsDashSdkClientDashSqsDashNode.atAwsDashSdkClientDashSqsDashNodeStrings.TooManyEntriesInBatchRequest = js.native
+}
+

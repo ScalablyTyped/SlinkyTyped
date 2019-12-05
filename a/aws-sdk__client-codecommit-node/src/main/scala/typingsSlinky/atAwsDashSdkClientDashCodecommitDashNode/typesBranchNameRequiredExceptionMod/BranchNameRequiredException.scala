@@ -1,0 +1,26 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesBranchNameRequiredExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreateBranchExceptionsUnionMod.CreateBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDeleteBranchExceptionsUnionMod.DeleteBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDeleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetBranchExceptionsUnionMod.GetBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesPutFileExceptionsUnionMod.PutFileExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait BranchNameRequiredException
+  extends ServiceException[_BranchNameRequiredExceptionDetails]
+     with CreateBranchExceptionsUnion
+     with DeleteBranchExceptionsUnion
+     with DeleteFileExceptionsUnion
+     with GetBranchExceptionsUnion
+     with PutFileExceptionsUnion
+     with UpdateDefaultBranchExceptionsUnion {
+  @JSName("name")
+  var name_BranchNameRequiredException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.BranchNameRequiredException = js.native
+}
+

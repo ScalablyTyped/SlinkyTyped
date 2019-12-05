@@ -1,0 +1,47 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait ContentType extends js.Object
+
+/**
+  * An enumeration representing the types of XML content nodes.
+  */
+@JSGlobal("GoogleAppsScript.XML_Service.ContentType")
+@js.native
+object ContentType extends js.Object {
+  @js.native
+  sealed trait CDATA extends ContentType
+  
+  @js.native
+  sealed trait COMMENT extends ContentType
+  
+  @js.native
+  sealed trait DOCTYPE extends ContentType
+  
+  @js.native
+  sealed trait ELEMENT extends ContentType
+  
+  @js.native
+  sealed trait ENTITYREF extends ContentType
+  
+  @js.native
+  sealed trait PROCESSINGINSTRUCTION extends ContentType
+  
+  @js.native
+  sealed trait TEXT extends ContentType
+  
+  /* 0 */ val CDATA: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.CDATA with Double = js.native
+  /* 1 */ val COMMENT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.COMMENT with Double = js.native
+  /* 2 */ val DOCTYPE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.DOCTYPE with Double = js.native
+  /* 3 */ val ELEMENT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.ELEMENT with Double = js.native
+  /* 4 */ val ENTITYREF: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.ENTITYREF with Double = js.native
+  /* 5 */ val PROCESSINGINSTRUCTION: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.PROCESSINGINSTRUCTION with Double = js.native
+  /* 6 */ val TEXT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.ContentType.TEXT with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[ContentType with Double] = js.native
+}
+

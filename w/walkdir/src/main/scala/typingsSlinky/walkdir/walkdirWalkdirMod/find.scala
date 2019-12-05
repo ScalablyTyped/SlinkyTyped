@@ -1,0 +1,25 @@
+package typingsSlinky.walkdir.walkdirWalkdirMod
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.node.fsMod.Stats
+import typingsSlinky.walkdir.Anon_False
+import typingsSlinky.walkdir.Anon_FalseSync
+import typingsSlinky.walkdir.Anon_Returnobject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("walkdir/walkdir", "find")
+@js.native
+object find extends js.Object {
+  def apply(path: String): WalkEmitter = js.native
+  def apply(path: String, options: Anon_FalseSync with WalkOptions): WalkEmitter = js.native
+  def apply(path: String, options: Anon_False with WalkOptions): js.Array[String] = js.native
+  def apply(path: String, options: Anon_Returnobject with WalkOptions): StringDictionary[Stats] = js.native
+  def apply(path: String, options: Anon_False with WalkOptions, eventListener: WalkEventListener): js.Array[String] = js.native
+  def apply(path: String, options: Anon_FalseSync with WalkOptions, eventListener: WalkEventListener): WalkEmitter = js.native
+  def apply(path: String, options: Anon_Returnobject with WalkOptions, eventListener: WalkEventListener): StringDictionary[Stats] = js.native
+  def apply(path: String, options: WalkEventListener): WalkEmitter = js.native
+  def apply(path: String, options: WalkEventListener, eventListener: WalkEventListener): WalkEmitter = js.native
+}
+

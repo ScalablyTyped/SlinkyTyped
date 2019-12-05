@@ -1,0 +1,20 @@
+package typingsSlinky.reactDashDataDashGrid.reactDashDataDashGridDashAddonsMod._Global_
+
+import typingsSlinky.reactDashDataDashGrid.Anon_Data
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Window extends js.Object {
+  var ReactDataGridPlugins: Anon_Data
+}
+
+object Window {
+  @scala.inline
+  def apply(ReactDataGridPlugins: Anon_Data): Window = {
+    val __obj = js.Dynamic.literal(ReactDataGridPlugins = ReactDataGridPlugins.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Window]
+  }
+}
+

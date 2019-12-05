@@ -1,0 +1,18 @@
+package typingsSlinky.officeDashUiDashFabricDashReact.libIndexDotBundleMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/index.bundle", "ShimmerElementType")
+@js.native
+object ShimmerElementType extends js.Object {
+  /* 2 */ val circle: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.circle with Double = js.native
+  /* 3 */ val gap: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.gap with Double = js.native
+  /* 1 */ val line: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.line with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[
+    typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType with Double
+  ] = js.native
+}
+

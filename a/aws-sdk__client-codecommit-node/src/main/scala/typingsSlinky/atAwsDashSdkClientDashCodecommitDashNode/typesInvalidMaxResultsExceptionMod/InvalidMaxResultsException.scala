@@ -1,0 +1,24 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesInvalidMaxResultsExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDescribePullRequestEventsExceptionsUnionMod.DescribePullRequestEventsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetCommentsForComparedCommitExceptionsUnionMod.GetCommentsForComparedCommitExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetDifferencesExceptionsUnionMod.GetDifferencesExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesListPullRequestsExceptionsUnionMod.ListPullRequestsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidMaxResultsException
+  extends ServiceException[_InvalidMaxResultsExceptionDetails]
+     with DescribePullRequestEventsExceptionsUnion
+     with GetCommentsForComparedCommitExceptionsUnion
+     with GetCommentsForPullRequestExceptionsUnion
+     with GetDifferencesExceptionsUnion
+     with ListPullRequestsExceptionsUnion {
+  @JSName("name")
+  var name_InvalidMaxResultsException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.InvalidMaxResultsException = js.native
+}
+

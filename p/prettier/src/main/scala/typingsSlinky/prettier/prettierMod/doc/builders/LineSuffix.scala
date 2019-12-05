@@ -1,0 +1,27 @@
+package typingsSlinky.prettier.prettierMod.doc.builders
+
+import typingsSlinky.prettier.prettierStrings.`line-suffix`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait LineSuffix extends _Doc {
+  var contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc
+  var `type`: `line-suffix`
+}
+
+object LineSuffix {
+  @scala.inline
+  def apply(contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc, `type`: `line-suffix`): LineSuffix = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LineSuffix]
+  }
+}
+
+@JSImport("prettier", "doc.builders.lineSuffix")
+@js.native
+object lineSuffix extends js.Object {
+  def apply(contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc): LineSuffix = js.native
+}
+

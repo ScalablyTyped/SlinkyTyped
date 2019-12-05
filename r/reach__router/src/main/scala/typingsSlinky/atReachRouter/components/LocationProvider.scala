@@ -17,10 +17,10 @@ object LocationProvider
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(history: History = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.LocationProvider] = {
+  def apply(history: History = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.LocationProvider] = {
     val __obj = js.Dynamic.literal()
     if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = LocationProviderProps

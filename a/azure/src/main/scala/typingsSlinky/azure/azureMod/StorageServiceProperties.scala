@@ -1,0 +1,23 @@
+package typingsSlinky.azure.azureMod
+
+import typingsSlinky.azure.Anon_Delete
+import typingsSlinky.azure.Anon_Enabled
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait StorageServiceProperties extends js.Object {
+  var DefaultServiceVersion: String
+  var Logging: Anon_Delete
+  var Metrics: Anon_Enabled
+}
+
+object StorageServiceProperties {
+  @scala.inline
+  def apply(DefaultServiceVersion: String, Logging: Anon_Delete, Metrics: Anon_Enabled): StorageServiceProperties = {
+    val __obj = js.Dynamic.literal(DefaultServiceVersion = DefaultServiceVersion.asInstanceOf[js.Any], Logging = Logging.asInstanceOf[js.Any], Metrics = Metrics.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[StorageServiceProperties]
+  }
+}
+

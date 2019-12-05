@@ -1,0 +1,24 @@
+package typingsSlinky.reactDashAdal.reactDashAdalMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typings.reactDashAdal.reactDashAdalStrings.LOGIN
+  - typings.reactDashAdal.reactDashAdalStrings.RENEW_TOKEN
+  - typings.reactDashAdal.reactDashAdalStrings.UNKNOWN
+*/
+trait RequestType extends js.Object
+
+object RequestType {
+  @scala.inline
+  def LOGIN: typingsSlinky.reactDashAdal.reactDashAdalStrings.LOGIN = this.cast("LOGIN")
+  @scala.inline
+  def RENEW_TOKEN: typingsSlinky.reactDashAdal.reactDashAdalStrings.RENEW_TOKEN = this.cast("RENEW_TOKEN")
+  @scala.inline
+  def UNKNOWN: typingsSlinky.reactDashAdal.reactDashAdalStrings.UNKNOWN = this.cast("UNKNOWN")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

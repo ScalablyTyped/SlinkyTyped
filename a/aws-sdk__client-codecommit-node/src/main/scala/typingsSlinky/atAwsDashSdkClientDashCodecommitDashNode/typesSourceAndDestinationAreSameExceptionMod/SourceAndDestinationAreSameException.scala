@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesSourceAndDestinationAreSameExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreatePullRequestExceptionsUnionMod.CreatePullRequestExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait SourceAndDestinationAreSameException
+  extends ServiceException[_SourceAndDestinationAreSameExceptionDetails]
+     with CreatePullRequestExceptionsUnion {
+  @JSName("name")
+  var name_SourceAndDestinationAreSameException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.SourceAndDestinationAreSameException = js.native
+}
+

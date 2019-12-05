@@ -1,0 +1,54 @@
+package typingsSlinky.chrome
+
+import typingsSlinky.chrome.chrome.webNavigation.GetAllFrameDetails
+import typingsSlinky.chrome.chrome.webNavigation.GetAllFrameResultDetails
+import typingsSlinky.chrome.chrome.webNavigation.GetFrameDetails
+import typingsSlinky.chrome.chrome.webNavigation.GetFrameResultDetails
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationFramedErrorEvent
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationFramedEvent
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationParentedEvent
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationReplacementEvent
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationSourceEvent
+import typingsSlinky.chrome.chrome.webNavigation.WebNavigationTransitionalEvent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait TypeofwebNavigation extends js.Object {
+  var onBeforeNavigate: WebNavigationParentedEvent
+  var onCommitted: WebNavigationTransitionalEvent
+  var onCompleted: WebNavigationFramedEvent
+  var onCreatedNavigationTarget: WebNavigationSourceEvent
+  var onDOMContentLoaded: WebNavigationFramedEvent
+  var onErrorOccurred: WebNavigationFramedErrorEvent
+  var onHistoryStateUpdated: WebNavigationTransitionalEvent
+  var onReferenceFragmentUpdated: WebNavigationTransitionalEvent
+  var onTabReplaced: WebNavigationReplacementEvent
+  def getAllFrames(
+    details: GetAllFrameDetails,
+    callback: js.Function1[/* details */ js.Array[GetAllFrameResultDetails] | Null, Unit]
+  ): Unit
+  def getFrame(details: GetFrameDetails, callback: js.Function1[/* details */ GetFrameResultDetails | Null, Unit]): Unit
+}
+
+object TypeofwebNavigation {
+  @scala.inline
+  def apply(
+    getAllFrames: (GetAllFrameDetails, js.Function1[/* details */ js.Array[GetAllFrameResultDetails] | Null, Unit]) => Unit,
+    getFrame: (GetFrameDetails, js.Function1[/* details */ GetFrameResultDetails | Null, Unit]) => Unit,
+    onBeforeNavigate: WebNavigationParentedEvent,
+    onCommitted: WebNavigationTransitionalEvent,
+    onCompleted: WebNavigationFramedEvent,
+    onCreatedNavigationTarget: WebNavigationSourceEvent,
+    onDOMContentLoaded: WebNavigationFramedEvent,
+    onErrorOccurred: WebNavigationFramedErrorEvent,
+    onHistoryStateUpdated: WebNavigationTransitionalEvent,
+    onReferenceFragmentUpdated: WebNavigationTransitionalEvent,
+    onTabReplaced: WebNavigationReplacementEvent
+  ): TypeofwebNavigation = {
+    val __obj = js.Dynamic.literal(getAllFrames = js.Any.fromFunction2(getAllFrames), getFrame = js.Any.fromFunction2(getFrame), onBeforeNavigate = onBeforeNavigate.asInstanceOf[js.Any], onCommitted = onCommitted.asInstanceOf[js.Any], onCompleted = onCompleted.asInstanceOf[js.Any], onCreatedNavigationTarget = onCreatedNavigationTarget.asInstanceOf[js.Any], onDOMContentLoaded = onDOMContentLoaded.asInstanceOf[js.Any], onErrorOccurred = onErrorOccurred.asInstanceOf[js.Any], onHistoryStateUpdated = onHistoryStateUpdated.asInstanceOf[js.Any], onReferenceFragmentUpdated = onReferenceFragmentUpdated.asInstanceOf[js.Any], onTabReplaced = onTabReplaced.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[TypeofwebNavigation]
+  }
+}
+

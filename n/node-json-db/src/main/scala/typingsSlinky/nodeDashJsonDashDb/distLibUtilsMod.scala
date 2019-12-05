@@ -1,0 +1,16 @@
+package typingsSlinky.nodeDashJsonDashDb
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.nodeDashJsonDashDb.distLibUtilsMod.KeyValue
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("node-json-db/dist/lib/Utils", JSImport.Namespace)
+@js.native
+object distLibUtilsMod extends js.Object {
+  def merge(arrays: KeyValue*): KeyValue = js.native
+  def removeTrailingChar(dataPath: String, trailing: String): String = js.native
+  type KeyValue = StringDictionary[js.Any]
+}
+

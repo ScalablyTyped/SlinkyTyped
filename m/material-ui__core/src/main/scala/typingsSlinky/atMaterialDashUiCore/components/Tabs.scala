@@ -201,7 +201,7 @@ object Tabs
     variant: standard | scrollable | fullWidth = null,
     vocab: String = null,
     width: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     if (ScrollButtonComponent != null) __obj.updateDynamic("ScrollButtonComponent")(ScrollButtonComponent.asInstanceOf[js.Any])
@@ -318,7 +318,7 @@ object Tabs
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TabsProps

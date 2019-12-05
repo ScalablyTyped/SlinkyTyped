@@ -1,0 +1,212 @@
+package typingsSlinky.petitDashDom.petitDashDomMod.PetitDom
+
+import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLAppletElement
+import org.scalajs.dom.raw.HTMLAreaElement
+import org.scalajs.dom.raw.HTMLAudioElement
+import org.scalajs.dom.raw.HTMLBRElement
+import org.scalajs.dom.raw.HTMLBaseElement
+import org.scalajs.dom.raw.HTMLBaseFontElement
+import org.scalajs.dom.raw.HTMLBodyElement
+import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLDListElement
+import org.scalajs.dom.raw.HTMLDataListElement
+import org.scalajs.dom.raw.HTMLDirectoryElement
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLEmbedElement
+import org.scalajs.dom.raw.HTMLFieldSetElement
+import org.scalajs.dom.raw.HTMLFontElement
+import org.scalajs.dom.raw.HTMLFormElement
+import org.scalajs.dom.raw.HTMLFrameElement
+import org.scalajs.dom.raw.HTMLFrameSetElement
+import org.scalajs.dom.raw.HTMLHRElement
+import org.scalajs.dom.raw.HTMLHeadElement
+import org.scalajs.dom.raw.HTMLHeadingElement
+import org.scalajs.dom.raw.HTMLHtmlElement
+import org.scalajs.dom.raw.HTMLIFrameElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLLIElement
+import org.scalajs.dom.raw.HTMLLabelElement
+import org.scalajs.dom.raw.HTMLLegendElement
+import org.scalajs.dom.raw.HTMLLinkElement
+import org.scalajs.dom.raw.HTMLMapElement
+import org.scalajs.dom.raw.HTMLMarqueeElement
+import org.scalajs.dom.raw.HTMLMenuElement
+import org.scalajs.dom.raw.HTMLMetaElement
+import org.scalajs.dom.raw.HTMLModElement
+import org.scalajs.dom.raw.HTMLOListElement
+import org.scalajs.dom.raw.HTMLObjectElement
+import org.scalajs.dom.raw.HTMLOptGroupElement
+import org.scalajs.dom.raw.HTMLOptionElement
+import org.scalajs.dom.raw.HTMLParagraphElement
+import org.scalajs.dom.raw.HTMLParamElement
+import org.scalajs.dom.raw.HTMLPreElement
+import org.scalajs.dom.raw.HTMLProgressElement
+import org.scalajs.dom.raw.HTMLQuoteElement
+import org.scalajs.dom.raw.HTMLScriptElement
+import org.scalajs.dom.raw.HTMLSelectElement
+import org.scalajs.dom.raw.HTMLSourceElement
+import org.scalajs.dom.raw.HTMLSpanElement
+import org.scalajs.dom.raw.HTMLStyleElement
+import org.scalajs.dom.raw.HTMLTableCaptionElement
+import org.scalajs.dom.raw.HTMLTableColElement
+import org.scalajs.dom.raw.HTMLTableDataCellElement
+import org.scalajs.dom.raw.HTMLTableElement
+import org.scalajs.dom.raw.HTMLTableHeaderCellElement
+import org.scalajs.dom.raw.HTMLTableRowElement
+import org.scalajs.dom.raw.HTMLTableSectionElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
+import org.scalajs.dom.raw.HTMLTitleElement
+import org.scalajs.dom.raw.HTMLTrackElement
+import org.scalajs.dom.raw.HTMLUListElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import typingsSlinky.std.HTMLDataElement
+import typingsSlinky.std.HTMLDetailsElement
+import typingsSlinky.std.HTMLDialogElement
+import typingsSlinky.std.HTMLElementTagNameMap
+import typingsSlinky.std.HTMLMeterElement
+import typingsSlinky.std.HTMLOutputElement
+import typingsSlinky.std.HTMLPictureElement
+import typingsSlinky.std.HTMLSlotElement
+import typingsSlinky.std.HTMLTemplateElement
+import typingsSlinky.std.HTMLTimeElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<'a' | 'circle' | 'clipPath' | 'defs' | 'desc' | 'ellipse' | 'feBlend' | 'feColorMatrix' | 'feComponentTransfer' | 'feComposite' | 'feConvolveMatrix' | 'feDiffuseLighting' | 'feDisplacementMap' | 'feDistantLight' | 'feFlood' | 'feFuncA' | 'feFuncB' | 'feFuncG' | 'feFuncR' | 'feGaussianBlur' | 'feImage' | 'feMerge' | 'feMergeNode' | 'feMorphology' | 'feOffset' | 'fePointLight' | 'feSpecularLighting' | 'feSpotLight' | 'feTile' | 'feTurbulence' | 'filter' | 'foreignObject' | 'g' | 'image' | 'line' | 'linearGradient' | 'marker' | 'mask' | 'metadata' | 'path' | 'pattern' | 'polygon' | 'polyline' | 'radialGradient' | 'rect' | 'script' | 'stop' | 'style' | 'svg' | 'switch' | 'symbol' | 'text' | 'textPath' | 'title' | 'tspan' | 'use' | 'view', 'a' | 'script' | 'style' | 'title'> ]: std.SVGElementTagNameMap[P]} */ trait DomElements extends HTMLElementTagNameMap
+
+object DomElements {
+  @scala.inline
+  def apply(
+    a: HTMLAnchorElement,
+    abbr: HTMLElement,
+    address: HTMLElement,
+    applet: HTMLAppletElement,
+    area: HTMLAreaElement,
+    article: HTMLElement,
+    aside: HTMLElement,
+    audio: HTMLAudioElement,
+    b: HTMLElement,
+    base: HTMLBaseElement,
+    basefont: HTMLBaseFontElement,
+    bdi: HTMLElement,
+    bdo: HTMLElement,
+    blockquote: HTMLQuoteElement,
+    body: HTMLBodyElement,
+    br: HTMLBRElement,
+    button: HTMLButtonElement,
+    canvas: HTMLCanvasElement,
+    caption: HTMLTableCaptionElement,
+    cite: HTMLElement,
+    code: HTMLElement,
+    col: HTMLTableColElement,
+    colgroup: HTMLTableColElement,
+    data: HTMLDataElement,
+    datalist: HTMLDataListElement,
+    dd: HTMLElement,
+    del: HTMLModElement,
+    details: HTMLDetailsElement,
+    dfn: HTMLElement,
+    dialog: HTMLDialogElement,
+    dir: HTMLDirectoryElement,
+    div: HTMLDivElement,
+    dl: HTMLDListElement,
+    dt: HTMLElement,
+    em: HTMLElement,
+    embed: HTMLEmbedElement,
+    fieldset: HTMLFieldSetElement,
+    figcaption: HTMLElement,
+    figure: HTMLElement,
+    font: HTMLFontElement,
+    footer: HTMLElement,
+    form: HTMLFormElement,
+    frame: HTMLFrameElement,
+    frameset: HTMLFrameSetElement,
+    h1: HTMLHeadingElement,
+    h2: HTMLHeadingElement,
+    h3: HTMLHeadingElement,
+    h4: HTMLHeadingElement,
+    h5: HTMLHeadingElement,
+    h6: HTMLHeadingElement,
+    head: HTMLHeadElement,
+    header: HTMLElement,
+    hgroup: HTMLElement,
+    hr: HTMLHRElement,
+    html: HTMLHtmlElement,
+    i: HTMLElement,
+    iframe: HTMLIFrameElement,
+    img: HTMLImageElement,
+    input: HTMLInputElement,
+    ins: HTMLModElement,
+    kbd: HTMLElement,
+    label: HTMLLabelElement,
+    legend: HTMLLegendElement,
+    li: HTMLLIElement,
+    link: HTMLLinkElement,
+    main: HTMLElement,
+    map: HTMLMapElement,
+    mark: HTMLElement,
+    marquee: HTMLMarqueeElement,
+    menu: HTMLMenuElement,
+    meta: HTMLMetaElement,
+    meter: HTMLMeterElement,
+    nav: HTMLElement,
+    noscript: HTMLElement,
+    `object`: HTMLObjectElement,
+    ol: HTMLOListElement,
+    optgroup: HTMLOptGroupElement,
+    option: HTMLOptionElement,
+    output: HTMLOutputElement,
+    p: HTMLParagraphElement,
+    param: HTMLParamElement,
+    picture: HTMLPictureElement,
+    pre: HTMLPreElement,
+    progress: HTMLProgressElement,
+    q: HTMLQuoteElement,
+    rp: HTMLElement,
+    rt: HTMLElement,
+    ruby: HTMLElement,
+    s: HTMLElement,
+    samp: HTMLElement,
+    script: HTMLScriptElement,
+    section: HTMLElement,
+    select: HTMLSelectElement,
+    slot: HTMLSlotElement,
+    small: HTMLElement,
+    source: HTMLSourceElement,
+    span: HTMLSpanElement,
+    strong: HTMLElement,
+    style: HTMLStyleElement,
+    sub: HTMLElement,
+    summary: HTMLElement,
+    sup: HTMLElement,
+    table: HTMLTableElement,
+    tbody: HTMLTableSectionElement,
+    td: HTMLTableDataCellElement,
+    template: HTMLTemplateElement,
+    textarea: HTMLTextAreaElement,
+    tfoot: HTMLTableSectionElement,
+    th: HTMLTableHeaderCellElement,
+    thead: HTMLTableSectionElement,
+    time: HTMLTimeElement,
+    title: HTMLTitleElement,
+    tr: HTMLTableRowElement,
+    track: HTMLTrackElement,
+    u: HTMLElement,
+    ul: HTMLUListElement,
+    `var`: HTMLElement,
+    video: HTMLVideoElement,
+    wbr: HTMLElement
+  ): DomElements = {
+    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], abbr = abbr.asInstanceOf[js.Any], address = address.asInstanceOf[js.Any], applet = applet.asInstanceOf[js.Any], area = area.asInstanceOf[js.Any], article = article.asInstanceOf[js.Any], aside = aside.asInstanceOf[js.Any], audio = audio.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], basefont = basefont.asInstanceOf[js.Any], bdi = bdi.asInstanceOf[js.Any], bdo = bdo.asInstanceOf[js.Any], blockquote = blockquote.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], br = br.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], canvas = canvas.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], cite = cite.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], col = col.asInstanceOf[js.Any], colgroup = colgroup.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], datalist = datalist.asInstanceOf[js.Any], dd = dd.asInstanceOf[js.Any], del = del.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], dfn = dfn.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], div = div.asInstanceOf[js.Any], dl = dl.asInstanceOf[js.Any], dt = dt.asInstanceOf[js.Any], em = em.asInstanceOf[js.Any], embed = embed.asInstanceOf[js.Any], fieldset = fieldset.asInstanceOf[js.Any], figcaption = figcaption.asInstanceOf[js.Any], figure = figure.asInstanceOf[js.Any], font = font.asInstanceOf[js.Any], footer = footer.asInstanceOf[js.Any], form = form.asInstanceOf[js.Any], frame = frame.asInstanceOf[js.Any], frameset = frameset.asInstanceOf[js.Any], h1 = h1.asInstanceOf[js.Any], h2 = h2.asInstanceOf[js.Any], h3 = h3.asInstanceOf[js.Any], h4 = h4.asInstanceOf[js.Any], h5 = h5.asInstanceOf[js.Any], h6 = h6.asInstanceOf[js.Any], head = head.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], hgroup = hgroup.asInstanceOf[js.Any], hr = hr.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any], i = i.asInstanceOf[js.Any], iframe = iframe.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], ins = ins.asInstanceOf[js.Any], kbd = kbd.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], legend = legend.asInstanceOf[js.Any], li = li.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], main = main.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any], mark = mark.asInstanceOf[js.Any], marquee = marquee.asInstanceOf[js.Any], menu = menu.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], meter = meter.asInstanceOf[js.Any], nav = nav.asInstanceOf[js.Any], noscript = noscript.asInstanceOf[js.Any], ol = ol.asInstanceOf[js.Any], optgroup = optgroup.asInstanceOf[js.Any], option = option.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any], picture = picture.asInstanceOf[js.Any], pre = pre.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], rp = rp.asInstanceOf[js.Any], rt = rt.asInstanceOf[js.Any], ruby = ruby.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], samp = samp.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], section = section.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], slot = slot.asInstanceOf[js.Any], small = small.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], span = span.asInstanceOf[js.Any], strong = strong.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], sub = sub.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any], sup = sup.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any], tbody = tbody.asInstanceOf[js.Any], td = td.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], textarea = textarea.asInstanceOf[js.Any], tfoot = tfoot.asInstanceOf[js.Any], th = th.asInstanceOf[js.Any], thead = thead.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], tr = tr.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any], u = u.asInstanceOf[js.Any], ul = ul.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any], wbr = wbr.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DomElements]
+  }
+}
+

@@ -1,0 +1,19 @@
+package typingsSlinky.vsoDashNodeDashApi
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_EnumValuesAnonError extends js.Object {
+  var enumValues: Anon_Error
+}
+
+object Anon_EnumValuesAnonError {
+  @scala.inline
+  def apply(enumValues: Anon_Error): Anon_EnumValuesAnonError = {
+    val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_EnumValuesAnonError]
+  }
+}
+

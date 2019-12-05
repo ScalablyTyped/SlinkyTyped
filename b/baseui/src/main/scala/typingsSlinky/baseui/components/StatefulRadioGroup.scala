@@ -1,0 +1,40 @@
+package typingsSlinky.baseui.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.input.tag
+import typingsSlinky.baseui.baseuiStrings.horizontal
+import typingsSlinky.baseui.baseuiStrings.vertical
+import typingsSlinky.baseui.radioMod.RadioGroupOverrides
+import typingsSlinky.baseui.radioMod.RadioOverrides
+import typingsSlinky.baseui.radioMod.State
+import typingsSlinky.baseui.radioMod.StatefulRadioGroupProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object StatefulRadioGroup
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  @JSImport("baseui/radio", "StatefulRadioGroup")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: autoFocus, name, onChange */
+  def apply(
+    align: horizontal | vertical = null,
+    initialState: State = null,
+    overrides: RadioOverrides with RadioGroupOverrides = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = StatefulRadioGroupProps
+}
+

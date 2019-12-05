@@ -43,7 +43,7 @@ object Sidebar
     onVisible: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
     target: js.Object | ReactRef[HTMLElement] = null,
     visible: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
@@ -56,7 +56,7 @@ object Sidebar
     if (onVisible != null) __obj.updateDynamic("onVisible")(js.Any.fromFunction2(onVisible))
     if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SidebarProps

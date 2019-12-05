@@ -1,0 +1,14 @@
+package typingsSlinky.asyncDashStreamDashGenerator
+
+import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.std.AsyncIterableIterator
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("async-stream-generator", JSImport.Namespace)
+@js.native
+object asyncDashStreamDashGeneratorMod extends js.Object {
+  def apply(generator: AsyncIterableIterator[_]): Readable = js.native
+}
+

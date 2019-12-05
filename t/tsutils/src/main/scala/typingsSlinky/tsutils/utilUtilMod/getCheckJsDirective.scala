@@ -1,0 +1,13 @@
+package typingsSlinky.tsutils.utilUtilMod
+
+import typingsSlinky.typescript.typescriptMod.CheckJsDirective
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("tsutils/util/util", "getCheckJsDirective")
+@js.native
+object getCheckJsDirective extends js.Object {
+  def apply(source: String): js.UndefOr[CheckJsDirective] = js.native
+}
+

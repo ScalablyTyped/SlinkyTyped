@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "ant-design__create-react-context"
-version := "0.2.4-6ee586"
+version := "0.2.4-306f31"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.2",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-243f84",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-26f45e",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-6c3558",
   "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")

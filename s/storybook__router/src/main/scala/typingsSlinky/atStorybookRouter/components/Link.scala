@@ -11,10 +11,14 @@ import scala.scalajs.js.annotation._
 
 object Link
   extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  override val component: String | js.Object = typingsSlinky.atStorybookRouter.distRouterMod.Link.asInstanceOf[String | js.Object]
-  def apply(to: String, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+  @JSImport("@storybook/router/dist/router", "Link")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(to: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = QueryLinkProps

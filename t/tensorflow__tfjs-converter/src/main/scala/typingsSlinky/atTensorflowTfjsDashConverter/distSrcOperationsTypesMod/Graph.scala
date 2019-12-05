@@ -1,0 +1,30 @@
+package typingsSlinky.atTensorflowTfjsDashConverter.distSrcOperationsTypesMod
+
+import org.scalablytyped.runtime.StringDictionary
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Graph extends js.Object {
+  var inputs: js.Array[Node]
+  var nodes: StringDictionary[Node]
+  var outputs: js.Array[Node]
+  var placeholders: js.Array[Node]
+  var weights: js.Array[Node]
+}
+
+object Graph {
+  @scala.inline
+  def apply(
+    inputs: js.Array[Node],
+    nodes: StringDictionary[Node],
+    outputs: js.Array[Node],
+    placeholders: js.Array[Node],
+    weights: js.Array[Node]
+  ): Graph = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], placeholders = placeholders.asInstanceOf[js.Any], weights = weights.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Graph]
+  }
+}
+

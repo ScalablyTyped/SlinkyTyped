@@ -1,0 +1,13 @@
+package typingsSlinky.stripeDashV3.stripe
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait StripeStatic extends js.Object {
+  var version: Double = js.native
+  def apply(publicKey: String): typingsSlinky.stripeDashV3.stripe.Stripe = js.native
+  def apply(publicKey: String, options: StripeOptions): typingsSlinky.stripeDashV3.stripe.Stripe = js.native
+}
+

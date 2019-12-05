@@ -42,7 +42,7 @@ object Portal
     openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.undefined,
     trigger: TagMod[Any] = null,
     triggerRef: typingsSlinky.react.reactMod.Ref[_] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(closeOnDocumentClick)) __obj.updateDynamic("closeOnDocumentClick")(closeOnDocumentClick.asInstanceOf[js.Any])
@@ -65,7 +65,7 @@ object Portal
     if (!js.isUndefined(openOnTriggerMouseEnter)) __obj.updateDynamic("openOnTriggerMouseEnter")(openOnTriggerMouseEnter.asInstanceOf[js.Any])
     if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     if (triggerRef != null) __obj.updateDynamic("triggerRef")(triggerRef.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PortalProps

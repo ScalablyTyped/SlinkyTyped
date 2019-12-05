@@ -1,0 +1,27 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait GroupControlTogglePosition extends js.Object
+
+/**
+  * An enumeration representing the possible positions that a group control toggle can have.
+  */
+@JSGlobal("GoogleAppsScript.Spreadsheet.GroupControlTogglePosition")
+@js.native
+object GroupControlTogglePosition extends js.Object {
+  @js.native
+  sealed trait AFTER extends GroupControlTogglePosition
+  
+  @js.native
+  sealed trait BEFORE extends GroupControlTogglePosition
+  
+  /* 1 */ val AFTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.GroupControlTogglePosition.AFTER with Double = js.native
+  /* 0 */ val BEFORE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.GroupControlTogglePosition.BEFORE with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[GroupControlTogglePosition with Double] = js.native
+}
+

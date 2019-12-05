@@ -1,0 +1,304 @@
+package typingsSlinky.plotlyDotJs.plotlyDotJsMod
+
+import typingsSlinky.plotlyDotJs.Anon_Angular
+import typingsSlinky.plotlyDotJs.Anon_Bottom
+import typingsSlinky.plotlyDotJs.Anon_End
+import typingsSlinky.plotlyDotJs.Anon_Font
+import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`false`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`bottom center`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`bottom left`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`bottom right`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`gauge+delta`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`gauge+number+delta`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`gauge+number`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+text+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+text+value`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+value+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`label+value`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`lines+markers`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`middle center`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`middle left`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`middle right`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`number+delta`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+lines+markers`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+lines`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+markers`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+value+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`text+value`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`top center`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`top left`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`top right`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`value+percent`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y+z+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y+z+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y+z`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`x+y`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x+z+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x+z+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x+z`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+x`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+z+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+z+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`y+z`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x+y+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x+y+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x+y`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+x`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+y+x+name`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+y+x+text`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`z+y+x`
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.all
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.area
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.bar
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.best
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.box
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.candlestick
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.choropleth
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.contour
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.delta
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.diameter
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.fast
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.fills
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.funnel
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.funnelarea
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.gauge
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.h
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.heatmap
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.histogram
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.hv
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.hvh
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.indicator
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.inside
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.label
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.legendonly
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.linear
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.lines
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.markers
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.mesh3d
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.name
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.none
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.number
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.ohlc
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.parcoords
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.percent
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.pie
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.pointcloud
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.points
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scatter
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scatter3d
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scattergeo
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scattergl
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scatterpolar
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.scatterternary
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.sd
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.skip
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.spline
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.surface
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.text
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.tonext
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.tonextx
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.tonexty
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.toself
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.tozerox
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.tozeroy
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.treemap
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.v
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.value
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.vh
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.vhv
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.waterfall
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.x
+import typingsSlinky.std.Partial
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait PlotData extends js.Object {
+  var autobinx: Boolean
+  var boxmean: Boolean | sd
+  var colorscale: ColorScale
+  var connectgaps: Boolean
+  var customdata: js.Array[Datum]
+  var delta: Anon_Bottom
+  var error_x: ErrorBar
+  var error_y: ErrorBar
+  var fill: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext
+  var fillcolor: String
+  var gauge: Anon_Angular
+  var hole: Double
+  var hoverinfo: all | name | none | skip | text | x | `x+text` | `x+name` | `x+y` | `x+y+text` | `x+y+name` | `x+y+z` | `x+y+z+text` | `x+y+z+name` | `y+name` | `y+x` | `y+text` | `y+x+text` | `y+x+name` | `y+z` | `y+z+text` | `y+z+name` | `y+x+z` | `y+x+z+text` | `y+x+z+name` | `z+x` | `z+x+text` | `z+x+name` | `z+y+x` | `z+y+x+text` | `z+y+x+name` | `z+x+y` | `z+x+y+text` | `z+x+y+name`
+  var hoverlabel: Partial[HoverLabel]
+  var hoveron: points | fills
+  var hovertemplate: String | js.Array[String]
+  var labels: js.Array[Datum]
+  var legendgroup: String
+  var line: Partial[ScatterLine]
+  var `line.color`: Color
+  var `line.dash`: Dash
+  var `line.shape`: linear | spline | hv | vh | hvh | vhv
+  var `line.simplify`: Boolean
+  var `line.smoothing`: Double
+  var `line.width`: Double
+  var marker: Partial[PlotMarker]
+   // Drawing.symbolList
+  var `marker.color`: Color
+  var `marker.line`: Partial[ScatterMarkerLine]
+  var `marker.maxdisplayed`: Double
+  var `marker.opacity`: Double | js.Array[Double]
+  var `marker.pad.b`: Double
+  var `marker.pad.l`: Double
+  var `marker.pad.r`: Double
+   // TODO
+  var `marker.pad.t`: Double
+  var `marker.showscale`: Boolean
+  var `marker.size`: Double | js.Array[Double]
+  var `marker.sizemax`: Double
+  var `marker.sizemin`: Double
+  var `marker.sizemode`: diameter | area
+  var `marker.sizeref`: Double
+  var `marker.symbol`: String | js.Array[String]
+  var mode: lines | markers | text | `lines+markers` | `text+markers` | `text+lines` | `text+lines+markers` | none | gauge | number | delta | `number+delta` | `gauge+number` | `gauge+number+delta` | `gauge+delta`
+  var name: String
+  var number: Anon_Font
+  var orientation: v | h
+  var parents: js.Array[String]
+  var r: js.Array[Datum]
+  var rotation: Double
+  var stackgroup: String
+  var text: String | js.Array[String]
+  var textinfo: label | `label+text` | `label+value` | `label+percent` | `label+text+value` | `label+text+percent` | `label+value+percent` | text | `text+value` | `text+percent` | `text+value+percent` | value | `value+percent` | percent | none
+  var textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside
+  var theta: js.Array[Datum]
+  var transforms: js.Array[DataTransform]
+  var transpose: Boolean
+  var `type`: bar | box | candlestick | choropleth | contour | heatmap | histogram | indicator | mesh3d | ohlc | parcoords | pie | pointcloud | scatter | scatter3d | scattergeo | scattergl | scatterpolar | scatterternary | surface | treemap | waterfall | funnel | funnelarea
+  var value: Double
+  var values: js.Array[Datum]
+  var visible: Boolean | legendonly
+  var width: Double | js.Array[Double]
+  var x: (js.Array[js.Array[Datum] | Datum]) | TypedArray
+  var xaxis: String
+  var xbins: Anon_End
+  var xgap: Double
+  var xy: scala.scalajs.js.typedarray.Float32Array
+  var y: (js.Array[js.Array[Datum] | Datum]) | TypedArray
+  var yaxis: String
+  var ygap: Double
+  var z: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray
+  var zsmooth: fast | best | `false`
+}
+
+object PlotData {
+  @scala.inline
+  def apply(
+    autobinx: Boolean,
+    boxmean: Boolean | sd,
+    colorscale: ColorScale,
+    connectgaps: Boolean,
+    customdata: js.Array[Datum],
+    delta: Anon_Bottom,
+    error_x: ErrorBar,
+    error_y: ErrorBar,
+    fill: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext,
+    fillcolor: String,
+    gauge: Anon_Angular,
+    hole: Double,
+    hoverinfo: all | name | none | skip | text | x | `x+text` | `x+name` | `x+y` | `x+y+text` | `x+y+name` | `x+y+z` | `x+y+z+text` | `x+y+z+name` | `y+name` | `y+x` | `y+text` | `y+x+text` | `y+x+name` | `y+z` | `y+z+text` | `y+z+name` | `y+x+z` | `y+x+z+text` | `y+x+z+name` | `z+x` | `z+x+text` | `z+x+name` | `z+y+x` | `z+y+x+text` | `z+y+x+name` | `z+x+y` | `z+x+y+text` | `z+x+y+name`,
+    hoverlabel: Partial[HoverLabel],
+    hoveron: points | fills,
+    hovertemplate: String | js.Array[String],
+    labels: js.Array[Datum],
+    legendgroup: String,
+    line: Partial[ScatterLine],
+    `line.color`: Color,
+    `line.dash`: Dash,
+    `line.shape`: linear | spline | hv | vh | hvh | vhv,
+    `line.simplify`: Boolean,
+    `line.smoothing`: Double,
+    `line.width`: Double,
+    marker: Partial[PlotMarker],
+    `marker.color`: Color,
+    `marker.line`: Partial[ScatterMarkerLine],
+    `marker.maxdisplayed`: Double,
+    `marker.opacity`: Double | js.Array[Double],
+    `marker.pad.b`: Double,
+    `marker.pad.l`: Double,
+    `marker.pad.r`: Double,
+    `marker.pad.t`: Double,
+    `marker.showscale`: Boolean,
+    `marker.size`: Double | js.Array[Double],
+    `marker.sizemax`: Double,
+    `marker.sizemin`: Double,
+    `marker.sizemode`: diameter | area,
+    `marker.sizeref`: Double,
+    `marker.symbol`: String | js.Array[String],
+    mode: lines | markers | text | `lines+markers` | `text+markers` | `text+lines` | `text+lines+markers` | none | gauge | number | delta | `number+delta` | `gauge+number` | `gauge+number+delta` | `gauge+delta`,
+    name: String,
+    number: Anon_Font,
+    orientation: v | h,
+    parents: js.Array[String],
+    r: js.Array[Datum],
+    rotation: Double,
+    stackgroup: String,
+    text: String | js.Array[String],
+    textinfo: label | `label+text` | `label+value` | `label+percent` | `label+text+value` | `label+text+percent` | `label+value+percent` | text | `text+value` | `text+percent` | `text+value+percent` | value | `value+percent` | percent | none,
+    textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside,
+    theta: js.Array[Datum],
+    transforms: js.Array[DataTransform],
+    transpose: Boolean,
+    `type`: bar | box | candlestick | choropleth | contour | heatmap | histogram | indicator | mesh3d | ohlc | parcoords | pie | pointcloud | scatter | scatter3d | scattergeo | scattergl | scatterpolar | scatterternary | surface | treemap | waterfall | funnel | funnelarea,
+    value: Double,
+    values: js.Array[Datum],
+    visible: Boolean | legendonly,
+    width: Double | js.Array[Double],
+    x: (js.Array[js.Array[Datum] | Datum]) | TypedArray,
+    xaxis: String,
+    xbins: Anon_End,
+    xgap: Double,
+    xy: scala.scalajs.js.typedarray.Float32Array,
+    y: (js.Array[js.Array[Datum] | Datum]) | TypedArray,
+    yaxis: String,
+    ygap: Double,
+    z: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray,
+    zsmooth: fast | best | `false`
+  ): PlotData = {
+    val __obj = js.Dynamic.literal(autobinx = autobinx.asInstanceOf[js.Any], boxmean = boxmean.asInstanceOf[js.Any], colorscale = colorscale.asInstanceOf[js.Any], connectgaps = connectgaps.asInstanceOf[js.Any], customdata = customdata.asInstanceOf[js.Any], delta = delta.asInstanceOf[js.Any], error_x = error_x.asInstanceOf[js.Any], error_y = error_y.asInstanceOf[js.Any], fill = fill.asInstanceOf[js.Any], fillcolor = fillcolor.asInstanceOf[js.Any], gauge = gauge.asInstanceOf[js.Any], hole = hole.asInstanceOf[js.Any], hoverinfo = hoverinfo.asInstanceOf[js.Any], hoverlabel = hoverlabel.asInstanceOf[js.Any], hoveron = hoveron.asInstanceOf[js.Any], hovertemplate = hovertemplate.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], legendgroup = legendgroup.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], parents = parents.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], stackgroup = stackgroup.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textinfo = textinfo.asInstanceOf[js.Any], textposition = textposition.asInstanceOf[js.Any], theta = theta.asInstanceOf[js.Any], transforms = transforms.asInstanceOf[js.Any], transpose = transpose.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xaxis = xaxis.asInstanceOf[js.Any], xbins = xbins.asInstanceOf[js.Any], xgap = xgap.asInstanceOf[js.Any], xy = xy.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yaxis = yaxis.asInstanceOf[js.Any], ygap = ygap.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any], zsmooth = zsmooth.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.color")(`line.color`.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.dash")(`line.dash`.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.shape")(`line.shape`.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.simplify")(`line.simplify`.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.smoothing")(`line.smoothing`.asInstanceOf[js.Any])
+    __obj.updateDynamic("line.width")(`line.width`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.color")(`marker.color`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.line")(`marker.line`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.maxdisplayed")(`marker.maxdisplayed`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.opacity")(`marker.opacity`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.pad.b")(`marker.pad.b`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.pad.l")(`marker.pad.l`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.pad.r")(`marker.pad.r`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.pad.t")(`marker.pad.t`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.showscale")(`marker.showscale`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.size")(`marker.size`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.sizemax")(`marker.sizemax`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.sizemin")(`marker.sizemin`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.sizemode")(`marker.sizemode`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.sizeref")(`marker.sizeref`.asInstanceOf[js.Any])
+    __obj.updateDynamic("marker.symbol")(`marker.symbol`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlotData]
+  }
+}
+

@@ -1,0 +1,18 @@
+package typingsSlinky.firefoxDashWebextDashBrowser.browser.webRequest
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.firefoxDashWebextDashBrowser.Anon_CookieStoreIdDocumentUrlFrameIdFromCacheIncognito
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Fired when a server-initiated redirect is about to occur. */
+@JSGlobal("browser.webRequest.onBeforeRedirect")
+@js.native
+object onBeforeRedirect
+  extends TopLevel[
+      _WebRequestOnBeforeRedirectEvent[
+        js.Function1[/* details */ Anon_CookieStoreIdDocumentUrlFrameIdFromCacheIncognito, Unit]
+      ]
+    ]
+

@@ -1,0 +1,12 @@
+package typingsSlinky.screeps
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.screeps.screepsNumbers.`25`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("POWER_CREEP_MAX_LEVEL")
+@js.native
+object POWER_CREEP_MAX_LEVEL extends TopLevel[`25`]
+

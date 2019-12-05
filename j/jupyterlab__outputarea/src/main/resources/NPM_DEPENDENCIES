@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@jupyterlab/outputarea" : "1.2.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@jupyterlab/outputarea" : "1.2.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

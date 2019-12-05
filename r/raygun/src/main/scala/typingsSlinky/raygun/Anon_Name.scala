@@ -1,0 +1,21 @@
+package typingsSlinky.raygun
+
+import typingsSlinky.raygun.raygunStrings.`raygun-node`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Name extends js.Object {
+  var name: `raygun-node`
+  var version: String
+}
+
+object Anon_Name {
+  @scala.inline
+  def apply(name: `raygun-node`, version: String): Anon_Name = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Name]
+  }
+}
+

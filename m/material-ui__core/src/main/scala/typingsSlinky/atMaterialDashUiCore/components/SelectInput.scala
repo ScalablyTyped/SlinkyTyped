@@ -41,7 +41,7 @@ object SelectInput
     onOpen: /* event */ ChangeEvent[js.Object] => Unit = null,
     renderValue: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => TagMod[Any] = null,
     variant: standard | outlined | filled = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     if (IconComponent != null) __obj.updateDynamic("IconComponent")(IconComponent.asInstanceOf[js.Any])
@@ -53,7 +53,7 @@ object SelectInput
     if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
     if (renderValue != null) __obj.updateDynamic("renderValue")(js.Any.fromFunction1(renderValue))
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SelectInputProps

@@ -1,0 +1,12 @@
+package typingsSlinky.tern.ternMod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tern.libInferMod.ContextConstructor
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("tern", "Context")
+@js.native
+object Context extends TopLevel[ContextConstructor]
+

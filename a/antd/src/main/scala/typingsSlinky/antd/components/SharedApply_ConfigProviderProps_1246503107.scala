@@ -25,7 +25,7 @@ abstract class SharedApply_ConfigProviderProps_1246503107[ComponentRef <: js.Obj
     pageHeader: Anon_Ghost = null,
     prefixCls: String = null,
     renderEmpty: /* componentName */ js.UndefOr[String] => TagMod[Any] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoInsertSpaceInButton)) __obj.updateDynamic("autoInsertSpaceInButton")(autoInsertSpaceInButton.asInstanceOf[js.Any])
@@ -35,7 +35,7 @@ abstract class SharedApply_ConfigProviderProps_1246503107[ComponentRef <: js.Obj
     if (pageHeader != null) __obj.updateDynamic("pageHeader")(pageHeader.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (renderEmpty != null) __obj.updateDynamic("renderEmpty")(js.Any.fromFunction1(renderEmpty))
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ConfigProviderProps

@@ -61,7 +61,7 @@ object RangePicker
     suffixIcon: TagMod[Any] = null,
     tagPrefixCls: String = null,
     timePicker: TagMod[Any] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
@@ -96,7 +96,7 @@ object RangePicker
     if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
     if (tagPrefixCls != null) __obj.updateDynamic("tagPrefixCls")(tagPrefixCls.asInstanceOf[js.Any])
     if (timePicker != null) __obj.updateDynamic("timePicker")(timePicker.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RangePickerProps

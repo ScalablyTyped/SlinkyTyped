@@ -1,0 +1,14 @@
+package typingsSlinky.atTensorflowTfjsDashLayers
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object distKerasUnderscoreFormatLayersNormalizationUnderscoreSerializationMod {
+  import typingsSlinky.atTensorflowTfjsDashLayers.atTensorflowTfjsDashLayersStrings.BatchNormalization
+  import typingsSlinky.atTensorflowTfjsDashLayers.distKerasUnderscoreFormatTopologyUnderscoreConfigMod.BaseLayerSerialization
+
+  type BatchNormalizationLayerSerialization = BaseLayerSerialization[BatchNormalization, BatchNormalizationLayerConfig]
+  type NormalizationLayerClassName = BatchNormalization
+  type NormalizationLayerSerialization = BatchNormalizationLayerSerialization
+}

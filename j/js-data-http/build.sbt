@@ -1,0 +1,17 @@
+organization := "org.scalablytyped.slinky"
+name := "js-data-http"
+version := "3.0.1-57dfa5"
+scalaVersion := "2.12.10"
+enablePlugins(ScalaJSPlugin)
+libraryDependencies ++= Seq(
+  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "me.shadaj" %%% "slinky-web" % "0.6.2",
+  "org.scalablytyped.slinky" %%% "js-data" % "3.0.8-15f2ab",
+  "org.scalablytyped.slinky" %%% "js-data-adapter" % "1.0.1-3d5033",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+publishArtifact in packageDoc := false
+scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+bintrayRepository := "SlinkyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+        

@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesConditionalCheckFailedExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesDeleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesPutItemExceptionsUnionMod.PutItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateItemExceptionsUnionMod.UpdateItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ConditionalCheckFailedException
+  extends ServiceException[_ConditionalCheckFailedExceptionDetails]
+     with DeleteItemExceptionsUnion
+     with PutItemExceptionsUnion
+     with UpdateItemExceptionsUnion {
+  @JSName("name")
+  var name_ConditionalCheckFailedException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.atAwsDashSdkClientDashDynamodbDashBrowserStrings.ConditionalCheckFailedException = js.native
+}
+

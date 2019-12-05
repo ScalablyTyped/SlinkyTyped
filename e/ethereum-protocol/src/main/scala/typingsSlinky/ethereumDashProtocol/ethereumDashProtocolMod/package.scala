@@ -1,0 +1,23 @@
+package typingsSlinky.ethereumDashProtocol
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object ethereumDashProtocolMod {
+  import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.bignumberDotJs.bignumberDotJsMod.default
+
+  type BlockParam = BlockParamLiteral | Double
+  type ContractAbi = js.Array[AbiDefinition]
+  type ContractEventArg = String | default | Double | Boolean
+  type DecodedLogArgs = StringDictionary[ContractEventArg]
+  type JSONRPCErrorCallback = js.Function2[
+    /* err */ js.Error | Null, 
+    /* result */ js.UndefOr[JSONRPCResponsePayload], 
+    scala.Unit
+  ]
+  type LogTopic = Null | String | js.Array[String]
+  type LogWithDecodedArgs[ArgsType /* <: DecodedLogArgs */] = DecodedLogEntry[ArgsType]
+  type RawLog = LogEntry
+}

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "material-components-web" : "4.0.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "material-components-web" : "4.0.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

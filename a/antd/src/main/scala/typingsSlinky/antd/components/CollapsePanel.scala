@@ -27,7 +27,7 @@ object CollapsePanel
     prefixCls: String = null,
     showArrow: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any])
     if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
@@ -35,7 +35,7 @@ object CollapsePanel
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = CollapsePanelProps

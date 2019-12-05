@@ -37,7 +37,7 @@ object Badge
     style: CSSProperties = null,
     text: TagMod[Any] = null,
     title: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object Badge
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = BadgeProps

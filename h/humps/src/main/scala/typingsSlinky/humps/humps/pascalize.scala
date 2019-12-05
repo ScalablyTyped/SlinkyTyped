@@ -1,0 +1,12 @@
+package typingsSlinky.humps.humps
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("humps.pascalize")
+@js.native
+object pascalize extends js.Object {
+  def apply(value: String): String = js.native
+}
+

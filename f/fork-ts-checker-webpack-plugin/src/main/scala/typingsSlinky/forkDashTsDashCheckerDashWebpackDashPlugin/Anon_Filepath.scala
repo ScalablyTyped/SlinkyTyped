@@ -1,0 +1,16 @@
+package typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin
+
+import typingsSlinky.eslint.eslintMod.CLIEngine.LintReport
+import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.libNormalizedMessageMod.NormalizedMessage
+import typingsSlinky.std.IterableIterator
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Anon_Filepath extends js.Object {
+  def getFormattedLints(lintReports: js.Array[LintReport]): js.Array[NormalizedMessage] = js.native
+  def getFormattedLints(lintReports: IterableIterator[LintReport]): js.Array[NormalizedMessage] = js.native
+  def getLints(filepath: String): js.UndefOr[LintReport] = js.native
+}
+

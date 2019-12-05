@@ -1,0 +1,35 @@
+package typingsSlinky.hiDashBase32
+
+import typingsSlinky.hiDashBase32.hiDashBase32Mod.Decode
+import typingsSlinky.hiDashBase32.hiDashBase32Mod.Input
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("hi-base32", JSImport.Namespace)
+@js.native
+object hiDashBase32Mod extends js.Object {
+  @js.native
+  trait Decode extends js.Object {
+    /**
+      * Decode base32 string and return string
+      *
+      * @param base32Str The base32 string you want to decode.
+      * @param ascciOnly decode as ASCII or decode as UTF-8 string. Default is false.
+      */
+    def apply(base32Str: String): String = js.native
+    def apply(base32Str: String, asciiOnly: Boolean): String = js.native
+    /**
+      * Decode base32 string and return byte array
+      *
+      * @param base32Str The base32 string you want to decode.
+      */
+    def asBytes(base32Str: String): js.Array[Double] = js.native
+  }
+  
+  var decode: Decode = js.native
+  def encode(input: Input): String = js.native
+  def encode(input: Input, asciiOnly: Boolean): String = js.native
+  type Input = String | js.Array[Double] | scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.Uint8Array
+}
+

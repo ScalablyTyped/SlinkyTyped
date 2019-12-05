@@ -76,7 +76,7 @@ object TouchableWithoutFeedback
     style: StyleProp[ViewStyle] = null,
     testID: String = null,
     tvParallaxProperties: TVParallaxProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNative.reactDashNativeMod.TouchableWithoutFeedback
@@ -113,7 +113,7 @@ object TouchableWithoutFeedback
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TouchableWithoutFeedbackProps

@@ -1,0 +1,16 @@
+package typingsSlinky.thrift
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object thriftMod {
+  import org.scalablytyped.runtime.NumberDictionary
+  import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.node.Buffer
+
+  type HttpHeaders = StringDictionary[js.UndefOr[Double | String | js.Array[String]]]
+  type SeqId2Service = NumberDictionary[String]
+  type ServiceMap[TProcessor, THandler] = StringDictionary[ServerOptions[TProcessor, THandler]]
+  type TTransportCallback = js.Function2[/* msg */ js.UndefOr[Buffer], /* seqid */ js.UndefOr[Double], Unit]
+}

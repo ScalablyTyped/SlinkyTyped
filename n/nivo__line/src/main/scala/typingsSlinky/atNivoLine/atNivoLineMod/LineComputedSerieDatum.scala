@@ -1,0 +1,21 @@
+package typingsSlinky.atNivoLine.atNivoLineMod
+
+import typingsSlinky.atNivoLine.Anon_X
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait LineComputedSerieDatum extends js.Object {
+  var data: LineDatum
+  var position: Anon_X
+}
+
+object LineComputedSerieDatum {
+  @scala.inline
+  def apply(data: LineDatum, position: Anon_X): LineComputedSerieDatum = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[LineComputedSerieDatum]
+  }
+}
+

@@ -1,0 +1,22 @@
+package typingsSlinky.activexDashWord.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Word.Rectangle")
+@js.native
+class Rectangle protected () extends js.Object {
+  val Application: typingsSlinky.activexDashWord.Word.Application = js.native
+  val Creator: Double = js.native
+  val Height: Double = js.native
+  val Left: Double = js.native
+  val Lines: typingsSlinky.activexDashWord.Word.Lines = js.native
+  val Parent: js.Any = js.native
+  val Range: typingsSlinky.activexDashWord.Word.Range = js.native
+  val RectangleType: WdRectangleType = js.native
+  val Top: Double = js.native
+  val Width: Double = js.native
+  var `Word.Rectangle_typekey`: Rectangle = js.native
+}
+

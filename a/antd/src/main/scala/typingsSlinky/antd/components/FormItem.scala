@@ -38,7 +38,7 @@ object FormItem
     style: CSSProperties = null,
     validateStatus: success | warning | error | validating | typingsSlinky.antd.antdStrings.Empty = null,
     wrapperCol: ColProps = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object FormItem
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (validateStatus != null) __obj.updateDynamic("validateStatus")(validateStatus.asInstanceOf[js.Any])
     if (wrapperCol != null) __obj.updateDynamic("wrapperCol")(wrapperCol.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FormItemProps

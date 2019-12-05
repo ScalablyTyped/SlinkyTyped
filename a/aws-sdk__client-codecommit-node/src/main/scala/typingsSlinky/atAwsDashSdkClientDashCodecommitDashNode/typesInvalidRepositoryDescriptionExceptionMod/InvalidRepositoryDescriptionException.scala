@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesInvalidRepositoryDescriptionExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreateRepositoryExceptionsUnionMod.CreateRepositoryExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateRepositoryDescriptionExceptionsUnionMod.UpdateRepositoryDescriptionExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidRepositoryDescriptionException
+  extends ServiceException[_InvalidRepositoryDescriptionExceptionDetails]
+     with CreateRepositoryExceptionsUnion
+     with UpdateRepositoryDescriptionExceptionsUnion {
+  @JSName("name")
+  var name_InvalidRepositoryDescriptionException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.InvalidRepositoryDescriptionException = js.native
+}
+

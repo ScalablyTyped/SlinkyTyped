@@ -1,0 +1,13 @@
+package typingsSlinky.officeDashUiDashFabricDashReact.libIndexDotBundleMod
+
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsSelectedItemsListSelectedPeopleListSelectedPeopleListMod.IExtendedPersonaProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsSelectedItemsListSelectedPeopleListSelectedPeopleListMod.ISelectedPeopleProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/index.bundle", "BasePeopleSelectedItemsList")
+@js.native
+class BasePeopleSelectedItemsList ()
+  extends typingsSlinky.officeDashUiDashFabricDashReact.libComponentsSelectedItemsListBaseSelectedItemsListMod.BaseSelectedItemsList[IExtendedPersonaProps, ISelectedPeopleProps]
+

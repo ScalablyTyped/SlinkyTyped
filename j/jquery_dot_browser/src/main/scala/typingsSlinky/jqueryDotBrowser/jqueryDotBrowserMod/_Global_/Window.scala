@@ -1,0 +1,20 @@
+package typingsSlinky.jqueryDotBrowser.jqueryDotBrowserMod._Global_
+
+import typingsSlinky.jqueryDotBrowser.jqueryDotBrowserMod.Matchs
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Window extends js.Object {
+  var jQBrowser: Matchs
+}
+
+object Window {
+  @scala.inline
+  def apply(jQBrowser: Matchs): Window = {
+    val __obj = js.Dynamic.literal(jQBrowser = jQBrowser.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Window]
+  }
+}
+

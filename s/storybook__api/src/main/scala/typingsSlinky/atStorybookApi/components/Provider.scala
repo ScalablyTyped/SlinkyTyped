@@ -27,7 +27,7 @@ object Provider
     storyId: String = null,
     uri: String = null,
     viewMode: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.atStorybookApi.atStorybookApiMod.Provider] = {
     val __obj = js.Dynamic.literal(docsMode = docsMode.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
     if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object Provider
     if (storyId != null) __obj.updateDynamic("storyId")(storyId.asInstanceOf[js.Any])
     if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = typingsSlinky.atStorybookApi.atStorybookApiMod.Props

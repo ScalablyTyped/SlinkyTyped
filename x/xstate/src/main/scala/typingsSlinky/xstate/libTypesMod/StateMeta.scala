@@ -1,0 +1,20 @@
+package typingsSlinky.xstate.libTypesMod
+
+import typingsSlinky.xstate.libStateMod.State
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait StateMeta[TContext, TEvent /* <: EventObject */] extends js.Object {
+  var state: State[TContext, TEvent]
+}
+
+object StateMeta {
+  @scala.inline
+  def apply[TContext, TEvent /* <: EventObject */](state: State[TContext, TEvent]): StateMeta[TContext, TEvent] = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[StateMeta[TContext, TEvent]]
+  }
+}
+

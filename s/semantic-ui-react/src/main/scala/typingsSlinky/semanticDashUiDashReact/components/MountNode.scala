@@ -21,11 +21,11 @@ object MountNode
   /* The following DOM/SVG props were specified: className */
   def apply(
     node: HTMLElement | typingsSlinky.react.reactMod.Ref[_] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = MountNodeProps

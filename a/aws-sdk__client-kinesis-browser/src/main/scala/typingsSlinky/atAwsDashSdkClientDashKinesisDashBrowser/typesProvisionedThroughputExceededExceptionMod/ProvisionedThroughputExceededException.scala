@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesProvisionedThroughputExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesGetRecordsExceptionsUnionMod.GetRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesGetShardIteratorExceptionsUnionMod.GetShardIteratorExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordExceptionsUnionMod.PutRecordExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ProvisionedThroughputExceededException
+  extends ServiceException[_ProvisionedThroughputExceededExceptionDetails]
+     with GetRecordsExceptionsUnion
+     with GetShardIteratorExceptionsUnion
+     with PutRecordExceptionsUnion
+     with PutRecordsExceptionsUnion {
+  @JSName("name")
+  var name_ProvisionedThroughputExceededException: typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.atAwsDashSdkClientDashKinesisDashBrowserStrings.ProvisionedThroughputExceededException = js.native
+}
+

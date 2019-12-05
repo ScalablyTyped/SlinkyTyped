@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesInvalidCiphertextExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesDecryptExceptionsUnionMod.DecryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesImportKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.typesReEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidCiphertextException
+  extends ServiceException[_InvalidCiphertextExceptionDetails]
+     with DecryptExceptionsUnion
+     with ImportKeyMaterialExceptionsUnion
+     with ReEncryptExceptionsUnion {
+  @JSName("name")
+  var name_InvalidCiphertextException: typingsSlinky.atAwsDashSdkClientDashKmsDashBrowser.atAwsDashSdkClientDashKmsDashBrowserStrings.InvalidCiphertextException = js.native
+}
+

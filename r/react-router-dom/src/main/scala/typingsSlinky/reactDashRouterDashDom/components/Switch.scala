@@ -18,10 +18,10 @@ object Switch
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(location: Location[LocationState] = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Switch] = {
+  def apply(location: Location[LocationState] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Switch] = {
     val __obj = js.Dynamic.literal()
     if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SwitchProps

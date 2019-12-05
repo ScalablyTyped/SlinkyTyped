@@ -1,0 +1,21 @@
+package typingsSlinky.cliDashProgress.cliDashProgressMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Preset extends js.Object {
+  var barCompleteChar: String
+  var barIncompleteChar: String
+  var format: String
+}
+
+object Preset {
+  @scala.inline
+  def apply(barCompleteChar: String, barIncompleteChar: String, format: String): Preset = {
+    val __obj = js.Dynamic.literal(barCompleteChar = barCompleteChar.asInstanceOf[js.Any], barIncompleteChar = barIncompleteChar.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Preset]
+  }
+}
+

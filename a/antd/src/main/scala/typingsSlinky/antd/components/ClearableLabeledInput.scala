@@ -40,7 +40,7 @@ object ClearableLabeledInput
     style: js.Object = null,
     suffix: TagMod[Any] = null,
     value: js.Any = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     if (addonAfter != null) __obj.updateDynamic("addonAfter")(addonAfter.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object ClearableLabeledInput
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ClearableInputProps

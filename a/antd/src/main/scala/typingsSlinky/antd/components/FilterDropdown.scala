@@ -29,11 +29,11 @@ object FilterDropdown
     prefixCls: String,
     selectedKeys: js.Array[String],
     getPopupContainer: /* triggerNode */ js.UndefOr[HTMLElement] => HTMLElement = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], confirmFilter = js.Any.fromFunction2(confirmFilter), dropdownPrefixCls = dropdownPrefixCls.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], selectedKeys = selectedKeys.asInstanceOf[js.Any])
     if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.antd.libTableFilterDropdownMod.default[js.Any]]]

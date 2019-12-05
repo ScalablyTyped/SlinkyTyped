@@ -1,0 +1,30 @@
+package typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesUnsupportedOperationExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesCreateKeyExceptionsUnionMod.CreateKeyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesDeleteImportedKeyMaterialExceptionsUnionMod.DeleteImportedKeyMaterialExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesDisableKeyRotationExceptionsUnionMod.DisableKeyRotationExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesEnableKeyRotationExceptionsUnionMod.EnableKeyRotationExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesGetKeyRotationStatusExceptionsUnionMod.GetKeyRotationStatusExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesGetParametersForImportExceptionsUnionMod.GetParametersForImportExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesImportKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKmsDashNode.typesPutKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UnsupportedOperationException
+  extends ServiceException[_UnsupportedOperationExceptionDetails]
+     with CreateKeyExceptionsUnion
+     with DeleteImportedKeyMaterialExceptionsUnion
+     with DisableKeyRotationExceptionsUnion
+     with EnableKeyRotationExceptionsUnion
+     with GetKeyRotationStatusExceptionsUnion
+     with GetParametersForImportExceptionsUnion
+     with ImportKeyMaterialExceptionsUnion
+     with PutKeyPolicyExceptionsUnion {
+  @JSName("name")
+  var name_UnsupportedOperationException: typingsSlinky.atAwsDashSdkClientDashKmsDashNode.atAwsDashSdkClientDashKmsDashNodeStrings.UnsupportedOperationException = js.native
+}
+

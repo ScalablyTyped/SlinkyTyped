@@ -1,0 +1,16 @@
+package typingsSlinky.vexdb
+
+import typingsSlinky.vexdb.outUtilFilterMod.Filter
+import typingsSlinky.vexdb.outUtilFilterMod.FilterFunction
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("vexdb/out/util/filter", JSImport.Namespace)
+@js.native
+object outUtilFilterMod extends js.Object {
+  def default(`object`: js.Object, key: String, filt: Filter): js.Promise[Boolean] = js.native
+  type Filter = js.RegExp | (js.Array[Double | String]) | FilterFunction | Double | String
+  type FilterFunction = js.Function2[/* val */ js.Any, /* object */ js.Object, js.Promise[Boolean] | Boolean]
+}
+

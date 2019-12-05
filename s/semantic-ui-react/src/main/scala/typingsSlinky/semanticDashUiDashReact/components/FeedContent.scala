@@ -31,7 +31,7 @@ object FeedContent
     extraText: SemanticShorthandItem[FeedExtraProps] = null,
     meta: SemanticShorthandItem[FeedMetaProps] = null,
     summary: SemanticShorthandItem[FeedSummaryProps] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -41,7 +41,7 @@ object FeedContent
     if (extraText != null) __obj.updateDynamic("extraText")(extraText.asInstanceOf[js.Any])
     if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
     if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FeedContentProps

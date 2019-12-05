@@ -1,0 +1,48 @@
+package typingsSlinky.jsonld.jsonldMod.Options
+
+import typingsSlinky.jsonld.jsonldDashSpecMod.Context
+import typingsSlinky.jsonld.jsonldDashSpecMod.RemoteDocument
+import typingsSlinky.jsonld.jsonldDashSpecMod.Url
+import typingsSlinky.jsonld.jsonldMod.MimeNQuad
+import typingsSlinky.jsonld.jsonldStrings.URDNA2015
+import typingsSlinky.jsonld.jsonldStrings.URGNA2012
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Normalize extends Common {
+  var algorithm: js.UndefOr[URDNA2015 | URGNA2012] = js.undefined
+  var expansion: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[MimeNQuad] = js.undefined
+  var inputFormat: js.UndefOr[MimeNQuad] = js.undefined
+  var skipExpansion: js.UndefOr[Boolean] = js.undefined
+  var useNative: js.UndefOr[Boolean] = js.undefined
+}
+
+object Normalize {
+  @scala.inline
+  def apply(
+    algorithm: URDNA2015 | URGNA2012 = null,
+    base: String = null,
+    documentLoader: (/* url */ Url, /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit]) => js.Promise[RemoteDocument] = null,
+    expandContext: Context = null,
+    expansion: js.UndefOr[Boolean] = js.undefined,
+    format: MimeNQuad = null,
+    inputFormat: MimeNQuad = null,
+    skipExpansion: js.UndefOr[Boolean] = js.undefined,
+    useNative: js.UndefOr[Boolean] = js.undefined
+  ): Normalize = {
+    val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (documentLoader != null) __obj.updateDynamic("documentLoader")(js.Any.fromFunction2(documentLoader))
+    if (expandContext != null) __obj.updateDynamic("expandContext")(expandContext.asInstanceOf[js.Any])
+    if (!js.isUndefined(expansion)) __obj.updateDynamic("expansion")(expansion.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (inputFormat != null) __obj.updateDynamic("inputFormat")(inputFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipExpansion)) __obj.updateDynamic("skipExpansion")(skipExpansion.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNative)) __obj.updateDynamic("useNative")(useNative.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Normalize]
+  }
+}
+

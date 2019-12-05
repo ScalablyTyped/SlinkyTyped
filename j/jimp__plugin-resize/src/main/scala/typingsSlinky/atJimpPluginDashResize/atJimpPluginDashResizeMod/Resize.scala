@@ -1,0 +1,21 @@
+package typingsSlinky.atJimpPluginDashResize.atJimpPluginDashResizeMod
+
+import typingsSlinky.atJimpPluginDashResize.Anon_BezierInterpolation
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Resize extends js.Object {
+  var `class`: ResizeClass
+  var constants: Anon_BezierInterpolation
+}
+
+object Resize {
+  @scala.inline
+  def apply(`class`: ResizeClass, constants: Anon_BezierInterpolation): Resize = {
+    val __obj = js.Dynamic.literal(constants = constants.asInstanceOf[js.Any])
+    __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Resize]
+  }
+}
+

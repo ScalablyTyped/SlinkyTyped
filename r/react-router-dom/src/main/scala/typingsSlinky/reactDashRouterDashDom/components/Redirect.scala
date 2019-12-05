@@ -25,7 +25,7 @@ object Redirect
     path: String = null,
     push: js.UndefOr[Boolean] = js.undefined,
     strict: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.Redirect] = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
     if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
@@ -33,7 +33,7 @@ object Redirect
     if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.asInstanceOf[js.Any])
     if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RedirectProps

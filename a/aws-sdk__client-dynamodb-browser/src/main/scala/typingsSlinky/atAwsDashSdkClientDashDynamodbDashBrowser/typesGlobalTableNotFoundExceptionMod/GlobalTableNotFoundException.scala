@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesGlobalTableNotFoundExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesDescribeGlobalTableExceptionsUnionMod.DescribeGlobalTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesDescribeGlobalTableSettingsExceptionsUnionMod.DescribeGlobalTableSettingsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateGlobalTableExceptionsUnionMod.UpdateGlobalTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GlobalTableNotFoundException
+  extends ServiceException[_GlobalTableNotFoundExceptionDetails]
+     with DescribeGlobalTableExceptionsUnion
+     with DescribeGlobalTableSettingsExceptionsUnion
+     with UpdateGlobalTableExceptionsUnion
+     with UpdateGlobalTableSettingsExceptionsUnion {
+  @JSName("name")
+  var name_GlobalTableNotFoundException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.atAwsDashSdkClientDashDynamodbDashBrowserStrings.GlobalTableNotFoundException = js.native
+}
+

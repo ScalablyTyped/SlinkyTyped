@@ -1,0 +1,48 @@
+package typingsSlinky.reactDashBootstrapDashTable.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.SyntheticEvent
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.BootstrapVersion
+import typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.InsertModalHeaderProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object InsertModalHeader
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.InsertModalHeader
+    ] {
+  @JSImport("react-bootstrap-table", "InsertModalHeader")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    beforeClose: /* e */ SyntheticEvent[Event, _] => Unit = null,
+    hideClose: js.UndefOr[Boolean] = js.undefined,
+    onModalClose: /* closeModal */ js.Function0[Unit] => Unit = null,
+    title: String = null,
+    version: BootstrapVersion = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.InsertModalHeader
+  ] = {
+    val __obj = js.Dynamic.literal()
+    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction1(beforeClose))
+    if (!js.isUndefined(hideClose)) __obj.updateDynamic("hideClose")(hideClose.asInstanceOf[js.Any])
+    if (onModalClose != null) __obj.updateDynamic("onModalClose")(js.Any.fromFunction1(onModalClose))
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = InsertModalHeaderProps
+}
+

@@ -31,7 +31,7 @@ object FormField
     label: SemanticShorthandItem[HtmlLabelProps] = null,
     required: js.Any = null,
     width: SemanticWIDTHS = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -42,7 +42,7 @@ object FormField
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FormFieldProps

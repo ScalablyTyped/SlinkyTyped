@@ -182,7 +182,7 @@ object TableHeaderCell
     vocab: String = null,
     warning: js.UndefOr[Boolean] = js.undefined,
     width: SemanticWIDTHS = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
@@ -285,7 +285,7 @@ object TableHeaderCell
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     if (!js.isUndefined(warning)) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TableHeaderCellProps

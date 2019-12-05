@@ -1,0 +1,20 @@
+package typingsSlinky.ldapjs
+
+import typingsSlinky.ldapjs.ldapjsMod.Filter
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Filter extends js.Object {
+  var filter: Filter
+}
+
+object Anon_Filter {
+  @scala.inline
+  def apply(filter: Filter): Anon_Filter = {
+    val __obj = js.Dynamic.literal(filter = filter.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Filter]
+  }
+}
+

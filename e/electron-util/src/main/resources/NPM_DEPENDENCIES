@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "electron-util" : "0.12.3"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "electron-util" : "0.12.3"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

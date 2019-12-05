@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesKMSAccessDeniedExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesGetRecordsExceptionsUnionMod.GetRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordExceptionsUnionMod.PutRecordExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesStartStreamEncryptionExceptionsUnionMod.StartStreamEncryptionExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait KMSAccessDeniedException
+  extends ServiceException[_KMSAccessDeniedExceptionDetails]
+     with GetRecordsExceptionsUnion
+     with PutRecordExceptionsUnion
+     with PutRecordsExceptionsUnion
+     with StartStreamEncryptionExceptionsUnion {
+  @JSName("name")
+  var name_KMSAccessDeniedException: typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.atAwsDashSdkClientDashKinesisDashBrowserStrings.KMSAccessDeniedException = js.native
+}
+

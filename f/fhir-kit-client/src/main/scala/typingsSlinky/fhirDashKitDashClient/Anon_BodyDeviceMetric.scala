@@ -1,0 +1,31 @@
+package typingsSlinky.fhirDashKitDashClient
+
+import typingsSlinky.fhir.fhir.DeviceMetric
+import typingsSlinky.request.requestMod.Headers
+import typingsSlinky.request.requestMod.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_BodyDeviceMetric extends js.Object {
+  var body: DeviceMetric
+  var headers: js.UndefOr[Headers] = js.undefined
+  var options: js.UndefOr[Options] = js.undefined
+  var resourceType: typingsSlinky.fhirDashKitDashClient.fhirDashKitDashClientStrings.DeviceMetric
+}
+
+object Anon_BodyDeviceMetric {
+  @scala.inline
+  def apply(
+    body: DeviceMetric,
+    resourceType: typingsSlinky.fhirDashKitDashClient.fhirDashKitDashClientStrings.DeviceMetric,
+    headers: Headers = null,
+    options: Options = null
+  ): Anon_BodyDeviceMetric = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_BodyDeviceMetric]
+  }
+}
+

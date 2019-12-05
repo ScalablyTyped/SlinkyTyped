@@ -26,7 +26,7 @@ object MemoryRouter
     initialEntries: js.Array[LocationDescriptor[LocationState]] = null,
     initialIndex: Int | Double = null,
     keyLength: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.MemoryRouter
@@ -36,7 +36,7 @@ object MemoryRouter
     if (initialEntries != null) __obj.updateDynamic("initialEntries")(initialEntries.asInstanceOf[js.Any])
     if (initialIndex != null) __obj.updateDynamic("initialIndex")(initialIndex.asInstanceOf[js.Any])
     if (keyLength != null) __obj.updateDynamic("keyLength")(keyLength.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = MemoryRouterProps

@@ -1,0 +1,35 @@
+package typingsSlinky.atReachTabs.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.atReachTabs.atReachTabsMod.TabsProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Tabs
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  @JSImport("@reach/tabs", "Tabs")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: onChange, readOnly */
+  def apply(
+    as: String = null,
+    defaultIndex: Int | Double = null,
+    index: Int | Double = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (defaultIndex != null) __obj.updateDynamic("defaultIndex")(defaultIndex.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = TabsProps
+}
+

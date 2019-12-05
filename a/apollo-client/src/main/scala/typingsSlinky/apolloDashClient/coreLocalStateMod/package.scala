@@ -1,0 +1,21 @@
+package typingsSlinky.apolloDashClient
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object coreLocalStateMod {
+  import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.apolloDashClient.Anon_Field
+
+  type FragmentMatcher = js.Function3[/* rootValue */ js.Any, /* typeCondition */ String, /* context */ js.Any, Boolean]
+  type Resolver = js.Function5[
+    /* fieldName */ String, 
+    /* rootValue */ js.Any, 
+    /* args */ js.Any, 
+    /* context */ js.Any, 
+    /* info */ Anon_Field, 
+    js.Any
+  ]
+  type VariableMap = StringDictionary[js.Any]
+}

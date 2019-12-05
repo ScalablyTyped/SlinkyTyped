@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCommitRequiredExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetDifferencesExceptionsUnionMod.GetDifferencesExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetMergeConflictsExceptionsUnionMod.GetMergeConflictsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommitRequiredException
+  extends ServiceException[_CommitRequiredExceptionDetails]
+     with GetDifferencesExceptionsUnion
+     with GetMergeConflictsExceptionsUnion {
+  @JSName("name")
+  var name_CommitRequiredException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.CommitRequiredException = js.native
+}
+

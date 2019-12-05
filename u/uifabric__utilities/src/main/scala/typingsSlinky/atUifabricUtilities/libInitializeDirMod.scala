@@ -1,0 +1,14 @@
+package typingsSlinky.atUifabricUtilities
+
+import org.scalajs.dom.raw.Window
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@uifabric/utilities/lib/initializeDir", JSImport.Namespace)
+@js.native
+object libInitializeDirMod extends js.Object {
+  def initializeDir(): Unit = js.native
+  def initializeDir(win: Window): Unit = js.native
+}
+

@@ -19,11 +19,11 @@ object CheckableTag
   
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: checked, className, onChange */
-  def apply(prefixCls: String = null, style: CSSProperties = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
+  def apply(prefixCls: String = null, style: CSSProperties = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = CheckableTagProps

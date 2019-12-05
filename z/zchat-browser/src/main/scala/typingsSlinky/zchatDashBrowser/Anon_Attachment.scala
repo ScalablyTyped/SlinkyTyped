@@ -1,0 +1,23 @@
+package typingsSlinky.zchatDashBrowser
+
+import typingsSlinky.zchatDashBrowser.zchatDashBrowserMod.Attachment
+import typingsSlinky.zchatDashBrowser.zchatDashBrowserStrings.chatDOTfile
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Attachment extends js.Object {
+  var attachment: Attachment
+  var deleted: Boolean
+  var `type`: chatDOTfile
+}
+
+object Anon_Attachment {
+  @scala.inline
+  def apply(attachment: Attachment, deleted: Boolean, `type`: chatDOTfile): Anon_Attachment = {
+    val __obj = js.Dynamic.literal(attachment = attachment.asInstanceOf[js.Any], deleted = deleted.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_Attachment]
+  }
+}
+

@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesKMSThrottlingExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesGetRecordsExceptionsUnionMod.GetRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordExceptionsUnionMod.PutRecordExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesPutRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.typesStartStreamEncryptionExceptionsUnionMod.StartStreamEncryptionExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait KMSThrottlingException
+  extends ServiceException[_KMSThrottlingExceptionDetails]
+     with GetRecordsExceptionsUnion
+     with PutRecordExceptionsUnion
+     with PutRecordsExceptionsUnion
+     with StartStreamEncryptionExceptionsUnion {
+  @JSName("name")
+  var name_KMSThrottlingException: typingsSlinky.atAwsDashSdkClientDashKinesisDashBrowser.atAwsDashSdkClientDashKinesisDashBrowserStrings.KMSThrottlingException = js.native
+}
+

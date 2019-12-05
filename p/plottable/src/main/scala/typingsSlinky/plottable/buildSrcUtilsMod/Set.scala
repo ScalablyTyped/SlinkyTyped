@@ -1,0 +1,11 @@
+package typingsSlinky.plottable.buildSrcUtilsMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("plottable/build/src/utils", "Set")
+@js.native
+class Set[T] ()
+  extends typingsSlinky.plottable.buildSrcUtilsSetMod.Set[T]
+

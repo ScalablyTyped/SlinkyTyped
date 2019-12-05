@@ -1,0 +1,14 @@
+package typingsSlinky.vexflow.vexflowMod.Flow
+
+import typingsSlinky.vexflow.Anon_BpmDots
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("vexflow", "Flow.StaveTempo")
+@js.native
+class StaveTempo protected ()
+  extends typingsSlinky.vexflow.Vex.Flow.StaveTempo {
+  def this(tempo: Anon_BpmDots, x: Double, shift_y: Double) = this()
+}
+

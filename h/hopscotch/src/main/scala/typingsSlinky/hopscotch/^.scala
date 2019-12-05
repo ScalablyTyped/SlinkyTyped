@@ -1,0 +1,12 @@
+package typingsSlinky.hopscotch
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobalScope
+@js.native
+object ^ extends js.Object {
+  var hopscotch: HopscotchStatic = js.native
+}
+

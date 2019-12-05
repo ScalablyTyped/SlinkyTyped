@@ -1,0 +1,22 @@
+package typingsSlinky.navermaps.naver.maps
+
+import org.scalajs.dom.raw.HTMLElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait DOMEventListener extends js.Object {
+  var eventName: String
+  var target: HTMLElement
+  def listener(): js.Any
+}
+
+object DOMEventListener {
+  @scala.inline
+  def apply(eventName: String, listener: () => js.Any, target: HTMLElement): DOMEventListener = {
+    val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], listener = js.Any.fromFunction0(listener), target = target.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[DOMEventListener]
+  }
+}
+

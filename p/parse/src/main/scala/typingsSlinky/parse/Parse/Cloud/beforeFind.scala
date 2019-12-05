@@ -1,0 +1,21 @@
+package typingsSlinky.parse.Parse.Cloud
+
+import typingsSlinky.parse.Parse.Object
+import typingsSlinky.parse.Parse.Query
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Parse.Cloud.beforeFind")
+@js.native
+object beforeFind extends js.Object {
+  def apply(arg1: js.Any): Unit = js.native
+  def apply(
+    arg1: js.Any,
+    func: js.Function1[
+      /* request */ BeforeFindRequest, 
+      (js.Promise[Query[Object[_]] | Unit]) | Query[Object[_]] | Unit
+    ]
+  ): Unit = js.native
+}
+

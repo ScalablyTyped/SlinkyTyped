@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesReplicaNotFoundExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateGlobalTableExceptionsUnionMod.UpdateGlobalTableExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ReplicaNotFoundException
+  extends ServiceException[_ReplicaNotFoundExceptionDetails]
+     with UpdateGlobalTableExceptionsUnion
+     with UpdateGlobalTableSettingsExceptionsUnion {
+  @JSName("name")
+  var name_ReplicaNotFoundException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.atAwsDashSdkClientDashDynamodbDashBrowserStrings.ReplicaNotFoundException = js.native
+}
+

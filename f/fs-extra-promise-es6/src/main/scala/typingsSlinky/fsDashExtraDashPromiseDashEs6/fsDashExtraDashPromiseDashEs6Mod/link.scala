@@ -1,0 +1,13 @@
+package typingsSlinky.fsDashExtraDashPromiseDashEs6.fsDashExtraDashPromiseDashEs6Mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("fs-extra-promise-es6", "link")
+@js.native
+object link extends js.Object {
+  def apply(srcpath: String, dstpath: String): Unit = js.native
+  def apply(srcpath: String, dstpath: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+}
+

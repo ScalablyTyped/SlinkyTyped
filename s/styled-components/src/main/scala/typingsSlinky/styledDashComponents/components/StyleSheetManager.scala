@@ -18,14 +18,14 @@ object StyleSheetManager
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def Anon_Sheet(sheet: ServerStyleSheet, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] = {
+  def Anon_Sheet(sheet: ServerStyleSheet, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] = {
     val __obj = js.Dynamic.literal(sheet = sheet.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def Anon_Target(target: HTMLElement, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] = {
+  def Anon_Target(target: HTMLElement, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.styledDashComponents.macroMod.StyleSheetManager] = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = StyleSheetManagerProps

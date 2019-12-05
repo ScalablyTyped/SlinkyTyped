@@ -1,0 +1,12 @@
+package typingsSlinky.dojo
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dojo.dojox.data.GoogleSearchStore.Search
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("dojox/data/GoogleSearchStore.Search", JSImport.Namespace)
+@js.native
+object dojoxDataGoogleSearchStoreDotSearchMod extends TopLevel[Search]
+

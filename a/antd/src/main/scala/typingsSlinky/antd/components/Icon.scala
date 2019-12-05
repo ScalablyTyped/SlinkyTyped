@@ -32,7 +32,7 @@ object Icon
     title: String = null,
     twoToneColor: String = null,
     viewBox: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object Icon
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (twoToneColor != null) __obj.updateDynamic("twoToneColor")(twoToneColor.asInstanceOf[js.Any])
     if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = IconProps

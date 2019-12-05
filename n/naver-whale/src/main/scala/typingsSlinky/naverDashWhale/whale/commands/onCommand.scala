@@ -1,0 +1,12 @@
+package typingsSlinky.naverDashWhale.whale.commands
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("chrome.commands.onCommand")
+@js.native
+object onCommand
+  extends TopLevel[typingsSlinky.chrome.chrome.commands.CommandEvent]
+

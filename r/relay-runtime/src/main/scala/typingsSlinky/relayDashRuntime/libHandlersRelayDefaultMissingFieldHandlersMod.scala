@@ -1,0 +1,13 @@
+package typingsSlinky.relayDashRuntime
+
+import typingsSlinky.relayDashRuntime.libStoreRelayStoreTypesMod.MissingFieldHandler
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("relay-runtime/lib/handlers/RelayDefaultMissingFieldHandlers", JSImport.Namespace)
+@js.native
+object libHandlersRelayDefaultMissingFieldHandlersMod extends js.Object {
+  val default: js.Array[MissingFieldHandler] = js.native
+}
+

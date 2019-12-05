@@ -28,7 +28,7 @@ object RadioButtonGroup
     onChange: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
     style: CSSProperties = null,
     valueSelected: js.Any = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (defaultSelected != null) __obj.updateDynamic("defaultSelected")(defaultSelected.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object RadioButtonGroup
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (valueSelected != null) __obj.updateDynamic("valueSelected")(valueSelected.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RadioButtonGroupProps

@@ -1,0 +1,25 @@
+package typingsSlinky.reactDashNativeDashCalendars
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object reactDashNativeDashCalendarsMod {
+  import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.reactDashNative.reactDashNativeMod.TextStyle
+  import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
+
+  type AgendaItemsMap[TItem] = StringDictionary[js.Array[TItem]]
+  /* Rewritten from type alias, can be one of: 
+    - typings.reactDashNativeDashCalendars.reactDashNativeDashCalendarsMod.MultiDotMarkingProps
+    - typings.reactDashNativeDashCalendars.reactDashNativeDashCalendarsMod.DotMarkingProps
+    - typings.reactDashNativeDashCalendars.reactDashNativeDashCalendarsMod.PeriodMarkingProps
+    - typings.reactDashNativeDashCalendars.reactDashNativeDashCalendarsMod.MultiPeriodMarkingProps
+    - typings.reactDashNativeDashCalendars.reactDashNativeDashCalendarsMod.CustomMarkingProps
+    - js.Object
+  */
+  type CalendarMarkingProps = _CalendarMarkingProps | js.Object
+  type CalendarThemeIdStyle = StringDictionary[ViewStyle | TextStyle]
+  type DateCallbackHandler = js.Function1[/* date */ DateObject, Unit]
+  type TCalendarDate = js.Date | DateObject | Double | String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XDate */ js.Any)
+}

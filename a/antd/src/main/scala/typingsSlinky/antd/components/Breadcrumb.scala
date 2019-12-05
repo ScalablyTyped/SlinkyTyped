@@ -28,7 +28,7 @@ object Breadcrumb
     routes: js.Array[Route] = null,
     separator: TagMod[Any] = null,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (itemRender != null) __obj.updateDynamic("itemRender")(js.Any.fromFunction4(itemRender))
@@ -37,7 +37,7 @@ object Breadcrumb
     if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
     if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = BreadcrumbProps

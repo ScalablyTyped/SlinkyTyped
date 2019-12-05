@@ -180,7 +180,7 @@ object Grid
     xl: Boolean | GridSize = null,
     xs: Boolean | GridSize = null,
     zeroMinWidth: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
@@ -282,7 +282,7 @@ object Grid
     if (xl != null) __obj.updateDynamic("xl")(xl.asInstanceOf[js.Any])
     if (xs != null) __obj.updateDynamic("xs")(xs.asInstanceOf[js.Any])
     if (!js.isUndefined(zeroMinWidth)) __obj.updateDynamic("zeroMinWidth")(zeroMinWidth.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = GridProps

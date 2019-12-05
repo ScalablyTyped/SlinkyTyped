@@ -1,0 +1,20 @@
+package typingsSlinky.atJupyterlabUiDashComponents
+
+import org.scalajs.dom.raw.HTMLElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_ContainerHTMLElement extends js.Object {
+  var container: HTMLElement
+}
+
+object Anon_ContainerHTMLElement {
+  @scala.inline
+  def apply(container: HTMLElement): Anon_ContainerHTMLElement = {
+    val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_ContainerHTMLElement]
+  }
+}
+

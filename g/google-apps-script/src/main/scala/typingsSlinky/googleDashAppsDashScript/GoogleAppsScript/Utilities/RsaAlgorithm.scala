@@ -1,0 +1,31 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait RsaAlgorithm extends js.Object
+
+/**
+  * Selector of RSA algorithm
+  */
+@JSGlobal("GoogleAppsScript.Utilities.RsaAlgorithm")
+@js.native
+object RsaAlgorithm extends js.Object {
+  @js.native
+  sealed trait RSA_SHA_1
+    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.RsaAlgorithm
+  
+  @js.native
+  sealed trait RSA_SHA_256
+    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.RsaAlgorithm
+  
+  /* 0 */ val RSA_SHA_1: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.RsaAlgorithm.RSA_SHA_1 with Double = js.native
+  /* 1 */ val RSA_SHA_256: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.RsaAlgorithm.RSA_SHA_256 with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[
+    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.RsaAlgorithm with Double
+  ] = js.native
+}
+

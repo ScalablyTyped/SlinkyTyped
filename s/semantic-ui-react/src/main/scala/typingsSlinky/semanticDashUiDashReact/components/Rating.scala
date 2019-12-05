@@ -38,7 +38,7 @@ object Rating
     onRate: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ RatingProps) => Unit = null,
     rating: Double | String = null,
     size: mini | tiny | small | large | huge | massive = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
@@ -49,7 +49,7 @@ object Rating
     if (onRate != null) __obj.updateDynamic("onRate")(js.Any.fromFunction2(onRate))
     if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = RatingProps

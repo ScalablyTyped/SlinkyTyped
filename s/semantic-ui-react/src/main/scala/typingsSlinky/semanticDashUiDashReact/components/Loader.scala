@@ -28,7 +28,7 @@ object Loader
     `inline`: Boolean | centered = null,
     inverted: js.UndefOr[Boolean] = js.undefined,
     size: SemanticSIZES = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -38,7 +38,7 @@ object Loader
     if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = LoaderProps

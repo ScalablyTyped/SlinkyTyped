@@ -1,0 +1,22 @@
+package typingsSlinky.atNivoLine.atNivoLineMod
+
+import typingsSlinky.atNivoLine.Anon_Data
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait LineSliceData extends js.Object {
+  var data: js.Array[Anon_Data]
+  var id: LineValue
+  var x: Double
+}
+
+object LineSliceData {
+  @scala.inline
+  def apply(data: js.Array[Anon_Data], id: LineValue, x: Double): LineSliceData = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[LineSliceData]
+  }
+}
+

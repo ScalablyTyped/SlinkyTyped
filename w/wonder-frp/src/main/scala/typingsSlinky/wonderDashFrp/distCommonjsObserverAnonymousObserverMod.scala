@@ -1,0 +1,22 @@
+package typingsSlinky.wonderDashFrp
+
+import typingsSlinky.wonderDashFrp.distCommonjsCoreObserverMod.Observer
+import typingsSlinky.wonderDashFrp.distCommonjsObserverAnonymousObserverMod.AnonymousObserver
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("wonder-frp/dist/commonjs/observer/AnonymousObserver", JSImport.Namespace)
+@js.native
+object distCommonjsObserverAnonymousObserverMod extends js.Object {
+  @js.native
+  class AnonymousObserver () extends Observer
+  
+  /* static members */
+  @js.native
+  object AnonymousObserver extends js.Object {
+    def create(onNext: js.Function, onError: js.Function, onCompleted: js.Function): AnonymousObserver = js.native
+  }
+  
+}
+

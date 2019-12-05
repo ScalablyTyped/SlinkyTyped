@@ -1,0 +1,44 @@
+package typingsSlinky.winrt.Windows.Storage.Pickers
+
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMap
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrt.Windows.Foundation.Collections.ValueSet
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.Windows.Storage.StorageFile
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait IFileSavePicker extends js.Object {
+  var commitButtonText: String
+  var continuationData: ValueSet
+  var defaultFileExtension: String
+  var fileTypeChoices: IMap[String, IVector[String]]
+  var settingsIdentifier: String
+  var suggestedFileName: String
+  var suggestedSaveFile: StorageFile
+  var suggestedStartLocation: PickerLocationId
+  def pickSaveFileAndContinue(): Unit
+  def pickSaveFileAsync(): IAsyncOperation[StorageFile]
+}
+
+object IFileSavePicker {
+  @scala.inline
+  def apply(
+    commitButtonText: String,
+    continuationData: ValueSet,
+    defaultFileExtension: String,
+    fileTypeChoices: IMap[String, IVector[String]],
+    pickSaveFileAndContinue: () => Unit,
+    pickSaveFileAsync: () => IAsyncOperation[StorageFile],
+    settingsIdentifier: String,
+    suggestedFileName: String,
+    suggestedSaveFile: StorageFile,
+    suggestedStartLocation: PickerLocationId
+  ): IFileSavePicker = {
+    val __obj = js.Dynamic.literal(commitButtonText = commitButtonText.asInstanceOf[js.Any], continuationData = continuationData.asInstanceOf[js.Any], defaultFileExtension = defaultFileExtension.asInstanceOf[js.Any], fileTypeChoices = fileTypeChoices.asInstanceOf[js.Any], pickSaveFileAndContinue = js.Any.fromFunction0(pickSaveFileAndContinue), pickSaveFileAsync = js.Any.fromFunction0(pickSaveFileAsync), settingsIdentifier = settingsIdentifier.asInstanceOf[js.Any], suggestedFileName = suggestedFileName.asInstanceOf[js.Any], suggestedSaveFile = suggestedSaveFile.asInstanceOf[js.Any], suggestedStartLocation = suggestedStartLocation.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[IFileSavePicker]
+  }
+}
+

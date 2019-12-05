@@ -1,0 +1,22 @@
+package typingsSlinky.jsrsasign
+
+import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.IntegerParam
+import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.StringParam
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Sn extends js.Object {
+  var sn: IntegerParam
+  var time: StringParam
+}
+
+object Anon_Sn {
+  @scala.inline
+  def apply(sn: IntegerParam, time: StringParam): Anon_Sn = {
+    val __obj = js.Dynamic.literal(sn = sn.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_Sn]
+  }
+}
+

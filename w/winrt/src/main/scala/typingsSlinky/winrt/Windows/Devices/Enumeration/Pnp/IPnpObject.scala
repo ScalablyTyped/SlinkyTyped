@@ -1,0 +1,28 @@
+package typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp
+
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait IPnpObject extends js.Object {
+  var id: String
+  var properties: IMapView[String, _]
+  var `type`: PnpObjectType
+  def update(updateInfo: PnpObjectUpdate): Unit
+}
+
+object IPnpObject {
+  @scala.inline
+  def apply(
+    id: String,
+    properties: IMapView[String, _],
+    `type`: PnpObjectType,
+    update: PnpObjectUpdate => Unit
+  ): IPnpObject = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], update = js.Any.fromFunction1(update))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IPnpObject]
+  }
+}
+

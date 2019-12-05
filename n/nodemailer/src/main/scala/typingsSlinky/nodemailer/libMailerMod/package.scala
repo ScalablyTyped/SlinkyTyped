@@ -1,0 +1,21 @@
+package typingsSlinky.nodemailer
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object libMailerMod {
+  import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.nodemailer.Anon_Comment
+  import typingsSlinky.nodemailer.Anon_KeyValue
+  import typingsSlinky.nodemailer.Anon_Prepared
+
+  type Headers = (StringDictionary[String | js.Array[String] | Anon_Prepared]) | js.Array[Anon_KeyValue]
+  type ListHeader = String | Anon_Comment
+  type ListHeaders = StringDictionary[ListHeader | (js.Array[js.Array[ListHeader] | ListHeader])]
+  type PluginFunction = js.Function2[
+    /* mail */ typingsSlinky.nodemailer.libMailerMailDashMessageMod.^, 
+    /* callback */ js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit], 
+    Unit
+  ]
+}

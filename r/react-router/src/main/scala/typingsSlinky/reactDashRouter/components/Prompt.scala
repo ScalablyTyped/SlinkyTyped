@@ -21,11 +21,11 @@ object Prompt
   def apply(
     message: String | (js.Function1[/* location */ Location[LocationState], String | Boolean]),
     when: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashRouter.reactDashRouterMod.Prompt] = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     if (!js.isUndefined(when)) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PromptProps

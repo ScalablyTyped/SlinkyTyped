@@ -1,0 +1,13 @@
+package typingsSlinky.dompurify.dompurifyMod
+
+import org.scalajs.dom.raw.Window
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait createDOMPurifyI extends DOMPurifyI {
+  def apply(): DOMPurifyI = js.native
+  def apply(window: Window): DOMPurifyI = js.native
+}
+

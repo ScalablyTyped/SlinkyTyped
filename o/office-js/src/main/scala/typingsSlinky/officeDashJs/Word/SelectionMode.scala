@@ -1,0 +1,31 @@
+package typingsSlinky.officeDashJs.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait SelectionMode extends js.Object
+
+/**
+  * [Api set: WordApi]
+  */
+@JSGlobal("Word.SelectionMode")
+@js.native
+object SelectionMode extends js.Object {
+  @js.native
+  sealed trait end extends SelectionMode
+  
+  @js.native
+  sealed trait select extends SelectionMode
+  
+  @js.native
+  sealed trait start extends SelectionMode
+  
+  /* "End" */ val end: typingsSlinky.officeDashJs.Word.SelectionMode.end with String = js.native
+  /* "Select" */ val select: typingsSlinky.officeDashJs.Word.SelectionMode.select with String = js.native
+  /* "Start" */ val start: typingsSlinky.officeDashJs.Word.SelectionMode.start with String = js.native
+  @JSBracketAccess
+  def apply(value: String): js.UndefOr[SelectionMode with String] = js.native
+}
+

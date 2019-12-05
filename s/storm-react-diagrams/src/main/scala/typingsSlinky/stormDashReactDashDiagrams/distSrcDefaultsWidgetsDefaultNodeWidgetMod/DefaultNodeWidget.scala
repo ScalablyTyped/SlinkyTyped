@@ -1,0 +1,15 @@
+package typingsSlinky.stormDashReactDashDiagrams.distSrcDefaultsWidgetsDefaultNodeWidgetMod
+
+import typingsSlinky.react.reactMod._Global_.JSX.Element
+import typingsSlinky.stormDashReactDashDiagrams.distSrcWidgetsBaseWidgetMod.BaseWidget
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("storm-react-diagrams/dist/src/defaults/widgets/DefaultNodeWidget", "DefaultNodeWidget")
+@js.native
+class DefaultNodeWidget protected () extends BaseWidget[DefaultNodeProps, DefaultNodeState] {
+  def this(props: DefaultNodeProps) = this()
+  def generatePort(port: js.Any): Element = js.native
+}
+

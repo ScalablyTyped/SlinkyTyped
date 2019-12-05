@@ -1,0 +1,21 @@
+package typingsSlinky.atom
+
+import typingsSlinky.atom.atomMod.FileEncoding
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_NewValueOldValueFileEncoding extends js.Object {
+  var newValue: FileEncoding
+  var oldValue: js.UndefOr[FileEncoding] = js.undefined
+}
+
+object Anon_NewValueOldValueFileEncoding {
+  @scala.inline
+  def apply(newValue: FileEncoding, oldValue: FileEncoding = null): Anon_NewValueOldValueFileEncoding = {
+    val __obj = js.Dynamic.literal(newValue = newValue.asInstanceOf[js.Any])
+    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_NewValueOldValueFileEncoding]
+  }
+}
+

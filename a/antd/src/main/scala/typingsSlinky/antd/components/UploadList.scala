@@ -35,7 +35,7 @@ object UploadList
     showDownloadIcon: js.UndefOr[Boolean] = js.undefined,
     showPreviewIcon: js.UndefOr[Boolean] = js.undefined,
     showRemoveIcon: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
     if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
@@ -49,7 +49,7 @@ object UploadList
     if (!js.isUndefined(showDownloadIcon)) __obj.updateDynamic("showDownloadIcon")(showDownloadIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(showPreviewIcon)) __obj.updateDynamic("showPreviewIcon")(showPreviewIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(showRemoveIcon)) __obj.updateDynamic("showRemoveIcon")(showRemoveIcon.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = UploadListProps

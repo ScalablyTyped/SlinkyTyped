@@ -1,0 +1,28 @@
+package typingsSlinky.grommet.components
+
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.grommet.componentsTabMod.TabProps
+import typingsSlinky.grommet.grommetStrings.title
+import typingsSlinky.grommet.utilsMod.Omit
+import typingsSlinky.react.reactMod.ButtonHTMLAttributes
+import typingsSlinky.react.reactMod.DetailedHTMLProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(<intersection>))) was not a @ScalaJSDefined trait */
+object Tab
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.grommetMod.Tab] {
+  @JSImport("grommet", "Tab")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  type Props = TabProps with (Omit[
+    DetailedHTMLProps[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement], 
+    title
+  ])
+}
+

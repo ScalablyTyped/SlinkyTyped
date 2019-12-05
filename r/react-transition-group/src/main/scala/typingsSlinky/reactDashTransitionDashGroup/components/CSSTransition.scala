@@ -36,7 +36,7 @@ object CSSTransition
     onExited: /* node */ HTMLElement => Unit = null,
     onExiting: /* node */ HTMLElement => Unit = null,
     unmountOnExit: js.UndefOr[Boolean] = js.undefined,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
     if (addEndListener != null) __obj.updateDynamic("addEndListener")(js.Any.fromFunction2(addEndListener))
@@ -53,7 +53,7 @@ object CSSTransition
     if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
     if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
     if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = CSSTransitionProps

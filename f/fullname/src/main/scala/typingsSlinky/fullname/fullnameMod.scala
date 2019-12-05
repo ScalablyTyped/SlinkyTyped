@@ -1,0 +1,12 @@
+package typingsSlinky.fullname
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("fullname", JSImport.Namespace)
+@js.native
+object fullnameMod extends js.Object {
+  def apply(): js.Promise[String] = js.native
+}
+

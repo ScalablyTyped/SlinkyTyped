@@ -1,0 +1,12 @@
+package typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscoreGrpcUnderscorePbMod
+
+import typingsSlinky.grpc.grpcMod.MethodDefinition
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.GetBlockRequest
+import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.GetBlockResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IMempoolService_IGetBlock extends MethodDefinition[GetBlockRequest, GetBlockResponse]
+

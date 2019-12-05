@@ -17,10 +17,10 @@ object Global
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply[Theme](styles: InterpolationWithTheme[Theme] = null, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+  def apply[Theme](styles: InterpolationWithTheme[Theme] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
   }
   type Props = GlobalProps[js.Any]

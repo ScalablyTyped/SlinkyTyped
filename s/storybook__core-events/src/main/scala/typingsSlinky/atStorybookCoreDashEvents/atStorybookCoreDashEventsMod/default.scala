@@ -1,0 +1,33 @@
+package typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@storybook/core-events", JSImport.Default)
+@js.native
+object default extends js.Object {
+  /* "channelCreated" */ val CHANNEL_CREATED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.CHANNEL_CREATED with String = js.native
+  /* "docsRendered" */ val DOCS_RENDERED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.DOCS_RENDERED with String = js.native
+  /* "forceReRender" */ val FORCE_RE_RENDER: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.FORCE_RE_RENDER with String = js.native
+  /* "getCurrentStory" */ val GET_CURRENT_STORY: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.GET_CURRENT_STORY with String = js.native
+  /* "getStories" */ val GET_STORIES: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.GET_STORIES with String = js.native
+  /* "previewKeydown" */ val PREVIEW_KEYDOWN: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.PREVIEW_KEYDOWN with String = js.native
+  /* "registerSubscription" */ val REGISTER_SUBSCRIPTION: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.REGISTER_SUBSCRIPTION with String = js.native
+  /* "selectStory" */ val SELECT_STORY: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.SELECT_STORY with String = js.native
+  /* "setCurrentStory" */ val SET_CURRENT_STORY: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.SET_CURRENT_STORY with String = js.native
+  /* "setStories" */ val SET_STORIES: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.SET_STORIES with String = js.native
+  /* "storiesConfigured" */ val STORIES_CONFIGURED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORIES_CONFIGURED with String = js.native
+  /* "storyAdded" */ val STORY_ADDED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_ADDED with String = js.native
+  /* "storyChanged" */ val STORY_CHANGED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_CHANGED with String = js.native
+  /* "storyErrored" */ val STORY_ERRORED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_ERRORED with String = js.native
+  /* "storyInit" */ val STORY_INIT: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_INIT with String = js.native
+  /* "storyMissing" */ val STORY_MISSING: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_MISSING with String = js.native
+  /* "storyRender" */ val STORY_RENDER: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_RENDER with String = js.native
+  /* "storyRendered" */ val STORY_RENDERED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_RENDERED with String = js.native
+  /* "storyThrewException" */ val STORY_THREW_EXCEPTION: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_THREW_EXCEPTION with String = js.native
+  /* "storyUnchanged" */ val STORY_UNCHANGED: typingsSlinky.atStorybookCoreDashEvents.atStorybookCoreDashEventsMod.events.STORY_UNCHANGED with String = js.native
+  @JSBracketAccess
+  def apply(value: String): js.UndefOr[events with String] = js.native
+}
+

@@ -27,11 +27,11 @@ object DrawerView
     navigationConfig: DrawerOptionscontentComponentComponentTypeDrawerCo,
     screenProps: js.Any,
     `lazy`: Boolean,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], navigationConfig = navigationConfig.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any])
     __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = typingsSlinky.reactDashNavigationDashDrawer.libTypescriptSrcViewsDrawerViewMod.Props

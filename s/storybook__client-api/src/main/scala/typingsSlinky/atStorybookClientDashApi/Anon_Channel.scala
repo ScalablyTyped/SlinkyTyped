@@ -1,0 +1,28 @@
+package typingsSlinky.atStorybookClientDashApi
+
+import typingsSlinky.atStorybookChannels.atStorybookChannelsMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_Channel extends js.Object {
+  var channel: default | Null
+  var clientApi: typingsSlinky.atStorybookClientDashApi.distClientUnderscoreApiMod.default
+  var storyStore: typingsSlinky.atStorybookClientDashApi.distStoryUnderscoreStoreMod.default
+  def clearDecorators(): Unit
+}
+
+object Anon_Channel {
+  @scala.inline
+  def apply(
+    clearDecorators: () => Unit,
+    clientApi: typingsSlinky.atStorybookClientDashApi.distClientUnderscoreApiMod.default,
+    storyStore: typingsSlinky.atStorybookClientDashApi.distStoryUnderscoreStoreMod.default,
+    channel: default = null
+  ): Anon_Channel = {
+    val __obj = js.Dynamic.literal(clearDecorators = js.Any.fromFunction0(clearDecorators), clientApi = clientApi.asInstanceOf[js.Any], storyStore = storyStore.asInstanceOf[js.Any])
+    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Anon_Channel]
+  }
+}
+

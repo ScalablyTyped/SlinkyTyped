@@ -1,0 +1,53 @@
+package typingsSlinky.d3pie.d3pie
+
+import typingsSlinky.d3pie.Anon_CanvasHeight
+import typingsSlinky.d3pie.Anon_CanvasPadding
+import typingsSlinky.d3pie.Anon_Caption
+import typingsSlinky.d3pie.Anon_Content
+import typingsSlinky.d3pie.Anon_Context
+import typingsSlinky.d3pie.Anon_HighlightLuminosity
+import typingsSlinky.d3pie.Anon_Left
+import typingsSlinky.d3pie.Anon_Location
+import typingsSlinky.d3pie.Anon_OnClickSegment
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ID3PieOptions extends js.Object {
+  var callbacks: js.UndefOr[Anon_OnClickSegment] = js.undefined
+  var data: Anon_Content
+  var effects: js.UndefOr[Anon_HighlightLuminosity] = js.undefined
+  var footer: js.UndefOr[Anon_Left with ID3PieTextOptions] = js.undefined
+  var header: js.UndefOr[Anon_Location] = js.undefined
+  var labels: js.UndefOr[Anon_Context] = js.undefined
+  var misc: js.UndefOr[Anon_CanvasPadding] = js.undefined
+  var size: js.UndefOr[Anon_CanvasHeight] = js.undefined
+  var tooltips: js.UndefOr[Anon_Caption] = js.undefined
+}
+
+object ID3PieOptions {
+  @scala.inline
+  def apply(
+    data: Anon_Content,
+    callbacks: Anon_OnClickSegment = null,
+    effects: Anon_HighlightLuminosity = null,
+    footer: Anon_Left with ID3PieTextOptions = null,
+    header: Anon_Location = null,
+    labels: Anon_Context = null,
+    misc: Anon_CanvasPadding = null,
+    size: Anon_CanvasHeight = null,
+    tooltips: Anon_Caption = null
+  ): ID3PieOptions = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (callbacks != null) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
+    if (effects != null) __obj.updateDynamic("effects")(effects.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (misc != null) __obj.updateDynamic("misc")(misc.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (tooltips != null) __obj.updateDynamic("tooltips")(tooltips.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ID3PieOptions]
+  }
+}
+

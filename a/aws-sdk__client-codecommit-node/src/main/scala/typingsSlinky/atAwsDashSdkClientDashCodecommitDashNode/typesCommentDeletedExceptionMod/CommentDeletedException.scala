@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCommentDeletedExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDeleteCommentContentExceptionsUnionMod.DeleteCommentContentExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetCommentExceptionsUnionMod.GetCommentExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommentDeletedException
+  extends ServiceException[_CommentDeletedExceptionDetails]
+     with DeleteCommentContentExceptionsUnion
+     with GetCommentExceptionsUnion
+     with UpdateCommentExceptionsUnion {
+  @JSName("name")
+  var name_CommentDeletedException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.CommentDeletedException = js.native
+}
+

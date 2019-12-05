@@ -1,0 +1,13 @@
+package typingsSlinky.tsutils.utilUtilMod
+
+import typingsSlinky.typescript.typescriptMod.CompilerOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("tsutils/util/util", "isStrictCompilerOptionEnabled")
+@js.native
+object isStrictCompilerOptionEnabled extends js.Object {
+  def apply(options: CompilerOptions, option: StrictCompilerOption): Boolean = js.native
+}
+

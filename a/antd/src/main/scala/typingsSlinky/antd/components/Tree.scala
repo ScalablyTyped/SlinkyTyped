@@ -65,7 +65,7 @@ object Tree
     style: CSSProperties = null,
     switcherIcon: ReactElement = null,
     treeData: js.Array[TreeNodeNormal] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoExpandParent)) __obj.updateDynamic("autoExpandParent")(autoExpandParent.asInstanceOf[js.Any])
@@ -99,7 +99,7 @@ object Tree
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (switcherIcon != null) __obj.updateDynamic("switcherIcon")(switcherIcon.asInstanceOf[js.Any])
     if (treeData != null) __obj.updateDynamic("treeData")(treeData.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TreeProps

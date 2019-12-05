@@ -1,0 +1,32 @@
+package typingsSlinky.vscode.vscodeMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait OverviewRulerLane extends js.Object
+
+@JSImport("vscode", "OverviewRulerLane")
+@js.native
+object OverviewRulerLane extends js.Object {
+  @js.native
+  sealed trait Center extends OverviewRulerLane
+  
+  @js.native
+  sealed trait Full extends OverviewRulerLane
+  
+  @js.native
+  sealed trait Left extends OverviewRulerLane
+  
+  @js.native
+  sealed trait Right extends OverviewRulerLane
+  
+  /* 2 */ val Center: typingsSlinky.vscode.vscodeMod.OverviewRulerLane.Center with Double = js.native
+  /* 7 */ val Full: typingsSlinky.vscode.vscodeMod.OverviewRulerLane.Full with Double = js.native
+  /* 1 */ val Left: typingsSlinky.vscode.vscodeMod.OverviewRulerLane.Left with Double = js.native
+  /* 4 */ val Right: typingsSlinky.vscode.vscodeMod.OverviewRulerLane.Right with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[OverviewRulerLane with Double] = js.native
+}
+

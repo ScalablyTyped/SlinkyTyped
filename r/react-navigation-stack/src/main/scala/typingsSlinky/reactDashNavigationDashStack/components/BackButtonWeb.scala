@@ -15,9 +15,9 @@ object BackButtonWeb
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(tintColor: String, overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+  def apply(tintColor: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(tintColor = tintColor.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = typingsSlinky.reactDashNavigationDashStack.libTypescriptViewsHeaderBackButtonWebMod.Props

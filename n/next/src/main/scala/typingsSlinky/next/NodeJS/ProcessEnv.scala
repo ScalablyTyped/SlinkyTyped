@@ -1,0 +1,22 @@
+package typingsSlinky.next.NodeJS
+
+import typingsSlinky.next.nextStrings.development
+import typingsSlinky.next.nextStrings.production
+import typingsSlinky.next.nextStrings.test
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ProcessEnv extends js.Object {
+  val NODE_ENV: development | production | test
+}
+
+object ProcessEnv {
+  @scala.inline
+  def apply(NODE_ENV: development | production | test): ProcessEnv = {
+    val __obj = js.Dynamic.literal(NODE_ENV = NODE_ENV.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[ProcessEnv]
+  }
+}
+

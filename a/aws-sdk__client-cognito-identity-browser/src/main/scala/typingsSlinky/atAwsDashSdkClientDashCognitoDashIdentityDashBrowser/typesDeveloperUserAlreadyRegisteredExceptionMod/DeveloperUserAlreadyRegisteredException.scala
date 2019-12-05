@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.typesDeveloperUserAlreadyRegisteredExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.typesGetOpenIdTokenForDeveloperIdentityExceptionsUnionMod.GetOpenIdTokenForDeveloperIdentityExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DeveloperUserAlreadyRegisteredException
+  extends ServiceException[_DeveloperUserAlreadyRegisteredExceptionDetails]
+     with GetOpenIdTokenForDeveloperIdentityExceptionsUnion {
+  @JSName("name")
+  var name_DeveloperUserAlreadyRegisteredException: typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.atAwsDashSdkClientDashCognitoDashIdentityDashBrowserStrings.DeveloperUserAlreadyRegisteredException = js.native
+}
+

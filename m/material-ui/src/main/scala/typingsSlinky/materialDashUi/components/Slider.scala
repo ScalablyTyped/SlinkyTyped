@@ -38,7 +38,7 @@ object Slider
     step: Int | Double = null,
     style: CSSProperties = null,
     value: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
@@ -54,7 +54,7 @@ object Slider
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SliderProps

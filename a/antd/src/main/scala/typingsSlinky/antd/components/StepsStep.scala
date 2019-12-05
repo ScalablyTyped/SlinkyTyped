@@ -30,7 +30,7 @@ object StepsStep
     style: CSSProperties = null,
     subTitle: TagMod[Any] = null,
     title: TagMod[Any] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
@@ -39,7 +39,7 @@ object StepsStep
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = StepProps

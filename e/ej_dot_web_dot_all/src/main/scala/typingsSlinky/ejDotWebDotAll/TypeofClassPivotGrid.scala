@@ -1,0 +1,19 @@
+package typingsSlinky.ejDotWebDotAll
+
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.ejDotWebDotAll.ej.PivotGrid
+import typingsSlinky.ejDotWebDotAll.ej.PivotGrid.Model
+import typingsSlinky.std.Element
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofClassPivotGrid
+  extends Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, PivotGrid]
+     with Instantiable1[(/* element */ Element) | (/* element */ JQuery), PivotGrid] {
+  var Locale: js.Any = js.native
+  var fn: PivotGrid = js.native
+}
+

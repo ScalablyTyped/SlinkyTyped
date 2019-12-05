@@ -1,0 +1,22 @@
+package typingsSlinky.jsmediatags.typesMod
+
+import typingsSlinky.jsmediatags.Anon_Compression
+import typingsSlinky.jsmediatags.Anon_Filealterpreservation
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait TagFrameFlags extends js.Object {
+  var format: Anon_Compression
+  var message: Anon_Filealterpreservation
+}
+
+object TagFrameFlags {
+  @scala.inline
+  def apply(format: Anon_Compression, message: Anon_Filealterpreservation): TagFrameFlags = {
+    val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[TagFrameFlags]
+  }
+}
+

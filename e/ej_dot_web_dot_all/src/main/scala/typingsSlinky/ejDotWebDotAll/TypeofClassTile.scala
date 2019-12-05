@@ -1,0 +1,19 @@
+package typingsSlinky.ejDotWebDotAll
+
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.ejDotWebDotAll.ej.Tile
+import typingsSlinky.ejDotWebDotAll.ej.Tile.Model
+import typingsSlinky.std.Element
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofClassTile
+  extends Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, Tile]
+     with Instantiable1[(/* element */ Element) | (/* element */ JQuery), Tile] {
+  var Locale: js.Any = js.native
+  var fn: Tile = js.native
+}
+

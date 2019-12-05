@@ -187,7 +187,7 @@ object TextField
     unselectable: on | off = null,
     variant: standard = null,
     vocab: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (FormHelperTextProps != null) __obj.updateDynamic("FormHelperTextProps")(FormHelperTextProps.asInstanceOf[js.Any])
@@ -291,7 +291,7 @@ object TextField
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   /* The following DOM/SVG props were specified: autoComplete, autoComplete, autoFocus, autoFocus, className, className, contentEditable, contentEditable, dangerouslySetInnerHTML, dangerouslySetInnerHTML, defaultChecked, defaultChecked, defaultValue, defaultValue, dir, dir, disabled, disabled, draggable, draggable, hidden, hidden, id, id, lang, lang, manifest, manifest, name, name, onAbort, onAbort, onAnimationEnd, onAnimationEnd, onAnimationIteration, onAnimationIteration, onAnimationStart, onAnimationStart, onBlur, onBlur, onCanPlay, onCanPlay, onCanPlayThrough, onCanPlayThrough, onChange, onChange, onClick, onClick, onCompositionEnd, onCompositionEnd, onCompositionStart, onCompositionStart, onCompositionUpdate, onCompositionUpdate, onContextMenu, onContextMenu, onCopy, onCopy, onCut, onCut, onDoubleClick, onDoubleClick, onDrag, onDrag, onDragEnd, onDragEnd, onDragEnter, onDragEnter, onDragExit, onDragExit, onDragLeave, onDragLeave, onDragOver, onDragOver, onDragStart, onDragStart, onDrop, onDrop, onDurationChange, onDurationChange, onEmptied, onEmptied, onEncrypted, onEncrypted, onEnded, onEnded, onError, onError, onFocus, onFocus, onInput, onInput, onInvalid, onInvalid, onKeyDown, onKeyDown, onKeyPress, onKeyPress, onKeyUp, onKeyUp, onLoad, onLoad, onLoadStart, onLoadStart, onLoadedData, onLoadedData, onLoadedMetadata, onLoadedMetadata, onMouseDown, onMouseDown, onMouseEnter, onMouseEnter, onMouseLeave, onMouseLeave, onMouseMove, onMouseMove, onMouseOut, onMouseOut, onMouseOver, onMouseOver, onMouseUp, onMouseUp, onPaste, onPaste, onPause, onPause, onPlay, onPlay, onPlaying, onPlaying, onPointerCancel, onPointerCancel, onPointerDown, onPointerDown, onPointerEnter, onPointerEnter, onPointerLeave, onPointerLeave, onPointerMove, onPointerMove, onPointerOut, onPointerOut, onPointerOver, onPointerOver, onPointerUp, onPointerUp, onProgress, onProgress, onRateChange, onRateChange, onScroll, onScroll, onSeeked, onSeeked, onSeeking, onSeeking, onSelect, onSelect, onStalled, onStalled, onSubmit, onSubmit, onSuspend, onSuspend, onTimeUpdate, onTimeUpdate, onTouchCancel, onTouchCancel, onTouchEnd, onTouchEnd, onTouchMove, onTouchMove, onTouchStart, onTouchStart, onTransitionEnd, onTransitionEnd, onVolumeChange, onVolumeChange, onWaiting, onWaiting, onWheel, onWheel, placeholder, placeholder, required, required, spellCheck, spellCheck, suppressContentEditableWarning, suppressContentEditableWarning, tabIndex, tabIndex, type, type, value, value */
@@ -397,7 +397,7 @@ object TextField
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
     if (FormHelperTextProps != null) __obj.updateDynamic("FormHelperTextProps")(FormHelperTextProps.asInstanceOf[js.Any])
@@ -500,7 +500,7 @@ object TextField
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   /* The following DOM/SVG props were specified: autoComplete, autoComplete, autoComplete, autoFocus, autoFocus, autoFocus, className, className, className, contentEditable, contentEditable, contentEditable, dangerouslySetInnerHTML, dangerouslySetInnerHTML, dangerouslySetInnerHTML, defaultChecked, defaultChecked, defaultChecked, defaultValue, defaultValue, defaultValue, dir, dir, dir, disabled, disabled, disabled, draggable, draggable, draggable, hidden, hidden, hidden, id, id, id, lang, lang, lang, manifest, manifest, manifest, name, name, name, onAbort, onAbort, onAbort, onAnimationEnd, onAnimationEnd, onAnimationEnd, onAnimationIteration, onAnimationIteration, onAnimationIteration, onAnimationStart, onAnimationStart, onAnimationStart, onBlur, onBlur, onBlur, onCanPlay, onCanPlay, onCanPlay, onCanPlayThrough, onCanPlayThrough, onCanPlayThrough, onChange, onChange, onChange, onClick, onClick, onClick, onCompositionEnd, onCompositionEnd, onCompositionEnd, onCompositionStart, onCompositionStart, onCompositionStart, onCompositionUpdate, onCompositionUpdate, onCompositionUpdate, onContextMenu, onContextMenu, onContextMenu, onCopy, onCopy, onCopy, onCut, onCut, onCut, onDoubleClick, onDoubleClick, onDoubleClick, onDrag, onDrag, onDrag, onDragEnd, onDragEnd, onDragEnd, onDragEnter, onDragEnter, onDragEnter, onDragExit, onDragExit, onDragExit, onDragLeave, onDragLeave, onDragLeave, onDragOver, onDragOver, onDragOver, onDragStart, onDragStart, onDragStart, onDrop, onDrop, onDrop, onDurationChange, onDurationChange, onDurationChange, onEmptied, onEmptied, onEmptied, onEncrypted, onEncrypted, onEncrypted, onEnded, onEnded, onEnded, onError, onError, onError, onFocus, onFocus, onFocus, onInput, onInput, onInput, onInvalid, onInvalid, onInvalid, onKeyDown, onKeyDown, onKeyDown, onKeyPress, onKeyPress, onKeyPress, onKeyUp, onKeyUp, onKeyUp, onLoad, onLoad, onLoad, onLoadStart, onLoadStart, onLoadStart, onLoadedData, onLoadedData, onLoadedData, onLoadedMetadata, onLoadedMetadata, onLoadedMetadata, onMouseDown, onMouseDown, onMouseDown, onMouseEnter, onMouseEnter, onMouseEnter, onMouseLeave, onMouseLeave, onMouseLeave, onMouseMove, onMouseMove, onMouseMove, onMouseOut, onMouseOut, onMouseOut, onMouseOver, onMouseOver, onMouseOver, onMouseUp, onMouseUp, onMouseUp, onPaste, onPaste, onPaste, onPause, onPause, onPause, onPlay, onPlay, onPlay, onPlaying, onPlaying, onPlaying, onPointerCancel, onPointerCancel, onPointerCancel, onPointerDown, onPointerDown, onPointerDown, onPointerEnter, onPointerEnter, onPointerEnter, onPointerLeave, onPointerLeave, onPointerLeave, onPointerMove, onPointerMove, onPointerMove, onPointerOut, onPointerOut, onPointerOut, onPointerOver, onPointerOver, onPointerOver, onPointerUp, onPointerUp, onPointerUp, onProgress, onProgress, onProgress, onRateChange, onRateChange, onRateChange, onScroll, onScroll, onScroll, onSeeked, onSeeked, onSeeked, onSeeking, onSeeking, onSeeking, onSelect, onSelect, onSelect, onStalled, onStalled, onStalled, onSubmit, onSubmit, onSubmit, onSuspend, onSuspend, onSuspend, onTimeUpdate, onTimeUpdate, onTimeUpdate, onTouchCancel, onTouchCancel, onTouchCancel, onTouchEnd, onTouchEnd, onTouchEnd, onTouchMove, onTouchMove, onTouchMove, onTouchStart, onTouchStart, onTouchStart, onTransitionEnd, onTransitionEnd, onTransitionEnd, onVolumeChange, onVolumeChange, onVolumeChange, onWaiting, onWaiting, onWaiting, onWheel, onWheel, onWheel, placeholder, placeholder, placeholder, required, required, required, spellCheck, spellCheck, spellCheck, suppressContentEditableWarning, suppressContentEditableWarning, suppressContentEditableWarning, tabIndex, tabIndex, tabIndex, type, type, type, value, value, value */
@@ -606,7 +606,7 @@ object TextField
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
     if (FormHelperTextProps != null) __obj.updateDynamic("FormHelperTextProps")(FormHelperTextProps.asInstanceOf[js.Any])
@@ -709,7 +709,7 @@ object TextField
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TextFieldProps

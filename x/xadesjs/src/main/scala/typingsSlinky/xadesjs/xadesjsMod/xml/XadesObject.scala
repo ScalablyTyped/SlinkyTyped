@@ -1,0 +1,11 @@
+package typingsSlinky.xadesjs.xadesjsMod.xml
+
+import typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("xadesjs", "xml.XadesObject")
+@js.native
+abstract class XadesObject () extends XmlObject
+

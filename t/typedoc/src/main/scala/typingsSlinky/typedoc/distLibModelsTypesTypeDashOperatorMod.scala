@@ -1,0 +1,22 @@
+package typingsSlinky.typedoc
+
+import typingsSlinky.typedoc.distLibModelsTypesAbstractMod.Type
+import typingsSlinky.typedoc.distLibModelsTypesTypeDashOperatorMod.TypeOperatorType
+import typingsSlinky.typedoc.typedocStrings.keyof
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc/dist/lib/models/types/type-operator", JSImport.Namespace)
+@js.native
+object distLibModelsTypesTypeDashOperatorMod extends js.Object {
+  @js.native
+  class TypeOperatorType protected () extends Type {
+    def this(target: Type) = this()
+    val operator: keyof = js.native
+    var target: Type = js.native
+    def equals(`type`: TypeOperatorType): Boolean = js.native
+  }
+  
+}
+

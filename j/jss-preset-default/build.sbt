@@ -1,0 +1,19 @@
+organization := "org.scalablytyped.slinky"
+name := "jss-preset-default"
+version := "10.0.0-83e434"
+scalaVersion := "2.12.10"
+enablePlugins(ScalaJSPlugin)
+libraryDependencies ++= Seq(
+  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "me.shadaj" %%% "slinky-web" % "0.6.2",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
+  "org.scalablytyped.slinky" %%% "jss" % "10.0.0-a1afec",
+  "org.scalablytyped.slinky" %%% "jss-plugin-default-unit" % "10.0.0-f4dc06",
+  "org.scalablytyped.slinky" %%% "jss-plugin-rule-value-observable" % "10.0.0-df5a53",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+publishArtifact in packageDoc := false
+scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+bintrayRepository := "SlinkyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+        

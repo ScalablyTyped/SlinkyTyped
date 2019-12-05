@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesInvalidCommentIdExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDeleteCommentContentExceptionsUnionMod.DeleteCommentContentExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetCommentExceptionsUnionMod.GetCommentExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesPostCommentReplyExceptionsUnionMod.PostCommentReplyExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidCommentIdException
+  extends ServiceException[_InvalidCommentIdExceptionDetails]
+     with DeleteCommentContentExceptionsUnion
+     with GetCommentExceptionsUnion
+     with PostCommentReplyExceptionsUnion
+     with UpdateCommentExceptionsUnion {
+  @JSName("name")
+  var name_InvalidCommentIdException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.InvalidCommentIdException = js.native
+}
+

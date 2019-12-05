@@ -1,0 +1,38 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait LineCategory extends js.Object
+
+/**
+  * The line category.
+  *
+  * The exact LineType created is determined based on the category and how it's routed to
+  * connect to other page elements.
+  */
+@JSGlobal("GoogleAppsScript.Slides.LineCategory")
+@js.native
+object LineCategory extends js.Object {
+  @js.native
+  sealed trait BENT extends LineCategory
+  
+  @js.native
+  sealed trait CURVED extends LineCategory
+  
+  @js.native
+  sealed trait STRAIGHT extends LineCategory
+  
+  @js.native
+  sealed trait UNSUPPORTED extends LineCategory
+  
+  /* 2 */ val BENT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LineCategory.BENT with Double = js.native
+  /* 3 */ val CURVED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LineCategory.CURVED with Double = js.native
+  /* 1 */ val STRAIGHT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LineCategory.STRAIGHT with Double = js.native
+  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LineCategory.UNSUPPORTED with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[LineCategory with Double] = js.native
+}
+

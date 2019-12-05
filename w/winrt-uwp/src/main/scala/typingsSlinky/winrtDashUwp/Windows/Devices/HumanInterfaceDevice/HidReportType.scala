@@ -1,0 +1,32 @@
+package typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait HidReportType extends js.Object
+
+/** Specifies a HID report type. */
+@JSGlobal("Windows.Devices.HumanInterfaceDevice.HidReportType")
+@js.native
+object HidReportType extends js.Object {
+  /** The report is a feature report. */
+  @js.native
+  sealed trait feature extends HidReportType
+  
+  /** The report is an input report. */
+  @js.native
+  sealed trait input extends HidReportType
+  
+  /** The report is an output report. */
+  @js.native
+  sealed trait output extends HidReportType
+  
+  /* 2 */ val feature: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidReportType.feature with Double = js.native
+  /* 0 */ val input: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidReportType.input with Double = js.native
+  /* 1 */ val output: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidReportType.output with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[HidReportType with Double] = js.native
+}
+

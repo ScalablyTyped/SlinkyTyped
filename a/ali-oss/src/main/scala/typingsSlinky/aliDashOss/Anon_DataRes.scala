@@ -1,0 +1,22 @@
+package typingsSlinky.aliDashOss
+
+import typingsSlinky.aliDashOss.aliDashOssMod.NormalSuccessResponse
+import typingsSlinky.aliDashOss.aliDashOssMod.StyleData
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_DataRes extends js.Object {
+  var data: StyleData
+  var res: NormalSuccessResponse
+}
+
+object Anon_DataRes {
+  @scala.inline
+  def apply(data: StyleData, res: NormalSuccessResponse): Anon_DataRes = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], res = res.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_DataRes]
+  }
+}
+

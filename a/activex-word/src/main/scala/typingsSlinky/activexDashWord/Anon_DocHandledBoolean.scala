@@ -1,0 +1,21 @@
+package typingsSlinky.activexDashWord
+
+import typingsSlinky.activexDashWord.Word.Document
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_DocHandledBoolean extends js.Object {
+  val Doc: Document
+  var Handled: Boolean
+}
+
+object Anon_DocHandledBoolean {
+  @scala.inline
+  def apply(Doc: Document, Handled: Boolean): Anon_DocHandledBoolean = {
+    val __obj = js.Dynamic.literal(Doc = Doc.asInstanceOf[js.Any], Handled = Handled.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_DocHandledBoolean]
+  }
+}
+

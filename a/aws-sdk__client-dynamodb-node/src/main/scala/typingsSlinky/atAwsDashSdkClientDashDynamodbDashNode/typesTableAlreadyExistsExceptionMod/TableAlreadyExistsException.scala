@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesTableAlreadyExistsExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesRestoreTableFromBackupExceptionsUnionMod.RestoreTableFromBackupExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesRestoreTableToPointInTimeExceptionsUnionMod.RestoreTableToPointInTimeExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TableAlreadyExistsException
+  extends ServiceException[_TableAlreadyExistsExceptionDetails]
+     with RestoreTableFromBackupExceptionsUnion
+     with RestoreTableToPointInTimeExceptionsUnion {
+  @JSName("name")
+  var name_TableAlreadyExistsException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.atAwsDashSdkClientDashDynamodbDashNodeStrings.TableAlreadyExistsException = js.native
+}
+

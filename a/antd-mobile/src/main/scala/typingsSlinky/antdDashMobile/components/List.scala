@@ -1,0 +1,42 @@
+package typingsSlinky.antdDashMobile.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.web.html.`*`.tag
+import typingsSlinky.antdDashMobile.libListMod.ListProps
+import typingsSlinky.antdDashMobile.libListMod.default
+import typingsSlinky.react.reactMod.CSSProperties
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object List
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  @JSImport("antd-mobile/lib/list", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    prefixCls: String = null,
+    renderFooter: js.Function0[TagMod[Any]] | TagMod[Any] = null,
+    renderHeader: js.Function0[TagMod[Any]] | TagMod[Any] = null,
+    role: String = null,
+    style: CSSProperties = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (renderFooter != null) __obj.updateDynamic("renderFooter")(renderFooter.asInstanceOf[js.Any])
+    if (renderHeader != null) __obj.updateDynamic("renderHeader")(renderHeader.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = ListProps
+}
+

@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "bowser" : "2.7.0"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "bowser" : "2.7.0"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

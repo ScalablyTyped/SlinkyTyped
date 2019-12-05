@@ -1,0 +1,16 @@
+package typingsSlinky.nodeDashMysqlDashWrapper.nodeDashMysqlDashWrapperMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("node-mysql-wrapper", "DeleteQuery")
+@js.native
+class DeleteQuery[T] protected () extends IQuery[T] {
+  def this(_table: Table[T]) = this()
+  def execute(criteriaOrID: String): typingsSlinky.bluebird.bluebirdMod.^[DeleteAnswer] = js.native
+  def execute(criteriaOrID: String, callback: js.Function1[/* _result */ DeleteAnswer, _]): typingsSlinky.bluebird.bluebirdMod.^[DeleteAnswer] = js.native
+  def execute(criteriaOrID: Double): typingsSlinky.bluebird.bluebirdMod.^[DeleteAnswer] = js.native
+  def execute(criteriaOrID: Double, callback: js.Function1[/* _result */ DeleteAnswer, _]): typingsSlinky.bluebird.bluebirdMod.^[DeleteAnswer] = js.native
+}
+

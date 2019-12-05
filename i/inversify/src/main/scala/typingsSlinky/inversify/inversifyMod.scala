@@ -1,0 +1,125 @@
+package typingsSlinky.inversify
+
+import typingsSlinky.inversify.dtsAnnotationInjectMod.ServiceIdentifierOrFunc
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Abstract
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.AsyncContainerModuleCallBack
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.ConstraintFunction
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.ContainerModuleCallBack
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.ContainerOptions
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Newable
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Request
+import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.ServiceIdentifier
+import typingsSlinky.inversify.inversifyStrings.`design:paramtypes`
+import typingsSlinky.inversify.inversifyStrings.`inversify:paramtypes`
+import typingsSlinky.inversify.inversifyStrings.`inversify:tagged_props`
+import typingsSlinky.inversify.inversifyStrings.`inversify:tagged`
+import typingsSlinky.inversify.inversifyStrings.inject
+import typingsSlinky.inversify.inversifyStrings.multi_inject
+import typingsSlinky.inversify.inversifyStrings.name
+import typingsSlinky.inversify.inversifyStrings.named
+import typingsSlinky.inversify.inversifyStrings.optional
+import typingsSlinky.inversify.inversifyStrings.post_construct
+import typingsSlinky.inversify.inversifyStrings.unmanaged
+import typingsSlinky.std.ClassDecorator
+import typingsSlinky.std.MethodDecorator
+import typingsSlinky.std.ParameterDecorator
+import typingsSlinky.std.PropertyKey
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("inversify", JSImport.Namespace)
+@js.native
+object inversifyMod extends js.Object {
+  @js.native
+  class AsyncContainerModule protected ()
+    extends typingsSlinky.inversify.dtsContainerContainerUnderscoreModuleMod.AsyncContainerModule {
+    def this(registry: AsyncContainerModuleCallBack) = this()
+  }
+  
+  @js.native
+  class Container ()
+    extends typingsSlinky.inversify.dtsContainerContainerMod.Container {
+    def this(containerOptions: ContainerOptions) = this()
+  }
+  
+  @js.native
+  class ContainerModule protected ()
+    extends typingsSlinky.inversify.dtsContainerContainerUnderscoreModuleMod.ContainerModule {
+    def this(registry: ContainerModuleCallBack) = this()
+  }
+  
+  @js.native
+  class LazyServiceIdentifer[T] protected ()
+    extends typingsSlinky.inversify.dtsAnnotationInjectMod.LazyServiceIdentifer[T] {
+    def this(cb: js.Function0[ServiceIdentifier[T]]) = this()
+  }
+  
+  @js.native
+  class MetadataReader ()
+    extends typingsSlinky.inversify.dtsPlanningMetadataUnderscoreReaderMod.MetadataReader
+  
+  val BindingScopeEnum: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.BindingScopeEnum = js.native
+  val BindingTypeEnum: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.BindingTypeEnum = js.native
+  val TargetTypeEnum: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.TargetTypeEnum = js.native
+  def decorate(decorator: MethodDecorator | ParameterDecorator, target: js.Any): Unit = js.native
+  def decorate(decorator: MethodDecorator | ParameterDecorator, target: js.Any, parameterIndex: String): Unit = js.native
+  def decorate(decorator: MethodDecorator | ParameterDecorator, target: js.Any, parameterIndex: Double): Unit = js.native
+  def decorate(decorator: ClassDecorator, target: js.Any): Unit = js.native
+  def decorate(decorator: ClassDecorator, target: js.Any, parameterIndex: String): Unit = js.native
+  def decorate(decorator: ClassDecorator, target: js.Any, parameterIndex: Double): Unit = js.native
+  def getServiceIdentifierAsString(serviceIdentifier: ServiceIdentifier[_]): String = js.native
+  def id(): Double = js.native
+  def inject(serviceIdentifier: ServiceIdentifierOrFunc): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def injectable(): js.Function1[/* target */ js.Any, _] = js.native
+  def multiBindToService(container: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Container): js.Function1[
+    /* service */ String | js.Symbol | Newable[_] | Abstract[_], 
+    js.Function1[/* repeated */ String | js.Symbol | Newable[_] | Abstract[_], Unit]
+  ] = js.native
+  def multiInject(serviceIdentifier: ServiceIdentifier[_]): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def named(name: String): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def named(name: js.Symbol): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def named(name: Double): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def namedConstraint(value: js.Any): ConstraintFunction = js.native
+  def optional(): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def postConstruct(): js.Function3[
+    /* target */ js.Any, 
+    /* propertyKey */ String, 
+    /* descriptor */ js.PropertyDescriptor, 
+    Unit
+  ] = js.native
+  def tagged(metadataKey: String, metadataValue: js.Any): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def tagged(metadataKey: js.Symbol, metadataValue: js.Any): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def tagged(metadataKey: Double, metadataValue: js.Any): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ js.UndefOr[Double], Unit] = js.native
+  def taggedConstraint(key: PropertyKey): js.Function1[/* value */ js.Any, ConstraintFunction] = js.native
+  def targetName(name: String): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ Double, Unit] = js.native
+  def traverseAncerstors(request: Request, constraint: ConstraintFunction): Boolean = js.native
+  def typeConstraint(`type`: String): js.Function1[/* request */ Request | Null, Boolean] = js.native
+  def typeConstraint(`type`: js.Function): js.Function1[/* request */ Request | Null, Boolean] = js.native
+  def unmanaged(): js.Function3[/* target */ js.Any, /* targetKey */ String, /* index */ Double, Unit] = js.native
+  /* static members */
+  @js.native
+  object Container extends js.Object {
+    def merge(
+      container1: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Container,
+      container2: typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Container
+    ): typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Container = js.native
+  }
+  
+  @js.native
+  object METADATA_KEY extends js.Object {
+    val DESIGN_PARAM_TYPES: `design:paramtypes` = js.native
+    val INJECT_TAG: inject = js.native
+    val MULTI_INJECT_TAG: multi_inject = js.native
+    val NAMED_TAG: named = js.native
+    val NAME_TAG: name = js.native
+    val OPTIONAL_TAG: optional = js.native
+    val PARAM_TYPES: `inversify:paramtypes` = js.native
+    val POST_CONSTRUCT: post_construct = js.native
+    val TAGGED: `inversify:tagged` = js.native
+    val TAGGED_PROP: `inversify:tagged_props` = js.native
+    val UNMANAGED_TAG: unmanaged = js.native
+  }
+  
+}
+

@@ -1,0 +1,27 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait CurveStyle extends js.Object
+
+/**
+  * An enumeration of the styles for curves in a chart.
+  */
+@JSGlobal("GoogleAppsScript.Charts.CurveStyle")
+@js.native
+object CurveStyle extends js.Object {
+  @js.native
+  sealed trait NORMAL extends CurveStyle
+  
+  @js.native
+  sealed trait SMOOTH extends CurveStyle
+  
+  /* 0 */ val NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.CurveStyle.NORMAL with Double = js.native
+  /* 1 */ val SMOOTH: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.CurveStyle.SMOOTH with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[CurveStyle with Double] = js.native
+}
+

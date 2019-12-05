@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "mobile-detect" : "1.4.4"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "mobile-detect" : "1.4.4"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

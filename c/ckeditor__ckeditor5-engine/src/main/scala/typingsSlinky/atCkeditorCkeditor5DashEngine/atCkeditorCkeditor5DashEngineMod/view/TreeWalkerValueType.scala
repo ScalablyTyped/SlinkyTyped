@@ -1,0 +1,24 @@
+package typingsSlinky.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineMod.view
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typings.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.elementStart
+  - typings.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.elementEnd
+  - typings.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.text
+*/
+trait TreeWalkerValueType extends js.Object
+
+object TreeWalkerValueType {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def elementEnd: typingsSlinky.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.elementEnd = this.cast("elementEnd")
+  @scala.inline
+  def elementStart: typingsSlinky.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.elementStart = this.cast("elementStart")
+  @scala.inline
+  def text: typingsSlinky.atCkeditorCkeditor5DashEngine.atCkeditorCkeditor5DashEngineStrings.text = this.cast("text")
+}
+

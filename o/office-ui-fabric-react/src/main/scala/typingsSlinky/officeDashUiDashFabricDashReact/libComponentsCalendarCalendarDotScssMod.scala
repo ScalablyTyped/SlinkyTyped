@@ -1,0 +1,179 @@
+package typingsSlinky.officeDashUiDashFabricDashReact
+
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.bottomDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.bottomLeftCornerDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.bottomRightCornerDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.calendarsInline_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.closeButton_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.currentDecade_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.currentYear_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayBackground_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayHover_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayIsFocused_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayIsHighlighted_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayIsToday_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayIsUnfocused_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayPicker_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayPress_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.daySelection_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.dayWrapper_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.day_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.decadeComponents_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.decade_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.divider_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.frame_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.goToTodayIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.goTodayInlineMonth_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.goTodaySpacing_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.goToday_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.headerToggleView_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.header_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.holderWithButton_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.holder_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.isHighlighted_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.isPickingYears_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.leftdate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthAndYear_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthComponents_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthIsCurrentMonth_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthIsHighlighted_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthOptionIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthOption_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthPickerAsOverlay_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthPickerOnly_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthPickerVisible_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthPicker_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.monthSelection_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextDecadeIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextDecade_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextMonthIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextMonth_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextYearIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.nextYear_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.optionGrid_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.pickerIsFocused_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.pickerIsOpened_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.picker_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevDecadeIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevDecade_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevMonthIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevMonth_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevYearIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.prevYear_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.rightDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.root_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.showWeekNumbersRTL_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.showWeekNumbers_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.table_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.toggleMonthView_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.topDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.topLeftCornerDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.topRightCornerDate_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.weekBackground_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.weekIsHighlighted_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.weekNumbers_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.weekSelection_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.weekday_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.wrap_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearComponents_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearIsCurrentYear_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearIsHighlighted_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearOptionIsDisabled_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearOption_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.yearPicker_442ea326
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.year_442ea326
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/components/Calendar/Calendar.scss", JSImport.Namespace)
+@js.native
+object libComponentsCalendarCalendarDotScssMod extends js.Object {
+  val bottomDate: bottomDate_442ea326 = js.native
+  val bottomLeftCornerDate: bottomLeftCornerDate_442ea326 = js.native
+  val bottomRightCornerDate: bottomRightCornerDate_442ea326 = js.native
+  val calendarsInline: calendarsInline_442ea326 = js.native
+  val closeButton: closeButton_442ea326 = js.native
+  val currentDecade: currentDecade_442ea326 = js.native
+  val currentYear: currentYear_442ea326 = js.native
+  val day: day_442ea326 = js.native
+  val dayBackground: dayBackground_442ea326 = js.native
+  val dayDisabled: dayDisabled_442ea326 = js.native
+  val dayHover: dayHover_442ea326 = js.native
+  val dayIsDisabled: dayIsDisabled_442ea326 = js.native
+  val dayIsFocused: dayIsFocused_442ea326 = js.native
+  val dayIsHighlighted: dayIsHighlighted_442ea326 = js.native
+  val dayIsToday: dayIsToday_442ea326 = js.native
+  val dayIsUnfocused: dayIsUnfocused_442ea326 = js.native
+  val dayPicker: dayPicker_442ea326 = js.native
+  val dayPress: dayPress_442ea326 = js.native
+  val daySelection: daySelection_442ea326 = js.native
+  val dayWrapper: dayWrapper_442ea326 = js.native
+  val decade: decade_442ea326 = js.native
+  val decadeComponents: decadeComponents_442ea326 = js.native
+  val divider: divider_442ea326 = js.native
+  val frame: frame_442ea326 = js.native
+  val goToTodayIsDisabled: goToTodayIsDisabled_442ea326 = js.native
+  val goToday: goToday_442ea326 = js.native
+  val goTodayInlineMonth: goTodayInlineMonth_442ea326 = js.native
+  val goTodaySpacing: goTodaySpacing_442ea326 = js.native
+  val header: header_442ea326 = js.native
+  val headerToggleView: headerToggleView_442ea326 = js.native
+  val holder: holder_442ea326 = js.native
+  val holderWithButton: holderWithButton_442ea326 = js.native
+  val isHighlighted: isHighlighted_442ea326 = js.native
+  val isPickingYears: isPickingYears_442ea326 = js.native
+  val leftdate: leftdate_442ea326 = js.native
+  val monthAndYear: monthAndYear_442ea326 = js.native
+  val monthComponents: monthComponents_442ea326 = js.native
+  val monthIsCurrentMonth: monthIsCurrentMonth_442ea326 = js.native
+  val monthIsHighlighted: monthIsHighlighted_442ea326 = js.native
+  val monthOption: monthOption_442ea326 = js.native
+  val monthOptionIsDisabled: monthOptionIsDisabled_442ea326 = js.native
+  val monthPicker: monthPicker_442ea326 = js.native
+  val monthPickerAsOverlay: monthPickerAsOverlay_442ea326 = js.native
+  val monthPickerOnly: monthPickerOnly_442ea326 = js.native
+  val monthPickerVisible: monthPickerVisible_442ea326 = js.native
+  val monthSelection: monthSelection_442ea326 = js.native
+  val nextDecade: nextDecade_442ea326 = js.native
+  val nextDecadeIsDisabled: nextDecadeIsDisabled_442ea326 = js.native
+  val nextMonth: nextMonth_442ea326 = js.native
+  val nextMonthIsDisabled: nextMonthIsDisabled_442ea326 = js.native
+  val nextYear: nextYear_442ea326 = js.native
+  val nextYearIsDisabled: nextYearIsDisabled_442ea326 = js.native
+  val optionGrid: optionGrid_442ea326 = js.native
+  val picker: picker_442ea326 = js.native
+  val pickerIsFocused: pickerIsFocused_442ea326 = js.native
+  val pickerIsOpened: pickerIsOpened_442ea326 = js.native
+  val prevDecade: prevDecade_442ea326 = js.native
+  val prevDecadeIsDisabled: prevDecadeIsDisabled_442ea326 = js.native
+  val prevMonth: prevMonth_442ea326 = js.native
+  val prevMonthIsDisabled: prevMonthIsDisabled_442ea326 = js.native
+  val prevYear: prevYear_442ea326 = js.native
+  val prevYearIsDisabled: prevYearIsDisabled_442ea326 = js.native
+  val rightDate: rightDate_442ea326 = js.native
+  val root: root_442ea326 = js.native
+  val showWeekNumbers: showWeekNumbers_442ea326 = js.native
+  val showWeekNumbersRTL: showWeekNumbersRTL_442ea326 = js.native
+  val table: table_442ea326 = js.native
+  val toggleMonthView: toggleMonthView_442ea326 = js.native
+  val topDate: topDate_442ea326 = js.native
+  val topLeftCornerDate: topLeftCornerDate_442ea326 = js.native
+  val topRightCornerDate: topRightCornerDate_442ea326 = js.native
+  val weekBackground: weekBackground_442ea326 = js.native
+  val weekIsHighlighted: weekIsHighlighted_442ea326 = js.native
+  val weekNumbers: weekNumbers_442ea326 = js.native
+  val weekSelection: weekSelection_442ea326 = js.native
+  val weekday: weekday_442ea326 = js.native
+  val wrap: wrap_442ea326 = js.native
+  val year: year_442ea326 = js.native
+  val yearComponents: yearComponents_442ea326 = js.native
+  val yearIsCurrentYear: yearIsCurrentYear_442ea326 = js.native
+  val yearIsHighlighted: yearIsHighlighted_442ea326 = js.native
+  val yearOption: yearOption_442ea326 = js.native
+  val yearOptionIsDisabled: yearOptionIsDisabled_442ea326 = js.native
+  val yearPicker: yearPicker_442ea326 = js.native
+}
+

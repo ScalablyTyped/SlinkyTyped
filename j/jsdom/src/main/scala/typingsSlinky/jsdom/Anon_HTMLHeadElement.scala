@@ -1,0 +1,11 @@
+package typingsSlinky.jsdom
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.std.HTMLHeadElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Anon_HTMLHeadElement extends Instantiable0[HTMLHeadElement]
+

@@ -1,0 +1,18 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesReferenceDoesNotExistExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesCreatePullRequestExceptionsUnionMod.CreatePullRequestExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesMergePullRequestByFastForwardExceptionsUnionMod.MergePullRequestByFastForwardExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ReferenceDoesNotExistException
+  extends ServiceException[_ReferenceDoesNotExistExceptionDetails]
+     with CreatePullRequestExceptionsUnion
+     with MergePullRequestByFastForwardExceptionsUnion {
+  @JSName("name")
+  var name_ReferenceDoesNotExistException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.ReferenceDoesNotExistException = js.native
+}
+

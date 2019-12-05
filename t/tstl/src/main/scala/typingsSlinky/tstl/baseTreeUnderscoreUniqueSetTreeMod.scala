@@ -1,0 +1,21 @@
+package typingsSlinky.tstl
+
+import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator
+import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator
+import typingsSlinky.tstl.baseContainerUniqueSetMod.UniqueSet
+import typingsSlinky.tstl.baseTreeUnderscoreSetTreeMod._SetTree
+import typingsSlinky.tstl.tstlNumbers.`true`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("tstl/base/tree/_UniqueSetTree", JSImport.Namespace)
+@js.native
+object baseTreeUnderscoreUniqueSetTreeMod extends js.Object {
+  @js.native
+  class _UniqueSetTree[Key, Source /* <: UniqueSet[Key, Source, Iterator[Key, `true`, Source], ReverseIterator[Key, `true`, Source]] */] protected () extends _SetTree[Key, `true`, Source] {
+    def this(source: Source, comp: js.Function2[/* x */ Key, /* y */ Key, Boolean]) = this()
+  }
+  
+}
+

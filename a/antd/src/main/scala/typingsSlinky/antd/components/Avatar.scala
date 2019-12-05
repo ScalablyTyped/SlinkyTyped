@@ -32,7 +32,7 @@ object Avatar
     size: large | small | typingsSlinky.antd.antdStrings.default | Double = null,
     srcSet: String = null,
     style: CSSProperties = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
@@ -42,7 +42,7 @@ object Avatar
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (srcSet != null) __obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = AvatarProps

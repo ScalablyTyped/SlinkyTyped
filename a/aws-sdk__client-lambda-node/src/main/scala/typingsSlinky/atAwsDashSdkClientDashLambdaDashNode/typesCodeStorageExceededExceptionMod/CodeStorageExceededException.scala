@@ -1,0 +1,20 @@
+package typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesCodeStorageExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesCreateFunctionExceptionsUnionMod.CreateFunctionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesPublishVersionExceptionsUnionMod.PublishVersionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CodeStorageExceededException
+  extends ServiceException[_CodeStorageExceededExceptionDetails]
+     with CreateFunctionExceptionsUnion
+     with PublishVersionExceptionsUnion
+     with UpdateFunctionCodeExceptionsUnion {
+  @JSName("name")
+  var name_CodeStorageExceededException: typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.atAwsDashSdkClientDashLambdaDashNodeStrings.CodeStorageExceededException = js.native
+}
+

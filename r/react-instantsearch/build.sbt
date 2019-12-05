@@ -1,0 +1,24 @@
+organization := "org.scalablytyped.slinky"
+name := "react-instantsearch"
+version := "5.2-dt-20191126Z-cddf2a"
+scalaVersion := "2.12.10"
+enablePlugins(ScalaJSPlugin)
+libraryDependencies ++= Seq(
+  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "me.shadaj" %%% "slinky-web" % "0.6.2",
+  "org.scalablytyped.slinky" %%% "algoliasearch" % "3.34.0-dt-20191126Z-2c2386",
+  "org.scalablytyped.slinky" %%% "algoliasearch-helper" % "2.26-dt-20190524Z-603f92",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
+  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-243f84",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-6c3558",
+  "org.scalablytyped.slinky" %%% "react-instantsearch-core" % "5.2-dt-20191022Z-7e770a",
+  "org.scalablytyped.slinky" %%% "react-instantsearch-dom" % "5.2-dt-20191126Z-09f6bf",
+  "org.scalablytyped.slinky" %%% "react-instantsearch-native" % "5.3-dt-20190909Z-5787bf",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+publishArtifact in packageDoc := false
+scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+bintrayRepository := "SlinkyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+        

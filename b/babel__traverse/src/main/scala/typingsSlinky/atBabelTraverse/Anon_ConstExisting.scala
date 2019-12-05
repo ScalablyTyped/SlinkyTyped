@@ -1,0 +1,37 @@
+package typingsSlinky.atBabelTraverse
+
+import typingsSlinky.atBabelTraverse.atBabelTraverseMod.Binding
+import typingsSlinky.atBabelTraverse.atBabelTraverseMod.Node
+import typingsSlinky.atBabelTraverse.atBabelTraverseMod.NodePath
+import typingsSlinky.atBabelTraverse.atBabelTraverseMod.Scope
+import typingsSlinky.atBabelTraverse.atBabelTraverseStrings.`var`
+import typingsSlinky.atBabelTraverse.atBabelTraverseStrings.const
+import typingsSlinky.atBabelTraverse.atBabelTraverseStrings.let
+import typingsSlinky.atBabelTypes.atBabelTypesMod.Identifier
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_ConstExisting extends js.Object {
+  var existing: Binding
+  var identifier: Identifier
+  var kind: `var` | let | const
+  var path: NodePath[Node]
+  var scope: Scope
+}
+
+object Anon_ConstExisting {
+  @scala.inline
+  def apply(
+    existing: Binding,
+    identifier: Identifier,
+    kind: `var` | let | const,
+    path: NodePath[Node],
+    scope: Scope
+  ): Anon_ConstExisting = {
+    val __obj = js.Dynamic.literal(existing = existing.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_ConstExisting]
+  }
+}
+

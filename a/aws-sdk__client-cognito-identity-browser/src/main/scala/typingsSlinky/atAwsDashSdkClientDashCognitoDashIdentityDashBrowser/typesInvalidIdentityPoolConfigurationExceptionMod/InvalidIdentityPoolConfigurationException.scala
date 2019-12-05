@@ -1,0 +1,16 @@
+package typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.typesInvalidIdentityPoolConfigurationExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.typesGetCredentialsForIdentityExceptionsUnionMod.GetCredentialsForIdentityExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidIdentityPoolConfigurationException
+  extends ServiceException[_InvalidIdentityPoolConfigurationExceptionDetails]
+     with GetCredentialsForIdentityExceptionsUnion {
+  @JSName("name")
+  var name_InvalidIdentityPoolConfigurationException: typingsSlinky.atAwsDashSdkClientDashCognitoDashIdentityDashBrowser.atAwsDashSdkClientDashCognitoDashIdentityDashBrowserStrings.InvalidIdentityPoolConfigurationException = js.native
+}
+

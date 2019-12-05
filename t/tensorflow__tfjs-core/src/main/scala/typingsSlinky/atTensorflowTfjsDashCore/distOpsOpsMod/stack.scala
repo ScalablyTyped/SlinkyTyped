@@ -1,0 +1,16 @@
+package typingsSlinky.atTensorflowTfjsDashCore.distOpsOpsMod
+
+import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor
+import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank
+import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TensorLike
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-core/dist/ops/ops", "stack")
+@js.native
+object stack extends js.Object {
+  def apply[T /* <: Tensor[Rank] */](tensors: js.Array[T | TensorLike]): Tensor[Rank] = js.native
+  def apply[T /* <: Tensor[Rank] */](tensors: js.Array[T | TensorLike], axis: Double): Tensor[Rank] = js.native
+}
+

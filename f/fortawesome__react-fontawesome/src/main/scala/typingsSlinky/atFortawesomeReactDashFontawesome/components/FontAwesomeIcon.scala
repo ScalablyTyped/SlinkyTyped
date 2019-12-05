@@ -43,7 +43,7 @@ object FontAwesomeIcon
     symbol: FaSymbol = null,
     title: String = null,
     transform: String | Transform = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
     if (!js.isUndefined(border)) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object FontAwesomeIcon
     if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FontAwesomeIconProps

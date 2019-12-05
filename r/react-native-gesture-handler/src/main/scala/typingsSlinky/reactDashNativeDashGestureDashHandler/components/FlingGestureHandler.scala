@@ -38,7 +38,7 @@ object FlingGestureHandler
     shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
     simultaneousHandlers: Ref[_] | js.Array[Ref[_]] = null,
     waitFor: Ref[_] | js.Array[Ref[_]] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.FlingGestureHandler
@@ -53,7 +53,7 @@ object FlingGestureHandler
     if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.asInstanceOf[js.Any])
     if (simultaneousHandlers != null) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
     if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = FlingGestureHandlerProperties

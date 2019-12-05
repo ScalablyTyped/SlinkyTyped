@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesItemCollectionSizeLimitExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesBatchWriteItemExceptionsUnionMod.BatchWriteItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesDeleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesPutItemExceptionsUnionMod.PutItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.typesUpdateItemExceptionsUnionMod.UpdateItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ItemCollectionSizeLimitExceededException
+  extends ServiceException[_ItemCollectionSizeLimitExceededExceptionDetails]
+     with BatchWriteItemExceptionsUnion
+     with DeleteItemExceptionsUnion
+     with PutItemExceptionsUnion
+     with UpdateItemExceptionsUnion {
+  @JSName("name")
+  var name_ItemCollectionSizeLimitExceededException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashBrowser.atAwsDashSdkClientDashDynamodbDashBrowserStrings.ItemCollectionSizeLimitExceededException = js.native
+}
+

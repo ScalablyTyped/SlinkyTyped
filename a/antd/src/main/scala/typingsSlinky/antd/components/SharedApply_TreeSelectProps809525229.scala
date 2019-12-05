@@ -78,7 +78,7 @@ abstract class SharedApply_TreeSelectProps809525229[ComponentRef <: js.Object] (
     treeNodeFilterProp: String = null,
     treeNodeLabelProp: String = null,
     value: T = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ComponentRef] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
@@ -131,7 +131,7 @@ abstract class SharedApply_TreeSelectProps809525229[ComponentRef <: js.Object] (
     if (treeNodeFilterProp != null) __obj.updateDynamic("treeNodeFilterProp")(treeNodeFilterProp.asInstanceOf[js.Any])
     if (treeNodeLabelProp != null) __obj.updateDynamic("treeNodeLabelProp")(treeNodeLabelProp.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.input.tag.type, ComponentRef]]
   }
   type Props = TreeSelectProps[js.Any]

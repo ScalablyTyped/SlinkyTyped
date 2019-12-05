@@ -1,0 +1,21 @@
+package typingsSlinky.breeze.breezeMod
+
+import typingsSlinky.breeze.Anon_AllowConcurrentSaves
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("breeze", "SaveOptions")
+@js.native
+class SaveOptions ()
+  extends typingsSlinky.breeze.breeze.SaveOptions {
+  def this(config: Anon_AllowConcurrentSaves) = this()
+}
+
+/* static members */
+@JSImport("breeze", "SaveOptions")
+@js.native
+object SaveOptions extends js.Object {
+  var defaultInstance: typingsSlinky.breeze.breeze.SaveOptions = js.native
+}
+

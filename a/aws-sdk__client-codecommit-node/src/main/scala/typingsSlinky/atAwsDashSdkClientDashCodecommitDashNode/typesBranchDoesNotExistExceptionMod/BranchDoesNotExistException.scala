@@ -1,0 +1,22 @@
+package typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesBranchDoesNotExistExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesDeleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesGetBranchExceptionsUnionMod.GetBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesPutFileExceptionsUnionMod.PutFileExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.typesUpdateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait BranchDoesNotExistException
+  extends ServiceException[_BranchDoesNotExistExceptionDetails]
+     with DeleteFileExceptionsUnion
+     with GetBranchExceptionsUnion
+     with PutFileExceptionsUnion
+     with UpdateDefaultBranchExceptionsUnion {
+  @JSName("name")
+  var name_BranchDoesNotExistException: typingsSlinky.atAwsDashSdkClientDashCodecommitDashNode.atAwsDashSdkClientDashCodecommitDashNodeStrings.BranchDoesNotExistException = js.native
+}
+

@@ -1,0 +1,10 @@
+package typingsSlinky.reactDashLeaflet.reactDashLeafletMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-leaflet", "Circle")
+@js.native
+class Circle[P /* <: CircleProps */, E /* <: typingsSlinky.leaflet.leafletMod.Circle[_] */] () extends Path[P, E]
+

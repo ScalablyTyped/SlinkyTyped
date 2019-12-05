@@ -42,7 +42,7 @@ object Icon
     name: SemanticICONS = null,
     rotated: clockwise | counterclockwise = null,
     size: IconSizeProp = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (`aria-hidden` != null) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Icon
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     if (rotated != null) __obj.updateDynamic("rotated")(rotated.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = IconProps

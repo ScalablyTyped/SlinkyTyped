@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "overwatch-api" : "0.8.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "overwatch-api" : "0.8.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

@@ -1,0 +1,39 @@
+package typingsSlinky.reactDashBetterDashPassword.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod.PasswordProps
+import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod.default
+import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordStrings.BACKSLASHu2022
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ReactDashBetterDashPassword
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  @JSImport("react-better-password", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className, onChange, placeholder */
+  def apply(
+    mask: BACKSLASHu2022 | String = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    timeout: Int | Double = null,
+    value: String = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = PasswordProps
+}
+

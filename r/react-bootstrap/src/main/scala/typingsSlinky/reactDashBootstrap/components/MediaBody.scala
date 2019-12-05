@@ -1,0 +1,29 @@
+package typingsSlinky.reactDashBootstrap.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashBootstrap.libMediaBodyMod.MediaBodyProps
+import typingsSlinky.reactDashBootstrap.libMediaBodyMod.^
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object MediaBody
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+  @JSImport("react-bootstrap/lib/MediaBody", JSImport.Namespace)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(componentClass: ReactComponentClass[_] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, ^] = {
+    val __obj = js.Dynamic.literal()
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = MediaBodyProps
+}
+

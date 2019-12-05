@@ -33,7 +33,7 @@ abstract class SharedApply_PageHeaderProps322846763 (implicit pw: ExternalPropsW
     style: CSSProperties = null,
     subTitle: TagMod[Any] = null,
     tags: ReactElement | js.Array[ReactElement] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
@@ -47,7 +47,7 @@ abstract class SharedApply_PageHeaderProps322846763 (implicit pw: ExternalPropsW
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
     if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = PageHeaderProps

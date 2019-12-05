@@ -1,0 +1,12 @@
+package typingsSlinky.jsDashToDashJava.jsDashToDashJavaMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("js-to-java", "int")
+@js.native
+object int extends js.Object {
+  def apply(value: scala.Double): js.Object = js.native
+}
+

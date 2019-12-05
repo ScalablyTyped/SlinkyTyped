@@ -61,7 +61,7 @@ object Search
     showNoResults: js.UndefOr[Boolean] = js.undefined,
     size: mini | tiny | small | large | big | huge | massive = null,
     value: String = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (aligned != null) __obj.updateDynamic("aligned")(aligned.asInstanceOf[js.Any])
@@ -89,7 +89,7 @@ object Search
     if (!js.isUndefined(showNoResults)) __obj.updateDynamic("showNoResults")(showNoResults.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SearchProps

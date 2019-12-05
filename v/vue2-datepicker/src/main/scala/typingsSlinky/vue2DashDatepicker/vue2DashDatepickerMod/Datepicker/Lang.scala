@@ -1,0 +1,28 @@
+package typingsSlinky.vue2DashDatepicker.vue2DashDatepickerMod.Datepicker
+
+import typingsSlinky.vue2DashDatepicker.Anon_Date
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Lang extends js.Object {
+  var days: js.Array[String]
+  var months: js.Array[String]
+  var pickers: js.Array[String]
+  var placeholder: Anon_Date
+}
+
+object Lang {
+  @scala.inline
+  def apply(
+    days: js.Array[String],
+    months: js.Array[String],
+    pickers: js.Array[String],
+    placeholder: Anon_Date
+  ): Lang = {
+    val __obj = js.Dynamic.literal(days = days.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], pickers = pickers.asInstanceOf[js.Any], placeholder = placeholder.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Lang]
+  }
+}
+

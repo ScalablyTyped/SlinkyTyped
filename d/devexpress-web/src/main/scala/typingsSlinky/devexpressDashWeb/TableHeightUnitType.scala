@@ -1,0 +1,40 @@
+package typingsSlinky.devexpressDashWeb
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait TableHeightUnitType extends js.Object
+
+/**
+  * Lists values that specify unit types for the table height.
+  */
+@JSGlobal("TableHeightUnitType")
+@js.native
+object TableHeightUnitType extends js.Object {
+  /**
+    * The height increases automatically to accommodate the content.
+    */
+  @js.native
+  sealed trait Auto extends TableHeightUnitType
+  
+  /**
+    * The exact height as specified. If the text cannot fit the height, it will appear truncated.
+    */
+  @js.native
+  sealed trait Exact extends TableHeightUnitType
+  
+  /**
+    * The minimum height will be the specified height. The height can be increased, if needed, to accommodate the content.
+    */
+  @js.native
+  sealed trait Minimum extends TableHeightUnitType
+  
+  /* 1 */ val Auto: typingsSlinky.devexpressDashWeb.TableHeightUnitType.Auto with Double = js.native
+  /* 2 */ val Exact: typingsSlinky.devexpressDashWeb.TableHeightUnitType.Exact with Double = js.native
+  /* 0 */ val Minimum: typingsSlinky.devexpressDashWeb.TableHeightUnitType.Minimum with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[TableHeightUnitType with Double] = js.native
+}
+

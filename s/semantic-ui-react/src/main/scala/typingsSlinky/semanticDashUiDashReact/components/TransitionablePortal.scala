@@ -28,7 +28,7 @@ object TransitionablePortal
     onOpen: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
     onStart: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
     transition: TransitionProps = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
@@ -36,7 +36,7 @@ object TransitionablePortal
     if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
     if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
     if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = TransitionablePortalProps

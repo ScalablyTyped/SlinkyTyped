@@ -1,0 +1,30 @@
+package typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesProvisionedThroughputExceededExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesBatchGetItemExceptionsUnionMod.BatchGetItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesBatchWriteItemExceptionsUnionMod.BatchWriteItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesDeleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesGetItemExceptionsUnionMod.GetItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesPutItemExceptionsUnionMod.PutItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesQueryExceptionsUnionMod.QueryExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesScanExceptionsUnionMod.ScanExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.typesUpdateItemExceptionsUnionMod.UpdateItemExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ProvisionedThroughputExceededException
+  extends ServiceException[_ProvisionedThroughputExceededExceptionDetails]
+     with BatchGetItemExceptionsUnion
+     with BatchWriteItemExceptionsUnion
+     with DeleteItemExceptionsUnion
+     with GetItemExceptionsUnion
+     with PutItemExceptionsUnion
+     with QueryExceptionsUnion
+     with ScanExceptionsUnion
+     with UpdateItemExceptionsUnion {
+  @JSName("name")
+  var name_ProvisionedThroughputExceededException: typingsSlinky.atAwsDashSdkClientDashDynamodbDashNode.atAwsDashSdkClientDashDynamodbDashNodeStrings.ProvisionedThroughputExceededException = js.native
+}
+

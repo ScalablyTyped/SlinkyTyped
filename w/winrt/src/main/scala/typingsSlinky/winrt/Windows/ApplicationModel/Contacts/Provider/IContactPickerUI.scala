@@ -1,0 +1,34 @@
+package typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider
+
+import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Contact
+import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactSelectionMode
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait IContactPickerUI extends js.Object {
+  var desiredFields: IVectorView[String]
+  var oncontactremoved: js.Any
+  var selectionMode: ContactSelectionMode
+  def addContact(id: String, contact: Contact): AddContactResult
+  def containsContact(id: String): Boolean
+  def removeContact(id: String): Unit
+}
+
+object IContactPickerUI {
+  @scala.inline
+  def apply(
+    addContact: (String, Contact) => AddContactResult,
+    containsContact: String => Boolean,
+    desiredFields: IVectorView[String],
+    oncontactremoved: js.Any,
+    removeContact: String => Unit,
+    selectionMode: ContactSelectionMode
+  ): IContactPickerUI = {
+    val __obj = js.Dynamic.literal(addContact = js.Any.fromFunction2(addContact), containsContact = js.Any.fromFunction1(containsContact), desiredFields = desiredFields.asInstanceOf[js.Any], oncontactremoved = oncontactremoved.asInstanceOf[js.Any], removeContact = js.Any.fromFunction1(removeContact), selectionMode = selectionMode.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[IContactPickerUI]
+  }
+}
+

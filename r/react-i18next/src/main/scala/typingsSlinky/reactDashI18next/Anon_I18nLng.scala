@@ -1,0 +1,21 @@
+package typingsSlinky.reactDashI18next
+
+import typingsSlinky.i18next.i18nextMod.i18n
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Anon_I18nLng extends js.Object {
+  var i18n: typingsSlinky.i18next.i18nextMod.i18n
+  var lng: String
+}
+
+object Anon_I18nLng {
+  @scala.inline
+  def apply(i18n: i18n, lng: String): Anon_I18nLng = {
+    val __obj = js.Dynamic.literal(i18n = i18n.asInstanceOf[js.Any], lng = lng.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[Anon_I18nLng]
+  }
+}
+

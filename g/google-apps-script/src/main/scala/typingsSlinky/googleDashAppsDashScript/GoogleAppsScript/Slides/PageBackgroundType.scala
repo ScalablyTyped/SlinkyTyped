@@ -1,0 +1,35 @@
+package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+sealed trait PageBackgroundType extends js.Object
+
+/**
+  * The kinds of page backgrounds.
+  */
+@JSGlobal("GoogleAppsScript.Slides.PageBackgroundType")
+@js.native
+object PageBackgroundType extends js.Object {
+  @js.native
+  sealed trait NONE extends PageBackgroundType
+  
+  @js.native
+  sealed trait PICTURE extends PageBackgroundType
+  
+  @js.native
+  sealed trait SOLID extends PageBackgroundType
+  
+  @js.native
+  sealed trait UNSUPPORTED extends PageBackgroundType
+  
+  /* 1 */ val NONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageBackgroundType.NONE with Double = js.native
+  /* 3 */ val PICTURE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageBackgroundType.PICTURE with Double = js.native
+  /* 2 */ val SOLID: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageBackgroundType.SOLID with Double = js.native
+  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageBackgroundType.UNSUPPORTED with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[PageBackgroundType with Double] = js.native
+}
+

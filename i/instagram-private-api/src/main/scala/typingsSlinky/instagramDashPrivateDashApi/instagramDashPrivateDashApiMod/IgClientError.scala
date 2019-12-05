@@ -1,0 +1,13 @@
+package typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("instagram-private-api", "IgClientError")
+@js.native
+class IgClientError ()
+  extends typingsSlinky.instagramDashPrivateDashApi.distErrorsMod.IgClientError {
+  def this(message: String) = this()
+}
+

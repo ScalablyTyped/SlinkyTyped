@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@formatjs/intl-unified-numberformat" : "2.1.7"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@formatjs/intl-unified-numberformat" : "2.1.7"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

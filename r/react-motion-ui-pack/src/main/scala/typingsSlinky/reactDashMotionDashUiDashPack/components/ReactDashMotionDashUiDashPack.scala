@@ -1,0 +1,46 @@
+package typingsSlinky.reactDashMotionDashUiDashPack.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashMotion.reactDashMotionMod.PlainStyle
+import typingsSlinky.reactDashMotion.reactDashMotionMod.Style
+import typingsSlinky.reactDashMotionDashUiDashPack.reactDashMotionDashUiDashPackMod.Transition.TransitionProps
+import typingsSlinky.reactDashMotionDashUiDashPack.reactDashMotionDashUiDashPackMod.default.^
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ReactDashMotionDashUiDashPack
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+  @JSImport("react-motion-ui-pack", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    appear: Style = null,
+    component: String | Boolean | ReactElement = null,
+    enter: Style = null,
+    leave: Style = null,
+    onEnter: /* style */ PlainStyle => Unit = null,
+    onLeave: /* style */ Style => Unit = null,
+    runOnMount: js.UndefOr[Boolean] = js.undefined,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, ^] = {
+    val __obj = js.Dynamic.literal()
+    if (appear != null) __obj.updateDynamic("appear")(appear.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
+    if (leave != null) __obj.updateDynamic("leave")(leave.asInstanceOf[js.Any])
+    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
+    if (onLeave != null) __obj.updateDynamic("onLeave")(js.Any.fromFunction1(onLeave))
+    if (!js.isUndefined(runOnMount)) __obj.updateDynamic("runOnMount")(runOnMount.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = TransitionProps
+}
+

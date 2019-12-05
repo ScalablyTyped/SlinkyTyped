@@ -1,0 +1,14 @@
+package typingsSlinky.systeminformation.systeminformationMod
+
+import typingsSlinky.systeminformation.systeminformationMod.Systeminformation.MemData
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("systeminformation", "mem")
+@js.native
+object mem extends js.Object {
+  def apply(): js.Promise[MemData] = js.native
+  def apply(cb: js.Function1[/* data */ MemData, _]): js.Promise[MemData] = js.native
+}
+

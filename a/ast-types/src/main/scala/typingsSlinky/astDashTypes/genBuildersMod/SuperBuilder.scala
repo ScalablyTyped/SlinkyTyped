@@ -1,0 +1,14 @@
+package typingsSlinky.astDashTypes.genBuildersMod
+
+import typingsSlinky.astDashTypes.Anon_CommentsLocArray
+import typingsSlinky.astDashTypes.genNamedTypesMod.namedTypes.Super
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait SuperBuilder extends js.Object {
+  def apply(): Super = js.native
+  def from(params: Anon_CommentsLocArray): Super = js.native
+}
+

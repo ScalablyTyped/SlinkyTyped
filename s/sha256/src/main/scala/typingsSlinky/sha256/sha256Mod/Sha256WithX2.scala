@@ -1,0 +1,17 @@
+package typingsSlinky.sha256.sha256Mod
+
+import typingsSlinky.sha256.Anon_AsBytes
+import typingsSlinky.sha256.Anon_AsString
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Sha256WithX2 extends Sha256 {
+  @JSName("x2")
+  var x2_Original: Sha256 = js.native
+  def x2(message: Message): String = js.native
+  def x2(message: Message, options: Anon_AsBytes): js.Array[Double] = js.native
+  def x2(message: Message, options: Anon_AsString): String = js.native
+}
+

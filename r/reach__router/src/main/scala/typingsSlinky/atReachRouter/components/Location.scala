@@ -16,9 +16,9 @@ object Location
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.Location] = {
+  def apply(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atReachRouter.atReachRouterMod.Location] = {
     val __obj = js.Dynamic.literal()
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = LocationProps

@@ -1,0 +1,26 @@
+package typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesPreconditionFailedExceptionMod
+
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesAddPermissionExceptionsUnionMod.AddPermissionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesPublishVersionExceptionsUnionMod.PublishVersionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesRemovePermissionExceptionsUnionMod.RemovePermissionExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateAliasExceptionsUnionMod.UpdateAliasExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
+import typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.typesUpdateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
+import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait PreconditionFailedException
+  extends ServiceException[_PreconditionFailedExceptionDetails]
+     with AddPermissionExceptionsUnion
+     with PublishVersionExceptionsUnion
+     with RemovePermissionExceptionsUnion
+     with UpdateAliasExceptionsUnion
+     with UpdateFunctionCodeExceptionsUnion
+     with UpdateFunctionConfigurationExceptionsUnion {
+  @JSName("name")
+  var name_PreconditionFailedException: typingsSlinky.atAwsDashSdkClientDashLambdaDashNode.atAwsDashSdkClientDashLambdaDashNodeStrings.PreconditionFailedException = js.native
+}
+

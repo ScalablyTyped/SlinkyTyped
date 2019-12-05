@@ -1,0 +1,40 @@
+package typingsSlinky.victory.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import typingsSlinky.victory.victoryMod.AnimationData
+import typingsSlinky.victory.victoryMod.AnimationEasing
+import typingsSlinky.victory.victoryMod.VictoryAnimationProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object VictoryAnimation
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation] {
+  @JSImport("victory", "VictoryAnimation")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    data: AnimationData = null,
+    delay: Int | Double = null,
+    duration: Int | Double = null,
+    easing: AnimationEasing = null,
+    onEnd: () => Unit = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation] = {
+    val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction0(onEnd))
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = VictoryAnimationProps
+}
+

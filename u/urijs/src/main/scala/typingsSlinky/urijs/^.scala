@@ -1,0 +1,15 @@
+package typingsSlinky.urijs
+
+import typingsSlinky.urijs.uri.URIStatic
+import typingsSlinky.urijs.uri.URITemplateStatic
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobalScope
+@js.native
+object ^ extends js.Object {
+  var URI: URIStatic = js.native
+  var URITemplate: URITemplateStatic = js.native
+}
+

@@ -1,0 +1,47 @@
+package typingsSlinky.arcgisDashJsDashApi.__esri
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.multipoint
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.point
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.polygon
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.polyline
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.stream
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait StreamLayer extends FeatureLayer {
+  /**
+    * An extent object used to filter features. Only features intersecting the extent are displayed in the view.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#geometryDefinition)
+    */
+  var geometryDefinition: Extent = js.native
+  /**
+    * The geometry type of features in the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#geometryType)
+    */
+  @JSName("geometryType")
+  val geometryType_StreamLayer: point | multipoint | polyline | polygon = js.native
+  /**
+    * Maximum number of features to show per [trackId](https://enterprise.arcgis.com/en/geoevent/latest/get-started/essential-geoevent-server-vocabulary.htm#ESRI_SECTION1_F45BBCE9ADFA4E57AF38DD225921EFCD). If `trackId` is not configured on the GeoEvent Service, the `maximumTrackPoints` property will have no effect and an error will be logged in the console.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#maximumTrackPoints)
+    */
+  var maximumTrackPoints: Double = js.native
+  /**
+    * Options for purging stale features. Use these options to avoid overloading the browser with graphics.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#purgeOptions)
+    */
+  var purgeOptions: StreamLayerPurgeOptions = js.native
+  @JSName("type")
+  val type_StreamLayer: stream = js.native
+}
+
+@JSGlobal("__esri.StreamLayer")
+@js.native
+object StreamLayer extends TopLevel[StreamLayerConstructor]
+

@@ -1,0 +1,21 @@
+package typingsSlinky.akuminaDashCore.akuminaDashCoreMod.Digispace
+
+import typingsSlinky.akuminaDashCore.Anon_Email
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("akumina-core", "Digispace.PageContext")
+@js.native
+class PageContext () extends js.Object
+
+/* static members */
+@JSImport("akumina-core", "Digispace.PageContext")
+@js.native
+object PageContext extends js.Object {
+  var EditMode: Boolean = js.native
+  var PageId: String = js.native
+  var PageRouteInfo: Anon_Email = js.native
+  def MapPageUrl(pageUrl: String): String = js.native
+}
+

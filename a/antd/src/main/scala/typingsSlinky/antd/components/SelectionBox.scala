@@ -28,11 +28,11 @@ object SelectionBox
     rowIndex: String,
     store: Store,
     `type`: RowSelectionType = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(defaultSelection = defaultSelection.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), rowIndex = rowIndex.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = SelectionBoxProps

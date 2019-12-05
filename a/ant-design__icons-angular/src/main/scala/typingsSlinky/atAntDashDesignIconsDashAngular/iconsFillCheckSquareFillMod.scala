@@ -1,0 +1,13 @@
+package typingsSlinky.atAntDashDesignIconsDashAngular
+
+import typingsSlinky.atAntDashDesignIconsDashAngular.typesMod.IconDefinition
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@ant-design/icons-angular/icons/fill/CheckSquareFill", JSImport.Namespace)
+@js.native
+object iconsFillCheckSquareFillMod extends js.Object {
+  val CheckSquareFill: IconDefinition = js.native
+}
+

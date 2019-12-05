@@ -28,12 +28,12 @@ object ClickAwayListener
     onClickAway: ChangeEvent[js.Object] => Unit,
     mouseEvent: onClick | onMouseDown | onMouseUp | `false` = null,
     touchEvent: onTouchStart | onTouchEnd | `false` = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(onClickAway = js.Any.fromFunction1(onClickAway))
     if (mouseEvent != null) __obj.updateDynamic("mouseEvent")(mouseEvent.asInstanceOf[js.Any])
     if (touchEvent != null) __obj.updateDynamic("touchEvent")(touchEvent.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ClickAwayListenerProps

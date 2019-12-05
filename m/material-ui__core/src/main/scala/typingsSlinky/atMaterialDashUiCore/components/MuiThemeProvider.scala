@@ -25,12 +25,12 @@ object MuiThemeProvider
     theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme]),
     disableStylesGeneration: js.UndefOr[Boolean] = js.undefined,
     sheetsManager: Map[StylesCreator, Map[Theme, SheetManagerTheme]] = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
     if (!js.isUndefined(disableStylesGeneration)) __obj.updateDynamic("disableStylesGeneration")(disableStylesGeneration.asInstanceOf[js.Any])
     if (sheetsManager != null) __obj.updateDynamic("sheetsManager")(sheetsManager.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = MuiThemeProviderProps

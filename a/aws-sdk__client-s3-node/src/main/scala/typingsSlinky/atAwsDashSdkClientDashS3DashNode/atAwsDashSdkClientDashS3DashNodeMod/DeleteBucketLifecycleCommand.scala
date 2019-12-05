@@ -1,0 +1,14 @@
+package typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeMod
+
+import typingsSlinky.atAwsDashSdkClientDashS3DashNode.typesDeleteBucketLifecycleInputMod.DeleteBucketLifecycleInput
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-s3-node", "DeleteBucketLifecycleCommand")
+@js.native
+class DeleteBucketLifecycleCommand protected ()
+  extends typingsSlinky.atAwsDashSdkClientDashS3DashNode.commandsDeleteBucketLifecycleCommandMod.DeleteBucketLifecycleCommand {
+  def this(input: DeleteBucketLifecycleInput) = this()
+}
+

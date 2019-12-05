@@ -1,0 +1,36 @@
+package typingsSlinky.actionsDashOnDashGoogle.distFrameworkFrameworkMod
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.actionsDashOnDashGoogle.distFrameworkExpressMod.Express
+import typingsSlinky.actionsDashOnDashGoogle.distFrameworkLambdaMod.Lambda
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait BuiltinFrameworks extends Frameworks {
+  /**
+    * Plug and play web framework support for express using body-parser
+    * @public
+    */
+  var express: Express
+  /**
+    * Plug and play web framework support for lambda API gateway
+    * @public
+    */
+  var lambda: Lambda
+}
+
+object BuiltinFrameworks {
+  @scala.inline
+  def apply(
+    express: Express,
+    lambda: Lambda,
+    StringDictionary: /** @public */
+  StringDictionary[Framework[js.Function]] = null
+  ): BuiltinFrameworks = {
+    val __obj = js.Dynamic.literal(express = express.asInstanceOf[js.Any], lambda = lambda.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    __obj.asInstanceOf[BuiltinFrameworks]
+  }
+}
+

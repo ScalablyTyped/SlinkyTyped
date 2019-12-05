@@ -1,0 +1,29 @@
+package typingsSlinky.reactDashNativeDashTabDashView
+
+import typingsSlinky.react.reactMod.Component
+import typingsSlinky.reactDashNative.reactDashNativeMod.ViewProps
+import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTouchableItemMod.Props
+import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTouchableItemMod.TouchableItem
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-native-tab-view/lib/typescript/src/TouchableItem", JSImport.Namespace)
+@js.native
+object libTypescriptSrcTouchableItemMod extends js.Object {
+  @js.native
+  trait TouchableItem
+    extends Component[Props, js.Object, js.Any]
+  
+  @js.native
+  class default () extends TouchableItem
+  
+  /* static members */
+  @js.native
+  object default extends js.Object {
+    var defaultProps: Anon_PressColor = js.native
+  }
+  
+  type Props = ViewProps with Anon_Borderless
+}
+

@@ -1,0 +1,16 @@
+package typingsSlinky.antdDashMobileDashRn.libAccordionIndexDotNativeMod
+
+import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod._Global_.JSX.Element
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Accordion
+  extends Component[AccordionNativeProps, js.Any, js.Any] {
+  def onChange(idx: Double): Unit = js.native
+  def renderContent(section: AccordionHeader): Element = js.native
+  def renderHeader(section: AccordionHeader, `_`: Double, isActive: Boolean): Element = js.native
+}
+

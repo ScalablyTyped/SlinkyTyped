@@ -87,7 +87,7 @@ object ImageBackground
     style: StyleProp[ViewStyle] = null,
     testID: String = null,
     width: Int | Double = null,
-    overrides: StringDictionary[js.Any] = null
+    _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashNative.reactDashNativeMod.ImageBackground] = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
@@ -130,7 +130,7 @@ object ImageBackground
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (overrides != null) js.Dynamic.global.Object.assign(__obj, overrides)
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
   type Props = ImageBackgroundProps

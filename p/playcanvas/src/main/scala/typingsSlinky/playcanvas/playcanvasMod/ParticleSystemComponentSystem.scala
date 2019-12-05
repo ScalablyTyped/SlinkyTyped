@@ -1,0 +1,21 @@
+package typingsSlinky.playcanvas.playcanvasMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * @constructor
+  * @name pc.ParticleSystemComponentSystem
+  * @extends pc.ComponentSystem
+  * @classdesc Allows an Entity to render a particle system
+  * @description Create a new ParticleSystemComponentSystem
+  * @param {pc.Application} app The Application.
+  */
+@JSImport("playcanvas", "ParticleSystemComponentSystem")
+@js.native
+class ParticleSystemComponentSystem protected ()
+  extends typingsSlinky.playcanvas.pc.ParticleSystemComponentSystem {
+  def this(app: typingsSlinky.playcanvas.pc.Application) = this()
+}
+
