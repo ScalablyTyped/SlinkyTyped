@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.SVGFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.SVGSizeConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
@@ -26,31 +27,21 @@ class SVGFile protected ()
     * @param svgConfig The svg size configuration object.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: SVGFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: SVGFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: SVGFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, url: String) = this()
+  def this(loader: LoaderPlugin, key: SVGFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, svgConfig: SVGSizeConfig) = this()
+  def this(loader: LoaderPlugin, key: SVGFileConfig, url: String, svgConfig: SVGSizeConfig) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: String,
-    svgConfig: SVGSizeConfig
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: SVGFileConfig,
-    url: String,
-    svgConfig: SVGSizeConfig
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     url: String,
     svgConfig: SVGSizeConfig,
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: SVGFileConfig,
     url: String,
     svgConfig: SVGSizeConfig,

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.microflows
 
+import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
@@ -24,6 +25,6 @@ abstract class MicroflowBase protected ()
 @js.native
 object MicroflowBase extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

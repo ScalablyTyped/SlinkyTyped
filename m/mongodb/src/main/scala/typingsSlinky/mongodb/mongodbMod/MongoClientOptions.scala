@@ -12,7 +12,6 @@ import typingsSlinky.mongodb.mongodbStrings.`SCRAM-SHA-1`
 import typingsSlinky.mongodb.mongodbStrings.`SCRAM-SHA-256`
 import typingsSlinky.mongodb.mongodbStrings.majority
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.tlsMod.PeerCertificate
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
@@ -104,7 +103,7 @@ object MongoClientOptions {
     authSource: String = null,
     autoReconnect: js.UndefOr[Boolean] = js.undefined,
     bufferMaxEntries: Int | scala.Double = null,
-    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]]) = null,
+    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]) = null,
     ciphers: String = null,
     connectTimeoutMS: Int | scala.Double = null,
     connectWithNoPrimary: js.UndefOr[Boolean] = js.undefined,

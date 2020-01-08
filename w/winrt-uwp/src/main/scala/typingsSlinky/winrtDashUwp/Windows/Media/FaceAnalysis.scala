@@ -7,8 +7,6 @@ import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapBounds
 import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapPixelFormat
 import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapSize
 import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.SoftwareBitmap
-import typingsSlinky.winrtDashUwp.Windows.Media.FaceAnalysis.FaceDetector
-import typingsSlinky.winrtDashUwp.Windows.Media.FaceAnalysis.FaceTracker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

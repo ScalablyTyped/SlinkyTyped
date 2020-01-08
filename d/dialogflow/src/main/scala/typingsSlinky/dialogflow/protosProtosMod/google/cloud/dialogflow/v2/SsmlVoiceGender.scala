@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object SsmlVoiceGender extends js.Object {
   @js.native
   sealed trait SSML_VOICE_GENDER_UNSPECIFIED extends SsmlVoiceGender
   
-  /* 2 */ val SSML_VOICE_GENDER_FEMALE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SsmlVoiceGender.SSML_VOICE_GENDER_FEMALE with Double = js.native
-  /* 1 */ val SSML_VOICE_GENDER_MALE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SsmlVoiceGender.SSML_VOICE_GENDER_MALE with Double = js.native
-  /* 3 */ val SSML_VOICE_GENDER_NEUTRAL: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SsmlVoiceGender.SSML_VOICE_GENDER_NEUTRAL with Double = js.native
-  /* 0 */ val SSML_VOICE_GENDER_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SsmlVoiceGender.SSML_VOICE_GENDER_UNSPECIFIED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SsmlVoiceGender with Double] = js.native
+  /* 2 */ @js.native
+  object SSML_VOICE_GENDER_FEMALE extends TopLevel[SSML_VOICE_GENDER_FEMALE with Double]
+  
+  /* 1 */ @js.native
+  object SSML_VOICE_GENDER_MALE extends TopLevel[SSML_VOICE_GENDER_MALE with Double]
+  
+  /* 3 */ @js.native
+  object SSML_VOICE_GENDER_NEUTRAL extends TopLevel[SSML_VOICE_GENDER_NEUTRAL with Double]
+  
+  /* 0 */ @js.native
+  object SSML_VOICE_GENDER_UNSPECIFIED extends TopLevel[SSML_VOICE_GENDER_UNSPECIFIED with Double]
+  
 }
 

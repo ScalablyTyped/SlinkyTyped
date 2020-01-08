@@ -1,6 +1,5 @@
 package typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesMod
 
-import typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.java
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -144,6 +143,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fedora
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.figma
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.firefox
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`firefox-browser`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`first-order`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`first-order-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.firstdraft
@@ -205,6 +205,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.houzz
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.html5
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hubspot
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ideal
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.imdb
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.instagram
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.intercom
@@ -214,13 +215,13 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`itch-io`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.itunes
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`itunes-note`
-  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.java
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.java_
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`jedi-order`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.jenkins
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.jira
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.joget
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.joomla
-  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.JS
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.js_
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`js-square`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.jsfiddle
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.kaggle
@@ -254,6 +255,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.meetup
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.megaport
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.mendeley
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microblog
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microsoft
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.mix
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.mixcloud
@@ -292,6 +294,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-hat`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-pp`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-square`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.pinterest
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pinterest-p`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pinterest-square`
@@ -391,6 +394,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.uikit
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.umbraco
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.uniregistry
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.unity
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.untappd
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ups
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.usb
@@ -446,6 +450,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`address-book`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`address-card`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.adjust
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`air-conditioner`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`air-freshener`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`alarm-clock`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`alarm-exclamation`
@@ -454,6 +459,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.album
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`album-collection`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.alicorn
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.alien
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`alien-monster`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`align-center`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`align-justify`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`align-left`
@@ -549,6 +556,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`badge-sheriff`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`badger-honey`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bags-shopping`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bahai
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`balance-scale`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`balance-scale-left`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`balance-scale-right`
@@ -577,9 +585,13 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`battery-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`battery-three-quarters`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bed
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-bunk`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-empty`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.beer
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bell
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-exclamation`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-on`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-plus`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-school`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-school-slash`
@@ -598,6 +610,9 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blender
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blender-phone`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blind
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blinds
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blinds-open`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blinds-raised`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blog
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bold
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bolt
@@ -693,6 +708,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.camcorder
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.camera
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-home`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-movie`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-polaroid`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-retro`
@@ -715,6 +731,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`car-side`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`car-tilt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`car-wash`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.caravan
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caravan-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caret-circle-down`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caret-circle-left`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caret-circle-right`
@@ -734,6 +752,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`cash-register`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`cassette-tape`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cat
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`cat-space`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cauldron
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cctv
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.certificate
@@ -837,6 +856,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`code-commit`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`code-merge`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coffee
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`coffee-pot`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`coffee-togo`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coffin
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cog
@@ -844,6 +864,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coin
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coins
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.columns
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.comet
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.comment
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`comment-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`comment-alt-check`
@@ -1029,9 +1050,12 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`eye-evil`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`eye-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fan
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fan-table`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.farm
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fast-backward`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fast-forward`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.faucet
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`faucet-drip`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fax
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.feather
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`feather-alt`
@@ -1129,11 +1153,15 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.function
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`funnel-dollar`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.futbol
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.galaxy
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`game-board`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`game-board-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`game-console-handheld`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.gamepad
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`gamepad-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.garage
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`garage-car`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`garage-open`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`gas-pump`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`gas-pump-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.gavel
@@ -1235,7 +1263,6 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hat-winter`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hat-witch`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hat-wizard`
-  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.haykal
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hdd
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`head-side`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`head-side-brain`
@@ -1252,6 +1279,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`heart-rate`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`heart-square`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.heartbeat
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.heat
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.helicopter
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`helmet-battle`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hexagon
@@ -1285,8 +1313,14 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hourglass-end`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hourglass-half`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hourglass-start`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.house
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-damage`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-day`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-flood`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-leave`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-night`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-return`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-signal`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hryvnia
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.humidity
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hurricane
@@ -1342,6 +1376,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`knife-kitchen`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lambda
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lamp
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lamp-desk`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lamp-floor`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.landmark
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`landmark-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.language
@@ -1368,6 +1404,10 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`level-up`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`level-up-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`life-ring`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-ceiling`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch-off`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch-on`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lightbulb
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lightbulb-dollar`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lightbulb-exclamation`
@@ -1454,6 +1494,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`microphone-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`microphone-stand`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microscope
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microwave
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`mind-share`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.minus
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`minus-circle`
@@ -1513,6 +1554,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ornament
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.otter
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.outdent
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.outlet
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.oven
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.overline
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`page-break`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.pager
@@ -1585,6 +1628,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`plane-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`plane-arrival`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`plane-departure`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`planet-moon`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`planet-ringed`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.play
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`play-circle`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.plug
@@ -1596,6 +1641,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.podcast
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.podium
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`podium-star`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`police-box`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.poll
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`poll-h`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`poll-people`
@@ -1603,6 +1649,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`poo-storm`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.poop
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.popcorn
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`portal-enter`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`portal-exit`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.portrait
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pound-sign`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`power-off`
@@ -1631,6 +1679,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.rabbit
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`rabbit-fast`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.racquet
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.radar
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.radiation
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`radiation-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.radio
@@ -1640,6 +1689,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ram
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`ramp-loading`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.random
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.raygun
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.receipt
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`record-vinyl`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`rectangle-landscape`
@@ -1648,6 +1698,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.recycle
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.redo
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`redo-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.refrigerator
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.registered
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`remove-format`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.repeat
@@ -1666,6 +1717,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.road
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.robot
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.rocket
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`rocket-launch`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.route
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`route-highway`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`route-interstate`
@@ -1716,6 +1768,11 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.seedling
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`send-back`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`send-backward`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sensor
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-alert`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-fire`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-on`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-smoke`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.server
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.shapes
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.share
@@ -1765,6 +1822,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`signal-stream`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.signature
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sim-card`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.siren
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`siren-on`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sitemap
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.skating
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.skeleton
@@ -1802,6 +1861,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.snowplow
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.socks
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`solar-panel`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`solar-system`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sort
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-alpha-down`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-alpha-down-alt`
@@ -1812,6 +1872,9 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-amount-down-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-amount-up`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-amount-up-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle-down`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle-up`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-down`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-numeric-down`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-numeric-down-alt`
@@ -1829,6 +1892,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.soup
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.spa
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-shuttle`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-station-moon`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-station-moon-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.spade
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sparkles
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.speaker
@@ -1841,6 +1906,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`spinner-third`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.splotch
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`spray-can`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sprinkler
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.square
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`square-full`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`square-root`
@@ -1856,7 +1922,12 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-half-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-of-david`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-of-life`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-shooting`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.starfighter
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`starfighter-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.stars
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.starship
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`starship-freighter`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.steak
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`steering-wheel`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`step-backward`
@@ -1892,7 +1963,10 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.swimmer
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`swimming-pool`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sword
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sword-laser`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sword-laser-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.swords
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`swords-laser`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.synagogue
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sync
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sync-alt`
@@ -1928,10 +2002,13 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.taxi
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.teeth
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`teeth-open`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.telescope
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-down`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-frigid`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-high`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-hot`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-low`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-up`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.tenge
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`tennis-ball`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.terminal
@@ -1992,10 +2069,16 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`traffic-light-go`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`traffic-light-slow`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`traffic-light-stop`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.trailer
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.train
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.tram
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.transgender
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transgender-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.transporter
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-1`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-2`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-3`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-empty`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.trash
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`trash-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`trash-restore`
@@ -2034,6 +2117,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`tv-music`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`tv-retro`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.typewriter
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ufo
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`ufo-beam`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.umbrella
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`umbrella-beach`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.underline
@@ -2051,6 +2136,7 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`usd-circle`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`usd-square`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.user
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-alien`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-alt-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-astronaut`
@@ -2075,12 +2161,14 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-ninja`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-nurse`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-plus`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-robot`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-secret`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-shield`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-slash`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-tag`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-tie`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-times`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-visor`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.users
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`users-class`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`users-cog`
@@ -2091,6 +2179,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`utensil-spoon`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.utensils
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`utensils-alt`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.vacuum
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`vacuum-robot`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`value-absolute`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`vector-square`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.venus
@@ -2155,6 +2245,8 @@ import scala.scalajs.js.annotation._
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.window
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-alt`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-close`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-frame`
+  - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-frame-open`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-maximize`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-minimize`
   - typings.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-restore`
@@ -2174,8 +2266,6 @@ trait IconName extends js.Object
 object IconName {
   @scala.inline
   def `500px`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`500px` = this.cast("500px")
-  @scala.inline
-  def JS: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.JS = this.cast("js")
   @scala.inline
   def abacus: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.abacus = this.cast("abacus")
   @scala.inline
@@ -2203,6 +2293,8 @@ object IconName {
   @scala.inline
   def affiliatetheme: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.affiliatetheme = this.cast("affiliatetheme")
   @scala.inline
+  def `air-conditioner`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`air-conditioner` = this.cast("air-conditioner")
+  @scala.inline
   def `air-freshener`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`air-freshener` = this.cast("air-freshener")
   @scala.inline
   def airbnb: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.airbnb = this.cast("airbnb")
@@ -2222,6 +2314,10 @@ object IconName {
   def algolia: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.algolia = this.cast("algolia")
   @scala.inline
   def alicorn: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.alicorn = this.cast("alicorn")
+  @scala.inline
+  def alien: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.alien = this.cast("alien")
+  @scala.inline
+  def `alien-monster`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`alien-monster` = this.cast("alien-monster")
   @scala.inline
   def `align-center`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`align-center` = this.cast("align-center")
   @scala.inline
@@ -2455,6 +2551,8 @@ object IconName {
   @scala.inline
   def `bags-shopping`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bags-shopping` = this.cast("bags-shopping")
   @scala.inline
+  def bahai: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bahai = this.cast("bahai")
+  @scala.inline
   def `balance-scale`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`balance-scale` = this.cast("balance-scale")
   @scala.inline
   def `balance-scale-left`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`balance-scale-left` = this.cast("balance-scale-left")
@@ -2515,6 +2613,12 @@ object IconName {
   @scala.inline
   def bed: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bed = this.cast("bed")
   @scala.inline
+  def `bed-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-alt` = this.cast("bed-alt")
+  @scala.inline
+  def `bed-bunk`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-bunk` = this.cast("bed-bunk")
+  @scala.inline
+  def `bed-empty`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bed-empty` = this.cast("bed-empty")
+  @scala.inline
   def beer: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.beer = this.cast("beer")
   @scala.inline
   def behance: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.behance = this.cast("behance")
@@ -2524,6 +2628,8 @@ object IconName {
   def bell: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.bell = this.cast("bell")
   @scala.inline
   def `bell-exclamation`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-exclamation` = this.cast("bell-exclamation")
+  @scala.inline
+  def `bell-on`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-on` = this.cast("bell-on")
   @scala.inline
   def `bell-plus`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`bell-plus` = this.cast("bell-plus")
   @scala.inline
@@ -2572,6 +2678,12 @@ object IconName {
   def `blender-phone`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blender-phone` = this.cast("blender-phone")
   @scala.inline
   def blind: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blind = this.cast("blind")
+  @scala.inline
+  def blinds: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blinds = this.cast("blinds")
+  @scala.inline
+  def `blinds-open`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blinds-open` = this.cast("blinds-open")
+  @scala.inline
+  def `blinds-raised`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`blinds-raised` = this.cast("blinds-raised")
   @scala.inline
   def blog: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.blog = this.cast("blog")
   @scala.inline
@@ -2783,6 +2895,8 @@ object IconName {
   @scala.inline
   def `camera-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-alt` = this.cast("camera-alt")
   @scala.inline
+  def `camera-home`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-home` = this.cast("camera-home")
+  @scala.inline
   def `camera-movie`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-movie` = this.cast("camera-movie")
   @scala.inline
   def `camera-polaroid`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`camera-polaroid` = this.cast("camera-polaroid")
@@ -2829,6 +2943,10 @@ object IconName {
   @scala.inline
   def `car-wash`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`car-wash` = this.cast("car-wash")
   @scala.inline
+  def caravan: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.caravan = this.cast("caravan")
+  @scala.inline
+  def `caravan-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caravan-alt` = this.cast("caravan-alt")
+  @scala.inline
   def `caret-circle-down`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caret-circle-down` = this.cast("caret-circle-down")
   @scala.inline
   def `caret-circle-left`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`caret-circle-left` = this.cast("caret-circle-left")
@@ -2868,6 +2986,8 @@ object IconName {
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
   def cat: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cat = this.cast("cat")
+  @scala.inline
+  def `cat-space`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`cat-space` = this.cast("cat-space")
   @scala.inline
   def cauldron: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.cauldron = this.cast("cauldron")
   @scala.inline
@@ -3111,6 +3231,8 @@ object IconName {
   @scala.inline
   def coffee: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coffee = this.cast("coffee")
   @scala.inline
+  def `coffee-pot`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`coffee-pot` = this.cast("coffee-pot")
+  @scala.inline
   def `coffee-togo`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`coffee-togo` = this.cast("coffee-togo")
   @scala.inline
   def coffin: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coffin = this.cast("coffin")
@@ -3124,6 +3246,8 @@ object IconName {
   def coins: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.coins = this.cast("coins")
   @scala.inline
   def columns: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.columns = this.cast("columns")
+  @scala.inline
+  def comet: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.comet = this.cast("comet")
   @scala.inline
   def comment: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.comment = this.cast("comment")
   @scala.inline
@@ -3619,6 +3743,8 @@ object IconName {
   @scala.inline
   def fan: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fan = this.cast("fan")
   @scala.inline
+  def `fan-table`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fan-table` = this.cast("fan-table")
+  @scala.inline
   def `fantasy-flight-games`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fantasy-flight-games` = this.cast("fantasy-flight-games")
   @scala.inline
   def farm: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.farm = this.cast("farm")
@@ -3626,6 +3752,10 @@ object IconName {
   def `fast-backward`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fast-backward` = this.cast("fast-backward")
   @scala.inline
   def `fast-forward`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fast-forward` = this.cast("fast-forward")
+  @scala.inline
+  def faucet: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.faucet = this.cast("faucet")
+  @scala.inline
+  def `faucet-drip`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`faucet-drip` = this.cast("faucet-drip")
   @scala.inline
   def fax: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fax = this.cast("fax")
   @scala.inline
@@ -3742,6 +3872,8 @@ object IconName {
   def `fire-smoke`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`fire-smoke` = this.cast("fire-smoke")
   @scala.inline
   def firefox: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.firefox = this.cast("firefox")
+  @scala.inline
+  def `firefox-browser`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`firefox-browser` = this.cast("firefox-browser")
   @scala.inline
   def fireplace: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.fireplace = this.cast("fireplace")
   @scala.inline
@@ -3871,6 +4003,8 @@ object IconName {
   @scala.inline
   def `galactic-senate`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`galactic-senate` = this.cast("galactic-senate")
   @scala.inline
+  def galaxy: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.galaxy = this.cast("galaxy")
+  @scala.inline
   def `game-board`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`game-board` = this.cast("game-board")
   @scala.inline
   def `game-board-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`game-board-alt` = this.cast("game-board-alt")
@@ -3880,6 +4014,12 @@ object IconName {
   def gamepad: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.gamepad = this.cast("gamepad")
   @scala.inline
   def `gamepad-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`gamepad-alt` = this.cast("gamepad-alt")
+  @scala.inline
+  def garage: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.garage = this.cast("garage")
+  @scala.inline
+  def `garage-car`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`garage-car` = this.cast("garage-car")
+  @scala.inline
+  def `garage-open`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`garage-open` = this.cast("garage-open")
   @scala.inline
   def `gas-pump`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`gas-pump` = this.cast("gas-pump")
   @scala.inline
@@ -4147,8 +4287,6 @@ object IconName {
   @scala.inline
   def `hat-wizard`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hat-wizard` = this.cast("hat-wizard")
   @scala.inline
-  def haykal: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.haykal = this.cast("haykal")
-  @scala.inline
   def hdd: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.hdd = this.cast("hdd")
   @scala.inline
   def `head-side`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`head-side` = this.cast("head-side")
@@ -4180,6 +4318,8 @@ object IconName {
   def `heart-square`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`heart-square` = this.cast("heart-square")
   @scala.inline
   def heartbeat: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.heartbeat = this.cast("heartbeat")
+  @scala.inline
+  def heat: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.heat = this.cast("heat")
   @scala.inline
   def helicopter: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.helicopter = this.cast("helicopter")
   @scala.inline
@@ -4257,9 +4397,21 @@ object IconName {
   @scala.inline
   def `hourglass-start`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`hourglass-start` = this.cast("hourglass-start")
   @scala.inline
+  def house: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.house = this.cast("house")
+  @scala.inline
   def `house-damage`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-damage` = this.cast("house-damage")
   @scala.inline
+  def `house-day`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-day` = this.cast("house-day")
+  @scala.inline
   def `house-flood`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-flood` = this.cast("house-flood")
+  @scala.inline
+  def `house-leave`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-leave` = this.cast("house-leave")
+  @scala.inline
+  def `house-night`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-night` = this.cast("house-night")
+  @scala.inline
+  def `house-return`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-return` = this.cast("house-return")
+  @scala.inline
+  def `house-signal`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`house-signal` = this.cast("house-signal")
   @scala.inline
   def houzz: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.houzz = this.cast("houzz")
   @scala.inline
@@ -4290,6 +4442,8 @@ object IconName {
   def `id-card`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`id-card` = this.cast("id-card")
   @scala.inline
   def `id-card-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`id-card-alt` = this.cast("id-card-alt")
+  @scala.inline
+  def ideal: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ideal = this.cast("ideal")
   @scala.inline
   def igloo: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.igloo = this.cast("igloo")
   @scala.inline
@@ -4352,7 +4506,7 @@ object IconName {
   def `jack-o-lantern`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`jack-o-lantern` = this.cast("jack-o-lantern")
   @JSName("java")
   @scala.inline
-  def java_ : java = this.cast("java")
+  def java_ : typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.java_ = this.cast("java")
   @scala.inline
   def jedi: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.jedi = this.cast("jedi")
   @scala.inline
@@ -4373,6 +4527,9 @@ object IconName {
   def joystick: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.joystick = this.cast("joystick")
   @scala.inline
   def `js-square`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`js-square` = this.cast("js-square")
+  @JSName("js")
+  @scala.inline
+  def js_ : typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.js_ = this.cast("js")
   @scala.inline
   def jsfiddle: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.jsfiddle = this.cast("jsfiddle")
   @scala.inline
@@ -4423,6 +4580,10 @@ object IconName {
   def lambda: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lambda = this.cast("lambda")
   @scala.inline
   def lamp: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lamp = this.cast("lamp")
+  @scala.inline
+  def `lamp-desk`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lamp-desk` = this.cast("lamp-desk")
+  @scala.inline
+  def `lamp-floor`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`lamp-floor` = this.cast("lamp-floor")
   @scala.inline
   def landmark: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.landmark = this.cast("landmark")
   @scala.inline
@@ -4485,6 +4646,14 @@ object IconName {
   def `level-up-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`level-up-alt` = this.cast("level-up-alt")
   @scala.inline
   def `life-ring`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`life-ring` = this.cast("life-ring")
+  @scala.inline
+  def `light-ceiling`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-ceiling` = this.cast("light-ceiling")
+  @scala.inline
+  def `light-switch`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch` = this.cast("light-switch")
+  @scala.inline
+  def `light-switch-off`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch-off` = this.cast("light-switch-off")
+  @scala.inline
+  def `light-switch-on`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`light-switch-on` = this.cast("light-switch-on")
   @scala.inline
   def lightbulb: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.lightbulb = this.cast("lightbulb")
   @scala.inline
@@ -4684,6 +4853,8 @@ object IconName {
   @scala.inline
   def meteor: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.meteor = this.cast("meteor")
   @scala.inline
+  def microblog: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microblog = this.cast("microblog")
+  @scala.inline
   def microchip: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microchip = this.cast("microchip")
   @scala.inline
   def microphone: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microphone = this.cast("microphone")
@@ -4699,6 +4870,8 @@ object IconName {
   def microscope: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microscope = this.cast("microscope")
   @scala.inline
   def microsoft: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microsoft = this.cast("microsoft")
+  @scala.inline
+  def microwave: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.microwave = this.cast("microwave")
   @scala.inline
   def `mind-share`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`mind-share` = this.cast("mind-share")
   @scala.inline
@@ -4862,6 +5035,10 @@ object IconName {
   @scala.inline
   def outdent: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.outdent = this.cast("outdent")
   @scala.inline
+  def outlet: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.outlet = this.cast("outlet")
+  @scala.inline
+  def oven: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.oven = this.cast("oven")
+  @scala.inline
   def overline: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.overline = this.cast("overline")
   @scala.inline
   def `page-break`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`page-break` = this.cast("page-break")
@@ -5016,6 +5193,8 @@ object IconName {
   @scala.inline
   def `pied-piper-pp`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-pp` = this.cast("pied-piper-pp")
   @scala.inline
+  def `pied-piper-square`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`pied-piper-square` = this.cast("pied-piper-square")
+  @scala.inline
   def pig: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.pig = this.cast("pig")
   @scala.inline
   def `piggy-bank`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`piggy-bank` = this.cast("piggy-bank")
@@ -5042,6 +5221,10 @@ object IconName {
   @scala.inline
   def `plane-departure`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`plane-departure` = this.cast("plane-departure")
   @scala.inline
+  def `planet-moon`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`planet-moon` = this.cast("planet-moon")
+  @scala.inline
+  def `planet-ringed`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`planet-ringed` = this.cast("planet-ringed")
+  @scala.inline
   def play: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.play = this.cast("play")
   @scala.inline
   def `play-circle`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`play-circle` = this.cast("play-circle")
@@ -5066,6 +5249,8 @@ object IconName {
   @scala.inline
   def `podium-star`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`podium-star` = this.cast("podium-star")
   @scala.inline
+  def `police-box`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`police-box` = this.cast("police-box")
+  @scala.inline
   def poll: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.poll = this.cast("poll")
   @scala.inline
   def `poll-h`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`poll-h` = this.cast("poll-h")
@@ -5079,6 +5264,10 @@ object IconName {
   def poop: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.poop = this.cast("poop")
   @scala.inline
   def popcorn: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.popcorn = this.cast("popcorn")
+  @scala.inline
+  def `portal-enter`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`portal-enter` = this.cast("portal-enter")
+  @scala.inline
+  def `portal-exit`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`portal-exit` = this.cast("portal-exit")
   @scala.inline
   def portrait: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.portrait = this.cast("portrait")
   @scala.inline
@@ -5150,6 +5339,8 @@ object IconName {
   @scala.inline
   def racquet: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.racquet = this.cast("racquet")
   @scala.inline
+  def radar: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.radar = this.cast("radar")
+  @scala.inline
   def radiation: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.radiation = this.cast("radiation")
   @scala.inline
   def `radiation-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`radiation-alt` = this.cast("radiation-alt")
@@ -5171,6 +5362,8 @@ object IconName {
   def `raspberry-pi`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`raspberry-pi` = this.cast("raspberry-pi")
   @scala.inline
   def ravelry: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ravelry = this.cast("ravelry")
+  @scala.inline
+  def raygun: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.raygun = this.cast("raygun")
   @scala.inline
   def react: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.react = this.cast("react")
   @scala.inline
@@ -5205,6 +5398,8 @@ object IconName {
   def redo: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.redo = this.cast("redo")
   @scala.inline
   def `redo-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`redo-alt` = this.cast("redo-alt")
+  @scala.inline
+  def refrigerator: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.refrigerator = this.cast("refrigerator")
   @scala.inline
   def registered: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.registered = this.cast("registered")
   @scala.inline
@@ -5251,6 +5446,8 @@ object IconName {
   def robot: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.robot = this.cast("robot")
   @scala.inline
   def rocket: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.rocket = this.cast("rocket")
+  @scala.inline
+  def `rocket-launch`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`rocket-launch` = this.cast("rocket-launch")
   @scala.inline
   def rocketchat: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.rocketchat = this.cast("rocketchat")
   @scala.inline
@@ -5372,6 +5569,16 @@ object IconName {
   @scala.inline
   def `send-backward`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`send-backward` = this.cast("send-backward")
   @scala.inline
+  def sensor: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sensor = this.cast("sensor")
+  @scala.inline
+  def `sensor-alert`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-alert` = this.cast("sensor-alert")
+  @scala.inline
+  def `sensor-fire`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-fire` = this.cast("sensor-fire")
+  @scala.inline
+  def `sensor-on`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-on` = this.cast("sensor-on")
+  @scala.inline
+  def `sensor-smoke`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sensor-smoke` = this.cast("sensor-smoke")
+  @scala.inline
   def server: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.server = this.cast("server")
   @scala.inline
   def servicestack: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.servicestack = this.cast("servicestack")
@@ -5478,6 +5685,10 @@ object IconName {
   @scala.inline
   def simplybuilt: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.simplybuilt = this.cast("simplybuilt")
   @scala.inline
+  def siren: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.siren = this.cast("siren")
+  @scala.inline
+  def `siren-on`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`siren-on` = this.cast("siren-on")
+  @scala.inline
   def sistrix: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sistrix = this.cast("sistrix")
   @scala.inline
   def sitemap: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sitemap = this.cast("sitemap")
@@ -5574,6 +5785,8 @@ object IconName {
   @scala.inline
   def `solar-panel`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`solar-panel` = this.cast("solar-panel")
   @scala.inline
+  def `solar-system`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`solar-system` = this.cast("solar-system")
+  @scala.inline
   def sort: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sort = this.cast("sort")
   @scala.inline
   def `sort-alpha-down`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-alpha-down` = this.cast("sort-alpha-down")
@@ -5593,6 +5806,12 @@ object IconName {
   def `sort-amount-up`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-amount-up` = this.cast("sort-amount-up")
   @scala.inline
   def `sort-amount-up-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-amount-up-alt` = this.cast("sort-amount-up-alt")
+  @scala.inline
+  def `sort-circle`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle` = this.cast("sort-circle")
+  @scala.inline
+  def `sort-circle-down`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle-down` = this.cast("sort-circle-down")
+  @scala.inline
+  def `sort-circle-up`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-circle-up` = this.cast("sort-circle-up")
   @scala.inline
   def `sort-down`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sort-down` = this.cast("sort-down")
   @scala.inline
@@ -5632,6 +5851,10 @@ object IconName {
   @scala.inline
   def `space-shuttle`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-shuttle` = this.cast("space-shuttle")
   @scala.inline
+  def `space-station-moon`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-station-moon` = this.cast("space-station-moon")
+  @scala.inline
+  def `space-station-moon-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`space-station-moon-alt` = this.cast("space-station-moon-alt")
+  @scala.inline
   def spade: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.spade = this.cast("spade")
   @scala.inline
   def sparkles: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sparkles = this.cast("sparkles")
@@ -5661,6 +5884,8 @@ object IconName {
   def spotify: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.spotify = this.cast("spotify")
   @scala.inline
   def `spray-can`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`spray-can` = this.cast("spray-can")
+  @scala.inline
+  def sprinkler: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sprinkler = this.cast("sprinkler")
   @scala.inline
   def square: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.square = this.cast("square")
   @scala.inline
@@ -5700,7 +5925,17 @@ object IconName {
   @scala.inline
   def `star-of-life`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-of-life` = this.cast("star-of-life")
   @scala.inline
+  def `star-shooting`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`star-shooting` = this.cast("star-shooting")
+  @scala.inline
+  def starfighter: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.starfighter = this.cast("starfighter")
+  @scala.inline
+  def `starfighter-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`starfighter-alt` = this.cast("starfighter-alt")
+  @scala.inline
   def stars: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.stars = this.cast("stars")
+  @scala.inline
+  def starship: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.starship = this.cast("starship")
+  @scala.inline
+  def `starship-freighter`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`starship-freighter` = this.cast("starship-freighter")
   @scala.inline
   def staylinked: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.staylinked = this.cast("staylinked")
   @scala.inline
@@ -5802,7 +6037,13 @@ object IconName {
   @scala.inline
   def sword: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.sword = this.cast("sword")
   @scala.inline
+  def `sword-laser`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sword-laser` = this.cast("sword-laser")
+  @scala.inline
+  def `sword-laser-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`sword-laser-alt` = this.cast("sword-laser-alt")
+  @scala.inline
   def swords: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.swords = this.cast("swords")
+  @scala.inline
+  def `swords-laser`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`swords-laser` = this.cast("swords-laser")
   @scala.inline
   def symfony: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.symfony = this.cast("symfony")
   @scala.inline
@@ -5882,6 +6123,10 @@ object IconName {
   @scala.inline
   def `telegram-plane`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`telegram-plane` = this.cast("telegram-plane")
   @scala.inline
+  def telescope: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.telescope = this.cast("telescope")
+  @scala.inline
+  def `temperature-down`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-down` = this.cast("temperature-down")
+  @scala.inline
   def `temperature-frigid`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-frigid` = this.cast("temperature-frigid")
   @scala.inline
   def `temperature-high`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-high` = this.cast("temperature-high")
@@ -5889,6 +6134,8 @@ object IconName {
   def `temperature-hot`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-hot` = this.cast("temperature-hot")
   @scala.inline
   def `temperature-low`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-low` = this.cast("temperature-low")
+  @scala.inline
+  def `temperature-up`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`temperature-up` = this.cast("temperature-up")
   @scala.inline
   def `tencent-weibo`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`tencent-weibo` = this.cast("tencent-weibo")
   @scala.inline
@@ -6022,6 +6269,8 @@ object IconName {
   @scala.inline
   def `traffic-light-stop`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`traffic-light-stop` = this.cast("traffic-light-stop")
   @scala.inline
+  def trailer: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.trailer = this.cast("trailer")
+  @scala.inline
   def train: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.train = this.cast("train")
   @scala.inline
   def tram: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.tram = this.cast("tram")
@@ -6029,6 +6278,16 @@ object IconName {
   def transgender: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.transgender = this.cast("transgender")
   @scala.inline
   def `transgender-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transgender-alt` = this.cast("transgender-alt")
+  @scala.inline
+  def transporter: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.transporter = this.cast("transporter")
+  @scala.inline
+  def `transporter-1`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-1` = this.cast("transporter-1")
+  @scala.inline
+  def `transporter-2`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-2` = this.cast("transporter-2")
+  @scala.inline
+  def `transporter-3`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-3` = this.cast("transporter-3")
+  @scala.inline
+  def `transporter-empty`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`transporter-empty` = this.cast("transporter-empty")
   @scala.inline
   def trash: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.trash = this.cast("trash")
   @scala.inline
@@ -6126,6 +6385,10 @@ object IconName {
   @scala.inline
   def ubuntu: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ubuntu = this.cast("ubuntu")
   @scala.inline
+  def ufo: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.ufo = this.cast("ufo")
+  @scala.inline
+  def `ufo-beam`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`ufo-beam` = this.cast("ufo-beam")
+  @scala.inline
   def uikit: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.uikit = this.cast("uikit")
   @scala.inline
   def umbraco: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.umbraco = this.cast("umbraco")
@@ -6145,6 +6408,8 @@ object IconName {
   def union: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.union = this.cast("union")
   @scala.inline
   def uniregistry: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.uniregistry = this.cast("uniregistry")
+  @scala.inline
+  def unity: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.unity = this.cast("unity")
   @scala.inline
   def `universal-access`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`universal-access` = this.cast("universal-access")
   @scala.inline
@@ -6171,6 +6436,8 @@ object IconName {
   def `usd-square`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`usd-square` = this.cast("usd-square")
   @scala.inline
   def user: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.user = this.cast("user")
+  @scala.inline
+  def `user-alien`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-alien` = this.cast("user-alien")
   @scala.inline
   def `user-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-alt` = this.cast("user-alt")
   @scala.inline
@@ -6220,6 +6487,8 @@ object IconName {
   @scala.inline
   def `user-plus`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-plus` = this.cast("user-plus")
   @scala.inline
+  def `user-robot`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-robot` = this.cast("user-robot")
+  @scala.inline
   def `user-secret`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-secret` = this.cast("user-secret")
   @scala.inline
   def `user-shield`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-shield` = this.cast("user-shield")
@@ -6231,6 +6500,8 @@ object IconName {
   def `user-tie`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-tie` = this.cast("user-tie")
   @scala.inline
   def `user-times`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-times` = this.cast("user-times")
+  @scala.inline
+  def `user-visor`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`user-visor` = this.cast("user-visor")
   @scala.inline
   def users: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.users = this.cast("users")
   @scala.inline
@@ -6257,6 +6528,10 @@ object IconName {
   def `utensils-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`utensils-alt` = this.cast("utensils-alt")
   @scala.inline
   def vaadin: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.vaadin = this.cast("vaadin")
+  @scala.inline
+  def vacuum: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.vacuum = this.cast("vacuum")
+  @scala.inline
+  def `vacuum-robot`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`vacuum-robot` = this.cast("vacuum-robot")
   @scala.inline
   def `value-absolute`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`value-absolute` = this.cast("value-absolute")
   @scala.inline
@@ -6423,6 +6698,10 @@ object IconName {
   def `window-alt`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-alt` = this.cast("window-alt")
   @scala.inline
   def `window-close`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-close` = this.cast("window-close")
+  @scala.inline
+  def `window-frame`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-frame` = this.cast("window-frame")
+  @scala.inline
+  def `window-frame-open`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-frame-open` = this.cast("window-frame-open")
   @scala.inline
   def `window-maximize`: typingsSlinky.atFortawesomeFontawesomeDashCommonDashTypes.atFortawesomeFontawesomeDashCommonDashTypesStrings.`window-maximize` = this.cast("window-maximize")
   @scala.inline

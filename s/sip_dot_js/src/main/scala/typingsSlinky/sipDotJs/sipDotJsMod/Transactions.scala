@@ -1,6 +1,7 @@
 package typingsSlinky.sipDotJs.sipDotJsMod
 
 import org.scalablytyped.runtime.Instantiable3
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sipDotJs.libCoreMessagesMod.IncomingRequestMessage
 import typingsSlinky.sipDotJs.libCoreMessagesMod.OutgoingRequestMessage
 import typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashUserMod.ClientTransactionUser
@@ -93,29 +94,49 @@ object Transactions extends js.Object {
     ) = this()
   }
   
-  var InviteClientTransaction: Instantiable3[
-    /* request */ OutgoingRequestMessage, 
-    /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
-    /* user */ ClientTransactionUser, 
-    typingsSlinky.sipDotJs.libCoreTransactionsMod.InviteClientTransaction
-  ] = js.native
-  var InviteServerTransaction: Instantiable3[
-    /* request */ IncomingRequestMessage, 
-    /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
-    /* user */ ServerTransactionUser, 
-    typingsSlinky.sipDotJs.libCoreTransactionsMod.InviteServerTransaction
-  ] = js.native
-  var NonInviteClientTransaction: Instantiable3[
-    /* request */ OutgoingRequestMessage, 
-    /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
-    /* user */ ClientTransactionUser, 
-    typingsSlinky.sipDotJs.libCoreTransactionsMod.NonInviteClientTransaction
-  ] = js.native
-  var NonInviteServerTransaction: Instantiable3[
-    /* request */ IncomingRequestMessage, 
-    /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
-    /* user */ ServerTransactionUser, 
-    typingsSlinky.sipDotJs.libCoreTransactionsMod.NonInviteServerTransaction
-  ] = js.native
+  @js.native
+  object InviteClientTransaction
+    extends TopLevel[
+          Instantiable3[
+            /* request */ OutgoingRequestMessage, 
+            /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
+            /* user */ ClientTransactionUser, 
+            typingsSlinky.sipDotJs.libCoreTransactionsMod.InviteClientTransaction
+          ]
+        ]
+  
+  @js.native
+  object InviteServerTransaction
+    extends TopLevel[
+          Instantiable3[
+            /* request */ IncomingRequestMessage, 
+            /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
+            /* user */ ServerTransactionUser, 
+            typingsSlinky.sipDotJs.libCoreTransactionsMod.InviteServerTransaction
+          ]
+        ]
+  
+  @js.native
+  object NonInviteClientTransaction
+    extends TopLevel[
+          Instantiable3[
+            /* request */ OutgoingRequestMessage, 
+            /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
+            /* user */ ClientTransactionUser, 
+            typingsSlinky.sipDotJs.libCoreTransactionsMod.NonInviteClientTransaction
+          ]
+        ]
+  
+  @js.native
+  object NonInviteServerTransaction
+    extends TopLevel[
+          Instantiable3[
+            /* request */ IncomingRequestMessage, 
+            /* transport */ typingsSlinky.sipDotJs.libCoreTransportMod.Transport, 
+            /* user */ ServerTransactionUser, 
+            typingsSlinky.sipDotJs.libCoreTransactionsMod.NonInviteServerTransaction
+          ]
+        ]
+  
 }
 

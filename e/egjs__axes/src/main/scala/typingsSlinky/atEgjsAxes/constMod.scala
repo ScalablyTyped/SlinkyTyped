@@ -1,6 +1,6 @@
 package typingsSlinky.atEgjsAxes
 
-import typingsSlinky.atEgjsAxes.constMod.DIRECTION
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,16 +38,32 @@ object constMod extends js.Object {
     @js.native
     sealed trait DIRECTION_VERTICAL extends DIRECTION
     
-    /* 30 */ val DIRECTION_ALL: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_ALL with Double = js.native
-    /* 16 */ val DIRECTION_DOWN: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_DOWN with Double = js.native
-    /* 6 */ val DIRECTION_HORIZONTAL: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_HORIZONTAL with Double = js.native
-    /* 2 */ val DIRECTION_LEFT: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_LEFT with Double = js.native
-    /* 1 */ val DIRECTION_NONE: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_NONE with Double = js.native
-    /* 4 */ val DIRECTION_RIGHT: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_RIGHT with Double = js.native
-    /* 8 */ val DIRECTION_UP: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_UP with Double = js.native
-    /* 24 */ val DIRECTION_VERTICAL: typingsSlinky.atEgjsAxes.constMod.DIRECTION.DIRECTION_VERTICAL with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[DIRECTION with Double] = js.native
+    /* 30 */ @js.native
+    object DIRECTION_ALL extends TopLevel[DIRECTION_ALL with Double]
+    
+    /* 16 */ @js.native
+    object DIRECTION_DOWN extends TopLevel[DIRECTION_DOWN with Double]
+    
+    /* 6 */ @js.native
+    object DIRECTION_HORIZONTAL extends TopLevel[DIRECTION_HORIZONTAL with Double]
+    
+    /* 2 */ @js.native
+    object DIRECTION_LEFT extends TopLevel[DIRECTION_LEFT with Double]
+    
+    /* 1 */ @js.native
+    object DIRECTION_NONE extends TopLevel[DIRECTION_NONE with Double]
+    
+    /* 4 */ @js.native
+    object DIRECTION_RIGHT extends TopLevel[DIRECTION_RIGHT with Double]
+    
+    /* 8 */ @js.native
+    object DIRECTION_UP extends TopLevel[DIRECTION_UP with Double]
+    
+    /* 24 */ @js.native
+    object DIRECTION_VERTICAL extends TopLevel[DIRECTION_VERTICAL with Double]
+    
   }
   
 }

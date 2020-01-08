@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
-import typingsSlinky.plottable.buildSrcCoreRenderControllerMod.Policy
 import typingsSlinky.plottable.buildSrcCoreRenderPolicyMod.IRenderPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`

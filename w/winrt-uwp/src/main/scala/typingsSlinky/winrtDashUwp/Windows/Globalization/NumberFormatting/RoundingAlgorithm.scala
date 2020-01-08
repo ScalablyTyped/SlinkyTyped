@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,18 +56,40 @@ object RoundingAlgorithm extends js.Object {
   @js.native
   sealed trait roundUp extends RoundingAlgorithm
   
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.none with Double = js.native
-  /* 4 */ val roundAwayFromZero: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundAwayFromZero with Double = js.native
-  /* 1 */ val roundDown: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundDown with Double = js.native
-  /* 8 */ val roundHalfAwayFromZero: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfAwayFromZero with Double = js.native
-  /* 5 */ val roundHalfDown: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfDown with Double = js.native
-  /* 9 */ val roundHalfToEven: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfToEven with Double = js.native
-  /* 10 */ val roundHalfToOdd: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfToOdd with Double = js.native
-  /* 7 */ val roundHalfTowardsZero: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfTowardsZero with Double = js.native
-  /* 6 */ val roundHalfUp: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundHalfUp with Double = js.native
-  /* 3 */ val roundTowardsZero: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundTowardsZero with Double = js.native
-  /* 2 */ val roundUp: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.RoundingAlgorithm.roundUp with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RoundingAlgorithm with Double] = js.native
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 4 */ @js.native
+  object roundAwayFromZero extends TopLevel[roundAwayFromZero with Double]
+  
+  /* 1 */ @js.native
+  object roundDown extends TopLevel[roundDown with Double]
+  
+  /* 8 */ @js.native
+  object roundHalfAwayFromZero extends TopLevel[roundHalfAwayFromZero with Double]
+  
+  /* 5 */ @js.native
+  object roundHalfDown extends TopLevel[roundHalfDown with Double]
+  
+  /* 9 */ @js.native
+  object roundHalfToEven extends TopLevel[roundHalfToEven with Double]
+  
+  /* 10 */ @js.native
+  object roundHalfToOdd extends TopLevel[roundHalfToOdd with Double]
+  
+  /* 7 */ @js.native
+  object roundHalfTowardsZero extends TopLevel[roundHalfTowardsZero with Double]
+  
+  /* 6 */ @js.native
+  object roundHalfUp extends TopLevel[roundHalfUp with Double]
+  
+  /* 3 */ @js.native
+  object roundTowardsZero extends TopLevel[roundTowardsZero with Double]
+  
+  /* 2 */ @js.native
+  object roundUp extends TopLevel[roundUp with Double]
+  
 }
 

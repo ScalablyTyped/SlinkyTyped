@@ -2,11 +2,6 @@ package typingsSlinky.plottable
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.plottable.buildSrcCoreDatasetMod.Dataset
-import typingsSlinky.plottable.buildSrcMemoizeSignatureMod.ArraySignature
-import typingsSlinky.plottable.buildSrcMemoizeSignatureMod.ISignatureRecord
-import typingsSlinky.plottable.buildSrcMemoizeSignatureMod.ObjectSignature
-import typingsSlinky.plottable.buildSrcMemoizeSignatureMod.ReferenceSignature
-import typingsSlinky.plottable.buildSrcMemoizeSignatureMod.Signature
 import typingsSlinky.plottable.buildSrcScalesScaleMod.Scale
 import typingsSlinky.std.Record
 import scala.scalajs.js

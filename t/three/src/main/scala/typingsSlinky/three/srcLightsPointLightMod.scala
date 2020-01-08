@@ -3,7 +3,6 @@ package typingsSlinky.three
 import typingsSlinky.three.srcCamerasPerspectiveCameraMod.PerspectiveCamera
 import typingsSlinky.three.srcLightsLightMod.Light
 import typingsSlinky.three.srcLightsLightShadowMod.LightShadow
-import typingsSlinky.three.srcLightsPointLightMod.PointLightShadow
 import typingsSlinky.three.srcMathColorMod.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`

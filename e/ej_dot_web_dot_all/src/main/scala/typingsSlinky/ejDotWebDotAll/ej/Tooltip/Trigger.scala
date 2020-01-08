@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tooltip
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Trigger extends js.Object {
   @js.native
   sealed trait Hover extends Trigger
   
-  /* 0 */ val Click: typingsSlinky.ejDotWebDotAll.ej.Tooltip.Trigger.Click with Double = js.native
-  /* 2 */ val Focus: typingsSlinky.ejDotWebDotAll.ej.Tooltip.Trigger.Focus with Double = js.native
-  /* 1 */ val Hover: typingsSlinky.ejDotWebDotAll.ej.Tooltip.Trigger.Hover with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Trigger with Double] = js.native
+  /* 0 */ @js.native
+  object Click extends TopLevel[Click with Double]
+  
+  /* 2 */ @js.native
+  object Focus extends TopLevel[Focus with Double]
+  
+  /* 1 */ @js.native
+  object Hover extends TopLevel[Hover with Double]
+  
 }
 

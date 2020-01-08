@@ -1,7 +1,5 @@
 package typingsSlinky.promiseDotAllsettled
 
-import typingsSlinky.promiseDotAllsettled.implementationMod.PromiseResultTuple
-import typingsSlinky.promiseDotAllsettled.implementationMod.PromiseTuple
 import typingsSlinky.promiseDotAllsettled.typesMod.PromiseResult
 import typingsSlinky.std.Iterable
 import scala.scalajs.js

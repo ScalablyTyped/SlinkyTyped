@@ -1,6 +1,5 @@
 package typingsSlinky.typesafeDashActions
 
-import typingsSlinky.typesafeDashActions.distCreateDashActionMod.PayloadMetaAction
 import typingsSlinky.typesafeDashActions.distTypeDashHelpersMod.ActionCreator
 import typingsSlinky.typesafeDashActions.distTypeDashHelpersMod.TypeConstant
 import scala.scalajs.js

@@ -5,8 +5,6 @@ import typingsSlinky.electron.Electron.BrowserWindow
 import typingsSlinky.electron.Electron.ContextMenuParams
 import typingsSlinky.electron.Electron.Menu
 import typingsSlinky.electron.Electron.WebviewTag
-import typingsSlinky.electronDashSpellchecker.electronDashSpellcheckerMod.ContextMenuFormatter
-import typingsSlinky.electronDashSpellchecker.electronDashSpellcheckerMod.SpellCheckHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

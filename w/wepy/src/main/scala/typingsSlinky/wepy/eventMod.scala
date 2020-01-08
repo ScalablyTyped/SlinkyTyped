@@ -1,6 +1,5 @@
 package typingsSlinky.wepy
 
-import typingsSlinky.wepy.eventMod.event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

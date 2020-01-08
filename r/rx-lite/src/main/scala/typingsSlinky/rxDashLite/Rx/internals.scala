@@ -2,7 +2,6 @@ package typingsSlinky.rxDashLite.Rx
 
 import typingsSlinky.rxDashCore.Rx.IDisposable
 import typingsSlinky.rxDashLite.Anon_GetDisposable
-import typingsSlinky.rxDashLite.Rx.internals.ScheduledItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

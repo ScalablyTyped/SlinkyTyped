@@ -1,6 +1,5 @@
 package typingsSlinky.atAntDashDesignReactDashNative
 
-import typingsSlinky.atAntDashDesignReactDashNative.libBadgeDemoBasicMod.BasicTagExample
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

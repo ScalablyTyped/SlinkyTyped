@@ -1,10 +1,10 @@
 package typingsSlinky.sipDotJs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sipDotJs.libCoreMessagesMethodsSubscribeMod.OutgoingSubscribeRequest
 import typingsSlinky.sipDotJs.libCoreMessagesMethodsSubscribeMod.OutgoingSubscribeRequestDelegate
 import typingsSlinky.sipDotJs.libCoreMessagesOutgoingDashRequestMod.RequestOptions
 import typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionDashDelegateMod.SubscriptionDelegate
-import typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,13 +70,23 @@ object libCoreSubscriptionSubscriptionMod extends js.Object {
     @js.native
     sealed trait Terminated extends SubscriptionState
     
-    /* "Active" */ val Active: typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState.Active with String = js.native
-    /* "Initial" */ val Initial: typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState.Initial with String = js.native
-    /* "NotifyWait" */ val NotifyWait: typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState.NotifyWait with String = js.native
-    /* "Pending" */ val Pending: typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState.Pending with String = js.native
-    /* "Terminated" */ val Terminated: typingsSlinky.sipDotJs.libCoreSubscriptionSubscriptionMod.SubscriptionState.Terminated with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[SubscriptionState with String] = js.native
+    /* "Active" */ @js.native
+    object Active extends TopLevel[Active with String]
+    
+    /* "Initial" */ @js.native
+    object Initial extends TopLevel[Initial with String]
+    
+    /* "NotifyWait" */ @js.native
+    object NotifyWait extends TopLevel[NotifyWait with String]
+    
+    /* "Pending" */ @js.native
+    object Pending extends TopLevel[Pending with String]
+    
+    /* "Terminated" */ @js.native
+    object Terminated extends TopLevel[Terminated with String]
+    
   }
   
 }

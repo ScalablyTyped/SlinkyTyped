@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object MoveOperations extends js.Object {
   @js.native
   sealed trait overwrite extends MoveOperations
   
-  /* 2 */ val allowBrokenThickets: typingsSlinky.sharepoint.SP.MoveOperations.allowBrokenThickets with Double = js.native
-  /* 3 */ val bypassApprovePermission: typingsSlinky.sharepoint.SP.MoveOperations.bypassApprovePermission with Double = js.native
-  /* 0 */ val none: typingsSlinky.sharepoint.SP.MoveOperations.none with Double = js.native
-  /* 1 */ val overwrite: typingsSlinky.sharepoint.SP.MoveOperations.overwrite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MoveOperations with Double] = js.native
+  /* 2 */ @js.native
+  object allowBrokenThickets extends TopLevel[allowBrokenThickets with Double]
+  
+  /* 3 */ @js.native
+  object bypassApprovePermission extends TopLevel[bypassApprovePermission with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object overwrite extends TopLevel[overwrite with Double]
+  
 }
 

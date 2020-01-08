@@ -1,6 +1,5 @@
 package typingsSlinky.jqueryDashSlugify.jqueryDashSlugifyMod
 
-import typingsSlinky.jqueryDashSlugify.jqueryDashSlugifyMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

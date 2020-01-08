@@ -1,8 +1,6 @@
 package typingsSlinky.sqlite
 
 import typingsSlinky.sqlDashTemplateDashStrings.sqlDashTemplateDashStringsMod.SQLStatement
-import typingsSlinky.sqlite.sqliteMod.Database
-import typingsSlinky.sqlite.sqliteMod.Statement
 import typingsSlinky.sqlite.sqliteStrings.busyTimeout
 import typingsSlinky.sqlite.sqliteStrings.close
 import typingsSlinky.sqlite.sqliteStrings.error

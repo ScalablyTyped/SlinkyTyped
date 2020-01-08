@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,10 +38,16 @@ object PivotLayoutType extends js.Object {
   @js.native
   sealed trait tabular extends PivotLayoutType
   
-  /* "Compact" */ val compact: typingsSlinky.officeDashJsDashPreview.Excel.PivotLayoutType.compact with String = js.native
-  /* "Outline" */ val outline: typingsSlinky.officeDashJsDashPreview.Excel.PivotLayoutType.outline with String = js.native
-  /* "Tabular" */ val tabular: typingsSlinky.officeDashJsDashPreview.Excel.PivotLayoutType.tabular with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[PivotLayoutType with String] = js.native
+  /* "Compact" */ @js.native
+  object compact extends TopLevel[compact with String]
+  
+  /* "Outline" */ @js.native
+  object outline extends TopLevel[outline with String]
+  
+  /* "Tabular" */ @js.native
+  object tabular extends TopLevel[tabular with String]
+  
 }
 

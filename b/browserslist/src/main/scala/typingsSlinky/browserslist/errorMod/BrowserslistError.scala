@@ -1,6 +1,6 @@
 package typingsSlinky.browserslist.errorMod
 
-import typingsSlinky.browserslist.browserslistNumbers.`true`
+import typingsSlinky.browserslist.browserslistBooleans.`true`
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,28 +74,70 @@ object ChangeType extends js.Object {
   @js.native
   sealed trait update extends ChangeType
   
-  /* 1 */ val add: typingsSlinky.sharepoint.SP.ChangeType.add with Double = js.native
-  /* 11 */ val assignmentAdd: typingsSlinky.sharepoint.SP.ChangeType.assignmentAdd with Double = js.native
-  /* 12 */ val assignmentDelete: typingsSlinky.sharepoint.SP.ChangeType.assignmentDelete with Double = js.native
-  /* 3 */ val deleteObject: typingsSlinky.sharepoint.SP.ChangeType.deleteObject with Double = js.native
-  /* 19 */ val listContentTypeAdd: typingsSlinky.sharepoint.SP.ChangeType.listContentTypeAdd with Double = js.native
-  /* 20 */ val listContentTypeDelete: typingsSlinky.sharepoint.SP.ChangeType.listContentTypeDelete with Double = js.native
-  /* 13 */ val memberAdd: typingsSlinky.sharepoint.SP.ChangeType.memberAdd with Double = js.native
-  /* 14 */ val memberDelete: typingsSlinky.sharepoint.SP.ChangeType.memberDelete with Double = js.native
-  /* 5 */ val moveAway: typingsSlinky.sharepoint.SP.ChangeType.moveAway with Double = js.native
-  /* 6 */ val moveInto: typingsSlinky.sharepoint.SP.ChangeType.moveInto with Double = js.native
-  /* 16 */ val navigation: typingsSlinky.sharepoint.SP.ChangeType.navigation with Double = js.native
-  /* 0 */ val noChange: typingsSlinky.sharepoint.SP.ChangeType.noChange with Double = js.native
-  /* 4 */ val rename: typingsSlinky.sharepoint.SP.ChangeType.rename with Double = js.native
-  /* 7 */ val restore: typingsSlinky.sharepoint.SP.ChangeType.restore with Double = js.native
-  /* 8 */ val roleAdd: typingsSlinky.sharepoint.SP.ChangeType.roleAdd with Double = js.native
-  /* 9 */ val roleDelete: typingsSlinky.sharepoint.SP.ChangeType.roleDelete with Double = js.native
-  /* 10 */ val roleUpdate: typingsSlinky.sharepoint.SP.ChangeType.roleUpdate with Double = js.native
-  /* 17 */ val scopeAdd: typingsSlinky.sharepoint.SP.ChangeType.scopeAdd with Double = js.native
-  /* 18 */ val scopeDelete: typingsSlinky.sharepoint.SP.ChangeType.scopeDelete with Double = js.native
-  /* 15 */ val systemUpdate: typingsSlinky.sharepoint.SP.ChangeType.systemUpdate with Double = js.native
-  /* 2 */ val update: typingsSlinky.sharepoint.SP.ChangeType.update with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChangeType with Double] = js.native
+  /* 1 */ @js.native
+  object add extends TopLevel[add with Double]
+  
+  /* 11 */ @js.native
+  object assignmentAdd extends TopLevel[assignmentAdd with Double]
+  
+  /* 12 */ @js.native
+  object assignmentDelete extends TopLevel[assignmentDelete with Double]
+  
+  /* 3 */ @js.native
+  object deleteObject extends TopLevel[deleteObject with Double]
+  
+  /* 19 */ @js.native
+  object listContentTypeAdd extends TopLevel[listContentTypeAdd with Double]
+  
+  /* 20 */ @js.native
+  object listContentTypeDelete extends TopLevel[listContentTypeDelete with Double]
+  
+  /* 13 */ @js.native
+  object memberAdd extends TopLevel[memberAdd with Double]
+  
+  /* 14 */ @js.native
+  object memberDelete extends TopLevel[memberDelete with Double]
+  
+  /* 5 */ @js.native
+  object moveAway extends TopLevel[moveAway with Double]
+  
+  /* 6 */ @js.native
+  object moveInto extends TopLevel[moveInto with Double]
+  
+  /* 16 */ @js.native
+  object navigation extends TopLevel[navigation with Double]
+  
+  /* 0 */ @js.native
+  object noChange extends TopLevel[noChange with Double]
+  
+  /* 4 */ @js.native
+  object rename extends TopLevel[rename with Double]
+  
+  /* 7 */ @js.native
+  object restore extends TopLevel[restore with Double]
+  
+  /* 8 */ @js.native
+  object roleAdd extends TopLevel[roleAdd with Double]
+  
+  /* 9 */ @js.native
+  object roleDelete extends TopLevel[roleDelete with Double]
+  
+  /* 10 */ @js.native
+  object roleUpdate extends TopLevel[roleUpdate with Double]
+  
+  /* 17 */ @js.native
+  object scopeAdd extends TopLevel[scopeAdd with Double]
+  
+  /* 18 */ @js.native
+  object scopeDelete extends TopLevel[scopeDelete with Double]
+  
+  /* 15 */ @js.native
+  object systemUpdate extends TopLevel[systemUpdate with Double]
+  
+  /* 2 */ @js.native
+  object update extends TopLevel[update with Double]
+  
 }
 

@@ -20,7 +20,6 @@ trait Instance extends Duplex {
   // https://github.com/feross/simple-peer/tree/v9.6.1#peeraddtracktrack-stream
   def addTrack(track: MediaStreamTrack, stream: MediaStream): Unit = js.native
   def address(): Anon_Address = js.native
-  def destroy(error: js.Error): Unit = js.native
   // https://github.com/feross/simple-peer/tree/v9.6.1#peerremovestreamstream
   def removeStream(stream: MediaStream): Unit = js.native
   // https://github.com/feross/simple-peer/tree/v9.6.1#peerremovetracktrack-stream

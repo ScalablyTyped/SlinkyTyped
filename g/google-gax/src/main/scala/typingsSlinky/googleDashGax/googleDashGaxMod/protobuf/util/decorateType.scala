@@ -1,6 +1,8 @@
 package typingsSlinky.googleDashGax.googleDashGaxMod.protobuf.util
 
 import typingsSlinky.protobufjs.protobufjsMod.Constructor
+import typingsSlinky.protobufjs.protobufjsMod.Message
+import typingsSlinky.protobufjs.protobufjsMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +16,7 @@ object decorateType extends js.Object {
     * @param [typeName] Type name, defaults to the constructor's name
     * @returns Reflected type
     */
-  def apply[T /* <: typingsSlinky.protobufjs.protobufjsMod.Message[T] */](ctor: Constructor[T]): typingsSlinky.protobufjs.protobufjsMod.Type = js.native
-  def apply[T /* <: typingsSlinky.protobufjs.protobufjsMod.Message[T] */](ctor: Constructor[T], typeName: String): typingsSlinky.protobufjs.protobufjsMod.Type = js.native
+  def apply[T /* <: Message[T] */](ctor: Constructor[T]): Type = js.native
+  def apply[T /* <: Message[T] */](ctor: Constructor[T], typeName: String): Type = js.native
 }
 

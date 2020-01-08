@@ -1,6 +1,5 @@
 package typingsSlinky.grommet
 
-import typingsSlinky.grommet.contextsResponsiveContextMod.ResponsiveValue
 import typingsSlinky.react.reactMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`

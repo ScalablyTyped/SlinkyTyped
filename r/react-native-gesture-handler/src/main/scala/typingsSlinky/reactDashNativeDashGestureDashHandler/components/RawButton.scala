@@ -3,6 +3,7 @@ package typingsSlinky.reactDashNativeDashGestureDashHandler.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.Ref
 import typingsSlinky.reactDashNativeDashGestureDashHandler.Anon_Bottom
@@ -29,6 +30,7 @@ object RawButton
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
+    accessibilityLabel: String = null,
     disallowInterruption: js.UndefOr[Boolean] = js.undefined,
     enabled: js.UndefOr[Boolean] = js.undefined,
     exclusive: js.UndefOr[Boolean] = js.undefined,
@@ -46,6 +48,7 @@ object RawButton
     typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.RawButton
   ] = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
     if (!js.isUndefined(disallowInterruption)) __obj.updateDynamic("disallowInterruption")(disallowInterruption.asInstanceOf[js.Any])
     if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.asInstanceOf[js.Any])
@@ -60,6 +63,12 @@ object RawButton
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.RawButton
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.RawButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = RawButtonProperties
 }
 

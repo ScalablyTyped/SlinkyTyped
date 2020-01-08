@@ -2,8 +2,6 @@ package typingsSlinky.box2d.Box2D.Dynamics
 
 import typingsSlinky.box2d.Box2D.Common.Math.b2Mat22
 import typingsSlinky.box2d.Box2D.Common.Math.b2Vec2
-import typingsSlinky.box2d.Box2D.Dynamics.Controllers.b2Controller
-import typingsSlinky.box2d.Box2D.Dynamics.Controllers.b2ControllerEdge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

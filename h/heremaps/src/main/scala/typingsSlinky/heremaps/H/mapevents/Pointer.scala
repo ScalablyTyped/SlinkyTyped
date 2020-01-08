@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.mapevents
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.Map
 import typingsSlinky.heremaps.H.map.Object
 import typingsSlinky.heremaps.H.mapevents.Pointer.Button
@@ -76,12 +77,20 @@ object Pointer extends js.Object {
     @js.native
     sealed trait RIGHT extends Button
     
-    /* 1 */ val LEFT: typingsSlinky.heremaps.H.mapevents.Pointer.Button.LEFT with Double = js.native
-    /* 2 */ val MIDDLE: typingsSlinky.heremaps.H.mapevents.Pointer.Button.MIDDLE with Double = js.native
-    /* 0 */ val NONE: typingsSlinky.heremaps.H.mapevents.Pointer.Button.NONE with Double = js.native
-    /* 3 */ val RIGHT: typingsSlinky.heremaps.H.mapevents.Pointer.Button.RIGHT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Button with Double] = js.native
+    /* 1 */ @js.native
+    object LEFT extends TopLevel[LEFT with Double]
+    
+    /* 2 */ @js.native
+    object MIDDLE extends TopLevel[MIDDLE with Double]
+    
+    /* 0 */ @js.native
+    object NONE extends TopLevel[NONE with Double]
+    
+    /* 3 */ @js.native
+    object RIGHT extends TopLevel[RIGHT with Double]
+    
   }
   
   /**

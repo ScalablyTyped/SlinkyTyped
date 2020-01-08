@@ -32,8 +32,8 @@ object RangePicker
     allowClear: js.UndefOr[Boolean] = js.undefined,
     dateRender: (/* current */ Moment, /* today */ Moment) => TagMod[Any] = null,
     defaultPickerValue: RangePickerValue = null,
-    disabledDate: /* current */ js.UndefOr[Moment] => Boolean = null,
-    disabledTime: (/* current */ js.UndefOr[Moment], /* type */ String) => Anon_DisabledHours = null,
+    disabledDate: /* current */ Moment | Null => Boolean = null,
+    disabledTime: (/* current */ RangePickerValue, /* type */ String) => Anon_DisabledHours = null,
     dropdownClassName: String = null,
     format: String | js.Array[String] = null,
     getCalendarContainer: /* triggerNode */ org.scalajs.dom.raw.Element => HTMLElement = null,
@@ -99,6 +99,9 @@ object RangePicker
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.span.tag.type, 
+  typingsSlinky.antd.libDateDashPickerRangePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = RangePickerProps
 }
 

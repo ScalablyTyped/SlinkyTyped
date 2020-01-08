@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashInputDashMask extends SharedApply_Props954717001[default] {
+object ReactDashInputDashMask extends SharedApply_Props1665028478[default] {
   @JSImport("react-input-mask", JSImport.Default)
   @js.native
   object componentImport extends js.Object

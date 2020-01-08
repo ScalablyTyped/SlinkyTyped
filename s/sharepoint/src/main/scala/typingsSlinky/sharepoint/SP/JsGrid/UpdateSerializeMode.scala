@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,12 +30,22 @@ object UpdateSerializeMode extends js.Object {
   @js.native
   sealed trait PropLocalizedOnly extends UpdateSerializeMode
   
-  /* 0 */ val Cancel: typingsSlinky.sharepoint.SP.JsGrid.UpdateSerializeMode.Cancel with Double = js.native
-  /* 1 */ val Default: typingsSlinky.sharepoint.SP.JsGrid.UpdateSerializeMode.Default with Double = js.native
-  /* 4 */ val PropBoth: typingsSlinky.sharepoint.SP.JsGrid.UpdateSerializeMode.PropBoth with Double = js.native
-  /* 2 */ val PropDataOnly: typingsSlinky.sharepoint.SP.JsGrid.UpdateSerializeMode.PropDataOnly with Double = js.native
-  /* 3 */ val PropLocalizedOnly: typingsSlinky.sharepoint.SP.JsGrid.UpdateSerializeMode.PropLocalizedOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UpdateSerializeMode with Double] = js.native
+  /* 0 */ @js.native
+  object Cancel extends TopLevel[Cancel with Double]
+  
+  /* 1 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 4 */ @js.native
+  object PropBoth extends TopLevel[PropBoth with Double]
+  
+  /* 2 */ @js.native
+  object PropDataOnly extends TopLevel[PropDataOnly with Double]
+  
+  /* 3 */ @js.native
+  object PropLocalizedOnly extends TopLevel[PropLocalizedOnly with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.intlDashLocalesDashSupported
 
-import typingsSlinky.intlDashLocalesDashSupported.intlDashLocalesDashSupportedMod.IntlConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Lib extends SharedApply_MentionsProps_752072199[default] {
+object Lib extends SharedApply_MentionsProps_1747607871[default] {
   @JSImport("rc-mentions/lib", JSImport.Default)
   @js.native
   object componentImport extends js.Object

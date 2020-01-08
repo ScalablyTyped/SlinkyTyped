@@ -1,12 +1,11 @@
 package typingsSlinky.atFirebaseFirestore
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atFirebaseFirestore.distSrcCoreSnapshotUnderscoreVersionMod.SnapshotVersion
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTargetMod.Target
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.ListenSequenceNumber
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.ProtoByteString
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.TargetId
-import typingsSlinky.atFirebaseFirestore.distSrcLocalTargetUnderscoreDataMod.TargetData
-import typingsSlinky.atFirebaseFirestore.distSrcLocalTargetUnderscoreDataMod.TargetPurpose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -165,11 +164,17 @@ object distSrcLocalTargetUnderscoreDataMod extends js.Object {
     @js.native
     sealed trait Listen extends TargetPurpose
     
-    /* 1 */ val ExistenceFilterMismatch: typingsSlinky.atFirebaseFirestore.distSrcLocalTargetUnderscoreDataMod.TargetPurpose.ExistenceFilterMismatch with Double = js.native
-    /* 2 */ val LimboResolution: typingsSlinky.atFirebaseFirestore.distSrcLocalTargetUnderscoreDataMod.TargetPurpose.LimboResolution with Double = js.native
-    /* 0 */ val Listen: typingsSlinky.atFirebaseFirestore.distSrcLocalTargetUnderscoreDataMod.TargetPurpose.Listen with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[TargetPurpose with Double] = js.native
+    /* 1 */ @js.native
+    object ExistenceFilterMismatch extends TopLevel[ExistenceFilterMismatch with Double]
+    
+    /* 2 */ @js.native
+    object LimboResolution extends TopLevel[LimboResolution with Double]
+    
+    /* 0 */ @js.native
+    object Listen extends TopLevel[Listen with Double]
+    
   }
   
 }

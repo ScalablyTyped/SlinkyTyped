@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object ResponseMediaType extends js.Object {
   @js.native
   sealed trait RESPONSE_MEDIA_TYPE_UNSPECIFIED extends ResponseMediaType
   
-  /* 1 */ val AUDIO: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent.ResponseMediaType.AUDIO with Double = js.native
-  /* 0 */ val RESPONSE_MEDIA_TYPE_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent.ResponseMediaType.RESPONSE_MEDIA_TYPE_UNSPECIFIED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResponseMediaType with Double] = js.native
+  /* 1 */ @js.native
+  object AUDIO extends TopLevel[AUDIO with Double]
+  
+  /* 0 */ @js.native
+  object RESPONSE_MEDIA_TYPE_UNSPECIFIED extends TopLevel[RESPONSE_MEDIA_TYPE_UNSPECIFIED with Double]
+  
 }
 

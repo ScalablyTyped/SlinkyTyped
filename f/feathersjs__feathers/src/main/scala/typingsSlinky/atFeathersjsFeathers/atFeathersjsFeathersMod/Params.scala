@@ -1,7 +1,7 @@
 package typingsSlinky.atFeathersjsFeathers.atFeathersjsFeathersMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atFeathersjsFeathers.atFeathersjsFeathersNumbers.`false`
+import typingsSlinky.atFeathersjsFeathers.atFeathersjsFeathersBooleans.`false`
 import typingsSlinky.atFeathersjsFeathers.atFeathersjsFeathersStrings.max
 import typingsSlinky.std.Pick
 import scala.scalajs.js

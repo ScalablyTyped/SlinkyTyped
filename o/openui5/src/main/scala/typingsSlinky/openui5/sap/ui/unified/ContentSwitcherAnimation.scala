@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.unified
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +35,28 @@ object ContentSwitcherAnimation extends js.Object {
   @js.native
   sealed trait ZoomOut extends ContentSwitcherAnimation
   
-  /* 0 */ val Fade: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.Fade with Double = js.native
-  /* 1 */ val None: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.None with Double = js.native
-  /* 2 */ val Rotate: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.Rotate with Double = js.native
-  /* 3 */ val SlideOver: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.SlideOver with Double = js.native
-  /* 4 */ val SlideRight: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.SlideRight with Double = js.native
-  /* 5 */ val ZoomIn: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.ZoomIn with Double = js.native
-  /* 6 */ val ZoomOut: typingsSlinky.openui5.sap.ui.unified.ContentSwitcherAnimation.ZoomOut with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContentSwitcherAnimation with Double] = js.native
+  /* 0 */ @js.native
+  object Fade extends TopLevel[Fade with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Rotate extends TopLevel[Rotate with Double]
+  
+  /* 3 */ @js.native
+  object SlideOver extends TopLevel[SlideOver with Double]
+  
+  /* 4 */ @js.native
+  object SlideRight extends TopLevel[SlideRight with Double]
+  
+  /* 5 */ @js.native
+  object ZoomIn extends TopLevel[ZoomIn with Double]
+  
+  /* 6 */ @js.native
+  object ZoomOut extends TopLevel[ZoomOut with Double]
+  
 }
 

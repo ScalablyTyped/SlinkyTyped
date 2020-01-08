@@ -1,7 +1,6 @@
 package typingsSlinky.amcharts
 
 import typingsSlinky.amcharts.amRectangularChartMod.AmRectangularChart
-import typingsSlinky.amcharts.amSerialChartMod.AmSerialChart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

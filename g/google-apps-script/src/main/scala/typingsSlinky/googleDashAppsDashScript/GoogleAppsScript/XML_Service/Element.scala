@@ -27,15 +27,11 @@ import scala.scalajs.js.annotation._
   *     Logger.log(xml);
   */
 @js.native
-trait Element
-  extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content {
-  def addContent(content: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content): Element = js.native
-  def addContent(
-    index: Integer,
-    content: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content
-  ): Element = js.native
-  def cloneContent(): js.Array[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content] = js.native
-  def getAllContent(): js.Array[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content] = js.native
+trait Element extends Content {
+  def addContent(content: Content): Element = js.native
+  def addContent(index: Integer, content: Content): Element = js.native
+  def cloneContent(): js.Array[Content] = js.native
+  def getAllContent(): js.Array[Content] = js.native
   def getAttribute(name: String): Attribute = js.native
   def getAttribute(name: String, namespace: Namespace): Attribute = js.native
   def getAttributes(): js.Array[Attribute] = js.native
@@ -46,10 +42,10 @@ trait Element
   def getChildren(): js.Array[Element] = js.native
   def getChildren(name: String): js.Array[Element] = js.native
   def getChildren(name: String, namespace: Namespace): js.Array[Element] = js.native
-  def getContent(index: Integer): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content = js.native
+  def getContent(index: Integer): Content = js.native
   def getContentSize(): Integer = js.native
-  def getDescendants(): js.Array[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content] = js.native
-  def getDocument(): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Document = js.native
+  def getDescendants(): js.Array[Content] = js.native
+  def getDocument(): Document = js.native
   def getName(): String = js.native
   def getNamespace(): Namespace = js.native
   def getNamespace(prefix: String): Namespace = js.native
@@ -60,9 +56,9 @@ trait Element
   def removeAttribute(attributeName: String): Boolean = js.native
   def removeAttribute(attributeName: String, namespace: Namespace): Boolean = js.native
   def removeAttribute(attribute: Attribute): Boolean = js.native
-  def removeContent(): js.Array[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content] = js.native
-  def removeContent(content: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content): Boolean = js.native
-  def removeContent(index: Integer): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.XML_Service.Content = js.native
+  def removeContent(): js.Array[Content] = js.native
+  def removeContent(content: Content): Boolean = js.native
+  def removeContent(index: Integer): Content = js.native
   def setAttribute(attribute: Attribute): Element = js.native
   def setAttribute(name: String, value: String): Element = js.native
   def setAttribute(name: String, value: String, namespace: Namespace): Element = js.native

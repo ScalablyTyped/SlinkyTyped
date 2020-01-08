@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,11 +36,19 @@ object AdvertisingState extends js.Object {
   @js.native
   sealed trait none extends AdvertisingState
   
-  /* 2 */ val linear: typingsSlinky.playerframework.PlayerFramework.AdvertisingState.linear with Double = js.native
-  /* 1 */ val loading: typingsSlinky.playerframework.PlayerFramework.AdvertisingState.loading with Double = js.native
-  /* 3 */ val nonLinear: typingsSlinky.playerframework.PlayerFramework.AdvertisingState.nonLinear with Double = js.native
-  /* 0 */ val none: typingsSlinky.playerframework.PlayerFramework.AdvertisingState.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AdvertisingState with Double] = js.native
+  /* 2 */ @js.native
+  object linear extends TopLevel[linear with Double]
+  
+  /* 1 */ @js.native
+  object loading extends TopLevel[loading with Double]
+  
+  /* 3 */ @js.native
+  object nonLinear extends TopLevel[nonLinear with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

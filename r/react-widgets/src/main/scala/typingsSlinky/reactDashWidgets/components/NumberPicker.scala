@@ -3,16 +3,17 @@ package typingsSlinky.reactDashWidgets.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libNumberPickerMod.NumberPickerMessages
 import typingsSlinky.reactDashWidgets.libNumberPickerMod.NumberPickerProps
+import typingsSlinky.reactDashWidgets.libNumberPickerMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NumberPicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/NumberPicker", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -35,7 +36,7 @@ object NumberPicker
     step: Int | Double = null,
     value: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
     if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
@@ -54,6 +55,7 @@ object NumberPicker
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashWidgets.libNumberPickerMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = NumberPickerProps
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.thrift.thriftMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`

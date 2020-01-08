@@ -1,7 +1,7 @@
 package typingsSlinky.atStorybookAddonDashKnobs
 
-import typingsSlinky.atStorybookAddonDashKnobs.atStorybookAddonDashKnobsStrings.`storybookjs/knobs`
 import typingsSlinky.atStorybookAddonDashKnobs.atStorybookAddonDashKnobsStrings.knobs
+import typingsSlinky.atStorybookAddonDashKnobs.atStorybookAddonDashKnobsStrings.storybookjsSlashknobs
 import typingsSlinky.atStorybookAddonDashKnobs.distComponentsTypesArrayMod.ArrayTypeKnobValue
 import typingsSlinky.atStorybookAddonDashKnobs.distComponentsTypesButtonMod.ButtonTypeOnClickProp
 import typingsSlinky.atStorybookAddonDashKnobs.distComponentsTypesMod.KnobType
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/addon-knobs", JSImport.Namespace)
 @js.native
 object atStorybookAddonDashKnobsMod extends js.Object {
-  val ADDON_ID: `storybookjs/knobs` = js.native
+  val ADDON_ID: storybookjsSlashknobs = js.native
   val CHANGE: String = js.native
   val CLICK: String = js.native
   val PANEL_ID: String = js.native
@@ -101,7 +101,7 @@ object atStorybookAddonDashKnobsMod extends js.Object {
   def text(name: String, value: String): String = js.native
   def text(name: String, value: String, groupId: String): String = js.native
   def withKnobs(
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
   ): js.Any = js.native
 }
 

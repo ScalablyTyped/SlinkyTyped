@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.map.provider.TileProvider
 
+import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.ICopyright
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,13 +15,7 @@ import scala.scalajs.js.annotation._
   * @property tileSize {number=} - The size of a tile as edge length in pixels. It must be 2^n where n is in range [0 ... 30], default is 256
   */
 trait Options extends js.Object {
-  var getCopyrights: js.UndefOr[
-    js.Function2[
-      /* rect */ typingsSlinky.heremaps.H.geo.Rect, 
-      /* number */ Double, 
-      js.Array[ICopyright]
-    ]
-  ] = js.undefined
+  var getCopyrights: js.UndefOr[js.Function2[/* rect */ Rect, /* number */ Double, js.Array[ICopyright]]] = js.undefined
   var max: js.UndefOr[Double] = js.undefined
   var min: js.UndefOr[Double] = js.undefined
   var tileSize: js.UndefOr[Double] = js.undefined
@@ -30,7 +25,7 @@ trait Options extends js.Object {
 object Options {
   @scala.inline
   def apply(
-    getCopyrights: (/* rect */ typingsSlinky.heremaps.H.geo.Rect, /* number */ Double) => js.Array[ICopyright] = null,
+    getCopyrights: (/* rect */ Rect, /* number */ Double) => js.Array[ICopyright] = null,
     max: Int | Double = null,
     min: Int | Double = null,
     tileSize: Int | Double = null,

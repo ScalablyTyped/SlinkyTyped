@@ -1,6 +1,5 @@
 package typingsSlinky.int64DashBuffer
 
-import typingsSlinky.int64DashBuffer.int64DashBufferMod.Int64
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

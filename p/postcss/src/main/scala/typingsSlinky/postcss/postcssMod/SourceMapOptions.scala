@@ -1,6 +1,6 @@
 package typingsSlinky.postcss.postcssMod
 
-import typingsSlinky.postcss.postcssNumbers.`false`
+import typingsSlinky.postcss.postcssBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

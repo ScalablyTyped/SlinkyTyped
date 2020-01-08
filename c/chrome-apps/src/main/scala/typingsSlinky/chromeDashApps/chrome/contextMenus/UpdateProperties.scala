@@ -5,6 +5,7 @@ import typingsSlinky.chromeDashApps.Anon_CHECKBOX
 import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
 import typingsSlinky.chromeDashApps.chrome.integer
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.all_
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.audio
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.browser_action
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.checkbox
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.editable
@@ -34,7 +35,7 @@ trait UpdateProperties extends js.Object {
         String, 
         Exclude[
           String, 
-          browser_action | launcher | all_ | frame | typingsSlinky.chromeDashApps.chromeDashAppsStrings.audio | link | page | selection | page_action | editable | video | image
+          browser_action | selection | video | launcher | image | editable | page_action | page | audio | frame | all_ | link
         ]
       ]
     ]
@@ -71,7 +72,7 @@ object UpdateProperties {
         String, 
         Exclude[
           String, 
-          browser_action | launcher | all_ | frame | typingsSlinky.chromeDashApps.chromeDashAppsStrings.audio | link | page | selection | page_action | editable | video | image
+          browser_action | selection | video | launcher | image | editable | page_action | page | audio | frame | all_ | link
         ]
       ]
     ] = null,

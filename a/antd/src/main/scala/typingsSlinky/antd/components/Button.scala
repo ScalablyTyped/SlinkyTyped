@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.Anon_Delay
@@ -150,8 +151,8 @@ object Button
     itemType: String = null,
     loading: Boolean | Anon_Delay = null,
     onAuxClick: SyntheticMouseEvent[_] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with _, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget, Event] => Unit = null,
     ping: String = null,
     prefix: String = null,
     prefixCls: String = null,
@@ -279,6 +280,7 @@ object Button
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libButtonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ButtonProps
 }
 

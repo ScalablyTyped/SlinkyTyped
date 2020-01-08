@@ -1,6 +1,5 @@
 package typingsSlinky.chaiDashWebdriverio
 
-import typingsSlinky.chaiDashWebdriverio.Chai.Assertion
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`

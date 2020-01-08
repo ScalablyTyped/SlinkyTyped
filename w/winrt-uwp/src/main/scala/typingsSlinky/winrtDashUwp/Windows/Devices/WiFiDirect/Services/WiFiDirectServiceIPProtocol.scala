@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object WiFiDirectServiceIPProtocol extends js.Object {
   @js.native
   sealed trait udp extends WiFiDirectServiceIPProtocol
   
-  /* 0 */ val tcp: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol.tcp with Double = js.native
-  /* 1 */ val udp: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol.udp with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WiFiDirectServiceIPProtocol with Double] = js.native
+  /* 0 */ @js.native
+  object tcp extends TopLevel[tcp with Double]
+  
+  /* 1 */ @js.native
+  object udp extends TopLevel[udp with Double]
+  
 }
 

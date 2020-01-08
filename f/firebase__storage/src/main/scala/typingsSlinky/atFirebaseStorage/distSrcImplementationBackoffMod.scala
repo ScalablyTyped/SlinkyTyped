@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseStorage
 
-import typingsSlinky.atFirebaseStorage.distSrcImplementationBackoffMod.id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

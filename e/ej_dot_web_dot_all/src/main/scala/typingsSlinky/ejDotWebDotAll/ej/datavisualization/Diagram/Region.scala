@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,16 @@ object Region extends js.Object {
   @js.native
   sealed trait PageSettings extends Region
   
-  /* 0 */ val Content: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Region.Content with Double = js.native
-  /* 1 */ val PageSettings: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Region.PageSettings with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Region with Double] = js.native
+  /* 0 */ @js.native
+  object Content extends TopLevel[Content with Double]
+  
+  /* 1 */ @js.native
+  object PageSettings
+    extends TopLevel[
+          typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Region.PageSettings with Double
+        ]
+  
 }
 

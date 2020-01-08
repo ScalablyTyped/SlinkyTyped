@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +13,19 @@ sealed trait Animation extends js.Object
 object Animation extends js.Object {
   //string
   @js.native
-  sealed trait FadeIn
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.Animation
+  sealed trait FadeIn extends Animation
   
   //string
   @js.native
-  sealed trait Rotation
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.Animation
+  sealed trait Rotation extends Animation
   
-  /* 1 */ val FadeIn: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.Animation.FadeIn with Double = js.native
-  /* 0 */ val Rotation: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.Animation.Rotation with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.Animation with Double] = js.native
+  def apply(value: Double): js.UndefOr[Animation with Double] = js.native
+  /* 1 */ @js.native
+  object FadeIn extends TopLevel[FadeIn with Double]
+  
+  /* 0 */ @js.native
+  object Rotation extends TopLevel[Rotation with Double]
+  
 }
 

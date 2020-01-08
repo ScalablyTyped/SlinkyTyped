@@ -17,6 +17,7 @@ import typingsSlinky.dojo.dojoStrings.templatePath
 import typingsSlinky.dojo.dojoStrings.templateString
 import typingsSlinky.dojo.dojoStrings.textId
 import typingsSlinky.dojo.dojoStrings.toolTip
+import typingsSlinky.dojo.dojoStrings.widget
 import typingsSlinky.dojo.dojoStrings.widgetsInTemplate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -149,7 +150,7 @@ object FindReplace extends js.Object {
     @JSName("get")
     def get_templateString(property: templateString): String = js.native
     @JSName("get")
-    def get_widget(property: typingsSlinky.dojo.dojoStrings.widget): js.Object = js.native
+    def get_widget(property: widget): js.Object = js.native
     @JSName("get")
     def get_widgetsInTemplate(property: widgetsInTemplate): Boolean = js.native
     @JSName("set")
@@ -169,7 +170,7 @@ object FindReplace extends js.Object {
     @JSName("set")
     def set_templateString(property: templateString, value: String): Unit = js.native
     @JSName("set")
-    def set_widget(property: typingsSlinky.dojo.dojoStrings.widget, value: js.Object): Unit = js.native
+    def set_widget(property: widget, value: js.Object): Unit = js.native
     @JSName("set")
     def set_widgetsInTemplate(property: widgetsInTemplate, value: Boolean): Unit = js.native
     @JSName("watch")
@@ -244,7 +245,7 @@ object FindReplace extends js.Object {
     ): Anon_Unwatch = js.native
     @JSName("watch")
     def watch_widget(
-      property: typingsSlinky.dojo.dojoStrings.widget,
+      property: widget,
       callback: js.Function3[
           /* property */ js.UndefOr[String], 
           /* oldValue */ js.UndefOr[js.Object], 
@@ -352,7 +353,7 @@ object FindReplace extends js.Object {
     @JSName("get")
     def get_templateString(property: templateString): String = js.native
     @JSName("get")
-    def get_widget(property: typingsSlinky.dojo.dojoStrings.widget): js.Object = js.native
+    def get_widget(property: widget): js.Object = js.native
     @JSName("get")
     def get_widgetsInTemplate(property: widgetsInTemplate): Boolean = js.native
     /**
@@ -374,7 +375,7 @@ object FindReplace extends js.Object {
     @JSName("set")
     def set_templateString(property: templateString, value: String): Unit = js.native
     @JSName("set")
-    def set_widget(property: typingsSlinky.dojo.dojoStrings.widget, value: js.Object): Unit = js.native
+    def set_widget(property: widget, value: js.Object): Unit = js.native
     @JSName("set")
     def set_widgetsInTemplate(property: widgetsInTemplate, value: Boolean): Unit = js.native
     @JSName("watch")
@@ -439,7 +440,7 @@ object FindReplace extends js.Object {
     ): Anon_Unwatch = js.native
     @JSName("watch")
     def watch_widget(
-      property: typingsSlinky.dojo.dojoStrings.widget,
+      property: widget,
       callback: js.Function3[
           /* property */ js.UndefOr[String], 
           /* oldValue */ js.UndefOr[js.Object], 
@@ -566,7 +567,7 @@ object FindReplace extends js.Object {
     @JSName("get")
     def get_toolTip(property: toolTip): String = js.native
     @JSName("get")
-    def get_widget(property: typingsSlinky.dojo.dojoStrings.widget): js.Object = js.native
+    def get_widget(property: widget): js.Object = js.native
     @JSName("get")
     def get_widgetsInTemplate(property: widgetsInTemplate): Boolean = js.native
     /**
@@ -594,7 +595,7 @@ object FindReplace extends js.Object {
     @JSName("set")
     def set_toolTip(property: toolTip, value: String): Unit = js.native
     @JSName("set")
-    def set_widget(property: typingsSlinky.dojo.dojoStrings.widget, value: js.Object): Unit = js.native
+    def set_widget(property: widget, value: js.Object): Unit = js.native
     @JSName("set")
     def set_widgetsInTemplate(property: widgetsInTemplate, value: Boolean): Unit = js.native
     @JSName("watch")
@@ -679,7 +680,7 @@ object FindReplace extends js.Object {
     ): Anon_Unwatch = js.native
     @JSName("watch")
     def watch_widget(
-      property: typingsSlinky.dojo.dojoStrings.widget,
+      property: widget,
       callback: js.Function3[
           /* property */ js.UndefOr[String], 
           /* oldValue */ js.UndefOr[js.Object], 

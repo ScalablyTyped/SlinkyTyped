@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ReportViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,16 +47,34 @@ object ToolbarItems extends js.Object {
   @js.native
   sealed trait Zoom extends ToolbarItems
   
-  /* 4 */ val Export: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.Export with Double = js.native
-  /* 3 */ val FittoPage: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.FittoPage with Double = js.native
-  /* 5 */ val PageNavigation: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.PageNavigation with Double = js.native
-  /* 8 */ val PageSetup: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.PageSetup with Double = js.native
-  /* 6 */ val Parameters: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.Parameters with Double = js.native
-  /* 0 */ val Print: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.Print with Double = js.native
-  /* 7 */ val PrintLayout: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.PrintLayout with Double = js.native
-  /* 1 */ val Refresh: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.Refresh with Double = js.native
-  /* 2 */ val Zoom: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ToolbarItems.Zoom with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToolbarItems with Double] = js.native
+  /* 4 */ @js.native
+  object Export extends TopLevel[Export with Double]
+  
+  /* 3 */ @js.native
+  object FittoPage extends TopLevel[FittoPage with Double]
+  
+  /* 5 */ @js.native
+  object PageNavigation extends TopLevel[PageNavigation with Double]
+  
+  /* 8 */ @js.native
+  object PageSetup extends TopLevel[PageSetup with Double]
+  
+  /* 6 */ @js.native
+  object Parameters extends TopLevel[Parameters with Double]
+  
+  /* 0 */ @js.native
+  object Print extends TopLevel[Print with Double]
+  
+  /* 7 */ @js.native
+  object PrintLayout extends TopLevel[PrintLayout with Double]
+  
+  /* 1 */ @js.native
+  object Refresh extends TopLevel[Refresh with Double]
+  
+  /* 2 */ @js.native
+  object Zoom extends TopLevel[Zoom with Double]
+  
 }
 

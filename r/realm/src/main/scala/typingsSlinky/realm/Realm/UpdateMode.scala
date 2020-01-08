@@ -1,5 +1,6 @@
 package typingsSlinky.realm.Realm
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object UpdateMode extends js.Object {
   @js.native
   sealed trait Never extends UpdateMode
   
-  /* "all" */ val All: typingsSlinky.realm.Realm.UpdateMode.All with String = js.native
-  /* "modified" */ val Modified: typingsSlinky.realm.Realm.UpdateMode.Modified with String = js.native
-  /* "never" */ val Never: typingsSlinky.realm.Realm.UpdateMode.Never with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[UpdateMode with String] = js.native
+  /* "all" */ @js.native
+  object All extends TopLevel[All with String]
+  
+  /* "modified" */ @js.native
+  object Modified extends TopLevel[Modified with String]
+  
+  /* "never" */ @js.native
+  object Never extends TopLevel[Never with String]
+  
 }
 

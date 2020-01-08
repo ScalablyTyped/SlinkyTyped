@@ -1,7 +1,6 @@
 package typingsSlinky.twilioDashCommon
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.twilioDashCommon.twilioDashCommonMod.AccessManager
 import typingsSlinky.twilioDashCommon.twilioDashCommonStrings.error
 import typingsSlinky.twilioDashCommon.twilioDashCommonStrings.tokenExpired
 import typingsSlinky.twilioDashCommon.twilioDashCommonStrings.tokenUpdated

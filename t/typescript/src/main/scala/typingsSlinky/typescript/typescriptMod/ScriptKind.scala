@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,15 +39,31 @@ object ScriptKind extends js.Object {
   @js.native
   sealed trait Unknown extends ScriptKind
   
-  /* 7 */ val Deferred: typingsSlinky.typescript.typescriptMod.ScriptKind.Deferred with Double = js.native
-  /* 5 */ val External: typingsSlinky.typescript.typescriptMod.ScriptKind.External with Double = js.native
-  /* 1 */ val JS: typingsSlinky.typescript.typescriptMod.ScriptKind.JS with Double = js.native
-  /* 6 */ val JSON: typingsSlinky.typescript.typescriptMod.ScriptKind.JSON with Double = js.native
-  /* 2 */ val JSX: typingsSlinky.typescript.typescriptMod.ScriptKind.JSX with Double = js.native
-  /* 3 */ val TS: typingsSlinky.typescript.typescriptMod.ScriptKind.TS with Double = js.native
-  /* 4 */ val TSX: typingsSlinky.typescript.typescriptMod.ScriptKind.TSX with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.typescript.typescriptMod.ScriptKind.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScriptKind with Double] = js.native
+  /* 7 */ @js.native
+  object Deferred extends TopLevel[Deferred with Double]
+  
+  /* 5 */ @js.native
+  object External extends TopLevel[External with Double]
+  
+  /* 1 */ @js.native
+  object JS extends TopLevel[JS with Double]
+  
+  /* 6 */ @js.native
+  object JSON extends TopLevel[JSON with Double]
+  
+  /* 2 */ @js.native
+  object JSX extends TopLevel[JSX with Double]
+  
+  /* 3 */ @js.native
+  object TS extends TopLevel[TS with Double]
+  
+  /* 4 */ @js.native
+  object TSX extends TopLevel[TSX with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

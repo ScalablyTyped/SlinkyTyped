@@ -19,11 +19,12 @@ object Image
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: alt, src */
   def apply(
+    alt: String,
     color: String,
     naturalHeight: Double,
     naturalWidth: Double,
+    src: String,
     fit: cover | contain | none = null,
     onError: () => Unit = null,
     onLoad: () => Unit = null,
@@ -31,7 +32,7 @@ object Image
     srcSet: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Image] = {
-    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
     if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
     if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction0(onError))
     if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.rbac.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -8,7 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * RoleList is a collection of Roles
+  * RoleList is a collection of Roles Deprecated in v1.17 in favor of
+  * rbac.authorization.k8s.io/v1 RoleList, and will no longer be served in v1.20.
   */
 trait RoleList extends js.Object {
   /**
@@ -17,7 +18,7 @@ trait RoleList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Items is a list of Roles
     */
@@ -39,7 +40,7 @@ object RoleList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[Role]]],
-    apiVersion: Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[rbacDotauthorizationDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.RoleList] = null,
     metadata: Input[ListMeta] = null
   ): RoleList = {

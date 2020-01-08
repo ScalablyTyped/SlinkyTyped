@@ -1,6 +1,6 @@
 package typingsSlinky.stylus.stylusMod.Stylus
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.stylus.stylusMod.Stylus.Nodes.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`

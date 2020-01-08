@@ -1,6 +1,6 @@
 package typingsSlinky.azureDashSb.libServiceclientMod
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

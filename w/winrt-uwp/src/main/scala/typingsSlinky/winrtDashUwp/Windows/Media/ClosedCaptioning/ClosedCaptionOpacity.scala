@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ClosedCaptionOpacity extends js.Object {
   @js.native
   sealed trait zeroPercent extends ClosedCaptionOpacity
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacity.default with Double = js.native
-  /* 1 */ val oneHundredPercent: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacity.oneHundredPercent with Double = js.native
-  /* 2 */ val seventyFivePercent: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacity.seventyFivePercent with Double = js.native
-  /* 3 */ val twentyFivePercent: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacity.twentyFivePercent with Double = js.native
-  /* 4 */ val zeroPercent: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacity.zeroPercent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ClosedCaptionOpacity with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object oneHundredPercent extends TopLevel[oneHundredPercent with Double]
+  
+  /* 2 */ @js.native
+  object seventyFivePercent extends TopLevel[seventyFivePercent with Double]
+  
+  /* 3 */ @js.native
+  object twentyFivePercent extends TopLevel[twentyFivePercent with Double]
+  
+  /* 4 */ @js.native
+  object zeroPercent extends TopLevel[zeroPercent with Double]
+  
 }
 

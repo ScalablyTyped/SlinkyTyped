@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageWbIncandescent
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageWbIncandescent] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageWbIncandescent] {
   @JSImport("material-ui/svg-icons", "ImageWbIncandescent")
   @js.native
   object componentImport extends js.Object

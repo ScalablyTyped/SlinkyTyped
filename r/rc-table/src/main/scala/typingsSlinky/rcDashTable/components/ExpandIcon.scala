@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.rcDashTable.libExpandIconMod.ExpandIconProps
@@ -40,6 +41,9 @@ object ExpandIcon
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.rcDashTable.libExpandIconMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.rcDashTable.libExpandIconMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ExpandIconProps[js.Any]
 }
 

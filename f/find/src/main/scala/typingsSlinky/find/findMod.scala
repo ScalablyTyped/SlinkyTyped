@@ -1,7 +1,5 @@
 package typingsSlinky.find
 
-import typingsSlinky.find.findMod.AsyncFindStream
-import typingsSlinky.find.findMod.FindEachStream
 import typingsSlinky.std.Error
 import typingsSlinky.std.RegExp
 import scala.scalajs.js

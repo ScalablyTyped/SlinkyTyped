@@ -1,7 +1,5 @@
 package typingsSlinky.orientjs.orientjsMod
 
-import typingsSlinky.orientjs.orientjsMod.Errors.BaseError
-import typingsSlinky.orientjs.orientjsMod.Errors.OperationError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

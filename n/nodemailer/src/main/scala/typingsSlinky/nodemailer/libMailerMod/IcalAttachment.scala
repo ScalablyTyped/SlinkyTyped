@@ -3,7 +3,7 @@ package typingsSlinky.nodemailer.libMailerMod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

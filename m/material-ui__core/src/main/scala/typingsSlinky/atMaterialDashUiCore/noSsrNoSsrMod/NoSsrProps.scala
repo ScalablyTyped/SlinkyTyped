@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NoSsrProps extends js.Object {
-  var children: TagMod[Any]
-  var fallback: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: TagMod[Any] = js.native
+  var fallback: js.UndefOr[TagMod[Any]] = js.native
 }
 
 object NoSsrProps {

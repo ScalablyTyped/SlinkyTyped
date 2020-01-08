@@ -1,10 +1,7 @@
 package typingsSlinky.atAngularCompiler
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod.CompileIdentifierMetadata
-import typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseErrorLevel
-import typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseLocation
-import typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseSourceFile
-import typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,10 +61,14 @@ object srcParseUnderscoreUtilMod extends js.Object {
     @js.native
     sealed trait WARNING extends ParseErrorLevel
     
-    /* 1 */ val ERROR: typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseErrorLevel.ERROR with Double = js.native
-    /* 0 */ val WARNING: typingsSlinky.atAngularCompiler.srcParseUnderscoreUtilMod.ParseErrorLevel.WARNING with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ParseErrorLevel with Double] = js.native
+    /* 1 */ @js.native
+    object ERROR extends TopLevel[ERROR with Double]
+    
+    /* 0 */ @js.native
+    object WARNING extends TopLevel[WARNING with Double]
+    
   }
   
 }

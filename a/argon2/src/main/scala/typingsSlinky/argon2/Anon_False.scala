@@ -1,6 +1,6 @@
 package typingsSlinky.argon2
 
-import typingsSlinky.argon2.argon2Numbers.`false`
+import typingsSlinky.argon2.argon2Booleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

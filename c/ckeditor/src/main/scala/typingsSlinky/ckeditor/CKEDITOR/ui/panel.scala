@@ -1,6 +1,7 @@
 package typingsSlinky.ckeditor.CKEDITOR.ui
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.ckeditor.CKEDITOR.dom.document
 import typingsSlinky.ckeditor.CKEDITOR.dom.nodeList
 import typingsSlinky.ckeditor.CKEDITOR.editor
 import typingsSlinky.ckeditor.CKEDITOR.ui.panel.block
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CKEDITOR.ui.panel")
 @js.native
 class panel protected () extends js.Object {
-  def this(document: typingsSlinky.ckeditor.CKEDITOR.dom.document, definition: StringDictionary[js.Any]) = this()
+  def this(document: document, definition: StringDictionary[js.Any]) = this()
   def addBlock(name: String, block: StringDictionary[js.Any]): Unit = js.native
   def getBlock(name: String): block = js.native
   def render(editor: editor): Unit = js.native

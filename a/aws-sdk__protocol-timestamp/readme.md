@@ -10,9 +10,9 @@ A marshaller and unmarshaller for timestamps used by the AWS SDKs
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/protocol-timestamp |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 8 |
 | # dependents       | 9 |
-| # downloads        | 10084 |
+| # downloads        | 48644 |
 | # stars            | 0 |
 
 ## Links

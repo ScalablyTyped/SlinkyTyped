@@ -1,7 +1,6 @@
 package typingsSlinky.fastDashGlob
 
 import typingsSlinky.fastDashGlob.outManagersTasksMod.Task
-import typingsSlinky.fastDashGlob.outProvidersSyncMod.ProviderSync
 import typingsSlinky.fastDashGlob.outTypesMod.Entry
 import typingsSlinky.fastDashGlob.outTypesMod.EntryItem
 import typingsSlinky.fastDashGlob.outTypesMod.ReaderOptions

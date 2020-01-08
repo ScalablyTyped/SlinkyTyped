@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.div.tag
 import typingsSlinky.atAtlaskitCalendar.atAtlaskitCalendarMod.default
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -54,6 +55,9 @@ object Calendar
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.atAtlaskitCalendar.atAtlaskitCalendarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = typingsSlinky.atAtlaskitCalendar.atAtlaskitCalendarMod.Props
 }
 

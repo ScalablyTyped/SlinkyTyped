@@ -1,7 +1,6 @@
 package typingsSlinky.protractor
 
 import typingsSlinky.protractor.builtConfigMod.Config
-import typingsSlinky.protractor.builtDriverProvidersDriverProviderMod.DriverProvider
 import typingsSlinky.q.qMod.Promise
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.WebDriver
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-tooltips"
-version := "1.2-dt-20180214Z-46c971"
+version := "1.2-dt-20180214Z-beae5a"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

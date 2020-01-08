@@ -1,7 +1,7 @@
 package typingsSlinky.apolloDashServerDashEnv.distFetchMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apolloDashServerDashEnv.apolloDashServerDashEnvNumbers.`false`
+import typingsSlinky.apolloDashServerDashEnv.apolloDashServerDashEnvBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

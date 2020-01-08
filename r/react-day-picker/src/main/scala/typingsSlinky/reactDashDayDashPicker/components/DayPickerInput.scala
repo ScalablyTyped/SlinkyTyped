@@ -3,6 +3,7 @@ package typingsSlinky.reactDashDayDashPicker.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.div.tag
 import typingsSlinky.reactDashDayDashPicker.typesCommonMod.DayModifiers
 import typingsSlinky.reactDashDayDashPicker.typesCommonMod.InputClassNames
@@ -63,6 +64,12 @@ object DayPickerInput
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashDayDashPicker.typesDayPickerInputMod.DayPickerInput
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.reactDashDayDashPicker.typesDayPickerInputMod.DayPickerInput](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DayPickerInputProps
 }
 

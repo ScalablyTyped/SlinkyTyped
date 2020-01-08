@@ -6,8 +6,6 @@ import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.d3DashDsv.d3DashDsvMod.DSVParsedArray
 import typingsSlinky.d3DashDsv.d3DashDsvMod.DSVRowString
-import typingsSlinky.d3DashRequest.d3DashRequestMod.DsvRequest
-import typingsSlinky.d3DashRequest.d3DashRequestMod.Request
 import typingsSlinky.d3DashRequest.d3DashRequestStrings.beforesend
 import typingsSlinky.d3DashRequest.d3DashRequestStrings.error
 import typingsSlinky.d3DashRequest.d3DashRequestStrings.load
@@ -55,7 +53,11 @@ object d3DashRequestMod extends js.Object {
       * Equivalent to `request.send` with the GET method: `request.send("GET", data, callback)`.
       */
     def get[RequestData, ResponseData](data: RequestData, callback: js.Function2[/* error */ js.Any, /* d */ ResponseData, Unit]): this.type = js.native
-    def header(name: String): this.type = js.native
+    /**
+      * Returns the current value of the request header with the specified name.
+      * Header names are case-insensitive.
+      */
+    def header(name: String): String = js.native
     /**
       * Sets the request header with the specified name to the specified value and returns this request instance.
       * If value is null, removes the request header with the specified name instead.
@@ -66,12 +68,8 @@ object d3DashRequestMod extends js.Object {
       * use `request.get` or similar instead.
       */
     def header(name: String, value: String): this.type = js.native
-    /**
-      * Returns the current value of the request header with the specified name.
-      * Header names are case-insensitive.
-      */
     @JSName("header")
-    def header_String(name: String): String = js.native
+    def header_This(name: String): this.type = js.native
     /**
       * Returns the current mime type, which defaults to null.
       */

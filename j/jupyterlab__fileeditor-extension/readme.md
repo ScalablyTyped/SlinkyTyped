@@ -10,15 +10,13 @@ JupyterLab - Editor Widget Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/fileeditor-extension |
 | Keywords           | - |
-| # releases         | 40 |
+| # releases         | 65 |
 | # dependents       | 3 |
-| # downloads        | 582863 |
+| # downloads        | 755961 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Ffileeditor-extension)
     
 

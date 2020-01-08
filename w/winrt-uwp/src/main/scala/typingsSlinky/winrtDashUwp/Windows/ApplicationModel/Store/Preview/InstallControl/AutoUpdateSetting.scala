@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.InstallControl
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object AutoUpdateSetting extends js.Object {
   @js.native
   sealed trait enabledByPolicy extends AutoUpdateSetting
   
-  /* 0 */ val disabled: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting.disabled with Double = js.native
-  /* 2 */ val disabledByPolicy: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting.disabledByPolicy with Double = js.native
-  /* 1 */ val enabled: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting.enabled with Double = js.native
-  /* 3 */ val enabledByPolicy: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting.enabledByPolicy with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AutoUpdateSetting with Double] = js.native
+  /* 0 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 2 */ @js.native
+  object disabledByPolicy extends TopLevel[disabledByPolicy with Double]
+  
+  /* 1 */ @js.native
+  object enabled extends TopLevel[enabled with Double]
+  
+  /* 3 */ @js.native
+  object enabledByPolicy extends TopLevel[enabledByPolicy with Double]
+  
 }
 

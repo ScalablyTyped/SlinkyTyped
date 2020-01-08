@@ -2,8 +2,8 @@ package typingsSlinky.nodemailer.libSmtpDashTransportMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodemailer.libSharedMod.Logger
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.Transport
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.close
 import typingsSlinky.nodemailer.nodemailerStrings.error
 import scala.scalajs.js

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object GitVersionType extends js.Object {
   @js.native
   sealed trait Tag extends GitVersionType
   
-  /* 0 */ val Branch: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitVersionType.Branch with Double = js.native
-  /* 2 */ val Commit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitVersionType.Commit with Double = js.native
-  /* 1 */ val Tag: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitVersionType.Tag with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitVersionType with Double] = js.native
+  /* 0 */ @js.native
+  object Branch extends TopLevel[Branch with Double]
+  
+  /* 2 */ @js.native
+  object Commit extends TopLevel[Commit with Double]
+  
+  /* 1 */ @js.native
+  object Tag extends TopLevel[Tag with Double]
+  
 }
 

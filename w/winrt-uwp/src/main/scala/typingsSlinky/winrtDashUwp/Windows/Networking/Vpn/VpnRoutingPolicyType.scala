@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Vpn
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object VpnRoutingPolicyType extends js.Object {
   @js.native
   sealed trait splitRouting extends VpnRoutingPolicyType
   
-  /* 1 */ val forceAllTrafficOverVpn: typingsSlinky.winrtDashUwp.Windows.Networking.Vpn.VpnRoutingPolicyType.forceAllTrafficOverVpn with Double = js.native
-  /* 0 */ val splitRouting: typingsSlinky.winrtDashUwp.Windows.Networking.Vpn.VpnRoutingPolicyType.splitRouting with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VpnRoutingPolicyType with Double] = js.native
+  /* 1 */ @js.native
+  object forceAllTrafficOverVpn extends TopLevel[forceAllTrafficOverVpn with Double]
+  
+  /* 0 */ @js.native
+  object splitRouting extends TopLevel[splitRouting with Double]
+  
 }
 

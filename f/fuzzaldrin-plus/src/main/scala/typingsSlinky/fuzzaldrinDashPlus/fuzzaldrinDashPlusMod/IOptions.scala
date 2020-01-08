@@ -1,8 +1,8 @@
 package typingsSlinky.fuzzaldrinDashPlus.fuzzaldrinDashPlusMod
 
 import typingsSlinky.fuzzaldrinDashPlus.Anon_TagClass
-import typingsSlinky.fuzzaldrinDashPlus.fuzzaldrinDashPlusStrings.BACKSLASHBACKSLASH
-import typingsSlinky.fuzzaldrinDashPlus.fuzzaldrinDashPlusStrings.`/`
+import typingsSlinky.fuzzaldrinDashPlus.fuzzaldrinDashPlusStrings.Backslash
+import typingsSlinky.fuzzaldrinDashPlus.fuzzaldrinDashPlusStrings.Slash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait IOptions extends js.Object {
   var allowErrors: js.UndefOr[Boolean] = js.undefined
   var optCharRegEx: js.UndefOr[js.RegExp] = js.undefined
-  var pathSeparator: js.UndefOr[`/` | BACKSLASHBACKSLASH | String] = js.undefined
+  var pathSeparator: js.UndefOr[Slash | Backslash | String] = js.undefined
   var preparedQuery: js.UndefOr[Query] = js.undefined
   var useExtensionBonus: js.UndefOr[Boolean] = js.undefined
   var usePathScoring: js.UndefOr[Boolean] = js.undefined
@@ -22,7 +22,7 @@ object IOptions {
   def apply(
     allowErrors: js.UndefOr[Boolean] = js.undefined,
     optCharRegEx: js.RegExp = null,
-    pathSeparator: `/` | BACKSLASHBACKSLASH | String = null,
+    pathSeparator: Slash | Backslash | String = null,
     preparedQuery: Query = null,
     useExtensionBonus: js.UndefOr[Boolean] = js.undefined,
     usePathScoring: js.UndefOr[Boolean] = js.undefined,

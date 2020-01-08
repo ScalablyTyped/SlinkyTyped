@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object BackgroundAccessStatus extends js.Object {
   @js.native
   sealed trait unspecified extends BackgroundAccessStatus
   
-  /* 2 */ val allowedMayUseActiveRealTimeConnectivity: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundAccessStatus.allowedMayUseActiveRealTimeConnectivity with Double = js.native
-  /* 1 */ val allowedWithAlwaysOnRealTimeConnectivity: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundAccessStatus.allowedWithAlwaysOnRealTimeConnectivity with Double = js.native
-  /* 3 */ val denied: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundAccessStatus.denied with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundAccessStatus.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BackgroundAccessStatus with Double] = js.native
+  /* 2 */ @js.native
+  object allowedMayUseActiveRealTimeConnectivity extends TopLevel[allowedMayUseActiveRealTimeConnectivity with Double]
+  
+  /* 1 */ @js.native
+  object allowedWithAlwaysOnRealTimeConnectivity extends TopLevel[allowedWithAlwaysOnRealTimeConnectivity with Double]
+  
+  /* 3 */ @js.native
+  object denied extends TopLevel[denied with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

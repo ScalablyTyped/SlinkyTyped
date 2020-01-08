@@ -5,7 +5,6 @@ import typingsSlinky.tstl.baseContainerArrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.baseContainerVectorContainerMod.VectorContainer
 import typingsSlinky.tstl.baseIteratorArrayIteratorMod.ArrayIterator
 import typingsSlinky.tstl.baseIteratorArrayIteratorMod.ArrayReverseIterator
-import typingsSlinky.tstl.containerVectorMod.Vector
 import typingsSlinky.tstl.containerVectorMod.Vector.Iterator
 import typingsSlinky.tstl.containerVectorMod.Vector.ReverseIterator
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
@@ -95,18 +94,18 @@ object containerVectorMod extends js.Object {
         ArrayIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -114,18 +113,18 @@ object containerVectorMod extends js.Object {
         ArrayReverseIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -133,18 +132,18 @@ object containerVectorMod extends js.Object {
         ArrayIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -152,18 +151,18 @@ object containerVectorMod extends js.Object {
         ArrayReverseIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -187,18 +186,18 @@ object containerVectorMod extends js.Object {
         ArrayIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -206,18 +205,18 @@ object containerVectorMod extends js.Object {
         ArrayReverseIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -225,18 +224,18 @@ object containerVectorMod extends js.Object {
         ArrayIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -244,18 +243,18 @@ object containerVectorMod extends js.Object {
         ArrayReverseIterator[
           js.Object, 
           ArrayContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             ArrayIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
             ArrayReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
             ], 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native

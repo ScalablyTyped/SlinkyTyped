@@ -2,7 +2,6 @@ package typingsSlinky.graphql
 
 import typingsSlinky.graphql.errorGraphQLErrorMod.GraphQLError
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLInputType
-import typingsSlinky.graphql.utilitiesCoerceInputValueMod.OnErrorCB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

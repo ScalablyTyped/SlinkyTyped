@@ -91,6 +91,17 @@ class Terminal () extends IDisposable {
     */
   val markers: js.Array[IMarker] = js.native
   /**
+    * Adds an event listener for when a binary event fires. This is used to
+    * enable non UTF-8 conformant binary messages to be sent to the backend.
+    * Currently this is only used for a certain type of mouse reports that
+    * happen to be not UTF-8 compatible.
+    * The event value is a JS string, pass it to the underlying pty as
+    * binary data, e.g. `pty.write(Buffer.from(data, 'binary'))`. 
+    * @returns an `IDisposable` to stop listening.
+    */
+  @JSName("onBinary")
+  var onBinary_Original: IEvent[String] = js.native
+  /**
     * Adds an event listener for the cursor moves.
     * @returns an `IDisposable` to stop listening.
     */
@@ -106,7 +117,7 @@ class Terminal () extends IDisposable {
   @JSName("onData")
   var onData_Original: IEvent[String] = js.native
   /**
-    * Adds an event listener for a key is pressed. The event value contains the
+    * Adds an event listener for when a key is pressed. The event value contains the
     * string that will be sent in the data event as well as the DOM event that
     * triggered it.
     * @returns an `IDisposable` to stop listening.
@@ -219,8 +230,8 @@ class Terminal () extends IDisposable {
     * @param key The option key.
     */
   def getOption(
-    key: allowTransparency | cancelEvents | convertEol | cursorBlink | disableStdin | macOptionIsMeta | rightClickSelectsWord | popOnBell | screenKeys | useFlowControl | visualBell | windowsMode
-  ): Boolean = js.native
+    key: bellSound | bellStyle | cursorStyle | fontFamily | fontWeight | fontWeightBold | logLevel | rendererType | termName | wordSeparator
+  ): String = js.native
   /**
     * Retrieves an option's value from the terminal.
     * @param key The option key.
@@ -231,9 +242,9 @@ class Terminal () extends IDisposable {
     * @param key The option key.
     */
   @JSName("getOption")
-  def getOption_String(
-    key: bellSound | bellStyle | cursorStyle | fontFamily | fontWeight | fontWeightBold | logLevel | rendererType | termName | wordSeparator
-  ): String = js.native
+  def getOption_Boolean(
+    key: allowTransparency | cancelEvents | convertEol | cursorBlink | disableStdin | macOptionIsMeta | rightClickSelectsWord | popOnBell | screenKeys | useFlowControl | visualBell | windowsMode
+  ): Boolean = js.native
   /**
     * Retrieves an option's value from the terminal.
     * @param key The option key.
@@ -283,6 +294,16 @@ class Terminal () extends IDisposable {
     */
   def loadAddon(addon: ITerminalAddon): Unit = js.native
   /**
+    * Adds an event listener for when a binary event fires. This is used to
+    * enable non UTF-8 conformant binary messages to be sent to the backend.
+    * Currently this is only used for a certain type of mouse reports that
+    * happen to be not UTF-8 compatible.
+    * The event value is a JS string, pass it to the underlying pty as
+    * binary data, e.g. `pty.write(Buffer.from(data, 'binary'))`. 
+    * @returns an `IDisposable` to stop listening.
+    */
+  def onBinary(listener: js.Function1[/* e */ String, _]): IDisposable = js.native
+  /**
     * Adds an event listener for the cursor moves.
     * @returns an `IDisposable` to stop listening.
     */
@@ -296,7 +317,7 @@ class Terminal () extends IDisposable {
     */
   def onData(listener: js.Function1[/* e */ String, _]): IDisposable = js.native
   /**
-    * Adds an event listener for a key is pressed. The event value contains the
+    * Adds an event listener for when a key is pressed. The event value contains the
     * string that will be sent in the data event as well as the DOM event that
     * triggered it.
     * @returns an `IDisposable` to stop listening.
@@ -439,7 +460,7 @@ class Terminal () extends IDisposable {
   def scrollToTop(): Unit = js.native
   /**
     * Selects text within the terminal.
-    * @param column The column the selection starts at..
+    * @param column The column the selection starts at.
     * @param row The row the selection starts at.
     * @param length The length of the selection.
     */

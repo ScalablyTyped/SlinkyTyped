@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MapViewAnimated
-  extends SharedApply_MapViewProps877434760[typingsSlinky.reactDashNativeDashMaps.reactDashNativeDashMapsMod.MapViewAnimated] {
+  extends SharedApply_MapViewProps1841398663[typingsSlinky.reactDashNativeDashMaps.reactDashNativeDashMapsMod.MapViewAnimated] {
   @JSImport("react-native-maps", "MapViewAnimated")
   @js.native
   object componentImport extends js.Object

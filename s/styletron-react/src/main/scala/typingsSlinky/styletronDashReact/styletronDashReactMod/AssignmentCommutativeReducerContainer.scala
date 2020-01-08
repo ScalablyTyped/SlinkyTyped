@@ -1,6 +1,6 @@
 package typingsSlinky.styletronDashReact.styletronDashReactMod
 
-import typingsSlinky.styletronDashReact.styletronDashReactNumbers.`true`
+import typingsSlinky.styletronDashReact.styletronDashReactBooleans.`true`
 import typingsSlinky.styletronDashStandard.styletronDashStandardMod.StyleObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

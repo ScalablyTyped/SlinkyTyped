@@ -1,7 +1,7 @@
 package typingsSlinky.next
 
-import typingsSlinky.next.distNextDashServerServerNextDashServerMod.Redirect
-import typingsSlinky.next.distNextDashServerServerNextDashServerMod.Rewrite
+import typingsSlinky.next.distLibCheckDashCustomDashRoutesMod.Redirect
+import typingsSlinky.next.distLibCheckDashCustomDashRoutesMod.Rewrite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

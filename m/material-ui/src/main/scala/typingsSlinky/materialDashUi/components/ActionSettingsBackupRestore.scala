@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionSettingsBackupRestore
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsBackupRestore] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsBackupRestore] {
   @JSImport("material-ui/svg-icons", "ActionSettingsBackupRestore")
   @js.native
   object componentImport extends js.Object

@@ -4,8 +4,6 @@ import typingsSlinky.geodesy.dmsMod.Precision
 import typingsSlinky.geodesy.geodesyMod.Datum
 import typingsSlinky.geodesy.geodesyMod.Dp
 import typingsSlinky.geodesy.geodesyMod.Format
-import typingsSlinky.geodesy.osgridrefMod.LatLon_OsGridRef
-import typingsSlinky.geodesy.osgridrefMod.OsGridRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

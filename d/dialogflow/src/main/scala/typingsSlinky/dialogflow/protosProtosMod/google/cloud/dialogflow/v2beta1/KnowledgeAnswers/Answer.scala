@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers.Answer.MatchConfidenceLevel
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -127,12 +128,20 @@ object Answer extends js.Object {
     @js.native
     sealed trait MEDIUM extends MatchConfidenceLevel
     
-    /* 3 */ val HIGH: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers.Answer.MatchConfidenceLevel.HIGH with Double = js.native
-    /* 1 */ val LOW: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers.Answer.MatchConfidenceLevel.LOW with Double = js.native
-    /* 0 */ val MATCH_CONFIDENCE_LEVEL_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers.Answer.MatchConfidenceLevel.MATCH_CONFIDENCE_LEVEL_UNSPECIFIED with Double = js.native
-    /* 2 */ val MEDIUM: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeAnswers.Answer.MatchConfidenceLevel.MEDIUM with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MatchConfidenceLevel with Double] = js.native
+    /* 3 */ @js.native
+    object HIGH extends TopLevel[HIGH with Double]
+    
+    /* 1 */ @js.native
+    object LOW extends TopLevel[LOW with Double]
+    
+    /* 0 */ @js.native
+    object MATCH_CONFIDENCE_LEVEL_UNSPECIFIED extends TopLevel[MATCH_CONFIDENCE_LEVEL_UNSPECIFIED with Double]
+    
+    /* 2 */ @js.native
+    object MEDIUM extends TopLevel[MEDIUM with Double]
+    
   }
   
 }

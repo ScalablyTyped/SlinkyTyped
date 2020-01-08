@@ -26,6 +26,7 @@ import typingsSlinky.atUifabricStyling.libStylesGetGlobalClassNamesMod.GlobalCla
 import typingsSlinky.atUifabricStyling.libUtilitiesIconsMod.IIconRecord
 import typingsSlinky.atUifabricStyling.libUtilitiesIconsMod.IIconSubset
 import typingsSlinky.atUifabricUtilities.libCustomizationsCustomizerContextMod.ICustomizerContext
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactBooleans.`false`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`0`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`1024`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`1366`
@@ -36,10 +37,9 @@ import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashR
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`480`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`640`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`768`
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`false`
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and (-ms-high-contrast: active)`
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and (-ms-high-contrast: black-on-white)`
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and (-ms-high-contrast: white-on-black)`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.absolute
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.accent
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.black
@@ -115,9 +115,9 @@ object libStylingMod extends js.Object {
   val DefaultEffects: IEffects = js.native
   val DefaultFontStyles: IFontStyles = js.native
   val DefaultPalette: IPalette = js.native
-  val HighContrastSelector: `@media screen and (-ms-high-contrast: active)` = js.native
-  val HighContrastSelectorBlack: `@media screen and (-ms-high-contrast: white-on-black)` = js.native
-  val HighContrastSelectorWhite: `@media screen and (-ms-high-contrast: black-on-white)` = js.native
+  val HighContrastSelector: `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis` = js.native
+  val HighContrastSelectorBlack: `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis` = js.native
+  val HighContrastSelectorWhite: `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis` = js.native
   val ScreenWidthMaxLarge: Double = js.native
   val ScreenWidthMaxMedium: Double = js.native
   val ScreenWidthMaxSmall: Double = js.native

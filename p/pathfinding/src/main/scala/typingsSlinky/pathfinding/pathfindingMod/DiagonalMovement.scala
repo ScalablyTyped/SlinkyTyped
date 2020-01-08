@@ -1,5 +1,6 @@
 package typingsSlinky.pathfinding.pathfindingMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object DiagonalMovement extends js.Object {
   @js.native
   sealed trait OnlyWhenNoObstacles extends DiagonalMovement
   
-  /* 1 */ val Always: typingsSlinky.pathfinding.pathfindingMod.DiagonalMovement.Always with Double = js.native
-  /* 3 */ val IfAtMostOneObstacle: typingsSlinky.pathfinding.pathfindingMod.DiagonalMovement.IfAtMostOneObstacle with Double = js.native
-  /* 2 */ val Never: typingsSlinky.pathfinding.pathfindingMod.DiagonalMovement.Never with Double = js.native
-  /* 4 */ val OnlyWhenNoObstacles: typingsSlinky.pathfinding.pathfindingMod.DiagonalMovement.OnlyWhenNoObstacles with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DiagonalMovement with Double] = js.native
+  /* 1 */ @js.native
+  object Always extends TopLevel[Always with Double]
+  
+  /* 3 */ @js.native
+  object IfAtMostOneObstacle extends TopLevel[IfAtMostOneObstacle with Double]
+  
+  /* 2 */ @js.native
+  object Never extends TopLevel[Never with Double]
+  
+  /* 4 */ @js.native
+  object OnlyWhenNoObstacles extends TopLevel[OnlyWhenNoObstacles with Double]
+  
 }
 

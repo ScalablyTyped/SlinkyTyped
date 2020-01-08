@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.appleDashMapkitDashJs.Anon_Adaptive
 import typingsSlinky.appleDashMapkitDashJs.Anon_Annotation
 import typingsSlinky.appleDashMapkitDashJs.Anon_AnnotationCoordinate
-import typingsSlinky.appleDashMapkitDashJs.Anon_Annotation_247029397
+import typingsSlinky.appleDashMapkitDashJs.Anon_Annotation_778575030
 import typingsSlinky.appleDashMapkitDashJs.Anon_Code
 import typingsSlinky.appleDashMapkitDashJs.Anon_Coordinate
 import typingsSlinky.appleDashMapkitDashJs.Anon_Dark
@@ -208,12 +208,12 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -230,12 +230,12 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -454,12 +454,12 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -476,12 +476,12 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_247029397, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Anon_Annotation_778575030, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")

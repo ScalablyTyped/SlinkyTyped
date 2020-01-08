@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Search
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object MatchCode extends js.Object {
   @js.native
   sealed trait upHierarchy extends MatchCode
   
-  /* 2 */ val ambiguous: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchCode.ambiguous with Double = js.native
-  /* 1 */ val good: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchCode.good with Double = js.native
-  /* 4 */ val modified: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchCode.modified with Double = js.native
-  /* 0 */ val none: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchCode.none with Double = js.native
-  /* 3 */ val upHierarchy: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchCode.upHierarchy with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MatchCode with Double] = js.native
+  /* 2 */ @js.native
+  object ambiguous extends TopLevel[ambiguous with Double]
+  
+  /* 1 */ @js.native
+  object good extends TopLevel[good with Double]
+  
+  /* 4 */ @js.native
+  object modified extends TopLevel[modified with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object upHierarchy extends TopLevel[upHierarchy with Double]
+  
 }
 

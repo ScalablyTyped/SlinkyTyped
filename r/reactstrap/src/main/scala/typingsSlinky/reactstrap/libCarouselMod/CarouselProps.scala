@@ -3,8 +3,8 @@ package typingsSlinky.reactstrap.libCarouselMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.react.reactMod.AllHTMLAttributes
 import typingsSlinky.react.reactMod.ClassAttributes
+import typingsSlinky.reactstrap.reactstrapBooleans.`false`
 import typingsSlinky.reactstrap.reactstrapMod.CSSModule
-import typingsSlinky.reactstrap.reactstrapNumbers.`false`
 import typingsSlinky.reactstrap.reactstrapStrings.carousel
 import typingsSlinky.reactstrap.reactstrapStrings.hover
 import typingsSlinky.std.HTMLElement

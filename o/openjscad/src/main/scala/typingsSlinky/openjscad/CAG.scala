@@ -2,7 +2,6 @@ package typingsSlinky.openjscad
 
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.openjscad.CAG.Side
-import typingsSlinky.openjscad.CAG.Vertex
 import typingsSlinky.openjscad.CSG.ICircleOptions
 import typingsSlinky.openjscad.CSG.IRectangleOptions
 import typingsSlinky.openjscad.CSG.Matrix4x4

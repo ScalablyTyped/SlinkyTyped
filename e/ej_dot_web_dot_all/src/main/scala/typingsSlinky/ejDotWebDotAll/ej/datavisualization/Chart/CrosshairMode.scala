@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object CrosshairMode extends js.Object {
   @js.native
   sealed trait Grouping extends CrosshairMode
   
-  /* 0 */ val Float: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CrosshairMode.Float with Double = js.native
-  /* 1 */ val Grouping: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CrosshairMode.Grouping with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CrosshairMode with Double] = js.native
+  /* 0 */ @js.native
+  object Float extends TopLevel[Float with Double]
+  
+  /* 1 */ @js.native
+  object Grouping extends TopLevel[Grouping with Double]
+  
 }
 

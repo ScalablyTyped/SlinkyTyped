@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ListSeparators extends js.Object {
   @js.native
   sealed trait None extends ListSeparators
   
-  /* 0 */ val All: typingsSlinky.openui5.sap.m.ListSeparators.All with Double = js.native
-  /* 1 */ val Inner: typingsSlinky.openui5.sap.m.ListSeparators.Inner with Double = js.native
-  /* 2 */ val None: typingsSlinky.openui5.sap.m.ListSeparators.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ListSeparators with Double] = js.native
+  /* 0 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 1 */ @js.native
+  object Inner extends TopLevel[Inner with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Calendar
-  extends SharedApply_BytesizeIconsProps219891393[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Calendar] {
+  extends SharedApply_BytesizeIconsProps1658782493[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Calendar] {
   @JSImport("react-bytesize-icons", "Calendar")
   @js.native
   object componentImport extends js.Object

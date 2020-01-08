@@ -10,7 +10,8 @@ class Cell protected () extends js.Object {
   val Application: typingsSlinky.activexDashPowerpoint.PowerPoint.Application = js.native
   val Borders: typingsSlinky.activexDashPowerpoint.PowerPoint.Borders = js.native
   val Parent: js.Any = js.native
-  var `PowerPoint.Cell_typekey`: Cell = js.native
+  @JSName("PowerPoint.Cell_typekey")
+  var PowerPointDotCell_typekey: Cell = js.native
   val Selected: Boolean = js.native
   val Shape: typingsSlinky.activexDashPowerpoint.PowerPoint.Shape = js.native
   def Merge(MergeTo: Cell): Unit = js.native

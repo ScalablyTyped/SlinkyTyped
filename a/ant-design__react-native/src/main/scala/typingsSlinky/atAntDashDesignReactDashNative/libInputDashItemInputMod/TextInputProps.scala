@@ -3,6 +3,7 @@ package typingsSlinky.atAntDashDesignReactDashNative.libInputDashItemInputMod
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.Anon_EndStart
+import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
@@ -102,7 +103,7 @@ trait TextInputProps
 object TextInputProps {
   @scala.inline
   def apply(
-    accessibilityActions: js.Array[typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo] = null,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
     accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
     accessibilityHint: String = null,

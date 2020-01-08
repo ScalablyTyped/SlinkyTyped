@@ -1,6 +1,10 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.javaactions
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenJavaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +18,12 @@ import scala.scalajs.js.annotation._
 class ExportMappingParameterType protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.javaactions.ExportMappingParameterType {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -28,7 +32,7 @@ class ExportMappingParameterType protected ()
 @js.native
 object ExportMappingParameterType extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenJavaactionsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new ExportMappingParameterType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

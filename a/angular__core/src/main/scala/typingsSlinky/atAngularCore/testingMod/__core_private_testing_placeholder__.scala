@@ -1,12 +1,12 @@
 package typingsSlinky.atAngularCore.testingMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.atAngularCore.atAngularCoreStrings.Empty
+import typingsSlinky.atAngularCore.atAngularCoreStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@angular/core/testing", "__core_private_testing_placeholder__")
 @js.native
-object __core_private_testing_placeholder__ extends TopLevel[Empty]
+object __core_private_testing_placeholder__ extends TopLevel[_empty]
 

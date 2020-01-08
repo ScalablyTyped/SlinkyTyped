@@ -2,7 +2,7 @@ package typingsSlinky.reactDashIntl.reactDashIntlMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactDashIntl.Anon_WrappedComponentComponentTypeP
-import typingsSlinky.reactDashIntl.reactDashIntlNumbers.`false`
+import typingsSlinky.reactDashIntl.reactDashIntlBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

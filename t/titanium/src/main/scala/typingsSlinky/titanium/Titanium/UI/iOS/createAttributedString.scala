@@ -10,7 +10,7 @@ object createAttributedString extends js.Object {
   /**
   			 * Creates and returns an instance of <Titanium.UI.iOS.AttributedString>.
   			 */
-  def apply(): typingsSlinky.titanium.Titanium.UI.iOS.AttributedString = js.native
-  def apply(parameters: js.Any): typingsSlinky.titanium.Titanium.UI.iOS.AttributedString = js.native
+  def apply(): AttributedString = js.native
+  def apply(parameters: js.Any): AttributedString = js.native
 }
 

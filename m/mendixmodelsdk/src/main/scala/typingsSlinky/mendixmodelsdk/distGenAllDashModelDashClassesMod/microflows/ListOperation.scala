@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.microflows
 
+import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -26,6 +27,6 @@ abstract class ListOperation protected ()
 @js.native
 object ListOperation extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

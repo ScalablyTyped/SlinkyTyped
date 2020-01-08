@@ -1,5 +1,6 @@
 package typingsSlinky.multerDashS3.multerDashS3Mod
 
+import typingsSlinky.awsDashSdk.awsDashSdkMod.S3
 import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod._Global_.Express.Request
 import typingsSlinky.multer.multerMod._Global_.Express.Multer.File
 import typingsSlinky.node.NodeJS.ReadableStream
@@ -59,7 +60,7 @@ trait Options extends js.Object {
       Unit
     ]
   ] = js.undefined
-  var s3: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.S3 */ js.Any
+  var s3: S3
   var serverSideEncryption: js.UndefOr[
     (js.Function3[
       /* req */ Request, 
@@ -79,7 +80,7 @@ object Options {
       /* callback */ js.Function2[/* error */ js.Any, /* bucket */ js.UndefOr[String], Unit], 
       Unit
     ]) | String,
-    s3: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.S3 */ js.Any,
+    s3: S3,
     acl: (js.Function3[
       /* req */ Request, 
       /* file */ File, 

@@ -1,5 +1,9 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.settings
 
+import typingsSlinky.mendixmodelsdk.distGenSettingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +13,12 @@ import scala.scalajs.js.annotation._
 abstract class ProjectSettingsPart protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.settings.ProjectSettingsPart {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -23,6 +27,6 @@ abstract class ProjectSettingsPart protected ()
 @js.native
 object ProjectSettingsPart extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenSettingsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

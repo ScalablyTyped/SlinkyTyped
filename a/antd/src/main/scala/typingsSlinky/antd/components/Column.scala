@@ -32,6 +32,7 @@ object Column
   def apply[T](
     align: left | right | center = null,
     dataIndex: String = null,
+    defaultFilteredValue: js.Array[_] = null,
     defaultSortOrder: SortOrder = null,
     ellipsis: js.UndefOr[Boolean] = js.undefined,
     filterDropdown: TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]]) = null,
@@ -56,6 +57,7 @@ object Column
     val __obj = js.Dynamic.literal()
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (dataIndex != null) __obj.updateDynamic("dataIndex")(dataIndex.asInstanceOf[js.Any])
+    if (defaultFilteredValue != null) __obj.updateDynamic("defaultFilteredValue")(defaultFilteredValue.asInstanceOf[js.Any])
     if (defaultSortOrder != null) __obj.updateDynamic("defaultSortOrder")(defaultSortOrder.asInstanceOf[js.Any])
     if (!js.isUndefined(ellipsis)) __obj.updateDynamic("ellipsis")(ellipsis.asInstanceOf[js.Any])
     if (filterDropdown != null) __obj.updateDynamic("filterDropdown")(filterDropdown.asInstanceOf[js.Any])
@@ -78,6 +80,7 @@ object Column
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableColumnMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableColumnMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ColumnProps[js.Any]
 }
 

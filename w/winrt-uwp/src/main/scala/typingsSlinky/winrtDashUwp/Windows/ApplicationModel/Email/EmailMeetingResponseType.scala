@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object EmailMeetingResponseType extends js.Object {
   @js.native
   sealed trait tentative extends EmailMeetingResponseType
   
-  /* 0 */ val accept: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMeetingResponseType.accept with Double = js.native
-  /* 1 */ val decline: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMeetingResponseType.decline with Double = js.native
-  /* 2 */ val tentative: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMeetingResponseType.tentative with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMeetingResponseType with Double] = js.native
+  /* 0 */ @js.native
+  object accept extends TopLevel[accept with Double]
+  
+  /* 1 */ @js.native
+  object decline extends TopLevel[decline with Double]
+  
+  /* 2 */ @js.native
+  object tentative extends TopLevel[tentative with Double]
+  
 }
 

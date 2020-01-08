@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object AppointmentStoreChangeType extends js.Object {
   @js.native
   sealed trait changeTrackingLost extends AppointmentStoreChangeType
   
-  /* 0 */ val appointmentCreated: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.appointmentCreated with Double = js.native
-  /* 2 */ val appointmentDeleted: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.appointmentDeleted with Double = js.native
-  /* 1 */ val appointmentModified: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.appointmentModified with Double = js.native
-  /* 4 */ val calendarCreated: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.calendarCreated with Double = js.native
-  /* 6 */ val calendarDeleted: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.calendarDeleted with Double = js.native
-  /* 5 */ val calendarModified: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.calendarModified with Double = js.native
-  /* 3 */ val changeTrackingLost: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType.changeTrackingLost with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentStoreChangeType with Double] = js.native
+  /* 0 */ @js.native
+  object appointmentCreated extends TopLevel[appointmentCreated with Double]
+  
+  /* 2 */ @js.native
+  object appointmentDeleted extends TopLevel[appointmentDeleted with Double]
+  
+  /* 1 */ @js.native
+  object appointmentModified extends TopLevel[appointmentModified with Double]
+  
+  /* 4 */ @js.native
+  object calendarCreated extends TopLevel[calendarCreated with Double]
+  
+  /* 6 */ @js.native
+  object calendarDeleted extends TopLevel[calendarDeleted with Double]
+  
+  /* 5 */ @js.native
+  object calendarModified extends TopLevel[calendarModified with Double]
+  
+  /* 3 */ @js.native
+  object changeTrackingLost extends TopLevel[changeTrackingLost with Double]
+  
 }
 

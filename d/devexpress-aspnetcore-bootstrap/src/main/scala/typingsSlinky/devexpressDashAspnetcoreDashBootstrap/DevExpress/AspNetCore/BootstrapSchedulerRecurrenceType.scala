@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object BootstrapSchedulerRecurrenceType extends js.Object {
   @js.native
   sealed trait Yearly extends BootstrapSchedulerRecurrenceType
   
-  /* "Daily" */ val Daily: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapSchedulerRecurrenceType.Daily with String = js.native
-  /* "Hourly" */ val Hourly: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapSchedulerRecurrenceType.Hourly with String = js.native
-  /* "Monthly" */ val Monthly: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapSchedulerRecurrenceType.Monthly with String = js.native
-  /* "Weekly" */ val Weekly: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapSchedulerRecurrenceType.Weekly with String = js.native
-  /* "Yearly" */ val Yearly: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapSchedulerRecurrenceType.Yearly with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BootstrapSchedulerRecurrenceType with String] = js.native
+  /* "Daily" */ @js.native
+  object Daily extends TopLevel[Daily with String]
+  
+  /* "Hourly" */ @js.native
+  object Hourly extends TopLevel[Hourly with String]
+  
+  /* "Monthly" */ @js.native
+  object Monthly extends TopLevel[Monthly with String]
+  
+  /* "Weekly" */ @js.native
+  object Weekly extends TopLevel[Weekly with String]
+  
+  /* "Yearly" */ @js.native
+  object Yearly extends TopLevel[Yearly with String]
+  
 }
 

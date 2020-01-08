@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.navigation
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenNavigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -30,7 +31,7 @@ class RoleBasedNativeHomePage protected ()
 @js.native
 object RoleBasedNativeHomePage extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenNavigationMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new RoleBasedNativeHomePage instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

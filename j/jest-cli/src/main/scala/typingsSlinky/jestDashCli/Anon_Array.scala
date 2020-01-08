@@ -1,6 +1,6 @@
 package typingsSlinky.jestDashCli
 
-import typingsSlinky.jestDashCli.jestDashCliNumbers.`true`
+import typingsSlinky.jestDashCli.jestDashCliBooleans.`true`
 import typingsSlinky.jestDashCli.jestDashCliStrings.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -245,19 +245,8 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
     callback: js.Function3[/* err */ js.Any, /* doc */ DocType | Null, /* res */ js.Any, Unit]
   ): (DocumentQuery[DocType | Null, DocType, js.Object]) with QueryHelpers = js.native
   def findOneAndUpdate(query: js.Any, update: js.Any, options: Anon_NewTrue with QueryFindOneAndUpdateOptions): (DocumentQuery[DocType, DocType, js.Object]) with QueryHelpers = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any, options: Anon_RawResult with QueryFindOneAndUpdateOptions): (Query[FindAndModifyWriteOpResultObject[DocType | Null]]) with QueryHelpers = js.native
   def findOneAndUpdate(query: js.Any, update: js.Any, options: Anon_New with QueryFindOneAndUpdateOptions): Query[FindAndModifyWriteOpResultObject[DocType]] with QueryHelpers = js.native
-  def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
-    options: Anon_RawResult with QueryFindOneAndUpdateOptions,
-    callback: js.Function3[
-      /* err */ js.Any, 
-      /* doc */ FindAndModifyWriteOpResultObject[DocType | Null], 
-      /* res */ js.Any, 
-      Unit
-    ]
-  ): (Query[FindAndModifyWriteOpResultObject[DocType | Null]]) with QueryHelpers = js.native
+  def findOneAndUpdate(query: js.Any, update: js.Any, options: Anon_RawResult with QueryFindOneAndUpdateOptions): (Query[FindAndModifyWriteOpResultObject[DocType | Null]]) with QueryHelpers = js.native
   def findOneAndUpdate(
     query: js.Any,
     update: js.Any,
@@ -275,6 +264,17 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
       Unit
     ]
   ): Query[FindAndModifyWriteOpResultObject[DocType]] with QueryHelpers = js.native
+  def findOneAndUpdate(
+    query: js.Any,
+    update: js.Any,
+    options: Anon_RawResult with QueryFindOneAndUpdateOptions,
+    callback: js.Function3[
+      /* err */ js.Any, 
+      /* doc */ FindAndModifyWriteOpResultObject[DocType | Null], 
+      /* res */ js.Any, 
+      Unit
+    ]
+  ): (Query[FindAndModifyWriteOpResultObject[DocType | Null]]) with QueryHelpers = js.native
   def findOneAndUpdate(query: js.Any, update: js.Any, options: QueryFindOneAndUpdateOptions): (DocumentQuery[DocType | Null, DocType, js.Object]) with QueryHelpers = js.native
   def findOneAndUpdate(
     query: js.Any,
@@ -358,6 +358,11 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
     * When called with one argument, the most recent path passed to where() is used.
     */
   def lte[T](`val`: T): this.type = js.native
+  /**
+    * Runs a function fn and treats the return value of fn as the new value for the query to resolve to.
+    * Any functions you pass to map() will run after any post hooks.
+    */
+  def map[TRes](fn: js.Function1[/* res */ T, TRes]): (DocumentQuery[TRes, DocType, QueryHelpers]) with QueryHelpers = js.native
   def maxDistance(path: String, `val`: Double): this.type = js.native
   /**
     * Specifies a $maxDistance query condition.
@@ -473,7 +478,7 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
   /**
     * Determines the MongoDB nodes from which to read.
     * @param pref one of the listed preference options or aliases
-    * @tags optional tags for this query
+    * @param tags optional tags for this query
     */
   def read(pref: String): this.type = js.native
   def read(pref: String, tags: js.Array[_]): this.type = js.native

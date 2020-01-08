@@ -1,6 +1,5 @@
 package typingsSlinky.createjsDashLib
 
-import typingsSlinky.createjsDashLib.createjs.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

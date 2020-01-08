@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashSyntaxDashHighlighter extends SharedApply_SyntaxHighlighterProps_1713497095[default] {
+object ReactDashSyntaxDashHighlighter extends SharedApply_SyntaxHighlighterProps_1507978106[default] {
   @JSImport("react-syntax-highlighter", "default")
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,28 @@ object RoleType extends js.Object {
   @js.native
   sealed trait Viewer extends RoleType
   
-  /* 1 */ val Admin: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.Admin with Double = js.native
-  /* 5 */ val GuestReporter: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.GuestReporter with Double = js.native
-  /* 6 */ val GuestViewer: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.GuestViewer with Double = js.native
-  /* 3 */ val Reporter: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.Reporter with Double = js.native
-  /* 2 */ val User: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.User with Double = js.native
-  /* 4 */ val Viewer: typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.Viewer with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RoleType with Double] = js.native
+  /* 1 */ @js.native
+  object Admin extends TopLevel[Admin with Double]
+  
+  /* 5 */ @js.native
+  object GuestReporter extends TopLevel[GuestReporter with Double]
+  
+  /* 6 */ @js.native
+  object GuestViewer extends TopLevel[GuestViewer with Double]
+  
+  /* 3 */ @js.native
+  object Reporter extends TopLevel[Reporter with Double]
+  
+  /* 2 */ @js.native
+  object User
+    extends TopLevel[
+          typingsSlinky.backlogDashJs.backlogDashJsMod.Option.User.RoleType.User with Double
+        ]
+  
+  /* 4 */ @js.native
+  object Viewer extends TopLevel[Viewer with Double]
+  
 }
 

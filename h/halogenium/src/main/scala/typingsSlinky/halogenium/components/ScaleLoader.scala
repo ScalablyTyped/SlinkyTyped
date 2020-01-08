@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ScaleLoader
-  extends SharedApply_RadiusLoaderProps_1762243374[typingsSlinky.halogenium.halogeniumMod.ScaleLoader] {
+  extends SharedApply_RadiusLoaderProps2092053963[typingsSlinky.halogenium.halogeniumMod.ScaleLoader] {
   @JSImport("halogenium", "ScaleLoader")
   @js.native
   object componentImport extends js.Object

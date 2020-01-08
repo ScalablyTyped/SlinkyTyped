@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object CharacterFormattingScript extends js.Object {
   @js.native
   sealed trait Superscript extends CharacterFormattingScript
   
-  /* 0 */ val Normal: typingsSlinky.devexpressDashWeb.CharacterFormattingScript.Normal with Double = js.native
-  /* 1 */ val Subscript: typingsSlinky.devexpressDashWeb.CharacterFormattingScript.Subscript with Double = js.native
-  /* 2 */ val Superscript: typingsSlinky.devexpressDashWeb.CharacterFormattingScript.Superscript with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CharacterFormattingScript with Double] = js.native
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
+  /* 1 */ @js.native
+  object Subscript extends TopLevel[Subscript with Double]
+  
+  /* 2 */ @js.native
+  object Superscript extends TopLevel[Superscript with Double]
+  
 }
 

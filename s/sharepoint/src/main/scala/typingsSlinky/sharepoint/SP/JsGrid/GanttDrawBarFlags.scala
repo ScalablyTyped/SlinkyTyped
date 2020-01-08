@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object GanttDrawBarFlags extends js.Object {
   @js.native
   sealed trait RightLink extends GanttDrawBarFlags
   
-  /* 0 */ val LeftLink: typingsSlinky.sharepoint.SP.JsGrid.GanttDrawBarFlags.LeftLink with Double = js.native
-  /* 1 */ val RightLink: typingsSlinky.sharepoint.SP.JsGrid.GanttDrawBarFlags.RightLink with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GanttDrawBarFlags with Double] = js.native
+  /* 0 */ @js.native
+  object LeftLink extends TopLevel[LeftLink with Double]
+  
+  /* 1 */ @js.native
+  object RightLink extends TopLevel[RightLink with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserMod
 
+import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.Asterisk
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.DISTINCT
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.alter
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.delete
@@ -7,11 +8,13 @@ import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.insert
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.replace
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.select
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.update
+import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.use
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
+  - typings.nodeDashSqlDashParser.nodeDashSqlDashParserMod.Use
   - typings.nodeDashSqlDashParser.nodeDashSqlDashParserMod.Select
   - typings.nodeDashSqlDashParser.nodeDashSqlDashParserMod.Insert_Replace
   - typings.nodeDashSqlDashParser.nodeDashSqlDashParserMod.Update
@@ -22,34 +25,8 @@ trait AST extends js.Object
 
 object AST {
   @scala.inline
-  def Update(
-    set: js.Array[SetList],
-    `type`: update,
-    where: js.Any,
-    db: String = null,
-    table: js.Array[From | Dual] = null
-  ): AST = {
-    val __obj = js.Dynamic.literal(set = set.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (db != null) __obj.updateDynamic("db")(db.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AST]
-  }
-  @scala.inline
-  def Delete(from: js.Array[From | Dual], table: js.Any, `type`: delete, where: js.Any): AST = {
-    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AST]
-  }
-  @scala.inline
-  def Alter(expr: js.Any, table: From, `type`: alter): AST = {
-    val __obj = js.Dynamic.literal(expr = expr.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AST]
-  }
-  @scala.inline
   def Insert_Replace(
-    table: String,
+    table: js.Any,
     `type`: replace | insert,
     values: js.Array[InsertReplaceValue],
     columns: js.Array[String] = null,
@@ -62,8 +39,14 @@ object AST {
     __obj.asInstanceOf[AST]
   }
   @scala.inline
+  def Use(db: String, `type`: use): AST = {
+    val __obj = js.Dynamic.literal(db = db.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AST]
+  }
+  @scala.inline
   def Select(
-    columns: js.Array[_] | typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.`*`,
+    columns: js.Array[_] | Asterisk,
     `type`: select,
     where: js.Any,
     distinct: DISTINCT = null,
@@ -85,6 +68,32 @@ object AST {
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     if (orderby != null) __obj.updateDynamic("orderby")(orderby.asInstanceOf[js.Any])
     if (`with` != null) __obj.updateDynamic("with")(`with`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AST]
+  }
+  @scala.inline
+  def Alter(expr: js.Any, table: From, `type`: alter): AST = {
+    val __obj = js.Dynamic.literal(expr = expr.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AST]
+  }
+  @scala.inline
+  def Delete(from: js.Array[From | Dual], table: js.Any, `type`: delete, where: js.Any): AST = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AST]
+  }
+  @scala.inline
+  def Update(
+    set: js.Array[SetList],
+    `type`: update,
+    where: js.Any,
+    db: String = null,
+    table: js.Array[From | Dual] = null
+  ): AST = {
+    val __obj = js.Dynamic.literal(set = set.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (db != null) __obj.updateDynamic("db")(db.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[AST]
   }
 }

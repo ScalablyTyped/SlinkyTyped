@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import typingsSlinky.antd.Anon_ScrollToFirstRowOnChange
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.libSpinMod.SpinProps
 import typingsSlinky.antd.libTableCreateStoreMod.Store
 import typingsSlinky.csstype.csstypeMod.TableLayoutProperty
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,7 +52,7 @@ trait InternalTableProps[T] extends js.Object {
   var onChange: js.UndefOr[
     js.Function4[
       /* pagination */ PaginationConfig, 
-      /* filters */ Record[String, js.Array[String]], 
+      /* filters */ Partial[Record[String, js.Array[String]]], 
       /* sorter */ SorterResult[T], 
       /* extra */ TableCurrentDataSource[T], 
       Unit
@@ -107,7 +108,7 @@ object InternalTableProps {
     indentSize: Int | Double = null,
     loading: Boolean | SpinProps = null,
     locale: TableLocale = null,
-    onChange: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[String]], /* sorter */ SorterResult[T], /* extra */ TableCurrentDataSource[T]) => Unit = null,
+    onChange: (/* pagination */ PaginationConfig, /* filters */ Partial[Record[String, js.Array[String]]], /* sorter */ SorterResult[T], /* extra */ TableCurrentDataSource[T]) => Unit = null,
     onExpand: (/* expanded */ Boolean, /* record */ T) => Unit = null,
     onExpandedRowsChange: /* expandedRowKeys */ js.Array[Double | String] => Unit = null,
     onHeaderRow: /* columns */ js.Array[ColumnProps[T]] => TableEventListeners = null,

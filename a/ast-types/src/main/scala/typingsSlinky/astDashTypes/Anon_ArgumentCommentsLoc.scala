@@ -1,6 +1,6 @@
 package typingsSlinky.astDashTypes
 
-import typingsSlinky.astDashTypes.astDashTypesStrings.`++`
+import typingsSlinky.astDashTypes.astDashTypesStrings.PlussignPlussign
 import typingsSlinky.astDashTypes.astDashTypesStrings.`--`
 import typingsSlinky.astDashTypes.genKindsMod.CommentKind
 import typingsSlinky.astDashTypes.genKindsMod.ExpressionKind
@@ -13,7 +13,7 @@ trait Anon_ArgumentCommentsLoc extends js.Object {
   var argument: ExpressionKind
   var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
   var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var operator: `++` | `--`
+  var operator: PlussignPlussign | `--`
   var prefix: Boolean
 }
 
@@ -21,7 +21,7 @@ object Anon_ArgumentCommentsLoc {
   @scala.inline
   def apply(
     argument: ExpressionKind,
-    operator: `++` | `--`,
+    operator: PlussignPlussign | `--`,
     prefix: Boolean,
     comments: js.Array[CommentKind] = null,
     loc: SourceLocationKind = null

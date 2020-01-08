@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.Power
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PowerSupplyStatus extends js.Object {
   @js.native
   sealed trait notPresent extends PowerSupplyStatus
   
-  /* 2 */ val adequate: typingsSlinky.winrtDashUwp.Windows.System.Power.PowerSupplyStatus.adequate with Double = js.native
-  /* 1 */ val inadequate: typingsSlinky.winrtDashUwp.Windows.System.Power.PowerSupplyStatus.inadequate with Double = js.native
-  /* 0 */ val notPresent: typingsSlinky.winrtDashUwp.Windows.System.Power.PowerSupplyStatus.notPresent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PowerSupplyStatus with Double] = js.native
+  /* 2 */ @js.native
+  object adequate extends TopLevel[adequate with Double]
+  
+  /* 1 */ @js.native
+  object inadequate extends TopLevel[inadequate with Double]
+  
+  /* 0 */ @js.native
+  object notPresent extends TopLevel[notPresent with Double]
+  
 }
 

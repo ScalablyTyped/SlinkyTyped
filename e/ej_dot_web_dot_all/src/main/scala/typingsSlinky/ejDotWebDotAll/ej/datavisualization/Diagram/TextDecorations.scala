@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object TextDecorations extends js.Object {
   @js.native
   sealed trait Underline extends TextDecorations
   
-  /* 2 */ val LineThrough: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextDecorations.LineThrough with Double = js.native
-  /* 3 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextDecorations.None with Double = js.native
-  /* 1 */ val Overline: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextDecorations.Overline with Double = js.native
-  /* 0 */ val Underline: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextDecorations.Underline with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextDecorations with Double] = js.native
+  /* 2 */ @js.native
+  object LineThrough extends TopLevel[LineThrough with Double]
+  
+  /* 3 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Overline extends TopLevel[Overline with Double]
+  
+  /* 0 */ @js.native
+  object Underline extends TopLevel[Underline with Double]
+  
 }
 

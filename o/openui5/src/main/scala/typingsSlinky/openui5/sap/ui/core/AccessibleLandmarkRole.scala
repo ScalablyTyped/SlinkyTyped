@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,14 +37,28 @@ object AccessibleLandmarkRole extends js.Object {
   @js.native
   sealed trait Search extends AccessibleLandmarkRole
   
-  /* 0 */ val Banner: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Banner with Double = js.native
-  /* 1 */ val Complementary: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Complementary with Double = js.native
-  /* 2 */ val Main: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Main with Double = js.native
-  /* 3 */ val Navigation: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Navigation with Double = js.native
-  /* 4 */ val None: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.None with Double = js.native
-  /* 5 */ val Region: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Region with Double = js.native
-  /* 6 */ val Search: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Search with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AccessibleLandmarkRole with Double] = js.native
+  /* 0 */ @js.native
+  object Banner extends TopLevel[Banner with Double]
+  
+  /* 1 */ @js.native
+  object Complementary extends TopLevel[Complementary with Double]
+  
+  /* 2 */ @js.native
+  object Main extends TopLevel[Main with Double]
+  
+  /* 3 */ @js.native
+  object Navigation extends TopLevel[Navigation with Double]
+  
+  /* 4 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 5 */ @js.native
+  object Region extends TopLevel[Region with Double]
+  
+  /* 6 */ @js.native
+  object Search extends TopLevel[Search with Double]
+  
 }
 

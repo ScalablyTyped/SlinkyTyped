@@ -1,6 +1,6 @@
 package typingsSlinky.arangodb.Foxx
 
-import typingsSlinky.arangodb.arangodbNumbers.`false`
+import typingsSlinky.arangodb.arangodbBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

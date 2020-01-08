@@ -2,7 +2,6 @@ package typingsSlinky.atFirebaseDatabase
 
 import typingsSlinky.atFirebaseDatabase.distSrcCoreSnapChildrenNodeMod.ChildrenNode
 import typingsSlinky.atFirebaseDatabase.distSrcCoreSnapIndexesIndexMod.Index
-import typingsSlinky.atFirebaseDatabase.distSrcCoreSnapIndexesKeyIndexMod.KeyIndex
 import typingsSlinky.atFirebaseDatabase.distSrcCoreSnapNodeMod.NamedNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +24,8 @@ object distSrcCoreSnapIndexesKeyIndexMod extends js.Object {
   /* static members */
   @js.native
   object KeyIndex extends js.Object {
-    var __EMPTY_NODE: ChildrenNode = js.native
+    def __EMPTY_NODE(): ChildrenNode = js.native
+    def __EMPTY_NODE(`val`: ChildrenNode): js.Any = js.native
   }
   
 }

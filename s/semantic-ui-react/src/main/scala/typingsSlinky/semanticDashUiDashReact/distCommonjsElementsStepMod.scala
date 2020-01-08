@@ -1,5 +1,6 @@
 package typingsSlinky.semanticDashUiDashReact
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsStepStepMod.StepComponent
@@ -18,6 +19,8 @@ object distCommonjsElementsStepMod extends js.Object {
     def this(props: StepProps, context: js.Any) = this()
   }
   
-  val default: StepComponent = js.native
+  @js.native
+  object default extends TopLevel[StepComponent]
+  
 }
 

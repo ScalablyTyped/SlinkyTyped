@@ -3,8 +3,8 @@ package typingsSlinky.atTensorflowTfjsDashConverter
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataCompiledUnderscoreApiMod.IAttrValue
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataCompiledUnderscoreApiMod.IGraphDef
+import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataCompiledUnderscoreApiMod.ISignatureDef
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataCompiledUnderscoreApiMod.ITensorShape
-import typingsSlinky.atTensorflowTfjsDashConverter.distSrcOperationsOperationUnderscoreMapperMod.OperationMapper
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcOperationsTypesMod.Graph
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.DataType
 import scala.scalajs.js
@@ -17,8 +17,10 @@ object distSrcOperationsOperationUnderscoreMapperMod extends js.Object {
   @js.native
   class OperationMapper protected () extends js.Object {
     var mapNode: js.Any = js.native
+    var mapSignatureEntries: js.Any = js.native
     var opMappers: js.Any = js.native
     def transformGraph(graph: IGraphDef): Graph = js.native
+    def transformGraph(graph: IGraphDef, signature: ISignatureDef): Graph = js.native
   }
   
   def decodeBase64(text: String): String = js.native

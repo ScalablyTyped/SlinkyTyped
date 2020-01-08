@@ -2,6 +2,7 @@ package typingsSlinky.plottable.plottableMod.Utils
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +21,6 @@ object Translator extends js.Object {
   /**
     * Is the event's target part of the given component's DOM tree?
     */
-  def isEventInside(component: typingsSlinky.plottable.buildSrcComponentsComponentMod.Component, e: Event): Boolean = js.native
+  def isEventInside(component: Component, e: Event): Boolean = js.native
 }
 

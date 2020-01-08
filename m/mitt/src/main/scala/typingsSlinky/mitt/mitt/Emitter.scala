@@ -1,5 +1,6 @@
 package typingsSlinky.mitt.mitt
 
+import typingsSlinky.mitt.mittStrings.Asterisk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +27,7 @@ trait Emitter extends js.Object {
   		 * @memberOf Mitt
   		 */
   def off(`type`: String, handler: Handler): Unit = js.native
-  def off(`type`: typingsSlinky.mitt.mittStrings.`*`, handler: WildcardHandler): Unit = js.native
+  def off(`type`: Asterisk, handler: WildcardHandler): Unit = js.native
   /**
   		 * Register an event handler for the given type.
   		 *
@@ -36,6 +37,6 @@ trait Emitter extends js.Object {
   		 * @memberOf Mitt
   		 */
   def on(`type`: String, handler: Handler): Unit = js.native
-  def on(`type`: typingsSlinky.mitt.mittStrings.`*`, handler: WildcardHandler): Unit = js.native
+  def on(`type`: Asterisk, handler: WildcardHandler): Unit = js.native
 }
 

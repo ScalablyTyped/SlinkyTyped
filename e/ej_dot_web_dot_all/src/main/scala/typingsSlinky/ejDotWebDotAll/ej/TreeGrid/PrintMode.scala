@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object PrintMode extends js.Object {
   @js.native
   sealed trait CurrentPage extends PrintMode
   
-  /* 0 */ val AllPages: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.PrintMode.AllPages with Double = js.native
-  /* 1 */ val CurrentPage: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.PrintMode.CurrentPage with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrintMode with Double] = js.native
+  /* 0 */ @js.native
+  object AllPages extends TopLevel[AllPages with Double]
+  
+  /* 1 */ @js.native
+  object CurrentPage extends TopLevel[CurrentPage with Double]
+  
 }
 

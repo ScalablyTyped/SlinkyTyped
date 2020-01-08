@@ -1,7 +1,7 @@
 package typingsSlinky.atTensorflowTfjsDashCore
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreStrings.`downloads://`
+import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreStrings.downloadsColonSlashSlash
 import typingsSlinky.atTensorflowTfjsDashCore.distIoRouterUnderscoreRegistryMod.IORouter
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.IOHandler
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.ModelArtifacts
@@ -31,7 +31,7 @@ object distIoBrowserUnderscoreFilesMod extends js.Object {
   /* static members */
   @js.native
   object BrowserDownloads extends js.Object {
-    val URL_SCHEME: `downloads://` = js.native
+    val URL_SCHEME: downloadsColonSlashSlash = js.native
   }
   
 }

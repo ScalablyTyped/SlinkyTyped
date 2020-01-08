@@ -1,8 +1,8 @@
 package typingsSlinky.webpack.webpackMod.Options
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.webpack.webpackBooleans.`false`
 import typingsSlinky.webpack.webpackMod.compilation.Chunk
-import typingsSlinky.webpack.webpackNumbers.`false`
 import typingsSlinky.webpack.webpackStrings.all
 import typingsSlinky.webpack.webpackStrings.async
 import typingsSlinky.webpack.webpackStrings.initial

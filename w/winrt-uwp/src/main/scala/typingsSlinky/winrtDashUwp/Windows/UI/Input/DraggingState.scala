@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Input
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object DraggingState extends js.Object {
   @js.native
   sealed trait started extends DraggingState
   
-  /* 2 */ val completed: typingsSlinky.winrtDashUwp.Windows.UI.Input.DraggingState.completed with Double = js.native
-  /* 1 */ val continuing: typingsSlinky.winrtDashUwp.Windows.UI.Input.DraggingState.continuing with Double = js.native
-  /* 0 */ val started: typingsSlinky.winrtDashUwp.Windows.UI.Input.DraggingState.started with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DraggingState with Double] = js.native
+  /* 2 */ @js.native
+  object completed extends TopLevel[completed with Double]
+  
+  /* 1 */ @js.native
+  object continuing extends TopLevel[continuing with Double]
+  
+  /* 0 */ @js.native
+  object started extends TopLevel[started with Double]
+  
 }
 

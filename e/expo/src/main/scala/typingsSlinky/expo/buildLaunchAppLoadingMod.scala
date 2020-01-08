@@ -1,7 +1,5 @@
 package typingsSlinky.expo
 
-import typingsSlinky.expo.buildLaunchAppLoadingMod.AppLoading
-import typingsSlinky.expo.buildLaunchAppLoadingMod.Props
 import typingsSlinky.fbemitter.fbemitterMod.EventEmitter
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

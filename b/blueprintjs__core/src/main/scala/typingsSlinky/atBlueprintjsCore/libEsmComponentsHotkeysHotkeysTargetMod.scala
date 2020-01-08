@@ -2,7 +2,6 @@ package typingsSlinky.atBlueprintjsCore
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.atBlueprintjsCore.libEsmCommonConstructorMod.IConstructor
-import typingsSlinky.atBlueprintjsCore.libEsmComponentsHotkeysHotkeysTargetMod.IHotkeysTargetComponent
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

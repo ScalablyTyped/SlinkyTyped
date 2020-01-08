@@ -4,9 +4,9 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.objectMod.ObjectEvent
-import typingsSlinky.ol.olStrings.`change:center`
-import typingsSlinky.ol.olStrings.`change:resolution`
-import typingsSlinky.ol.olStrings.`change:rotation`
+import typingsSlinky.ol.olStrings.changeColoncenter
+import typingsSlinky.ol.olStrings.changeColonresolution
+import typingsSlinky.ol.olStrings.changeColonrotation
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.sizeMod.Size
 import typingsSlinky.ol.viewHintMod.ViewHint
@@ -68,17 +68,17 @@ trait View
   def getZoomForResolution(resolution: Double): js.UndefOr[Double] = js.native
   def isDef(): Boolean = js.native
   @JSName("on")
-  def on_changecenter(`type`: `change:center`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changecenter(`type`: changeColoncenter, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changeresolution(`type`: `change:resolution`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changeresolution(`type`: changeColonresolution, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changerotation(`type`: `change:rotation`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changerotation(`type`: changeColonrotation, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changecenter(`type`: `change:center`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changecenter(`type`: changeColoncenter, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changeresolution(`type`: `change:resolution`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changeresolution(`type`: changeColonresolution, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changerotation(`type`: `change:rotation`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changerotation(`type`: changeColonrotation, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   def rotate(rotation: Double): Unit = js.native
   def rotate(rotation: Double, opt_anchor: Coordinate): Unit = js.native
   def setCenter(): Unit = js.native
@@ -91,11 +91,11 @@ trait View
   def setRotation(rotation: Double): Unit = js.native
   def setZoom(zoom: Double): Unit = js.native
   @JSName("un")
-  def un_changecenter(`type`: `change:center`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changecenter(`type`: changeColoncenter, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changeresolution(`type`: `change:resolution`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changeresolution(`type`: changeColonresolution, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changerotation(`type`: `change:rotation`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changerotation(`type`: changeColonrotation, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   def updateAnimations_(): Unit = js.native
 }
 

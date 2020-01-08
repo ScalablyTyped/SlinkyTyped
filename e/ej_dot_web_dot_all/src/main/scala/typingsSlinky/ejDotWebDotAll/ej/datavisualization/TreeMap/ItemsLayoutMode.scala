@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.TreeMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object ItemsLayoutMode extends js.Object {
   @js.native
   sealed trait Squarified extends ItemsLayoutMode
   
-  /* 3 */ val Sliceanddiceauto: typingsSlinky.ejDotWebDotAll.ej.datavisualization.TreeMap.ItemsLayoutMode.Sliceanddiceauto with Double = js.native
-  /* 1 */ val Sliceanddicehorizontal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.TreeMap.ItemsLayoutMode.Sliceanddicehorizontal with Double = js.native
-  /* 2 */ val Sliceanddicevertical: typingsSlinky.ejDotWebDotAll.ej.datavisualization.TreeMap.ItemsLayoutMode.Sliceanddicevertical with Double = js.native
-  /* 0 */ val Squarified: typingsSlinky.ejDotWebDotAll.ej.datavisualization.TreeMap.ItemsLayoutMode.Squarified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ItemsLayoutMode with Double] = js.native
+  /* 3 */ @js.native
+  object Sliceanddiceauto extends TopLevel[Sliceanddiceauto with Double]
+  
+  /* 1 */ @js.native
+  object Sliceanddicehorizontal extends TopLevel[Sliceanddicehorizontal with Double]
+  
+  /* 2 */ @js.native
+  object Sliceanddicevertical extends TopLevel[Sliceanddicevertical with Double]
+  
+  /* 0 */ @js.native
+  object Squarified extends TopLevel[Squarified with Double]
+  
 }
 

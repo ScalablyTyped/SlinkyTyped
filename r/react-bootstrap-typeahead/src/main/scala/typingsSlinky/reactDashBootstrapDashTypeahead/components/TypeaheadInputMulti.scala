@@ -10,7 +10,7 @@ import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypea
 import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadMod.TypeaheadMenuProps
 import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadMod.TypeaheadModel
 import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadMod.TypeaheadMulitInputWithHocProps
-import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadStrings.Empty
+import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object TypeaheadInputMulti
     labelKey: TypeaheadLabelKey[T],
     onRemove: Event => Unit,
     renderToken: (T, TypeaheadMenuProps[T], Double) => TagMod[Any],
-    role: Empty,
+    role: _empty,
     selected: js.Array[T],
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[

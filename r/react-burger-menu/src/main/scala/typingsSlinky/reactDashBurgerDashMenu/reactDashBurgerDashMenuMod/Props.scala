@@ -2,7 +2,7 @@ package typingsSlinky.reactDashBurgerDashMenu.reactDashBurgerDashMenuMod
 
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.reactDashBurgerDashMenu.reactDashBurgerDashMenuNumbers.`false`
+import typingsSlinky.reactDashBurgerDashMenu.reactDashBurgerDashMenuBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

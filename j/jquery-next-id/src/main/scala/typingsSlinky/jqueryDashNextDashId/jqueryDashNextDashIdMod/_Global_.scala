@@ -1,6 +1,5 @@
 package typingsSlinky.jqueryDashNextDashId.jqueryDashNextDashIdMod
 
-import typingsSlinky.jqueryDashNextDashId.jqueryDashNextDashIdMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

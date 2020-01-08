@@ -3,6 +3,7 @@ package typingsSlinky.ink.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.ink.inkMod.BoxProps
 import typingsSlinky.ink.inkStrings.`column-reverse`
@@ -84,6 +85,7 @@ object Box
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.ink.inkMod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.ink.inkMod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BoxProps
 }
 

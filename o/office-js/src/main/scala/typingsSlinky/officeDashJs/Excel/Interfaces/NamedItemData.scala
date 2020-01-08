@@ -7,6 +7,9 @@ import typingsSlinky.officeDashJs.officeDashJsStrings.Boolean
 import typingsSlinky.officeDashJs.officeDashJsStrings.Double
 import typingsSlinky.officeDashJs.officeDashJsStrings.Error
 import typingsSlinky.officeDashJs.officeDashJsStrings.Integer
+import typingsSlinky.officeDashJs.officeDashJsStrings.Range
+import typingsSlinky.officeDashJs.officeDashJsStrings.Workbook
+import typingsSlinky.officeDashJs.officeDashJsStrings.Worksheet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,9 +50,7 @@ trait NamedItemData extends js.Object {
     *
     * [Api set: ExcelApi 1.4]
     */
-  var scope: js.UndefOr[
-    NamedItemScope | typingsSlinky.officeDashJs.officeDashJsStrings.Worksheet | typingsSlinky.officeDashJs.officeDashJsStrings.Workbook
-  ] = js.undefined
+  var scope: js.UndefOr[NamedItemScope | Worksheet | Workbook] = js.undefined
   /**
     *
     * Indicates the type of the value returned by the name's formula. See Excel.NamedItemType for details. Read-only.
@@ -57,7 +58,7 @@ trait NamedItemData extends js.Object {
     * [Api set: ExcelApi 1.1 for String,Integer,Double,Boolean,Range,Error; 1.7 for Array]
     */
   var `type`: js.UndefOr[
-    NamedItemType | typingsSlinky.officeDashJs.officeDashJsStrings.String | Integer | Double | Boolean | typingsSlinky.officeDashJs.officeDashJsStrings.Range | Error | Array
+    NamedItemType | typingsSlinky.officeDashJs.officeDashJsStrings.String | Integer | Double | Boolean | Range | Error | Array
   ] = js.undefined
   /**
     *
@@ -82,8 +83,8 @@ object NamedItemData {
     comment: String = null,
     formula: js.Any = null,
     name: String = null,
-    scope: NamedItemScope | typingsSlinky.officeDashJs.officeDashJsStrings.Worksheet | typingsSlinky.officeDashJs.officeDashJsStrings.Workbook = null,
-    `type`: NamedItemType | typingsSlinky.officeDashJs.officeDashJsStrings.String | Integer | Double | Boolean | typingsSlinky.officeDashJs.officeDashJsStrings.Range | Error | Array = null,
+    scope: NamedItemScope | Worksheet | Workbook = null,
+    `type`: NamedItemType | typingsSlinky.officeDashJs.officeDashJsStrings.String | Integer | Double | Boolean | Range | Error | Array = null,
     value: js.Any = null,
     visible: js.UndefOr[scala.Boolean] = js.undefined
   ): NamedItemData = {

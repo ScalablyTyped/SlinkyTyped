@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object DevicePairingProtectionLevel extends js.Object {
   @js.native
   sealed trait none extends DevicePairingProtectionLevel
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingProtectionLevel.default with Double = js.native
-  /* 2 */ val encryption: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingProtectionLevel.encryption with Double = js.native
-  /* 3 */ val encryptionAndAuthentication: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingProtectionLevel.encryptionAndAuthentication with Double = js.native
-  /* 1 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingProtectionLevel.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DevicePairingProtectionLevel with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 2 */ @js.native
+  object encryption extends TopLevel[encryption with Double]
+  
+  /* 3 */ @js.native
+  object encryptionAndAuthentication extends TopLevel[encryptionAndAuthentication with Double]
+  
+  /* 1 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

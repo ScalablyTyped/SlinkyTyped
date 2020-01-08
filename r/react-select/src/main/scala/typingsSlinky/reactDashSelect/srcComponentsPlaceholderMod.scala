@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashSelect
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import slinky.core.TagMod
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
-import typingsSlinky.reactDashSelect.srcComponentsPlaceholderMod.PlaceholderProps
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.reactDashSelect.srcSelectMod.Props
 import typingsSlinky.reactDashSelect.srcTypesMod.ActionTypes
 import typingsSlinky.reactDashSelect.srcTypesMod.ClassNamesState
@@ -64,8 +64,14 @@ object srcComponentsPlaceholderMod extends js.Object {
     def this(props: PlaceholderProps[_], context: js.Any) = this()
   }
   
-  val Placeholder: ReactComponentClass[PlaceholderProps[js.Any]] = js.native
-  val default: ReactComponentClass[PlaceholderProps[js.Any]] = js.native
   def placeholderCSS(): CSSProperties = js.native
+  @js.native
+  object Placeholder
+    extends TopLevel[ComponentType[PlaceholderProps[js.Any]]]
+  
+  @js.native
+  object default
+    extends TopLevel[ComponentType[PlaceholderProps[js.Any]]]
+  
 }
 

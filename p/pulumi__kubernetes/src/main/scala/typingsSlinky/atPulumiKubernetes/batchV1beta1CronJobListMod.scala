@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`batch/v1beta1`
-import typingsSlinky.atPulumiKubernetes.batchV1beta1CronJobListMod.CronJobList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.batchSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.batch.v1beta1.CronJob
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object batchV1beta1CronJobListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`batch/v1beta1`] = js.native
+    val apiVersion: Output[batchSlashv1beta1] = js.native
     /**
       * items is the list of CronJobs.
       */

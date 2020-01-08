@@ -2,6 +2,7 @@ package typingsSlinky.dojo.dojox.dgauges
 
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dojoStrings.align
+import typingsSlinky.dojo.dojoStrings.color
 import typingsSlinky.dojo.dojoStrings.font
 import typingsSlinky.dojo.dojoStrings.indicator
 import typingsSlinky.dojo.dojoStrings.labelFunc
@@ -69,7 +70,7 @@ class TextIndicator () extends IndicatorBase {
   @JSName("get")
   def get_align(property: align): String = js.native
   @JSName("get")
-  def get_color(property: typingsSlinky.dojo.dojoStrings.color): js.Object = js.native
+  def get_color(property: color): js.Object = js.native
   @JSName("get")
   def get_font(property: font): js.Object = js.native
   @JSName("get")
@@ -83,7 +84,7 @@ class TextIndicator () extends IndicatorBase {
   @JSName("set")
   def set_align(property: align, value: String): Unit = js.native
   @JSName("set")
-  def set_color(property: typingsSlinky.dojo.dojoStrings.color, value: js.Object): Unit = js.native
+  def set_color(property: color, value: js.Object): Unit = js.native
   @JSName("set")
   def set_font(property: font, value: js.Object): Unit = js.native
   @JSName("set")
@@ -106,7 +107,7 @@ class TextIndicator () extends IndicatorBase {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_color(
-    property: typingsSlinky.dojo.dojoStrings.color,
+    property: color,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Object], 

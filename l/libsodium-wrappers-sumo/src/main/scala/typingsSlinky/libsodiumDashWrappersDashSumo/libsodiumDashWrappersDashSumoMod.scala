@@ -16,7 +16,7 @@ import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.StringOutput
 import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.StringSecretBox
 import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.Uint8ArrayOutputFormat
 import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.base64_variants
-import typingsSlinky.libsodiumDashWrappersDashSumo.libsodiumDashWrappersDashSumoNumbers.`true`
+import typingsSlinky.libsodiumDashWrappersDashSumo.libsodiumDashWrappersDashSumoBooleans.`true`
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

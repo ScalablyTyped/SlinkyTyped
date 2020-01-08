@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CoreDispatcherPriority extends js.Object {
   @js.native
   sealed trait normal extends CoreDispatcherPriority
   
-  /* 2 */ val high: typingsSlinky.winrt.Windows.UI.Core.CoreDispatcherPriority.high with Double = js.native
-  /* 0 */ val low: typingsSlinky.winrt.Windows.UI.Core.CoreDispatcherPriority.low with Double = js.native
-  /* 1 */ val normal: typingsSlinky.winrt.Windows.UI.Core.CoreDispatcherPriority.normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoreDispatcherPriority with Double] = js.native
+  /* 2 */ @js.native
+  object high extends TopLevel[high with Double]
+  
+  /* 0 */ @js.native
+  object low extends TopLevel[low with Double]
+  
+  /* 1 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
 }
 

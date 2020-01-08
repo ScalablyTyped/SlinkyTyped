@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object NDCertificateFeature extends js.Object {
   @js.native
   sealed trait transmitter extends NDCertificateFeature
   
-  /* 4 */ val antiRollBackClock: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.antiRollBackClock with Double = js.native
-  /* 5 */ val crls: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.crls with Double = js.native
-  /* 6 */ val playReady3Features: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.playReady3Features with Double = js.native
-  /* 1 */ val receiver: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.receiver with Double = js.native
-  /* 3 */ val secureClock: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.secureClock with Double = js.native
-  /* 2 */ val sharedCertificate: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.sharedCertificate with Double = js.native
-  /* 0 */ val transmitter: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateFeature.transmitter with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NDCertificateFeature with Double] = js.native
+  /* 4 */ @js.native
+  object antiRollBackClock extends TopLevel[antiRollBackClock with Double]
+  
+  /* 5 */ @js.native
+  object crls extends TopLevel[crls with Double]
+  
+  /* 6 */ @js.native
+  object playReady3Features extends TopLevel[playReady3Features with Double]
+  
+  /* 1 */ @js.native
+  object receiver extends TopLevel[receiver with Double]
+  
+  /* 3 */ @js.native
+  object secureClock extends TopLevel[secureClock with Double]
+  
+  /* 2 */ @js.native
+  object sharedCertificate extends TopLevel[sharedCertificate with Double]
+  
+  /* 0 */ @js.native
+  object transmitter extends TopLevel[transmitter with Double]
+  
 }
 

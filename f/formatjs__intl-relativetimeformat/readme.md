@@ -1,7 +1,7 @@
 
 # Scala.js typings for formatjs__intl-relativetimeformat
 
-Typings are for version 4.4.6
+Typings are for version 4.5.1
 
 ## Library description:
 Formats JavaScript dates to relative time strings.
@@ -10,9 +10,9 @@ Formats JavaScript dates to relative time strings.
 | ------------------ | :-------------: |
 | Full name          | @formatjs/intl-relativetimeformat |
 | Keywords           | intl, i18n, relative, time, moment, format, date |
-| # releases         | 24 |
-| # dependents       | 4 |
-| # downloads        | 49472 |
+| # releases         | 52 |
+| # dependents       | 18 |
+| # downloads        | 1986743 |
 | # stars            | 0 |
 
 ## Links

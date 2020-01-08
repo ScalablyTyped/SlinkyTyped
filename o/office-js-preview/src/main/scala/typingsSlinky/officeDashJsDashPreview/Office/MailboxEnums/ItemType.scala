@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +10,6 @@ sealed trait ItemType extends js.Object
 
 /**
   * Specifies an item's type.
-  *
-  * [Api set: Mailbox 1.0]
   *
   * @remarks
   * 
@@ -31,9 +30,13 @@ object ItemType extends js.Object {
   @js.native
   sealed trait Message extends ItemType
   
-  /* "appointment" */ val Appointment: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.ItemType.Appointment with String = js.native
-  /* "message" */ val Message: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.ItemType.Message with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ItemType with String] = js.native
+  /* "appointment" */ @js.native
+  object Appointment extends TopLevel[Appointment with String]
+  
+  /* "message" */ @js.native
+  object Message extends TopLevel[Message with String]
+  
 }
 

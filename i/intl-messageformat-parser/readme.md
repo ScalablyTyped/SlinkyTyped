@@ -1,7 +1,7 @@
 
 # Scala.js typings for intl-messageformat-parser
 
-Typings are for version 3.3.1
+Typings are for version 3.5.3
 
 ## Library description:
 Parses ICU Message strings into an AST via JavaScript.
@@ -10,9 +10,9 @@ Parses ICU Message strings into an AST via JavaScript.
 | ------------------ | :-------------: |
 | Full name          | intl-messageformat-parser |
 | Keywords           | i18n, intl, internationalization, localization, globalization, messageformat, parser, plural, icu |
-| # releases         | 8 |
-| # dependents       | 50 |
-| # downloads        | 21141765 |
+| # releases         | 45 |
+| # dependents       | 58 |
+| # downloads        | 34653119 |
 | # stars            | 0 |
 
 ## Links

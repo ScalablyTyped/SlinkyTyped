@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "relaxed-json"
-version := "1.0-dt-20180214Z-514fb7"
+version := "1.0-dt-20180214Z-c75a12"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

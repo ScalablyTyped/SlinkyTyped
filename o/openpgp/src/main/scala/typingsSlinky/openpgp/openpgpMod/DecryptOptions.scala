@@ -1,10 +1,10 @@
 package typingsSlinky.openpgp.openpgpMod
 
 import typingsSlinky.openpgp.Anon_Algorithm
+import typingsSlinky.openpgp.openpgpBooleans.`false`
 import typingsSlinky.openpgp.openpgpMod.key.Key
 import typingsSlinky.openpgp.openpgpMod.message.Message
 import typingsSlinky.openpgp.openpgpMod.signature.Signature
-import typingsSlinky.openpgp.openpgpNumbers.`false`
 import typingsSlinky.openpgp.openpgpStrings.binary
 import typingsSlinky.openpgp.openpgpStrings.node
 import typingsSlinky.openpgp.openpgpStrings.utf8

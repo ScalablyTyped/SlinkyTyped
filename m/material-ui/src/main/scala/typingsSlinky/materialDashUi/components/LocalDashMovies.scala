@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocalDashMovies extends SharedApply_SvgIconProps657215518[default] {
+object LocalDashMovies extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/maps/local-movies", JSImport.Default)
   @js.native
   object componentImport extends js.Object

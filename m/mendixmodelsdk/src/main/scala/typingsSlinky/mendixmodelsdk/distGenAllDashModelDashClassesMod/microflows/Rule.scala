@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.microflows
 
+import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
@@ -27,7 +28,7 @@ class Rule protected ()
 @js.native
 object Rule extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new Rule unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.

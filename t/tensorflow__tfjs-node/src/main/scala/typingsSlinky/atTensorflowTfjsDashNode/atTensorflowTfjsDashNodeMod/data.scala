@@ -12,7 +12,7 @@ import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.FileElement
 import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.MicrophoneConfig
 import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.WebcamConfig
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeNumbers.`10000`
-import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.`1DOT3DOT2`
+import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.`1Dot5Dot1`
 import typingsSlinky.std.IteratorResult
 import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
@@ -107,7 +107,7 @@ object data extends js.Object {
     def this(url: RequestInfo, fileOptions: FileChunkIteratorOptions) = this()
   }
   
-  val version_data: `1DOT3DOT2` = js.native
+  val version_data: `1Dot5Dot1` = js.native
   def array[T /* <: TensorContainer */](items: js.Array[T]): typingsSlinky.atTensorflowTfjsDashData.distDatasetMod.Dataset[T] = js.native
   def csv(source: RequestInfo): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native
   def csv(source: RequestInfo, csvConfig: CSVConfig): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native

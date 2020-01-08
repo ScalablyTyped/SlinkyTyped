@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,16 @@ object TemplateType extends js.Object {
   @js.native
   sealed trait WorkItemType extends TemplateType
   
-  /* 1 */ val GlobalWorkflow: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.TemplateType.GlobalWorkflow with Double = js.native
-  /* 0 */ val WorkItemType: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.TemplateType.WorkItemType with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TemplateType with Double] = js.native
+  /* 1 */ @js.native
+  object GlobalWorkflow extends TopLevel[GlobalWorkflow with Double]
+  
+  /* 0 */ @js.native
+  object WorkItemType
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.TemplateType.WorkItemType with Double
+        ]
+  
 }
 

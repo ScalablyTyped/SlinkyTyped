@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object BluetoothCacheMode extends js.Object {
   @js.native
   sealed trait uncached extends BluetoothCacheMode
   
-  /* 0 */ val cached: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.BluetoothCacheMode.cached with Double = js.native
-  /* 1 */ val uncached: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.BluetoothCacheMode.uncached with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BluetoothCacheMode with Double] = js.native
+  /* 0 */ @js.native
+  object cached extends TopLevel[cached with Double]
+  
+  /* 1 */ @js.native
+  object uncached extends TopLevel[uncached with Double]
+  
 }
 

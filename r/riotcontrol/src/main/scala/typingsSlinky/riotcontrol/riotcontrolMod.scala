@@ -1,6 +1,5 @@
 package typingsSlinky.riotcontrol
 
-import typingsSlinky.riotcontrol.riotcontrolMod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

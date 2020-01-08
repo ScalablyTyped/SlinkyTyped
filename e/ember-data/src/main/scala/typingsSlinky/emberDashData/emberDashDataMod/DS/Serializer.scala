@@ -1,5 +1,6 @@
 package typingsSlinky.emberDashData.emberDashDataMod.DS
 
+import typingsSlinky.atEmberObject.atEmberObjectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("ember-data", "DS.Serializer")
 @js.native
-class Serializer ()
-  extends typingsSlinky.atEmberObject.atEmberObjectMod.default {
+class Serializer () extends default {
   /**
     * The `store` property is the application's `store` that contains
     * all records. It can be used to look up serializers for other model

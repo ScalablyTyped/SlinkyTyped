@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashTouch.reactDashTouchMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object moves extends js.Object {
   @js.native
   sealed trait UPRIGHT extends moves
   
-  /* 6 */ val DOWN: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.DOWN with Double = js.native
-  /* 7 */ val DOWNLEFT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.DOWNLEFT with Double = js.native
-  /* 5 */ val DOWNRIGHT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.DOWNRIGHT with Double = js.native
-  /* 3 */ val LEFT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.LEFT with Double = js.native
-  /* 4 */ val RIGHT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.RIGHT with Double = js.native
-  /* 1 */ val UP: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.UP with Double = js.native
-  /* 0 */ val UPLEFT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.UPLEFT with Double = js.native
-  /* 2 */ val UPRIGHT: typingsSlinky.reactDashTouch.reactDashTouchMod.moves.UPRIGHT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[moves with Double] = js.native
+  /* 6 */ @js.native
+  object DOWN extends TopLevel[DOWN with Double]
+  
+  /* 7 */ @js.native
+  object DOWNLEFT extends TopLevel[DOWNLEFT with Double]
+  
+  /* 5 */ @js.native
+  object DOWNRIGHT extends TopLevel[DOWNRIGHT with Double]
+  
+  /* 3 */ @js.native
+  object LEFT extends TopLevel[LEFT with Double]
+  
+  /* 4 */ @js.native
+  object RIGHT extends TopLevel[RIGHT with Double]
+  
+  /* 1 */ @js.native
+  object UP extends TopLevel[UP with Double]
+  
+  /* 0 */ @js.native
+  object UPLEFT extends TopLevel[UPLEFT with Double]
+  
+  /* 2 */ @js.native
+  object UPRIGHT extends TopLevel[UPRIGHT with Double]
+  
 }
 

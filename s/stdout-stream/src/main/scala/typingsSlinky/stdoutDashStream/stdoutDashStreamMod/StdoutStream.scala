@@ -1,7 +1,7 @@
 package typingsSlinky.stdoutDashStream.stdoutDashStreamMod
 
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.stdoutDashStream.stdoutDashStreamNumbers.`true`
+import typingsSlinky.stdoutDashStream.stdoutDashStreamBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

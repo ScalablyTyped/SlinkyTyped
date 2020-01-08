@@ -2,8 +2,6 @@ package typingsSlinky.atFirebaseFirestore
 
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreMapMod.SortedMap
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreMapMod.SortedMapIterator
-import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreSetMod.SortedSet
-import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreSetMod.SortedSetIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

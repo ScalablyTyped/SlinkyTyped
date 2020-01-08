@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object InputMode extends js.Object {
   @js.native
   sealed trait Text extends InputMode
   
-  /* 0 */ val Password: typingsSlinky.ejDotWebDotAll.ej.InputMode.Password with Double = js.native
-  /* 1 */ val Text: typingsSlinky.ejDotWebDotAll.ej.InputMode.Text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InputMode with Double] = js.native
+  /* 0 */ @js.native
+  object Password extends TopLevel[Password with Double]
+  
+  /* 1 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
 }
 

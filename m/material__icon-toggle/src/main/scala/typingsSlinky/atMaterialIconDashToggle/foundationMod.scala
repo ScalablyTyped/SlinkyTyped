@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialIconDashToggle
 
 import typingsSlinky.atMaterialIconDashToggle.adapterMod.MDCIconToggleAdapter
-import typingsSlinky.atMaterialIconDashToggle.foundationMod.MDCIconToggleFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

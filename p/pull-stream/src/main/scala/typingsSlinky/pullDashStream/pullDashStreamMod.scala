@@ -1,8 +1,5 @@
 package typingsSlinky.pullDashStream
 
-import typingsSlinky.pullDashStream.pullDashStreamMod.Sink
-import typingsSlinky.pullDashStream.pullDashStreamMod.Source
-import typingsSlinky.pullDashStream.pullDashStreamMod.Through
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +35,7 @@ object pullDashStreamMod extends js.Object {
     */
   def apply(): js.UndefOr[scala.Nothing] = js.native
   def apply(
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param pullStreams because its type ReadonlyArray<pull.Source<any> | pull.Sink<any> | pull.Through<any, any>> is not an array type */ pullStreams: js.Array[Source[_] | Sink[_] | (Through[_, _])]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param pullStreams because its type ReadonlyArray<pull.Source<any> | pull.Sink<any> | pull.Through<any, any>> is not an array type */ pullStreams: js.Array[Source[_] | Sink[_] | (Through[_, _])]
   ): js.UndefOr[Source[_] | Sink[_] | (Through[_, _])] = js.native
   def apply[In](sink: Sink[In]): Sink[In] = js.native
   def apply[Out](source: Source[Out]): Source[Out] = js.native

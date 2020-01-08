@@ -2,8 +2,8 @@ package typingsSlinky.victory.victoryMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.victory.Anon_AxisAxisLabel
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryStrings.axis
 import typingsSlinky.victory.victoryStrings.axisLabel
 import typingsSlinky.victory.victoryStrings.bottom
@@ -236,8 +236,8 @@ object VictoryAxisProps {
     horizontal: js.UndefOr[Boolean] = js.undefined,
     invertAxis: js.UndefOr[Boolean] = js.undefined,
     label: js.Any = null,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     name: String = null,
     offsetX: Int | Double = null,
     offsetY: Int | Double = null,

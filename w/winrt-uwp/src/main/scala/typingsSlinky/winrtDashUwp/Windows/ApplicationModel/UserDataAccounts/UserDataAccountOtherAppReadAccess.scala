@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object UserDataAccountOtherAppReadAccess extends js.Object {
   @js.native
   sealed trait systemOnly extends UserDataAccountOtherAppReadAccess
   
-  /* 1 */ val full: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess.full with Double = js.native
-  /* 0 */ val systemOnly: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess.systemOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserDataAccountOtherAppReadAccess with Double] = js.native
+  /* 1 */ @js.native
+  object full extends TopLevel[full with Double]
+  
+  /* 0 */ @js.native
+  object systemOnly extends TopLevel[systemOnly with Double]
+  
 }
 

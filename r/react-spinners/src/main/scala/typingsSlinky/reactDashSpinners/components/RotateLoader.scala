@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RotateLoader extends SharedApply_LoaderSizeMarginProps1778921353[default] {
+object RotateLoader extends SharedApply_LoaderSizeMarginProps2112337662[default] {
   @JSImport("react-spinners/RotateLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

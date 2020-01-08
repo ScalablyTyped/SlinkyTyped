@@ -1,5 +1,6 @@
 package typingsSlinky.tsutils.utilUsageMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object UsageDomain extends js.Object {
   @js.native
   sealed trait ValueOrNamespace extends UsageDomain
   
-  /* 7 */ val Any: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Any with Double = js.native
-  /* 1 */ val Namespace: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Namespace with Double = js.native
-  /* 2 */ val Type: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Type with Double = js.native
-  /* 8 */ val TypeQuery: typingsSlinky.tsutils.utilUsageMod.UsageDomain.TypeQuery with Double = js.native
-  /* 4 */ val Value: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Value with Double = js.native
-  /* 5 */ val ValueOrNamespace: typingsSlinky.tsutils.utilUsageMod.UsageDomain.ValueOrNamespace with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UsageDomain with Double] = js.native
+  /* 7 */ @js.native
+  object Any extends TopLevel[Any with Double]
+  
+  /* 1 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
+  
+  /* 2 */ @js.native
+  object Type extends TopLevel[Type with Double]
+  
+  /* 8 */ @js.native
+  object TypeQuery extends TopLevel[TypeQuery with Double]
+  
+  /* 4 */ @js.native
+  object Value extends TopLevel[Value with Double]
+  
+  /* 5 */ @js.native
+  object ValueOrNamespace extends TopLevel[ValueOrNamespace with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import typingsSlinky.fastifyDashAccepts.Fn_Charsets
 import typingsSlinky.fastifyDashAccepts.Fn_Encodings
 import typingsSlinky.fastifyDashAccepts.Fn_False
 import typingsSlinky.fastifyDashAccepts.Fn_FalseTypes
-import typingsSlinky.fastifyDashAccepts.fastifyDashAcceptsNumbers.`false`
+import typingsSlinky.fastifyDashAccepts.fastifyDashAcceptsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

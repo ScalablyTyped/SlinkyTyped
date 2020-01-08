@@ -1,7 +1,7 @@
 package typingsSlinky.zfont.zfontMod.zdogMod
 
 import typingsSlinky.zdog.zdogMod.Group
-import typingsSlinky.zfont.zfontNumbers.`false`
+import typingsSlinky.zfont.zfontBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

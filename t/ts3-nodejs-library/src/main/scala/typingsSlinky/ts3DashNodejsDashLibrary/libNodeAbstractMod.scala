@@ -1,8 +1,8 @@
 package typingsSlinky.ts3DashNodejsDashLibrary
 
 import typingsSlinky.std.Record
+import typingsSlinky.ts3DashNodejsDashLibrary.libTeamSpeakMod.TeamSpeak
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesQueryResponseMod.QueryResponse
-import typingsSlinky.ts3DashNodejsDashLibrary.ts3DashNodejsDashLibraryMod.TeamSpeak
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

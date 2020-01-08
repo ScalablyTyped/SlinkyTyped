@@ -1,7 +1,5 @@
 package typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod
 
-import typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod.rpc.ServiceMethod
-import typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod.rpc.ServiceMethodCallback
 import typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod.util.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

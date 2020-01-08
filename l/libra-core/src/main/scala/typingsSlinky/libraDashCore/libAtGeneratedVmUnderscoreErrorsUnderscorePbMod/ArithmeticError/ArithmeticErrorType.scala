@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.ArithmeticError
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ArithmeticErrorType extends js.Object {
   @js.native
   sealed trait UNKNOWNARITHMETICERROR extends ArithmeticErrorType
   
-  /* 3 */ val DIVISIONBYZERO: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.ArithmeticError.ArithmeticErrorType.DIVISIONBYZERO with Double = js.native
-  /* 2 */ val OVERFLOW: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.ArithmeticError.ArithmeticErrorType.OVERFLOW with Double = js.native
-  /* 1 */ val UNDERFLOW: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.ArithmeticError.ArithmeticErrorType.UNDERFLOW with Double = js.native
-  /* 0 */ val UNKNOWNARITHMETICERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.ArithmeticError.ArithmeticErrorType.UNKNOWNARITHMETICERROR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ArithmeticErrorType with Double] = js.native
+  /* 3 */ @js.native
+  object DIVISIONBYZERO extends TopLevel[DIVISIONBYZERO with Double]
+  
+  /* 2 */ @js.native
+  object OVERFLOW extends TopLevel[OVERFLOW with Double]
+  
+  /* 1 */ @js.native
+  object UNDERFLOW extends TopLevel[UNDERFLOW with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWNARITHMETICERROR extends TopLevel[UNKNOWNARITHMETICERROR with Double]
+  
 }
 

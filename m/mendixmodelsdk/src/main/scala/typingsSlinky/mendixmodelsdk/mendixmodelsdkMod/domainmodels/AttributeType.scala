@@ -1,5 +1,9 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +13,12 @@ import scala.scalajs.js.annotation._
 abstract class AttributeType protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.domainmodels.AttributeType {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -23,6 +27,6 @@ abstract class AttributeType protected ()
 @js.native
 object AttributeType extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

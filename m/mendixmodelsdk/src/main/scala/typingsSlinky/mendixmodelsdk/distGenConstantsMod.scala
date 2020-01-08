@@ -1,9 +1,9 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.distGenConstantsMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenConstantsMod.constants.Constant
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenDatatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Document
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -35,7 +35,7 @@ object distGenConstantsMod extends js.Object {
     - typings.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
-    - typings.mendixmodelsdk.distGenConstantsMod.constants.IConstant because var conflicts: id, isLoaded, model, name, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenConstantsMod.constants.IConstant because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined  */ @js.native
     class Constant protected () extends Document {
       def this(
         model: AbstractModel,
@@ -44,21 +44,29 @@ object distGenConstantsMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
+      @JSName("model")
+      var model_FConstant: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MConstant(): FolderBase = js.native
       /**
         * The value of this property is conceptually of type dataTypes.LegacyDataType.
         *
         * In version 7.9.0: deleted
         */
-      var dataType: String = js.native
-      var defaultValue: String = js.native
+      def dataType(): String = js.native
+      def dataType(newValue: String): js.Any = js.native
+      def defaultValue(): String = js.native
+      def defaultValue(newValue: String): js.Any = js.native
       /**
         * In version 8.2.0: introduced
         */
-      var exposedToClient: Boolean = js.native
+      def exposedToClient(): Boolean = js.native
+      def exposedToClient(newValue: Boolean): js.Any = js.native
       /**
         * In version 7.9.0: introduced
         */
-      var `type`: DataType = js.native
+      def `type`(): DataType = js.native
+      def `type`(newValue: DataType): js.Any = js.native
     }
     
     /**

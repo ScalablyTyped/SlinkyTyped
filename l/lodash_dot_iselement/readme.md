@@ -11,8 +11,8 @@ The lodash method `_.isElement` exported as a module.
 | Full name          | lodash.iselement |
 | Keywords           | lodash-modularized, iselement |
 | # releases         | 0 |
-| # dependents       | 15 |
-| # downloads        | 5302 |
+| # dependents       | 18 |
+| # downloads        | 99991 |
 | # stars            | 0 |
 
 ## Links

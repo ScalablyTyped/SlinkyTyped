@@ -1,7 +1,6 @@
 package typingsSlinky.atUifabricUtilities
 
 import slinky.core.facade.ReactRef
-import typingsSlinky.atUifabricUtilities.libCreateRefMod.RefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

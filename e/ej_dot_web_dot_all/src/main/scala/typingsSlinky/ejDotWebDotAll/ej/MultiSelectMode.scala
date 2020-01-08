@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object MultiSelectMode extends js.Object {
   @js.native
   sealed trait VisualMode extends MultiSelectMode
   
-  /* 1 */ val Delimiter: typingsSlinky.ejDotWebDotAll.ej.MultiSelectMode.Delimiter with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.MultiSelectMode.None with Double = js.native
-  /* 2 */ val VisualMode: typingsSlinky.ejDotWebDotAll.ej.MultiSelectMode.VisualMode with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MultiSelectMode with Double] = js.native
+  /* 1 */ @js.native
+  object Delimiter extends TopLevel[Delimiter with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object VisualMode extends TopLevel[VisualMode with Double]
+  
 }
 

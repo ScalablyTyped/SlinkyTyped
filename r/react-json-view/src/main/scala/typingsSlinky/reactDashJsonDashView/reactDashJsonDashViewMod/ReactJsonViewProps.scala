@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod
 
 import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewNumbers.`false`
+import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewBooleans.`false`
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.circle
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.square
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.triangle

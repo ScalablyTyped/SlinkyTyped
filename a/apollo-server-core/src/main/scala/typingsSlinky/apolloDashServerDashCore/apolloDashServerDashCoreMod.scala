@@ -12,10 +12,10 @@ import typingsSlinky.apolloDashServerDashErrors.Anon_Extensions
 import typingsSlinky.apolloDashServerDashErrors.Anon_ExtensionsAny
 import typingsSlinky.apolloDashServerDashTypes.apolloDashServerDashTypesMod.ValueOrPromise
 import typingsSlinky.atApollographqlGraphqlDashPlaygroundDashHtml.distRenderDashPlaygroundDashPageMod.RenderPageOptions
+import typingsSlinky.graphql.graphqlMod.GraphQLError
 import typingsSlinky.graphql.graphqlMod.GraphQLScalarType
 import typingsSlinky.graphql.languageAstMod.DocumentNode
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.std.Error
 import typingsSlinky.std.Record
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
@@ -64,12 +64,7 @@ object apolloDashServerDashCoreMod extends js.Object {
   }
   
   @js.native
-  class InvalidGraphQLRequestError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class InvalidGraphQLRequestError () extends GraphQLError
   
   @js.native
   class SyntaxError protected ()

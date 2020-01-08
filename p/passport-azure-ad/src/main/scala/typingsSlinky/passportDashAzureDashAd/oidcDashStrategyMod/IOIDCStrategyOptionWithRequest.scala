@@ -1,7 +1,7 @@
 package typingsSlinky.passportDashAzureDashAd.oidcDashStrategyMod
 
 import typingsSlinky.passportDashAzureDashAd.Anon_Iv
-import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdNumbers.`true`
+import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdBooleans.`true`
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.`code id_token`
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.`id_token code`
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.code

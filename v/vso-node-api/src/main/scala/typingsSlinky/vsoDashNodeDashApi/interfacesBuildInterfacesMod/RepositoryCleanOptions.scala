@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,11 +29,19 @@ object RepositoryCleanOptions extends js.Object {
   @js.native
   sealed trait SourceDir extends RepositoryCleanOptions
   
-  /* 3 */ val AllBuildDir: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.RepositoryCleanOptions.AllBuildDir with Double = js.native
-  /* 0 */ val Source: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.RepositoryCleanOptions.Source with Double = js.native
-  /* 1 */ val SourceAndOutputDir: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.RepositoryCleanOptions.SourceAndOutputDir with Double = js.native
-  /* 2 */ val SourceDir: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.RepositoryCleanOptions.SourceDir with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RepositoryCleanOptions with Double] = js.native
+  /* 3 */ @js.native
+  object AllBuildDir extends TopLevel[AllBuildDir with Double]
+  
+  /* 0 */ @js.native
+  object Source extends TopLevel[Source with Double]
+  
+  /* 1 */ @js.native
+  object SourceAndOutputDir extends TopLevel[SourceAndOutputDir with Double]
+  
+  /* 2 */ @js.native
+  object SourceDir extends TopLevel[SourceDir with Double]
+  
 }
 

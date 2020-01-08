@@ -10,7 +10,7 @@ package object highchartsMod {
   import org.scalajs.dom.raw.HTMLElement
   import org.scalajs.dom.raw.MouseEvent
   import org.scalajs.dom.raw.PointerEvent
-  import typingsSlinky.highcharts.highchartsNumbers.`false`
+  import typingsSlinky.highcharts.highchartsBooleans.`false`
 
   type AnimationStepCallbackFunction = js.ThisFunction0[/* this */ SVGElement, Unit]
   type AxisEventCallbackFunction = js.ThisFunction0[/* this */ Axis, Unit]

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ProcessType extends js.Object {
   @js.native
   sealed trait System extends ProcessType
   
-  /* 1 */ val Custom: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProcessType.Custom with Double = js.native
-  /* 2 */ val Inherited: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProcessType.Inherited with Double = js.native
-  /* 0 */ val System: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProcessType.System with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProcessType with Double] = js.native
+  /* 1 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 2 */ @js.native
+  object Inherited extends TopLevel[Inherited with Double]
+  
+  /* 0 */ @js.native
+  object System extends TopLevel[System with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageFilterTiltShift
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilterTiltShift] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilterTiltShift] {
   @JSImport("material-ui/svg-icons", "ImageFilterTiltShift")
   @js.native
   object componentImport extends js.Object

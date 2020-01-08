@@ -12,7 +12,7 @@ A small logging library
 | Keywords           | logging |
 | # releases         | 7 |
 | # dependents       | 0 |
-| # downloads        | 615 |
+| # downloads        | 625 |
 | # stars            | 0 |
 
 ## Links

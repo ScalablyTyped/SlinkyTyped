@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,19 +50,43 @@ object ChartDataLabelPosition extends js.Object {
   @js.native
   sealed trait top extends ChartDataLabelPosition
   
-  /* "BestFit" */ val bestFit: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.bestFit with String = js.native
-  /* "Bottom" */ val bottom: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.bottom with String = js.native
-  /* "Callout" */ val callout: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.callout with String = js.native
-  /* "Center" */ val center: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.center with String = js.native
-  /* "InsideBase" */ val insideBase: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.insideBase with String = js.native
-  /* "InsideEnd" */ val insideEnd: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.insideEnd with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.invalid with String = js.native
-  /* "Left" */ val left: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.left with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.none with String = js.native
-  /* "OutsideEnd" */ val outsideEnd: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.outsideEnd with String = js.native
-  /* "Right" */ val right: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.right with String = js.native
-  /* "Top" */ val top: typingsSlinky.officeDashJsDashPreview.Excel.ChartDataLabelPosition.top with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartDataLabelPosition with String] = js.native
+  /* "BestFit" */ @js.native
+  object bestFit extends TopLevel[bestFit with String]
+  
+  /* "Bottom" */ @js.native
+  object bottom extends TopLevel[bottom with String]
+  
+  /* "Callout" */ @js.native
+  object callout extends TopLevel[callout with String]
+  
+  /* "Center" */ @js.native
+  object center extends TopLevel[center with String]
+  
+  /* "InsideBase" */ @js.native
+  object insideBase extends TopLevel[insideBase with String]
+  
+  /* "InsideEnd" */ @js.native
+  object insideEnd extends TopLevel[insideEnd with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "Left" */ @js.native
+  object left extends TopLevel[left with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "OutsideEnd" */ @js.native
+  object outsideEnd extends TopLevel[outsideEnd with String]
+  
+  /* "Right" */ @js.native
+  object right extends TopLevel[right with String]
+  
+  /* "Top" */ @js.native
+  object top extends TopLevel[top with String]
+  
 }
 

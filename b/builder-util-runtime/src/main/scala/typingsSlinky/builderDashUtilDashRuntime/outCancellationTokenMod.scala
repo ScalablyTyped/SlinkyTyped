@@ -1,6 +1,5 @@
 package typingsSlinky.builderDashUtilDashRuntime
 
-import typingsSlinky.builderDashUtilDashRuntime.outCancellationTokenMod.CancellationToken
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Error
 import scala.scalajs.js

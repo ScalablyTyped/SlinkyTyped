@@ -1,6 +1,5 @@
 package typingsSlinky.sharepoint.SP.BusinessData
 
-import typingsSlinky.sharepoint.SP.BusinessData.Infrastructure.ExternalSubscriptionStore
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.ClientRuntimeContext
 import typingsSlinky.sharepoint.SP.Web

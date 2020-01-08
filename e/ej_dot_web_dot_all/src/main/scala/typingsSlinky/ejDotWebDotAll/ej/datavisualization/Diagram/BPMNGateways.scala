@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,15 +43,31 @@ object BPMNGateways extends js.Object {
   @js.native
   sealed trait ParallelEventBased extends BPMNGateways
   
-  /* 4 */ val Complex: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.Complex with Double = js.native
-  /* 5 */ val EventBased: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.EventBased with Double = js.native
-  /* 1 */ val Exclusive: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.Exclusive with Double = js.native
-  /* 6 */ val ExclusiveEventBased: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.ExclusiveEventBased with Double = js.native
-  /* 2 */ val Inclusive: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.Inclusive with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.None with Double = js.native
-  /* 3 */ val Parallel: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.Parallel with Double = js.native
-  /* 7 */ val ParallelEventBased: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNGateways.ParallelEventBased with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNGateways with Double] = js.native
+  /* 4 */ @js.native
+  object Complex extends TopLevel[Complex with Double]
+  
+  /* 5 */ @js.native
+  object EventBased extends TopLevel[EventBased with Double]
+  
+  /* 1 */ @js.native
+  object Exclusive extends TopLevel[Exclusive with Double]
+  
+  /* 6 */ @js.native
+  object ExclusiveEventBased extends TopLevel[ExclusiveEventBased with Double]
+  
+  /* 2 */ @js.native
+  object Inclusive extends TopLevel[Inclusive with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object Parallel extends TopLevel[Parallel with Double]
+  
+  /* 7 */ @js.native
+  object ParallelEventBased extends TopLevel[ParallelEventBased with Double]
+  
 }
 

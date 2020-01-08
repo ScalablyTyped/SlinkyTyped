@@ -1,5 +1,6 @@
 package typingsSlinky.applicationinsightsDashJs.AI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DataPointType extends js.Object {
   @js.native
   sealed trait Measurement extends DataPointType
   
-  /* 1 */ val Aggregation: typingsSlinky.applicationinsightsDashJs.AI.DataPointType.Aggregation with Double = js.native
-  /* 0 */ val Measurement: typingsSlinky.applicationinsightsDashJs.AI.DataPointType.Measurement with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DataPointType with Double] = js.native
+  /* 1 */ @js.native
+  object Aggregation extends TopLevel[Aggregation with Double]
+  
+  /* 0 */ @js.native
+  object Measurement extends TopLevel[Measurement with Double]
+  
 }
 

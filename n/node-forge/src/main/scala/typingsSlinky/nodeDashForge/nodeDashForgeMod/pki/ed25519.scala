@@ -5,8 +5,6 @@ import typingsSlinky.nodeDashForge.Anon_PrivateKey
 import typingsSlinky.nodeDashForge.Anon_PrivateKeyBinaryBuffer
 import typingsSlinky.nodeDashForge.Anon_PublicKey
 import typingsSlinky.nodeDashForge.Anon_Seed
-import typingsSlinky.nodeDashForge.nodeDashForgeMod.pki.ed25519.NativeBuffer
-import typingsSlinky.nodeDashForge.nodeDashForgeMod.pki.ed25519.ToNativeBufferParameters
 import typingsSlinky.nodeDashForge.nodeDashForgeMod.util.ByteBuffer
 import typingsSlinky.nodeDashForge.nodeDashForgeNumbers.`32`
 import typingsSlinky.nodeDashForge.nodeDashForgeNumbers.`64`

@@ -1,9 +1,5 @@
 package typingsSlinky.reselect
 
-import typingsSlinky.reselect.reselectMod.OutputParametricSelector
-import typingsSlinky.reselect.reselectMod.OutputSelector
-import typingsSlinky.reselect.reselectMod.ParametricSelector
-import typingsSlinky.reselect.reselectMod.Selector
 import typingsSlinky.reselect.reselectStrings.createStructuredSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("reselect", JSImport.Namespace)
 @js.native
 object reselectMod extends js.Object {
-  def createSelector[S, R1, T](selectors: js.Array[Selector[S, R1]], combiner: js.Function1[/* res */ R1, T]): OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
-  def createSelector[S, R1, T](selector: Selector[S, R1], combiner: js.Function1[/* res */ R1, T]): OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
+  def createSelector[S1, R1, T](selector1: Selector[S1, R1], combiner: js.Function1[/* res1 */ R1, T]): OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
+  def createSelector[S1, R1, T](selectors: js.Array[Selector[S1, R1]], combiner: js.Function1[/* res1 */ R1, T]): OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
   def createSelector[S1, P1, R1, T](selector1: ParametricSelector[S1, P1, R1], combiner: js.Function1[/* res1 */ R1, T]): OutputParametricSelector[S1, P1, T, js.Function1[/* res1 */ R1, T]] = js.native
   def createSelector[S, R1, R2, T](
     selector1: Selector[S, R1],
@@ -890,10 +886,6 @@ object reselectMod extends js.Object {
   ): Fn_Combiner = js.native
   @JSName("createSelector")
   def createSelector_S1P1R1T_OutputParametricSelector[S1, P1, R1, T](selectors: js.Array[ParametricSelector[S1, P1, R1]], combiner: js.Function1[/* res1 */ R1, T]): OutputParametricSelector[S1, P1, T, js.Function1[/* res1 */ R1, T]] = js.native
-  @JSName("createSelector")
-  def createSelector_S1R1T[S1, R1, T](selector1: Selector[S1, R1], combiner: js.Function1[/* res1 */ R1, T]): OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
-  @JSName("createSelector")
-  def createSelector_S1R1T[S1, R1, T](selectors: js.Array[Selector[S1, R1]], combiner: js.Function1[/* res1 */ R1, T]): OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
   @JSName("createSelector")
   def createSelector_S1S2P1P2R1R2T[S1, S2, P1, P2, R1, R2, T](
     selector1: ParametricSelector[S1, P1, R1],
@@ -2449,6 +2441,10 @@ object reselectMod extends js.Object {
   def createSelector_SPR1T_OutputParametricSelector[S, P, R1, T](selectors: js.Array[ParametricSelector[S, P, R1]], combiner: js.Function1[/* res */ R1, T]): OutputParametricSelector[S, P, T, js.Function1[/* res */ R1, T]] = js.native
   @JSName("createSelector")
   def createSelector_SPRT_OutputParametricSelector[S, P, R, T](selectors: js.Array[ParametricSelector[S, P, R]], combiner: js.Function1[/* repeated */ R, T]): OutputParametricSelector[S, P, T, js.Function1[/* repeated */ R, T]] = js.native
+  @JSName("createSelector")
+  def createSelector_SR1T[S, R1, T](selectors: js.Array[Selector[S, R1]], combiner: js.Function1[/* res */ R1, T]): OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
+  @JSName("createSelector")
+  def createSelector_SR1T[S, R1, T](selector: Selector[S, R1], combiner: js.Function1[/* res */ R1, T]): OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
   @JSName("createSelector")
   def createSelector_SRT[S, R, T](selectors: js.Array[Selector[S, R]], combiner: js.Function1[/* repeated */ R, T]): OutputSelector[S, T, js.Function1[/* repeated */ R, T]] = js.native
   def createStructuredSelector[S, T](

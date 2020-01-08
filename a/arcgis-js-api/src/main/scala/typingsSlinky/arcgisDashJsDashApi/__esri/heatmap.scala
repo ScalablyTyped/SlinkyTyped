@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,7 @@ trait heatmap extends js.Object {
     * @param params.maxRatio The maximum [ratio](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-HeatmapColorStop.html#ratio) used in the [HeatmapRenderer.colorStops](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html#colorStops) of the output renderer.
     *
     */
-  def createRenderer(params: heatmapCreateRendererParams): IPromise[HeatmapRendererResult]
+  def createRenderer(params: heatmapCreateRendererParams): js.Promise[HeatmapRendererResult]
 }
 
 @JSGlobal("__esri.heatmap")

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object PortVisibility extends js.Object {
   @js.native
   sealed trait Visible extends PortVisibility
   
-  /* 3 */ val Connect: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortVisibility.Connect with Double = js.native
-  /* 4 */ val Default: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortVisibility.Default with Double = js.native
-  /* 1 */ val Hidden: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortVisibility.Hidden with Double = js.native
-  /* 2 */ val Hover: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortVisibility.Hover with Double = js.native
-  /* 0 */ val Visible: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortVisibility.Visible with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PortVisibility with Double] = js.native
+  /* 3 */ @js.native
+  object Connect extends TopLevel[Connect with Double]
+  
+  /* 4 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object Hidden extends TopLevel[Hidden with Double]
+  
+  /* 2 */ @js.native
+  object Hover extends TopLevel[Hover with Double]
+  
+  /* 0 */ @js.native
+  object Visible extends TopLevel[Visible with Double]
+  
 }
 

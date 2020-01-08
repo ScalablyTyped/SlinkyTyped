@@ -1,13 +1,13 @@
 package typingsSlinky.mongodb.mongodbMod
 
 import org.scalablytyped.runtime.NumberDictionary
+import typingsSlinky.mongodb.Anon_IdAny
 import typingsSlinky.mongodb.Anon_NOk
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait InsertWriteOpResult[TSchema /* <: Record[String, _] */] extends js.Object {
+trait InsertWriteOpResult[TSchema /* <: Anon_IdAny */] extends js.Object {
   var connection: js.Any
   var insertedCount: scala.Double
   var insertedIds: NumberDictionary[
@@ -19,7 +19,7 @@ trait InsertWriteOpResult[TSchema /* <: Record[String, _] */] extends js.Object 
 
 object InsertWriteOpResult {
   @scala.inline
-  def apply[TSchema /* <: Record[String, _] */](
+  def apply[TSchema /* <: Anon_IdAny */](
     connection: js.Any,
     insertedCount: scala.Double,
     insertedIds: NumberDictionary[

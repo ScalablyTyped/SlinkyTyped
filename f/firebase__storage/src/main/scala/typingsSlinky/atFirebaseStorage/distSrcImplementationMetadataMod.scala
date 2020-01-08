@@ -2,8 +2,6 @@ package typingsSlinky.atFirebaseStorage
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atFirebaseStorage.distSrcImplementationAuthwrapperMod.AuthWrapper
-import typingsSlinky.atFirebaseStorage.distSrcImplementationMetadataMod.Mapping
-import typingsSlinky.atFirebaseStorage.distSrcImplementationMetadataMod.Mappings
 import typingsSlinky.atFirebaseStorage.distSrcMetadataMod.Metadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`

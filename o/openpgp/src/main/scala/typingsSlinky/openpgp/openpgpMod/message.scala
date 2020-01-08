@@ -3,7 +3,6 @@ package typingsSlinky.openpgp.openpgpMod
 import typingsSlinky.openpgp.Anon_Algorithm
 import typingsSlinky.openpgp.Anon_Keyid
 import typingsSlinky.openpgp.openpgpMod.enums.compression
-import typingsSlinky.openpgp.openpgpMod.message.Message
 import typingsSlinky.openpgp.openpgpMod.packet.List
 import typingsSlinky.openpgp.openpgpMod.packet.Literal
 import typingsSlinky.openpgp.openpgpMod.signature.Signature

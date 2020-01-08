@@ -3,8 +3,8 @@ package typingsSlinky.plotlyDotJs.plotlyDotJsMod
 import typingsSlinky.plotlyDotJs.Anon_Dtickrange
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.B
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.E
-import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.Empty
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.SI
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings._empty
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.all
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.array
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.auto
@@ -55,7 +55,7 @@ trait ColorBar extends js.Object {
   var ticklen: Double
   var tickmode: auto | linear | array
   var tickprefix: String
-  var ticks: outside | inside | Empty
+  var ticks: outside | inside | _empty
   var ticksuffix: String
   var ticktext: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray
   var ticktextsrc: js.Any
@@ -102,7 +102,7 @@ object ColorBar {
     ticklen: Double,
     tickmode: auto | linear | array,
     tickprefix: String,
-    ticks: outside | inside | Empty,
+    ticks: outside | inside | _empty,
     ticksuffix: String,
     ticktext: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray,
     ticktextsrc: js.Any,

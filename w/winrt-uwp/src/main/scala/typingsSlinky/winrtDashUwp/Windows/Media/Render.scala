@@ -1,6 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
-import typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,20 +63,44 @@ object Render extends js.Object {
     @js.native
     sealed trait speech extends AudioRenderCategory
     
-    /* 4 */ val alerts: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.alerts with Double = js.native
-    /* 2 */ val backgroundCapableMedia: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.backgroundCapableMedia with Double = js.native
-    /* 3 */ val communications: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.communications with Double = js.native
-    /* 1 */ val foregroundOnlyMedia: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.foregroundOnlyMedia with Double = js.native
-    /* 8 */ val gameChat: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.gameChat with Double = js.native
-    /* 6 */ val gameEffects: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.gameEffects with Double = js.native
-    /* 7 */ val gameMedia: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.gameMedia with Double = js.native
-    /* 11 */ val media: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.media with Double = js.native
-    /* 10 */ val movie: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.movie with Double = js.native
-    /* 0 */ val other: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.other with Double = js.native
-    /* 5 */ val soundEffects: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.soundEffects with Double = js.native
-    /* 9 */ val speech: typingsSlinky.winrtDashUwp.Windows.Media.Render.AudioRenderCategory.speech with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[AudioRenderCategory with Double] = js.native
+    /* 4 */ @js.native
+    object alerts extends TopLevel[alerts with Double]
+    
+    /* 2 */ @js.native
+    object backgroundCapableMedia extends TopLevel[backgroundCapableMedia with Double]
+    
+    /* 3 */ @js.native
+    object communications extends TopLevel[communications with Double]
+    
+    /* 1 */ @js.native
+    object foregroundOnlyMedia extends TopLevel[foregroundOnlyMedia with Double]
+    
+    /* 8 */ @js.native
+    object gameChat extends TopLevel[gameChat with Double]
+    
+    /* 6 */ @js.native
+    object gameEffects extends TopLevel[gameEffects with Double]
+    
+    /* 7 */ @js.native
+    object gameMedia extends TopLevel[gameMedia with Double]
+    
+    /* 11 */ @js.native
+    object media extends TopLevel[media with Double]
+    
+    /* 10 */ @js.native
+    object movie extends TopLevel[movie with Double]
+    
+    /* 0 */ @js.native
+    object other extends TopLevel[other with Double]
+    
+    /* 5 */ @js.native
+    object soundEffects extends TopLevel[soundEffects with Double]
+    
+    /* 9 */ @js.native
+    object speech extends TopLevel[speech with Double]
+    
   }
   
 }

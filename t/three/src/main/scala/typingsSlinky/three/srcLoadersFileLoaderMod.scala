@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.std.MimeType
-import typingsSlinky.three.srcLoadersFileLoaderMod.FileLoader
 import typingsSlinky.three.srcLoadersLoaderMod.Loader
 import typingsSlinky.three.srcLoadersLoadingManagerMod.LoadingManager
 import scala.scalajs.js

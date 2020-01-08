@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -194,27 +195,67 @@ object EventType extends js.Object {
   @js.native
   sealed trait ViewSelectionChanged extends EventType
   
-  /* 0 */ val ActiveViewChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.ActiveViewChanged with Double = js.native
-  /* 1 */ val AppointmentTimeChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.AppointmentTimeChanged with Double = js.native
-  /* 2 */ val AttachmentsChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.AttachmentsChanged with Double = js.native
-  /* 3 */ val BindingDataChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.BindingDataChanged with Double = js.native
-  /* 4 */ val BindingSelectionChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.BindingSelectionChanged with Double = js.native
-  /* 5 */ val DialogEventReceived: typingsSlinky.officeDashJsDashPreview.Office.EventType.DialogEventReceived with Double = js.native
-  /* 6 */ val DialogMessageReceived: typingsSlinky.officeDashJsDashPreview.Office.EventType.DialogMessageReceived with Double = js.native
-  /* 7 */ val DocumentSelectionChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.DocumentSelectionChanged with Double = js.native
-  /* 8 */ val EnhancedLocationsChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.EnhancedLocationsChanged with Double = js.native
-  /* 9 */ val ItemChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.ItemChanged with Double = js.native
-  /* 10 */ val NodeDeleted: typingsSlinky.officeDashJsDashPreview.Office.EventType.NodeDeleted with Double = js.native
-  /* 11 */ val NodeInserted: typingsSlinky.officeDashJsDashPreview.Office.EventType.NodeInserted with Double = js.native
-  /* 12 */ val NodeReplaced: typingsSlinky.officeDashJsDashPreview.Office.EventType.NodeReplaced with Double = js.native
-  /* 13 */ val OfficeThemeChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.OfficeThemeChanged with Double = js.native
-  /* 14 */ val RecipientsChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.RecipientsChanged with Double = js.native
-  /* 15 */ val RecurrenceChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.RecurrenceChanged with Double = js.native
-  /* 16 */ val ResourceSelectionChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.ResourceSelectionChanged with Double = js.native
-  /* 17 */ val SettingsChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.SettingsChanged with Double = js.native
-  /* 18 */ val TaskSelectionChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.TaskSelectionChanged with Double = js.native
-  /* 19 */ val ViewSelectionChanged: typingsSlinky.officeDashJsDashPreview.Office.EventType.ViewSelectionChanged with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EventType with Double] = js.native
+  /* 0 */ @js.native
+  object ActiveViewChanged extends TopLevel[ActiveViewChanged with Double]
+  
+  /* 1 */ @js.native
+  object AppointmentTimeChanged extends TopLevel[AppointmentTimeChanged with Double]
+  
+  /* 2 */ @js.native
+  object AttachmentsChanged extends TopLevel[AttachmentsChanged with Double]
+  
+  /* 3 */ @js.native
+  object BindingDataChanged extends TopLevel[BindingDataChanged with Double]
+  
+  /* 4 */ @js.native
+  object BindingSelectionChanged extends TopLevel[BindingSelectionChanged with Double]
+  
+  /* 5 */ @js.native
+  object DialogEventReceived extends TopLevel[DialogEventReceived with Double]
+  
+  /* 6 */ @js.native
+  object DialogMessageReceived extends TopLevel[DialogMessageReceived with Double]
+  
+  /* 7 */ @js.native
+  object DocumentSelectionChanged extends TopLevel[DocumentSelectionChanged with Double]
+  
+  /* 8 */ @js.native
+  object EnhancedLocationsChanged extends TopLevel[EnhancedLocationsChanged with Double]
+  
+  /* 9 */ @js.native
+  object ItemChanged extends TopLevel[ItemChanged with Double]
+  
+  /* 10 */ @js.native
+  object NodeDeleted extends TopLevel[NodeDeleted with Double]
+  
+  /* 11 */ @js.native
+  object NodeInserted extends TopLevel[NodeInserted with Double]
+  
+  /* 12 */ @js.native
+  object NodeReplaced extends TopLevel[NodeReplaced with Double]
+  
+  /* 13 */ @js.native
+  object OfficeThemeChanged extends TopLevel[OfficeThemeChanged with Double]
+  
+  /* 14 */ @js.native
+  object RecipientsChanged extends TopLevel[RecipientsChanged with Double]
+  
+  /* 15 */ @js.native
+  object RecurrenceChanged extends TopLevel[RecurrenceChanged with Double]
+  
+  /* 16 */ @js.native
+  object ResourceSelectionChanged extends TopLevel[ResourceSelectionChanged with Double]
+  
+  /* 17 */ @js.native
+  object SettingsChanged extends TopLevel[SettingsChanged with Double]
+  
+  /* 18 */ @js.native
+  object TaskSelectionChanged extends TopLevel[TaskSelectionChanged with Double]
+  
+  /* 19 */ @js.native
+  object ViewSelectionChanged extends TopLevel[ViewSelectionChanged with Double]
+  
 }
 

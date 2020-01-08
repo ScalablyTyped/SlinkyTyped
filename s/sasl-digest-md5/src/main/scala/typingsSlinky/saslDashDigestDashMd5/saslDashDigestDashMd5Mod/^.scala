@@ -2,7 +2,7 @@ package typingsSlinky.saslDashDigestDashMd5.saslDashDigestDashMd5Mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.saslDashDigestDashMd5.TypeofClassDigestMd5Mechanism
-import typingsSlinky.saslDashDigestDashMd5.saslDashDigestDashMd5Numbers.`false`
+import typingsSlinky.saslDashDigestDashMd5.saslDashDigestDashMd5Booleans.`false`
 import typingsSlinky.saslDashDigestDashMd5.saslDashDigestDashMd5Strings.`DIGEST-MD5`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

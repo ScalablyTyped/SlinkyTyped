@@ -5,41 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.refreshDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.nextDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.prevDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.toDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.destroyDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.replaceDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.addDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.removeDOTowlDOTcarousel
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.playDOTowlDOTautoplay
-  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.stopDOTowlDOTautoplay
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.refreshDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.nextDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.prevDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.toDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.destroyDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.replaceDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.addDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.removeDotowlDotcarousel
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.playDotowlDotautoplay
+  - typings.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.stopDotowlDotautoplay
 */
 trait TriggerEvent extends js.Object
 
 object TriggerEvent {
   @scala.inline
-  def addDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.addDOTowlDOTcarousel = this.cast("add.owl.carousel")
+  def addDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.addDotowlDotcarousel = this.cast("add.owl.carousel")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def destroyDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.destroyDOTowlDOTcarousel = this.cast("destroy.owl.carousel")
+  def destroyDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.destroyDotowlDotcarousel = this.cast("destroy.owl.carousel")
   @scala.inline
-  def nextDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.nextDOTowlDOTcarousel = this.cast("next.owl.carousel")
+  def nextDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.nextDotowlDotcarousel = this.cast("next.owl.carousel")
   @scala.inline
-  def playDOTowlDOTautoplay: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.playDOTowlDOTautoplay = this.cast("play.owl.autoplay")
+  def playDotowlDotautoplay: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.playDotowlDotautoplay = this.cast("play.owl.autoplay")
   @scala.inline
-  def prevDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.prevDOTowlDOTcarousel = this.cast("prev.owl.carousel")
+  def prevDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.prevDotowlDotcarousel = this.cast("prev.owl.carousel")
   @scala.inline
-  def refreshDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.refreshDOTowlDOTcarousel = this.cast("refresh.owl.carousel")
+  def refreshDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.refreshDotowlDotcarousel = this.cast("refresh.owl.carousel")
   @scala.inline
-  def removeDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.removeDOTowlDOTcarousel = this.cast("remove.owl.carousel")
+  def removeDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.removeDotowlDotcarousel = this.cast("remove.owl.carousel")
   @scala.inline
-  def replaceDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.replaceDOTowlDOTcarousel = this.cast("replace.owl.carousel")
+  def replaceDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.replaceDotowlDotcarousel = this.cast("replace.owl.carousel")
   @scala.inline
-  def stopDOTowlDOTautoplay: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.stopDOTowlDOTautoplay = this.cast("stop.owl.autoplay")
+  def stopDotowlDotautoplay: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.stopDotowlDotautoplay = this.cast("stop.owl.autoplay")
   @scala.inline
-  def toDOTowlDOTcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.toDOTowlDOTcarousel = this.cast("to.owl.carousel")
+  def toDotowlDotcarousel: typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselStrings.toDotowlDotcarousel = this.cast("to.owl.carousel")
 }
 

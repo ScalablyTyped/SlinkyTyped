@@ -1,0 +1,13 @@
+package typingsSlinky.reactDashTable.reactDashTableMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-table", "useRowState")
+@js.native
+object useRowState extends js.Object {
+  val pluginName: typingsSlinky.reactDashTable.reactDashTableStrings.useRowState = js.native
+  def apply[D /* <: js.Object */](hooks: Hooks[D]): Unit = js.native
+}
+

@@ -1,6 +1,5 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.plottable.buildSrcUtilsSetMod.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

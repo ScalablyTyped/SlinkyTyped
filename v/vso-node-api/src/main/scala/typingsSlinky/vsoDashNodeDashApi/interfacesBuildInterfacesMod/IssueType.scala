@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object IssueType extends js.Object {
   @js.native
   sealed trait Warning extends IssueType
   
-  /* 1 */ val Error: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.IssueType.Error with Double = js.native
-  /* 2 */ val Warning: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.IssueType.Warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IssueType with Double] = js.native
+  /* 1 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 2 */ @js.native
+  object Warning extends TopLevel[Warning with Double]
+  
 }
 

@@ -152,7 +152,7 @@ trait Model extends js.Object {
   /** Specify tooltip option of circular gauge
     * @Default {object}
     */
-  var tooltip: js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.Tooltip] = js.undefined
+  var tooltip: js.UndefOr[Tooltip] = js.undefined
   /** Specifies the value of circular gauge.
     * @Default {0}
     */
@@ -206,7 +206,7 @@ object Model {
     rightClick: /* e */ RightClickEventArgs => Unit = null,
     scales: js.Array[Scale] = null,
     theme: String = null,
-    tooltip: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.Tooltip = null,
+    tooltip: Tooltip = null,
     value: Int | Double = null,
     width: Int | Double = null
   ): Model = {

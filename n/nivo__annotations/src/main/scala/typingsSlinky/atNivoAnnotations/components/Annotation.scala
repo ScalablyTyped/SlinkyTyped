@@ -21,13 +21,13 @@ object Annotation
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
   def CircleAnnotationProps(
     containerHeight: Double,
     containerWidth: Double,
     note: TagMod[Any],
     noteX: NoteCoordinate,
     noteY: NoteCoordinate,
+    size: Double,
     x: Double,
     y: Double,
     `type`: circle,
@@ -38,7 +38,7 @@ object Annotation
     noteWidth: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.atNivoAnnotations.atNivoAnnotationsMod.Annotation] = {
-    val __obj = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
@@ -48,7 +48,6 @@ object Annotation
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  /* The following DOM/SVG props were specified: size, size */
   def DotAnnotationProps(
     containerHeight: Double,
     containerWidth: Double,
@@ -75,7 +74,6 @@ object Annotation
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  /* The following DOM/SVG props were specified: size, size */
   def RectAnnotationProps(
     containerHeight: Double,
     containerWidth: Double,

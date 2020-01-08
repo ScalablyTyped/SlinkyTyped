@@ -2,7 +2,7 @@ package typingsSlinky.bull.bullMod
 
 import typingsSlinky.bull.Anon_AttemptsMade
 import typingsSlinky.bull.Anon_Message
-import typingsSlinky.bull.bullNumbers.`false`
+import typingsSlinky.bull.bullBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

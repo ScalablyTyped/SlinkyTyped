@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialDataDashTable
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialDataDashTable.componentMod.MDCDataTable
 import typingsSlinky.atMaterialDataDashTable.foundationMod.MDCDataTableFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

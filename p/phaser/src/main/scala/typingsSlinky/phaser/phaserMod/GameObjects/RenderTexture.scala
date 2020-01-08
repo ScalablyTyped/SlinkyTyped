@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,10 +30,10 @@ class RenderTexture protected ()
     * @param width The width of the Render Texture. Default 32.
     * @param height The height of the Render Texture. Default 32.
     */
-  def this(scene: typingsSlinky.phaser.Phaser.Scene) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, width: integer) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, width: integer, height: integer) = this()
+  def this(scene: Scene) = this()
+  def this(scene: Scene, x: Double) = this()
+  def this(scene: Scene, x: Double, y: Double) = this()
+  def this(scene: Scene, x: Double, y: Double, width: integer) = this()
+  def this(scene: Scene, x: Double, y: Double, width: integer, height: integer) = this()
 }
 

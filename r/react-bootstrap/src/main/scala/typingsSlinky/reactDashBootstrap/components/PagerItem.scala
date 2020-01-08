@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PagerItem extends SharedApply_PagerItemProps_1742447080[^] {
+object PagerItem extends SharedApply_PagerItemProps1512500641[^] {
   @JSImport("react-bootstrap/lib/PagerItem", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object

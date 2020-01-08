@@ -1,7 +1,5 @@
 package typingsSlinky.atBlueprintjsTable
 
-import typingsSlinky.atBlueprintjsTable.libEsmCommonBatcherMod.Callback
-import typingsSlinky.atBlueprintjsTable.libEsmCommonBatcherMod.SimpleStringifyable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

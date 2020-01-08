@@ -1,6 +1,5 @@
 package typingsSlinky.androiduix.android.text
 
-import typingsSlinky.androiduix.android.text.Spannable.Factory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

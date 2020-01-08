@@ -1,5 +1,6 @@
 package typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object EPolygonOffsetMode extends js.Object {
   @js.native
   sealed trait OUT extends EPolygonOffsetMode
   
-  /* 3 */ val CUSTOM: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EPolygonOffsetMode.CUSTOM with Double = js.native
-  /* 1 */ val IN: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EPolygonOffsetMode.IN with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EPolygonOffsetMode.NONE with Double = js.native
-  /* 2 */ val OUT: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EPolygonOffsetMode.OUT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EPolygonOffsetMode with Double] = js.native
+  /* 3 */ @js.native
+  object CUSTOM extends TopLevel[CUSTOM with Double]
+  
+  /* 1 */ @js.native
+  object IN extends TopLevel[IN with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 2 */ @js.native
+  object OUT extends TopLevel[OUT with Double]
+  
 }
 

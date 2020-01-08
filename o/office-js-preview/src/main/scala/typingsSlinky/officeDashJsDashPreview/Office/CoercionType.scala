@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,15 +83,32 @@ object CoercionType extends js.Object {
   @js.native
   sealed trait XmlSvg extends CoercionType
   
-  /* 3 */ val Html: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Html with Double = js.native
-  /* 6 */ val Image: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Image with Double = js.native
-  /* 1 */ val Matrix: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Matrix with Double = js.native
-  /* 4 */ val Ooxml: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Ooxml with Double = js.native
-  /* 5 */ val SlideRange: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.SlideRange with Double = js.native
-  /* 2 */ val Table: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Table with Double = js.native
-  /* 0 */ val Text: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Text with Double = js.native
-  /* 7 */ val XmlSvg: typingsSlinky.officeDashJsDashPreview.Office.CoercionType.XmlSvg with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoercionType with Double] = js.native
+  /* 3 */ @js.native
+  object Html extends TopLevel[Html with Double]
+  
+  /* 6 */ @js.native
+  object Image extends TopLevel[Image with Double]
+  
+  /* 1 */ @js.native
+  object Matrix extends TopLevel[Matrix with Double]
+  
+  /* 4 */ @js.native
+  object Ooxml extends TopLevel[Ooxml with Double]
+  
+  /* 5 */ @js.native
+  object SlideRange extends TopLevel[SlideRange with Double]
+  
+  /* 2 */ @js.native
+  object Table
+    extends TopLevel[typingsSlinky.officeDashJsDashPreview.Office.CoercionType.Table with Double]
+  
+  /* 0 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
+  /* 7 */ @js.native
+  object XmlSvg extends TopLevel[XmlSvg with Double]
+  
 }
 

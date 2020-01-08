@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object KingBed extends SharedApply_SvgIconProps1025744599[default] {
+object KingBed extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/KingBed", "default")
   @js.native
   object componentImport extends js.Object

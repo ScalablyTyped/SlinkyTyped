@@ -12,7 +12,7 @@ The same useRef, but with callback
 | Keywords           | react, hoot, useRef, createRef |
 | # releases         | 7 |
 | # dependents       | 4 |
-| # downloads        | 161075 |
+| # downloads        | 602872 |
 | # stars            | 0 |
 
 ## Links

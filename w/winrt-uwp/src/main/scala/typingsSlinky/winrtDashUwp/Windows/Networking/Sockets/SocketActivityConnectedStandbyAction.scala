@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Sockets
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object SocketActivityConnectedStandbyAction extends js.Object {
   @js.native
   sealed trait wake extends SocketActivityConnectedStandbyAction
   
-  /* 0 */ val doNotWake: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityConnectedStandbyAction.doNotWake with Double = js.native
-  /* 1 */ val wake: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityConnectedStandbyAction.wake with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocketActivityConnectedStandbyAction with Double] = js.native
+  /* 0 */ @js.native
+  object doNotWake extends TopLevel[doNotWake with Double]
+  
+  /* 1 */ @js.native
+  object wake extends TopLevel[wake with Double]
+  
 }
 

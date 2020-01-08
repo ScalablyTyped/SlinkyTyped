@@ -1,5 +1,6 @@
 package typingsSlinky.parse.reactDashNativeMod
 
+import typingsSlinky.parse.parseMod._Global_.Parse.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +11,8 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("parse/react-native", "Relation")
 @js.native
-class Relation[S /* <: typingsSlinky.parse.Parse.Object[_] */, T /* <: typingsSlinky.parse.Parse.Object[_] */] ()
-  extends typingsSlinky.parse.nodeMod.Relation[S, T] {
+class Relation[S /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */, T /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */] ()
+  extends typingsSlinky.parse.parseMod.Relation[S, T] {
   def this(parent: S) = this()
   def this(parent: S, key: String) = this()
 }

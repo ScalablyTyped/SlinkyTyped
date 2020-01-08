@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,28 +95,70 @@ object ConnectorConstraints extends js.Object {
   @js.native
   sealed trait Select extends ConnectorConstraints
   
-  /* 10 */ val AllowDrop: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.AllowDrop with Double = js.native
-  /* 16 */ val BridgeObstacle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.BridgeObstacle with Double = js.native
-  /* 7 */ val Bridging: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Bridging with Double = js.native
-  /* 13 */ val CrispEdges: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.CrispEdges with Double = js.native
-  /* 20 */ val Default: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Default with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Delete with Double = js.native
-  /* 3 */ val Drag: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Drag with Double = js.native
-  /* 8 */ val DragLabel: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.DragLabel with Double = js.native
-  /* 15 */ val DragLimit: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.DragLimit with Double = js.native
-  /* 6 */ val DragSegmentThumb: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.DragSegmentThumb with Double = js.native
-  /* 4 */ val DragSourceEnd: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.DragSourceEnd with Double = js.native
-  /* 5 */ val DragTargetEnd: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.DragTargetEnd with Double = js.native
-  /* 9 */ val InheritBridging: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.InheritBridging with Double = js.native
-  /* 14 */ val InheritCrispEdges: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.InheritCrispEdges with Double = js.native
-  /* 19 */ val InheritRouting: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.InheritRouting with Double = js.native
-  /* 11 */ val InheritTooltip: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.InheritTooltip with Double = js.native
-  /* 17 */ val Interaction: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Interaction with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.None with Double = js.native
-  /* 12 */ val PointerEvents: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.PointerEvents with Double = js.native
-  /* 18 */ val Routing: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Routing with Double = js.native
-  /* 1 */ val Select: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ConnectorConstraints.Select with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConnectorConstraints with Double] = js.native
+  /* 10 */ @js.native
+  object AllowDrop extends TopLevel[AllowDrop with Double]
+  
+  /* 16 */ @js.native
+  object BridgeObstacle extends TopLevel[BridgeObstacle with Double]
+  
+  /* 7 */ @js.native
+  object Bridging extends TopLevel[Bridging with Double]
+  
+  /* 13 */ @js.native
+  object CrispEdges extends TopLevel[CrispEdges with Double]
+  
+  /* 20 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 3 */ @js.native
+  object Drag extends TopLevel[Drag with Double]
+  
+  /* 8 */ @js.native
+  object DragLabel extends TopLevel[DragLabel with Double]
+  
+  /* 15 */ @js.native
+  object DragLimit extends TopLevel[DragLimit with Double]
+  
+  /* 6 */ @js.native
+  object DragSegmentThumb extends TopLevel[DragSegmentThumb with Double]
+  
+  /* 4 */ @js.native
+  object DragSourceEnd extends TopLevel[DragSourceEnd with Double]
+  
+  /* 5 */ @js.native
+  object DragTargetEnd extends TopLevel[DragTargetEnd with Double]
+  
+  /* 9 */ @js.native
+  object InheritBridging extends TopLevel[InheritBridging with Double]
+  
+  /* 14 */ @js.native
+  object InheritCrispEdges extends TopLevel[InheritCrispEdges with Double]
+  
+  /* 19 */ @js.native
+  object InheritRouting extends TopLevel[InheritRouting with Double]
+  
+  /* 11 */ @js.native
+  object InheritTooltip extends TopLevel[InheritTooltip with Double]
+  
+  /* 17 */ @js.native
+  object Interaction extends TopLevel[Interaction with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 12 */ @js.native
+  object PointerEvents extends TopLevel[PointerEvents with Double]
+  
+  /* 18 */ @js.native
+  object Routing extends TopLevel[Routing with Double]
+  
+  /* 1 */ @js.native
+  object Select extends TopLevel[Select with Double]
+  
 }
 

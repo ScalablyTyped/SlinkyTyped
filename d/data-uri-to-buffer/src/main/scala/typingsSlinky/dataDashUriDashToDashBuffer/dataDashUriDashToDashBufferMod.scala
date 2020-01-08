@@ -1,6 +1,5 @@
 package typingsSlinky.dataDashUriDashToDashBuffer
 
-import typingsSlinky.dataDashUriDashToDashBuffer.dataDashUriDashToDashBufferMod.MimeBuffer
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

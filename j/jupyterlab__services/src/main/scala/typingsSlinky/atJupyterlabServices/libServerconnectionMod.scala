@@ -2,7 +2,6 @@ package typingsSlinky.atJupyterlabServices
 
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.atJupyterlabServices.libServerconnectionMod.ServerConnection.ISettings
 import typingsSlinky.std.Error
 import typingsSlinky.std.Partial
 import typingsSlinky.std.RequestInfo

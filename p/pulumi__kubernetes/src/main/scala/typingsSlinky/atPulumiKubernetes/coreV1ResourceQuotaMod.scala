@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1ResourceQuotaMod.ResourceQuota
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ResourceQuotaSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ResourceQuotaStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta

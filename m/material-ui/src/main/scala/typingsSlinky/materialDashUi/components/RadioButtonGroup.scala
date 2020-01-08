@@ -21,8 +21,9 @@ object RadioButtonGroup
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, name */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    name: String,
     defaultSelected: js.Any = null,
     labelPosition: left | right = null,
     onChange: (/* e */ FormEvent[js.Object], /* selected */ String) => Unit = null,
@@ -30,7 +31,7 @@ object RadioButtonGroup
     valueSelected: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (defaultSelected != null) __obj.updateDynamic("defaultSelected")(defaultSelected.asInstanceOf[js.Any])
     if (labelPosition != null) __obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))

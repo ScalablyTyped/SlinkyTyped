@@ -1,6 +1,6 @@
 package typingsSlinky.envDashCi.envDashCiMod
 
-import typingsSlinky.envDashCi.envDashCiNumbers.`true`
+import typingsSlinky.envDashCi.envDashCiBooleans.`true`
 import typingsSlinky.envDashCi.envDashCiStrings.`Cirrus CI`
 import typingsSlinky.envDashCi.envDashCiStrings.cirrus
 import scala.scalajs.js

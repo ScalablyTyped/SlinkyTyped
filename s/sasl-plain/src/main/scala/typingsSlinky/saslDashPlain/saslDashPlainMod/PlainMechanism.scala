@@ -1,6 +1,6 @@
 package typingsSlinky.saslDashPlain.saslDashPlainMod
 
-import typingsSlinky.saslDashPlain.saslDashPlainNumbers.`true`
+import typingsSlinky.saslDashPlain.saslDashPlainBooleans.`true`
 import typingsSlinky.saslDashPlain.saslDashPlainStrings.PLAIN
 import typingsSlinky.saslmechanisms.saslmechanismsMod.Mechanism
 import scala.scalajs.js

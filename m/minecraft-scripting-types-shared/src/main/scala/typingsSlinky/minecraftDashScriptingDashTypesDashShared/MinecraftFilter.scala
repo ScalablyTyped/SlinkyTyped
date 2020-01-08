@@ -1,13 +1,13 @@
 package typingsSlinky.minecraftDashScriptingDashTypesDashShared
 
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`!=`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`<=`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`<>`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`<`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`==`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`=`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`>=`
-import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.`>`
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.Equalssign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.EqualssignEqualssign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.ExclamationmarkEqualssign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.Greaterthansign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.GreaterthansignEqualssign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.Lessthansign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.LessthansignEqualssign
+import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.LessthansignGreaterthansign
 import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.equals
 import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.not
 import typingsSlinky.minecraftDashScriptingDashTypesDashShared.minecraftDashScriptingDashTypesDashSharedStrings.other
@@ -23,7 +23,9 @@ trait MinecraftFilter extends js.Object {
   var all_of: js.UndefOr[js.Array[MinecraftFilter]] = js.undefined
   var any_of: js.UndefOr[js.Array[MinecraftFilter]] = js.undefined
   var domain: js.UndefOr[String] = js.undefined
-  var operator: js.UndefOr[`!=` | `<` | `<=` | `<>` | `=` | `==` | `>` | `>=` | equals | not] = js.undefined
+  var operator: js.UndefOr[
+    ExclamationmarkEqualssign | Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | EqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign | equals | not
+  ] = js.undefined
   var subject: js.UndefOr[other | parent | player | self | target] = js.undefined
   var test: js.UndefOr[String] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
@@ -35,7 +37,7 @@ object MinecraftFilter {
     all_of: js.Array[MinecraftFilter] = null,
     any_of: js.Array[MinecraftFilter] = null,
     domain: String = null,
-    operator: `!=` | `<` | `<=` | `<>` | `=` | `==` | `>` | `>=` | equals | not = null,
+    operator: ExclamationmarkEqualssign | Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | EqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign | equals | not = null,
     subject: other | parent | player | self | target = null,
     test: String = null,
     value: js.Any = null

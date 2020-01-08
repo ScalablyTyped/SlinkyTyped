@@ -9,6 +9,7 @@ import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.edited
 import typingsSlinky.dojo.dojoStrings.hovered
 import typingsSlinky.dojo.dojoStrings.item
+import typingsSlinky.dojo.dojoStrings.mobile
 import typingsSlinky.dojo.dojoStrings.moveEnabled
 import typingsSlinky.dojo.dojoStrings.owner
 import typingsSlinky.dojo.dojoStrings.resizeEnabled
@@ -150,7 +151,7 @@ class MobileHorizontalRenderer () extends _WidgetBase {
   @JSName("get")
   def get_item(property: item): js.Object = js.native
   @JSName("get")
-  def get_mobile(property: typingsSlinky.dojo.dojoStrings.mobile): Boolean = js.native
+  def get_mobile(property: mobile): Boolean = js.native
   @JSName("get")
   def get_moveEnabled(property: moveEnabled): Boolean = js.native
   @JSName("get")
@@ -186,7 +187,7 @@ class MobileHorizontalRenderer () extends _WidgetBase {
   @JSName("set")
   def set_item(property: item, value: js.Object): Unit = js.native
   @JSName("set")
-  def set_mobile(property: typingsSlinky.dojo.dojoStrings.mobile, value: Boolean): Unit = js.native
+  def set_mobile(property: mobile, value: Boolean): Unit = js.native
   @JSName("set")
   def set_moveEnabled(property: moveEnabled, value: Boolean): Unit = js.native
   @JSName("set")
@@ -251,7 +252,7 @@ class MobileHorizontalRenderer () extends _WidgetBase {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_mobile(
-    property: typingsSlinky.dojo.dojoStrings.mobile,
+    property: mobile,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[Boolean], 

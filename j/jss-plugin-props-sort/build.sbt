@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "jss-plugin-props-sort"
-version := "10.0.0-9c1adb"
+version := "10.0.3-083cf2"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
-  "org.scalablytyped.slinky" %%% "jss" % "10.0.0-a1afec",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-f22bc8",
+  "org.scalablytyped.slinky" %%% "jss" % "10.0.3-fa15a9",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

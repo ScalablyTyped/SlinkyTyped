@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Usb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object UsbControlRecipient extends js.Object {
   @js.native
   sealed trait specifiedInterface extends UsbControlRecipient
   
-  /* 4 */ val defaultInterface: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbControlRecipient.defaultInterface with Double = js.native
-  /* 0 */ val device: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbControlRecipient.device with Double = js.native
-  /* 2 */ val endpoint: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbControlRecipient.endpoint with Double = js.native
-  /* 3 */ val other: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbControlRecipient.other with Double = js.native
-  /* 1 */ val specifiedInterface: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbControlRecipient.specifiedInterface with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UsbControlRecipient with Double] = js.native
+  /* 4 */ @js.native
+  object defaultInterface extends TopLevel[defaultInterface with Double]
+  
+  /* 0 */ @js.native
+  object device extends TopLevel[device with Double]
+  
+  /* 2 */ @js.native
+  object endpoint extends TopLevel[endpoint with Double]
+  
+  /* 3 */ @js.native
+  object other extends TopLevel[other with Double]
+  
+  /* 1 */ @js.native
+  object specifiedInterface extends TopLevel[specifiedInterface with Double]
+  
 }
 

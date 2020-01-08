@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   - typings.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.neighborhood
   - typings.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.address
   - typings.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poi
-  - typings.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poiDOTlandmark
+  - typings.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poiDotlandmark
 */
 trait GeocodeQueryType extends js.Object
 
@@ -36,7 +36,7 @@ object GeocodeQueryType {
   @scala.inline
   def poi: typingsSlinky.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poi = this.cast("poi")
   @scala.inline
-  def poiDOTlandmark: typingsSlinky.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poiDOTlandmark = this.cast("poi.landmark")
+  def poiDotlandmark: typingsSlinky.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.poiDotlandmark = this.cast("poi.landmark")
   @scala.inline
   def postcode: typingsSlinky.atMapboxMapboxDashSdk.atMapboxMapboxDashSdkStrings.postcode = this.cast("postcode")
   @scala.inline

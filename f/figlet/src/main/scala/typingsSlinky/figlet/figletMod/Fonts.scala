@@ -199,7 +199,7 @@ import scala.scalajs.js.annotation._
   - typings.figlet.figletStrings.Octal
   - typings.figlet.figletStrings.Ogre
   - typings.figlet.figletStrings.`Old Banner`
-  - typings.figlet.figletStrings.`Patorjk_quotes Cheese`
+  - typings.figlet.figletStrings.`PatorjkApostrophes Cheese`
   - typings.figlet.figletStrings.`Patorjk-HeX`
   - typings.figlet.figletStrings.Pawp
   - typings.figlet.figletStrings.`Peaks Slant`
@@ -685,9 +685,9 @@ object Fonts {
   @scala.inline
   def `Old Banner`: typingsSlinky.figlet.figletStrings.`Old Banner` = this.cast("Old Banner")
   @scala.inline
-  def `Patorjk_quotes Cheese`: typingsSlinky.figlet.figletStrings.`Patorjk_quotes Cheese` = this.cast("Patorjk's Cheese")
-  @scala.inline
   def `Patorjk-HeX`: typingsSlinky.figlet.figletStrings.`Patorjk-HeX` = this.cast("Patorjk-HeX")
+  @scala.inline
+  def `PatorjkApostrophes Cheese`: typingsSlinky.figlet.figletStrings.`PatorjkApostrophes Cheese` = this.cast("Patorjk's Cheese")
   @scala.inline
   def Pawp: typingsSlinky.figlet.figletStrings.Pawp = this.cast("Pawp")
   @scala.inline

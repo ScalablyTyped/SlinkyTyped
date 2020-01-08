@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.admissionregistration.v1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`admissionregistrationDOTk8sDOTio/v1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.admissionregistrationDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait MutatingWebhookConfigurationList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`admissionregistrationDOTk8sDOTio/v1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[admissionregistrationDotk8sDotioSlashv1]] = js.undefined
   /**
     * List of MutatingWebhookConfiguration.
     */
@@ -44,7 +44,7 @@ object MutatingWebhookConfigurationList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[MutatingWebhookConfiguration]]],
-    apiVersion: Input[`admissionregistrationDOTk8sDOTio/v1`] = null,
+    apiVersion: Input[admissionregistrationDotk8sDotioSlashv1] = null,
     kind: Input[
       typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.MutatingWebhookConfigurationList
     ] = null,

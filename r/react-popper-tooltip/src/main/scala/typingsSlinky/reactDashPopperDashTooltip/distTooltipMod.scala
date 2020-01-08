@@ -2,7 +2,6 @@ package typingsSlinky.reactDashPopperDashTooltip
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.Context
-import typingsSlinky.reactDashPopperDashTooltip.distTooltipMod.Tooltip
 import typingsSlinky.reactDashPopperDashTooltip.distTypesMod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,6 +21,7 @@ object distTooltipMod extends js.Object {
     var getTooltipRef: js.Any = js.native
     var handleOutsideClick: js.UndefOr[js.Any] = js.native
     var handleOutsideRightClick: js.UndefOr[js.Any] = js.native
+    var isTriggeredBy: js.Any = js.native
     var observer: js.UndefOr[js.Any] = js.native
     var removeOutsideClickHandler: js.Any = js.native
     var removeOutsideRightClickHandler: js.Any = js.native

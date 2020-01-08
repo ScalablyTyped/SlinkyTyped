@@ -1,7 +1,6 @@
 package typingsSlinky.loremDashIpsum
 
 import typingsSlinky.loremDashIpsum.typesSrcLibGeneratorMod.IGeneratorOptions
-import typingsSlinky.loremDashIpsum.typesSrcLibLoremIpsumMod.LoremIpsum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

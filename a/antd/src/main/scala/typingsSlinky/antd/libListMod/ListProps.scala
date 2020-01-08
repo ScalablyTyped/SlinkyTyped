@@ -1,7 +1,7 @@
 package typingsSlinky.antd.libListMod
 
 import slinky.core.TagMod
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.libSpinMod.SpinProps
 import typingsSlinky.react.reactMod.CSSProperties

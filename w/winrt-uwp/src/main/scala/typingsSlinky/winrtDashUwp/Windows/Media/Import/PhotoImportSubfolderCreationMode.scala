@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Import
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object PhotoImportSubfolderCreationMode extends js.Object {
   @js.native
   sealed trait keepOriginalFolderStructure extends PhotoImportSubfolderCreationMode
   
-  /* 2 */ val createSubfoldersFromExifDate: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportSubfolderCreationMode.createSubfoldersFromExifDate with Double = js.native
-  /* 1 */ val createSubfoldersFromFileDate: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportSubfolderCreationMode.createSubfoldersFromFileDate with Double = js.native
-  /* 0 */ val doNotCreateSubfolders: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportSubfolderCreationMode.doNotCreateSubfolders with Double = js.native
-  /* 3 */ val keepOriginalFolderStructure: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportSubfolderCreationMode.keepOriginalFolderStructure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoImportSubfolderCreationMode with Double] = js.native
+  /* 2 */ @js.native
+  object createSubfoldersFromExifDate extends TopLevel[createSubfoldersFromExifDate with Double]
+  
+  /* 1 */ @js.native
+  object createSubfoldersFromFileDate extends TopLevel[createSubfoldersFromFileDate with Double]
+  
+  /* 0 */ @js.native
+  object doNotCreateSubfolders extends TopLevel[doNotCreateSubfolders with Double]
+  
+  /* 3 */ @js.native
+  object keepOriginalFolderStructure extends TopLevel[keepOriginalFolderStructure with Double]
+  
 }
 

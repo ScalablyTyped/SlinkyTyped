@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ReadIdentitiesOptions extends js.Object {
   @js.native
   sealed trait None extends ReadIdentitiesOptions
   
-  /* 1 */ val FilterIllegalMemberships: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.ReadIdentitiesOptions.FilterIllegalMemberships with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.ReadIdentitiesOptions.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadIdentitiesOptions with Double] = js.native
+  /* 1 */ @js.native
+  object FilterIllegalMemberships extends TopLevel[FilterIllegalMemberships with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

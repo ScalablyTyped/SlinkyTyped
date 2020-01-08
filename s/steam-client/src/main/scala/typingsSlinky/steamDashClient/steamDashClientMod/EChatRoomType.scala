@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object EChatRoomType extends js.Object {
   @js.native
   sealed trait MUC extends EChatRoomType
   
-  /* 1 */ val Friend: typingsSlinky.steamDashClient.steamDashClientMod.EChatRoomType.Friend with Double = js.native
-  /* 3 */ val Lobby: typingsSlinky.steamDashClient.steamDashClientMod.EChatRoomType.Lobby with Double = js.native
-  /* 2 */ val MUC: typingsSlinky.steamDashClient.steamDashClientMod.EChatRoomType.MUC with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EChatRoomType with Double] = js.native
+  /* 1 */ @js.native
+  object Friend extends TopLevel[Friend with Double]
+  
+  /* 3 */ @js.native
+  object Lobby extends TopLevel[Lobby with Double]
+  
+  /* 2 */ @js.native
+  object MUC extends TopLevel[MUC with Double]
+  
 }
 

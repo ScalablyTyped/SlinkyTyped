@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object MediaPlaybackType extends js.Object {
   @js.native
   sealed trait video extends MediaPlaybackType
   
-  /* 3 */ val image: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackType.image with Double = js.native
-  /* 1 */ val music: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackType.music with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackType.unknown with Double = js.native
-  /* 2 */ val video: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackType.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaPlaybackType with Double] = js.native
+  /* 3 */ @js.native
+  object image extends TopLevel[image with Double]
+  
+  /* 1 */ @js.native
+  object music extends TopLevel[music with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 2 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TreeTreeNode extends SharedApply_AntTreeNodeProps_1322051974 {
+object TreeTreeNode extends SharedApply_AntTreeNodeProps372575142 {
   @JSImport("antd", "Tree.TreeNode")
   @js.native
   object componentImport extends js.Object

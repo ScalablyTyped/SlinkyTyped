@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tooltip
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CloseMode extends js.Object {
   @js.native
   sealed trait Sticky extends CloseMode
   
-  /* 1 */ val Auto: typingsSlinky.ejDotWebDotAll.ej.Tooltip.CloseMode.Auto with Double = js.native
-  /* 2 */ val None: typingsSlinky.ejDotWebDotAll.ej.Tooltip.CloseMode.None with Double = js.native
-  /* 0 */ val Sticky: typingsSlinky.ejDotWebDotAll.ej.Tooltip.CloseMode.Sticky with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CloseMode with Double] = js.native
+  /* 1 */ @js.native
+  object Auto extends TopLevel[Auto with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 0 */ @js.native
+  object Sticky extends TopLevel[Sticky with Double]
+  
 }
 

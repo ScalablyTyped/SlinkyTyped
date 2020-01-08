@@ -15,9 +15,6 @@ import typingsSlinky.phaser.Phaser.Plugins.PluginManager
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
 import typingsSlinky.phaser.Phaser.Scale.ScaleManager
-import typingsSlinky.phaser.Phaser.Scenes.SceneManager
-import typingsSlinky.phaser.Phaser.Scenes.ScenePlugin
-import typingsSlinky.phaser.Phaser.Scenes.Systems
 import typingsSlinky.phaser.Phaser.Sound.HTML5AudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.WebAudioSoundManager

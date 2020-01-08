@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScriptDashOauth2.GoogleAppsScriptOAuth2
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object StateParameterLocation extends js.Object {
   @js.native
   sealed trait REDIRECT_URL extends StateParameterLocation
   
-  /* 0 */ val AUTHORIZATION_URL: typingsSlinky.googleDashAppsDashScriptDashOauth2.GoogleAppsScriptOAuth2.StateParameterLocation.AUTHORIZATION_URL with Double = js.native
-  /* 1 */ val REDIRECT_URL: typingsSlinky.googleDashAppsDashScriptDashOauth2.GoogleAppsScriptOAuth2.StateParameterLocation.REDIRECT_URL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StateParameterLocation with Double] = js.native
+  /* 0 */ @js.native
+  object AUTHORIZATION_URL extends TopLevel[AUTHORIZATION_URL with Double]
+  
+  /* 1 */ @js.native
+  object REDIRECT_URL extends TopLevel[REDIRECT_URL with Double]
+  
 }
 

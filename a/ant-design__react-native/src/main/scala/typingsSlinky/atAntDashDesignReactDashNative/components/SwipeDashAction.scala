@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SwipeDashAction extends SharedApply_SwipeActionProps_832297173[default] {
+object SwipeDashAction extends SharedApply_SwipeActionProps_652232391[default] {
   @JSImport("@ant-design/react-native/lib/swipe-action", JSImport.Default)
   @js.native
   object componentImport extends js.Object

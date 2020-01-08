@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015UtilsTimeCommonTimeControllerMod.CommonTimeController
 import typingsSlinky.wonderDotJs.distEs2015UtilsTimeTimeControllerMod.TimeController
 import scala.scalajs.js
 import scala.scalajs.js.`|`

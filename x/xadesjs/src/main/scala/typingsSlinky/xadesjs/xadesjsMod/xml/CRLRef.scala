@@ -1,14 +1,11 @@
 package typingsSlinky.xadesjs.xadesjsMod.xml
 
-import typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.CRLRef")
 @js.native
-class CRLRef () extends XmlObject {
-  var CRLIdentifier: typingsSlinky.xadesjs.xadesjsMod.xml.CRLIdentifier = js.native
-  var DigestAlgAndValue: DigestAlgAndValueType = js.native
-}
+class CRLRef ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.CRLRef
 

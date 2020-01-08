@@ -3,7 +3,6 @@ package typingsSlinky.agDashGrid
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.agDashGrid.distLibEntitiesGridOptionsMod.GridOptions
-import typingsSlinky.agDashGrid.distLibGridMod.GridParams
 import typingsSlinky.agDashGrid.distLibInterfacesIFrameworkFactoryMod.IFrameworkFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`

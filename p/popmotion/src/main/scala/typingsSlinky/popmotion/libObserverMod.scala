@@ -1,6 +1,5 @@
 package typingsSlinky.popmotion
 
-import typingsSlinky.popmotion.libObserverMod.Observer
 import typingsSlinky.popmotion.libObserverTypesMod.IObserver
 import typingsSlinky.popmotion.libObserverTypesMod.ObserverCandidate
 import typingsSlinky.popmotion.libObserverTypesMod.ObserverProps

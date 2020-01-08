@@ -4,7 +4,7 @@ import typingsSlinky.atFrctlFractal.Anon_HandleString
 import typingsSlinky.atFrctlFractal.Anon_Mount
 import typingsSlinky.atFrctlFractal.Anon_MountPath
 import typingsSlinky.atFrctlFractal.Anon_Params
-import typingsSlinky.atFrctlFractal.atFrctlFractalNumbers.`false`
+import typingsSlinky.atFrctlFractal.atFrctlFractalBooleans.`false`
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.favicon
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.format
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.lang
@@ -14,7 +14,7 @@ import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.rtl
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.scripts
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.skin
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.static
-import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.staticDOTmount
+import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.staticDotmount
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.styles
 import typingsSlinky.atFrctlFractal.atFrctlFractalStrings.version
 import typingsSlinky.node.eventsMod.EventEmitter
@@ -61,7 +61,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("getOption")
   def getOption_static(key: static): Anon_Mount = js.native
   @JSName("getOption")
-  def getOption_staticmount(key: staticDOTmount): String = js.native
+  def getOption_staticmount(key: staticDotmount): String = js.native
   @JSName("getOption")
   def getOption_styles(key: styles): js.Array[String] = js.native
   @JSName("getOption")
@@ -98,7 +98,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("setOption")
   def setOption_static(key: static, value: Anon_Mount): this.type = js.native
   @JSName("setOption")
-  def setOption_staticmount(key: staticDOTmount, value: String): this.type = js.native
+  def setOption_staticmount(key: staticDotmount, value: String): this.type = js.native
   @JSName("setOption")
   def setOption_styles(key: styles, value: js.Array[String]): this.type = js.native
   @JSName("setOption")

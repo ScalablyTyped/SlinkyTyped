@@ -1,5 +1,6 @@
 package typingsSlinky.androiduix.android.graphics.Paint
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object Cap extends js.Object {
   @js.native
   sealed trait SQUARE extends Cap
   
-  /* 0 */ val BUTT: typingsSlinky.androiduix.android.graphics.Paint.Cap.BUTT with Double = js.native
-  /* 1 */ val ROUND: typingsSlinky.androiduix.android.graphics.Paint.Cap.ROUND with Double = js.native
-  /* 2 */ val SQUARE: typingsSlinky.androiduix.android.graphics.Paint.Cap.SQUARE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Cap with Double] = js.native
+  /* 0 */ @js.native
+  object BUTT extends TopLevel[BUTT with Double]
+  
+  /* 1 */ @js.native
+  object ROUND extends TopLevel[ROUND with Double]
+  
+  /* 2 */ @js.native
+  object SQUARE extends TopLevel[SQUARE with Double]
+  
 }
 

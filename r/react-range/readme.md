@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-range
 
-Typings are for version 1.4.3
+Typings are for version 1.4.6
 
 ## Library description:
 Range input. Slides in all directions.
@@ -10,9 +10,9 @@ Range input. Slides in all directions.
 | ------------------ | :-------------: |
 | Full name          | react-range |
 | Keywords           | react, react-dom, react-component, range, slider, interval |
-| # releases         | 6 |
-| # dependents       | 6 |
-| # downloads        | 442944 |
+| # releases         | 22 |
+| # dependents       | 12 |
+| # downloads        | 707590 |
 | # stars            | 0 |
 
 ## Links

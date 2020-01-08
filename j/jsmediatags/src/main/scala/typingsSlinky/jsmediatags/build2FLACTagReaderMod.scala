@@ -1,6 +1,5 @@
 package typingsSlinky.jsmediatags
 
-import typingsSlinky.jsmediatags.build2FLACTagReaderMod.FLACTagReader
 import typingsSlinky.jsmediatags.typesMod.ByteRange
 import typingsSlinky.jsmediatags.typesMod.LoadCallbackType
 import scala.scalajs.js

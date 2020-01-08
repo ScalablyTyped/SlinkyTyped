@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object InstallationSource extends js.Object {
   @js.native
   sealed trait WEB_STORE_ADD_ON extends InstallationSource
   
-  /* 0 */ val APPS_MARKETPLACE_DOMAIN_ADD_ON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.InstallationSource.APPS_MARKETPLACE_DOMAIN_ADD_ON with Double = js.native
-  /* 1 */ val NONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.InstallationSource.NONE with Double = js.native
-  /* 2 */ val WEB_STORE_ADD_ON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.InstallationSource.WEB_STORE_ADD_ON with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InstallationSource with Double] = js.native
+  /* 0 */ @js.native
+  object APPS_MARKETPLACE_DOMAIN_ADD_ON extends TopLevel[APPS_MARKETPLACE_DOMAIN_ADD_ON with Double]
+  
+  /* 1 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 2 */ @js.native
+  object WEB_STORE_ADD_ON extends TopLevel[WEB_STORE_ADD_ON with Double]
+  
 }
 

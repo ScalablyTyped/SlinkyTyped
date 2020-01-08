@@ -3,7 +3,10 @@ package typingsSlinky.officeDashJsDashPreview.Excel.Interfaces
 import typingsSlinky.officeDashJsDashPreview.Excel.Placement
 import typingsSlinky.officeDashJsDashPreview.Excel.ShapeType
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Absolute
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.GeometricShape
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Group
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Line
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.OneCell
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.TwoCell
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Unsupported
@@ -129,9 +132,7 @@ trait ShapeData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: js.UndefOr[
-    ShapeType | Unsupported | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.GeometricShape | Group | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Line
-  ] = js.undefined
+  var `type`: js.UndefOr[ShapeType | Unsupported | Image | GeometricShape | Group | Line] = js.undefined
   /**
     *
     * Represents the visibility of this shape.
@@ -174,7 +175,7 @@ object ShapeData {
     placement: Placement | TwoCell | OneCell | Absolute = null,
     rotation: Int | Double = null,
     top: Int | Double = null,
-    `type`: ShapeType | Unsupported | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.GeometricShape | Group | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Line = null,
+    `type`: ShapeType | Unsupported | Image | GeometricShape | Group | Line = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     width: Int | Double = null,
     zOrderPosition: Int | Double = null

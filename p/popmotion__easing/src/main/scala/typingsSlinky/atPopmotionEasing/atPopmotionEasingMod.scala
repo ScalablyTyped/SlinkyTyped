@@ -1,7 +1,5 @@
 package typingsSlinky.atPopmotionEasing
 
-import typingsSlinky.atPopmotionEasing.atPopmotionEasingMod.Easing
-import typingsSlinky.atPopmotionEasing.atPopmotionEasingMod.EasingModifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Vertical extends js.Object {
   @js.native
   sealed trait Top extends Vertical
   
-  /* 2 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Vertical.Bottom with Double = js.native
-  /* 1 */ val Center: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Vertical.Center with Double = js.native
-  /* 0 */ val Top: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Vertical.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Vertical with Double] = js.native
+  /* 2 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 1 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

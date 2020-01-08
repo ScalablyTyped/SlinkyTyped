@@ -1,6 +1,7 @@
 package typingsSlinky.winjs.winjsMod.UI
 
 import typingsSlinky.winjs.Element
+import typingsSlinky.winjs.WinJS.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,8 @@ object processAll extends js.Object {
     * @param skipRoot If true, the elements to be bound skip the specified root element and include only the children.
     * @returns A promise that is fulfilled when binding has been applied to all the controls.
     **/
-  def apply(): typingsSlinky.winjs.WinJS.Promise[_] = js.native
-  def apply(rootElement: Element): typingsSlinky.winjs.WinJS.Promise[_] = js.native
-  def apply(rootElement: Element, skipRoot: Boolean): typingsSlinky.winjs.WinJS.Promise[_] = js.native
+  def apply(): Promise[_] = js.native
+  def apply(rootElement: Element): Promise[_] = js.native
+  def apply(rootElement: Element, skipRoot: Boolean): Promise[_] = js.native
 }
 

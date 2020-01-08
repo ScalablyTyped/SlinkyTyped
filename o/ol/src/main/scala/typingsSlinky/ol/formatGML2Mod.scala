@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.formatGML2Mod.GML2
 import typingsSlinky.ol.formatGMLBaseMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`

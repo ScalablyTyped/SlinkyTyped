@@ -6,6 +6,7 @@ import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenConstantsMod.constants.Constant
 import typingsSlinky.mendixmodelsdk.distGenDatasetsMod.datasets.DataSetColumn
 import typingsSlinky.mendixmodelsdk.distGenDatasetsMod.datasets.DataSetParameter
+import typingsSlinky.mendixmodelsdk.distGenDatatypesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.DocumentTemplateParameter
 import typingsSlinky.mendixmodelsdk.distGenImportmappingsMod.importmappings.ImportMapping
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.ValueMappingElement
@@ -46,7 +47,7 @@ class EnumerationType protected ()
 @js.native
 object EnumerationType extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDatatypesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

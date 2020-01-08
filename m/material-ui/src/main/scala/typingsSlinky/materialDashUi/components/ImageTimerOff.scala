@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageTimerOff
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageTimerOff] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageTimerOff] {
   @JSImport("material-ui/svg-icons", "ImageTimerOff")
   @js.native
   object componentImport extends js.Object

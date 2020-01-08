@@ -17,13 +17,14 @@ object Switch
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, name */
+  /* The following DOM/SVG props were specified: disabled, name */
   def apply(
+    id: String,
     onChange: Anon_EventValueBoolean => Unit,
     switched: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Switch] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     if (!js.isUndefined(switched)) __obj.updateDynamic("switched")(switched.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

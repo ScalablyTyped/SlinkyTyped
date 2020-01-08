@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object SunburstLegendShape extends js.Object {
   @js.native
   sealed trait Triangle extends SunburstLegendShape
   
-  /* 3 */ val Circle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Circle with Double = js.native
-  /* 4 */ val Cross: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Cross with Double = js.native
-  /* 0 */ val Diamond: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Diamond with Double = js.native
-  /* 1 */ val Pentagon: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Pentagon with Double = js.native
-  /* 2 */ val Rectangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Rectangle with Double = js.native
-  /* 5 */ val Triangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sunburst.SunburstLegendShape.Triangle with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SunburstLegendShape with Double] = js.native
+  /* 3 */ @js.native
+  object Circle extends TopLevel[Circle with Double]
+  
+  /* 4 */ @js.native
+  object Cross extends TopLevel[Cross with Double]
+  
+  /* 0 */ @js.native
+  object Diamond extends TopLevel[Diamond with Double]
+  
+  /* 1 */ @js.native
+  object Pentagon extends TopLevel[Pentagon with Double]
+  
+  /* 2 */ @js.native
+  object Rectangle extends TopLevel[Rectangle with Double]
+  
+  /* 5 */ @js.native
+  object Triangle extends TopLevel[Triangle with Double]
+  
 }
 

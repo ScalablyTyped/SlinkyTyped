@@ -1,25 +1,21 @@
 package typingsSlinky.xmldsigjs.xmldsigjsMod
 
-import typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlObject
+import typingsSlinky.xmldsigjs.buildTypesXmlKeyUnderscoreInfosRsaUnderscoreKeyMod.RsaPSSSignParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("xmldsigjs", "PssAlgorithmParams")
 @js.native
-class PssAlgorithmParams () extends XmlObject {
+class PssAlgorithmParams ()
+  extends typingsSlinky.xmldsigjs.buildTypesXmlKeyUnderscoreInfosMod.PssAlgorithmParams {
   def this(algorithm: RsaPSSSignParams) = this()
-  var DigestMethod: typingsSlinky.xmldsigjs.xmldsigjsMod.DigestMethod = js.native
-  var MGF: MaskGenerationFunction = js.native
-  var SaltLength: Double = js.native
-  var TrailerField: Double = js.native
-  def FromAlgorithm(algorithm: RsaPSSSignParams): Unit = js.native
 }
 
 /* static members */
 @JSImport("xmldsigjs", "PssAlgorithmParams")
 @js.native
 object PssAlgorithmParams extends js.Object {
-  def FromAlgorithm(algorithm: RsaPSSSignParams): PssAlgorithmParams = js.native
+  def FromAlgorithm(algorithm: RsaPSSSignParams): typingsSlinky.xmldsigjs.buildTypesXmlKeyUnderscoreInfosRsaUnderscoreKeyMod.PssAlgorithmParams = js.native
 }
 

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ChevronDown extends SharedApply_IconProps_2051139184 {
+object ChevronDown extends SharedApply_IconProps_550943370 {
   @JSImport("baseui/icon", "ChevronDown")
   @js.native
   object componentImport extends js.Object

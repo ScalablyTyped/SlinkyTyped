@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tab
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object Position extends js.Object {
   @js.native
   sealed trait Top extends Position
   
-  /* 1 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.Tab.Position.Bottom with Double = js.native
-  /* 2 */ val Left: typingsSlinky.ejDotWebDotAll.ej.Tab.Position.Left with Double = js.native
-  /* 3 */ val Right: typingsSlinky.ejDotWebDotAll.ej.Tab.Position.Right with Double = js.native
-  /* 0 */ val Top: typingsSlinky.ejDotWebDotAll.ej.Tab.Position.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Position with Double] = js.native
+  /* 1 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 2 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 3 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

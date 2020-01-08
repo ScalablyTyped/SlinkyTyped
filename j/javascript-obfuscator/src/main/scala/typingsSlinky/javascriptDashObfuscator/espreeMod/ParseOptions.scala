@@ -1,10 +1,12 @@
 package typingsSlinky.javascriptDashObfuscator.espreeMod
 
-import typingsSlinky.javascriptDashObfuscator.Anon_ExperimentalObjectRestSpread
+import typingsSlinky.javascriptDashObfuscator.Anon_GlobalReturn
+import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`10`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`2015`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`2016`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`2017`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`2018`
+import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`2019`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`3`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`5`
 import typingsSlinky.javascriptDashObfuscator.javascriptDashObfuscatorNumbers.`6`
@@ -16,10 +18,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ParseOptions extends js.Object {
-  var attachComment: js.UndefOr[Boolean] = js.undefined
   var comment: js.UndefOr[Boolean] = js.undefined
-  var ecmaFeatures: js.UndefOr[Anon_ExperimentalObjectRestSpread] = js.undefined
-  var ecmaVersion: js.UndefOr[`3` | `5` | `6` | `7` | `8` | `9` | `2015` | `2016` | `2017` | `2018`] = js.undefined
+  var ecmaFeatures: js.UndefOr[Anon_GlobalReturn] = js.undefined
+  var ecmaVersion: js.UndefOr[
+    `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019`
+  ] = js.undefined
   var loc: js.UndefOr[Boolean] = js.undefined
   var range: js.UndefOr[Boolean] = js.undefined
   var sourceType: js.UndefOr[SourceType] = js.undefined
@@ -28,16 +31,14 @@ trait ParseOptions extends js.Object {
 object ParseOptions {
   @scala.inline
   def apply(
-    attachComment: js.UndefOr[Boolean] = js.undefined,
     comment: js.UndefOr[Boolean] = js.undefined,
-    ecmaFeatures: Anon_ExperimentalObjectRestSpread = null,
-    ecmaVersion: `3` | `5` | `6` | `7` | `8` | `9` | `2015` | `2016` | `2017` | `2018` = null,
+    ecmaFeatures: Anon_GlobalReturn = null,
+    ecmaVersion: `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019` = null,
     loc: js.UndefOr[Boolean] = js.undefined,
     range: js.UndefOr[Boolean] = js.undefined,
     sourceType: SourceType = null
   ): ParseOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(attachComment)) __obj.updateDynamic("attachComment")(attachComment.asInstanceOf[js.Any])
     if (!js.isUndefined(comment)) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
     if (ecmaFeatures != null) __obj.updateDynamic("ecmaFeatures")(ecmaFeatures.asInstanceOf[js.Any])
     if (ecmaVersion != null) __obj.updateDynamic("ecmaVersion")(ecmaVersion.asInstanceOf[js.Any])

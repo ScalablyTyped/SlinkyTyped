@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "jasmine-node"
-version := "v1.14.5-dt-20190322Z-dc3fdd"
+version := "v1.14.5-dt-20190322Z-01fac6"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "jasmine" % "3.5-dt-20191122Z-b7917e",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "jasmine" % "3.5-dt-20191122Z-3aa6d5",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

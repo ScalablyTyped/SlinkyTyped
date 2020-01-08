@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberOrderedDashSet
 
-import typingsSlinky.atEmberOrderedDashSet.atEmberOrderedDashSetMod.OrderedSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

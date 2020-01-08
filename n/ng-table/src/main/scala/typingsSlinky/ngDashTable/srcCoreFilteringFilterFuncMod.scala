@@ -2,7 +2,6 @@ package typingsSlinky.ngDashTable
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ngDashTable.srcCoreFilteringFilterComparatorMod.FilterComparator
-import typingsSlinky.ngDashTable.srcCoreFilteringFilterFuncMod.IFilterValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

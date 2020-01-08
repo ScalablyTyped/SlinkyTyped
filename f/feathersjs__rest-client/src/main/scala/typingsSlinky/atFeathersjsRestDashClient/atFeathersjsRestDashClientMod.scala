@@ -1,8 +1,5 @@
 package typingsSlinky.atFeathersjsRestDashClient
 
-import typingsSlinky.atFeathersjsRestDashClient.atFeathersjsRestDashClientMod.Handler
-import typingsSlinky.atFeathersjsRestDashClient.atFeathersjsRestDashClientMod.HandlerResult
-import typingsSlinky.atFeathersjsRestDashClient.atFeathersjsRestDashClientMod.Transport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

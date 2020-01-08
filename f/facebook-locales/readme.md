@@ -10,9 +10,9 @@ Maps locales to Facebook locales
 | ------------------ | :-------------: |
 | Full name          | facebook-locales |
 | Keywords           | i18n, facebook, locales, locale |
-| # releases         | 169 |
+| # releases         | 240 |
 | # dependents       | 1 |
-| # downloads        | 92319 |
+| # downloads        | 99750 |
 | # stars            | 0 |
 
 ## Links

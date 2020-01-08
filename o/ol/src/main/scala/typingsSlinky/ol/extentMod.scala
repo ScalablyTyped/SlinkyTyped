@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentCornerMod.Corner
-import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.extentRelationshipMod.Relationship
 import typingsSlinky.ol.projMod.TransformFunction
 import typingsSlinky.ol.sizeMod.Size

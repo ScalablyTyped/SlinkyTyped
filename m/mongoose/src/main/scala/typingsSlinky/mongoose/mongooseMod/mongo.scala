@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable4
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.bson.bsonMod.ObjectId
 import typingsSlinky.mongodb.mongodbMod.MongoCallback
 import typingsSlinky.mongodb.mongodbMod.MongoClient
@@ -149,66 +150,148 @@ object mongo extends js.Object {
     def this(host: String, port: scala.Double) = this()
   }
   
-  var AggregationCursor: Instantiable0[typingsSlinky.mongodb.mongodbMod.AggregationCursor[js.Object]] = js.native
   var Binary: TypeofClassBinary = js.native
-  var ChangeStream: Instantiable2[
-    /* changeDomain */ typingsSlinky.mongodb.mongodbMod.Db, 
-    /* pipeline */ js.Array[js.Object], 
-    typingsSlinky.mongodb.mongodbMod.ChangeStream
-  ] = js.native
-  var Code: Instantiable1[/* code */ String, typingsSlinky.mongodb.mongodbMod.Code] = js.native
-  var CommandCursor: Instantiable0[typingsSlinky.mongodb.mongodbMod.CommandCursor] = js.native
-  var Cursor: Instantiable0[typingsSlinky.mongodb.mongodbMod.Cursor[js.Object]] = js.native
-  var DBRef: Instantiable2[/* namespace */ String, /* oid */ ObjectId, typingsSlinky.mongodb.mongodbMod.DBRef] = js.native
-  var Db: Instantiable2[
-    /* databaseName */ String, 
-    /* serverConfig */ typingsSlinky.mongodb.mongodbMod.Server, 
-    typingsSlinky.mongodb.mongodbMod.Db
-  ] = js.native
   var Decimal128: TypeofClassDecimal128Bytes = js.native
-  var Double: Instantiable1[/* value */ scala.Double, typingsSlinky.mongodb.mongodbMod.Double] = js.native
-  var GridFSBucket: Instantiable1[
-    /* db */ typingsSlinky.mongodb.mongodbMod.Db, 
-    typingsSlinky.mongodb.mongodbMod.GridFSBucket
-  ] = js.native
-  var GridFSBucketReadStream: Instantiable4[
-    /* chunks */ typingsSlinky.mongodb.mongodbMod.Collection[js.Any], 
-    /* files */ typingsSlinky.mongodb.mongodbMod.Collection[js.Any], 
-    /* readPreference */ js.Object, 
-    /* filter */ js.Object, 
-    typingsSlinky.mongodb.mongodbMod.GridFSBucketReadStream
-  ] = js.native
-  var GridFSBucketWriteStream: Instantiable2[
-    /* bucket */ typingsSlinky.mongodb.mongodbMod.GridFSBucket, 
-    /* filename */ String, 
-    typingsSlinky.mongodb.mongodbMod.GridFSBucketWriteStream
-  ] = js.native
-  var Int32: Instantiable1[/* value */ scala.Double, typingsSlinky.mongodb.mongodbMod.Int32] = js.native
   var Logger: TypeofClassLogger = js.native
   var Long: TypeofClassLong = js.native
-  var MaxKey: Instantiable0[typingsSlinky.mongodb.mongodbMod.MaxKey] = js.native
-  var MinKey: Instantiable0[typingsSlinky.mongodb.mongodbMod.MinKey] = js.native
   var MongoClient: TypeofClassMongoClient = js.native
   var MongoError: TypeofClassMongoError = js.native
-  var MongoNetworkError: Instantiable1[/* message */ String, typingsSlinky.mongodb.mongodbMod.MongoNetworkError] = js.native
-  var MongoParseError: Instantiable1[/* message */ String, typingsSlinky.mongodb.mongodbMod.MongoParseError] = js.native
-  var Mongos: Instantiable1[
-    /* servers */ js.Array[typingsSlinky.mongodb.mongodbMod.Server], 
-    typingsSlinky.mongodb.mongodbMod.Mongos
-  ] = js.native
   var ObjectID: TypeofClassObjectID = js.native
   var ObjectId: TypeofClassObjectIdCacheHexString = js.native
   var ReadPreference: TypeofClassReadPreference = js.native
-  var ReplSet: Instantiable1[
-    /* servers */ js.Array[typingsSlinky.mongodb.mongodbMod.Server], 
-    typingsSlinky.mongodb.mongodbMod.ReplSet
-  ] = js.native
-  var ResumeToken: Instantiable0[typingsSlinky.mongodb.mongodbMod.ResumeToken] = js.native
-  var Server: Instantiable2[/* host */ String, /* port */ scala.Double, typingsSlinky.mongodb.mongodbMod.Server] = js.native
   var Timestamp: TypeofClassTimestamp = js.native
   def connect(uri: String): js.Promise[MongoClient] = js.native
   def connect(uri: String, callback: MongoCallback[MongoClient]): Unit = js.native
   def connect(uri: String, options: MongoClientOptions): js.Promise[MongoClient] = js.native
   def connect(uri: String, options: MongoClientOptions, callback: MongoCallback[MongoClient]): Unit = js.native
+  @js.native
+  object AggregationCursor
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.AggregationCursor[js.Object]]]
+  
+  @js.native
+  object ChangeStream
+    extends TopLevel[
+          Instantiable2[
+            /* changeDomain */ typingsSlinky.mongodb.mongodbMod.Db, 
+            /* pipeline */ js.Array[js.Object], 
+            typingsSlinky.mongodb.mongodbMod.ChangeStream
+          ]
+        ]
+  
+  @js.native
+  object Code
+    extends TopLevel[Instantiable1[/* code */ String, typingsSlinky.mongodb.mongodbMod.Code]]
+  
+  @js.native
+  object CommandCursor
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.CommandCursor]]
+  
+  @js.native
+  object Cursor
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.Cursor[js.Object]]]
+  
+  @js.native
+  object DBRef
+    extends TopLevel[
+          Instantiable2[/* namespace */ String, /* oid */ ObjectId, typingsSlinky.mongodb.mongodbMod.DBRef]
+        ]
+  
+  @js.native
+  object Db
+    extends TopLevel[
+          Instantiable2[
+            /* databaseName */ String, 
+            /* serverConfig */ typingsSlinky.mongodb.mongodbMod.Server, 
+            typingsSlinky.mongodb.mongodbMod.Db
+          ]
+        ]
+  
+  @js.native
+  object Double
+    extends TopLevel[Instantiable1[/* value */ scala.Double, typingsSlinky.mongodb.mongodbMod.Double]]
+  
+  @js.native
+  object GridFSBucket
+    extends TopLevel[
+          Instantiable1[
+            /* db */ typingsSlinky.mongodb.mongodbMod.Db, 
+            typingsSlinky.mongodb.mongodbMod.GridFSBucket
+          ]
+        ]
+  
+  @js.native
+  object GridFSBucketReadStream
+    extends TopLevel[
+          Instantiable4[
+            /* chunks */ typingsSlinky.mongodb.mongodbMod.Collection[js.Any], 
+            /* files */ typingsSlinky.mongodb.mongodbMod.Collection[js.Any], 
+            /* readPreference */ js.Object, 
+            /* filter */ js.Object, 
+            typingsSlinky.mongodb.mongodbMod.GridFSBucketReadStream
+          ]
+        ]
+  
+  @js.native
+  object GridFSBucketWriteStream
+    extends TopLevel[
+          Instantiable2[
+            /* bucket */ typingsSlinky.mongodb.mongodbMod.GridFSBucket, 
+            /* filename */ String, 
+            typingsSlinky.mongodb.mongodbMod.GridFSBucketWriteStream
+          ]
+        ]
+  
+  @js.native
+  object Int32
+    extends TopLevel[Instantiable1[/* value */ scala.Double, typingsSlinky.mongodb.mongodbMod.Int32]]
+  
+  @js.native
+  object MaxKey
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.MaxKey]]
+  
+  @js.native
+  object MinKey
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.MinKey]]
+  
+  @js.native
+  object MongoNetworkError
+    extends TopLevel[
+          Instantiable1[/* message */ String, typingsSlinky.mongodb.mongodbMod.MongoNetworkError]
+        ]
+  
+  @js.native
+  object MongoParseError
+    extends TopLevel[
+          Instantiable1[/* message */ String, typingsSlinky.mongodb.mongodbMod.MongoParseError]
+        ]
+  
+  @js.native
+  object Mongos
+    extends TopLevel[
+          Instantiable1[
+            /* servers */ js.Array[typingsSlinky.mongodb.mongodbMod.Server], 
+            typingsSlinky.mongodb.mongodbMod.Mongos
+          ]
+        ]
+  
+  @js.native
+  object ReplSet
+    extends TopLevel[
+          Instantiable1[
+            /* servers */ js.Array[typingsSlinky.mongodb.mongodbMod.Server], 
+            typingsSlinky.mongodb.mongodbMod.ReplSet
+          ]
+        ]
+  
+  @js.native
+  object ResumeToken
+    extends TopLevel[Instantiable0[typingsSlinky.mongodb.mongodbMod.ResumeToken]]
+  
+  @js.native
+  object Server
+    extends TopLevel[
+          Instantiable2[/* host */ String, /* port */ scala.Double, typingsSlinky.mongodb.mongodbMod.Server]
+        ]
+  
 }
 

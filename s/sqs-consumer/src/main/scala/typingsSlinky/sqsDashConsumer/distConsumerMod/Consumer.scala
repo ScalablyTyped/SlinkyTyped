@@ -1,6 +1,6 @@
 package typingsSlinky.sqsDashConsumer.distConsumerMod
 
-import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.events.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

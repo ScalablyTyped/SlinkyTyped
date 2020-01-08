@@ -9,16 +9,16 @@ trait EJSONableCustomType extends js.Object {
   var clone_FEJSONableCustomType: js.UndefOr[js.Function0[this.type]] = js.undefined
   @JSName("equals")
   var equals_FEJSONableCustomType: js.UndefOr[js.Function1[/* other */ js.Object, Boolean]] = js.undefined
-  def toJSONValue(): typingsSlinky.meteor.ejsonMod.JSONable
+  def toJSONValue(): JSONable
   def typeName(): String
 }
 
 object EJSONableCustomType {
   @scala.inline
   def apply(
-    toJSONValue: () => typingsSlinky.meteor.ejsonMod.JSONable,
+    toJSONValue: () => JSONable,
     typeName: () => String,
-    clone: () => typingsSlinky.meteor.ejsonMod.EJSONableCustomType = null,
+    clone: () => EJSONableCustomType = null,
     equals: /* other */ js.Object => Boolean = null
   ): EJSONableCustomType = {
     val __obj = js.Dynamic.literal(toJSONValue = js.Any.fromFunction0(toJSONValue), typeName = js.Any.fromFunction0(typeName))

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Fragment
-  extends SharedApply_FragmentProps_1190256894[typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.Fragment] {
+  extends SharedApply_FragmentProps_1590766101[typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.Fragment] {
   @JSImport("redux-little-router", "Fragment")
   @js.native
   object componentImport extends js.Object

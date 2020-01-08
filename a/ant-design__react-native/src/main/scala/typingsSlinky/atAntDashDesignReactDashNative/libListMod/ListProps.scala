@@ -1,7 +1,7 @@
 package typingsSlinky.atAntDashDesignReactDashNative.libListMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeNumbers.`false`
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeBooleans.`false`
 import typingsSlinky.atAntDashDesignReactDashNative.libListPropsTypeMod.ListPropsType
 import typingsSlinky.atAntDashDesignReactDashNative.libListStyleMod.ListStyle
 import typingsSlinky.atAntDashDesignReactDashNative.libStyleMod.WithThemeStyles

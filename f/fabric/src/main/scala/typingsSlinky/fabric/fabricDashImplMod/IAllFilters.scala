@@ -5,8 +5,8 @@ import typingsSlinky.fabric.Anon_FromObjectObject
 import typingsSlinky.fabric.Anon_FromObjectObjectOptions
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonBlocksize
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonChannel
-import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonColor
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonColorOpacity
+import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonColorString
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonContrast
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonDistance
 import typingsSlinky.fabric.Anon_FromObjectObjectOptionsAnonMatrix
@@ -39,7 +39,7 @@ trait IAllFilters extends js.Object {
   var Grayscale: Anon_FromObjectObjectOptionsAny
   var Invert: Anon_FromObjectObjectOptionsAnyIInvertFilter
   var Mask: Anon_FromObjectObjectOptionsAnonChannel
-  var Multiply: Anon_FromObjectObjectOptionsAnonColor
+  var Multiply: Anon_FromObjectObjectOptionsAnonColorString
   var Noise: Anon_FromObjectObjectOptionsAnonNoise
   var Pixelate: Anon_FromObjectObjectOptionsAnonBlocksize
   var RemoveWhite: Anon_FromObjectObjectOptionsAnonDistance
@@ -64,7 +64,7 @@ object IAllFilters {
     Grayscale: Anon_FromObjectObjectOptionsAny,
     Invert: Anon_FromObjectObjectOptionsAnyIInvertFilter,
     Mask: Anon_FromObjectObjectOptionsAnonChannel,
-    Multiply: Anon_FromObjectObjectOptionsAnonColor,
+    Multiply: Anon_FromObjectObjectOptionsAnonColorString,
     Noise: Anon_FromObjectObjectOptionsAnonNoise,
     Pixelate: Anon_FromObjectObjectOptionsAnonBlocksize,
     RemoveWhite: Anon_FromObjectObjectOptionsAnonDistance,

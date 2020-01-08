@@ -1,8 +1,6 @@
 package typingsSlinky.rmcDashCalendar
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.rmcDashCalendar.libCalendarShortcutPanelMod.PropsType
-import typingsSlinky.rmcDashCalendar.libCalendarShortcutPanelMod.ShortcutPanel
 import typingsSlinky.rmcDashCalendar.libDateDataTypesMod.Models.Locale
 import scala.scalajs.js
 import scala.scalajs.js.`|`

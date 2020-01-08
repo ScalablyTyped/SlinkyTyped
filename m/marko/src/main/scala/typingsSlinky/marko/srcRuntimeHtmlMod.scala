@@ -1,6 +1,5 @@
 package typingsSlinky.marko
 
-import typingsSlinky.marko.srcRuntimeHtmlMod.AsyncStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

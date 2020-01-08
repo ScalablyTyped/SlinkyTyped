@@ -32,6 +32,7 @@ import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.execute
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.grammar
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.grid
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.horizontal
+import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.inherit
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.link
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.list
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.listbox
@@ -61,6 +62,7 @@ import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.vertical
 import typingsSlinky.atUifabricFoundation.atUifabricFoundationStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ClipboardEventHandler
 import typingsSlinky.react.reactMod.CompositionEventHandler
@@ -279,7 +281,7 @@ trait DetailedHTMLPropsHTMLAttributesanyany extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
-  var contentEditable: js.UndefOr[Boolean] = js.undefined
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
   var dangerouslySetInnerHTML: js.UndefOr[Anon_Html] = js.undefined
   var datatype: js.UndefOr[String] = js.undefined
@@ -287,7 +289,7 @@ trait DetailedHTMLPropsHTMLAttributesanyany extends js.Object {
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
   var dir: js.UndefOr[String] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
+  var draggable: js.UndefOr[Booleanish] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var inlist: js.UndefOr[js.Any] = js.undefined
@@ -417,7 +419,7 @@ trait DetailedHTMLPropsHTMLAttributesanyany extends js.Object {
   var role: js.UndefOr[String] = js.undefined
   var security: js.UndefOr[String] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
-  var spellCheck: js.UndefOr[Boolean] = js.undefined
+  var spellCheck: js.UndefOr[Booleanish] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
@@ -488,7 +490,7 @@ object DetailedHTMLPropsHTMLAttributesanyany {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -513,11 +515,11 @@ object DetailedHTMLPropsHTMLAttributesanyany {
     onAnimationIteration: SyntheticAnimationEvent[_] => Unit = null,
     onAnimationStart: SyntheticAnimationEvent[_] => Unit = null,
     onAuxClick: SyntheticMouseEvent[_] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget, Event] => Unit = null,
     onBlur: SyntheticFocusEvent[_] => Unit = null,
     onCanPlay: SyntheticEvent[Event, _] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, _] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget, Event] => Unit = null,
     onClick: SyntheticMouseEvent[_] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[_] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[_] => Unit = null,
@@ -540,8 +542,8 @@ object DetailedHTMLPropsHTMLAttributesanyany {
     onEnded: SyntheticEvent[Event, _] => Unit = null,
     onError: SyntheticEvent[Event, _] => Unit = null,
     onFocus: SyntheticFocusEvent[_] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with _, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onInput: SyntheticEvent[EventTarget, Event] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget, Event] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[_] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[_] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[_] => Unit = null,
@@ -570,13 +572,13 @@ object DetailedHTMLPropsHTMLAttributesanyany {
     onPointerUp: SyntheticPointerEvent[_] => Unit = null,
     onProgress: SyntheticEvent[Event, _] => Unit = null,
     onRateChange: SyntheticEvent[Event, _] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget, Event] => Unit = null,
     onScroll: SyntheticUIEvent[_] => Unit = null,
     onSeeked: SyntheticEvent[Event, _] => Unit = null,
     onSeeking: SyntheticEvent[Event, _] => Unit = null,
     onSelect: SyntheticEvent[Event, _] => Unit = null,
     onStalled: SyntheticEvent[Event, _] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget, Event] => Unit = null,
     onSuspend: SyntheticEvent[Event, _] => Unit = null,
     onTimeUpdate: SyntheticEvent[Event, _] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[_] => Unit = null,
@@ -665,7 +667,7 @@ object DetailedHTMLPropsHTMLAttributesanyany {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

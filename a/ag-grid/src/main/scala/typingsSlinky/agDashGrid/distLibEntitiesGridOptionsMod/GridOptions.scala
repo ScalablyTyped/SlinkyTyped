@@ -3,7 +3,7 @@ package typingsSlinky.agDashGrid.distLibEntitiesGridOptionsMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.agDashGrid.Anon_Any_746802533
+import typingsSlinky.agDashGrid.Anon_Any_640158205
 import typingsSlinky.agDashGrid.Anon_ICellRendererComp
 import typingsSlinky.agDashGrid.Anon_IDateComp
 import typingsSlinky.agDashGrid.Anon_ILoadingOverlayComp
@@ -153,7 +153,7 @@ trait GridOptions extends ComponentHolder {
   var floatingFilter: js.UndefOr[Boolean] = js.undefined
   var floatingFiltersHeight: js.UndefOr[Double] = js.undefined
   var forPrint: js.UndefOr[Boolean] = js.undefined
-  var frameworkComponents: js.UndefOr[StringDictionary[Anon_Any_746802533]] = js.undefined
+  var frameworkComponents: js.UndefOr[StringDictionary[Anon_Any_640158205]] = js.undefined
   var fullWidthCellRenderer: js.UndefOr[Anon_ICellRendererComp | ICellRendererFunc | String] = js.undefined
   var fullWidthCellRendererFramework: js.UndefOr[js.Any] = js.undefined
   var fullWidthCellRendererParams: js.UndefOr[js.Any] = js.undefined
@@ -464,7 +464,7 @@ object GridOptions {
     floatingFilter: js.UndefOr[Boolean] = js.undefined,
     floatingFiltersHeight: Int | Double = null,
     forPrint: js.UndefOr[Boolean] = js.undefined,
-    frameworkComponents: StringDictionary[Anon_Any_746802533] = null,
+    frameworkComponents: StringDictionary[Anon_Any_640158205] = null,
     fullWidthCellRenderer: Anon_ICellRendererComp | ICellRendererFunc | String = null,
     fullWidthCellRendererFramework: js.Any = null,
     fullWidthCellRendererParams: js.Any = null,

@@ -2,6 +2,7 @@ package typingsSlinky.chromeDashApps.chrome.storage
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object onChanged
   extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[
+      Event[
         js.Function2[/* changes */ StringDictionary[StorageChange], /* areaName */ StorageAreas, Unit]
       ]
     ]

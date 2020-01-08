@@ -1,6 +1,5 @@
 package typingsSlinky.cesium.cesiumMod
 
-import typingsSlinky.cesium.cesiumMod.binarySearch.Comparator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

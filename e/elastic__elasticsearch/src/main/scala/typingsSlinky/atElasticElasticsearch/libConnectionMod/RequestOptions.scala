@@ -1,6 +1,5 @@
 package typingsSlinky.atElasticElasticsearch.libConnectionMod
 
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
@@ -23,7 +22,7 @@ object RequestOptions {
     asStream: js.UndefOr[Boolean] = js.undefined,
     auth: String = null,
     body: js.Any = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ Error, /* socket */ Socket, Unit]) => Socket = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
     defaultPort: Double | String = null,
     family: Int | Double = null,
     headers: OutgoingHttpHeaders = null,

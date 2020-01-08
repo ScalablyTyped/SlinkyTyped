@@ -4,6 +4,8 @@ import typingsSlinky.officeDashJsDashPreview.Word.BodyType
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Footer
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Header
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.MainDoc
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Section
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.TableCell
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Unknown_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -82,9 +84,7 @@ trait BodyData extends js.Object {
     *
     * [Api set: WordApi 1.3]
     */
-  var `type`: js.UndefOr[
-    BodyType | Unknown_ | MainDoc | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Section | Header | Footer | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.TableCell
-  ] = js.undefined
+  var `type`: js.UndefOr[BodyType | Unknown_ | MainDoc | Section | Header | Footer | TableCell] = js.undefined
 }
 
 object BodyData {
@@ -99,7 +99,7 @@ object BodyData {
     styleBuiltIn: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 150 */ js.Any = null,
     tables: js.Array[TableData] = null,
     text: String = null,
-    `type`: BodyType | Unknown_ | MainDoc | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Section | Header | Footer | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.TableCell = null
+    `type`: BodyType | Unknown_ | MainDoc | Section | Header | Footer | TableCell = null
   ): BodyData = {
     val __obj = js.Dynamic.literal()
     if (contentControls != null) __obj.updateDynamic("contentControls")(contentControls.asInstanceOf[js.Any])

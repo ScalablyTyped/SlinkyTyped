@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashInspector.reactDashInspectorMod
 
-import typingsSlinky.react.reactMod.Component
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.react.reactMod.ExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-inspector", "TableInspector")
 @js.native
-class TableInspector ()
-  extends Component[InspectorProps, js.Object, js.Any]
+object TableInspector extends TopLevel[ExoticComponent[TableInspectorProps]]
 

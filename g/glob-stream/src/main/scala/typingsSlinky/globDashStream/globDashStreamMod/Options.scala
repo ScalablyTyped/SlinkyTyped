@@ -2,8 +2,8 @@ package typingsSlinky.globDashStream.globDashStreamMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.glob.Anon_IsDirectory
+import typingsSlinky.glob.globBooleans.`false`
 import typingsSlinky.glob.globMod.IOptions
-import typingsSlinky.glob.globNumbers.`false`
 import typingsSlinky.glob.globStrings.DIR
 import typingsSlinky.glob.globStrings.FILE
 import scala.scalajs.js

@@ -3,10 +3,10 @@ package typingsSlinky.reactDashVirtualized
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndices
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndicesGetter
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndicesGetterParams
+import typingsSlinky.reactDashVirtualized.reactDashVirtualizedBooleans.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`-1`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`10`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`30`
-import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`

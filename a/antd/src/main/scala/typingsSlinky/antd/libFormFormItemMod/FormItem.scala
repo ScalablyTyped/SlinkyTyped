@@ -2,7 +2,7 @@ package typingsSlinky.antd.libFormFormItemMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.antdStrings.Empty
+import typingsSlinky.antd.antdStrings._empty
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.validating
@@ -26,7 +26,7 @@ trait FormItem
   def getId(): js.Any = js.native
   def getMeta(): js.Any = js.native
   def getOnlyControl(): ReactElement | Null = js.native
-  def getValidateStatus(): Empty | error | success | validating = js.native
+  def getValidateStatus(): _empty | error | success | validating = js.native
   def isRequired(): js.Any = js.native
   def onHelpAnimEnd(_key: String, helpShow: Boolean): Unit = js.native
   def onLabelClick(): Unit = js.native

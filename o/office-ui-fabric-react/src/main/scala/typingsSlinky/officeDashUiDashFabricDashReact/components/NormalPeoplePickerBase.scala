@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NormalPeoplePickerBase
-  extends SharedApply_IPeoplePickerProps2121770893[
+  extends SharedApply_IPeoplePickerProps_1197075780[
       typingsSlinky.officeDashUiDashFabricDashReact.libPickersMod.NormalPeoplePickerBase
     ] {
   @JSImport("office-ui-fabric-react/lib/Pickers", "NormalPeoplePickerBase")

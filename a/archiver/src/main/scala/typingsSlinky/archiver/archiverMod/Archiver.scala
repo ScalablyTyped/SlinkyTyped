@@ -1,6 +1,6 @@
 package typingsSlinky.archiver.archiverMod
 
-import typingsSlinky.archiver.archiverNumbers.`false`
+import typingsSlinky.archiver.archiverBooleans.`false`
 import typingsSlinky.archiver.archiverStrings.close
 import typingsSlinky.archiver.archiverStrings.data
 import typingsSlinky.archiver.archiverStrings.drain

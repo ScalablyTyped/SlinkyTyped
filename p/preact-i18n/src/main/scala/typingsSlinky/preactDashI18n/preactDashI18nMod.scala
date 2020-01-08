@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.preact.preactMod.Component
 import typingsSlinky.preact.preactMod.ComponentChild
 import typingsSlinky.preact.preactMod.VNode
-import typingsSlinky.preactDashI18n.preactDashI18nMod.TextComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +15,14 @@ object preactDashI18nMod extends js.Object {
   class IntlProvider ()
     extends Component[
           Anon_Definition, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for S */ js.Any
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
   @js.native
   class Localizer ()
     extends Component[
           Anon_Children, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for S */ js.Any
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
   @js.native
@@ -36,19 +35,19 @@ object preactDashI18nMod extends js.Object {
   class TextComponent ()
     extends Component[
           Anon_Fields, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for S */ js.Any
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
   def default(
     Child: Component[
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for P */ _, 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for S */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for P */ _, 
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ _
     ]
   ): VNode[js.Object] = js.native
   def default(
     Child: Component[
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for P */ _, 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for S */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for P */ _, 
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ _
     ],
     options: Anon_DefinitionScope
   ): VNode[js.Object] = js.native

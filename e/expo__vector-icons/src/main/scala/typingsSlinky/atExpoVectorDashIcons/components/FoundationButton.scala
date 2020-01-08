@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FoundationButton extends SharedApply_IconButtonProps_562613305[Button] {
+object FoundationButton extends SharedApply_IconButtonProps_1447369838[Button] {
   @JSImport("@expo/vector-icons", "Foundation.Button")
   @js.native
   object componentImport extends js.Object

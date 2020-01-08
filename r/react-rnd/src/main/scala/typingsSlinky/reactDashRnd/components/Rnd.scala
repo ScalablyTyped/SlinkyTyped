@@ -6,14 +6,15 @@ import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.reDashResizable.reDashResizableMod.ResizeDirection
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.reactDashDraggable.reactDashDraggableBooleans.`false`
 import typingsSlinky.reactDashDraggable.reactDashDraggableMod.DraggableData
 import typingsSlinky.reactDashDraggable.reactDashDraggableMod.DraggableEvent
-import typingsSlinky.reactDashDraggable.reactDashDraggableNumbers.`false`
 import typingsSlinky.reactDashRnd.Anon_X
 import typingsSlinky.reactDashRnd.reactDashRndMod.Grid
 import typingsSlinky.reactDashRnd.reactDashRndMod.HandleClasses
@@ -110,6 +111,7 @@ object Rnd
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashRnd.reactDashRndMod.Rnd] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashRnd.reactDashRndMod.Rnd](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = typingsSlinky.reactDashRnd.reactDashRndMod.Props
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.rxjs.internalDashCompatibilityMod
 import typingsSlinky.rxjs.internalObservableMod.Observable
 import typingsSlinky.rxjs.internalObservableSubscribeOnObservableMod.DispatchArg
 import typingsSlinky.rxjs.internalSubscriptionMod.Subscription
-import typingsSlinky.rxjs.internalTypesMod.SchedulerAction
 import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,6 +26,6 @@ object SubscribeOnObservable extends js.Object {
   def create[T](source: Observable[T], delay: Double): Observable[T] = js.native
   def create[T](source: Observable[T], delay: Double, scheduler: SchedulerLike): Observable[T] = js.native
   /** @nocollapse */
-  def dispatch[T](`this`: SchedulerAction[T], arg: DispatchArg[T]): Subscription = js.native
+  def dispatch[T](arg: DispatchArg[T]): Subscription = js.native
 }
 

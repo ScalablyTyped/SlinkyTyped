@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.tilecoordMod.TileCoord
 import typingsSlinky.ol.tilegridTileGridMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

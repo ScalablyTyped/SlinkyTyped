@@ -5,29 +5,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`=`
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`==`
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`>`
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`>=`
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`<`
-  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`<=`
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Equalssign
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.EqualssignEqualssign
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Greaterthansign
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.GreaterthansignEqualssign
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Lessthansign
+  - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.LessthansignEqualssign
   - typings.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`array-contains`
 */
 trait QueryOperator extends js.Object
 
 object QueryOperator {
   @scala.inline
-  def `<`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`<` = this.cast("<")
+  def Equalssign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Equalssign = this.cast("=")
   @scala.inline
-  def `<=`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`<=` = this.cast("<=")
+  def EqualssignEqualssign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.EqualssignEqualssign = this.cast("==")
   @scala.inline
-  def `=`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`=` = this.cast("=")
+  def Greaterthansign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `==`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`==` = this.cast("==")
+  def GreaterthansignEqualssign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   def `array-contains`: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseStrings.`array-contains` = this.cast("array-contains")
   @scala.inline

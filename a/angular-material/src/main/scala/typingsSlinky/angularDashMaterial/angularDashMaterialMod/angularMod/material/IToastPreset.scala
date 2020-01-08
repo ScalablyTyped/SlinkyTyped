@@ -1,7 +1,7 @@
 package typingsSlinky.angularDashMaterial.angularDashMaterialMod.angularMod.material
 
 import typingsSlinky.angular.JQuery
-import typingsSlinky.angularDashMaterial.angularDashMaterialNumbers.`false`
+import typingsSlinky.angularDashMaterial.angularDashMaterialBooleans.`false`
 import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

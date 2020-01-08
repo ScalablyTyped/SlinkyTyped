@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object BPMNLoops extends js.Object {
   @js.native
   sealed trait Standard extends BPMNLoops
   
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNLoops.None with Double = js.native
-  /* 2 */ val ParallelMultiInstance: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNLoops.ParallelMultiInstance with Double = js.native
-  /* 3 */ val SequenceMultiInstance: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNLoops.SequenceMultiInstance with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNLoops.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNLoops with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object ParallelMultiInstance extends TopLevel[ParallelMultiInstance with Double]
+  
+  /* 3 */ @js.native
+  object SequenceMultiInstance extends TopLevel[SequenceMultiInstance with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

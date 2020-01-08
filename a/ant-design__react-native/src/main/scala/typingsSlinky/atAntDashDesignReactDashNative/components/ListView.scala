@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListView
-  extends SharedApply_ListViewProps748604670[
+  extends SharedApply_ListViewProps565828285[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.ListView[js.Any]
     ] {
   @JSImport("@ant-design/react-native", "ListView")

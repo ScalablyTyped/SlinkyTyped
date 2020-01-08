@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object ChatTransportErrorCodeCategory extends js.Object {
   @js.native
   sealed trait none extends ChatTransportErrorCodeCategory
   
-  /* 1 */ val http: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory.http with Double = js.native
-  /* 3 */ val mmsServer: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory.mmsServer with Double = js.native
-  /* 2 */ val network: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory.network with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChatTransportErrorCodeCategory with Double] = js.native
+  /* 1 */ @js.native
+  object http extends TopLevel[http with Double]
+  
+  /* 3 */ @js.native
+  object mmsServer extends TopLevel[mmsServer with Double]
+  
+  /* 2 */ @js.native
+  object network extends TopLevel[network with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

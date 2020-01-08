@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.events.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`eventsDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.eventsDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait EventList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`eventsDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[eventsDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Items is a list of schema objects.
     */
@@ -40,7 +40,7 @@ object EventList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[Event]]],
-    apiVersion: Input[`eventsDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[eventsDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.EventList] = null,
     metadata: Input[ListMeta] = null
   ): EventList = {

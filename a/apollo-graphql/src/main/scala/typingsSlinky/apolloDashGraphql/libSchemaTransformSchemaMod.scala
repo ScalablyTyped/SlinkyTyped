@@ -1,6 +1,5 @@
 package typingsSlinky.apolloDashGraphql
 
-import typingsSlinky.apolloDashGraphql.libSchemaTransformSchemaMod.TypeTransformer
 import typingsSlinky.graphql.graphqlMod.GraphQLSchema
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLNamedType
 import scala.scalajs.js

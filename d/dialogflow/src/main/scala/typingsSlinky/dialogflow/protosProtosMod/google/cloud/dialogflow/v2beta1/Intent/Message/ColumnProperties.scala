@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -118,12 +119,20 @@ object ColumnProperties extends js.Object {
     @js.native
     sealed trait TRAILING extends HorizontalAlignment
     
-    /* 2 */ val CENTER: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment.CENTER with Double = js.native
-    /* 0 */ val HORIZONTAL_ALIGNMENT_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment.HORIZONTAL_ALIGNMENT_UNSPECIFIED with Double = js.native
-    /* 1 */ val LEADING: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment.LEADING with Double = js.native
-    /* 3 */ val TRAILING: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment.TRAILING with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[HorizontalAlignment with Double] = js.native
+    /* 2 */ @js.native
+    object CENTER extends TopLevel[CENTER with Double]
+    
+    /* 0 */ @js.native
+    object HORIZONTAL_ALIGNMENT_UNSPECIFIED extends TopLevel[HORIZONTAL_ALIGNMENT_UNSPECIFIED with Double]
+    
+    /* 1 */ @js.native
+    object LEADING extends TopLevel[LEADING with Double]
+    
+    /* 3 */ @js.native
+    object TRAILING extends TopLevel[TRAILING with Double]
+    
   }
   
 }

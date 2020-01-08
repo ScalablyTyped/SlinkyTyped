@@ -155,6 +155,7 @@ object Popover
     onReset: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
     placement: Placement = null,
     placementPrefix: String = null,
+    popperClassName: String = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
@@ -253,6 +254,7 @@ object Popover
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (placementPrefix != null) __obj.updateDynamic("placementPrefix")(placementPrefix.asInstanceOf[js.Any])
+    if (popperClassName != null) __obj.updateDynamic("popperClassName")(popperClassName.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])

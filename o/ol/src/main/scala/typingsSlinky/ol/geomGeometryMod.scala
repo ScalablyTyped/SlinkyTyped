@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.geomGeometryMod.Geometry
 import typingsSlinky.ol.geomGeometryTypeMod.GeometryType
 import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.projMod.TransformFunction

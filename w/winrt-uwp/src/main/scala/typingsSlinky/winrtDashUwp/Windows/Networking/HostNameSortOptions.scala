@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object HostNameSortOptions extends js.Object {
   @js.native
   sealed trait optimizeForLongConnections extends HostNameSortOptions
   
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.HostNameSortOptions.none with Double = js.native
-  /* 1 */ val optimizeForLongConnections: typingsSlinky.winrtDashUwp.Windows.Networking.HostNameSortOptions.optimizeForLongConnections with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HostNameSortOptions with Double] = js.native
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object optimizeForLongConnections extends TopLevel[optimizeForLongConnections with Double]
+  
 }
 

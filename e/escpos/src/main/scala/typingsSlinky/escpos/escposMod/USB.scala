@@ -1,6 +1,6 @@
 package typingsSlinky.escpos.escposMod
 
-import typingsSlinky.escpos.escposNumbers.`false`
+import typingsSlinky.escpos.escposBooleans.`false`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

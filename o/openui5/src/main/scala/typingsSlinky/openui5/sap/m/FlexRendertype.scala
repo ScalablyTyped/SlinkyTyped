@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,14 @@ object FlexRendertype extends js.Object {
   @js.native
   sealed trait List extends FlexRendertype
   
-  /* 0 */ val Div: typingsSlinky.openui5.sap.m.FlexRendertype.Div with Double = js.native
-  /* 1 */ val List: typingsSlinky.openui5.sap.m.FlexRendertype.List with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FlexRendertype with Double] = js.native
+  /* 0 */ @js.native
+  object Div extends TopLevel[Div with Double]
+  
+  /* 1 */ @js.native
+  object List
+    extends TopLevel[typingsSlinky.openui5.sap.m.FlexRendertype.List with Double]
+  
 }
 

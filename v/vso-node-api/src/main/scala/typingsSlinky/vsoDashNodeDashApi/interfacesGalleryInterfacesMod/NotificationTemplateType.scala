@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object NotificationTemplateType extends js.Object {
   @js.native
   sealed trait ReviewNotification extends NotificationTemplateType
   
-  /* 3 */ val CustomerContactNotification: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.NotificationTemplateType.CustomerContactNotification with Double = js.native
-  /* 4 */ val PublisherMemberUpdateNotification: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.NotificationTemplateType.PublisherMemberUpdateNotification with Double = js.native
-  /* 2 */ val QnaNotification: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.NotificationTemplateType.QnaNotification with Double = js.native
-  /* 1 */ val ReviewNotification: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.NotificationTemplateType.ReviewNotification with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationTemplateType with Double] = js.native
+  /* 3 */ @js.native
+  object CustomerContactNotification extends TopLevel[CustomerContactNotification with Double]
+  
+  /* 4 */ @js.native
+  object PublisherMemberUpdateNotification extends TopLevel[PublisherMemberUpdateNotification with Double]
+  
+  /* 2 */ @js.native
+  object QnaNotification extends TopLevel[QnaNotification with Double]
+  
+  /* 1 */ @js.native
+  object ReviewNotification extends TopLevel[ReviewNotification with Double]
+  
 }
 

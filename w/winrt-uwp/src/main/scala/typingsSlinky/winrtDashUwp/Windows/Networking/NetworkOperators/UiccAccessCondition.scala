@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object UiccAccessCondition extends js.Object {
   @js.native
   sealed trait pin4 extends UiccAccessCondition
   
-  /* 5 */ val administrative5: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.administrative5 with Double = js.native
-  /* 6 */ val administrative6: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.administrative6 with Double = js.native
-  /* 0 */ val alwaysAllowed: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.alwaysAllowed with Double = js.native
-  /* 7 */ val neverAllowed: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.neverAllowed with Double = js.native
-  /* 1 */ val pin1: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.pin1 with Double = js.native
-  /* 2 */ val pin2: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.pin2 with Double = js.native
-  /* 3 */ val pin3: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.pin3 with Double = js.native
-  /* 4 */ val pin4: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAccessCondition.pin4 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UiccAccessCondition with Double] = js.native
+  /* 5 */ @js.native
+  object administrative5 extends TopLevel[administrative5 with Double]
+  
+  /* 6 */ @js.native
+  object administrative6 extends TopLevel[administrative6 with Double]
+  
+  /* 0 */ @js.native
+  object alwaysAllowed extends TopLevel[alwaysAllowed with Double]
+  
+  /* 7 */ @js.native
+  object neverAllowed extends TopLevel[neverAllowed with Double]
+  
+  /* 1 */ @js.native
+  object pin1 extends TopLevel[pin1 with Double]
+  
+  /* 2 */ @js.native
+  object pin2 extends TopLevel[pin2 with Double]
+  
+  /* 3 */ @js.native
+  object pin3 extends TopLevel[pin3 with Double]
+  
+  /* 4 */ @js.native
+  object pin4 extends TopLevel[pin4 with Double]
+  
 }
 

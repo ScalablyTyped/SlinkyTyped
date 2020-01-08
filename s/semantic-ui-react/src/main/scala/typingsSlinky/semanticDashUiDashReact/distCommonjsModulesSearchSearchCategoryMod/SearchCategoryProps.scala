@@ -23,6 +23,7 @@ object SearchCategoryProps {
     children: TagMod[Any] = null,
     className: String = null,
     content: SemanticShorthandContent = null,
+    layoutRenderer: (/* categoryContent */ ReactElement, /* resultsContent */ ReactElement) => ReactElement = null,
     name: String = null,
     renderer: /* props */ SearchCategoryProps => ReactElement = null,
     results: js.Array[ReactComponentClass[SearchResultProps]] = null
@@ -34,6 +35,7 @@ object SearchCategoryProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (layoutRenderer != null) __obj.updateDynamic("layoutRenderer")(js.Any.fromFunction2(layoutRenderer))
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
     if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])

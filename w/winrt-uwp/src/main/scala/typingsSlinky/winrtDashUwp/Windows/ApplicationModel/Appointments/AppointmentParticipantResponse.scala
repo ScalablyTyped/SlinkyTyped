@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object AppointmentParticipantResponse extends js.Object {
   @js.native
   sealed trait unknown extends AppointmentParticipantResponse
   
-  /* 2 */ val accepted: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantResponse.accepted with Double = js.native
-  /* 3 */ val declined: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantResponse.declined with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantResponse.none with Double = js.native
-  /* 1 */ val tentative: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantResponse.tentative with Double = js.native
-  /* 4 */ val unknown: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantResponse.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentParticipantResponse with Double] = js.native
+  /* 2 */ @js.native
+  object accepted extends TopLevel[accepted with Double]
+  
+  /* 3 */ @js.native
+  object declined extends TopLevel[declined with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object tentative extends TopLevel[tentative with Double]
+  
+  /* 4 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

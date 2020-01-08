@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,15 +78,31 @@ object SpecialCellType extends js.Object {
   @js.native
   sealed trait visible extends SpecialCellType
   
-  /* "Blanks" */ val blanks: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.blanks with String = js.native
-  /* "ConditionalFormats" */ val conditionalFormats: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.conditionalFormats with String = js.native
-  /* "Constants" */ val constants: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.constants with String = js.native
-  /* "DataValidations" */ val dataValidations: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.dataValidations with String = js.native
-  /* "Formulas" */ val formulas: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.formulas with String = js.native
-  /* "SameConditionalFormat" */ val sameConditionalFormat: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.sameConditionalFormat with String = js.native
-  /* "SameDataValidation" */ val sameDataValidation: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.sameDataValidation with String = js.native
-  /* "Visible" */ val visible: typingsSlinky.officeDashJsDashPreview.Excel.SpecialCellType.visible with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SpecialCellType with String] = js.native
+  /* "Blanks" */ @js.native
+  object blanks extends TopLevel[blanks with String]
+  
+  /* "ConditionalFormats" */ @js.native
+  object conditionalFormats extends TopLevel[conditionalFormats with String]
+  
+  /* "Constants" */ @js.native
+  object constants extends TopLevel[constants with String]
+  
+  /* "DataValidations" */ @js.native
+  object dataValidations extends TopLevel[dataValidations with String]
+  
+  /* "Formulas" */ @js.native
+  object formulas extends TopLevel[formulas with String]
+  
+  /* "SameConditionalFormat" */ @js.native
+  object sameConditionalFormat extends TopLevel[sameConditionalFormat with String]
+  
+  /* "SameDataValidation" */ @js.native
+  object sameDataValidation extends TopLevel[sameDataValidation with String]
+  
+  /* "Visible" */ @js.native
+  object visible extends TopLevel[visible with String]
+  
 }
 

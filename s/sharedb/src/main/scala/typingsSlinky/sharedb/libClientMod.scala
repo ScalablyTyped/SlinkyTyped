@@ -1,9 +1,6 @@
 package typingsSlinky.sharedb
 
 import org.scalajs.dom.raw.WebSocket
-import typingsSlinky.sharedb.libClientMod.Doc
-import typingsSlinky.sharedb.libClientMod.Error
-import typingsSlinky.sharedb.libClientMod.Query
 import typingsSlinky.ws.wsMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`

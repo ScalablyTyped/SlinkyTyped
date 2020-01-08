@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +35,28 @@ object FacetFilterListDataType extends js.Object {
   @js.native
   sealed trait Time extends FacetFilterListDataType
   
-  /* 0 */ val Boolean: typingsSlinky.openui5.sap.m.FacetFilterListDataType.Boolean with Double = js.native
-  /* 1 */ val Date: typingsSlinky.openui5.sap.m.FacetFilterListDataType.Date with Double = js.native
-  /* 2 */ val DateTime: typingsSlinky.openui5.sap.m.FacetFilterListDataType.DateTime with Double = js.native
-  /* 3 */ val Float: typingsSlinky.openui5.sap.m.FacetFilterListDataType.Float with Double = js.native
-  /* 4 */ val Integer: typingsSlinky.openui5.sap.m.FacetFilterListDataType.Integer with Double = js.native
-  /* 5 */ val String: typingsSlinky.openui5.sap.m.FacetFilterListDataType.String with Double = js.native
-  /* 6 */ val Time: typingsSlinky.openui5.sap.m.FacetFilterListDataType.Time with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FacetFilterListDataType with Double] = js.native
+  /* 0 */ @js.native
+  object Boolean extends TopLevel[Boolean with Double]
+  
+  /* 1 */ @js.native
+  object Date extends TopLevel[Date with Double]
+  
+  /* 2 */ @js.native
+  object DateTime extends TopLevel[DateTime with Double]
+  
+  /* 3 */ @js.native
+  object Float extends TopLevel[Float with Double]
+  
+  /* 4 */ @js.native
+  object Integer extends TopLevel[Integer with Double]
+  
+  /* 5 */ @js.native
+  object String extends TopLevel[String with Double]
+  
+  /* 6 */ @js.native
+  object Time extends TopLevel[Time with Double]
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.loginDashWithDashAmazonDashSdkDashBrowser
 
-import typingsSlinky.loginDashWithDashAmazonDashSdkDashBrowser.loginDashWithDashAmazonDashSdkDashBrowserNumbers.`false`
-import typingsSlinky.loginDashWithDashAmazonDashSdkDashBrowser.loginDashWithDashAmazonDashSdkDashBrowserNumbers.`true`
+import typingsSlinky.loginDashWithDashAmazonDashSdkDashBrowser.loginDashWithDashAmazonDashSdkDashBrowserBooleans.`false`
+import typingsSlinky.loginDashWithDashAmazonDashSdkDashBrowser.loginDashWithDashAmazonDashSdkDashBrowserBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

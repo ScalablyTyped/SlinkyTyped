@@ -1,8 +1,8 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/BACK`
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/INIT`
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/NAVIGATE`
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashBACK
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashINIT
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashNAVIGATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait NavigationTabAction extends _NavigationAction
 
 object NavigationTabAction {
   @scala.inline
-  def NavigationInitAction(`type`: `Navigation/INIT`, key: String = null, params: NavigationParams = null): NavigationTabAction = {
+  def NavigationInitAction(`type`: NavigationSlashINIT, key: String = null, params: NavigationParams = null): NavigationTabAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
@@ -26,7 +26,7 @@ object NavigationTabAction {
   @scala.inline
   def NavigationNavigateAction(
     routeName: String,
-    `type`: `Navigation/NAVIGATE`,
+    `type`: NavigationSlashNAVIGATE,
     action: typingsSlinky.reactDashNavigation.reactDashNavigationMod.NavigationNavigateAction = null,
     key: String = null,
     params: NavigationParams = null
@@ -39,7 +39,7 @@ object NavigationTabAction {
     __obj.asInstanceOf[NavigationTabAction]
   }
   @scala.inline
-  def NavigationBackAction(`type`: `Navigation/BACK`, immediate: js.UndefOr[Boolean] = js.undefined, key: String = null): NavigationTabAction = {
+  def NavigationBackAction(`type`: NavigationSlashBACK, immediate: js.UndefOr[Boolean] = js.undefined, key: String = null): NavigationTabAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.asInstanceOf[js.Any])

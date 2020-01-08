@@ -1,7 +1,5 @@
 package typingsSlinky.maliDashCompose
 
-import typingsSlinky.maliDashCompose.maliDashComposeMod.ComposedMiddleware
-import typingsSlinky.maliDashCompose.maliDashComposeMod.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

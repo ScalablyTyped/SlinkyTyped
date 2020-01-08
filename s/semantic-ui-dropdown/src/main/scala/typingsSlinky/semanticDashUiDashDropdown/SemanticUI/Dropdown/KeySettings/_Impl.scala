@@ -1,6 +1,6 @@
 package typingsSlinky.semanticDashUiDashDropdown.SemanticUI.Dropdown.KeySettings
 
-import typingsSlinky.semanticDashUiDashDropdown.semanticDashUiDashDropdownNumbers.`false`
+import typingsSlinky.semanticDashUiDashDropdown.semanticDashUiDashDropdownBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

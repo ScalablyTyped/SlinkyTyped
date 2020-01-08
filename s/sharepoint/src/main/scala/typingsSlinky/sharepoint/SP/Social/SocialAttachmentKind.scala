@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Social
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SocialAttachmentKind extends js.Object {
   @js.native
   sealed trait video extends SocialAttachmentKind
   
-  /* 2 */ val document: typingsSlinky.sharepoint.SP.Social.SocialAttachmentKind.document with Double = js.native
-  /* 0 */ val image: typingsSlinky.sharepoint.SP.Social.SocialAttachmentKind.image with Double = js.native
-  /* 1 */ val video: typingsSlinky.sharepoint.SP.Social.SocialAttachmentKind.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocialAttachmentKind with Double] = js.native
+  /* 2 */ @js.native
+  object document extends TopLevel[document with Double]
+  
+  /* 0 */ @js.native
+  object image extends TopLevel[image with Double]
+  
+  /* 1 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

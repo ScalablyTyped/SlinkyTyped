@@ -1,6 +1,5 @@
 package typingsSlinky.xmlcreate
 
-import typingsSlinky.xmlcreate.libNodesXmlAttributeMod.XmlAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

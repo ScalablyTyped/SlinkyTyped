@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Hue extends SharedApply_HuePickerProps1354184029[default] {
+object Hue extends SharedApply_HuePickerProps_183401559[default] {
   @JSImport("react-color/lib/components/hue/Hue", JSImport.Default)
   @js.native
   object componentImport extends js.Object

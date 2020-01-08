@@ -10,9 +10,9 @@ Tests whether one path is inside another path
 | ------------------ | :-------------: |
 | Full name          | path-is-inside |
 | Keywords           | path, directory, folder, inside, relative |
-| # releases         | 1 |
-| # dependents       | 130 |
-| # downloads        | 234151799 |
+| # releases         | 0 |
+| # dependents       | 153 |
+| # downloads        | 373129511 |
 | # stars            | 4 |
 
 ## Links

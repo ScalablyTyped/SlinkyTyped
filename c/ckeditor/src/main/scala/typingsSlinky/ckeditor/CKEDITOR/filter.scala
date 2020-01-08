@@ -1,12 +1,11 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.CKEDITOR.filter.allowedContentRule
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ckeditor.CKEDITOR.filter.allowedContentRules
 import typingsSlinky.ckeditor.CKEDITOR.filter.contentRule
 import typingsSlinky.ckeditor.CKEDITOR.filter.disallowedContentRules
 import typingsSlinky.ckeditor.CKEDITOR.filter.transformation
-import typingsSlinky.ckeditor.CKEDITOR.filter.transformationTools
 import typingsSlinky.ckeditor.CKEDITOR.htmlParser.element
 import typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment
 import scala.scalajs.js
@@ -82,7 +81,9 @@ object filter extends js.Object {
   }
   
   var instances: StringDictionary[filter] = js.native
-  var transformationTools: transformationTools = js.native
+  @js.native
+  object transformationTools extends TopLevel[transformationTools]
+  
   type allowedContentRule = String | style | StringDictionary[js.Any]
   type allowedContentRules = allowedContentRule | js.Array[allowedContentRule]
   type contentRule = String | style

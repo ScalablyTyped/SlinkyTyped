@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Schedule
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object TimeMode extends js.Object {
   @js.native
   sealed trait Hour24 extends TimeMode
   
-  /* 0 */ val Hour12: typingsSlinky.ejDotWebDotAll.ej.Schedule.TimeMode.Hour12 with Double = js.native
-  /* 1 */ val Hour24: typingsSlinky.ejDotWebDotAll.ej.Schedule.TimeMode.Hour24 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimeMode with Double] = js.native
+  /* 0 */ @js.native
+  object Hour12 extends TopLevel[Hour12 with Double]
+  
+  /* 1 */ @js.native
+  object Hour24 extends TopLevel[Hour24 with Double]
+  
 }
 

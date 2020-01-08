@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Fill extends SharedApply_IconFillProps_702513120[default] {
+object Fill extends SharedApply_IconFillProps_2008361208[default] {
   @JSImport("@ant-design/icons-react-native/lib/fill", JSImport.Default)
   @js.native
   object componentImport extends js.Object

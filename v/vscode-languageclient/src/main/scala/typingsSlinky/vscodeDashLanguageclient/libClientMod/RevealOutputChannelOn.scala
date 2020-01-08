@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeDashLanguageclient.libClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object RevealOutputChannelOn extends js.Object {
   @js.native
   sealed trait Warn extends RevealOutputChannelOn
   
-  /* 3 */ val Error: typingsSlinky.vscodeDashLanguageclient.libClientMod.RevealOutputChannelOn.Error with Double = js.native
-  /* 1 */ val Info: typingsSlinky.vscodeDashLanguageclient.libClientMod.RevealOutputChannelOn.Info with Double = js.native
-  /* 4 */ val Never: typingsSlinky.vscodeDashLanguageclient.libClientMod.RevealOutputChannelOn.Never with Double = js.native
-  /* 2 */ val Warn: typingsSlinky.vscodeDashLanguageclient.libClientMod.RevealOutputChannelOn.Warn with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RevealOutputChannelOn with Double] = js.native
+  /* 3 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 1 */ @js.native
+  object Info extends TopLevel[Info with Double]
+  
+  /* 4 */ @js.native
+  object Never extends TopLevel[Never with Double]
+  
+  /* 2 */ @js.native
+  object Warn extends TopLevel[Warn with Double]
+  
 }
 

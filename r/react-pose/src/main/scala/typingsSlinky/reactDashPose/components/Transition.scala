@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Transition extends SharedApply_Props_686187855[default] {
+object Transition extends SharedApply_Props1739510338[default] {
   @JSImport("react-pose/lib/components/Transition", JSImport.Default)
   @js.native
   object componentImport extends js.Object

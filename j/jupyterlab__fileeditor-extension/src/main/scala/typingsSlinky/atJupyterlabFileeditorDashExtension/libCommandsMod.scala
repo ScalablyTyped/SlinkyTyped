@@ -12,18 +12,18 @@ import typingsSlinky.atJupyterlabDocregistry.libRegistryMod.IDocumentWidget
 import typingsSlinky.atJupyterlabFilebrowser.libTokensMod.IFileBrowserFactory
 import typingsSlinky.atJupyterlabFileeditor.atJupyterlabFileeditorMod.FileEditor
 import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.Editor
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:change-font-size`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:change-tabs`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:create-console`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:create-new-markdown-file`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:create-new`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:markdown-preview`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:run-all`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:run-code`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:toggle-autoclosing-brackets`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:toggle-line-numbers`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:toggle-line-wrap`
-import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditor:toggle-match-brackets`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColonchange-font-size`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColonchange-tabs`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColoncreate-console`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColoncreate-new-markdown-file`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColoncreate-new`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColonmarkdown-preview`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColonrun-all`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColonrun-code`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColontoggle-autoclosing-brackets`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColontoggle-line-numbers`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColontoggle-line-wrap`
+import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`fileeditorColontoggle-match-brackets`
 import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`jp-MarkdownIcon`
 import typingsSlinky.atJupyterlabFileeditorDashExtension.atJupyterlabFileeditorDashExtensionStrings.`jp-MaterialIcon jp-TextEditorIcon`
 import typingsSlinky.atJupyterlabLauncher.atJupyterlabLauncherMod.ILauncher
@@ -41,18 +41,18 @@ object libCommandsMod extends js.Object {
   val MARKDOWN_ICON_CLASS: `jp-MarkdownIcon` = js.native
   @js.native
   object CommandIDs extends js.Object {
-    val autoClosingBrackets: `fileeditor:toggle-autoclosing-brackets` = js.native
-    val changeFontSize: `fileeditor:change-font-size` = js.native
-    val changeTabs: `fileeditor:change-tabs` = js.native
-    val createConsole: `fileeditor:create-console` = js.native
-    val createNew: `fileeditor:create-new` = js.native
-    val createNewMarkdown: `fileeditor:create-new-markdown-file` = js.native
-    val lineNumbers: `fileeditor:toggle-line-numbers` = js.native
-    val lineWrap: `fileeditor:toggle-line-wrap` = js.native
-    val markdownPreview: `fileeditor:markdown-preview` = js.native
-    val matchBrackets: `fileeditor:toggle-match-brackets` = js.native
-    val runAllCode: `fileeditor:run-all` = js.native
-    val runCode: `fileeditor:run-code` = js.native
+    val autoClosingBrackets: `fileeditorColontoggle-autoclosing-brackets` = js.native
+    val changeFontSize: `fileeditorColonchange-font-size` = js.native
+    val changeTabs: `fileeditorColonchange-tabs` = js.native
+    val createConsole: `fileeditorColoncreate-console` = js.native
+    val createNew: `fileeditorColoncreate-new` = js.native
+    val createNewMarkdown: `fileeditorColoncreate-new-markdown-file` = js.native
+    val lineNumbers: `fileeditorColontoggle-line-numbers` = js.native
+    val lineWrap: `fileeditorColontoggle-line-wrap` = js.native
+    val markdownPreview: `fileeditorColonmarkdown-preview` = js.native
+    val matchBrackets: `fileeditorColontoggle-match-brackets` = js.native
+    val runAllCode: `fileeditorColonrun-all` = js.native
+    val runCode: `fileeditorColonrun-code` = js.native
   }
   
   @js.native

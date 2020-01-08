@@ -28,6 +28,7 @@ import typingsSlinky.atNivoBar.dataFromindexeskeysLegendProps
 import typingsSlinky.atNivoColors.atNivoColorsMod.InheritedColorProp
 import typingsSlinky.atNivoColors.atNivoColorsMod.OrdinalColorsInstruction
 import typingsSlinky.atNivoCore.Anon_
+import typingsSlinky.atNivoCore.Anon_Id
 import typingsSlinky.atNivoCore.atNivoCoreMod.Box
 import typingsSlinky.atNivoCore.atNivoCoreMod.CartesianMarkerProps
 import typingsSlinky.atNivoCore.atNivoCoreMod.Theme
@@ -53,7 +54,7 @@ object ResponsiveBar
     borderRadius: Int | Double = null,
     borderWidth: Int | Double = null,
     colors: OrdinalColorsInstruction[_] = null,
-    defs: js.Array[typingsSlinky.atNivoCore.Anon_Id] = null,
+    defs: js.Array[Anon_Id] = null,
     enableGridX: js.UndefOr[Boolean] = js.undefined,
     enableGridY: js.UndefOr[Boolean] = js.undefined,
     enableLabel: js.UndefOr[Boolean] = js.undefined,

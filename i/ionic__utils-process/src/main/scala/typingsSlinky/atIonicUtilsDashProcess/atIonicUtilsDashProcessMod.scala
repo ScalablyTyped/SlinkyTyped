@@ -1,7 +1,6 @@
 package typingsSlinky.atIonicUtilsDashProcess
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atIonicUtilsDashProcess.atIonicUtilsDashProcessMod.ExitFn
 import typingsSlinky.node.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`

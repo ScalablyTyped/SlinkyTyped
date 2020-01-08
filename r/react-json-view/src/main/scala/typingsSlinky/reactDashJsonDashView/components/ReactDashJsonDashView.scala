@@ -5,6 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewBooleans.`false`
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.CollapsedFieldProps
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.InteractionProps
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.OnCopyProps
@@ -13,7 +14,6 @@ import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.ReactJsonVie
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.ThemeKeys
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.ThemeObject
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewMod.default
-import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewNumbers.`false`
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.circle
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.square
 import typingsSlinky.reactDashJsonDashView.reactDashJsonDashViewStrings.triangle

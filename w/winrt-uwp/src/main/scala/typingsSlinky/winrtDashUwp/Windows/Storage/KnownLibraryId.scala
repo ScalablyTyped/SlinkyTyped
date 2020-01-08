@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object KnownLibraryId extends js.Object {
   @js.native
   sealed trait videos extends KnownLibraryId
   
-  /* 3 */ val documents: typingsSlinky.winrtDashUwp.Windows.Storage.KnownLibraryId.documents with Double = js.native
-  /* 0 */ val music: typingsSlinky.winrtDashUwp.Windows.Storage.KnownLibraryId.music with Double = js.native
-  /* 1 */ val pictures: typingsSlinky.winrtDashUwp.Windows.Storage.KnownLibraryId.pictures with Double = js.native
-  /* 2 */ val videos: typingsSlinky.winrtDashUwp.Windows.Storage.KnownLibraryId.videos with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[KnownLibraryId with Double] = js.native
+  /* 3 */ @js.native
+  object documents extends TopLevel[documents with Double]
+  
+  /* 0 */ @js.native
+  object music extends TopLevel[music with Double]
+  
+  /* 1 */ @js.native
+  object pictures extends TopLevel[pictures with Double]
+  
+  /* 2 */ @js.native
+  object videos extends TopLevel[videos with Double]
+  
 }
 

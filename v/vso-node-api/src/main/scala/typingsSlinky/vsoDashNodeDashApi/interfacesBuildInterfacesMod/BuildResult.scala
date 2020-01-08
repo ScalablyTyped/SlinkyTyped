@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object BuildResult extends js.Object {
   @js.native
   sealed trait Succeeded extends BuildResult
   
-  /* 32 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildResult.Canceled with Double = js.native
-  /* 8 */ val Failed: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildResult.Failed with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildResult.None with Double = js.native
-  /* 4 */ val PartiallySucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildResult.PartiallySucceeded with Double = js.native
-  /* 2 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildResult.Succeeded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BuildResult with Double] = js.native
+  /* 32 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 8 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object PartiallySucceeded extends TopLevel[PartiallySucceeded with Double]
+  
+  /* 2 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
 }
 

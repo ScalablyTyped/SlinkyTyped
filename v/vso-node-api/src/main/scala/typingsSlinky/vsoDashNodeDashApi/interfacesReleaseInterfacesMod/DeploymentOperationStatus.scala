@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -130,27 +131,67 @@ object DeploymentOperationStatus extends js.Object {
   @js.native
   sealed trait Undefined extends DeploymentOperationStatus
   
-  /* 258047 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.All with Double = js.native
-  /* 8 */ val Approved: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Approved with Double = js.native
-  /* 2048 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Canceled with Double = js.native
-  /* 32768 */ val Cancelling: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Cancelling with Double = js.native
-  /* 32 */ val Deferred: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Deferred with Double = js.native
-  /* 65536 */ val EvaluatingGates: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.EvaluatingGates with Double = js.native
-  /* 131072 */ val GateFailed: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.GateFailed with Double = js.native
-  /* 8192 */ val ManualInterventionPending: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.ManualInterventionPending with Double = js.native
-  /* 4 */ val Pending: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Pending with Double = js.native
-  /* 4096 */ val PhaseCanceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.PhaseCanceled with Double = js.native
-  /* 1024 */ val PhaseFailed: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.PhaseFailed with Double = js.native
-  /* 128 */ val PhaseInProgress: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.PhaseInProgress with Double = js.native
-  /* 512 */ val PhasePartiallySucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.PhasePartiallySucceeded with Double = js.native
-  /* 256 */ val PhaseSucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.PhaseSucceeded with Double = js.native
-  /* 1 */ val Queued: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Queued with Double = js.native
-  /* 64 */ val QueuedForAgent: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.QueuedForAgent with Double = js.native
-  /* 16384 */ val QueuedForPipeline: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.QueuedForPipeline with Double = js.native
-  /* 16 */ val Rejected: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Rejected with Double = js.native
-  /* 2 */ val Scheduled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Scheduled with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentOperationStatus.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeploymentOperationStatus with Double] = js.native
+  /* 258047 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 8 */ @js.native
+  object Approved extends TopLevel[Approved with Double]
+  
+  /* 2048 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 32768 */ @js.native
+  object Cancelling extends TopLevel[Cancelling with Double]
+  
+  /* 32 */ @js.native
+  object Deferred extends TopLevel[Deferred with Double]
+  
+  /* 65536 */ @js.native
+  object EvaluatingGates extends TopLevel[EvaluatingGates with Double]
+  
+  /* 131072 */ @js.native
+  object GateFailed extends TopLevel[GateFailed with Double]
+  
+  /* 8192 */ @js.native
+  object ManualInterventionPending extends TopLevel[ManualInterventionPending with Double]
+  
+  /* 4 */ @js.native
+  object Pending extends TopLevel[Pending with Double]
+  
+  /* 4096 */ @js.native
+  object PhaseCanceled extends TopLevel[PhaseCanceled with Double]
+  
+  /* 1024 */ @js.native
+  object PhaseFailed extends TopLevel[PhaseFailed with Double]
+  
+  /* 128 */ @js.native
+  object PhaseInProgress extends TopLevel[PhaseInProgress with Double]
+  
+  /* 512 */ @js.native
+  object PhasePartiallySucceeded extends TopLevel[PhasePartiallySucceeded with Double]
+  
+  /* 256 */ @js.native
+  object PhaseSucceeded extends TopLevel[PhaseSucceeded with Double]
+  
+  /* 1 */ @js.native
+  object Queued extends TopLevel[Queued with Double]
+  
+  /* 64 */ @js.native
+  object QueuedForAgent extends TopLevel[QueuedForAgent with Double]
+  
+  /* 16384 */ @js.native
+  object QueuedForPipeline extends TopLevel[QueuedForPipeline with Double]
+  
+  /* 16 */ @js.native
+  object Rejected extends TopLevel[Rejected with Double]
+  
+  /* 2 */ @js.native
+  object Scheduled extends TopLevel[Scheduled with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.queryDashString
 
-import typingsSlinky.queryDashString.queryDashStringNumbers.`true`
+import typingsSlinky.queryDashString.queryDashStringBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

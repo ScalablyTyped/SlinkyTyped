@@ -338,14 +338,14 @@ trait Cash extends js.Object {
     * Returns a collection of sibling elements.
     */
   def siblings(): Cash = js.native
-  def text(): Cash = js.native
-  def text(content: String): Cash = js.native
   /**
     * text
     * Returns the inner text of the first element in the collection, sets the text if textContent is provided.
     */
+  def text(): String = js.native
+  def text(content: String): Cash = js.native
   @JSName("text")
-  def text_String(): String = js.native
+  def text_Cash(): Cash = js.native
   /**
     * toggleClass
     * Adds or removes className from collection elements based on if the element already has the class.

@@ -1,8 +1,8 @@
 package typingsSlinky.victory.victoryMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -124,8 +124,8 @@ object VictoryStackProps {
     horizontal: js.UndefOr[Boolean] = js.undefined,
     labelComponent: ReactElement = null,
     labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     name: String = null,
     padding: PaddingProps = null,
     scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,

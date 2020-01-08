@@ -1,7 +1,6 @@
 package typingsSlinky.forgeDashDi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.forgeDashDi.distFrameworkBindingMod.Binding
 import typingsSlinky.forgeDashDi.distFrameworkConstructorMod.Constructor
 import typingsSlinky.forgeDashDi.distFrameworkPredicateMod.Predicate
 import typingsSlinky.forgeDashDi.distLifecyclesLifecycleMod.Lifecycle

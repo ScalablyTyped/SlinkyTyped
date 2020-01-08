@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.renderCanvasInstructionMod.Instruction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

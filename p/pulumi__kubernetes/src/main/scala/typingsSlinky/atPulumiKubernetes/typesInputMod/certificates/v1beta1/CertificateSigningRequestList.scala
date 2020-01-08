@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.certificates.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`certificatesDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.certificatesDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait CertificateSigningRequestList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`certificatesDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[certificatesDotk8sDotioSlashv1beta1]] = js.undefined
   var items: Input[js.Array[Input[CertificateSigningRequest]]]
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
@@ -37,7 +37,7 @@ object CertificateSigningRequestList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[CertificateSigningRequest]]],
-    apiVersion: Input[`certificatesDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[certificatesDotk8sDotioSlashv1beta1] = null,
     kind: Input[
       typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.CertificateSigningRequestList
     ] = null,

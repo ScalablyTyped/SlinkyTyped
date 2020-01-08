@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,10 +26,16 @@ object ShapeScaleFrom extends js.Object {
   @js.native
   sealed trait scaleFromTopLeft extends ShapeScaleFrom
   
-  /* "ScaleFromBottomRight" */ val scaleFromBottomRight: typingsSlinky.officeDashJs.Excel.ShapeScaleFrom.scaleFromBottomRight with String = js.native
-  /* "ScaleFromMiddle" */ val scaleFromMiddle: typingsSlinky.officeDashJs.Excel.ShapeScaleFrom.scaleFromMiddle with String = js.native
-  /* "ScaleFromTopLeft" */ val scaleFromTopLeft: typingsSlinky.officeDashJs.Excel.ShapeScaleFrom.scaleFromTopLeft with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeScaleFrom with String] = js.native
+  /* "ScaleFromBottomRight" */ @js.native
+  object scaleFromBottomRight extends TopLevel[scaleFromBottomRight with String]
+  
+  /* "ScaleFromMiddle" */ @js.native
+  object scaleFromMiddle extends TopLevel[scaleFromMiddle with String]
+  
+  /* "ScaleFromTopLeft" */ @js.native
+  object scaleFromTopLeft extends TopLevel[scaleFromTopLeft with String]
+  
 }
 

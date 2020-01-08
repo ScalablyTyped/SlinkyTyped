@@ -1,6 +1,6 @@
 package typingsSlinky.parseDashMockdb.ParseMockDB
 
-import typingsSlinky.parse.Parse.Cloud.BeforeSaveRequest
+import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.BeforeSaveRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

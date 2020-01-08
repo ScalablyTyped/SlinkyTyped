@@ -1,10 +1,5 @@
 package typingsSlinky.roslib
 
-import typingsSlinky.roslib.roslibMod.Message
-import typingsSlinky.roslib.roslibMod.Quaternion
-import typingsSlinky.roslib.roslibMod.ServiceRequest
-import typingsSlinky.roslib.roslibMod.Transform
-import typingsSlinky.roslib.roslibMod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

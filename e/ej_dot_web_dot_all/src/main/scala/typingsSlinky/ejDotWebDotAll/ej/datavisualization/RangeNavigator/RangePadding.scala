@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object RangePadding extends js.Object {
   @js.native
   sealed trait Round extends RangePadding
   
-  /* 0 */ val Additional: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.RangePadding.Additional with Double = js.native
-  /* 2 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.RangePadding.None with Double = js.native
-  /* 1 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.RangePadding.Normal with Double = js.native
-  /* 3 */ val Round: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.RangePadding.Round with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RangePadding with Double] = js.native
+  /* 0 */ @js.native
+  object Additional extends TopLevel[Additional with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
+  /* 3 */ @js.native
+  object Round extends TopLevel[Round with Double]
+  
 }
 

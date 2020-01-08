@@ -3,6 +3,7 @@ package typingsSlinky.reactDashOnsenui.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ReactInstance
@@ -57,6 +58,9 @@ object Popover
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.Popover] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.Popover](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = HTMLAttributesidclassNamestylegetTargetReactInstan
 }
 

@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.atBlueprintjsCore.libEsmComponentsPopoverPopoverMod.IPopoverProps
 import typingsSlinky.atBlueprintjsCore.libEsmComponentsPopoverPopoverMod.PopoverInteractionKind
@@ -106,6 +107,9 @@ object Popover
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.atBlueprintjsCore.libEsmComponentsMod.Popover] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atBlueprintjsCore.libEsmComponentsMod.Popover](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IPopoverProps
 }
 

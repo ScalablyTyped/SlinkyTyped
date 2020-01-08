@@ -1,7 +1,6 @@
 package typingsSlinky.graphql
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.executionValuesMod.CoercedVariableValues
 import typingsSlinky.graphql.languageAstMod.DirectiveNode
 import typingsSlinky.graphql.languageAstMod.FieldNode
 import typingsSlinky.graphql.languageAstMod.VariableDefinitionNode

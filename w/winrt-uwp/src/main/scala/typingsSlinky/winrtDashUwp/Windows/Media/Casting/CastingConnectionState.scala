@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Casting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object CastingConnectionState extends js.Object {
   @js.native
   sealed trait rendering extends CastingConnectionState
   
-  /* 1 */ val connected: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingConnectionState.connected with Double = js.native
-  /* 4 */ val connecting: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingConnectionState.connecting with Double = js.native
-  /* 0 */ val disconnected: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingConnectionState.disconnected with Double = js.native
-  /* 3 */ val disconnecting: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingConnectionState.disconnecting with Double = js.native
-  /* 2 */ val rendering: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingConnectionState.rendering with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CastingConnectionState with Double] = js.native
+  /* 1 */ @js.native
+  object connected extends TopLevel[connected with Double]
+  
+  /* 4 */ @js.native
+  object connecting extends TopLevel[connecting with Double]
+  
+  /* 0 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
+  /* 3 */ @js.native
+  object disconnecting extends TopLevel[disconnecting with Double]
+  
+  /* 2 */ @js.native
+  object rendering extends TopLevel[rendering with Double]
+  
 }
 

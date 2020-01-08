@@ -1,8 +1,8 @@
 package typingsSlinky.sequelize.sequelizeMod
 
+import typingsSlinky.sequelize.sequelizeBooleans.`false`
 import typingsSlinky.sequelize.sequelizeNumbers.`3`
 import typingsSlinky.sequelize.sequelizeNumbers.`5`
-import typingsSlinky.sequelize.sequelizeNumbers.`false`
 import typingsSlinky.sequelize.sequelizeStrings.`10`
 import typingsSlinky.sequelize.sequelizeStrings.`13`
 import typingsSlinky.sequelize.sequelizeStrings.`4`

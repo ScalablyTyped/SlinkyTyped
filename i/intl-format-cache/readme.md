@@ -1,7 +1,7 @@
 
 # Scala.js typings for intl-format-cache
 
-Typings are for version 4.2.11
+Typings are for version 4.2.16
 
 ## Library description:
 A memoizer factory for Intl format constructors.
@@ -10,9 +10,9 @@ A memoizer factory for Intl format constructors.
 | ------------------ | :-------------: |
 | Full name          | intl-format-cache |
 | Keywords           | intl, i18n |
-| # releases         | 16 |
-| # dependents       | 54 |
-| # downloads        | 15402491 |
+| # releases         | 61 |
+| # dependents       | 57 |
+| # downloads        | 20971467 |
 | # stars            | 1 |
 
 ## Links

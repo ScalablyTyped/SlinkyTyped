@@ -1,19 +1,5 @@
 package typingsSlinky.curriable
 
-import typingsSlinky.curriable.curriableMod.Append
-import typingsSlinky.curriable.curriableMod.Cast
-import typingsSlinky.curriable.curriableMod.CleanedGaps
-import typingsSlinky.curriable.curriableMod.Concat
-import typingsSlinky.curriable.curriableMod.Curried
-import typingsSlinky.curriable.curriableMod.Curry
-import typingsSlinky.curriable.curriableMod.Gaps
-import typingsSlinky.curriable.curriableMod.Handler
-import typingsSlinky.curriable.curriableMod.Length
-import typingsSlinky.curriable.curriableMod.PartialGaps
-import typingsSlinky.curriable.curriableMod.Placeholder
-import typingsSlinky.curriable.curriableMod.Prepend
-import typingsSlinky.curriable.curriableMod.Reverse
-import typingsSlinky.curriable.curriableMod.Tail
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
@@ -24,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object curriableMod extends js.Object {
   /* Rewritten from type alias, can be one of: 
-    - typings.curriable.curriableNumbers.`true`
-    - typings.curriable.curriableNumbers.`false`
+    - typings.curriable.curriableBooleans.`true`
+    - typings.curriable.curriableBooleans.`false`
   */
   trait HasTail[T /* <: js.Array[_] */] extends js.Object
   

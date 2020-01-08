@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object RemoteSystemAccessStatus extends js.Object {
   @js.native
   sealed trait unspecified extends RemoteSystemAccessStatus
   
-  /* 1 */ val allowed: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemAccessStatus.allowed with Double = js.native
-  /* 3 */ val deniedBySystem: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemAccessStatus.deniedBySystem with Double = js.native
-  /* 2 */ val deniedByUser: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemAccessStatus.deniedByUser with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemAccessStatus.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RemoteSystemAccessStatus with Double] = js.native
+  /* 1 */ @js.native
+  object allowed extends TopLevel[allowed with Double]
+  
+  /* 3 */ @js.native
+  object deniedBySystem extends TopLevel[deniedBySystem with Double]
+  
+  /* 2 */ @js.native
+  object deniedByUser extends TopLevel[deniedByUser with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

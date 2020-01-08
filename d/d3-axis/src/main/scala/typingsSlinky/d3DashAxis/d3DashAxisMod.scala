@@ -1,9 +1,5 @@
 package typingsSlinky.d3DashAxis
 
-import typingsSlinky.d3DashAxis.d3DashAxisMod.Axis
-import typingsSlinky.d3DashAxis.d3DashAxisMod.AxisDomain
-import typingsSlinky.d3DashAxis.d3DashAxisMod.AxisScale
-import typingsSlinky.d3DashAxis.d3DashAxisMod.AxisTimeInterval
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.Selection
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.TransitionLike
 import typingsSlinky.std.SVGGElement

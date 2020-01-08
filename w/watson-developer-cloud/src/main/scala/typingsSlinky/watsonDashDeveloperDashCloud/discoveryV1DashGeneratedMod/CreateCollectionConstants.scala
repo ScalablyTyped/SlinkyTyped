@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,19 +48,41 @@ object CreateCollectionConstants extends js.Object {
     @js.native
     sealed trait ZH_CN extends Language
     
-    /* "ar" */ val AR: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.AR with String = js.native
-    /* "de" */ val DE: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.DE with String = js.native
-    /* "en" */ val EN: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.EN with String = js.native
-    /* "es" */ val ES: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.ES with String = js.native
-    /* "fr" */ val FR: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.FR with String = js.native
-    /* "it" */ val IT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.IT with String = js.native
-    /* "ja" */ val JA: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.JA with String = js.native
-    /* "ko" */ val KO: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.KO with String = js.native
-    /* "nl" */ val NL: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.NL with String = js.native
-    /* "pt" */ val PT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.PT with String = js.native
-    /* "zh-CN" */ val ZH_CN: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateCollectionConstants.Language.ZH_CN with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Language with String] = js.native
+    /* "ar" */ @js.native
+    object AR extends TopLevel[AR with String]
+    
+    /* "de" */ @js.native
+    object DE extends TopLevel[DE with String]
+    
+    /* "en" */ @js.native
+    object EN extends TopLevel[EN with String]
+    
+    /* "es" */ @js.native
+    object ES extends TopLevel[ES with String]
+    
+    /* "fr" */ @js.native
+    object FR extends TopLevel[FR with String]
+    
+    /* "it" */ @js.native
+    object IT extends TopLevel[IT with String]
+    
+    /* "ja" */ @js.native
+    object JA extends TopLevel[JA with String]
+    
+    /* "ko" */ @js.native
+    object KO extends TopLevel[KO with String]
+    
+    /* "nl" */ @js.native
+    object NL extends TopLevel[NL with String]
+    
+    /* "pt" */ @js.native
+    object PT extends TopLevel[PT with String]
+    
+    /* "zh-CN" */ @js.native
+    object ZH_CN extends TopLevel[ZH_CN with String]
+    
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.fullcalendar.fullcalendarMod
 
 import typingsSlinky.fullcalendar.Anon_BottomLeft
-import typingsSlinky.fullcalendar.fullcalendarNumbers.`false`
+import typingsSlinky.fullcalendar.fullcalendarBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

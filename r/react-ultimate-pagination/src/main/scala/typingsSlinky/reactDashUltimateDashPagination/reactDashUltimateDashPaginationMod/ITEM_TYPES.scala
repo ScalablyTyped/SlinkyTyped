@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object ITEM_TYPES extends js.Object {
   @js.native
   sealed trait PREVIOUS_PAGE_LINK extends ITEM_TYPES
   
-  /* "ELLIPSIS" */ val ELLIPSIS: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.ELLIPSIS with String = js.native
-  /* "FIRST_PAGE_LINK" */ val FIRST_PAGE_LINK: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.FIRST_PAGE_LINK with String = js.native
-  /* "LAST_PAGE_LINK" */ val LAST_PAGE_LINK: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.LAST_PAGE_LINK with String = js.native
-  /* "NEXT_PAGE_LINK" */ val NEXT_PAGE_LINK: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.NEXT_PAGE_LINK with String = js.native
-  /* "PAGE" */ val PAGE: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.PAGE with String = js.native
-  /* "PREVIOUS_PAGE_LINK" */ val PREVIOUS_PAGE_LINK: typingsSlinky.reactDashUltimateDashPagination.reactDashUltimateDashPaginationMod.ITEM_TYPES.PREVIOUS_PAGE_LINK with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ITEM_TYPES with String] = js.native
+  /* "ELLIPSIS" */ @js.native
+  object ELLIPSIS extends TopLevel[ELLIPSIS with String]
+  
+  /* "FIRST_PAGE_LINK" */ @js.native
+  object FIRST_PAGE_LINK extends TopLevel[FIRST_PAGE_LINK with String]
+  
+  /* "LAST_PAGE_LINK" */ @js.native
+  object LAST_PAGE_LINK extends TopLevel[LAST_PAGE_LINK with String]
+  
+  /* "NEXT_PAGE_LINK" */ @js.native
+  object NEXT_PAGE_LINK extends TopLevel[NEXT_PAGE_LINK with String]
+  
+  /* "PAGE" */ @js.native
+  object PAGE extends TopLevel[PAGE with String]
+  
+  /* "PREVIOUS_PAGE_LINK" */ @js.native
+  object PREVIOUS_PAGE_LINK extends TopLevel[PREVIOUS_PAGE_LINK with String]
+  
 }
 

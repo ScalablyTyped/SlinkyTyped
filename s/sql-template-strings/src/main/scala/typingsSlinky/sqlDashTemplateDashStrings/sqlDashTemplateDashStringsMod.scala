@@ -1,6 +1,5 @@
 package typingsSlinky.sqlDashTemplateDashStrings
 
-import typingsSlinky.sqlDashTemplateDashStrings.sqlDashTemplateDashStringsMod.SQLStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

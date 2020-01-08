@@ -1,6 +1,5 @@
 package typingsSlinky.cesium.cesiumMod
 
-import typingsSlinky.cesium.cesiumMod.Transforms.LocalFrameToFixedFrame
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

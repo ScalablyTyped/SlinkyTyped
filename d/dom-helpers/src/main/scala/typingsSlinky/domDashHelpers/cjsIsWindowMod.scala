@@ -1,7 +1,7 @@
 package typingsSlinky.domDashHelpers
 
 import org.scalajs.dom.raw.Window
-import typingsSlinky.domDashHelpers.domDashHelpersNumbers.`false`
+import typingsSlinky.domDashHelpers.domDashHelpersBooleans.`false`
 import typingsSlinky.std.Document
 import typingsSlinky.std.Element
 import scala.scalajs.js

@@ -1,9 +1,6 @@
 package typingsSlinky.styledDashComponents.nativeMod
 
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.AnyStyledComponent
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.StyledComponentInnerAttrs
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.StyledComponentInnerComponent
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.StyledComponentInnerOtherProps
+import slinky.core.ReactComponentClass
 import typingsSlinky.styledDashComponents.styledDashComponentsMod.ThemedStyledFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +9,10 @@ import scala.scalajs.js.annotation._
 // Copied over from "ThemedBaseStyledInterface" in index.d.ts in order to remove DOM element typings
 @js.native
 trait ReactNativeThemedBaseStyledInterface[T /* <: js.Object */] extends js.Object {
-  def apply[C /* <: AnyStyledComponent */](component: C): ThemedStyledFunction[
-    StyledComponentInnerComponent[C], 
-    T, 
-    StyledComponentInnerOtherProps[C], 
-    StyledComponentInnerAttrs[C]
-  ] = js.native
+  def apply[C /* <: ReactComponentClass[_] */](
+    // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
+  // causes tests to fail in TS 3.1
+  component: C
+  ): ThemedStyledFunction[C, T, js.Object, scala.Nothing] = js.native
 }
 

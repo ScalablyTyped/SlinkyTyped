@@ -28,7 +28,6 @@ import typingsSlinky.kefir.kefirMod.Pool
 import typingsSlinky.kefir.kefirMod.Property
 import typingsSlinky.kefir.kefirMod.Stream
 import typingsSlinky.kefir.kefirMod.ValueOfAnObservable
-import typingsSlinky.kefir.kefirStrings.`_backtick^_backtick`
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
@@ -81,15 +80,8 @@ object ^ extends js.Object {
   var withInterval_Original: Fn_Emitter = js.native
   @JSName("zip")
   var zip_Original: Fn_Combinator = js.native
-  def combine[T /* <: js.Tuple6[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
-  ] */](obss: T): Stream[
-    js.Tuple6[
+  def combine[T /* <: js.Tuple5[Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream[
+    js.Tuple5[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
       ], 
@@ -104,9 +96,6 @@ object ^ extends js.Object {
       ], 
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[4] */ js.Any
-      ], 
-      ValueOfAnObservable[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[5] */ js.Any
       ]
     ], 
     _
@@ -152,7 +141,7 @@ object ^ extends js.Object {
   def combine_T_StringDictionaryObservableWildcardWildcard[T /* <: StringDictionary[Observable[_, _]] */](obss: T): Stream[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: kefir.kefir.ValueOfAnObservable<T[P]>}
-    */ `_backtick^_backtick` with T, 
+    */ typingsSlinky.kefir.kefirStrings.^  with T, 
     _
   ] = js.native
   @JSName("combine")
@@ -201,8 +190,15 @@ object ^ extends js.Object {
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_Tuple5ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple5[Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream[
-    js.Tuple5[
+  def combine_T_Tuple6ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple6[
+    Observable[_, _], 
+    Observable[_, _], 
+    Observable[_, _], 
+    Observable[_, _], 
+    Observable[_, _], 
+    Observable[_, _]
+  ] */](obss: T): Stream[
+    js.Tuple6[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
       ], 
@@ -217,6 +213,9 @@ object ^ extends js.Object {
       ], 
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[4] */ js.Any
+      ], 
+      ValueOfAnObservable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[5] */ js.Any
       ]
     ], 
     _

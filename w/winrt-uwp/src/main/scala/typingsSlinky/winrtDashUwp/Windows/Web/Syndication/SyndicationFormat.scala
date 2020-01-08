@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Web.Syndication
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object SyndicationFormat extends js.Object {
   @js.native
   sealed trait rss20 extends SyndicationFormat
   
-  /* 5 */ val atom03: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.atom03 with Double = js.native
-  /* 0 */ val atom10: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.atom10 with Double = js.native
-  /* 4 */ val rss091: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.rss091 with Double = js.native
-  /* 3 */ val rss092: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.rss092 with Double = js.native
-  /* 2 */ val rss10: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.rss10 with Double = js.native
-  /* 1 */ val rss20: typingsSlinky.winrtDashUwp.Windows.Web.Syndication.SyndicationFormat.rss20 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SyndicationFormat with Double] = js.native
+  /* 5 */ @js.native
+  object atom03 extends TopLevel[atom03 with Double]
+  
+  /* 0 */ @js.native
+  object atom10 extends TopLevel[atom10 with Double]
+  
+  /* 4 */ @js.native
+  object rss091 extends TopLevel[rss091 with Double]
+  
+  /* 3 */ @js.native
+  object rss092 extends TopLevel[rss092 with Double]
+  
+  /* 2 */ @js.native
+  object rss10 extends TopLevel[rss10 with Double]
+  
+  /* 1 */ @js.native
+  object rss20 extends TopLevel[rss20 with Double]
+  
 }
 

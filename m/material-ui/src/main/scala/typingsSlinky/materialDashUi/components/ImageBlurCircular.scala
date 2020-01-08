@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageBlurCircular
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurCircular] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageBlurCircular] {
   @JSImport("material-ui/svg-icons", "ImageBlurCircular")
   @js.native
   object componentImport extends js.Object

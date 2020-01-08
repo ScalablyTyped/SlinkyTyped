@@ -3,8 +3,6 @@ package typingsSlinky.reactDashBlessed
 import slinky.core.ReactComponentClass
 import typingsSlinky.blessed.blessedMod.Widgets.Screen
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.reactDashBlessed.reactDashBlessedMod.Callback
-import typingsSlinky.reactDashBlessed.reactDashBlessedMod.renderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

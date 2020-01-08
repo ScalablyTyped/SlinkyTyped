@@ -12,11 +12,13 @@ The lodash method `_.isFinite` exported as a module.
 | Keywords           | lodash-modularized, isfinite |
 | # releases         | 0 |
 | # dependents       | 47 |
-| # downloads        | 16828257 |
+| # downloads        | 22361672 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://lodash.com/)
+- [Bugs](https://github.com/lodash/lodash/issues)
+- [Repository](https://github.com/lodash/lodash)
 - [Npm](https://www.npmjs.com/package/lodash.isfinite)
     
 

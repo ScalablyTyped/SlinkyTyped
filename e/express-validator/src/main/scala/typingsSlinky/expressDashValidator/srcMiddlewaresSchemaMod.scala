@@ -2,11 +2,6 @@ package typingsSlinky.expressDashValidator
 
 import typingsSlinky.expressDashValidator.srcBaseMod.Location
 import typingsSlinky.expressDashValidator.srcChainValidationDashChainMod.ValidationChain
-import typingsSlinky.expressDashValidator.srcMiddlewaresSchemaMod.InternalParamSchema
-import typingsSlinky.expressDashValidator.srcMiddlewaresSchemaMod.ParamSchema
-import typingsSlinky.expressDashValidator.srcMiddlewaresSchemaMod.SanitizersSchema
-import typingsSlinky.expressDashValidator.srcMiddlewaresSchemaMod.Schema
-import typingsSlinky.expressDashValidator.srcMiddlewaresSchemaMod.ValidatorsSchema
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,13 +11,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object srcMiddlewaresSchemaMod extends js.Object {
   /* Rewritten from type alias, can be one of: 
-    - typings.expressDashValidator.expressDashValidatorNumbers.`true`
+    - typings.expressDashValidator.expressDashValidatorBooleans.`true`
     - typings.expressDashValidator.Anon_0Options[K]
   */
   trait SanitizerSchemaOptions[K /* <: String */] extends js.Object
   
   /* Rewritten from type alias, can be one of: 
-    - typings.expressDashValidator.expressDashValidatorNumbers.`true`
+    - typings.expressDashValidator.expressDashValidatorBooleans.`true`
     - typings.expressDashValidator.Anon_0[K]
   */
   trait ValidatorSchemaOptions[K /* <: String */] extends js.Object

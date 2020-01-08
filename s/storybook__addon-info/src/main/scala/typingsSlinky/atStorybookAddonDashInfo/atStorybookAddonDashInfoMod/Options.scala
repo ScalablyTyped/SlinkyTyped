@@ -2,7 +2,7 @@ package typingsSlinky.atStorybookAddonDashInfo.atStorybookAddonDashInfoMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.atStorybookAddonDashInfo.atStorybookAddonDashInfoNumbers.`false`
+import typingsSlinky.atStorybookAddonDashInfo.atStorybookAddonDashInfoBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

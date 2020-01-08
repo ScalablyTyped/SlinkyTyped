@@ -1,9 +1,8 @@
 package typingsSlinky.justDashDebounceDashIt
 
-import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItMod.ArgumentTypes
+import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItBooleans.`false`
+import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItBooleans.`true`
 import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItNumbers.`0`
-import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItNumbers.`false`
-import typingsSlinky.justDashDebounceDashIt.justDashDebounceDashItNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

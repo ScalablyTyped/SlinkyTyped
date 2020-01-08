@@ -2,7 +2,6 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.protocolCommunicatorIClientDriverMod.IClientDriver
 import typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMod.DistributedSystemArray
-import typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem
 import typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem
 import scala.scalajs.js
 import scala.scalajs.js.`|`

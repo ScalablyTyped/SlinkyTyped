@@ -1,19 +1,8 @@
 package typingsSlinky.ndnDashJs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ndnDashJs.blobMod.Blob
 import typingsSlinky.ndnDashJs.nameMod.Name
-import typingsSlinky.ndnDashJs.signatureMod.DigestSha256Signature
-import typingsSlinky.ndnDashJs.signatureMod.GenericSignature
-import typingsSlinky.ndnDashJs.signatureMod.HmacWithSha25Signature
-import typingsSlinky.ndnDashJs.signatureMod.KeyLocator
-import typingsSlinky.ndnDashJs.signatureMod.KeyLocatorType
-import typingsSlinky.ndnDashJs.signatureMod.Sha256WithEcdsaSignature
-import typingsSlinky.ndnDashJs.signatureMod.Sha256WithRsaSignature
-import typingsSlinky.ndnDashJs.signatureMod.Signature
-import typingsSlinky.ndnDashJs.signatureMod.SignatureBase
-import typingsSlinky.ndnDashJs.signatureMod.SignatureBaseKl
-import typingsSlinky.ndnDashJs.signatureMod.SignatureBaseKlVp
-import typingsSlinky.ndnDashJs.signatureMod.ValidityPeriod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -100,10 +89,14 @@ object signatureMod extends js.Object {
     @js.native
     sealed trait KEY_LOCATOR_DIGEST extends KeyLocatorType
     
-    /* 1 */ val KEYNAME: typingsSlinky.ndnDashJs.signatureMod.KeyLocatorType.KEYNAME with Double = js.native
-    /* 2 */ val KEY_LOCATOR_DIGEST: typingsSlinky.ndnDashJs.signatureMod.KeyLocatorType.KEY_LOCATOR_DIGEST with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[KeyLocatorType with Double] = js.native
+    /* 1 */ @js.native
+    object KEYNAME extends TopLevel[KEYNAME with Double]
+    
+    /* 2 */ @js.native
+    object KEY_LOCATOR_DIGEST extends TopLevel[KEY_LOCATOR_DIGEST with Double]
+    
   }
   
 }

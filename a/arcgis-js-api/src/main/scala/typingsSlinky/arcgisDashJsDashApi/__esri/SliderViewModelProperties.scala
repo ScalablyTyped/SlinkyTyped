@@ -1,5 +1,10 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,9 +92,9 @@ trait SliderViewModelProperties extends js.Object {
 object SliderViewModelProperties {
   @scala.inline
   def apply(
-    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
-    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => Double = null,
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
     max: Int | Double = null,
     min: Int | Double = null,
     precision: Int | Double = null,

@@ -2,9 +2,8 @@ package typingsSlinky.stylefire
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Set
-import typingsSlinky.stylefire.libCssRenderMod.AliasMap
 import typingsSlinky.stylefire.libStylerTypesMod.State
-import typingsSlinky.stylefire.stylefireNumbers.`true`
+import typingsSlinky.stylefire.stylefireBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -18,8 +18,8 @@ object ReactDashStarDashRatingDashComponent
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
   def apply(
+    name: String,
     value: Double,
     editing: js.UndefOr[Boolean] = js.undefined,
     emptyStarColor: String = null,
@@ -32,7 +32,7 @@ object ReactDashStarDashRatingDashComponent
     starCount: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     if (!js.isUndefined(editing)) __obj.updateDynamic("editing")(editing.asInstanceOf[js.Any])
     if (emptyStarColor != null) __obj.updateDynamic("emptyStarColor")(emptyStarColor.asInstanceOf[js.Any])
     if (onStarClick != null) __obj.updateDynamic("onStarClick")(js.Any.fromFunction3(onStarClick))

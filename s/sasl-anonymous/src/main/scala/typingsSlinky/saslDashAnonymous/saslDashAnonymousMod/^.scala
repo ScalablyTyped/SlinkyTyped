@@ -2,7 +2,7 @@ package typingsSlinky.saslDashAnonymous.saslDashAnonymousMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.saslDashAnonymous.TypeofClassAnonymousMechanism
-import typingsSlinky.saslDashAnonymous.saslDashAnonymousNumbers.`true`
+import typingsSlinky.saslDashAnonymous.saslDashAnonymousBooleans.`true`
 import typingsSlinky.saslDashAnonymous.saslDashAnonymousStrings.ANONYMOUS
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -10,9 +10,9 @@ A syslog transport for winston
 | ------------------ | :-------------: |
 | Full name          | winston-syslog |
 | Keywords           | logging, sysadmin, tools, winston, syslog |
-| # releases         | 2 |
-| # dependents       | 30 |
-| # downloads        | 1108564 |
+| # releases         | 3 |
+| # dependents       | 32 |
+| # downloads        | 1132635 |
 | # stars            | 3 |
 
 ## Links

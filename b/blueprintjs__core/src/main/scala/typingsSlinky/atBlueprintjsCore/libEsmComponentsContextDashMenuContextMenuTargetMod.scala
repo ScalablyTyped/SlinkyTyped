@@ -3,7 +3,6 @@ package typingsSlinky.atBlueprintjsCore
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.atBlueprintjsCore.libEsmCommonConstructorMod.IConstructor
-import typingsSlinky.atBlueprintjsCore.libEsmComponentsContextDashMenuContextMenuTargetMod.IContextMenuTargetComponent
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.rollupDashPluginutils
 
-import typingsSlinky.rollupDashPluginutils.rollupDashPluginutilsNumbers.`false`
+import typingsSlinky.rollupDashPluginutils.rollupDashPluginutilsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

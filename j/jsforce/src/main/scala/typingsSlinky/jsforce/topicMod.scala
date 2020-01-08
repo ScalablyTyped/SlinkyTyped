@@ -2,7 +2,6 @@ package typingsSlinky.jsforce
 
 import typingsSlinky.jsforce.streamingMod.Streaming
 import typingsSlinky.jsforce.streamingMod.StreamingMessage
-import typingsSlinky.jsforce.topicMod.Topic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

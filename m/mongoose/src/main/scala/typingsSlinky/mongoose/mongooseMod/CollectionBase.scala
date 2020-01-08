@@ -1,6 +1,6 @@
 package typingsSlinky.mongoose.mongooseMod
 
-import typingsSlinky.mongodb.mongodbMod.Default
+import typingsSlinky.mongodb.mongodbMod.DefaultSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait CollectionBase
-  extends typingsSlinky.mongodb.mongodbMod.Collection[Default] {
+  extends typingsSlinky.mongodb.mongodbMod.Collection[DefaultSchema] {
   /** The Connection instance */
   var conn: Connection = js.native
   /** The collection name */

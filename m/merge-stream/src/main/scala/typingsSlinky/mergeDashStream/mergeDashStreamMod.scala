@@ -1,6 +1,5 @@
 package typingsSlinky.mergeDashStream
 
-import typingsSlinky.mergeDashStream.mergeDashStreamMod.MergedStream
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js

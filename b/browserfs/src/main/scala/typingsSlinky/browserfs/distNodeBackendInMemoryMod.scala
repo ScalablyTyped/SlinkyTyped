@@ -1,6 +1,5 @@
 package typingsSlinky.browserfs
 
-import typingsSlinky.browserfs.distNodeBackendInMemoryMod.InMemoryFileSystem
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSCallback
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.distNodeGenericKeyUnderscoreValueUnderscoreFilesystemMod.SimpleSyncStore

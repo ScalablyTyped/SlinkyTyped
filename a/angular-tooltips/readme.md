@@ -10,9 +10,9 @@ Angular.js tooltips module.
 | ------------------ | :-------------: |
 | Full name          | angular-tooltips |
 | Keywords           | tiptip, tooltip, tooltips, popover, angularjs, angular |
-| # releases         | 6 |
-| # dependents       | 6 |
-| # downloads        | 203544 |
+| # releases         | 0 |
+| # dependents       | 9 |
+| # downloads        | 257336 |
 | # stars            | 0 |
 
 ## Links

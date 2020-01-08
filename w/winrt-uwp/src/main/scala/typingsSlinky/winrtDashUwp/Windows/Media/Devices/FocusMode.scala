@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Devices
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object FocusMode extends js.Object {
   @js.native
   sealed trait single extends FocusMode
   
-  /* 0 */ val auto: typingsSlinky.winrtDashUwp.Windows.Media.Devices.FocusMode.auto with Double = js.native
-  /* 2 */ val continuous: typingsSlinky.winrtDashUwp.Windows.Media.Devices.FocusMode.continuous with Double = js.native
-  /* 3 */ val manual: typingsSlinky.winrtDashUwp.Windows.Media.Devices.FocusMode.manual with Double = js.native
-  /* 1 */ val single: typingsSlinky.winrtDashUwp.Windows.Media.Devices.FocusMode.single with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FocusMode with Double] = js.native
+  /* 0 */ @js.native
+  object auto extends TopLevel[auto with Double]
+  
+  /* 2 */ @js.native
+  object continuous extends TopLevel[continuous with Double]
+  
+  /* 3 */ @js.native
+  object manual extends TopLevel[manual with Double]
+  
+  /* 1 */ @js.native
+  object single extends TopLevel[single with Double]
+  
 }
 

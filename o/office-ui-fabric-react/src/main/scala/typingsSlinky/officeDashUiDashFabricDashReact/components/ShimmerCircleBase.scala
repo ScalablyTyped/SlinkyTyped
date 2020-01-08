@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ShimmerCircleBase extends SharedApply_IShimmerCircleProps991476452 {
+object ShimmerCircleBase extends SharedApply_IShimmerCircleProps_1278154878 {
   @JSImport("office-ui-fabric-react/lib/Shimmer", "ShimmerCircleBase")
   @js.native
   object componentImport extends js.Object

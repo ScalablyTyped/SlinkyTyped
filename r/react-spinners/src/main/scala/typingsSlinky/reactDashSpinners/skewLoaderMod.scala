@@ -3,7 +3,6 @@ package typingsSlinky.reactDashSpinners
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashSpinners.interfacesMod.LoaderSizeProps
 import typingsSlinky.reactDashSpinners.interfacesMod.StyleFunction
-import typingsSlinky.reactDashSpinners.skewLoaderMod.Loader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

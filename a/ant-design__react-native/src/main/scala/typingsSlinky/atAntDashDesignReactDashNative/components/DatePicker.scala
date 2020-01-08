@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePicker extends SharedApply_DatePickerProps_1279571487[default] {
+object DatePicker extends SharedApply_DatePickerProps_1137734648[default] {
   @JSImport("@ant-design/react-native/lib/date-picker/datepicker/DatePicker", JSImport.Default)
   @js.native
   object componentImport extends js.Object
@@ -14,7 +14,7 @@ object DatePicker extends SharedApply_DatePickerProps_1279571487[default] {
 }
 
 object Datepicker
-  extends SharedApply_DatePickerProps_1279571487[
+  extends SharedApply_DatePickerProps_1137734648[
       typingsSlinky.atAntDashDesignReactDashNative.libDateDashPickerDatepickerMod.default
     ] {
   @JSImport("@ant-design/react-native/lib/date-picker/datepicker", JSImport.Default)

@@ -1,7 +1,7 @@
 package typingsSlinky.geolib
 
 import typingsSlinky.geolib.esTypesMod.GeolibInputCoordinates
-import typingsSlinky.geolib.geolibNumbers.`false`
+import typingsSlinky.geolib.geolibBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

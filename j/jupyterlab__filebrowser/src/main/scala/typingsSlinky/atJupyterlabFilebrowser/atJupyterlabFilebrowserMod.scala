@@ -2,7 +2,6 @@ package typingsSlinky.atJupyterlabFilebrowser
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atJupyterlabApputils.libDialogMod.Dialog.IResult
-import typingsSlinky.atJupyterlabFilebrowser.atJupyterlabFilebrowserMod.FileBrowserModel
 import typingsSlinky.atJupyterlabFilebrowser.libCrumbsMod.BreadCrumbs.IOptions
 import typingsSlinky.atJupyterlabFilebrowser.libOpendialogMod.FileDialog.IDirectoryOptions
 import typingsSlinky.atJupyterlabFilebrowser.libOpendialogMod.FileDialog.IFileOptions

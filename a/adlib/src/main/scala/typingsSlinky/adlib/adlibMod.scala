@@ -1,8 +1,6 @@
 package typingsSlinky.adlib
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.adlib.adlibMod.TransformFunction
-import typingsSlinky.adlib.adlibMod.TransformsList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

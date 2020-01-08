@@ -1,7 +1,7 @@
 package typingsSlinky.slickDashCarousel
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.slickDashCarousel.slickDashCarouselNumbers.`false`
+import typingsSlinky.slickDashCarousel.slickDashCarouselBooleans.`false`
 import typingsSlinky.slickDashCarousel.slickDashCarouselStrings.MozTransform
 import typingsSlinky.slickDashCarousel.slickDashCarouselStrings.MozTransition
 import typingsSlinky.slickDashCarousel.slickDashCarouselStrings.OTransform

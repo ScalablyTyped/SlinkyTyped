@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ViewScope extends js.Object {
   @js.native
   sealed trait recursiveAll extends ViewScope
   
-  /* 0 */ val defaultValue: typingsSlinky.sharepoint.SP.ViewScope.defaultValue with Double = js.native
-  /* 3 */ val filesOnly: typingsSlinky.sharepoint.SP.ViewScope.filesOnly with Double = js.native
-  /* 1 */ val recursive: typingsSlinky.sharepoint.SP.ViewScope.recursive with Double = js.native
-  /* 2 */ val recursiveAll: typingsSlinky.sharepoint.SP.ViewScope.recursiveAll with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ViewScope with Double] = js.native
+  /* 0 */ @js.native
+  object defaultValue extends TopLevel[defaultValue with Double]
+  
+  /* 3 */ @js.native
+  object filesOnly extends TopLevel[filesOnly with Double]
+  
+  /* 1 */ @js.native
+  object recursive extends TopLevel[recursive with Double]
+  
+  /* 2 */ @js.native
+  object recursiveAll extends TopLevel[recursiveAll with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.map.layer
 
+import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.layer.ITileLayer.Options
 import typingsSlinky.heremaps.H.map.layer.ITileLayer.Response
 import typingsSlinky.heremaps.H.map.provider.Tile
@@ -36,8 +37,8 @@ class BaseTileLayer protected () extends Layer {
     * @param opt_zoom {number=} - overrides current projection zoom level
     * @returns {H.math.Rect} - projected 2d space rect cooresponding to provided geo bounds
     */
-  def geoRectToRect(geoRect: typingsSlinky.heremaps.H.geo.Rect): typingsSlinky.heremaps.H.math.Rect = js.native
-  def geoRectToRect(geoRect: typingsSlinky.heremaps.H.geo.Rect, opt_zoom: Double): typingsSlinky.heremaps.H.math.Rect = js.native
+  def geoRectToRect(geoRect: Rect): typingsSlinky.heremaps.H.math.Rect = js.native
+  def geoRectToRect(geoRect: Rect, opt_zoom: Double): typingsSlinky.heremaps.H.math.Rect = js.native
   /**
     * This method returns the provider which feeds this layer with data.
     * @returns {H.map.provider.TileProvider} - this layer's provider

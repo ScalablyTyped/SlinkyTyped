@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Dist extends SharedApply_LatexProps886769972[default] {
+object Dist extends SharedApply_LatexProps_725374845[default] {
   @JSImport("react-latex-next/dist", JSImport.Default)
   @js.native
   object componentImport extends js.Object

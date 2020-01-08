@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererShaderSourceBuilderEngineShaderSourceBuilderMod.EngineShaderSourceBuilder
 import typingsSlinky.wonderDotJs.distEs2015RendererShaderSourceBuilderShaderSourceBuilderMod.ShaderSourceBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`

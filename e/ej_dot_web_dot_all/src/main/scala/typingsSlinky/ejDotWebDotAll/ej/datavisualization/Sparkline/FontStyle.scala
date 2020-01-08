@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object FontStyle extends js.Object {
   @js.native
   sealed trait Normal extends FontStyle
   
-  /* 1 */ val Italic: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline.FontStyle.Italic with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline.FontStyle.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FontStyle with Double] = js.native
+  /* 1 */ @js.native
+  object Italic extends TopLevel[Italic with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

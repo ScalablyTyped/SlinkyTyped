@@ -1,6 +1,5 @@
 package typingsSlinky.xmlcreate
 
-import typingsSlinky.xmlcreate.libNodesXmlDeclMod.XmlDecl
 import typingsSlinky.xmlcreate.libOptionsMod.IDeclarationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

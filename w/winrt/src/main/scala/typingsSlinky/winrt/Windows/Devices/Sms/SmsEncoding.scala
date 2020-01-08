@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SmsEncoding extends js.Object {
   @js.native
   sealed trait unknown extends SmsEncoding
   
-  /* 4 */ val gsmSevenBit: typingsSlinky.winrt.Windows.Devices.Sms.SmsEncoding.gsmSevenBit with Double = js.native
-  /* 1 */ val optimal: typingsSlinky.winrt.Windows.Devices.Sms.SmsEncoding.optimal with Double = js.native
-  /* 2 */ val sevenBitAscii: typingsSlinky.winrt.Windows.Devices.Sms.SmsEncoding.sevenBitAscii with Double = js.native
-  /* 3 */ val unicode: typingsSlinky.winrt.Windows.Devices.Sms.SmsEncoding.unicode with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrt.Windows.Devices.Sms.SmsEncoding.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmsEncoding with Double] = js.native
+  /* 4 */ @js.native
+  object gsmSevenBit extends TopLevel[gsmSevenBit with Double]
+  
+  /* 1 */ @js.native
+  object optimal extends TopLevel[optimal with Double]
+  
+  /* 2 */ @js.native
+  object sevenBitAscii extends TopLevel[sevenBitAscii with Double]
+  
+  /* 3 */ @js.native
+  object unicode extends TopLevel[unicode with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

@@ -294,6 +294,9 @@ object List
   slinky.web.html.div.tag.type, 
   typingsSlinky.officeDashUiDashFabricDashReact.libListMod.List[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeDashUiDashFabricDashReact.libListMod.List[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libListMod.List[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IListProps[js.Any]
 }
 

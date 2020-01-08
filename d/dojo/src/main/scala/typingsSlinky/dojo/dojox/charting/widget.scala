@@ -13,7 +13,6 @@ import typingsSlinky.dojo.dojoStrings.swatchSize
 import typingsSlinky.dojo.dojoStrings.theme
 import typingsSlinky.dojo.dojoStrings.transitionFill
 import typingsSlinky.dojo.dojoStrings.transitionStroke
-import typingsSlinky.dojo.dojox.charting.widget.Legend
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

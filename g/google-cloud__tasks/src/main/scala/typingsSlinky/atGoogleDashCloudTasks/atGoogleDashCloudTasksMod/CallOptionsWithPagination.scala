@@ -1,6 +1,6 @@
 package typingsSlinky.atGoogleDashCloudTasks.atGoogleDashCloudTasksMod
 
-import typingsSlinky.atGoogleDashCloudTasks.atGoogleDashCloudTasksNumbers.`false`
+import typingsSlinky.atGoogleDashCloudTasks.atGoogleDashCloudTasksBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

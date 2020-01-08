@@ -1,6 +1,5 @@
 package typingsSlinky.atAwsDashSdkMiddlewareDashInputDashDefault
 
-import typingsSlinky.atAwsDashSdkMiddlewareDashInputDashDefault.atAwsDashSdkMiddlewareDashInputDashDefaultMod.InputDefaultArgs
 import typingsSlinky.atAwsDashSdkTypes.buildMiddlewareMod.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`

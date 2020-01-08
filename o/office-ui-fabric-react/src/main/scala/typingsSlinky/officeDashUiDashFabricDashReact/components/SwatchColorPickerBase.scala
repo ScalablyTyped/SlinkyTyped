@@ -32,6 +32,8 @@ object SwatchColorPickerBase
   def apply(
     colorCells: js.Array[IColorCellProps],
     columnCount: Double,
+    ariaPosInSet: Int | Double = null,
+    ariaSetSize: Int | Double = null,
     cellBorderWidth: Int | Double = null,
     cellHeight: Int | Double = null,
     cellMargin: Int | Double = null,
@@ -57,6 +59,8 @@ object SwatchColorPickerBase
     typingsSlinky.officeDashUiDashFabricDashReact.libIndexDotBundleMod.SwatchColorPickerBase
   ] = {
     val __obj = js.Dynamic.literal(colorCells = colorCells.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any])
+    if (ariaPosInSet != null) __obj.updateDynamic("ariaPosInSet")(ariaPosInSet.asInstanceOf[js.Any])
+    if (ariaSetSize != null) __obj.updateDynamic("ariaSetSize")(ariaSetSize.asInstanceOf[js.Any])
     if (cellBorderWidth != null) __obj.updateDynamic("cellBorderWidth")(cellBorderWidth.asInstanceOf[js.Any])
     if (cellHeight != null) __obj.updateDynamic("cellHeight")(cellHeight.asInstanceOf[js.Any])
     if (cellMargin != null) __obj.updateDynamic("cellMargin")(cellMargin.asInstanceOf[js.Any])

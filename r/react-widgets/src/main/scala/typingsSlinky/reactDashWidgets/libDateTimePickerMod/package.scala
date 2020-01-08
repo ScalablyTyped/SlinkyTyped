@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libDateTimePickerMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type DateTimePicker = ReactElement
+  type DateTimePickerClass = ReactComponentClass[DateTimePickerProps]
 }

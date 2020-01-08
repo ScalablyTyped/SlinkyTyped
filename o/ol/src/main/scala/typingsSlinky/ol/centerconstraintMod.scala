@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.centerconstraintMod.Type
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import scala.scalajs.js

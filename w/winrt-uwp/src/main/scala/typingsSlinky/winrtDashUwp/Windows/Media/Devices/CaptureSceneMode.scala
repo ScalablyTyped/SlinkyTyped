@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Devices
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,20 +64,46 @@ object CaptureSceneMode extends js.Object {
   @js.native
   sealed trait sunset extends CaptureSceneMode
   
-  /* 0 */ val auto: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.auto with Double = js.native
-  /* 12 */ val backlit: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.backlit with Double = js.native
-  /* 7 */ val beach: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.beach with Double = js.native
-  /* 9 */ val candlelight: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.candlelight with Double = js.native
-  /* 10 */ val landscape: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.landscape with Double = js.native
-  /* 2 */ val `macro`: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.`macro` with Double = js.native
-  /* 1 */ val manual: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.manual with Double = js.native
-  /* 6 */ val night: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.night with Double = js.native
-  /* 11 */ val nightPortrait: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.nightPortrait with Double = js.native
-  /* 3 */ val portrait: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.portrait with Double = js.native
-  /* 5 */ val snow: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.snow with Double = js.native
-  /* 4 */ val sport: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.sport with Double = js.native
-  /* 8 */ val sunset: typingsSlinky.winrtDashUwp.Windows.Media.Devices.CaptureSceneMode.sunset with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CaptureSceneMode with Double] = js.native
+  /* 0 */ @js.native
+  object auto extends TopLevel[auto with Double]
+  
+  /* 12 */ @js.native
+  object backlit extends TopLevel[backlit with Double]
+  
+  /* 7 */ @js.native
+  object beach extends TopLevel[beach with Double]
+  
+  /* 9 */ @js.native
+  object candlelight extends TopLevel[candlelight with Double]
+  
+  /* 10 */ @js.native
+  object landscape extends TopLevel[landscape with Double]
+  
+  /* 2 */ @js.native
+  object `macro` extends TopLevel[`macro` with Double]
+  
+  /* 1 */ @js.native
+  object manual extends TopLevel[manual with Double]
+  
+  /* 6 */ @js.native
+  object night extends TopLevel[night with Double]
+  
+  /* 11 */ @js.native
+  object nightPortrait extends TopLevel[nightPortrait with Double]
+  
+  /* 3 */ @js.native
+  object portrait extends TopLevel[portrait with Double]
+  
+  /* 5 */ @js.native
+  object snow extends TopLevel[snow with Double]
+  
+  /* 4 */ @js.native
+  object sport extends TopLevel[sport with Double]
+  
+  /* 8 */ @js.native
+  object sunset extends TopLevel[sunset with Double]
+  
 }
 

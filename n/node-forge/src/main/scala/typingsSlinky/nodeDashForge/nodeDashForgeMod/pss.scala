@@ -1,6 +1,5 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod
 
-import typingsSlinky.nodeDashForge.nodeDashForgeMod.pss.PSS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "cuint"
-version := "0.2-dt-20190408Z-4079aa"
+version := "0.2-dt-20190408Z-e04516"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

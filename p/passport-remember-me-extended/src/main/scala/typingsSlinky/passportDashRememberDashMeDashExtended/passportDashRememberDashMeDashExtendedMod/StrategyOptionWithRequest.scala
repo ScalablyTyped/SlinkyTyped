@@ -1,7 +1,7 @@
 package typingsSlinky.passportDashRememberDashMeDashExtended.passportDashRememberDashMeDashExtendedMod
 
 import typingsSlinky.express.expressMod.CookieOptions
-import typingsSlinky.passportDashRememberDashMeDashExtended.passportDashRememberDashMeDashExtendedNumbers.`true`
+import typingsSlinky.passportDashRememberDashMeDashExtended.passportDashRememberDashMeDashExtendedBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

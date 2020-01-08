@@ -1,12 +1,5 @@
 package typingsSlinky.typescriptDashDeferred
 
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.DeferredErrorCB
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.DeferredInterface
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.DeferredSuccessCB
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.ImmediateErrorCB
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.ImmediateSuccessCB
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.PromiseInterface
-import typingsSlinky.typescriptDashDeferred.typescriptDashDeferredMod.ThenableInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

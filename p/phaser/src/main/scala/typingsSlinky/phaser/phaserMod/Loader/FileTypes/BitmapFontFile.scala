@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.BitmapFontFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
@@ -26,74 +27,46 @@ class BitmapFontFile protected ()
     * @param textureXhrSettings An XHR Settings configuration object for the font image file. Used in replacement of the Loaders default XHR Settings.
     * @param fontDataXhrSettings An XHR Settings configuration object for the font data xml file. Used in replacement of the Loaders default XHR Settings.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: BitmapFontFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, textureURL: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, textureURL: js.Array[String]) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: BitmapFontFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, textureURL: String) = this()
+  def this(loader: LoaderPlugin, key: String, textureURL: js.Array[String]) = this()
+  def this(loader: LoaderPlugin, key: BitmapFontFileConfig, textureURL: String) = this()
+  def this(loader: LoaderPlugin, key: BitmapFontFileConfig, textureURL: js.Array[String]) = this()
+  def this(loader: LoaderPlugin, key: String, textureURL: String, fontDataURL: String) = this()
+  def this(loader: LoaderPlugin, key: String, textureURL: js.Array[String], fontDataURL: String) = this()
+  def this(loader: LoaderPlugin, key: BitmapFontFileConfig, textureURL: String, fontDataURL: String) = this()
+  def this(loader: LoaderPlugin, key: BitmapFontFileConfig, textureURL: js.Array[String], fontDataURL: String) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: BitmapFontFileConfig,
-    textureURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: BitmapFontFileConfig,
-    textureURL: js.Array[String]
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    textureURL: String,
-    fontDataURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    textureURL: js.Array[String],
-    fontDataURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: BitmapFontFileConfig,
-    textureURL: String,
-    fontDataURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: BitmapFontFileConfig,
-    textureURL: js.Array[String],
-    fontDataURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     textureURL: String,
     fontDataURL: String,
     textureXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     textureURL: js.Array[String],
     fontDataURL: String,
     textureXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: BitmapFontFileConfig,
     textureURL: String,
     fontDataURL: String,
     textureXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: BitmapFontFileConfig,
     textureURL: js.Array[String],
     fontDataURL: String,
     textureXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     textureURL: String,
     fontDataURL: String,
@@ -101,7 +74,7 @@ class BitmapFontFile protected ()
     fontDataXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     textureURL: js.Array[String],
     fontDataURL: String,
@@ -109,7 +82,7 @@ class BitmapFontFile protected ()
     fontDataXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: BitmapFontFileConfig,
     textureURL: String,
     fontDataURL: String,
@@ -117,7 +90,7 @@ class BitmapFontFile protected ()
     fontDataXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: BitmapFontFileConfig,
     textureURL: js.Array[String],
     fontDataURL: String,

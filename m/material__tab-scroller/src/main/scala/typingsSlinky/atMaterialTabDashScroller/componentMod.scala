@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTabDashScroller
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialTabDashScroller.componentMod.MDCTabScroller
 import typingsSlinky.atMaterialTabDashScroller.foundationMod.MDCTabScrollerFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

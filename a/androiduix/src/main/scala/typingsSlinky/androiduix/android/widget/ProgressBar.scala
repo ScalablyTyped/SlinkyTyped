@@ -5,7 +5,6 @@ import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.animation.Interpolator
-import typingsSlinky.androiduix.android.widget.ProgressBar.RefreshData
 import typingsSlinky.androiduix.androidui.image.NetDrawable
 import typingsSlinky.std.Map
 import scala.scalajs.js

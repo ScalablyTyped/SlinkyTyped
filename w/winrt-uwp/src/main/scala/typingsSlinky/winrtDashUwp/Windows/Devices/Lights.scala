@@ -1,7 +1,5 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices
 
-import typingsSlinky.winrtDashUwp.Windows.Devices.Lights.Lamp
-import typingsSlinky.winrtDashUwp.Windows.Devices.Lights.LampAvailabilityChangedEventArgs
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.TypedEventHandler

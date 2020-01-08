@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,20 +89,46 @@ object PublishedExtensionFlags extends js.Object {
   @js.native
   sealed trait Validated extends PublishedExtensionFlags
   
-  /* 2 */ val BuiltIn: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.BuiltIn with Double = js.native
-  /* 1 */ val Disabled: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Disabled with Double = js.native
-  /* 16384 */ val Locked: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Locked with Double = js.native
-  /* 512 */ val MultiVersion: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.MultiVersion with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.None with Double = js.native
-  /* 16 */ val Paid: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Paid with Double = js.native
-  /* 2048 */ val Preview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Preview with Double = js.native
-  /* 256 */ val Public: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Public with Double = js.native
-  /* 1024 */ val System: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.System with Double = js.native
-  /* 8192 */ val Trial: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Trial with Double = js.native
-  /* 8 */ val Trusted: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Trusted with Double = js.native
-  /* 4096 */ val Unpublished: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Unpublished with Double = js.native
-  /* 4 */ val Validated: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublishedExtensionFlags.Validated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PublishedExtensionFlags with Double] = js.native
+  /* 2 */ @js.native
+  object BuiltIn extends TopLevel[BuiltIn with Double]
+  
+  /* 1 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 16384 */ @js.native
+  object Locked extends TopLevel[Locked with Double]
+  
+  /* 512 */ @js.native
+  object MultiVersion extends TopLevel[MultiVersion with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 16 */ @js.native
+  object Paid extends TopLevel[Paid with Double]
+  
+  /* 2048 */ @js.native
+  object Preview extends TopLevel[Preview with Double]
+  
+  /* 256 */ @js.native
+  object Public extends TopLevel[Public with Double]
+  
+  /* 1024 */ @js.native
+  object System extends TopLevel[System with Double]
+  
+  /* 8192 */ @js.native
+  object Trial extends TopLevel[Trial with Double]
+  
+  /* 8 */ @js.native
+  object Trusted extends TopLevel[Trusted with Double]
+  
+  /* 4096 */ @js.native
+  object Unpublished extends TopLevel[Unpublished with Double]
+  
+  /* 4 */ @js.native
+  object Validated extends TopLevel[Validated with Double]
+  
 }
 

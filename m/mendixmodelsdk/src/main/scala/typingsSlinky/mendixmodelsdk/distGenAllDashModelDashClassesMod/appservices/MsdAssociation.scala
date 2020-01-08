@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.distGenAppservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.webservices.DataAssociation
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
@@ -28,7 +29,7 @@ class MsdAssociation protected ()
 @js.native
 object MsdAssociation extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenAppservicesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new MsdAssociation instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

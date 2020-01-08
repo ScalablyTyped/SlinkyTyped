@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutNumbers.`false`
+import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutBooleans.`false`
 import typingsSlinky.atAntDashDesignProDashLayout.libPageHeaderWrapperMod.PageHeaderWrapperProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,6 +28,7 @@ object PageHeaderWrapper
     tabList: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabPaneProps */ _
     ] = null,
+    tabProps: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps */ js.Any = null,
     title: TagMod[Any] | `false` = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
@@ -39,10 +40,12 @@ object PageHeaderWrapper
     if (tabActiveKey != null) __obj.updateDynamic("tabActiveKey")(tabActiveKey.asInstanceOf[js.Any])
     if (tabBarExtraContent != null) __obj.updateDynamic("tabBarExtraContent")(tabBarExtraContent.asInstanceOf[js.Any])
     if (tabList != null) __obj.updateDynamic("tabList")(tabList.asInstanceOf[js.Any])
+    if (tabProps != null) __obj.updateDynamic("tabProps")(tabProps.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PageHeaderWrapperProps
 }
 

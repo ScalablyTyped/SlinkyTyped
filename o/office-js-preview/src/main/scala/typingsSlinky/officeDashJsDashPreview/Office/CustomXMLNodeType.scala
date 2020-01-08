@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,14 +56,28 @@ object CustomXMLNodeType extends js.Object {
   @js.native
   sealed trait Text extends CustomXMLNodeType
   
-  /* 0 */ val Attribute: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.Attribute with Double = js.native
-  /* 1 */ val CData: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.CData with Double = js.native
-  /* 3 */ val Element: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.Element with Double = js.native
-  /* 2 */ val NodeComment: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.NodeComment with Double = js.native
-  /* 4 */ val NodeDocument: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.NodeDocument with Double = js.native
-  /* 5 */ val ProcessingInstruction: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.ProcessingInstruction with Double = js.native
-  /* 6 */ val Text: typingsSlinky.officeDashJsDashPreview.Office.CustomXMLNodeType.Text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CustomXMLNodeType with Double] = js.native
+  /* 0 */ @js.native
+  object Attribute extends TopLevel[Attribute with Double]
+  
+  /* 1 */ @js.native
+  object CData extends TopLevel[CData with Double]
+  
+  /* 3 */ @js.native
+  object Element extends TopLevel[Element with Double]
+  
+  /* 2 */ @js.native
+  object NodeComment extends TopLevel[NodeComment with Double]
+  
+  /* 4 */ @js.native
+  object NodeDocument extends TopLevel[NodeDocument with Double]
+  
+  /* 5 */ @js.native
+  object ProcessingInstruction extends TopLevel[ProcessingInstruction with Double]
+  
+  /* 6 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.xmlbuilder.xmlbuilderMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,12 +38,20 @@ object WriterState extends js.Object {
   @js.native
   sealed trait OpenTag extends WriterState
   
-  /* 3 */ val CloseTag: typingsSlinky.xmlbuilder.xmlbuilderMod.WriterState.CloseTag with Double = js.native
-  /* 2 */ val InsideTag: typingsSlinky.xmlbuilder.xmlbuilderMod.WriterState.InsideTag with Double = js.native
-  /* 0 */ val None: typingsSlinky.xmlbuilder.xmlbuilderMod.WriterState.None with Double = js.native
-  /* 1 */ val OpenTag: typingsSlinky.xmlbuilder.xmlbuilderMod.WriterState.OpenTag with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WriterState with Double] = js.native
+  /* 3 */ @js.native
+  object CloseTag extends TopLevel[CloseTag with Double]
+  
+  /* 2 */ @js.native
+  object InsideTag extends TopLevel[InsideTag with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object OpenTag extends TopLevel[OpenTag with Double]
+  
 }
 
 /**

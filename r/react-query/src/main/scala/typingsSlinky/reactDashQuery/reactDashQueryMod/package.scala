@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object reactDashQueryMod {
   import typingsSlinky.reactDashQuery.Anon_UpdateQuery
-  import typingsSlinky.reactDashQuery.reactDashQueryNumbers.`false`
+  import typingsSlinky.reactDashQuery.reactDashQueryBooleans.`false`
 
   type MutateFunction[TResults, TVariables /* <: js.Object */] = js.Function2[
     /* variables */ js.UndefOr[TVariables], 

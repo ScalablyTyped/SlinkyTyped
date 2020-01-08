@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.ImageFrameConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
@@ -26,63 +27,44 @@ class SpriteSheetFile protected ()
     * @param frameConfig The frame configuration object.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: SpriteSheetFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: js.Array[String]) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: SpriteSheetFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: SpriteSheetFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, url: String) = this()
+  def this(loader: LoaderPlugin, key: String, url: js.Array[String]) = this()
+  def this(loader: LoaderPlugin, key: SpriteSheetFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: SpriteSheetFileConfig, url: js.Array[String]) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, frameConfig: ImageFrameConfig) = this()
+  def this(loader: LoaderPlugin, key: String, url: js.Array[String], frameConfig: ImageFrameConfig) = this()
+  def this(loader: LoaderPlugin, key: SpriteSheetFileConfig, url: String, frameConfig: ImageFrameConfig) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: SpriteSheetFileConfig,
-    url: js.Array[String]
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: String,
-    frameConfig: ImageFrameConfig
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: js.Array[String],
-    frameConfig: ImageFrameConfig
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: SpriteSheetFileConfig,
-    url: String,
-    frameConfig: ImageFrameConfig
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: SpriteSheetFileConfig,
     url: js.Array[String],
     frameConfig: ImageFrameConfig
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     url: String,
     frameConfig: ImageFrameConfig,
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     url: js.Array[String],
     frameConfig: ImageFrameConfig,
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: SpriteSheetFileConfig,
     url: String,
     frameConfig: ImageFrameConfig,
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: SpriteSheetFileConfig,
     url: js.Array[String],
     frameConfig: ImageFrameConfig,

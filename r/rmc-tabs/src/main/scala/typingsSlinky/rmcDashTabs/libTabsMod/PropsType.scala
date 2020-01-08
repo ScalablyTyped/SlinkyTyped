@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.rmcDashTabs.libModelsMod.Models.TabData
 import typingsSlinky.rmcDashTabs.libPropsTypeMod.TabBarPropsType
-import typingsSlinky.rmcDashTabs.rmcDashTabsNumbers.`false`
+import typingsSlinky.rmcDashTabs.rmcDashTabsBooleans.`false`
 import typingsSlinky.rmcDashTabs.rmcDashTabsStrings.bottom
 import typingsSlinky.rmcDashTabs.rmcDashTabsStrings.horizontal
 import typingsSlinky.rmcDashTabs.rmcDashTabsStrings.left

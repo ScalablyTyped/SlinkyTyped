@@ -3,7 +3,7 @@ package typingsSlinky.antdDashMobile.libListListItemMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antdDashMobile.antdDashMobileStrings.Empty
+import typingsSlinky.antdDashMobile.antdDashMobileStrings._empty
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.android
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.bottom
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.down
@@ -33,7 +33,7 @@ object ListItemProps {
   def apply(
     activeStyle: CSSProperties = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     className: String = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,

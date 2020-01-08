@@ -10,15 +10,13 @@ Data structures which may be observed for changes.
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/observables |
 | Keywords           | - |
-| # releases         | 29 |
-| # dependents       | 22 |
-| # downloads        | 1470339 |
+| # releases         | 54 |
+| # dependents       | 24 |
+| # downloads        | 1465461 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fobservables)
     
 

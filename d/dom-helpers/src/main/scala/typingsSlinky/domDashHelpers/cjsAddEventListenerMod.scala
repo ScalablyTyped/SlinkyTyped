@@ -1,8 +1,6 @@
 package typingsSlinky.domDashHelpers
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.domDashHelpers.cjsAddEventListenerMod.EventHandler
-import typingsSlinky.domDashHelpers.cjsAddEventListenerMod.TaggedEventHandler
 import typingsSlinky.domDashHelpers.domDashHelpersStrings.abort
 import typingsSlinky.domDashHelpers.domDashHelpersStrings.animationcancel
 import typingsSlinky.domDashHelpers.domDashHelpersStrings.animationend

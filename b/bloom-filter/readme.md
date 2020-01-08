@@ -11,8 +11,8 @@ A bloom filter suitable for use in Bitcoin Connection Bloom Filtering as part of
 | Full name          | bloom-filter |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 81 |
-| # downloads        | 49971 |
+| # dependents       | 115 |
+| # downloads        | 65649 |
 | # stars            | 0 |
 
 ## Links

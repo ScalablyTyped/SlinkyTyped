@@ -1,7 +1,7 @@
 package typingsSlinky.atHapiNes.libClientMod
 
 import typingsSlinky.atHapiNes.Anon_Code
-import typingsSlinky.atHapiNes.atHapiNesNumbers.`true`
+import typingsSlinky.atHapiNes.atHapiNesBooleans.`true`
 import typingsSlinky.atHapiNes.libClientMod.Client.ClientConnectOptions
 import typingsSlinky.atHapiNes.libClientMod.Client.ClientOptions
 import typingsSlinky.atHapiNes.libClientMod.Client.ClientRequestOptions

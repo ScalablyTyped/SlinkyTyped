@@ -1,12 +1,13 @@
 package typingsSlinky.promiseDashFs.promiseDashFsMod
 
+import typingsSlinky.node.Anon_BufferEncoding
+import typingsSlinky.node.Anon_EncodingBufferEncoding
+import typingsSlinky.node.Anon_EncodingNull
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.promiseDashFs.Anon_Buffer
-import typingsSlinky.promiseDashFs.Anon_EncodingBufferEncoding
-import typingsSlinky.promiseDashFs.Anon_EncodingNull
 import typingsSlinky.promiseDashFs.promiseDashFsStrings.buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +29,7 @@ object readlink extends js.Object {
   def apply(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ String), Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
   def apply(
@@ -39,7 +40,7 @@ object readlink extends js.Object {
   def apply(
     path: PathLike,
     options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ String), Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   /**
     * Asynchronous readlink(2) - read value of a symbolic link.
@@ -48,7 +49,7 @@ object readlink extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_BufferEncoding,
+    options: Anon_BufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ Buffer, Unit]
   ): Unit = js.native
   /**
@@ -58,7 +59,7 @@ object readlink extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_EncodingBufferEncoding,
+    options: Anon_EncodingBufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
   ): Unit = js.native
   /**
@@ -68,7 +69,7 @@ object readlink extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_EncodingNull,
+    options: Anon_EncodingNull,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String | Buffer, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
@@ -78,8 +79,8 @@ object readlink extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: Anon_Buffer): js.Promise[Buffer] = js.native
-  def apply(path: PathLike, options: Anon_EncodingBufferEncoding): js.Promise[String] = js.native
-  def apply(path: PathLike, options: Anon_EncodingNull): js.Promise[String | Buffer] = js.native
+  def apply(path: PathLike, options: typingsSlinky.promiseDashFs.Anon_EncodingBufferEncoding): js.Promise[String] = js.native
+  def apply(path: PathLike, options: typingsSlinky.promiseDashFs.Anon_EncodingNull): js.Promise[String | Buffer] = js.native
   def apply(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
   def apply(
     path: PathLike,
@@ -98,9 +99,9 @@ object readlink extends js.Object {
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_BufferEncoding): js.Promise[Buffer] = js.native
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_EncodingBufferEncoding): js.Promise[String] = js.native
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_EncodingNull): js.Promise[String | Buffer] = js.native
+  def __promisify__(path: PathLike, options: Anon_BufferEncoding): js.Promise[Buffer] = js.native
+  def __promisify__(path: PathLike, options: Anon_EncodingBufferEncoding): js.Promise[String] = js.native
+  def __promisify__(path: PathLike, options: Anon_EncodingNull): js.Promise[String | Buffer] = js.native
   def __promisify__(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
   @JSName("__promisify__")
   def __promisify___buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native

@@ -1,8 +1,8 @@
 package typingsSlinky.atBabelTypes.atBabelTypesMod
 
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`&&`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`??`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`||`
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.AmpersandAmpersand
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.QuestionmarkQuestionmark
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.VerticallineVerticalline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
      with BaseNode
      with Expression {
   var left: Expression
-  var operator: `||` | `&&` | `??`
+  var operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark
   var right: Expression
   @JSName("type")
   var type_LogicalExpression: typingsSlinky.atBabelTypes.atBabelTypesStrings.LogicalExpression
@@ -23,7 +23,7 @@ object LogicalExpression {
   @scala.inline
   def apply(
     left: Expression,
-    operator: `||` | `&&` | `??`,
+    operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark,
     right: Expression,
     `type`: typingsSlinky.atBabelTypes.atBabelTypesStrings.LogicalExpression,
     end: Int | Double = null,
@@ -48,8 +48,8 @@ object LogicalExpression {
 @JSImport("@babel/types", "logicalExpression")
 @js.native
 object logicalExpression extends js.Object {
-  def apply(operator: `&&`, left: Expression, right: Expression): LogicalExpression = js.native
-  def apply(operator: `??`, left: Expression, right: Expression): LogicalExpression = js.native
-  def apply(operator: `||`, left: Expression, right: Expression): LogicalExpression = js.native
+  def apply(operator: AmpersandAmpersand, left: Expression, right: Expression): LogicalExpression = js.native
+  def apply(operator: QuestionmarkQuestionmark, left: Expression, right: Expression): LogicalExpression = js.native
+  def apply(operator: VerticallineVerticalline, left: Expression, right: Expression): LogicalExpression = js.native
 }
 

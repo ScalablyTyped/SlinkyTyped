@@ -3,11 +3,10 @@ package typingsSlinky.tstl
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
 import typingsSlinky.tstl.baseContainerUniqueTreeSetMod.UniqueTreeSet
-import typingsSlinky.tstl.containerTreeSetMod.TreeSet
 import typingsSlinky.tstl.containerTreeSetMod.TreeSet.Iterator
 import typingsSlinky.tstl.containerTreeSetMod.TreeSet.ReverseIterator
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
-import typingsSlinky.tstl.tstlNumbers.`true`
+import typingsSlinky.tstl.tstlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,18 +105,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -127,18 +126,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -148,18 +147,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -169,18 +168,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -198,18 +197,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -219,18 +218,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -240,18 +239,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -261,18 +260,18 @@ object containerTreeSetMod extends js.Object {
           js.Object, 
           Boolean, 
           SetContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,16 +57,34 @@ object ParagraphHeading extends js.Object {
   @js.native
   sealed trait TITLE extends ParagraphHeading
   
-  /* 1 */ val HEADING1: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING1 with Double = js.native
-  /* 2 */ val HEADING2: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING2 with Double = js.native
-  /* 3 */ val HEADING3: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING3 with Double = js.native
-  /* 4 */ val HEADING4: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING4 with Double = js.native
-  /* 5 */ val HEADING5: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING5 with Double = js.native
-  /* 6 */ val HEADING6: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.HEADING6 with Double = js.native
-  /* 0 */ val NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.NORMAL with Double = js.native
-  /* 8 */ val SUBTITLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.SUBTITLE with Double = js.native
-  /* 7 */ val TITLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.ParagraphHeading.TITLE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ParagraphHeading with Double] = js.native
+  /* 1 */ @js.native
+  object HEADING1 extends TopLevel[HEADING1 with Double]
+  
+  /* 2 */ @js.native
+  object HEADING2 extends TopLevel[HEADING2 with Double]
+  
+  /* 3 */ @js.native
+  object HEADING3 extends TopLevel[HEADING3 with Double]
+  
+  /* 4 */ @js.native
+  object HEADING4 extends TopLevel[HEADING4 with Double]
+  
+  /* 5 */ @js.native
+  object HEADING5 extends TopLevel[HEADING5 with Double]
+  
+  /* 6 */ @js.native
+  object HEADING6 extends TopLevel[HEADING6 with Double]
+  
+  /* 0 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
+  /* 8 */ @js.native
+  object SUBTITLE extends TopLevel[SUBTITLE with Double]
+  
+  /* 7 */ @js.native
+  object TITLE extends TopLevel[TITLE with Double]
+  
 }
 

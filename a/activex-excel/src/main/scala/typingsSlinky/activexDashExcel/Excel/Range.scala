@@ -1,6 +1,7 @@
 package typingsSlinky.activexDashExcel.Excel
 
 import typingsSlinky.activexDashAdodb.ADODB.Recordset
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`false`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`-4123`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`0`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`10`
@@ -18,12 +19,11 @@ import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`6`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`7`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`8`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`9`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`false`
-import typingsSlinky.activexDashExcel.activexDashExcelStrings.BACKSLASH
-import typingsSlinky.activexDashExcel.activexDashExcelStrings.BACKSLASHBACKSLASH
-import typingsSlinky.activexDashExcel.activexDashExcelStrings.Empty
-import typingsSlinky.activexDashExcel.activexDashExcelStrings._quote
-import typingsSlinky.activexDashExcel.activexDashExcelStrings.`_backtick^_backtick`
+import typingsSlinky.activexDashExcel.activexDashExcelStrings.Apostrophe
+import typingsSlinky.activexDashExcel.activexDashExcelStrings.Backslash
+import typingsSlinky.activexDashExcel.activexDashExcelStrings.Quotationmark
+import typingsSlinky.activexDashExcel.activexDashExcelStrings.^
+import typingsSlinky.activexDashExcel.activexDashExcelStrings._empty
 import typingsSlinky.activexDashOffice.Office.MsoLanguageID
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.SafeArray
@@ -114,7 +114,7 @@ trait Range extends js.Object {
   val PivotTable: typingsSlinky.activexDashExcel.Excel.PivotTable = js.native
   @JSName("Precedents")
   val Precedents_Original: Range = js.native
-  val PrefixCharacter: _quote | BACKSLASH | `_backtick^_backtick` | BACKSLASHBACKSLASH | Empty = js.native
+  val PrefixCharacter: Apostrophe | Quotationmark | ^  | Backslash | _empty = js.native
   @JSName("Previous")
   val Previous_Original: Range = js.native
   val QueryTable: typingsSlinky.activexDashExcel.Excel.QueryTable = js.native

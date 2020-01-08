@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberRouting
 
-import typingsSlinky.atEmberRouting.dashPrivateRouterDashDslMod.RouterDSL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

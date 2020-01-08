@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "http-link-dataloader"
-version := "0.1.6-9eec91"
+version := "0.1.6-85a7a7"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "apollo-link" % "1.2.13-c0afa5",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.5.8-a854ac",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "zen-observable-ts" % "0.8.20-9b9238")
+  "org.scalablytyped.slinky" %%% "apollo-link" % "1.2.13-c98446",
+  "org.scalablytyped.slinky" %%% "graphql" % "14.5.8-ffbf48",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "zen-observable-ts" % "0.8.20-28d607")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

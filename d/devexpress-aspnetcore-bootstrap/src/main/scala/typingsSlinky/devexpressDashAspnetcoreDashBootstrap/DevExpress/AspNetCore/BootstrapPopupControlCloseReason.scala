@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object BootstrapPopupControlCloseReason extends js.Object {
   @js.native
   sealed trait OuterMouseClick extends BootstrapPopupControlCloseReason
   
-  /* "API" */ val API: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapPopupControlCloseReason.API with String = js.native
-  /* "CloseButton" */ val CloseButton: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapPopupControlCloseReason.CloseButton with String = js.native
-  /* "Escape" */ val Escape: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapPopupControlCloseReason.Escape with String = js.native
-  /* "MouseOut" */ val MouseOut: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapPopupControlCloseReason.MouseOut with String = js.native
-  /* "OuterMouseClick" */ val OuterMouseClick: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.BootstrapPopupControlCloseReason.OuterMouseClick with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BootstrapPopupControlCloseReason with String] = js.native
+  /* "API" */ @js.native
+  object API extends TopLevel[API with String]
+  
+  /* "CloseButton" */ @js.native
+  object CloseButton extends TopLevel[CloseButton with String]
+  
+  /* "Escape" */ @js.native
+  object Escape extends TopLevel[Escape with String]
+  
+  /* "MouseOut" */ @js.native
+  object MouseOut extends TopLevel[MouseOut with String]
+  
+  /* "OuterMouseClick" */ @js.native
+  object OuterMouseClick extends TopLevel[OuterMouseClick with String]
+  
 }
 

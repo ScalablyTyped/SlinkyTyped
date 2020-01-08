@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormatDashClear extends SharedApply_SvgIconProps657215518[default] {
+object FormatDashClear extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/editor/format-clear", JSImport.Default)
   @js.native
   object componentImport extends js.Object

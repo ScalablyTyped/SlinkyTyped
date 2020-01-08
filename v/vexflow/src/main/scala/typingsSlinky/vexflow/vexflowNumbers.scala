@@ -2,17 +2,17 @@ package typingsSlinky.vexflow
 
 import typingsSlinky.vexflow.Vex.Flow.Annotation.Justify
 import typingsSlinky.vexflow.Vex.Flow.Annotation.VerticalJustify
-import typingsSlinky.vexflow.Vex.Flow.Curve.Position
+import typingsSlinky.vexflow.Vex.Flow.Modifier.Position
 import typingsSlinky.vexflow.Vex.Flow.PedalMarking.Styles
 import typingsSlinky.vexflow.Vex.Flow.Renderer.Backends
 import typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType
+import typingsSlinky.vexflow.Vex.Flow.StaveHairpin.`type`
 import typingsSlinky.vexflow.Vex.Flow.StaveLine.TextJustification
 import typingsSlinky.vexflow.Vex.Flow.StaveLine.TextVerticalPosition
 import typingsSlinky.vexflow.Vex.Flow.Stroke.Type
 import typingsSlinky.vexflow.Vex.Flow.TextBracket.Positions
 import typingsSlinky.vexflow.Vex.Flow.TextNote.Justification
 import typingsSlinky.vexflow.Vex.Flow.Voice.Mode
-import typingsSlinky.vexflow.Vex.Flow.Volta.`type`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,17 +29,17 @@ object vexflowNumbers {
        with LineEndType
        with Mode
        with Position
-       with typingsSlinky.vexflow.Vex.Flow.Modifier.Position
+       with typingsSlinky.vexflow.Vex.Flow.Curve.Position
        with Styles
        with TextJustification
        with TextVerticalPosition
        with Type
        with VerticalJustify
        with `type`
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
+       with typingsSlinky.vexflow.Vex.Flow.Volta.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
-       with typingsSlinky.vexflow.Vex.Flow.StaveHairpin.`type`
   
   @js.native
   sealed trait `1`
@@ -49,7 +49,7 @@ object vexflowNumbers {
        with LineEndType
        with Mode
        with Position
-       with typingsSlinky.vexflow.Vex.Flow.Modifier.Position
+       with typingsSlinky.vexflow.Vex.Flow.Curve.Position
        with typingsSlinky.vexflow.Vex.Flow.StaveModifier.Position
        with Positions
        with Styles
@@ -58,10 +58,10 @@ object vexflowNumbers {
        with Type
        with VerticalJustify
        with `type`
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
+       with typingsSlinky.vexflow.Vex.Flow.Volta.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
-       with typingsSlinky.vexflow.Vex.Flow.StaveHairpin.`type`
   
   @js.native
   sealed trait `10`
@@ -71,39 +71,39 @@ object vexflowNumbers {
   sealed trait `2`
     extends Backends
        with Justify
-       with typingsSlinky.vexflow.Vex.Flow.Modifier.Position
+       with Position
        with typingsSlinky.vexflow.Vex.Flow.StaveModifier.Position
        with Type
        with VerticalJustify
-       with `type`
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
+       with typingsSlinky.vexflow.Vex.Flow.Volta.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
   
   @js.native
   sealed trait `3`
     extends typingsSlinky.vexflow.Vex.Flow.StaveModifier.Position
        with Type
-       with `type`
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
+       with typingsSlinky.vexflow.Vex.Flow.Volta.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
   
   @js.native
   sealed trait `4`
     extends typingsSlinky.vexflow.Vex.Flow.StaveModifier.Position
        with Type
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
   
   @js.native
   sealed trait `5`
     extends typingsSlinky.vexflow.Vex.Flow.StaveModifier.Position
        with Type
+       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
        with typingsSlinky.vexflow.Vex.Flow.Repetition.`type`
        with typingsSlinky.vexflow.Vex.Flow.StaveConnector.`type`
-       with typingsSlinky.vexflow.Vex.Flow.Barline.`type`
   
   @js.native
   sealed trait `6`

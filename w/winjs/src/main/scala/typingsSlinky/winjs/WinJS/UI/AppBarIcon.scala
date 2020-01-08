@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.UI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -605,204 +606,598 @@ object AppBarIcon extends js.Object {
   @js.native
   sealed trait zoomout extends AppBarIcon
   
-  /* 11 */ val accept: typingsSlinky.winjs.WinJS.UI.AppBarIcon.accept with Double = js.native
-  /* 100 */ val accounts: typingsSlinky.winjs.WinJS.UI.AppBarIcon.accounts with Double = js.native
-  /* 9 */ val add: typingsSlinky.winjs.WinJS.UI.AppBarIcon.add with Double = js.native
-  /* 186 */ val addfriend: typingsSlinky.winjs.WinJS.UI.AppBarIcon.addfriend with Double = js.native
-  /* 155 */ val admin: typingsSlinky.winjs.WinJS.UI.AppBarIcon.admin with Double = js.native
-  /* 149 */ val aligncenter: typingsSlinky.winjs.WinJS.UI.AppBarIcon.aligncenter with Double = js.native
-  /* 150 */ val alignleft: typingsSlinky.winjs.WinJS.UI.AppBarIcon.alignleft with Double = js.native
-  /* 148 */ val alignright: typingsSlinky.winjs.WinJS.UI.AppBarIcon.alignright with Double = js.native
-  /* 114 */ val allapps: typingsSlinky.winjs.WinJS.UI.AppBarIcon.allapps with Double = js.native
-  /* 104 */ val attach: typingsSlinky.winjs.WinJS.UI.AppBarIcon.attach with Double = js.native
-  /* 47 */ val attachcamera: typingsSlinky.winjs.WinJS.UI.AppBarIcon.attachcamera with Double = js.native
-  /* 127 */ val audio: typingsSlinky.winjs.WinJS.UI.AppBarIcon.audio with Double = js.native
-  /* 19 */ val back: typingsSlinky.winjs.WinJS.UI.AppBarIcon.back with Double = js.native
-  /* 177 */ val backtowindow: typingsSlinky.winjs.WinJS.UI.AppBarIcon.backtowindow with Double = js.native
-  /* 184 */ val blockcontact: typingsSlinky.winjs.WinJS.UI.AppBarIcon.blockcontact with Double = js.native
-  /* 143 */ val bold: typingsSlinky.winjs.WinJS.UI.AppBarIcon.bold with Double = js.native
-  /* 49 */ val bookmarks: typingsSlinky.winjs.WinJS.UI.AppBarIcon.bookmarks with Double = js.native
-  /* 82 */ val browsephotos: typingsSlinky.winjs.WinJS.UI.AppBarIcon.browsephotos with Double = js.native
-  /* 53 */ val bullets: typingsSlinky.winjs.WinJS.UI.AppBarIcon.bullets with Double = js.native
-  /* 169 */ val calculator: typingsSlinky.winjs.WinJS.UI.AppBarIcon.calculator with Double = js.native
-  /* 95 */ val calendar: typingsSlinky.winjs.WinJS.UI.AppBarIcon.calendar with Double = js.native
-  /* 93 */ val calendarday: typingsSlinky.winjs.WinJS.UI.AppBarIcon.calendarday with Double = js.native
-  /* 180 */ val calendarreply: typingsSlinky.winjs.WinJS.UI.AppBarIcon.calendarreply with Double = js.native
-  /* 94 */ val calendarweek: typingsSlinky.winjs.WinJS.UI.AppBarIcon.calendarweek with Double = js.native
-  /* 22 */ val camera: typingsSlinky.winjs.WinJS.UI.AppBarIcon.camera with Double = js.native
-  /* 10 */ val cancel: typingsSlinky.winjs.WinJS.UI.AppBarIcon.cancel with Double = js.native
-  /* 86 */ val caption: typingsSlinky.winjs.WinJS.UI.AppBarIcon.caption with Double = js.native
-  /* 132 */ val cc: typingsSlinky.winjs.WinJS.UI.AppBarIcon.cc with Double = js.native
-  /* 162 */ val cellphone: typingsSlinky.winjs.WinJS.UI.AppBarIcon.cellphone with Double = js.native
-  /* 96 */ val characters: typingsSlinky.winjs.WinJS.UI.AppBarIcon.characters with Double = js.native
-  /* 6 */ val clear: typingsSlinky.winjs.WinJS.UI.AppBarIcon.clear with Double = js.native
-  /* 158 */ val clearselection: typingsSlinky.winjs.WinJS.UI.AppBarIcon.clearselection with Double = js.native
-  /* 35 */ val clock: typingsSlinky.winjs.WinJS.UI.AppBarIcon.clock with Double = js.native
-  /* 40 */ val closepane: typingsSlinky.winjs.WinJS.UI.AppBarIcon.closepane with Double = js.native
-  /* 54 */ val comment: typingsSlinky.winjs.WinJS.UI.AppBarIcon.comment with Double = js.native
-  /* 63 */ val contact: typingsSlinky.winjs.WinJS.UI.AppBarIcon.contact with Double = js.native
-  /* 125 */ val contact2: typingsSlinky.winjs.WinJS.UI.AppBarIcon.contact2 with Double = js.native
-  /* 56 */ val contactinfo: typingsSlinky.winjs.WinJS.UI.AppBarIcon.contactinfo with Double = js.native
-  /* 119 */ val contactpresence: typingsSlinky.winjs.WinJS.UI.AppBarIcon.contactpresence with Double = js.native
-  /* 107 */ val copy: typingsSlinky.winjs.WinJS.UI.AppBarIcon.copy with Double = js.native
-  /* 37 */ val crop: typingsSlinky.winjs.WinJS.UI.AppBarIcon.crop with Double = js.native
-  /* 103 */ val cut: typingsSlinky.winjs.WinJS.UI.AppBarIcon.cut with Double = js.native
-  /* 7 */ val delete: typingsSlinky.winjs.WinJS.UI.AppBarIcon.delete with Double = js.native
-  /* 170 */ val directions: typingsSlinky.winjs.WinJS.UI.AppBarIcon.directions with Double = js.native
-  /* 136 */ val disableupdates: typingsSlinky.winjs.WinJS.UI.AppBarIcon.disableupdates with Double = js.native
-  /* 115 */ val disconnectdrive: typingsSlinky.winjs.WinJS.UI.AppBarIcon.disconnectdrive with Double = js.native
-  /* 146 */ val dislike: typingsSlinky.winjs.WinJS.UI.AppBarIcon.dislike with Double = js.native
-  /* 71 */ val dockbottom: typingsSlinky.winjs.WinJS.UI.AppBarIcon.dockbottom with Double = js.native
-  /* 69 */ val dockleft: typingsSlinky.winjs.WinJS.UI.AppBarIcon.dockleft with Double = js.native
-  /* 70 */ val dockright: typingsSlinky.winjs.WinJS.UI.AppBarIcon.dockright with Double = js.native
-  /* 50 */ val document: typingsSlinky.winjs.WinJS.UI.AppBarIcon.document with Double = js.native
-  /* 26 */ val download: typingsSlinky.winjs.WinJS.UI.AppBarIcon.download with Double = js.native
-  /* 4 */ val edit: typingsSlinky.winjs.WinJS.UI.AppBarIcon.edit with Double = js.native
-  /* 31 */ val emoji: typingsSlinky.winjs.WinJS.UI.AppBarIcon.emoji with Double = js.native
-  /* 108 */ val emoji2: typingsSlinky.winjs.WinJS.UI.AppBarIcon.emoji2 with Double = js.native
-  /* 21 */ val favorite: typingsSlinky.winjs.WinJS.UI.AppBarIcon.favorite with Double = js.native
-  /* 106 */ val filter: typingsSlinky.winjs.WinJS.UI.AppBarIcon.filter with Double = js.native
-  /* 28 */ val find: typingsSlinky.winjs.WinJS.UI.AppBarIcon.find with Double = js.native
-  /* 43 */ val flag: typingsSlinky.winjs.WinJS.UI.AppBarIcon.flag with Double = js.native
-  /* 126 */ val folder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.folder with Double = js.native
-  /* 123 */ val font: typingsSlinky.winjs.WinJS.UI.AppBarIcon.font with Double = js.native
-  /* 124 */ val fontcolor: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fontcolor with Double = js.native
-  /* 159 */ val fontdecrease: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fontdecrease with Double = js.native
-  /* 160 */ val fontincrease: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fontincrease with Double = js.native
-  /* 161 */ val fontsize: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fontsize with Double = js.native
-  /* 17 */ val forward: typingsSlinky.winjs.WinJS.UI.AppBarIcon.forward with Double = js.native
-  /* 193 */ val fourbars: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fourbars with Double = js.native
-  /* 178 */ val fullscreen: typingsSlinky.winjs.WinJS.UI.AppBarIcon.fullscreen with Double = js.native
-  /* 45 */ val globe: typingsSlinky.winjs.WinJS.UI.AppBarIcon.globe with Double = js.native
-  /* 67 */ val go: typingsSlinky.winjs.WinJS.UI.AppBarIcon.go with Double = js.native
-  /* 188 */ val gotostart: typingsSlinky.winjs.WinJS.UI.AppBarIcon.gotostart with Double = js.native
-  /* 122 */ val gototoday: typingsSlinky.winjs.WinJS.UI.AppBarIcon.gototoday with Double = js.native
-  /* 196 */ val hamburger: typingsSlinky.winjs.WinJS.UI.AppBarIcon.hamburger with Double = js.native
-  /* 57 */ val hangup: typingsSlinky.winjs.WinJS.UI.AppBarIcon.hangup with Double = js.native
-  /* 29 */ val help: typingsSlinky.winjs.WinJS.UI.AppBarIcon.help with Double = js.native
-  /* 102 */ val hidebcc: typingsSlinky.winjs.WinJS.UI.AppBarIcon.hidebcc with Double = js.native
-  /* 135 */ val highlight: typingsSlinky.winjs.WinJS.UI.AppBarIcon.highlight with Double = js.native
-  /* 15 */ val home: typingsSlinky.winjs.WinJS.UI.AppBarIcon.home with Double = js.native
-  /* 80 */ val `import`: typingsSlinky.winjs.WinJS.UI.AppBarIcon.`import` with Double = js.native
-  /* 81 */ val importall: typingsSlinky.winjs.WinJS.UI.AppBarIcon.importall with Double = js.native
-  /* 109 */ val important: typingsSlinky.winjs.WinJS.UI.AppBarIcon.important with Double = js.native
-  /* 141 */ val italic: typingsSlinky.winjs.WinJS.UI.AppBarIcon.italic with Double = js.native
-  /* 68 */ val keyboard: typingsSlinky.winjs.WinJS.UI.AppBarIcon.keyboard with Double = js.native
-  /* 33 */ val leavechat: typingsSlinky.winjs.WinJS.UI.AppBarIcon.leavechat with Double = js.native
-  /* 20 */ val left: typingsSlinky.winjs.WinJS.UI.AppBarIcon.left with Double = js.native
-  /* 172 */ val library: typingsSlinky.winjs.WinJS.UI.AppBarIcon.library with Double = js.native
-  /* 147 */ val like: typingsSlinky.winjs.WinJS.UI.AppBarIcon.like with Double = js.native
-  /* 145 */ val likedislike: typingsSlinky.winjs.WinJS.UI.AppBarIcon.likedislike with Double = js.native
-  /* 99 */ val link: typingsSlinky.winjs.WinJS.UI.AppBarIcon.link with Double = js.native
-  /* 76 */ val list: typingsSlinky.winjs.WinJS.UI.AppBarIcon.list with Double = js.native
-  /* 27 */ val mail: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mail with Double = js.native
-  /* 55 */ val mail2: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mail2 with Double = js.native
-  /* 34 */ val mailforward: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mailforward with Double = js.native
-  /* 110 */ val mailreply: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mailreply with Double = js.native
-  /* 97 */ val mailreplyall: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mailreplyall with Double = js.native
-  /* 113 */ val manage: typingsSlinky.winjs.WinJS.UI.AppBarIcon.manage with Double = js.native
-  /* 157 */ val map: typingsSlinky.winjs.WinJS.UI.AppBarIcon.map with Double = js.native
-  /* 116 */ val mapdrive: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mapdrive with Double = js.native
-  /* 59 */ val mappin: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mappin with Double = js.native
-  /* 174 */ val memo: typingsSlinky.winjs.WinJS.UI.AppBarIcon.memo with Double = js.native
-  /* 91 */ val message: typingsSlinky.winjs.WinJS.UI.AppBarIcon.message with Double = js.native
-  /* 175 */ val microphone: typingsSlinky.winjs.WinJS.UI.AppBarIcon.microphone with Double = js.native
-  /* 12 */ val more: typingsSlinky.winjs.WinJS.UI.AppBarIcon.more with Double = js.native
-  /* 144 */ val movetofolder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.movetofolder with Double = js.native
-  /* 66 */ val musicinfo: typingsSlinky.winjs.WinJS.UI.AppBarIcon.musicinfo with Double = js.native
-  /* 140 */ val mute: typingsSlinky.winjs.WinJS.UI.AppBarIcon.mute with Double = js.native
-  /* 179 */ val newfolder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.newfolder with Double = js.native
-  /* 117 */ val newwindow: typingsSlinky.winjs.WinJS.UI.AppBarIcon.newwindow with Double = js.native
-  /* 1 */ val next: typingsSlinky.winjs.WinJS.UI.AppBarIcon.next with Double = js.native
-  /* 190 */ val onebar: typingsSlinky.winjs.WinJS.UI.AppBarIcon.onebar with Double = js.native
-  /* 153 */ val openfile: typingsSlinky.winjs.WinJS.UI.AppBarIcon.openfile with Double = js.native
-  /* 139 */ val openlocal: typingsSlinky.winjs.WinJS.UI.AppBarIcon.openlocal with Double = js.native
-  /* 41 */ val openpane: typingsSlinky.winjs.WinJS.UI.AppBarIcon.openpane with Double = js.native
-  /* 118 */ val openwith: typingsSlinky.winjs.WinJS.UI.AppBarIcon.openwith with Double = js.native
-  /* 79 */ val orientation: typingsSlinky.winjs.WinJS.UI.AppBarIcon.orientation with Double = js.native
-  /* 154 */ val otheruser: typingsSlinky.winjs.WinJS.UI.AppBarIcon.otheruser with Double = js.native
-  /* 167 */ val outlinestar: typingsSlinky.winjs.WinJS.UI.AppBarIcon.outlinestar with Double = js.native
-  /* 52 */ val page: typingsSlinky.winjs.WinJS.UI.AppBarIcon.page with Double = js.native
-  /* 92 */ val page2: typingsSlinky.winjs.WinJS.UI.AppBarIcon.page2 with Double = js.native
-  /* 105 */ val paste: typingsSlinky.winjs.WinJS.UI.AppBarIcon.paste with Double = js.native
-  /* 3 */ val pause: typingsSlinky.winjs.WinJS.UI.AppBarIcon.pause with Double = js.native
-  /* 39 */ val people: typingsSlinky.winjs.WinJS.UI.AppBarIcon.people with Double = js.native
-  /* 134 */ val permissions: typingsSlinky.winjs.WinJS.UI.AppBarIcon.permissions with Double = js.native
-  /* 60 */ val phone: typingsSlinky.winjs.WinJS.UI.AppBarIcon.phone with Double = js.native
-  /* 173 */ val phonebook: typingsSlinky.winjs.WinJS.UI.AppBarIcon.phonebook with Double = js.native
-  /* 84 */ val pictures: typingsSlinky.winjs.WinJS.UI.AppBarIcon.pictures with Double = js.native
-  /* 65 */ val pin: typingsSlinky.winjs.WinJS.UI.AppBarIcon.pin with Double = js.native
-  /* 128 */ val placeholder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.placeholder with Double = js.native
-  /* 2 */ val play: typingsSlinky.winjs.WinJS.UI.AppBarIcon.play with Double = js.native
-  /* 176 */ val postupdate: typingsSlinky.winjs.WinJS.UI.AppBarIcon.postupdate with Double = js.native
-  /* 195 */ val preview: typingsSlinky.winjs.WinJS.UI.AppBarIcon.preview with Double = js.native
-  /* 44 */ val previewlink: typingsSlinky.winjs.WinJS.UI.AppBarIcon.previewlink with Double = js.native
-  /* 0 */ val previous: typingsSlinky.winjs.WinJS.UI.AppBarIcon.previous with Double = js.native
-  /* 120 */ val priority: typingsSlinky.winjs.WinJS.UI.AppBarIcon.priority with Double = js.native
-  /* 51 */ val protecteddocument: typingsSlinky.winjs.WinJS.UI.AppBarIcon.protecteddocument with Double = js.native
-  /* 98 */ val read: typingsSlinky.winjs.WinJS.UI.AppBarIcon.read with Double = js.native
-  /* 13 */ val redo: typingsSlinky.winjs.WinJS.UI.AppBarIcon.redo with Double = js.native
-  /* 73 */ val refresh: typingsSlinky.winjs.WinJS.UI.AppBarIcon.refresh with Double = js.native
-  /* 72 */ val remote: typingsSlinky.winjs.WinJS.UI.AppBarIcon.remote with Double = js.native
-  /* 8 */ val remove: typingsSlinky.winjs.WinJS.UI.AppBarIcon.remove with Double = js.native
-  /* 64 */ val rename: typingsSlinky.winjs.WinJS.UI.AppBarIcon.rename with Double = js.native
-  /* 90 */ val repair: typingsSlinky.winjs.WinJS.UI.AppBarIcon.repair with Double = js.native
-  /* 166 */ val repeatall: typingsSlinky.winjs.WinJS.UI.AppBarIcon.repeatall with Double = js.native
-  /* 165 */ val repeatone: typingsSlinky.winjs.WinJS.UI.AppBarIcon.repeatone with Double = js.native
-  /* 182 */ val reporthacked: typingsSlinky.winjs.WinJS.UI.AppBarIcon.reporthacked with Double = js.native
-  /* 163 */ val reshare: typingsSlinky.winjs.WinJS.UI.AppBarIcon.reshare with Double = js.native
-  /* 18 */ val right: typingsSlinky.winjs.WinJS.UI.AppBarIcon.right with Double = js.native
-  /* 74 */ val rotate: typingsSlinky.winjs.WinJS.UI.AppBarIcon.rotate with Double = js.native
-  /* 38 */ val rotatecamera: typingsSlinky.winjs.WinJS.UI.AppBarIcon.rotatecamera with Double = js.native
-  /* 5 */ val save: typingsSlinky.winjs.WinJS.UI.AppBarIcon.save with Double = js.native
-  /* 85 */ val savelocal: typingsSlinky.winjs.WinJS.UI.AppBarIcon.savelocal with Double = js.native
-  /* 194 */ val scan: typingsSlinky.winjs.WinJS.UI.AppBarIcon.scan with Double = js.native
-  /* 78 */ val selectall: typingsSlinky.winjs.WinJS.UI.AppBarIcon.selectall with Double = js.native
-  /* 36 */ val send: typingsSlinky.winjs.WinJS.UI.AppBarIcon.send with Double = js.native
-  /* 130 */ val setlockscreen: typingsSlinky.winjs.WinJS.UI.AppBarIcon.setlockscreen with Double = js.native
-  /* 131 */ val settile: typingsSlinky.winjs.WinJS.UI.AppBarIcon.settile with Double = js.native
-  /* 23 */ val settings: typingsSlinky.winjs.WinJS.UI.AppBarIcon.settings with Double = js.native
-  /* 77 */ val shop: typingsSlinky.winjs.WinJS.UI.AppBarIcon.shop with Double = js.native
-  /* 101 */ val showbcc: typingsSlinky.winjs.WinJS.UI.AppBarIcon.showbcc with Double = js.native
-  /* 88 */ val showresults: typingsSlinky.winjs.WinJS.UI.AppBarIcon.showresults with Double = js.native
-  /* 75 */ val shuffle: typingsSlinky.winjs.WinJS.UI.AppBarIcon.shuffle with Double = js.native
-  /* 111 */ val slideshow: typingsSlinky.winjs.WinJS.UI.AppBarIcon.slideshow with Double = js.native
-  /* 168 */ val solidstar: typingsSlinky.winjs.WinJS.UI.AppBarIcon.solidstar with Double = js.native
-  /* 112 */ val sort: typingsSlinky.winjs.WinJS.UI.AppBarIcon.sort with Double = js.native
-  /* 87 */ val stop: typingsSlinky.winjs.WinJS.UI.AppBarIcon.stop with Double = js.native
-  /* 133 */ val stopslideshow: typingsSlinky.winjs.WinJS.UI.AppBarIcon.stopslideshow with Double = js.native
-  /* 156 */ val street: typingsSlinky.winjs.WinJS.UI.AppBarIcon.street with Double = js.native
-  /* 62 */ val switch: typingsSlinky.winjs.WinJS.UI.AppBarIcon.switch with Double = js.native
-  /* 185 */ val switchapps: typingsSlinky.winjs.WinJS.UI.AppBarIcon.switchapps with Double = js.native
-  /* 25 */ val sync: typingsSlinky.winjs.WinJS.UI.AppBarIcon.sync with Double = js.native
-  /* 183 */ val syncfolder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.syncfolder with Double = js.native
-  /* 164 */ val tag: typingsSlinky.winjs.WinJS.UI.AppBarIcon.tag with Double = js.native
-  /* 171 */ val target: typingsSlinky.winjs.WinJS.UI.AppBarIcon.target with Double = js.native
-  /* 192 */ val threebars: typingsSlinky.winjs.WinJS.UI.AppBarIcon.threebars with Double = js.native
-  /* 187 */ val touchpointer: typingsSlinky.winjs.WinJS.UI.AppBarIcon.touchpointer with Double = js.native
-  /* 46 */ val trim: typingsSlinky.winjs.WinJS.UI.AppBarIcon.trim with Double = js.native
-  /* 191 */ val twobars: typingsSlinky.winjs.WinJS.UI.AppBarIcon.twobars with Double = js.native
-  /* 32 */ val twopage: typingsSlinky.winjs.WinJS.UI.AppBarIcon.twopage with Double = js.native
-  /* 142 */ val underline: typingsSlinky.winjs.WinJS.UI.AppBarIcon.underline with Double = js.native
-  /* 14 */ val undo: typingsSlinky.winjs.WinJS.UI.AppBarIcon.undo with Double = js.native
-  /* 137 */ val unfavorite: typingsSlinky.winjs.WinJS.UI.AppBarIcon.unfavorite with Double = js.native
-  /* 138 */ val unpin: typingsSlinky.winjs.WinJS.UI.AppBarIcon.unpin with Double = js.native
-  /* 181 */ val unsyncfolder: typingsSlinky.winjs.WinJS.UI.AppBarIcon.unsyncfolder with Double = js.native
-  /* 16 */ val up: typingsSlinky.winjs.WinJS.UI.AppBarIcon.up with Double = js.native
-  /* 30 */ val upload: typingsSlinky.winjs.WinJS.UI.AppBarIcon.upload with Double = js.native
-  /* 121 */ val uploadskydrive: typingsSlinky.winjs.WinJS.UI.AppBarIcon.uploadskydrive with Double = js.native
-  /* 24 */ val video: typingsSlinky.winjs.WinJS.UI.AppBarIcon.video with Double = js.native
-  /* 61 */ val videochat: typingsSlinky.winjs.WinJS.UI.AppBarIcon.videochat with Double = js.native
-  /* 129 */ val view: typingsSlinky.winjs.WinJS.UI.AppBarIcon.view with Double = js.native
-  /* 58 */ val viewall: typingsSlinky.winjs.WinJS.UI.AppBarIcon.viewall with Double = js.native
-  /* 89 */ val volume: typingsSlinky.winjs.WinJS.UI.AppBarIcon.volume with Double = js.native
-  /* 83 */ val webcam: typingsSlinky.winjs.WinJS.UI.AppBarIcon.webcam with Double = js.native
-  /* 42 */ val world: typingsSlinky.winjs.WinJS.UI.AppBarIcon.world with Double = js.native
-  /* 189 */ val zerobars: typingsSlinky.winjs.WinJS.UI.AppBarIcon.zerobars with Double = js.native
-  /* 151 */ val zoom: typingsSlinky.winjs.WinJS.UI.AppBarIcon.zoom with Double = js.native
-  /* 48 */ val zoomin: typingsSlinky.winjs.WinJS.UI.AppBarIcon.zoomin with Double = js.native
-  /* 152 */ val zoomout: typingsSlinky.winjs.WinJS.UI.AppBarIcon.zoomout with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppBarIcon with Double] = js.native
+  /* 11 */ @js.native
+  object accept extends TopLevel[accept with Double]
+  
+  /* 100 */ @js.native
+  object accounts extends TopLevel[accounts with Double]
+  
+  /* 9 */ @js.native
+  object add extends TopLevel[add with Double]
+  
+  /* 186 */ @js.native
+  object addfriend extends TopLevel[addfriend with Double]
+  
+  /* 155 */ @js.native
+  object admin extends TopLevel[admin with Double]
+  
+  /* 149 */ @js.native
+  object aligncenter extends TopLevel[aligncenter with Double]
+  
+  /* 150 */ @js.native
+  object alignleft extends TopLevel[alignleft with Double]
+  
+  /* 148 */ @js.native
+  object alignright extends TopLevel[alignright with Double]
+  
+  /* 114 */ @js.native
+  object allapps extends TopLevel[allapps with Double]
+  
+  /* 104 */ @js.native
+  object attach extends TopLevel[attach with Double]
+  
+  /* 47 */ @js.native
+  object attachcamera extends TopLevel[attachcamera with Double]
+  
+  /* 127 */ @js.native
+  object audio extends TopLevel[audio with Double]
+  
+  /* 19 */ @js.native
+  object back extends TopLevel[back with Double]
+  
+  /* 177 */ @js.native
+  object backtowindow extends TopLevel[backtowindow with Double]
+  
+  /* 184 */ @js.native
+  object blockcontact extends TopLevel[blockcontact with Double]
+  
+  /* 143 */ @js.native
+  object bold extends TopLevel[bold with Double]
+  
+  /* 49 */ @js.native
+  object bookmarks extends TopLevel[bookmarks with Double]
+  
+  /* 82 */ @js.native
+  object browsephotos extends TopLevel[browsephotos with Double]
+  
+  /* 53 */ @js.native
+  object bullets extends TopLevel[bullets with Double]
+  
+  /* 169 */ @js.native
+  object calculator extends TopLevel[calculator with Double]
+  
+  /* 95 */ @js.native
+  object calendar extends TopLevel[calendar with Double]
+  
+  /* 93 */ @js.native
+  object calendarday extends TopLevel[calendarday with Double]
+  
+  /* 180 */ @js.native
+  object calendarreply extends TopLevel[calendarreply with Double]
+  
+  /* 94 */ @js.native
+  object calendarweek extends TopLevel[calendarweek with Double]
+  
+  /* 22 */ @js.native
+  object camera extends TopLevel[camera with Double]
+  
+  /* 10 */ @js.native
+  object cancel extends TopLevel[cancel with Double]
+  
+  /* 86 */ @js.native
+  object caption extends TopLevel[caption with Double]
+  
+  /* 132 */ @js.native
+  object cc extends TopLevel[cc with Double]
+  
+  /* 162 */ @js.native
+  object cellphone extends TopLevel[cellphone with Double]
+  
+  /* 96 */ @js.native
+  object characters extends TopLevel[characters with Double]
+  
+  /* 6 */ @js.native
+  object clear extends TopLevel[clear with Double]
+  
+  /* 158 */ @js.native
+  object clearselection extends TopLevel[clearselection with Double]
+  
+  /* 35 */ @js.native
+  object clock extends TopLevel[clock with Double]
+  
+  /* 40 */ @js.native
+  object closepane extends TopLevel[closepane with Double]
+  
+  /* 54 */ @js.native
+  object comment extends TopLevel[comment with Double]
+  
+  /* 63 */ @js.native
+  object contact extends TopLevel[contact with Double]
+  
+  /* 125 */ @js.native
+  object contact2 extends TopLevel[contact2 with Double]
+  
+  /* 56 */ @js.native
+  object contactinfo extends TopLevel[contactinfo with Double]
+  
+  /* 119 */ @js.native
+  object contactpresence extends TopLevel[contactpresence with Double]
+  
+  /* 107 */ @js.native
+  object copy extends TopLevel[copy with Double]
+  
+  /* 37 */ @js.native
+  object crop extends TopLevel[crop with Double]
+  
+  /* 103 */ @js.native
+  object cut extends TopLevel[cut with Double]
+  
+  /* 7 */ @js.native
+  object delete extends TopLevel[delete with Double]
+  
+  /* 170 */ @js.native
+  object directions extends TopLevel[directions with Double]
+  
+  /* 136 */ @js.native
+  object disableupdates extends TopLevel[disableupdates with Double]
+  
+  /* 115 */ @js.native
+  object disconnectdrive extends TopLevel[disconnectdrive with Double]
+  
+  /* 146 */ @js.native
+  object dislike extends TopLevel[dislike with Double]
+  
+  /* 71 */ @js.native
+  object dockbottom extends TopLevel[dockbottom with Double]
+  
+  /* 69 */ @js.native
+  object dockleft extends TopLevel[dockleft with Double]
+  
+  /* 70 */ @js.native
+  object dockright extends TopLevel[dockright with Double]
+  
+  /* 50 */ @js.native
+  object document extends TopLevel[document with Double]
+  
+  /* 26 */ @js.native
+  object download extends TopLevel[download with Double]
+  
+  /* 4 */ @js.native
+  object edit extends TopLevel[edit with Double]
+  
+  /* 31 */ @js.native
+  object emoji extends TopLevel[emoji with Double]
+  
+  /* 108 */ @js.native
+  object emoji2 extends TopLevel[emoji2 with Double]
+  
+  /* 21 */ @js.native
+  object favorite extends TopLevel[favorite with Double]
+  
+  /* 106 */ @js.native
+  object filter extends TopLevel[filter with Double]
+  
+  /* 28 */ @js.native
+  object find extends TopLevel[find with Double]
+  
+  /* 43 */ @js.native
+  object flag extends TopLevel[flag with Double]
+  
+  /* 126 */ @js.native
+  object folder extends TopLevel[folder with Double]
+  
+  /* 123 */ @js.native
+  object font extends TopLevel[font with Double]
+  
+  /* 124 */ @js.native
+  object fontcolor extends TopLevel[fontcolor with Double]
+  
+  /* 159 */ @js.native
+  object fontdecrease extends TopLevel[fontdecrease with Double]
+  
+  /* 160 */ @js.native
+  object fontincrease extends TopLevel[fontincrease with Double]
+  
+  /* 161 */ @js.native
+  object fontsize extends TopLevel[fontsize with Double]
+  
+  /* 17 */ @js.native
+  object forward extends TopLevel[forward with Double]
+  
+  /* 193 */ @js.native
+  object fourbars extends TopLevel[fourbars with Double]
+  
+  /* 178 */ @js.native
+  object fullscreen extends TopLevel[fullscreen with Double]
+  
+  /* 45 */ @js.native
+  object globe extends TopLevel[globe with Double]
+  
+  /* 67 */ @js.native
+  object go extends TopLevel[go with Double]
+  
+  /* 188 */ @js.native
+  object gotostart extends TopLevel[gotostart with Double]
+  
+  /* 122 */ @js.native
+  object gototoday extends TopLevel[gototoday with Double]
+  
+  /* 196 */ @js.native
+  object hamburger extends TopLevel[hamburger with Double]
+  
+  /* 57 */ @js.native
+  object hangup extends TopLevel[hangup with Double]
+  
+  /* 29 */ @js.native
+  object help extends TopLevel[help with Double]
+  
+  /* 102 */ @js.native
+  object hidebcc extends TopLevel[hidebcc with Double]
+  
+  /* 135 */ @js.native
+  object highlight extends TopLevel[highlight with Double]
+  
+  /* 15 */ @js.native
+  object home extends TopLevel[home with Double]
+  
+  /* 80 */ @js.native
+  object `import` extends TopLevel[`import` with Double]
+  
+  /* 81 */ @js.native
+  object importall extends TopLevel[importall with Double]
+  
+  /* 109 */ @js.native
+  object important extends TopLevel[important with Double]
+  
+  /* 141 */ @js.native
+  object italic extends TopLevel[italic with Double]
+  
+  /* 68 */ @js.native
+  object keyboard extends TopLevel[keyboard with Double]
+  
+  /* 33 */ @js.native
+  object leavechat extends TopLevel[leavechat with Double]
+  
+  /* 20 */ @js.native
+  object left extends TopLevel[left with Double]
+  
+  /* 172 */ @js.native
+  object library extends TopLevel[library with Double]
+  
+  /* 147 */ @js.native
+  object like extends TopLevel[like with Double]
+  
+  /* 145 */ @js.native
+  object likedislike extends TopLevel[likedislike with Double]
+  
+  /* 99 */ @js.native
+  object link extends TopLevel[link with Double]
+  
+  /* 76 */ @js.native
+  object list extends TopLevel[list with Double]
+  
+  /* 27 */ @js.native
+  object mail extends TopLevel[mail with Double]
+  
+  /* 55 */ @js.native
+  object mail2 extends TopLevel[mail2 with Double]
+  
+  /* 34 */ @js.native
+  object mailforward extends TopLevel[mailforward with Double]
+  
+  /* 110 */ @js.native
+  object mailreply extends TopLevel[mailreply with Double]
+  
+  /* 97 */ @js.native
+  object mailreplyall extends TopLevel[mailreplyall with Double]
+  
+  /* 113 */ @js.native
+  object manage extends TopLevel[manage with Double]
+  
+  /* 157 */ @js.native
+  object map extends TopLevel[map with Double]
+  
+  /* 116 */ @js.native
+  object mapdrive extends TopLevel[mapdrive with Double]
+  
+  /* 59 */ @js.native
+  object mappin extends TopLevel[mappin with Double]
+  
+  /* 174 */ @js.native
+  object memo extends TopLevel[memo with Double]
+  
+  /* 91 */ @js.native
+  object message extends TopLevel[message with Double]
+  
+  /* 175 */ @js.native
+  object microphone extends TopLevel[microphone with Double]
+  
+  /* 12 */ @js.native
+  object more extends TopLevel[more with Double]
+  
+  /* 144 */ @js.native
+  object movetofolder extends TopLevel[movetofolder with Double]
+  
+  /* 66 */ @js.native
+  object musicinfo extends TopLevel[musicinfo with Double]
+  
+  /* 140 */ @js.native
+  object mute extends TopLevel[mute with Double]
+  
+  /* 179 */ @js.native
+  object newfolder extends TopLevel[newfolder with Double]
+  
+  /* 117 */ @js.native
+  object newwindow extends TopLevel[newwindow with Double]
+  
+  /* 1 */ @js.native
+  object next extends TopLevel[next with Double]
+  
+  /* 190 */ @js.native
+  object onebar extends TopLevel[onebar with Double]
+  
+  /* 153 */ @js.native
+  object openfile extends TopLevel[openfile with Double]
+  
+  /* 139 */ @js.native
+  object openlocal extends TopLevel[openlocal with Double]
+  
+  /* 41 */ @js.native
+  object openpane extends TopLevel[openpane with Double]
+  
+  /* 118 */ @js.native
+  object openwith extends TopLevel[openwith with Double]
+  
+  /* 79 */ @js.native
+  object orientation extends TopLevel[orientation with Double]
+  
+  /* 154 */ @js.native
+  object otheruser extends TopLevel[otheruser with Double]
+  
+  /* 167 */ @js.native
+  object outlinestar extends TopLevel[outlinestar with Double]
+  
+  /* 52 */ @js.native
+  object page extends TopLevel[page with Double]
+  
+  /* 92 */ @js.native
+  object page2 extends TopLevel[page2 with Double]
+  
+  /* 105 */ @js.native
+  object paste extends TopLevel[paste with Double]
+  
+  /* 3 */ @js.native
+  object pause extends TopLevel[pause with Double]
+  
+  /* 39 */ @js.native
+  object people extends TopLevel[people with Double]
+  
+  /* 134 */ @js.native
+  object permissions extends TopLevel[permissions with Double]
+  
+  /* 60 */ @js.native
+  object phone extends TopLevel[phone with Double]
+  
+  /* 173 */ @js.native
+  object phonebook extends TopLevel[phonebook with Double]
+  
+  /* 84 */ @js.native
+  object pictures extends TopLevel[pictures with Double]
+  
+  /* 65 */ @js.native
+  object pin extends TopLevel[pin with Double]
+  
+  /* 128 */ @js.native
+  object placeholder extends TopLevel[placeholder with Double]
+  
+  /* 2 */ @js.native
+  object play extends TopLevel[play with Double]
+  
+  /* 176 */ @js.native
+  object postupdate extends TopLevel[postupdate with Double]
+  
+  /* 195 */ @js.native
+  object preview extends TopLevel[preview with Double]
+  
+  /* 44 */ @js.native
+  object previewlink extends TopLevel[previewlink with Double]
+  
+  /* 0 */ @js.native
+  object previous extends TopLevel[previous with Double]
+  
+  /* 120 */ @js.native
+  object priority extends TopLevel[priority with Double]
+  
+  /* 51 */ @js.native
+  object protecteddocument extends TopLevel[protecteddocument with Double]
+  
+  /* 98 */ @js.native
+  object read extends TopLevel[read with Double]
+  
+  /* 13 */ @js.native
+  object redo extends TopLevel[redo with Double]
+  
+  /* 73 */ @js.native
+  object refresh extends TopLevel[refresh with Double]
+  
+  /* 72 */ @js.native
+  object remote extends TopLevel[remote with Double]
+  
+  /* 8 */ @js.native
+  object remove extends TopLevel[remove with Double]
+  
+  /* 64 */ @js.native
+  object rename extends TopLevel[rename with Double]
+  
+  /* 90 */ @js.native
+  object repair extends TopLevel[repair with Double]
+  
+  /* 166 */ @js.native
+  object repeatall extends TopLevel[repeatall with Double]
+  
+  /* 165 */ @js.native
+  object repeatone extends TopLevel[repeatone with Double]
+  
+  /* 182 */ @js.native
+  object reporthacked extends TopLevel[reporthacked with Double]
+  
+  /* 163 */ @js.native
+  object reshare extends TopLevel[reshare with Double]
+  
+  /* 18 */ @js.native
+  object right extends TopLevel[right with Double]
+  
+  /* 74 */ @js.native
+  object rotate extends TopLevel[rotate with Double]
+  
+  /* 38 */ @js.native
+  object rotatecamera extends TopLevel[rotatecamera with Double]
+  
+  /* 5 */ @js.native
+  object save extends TopLevel[save with Double]
+  
+  /* 85 */ @js.native
+  object savelocal extends TopLevel[savelocal with Double]
+  
+  /* 194 */ @js.native
+  object scan extends TopLevel[scan with Double]
+  
+  /* 78 */ @js.native
+  object selectall extends TopLevel[selectall with Double]
+  
+  /* 36 */ @js.native
+  object send extends TopLevel[send with Double]
+  
+  /* 130 */ @js.native
+  object setlockscreen extends TopLevel[setlockscreen with Double]
+  
+  /* 131 */ @js.native
+  object settile extends TopLevel[settile with Double]
+  
+  /* 23 */ @js.native
+  object settings extends TopLevel[settings with Double]
+  
+  /* 77 */ @js.native
+  object shop extends TopLevel[shop with Double]
+  
+  /* 101 */ @js.native
+  object showbcc extends TopLevel[showbcc with Double]
+  
+  /* 88 */ @js.native
+  object showresults extends TopLevel[showresults with Double]
+  
+  /* 75 */ @js.native
+  object shuffle extends TopLevel[shuffle with Double]
+  
+  /* 111 */ @js.native
+  object slideshow extends TopLevel[slideshow with Double]
+  
+  /* 168 */ @js.native
+  object solidstar extends TopLevel[solidstar with Double]
+  
+  /* 112 */ @js.native
+  object sort extends TopLevel[sort with Double]
+  
+  /* 87 */ @js.native
+  object stop extends TopLevel[stop with Double]
+  
+  /* 133 */ @js.native
+  object stopslideshow extends TopLevel[stopslideshow with Double]
+  
+  /* 156 */ @js.native
+  object street extends TopLevel[street with Double]
+  
+  /* 62 */ @js.native
+  object switch extends TopLevel[switch with Double]
+  
+  /* 185 */ @js.native
+  object switchapps extends TopLevel[switchapps with Double]
+  
+  /* 25 */ @js.native
+  object sync extends TopLevel[sync with Double]
+  
+  /* 183 */ @js.native
+  object syncfolder extends TopLevel[syncfolder with Double]
+  
+  /* 164 */ @js.native
+  object tag extends TopLevel[tag with Double]
+  
+  /* 171 */ @js.native
+  object target extends TopLevel[target with Double]
+  
+  /* 192 */ @js.native
+  object threebars extends TopLevel[threebars with Double]
+  
+  /* 187 */ @js.native
+  object touchpointer extends TopLevel[touchpointer with Double]
+  
+  /* 46 */ @js.native
+  object trim extends TopLevel[trim with Double]
+  
+  /* 191 */ @js.native
+  object twobars extends TopLevel[twobars with Double]
+  
+  /* 32 */ @js.native
+  object twopage extends TopLevel[twopage with Double]
+  
+  /* 142 */ @js.native
+  object underline extends TopLevel[underline with Double]
+  
+  /* 14 */ @js.native
+  object undo extends TopLevel[undo with Double]
+  
+  /* 137 */ @js.native
+  object unfavorite extends TopLevel[unfavorite with Double]
+  
+  /* 138 */ @js.native
+  object unpin extends TopLevel[unpin with Double]
+  
+  /* 181 */ @js.native
+  object unsyncfolder extends TopLevel[unsyncfolder with Double]
+  
+  /* 16 */ @js.native
+  object up extends TopLevel[up with Double]
+  
+  /* 30 */ @js.native
+  object upload extends TopLevel[upload with Double]
+  
+  /* 121 */ @js.native
+  object uploadskydrive extends TopLevel[uploadskydrive with Double]
+  
+  /* 24 */ @js.native
+  object video extends TopLevel[video with Double]
+  
+  /* 61 */ @js.native
+  object videochat extends TopLevel[videochat with Double]
+  
+  /* 129 */ @js.native
+  object view extends TopLevel[view with Double]
+  
+  /* 58 */ @js.native
+  object viewall extends TopLevel[viewall with Double]
+  
+  /* 89 */ @js.native
+  object volume extends TopLevel[volume with Double]
+  
+  /* 83 */ @js.native
+  object webcam extends TopLevel[webcam with Double]
+  
+  /* 42 */ @js.native
+  object world extends TopLevel[world with Double]
+  
+  /* 189 */ @js.native
+  object zerobars extends TopLevel[zerobars with Double]
+  
+  /* 151 */ @js.native
+  object zoom extends TopLevel[zoom with Double]
+  
+  /* 48 */ @js.native
+  object zoomin extends TopLevel[zoomin with Double]
+  
+  /* 152 */ @js.native
+  object zoomout extends TopLevel[zoomout with Double]
+  
 }
 

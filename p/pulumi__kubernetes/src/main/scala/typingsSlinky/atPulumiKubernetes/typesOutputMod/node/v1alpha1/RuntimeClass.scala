@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesOutputMod.node.v1alpha1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`nodeDOTk8sDOTio/v1alpha1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.nodeDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait RuntimeClass extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: `nodeDOTk8sDOTio/v1alpha1`
+  val apiVersion: nodeDotk8sDotioSlashv1alpha1
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -44,7 +44,7 @@ trait RuntimeClass extends js.Object {
 object RuntimeClass {
   @scala.inline
   def apply(
-    apiVersion: `nodeDOTk8sDOTio/v1alpha1`,
+    apiVersion: nodeDotk8sDotioSlashv1alpha1,
     kind: typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.RuntimeClass,
     metadata: ObjectMeta,
     spec: RuntimeClassSpec

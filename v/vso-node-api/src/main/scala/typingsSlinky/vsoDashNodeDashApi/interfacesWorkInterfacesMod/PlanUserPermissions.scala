@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object PlanUserPermissions extends js.Object {
   @js.native
   sealed trait View extends PlanUserPermissions
   
-  /* 15 */ val AllPermissions: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.AllPermissions with Double = js.native
-  /* 4 */ val Delete: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.Delete with Double = js.native
-  /* 2 */ val Edit: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.Edit with Double = js.native
-  /* 8 */ val Manage: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.Manage with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.None with Double = js.native
-  /* 1 */ val View: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.PlanUserPermissions.View with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlanUserPermissions with Double] = js.native
+  /* 15 */ @js.native
+  object AllPermissions extends TopLevel[AllPermissions with Double]
+  
+  /* 4 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 2 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 8 */ @js.native
+  object Manage extends TopLevel[Manage with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object View extends TopLevel[View with Double]
+  
 }
 

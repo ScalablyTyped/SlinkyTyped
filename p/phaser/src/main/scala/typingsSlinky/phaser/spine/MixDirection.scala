@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.spine
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object MixDirection extends js.Object {
   @js.native
   sealed trait mixOut extends MixDirection
   
-  /* 0 */ val mixIn: typingsSlinky.phaser.spine.MixDirection.mixIn with Double = js.native
-  /* 1 */ val mixOut: typingsSlinky.phaser.spine.MixDirection.mixOut with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MixDirection with Double] = js.native
+  /* 0 */ @js.native
+  object mixIn extends TopLevel[mixIn with Double]
+  
+  /* 1 */ @js.native
+  object mixOut extends TopLevel[mixOut with Double]
+  
 }
 

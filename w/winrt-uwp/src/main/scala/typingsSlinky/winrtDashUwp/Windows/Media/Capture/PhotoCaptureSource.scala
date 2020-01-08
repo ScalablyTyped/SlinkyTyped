@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Capture
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PhotoCaptureSource extends js.Object {
   @js.native
   sealed trait videoPreview extends PhotoCaptureSource
   
-  /* 0 */ val auto: typingsSlinky.winrtDashUwp.Windows.Media.Capture.PhotoCaptureSource.auto with Double = js.native
-  /* 2 */ val photo: typingsSlinky.winrtDashUwp.Windows.Media.Capture.PhotoCaptureSource.photo with Double = js.native
-  /* 1 */ val videoPreview: typingsSlinky.winrtDashUwp.Windows.Media.Capture.PhotoCaptureSource.videoPreview with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoCaptureSource with Double] = js.native
+  /* 0 */ @js.native
+  object auto extends TopLevel[auto with Double]
+  
+  /* 2 */ @js.native
+  object photo extends TopLevel[photo with Double]
+  
+  /* 1 */ @js.native
+  object videoPreview extends TopLevel[videoPreview with Double]
+  
 }
 

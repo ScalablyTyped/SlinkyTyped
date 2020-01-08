@@ -4,12 +4,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.microsoftDashAjax.Sys.Net.WebRequest
 import typingsSlinky.microsoftDashAjax.Sys.Net.WebRequestExecutor
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.BeginRequestEventArgs
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.EndRequestEventArgs
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.InitializeRequestEventArgs
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.PageLoadedEventArgs
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.PageLoadingEventArgs
-import typingsSlinky.microsoftDashAjax.Sys.WebForms.PageRequestManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +33,7 @@ object WebForms extends js.Object {
       * @param updatePanelsToUpdate
       *           (Optional) A list of UniqueIDs for UpdatePanel controls that are requested to update their rendering by the client. Server-side processing may update additional UpdatePanels.
       */
-    def this(request: WebRequest, postBackElement: js.Any, updatePanelsToUpdate: js.Array[java.lang.String]) = this()
+    def this(request: WebRequest, postBackElement: js.Any, updatePanelsToUpdate: js.Array[String]) = this()
     //#endregion
     //#region Properties
     /**
@@ -58,7 +52,7 @@ object WebForms extends js.Object {
       * Server-side processing might update additional UpdatePanel controls.
       * @return An array of UniqueID values for UpdatePanel controls.
       */
-    def get_updatePanelsToUpdate(): js.Array[java.lang.String] = js.native
+    def get_updatePanelsToUpdate(): js.Array[String] = js.native
   }
   
   /**
@@ -128,7 +122,7 @@ object WebForms extends js.Object {
       * @param updatePanelsToUpdate
       *           (Optional) A list of UniqueID values for UpdatePanel controls that are being requested to update their rendering by the client. Server-side processing might update additional UpdatePanel controls.
       */
-    def this(request: WebRequest, postBackElement: js.Any, updatePanelsToUpdate: js.Array[java.lang.String]) = this()
+    def this(request: WebRequest, postBackElement: js.Any, updatePanelsToUpdate: js.Array[String]) = this()
     //#endregion
     //#region Properties
     /**
@@ -146,7 +140,7 @@ object WebForms extends js.Object {
       * The returned array can be modified by a client event handler to add or remove UpdatePanel controls that should re-render their content dynamically. Server processing can also modify the array.
       * @return An array of UniqueID values for UpdatePanel controls.
       */
-    def get_updatePanelsToUpdate(): js.Array[java.lang.String] = js.native
+    def get_updatePanelsToUpdate(): js.Array[String] = js.native
   }
   
   /**
@@ -286,25 +280,21 @@ object WebForms extends js.Object {
       *                   (Optional) A string that contains the name of the validation group.
       */
     def beginAsyncPostBack(): Unit = js.native
-    def beginAsyncPostBack(updatePanelsToUpdate: js.Array[java.lang.String]): Unit = js.native
-    def beginAsyncPostBack(updatePanelsToUpdate: js.Array[java.lang.String], eventTarget: java.lang.String): Unit = js.native
+    def beginAsyncPostBack(updatePanelsToUpdate: js.Array[String]): Unit = js.native
+    def beginAsyncPostBack(updatePanelsToUpdate: js.Array[String], eventTarget: String): Unit = js.native
+    def beginAsyncPostBack(updatePanelsToUpdate: js.Array[String], eventTarget: String, eventArgument: String): Unit = js.native
     def beginAsyncPostBack(
-      updatePanelsToUpdate: js.Array[java.lang.String],
-      eventTarget: java.lang.String,
-      eventArgument: java.lang.String
-    ): Unit = js.native
-    def beginAsyncPostBack(
-      updatePanelsToUpdate: js.Array[java.lang.String],
-      eventTarget: java.lang.String,
-      eventArgument: java.lang.String,
+      updatePanelsToUpdate: js.Array[String],
+      eventTarget: String,
+      eventArgument: String,
       causesValidation: Boolean
     ): Unit = js.native
     def beginAsyncPostBack(
-      updatePanelsToUpdate: js.Array[java.lang.String],
-      eventTarget: java.lang.String,
-      eventArgument: java.lang.String,
+      updatePanelsToUpdate: js.Array[String],
+      eventTarget: String,
+      eventArgument: String,
       causesValidation: Boolean,
-      validationGroup: java.lang.String
+      validationGroup: String
     ): Unit = js.native
     /**
       * Releases ECMAScript (JavaScript) resources and detaches events.

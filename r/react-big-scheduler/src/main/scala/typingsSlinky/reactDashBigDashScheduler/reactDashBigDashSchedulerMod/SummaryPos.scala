@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object SummaryPos extends js.Object {
   @js.native
   sealed trait TopRight extends SummaryPos
   
-  /* 3 */ val Bottom: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.Bottom with Double = js.native
-  /* 5 */ val BottomLeft: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.BottomLeft with Double = js.native
-  /* 4 */ val BottomRight: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.BottomRight with Double = js.native
-  /* 0 */ val Top: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.Top with Double = js.native
-  /* 2 */ val TopLeft: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.TopLeft with Double = js.native
-  /* 1 */ val TopRight: typingsSlinky.reactDashBigDashScheduler.reactDashBigDashSchedulerMod.SummaryPos.TopRight with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SummaryPos with Double] = js.native
+  /* 3 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 5 */ @js.native
+  object BottomLeft extends TopLevel[BottomLeft with Double]
+  
+  /* 4 */ @js.native
+  object BottomRight extends TopLevel[BottomRight with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
+  /* 2 */ @js.native
+  object TopLeft extends TopLevel[TopLeft with Double]
+  
+  /* 1 */ @js.native
+  object TopRight extends TopLevel[TopRight with Double]
+  
 }
 

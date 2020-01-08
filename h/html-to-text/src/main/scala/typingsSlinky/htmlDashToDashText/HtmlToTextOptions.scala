@@ -1,6 +1,6 @@
 package typingsSlinky.htmlDashToDashText
 
-import typingsSlinky.htmlDashToDashText.htmlDashToDashTextNumbers.`false`
+import typingsSlinky.htmlDashToDashText.htmlDashToDashTextBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,9 +1,9 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTransportTeamSpeakQueryMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.ts3DashNodejsDashLibrary.libTeamSpeakMod.ConnectionParams
 import typingsSlinky.ts3DashNodejsDashLibrary.libTransportTeamSpeakQueryMod.TeamSpeakQuery.executeArgs
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesQueryResponseMod.QueryResponseTypes
-import typingsSlinky.ts3DashNodejsDashLibrary.ts3DashNodejsDashLibraryMod.ConnectionParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

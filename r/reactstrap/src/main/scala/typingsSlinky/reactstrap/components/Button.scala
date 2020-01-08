@@ -8,6 +8,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.react.reactMod.CSSProperties
@@ -130,6 +131,7 @@ object Button
     autoCorrect: String = null,
     autoSave: String = null,
     block: js.UndefOr[Boolean] = js.undefined,
+    close: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
     contextMenu: String = null,
     cssModule: CSSModule = null,
@@ -160,7 +162,7 @@ object Button
     results: Int | Double = null,
     role: String = null,
     security: String = null,
-    size: js.Any = null,
+    size: String = null,
     slot: String = null,
     style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
@@ -229,6 +231,7 @@ object Button
     if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
+    if (!js.isUndefined(close)) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
@@ -275,6 +278,9 @@ object Button
   slinky.web.html.button.tag.type, 
   typingsSlinky.reactstrap.libButtonMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.button.tag.type, 
+  typingsSlinky.reactstrap.libButtonMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ButtonProps
 }
 

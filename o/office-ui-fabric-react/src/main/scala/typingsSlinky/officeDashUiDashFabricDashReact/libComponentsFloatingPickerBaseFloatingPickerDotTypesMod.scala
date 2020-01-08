@@ -2,8 +2,6 @@ package typingsSlinky.officeDashUiDashFabricDashReact
 
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.atUifabricUtilities.libCreateRefMod.IRefObject
-import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFloatingPickerBaseFloatingPickerDotTypesMod.IBaseFloatingPicker
-import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFloatingPickerBaseFloatingPickerDotTypesMod.IBaseFloatingPickerSuggestionProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFloatingPickerSuggestionsSuggestionsDotTypesMod.ISuggestionsControlProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFloatingPickerSuggestionsSuggestionsStoreMod.SuggestionsStore
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPickersSuggestionsSuggestionsDotTypesMod.ISuggestionModel
@@ -136,7 +134,7 @@ object libComponentsFloatingPickerBaseFloatingPickerDotTypesMod extends js.Objec
     /**
       * A callback for what should happen when a person types text into the input.
       * Returns the already selected items so the resolver can filter them out.
-      * If used in conjunction with resolveDelay this will ony kick off after the delay throttle.
+      * If used in conjunction with resolveDelay this will only kick off after the delay throttle.
       * Return null if using as a controlled component
       */
     def onResolveSuggestions(filter: String): js.Array[T] | js.Thenable[js.Array[T]] | Null = js.native

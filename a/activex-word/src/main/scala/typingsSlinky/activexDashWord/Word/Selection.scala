@@ -73,7 +73,8 @@ class Selection protected () extends js.Object {
   var Text: String = js.native
   val TopLevelTables: typingsSlinky.activexDashWord.Word.Tables = js.native
   val Type: WdSelectionType = js.native
-  var `Word.Selection_typekey`: Selection = js.native
+  @JSName("Word.Selection_typekey")
+  var WordDotSelection_typekey: Selection = js.native
   val WordOpenXML: String = js.native
   val Words: typingsSlinky.activexDashWord.Word.Words = js.native
   val XMLNodes: typingsSlinky.activexDashWord.Word.XMLNodes = js.native

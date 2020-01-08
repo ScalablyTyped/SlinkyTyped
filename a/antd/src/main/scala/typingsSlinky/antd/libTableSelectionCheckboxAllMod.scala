@@ -4,7 +4,6 @@ import typingsSlinky.antd.libCheckboxCheckboxMod.CheckboxChangeEvent
 import typingsSlinky.antd.libTableInterfaceMod.SelectionCheckboxAllProps
 import typingsSlinky.antd.libTableInterfaceMod.SelectionCheckboxAllState
 import typingsSlinky.antd.libTableInterfaceMod.SelectionItem
-import typingsSlinky.antd.libTableSelectionCheckboxAllMod.SelectionCheckboxAll
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

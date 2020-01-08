@@ -1,7 +1,6 @@
 package typingsSlinky.atAngularCompiler
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atAngularCompiler.srcI18nExtractorUnderscoreMergerMod.ExtractionResult
 import typingsSlinky.atAngularCompiler.srcI18nI18nUnderscoreAstMod.Message
 import typingsSlinky.atAngularCompiler.srcI18nParseUnderscoreUtilMod.I18nError
 import typingsSlinky.atAngularCompiler.srcI18nTranslationUnderscoreBundleMod.TranslationBundle

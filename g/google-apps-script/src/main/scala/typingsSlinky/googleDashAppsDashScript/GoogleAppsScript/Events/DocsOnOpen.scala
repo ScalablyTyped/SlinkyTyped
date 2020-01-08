@@ -1,23 +1,19 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Events
 
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Base.User
+import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.Document
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.AuthMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DocsOnOpen extends AppsScriptEvent {
-  var source: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.Document
+  var source: Document
 }
 
 object DocsOnOpen {
   @scala.inline
-  def apply(
-    authMode: AuthMode,
-    source: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.Document,
-    triggerUid: String,
-    user: User
-  ): DocsOnOpen = {
+  def apply(authMode: AuthMode, source: Document, triggerUid: String, user: User): DocsOnOpen = {
     val __obj = js.Dynamic.literal(authMode = authMode.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], triggerUid = triggerUid.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[DocsOnOpen]

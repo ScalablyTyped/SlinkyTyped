@@ -1,6 +1,5 @@
 package typingsSlinky.typedoc
 
-import typingsSlinky.typedoc.distLibApplicationMod.Application
 import typingsSlinky.typedoc.distLibConverterMod.Converter
 import typingsSlinky.typedoc.distLibModelsMod.ProjectReflection
 import typingsSlinky.typedoc.distLibOutputRendererMod.Renderer

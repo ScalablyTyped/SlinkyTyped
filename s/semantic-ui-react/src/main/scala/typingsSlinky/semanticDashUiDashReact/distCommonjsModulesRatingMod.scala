@@ -1,5 +1,6 @@
 package typingsSlinky.semanticDashUiDashReact
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesRatingRatingMod.RatingComponent
@@ -18,6 +19,8 @@ object distCommonjsModulesRatingMod extends js.Object {
     def this(props: RatingProps, context: js.Any) = this()
   }
   
-  val default: RatingComponent = js.native
+  @js.native
+  object default extends TopLevel[RatingComponent]
+  
 }
 

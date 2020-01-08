@@ -2,7 +2,6 @@ package typingsSlinky.smoothDashScrollbar
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.smoothDashScrollbar.interfacesScrollbarMod.ScrollbarOptions
-import typingsSlinky.smoothDashScrollbar.scrollbarMod.Scrollbar
 import typingsSlinky.std.Map
 import typingsSlinky.std.Partial
 import scala.scalajs.js

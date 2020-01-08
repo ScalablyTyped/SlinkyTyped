@@ -18,8 +18,8 @@ import typingsSlinky.nodemailer.libSmtpDashConnectionMod.AuthenticationType
 import typingsSlinky.nodemailer.libSmtpDashConnectionMod.CustomAuthenticationHandlers
 import typingsSlinky.nodemailer.libSmtpDashConnectionMod.DSNOptions
 import typingsSlinky.nodemailer.libSmtpDashConnectionMod.ms
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.TransportOptions
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.high
 import typingsSlinky.nodemailer.nodemailerStrings.low
 import typingsSlinky.nodemailer.nodemailerStrings.normal

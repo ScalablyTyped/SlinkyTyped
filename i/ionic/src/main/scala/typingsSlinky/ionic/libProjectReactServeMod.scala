@@ -2,8 +2,8 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.ReactServeOptions
 import typingsSlinky.ionic.ionicStrings.`React Scripts`
-import typingsSlinky.ionic.ionicStrings.`ionic:serve`
 import typingsSlinky.ionic.ionicStrings.`react-scripts`
+import typingsSlinky.ionic.ionicStrings.ionicColonserve
 import typingsSlinky.ionic.libServeMod.ServeCLI
 import typingsSlinky.ionic.libServeMod.ServeRunner
 import typingsSlinky.ionic.libServeMod.ServeRunnerDeps
@@ -26,7 +26,7 @@ object libProjectReactServeMod extends js.Object {
     @JSName("program")
     val program_ReactServeCLI: `react-scripts` = js.native
     @JSName("script")
-    val script_ReactServeCLI: `ionic:serve` = js.native
+    val script_ReactServeCLI: ionicColonserve = js.native
   }
   
   @js.native

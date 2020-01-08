@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TopBar extends SharedApply_TopBarProps_896806416 {
+object TopBar extends SharedApply_TopBarProps1954480808 {
   @JSImport("react-foundation", "TopBar")
   @js.native
   object componentImport extends js.Object

@@ -2,7 +2,7 @@ package typingsSlinky.botvs.botvsMod._Global_
 
 import typingsSlinky.botvs.Anon_Body
 import typingsSlinky.botvs.Anon_Data
-import typingsSlinky.botvs.botvsNumbers.`true`
+import typingsSlinky.botvs.botvsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

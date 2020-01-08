@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialMenuDashSurface.componentMod.MDCMenuSurface
 import typingsSlinky.atMaterialMenuDashSurface.constantsMod.Corner
 import typingsSlinky.atMaterialMenuDashSurface.foundationMod.MDCMenuSurfaceFoundation
 import typingsSlinky.atMaterialMenuDashSurface.typesMod.MDCMenuDistance

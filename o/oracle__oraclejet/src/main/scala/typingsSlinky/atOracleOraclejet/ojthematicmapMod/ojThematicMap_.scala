@@ -162,7 +162,7 @@ trait ojThematicMap_[K1, K2, K3, D1, D2, D3] extends dvtBaseComponent[ojThematic
     Anon_InsertSVGElement | Unit
   ]) | Null = js.native
   var styleDefaults: Anon_AreaSvgStyle = js.native
-  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultD1[D3, K1, K2, D1, K3, D2] = js.native
+  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultD1[K1, K2, K3, D1, D2, D3] = js.native
   var tooltipDisplay: auto | labelAndShortDesc | none | shortDesc = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
@@ -538,7 +538,7 @@ trait ojThematicMap_[K1, K2, K3, D1, D2, D3] extends dvtBaseComponent[ojThematic
   @JSName("getProperty")
   def getProperty_styleDefaults(property: styleDefaults): Anon_AreaSvgStyle = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon_ContextRendererAnonInsertAnonPreventDefaultD1[D3, K1, K2, D1, K3, D2] = js.native
+  def getProperty_tooltip(property: tooltip): Anon_ContextRendererAnonInsertAnonPreventDefaultD1[K1, K2, K3, D1, D2, D3] = js.native
   @JSName("getProperty")
   def getProperty_tooltipDisplay(property: tooltipDisplay): auto | labelAndShortDesc | none | shortDesc = js.native
   @JSName("getProperty")
@@ -647,7 +647,7 @@ trait ojThematicMap_[K1, K2, K3, D1, D2, D3] extends dvtBaseComponent[ojThematic
   @JSName("setProperty")
   def setProperty_tooltip(
     property: tooltip,
-    value: Anon_ContextRendererAnonInsertAnonPreventDefaultD1[D3, K1, K2, D1, K3, D2]
+    value: Anon_ContextRendererAnonInsertAnonPreventDefaultD1[K1, K2, K3, D1, D2, D3]
   ): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: Anon_ComponentNameLabelAndValue): Unit = js.native

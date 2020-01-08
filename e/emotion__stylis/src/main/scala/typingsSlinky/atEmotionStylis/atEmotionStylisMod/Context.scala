@@ -1,5 +1,6 @@
 package typingsSlinky.atEmotionStylis.atEmotionStylisMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object Context extends js.Object {
   @js.native
   sealed trait UNKWN extends Context
   
-  /* 3 */ val ATRUL: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.ATRUL with Double = js.native
-  /* 2 */ val BLCKS: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.BLCKS with Double = js.native
-  /* -2 */ val POSTS: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.POSTS with Double = js.native
-  /* -1 */ val PREPS: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.PREPS with Double = js.native
-  /* 1 */ val PROPS: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.PROPS with Double = js.native
-  /* 0 */ val UNKWN: typingsSlinky.atEmotionStylis.atEmotionStylisMod.Context.UNKWN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Context with Double] = js.native
+  /* 3 */ @js.native
+  object ATRUL extends TopLevel[ATRUL with Double]
+  
+  /* 2 */ @js.native
+  object BLCKS extends TopLevel[BLCKS with Double]
+  
+  /* -2 */ @js.native
+  object POSTS extends TopLevel[POSTS with Double]
+  
+  /* -1 */ @js.native
+  object PREPS extends TopLevel[PREPS with Double]
+  
+  /* 1 */ @js.native
+  object PROPS extends TopLevel[PROPS with Double]
+  
+  /* 0 */ @js.native
+  object UNKWN extends TopLevel[UNKWN with Double]
+  
 }
 

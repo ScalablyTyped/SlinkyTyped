@@ -47,7 +47,6 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
       */
     /* CompleteClass */
     override def addClient(driver: IClientDriver): Unit = js.native
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def addEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
     /**
@@ -98,7 +97,6 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
       * @return A new {@link IServerBase} object.
       */
     /* protected */ def createServerBase(): IServer = js.native
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def dispatchEvent(event: CollectionEvent[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
     /**
@@ -115,7 +113,6 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
     /* CompleteClass */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[System, Deque[System], Iterator[System], ReverseIterator[System], System] = js.native
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def hasEventListener(`type`: Type): Boolean = js.native
     /**
@@ -131,6 +128,7 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
       * @param items Items to insert.
       * @return Number of elements in the container after insertion.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def push(items: System*): Double = js.native
     /**
@@ -148,7 +146,6 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
     /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[System] = js.native
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def removeEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
     /**
@@ -162,7 +159,6 @@ object templatesParallelDerivedParallelClientArrayMod extends js.Object {
     /**
       * Number of elements in the container.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def size(): Double = js.native
   }

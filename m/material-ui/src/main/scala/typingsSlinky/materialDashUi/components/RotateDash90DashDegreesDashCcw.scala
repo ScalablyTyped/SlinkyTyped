@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RotateDash90DashDegreesDashCcw extends SharedApply_SvgIconProps657215518[default] {
+object RotateDash90DashDegreesDashCcw extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/image/rotate-90-degrees-ccw", JSImport.Default)
   @js.native
   object componentImport extends js.Object

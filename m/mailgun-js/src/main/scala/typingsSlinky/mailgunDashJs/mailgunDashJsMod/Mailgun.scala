@@ -1,13 +1,13 @@
 package typingsSlinky.mailgunDashJs.mailgunDashJsMod
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.mailgunDashJs.mailgunDashJsBooleans.`false`
+import typingsSlinky.mailgunDashJs.mailgunDashJsBooleans.`true`
 import typingsSlinky.mailgunDashJs.mailgunDashJsMod.validation.ParseResponse
 import typingsSlinky.mailgunDashJs.mailgunDashJsMod.validation.ValidateResponse
 import typingsSlinky.mailgunDashJs.mailgunDashJsMod.validation.ValidationCallback
 import typingsSlinky.mailgunDashJs.mailgunDashJsMod.validation.ValidationOptionsPrivate
 import typingsSlinky.mailgunDashJs.mailgunDashJsMod.validation.ValidationOptionsPublic
-import typingsSlinky.mailgunDashJs.mailgunDashJsNumbers.`false`
-import typingsSlinky.mailgunDashJs.mailgunDashJsNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

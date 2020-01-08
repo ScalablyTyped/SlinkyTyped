@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseContainerIHashSetMod.IHashSet
 import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
 import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator
 import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator

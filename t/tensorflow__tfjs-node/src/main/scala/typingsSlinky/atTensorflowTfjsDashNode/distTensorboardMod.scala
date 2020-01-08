@@ -4,7 +4,6 @@ import typingsSlinky.atTensorflowTfjs.atTensorflowTfjsMod.Tensor
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Scalar
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank
 import typingsSlinky.atTensorflowTfjsDashNode.distNodejsUnderscoreKernelUnderscoreBackendMod.NodeJSKernelBackend
-import typingsSlinky.atTensorflowTfjsDashNode.distTensorboardMod.SummaryFileWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

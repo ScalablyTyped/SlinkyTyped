@@ -1,5 +1,6 @@
 package typingsSlinky.three.srcConstantsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object MOUSE extends js.Object {
   @js.native
   sealed trait ROTATE extends MOUSE
   
-  /* 4 */ val DOLLY: typingsSlinky.three.srcConstantsMod.MOUSE.DOLLY with Double = js.native
-  /* 0 */ val LEFT: typingsSlinky.three.srcConstantsMod.MOUSE.LEFT with Double = js.native
-  /* 1 */ val MIDDLE: typingsSlinky.three.srcConstantsMod.MOUSE.MIDDLE with Double = js.native
-  /* 5 */ val PAN: typingsSlinky.three.srcConstantsMod.MOUSE.PAN with Double = js.native
-  /* 2 */ val RIGHT: typingsSlinky.three.srcConstantsMod.MOUSE.RIGHT with Double = js.native
-  /* 3 */ val ROTATE: typingsSlinky.three.srcConstantsMod.MOUSE.ROTATE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MOUSE with Double] = js.native
+  /* 4 */ @js.native
+  object DOLLY extends TopLevel[DOLLY with Double]
+  
+  /* 0 */ @js.native
+  object LEFT extends TopLevel[LEFT with Double]
+  
+  /* 1 */ @js.native
+  object MIDDLE extends TopLevel[MIDDLE with Double]
+  
+  /* 5 */ @js.native
+  object PAN extends TopLevel[PAN with Double]
+  
+  /* 2 */ @js.native
+  object RIGHT extends TopLevel[RIGHT with Double]
+  
+  /* 3 */ @js.native
+  object ROTATE extends TopLevel[ROTATE with Double]
+  
 }
 

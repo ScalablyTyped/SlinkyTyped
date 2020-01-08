@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashBeautifulDashDnd.reactDashBeautifulDashDndMod.BeforeCapture
 import typingsSlinky.reactDashBeautifulDashDnd.reactDashBeautifulDashDndMod.DragDropContextProps
 import typingsSlinky.reactDashBeautifulDashDnd.reactDashBeautifulDashDndMod.DragStart
 import typingsSlinky.reactDashBeautifulDashDnd.reactDashBeautifulDashDndMod.DragUpdate
@@ -25,6 +26,7 @@ object DragDropContext
   override val component: String | js.Object = this.componentImport
   def apply(
     onDragEnd: (DropResult, ResponderProvided) => Unit,
+    onBeforeCapture: /* before */ BeforeCapture => Unit = null,
     onBeforeDragStart: /* initial */ DragStart => Unit = null,
     onDragStart: (/* initial */ DragStart, /* provided */ ResponderProvided) => Unit = null,
     onDragUpdate: (/* initial */ DragUpdate, /* provided */ ResponderProvided) => Unit = null,
@@ -34,6 +36,7 @@ object DragDropContext
     typingsSlinky.reactDashBeautifulDashDnd.reactDashBeautifulDashDndMod.DragDropContext
   ] = {
     val __obj = js.Dynamic.literal(onDragEnd = js.Any.fromFunction2(onDragEnd))
+    if (onBeforeCapture != null) __obj.updateDynamic("onBeforeCapture")(js.Any.fromFunction1(onBeforeCapture))
     if (onBeforeDragStart != null) __obj.updateDynamic("onBeforeDragStart")(js.Any.fromFunction1(onBeforeDragStart))
     if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction2(onDragStart))
     if (onDragUpdate != null) __obj.updateDynamic("onDragUpdate")(js.Any.fromFunction2(onDragUpdate))

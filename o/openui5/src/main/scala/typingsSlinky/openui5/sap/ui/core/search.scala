@@ -1,7 +1,5 @@
 package typingsSlinky.openui5.sap.ui.core
 
-import typingsSlinky.openui5.sap.ui.core.search.OpenSearchProvider
-import typingsSlinky.openui5.sap.ui.core.search.SearchProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

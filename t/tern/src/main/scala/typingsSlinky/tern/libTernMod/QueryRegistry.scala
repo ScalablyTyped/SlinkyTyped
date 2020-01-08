@@ -3,7 +3,7 @@ package typingsSlinky.tern.libTernMod
 import typingsSlinky.tern.Anon_QueryResult
 import typingsSlinky.tern.Anon_QueryResultCompletionsQuery
 import typingsSlinky.tern.Anon_QueryResultDefinitionQuery
-import typingsSlinky.tern.Anon_QueryResultFilesQuery
+import typingsSlinky.tern.Anon_QueryResultDocumentationQuery
 import typingsSlinky.tern.Anon_QueryResultPropertiesQuery
 import typingsSlinky.tern.Anon_QueryResultRefsQuery
 import typingsSlinky.tern.Anon_QueryResultRenameQuery
@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
 trait QueryRegistry extends js.Object {
   var completions: Anon_QueryResultCompletionsQuery
   var definition: Anon_QueryResultDefinitionQuery
-  var documentation: Anon_QueryResult
-  var files: Anon_QueryResultFilesQuery
+  var documentation: Anon_QueryResultDocumentationQuery
+  var files: Anon_QueryResult
   var properties: Anon_QueryResultPropertiesQuery
   var refs: Anon_QueryResultRefsQuery
   var rename: Anon_QueryResultRenameQuery
@@ -28,8 +28,8 @@ object QueryRegistry {
   def apply(
     completions: Anon_QueryResultCompletionsQuery,
     definition: Anon_QueryResultDefinitionQuery,
-    documentation: Anon_QueryResult,
-    files: Anon_QueryResultFilesQuery,
+    documentation: Anon_QueryResultDocumentationQuery,
+    files: Anon_QueryResult,
     properties: Anon_QueryResultPropertiesQuery,
     refs: Anon_QueryResultRefsQuery,
     rename: Anon_QueryResultRenameQuery,

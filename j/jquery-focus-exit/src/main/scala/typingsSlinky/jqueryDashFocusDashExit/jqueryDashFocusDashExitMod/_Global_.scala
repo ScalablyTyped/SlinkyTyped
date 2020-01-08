@@ -3,7 +3,6 @@ package typingsSlinky.jqueryDashFocusDashExit.jqueryDashFocusDashExitMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery.TriggeredEvent
 import typingsSlinky.jqueryDashFocusDashExit.Anon_Debug
-import typingsSlinky.jqueryDashFocusDashExit.jqueryDashFocusDashExitMod._Global_.JQuery
 import typingsSlinky.jqueryDashFocusDashExit.jqueryDashFocusDashExitStrings.focusExit
 import typingsSlinky.jqueryDashFocusDashExit.jqueryDashFocusDashExitStrings.focusin
 import scala.scalajs.js

@@ -1,7 +1,6 @@
 package typingsSlinky.fabric.fabricDashImplMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.fabric.Anon_LeftRight
 import typingsSlinky.fabric.Anon_LeftTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,9 +39,8 @@ trait IUtilDomMisc extends js.Object {
   /**
   	 * Returns element scroll offsets
   	 * @param element Element to operate on
-  	 * @param upperCanvasEl Upper canvas element
   	 */
-  def getScrollLeftTop(element: HTMLElement, upperCanvasEl: HTMLElement): Anon_LeftRight = js.native
+  def getScrollLeftTop(element: HTMLElement): Anon_LeftTop = js.native
   /**
   	 * Creates specified element with specified attributes
   	 * @param tagName Type of an element to create

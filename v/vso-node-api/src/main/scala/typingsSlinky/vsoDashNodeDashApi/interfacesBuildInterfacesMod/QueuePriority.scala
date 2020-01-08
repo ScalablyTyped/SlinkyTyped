@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object QueuePriority extends js.Object {
   @js.native
   sealed trait Normal extends QueuePriority
   
-  /* 2 */ val AboveNormal: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueuePriority.AboveNormal with Double = js.native
-  /* 4 */ val BelowNormal: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueuePriority.BelowNormal with Double = js.native
-  /* 1 */ val High: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueuePriority.High with Double = js.native
-  /* 5 */ val Low: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueuePriority.Low with Double = js.native
-  /* 3 */ val Normal: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueuePriority.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueuePriority with Double] = js.native
+  /* 2 */ @js.native
+  object AboveNormal extends TopLevel[AboveNormal with Double]
+  
+  /* 4 */ @js.native
+  object BelowNormal extends TopLevel[BelowNormal with Double]
+  
+  /* 1 */ @js.native
+  object High extends TopLevel[High with Double]
+  
+  /* 5 */ @js.native
+  object Low extends TopLevel[Low with Double]
+  
+  /* 3 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

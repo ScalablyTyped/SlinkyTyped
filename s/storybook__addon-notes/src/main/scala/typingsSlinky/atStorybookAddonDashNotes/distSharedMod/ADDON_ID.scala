@@ -1,12 +1,12 @@
 package typingsSlinky.atStorybookAddonDashNotes.distSharedMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.atStorybookAddonDashNotes.atStorybookAddonDashNotesStrings.`storybookjs/notes`
+import typingsSlinky.atStorybookAddonDashNotes.atStorybookAddonDashNotesStrings.storybookjsSlashnotes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@storybook/addon-notes/dist/shared", "ADDON_ID")
 @js.native
-object ADDON_ID extends TopLevel[`storybookjs/notes`]
+object ADDON_ID extends TopLevel[storybookjsSlashnotes]
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object NeedleType extends js.Object {
   @js.native
   sealed trait Triangle extends NeedleType
   
-  /* 2 */ val Arrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.NeedleType.Arrow with Double = js.native
-  /* 3 */ val Image: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.NeedleType.Image with Double = js.native
-  /* 1 */ val Rectangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.NeedleType.Rectangle with Double = js.native
-  /* 4 */ val Trapezoid: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.NeedleType.Trapezoid with Double = js.native
-  /* 0 */ val Triangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.NeedleType.Triangle with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NeedleType with Double] = js.native
+  /* 2 */ @js.native
+  object Arrow extends TopLevel[Arrow with Double]
+  
+  /* 3 */ @js.native
+  object Image extends TopLevel[Image with Double]
+  
+  /* 1 */ @js.native
+  object Rectangle extends TopLevel[Rectangle with Double]
+  
+  /* 4 */ @js.native
+  object Trapezoid extends TopLevel[Trapezoid with Double]
+  
+  /* 0 */ @js.native
+  object Triangle extends TopLevel[Triangle with Double]
+  
 }
 

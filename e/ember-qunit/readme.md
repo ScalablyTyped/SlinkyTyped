@@ -10,9 +10,9 @@ QUnit helpers for testing Ember.js applications
 | ------------------ | :-------------: |
 | Full name          | ember-qunit |
 | Keywords           | ember-addon |
-| # releases         | 35 |
-| # dependents       | 1 |
-| # downloads        | 3822189 |
+| # releases         | 22 |
+| # dependents       | 2 |
+| # downloads        | 4509672 |
 | # stars            | 0 |
 
 ## Links

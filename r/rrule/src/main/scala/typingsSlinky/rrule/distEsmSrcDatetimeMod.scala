@@ -1,7 +1,5 @@
 package typingsSlinky.rrule
 
-import typingsSlinky.rrule.distEsmSrcDatetimeMod.DateTime
-import typingsSlinky.rrule.distEsmSrcDatetimeMod.Time
 import typingsSlinky.rrule.distEsmSrcTypesMod.ParsedOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

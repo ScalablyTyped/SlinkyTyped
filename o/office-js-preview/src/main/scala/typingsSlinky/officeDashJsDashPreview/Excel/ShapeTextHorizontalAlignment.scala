@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,14 +38,28 @@ object ShapeTextHorizontalAlignment extends js.Object {
   @js.native
   sealed trait thaiDistributed extends ShapeTextHorizontalAlignment
   
-  /* "Center" */ val center: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.center with String = js.native
-  /* "Distributed" */ val distributed: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.distributed with String = js.native
-  /* "Justify" */ val justify: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.justify with String = js.native
-  /* "JustifyLow" */ val justifyLow: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.justifyLow with String = js.native
-  /* "Left" */ val left: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.left with String = js.native
-  /* "Right" */ val right: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.right with String = js.native
-  /* "ThaiDistributed" */ val thaiDistributed: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextHorizontalAlignment.thaiDistributed with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeTextHorizontalAlignment with String] = js.native
+  /* "Center" */ @js.native
+  object center extends TopLevel[center with String]
+  
+  /* "Distributed" */ @js.native
+  object distributed extends TopLevel[distributed with String]
+  
+  /* "Justify" */ @js.native
+  object justify extends TopLevel[justify with String]
+  
+  /* "JustifyLow" */ @js.native
+  object justifyLow extends TopLevel[justifyLow with String]
+  
+  /* "Left" */ @js.native
+  object left extends TopLevel[left with String]
+  
+  /* "Right" */ @js.native
+  object right extends TopLevel[right with String]
+  
+  /* "ThaiDistributed" */ @js.native
+  object thaiDistributed extends TopLevel[thaiDistributed with String]
+  
 }
 

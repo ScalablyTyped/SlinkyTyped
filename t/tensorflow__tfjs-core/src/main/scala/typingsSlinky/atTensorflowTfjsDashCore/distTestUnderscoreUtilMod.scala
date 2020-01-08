@@ -1,8 +1,7 @@
 package typingsSlinky.atTensorflowTfjsDashCore
 
-import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreNumbers.`0DOT001`
-import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreNumbers.`0DOT1`
-import typingsSlinky.atTensorflowTfjsDashCore.distTestUnderscoreUtilMod.DoneFn
+import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreNumbers.`0.001`
+import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreNumbers.`0.1`
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.RecursiveArray
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TensorLike
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TypedArray
@@ -22,7 +21,7 @@ object distTestUnderscoreUtilMod extends js.Object {
     def fail(message: Error): Unit = js.native
   }
   
-  val TEST_EPSILON_FLOAT16: `0DOT1` = js.native
+  val TEST_EPSILON_FLOAT16: `0.1` = js.native
   def expectArrayBuffersEqual(actual: scala.scalajs.js.typedarray.ArrayBuffer, expected: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double, epsilon: Double): Unit = js.native
@@ -48,6 +47,6 @@ object distTestUnderscoreUtilMod extends js.Object {
   def expectPromiseToFail(fn: js.Function0[js.Promise[js.Object]], done: DoneFn): Unit = js.native
   def expectValuesInRange(actual: js.Array[Double], low: Double, high: Double): Unit = js.native
   def expectValuesInRange(actual: TypedArray, low: Double, high: Double): Unit = js.native
-  def testEpsilon(): `0DOT001` | `0DOT1` = js.native
+  def testEpsilon(): `0.001` | `0.1` = js.native
 }
 

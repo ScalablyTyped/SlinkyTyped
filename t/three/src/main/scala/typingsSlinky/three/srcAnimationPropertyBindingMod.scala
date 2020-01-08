@@ -1,8 +1,6 @@
 package typingsSlinky.three
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.three.srcAnimationPropertyBindingMod.PropertyBinding
-import typingsSlinky.three.srcAnimationPropertyBindingMod.PropertyBinding.Composite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

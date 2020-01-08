@@ -33,7 +33,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class Application protected () extends js.Object {
   val ADOConnectString: String = js.native
-  var `Access.Application_typekey`: typingsSlinky.activexDashAccess.Access.Application = js.native
+  @JSName("Access.Application_typekey")
+  var AccessDotApplication_typekey: typingsSlinky.activexDashAccess.Access.Application = js.native
   val AnswerWizard: typingsSlinky.activexDashOffice.Office.AnswerWizard = js.native
   val Application: typingsSlinky.activexDashAccess.Access.Application = js.native
   val Assistance: IAssistance = js.native

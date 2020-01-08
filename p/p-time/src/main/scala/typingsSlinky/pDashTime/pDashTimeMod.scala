@@ -1,6 +1,5 @@
 package typingsSlinky.pDashTime
 
-import typingsSlinky.pDashTime.pDashTimeMod.PromiseWithTime
 import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`

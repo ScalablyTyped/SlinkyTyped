@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcApiFieldUnderscorePathMod.FieldPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

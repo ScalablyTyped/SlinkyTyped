@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object FileSystemObjectType extends js.Object {
   @js.native
   sealed trait web extends FileSystemObjectType
   
-  /* 1 */ val file: typingsSlinky.sharepoint.SP.FileSystemObjectType.file with Double = js.native
-  /* 2 */ val folder: typingsSlinky.sharepoint.SP.FileSystemObjectType.folder with Double = js.native
-  /* 0 */ val invalid: typingsSlinky.sharepoint.SP.FileSystemObjectType.invalid with Double = js.native
-  /* 3 */ val web: typingsSlinky.sharepoint.SP.FileSystemObjectType.web with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileSystemObjectType with Double] = js.native
+  /* 1 */ @js.native
+  object file extends TopLevel[file with Double]
+  
+  /* 2 */ @js.native
+  object folder extends TopLevel[folder with Double]
+  
+  /* 0 */ @js.native
+  object invalid extends TopLevel[invalid with Double]
+  
+  /* 3 */ @js.native
+  object web extends TopLevel[web with Double]
+  
 }
 

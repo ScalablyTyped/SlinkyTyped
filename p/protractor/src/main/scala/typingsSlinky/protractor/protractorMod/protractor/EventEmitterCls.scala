@@ -1,5 +1,6 @@
 package typingsSlinky.protractor.protractorMod.protractor
 
+import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +11,5 @@ import scala.scalajs.js.annotation._
 /**
   * @constructor
   */
-class EventEmitterCls ()
-  extends typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.EventEmitter
+class EventEmitterCls () extends EventEmitter
 

@@ -1,5 +1,6 @@
 package typingsSlinky.sipDotJs.libConstantsMod.C
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,30 +80,76 @@ object causes extends js.Object {
   @js.native
   sealed trait WEBRTC_NOT_SUPPORTED extends causes
   
-  /* "Address Incomplete" */ val ADDRESS_INCOMPLETE: typingsSlinky.sipDotJs.libConstantsMod.C.causes.ADDRESS_INCOMPLETE with String = js.native
-  /* "Authentication Error" */ val AUTHENTICATION_ERROR: typingsSlinky.sipDotJs.libConstantsMod.C.causes.AUTHENTICATION_ERROR with String = js.native
-  /* "Bad Media Description" */ val BAD_MEDIA_DESCRIPTION: typingsSlinky.sipDotJs.libConstantsMod.C.causes.BAD_MEDIA_DESCRIPTION with String = js.native
-  /* "Busy" */ val BUSY: typingsSlinky.sipDotJs.libConstantsMod.C.causes.BUSY with String = js.native
-  /* "Canceled" */ val CANCELED: typingsSlinky.sipDotJs.libConstantsMod.C.causes.CANCELED with String = js.native
-  /* "Connection Error" */ val CONNECTION_ERROR: typingsSlinky.sipDotJs.libConstantsMod.C.causes.CONNECTION_ERROR with String = js.native
-  /* "Dialog Error" */ val DIALOG_ERROR: typingsSlinky.sipDotJs.libConstantsMod.C.causes.DIALOG_ERROR with String = js.native
-  /* "Expires" */ val EXPIRES: typingsSlinky.sipDotJs.libConstantsMod.C.causes.EXPIRES with String = js.native
-  /* "Incompatible SDP" */ val INCOMPATIBLE_SDP: typingsSlinky.sipDotJs.libConstantsMod.C.causes.INCOMPATIBLE_SDP with String = js.native
-  /* "Internal Error" */ val INTERNAL_ERROR: typingsSlinky.sipDotJs.libConstantsMod.C.causes.INTERNAL_ERROR with String = js.native
-  /* "Not Found" */ val NOT_FOUND: typingsSlinky.sipDotJs.libConstantsMod.C.causes.NOT_FOUND with String = js.native
-  /* "No ACK" */ val NO_ACK: typingsSlinky.sipDotJs.libConstantsMod.C.causes.NO_ACK with String = js.native
-  /* "No Answer" */ val NO_ANSWER: typingsSlinky.sipDotJs.libConstantsMod.C.causes.NO_ANSWER with String = js.native
-  /* "No PRACK" */ val NO_PRACK: typingsSlinky.sipDotJs.libConstantsMod.C.causes.NO_PRACK with String = js.native
-  /* "Redirected" */ val REDIRECTED: typingsSlinky.sipDotJs.libConstantsMod.C.causes.REDIRECTED with String = js.native
-  /* "Rejected" */ val REJECTED: typingsSlinky.sipDotJs.libConstantsMod.C.causes.REJECTED with String = js.native
-  /* "Request Timeout" */ val REQUEST_TIMEOUT: typingsSlinky.sipDotJs.libConstantsMod.C.causes.REQUEST_TIMEOUT with String = js.native
-  /* "RTP Timeout" */ val RTP_TIMEOUT: typingsSlinky.sipDotJs.libConstantsMod.C.causes.RTP_TIMEOUT with String = js.native
-  /* "SIP Failure Code" */ val SIP_FAILURE_CODE: typingsSlinky.sipDotJs.libConstantsMod.C.causes.SIP_FAILURE_CODE with String = js.native
-  /* "Unavailable" */ val UNAVAILABLE: typingsSlinky.sipDotJs.libConstantsMod.C.causes.UNAVAILABLE with String = js.native
-  /* "User Denied Media Access" */ val USER_DENIED_MEDIA_ACCESS: typingsSlinky.sipDotJs.libConstantsMod.C.causes.USER_DENIED_MEDIA_ACCESS with String = js.native
-  /* "WebRTC Error" */ val WEBRTC_ERROR: typingsSlinky.sipDotJs.libConstantsMod.C.causes.WEBRTC_ERROR with String = js.native
-  /* "WebRTC Not Supported" */ val WEBRTC_NOT_SUPPORTED: typingsSlinky.sipDotJs.libConstantsMod.C.causes.WEBRTC_NOT_SUPPORTED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[causes with String] = js.native
+  /* "Address Incomplete" */ @js.native
+  object ADDRESS_INCOMPLETE extends TopLevel[ADDRESS_INCOMPLETE with String]
+  
+  /* "Authentication Error" */ @js.native
+  object AUTHENTICATION_ERROR extends TopLevel[AUTHENTICATION_ERROR with String]
+  
+  /* "Bad Media Description" */ @js.native
+  object BAD_MEDIA_DESCRIPTION extends TopLevel[BAD_MEDIA_DESCRIPTION with String]
+  
+  /* "Busy" */ @js.native
+  object BUSY extends TopLevel[BUSY with String]
+  
+  /* "Canceled" */ @js.native
+  object CANCELED extends TopLevel[CANCELED with String]
+  
+  /* "Connection Error" */ @js.native
+  object CONNECTION_ERROR extends TopLevel[CONNECTION_ERROR with String]
+  
+  /* "Dialog Error" */ @js.native
+  object DIALOG_ERROR extends TopLevel[DIALOG_ERROR with String]
+  
+  /* "Expires" */ @js.native
+  object EXPIRES extends TopLevel[EXPIRES with String]
+  
+  /* "Incompatible SDP" */ @js.native
+  object INCOMPATIBLE_SDP extends TopLevel[INCOMPATIBLE_SDP with String]
+  
+  /* "Internal Error" */ @js.native
+  object INTERNAL_ERROR extends TopLevel[INTERNAL_ERROR with String]
+  
+  /* "Not Found" */ @js.native
+  object NOT_FOUND extends TopLevel[NOT_FOUND with String]
+  
+  /* "No ACK" */ @js.native
+  object NO_ACK extends TopLevel[NO_ACK with String]
+  
+  /* "No Answer" */ @js.native
+  object NO_ANSWER extends TopLevel[NO_ANSWER with String]
+  
+  /* "No PRACK" */ @js.native
+  object NO_PRACK extends TopLevel[NO_PRACK with String]
+  
+  /* "Redirected" */ @js.native
+  object REDIRECTED extends TopLevel[REDIRECTED with String]
+  
+  /* "Rejected" */ @js.native
+  object REJECTED extends TopLevel[REJECTED with String]
+  
+  /* "Request Timeout" */ @js.native
+  object REQUEST_TIMEOUT extends TopLevel[REQUEST_TIMEOUT with String]
+  
+  /* "RTP Timeout" */ @js.native
+  object RTP_TIMEOUT extends TopLevel[RTP_TIMEOUT with String]
+  
+  /* "SIP Failure Code" */ @js.native
+  object SIP_FAILURE_CODE extends TopLevel[SIP_FAILURE_CODE with String]
+  
+  /* "Unavailable" */ @js.native
+  object UNAVAILABLE extends TopLevel[UNAVAILABLE with String]
+  
+  /* "User Denied Media Access" */ @js.native
+  object USER_DENIED_MEDIA_ACCESS extends TopLevel[USER_DENIED_MEDIA_ACCESS with String]
+  
+  /* "WebRTC Error" */ @js.native
+  object WEBRTC_ERROR extends TopLevel[WEBRTC_ERROR with String]
+  
+  /* "WebRTC Not Supported" */ @js.native
+  object WEBRTC_NOT_SUPPORTED extends TopLevel[WEBRTC_NOT_SUPPORTED with String]
+  
 }
 

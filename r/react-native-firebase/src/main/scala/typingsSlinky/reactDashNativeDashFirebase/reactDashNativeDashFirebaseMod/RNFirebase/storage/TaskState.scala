@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object TaskState extends js.Object {
   @js.native
   sealed trait SUCCESS extends TaskState
   
-  /* "cancelled" */ val CANCELLED: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskState.CANCELLED with String = js.native
-  /* "error" */ val ERROR: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskState.ERROR with String = js.native
-  /* "paused" */ val PAUSED: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskState.PAUSED with String = js.native
-  /* "running" */ val RUNNING: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskState.RUNNING with String = js.native
-  /* "success" */ val SUCCESS: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskState.SUCCESS with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TaskState with String] = js.native
+  /* "cancelled" */ @js.native
+  object CANCELLED extends TopLevel[CANCELLED with String]
+  
+  /* "error" */ @js.native
+  object ERROR extends TopLevel[ERROR with String]
+  
+  /* "paused" */ @js.native
+  object PAUSED extends TopLevel[PAUSED with String]
+  
+  /* "running" */ @js.native
+  object RUNNING extends TopLevel[RUNNING with String]
+  
+  /* "success" */ @js.native
+  object SUCCESS extends TopLevel[SUCCESS with String]
+  
 }
 

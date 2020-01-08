@@ -10,9 +10,9 @@ A low-level Symbol-based API for defining a common cancellation protocol.
 | ------------------ | :-------------: |
 | Full name          | @esfx/cancelable |
 | Keywords           | - |
-| # releases         | 8 |
+| # releases         | 14 |
 | # dependents       | 18 |
-| # downloads        | 2539 |
+| # downloads        | 44373 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,20 +63,46 @@ object BPMNTriggers extends js.Object {
   @js.native
   sealed trait Timer extends BPMNTriggers
   
-  /* 12 */ val Cancel: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Cancel with Double = js.native
-  /* 6 */ val Compensation: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Compensation with Double = js.native
-  /* 10 */ val Conditional: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Conditional with Double = js.native
-  /* 5 */ val Error: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Error with Double = js.native
-  /* 3 */ val Escalation: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Escalation with Double = js.native
-  /* 4 */ val Link: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Link with Double = js.native
-  /* 1 */ val Message: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Message with Double = js.native
-  /* 8 */ val Multiple: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Multiple with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.None with Double = js.native
-  /* 9 */ val Parallel: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Parallel with Double = js.native
-  /* 7 */ val Signal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Signal with Double = js.native
-  /* 11 */ val Terminate: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Terminate with Double = js.native
-  /* 2 */ val Timer: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNTriggers.Timer with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNTriggers with Double] = js.native
+  /* 12 */ @js.native
+  object Cancel extends TopLevel[Cancel with Double]
+  
+  /* 6 */ @js.native
+  object Compensation extends TopLevel[Compensation with Double]
+  
+  /* 10 */ @js.native
+  object Conditional extends TopLevel[Conditional with Double]
+  
+  /* 5 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 3 */ @js.native
+  object Escalation extends TopLevel[Escalation with Double]
+  
+  /* 4 */ @js.native
+  object Link extends TopLevel[Link with Double]
+  
+  /* 1 */ @js.native
+  object Message extends TopLevel[Message with Double]
+  
+  /* 8 */ @js.native
+  object Multiple extends TopLevel[Multiple with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 9 */ @js.native
+  object Parallel extends TopLevel[Parallel with Double]
+  
+  /* 7 */ @js.native
+  object Signal extends TopLevel[Signal with Double]
+  
+  /* 11 */ @js.native
+  object Terminate extends TopLevel[Terminate with Double]
+  
+  /* 2 */ @js.native
+  object Timer extends TopLevel[Timer with Double]
+  
 }
 

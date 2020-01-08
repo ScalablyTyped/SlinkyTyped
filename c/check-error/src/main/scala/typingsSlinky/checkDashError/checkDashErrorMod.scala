@@ -1,6 +1,5 @@
 package typingsSlinky.checkDashError
 
-import typingsSlinky.checkDashError.checkDashErrorMod.ErrorInstanceOrConstructor
 import typingsSlinky.std.Error
 import typingsSlinky.std.RegExp
 import scala.scalajs.js

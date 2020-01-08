@@ -3,6 +3,7 @@ package typingsSlinky.phaser.phaserMod.Physics
 import typingsSlinky.phaser.ArcadePhysicsCallback
 import typingsSlinky.phaser.Phaser.GameObjects.GameObject
 import typingsSlinky.phaser.Phaser.Geom.Rectangle
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Tilemaps.DynamicTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.StaticTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
@@ -37,7 +38,7 @@ object Arcade extends js.Object {
       * 
       * @param scene The Scene that this Plugin belongs to.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene) = this()
+    def this(scene: Scene) = this()
   }
   
   /**
@@ -115,55 +116,51 @@ object Arcade extends js.Object {
       * @param children Game Objects to add to this group; or the `config` argument.
       * @param config Settings for this group.
       */
-    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: typingsSlinky.phaser.Phaser.Scene) = this()
+    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: Scene) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject]
     ) = this()
+    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: Scene, children: GroupCreateConfig) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
-      children: GroupCreateConfig
-    ) = this()
-    def this(
-      world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: PhysicsGroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject],
       config: GroupCreateConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject],
       config: PhysicsGroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupCreateConfig,
       config: GroupCreateConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupCreateConfig,
       config: PhysicsGroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: PhysicsGroupConfig,
       config: GroupCreateConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: PhysicsGroupConfig,
       config: PhysicsGroupConfig
     ) = this()
@@ -186,9 +183,9 @@ object Arcade extends js.Object {
       * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
       * @param frame An optional frame from the Texture this Game Object is rendering with.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String) = this()
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: String) = this()
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: integer) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
   }
   
   /**
@@ -209,9 +206,9 @@ object Arcade extends js.Object {
       * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
       * @param frame An optional frame from the Texture this Game Object is rendering with.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String) = this()
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: String) = this()
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: integer) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
+    def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
   }
   
   /**
@@ -252,55 +249,47 @@ object Arcade extends js.Object {
       * @param children Game Objects to add to this group; or the `config` argument.
       * @param config Settings for this group.
       */
-    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: typingsSlinky.phaser.Phaser.Scene) = this()
+    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: Scene) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject]
     ) = this()
+    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: Scene, children: GroupConfig) = this()
+    def this(world: typingsSlinky.phaser.Phaser.Physics.Arcade.World, scene: Scene, children: GroupCreateConfig) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
-      children: GroupConfig
-    ) = this()
-    def this(
-      world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
-      children: GroupCreateConfig
-    ) = this()
-    def this(
-      world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject],
       config: GroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: js.Array[GameObject],
       config: GroupCreateConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupConfig,
       config: GroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupConfig,
       config: GroupCreateConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupCreateConfig,
       config: GroupConfig
     ) = this()
     def this(
       world: typingsSlinky.phaser.Phaser.Physics.Arcade.World,
-      scene: typingsSlinky.phaser.Phaser.Scene,
+      scene: Scene,
       children: GroupCreateConfig,
       config: GroupCreateConfig
     ) = this()
@@ -321,7 +310,7 @@ object Arcade extends js.Object {
       * @param scene The Scene to which this World instance belongs.
       * @param config An Arcade Physics Configuration object.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, config: ArcadeWorldConfig) = this()
+    def this(scene: Scene, config: ArcadeWorldConfig) = this()
   }
   
   /**

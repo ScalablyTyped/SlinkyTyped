@@ -119,7 +119,7 @@ trait Model extends js.Object {
   var theme: js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline.Theme | String] = js.undefined
   /** Options to customize the tooltip.
     */
-  var tooltip: js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.Sparkline.Tooltip] = js.undefined
+  var tooltip: js.UndefOr[Tooltip] = js.undefined
   /** Fires before rendering trackball tooltip. You can use this event to customize the text displayed in trackball tooltip.
     */
   var tooltipInitialize: js.UndefOr[js.Function1[/* e */ TooltipInitializeEventArgs, Unit]] = js.undefined
@@ -176,7 +176,7 @@ object Model {
     startPointColor: String = null,
     stroke: String = null,
     theme: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline.Theme | String = null,
-    tooltip: typingsSlinky.ejDotWebDotAll.ej.Sparkline.Tooltip = null,
+    tooltip: Tooltip = null,
     tooltipInitialize: /* e */ TooltipInitializeEventArgs => Unit = null,
     `type`: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Sparkline.Type | String = null,
     width: Int | Double = null,

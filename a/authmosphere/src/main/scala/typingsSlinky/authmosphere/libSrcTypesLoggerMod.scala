@@ -1,6 +1,6 @@
 package typingsSlinky.authmosphere
 
-import typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,14 +47,26 @@ object libSrcTypesLoggerMod extends js.Object {
     @js.native
     sealed trait warn extends LogLevel
     
-    /* "debug" */ val debug: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.debug with String = js.native
-    /* "error" */ val error: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.error with String = js.native
-    /* "fatal" */ val fatal: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.fatal with String = js.native
-    /* "info" */ val info: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.info with String = js.native
-    /* "trace" */ val trace: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.trace with String = js.native
-    /* "warn" */ val warn: typingsSlinky.authmosphere.libSrcTypesLoggerMod.LogLevel.warn with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[LogLevel with String] = js.native
+    /* "debug" */ @js.native
+    object debug extends TopLevel[debug with String]
+    
+    /* "error" */ @js.native
+    object error extends TopLevel[error with String]
+    
+    /* "fatal" */ @js.native
+    object fatal extends TopLevel[fatal with String]
+    
+    /* "info" */ @js.native
+    object info extends TopLevel[info with String]
+    
+    /* "trace" */ @js.native
+    object trace extends TopLevel[trace with String]
+    
+    /* "warn" */ @js.native
+    object warn extends TopLevel[warn with String]
+    
   }
   
 }

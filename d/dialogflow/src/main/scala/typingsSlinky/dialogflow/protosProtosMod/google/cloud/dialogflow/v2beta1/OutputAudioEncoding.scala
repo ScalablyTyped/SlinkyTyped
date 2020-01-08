@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object OutputAudioEncoding extends js.Object {
   @js.native
   sealed trait OUTPUT_AUDIO_ENCODING_UNSPECIFIED extends OutputAudioEncoding
   
-  /* 1 */ val OUTPUT_AUDIO_ENCODING_LINEAR_16: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.OutputAudioEncoding.OUTPUT_AUDIO_ENCODING_LINEAR_16 with Double = js.native
-  /* 2 */ val OUTPUT_AUDIO_ENCODING_MP3: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.OutputAudioEncoding.OUTPUT_AUDIO_ENCODING_MP3 with Double = js.native
-  /* 3 */ val OUTPUT_AUDIO_ENCODING_OGG_OPUS: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.OutputAudioEncoding.OUTPUT_AUDIO_ENCODING_OGG_OPUS with Double = js.native
-  /* 0 */ val OUTPUT_AUDIO_ENCODING_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.OutputAudioEncoding.OUTPUT_AUDIO_ENCODING_UNSPECIFIED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OutputAudioEncoding with Double] = js.native
+  /* 1 */ @js.native
+  object OUTPUT_AUDIO_ENCODING_LINEAR_16 extends TopLevel[OUTPUT_AUDIO_ENCODING_LINEAR_16 with Double]
+  
+  /* 2 */ @js.native
+  object OUTPUT_AUDIO_ENCODING_MP3 extends TopLevel[OUTPUT_AUDIO_ENCODING_MP3 with Double]
+  
+  /* 3 */ @js.native
+  object OUTPUT_AUDIO_ENCODING_OGG_OPUS extends TopLevel[OUTPUT_AUDIO_ENCODING_OGG_OPUS with Double]
+  
+  /* 0 */ @js.native
+  object OUTPUT_AUDIO_ENCODING_UNSPECIFIED extends TopLevel[OUTPUT_AUDIO_ENCODING_UNSPECIFIED with Double]
+  
 }
 

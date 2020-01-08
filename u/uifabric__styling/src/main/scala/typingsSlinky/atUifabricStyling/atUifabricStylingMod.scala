@@ -11,6 +11,7 @@ import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IConcatenatedStyl
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IProcessedStyleSet
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
 import typingsSlinky.atUifabricMergeDashStyles.libStylesheetMod.IStyleSheetConfig
+import typingsSlinky.atUifabricStyling.atUifabricStylingBooleans.`false`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`0`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`1024`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`1366`
@@ -21,10 +22,9 @@ import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`320`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`480`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`640`
 import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`768`
-import typingsSlinky.atUifabricStyling.atUifabricStylingNumbers.`false`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and (-ms-high-contrast: active)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and (-ms-high-contrast: black-on-white)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and (-ms-high-contrast: white-on-black)`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis`
 import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.absolute
 import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.horizontal
 import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.relative
@@ -64,9 +64,9 @@ object atUifabricStylingMod extends js.Object {
   val DefaultEffects: IEffects = js.native
   val DefaultFontStyles: IFontStyles = js.native
   val DefaultPalette: IPalette = js.native
-  val HighContrastSelector: `@media screen and (-ms-high-contrast: active)` = js.native
-  val HighContrastSelectorBlack: `@media screen and (-ms-high-contrast: white-on-black)` = js.native
-  val HighContrastSelectorWhite: `@media screen and (-ms-high-contrast: black-on-white)` = js.native
+  val HighContrastSelector: `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis` = js.native
+  val HighContrastSelectorBlack: `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis` = js.native
+  val HighContrastSelectorWhite: `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis` = js.native
   val ScreenWidthMaxLarge: Double = js.native
   val ScreenWidthMaxMedium: Double = js.native
   val ScreenWidthMaxSmall: Double = js.native

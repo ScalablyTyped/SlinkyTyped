@@ -5,7 +5,6 @@ import typingsSlinky.node.netMod.TcpSocketConnectOpts
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import typingsSlinky.rsocketDashCore.rSocketEncodingMod.Encoders
 import typingsSlinky.rsocketDashFlowable.rsocketDashFlowableMod.Flowable
-import typingsSlinky.rsocketDashTcpDashClient.rSocketTcpClientMod.RSocketTcpConnection
 import typingsSlinky.rsocketDashTypes.reactiveSocketTypesMod.ConnectionStatus
 import typingsSlinky.rsocketDashTypes.reactiveSocketTypesMod.DuplexConnection
 import typingsSlinky.rsocketDashTypes.reactiveSocketTypesMod.Frame

@@ -1,5 +1,6 @@
 package typingsSlinky.atBlueprintjsTable.libEsmRegionsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object RegionCardinality extends js.Object {
   @js.native
   sealed trait FULL_TABLE extends RegionCardinality
   
-  /* "cells" */ val CELLS: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.RegionCardinality.CELLS with String = js.native
-  /* "full-columns" */ val FULL_COLUMNS: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.RegionCardinality.FULL_COLUMNS with String = js.native
-  /* "full-rows" */ val FULL_ROWS: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.RegionCardinality.FULL_ROWS with String = js.native
-  /* "full-table" */ val FULL_TABLE: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.RegionCardinality.FULL_TABLE with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[RegionCardinality with String] = js.native
+  /* "cells" */ @js.native
+  object CELLS extends TopLevel[CELLS with String]
+  
+  /* "full-columns" */ @js.native
+  object FULL_COLUMNS extends TopLevel[FULL_COLUMNS with String]
+  
+  /* "full-rows" */ @js.native
+  object FULL_ROWS extends TopLevel[FULL_ROWS with String]
+  
+  /* "full-table" */ @js.native
+  object FULL_TABLE extends TopLevel[FULL_TABLE with String]
+  
 }
 

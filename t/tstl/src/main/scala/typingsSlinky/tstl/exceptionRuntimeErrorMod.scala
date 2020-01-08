@@ -2,10 +2,6 @@ package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.tstl.exceptionExceptionMod.Exception
-import typingsSlinky.tstl.exceptionRuntimeErrorMod.OverflowError
-import typingsSlinky.tstl.exceptionRuntimeErrorMod.RangeError
-import typingsSlinky.tstl.exceptionRuntimeErrorMod.RuntimeError
-import typingsSlinky.tstl.exceptionRuntimeErrorMod.UnderflowError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

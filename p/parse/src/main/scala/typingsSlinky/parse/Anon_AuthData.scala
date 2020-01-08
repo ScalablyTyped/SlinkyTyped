@@ -1,6 +1,6 @@
 package typingsSlinky.parse
 
-import typingsSlinky.parse.Parse.AuthData
+import typingsSlinky.parse.parseMod._Global_.Parse.AuthData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -19,8 +19,9 @@ object ToastContainer
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: content, type */
+  /* The following DOM/SVG props were specified: type */
   def apply(
+    content: String,
     duration: Int | Double = null,
     mask: js.UndefOr[Boolean] = js.undefined,
     onAnimationEnd: () => Unit = null,
@@ -28,7 +29,7 @@ object ToastContainer
     styles: Partial[ToastStyle] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
     if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
     if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction0(onAnimationEnd))

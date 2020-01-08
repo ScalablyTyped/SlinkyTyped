@@ -13,7 +13,8 @@ class Footnote protected () extends js.Object {
   val Parent: js.Any = js.native
   val Range: typingsSlinky.activexDashWord.Word.Range = js.native
   val Reference: typingsSlinky.activexDashWord.Word.Range = js.native
-  var `Word.Footnote_typekey`: Footnote = js.native
+  @JSName("Word.Footnote_typekey")
+  var WordDotFootnote_typekey: Footnote = js.native
   def Delete(): Unit = js.native
 }
 

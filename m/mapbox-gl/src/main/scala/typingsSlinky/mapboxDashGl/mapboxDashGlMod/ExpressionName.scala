@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxDashGl.mapboxDashGlMod
 
-import typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`-`
+import typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`-_`
 import typingsSlinky.mapboxDashGl.mapboxDashGlStrings.get_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,13 +29,13 @@ import scala.scalajs.js.annotation._
   - typings.mapboxDashGl.mapboxDashGlStrings.get_
   - typings.mapboxDashGl.mapboxDashGlStrings.has
   - typings.mapboxDashGl.mapboxDashGlStrings.length
-  - typings.mapboxDashGl.mapboxDashGlStrings.`!`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`!=`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`<`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`<=`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`==`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`>`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`>=`
+  - typings.mapboxDashGl.mapboxDashGlStrings.Exclamationmark
+  - typings.mapboxDashGl.mapboxDashGlStrings.ExclamationmarkEqualssign
+  - typings.mapboxDashGl.mapboxDashGlStrings.Lessthansign
+  - typings.mapboxDashGl.mapboxDashGlStrings.LessthansignEqualssign
+  - typings.mapboxDashGl.mapboxDashGlStrings.EqualssignEqualssign
+  - typings.mapboxDashGl.mapboxDashGlStrings.Greaterthansign
+  - typings.mapboxDashGl.mapboxDashGlStrings.GreaterthansignEqualssign
   - typings.mapboxDashGl.mapboxDashGlStrings.all
   - typings.mapboxDashGl.mapboxDashGlStrings.any
   - typings.mapboxDashGl.mapboxDashGlStrings.`case`
@@ -54,12 +54,12 @@ import scala.scalajs.js.annotation._
   - typings.mapboxDashGl.mapboxDashGlStrings.upcase
   - typings.mapboxDashGl.mapboxDashGlStrings.rgb
   - typings.mapboxDashGl.mapboxDashGlStrings.rgba
-  - typings.mapboxDashGl.mapboxDashGlStrings.`-`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`*`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`/`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`%`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`_backtick^_backtick`
-  - typings.mapboxDashGl.mapboxDashGlStrings.`+`
+  - typings.mapboxDashGl.mapboxDashGlStrings.`-_`
+  - typings.mapboxDashGl.mapboxDashGlStrings.Asterisk
+  - typings.mapboxDashGl.mapboxDashGlStrings.Slash
+  - typings.mapboxDashGl.mapboxDashGlStrings.Percentsign
+  - typings.mapboxDashGl.mapboxDashGlStrings.^
+  - typings.mapboxDashGl.mapboxDashGlStrings.Plussign
   - typings.mapboxDashGl.mapboxDashGlStrings.abs
   - typings.mapboxDashGl.mapboxDashGlStrings.acos
   - typings.mapboxDashGl.mapboxDashGlStrings.asin
@@ -86,32 +86,31 @@ trait ExpressionName extends js.Object
 
 object ExpressionName {
   @scala.inline
-  def `!`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`!` = this.cast("!")
+  def Asterisk: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Asterisk = this.cast("*")
   @scala.inline
-  def `!=`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`!=` = this.cast("!=")
+  def EqualssignEqualssign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.EqualssignEqualssign = this.cast("==")
   @scala.inline
-  def `%`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`%` = this.cast("%")
+  def Exclamationmark: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Exclamationmark = this.cast("!")
   @scala.inline
-  def `*`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`*` = this.cast("*")
+  def ExclamationmarkEqualssign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.ExclamationmarkEqualssign = this.cast("!=")
   @scala.inline
-  def `+`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`+` = this.cast("+")
-  @JSName("-")
+  def Greaterthansign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `-_`: `-` = this.cast("-")
+  def GreaterthansignEqualssign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `/`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`/` = this.cast("/")
+  def Lessthansign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `<`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`<` = this.cast("<")
+  def LessthansignEqualssign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
-  def `<=`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`<=` = this.cast("<=")
+  def Percentsign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Percentsign = this.cast("%")
   @scala.inline
-  def `==`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`==` = this.cast("==")
+  def Plussign: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Plussign = this.cast("+")
   @scala.inline
-  def `>`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`>` = this.cast(">")
+  def Slash: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.Slash = this.cast("/")
   @scala.inline
-  def `>=`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`>=` = this.cast(">=")
+  def ^ : typingsSlinky.mapboxDashGl.mapboxDashGlStrings.^ = this.cast("^")
   @scala.inline
-  def `_backtick^_backtick`: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`_backtick^_backtick` = this.cast("^")
+  def _dash: `-_` = this.cast("-")
   @scala.inline
   def abs: typingsSlinky.mapboxDashGl.mapboxDashGlStrings.abs = this.cast("abs")
   @scala.inline

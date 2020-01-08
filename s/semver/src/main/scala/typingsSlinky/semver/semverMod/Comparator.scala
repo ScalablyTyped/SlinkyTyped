@@ -1,11 +1,11 @@
 package typingsSlinky.semver.semverMod
 
-import typingsSlinky.semver.semverStrings.Empty
-import typingsSlinky.semver.semverStrings.`<=`
-import typingsSlinky.semver.semverStrings.`<`
-import typingsSlinky.semver.semverStrings.`=`
-import typingsSlinky.semver.semverStrings.`>=`
-import typingsSlinky.semver.semverStrings.`>`
+import typingsSlinky.semver.semverStrings.Equalssign
+import typingsSlinky.semver.semverStrings.Greaterthansign
+import typingsSlinky.semver.semverStrings.GreaterthansignEqualssign
+import typingsSlinky.semver.semverStrings.Lessthansign
+import typingsSlinky.semver.semverStrings.LessthansignEqualssign
+import typingsSlinky.semver.semverStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ class Comparator protected () extends js.Object {
   def this(comp: Comparator, optionsOrLoose: Boolean) = this()
   def this(comp: Comparator, optionsOrLoose: Options) = this()
   var loose: Boolean = js.native
-  var operator: Empty | `=` | `<` | `>` | `<=` | `>=` = js.native
+  var operator: _empty | Equalssign | Lessthansign | Greaterthansign | LessthansignEqualssign | GreaterthansignEqualssign = js.native
   var options: Options = js.native
   var semver: SemVer = js.native
   var value: String = js.native

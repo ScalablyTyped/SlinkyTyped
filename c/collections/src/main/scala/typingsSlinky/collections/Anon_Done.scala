@@ -1,6 +1,6 @@
 package typingsSlinky.collections
 
-import typingsSlinky.collections.collectionsNumbers.`true`
+import typingsSlinky.collections.collectionsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

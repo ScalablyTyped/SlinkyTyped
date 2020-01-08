@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RemoveDashCircleDashOutline extends SharedApply_SvgIconProps657215518[default] {
+object RemoveDashCircleDashOutline extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/content/remove-circle-outline", JSImport.Default)
   @js.native
   object componentImport extends js.Object

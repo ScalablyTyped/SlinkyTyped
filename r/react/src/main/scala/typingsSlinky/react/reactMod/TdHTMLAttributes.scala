@@ -36,6 +36,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.justify
 import typingsSlinky.react.reactStrings.left
 import typingsSlinky.react.reactStrings.link
@@ -144,7 +145,7 @@ object TdHTMLAttributes {
     className: String = null,
     colSpan: Int | Double = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -326,7 +327,7 @@ object TdHTMLAttributes {
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (colSpan != null) __obj.updateDynamic("colSpan")(colSpan.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.atStorybookUi.distKeyboardScanCodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -592,201 +593,589 @@ object ScanCode extends js.Object {
   @js.native
   sealed trait ZoomToggle extends ScanCode
   
-  /* 145 */ val Abort: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Abort with Double = js.native
-  /* 125 */ val Again: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Again with Double = js.native
-  /* 159 */ val AltLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.AltLeft with Double = js.native
-  /* 163 */ val AltRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.AltRight with Double = js.native
-  /* 87 */ val ArrowDown: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ArrowDown with Double = js.native
-  /* 86 */ val ArrowLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ArrowLeft with Double = js.native
-  /* 85 */ val ArrowRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ArrowRight with Double = js.native
-  /* 88 */ val ArrowUp: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ArrowUp with Double = js.native
-  /* 133 */ val AudioVolumeDown: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.AudioVolumeDown with Double = js.native
-  /* 131 */ val AudioVolumeMute: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.AudioVolumeMute with Double = js.native
-  /* 132 */ val AudioVolumeUp: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.AudioVolumeUp with Double = js.native
-  /* 59 */ val Backquote: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Backquote with Double = js.native
-  /* 55 */ val Backslash: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Backslash with Double = js.native
-  /* 48 */ val Backspace: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Backspace with Double = js.native
-  /* 53 */ val BracketLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BracketLeft with Double = js.native
-  /* 54 */ val BracketRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BracketRight with Double = js.native
-  /* 166 */ val BrightnessDown: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrightnessDown with Double = js.native
-  /* 165 */ val BrightnessUp: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrightnessUp with Double = js.native
-  /* 184 */ val BrowserBack: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserBack with Double = js.native
-  /* 188 */ val BrowserFavorites: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserFavorites with Double = js.native
-  /* 185 */ val BrowserForward: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserForward with Double = js.native
-  /* 183 */ val BrowserHome: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserHome with Double = js.native
-  /* 187 */ val BrowserRefresh: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserRefresh with Double = js.native
-  /* 182 */ val BrowserSearch: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserSearch with Double = js.native
-  /* 186 */ val BrowserStop: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.BrowserStop with Double = js.native
-  /* 63 */ val CapsLock: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.CapsLock with Double = js.native
-  /* 60 */ val Comma: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Comma with Double = js.native
-  /* 107 */ val ContextMenu: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ContextMenu with Double = js.native
-  /* 157 */ val ControlLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ControlLeft with Double = js.native
-  /* 161 */ val ControlRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ControlRight with Double = js.native
-  /* 138 */ val Convert: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Convert with Double = js.native
-  /* 128 */ val Copy: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Copy with Double = js.native
-  /* 127 */ val Cut: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Cut with Double = js.native
-  /* 82 */ val Delete: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Delete with Double = js.native
-  /* 45 */ val Digit0: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit0 with Double = js.native
-  /* 36 */ val Digit1: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit1 with Double = js.native
-  /* 37 */ val Digit2: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit2 with Double = js.native
-  /* 38 */ val Digit3: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit3 with Double = js.native
-  /* 39 */ val Digit4: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit4 with Double = js.native
-  /* 40 */ val Digit5: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit5 with Double = js.native
-  /* 41 */ val Digit6: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit6 with Double = js.native
-  /* 42 */ val Digit7: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit7 with Double = js.native
-  /* 43 */ val Digit8: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit8 with Double = js.native
-  /* 44 */ val Digit9: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Digit9 with Double = js.native
-  /* 174 */ val Eject: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Eject with Double = js.native
-  /* 83 */ val End: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.End with Double = js.native
-  /* 46 */ val Enter: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Enter with Double = js.native
-  /* 52 */ val Equal: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Equal with Double = js.native
-  /* 47 */ val Escape: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Escape with Double = js.native
-  /* 64 */ val F1: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F1 with Double = js.native
-  /* 73 */ val F10: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F10 with Double = js.native
-  /* 74 */ val F11: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F11 with Double = js.native
-  /* 75 */ val F12: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F12 with Double = js.native
-  /* 110 */ val F13: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F13 with Double = js.native
-  /* 111 */ val F14: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F14 with Double = js.native
-  /* 112 */ val F15: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F15 with Double = js.native
-  /* 113 */ val F16: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F16 with Double = js.native
-  /* 114 */ val F17: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F17 with Double = js.native
-  /* 115 */ val F18: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F18 with Double = js.native
-  /* 116 */ val F19: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F19 with Double = js.native
-  /* 65 */ val F2: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F2 with Double = js.native
-  /* 117 */ val F20: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F20 with Double = js.native
-  /* 118 */ val F21: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F21 with Double = js.native
-  /* 119 */ val F22: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F22 with Double = js.native
-  /* 120 */ val F23: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F23 with Double = js.native
-  /* 121 */ val F24: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F24 with Double = js.native
-  /* 66 */ val F3: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F3 with Double = js.native
-  /* 67 */ val F4: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F4 with Double = js.native
-  /* 68 */ val F5: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F5 with Double = js.native
-  /* 69 */ val F6: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F6 with Double = js.native
-  /* 70 */ val F7: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F7 with Double = js.native
-  /* 71 */ val F8: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F8 with Double = js.native
-  /* 72 */ val F9: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.F9 with Double = js.native
-  /* 130 */ val Find: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Find with Double = js.native
-  /* 3 */ val Fn: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Fn with Double = js.native
-  /* 4 */ val FnLock: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.FnLock with Double = js.native
-  /* 123 */ val Help: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Help with Double = js.native
-  /* 80 */ val Home: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Home with Double = js.native
-  /* 1 */ val Hyper: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Hyper with Double = js.native
-  /* 79 */ val Insert: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Insert with Double = js.native
-  /* 106 */ val IntlBackslash: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.IntlBackslash with Double = js.native
-  /* 56 */ val IntlHash: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.IntlHash with Double = js.native
-  /* 135 */ val IntlRo: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.IntlRo with Double = js.native
-  /* 137 */ val IntlYen: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.IntlYen with Double = js.native
-  /* 136 */ val KanaMode: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KanaMode with Double = js.native
-  /* 10 */ val KeyA: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyA with Double = js.native
-  /* 11 */ val KeyB: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyB with Double = js.native
-  /* 12 */ val KeyC: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyC with Double = js.native
-  /* 13 */ val KeyD: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyD with Double = js.native
-  /* 14 */ val KeyE: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyE with Double = js.native
-  /* 15 */ val KeyF: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyF with Double = js.native
-  /* 16 */ val KeyG: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyG with Double = js.native
-  /* 17 */ val KeyH: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyH with Double = js.native
-  /* 18 */ val KeyI: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyI with Double = js.native
-  /* 19 */ val KeyJ: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyJ with Double = js.native
-  /* 20 */ val KeyK: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyK with Double = js.native
-  /* 21 */ val KeyL: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyL with Double = js.native
-  /* 22 */ val KeyM: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyM with Double = js.native
-  /* 23 */ val KeyN: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyN with Double = js.native
-  /* 24 */ val KeyO: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyO with Double = js.native
-  /* 25 */ val KeyP: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyP with Double = js.native
-  /* 26 */ val KeyQ: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyQ with Double = js.native
-  /* 27 */ val KeyR: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyR with Double = js.native
-  /* 28 */ val KeyS: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyS with Double = js.native
-  /* 29 */ val KeyT: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyT with Double = js.native
-  /* 30 */ val KeyU: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyU with Double = js.native
-  /* 31 */ val KeyV: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyV with Double = js.native
-  /* 32 */ val KeyW: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyW with Double = js.native
-  /* 33 */ val KeyX: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyX with Double = js.native
-  /* 34 */ val KeyY: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyY with Double = js.native
-  /* 35 */ val KeyZ: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.KeyZ with Double = js.native
-  /* 140 */ val Lang1: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Lang1 with Double = js.native
-  /* 141 */ val Lang2: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Lang2 with Double = js.native
-  /* 142 */ val Lang3: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Lang3 with Double = js.native
-  /* 143 */ val Lang4: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Lang4 with Double = js.native
-  /* 144 */ val Lang5: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Lang5 with Double = js.native
-  /* 179 */ val LaunchApp1: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.LaunchApp1 with Double = js.native
-  /* 178 */ val LaunchApp2: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.LaunchApp2 with Double = js.native
-  /* 177 */ val LaunchMail: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.LaunchMail with Double = js.native
-  /* 181 */ val LaunchScreenSaver: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.LaunchScreenSaver with Double = js.native
-  /* 193 */ val MAX_VALUE: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MAX_VALUE with Double = js.native
-  /* 191 */ val MailForward: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MailForward with Double = js.native
-  /* 190 */ val MailReply: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MailReply with Double = js.native
-  /* 192 */ val MailSend: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MailSend with Double = js.native
-  /* 169 */ val MediaFastForward: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaFastForward with Double = js.native
-  /* 167 */ val MediaPlay: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaPlay with Double = js.native
-  /* 175 */ val MediaPlayPause: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaPlayPause with Double = js.native
-  /* 168 */ val MediaRecord: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaRecord with Double = js.native
-  /* 170 */ val MediaRewind: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaRewind with Double = js.native
-  /* 176 */ val MediaSelect: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaSelect with Double = js.native
-  /* 173 */ val MediaStop: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaStop with Double = js.native
-  /* 171 */ val MediaTrackNext: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaTrackNext with Double = js.native
-  /* 172 */ val MediaTrackPrevious: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MediaTrackPrevious with Double = js.native
-  /* 160 */ val MetaLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MetaLeft with Double = js.native
-  /* 164 */ val MetaRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.MetaRight with Double = js.native
-  /* 51 */ val Minus: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Minus with Double = js.native
-  /* 139 */ val NonConvert: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NonConvert with Double = js.native
-  /* 0 */ val None: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.None with Double = js.native
-  /* 89 */ val NumLock: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumLock with Double = js.native
-  /* 104 */ val Numpad0: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad0 with Double = js.native
-  /* 95 */ val Numpad1: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad1 with Double = js.native
-  /* 96 */ val Numpad2: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad2 with Double = js.native
-  /* 97 */ val Numpad3: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad3 with Double = js.native
-  /* 98 */ val Numpad4: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad4 with Double = js.native
-  /* 99 */ val Numpad5: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad5 with Double = js.native
-  /* 100 */ val Numpad6: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad6 with Double = js.native
-  /* 101 */ val Numpad7: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad7 with Double = js.native
-  /* 102 */ val Numpad8: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad8 with Double = js.native
-  /* 103 */ val Numpad9: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Numpad9 with Double = js.native
-  /* 93 */ val NumpadAdd: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadAdd with Double = js.native
-  /* 149 */ val NumpadBackspace: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadBackspace with Double = js.native
-  /* 155 */ val NumpadClear: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadClear with Double = js.native
-  /* 156 */ val NumpadClearEntry: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadClearEntry with Double = js.native
-  /* 134 */ val NumpadComma: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadComma with Double = js.native
-  /* 105 */ val NumpadDecimal: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadDecimal with Double = js.native
-  /* 90 */ val NumpadDivide: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadDivide with Double = js.native
-  /* 94 */ val NumpadEnter: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadEnter with Double = js.native
-  /* 109 */ val NumpadEqual: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadEqual with Double = js.native
-  /* 153 */ val NumpadMemoryAdd: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMemoryAdd with Double = js.native
-  /* 152 */ val NumpadMemoryClear: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMemoryClear with Double = js.native
-  /* 151 */ val NumpadMemoryRecall: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMemoryRecall with Double = js.native
-  /* 150 */ val NumpadMemoryStore: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMemoryStore with Double = js.native
-  /* 154 */ val NumpadMemorySubtract: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMemorySubtract with Double = js.native
-  /* 91 */ val NumpadMultiply: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadMultiply with Double = js.native
-  /* 147 */ val NumpadParenLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadParenLeft with Double = js.native
-  /* 148 */ val NumpadParenRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadParenRight with Double = js.native
-  /* 92 */ val NumpadSubtract: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.NumpadSubtract with Double = js.native
-  /* 122 */ val Open: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Open with Double = js.native
-  /* 84 */ val PageDown: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.PageDown with Double = js.native
-  /* 81 */ val PageUp: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.PageUp with Double = js.native
-  /* 129 */ val Paste: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Paste with Double = js.native
-  /* 78 */ val Pause: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Pause with Double = js.native
-  /* 61 */ val Period: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Period with Double = js.native
-  /* 108 */ val Power: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Power with Double = js.native
-  /* 76 */ val PrintScreen: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.PrintScreen with Double = js.native
-  /* 146 */ val Props: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Props with Double = js.native
-  /* 58 */ val Quote: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Quote with Double = js.native
-  /* 6 */ val Resume: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Resume with Double = js.native
-  /* 77 */ val ScrollLock: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ScrollLock with Double = js.native
-  /* 124 */ val Select: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Select with Double = js.native
-  /* 180 */ val SelectTask: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.SelectTask with Double = js.native
-  /* 57 */ val Semicolon: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Semicolon with Double = js.native
-  /* 158 */ val ShiftLeft: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ShiftLeft with Double = js.native
-  /* 162 */ val ShiftRight: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ShiftRight with Double = js.native
-  /* 62 */ val Slash: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Slash with Double = js.native
-  /* 8 */ val Sleep: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Sleep with Double = js.native
-  /* 50 */ val Space: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Space with Double = js.native
-  /* 2 */ val Super: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Super with Double = js.native
-  /* 5 */ val Suspend: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Suspend with Double = js.native
-  /* 49 */ val Tab: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Tab with Double = js.native
-  /* 7 */ val Turbo: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Turbo with Double = js.native
-  /* 126 */ val Undo: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.Undo with Double = js.native
-  /* 9 */ val WakeUp: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.WakeUp with Double = js.native
-  /* 189 */ val ZoomToggle: typingsSlinky.atStorybookUi.distKeyboardScanCodeMod.ScanCode.ZoomToggle with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScanCode with Double] = js.native
+  /* 145 */ @js.native
+  object Abort extends TopLevel[Abort with Double]
+  
+  /* 125 */ @js.native
+  object Again extends TopLevel[Again with Double]
+  
+  /* 159 */ @js.native
+  object AltLeft extends TopLevel[AltLeft with Double]
+  
+  /* 163 */ @js.native
+  object AltRight extends TopLevel[AltRight with Double]
+  
+  /* 87 */ @js.native
+  object ArrowDown extends TopLevel[ArrowDown with Double]
+  
+  /* 86 */ @js.native
+  object ArrowLeft extends TopLevel[ArrowLeft with Double]
+  
+  /* 85 */ @js.native
+  object ArrowRight extends TopLevel[ArrowRight with Double]
+  
+  /* 88 */ @js.native
+  object ArrowUp extends TopLevel[ArrowUp with Double]
+  
+  /* 133 */ @js.native
+  object AudioVolumeDown extends TopLevel[AudioVolumeDown with Double]
+  
+  /* 131 */ @js.native
+  object AudioVolumeMute extends TopLevel[AudioVolumeMute with Double]
+  
+  /* 132 */ @js.native
+  object AudioVolumeUp extends TopLevel[AudioVolumeUp with Double]
+  
+  /* 59 */ @js.native
+  object Backquote extends TopLevel[Backquote with Double]
+  
+  /* 55 */ @js.native
+  object Backslash extends TopLevel[Backslash with Double]
+  
+  /* 48 */ @js.native
+  object Backspace extends TopLevel[Backspace with Double]
+  
+  /* 53 */ @js.native
+  object BracketLeft extends TopLevel[BracketLeft with Double]
+  
+  /* 54 */ @js.native
+  object BracketRight extends TopLevel[BracketRight with Double]
+  
+  /* 166 */ @js.native
+  object BrightnessDown extends TopLevel[BrightnessDown with Double]
+  
+  /* 165 */ @js.native
+  object BrightnessUp extends TopLevel[BrightnessUp with Double]
+  
+  /* 184 */ @js.native
+  object BrowserBack extends TopLevel[BrowserBack with Double]
+  
+  /* 188 */ @js.native
+  object BrowserFavorites extends TopLevel[BrowserFavorites with Double]
+  
+  /* 185 */ @js.native
+  object BrowserForward extends TopLevel[BrowserForward with Double]
+  
+  /* 183 */ @js.native
+  object BrowserHome extends TopLevel[BrowserHome with Double]
+  
+  /* 187 */ @js.native
+  object BrowserRefresh extends TopLevel[BrowserRefresh with Double]
+  
+  /* 182 */ @js.native
+  object BrowserSearch extends TopLevel[BrowserSearch with Double]
+  
+  /* 186 */ @js.native
+  object BrowserStop extends TopLevel[BrowserStop with Double]
+  
+  /* 63 */ @js.native
+  object CapsLock extends TopLevel[CapsLock with Double]
+  
+  /* 60 */ @js.native
+  object Comma extends TopLevel[Comma with Double]
+  
+  /* 107 */ @js.native
+  object ContextMenu extends TopLevel[ContextMenu with Double]
+  
+  /* 157 */ @js.native
+  object ControlLeft extends TopLevel[ControlLeft with Double]
+  
+  /* 161 */ @js.native
+  object ControlRight extends TopLevel[ControlRight with Double]
+  
+  /* 138 */ @js.native
+  object Convert extends TopLevel[Convert with Double]
+  
+  /* 128 */ @js.native
+  object Copy extends TopLevel[Copy with Double]
+  
+  /* 127 */ @js.native
+  object Cut extends TopLevel[Cut with Double]
+  
+  /* 82 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 45 */ @js.native
+  object Digit0 extends TopLevel[Digit0 with Double]
+  
+  /* 36 */ @js.native
+  object Digit1 extends TopLevel[Digit1 with Double]
+  
+  /* 37 */ @js.native
+  object Digit2 extends TopLevel[Digit2 with Double]
+  
+  /* 38 */ @js.native
+  object Digit3 extends TopLevel[Digit3 with Double]
+  
+  /* 39 */ @js.native
+  object Digit4 extends TopLevel[Digit4 with Double]
+  
+  /* 40 */ @js.native
+  object Digit5 extends TopLevel[Digit5 with Double]
+  
+  /* 41 */ @js.native
+  object Digit6 extends TopLevel[Digit6 with Double]
+  
+  /* 42 */ @js.native
+  object Digit7 extends TopLevel[Digit7 with Double]
+  
+  /* 43 */ @js.native
+  object Digit8 extends TopLevel[Digit8 with Double]
+  
+  /* 44 */ @js.native
+  object Digit9 extends TopLevel[Digit9 with Double]
+  
+  /* 174 */ @js.native
+  object Eject extends TopLevel[Eject with Double]
+  
+  /* 83 */ @js.native
+  object End extends TopLevel[End with Double]
+  
+  /* 46 */ @js.native
+  object Enter extends TopLevel[Enter with Double]
+  
+  /* 52 */ @js.native
+  object Equal extends TopLevel[Equal with Double]
+  
+  /* 47 */ @js.native
+  object Escape extends TopLevel[Escape with Double]
+  
+  /* 64 */ @js.native
+  object F1 extends TopLevel[F1 with Double]
+  
+  /* 73 */ @js.native
+  object F10 extends TopLevel[F10 with Double]
+  
+  /* 74 */ @js.native
+  object F11 extends TopLevel[F11 with Double]
+  
+  /* 75 */ @js.native
+  object F12 extends TopLevel[F12 with Double]
+  
+  /* 110 */ @js.native
+  object F13 extends TopLevel[F13 with Double]
+  
+  /* 111 */ @js.native
+  object F14 extends TopLevel[F14 with Double]
+  
+  /* 112 */ @js.native
+  object F15 extends TopLevel[F15 with Double]
+  
+  /* 113 */ @js.native
+  object F16 extends TopLevel[F16 with Double]
+  
+  /* 114 */ @js.native
+  object F17 extends TopLevel[F17 with Double]
+  
+  /* 115 */ @js.native
+  object F18 extends TopLevel[F18 with Double]
+  
+  /* 116 */ @js.native
+  object F19 extends TopLevel[F19 with Double]
+  
+  /* 65 */ @js.native
+  object F2 extends TopLevel[F2 with Double]
+  
+  /* 117 */ @js.native
+  object F20 extends TopLevel[F20 with Double]
+  
+  /* 118 */ @js.native
+  object F21 extends TopLevel[F21 with Double]
+  
+  /* 119 */ @js.native
+  object F22 extends TopLevel[F22 with Double]
+  
+  /* 120 */ @js.native
+  object F23 extends TopLevel[F23 with Double]
+  
+  /* 121 */ @js.native
+  object F24 extends TopLevel[F24 with Double]
+  
+  /* 66 */ @js.native
+  object F3 extends TopLevel[F3 with Double]
+  
+  /* 67 */ @js.native
+  object F4 extends TopLevel[F4 with Double]
+  
+  /* 68 */ @js.native
+  object F5 extends TopLevel[F5 with Double]
+  
+  /* 69 */ @js.native
+  object F6 extends TopLevel[F6 with Double]
+  
+  /* 70 */ @js.native
+  object F7 extends TopLevel[F7 with Double]
+  
+  /* 71 */ @js.native
+  object F8 extends TopLevel[F8 with Double]
+  
+  /* 72 */ @js.native
+  object F9 extends TopLevel[F9 with Double]
+  
+  /* 130 */ @js.native
+  object Find extends TopLevel[Find with Double]
+  
+  /* 3 */ @js.native
+  object Fn extends TopLevel[Fn with Double]
+  
+  /* 4 */ @js.native
+  object FnLock extends TopLevel[FnLock with Double]
+  
+  /* 123 */ @js.native
+  object Help extends TopLevel[Help with Double]
+  
+  /* 80 */ @js.native
+  object Home extends TopLevel[Home with Double]
+  
+  /* 1 */ @js.native
+  object Hyper extends TopLevel[Hyper with Double]
+  
+  /* 79 */ @js.native
+  object Insert extends TopLevel[Insert with Double]
+  
+  /* 106 */ @js.native
+  object IntlBackslash extends TopLevel[IntlBackslash with Double]
+  
+  /* 56 */ @js.native
+  object IntlHash extends TopLevel[IntlHash with Double]
+  
+  /* 135 */ @js.native
+  object IntlRo extends TopLevel[IntlRo with Double]
+  
+  /* 137 */ @js.native
+  object IntlYen extends TopLevel[IntlYen with Double]
+  
+  /* 136 */ @js.native
+  object KanaMode extends TopLevel[KanaMode with Double]
+  
+  /* 10 */ @js.native
+  object KeyA extends TopLevel[KeyA with Double]
+  
+  /* 11 */ @js.native
+  object KeyB extends TopLevel[KeyB with Double]
+  
+  /* 12 */ @js.native
+  object KeyC extends TopLevel[KeyC with Double]
+  
+  /* 13 */ @js.native
+  object KeyD extends TopLevel[KeyD with Double]
+  
+  /* 14 */ @js.native
+  object KeyE extends TopLevel[KeyE with Double]
+  
+  /* 15 */ @js.native
+  object KeyF extends TopLevel[KeyF with Double]
+  
+  /* 16 */ @js.native
+  object KeyG extends TopLevel[KeyG with Double]
+  
+  /* 17 */ @js.native
+  object KeyH extends TopLevel[KeyH with Double]
+  
+  /* 18 */ @js.native
+  object KeyI extends TopLevel[KeyI with Double]
+  
+  /* 19 */ @js.native
+  object KeyJ extends TopLevel[KeyJ with Double]
+  
+  /* 20 */ @js.native
+  object KeyK extends TopLevel[KeyK with Double]
+  
+  /* 21 */ @js.native
+  object KeyL extends TopLevel[KeyL with Double]
+  
+  /* 22 */ @js.native
+  object KeyM extends TopLevel[KeyM with Double]
+  
+  /* 23 */ @js.native
+  object KeyN extends TopLevel[KeyN with Double]
+  
+  /* 24 */ @js.native
+  object KeyO extends TopLevel[KeyO with Double]
+  
+  /* 25 */ @js.native
+  object KeyP extends TopLevel[KeyP with Double]
+  
+  /* 26 */ @js.native
+  object KeyQ extends TopLevel[KeyQ with Double]
+  
+  /* 27 */ @js.native
+  object KeyR extends TopLevel[KeyR with Double]
+  
+  /* 28 */ @js.native
+  object KeyS extends TopLevel[KeyS with Double]
+  
+  /* 29 */ @js.native
+  object KeyT extends TopLevel[KeyT with Double]
+  
+  /* 30 */ @js.native
+  object KeyU extends TopLevel[KeyU with Double]
+  
+  /* 31 */ @js.native
+  object KeyV extends TopLevel[KeyV with Double]
+  
+  /* 32 */ @js.native
+  object KeyW extends TopLevel[KeyW with Double]
+  
+  /* 33 */ @js.native
+  object KeyX extends TopLevel[KeyX with Double]
+  
+  /* 34 */ @js.native
+  object KeyY extends TopLevel[KeyY with Double]
+  
+  /* 35 */ @js.native
+  object KeyZ extends TopLevel[KeyZ with Double]
+  
+  /* 140 */ @js.native
+  object Lang1 extends TopLevel[Lang1 with Double]
+  
+  /* 141 */ @js.native
+  object Lang2 extends TopLevel[Lang2 with Double]
+  
+  /* 142 */ @js.native
+  object Lang3 extends TopLevel[Lang3 with Double]
+  
+  /* 143 */ @js.native
+  object Lang4 extends TopLevel[Lang4 with Double]
+  
+  /* 144 */ @js.native
+  object Lang5 extends TopLevel[Lang5 with Double]
+  
+  /* 179 */ @js.native
+  object LaunchApp1 extends TopLevel[LaunchApp1 with Double]
+  
+  /* 178 */ @js.native
+  object LaunchApp2 extends TopLevel[LaunchApp2 with Double]
+  
+  /* 177 */ @js.native
+  object LaunchMail extends TopLevel[LaunchMail with Double]
+  
+  /* 181 */ @js.native
+  object LaunchScreenSaver extends TopLevel[LaunchScreenSaver with Double]
+  
+  /* 193 */ @js.native
+  object MAX_VALUE extends TopLevel[MAX_VALUE with Double]
+  
+  /* 191 */ @js.native
+  object MailForward extends TopLevel[MailForward with Double]
+  
+  /* 190 */ @js.native
+  object MailReply extends TopLevel[MailReply with Double]
+  
+  /* 192 */ @js.native
+  object MailSend extends TopLevel[MailSend with Double]
+  
+  /* 169 */ @js.native
+  object MediaFastForward extends TopLevel[MediaFastForward with Double]
+  
+  /* 167 */ @js.native
+  object MediaPlay extends TopLevel[MediaPlay with Double]
+  
+  /* 175 */ @js.native
+  object MediaPlayPause extends TopLevel[MediaPlayPause with Double]
+  
+  /* 168 */ @js.native
+  object MediaRecord extends TopLevel[MediaRecord with Double]
+  
+  /* 170 */ @js.native
+  object MediaRewind extends TopLevel[MediaRewind with Double]
+  
+  /* 176 */ @js.native
+  object MediaSelect extends TopLevel[MediaSelect with Double]
+  
+  /* 173 */ @js.native
+  object MediaStop extends TopLevel[MediaStop with Double]
+  
+  /* 171 */ @js.native
+  object MediaTrackNext extends TopLevel[MediaTrackNext with Double]
+  
+  /* 172 */ @js.native
+  object MediaTrackPrevious extends TopLevel[MediaTrackPrevious with Double]
+  
+  /* 160 */ @js.native
+  object MetaLeft extends TopLevel[MetaLeft with Double]
+  
+  /* 164 */ @js.native
+  object MetaRight extends TopLevel[MetaRight with Double]
+  
+  /* 51 */ @js.native
+  object Minus extends TopLevel[Minus with Double]
+  
+  /* 139 */ @js.native
+  object NonConvert extends TopLevel[NonConvert with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 89 */ @js.native
+  object NumLock extends TopLevel[NumLock with Double]
+  
+  /* 104 */ @js.native
+  object Numpad0 extends TopLevel[Numpad0 with Double]
+  
+  /* 95 */ @js.native
+  object Numpad1 extends TopLevel[Numpad1 with Double]
+  
+  /* 96 */ @js.native
+  object Numpad2 extends TopLevel[Numpad2 with Double]
+  
+  /* 97 */ @js.native
+  object Numpad3 extends TopLevel[Numpad3 with Double]
+  
+  /* 98 */ @js.native
+  object Numpad4 extends TopLevel[Numpad4 with Double]
+  
+  /* 99 */ @js.native
+  object Numpad5 extends TopLevel[Numpad5 with Double]
+  
+  /* 100 */ @js.native
+  object Numpad6 extends TopLevel[Numpad6 with Double]
+  
+  /* 101 */ @js.native
+  object Numpad7 extends TopLevel[Numpad7 with Double]
+  
+  /* 102 */ @js.native
+  object Numpad8 extends TopLevel[Numpad8 with Double]
+  
+  /* 103 */ @js.native
+  object Numpad9 extends TopLevel[Numpad9 with Double]
+  
+  /* 93 */ @js.native
+  object NumpadAdd extends TopLevel[NumpadAdd with Double]
+  
+  /* 149 */ @js.native
+  object NumpadBackspace extends TopLevel[NumpadBackspace with Double]
+  
+  /* 155 */ @js.native
+  object NumpadClear extends TopLevel[NumpadClear with Double]
+  
+  /* 156 */ @js.native
+  object NumpadClearEntry extends TopLevel[NumpadClearEntry with Double]
+  
+  /* 134 */ @js.native
+  object NumpadComma extends TopLevel[NumpadComma with Double]
+  
+  /* 105 */ @js.native
+  object NumpadDecimal extends TopLevel[NumpadDecimal with Double]
+  
+  /* 90 */ @js.native
+  object NumpadDivide extends TopLevel[NumpadDivide with Double]
+  
+  /* 94 */ @js.native
+  object NumpadEnter extends TopLevel[NumpadEnter with Double]
+  
+  /* 109 */ @js.native
+  object NumpadEqual extends TopLevel[NumpadEqual with Double]
+  
+  /* 153 */ @js.native
+  object NumpadMemoryAdd extends TopLevel[NumpadMemoryAdd with Double]
+  
+  /* 152 */ @js.native
+  object NumpadMemoryClear extends TopLevel[NumpadMemoryClear with Double]
+  
+  /* 151 */ @js.native
+  object NumpadMemoryRecall extends TopLevel[NumpadMemoryRecall with Double]
+  
+  /* 150 */ @js.native
+  object NumpadMemoryStore extends TopLevel[NumpadMemoryStore with Double]
+  
+  /* 154 */ @js.native
+  object NumpadMemorySubtract extends TopLevel[NumpadMemorySubtract with Double]
+  
+  /* 91 */ @js.native
+  object NumpadMultiply extends TopLevel[NumpadMultiply with Double]
+  
+  /* 147 */ @js.native
+  object NumpadParenLeft extends TopLevel[NumpadParenLeft with Double]
+  
+  /* 148 */ @js.native
+  object NumpadParenRight extends TopLevel[NumpadParenRight with Double]
+  
+  /* 92 */ @js.native
+  object NumpadSubtract extends TopLevel[NumpadSubtract with Double]
+  
+  /* 122 */ @js.native
+  object Open extends TopLevel[Open with Double]
+  
+  /* 84 */ @js.native
+  object PageDown extends TopLevel[PageDown with Double]
+  
+  /* 81 */ @js.native
+  object PageUp extends TopLevel[PageUp with Double]
+  
+  /* 129 */ @js.native
+  object Paste extends TopLevel[Paste with Double]
+  
+  /* 78 */ @js.native
+  object Pause extends TopLevel[Pause with Double]
+  
+  /* 61 */ @js.native
+  object Period extends TopLevel[Period with Double]
+  
+  /* 108 */ @js.native
+  object Power extends TopLevel[Power with Double]
+  
+  /* 76 */ @js.native
+  object PrintScreen extends TopLevel[PrintScreen with Double]
+  
+  /* 146 */ @js.native
+  object Props extends TopLevel[Props with Double]
+  
+  /* 58 */ @js.native
+  object Quote extends TopLevel[Quote with Double]
+  
+  /* 6 */ @js.native
+  object Resume extends TopLevel[Resume with Double]
+  
+  /* 77 */ @js.native
+  object ScrollLock extends TopLevel[ScrollLock with Double]
+  
+  /* 124 */ @js.native
+  object Select extends TopLevel[Select with Double]
+  
+  /* 180 */ @js.native
+  object SelectTask extends TopLevel[SelectTask with Double]
+  
+  /* 57 */ @js.native
+  object Semicolon extends TopLevel[Semicolon with Double]
+  
+  /* 158 */ @js.native
+  object ShiftLeft extends TopLevel[ShiftLeft with Double]
+  
+  /* 162 */ @js.native
+  object ShiftRight extends TopLevel[ShiftRight with Double]
+  
+  /* 62 */ @js.native
+  object Slash extends TopLevel[Slash with Double]
+  
+  /* 8 */ @js.native
+  object Sleep extends TopLevel[Sleep with Double]
+  
+  /* 50 */ @js.native
+  object Space extends TopLevel[Space with Double]
+  
+  /* 2 */ @js.native
+  object Super extends TopLevel[Super with Double]
+  
+  /* 5 */ @js.native
+  object Suspend extends TopLevel[Suspend with Double]
+  
+  /* 49 */ @js.native
+  object Tab extends TopLevel[Tab with Double]
+  
+  /* 7 */ @js.native
+  object Turbo extends TopLevel[Turbo with Double]
+  
+  /* 126 */ @js.native
+  object Undo extends TopLevel[Undo with Double]
+  
+  /* 9 */ @js.native
+  object WakeUp extends TopLevel[WakeUp with Double]
+  
+  /* 189 */ @js.native
+  object ZoomToggle extends TopLevel[ZoomToggle with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,8 +27,8 @@ class Quad protected ()
     * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
     * @param frame An optional frame from the Texture this Game Object is rendering with.
     */
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: String) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double, texture: String, frame: integer) = this()
+  def this(scene: Scene, x: Double, y: Double, texture: String) = this()
+  def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
+  def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
 }
 

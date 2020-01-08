@@ -10,9 +10,9 @@ Detects what package manager executes the process
 | ------------------ | :-------------: |
 | Full name          | which-pm-runs |
 | Keywords           | npm, pnpm, yarn |
-| # releases         | 3 |
-| # dependents       | 6 |
-| # downloads        | 14713052 |
+| # releases         | 0 |
+| # dependents       | 7 |
+| # downloads        | 34343888 |
 | # stars            | 0 |
 
 ## Links

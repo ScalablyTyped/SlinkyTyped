@@ -1,6 +1,5 @@
 package typingsSlinky.mobxDashReactDashLite
 
-import typingsSlinky.mobxDashReactDashLite.distOptimizeSchedulerMod.IBatchedUpdates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object SubscriptionFlags extends js.Object {
   @js.native
   sealed trait TeamSubscription extends SubscriptionFlags
   
-  /* 4 */ val CanOptOut: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionFlags.CanOptOut with Double = js.native
-  /* 2 */ val ContributedSubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionFlags.ContributedSubscription with Double = js.native
-  /* 1 */ val GroupSubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionFlags.GroupSubscription with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionFlags.None with Double = js.native
-  /* 8 */ val TeamSubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionFlags.TeamSubscription with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SubscriptionFlags with Double] = js.native
+  /* 4 */ @js.native
+  object CanOptOut extends TopLevel[CanOptOut with Double]
+  
+  /* 2 */ @js.native
+  object ContributedSubscription extends TopLevel[ContributedSubscription with Double]
+  
+  /* 1 */ @js.native
+  object GroupSubscription extends TopLevel[GroupSubscription with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 8 */ @js.native
+  object TeamSubscription extends TopLevel[TeamSubscription with Double]
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.opentracing
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.opentracing.libSpanMod.Span
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

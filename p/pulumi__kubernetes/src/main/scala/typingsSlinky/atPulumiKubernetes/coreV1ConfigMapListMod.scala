@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1ConfigMapListMod.ConfigMapList
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ConfigMap
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource

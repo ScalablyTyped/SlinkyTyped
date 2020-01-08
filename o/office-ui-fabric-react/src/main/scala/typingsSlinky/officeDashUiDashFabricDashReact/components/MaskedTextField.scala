@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MaskedTextField
-  extends SharedApply_ITextFieldProps_1436080444[typingsSlinky.officeDashUiDashFabricDashReact.libTextFieldMod.MaskedTextField] {
+  extends SharedApply_ITextFieldProps751243367[typingsSlinky.officeDashUiDashFabricDashReact.libTextFieldMod.MaskedTextField] {
   @JSImport("office-ui-fabric-react/lib/TextField", "MaskedTextField")
   @js.native
   object componentImport extends js.Object

@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.Reflection
-import typingsSlinky.typedoc.distLibOutputModelsNavigationItemMod.NavigationItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

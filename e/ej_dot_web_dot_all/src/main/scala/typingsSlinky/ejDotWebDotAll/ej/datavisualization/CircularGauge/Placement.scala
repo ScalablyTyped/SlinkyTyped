@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object Placement extends js.Object {
   @js.native
   sealed trait Near extends Placement
   
-  /* 1 */ val Far: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.Placement.Far with Double = js.native
-  /* 0 */ val Near: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.Placement.Near with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Placement with Double] = js.native
+  /* 1 */ @js.native
+  object Far extends TopLevel[Far with Double]
+  
+  /* 0 */ @js.native
+  object Near extends TopLevel[Near with Double]
+  
 }
 

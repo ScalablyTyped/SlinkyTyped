@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,13 +57,25 @@ object Alignment extends js.Object {
   @js.native
   sealed trait unknown extends Alignment
   
-  /* "Centered" */ val centered: typingsSlinky.officeDashJsDashPreview.Word.Alignment.centered with String = js.native
-  /* "Justified" */ val justified: typingsSlinky.officeDashJsDashPreview.Word.Alignment.justified with String = js.native
-  /* "Left" */ val left: typingsSlinky.officeDashJsDashPreview.Word.Alignment.left with String = js.native
-  /* "Mixed" */ val mixed: typingsSlinky.officeDashJsDashPreview.Word.Alignment.mixed with String = js.native
-  /* "Right" */ val right: typingsSlinky.officeDashJsDashPreview.Word.Alignment.right with String = js.native
-  /* "Unknown" */ val unknown: typingsSlinky.officeDashJsDashPreview.Word.Alignment.unknown with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Alignment with String] = js.native
+  /* "Centered" */ @js.native
+  object centered extends TopLevel[centered with String]
+  
+  /* "Justified" */ @js.native
+  object justified extends TopLevel[justified with String]
+  
+  /* "Left" */ @js.native
+  object left extends TopLevel[left with String]
+  
+  /* "Mixed" */ @js.native
+  object mixed extends TopLevel[mixed with String]
+  
+  /* "Right" */ @js.native
+  object right extends TopLevel[right with String]
+  
+  /* "Unknown" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
 }
 

@@ -5,7 +5,7 @@ import typingsSlinky.geolib.esGetPathLengthMod.DistanceFn
 import typingsSlinky.geolib.esTypesMod.GeolibDistanceFn
 import typingsSlinky.geolib.esTypesMod.GeolibInputCoordinates
 import typingsSlinky.geolib.esTypesMod.GeolibInputCoordinatesWithTime
-import typingsSlinky.geolib.geolibNumbers.`false`
+import typingsSlinky.geolib.geolibBooleans.`false`
 import typingsSlinky.geolib.geolibStrings.E
 import typingsSlinky.geolib.geolibStrings.ENE
 import typingsSlinky.geolib.geolibStrings.ESE
@@ -48,6 +48,7 @@ object geolibMod extends js.Object {
   def getCompassDirection(origin: GeolibInputCoordinates, dest: GeolibInputCoordinates, bearingFn: BearingFunction): S | W | NNE | NE | ENE | E | ESE | SE | SSE | SSW | SW | WSW | WNW | NW | NNW | N = js.native
   def getCoordinateKey[Keys](point: GeolibInputCoordinates, keysToLookup: js.Array[Keys]): js.UndefOr[Keys] = js.native
   def getCoordinateKeys(point: GeolibInputCoordinates): Anon_0 | Anon_01 = js.native
+  def getCoordinateKeys(point: GeolibInputCoordinates, keysToLookup: Anon_Altitude): Anon_0 | Anon_01 = js.native
   def getDistance(from: GeolibInputCoordinates, to: GeolibInputCoordinates): Double = js.native
   def getDistance(from: GeolibInputCoordinates, to: GeolibInputCoordinates, accuracy: Double): Double = js.native
   def getDistanceFromLine(point: GeolibInputCoordinates, lineStart: GeolibInputCoordinates, lineEnd: GeolibInputCoordinates): Double = js.native

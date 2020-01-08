@@ -1,5 +1,6 @@
 package typingsSlinky.atBlueprintjsTable.libEsmRegionsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ColumnLoadingOption extends js.Object {
   @js.native
   sealed trait HEADER extends ColumnLoadingOption
   
-  /* "cells" */ val CELLS: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.ColumnLoadingOption.CELLS with String = js.native
-  /* "column-header" */ val HEADER: typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.ColumnLoadingOption.HEADER with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ColumnLoadingOption with String] = js.native
+  /* "cells" */ @js.native
+  object CELLS extends TopLevel[CELLS with String]
+  
+  /* "column-header" */ @js.native
+  object HEADER extends TopLevel[HEADER with String]
+  
 }
 

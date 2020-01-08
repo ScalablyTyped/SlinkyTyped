@@ -1,7 +1,7 @@
 
 # Scala.js typings for grpc__grpc-js
 
-Typings are for version 0.6.9
+Typings are for version 0.6.15
 
 ## Library description:
 gRPC Library for Node - pure JS implementation
@@ -10,9 +10,9 @@ gRPC Library for Node - pure JS implementation
 | ------------------ | :-------------: |
 | Full name          | @grpc/grpc-js |
 | Keywords           | - |
-| # releases         | 11 |
-| # dependents       | 18 |
-| # downloads        | 9016256 |
+| # releases         | 34 |
+| # dependents       | 42 |
+| # downloads        | 27858214 |
 | # stars            | 0 |
 
 ## Links

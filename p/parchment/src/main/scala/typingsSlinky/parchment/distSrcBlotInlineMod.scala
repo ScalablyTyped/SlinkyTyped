@@ -1,7 +1,6 @@
 package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.parchment.distSrcBlotInlineMod.InlineBlot
 import typingsSlinky.parchment.distSrcRegistryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`

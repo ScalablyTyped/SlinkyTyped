@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CaretLeft
-  extends SharedApply_BytesizeIconsProps219891393[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.CaretLeft] {
+  extends SharedApply_BytesizeIconsProps1658782493[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.CaretLeft] {
   @JSImport("react-bytesize-icons", "CaretLeft")
   @js.native
   object componentImport extends js.Object

@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialCheckbox
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialCheckbox.adapterMod.MDCCheckboxAdapter
-import typingsSlinky.atMaterialCheckbox.atMaterialCheckboxMod.MDCCheckbox
 import typingsSlinky.atMaterialCheckbox.foundationMod.default
 import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
 import scala.scalajs.js

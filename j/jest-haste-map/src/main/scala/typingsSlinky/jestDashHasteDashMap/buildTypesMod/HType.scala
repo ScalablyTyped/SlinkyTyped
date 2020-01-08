@@ -6,7 +6,7 @@ import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapNumbers.`2`
 import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapNumbers.`3`
 import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapNumbers.`4`
 import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapNumbers.`5`
-import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapStrings.BACKSLASHu0000
+import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapStrings.Null
 import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapStrings.g
 import typingsSlinky.jestDashHasteDashMap.jestDashHasteDashMapStrings.native
 import scala.scalajs.js
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 
 trait HType extends js.Object {
   var DEPENDENCIES: `4`
-  var DEPENDENCY_DELIM: BACKSLASHu0000
+  var DEPENDENCY_DELIM: Null
   var GENERIC_PLATFORM: g
   var ID: `0`
   var MODULE: `0`
@@ -33,7 +33,7 @@ object HType {
   @scala.inline
   def apply(
     DEPENDENCIES: `4`,
-    DEPENDENCY_DELIM: BACKSLASHu0000,
+    DEPENDENCY_DELIM: Null,
     GENERIC_PLATFORM: g,
     ID: `0`,
     MODULE: `0`,

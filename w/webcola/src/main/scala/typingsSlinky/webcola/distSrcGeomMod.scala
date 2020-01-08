@@ -1,11 +1,5 @@
 package typingsSlinky.webcola
 
-import typingsSlinky.webcola.distSrcGeomMod.BiTangent
-import typingsSlinky.webcola.distSrcGeomMod.BiTangents
-import typingsSlinky.webcola.distSrcGeomMod.Point
-import typingsSlinky.webcola.distSrcGeomMod.TVGPoint
-import typingsSlinky.webcola.distSrcGeomMod.VisibilityEdge
-import typingsSlinky.webcola.distSrcGeomMod.VisibilityVertex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

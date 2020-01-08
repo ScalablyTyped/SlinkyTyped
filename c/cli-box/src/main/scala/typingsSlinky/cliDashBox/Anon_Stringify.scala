@@ -1,6 +1,6 @@
 package typingsSlinky.cliDashBox
 
-import typingsSlinky.cliDashBox.cliDashBoxNumbers.`true`
+import typingsSlinky.cliDashBox.cliDashBoxBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

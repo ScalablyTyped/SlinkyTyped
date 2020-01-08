@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object ExtensionRequestState extends js.Object {
   @js.native
   sealed trait Rejected extends ExtensionRequestState
   
-  /* 1 */ val Accepted: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionRequestState.Accepted with Double = js.native
-  /* 0 */ val Open: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionRequestState.Open with Double = js.native
-  /* 2 */ val Rejected: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionRequestState.Rejected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionRequestState with Double] = js.native
+  /* 1 */ @js.native
+  object Accepted extends TopLevel[Accepted with Double]
+  
+  /* 0 */ @js.native
+  object Open extends TopLevel[Open with Double]
+  
+  /* 2 */ @js.native
+  object Rejected extends TopLevel[Rejected with Double]
+  
 }
 

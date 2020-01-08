@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object ApplicationViewSwitchingOptions extends js.Object {
   @js.native
   sealed trait skipAnimation extends ApplicationViewSwitchingOptions
   
-  /* 2 */ val consolidateViews: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.ApplicationViewSwitchingOptions.consolidateViews with Double = js.native
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.ApplicationViewSwitchingOptions.default with Double = js.native
-  /* 1 */ val skipAnimation: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.ApplicationViewSwitchingOptions.skipAnimation with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApplicationViewSwitchingOptions with Double] = js.native
+  /* 2 */ @js.native
+  object consolidateViews extends TopLevel[consolidateViews with Double]
+  
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object skipAnimation extends TopLevel[skipAnimation with Double]
+  
 }
 

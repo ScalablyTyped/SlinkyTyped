@@ -10,9 +10,9 @@ An accessible and easy tab component for ReactJS
 | ------------------ | :-------------: |
 | Full name          | react-tabs |
 | Keywords           | react, tabs, a11y, react-component |
-| # releases         | 14 |
-| # dependents       | 106 |
-| # downloads        | 3890714 |
+| # releases         | 8 |
+| # dependents       | 138 |
+| # downloads        | 7271539 |
 | # stars            | 10 |
 
 ## Links

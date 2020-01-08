@@ -16,8 +16,9 @@ object ReactDashSwf
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id, loop, src */
+  /* The following DOM/SVG props were specified: id, loop */
   def apply(
+    src: String,
     align: String = null,
     allowFullScreen: js.UndefOr[Boolean] = js.undefined,
     base: String = null,
@@ -35,7 +36,7 @@ object ReactDashSwf
     wmode: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (!js.isUndefined(allowFullScreen)) __obj.updateDynamic("allowFullScreen")(allowFullScreen.asInstanceOf[js.Any])
     if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])

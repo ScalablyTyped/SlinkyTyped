@@ -1,5 +1,6 @@
 package typingsSlinky.orientjs.orientjsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,31 +86,103 @@ object ODataType extends js.Object {
   @js.native
   sealed trait Transient extends ODataType
   
-  /* 23 */ val Any: typingsSlinky.orientjs.orientjsMod.ODataType.Any with scala.Double = js.native
-  /* 8 */ val Binary: typingsSlinky.orientjs.orientjsMod.ODataType.Binary with scala.Double = js.native
-  /* 0 */ val Boolean: typingsSlinky.orientjs.orientjsMod.ODataType.Boolean with scala.Double = js.native
-  /* 17 */ val Byte: typingsSlinky.orientjs.orientjsMod.ODataType.Byte with scala.Double = js.native
-  /* 20 */ val Custom: typingsSlinky.orientjs.orientjsMod.ODataType.Custom with scala.Double = js.native
-  /* 19 */ val Date: typingsSlinky.orientjs.orientjsMod.ODataType.Date with scala.Double = js.native
-  /* 6 */ val Datetime: typingsSlinky.orientjs.orientjsMod.ODataType.Datetime with scala.Double = js.native
-  /* 21 */ val Decimal: typingsSlinky.orientjs.orientjsMod.ODataType.Decimal with scala.Double = js.native
-  /* 5 */ val Double: typingsSlinky.orientjs.orientjsMod.ODataType.Double with scala.Double = js.native
-  /* 9 */ val Embedded: typingsSlinky.orientjs.orientjsMod.ODataType.Embedded with scala.Double = js.native
-  /* 10 */ val EmbeddedList: typingsSlinky.orientjs.orientjsMod.ODataType.EmbeddedList with scala.Double = js.native
-  /* 12 */ val EmbeddedMap: typingsSlinky.orientjs.orientjsMod.ODataType.EmbeddedMap with scala.Double = js.native
-  /* 11 */ val EmbeddedSet: typingsSlinky.orientjs.orientjsMod.ODataType.EmbeddedSet with scala.Double = js.native
-  /* 4 */ val Float: typingsSlinky.orientjs.orientjsMod.ODataType.Float with scala.Double = js.native
-  /* 1 */ val Integer: typingsSlinky.orientjs.orientjsMod.ODataType.Integer with scala.Double = js.native
-  /* 13 */ val Link: typingsSlinky.orientjs.orientjsMod.ODataType.Link with scala.Double = js.native
-  /* 22 */ val LinkBag: typingsSlinky.orientjs.orientjsMod.ODataType.LinkBag with scala.Double = js.native
-  /* 14 */ val LinkList: typingsSlinky.orientjs.orientjsMod.ODataType.LinkList with scala.Double = js.native
-  /* 16 */ val LinkMap: typingsSlinky.orientjs.orientjsMod.ODataType.LinkMap with scala.Double = js.native
-  /* 15 */ val LinkSet: typingsSlinky.orientjs.orientjsMod.ODataType.LinkSet with scala.Double = js.native
-  /* 3 */ val Long: typingsSlinky.orientjs.orientjsMod.ODataType.Long with scala.Double = js.native
-  /* 2 */ val Short: typingsSlinky.orientjs.orientjsMod.ODataType.Short with scala.Double = js.native
-  /* 7 */ val String: typingsSlinky.orientjs.orientjsMod.ODataType.String with scala.Double = js.native
-  /* 18 */ val Transient: typingsSlinky.orientjs.orientjsMod.ODataType.Transient with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[ODataType with scala.Double] = js.native
+  /* 23 */ @js.native
+  object Any
+    extends TopLevel[Any with scala.Double]
+  
+  /* 8 */ @js.native
+  object Binary
+    extends TopLevel[Binary with scala.Double]
+  
+  /* 0 */ @js.native
+  object Boolean
+    extends TopLevel[Boolean with scala.Double]
+  
+  /* 17 */ @js.native
+  object Byte
+    extends TopLevel[Byte with scala.Double]
+  
+  /* 20 */ @js.native
+  object Custom
+    extends TopLevel[Custom with scala.Double]
+  
+  /* 19 */ @js.native
+  object Date
+    extends TopLevel[Date with scala.Double]
+  
+  /* 6 */ @js.native
+  object Datetime
+    extends TopLevel[Datetime with scala.Double]
+  
+  /* 21 */ @js.native
+  object Decimal
+    extends TopLevel[Decimal with scala.Double]
+  
+  /* 5 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 9 */ @js.native
+  object Embedded
+    extends TopLevel[Embedded with scala.Double]
+  
+  /* 10 */ @js.native
+  object EmbeddedList
+    extends TopLevel[EmbeddedList with scala.Double]
+  
+  /* 12 */ @js.native
+  object EmbeddedMap
+    extends TopLevel[EmbeddedMap with scala.Double]
+  
+  /* 11 */ @js.native
+  object EmbeddedSet
+    extends TopLevel[EmbeddedSet with scala.Double]
+  
+  /* 4 */ @js.native
+  object Float
+    extends TopLevel[Float with scala.Double]
+  
+  /* 1 */ @js.native
+  object Integer
+    extends TopLevel[Integer with scala.Double]
+  
+  /* 13 */ @js.native
+  object Link
+    extends TopLevel[Link with scala.Double]
+  
+  /* 22 */ @js.native
+  object LinkBag
+    extends TopLevel[LinkBag with scala.Double]
+  
+  /* 14 */ @js.native
+  object LinkList
+    extends TopLevel[LinkList with scala.Double]
+  
+  /* 16 */ @js.native
+  object LinkMap
+    extends TopLevel[LinkMap with scala.Double]
+  
+  /* 15 */ @js.native
+  object LinkSet
+    extends TopLevel[LinkSet with scala.Double]
+  
+  /* 3 */ @js.native
+  object Long
+    extends TopLevel[Long with scala.Double]
+  
+  /* 2 */ @js.native
+  object Short
+    extends TopLevel[Short with scala.Double]
+  
+  /* 7 */ @js.native
+  object String
+    extends TopLevel[String with scala.Double]
+  
+  /* 18 */ @js.native
+  object Transient
+    extends TopLevel[Transient with scala.Double]
+  
 }
 

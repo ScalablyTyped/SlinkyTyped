@@ -1,7 +1,7 @@
 package typingsSlinky.three
 
 import typingsSlinky.three.srcCoreObject3DMod.Object3D
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

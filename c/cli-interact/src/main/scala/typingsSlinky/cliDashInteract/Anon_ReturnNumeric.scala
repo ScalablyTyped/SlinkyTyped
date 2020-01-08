@@ -1,6 +1,6 @@
 package typingsSlinky.cliDashInteract
 
-import typingsSlinky.cliDashInteract.cliDashInteractNumbers.`true`
+import typingsSlinky.cliDashInteract.cliDashInteractBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

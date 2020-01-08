@@ -16,23 +16,14 @@ import typingsSlinky.gun.Anon_False
 import typingsSlinky.gun.Anon_File
 import typingsSlinky.gun.Anon_SessionStorage
 import typingsSlinky.gun.Anon_Wait
-import typingsSlinky.gun.gunMod.Gun.AccessObject
-import typingsSlinky.gun.gunMod.Gun.AckCallback
-import typingsSlinky.gun.gunMod.Gun.AlwaysDisallowedType
-import typingsSlinky.gun.gunMod.Gun.ArrayAsRecord
-import typingsSlinky.gun.gunMod.Gun.ArrayOf
-import typingsSlinky.gun.gunMod.Gun.ChainReference
-import typingsSlinky.gun.gunMod.Gun.ConstructorOptions
-import typingsSlinky.gun.gunMod.Gun.CryptoKeyPair
-import typingsSlinky.gun.gunMod.Gun.DisallowArray
-import typingsSlinky.gun.gunMod.Gun.DisallowPrimitives
-import typingsSlinky.gun.gunNumbers.`false`
-import typingsSlinky.gun.gunStrings.DOLLAR
+import typingsSlinky.gun.gunBooleans.`false`
+import typingsSlinky.gun.gunStrings.$
 import typingsSlinky.gun.gunStrings.ack
 import typingsSlinky.gun.gunStrings.as
 import typingsSlinky.gun.gunStrings.back
 import typingsSlinky.gun.gunStrings.epriv
 import typingsSlinky.gun.gunStrings.epub
+import typingsSlinky.gun.gunStrings.gun
 import typingsSlinky.gun.gunStrings.id
 import typingsSlinky.gun.gunStrings.next
 import typingsSlinky.gun.gunStrings.off
@@ -265,7 +256,7 @@ object Gun extends js.Object {
       key: K,
       callback: js.Function2[
           /* paramA */ Record[
-            typingsSlinky.gun.gunStrings.gun | DOLLAR | root | id | back | on | tag | typingsSlinky.gun.gunStrings.get | soul | ack | put, 
+            gun | $ | root | id | back | on | tag | typingsSlinky.gun.gunStrings.get | soul | ack | put, 
             _
           ], 
           /* paramB */ Record[off | to | next | the | on | as | back | rid | id, _], 
@@ -439,7 +430,7 @@ object Gun extends js.Object {
   }
   
   type AccessObject[T] = T | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in keyof T ]: gun.gun.Gun.AlwaysDisallowedType<T[key]> extends never? never : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias gun.gun.Gun.AccessObject<T[key]> * / object}
+  {[ key in keyof T ]: gun.gun.Gun.AlwaysDisallowedType<T[key]> extends never? never : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias gun.gun.Gun.AccessObject<T[key]> * / object}
     */ typingsSlinky.gun.gunStrings.AccessObject with T)
   type AckCallback = js.Function1[/* ack */ Anon_Err | Anon_ErrOk, Unit]
   /** Gun does not accept Array value, so we need extract to make types correct */

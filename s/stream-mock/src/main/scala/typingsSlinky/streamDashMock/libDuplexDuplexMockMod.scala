@@ -6,7 +6,6 @@ import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.DuplexOptions
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.IterableIterator
-import typingsSlinky.streamDashMock.libDuplexDuplexMockMod.DuplexMock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

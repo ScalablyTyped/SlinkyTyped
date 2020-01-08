@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SyncLoader
-  extends SharedApply_MarginLoaderProps_986148290[typingsSlinky.halogenium.halogeniumMod.SyncLoader] {
+  extends SharedApply_MarginLoaderProps929156443[typingsSlinky.halogenium.halogeniumMod.SyncLoader] {
   @JSImport("halogenium", "SyncLoader")
   @js.native
   object componentImport extends js.Object

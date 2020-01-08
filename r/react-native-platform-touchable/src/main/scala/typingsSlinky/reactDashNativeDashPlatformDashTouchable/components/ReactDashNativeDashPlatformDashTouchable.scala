@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashNativeDashPlatformDashTouchable extends SharedApply_PlatformTouchableProps_6282842[default] {
+object ReactDashNativeDashPlatformDashTouchable extends SharedApply_PlatformTouchableProps_1551789867[default] {
   @JSImport("react-native-platform-touchable", JSImport.Default)
   @js.native
   object componentImport extends js.Object

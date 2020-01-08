@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,18 +77,43 @@ object BuildReason extends js.Object {
   @js.native
   sealed trait ValidateShelveset extends BuildReason
   
-  /* 495 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.All with Double = js.native
-  /* 4 */ val BatchedCI: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.BatchedCI with Double = js.native
-  /* 128 */ val CheckInShelveset: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.CheckInShelveset with Double = js.native
-  /* 2 */ val IndividualCI: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.IndividualCI with Double = js.native
-  /* 1 */ val Manual: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.Manual with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.None with Double = js.native
-  /* 256 */ val PullRequest: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.PullRequest with Double = js.native
-  /* 8 */ val Schedule: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.Schedule with Double = js.native
-  /* 431 */ val Triggered: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.Triggered with Double = js.native
-  /* 32 */ val UserCreated: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.UserCreated with Double = js.native
-  /* 64 */ val ValidateShelveset: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.ValidateShelveset with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BuildReason with Double] = js.native
+  /* 495 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 4 */ @js.native
+  object BatchedCI extends TopLevel[BatchedCI with Double]
+  
+  /* 128 */ @js.native
+  object CheckInShelveset extends TopLevel[CheckInShelveset with Double]
+  
+  /* 2 */ @js.native
+  object IndividualCI extends TopLevel[IndividualCI with Double]
+  
+  /* 1 */ @js.native
+  object Manual extends TopLevel[Manual with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 256 */ @js.native
+  object PullRequest extends TopLevel[PullRequest with Double]
+  
+  /* 8 */ @js.native
+  object Schedule
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildReason.Schedule with Double
+        ]
+  
+  /* 431 */ @js.native
+  object Triggered extends TopLevel[Triggered with Double]
+  
+  /* 32 */ @js.native
+  object UserCreated extends TopLevel[UserCreated with Double]
+  
+  /* 64 */ @js.native
+  object ValidateShelveset extends TopLevel[ValidateShelveset with Double]
+  
 }
 

@@ -8,25 +8,25 @@ import scala.scalajs.js.annotation._
   * Allowed arithmetic operators
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.compareDashVersions.compareDashVersionsStrings.`>`
-  - typings.compareDashVersions.compareDashVersionsStrings.`>=`
-  - typings.compareDashVersions.compareDashVersionsStrings.`=`
-  - typings.compareDashVersions.compareDashVersionsStrings.`<`
-  - typings.compareDashVersions.compareDashVersionsStrings.`<=`
+  - typings.compareDashVersions.compareDashVersionsStrings.Greaterthansign
+  - typings.compareDashVersions.compareDashVersionsStrings.GreaterthansignEqualssign
+  - typings.compareDashVersions.compareDashVersionsStrings.Equalssign
+  - typings.compareDashVersions.compareDashVersionsStrings.Lessthansign
+  - typings.compareDashVersions.compareDashVersionsStrings.LessthansignEqualssign
 */
 trait CompareOperator extends js.Object
 
 object CompareOperator {
   @scala.inline
-  def `<`: typingsSlinky.compareDashVersions.compareDashVersionsStrings.`<` = this.cast("<")
+  def Equalssign: typingsSlinky.compareDashVersions.compareDashVersionsStrings.Equalssign = this.cast("=")
   @scala.inline
-  def `<=`: typingsSlinky.compareDashVersions.compareDashVersionsStrings.`<=` = this.cast("<=")
+  def Greaterthansign: typingsSlinky.compareDashVersions.compareDashVersionsStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `=`: typingsSlinky.compareDashVersions.compareDashVersionsStrings.`=` = this.cast("=")
+  def GreaterthansignEqualssign: typingsSlinky.compareDashVersions.compareDashVersionsStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.compareDashVersions.compareDashVersionsStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.compareDashVersions.compareDashVersionsStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.compareDashVersions.compareDashVersionsStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.compareDashVersions.compareDashVersionsStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
 }

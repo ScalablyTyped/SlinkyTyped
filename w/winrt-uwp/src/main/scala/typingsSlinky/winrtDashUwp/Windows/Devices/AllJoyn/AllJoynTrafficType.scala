@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object AllJoynTrafficType extends js.Object {
   @js.native
   sealed trait unknown extends AllJoynTrafficType
   
-  /* 1 */ val messages: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynTrafficType.messages with Double = js.native
-  /* 3 */ val rawReliable: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynTrafficType.rawReliable with Double = js.native
-  /* 2 */ val rawUnreliable: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynTrafficType.rawUnreliable with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynTrafficType.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AllJoynTrafficType with Double] = js.native
+  /* 1 */ @js.native
+  object messages extends TopLevel[messages with Double]
+  
+  /* 3 */ @js.native
+  object rawReliable extends TopLevel[rawReliable with Double]
+  
+  /* 2 */ @js.native
+  object rawUnreliable extends TopLevel[rawUnreliable with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

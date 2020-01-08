@@ -2,7 +2,7 @@ package typingsSlinky.apostrophe.apostropheMod
 
 import typingsSlinky.apostrophe.Anon_Fields
 import typingsSlinky.apostrophe.Anon_Key
-import typingsSlinky.apostrophe.apostropheNumbers.`false`
+import typingsSlinky.apostrophe.apostropheBooleans.`false`
 import typingsSlinky.apostrophe.apostropheStrings.user
 import scala.scalajs.js
 import scala.scalajs.js.`|`

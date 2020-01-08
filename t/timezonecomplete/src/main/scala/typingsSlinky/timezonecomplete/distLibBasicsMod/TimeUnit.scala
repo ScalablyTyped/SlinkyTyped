@@ -1,5 +1,6 @@
 package typingsSlinky.timezonecomplete.distLibBasicsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,16 +41,34 @@ object TimeUnit extends js.Object {
   @js.native
   sealed trait Year extends TimeUnit
   
-  /* 4 */ val Day: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Day with Double = js.native
-  /* 3 */ val Hour: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Hour with Double = js.native
-  /* 8 */ val MAX: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.MAX with Double = js.native
-  /* 0 */ val Millisecond: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Millisecond with Double = js.native
-  /* 2 */ val Minute: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Minute with Double = js.native
-  /* 6 */ val Month: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Month with Double = js.native
-  /* 1 */ val Second: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Second with Double = js.native
-  /* 5 */ val Week: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Week with Double = js.native
-  /* 7 */ val Year: typingsSlinky.timezonecomplete.distLibBasicsMod.TimeUnit.Year with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimeUnit with Double] = js.native
+  /* 4 */ @js.native
+  object Day extends TopLevel[Day with Double]
+  
+  /* 3 */ @js.native
+  object Hour extends TopLevel[Hour with Double]
+  
+  /* 8 */ @js.native
+  object MAX extends TopLevel[MAX with Double]
+  
+  /* 0 */ @js.native
+  object Millisecond extends TopLevel[Millisecond with Double]
+  
+  /* 2 */ @js.native
+  object Minute extends TopLevel[Minute with Double]
+  
+  /* 6 */ @js.native
+  object Month extends TopLevel[Month with Double]
+  
+  /* 1 */ @js.native
+  object Second extends TopLevel[Second with Double]
+  
+  /* 5 */ @js.native
+  object Week extends TopLevel[Week with Double]
+  
+  /* 7 */ @js.native
+  object Year extends TopLevel[Year with Double]
+  
 }
 

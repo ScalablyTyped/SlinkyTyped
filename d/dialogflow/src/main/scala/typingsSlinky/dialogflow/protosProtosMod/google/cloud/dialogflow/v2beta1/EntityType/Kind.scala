@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.EntityType
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object Kind extends js.Object {
   @js.native
   sealed trait KIND_UNSPECIFIED extends Kind
   
-  /* 2 */ val KIND_LIST: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.EntityType.Kind.KIND_LIST with Double = js.native
-  /* 1 */ val KIND_MAP: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.EntityType.Kind.KIND_MAP with Double = js.native
-  /* 3 */ val KIND_REGEXP: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.EntityType.Kind.KIND_REGEXP with Double = js.native
-  /* 0 */ val KIND_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.EntityType.Kind.KIND_UNSPECIFIED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Kind with Double] = js.native
+  /* 2 */ @js.native
+  object KIND_LIST extends TopLevel[KIND_LIST with Double]
+  
+  /* 1 */ @js.native
+  object KIND_MAP extends TopLevel[KIND_MAP with Double]
+  
+  /* 3 */ @js.native
+  object KIND_REGEXP extends TopLevel[KIND_REGEXP with Double]
+  
+  /* 0 */ @js.native
+  object KIND_UNSPECIFIED extends TopLevel[KIND_UNSPECIFIED with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object RemoteLaunchUriStatus extends js.Object {
   @js.native
   sealed trait valueSetTooLarge extends RemoteLaunchUriStatus
   
-  /* 2 */ val appUnavailable: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.appUnavailable with Double = js.native
-  /* 6 */ val deniedByLocalSystem: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.deniedByLocalSystem with Double = js.native
-  /* 7 */ val deniedByRemoteSystem: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.deniedByRemoteSystem with Double = js.native
-  /* 3 */ val protocolUnavailable: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.protocolUnavailable with Double = js.native
-  /* 4 */ val remoteSystemUnavailable: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.remoteSystemUnavailable with Double = js.native
-  /* 1 */ val success: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.success with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.unknown with Double = js.native
-  /* 5 */ val valueSetTooLarge: typingsSlinky.winrtDashUwp.Windows.System.RemoteLaunchUriStatus.valueSetTooLarge with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RemoteLaunchUriStatus with Double] = js.native
+  /* 2 */ @js.native
+  object appUnavailable extends TopLevel[appUnavailable with Double]
+  
+  /* 6 */ @js.native
+  object deniedByLocalSystem extends TopLevel[deniedByLocalSystem with Double]
+  
+  /* 7 */ @js.native
+  object deniedByRemoteSystem extends TopLevel[deniedByRemoteSystem with Double]
+  
+  /* 3 */ @js.native
+  object protocolUnavailable extends TopLevel[protocolUnavailable with Double]
+  
+  /* 4 */ @js.native
+  object remoteSystemUnavailable extends TopLevel[remoteSystemUnavailable with Double]
+  
+  /* 1 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 5 */ @js.native
+  object valueSetTooLarge extends TopLevel[valueSetTooLarge with Double]
+  
 }
 

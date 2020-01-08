@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object AuditAction extends js.Object {
   @js.native
   sealed trait Update extends AuditAction
   
-  /* 1 */ val Add: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.AuditAction.Add with Double = js.native
-  /* 3 */ val Delete: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.AuditAction.Delete with Double = js.native
-  /* 2 */ val Update: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.AuditAction.Update with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AuditAction with Double] = js.native
+  /* 1 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 3 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 2 */ @js.native
+  object Update extends TopLevel[Update with Double]
+  
 }
 

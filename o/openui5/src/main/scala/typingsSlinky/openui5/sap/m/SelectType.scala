@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object SelectType extends js.Object {
   @js.native
   sealed trait IconOnly extends SelectType
   
-  /* 0 */ val Default: typingsSlinky.openui5.sap.m.SelectType.Default with Double = js.native
-  /* 1 */ val IconOnly: typingsSlinky.openui5.sap.m.SelectType.IconOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SelectType with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object IconOnly extends TopLevel[IconOnly with Double]
+  
 }
 

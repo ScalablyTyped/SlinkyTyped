@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__theming
 
-Typings are for version 5.2.6
+Typings are for version 5.2.8
 
 ## Library description:
 Core Storybook Components
@@ -10,15 +10,15 @@ Core Storybook Components
 | ------------------ | :-------------: |
 | Full name          | @storybook/theming |
 | Keywords           | storybook |
-| # releases         | 71 |
-| # dependents       | 31 |
-| # downloads        | 3074972 |
+| # releases         | 294 |
+| # dependents       | 70 |
+| # downloads        | 32205974 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/storybooks/storybook/tree/master/lib/theming)
-- [Bugs](https://github.com/storybooks/storybook/issues)
-- [Repository](https://github.com/storybooks/storybook)
+- [Homepage](https://github.com/storybookjs/storybook/tree/master/lib/theming)
+- [Bugs](https://github.com/storybookjs/storybook/issues)
+- [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Ftheming)
     
 

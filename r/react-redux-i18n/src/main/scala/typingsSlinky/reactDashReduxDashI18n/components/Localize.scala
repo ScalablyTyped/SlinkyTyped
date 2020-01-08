@@ -18,8 +18,9 @@ object Localize
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, value */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    value: String | Double | js.Object,
     dangerousHTML: js.UndefOr[Boolean] = js.undefined,
     dateFormat: String = null,
     options: js.Object = null,
@@ -30,7 +31,7 @@ object Localize
     slinky.web.html.`*`.tag.type, 
     typingsSlinky.reactDashReduxDashI18n.reactDashReduxDashI18nMod.Localize
   ] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     if (!js.isUndefined(dangerousHTML)) __obj.updateDynamic("dangerousHTML")(dangerousHTML.asInstanceOf[js.Any])
     if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])

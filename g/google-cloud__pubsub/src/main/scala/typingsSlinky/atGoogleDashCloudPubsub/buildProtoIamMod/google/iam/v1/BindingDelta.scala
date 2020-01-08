@@ -1,6 +1,7 @@
 package typingsSlinky.atGoogleDashCloudPubsub.buildProtoIamMod.google.iam.v1
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atGoogleDashCloudPubsub.buildProtoIamMod.google.iam.v1.BindingDelta.Action
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -118,11 +119,17 @@ object BindingDelta extends js.Object {
     @js.native
     sealed trait REMOVE extends Action
     
-    /* 0 */ val ACTION_UNSPECIFIED: typingsSlinky.atGoogleDashCloudPubsub.buildProtoIamMod.google.iam.v1.BindingDelta.Action.ACTION_UNSPECIFIED with Double = js.native
-    /* 1 */ val ADD: typingsSlinky.atGoogleDashCloudPubsub.buildProtoIamMod.google.iam.v1.BindingDelta.Action.ADD with Double = js.native
-    /* 2 */ val REMOVE: typingsSlinky.atGoogleDashCloudPubsub.buildProtoIamMod.google.iam.v1.BindingDelta.Action.REMOVE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Action with Double] = js.native
+    /* 0 */ @js.native
+    object ACTION_UNSPECIFIED extends TopLevel[ACTION_UNSPECIFIED with Double]
+    
+    /* 1 */ @js.native
+    object ADD extends TopLevel[ADD with Double]
+    
+    /* 2 */ @js.native
+    object REMOVE extends TopLevel[REMOVE with Double]
+    
   }
   
 }

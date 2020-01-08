@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
@@ -77,6 +78,10 @@ object TextPath
     kerning: NumberProp = null,
     lengthAdjust: LengthAdjust = null,
     letterSpacing: NumberProp = null,
+    marker: String = null,
+    markerEnd: String = null,
+    markerMid: String = null,
+    markerStart: String = null,
     mask: String = null,
     method: TextPathMethod = null,
     midLine: TextPathMidLine = null,
@@ -157,6 +162,10 @@ object TextPath
     if (kerning != null) __obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
     if (lengthAdjust != null) __obj.updateDynamic("lengthAdjust")(lengthAdjust.asInstanceOf[js.Any])
     if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
+    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
+    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
     if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     if (midLine != null) __obj.updateDynamic("midLine")(midLine.asInstanceOf[js.Any])
@@ -213,6 +222,9 @@ object TextPath
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.TextPath] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.TextPath](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TextPathProps
 }
 

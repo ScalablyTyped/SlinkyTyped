@@ -1,7 +1,6 @@
 package typingsSlinky.transliteration
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.transliteration.distNodeDataCharmapMod.Charmap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

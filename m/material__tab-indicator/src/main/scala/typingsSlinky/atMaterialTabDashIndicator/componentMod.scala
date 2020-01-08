@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialTabDashIndicator.componentMod.MDCTabIndicator
 import typingsSlinky.atMaterialTabDashIndicator.foundationMod.MDCTabIndicatorFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

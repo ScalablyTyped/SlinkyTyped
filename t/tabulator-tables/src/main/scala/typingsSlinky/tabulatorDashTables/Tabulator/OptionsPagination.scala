@@ -2,7 +2,7 @@ package typingsSlinky.tabulatorDashTables.Tabulator
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Record
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`true`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`true`
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.local
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.page
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.remote

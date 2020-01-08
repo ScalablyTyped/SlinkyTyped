@@ -260,6 +260,9 @@ object ToastHeader
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactstrap.libToastHeaderMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactstrap.libToastHeaderMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ToastHeaderProps
 }
 

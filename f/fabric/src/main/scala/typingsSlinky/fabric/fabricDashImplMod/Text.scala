@@ -12,7 +12,7 @@ import typingsSlinky.fabric.Anon_KernedWidth
 import typingsSlinky.fabric.Anon_Left
 import typingsSlinky.fabric.Anon_Line
 import typingsSlinky.fabric.Anon_NumOfSpaces
-import typingsSlinky.fabric.fabricStrings.Empty
+import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
 import typingsSlinky.fabric.fabricStrings.oblique
@@ -133,7 +133,7 @@ class Text protected () extends Object {
   	 * Font style . Possible values: "", "normal", "italic" or "oblique".
   	 * @type String
   	 */
-  var fontStyle: js.UndefOr[Empty | normal | italic | oblique] = js.native
+  var fontStyle: js.UndefOr[_empty | normal | italic | oblique] = js.native
   /**
   	 * Font weight (e.g. bold, normal, 400, 600, 800)
   	 * @type {(Number|String)}

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,15 @@ object GroupButtonMode extends js.Object {
   @js.native
   sealed trait RadioButton extends GroupButtonMode
   
-  /* 0 */ val CheckBox: typingsSlinky.ejDotWebDotAll.ej.GroupButtonMode.CheckBox with Double = js.native
-  /* 1 */ val RadioButton: typingsSlinky.ejDotWebDotAll.ej.GroupButtonMode.RadioButton with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GroupButtonMode with Double] = js.native
+  /* 0 */ @js.native
+  object CheckBox
+    extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.GroupButtonMode.CheckBox with Double]
+  
+  /* 1 */ @js.native
+  object RadioButton
+    extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.GroupButtonMode.RadioButton with Double]
+  
 }
 

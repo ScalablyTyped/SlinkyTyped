@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object HidCollectionType extends js.Object {
   @js.native
   sealed trait usageSwitch extends HidCollectionType
   
-  /* 1 */ val application: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.application with Double = js.native
-  /* 2 */ val logical: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.logical with Double = js.native
-  /* 4 */ val namedArray: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.namedArray with Double = js.native
-  /* 7 */ val other: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.other with Double = js.native
-  /* 0 */ val physical: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.physical with Double = js.native
-  /* 3 */ val report: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.report with Double = js.native
-  /* 6 */ val usageModifier: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.usageModifier with Double = js.native
-  /* 5 */ val usageSwitch: typingsSlinky.winrtDashUwp.Windows.Devices.HumanInterfaceDevice.HidCollectionType.usageSwitch with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HidCollectionType with Double] = js.native
+  /* 1 */ @js.native
+  object application extends TopLevel[application with Double]
+  
+  /* 2 */ @js.native
+  object logical extends TopLevel[logical with Double]
+  
+  /* 4 */ @js.native
+  object namedArray extends TopLevel[namedArray with Double]
+  
+  /* 7 */ @js.native
+  object other extends TopLevel[other with Double]
+  
+  /* 0 */ @js.native
+  object physical extends TopLevel[physical with Double]
+  
+  /* 3 */ @js.native
+  object report extends TopLevel[report with Double]
+  
+  /* 6 */ @js.native
+  object usageModifier extends TopLevel[usageModifier with Double]
+  
+  /* 5 */ @js.native
+  object usageSwitch extends TopLevel[usageSwitch with Double]
+  
 }
 

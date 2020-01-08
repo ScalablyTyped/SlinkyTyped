@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.distTokensMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -440,109 +441,313 @@ object SyntaxKind extends js.Object {
   @js.native
   sealed trait Unknown extends SyntaxKind
   
-  /* 60 */ val Argument: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Argument with Double = js.native
-  /* 61 */ val ArgumentList: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ArgumentList with Double = js.native
-  /* 6 */ val AtToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.AtToken with Double = js.native
-  /* 30 */ val ButKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ButKeyword with Double = js.native
-  /* 69 */ val ButNotSymbol: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ButNotSymbol with Double = js.native
-  /* 8 */ val CloseBraceToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.CloseBraceToken with Double = js.native
-  /* 11 */ val CloseBracketToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.CloseBracketToken with Double = js.native
-  /* 14 */ val CloseParenToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.CloseParenToken with Double = js.native
-  /* 17 */ val ColonColonColonToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ColonColonColonToken with Double = js.native
-  /* 16 */ val ColonColonToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ColonColonToken with Double = js.native
-  /* 15 */ val ColonToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ColonToken with Double = js.native
-  /* 18 */ val CommaToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.CommaToken with Double = js.native
-  /* 66 */ val Constraints: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Constraints with Double = js.native
-  /* 56 */ val Define: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Define with Double = js.native
-  /* 31 */ val DefineKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.DefineKeyword with Double = js.native
-  /* 28 */ val ElementOfToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ElementOfToken with Double = js.native
-  /* 75 */ val EmptyAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.EmptyAssertion with Double = js.native
-  /* 32 */ val EmptyKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.EmptyKeyword with Double = js.native
-  /* 5 */ val EndOfFileToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.EndOfFileToken with Double = js.native
-  /* 23 */ val EqualsEqualsToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.EqualsEqualsToken with Double = js.native
-  /* 22 */ val EqualsToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.EqualsToken with Double = js.native
-  /* 24 */ val ExclamationEqualsToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ExclamationEqualsToken with Double = js.native
-  /* 33 */ val FalseKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FalseKeyword with Double = js.native
-  /* 1 */ val FirstCommentTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstCommentTrivia with Double = js.native
-  /* 80 */ val FirstErrorNode: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstErrorNode with Double = js.native
-  /* 3 */ val FirstHtmlTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstHtmlTrivia with Double = js.native
-  /* 30 */ val FirstKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstKeyword with Double = js.native
-  /* 46 */ val FirstLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstLiteral with Double = js.native
-  /* 49 */ val FirstProseFragmentLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstProseFragmentLiteral with Double = js.native
-  /* 6 */ val FirstPunctuation: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstPunctuation with Double = js.native
-  /* 46 */ val FirstTextContent: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstTextContent with Double = js.native
-  /* 5 */ val FirstToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstToken with Double = js.native
-  /* 1 */ val FirstTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.FirstTrivia with Double = js.native
-  /* 34 */ val GoalKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.GoalKeyword with Double = js.native
-  /* 12 */ val GreaterThanToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.GreaterThanToken with Double = js.native
-  /* 35 */ val HereKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.HereKeyword with Double = js.native
-  /* 4 */ val HtmlCloseTagTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.HtmlCloseTagTrivia with Double = js.native
-  /* 3 */ val HtmlOpenTagTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.HtmlOpenTagTrivia with Double = js.native
-  /* 53 */ val Identifier: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Identifier with Double = js.native
-  /* 55 */ val Import: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Import with Double = js.native
-  /* 36 */ val ImportKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ImportKeyword with Double = js.native
-  /* 81 */ val InvalidAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.InvalidAssertion with Double = js.native
-  /* 80 */ val InvalidSymbol: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.InvalidSymbol with Double = js.native
-  /* 2 */ val LastCommentTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastCommentTrivia with Double = js.native
-  /* 81 */ val LastErrorNode: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastErrorNode with Double = js.native
-  /* 4 */ val LastHtmlTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastHtmlTrivia with Double = js.native
-  /* 45 */ val LastKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastKeyword with Double = js.native
-  /* 48 */ val LastLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastLiteral with Double = js.native
-  /* 52 */ val LastProseFragmentLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastProseFragmentLiteral with Double = js.native
-  /* 29 */ val LastPunctuation: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastPunctuation with Double = js.native
-  /* 52 */ val LastTextContent: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastTextContent with Double = js.native
-  /* 45 */ val LastToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastToken with Double = js.native
-  /* 4 */ val LastTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LastTrivia with Double = js.native
-  /* 25 */ val LessThanExclamationToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LessThanExclamationToken with Double = js.native
-  /* 26 */ val LessThanMinusToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LessThanMinusToken with Double = js.native
-  /* 77 */ val LexicalGoalAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LexicalGoalAssertion with Double = js.native
-  /* 37 */ val LexicalKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LexicalKeyword with Double = js.native
-  /* 62 */ val LinkReference: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LinkReference with Double = js.native
-  /* 76 */ val LookaheadAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LookaheadAssertion with Double = js.native
-  /* 38 */ val LookaheadKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.LookaheadKeyword with Double = js.native
-  /* 2 */ val MultiLineCommentTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.MultiLineCommentTrivia with Double = js.native
-  /* 39 */ val NoKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.NoKeyword with Double = js.native
-  /* 78 */ val NoSymbolHereAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.NoSymbolHereAssertion with Double = js.native
-  /* 73 */ val Nonterminal: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Nonterminal with Double = js.native
-  /* 29 */ val NotAnElementOfToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.NotAnElementOfToken with Double = js.native
-  /* 27 */ val NotEqualToToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.NotEqualToToken with Double = js.native
-  /* 40 */ val NotKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.NotKeyword with Double = js.native
-  /* 41 */ val OfKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OfKeyword with Double = js.native
-  /* 42 */ val OneKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OneKeyword with Double = js.native
-  /* 63 */ val OneOfList: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OneOfList with Double = js.native
-  /* 71 */ val OneOfSymbol: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OneOfSymbol with Double = js.native
-  /* 7 */ val OpenBraceToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OpenBraceToken with Double = js.native
-  /* 10 */ val OpenBracketGreaterThanToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OpenBracketGreaterThanToken with Double = js.native
-  /* 9 */ val OpenBracketToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OpenBracketToken with Double = js.native
-  /* 13 */ val OpenParenToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OpenParenToken with Double = js.native
-  /* 43 */ val OrKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.OrKeyword with Double = js.native
-  /* 58 */ val Parameter: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Parameter with Double = js.native
-  /* 59 */ val ParameterList: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ParameterList with Double = js.native
-  /* 72 */ val PlaceholderSymbol: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.PlaceholderSymbol with Double = js.native
-  /* 19 */ val PlusToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.PlusToken with Double = js.native
-  /* 57 */ val Production: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Production with Double = js.native
-  /* 74 */ val Prose: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Prose with Double = js.native
-  /* 79 */ val ProseAssertion: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ProseAssertion with Double = js.native
-  /* 52 */ val ProseFull: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ProseFull with Double = js.native
-  /* 49 */ val ProseHead: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ProseHead with Double = js.native
-  /* 50 */ val ProseMiddle: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ProseMiddle with Double = js.native
-  /* 51 */ val ProseTail: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ProseTail with Double = js.native
-  /* 21 */ val QuestionToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.QuestionToken with Double = js.native
-  /* 65 */ val RightHandSide: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.RightHandSide with Double = js.native
-  /* 64 */ val RightHandSideList: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.RightHandSideList with Double = js.native
-  /* 1 */ val SingleLineCommentTrivia: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.SingleLineCommentTrivia with Double = js.native
-  /* 54 */ val SourceFile: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.SourceFile with Double = js.native
-  /* 46 */ val StringLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.StringLiteral with Double = js.native
-  /* 68 */ val SymbolSet: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.SymbolSet with Double = js.native
-  /* 67 */ val SymbolSpan: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.SymbolSpan with Double = js.native
-  /* 47 */ val Terminal: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Terminal with Double = js.native
-  /* 44 */ val ThroughKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.ThroughKeyword with Double = js.native
-  /* 20 */ val TildeToken: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.TildeToken with Double = js.native
-  /* 45 */ val TrueKeyword: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.TrueKeyword with Double = js.native
-  /* 48 */ val UnicodeCharacterLiteral: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.UnicodeCharacterLiteral with Double = js.native
-  /* 70 */ val UnicodeCharacterRange: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.UnicodeCharacterRange with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.grammarkdown.distTokensMod.SyntaxKind.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SyntaxKind with Double] = js.native
+  /* 60 */ @js.native
+  object Argument extends TopLevel[Argument with Double]
+  
+  /* 61 */ @js.native
+  object ArgumentList extends TopLevel[ArgumentList with Double]
+  
+  /* 6 */ @js.native
+  object AtToken extends TopLevel[AtToken with Double]
+  
+  /* 30 */ @js.native
+  object ButKeyword extends TopLevel[ButKeyword with Double]
+  
+  /* 69 */ @js.native
+  object ButNotSymbol extends TopLevel[ButNotSymbol with Double]
+  
+  /* 8 */ @js.native
+  object CloseBraceToken extends TopLevel[CloseBraceToken with Double]
+  
+  /* 11 */ @js.native
+  object CloseBracketToken extends TopLevel[CloseBracketToken with Double]
+  
+  /* 14 */ @js.native
+  object CloseParenToken extends TopLevel[CloseParenToken with Double]
+  
+  /* 17 */ @js.native
+  object ColonColonColonToken extends TopLevel[ColonColonColonToken with Double]
+  
+  /* 16 */ @js.native
+  object ColonColonToken extends TopLevel[ColonColonToken with Double]
+  
+  /* 15 */ @js.native
+  object ColonToken extends TopLevel[ColonToken with Double]
+  
+  /* 18 */ @js.native
+  object CommaToken extends TopLevel[CommaToken with Double]
+  
+  /* 66 */ @js.native
+  object Constraints extends TopLevel[Constraints with Double]
+  
+  /* 56 */ @js.native
+  object Define extends TopLevel[Define with Double]
+  
+  /* 31 */ @js.native
+  object DefineKeyword extends TopLevel[DefineKeyword with Double]
+  
+  /* 28 */ @js.native
+  object ElementOfToken extends TopLevel[ElementOfToken with Double]
+  
+  /* 75 */ @js.native
+  object EmptyAssertion extends TopLevel[EmptyAssertion with Double]
+  
+  /* 32 */ @js.native
+  object EmptyKeyword extends TopLevel[EmptyKeyword with Double]
+  
+  /* 5 */ @js.native
+  object EndOfFileToken extends TopLevel[EndOfFileToken with Double]
+  
+  /* 23 */ @js.native
+  object EqualsEqualsToken extends TopLevel[EqualsEqualsToken with Double]
+  
+  /* 22 */ @js.native
+  object EqualsToken extends TopLevel[EqualsToken with Double]
+  
+  /* 24 */ @js.native
+  object ExclamationEqualsToken extends TopLevel[ExclamationEqualsToken with Double]
+  
+  /* 33 */ @js.native
+  object FalseKeyword extends TopLevel[FalseKeyword with Double]
+  
+  /* 1 */ @js.native
+  object FirstCommentTrivia extends TopLevel[FirstCommentTrivia with Double]
+  
+  /* 80 */ @js.native
+  object FirstErrorNode extends TopLevel[FirstErrorNode with Double]
+  
+  /* 3 */ @js.native
+  object FirstHtmlTrivia extends TopLevel[FirstHtmlTrivia with Double]
+  
+  /* 30 */ @js.native
+  object FirstKeyword extends TopLevel[FirstKeyword with Double]
+  
+  /* 46 */ @js.native
+  object FirstLiteral extends TopLevel[FirstLiteral with Double]
+  
+  /* 49 */ @js.native
+  object FirstProseFragmentLiteral extends TopLevel[FirstProseFragmentLiteral with Double]
+  
+  /* 6 */ @js.native
+  object FirstPunctuation extends TopLevel[FirstPunctuation with Double]
+  
+  /* 46 */ @js.native
+  object FirstTextContent extends TopLevel[FirstTextContent with Double]
+  
+  /* 5 */ @js.native
+  object FirstToken extends TopLevel[FirstToken with Double]
+  
+  /* 1 */ @js.native
+  object FirstTrivia extends TopLevel[FirstTrivia with Double]
+  
+  /* 34 */ @js.native
+  object GoalKeyword extends TopLevel[GoalKeyword with Double]
+  
+  /* 12 */ @js.native
+  object GreaterThanToken extends TopLevel[GreaterThanToken with Double]
+  
+  /* 35 */ @js.native
+  object HereKeyword extends TopLevel[HereKeyword with Double]
+  
+  /* 4 */ @js.native
+  object HtmlCloseTagTrivia extends TopLevel[HtmlCloseTagTrivia with Double]
+  
+  /* 3 */ @js.native
+  object HtmlOpenTagTrivia extends TopLevel[HtmlOpenTagTrivia with Double]
+  
+  /* 53 */ @js.native
+  object Identifier extends TopLevel[Identifier with Double]
+  
+  /* 55 */ @js.native
+  object Import extends TopLevel[Import with Double]
+  
+  /* 36 */ @js.native
+  object ImportKeyword extends TopLevel[ImportKeyword with Double]
+  
+  /* 81 */ @js.native
+  object InvalidAssertion extends TopLevel[InvalidAssertion with Double]
+  
+  /* 80 */ @js.native
+  object InvalidSymbol extends TopLevel[InvalidSymbol with Double]
+  
+  /* 2 */ @js.native
+  object LastCommentTrivia extends TopLevel[LastCommentTrivia with Double]
+  
+  /* 81 */ @js.native
+  object LastErrorNode extends TopLevel[LastErrorNode with Double]
+  
+  /* 4 */ @js.native
+  object LastHtmlTrivia extends TopLevel[LastHtmlTrivia with Double]
+  
+  /* 45 */ @js.native
+  object LastKeyword extends TopLevel[LastKeyword with Double]
+  
+  /* 48 */ @js.native
+  object LastLiteral extends TopLevel[LastLiteral with Double]
+  
+  /* 52 */ @js.native
+  object LastProseFragmentLiteral extends TopLevel[LastProseFragmentLiteral with Double]
+  
+  /* 29 */ @js.native
+  object LastPunctuation extends TopLevel[LastPunctuation with Double]
+  
+  /* 52 */ @js.native
+  object LastTextContent extends TopLevel[LastTextContent with Double]
+  
+  /* 45 */ @js.native
+  object LastToken extends TopLevel[LastToken with Double]
+  
+  /* 4 */ @js.native
+  object LastTrivia extends TopLevel[LastTrivia with Double]
+  
+  /* 25 */ @js.native
+  object LessThanExclamationToken extends TopLevel[LessThanExclamationToken with Double]
+  
+  /* 26 */ @js.native
+  object LessThanMinusToken extends TopLevel[LessThanMinusToken with Double]
+  
+  /* 77 */ @js.native
+  object LexicalGoalAssertion extends TopLevel[LexicalGoalAssertion with Double]
+  
+  /* 37 */ @js.native
+  object LexicalKeyword extends TopLevel[LexicalKeyword with Double]
+  
+  /* 62 */ @js.native
+  object LinkReference extends TopLevel[LinkReference with Double]
+  
+  /* 76 */ @js.native
+  object LookaheadAssertion extends TopLevel[LookaheadAssertion with Double]
+  
+  /* 38 */ @js.native
+  object LookaheadKeyword extends TopLevel[LookaheadKeyword with Double]
+  
+  /* 2 */ @js.native
+  object MultiLineCommentTrivia extends TopLevel[MultiLineCommentTrivia with Double]
+  
+  /* 39 */ @js.native
+  object NoKeyword extends TopLevel[NoKeyword with Double]
+  
+  /* 78 */ @js.native
+  object NoSymbolHereAssertion extends TopLevel[NoSymbolHereAssertion with Double]
+  
+  /* 73 */ @js.native
+  object Nonterminal extends TopLevel[Nonterminal with Double]
+  
+  /* 29 */ @js.native
+  object NotAnElementOfToken extends TopLevel[NotAnElementOfToken with Double]
+  
+  /* 27 */ @js.native
+  object NotEqualToToken extends TopLevel[NotEqualToToken with Double]
+  
+  /* 40 */ @js.native
+  object NotKeyword extends TopLevel[NotKeyword with Double]
+  
+  /* 41 */ @js.native
+  object OfKeyword extends TopLevel[OfKeyword with Double]
+  
+  /* 42 */ @js.native
+  object OneKeyword extends TopLevel[OneKeyword with Double]
+  
+  /* 63 */ @js.native
+  object OneOfList extends TopLevel[OneOfList with Double]
+  
+  /* 71 */ @js.native
+  object OneOfSymbol extends TopLevel[OneOfSymbol with Double]
+  
+  /* 7 */ @js.native
+  object OpenBraceToken extends TopLevel[OpenBraceToken with Double]
+  
+  /* 10 */ @js.native
+  object OpenBracketGreaterThanToken extends TopLevel[OpenBracketGreaterThanToken with Double]
+  
+  /* 9 */ @js.native
+  object OpenBracketToken extends TopLevel[OpenBracketToken with Double]
+  
+  /* 13 */ @js.native
+  object OpenParenToken extends TopLevel[OpenParenToken with Double]
+  
+  /* 43 */ @js.native
+  object OrKeyword extends TopLevel[OrKeyword with Double]
+  
+  /* 58 */ @js.native
+  object Parameter extends TopLevel[Parameter with Double]
+  
+  /* 59 */ @js.native
+  object ParameterList extends TopLevel[ParameterList with Double]
+  
+  /* 72 */ @js.native
+  object PlaceholderSymbol extends TopLevel[PlaceholderSymbol with Double]
+  
+  /* 19 */ @js.native
+  object PlusToken extends TopLevel[PlusToken with Double]
+  
+  /* 57 */ @js.native
+  object Production extends TopLevel[Production with Double]
+  
+  /* 74 */ @js.native
+  object Prose extends TopLevel[Prose with Double]
+  
+  /* 79 */ @js.native
+  object ProseAssertion extends TopLevel[ProseAssertion with Double]
+  
+  /* 52 */ @js.native
+  object ProseFull extends TopLevel[ProseFull with Double]
+  
+  /* 49 */ @js.native
+  object ProseHead extends TopLevel[ProseHead with Double]
+  
+  /* 50 */ @js.native
+  object ProseMiddle extends TopLevel[ProseMiddle with Double]
+  
+  /* 51 */ @js.native
+  object ProseTail extends TopLevel[ProseTail with Double]
+  
+  /* 21 */ @js.native
+  object QuestionToken extends TopLevel[QuestionToken with Double]
+  
+  /* 65 */ @js.native
+  object RightHandSide extends TopLevel[RightHandSide with Double]
+  
+  /* 64 */ @js.native
+  object RightHandSideList extends TopLevel[RightHandSideList with Double]
+  
+  /* 1 */ @js.native
+  object SingleLineCommentTrivia extends TopLevel[SingleLineCommentTrivia with Double]
+  
+  /* 54 */ @js.native
+  object SourceFile extends TopLevel[SourceFile with Double]
+  
+  /* 46 */ @js.native
+  object StringLiteral extends TopLevel[StringLiteral with Double]
+  
+  /* 68 */ @js.native
+  object SymbolSet extends TopLevel[SymbolSet with Double]
+  
+  /* 67 */ @js.native
+  object SymbolSpan extends TopLevel[SymbolSpan with Double]
+  
+  /* 47 */ @js.native
+  object Terminal extends TopLevel[Terminal with Double]
+  
+  /* 44 */ @js.native
+  object ThroughKeyword extends TopLevel[ThroughKeyword with Double]
+  
+  /* 20 */ @js.native
+  object TildeToken extends TopLevel[TildeToken with Double]
+  
+  /* 45 */ @js.native
+  object TrueKeyword extends TopLevel[TrueKeyword with Double]
+  
+  /* 48 */ @js.native
+  object UnicodeCharacterLiteral extends TopLevel[UnicodeCharacterLiteral with Double]
+  
+  /* 70 */ @js.native
+  object UnicodeCharacterRange extends TopLevel[UnicodeCharacterRange with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

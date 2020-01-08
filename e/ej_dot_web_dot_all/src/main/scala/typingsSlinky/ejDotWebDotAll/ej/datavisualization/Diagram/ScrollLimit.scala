@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,19 @@ object ScrollLimit extends js.Object {
   @js.native
   sealed trait Limited extends ScrollLimit
   
-  /* 1 */ val Diagram: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ScrollLimit.Diagram with Double = js.native
-  /* 0 */ val Infinite: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ScrollLimit.Infinite with Double = js.native
-  /* 2 */ val Limited: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ScrollLimit.Limited with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScrollLimit with Double] = js.native
+  /* 1 */ @js.native
+  object Diagram
+    extends TopLevel[
+          typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ScrollLimit.Diagram with Double
+        ]
+  
+  /* 0 */ @js.native
+  object Infinite extends TopLevel[Infinite with Double]
+  
+  /* 2 */ @js.native
+  object Limited extends TopLevel[Limited with Double]
+  
 }
 

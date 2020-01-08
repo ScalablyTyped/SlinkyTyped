@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SecurityTypes extends js.Object {
   @js.native
   sealed trait Pointer extends SecurityTypes
   
-  /* 0 */ val Append: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.SecurityTypes.Append with scala.Double = js.native
-  /* 1 */ val Inheritance: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.SecurityTypes.Inheritance with scala.Double = js.native
-  /* 2 */ val None: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.SecurityTypes.None with scala.Double = js.native
-  /* 3 */ val ParentChild: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.SecurityTypes.ParentChild with scala.Double = js.native
-  /* 4 */ val Pointer: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.SecurityTypes.Pointer with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[SecurityTypes with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[SecurityTypes with Double] = js.native
+  /* 0 */ @js.native
+  object Append extends TopLevel[Append with Double]
+  
+  /* 1 */ @js.native
+  object Inheritance extends TopLevel[Inheritance with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object ParentChild extends TopLevel[ParentChild with Double]
+  
+  /* 4 */ @js.native
+  object Pointer extends TopLevel[Pointer with Double]
+  
 }
 

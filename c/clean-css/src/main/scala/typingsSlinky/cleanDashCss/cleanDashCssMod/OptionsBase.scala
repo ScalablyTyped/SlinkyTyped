@@ -1,9 +1,10 @@
 package typingsSlinky.cleanDashCss.cleanDashCssMod
 
+import typingsSlinky.cleanDashCss.cleanDashCssBooleans.`false`
 import typingsSlinky.cleanDashCss.cleanDashCssNumbers.`0`
 import typingsSlinky.cleanDashCss.cleanDashCssNumbers.`1`
 import typingsSlinky.cleanDashCss.cleanDashCssNumbers.`2`
-import typingsSlinky.cleanDashCss.cleanDashCssNumbers.`false`
+import typingsSlinky.cleanDashCss.cleanDashCssStrings.Asterisk
 import typingsSlinky.cleanDashCss.cleanDashCssStrings.`keep-breaks`
 import typingsSlinky.cleanDashCss.cleanDashCssStrings.beautify
 import typingsSlinky.cleanDashCss.cleanDashCssStrings.ie7
@@ -22,9 +23,7 @@ trait OptionsBase extends js.Object {
     * Controls compatibility mode used; defaults to ie10+ using `'*'`.
     *  Compatibility hash exposes the following properties: `colors`, `properties`, `selectors`, and `units`
     */
-  var compatibility: js.UndefOr[
-    typingsSlinky.cleanDashCss.cleanDashCssStrings.`*` | ie9 | ie8 | ie7 | CompatibilityOptions
-  ] = js.undefined
+  var compatibility: js.UndefOr[Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions] = js.undefined
   /**
     * Controls a function for handling remote requests; Defaults to the build in `loadRemoteResource` function
     */
@@ -88,7 +87,7 @@ trait OptionsBase extends js.Object {
 object OptionsBase {
   @scala.inline
   def apply(
-    compatibility: typingsSlinky.cleanDashCss.cleanDashCssStrings.`*` | ie9 | ie8 | ie7 | CompatibilityOptions = null,
+    compatibility: Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions = null,
     fetch: (/* uri */ String, /* inlineRequest */ RequestOptions | typingsSlinky.node.httpsMod.RequestOptions, /* inlineTimeout */ Double, /* done */ js.Function2[/* message */ String | Double, /* body */ String, Unit]) => Unit = null,
     format: beautify | `keep-breaks` | FormatOptions | `false` = null,
     `inline`: js.Array[String] | `false` = null,

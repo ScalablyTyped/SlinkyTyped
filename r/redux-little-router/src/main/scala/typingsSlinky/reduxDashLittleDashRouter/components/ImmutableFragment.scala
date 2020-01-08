@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImmutableFragment
-  extends SharedApply_FragmentProps_1190256894[
+  extends SharedApply_FragmentProps_1590766101[
       typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.ImmutableFragment
     ] {
   @JSImport("redux-little-router", "ImmutableFragment")

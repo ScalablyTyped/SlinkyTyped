@@ -23,8 +23,9 @@ object TypeaheadMenu
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
+  /* The following DOM/SVG props were specified: className */
   def apply[T /* <: TypeaheadModel */](
+    id: String,
     emptyLabel: String = null,
     innerRef: LegacyRef[HTMLUListElement] = null,
     maxHeight: String = null,
@@ -35,7 +36,7 @@ object TypeaheadMenu
     tag.type, 
     typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadMod.TypeaheadMenu[js.Any]
   ] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     if (emptyLabel != null) __obj.updateDynamic("emptyLabel")(emptyLabel.asInstanceOf[js.Any])
     if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
     if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])

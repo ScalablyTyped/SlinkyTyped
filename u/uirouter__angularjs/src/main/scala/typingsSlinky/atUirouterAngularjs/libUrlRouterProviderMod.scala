@@ -1,7 +1,5 @@
 package typingsSlinky.atUirouterAngularjs
 
-import typingsSlinky.atUirouterAngularjs.libUrlRouterProviderMod.RawNg1RuleFunction
-import typingsSlinky.atUirouterAngularjs.libUrlRouterProviderMod.UrlRouterProvider
 import typingsSlinky.atUirouterCore.atUirouterCoreMod.UIRouter
 import typingsSlinky.atUirouterCore.atUirouterCoreMod.UrlMatcher
 import typingsSlinky.atUirouterCore.atUirouterCoreMod.UrlRouter

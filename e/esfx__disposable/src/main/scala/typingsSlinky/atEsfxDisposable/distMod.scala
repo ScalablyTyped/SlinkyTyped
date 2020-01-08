@@ -1,7 +1,5 @@
 package typingsSlinky.atEsfxDisposable
 
-import typingsSlinky.atEsfxDisposable.distMod.AsyncDisposable
-import typingsSlinky.atEsfxDisposable.distMod.Disposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

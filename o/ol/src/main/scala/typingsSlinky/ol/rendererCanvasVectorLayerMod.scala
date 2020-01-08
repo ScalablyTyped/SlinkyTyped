@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.ol.layerLayerMod.State
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererCanvasVectorLayerMod.CanvasVectorLayerRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

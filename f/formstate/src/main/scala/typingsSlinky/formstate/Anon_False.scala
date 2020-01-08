@@ -1,6 +1,6 @@
 package typingsSlinky.formstate
 
-import typingsSlinky.formstate.formstateNumbers.`false`
+import typingsSlinky.formstate.formstateBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

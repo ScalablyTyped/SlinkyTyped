@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distCommonjsStreamBaseStreamMod.BaseStream
-import typingsSlinky.wonderDashFrp.distCommonjsStreamDeferStreamMod.DeferStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

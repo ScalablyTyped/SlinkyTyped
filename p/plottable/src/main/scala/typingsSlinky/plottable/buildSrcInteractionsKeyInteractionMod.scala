@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcInteractionsInteractionMod.Interaction
-import typingsSlinky.plottable.buildSrcInteractionsKeyInteractionMod.KeyCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

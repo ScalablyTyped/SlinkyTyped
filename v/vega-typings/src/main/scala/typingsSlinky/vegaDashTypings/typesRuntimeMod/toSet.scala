@@ -1,7 +1,7 @@
 package typingsSlinky.vegaDashTypings.typesRuntimeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vegaDashTypings.vegaDashTypingsNumbers.`true`
+import typingsSlinky.vegaDashTypings.vegaDashTypingsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

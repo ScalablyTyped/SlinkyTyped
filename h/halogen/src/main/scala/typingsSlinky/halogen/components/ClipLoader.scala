@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ClipLoader extends SharedApply_SizeLoaderProps1168272630 {
+object ClipLoader extends SharedApply_SizeLoaderProps1572681796 {
   @JSImport("halogen", "ClipLoader")
   @js.native
   object componentImport extends js.Object

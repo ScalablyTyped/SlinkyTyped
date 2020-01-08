@@ -1,5 +1,6 @@
 package typingsSlinky.mongodb.mongodbMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.Anon_BatchSizeReadPreference
 import typingsSlinky.mongodb.Anon_BypassDocumentValidation
 import typingsSlinky.mongodb.Anon_DropTargetSession
@@ -19,7 +20,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Collection[TSchema] extends js.Object {
+trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   /**
     * Get the collection name.
     */

@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashInfiniteDashCalendar.reactDashInfiniteDashCalendarMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object EVENT_TYPE extends js.Object {
   @js.native
   sealed trait START extends EVENT_TYPE
   
-  /* 1 */ val END: typingsSlinky.reactDashInfiniteDashCalendar.reactDashInfiniteDashCalendarMod.EVENT_TYPE.END with Double = js.native
-  /* 0 */ val HOVER: typingsSlinky.reactDashInfiniteDashCalendar.reactDashInfiniteDashCalendarMod.EVENT_TYPE.HOVER with Double = js.native
-  /* 1 */ val START: typingsSlinky.reactDashInfiniteDashCalendar.reactDashInfiniteDashCalendarMod.EVENT_TYPE.START with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EVENT_TYPE with Double] = js.native
+  /* 1 */ @js.native
+  object END extends TopLevel[END with Double]
+  
+  /* 0 */ @js.native
+  object HOVER extends TopLevel[HOVER with Double]
+  
+  /* 1 */ @js.native
+  object START extends TopLevel[START with Double]
+  
 }
 

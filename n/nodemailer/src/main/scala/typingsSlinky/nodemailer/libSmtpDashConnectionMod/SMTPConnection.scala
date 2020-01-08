@@ -5,7 +5,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.nodemailer.libSharedMod.Logger
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import typingsSlinky.nodemailer.nodemailerStrings.connect
 import typingsSlinky.nodemailer.nodemailerStrings.connected
 import typingsSlinky.nodemailer.nodemailerStrings.end

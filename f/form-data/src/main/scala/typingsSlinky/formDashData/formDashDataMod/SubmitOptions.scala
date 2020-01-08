@@ -1,8 +1,7 @@
 package typingsSlinky.formDashData.formDashDataMod
 
-import typingsSlinky.formDashData.formDashDataStrings.`http:`
-import typingsSlinky.formDashData.formDashDataStrings.`https:`
-import typingsSlinky.node.Error
+import typingsSlinky.formDashData.formDashDataStrings.httpColon
+import typingsSlinky.formDashData.formDashDataStrings.httpsColon
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 trait SubmitOptions extends ClientRequestArgs {
   @JSName("protocol")
-  var protocol_SubmitOptions: js.UndefOr[`https:` | `http:`] = js.undefined
+  var protocol_SubmitOptions: js.UndefOr[httpsColon | httpColon] = js.undefined
 }
 
 object SubmitOptions {
@@ -22,7 +21,7 @@ object SubmitOptions {
     _defaultAgent: Agent = null,
     agent: Agent | Boolean = null,
     auth: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ Error, /* socket */ Socket, Unit]) => Socket = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
     defaultPort: Double | String = null,
     family: Int | Double = null,
     headers: OutgoingHttpHeaders = null,
@@ -32,7 +31,7 @@ object SubmitOptions {
     method: String = null,
     path: String = null,
     port: Double | String = null,
-    protocol: `https:` | `http:` = null,
+    protocol: httpsColon | httpColon = null,
     setHost: js.UndefOr[Boolean] = js.undefined,
     socketPath: String = null,
     timeout: Int | Double = null

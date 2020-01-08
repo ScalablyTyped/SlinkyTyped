@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialList
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialList.adapterMod.MDCListAdapter
-import typingsSlinky.atMaterialList.atMaterialListMod.MDCList
 import typingsSlinky.atMaterialList.constantsMod.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`

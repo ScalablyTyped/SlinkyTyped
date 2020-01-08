@@ -1,10 +1,10 @@
 package typingsSlinky.atReduxDashSagaCore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.apply
 import typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.call_
 import typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.cps_
 import typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.fork_
-import typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.spawn
 import typingsSlinky.atReduxDashSagaCore.typesEffectsMod.ActionChannelEffect
 import typingsSlinky.atReduxDashSagaCore.typesEffectsMod.AllEffect
 import typingsSlinky.atReduxDashSagaCore.typesEffectsMod.CallEffect
@@ -49,43 +49,43 @@ object effectsEffectsMod extends js.Object {
   def all[T](effects: js.Array[T]): AllEffect[T] = js.native
   def all[T](effects: StringDictionary[T]): AllEffect[T] = js.native
   @JSName("apply")
-  def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  def apply[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](ctx: Ctx, fn: Fn, args: Parameters[Fn]): CallEffect = js.native
+  @JSName("apply")
+  def apply_Ctx_IntersectionapplyAnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.apply with js.Any */, Name /* <: String */](
+    */ apply with js.Any */, Name /* <: String */](
     ctx: Ctx,
     fnName: Name,
     args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CallEffect = js.native
-  @JSName("apply")
-  def apply_CtxFn_ThisFunction1CtxAnyWildcard[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](ctx: Ctx, fn: Fn, args: Parameters[Fn]): CallEffect = js.native
   def call[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   def call[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ call_ with js.Any */, Name /* <: String */](
     ctxAndFnName: Anon_Context[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CallEffect = js.native
   def call[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
     ctxAndFn: js.Tuple2[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   def call[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
     ctxAndFn: Anon_ContextFn[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   @JSName("call")
   def call_Ctx_Intersectioncall_AnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ call_ with js.Any */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CallEffect = js.native
@@ -102,13 +102,13 @@ object effectsEffectsMod extends js.Object {
   def cps[Fn /* <: js.Function1[/* cb */ CpsCallback[_], _] */](fn: Fn): CpsEffect = js.native
   def cps[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   def cps[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): void}
     */ cps_ with js.Any */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CpsEffect = js.native
@@ -116,18 +116,18 @@ object effectsEffectsMod extends js.Object {
   {[ P in Name ]: (this : Ctx, args : ...any): void}
     */ cps_ with js.Any */, Name /* <: String */](
     ctxAndFnName: Anon_ContextFnCtx[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CpsEffect = js.native
   def cps[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
-    ctxAndFn: Anon_ContextFnCtx_324990983[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
+    ctxAndFn: Anon_ContextFnCtx_1115521307[Ctx, Fn],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   @JSName("cps")
   def cps_CtxFn_ThisFunction1CtxAnyUnit[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
     ctxAndFn: js.Tuple2[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   def debounce[T](ms: Double, channel: TakeableChannel[T], worker: js.Function1[/* item */ T, _]): ForkEffect = js.native
   def debounce[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */](
@@ -147,13 +147,13 @@ object effectsEffectsMod extends js.Object {
     ms: Double,
     channel: TakeableChannel[T],
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
   ): ForkEffect = js.native
   def debounce[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     ms: Double,
     pattern: P,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionMatchingPattern<P> */ _, 
       Fn
     ]
@@ -162,39 +162,39 @@ object effectsEffectsMod extends js.Object {
     ms: Double,
     pattern: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern<A> */ js.Any,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
   ): ForkEffect = js.native
   def delay[T](ms: Double): CallEffect = js.native
   def delay[T](ms: Double, `val`: T): CallEffect = js.native
   def flush[T](channel: FlushableChannel[T]): FlushEffect[T] = js.native
   def fork[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+  ): ForkEffect = js.native
+  def fork[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in Name ]: (this : Ctx, args : ...any): any}
+    */ fork_ with js.Any */, Name /* <: String */](
+    ctxAndFnName: js.Tuple2[Ctx, Name],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
+    ]
   ): ForkEffect = js.native
   def fork[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ fork_ with js.Any */, Name /* <: String */](
     ctxAndFnName: Anon_Context[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
-  ): ForkEffect = js.native
-  def fork[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
-    ctxAndFn: js.Tuple2[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   def fork[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
     ctxAndFn: Anon_ContextFn[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   @JSName("fork")
-  def fork_Ctx_Intersectionfork_AnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ fork_ with js.Any */, Name /* <: String */](
-    ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
-      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
-    ]
+  def fork_CtxFn_ThisFunction1CtxAnyWildcard[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
+    ctxAndFn: js.Tuple2[Ctx, Fn],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   def getContext(prop: String): GetContextEffect = js.native
   def join(
@@ -218,42 +218,42 @@ object effectsEffectsMod extends js.Object {
     maxTries: Double,
     delayLength: Double,
     fn: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   def select(): SelectEffect = js.native
   def select[Fn /* <: js.Function2[/* state */ js.Any, /* repeated */ js.Any, _] */](
     selector: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Tail<Parameters<Fn>> is not an array type */ args: Tail[Parameters[Fn]]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Tail<Parameters<Fn>> is not an array type */ args: Tail[Parameters[Fn]]
   ): SelectEffect = js.native
   def setContext[C /* <: js.Object */](props: C): SetContextEffect[C] = js.native
   def spawn[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+  ): ForkEffect = js.native
+  def spawn[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in Name ]: (this : Ctx, args : ...any): any}
+    */ typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
+    ctxAndFnName: js.Tuple2[Ctx, Name],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
+    ]
   ): ForkEffect = js.native
   def spawn[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ typingsSlinky.atReduxDashSagaCore.atReduxDashSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
     ctxAndFnName: Anon_Context[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
-  ): ForkEffect = js.native
-  def spawn[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
-    ctxAndFn: js.Tuple2[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   def spawn[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
     ctxAndFn: Anon_ContextFn[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   @JSName("spawn")
-  def spawn_Ctx_IntersectionspawnAnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ spawn with js.Any */, Name /* <: String */](
-    ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
-      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
-    ]
+  def spawn_CtxFn_ThisFunction1CtxAnyWildcard[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
+    ctxAndFn: js.Tuple2[Ctx, Fn],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   def take(): TakeEffect = js.native
   def take(
@@ -279,12 +279,12 @@ object effectsEffectsMod extends js.Object {
   def takeEvery[T, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     channel: TakeableChannel[T],
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
   ): ForkEffect = js.native
   def takeEvery[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: P,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionMatchingPattern<P> */ _, 
       Fn
     ]
@@ -292,7 +292,7 @@ object effectsEffectsMod extends js.Object {
   def takeEvery[A /* <: Action[_] */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern<A> */ js.Any,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
   ): ForkEffect = js.native
   def takeLatest[T](channel: TakeableChannel[T], worker: js.Function1[/* item */ T, _]): ForkEffect = js.native
   def takeLatest[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */](
@@ -309,12 +309,12 @@ object effectsEffectsMod extends js.Object {
   def takeLatest[T, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     channel: TakeableChannel[T],
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
   ): ForkEffect = js.native
   def takeLatest[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: P,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionMatchingPattern<P> */ _, 
       Fn
     ]
@@ -322,7 +322,7 @@ object effectsEffectsMod extends js.Object {
   def takeLatest[A /* <: Action[_] */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern<A> */ js.Any,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
   ): ForkEffect = js.native
   def takeLeading[T](channel: TakeableChannel[T], worker: js.Function1[/* item */ T, _]): ForkEffect = js.native
   def takeLeading[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */](
@@ -339,12 +339,12 @@ object effectsEffectsMod extends js.Object {
   def takeLeading[T, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     channel: TakeableChannel[T],
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
   ): ForkEffect = js.native
   def takeLeading[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: P,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionMatchingPattern<P> */ _, 
       Fn
     ]
@@ -352,7 +352,7 @@ object effectsEffectsMod extends js.Object {
   def takeLeading[A /* <: Action[_] */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     pattern: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern<A> */ js.Any,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
   ): ForkEffect = js.native
   def takeMaybe(): TakeEffect = js.native
   def takeMaybe(
@@ -393,13 +393,13 @@ object effectsEffectsMod extends js.Object {
     ms: Double,
     channel: TakeableChannel[T],
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<T, Fn> is not an array type */ args: HelperWorkerParameters[T, Fn]
   ): ForkEffect = js.native
   def throttle[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */, Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     ms: Double,
     pattern: P,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<ActionMatchingPattern<P>, Fn> is not an array type */ args: HelperWorkerParameters[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionMatchingPattern<P> */ _, 
       Fn
     ]
@@ -408,7 +408,7 @@ object effectsEffectsMod extends js.Object {
     ms: Double,
     pattern: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern<A> */ js.Any,
     worker: Fn,
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type HelperWorkerParameters<A, Fn> is not an array type */ args: HelperWorkerParameters[A, Fn]
   ): ForkEffect = js.native
   @js.native
   object effectTypes extends js.Object {

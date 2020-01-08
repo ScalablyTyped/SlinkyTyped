@@ -1,11 +1,11 @@
 package typingsSlinky.baiduDashApp.swan
 
 import typingsSlinky.baiduDashApp.Anon_Color
-import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`0DOT5`
-import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`0DOT8`
-import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1DOT0`
-import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1DOT25`
-import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1DOT5`
+import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`0.5`
+import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`0.8`
+import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1.0`
+import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1.25`
+import typingsSlinky.baiduDashApp.baiduDashAppNumbers.`1.5`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,15 +35,15 @@ trait VideoContext extends js.Object {
   		 *  设置倍速播放，支持的倍率有 0.5/0.8/1.0/1.25/1.5
   		 */
   @JSName("playbackRate")
-  def playbackRate_05(rate: `0DOT5`): Unit = js.native
+  def playbackRate_05(rate: `0.5`): Unit = js.native
   @JSName("playbackRate")
-  def playbackRate_08(rate: `0DOT8`): Unit = js.native
+  def playbackRate_08(rate: `0.8`): Unit = js.native
   @JSName("playbackRate")
-  def playbackRate_10(rate: `1DOT0`): Unit = js.native
+  def playbackRate_10(rate: `1.0`): Unit = js.native
   @JSName("playbackRate")
-  def playbackRate_125(rate: `1DOT25`): Unit = js.native
+  def playbackRate_125(rate: `1.25`): Unit = js.native
   @JSName("playbackRate")
-  def playbackRate_15(rate: `1DOT5`): Unit = js.native
+  def playbackRate_15(rate: `1.5`): Unit = js.native
   /**
   		 *  进入全屏
   		 */

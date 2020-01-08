@@ -1,6 +1,5 @@
 package typingsSlinky.webcola
 
-import typingsSlinky.webcola.distSrcPqueueMod.PairingHeap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

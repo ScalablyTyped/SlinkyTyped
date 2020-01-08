@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object distTypesMod {
   type BackendValues = scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint8Array | js.Array[scala.scalajs.js.typedarray.Uint8Array]
-  type DataValues = js.Array[String] | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Uint8Array
+  type DataValues = js.Array[String] | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint8Array
   type FlatVector = (js.Array[Boolean | Double]) | TypedArray
   type RegularArray[T] = js.Array[(js.Array[(js.Array[(js.Array[(js.Array[js.Array[T] | T]) | T]) | T]) | T]) | T]
   type ScalarLike = Double | Boolean | String | scala.scalajs.js.typedarray.Uint8Array

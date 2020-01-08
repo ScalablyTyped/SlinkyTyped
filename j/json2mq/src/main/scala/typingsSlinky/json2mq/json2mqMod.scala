@@ -1,7 +1,6 @@
 package typingsSlinky.json2mq
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.json2mq.json2mqMod.QueryObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

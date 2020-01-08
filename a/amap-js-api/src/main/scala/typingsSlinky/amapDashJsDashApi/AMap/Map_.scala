@@ -8,7 +8,7 @@ import typingsSlinky.amapDashJsDashApi.AMap.Map.ViewMode
 import typingsSlinky.amapDashJsDashApi.Anon_City
 import typingsSlinky.amapDashJsDashApi.Anon_IdLocation
 import typingsSlinky.amapDashJsDashApi.PartialStatus
-import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiNumbers.`false`
+import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiBooleans.`false`
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.all
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.circle
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.marker

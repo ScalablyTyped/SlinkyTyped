@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "progressbar"
-version := "1.1-dt-20180214Z-ca4762"
+version := "1.1-dt-20180214Z-3c42bd"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialChips
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialChips.chipAdapterMod.MDCChipAdapter
 import typingsSlinky.atMaterialChips.chipFoundationMod.default
-import typingsSlinky.atMaterialChips.chipMod.MDCChip
 import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
 import scala.scalajs.js
 import scala.scalajs.js.`|`

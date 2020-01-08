@@ -1,7 +1,6 @@
 package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.errorErrorsMod.RecognitionException
-import typingsSlinky.antlr4.parserRuleContextMod.ParserRuleContext
 import typingsSlinky.antlr4.ruleContextMod.RuleContext
 import typingsSlinky.antlr4.tokenMod.Token
 import typingsSlinky.antlr4.treeTreeMod.ErrorNode

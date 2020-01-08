@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.three.srcCoreBufferAttributeMod.BufferAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

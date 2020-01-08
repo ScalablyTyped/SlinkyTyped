@@ -2,6 +2,11 @@ package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.messagedefinitions
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenJsonstructuresMod.jsonstructures.JsonStructure
+import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.Element
+import typingsSlinky.mendixmodelsdk.distGenMessagedefinitionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +19,12 @@ import scala.scalajs.js.annotation._
 class ExposedEntity protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.messagedefinitions.ExposedEntity {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -28,7 +33,7 @@ class ExposedEntity protected ()
 @js.native
 object ExposedEntity extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenMessagedefinitionsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new ExposedEntity instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -43,7 +48,7 @@ object ExposedEntity extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.6.0 and higher
     */
-  def createInElementUnderChildren(container: typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.Element): typingsSlinky.mendixmodelsdk.distGenMessagedefinitionsMod.messagedefinitions.ExposedEntity = js.native
+  def createInElementUnderChildren(container: Element): typingsSlinky.mendixmodelsdk.distGenMessagedefinitionsMod.messagedefinitions.ExposedEntity = js.native
   /**
     * Creates and returns a new ExposedEntity instance in the SDK and on the server.
     * The new ExposedEntity will be automatically stored in the 'exposedEntity' property

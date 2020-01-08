@@ -11,8 +11,8 @@ import typingsSlinky.nodemailer.libMailerMod.Headers
 import typingsSlinky.nodemailer.libMailerMod.IcalAttachment
 import typingsSlinky.nodemailer.libMailerMod.ListHeaders
 import typingsSlinky.nodemailer.libMailerMod.TextEncoding
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.TransportOptions
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.high
 import typingsSlinky.nodemailer.nodemailerStrings.low
 import typingsSlinky.nodemailer.nodemailerStrings.normal

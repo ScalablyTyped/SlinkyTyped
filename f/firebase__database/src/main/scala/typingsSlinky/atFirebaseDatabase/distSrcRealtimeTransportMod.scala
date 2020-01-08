@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.atFirebaseDatabase.distSrcCoreRepoInfoMod.RepoInfo
-import typingsSlinky.atFirebaseDatabase.distSrcRealtimeTransportMod.Transport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

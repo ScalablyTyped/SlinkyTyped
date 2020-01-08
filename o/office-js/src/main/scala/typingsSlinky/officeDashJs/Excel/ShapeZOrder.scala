@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,11 +29,19 @@ object ShapeZOrder extends js.Object {
   @js.native
   sealed trait sendToBack extends ShapeZOrder
   
-  /* "BringForward" */ val bringForward: typingsSlinky.officeDashJs.Excel.ShapeZOrder.bringForward with String = js.native
-  /* "BringToFront" */ val bringToFront: typingsSlinky.officeDashJs.Excel.ShapeZOrder.bringToFront with String = js.native
-  /* "SendBackward" */ val sendBackward: typingsSlinky.officeDashJs.Excel.ShapeZOrder.sendBackward with String = js.native
-  /* "SendToBack" */ val sendToBack: typingsSlinky.officeDashJs.Excel.ShapeZOrder.sendToBack with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeZOrder with String] = js.native
+  /* "BringForward" */ @js.native
+  object bringForward extends TopLevel[bringForward with String]
+  
+  /* "BringToFront" */ @js.native
+  object bringToFront extends TopLevel[bringToFront with String]
+  
+  /* "SendBackward" */ @js.native
+  object sendBackward extends TopLevel[sendBackward with String]
+  
+  /* "SendToBack" */ @js.native
+  object sendToBack extends TopLevel[sendToBack with String]
+  
 }
 

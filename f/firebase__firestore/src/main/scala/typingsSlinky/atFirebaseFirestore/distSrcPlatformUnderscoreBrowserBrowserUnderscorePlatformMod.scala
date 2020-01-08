@@ -2,7 +2,7 @@ package typingsSlinky.atFirebaseFirestore
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Window
-import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreStrings.Empty
+import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreStrings._empty
 import typingsSlinky.atFirebaseFirestore.distSrcCoreDatabaseUnderscoreInfoMod.DatabaseId
 import typingsSlinky.atFirebaseFirestore.distSrcCoreDatabaseUnderscoreInfoMod.DatabaseInfo
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.ProtoByteString
@@ -28,7 +28,7 @@ object distSrcPlatformUnderscoreBrowserBrowserUnderscorePlatformMod extends js.O
     /* CompleteClass */
     override val emptyByteString: ProtoByteString = js.native
     @JSName("emptyByteString")
-    val emptyByteString_BrowserPlatform: Empty = js.native
+    val emptyByteString_BrowserPlatform: _empty = js.native
     /** The Platform's 'window' implementation or null if not available. */
     /* CompleteClass */
     override val window: Window | Null = js.native

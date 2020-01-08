@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,21 +56,49 @@ object ImageFormat extends js.Object {
   @js.native
   sealed trait wmf extends ImageFormat
   
-  /* "Bmp" */ val bmp: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.bmp with String = js.native
-  /* "Emf" */ val emf: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.emf with String = js.native
-  /* "Exif" */ val exif: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.exif with String = js.native
-  /* "Gif" */ val gif: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.gif with String = js.native
-  /* "Icon" */ val icon: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.icon with String = js.native
-  /* "Jpeg" */ val jpeg: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.jpeg with String = js.native
-  /* "Pdf" */ val pdf: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.pdf with String = js.native
-  /* "Pict" */ val pict: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.pict with String = js.native
-  /* "Png" */ val png: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.png with String = js.native
-  /* "Svg" */ val svg: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.svg with String = js.native
-  /* "Tiff" */ val tiff: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.tiff with String = js.native
-  /* "Undefined" */ val undefined: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.undefined with String = js.native
-  /* "Unsupported" */ val unsupported: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.unsupported with String = js.native
-  /* "Wmf" */ val wmf: typingsSlinky.officeDashJsDashPreview.Word.ImageFormat.wmf with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ImageFormat with String] = js.native
+  /* "Bmp" */ @js.native
+  object bmp extends TopLevel[bmp with String]
+  
+  /* "Emf" */ @js.native
+  object emf extends TopLevel[emf with String]
+  
+  /* "Exif" */ @js.native
+  object exif extends TopLevel[exif with String]
+  
+  /* "Gif" */ @js.native
+  object gif extends TopLevel[gif with String]
+  
+  /* "Icon" */ @js.native
+  object icon extends TopLevel[icon with String]
+  
+  /* "Jpeg" */ @js.native
+  object jpeg extends TopLevel[jpeg with String]
+  
+  /* "Pdf" */ @js.native
+  object pdf extends TopLevel[pdf with String]
+  
+  /* "Pict" */ @js.native
+  object pict extends TopLevel[pict with String]
+  
+  /* "Png" */ @js.native
+  object png extends TopLevel[png with String]
+  
+  /* "Svg" */ @js.native
+  object svg extends TopLevel[svg with String]
+  
+  /* "Tiff" */ @js.native
+  object tiff extends TopLevel[tiff with String]
+  
+  /* "Undefined" */ @js.native
+  object undefined extends TopLevel[undefined with String]
+  
+  /* "Unsupported" */ @js.native
+  object unsupported extends TopLevel[unsupported with String]
+  
+  /* "Wmf" */ @js.native
+  object wmf extends TopLevel[wmf with String]
+  
 }
 

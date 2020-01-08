@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object IMErrorType extends js.Object {
   @js.native
   sealed trait RosterError extends IMErrorType
   
-  /* 1 */ val Error: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.IMErrorType.Error with Double = js.native
-  /* 0 */ val RemoteFunctionError: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.IMErrorType.RemoteFunctionError with Double = js.native
-  /* 2 */ val RosterError: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.IMErrorType.RosterError with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IMErrorType with Double] = js.native
+  /* 1 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 0 */ @js.native
+  object RemoteFunctionError extends TopLevel[RemoteFunctionError with Double]
+  
+  /* 2 */ @js.native
+  object RosterError extends TopLevel[RosterError with Double]
+  
 }
 

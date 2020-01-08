@@ -4,11 +4,11 @@ import typingsSlinky.firebase.firebaseMod.analytics.EventNameString
 import typingsSlinky.firebase.firebaseMod.database.EventType
 import typingsSlinky.firebase.firebaseMod.firestore.DocumentChangeType
 import typingsSlinky.firebase.firebaseMod.firestore.FirestoreErrorCode
-import typingsSlinky.firebase.firebaseMod.firestore.LogLevel
 import typingsSlinky.firebase.firebaseMod.firestore.OrderByDirection
 import typingsSlinky.firebase.firebaseMod.firestore.WhereFilterOp
 import typingsSlinky.firebase.firebaseMod.functions.FunctionsErrorCode
 import typingsSlinky.firebase.firebaseMod.remoteConfig.FetchStatus
+import typingsSlinky.firebase.firebaseMod.remoteConfig.LogLevel
 import typingsSlinky.firebase.firebaseMod.remoteConfig.ValueSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,19 +16,19 @@ import scala.scalajs.js.annotation._
 
 object firebaseStrings {
   @js.native
-  sealed trait `<` extends WhereFilterOp
+  sealed trait EqualssignEqualssign extends WhereFilterOp
   
   @js.native
-  sealed trait `<=` extends WhereFilterOp
+  sealed trait Greaterthansign extends WhereFilterOp
   
   @js.native
-  sealed trait `==` extends WhereFilterOp
+  sealed trait GreaterthansignEqualssign extends WhereFilterOp
   
   @js.native
-  sealed trait `>` extends WhereFilterOp
+  sealed trait Lessthansign extends WhereFilterOp
   
   @js.native
-  sealed trait `>=` extends WhereFilterOp
+  sealed trait LessthansignEqualssign extends WhereFilterOp
   
   @js.native
   sealed trait aborted
@@ -100,7 +100,7 @@ object firebaseStrings {
   @js.native
   sealed trait debug
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.remoteConfig.LogLevel
+       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
   
   @js.native
   sealed trait default extends ValueSource
@@ -111,7 +111,7 @@ object firebaseStrings {
   @js.native
   sealed trait error
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.remoteConfig.LogLevel
+       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
   
   @js.native
   sealed trait estimate extends js.Object
@@ -223,7 +223,7 @@ object firebaseStrings {
   @js.native
   sealed trait silent
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.remoteConfig.LogLevel
+       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
   
   @js.native
   sealed trait static extends ValueSource
@@ -273,15 +273,15 @@ object firebaseStrings {
   sealed trait view_search_results extends EventNameString
   
   @scala.inline
-  def `<`: `<` = "<".asInstanceOf[`<`]
+  def EqualssignEqualssign: EqualssignEqualssign = "==".asInstanceOf[EqualssignEqualssign]
   @scala.inline
-  def `<=`: `<=` = "<=".asInstanceOf[`<=`]
+  def Greaterthansign: Greaterthansign = ">".asInstanceOf[Greaterthansign]
   @scala.inline
-  def `==`: `==` = "==".asInstanceOf[`==`]
+  def GreaterthansignEqualssign: GreaterthansignEqualssign = ">=".asInstanceOf[GreaterthansignEqualssign]
   @scala.inline
-  def `>`: `>` = ">".asInstanceOf[`>`]
+  def Lessthansign: Lessthansign = "<".asInstanceOf[Lessthansign]
   @scala.inline
-  def `>=`: `>=` = ">=".asInstanceOf[`>=`]
+  def LessthansignEqualssign: LessthansignEqualssign = "<=".asInstanceOf[LessthansignEqualssign]
   @scala.inline
   def aborted: aborted = "aborted".asInstanceOf[aborted]
   @scala.inline

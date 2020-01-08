@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.input.tag
@@ -25,7 +26,9 @@ object MentionsInput
   /* The following DOM/SVG props were specified: className, onKeyDown, onSelect, placeholder */
   def apply(
     allowSpaceInQuery: js.UndefOr[Boolean] = js.undefined,
+    allowSuggestionsAboveCursor: js.UndefOr[Boolean] = js.undefined,
     classNames: js.Any = null,
+    ignoreAccents: js.UndefOr[Boolean] = js.undefined,
     inputRef: ReactRef[HTMLInputElement | HTMLTextAreaElement] = null,
     onBlur: (/* event */ SyntheticFocusEvent[HTMLInputElement | HTMLTextAreaElement], /* clickedSuggestion */ Boolean) => Unit = null,
     onChange: (/* event */ Anon_Target, /* newValue */ String, /* newPlainTextValue */ String, /* mentions */ js.Array[MentionItem]) => Unit = null,
@@ -37,7 +40,9 @@ object MentionsInput
   ): BuildingComponent[tag.type, typingsSlinky.reactDashMentions.reactDashMentionsMod.MentionsInput] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowSpaceInQuery)) __obj.updateDynamic("allowSpaceInQuery")(allowSpaceInQuery.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSuggestionsAboveCursor)) __obj.updateDynamic("allowSuggestionsAboveCursor")(allowSuggestionsAboveCursor.asInstanceOf[js.Any])
     if (classNames != null) __obj.updateDynamic("classNames")(classNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreAccents)) __obj.updateDynamic("ignoreAccents")(ignoreAccents.asInstanceOf[js.Any])
     if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
     if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction4(onChange))
@@ -48,6 +53,9 @@ object MentionsInput
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashMentions.reactDashMentionsMod.MentionsInput] = new slinky.core.BuildingComponent[
+  slinky.web.html.input.tag.type, 
+  typingsSlinky.reactDashMentions.reactDashMentionsMod.MentionsInput](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MentionsInputProps
 }
 

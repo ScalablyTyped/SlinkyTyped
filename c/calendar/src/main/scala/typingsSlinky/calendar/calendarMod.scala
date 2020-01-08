@@ -1,7 +1,5 @@
 package typingsSlinky.calendar
 
-import typingsSlinky.calendar.calendarMod.DayFormatter
-import typingsSlinky.calendar.calendarMod.WeekFormatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

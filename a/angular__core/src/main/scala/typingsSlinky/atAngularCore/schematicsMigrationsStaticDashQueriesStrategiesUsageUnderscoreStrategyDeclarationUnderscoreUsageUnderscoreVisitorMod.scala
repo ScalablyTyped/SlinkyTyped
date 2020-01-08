@@ -1,7 +1,6 @@
 package typingsSlinky.atAngularCore
 
-import typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDeclarationUnderscoreUsageUnderscoreVisitorMod.FunctionContext
-import typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDeclarationUnderscoreUsageUnderscoreVisitorMod.ResolvedUsage
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Map
 import typingsSlinky.typescript.typescriptMod.Node
 import typingsSlinky.typescript.typescriptMod.TypeChecker
@@ -90,11 +89,17 @@ object schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDec
     @js.native
     sealed trait SYNCHRONOUS extends ResolvedUsage
     
-    /* 2 */ val AMBIGUOUS: typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDeclarationUnderscoreUsageUnderscoreVisitorMod.ResolvedUsage.AMBIGUOUS with Double = js.native
-    /* 1 */ val ASYNCHRONOUS: typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDeclarationUnderscoreUsageUnderscoreVisitorMod.ResolvedUsage.ASYNCHRONOUS with Double = js.native
-    /* 0 */ val SYNCHRONOUS: typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesStrategiesUsageUnderscoreStrategyDeclarationUnderscoreUsageUnderscoreVisitorMod.ResolvedUsage.SYNCHRONOUS with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ResolvedUsage with Double] = js.native
+    /* 2 */ @js.native
+    object AMBIGUOUS extends TopLevel[AMBIGUOUS with Double]
+    
+    /* 1 */ @js.native
+    object ASYNCHRONOUS extends TopLevel[ASYNCHRONOUS with Double]
+    
+    /* 0 */ @js.native
+    object SYNCHRONOUS extends TopLevel[SYNCHRONOUS with Double]
+    
   }
   
   type FunctionContext = Map[Node, Node]

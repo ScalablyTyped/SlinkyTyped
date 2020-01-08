@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashFacebook.passportDashFacebookMod
 
-import typingsSlinky.passportDashFacebook.passportDashFacebookNumbers.`true`
+import typingsSlinky.passportDashFacebook.passportDashFacebookBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

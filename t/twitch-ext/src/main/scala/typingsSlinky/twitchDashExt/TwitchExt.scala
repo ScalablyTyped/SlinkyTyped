@@ -1,8 +1,8 @@
 package typingsSlinky.twitchDashExt
 
 import typingsSlinky.std.Partial
-import typingsSlinky.twitchDashExt.twitchDashExtNumbers.`false`
-import typingsSlinky.twitchDashExt.twitchDashExtNumbers.`true`
+import typingsSlinky.twitchDashExt.twitchDashExtBooleans.`false`
+import typingsSlinky.twitchDashExt.twitchDashExtBooleans.`true`
 import typingsSlinky.twitchDashExt.twitchDashExtStrings.production
 import scala.scalajs.js
 import scala.scalajs.js.`|`

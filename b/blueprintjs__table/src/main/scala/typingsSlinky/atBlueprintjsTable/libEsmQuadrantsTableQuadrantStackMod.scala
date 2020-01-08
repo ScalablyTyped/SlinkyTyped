@@ -7,7 +7,6 @@ import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreMod.AbstractComponent2
 import typingsSlinky.atBlueprintjsCore.libEsmCommonPropsMod.IProps
 import typingsSlinky.atBlueprintjsTable.libEsmCommonGridMod.Grid
 import typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType
-import typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantStackMod.ITableQuadrantStackProps
 import typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.TableLoadingOption
 import typingsSlinky.react.reactMod.EventHandler
 import typingsSlinky.react.reactMod._Global_.JSX.Element

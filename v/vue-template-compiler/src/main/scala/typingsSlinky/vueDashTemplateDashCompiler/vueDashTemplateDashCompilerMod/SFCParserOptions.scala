@@ -1,6 +1,6 @@
 package typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerMod
 
-import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`true`
+import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerBooleans.`true`
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerStrings.line
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerStrings.space
 import scala.scalajs.js

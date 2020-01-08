@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object extendedBugReportMode extends js.Object {
   @js.native
   sealed trait enabledWithRequiredFields extends extendedBugReportMode
   
-  /* 2 */ val disabled: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.extendedBugReportMode.disabled with Double = js.native
-  /* 1 */ val enabledWithOptionalFields: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.extendedBugReportMode.enabledWithOptionalFields with Double = js.native
-  /* 0 */ val enabledWithRequiredFields: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.extendedBugReportMode.enabledWithRequiredFields with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[extendedBugReportMode with Double] = js.native
+  /* 2 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 1 */ @js.native
+  object enabledWithOptionalFields extends TopLevel[enabledWithOptionalFields with Double]
+  
+  /* 0 */ @js.native
+  object enabledWithRequiredFields extends TopLevel[enabledWithRequiredFields with Double]
+  
 }
 

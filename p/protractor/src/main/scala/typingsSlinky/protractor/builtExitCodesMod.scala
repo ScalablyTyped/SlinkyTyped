@@ -1,7 +1,5 @@
 package typingsSlinky.protractor
 
-import typingsSlinky.protractor.builtExitCodesMod.IError
-import typingsSlinky.protractor.builtExitCodesMod.ProtractorError
 import typingsSlinky.protractor.builtLoggerMod.Logger
 import typingsSlinky.std.Error
 import scala.scalajs.js

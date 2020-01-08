@@ -25,6 +25,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashR
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.initial
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.unset
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -214,7 +215,7 @@ object IStackProps {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | typingsSlinky.react.reactStrings.inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -410,7 +411,7 @@ object IStackProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

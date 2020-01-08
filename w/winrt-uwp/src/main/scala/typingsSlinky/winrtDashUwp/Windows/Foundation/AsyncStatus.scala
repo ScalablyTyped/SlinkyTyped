@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object AsyncStatus extends js.Object {
   @js.native
   sealed trait started extends AsyncStatus
   
-  /* 0 */ val canceled: typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncStatus.canceled with Double = js.native
-  /* 1 */ val completed: typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncStatus.completed with Double = js.native
-  /* 2 */ val error: typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncStatus.error with Double = js.native
-  /* 3 */ val started: typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncStatus.started with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AsyncStatus with Double] = js.native
+  /* 0 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 1 */ @js.native
+  object completed extends TopLevel[completed with Double]
+  
+  /* 2 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 3 */ @js.native
+  object started extends TopLevel[started with Double]
+  
 }
 

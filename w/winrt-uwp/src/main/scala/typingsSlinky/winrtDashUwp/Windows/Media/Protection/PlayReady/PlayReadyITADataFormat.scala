@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object PlayReadyITADataFormat extends js.Object {
   @js.native
   sealed trait serializedProperties_WithContentProtectionWrapper extends PlayReadyITADataFormat
   
-  /* 0 */ val serializedProperties: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.PlayReadyITADataFormat.serializedProperties with Double = js.native
-  /* 1 */ val serializedProperties_WithContentProtectionWrapper: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.PlayReadyITADataFormat.serializedProperties_WithContentProtectionWrapper with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlayReadyITADataFormat with Double] = js.native
+  /* 0 */ @js.native
+  object serializedProperties extends TopLevel[serializedProperties with Double]
+  
+  /* 1 */ @js.native
+  object serializedProperties_WithContentProtectionWrapper extends TopLevel[serializedProperties_WithContentProtectionWrapper with Double]
+  
 }
 

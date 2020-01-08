@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.customwidgets
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.BuildingBlock
@@ -54,7 +55,7 @@ class CustomWidget protected ()
 @js.native
 object CustomWidget extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -295,6 +296,15 @@ object CustomWidget extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.CustomWidget = js.native
+  /**
+    * Creates and returns a new CustomWidget instance in the SDK and on the server.
+    * The new CustomWidget will be automatically stored in the 'sidebarWidgets' property
+    * of the parent pages.NativeLayoutContent element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.CustomWidget = js.native
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LibColumn extends SharedApply_ColumnType1112971034 {
+object LibColumn extends SharedApply_ColumnProps1569304802 {
   @JSImport("rc-table/lib", "default.Column")
   @js.native
   object componentImport extends js.Object

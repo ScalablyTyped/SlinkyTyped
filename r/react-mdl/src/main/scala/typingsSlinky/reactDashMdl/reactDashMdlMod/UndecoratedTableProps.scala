@@ -15,6 +15,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ClassAttributes
 import typingsSlinky.react.reactMod.DOMAttributes
@@ -73,7 +74,7 @@ object UndecoratedTableProps {
     controls: js.UndefOr[Boolean] = js.undefined,
     coords: String = null,
     crossOrigin: String = null,
-    dangerouslySetInnerHTML: typingsSlinky.react.Anon_Html = null,
+    dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
     dateTime: String = null,
     default: js.UndefOr[Boolean] = js.undefined,

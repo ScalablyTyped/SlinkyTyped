@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NotificationDoNotDisturbAlt
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationDoNotDisturbAlt] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.NotificationDoNotDisturbAlt] {
   @JSImport("material-ui/svg-icons", "NotificationDoNotDisturbAlt")
   @js.native
   object componentImport extends js.Object

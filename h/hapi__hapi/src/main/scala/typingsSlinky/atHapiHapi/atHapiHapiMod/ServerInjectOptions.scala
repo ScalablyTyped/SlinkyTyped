@@ -1,6 +1,7 @@
 package typingsSlinky.atHapiHapi.atHapiHapiMod
 
 import typingsSlinky.atHapiHapi.Anon_Artifacts
+import typingsSlinky.atHapiShot.Anon_Close
 import typingsSlinky.atHapiShot.atHapiShotMod.Headers
 import typingsSlinky.atHapiShot.atHapiShotMod.RequestOptions
 import typingsSlinky.node.Buffer
@@ -41,7 +42,7 @@ object ServerInjectOptions {
     payload: String | Buffer | Stream | js.Object = null,
     plugins: PluginsStates = null,
     remoteAddress: String = null,
-    simulate: typingsSlinky.atHapiShot.Anon_Close = null,
+    simulate: Anon_Close = null,
     validate: js.UndefOr[Boolean] = js.undefined
   ): ServerInjectOptions = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])

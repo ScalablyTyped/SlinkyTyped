@@ -1,7 +1,7 @@
 package typingsSlinky.passportDashGithub2.passportDashGithub2Mod
 
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.passportDashGithub2.passportDashGithub2Numbers.`false`
+import typingsSlinky.passportDashGithub2.passportDashGithub2Booleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

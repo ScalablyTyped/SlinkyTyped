@@ -3,6 +3,7 @@ package typingsSlinky.officeDashUiDashFabricDashReact
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsSwatchColorPickerColorPickerGridCellDotTypesMod.IColorPickerGridCellProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsSwatchColorPickerSwatchColorPickerDotTypesMod.ISwatchColorPickerProps
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +26,7 @@ object libSwatchColorPickerMod extends js.Object {
   /* static members */
   @js.native
   object ColorPickerGridCellBase extends js.Object {
-    var defaultProps: IColorPickerGridCellProps = js.native
+    var defaultProps: Partial[IColorPickerGridCellProps] = js.native
   }
   
   /* static members */

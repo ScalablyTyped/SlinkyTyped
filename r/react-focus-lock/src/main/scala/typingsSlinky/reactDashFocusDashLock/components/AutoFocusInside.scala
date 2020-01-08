@@ -1,11 +1,16 @@
 package typingsSlinky.reactDashFocusDashLock.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AutoFocusInside
-  extends SharedApply_AutoFocusProps516347795[typingsSlinky.reactDashFocusDashLock.reactDashFocusDashLockMod.AutoFocusInside] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.reactDashFocusDashLock.reactDashFocusDashLockMod.AutoFocusInside
+    ] {
   @JSImport("react-focus-lock", "AutoFocusInside")
   @js.native
   object componentImport extends js.Object

@@ -1,9 +1,11 @@
 package typingsSlinky.javascriptDashStringify
 
 import typingsSlinky.javascriptDashStringify.distTypesMod.Next
-import typingsSlinky.javascriptDashStringify.javascriptDashStringifyStrings.BACKTICK
+import typingsSlinky.javascriptDashStringify.distTypesMod.ToString
+import typingsSlinky.javascriptDashStringify.javascriptDashStringifyStrings.Graveaccent
 import typingsSlinky.std.PropertyKey
 import typingsSlinky.std.RegExpExecArray
+import typingsSlinky.std.WeakSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,15 +17,13 @@ object distFunctionMod extends js.Object {
   class FunctionParser protected () extends js.Object {
     def this(fn: js.Function, indent: String, next: Next) = this()
     def this(fn: js.Function, indent: String, next: Next, key: String) = this()
-    def this(fn: js.Function, indent: String, next: Next, key: js.Symbol) = this()
-    def this(fn: js.Function, indent: String, next: Next, key: Double) = this()
     var fn: js.Function = js.native
     var fnString: String = js.native
     var fnType: String = js.native
     var hadKeyword: Boolean = js.native
     var indent: String = js.native
     var isMethodCandidate: Boolean = js.native
-    var key: js.UndefOr[String | Double | js.Symbol] = js.native
+    var key: js.UndefOr[String] = js.native
     var keyPrefix: String = js.native
     var keyQuote: js.UndefOr[String] = js.native
     @JSName("next")
@@ -55,7 +55,7 @@ object distFunctionMod extends js.Object {
     /**
       * Advance the parser past a template string.
       */
-    def consumeTemplate(): js.UndefOr[BACKTICK] = js.native
+    def consumeTemplate(): js.UndefOr[Graveaccent] = js.native
     /**
       * Advance the parser past any whitespace or comments.
       */
@@ -82,7 +82,8 @@ object distFunctionMod extends js.Object {
     def tryStrippingName(): js.UndefOr[String] = js.native
   }
   
+  val USED_METHOD_KEY: WeakSet[js.Function] = js.native
+  val functionToString: ToString = js.native
   def dedentFunction(fnString: String): String = js.native
-  def functionToString(fn: js.Function, space: String, next: Next): String = js.native
 }
 

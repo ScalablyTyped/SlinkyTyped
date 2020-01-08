@@ -9,10 +9,10 @@ A small utility to parse, match and generate paths
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | path-parser |
-| Keywords           | path, parser, url, route, match, partial match, regex |
+| Keywords           | - |
 | # releases         | 13 |
-| # dependents       | 26 |
-| # downloads        | 626303 |
+| # dependents       | 30 |
+| # downloads        | 1115393 |
 | # stars            | 3 |
 
 ## Links

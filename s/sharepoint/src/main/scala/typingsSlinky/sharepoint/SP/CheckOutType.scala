@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CheckOutType extends js.Object {
   @js.native
   sealed trait online extends CheckOutType
   
-  /* 2 */ val none: typingsSlinky.sharepoint.SP.CheckOutType.none with Double = js.native
-  /* 1 */ val offline: typingsSlinky.sharepoint.SP.CheckOutType.offline with Double = js.native
-  /* 0 */ val online: typingsSlinky.sharepoint.SP.CheckOutType.online with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CheckOutType with Double] = js.native
+  /* 2 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object offline extends TopLevel[offline with Double]
+  
+  /* 0 */ @js.native
+  object online extends TopLevel[online with Double]
+  
 }
 

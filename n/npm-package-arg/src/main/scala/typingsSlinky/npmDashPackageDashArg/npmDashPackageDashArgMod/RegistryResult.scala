@@ -1,6 +1,6 @@
 package typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgMod
 
-import typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgNumbers.`true`
+import typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgBooleans.`true`
 import typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgStrings.range
 import typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgStrings.tag
 import typingsSlinky.npmDashPackageDashArg.npmDashPackageDashArgStrings.version

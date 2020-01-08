@@ -1,6 +1,5 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.samchon.protocolEntityIEntityGroupMod.IEntityGroup
 import typingsSlinky.samchon.protocolEntityIEntityMod.IEntity
 import typingsSlinky.sxml.sxmlMod.XML
 import typingsSlinky.tstl.baseIteratorIteratorMod.Iterator
@@ -26,6 +25,7 @@ object protocolEntityIEntityGroupMod extends js.Object {
       *
       * @return Iterator to the first element.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
     /**
@@ -59,6 +59,7 @@ object protocolEntityIEntityGroupMod extends js.Object {
       *
       * @return Iterator to the end.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def end(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
     /**
@@ -105,6 +106,7 @@ object protocolEntityIEntityGroupMod extends js.Object {
       * @param items Items to insert.
       * @return Number of elements in the container after insertion.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def push(items: T*): Double = js.native
     /**
@@ -112,6 +114,7 @@ object protocolEntityIEntityGroupMod extends js.Object {
       *
       * @return Reverse iterator to the first.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseT = js.native
     /**
@@ -119,6 +122,7 @@ object protocolEntityIEntityGroupMod extends js.Object {
       *
       * @return Reverse iterator to the end.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseT = js.native
     /**

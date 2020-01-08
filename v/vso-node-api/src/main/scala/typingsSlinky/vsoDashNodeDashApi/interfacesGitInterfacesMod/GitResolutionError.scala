@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object GitResolutionError extends js.Object {
   @js.native
   sealed trait UnknownMergeType extends GitResolutionError
   
-  /* 3 */ val InvalidPath: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.InvalidPath with Double = js.native
-  /* 1 */ val MergeContentNotFound: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.MergeContentNotFound with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.None with Double = js.native
-  /* 255 */ val OtherError: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.OtherError with Double = js.native
-  /* 2 */ val PathInUse: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.PathInUse with Double = js.native
-  /* 4 */ val UnknownAction: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.UnknownAction with Double = js.native
-  /* 5 */ val UnknownMergeType: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionError.UnknownMergeType with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitResolutionError with Double] = js.native
+  /* 3 */ @js.native
+  object InvalidPath extends TopLevel[InvalidPath with Double]
+  
+  /* 1 */ @js.native
+  object MergeContentNotFound extends TopLevel[MergeContentNotFound with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 255 */ @js.native
+  object OtherError extends TopLevel[OtherError with Double]
+  
+  /* 2 */ @js.native
+  object PathInUse extends TopLevel[PathInUse with Double]
+  
+  /* 4 */ @js.native
+  object UnknownAction extends TopLevel[UnknownAction with Double]
+  
+  /* 5 */ @js.native
+  object UnknownMergeType extends TopLevel[UnknownMergeType with Double]
+  
 }
 

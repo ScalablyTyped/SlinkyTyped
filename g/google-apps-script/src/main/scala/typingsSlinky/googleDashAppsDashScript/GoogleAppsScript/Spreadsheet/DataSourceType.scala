@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object DataSourceType extends js.Object {
   @js.native
   sealed trait DATA_SOURCE_TYPE_UNSUPPORTED extends DataSourceType
   
-  /* 1 */ val BIGQUERY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DataSourceType.BIGQUERY with Double = js.native
-  /* 0 */ val DATA_SOURCE_TYPE_UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DataSourceType.DATA_SOURCE_TYPE_UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DataSourceType with Double] = js.native
+  /* 1 */ @js.native
+  object BIGQUERY extends TopLevel[BIGQUERY with Double]
+  
+  /* 0 */ @js.native
+  object DATA_SOURCE_TYPE_UNSUPPORTED extends TopLevel[DATA_SOURCE_TYPE_UNSUPPORTED with Double]
+  
 }
 

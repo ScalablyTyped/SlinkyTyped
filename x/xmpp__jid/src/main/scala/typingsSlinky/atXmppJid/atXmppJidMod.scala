@@ -1,6 +1,5 @@
 package typingsSlinky.atXmppJid
 
-import typingsSlinky.atXmppJid.atXmppJidMod.JID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

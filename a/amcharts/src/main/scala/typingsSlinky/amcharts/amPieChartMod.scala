@@ -1,6 +1,5 @@
 package typingsSlinky.amcharts
 
-import typingsSlinky.amcharts.amPieChartMod.AmPieChart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

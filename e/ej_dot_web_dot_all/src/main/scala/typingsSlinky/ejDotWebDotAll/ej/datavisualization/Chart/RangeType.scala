@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object RangeType extends js.Object {
   @js.native
   sealed trait Y extends RangeType
   
-  /* 1 */ val X: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.RangeType.X with Double = js.native
-  /* 0 */ val XY: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.RangeType.XY with Double = js.native
-  /* 2 */ val Y: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.RangeType.Y with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RangeType with Double] = js.native
+  /* 1 */ @js.native
+  object X extends TopLevel[X with Double]
+  
+  /* 0 */ @js.native
+  object XY extends TopLevel[XY with Double]
+  
+  /* 2 */ @js.native
+  object Y extends TopLevel[Y with Double]
+  
 }
 

@@ -17,6 +17,7 @@ import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystem
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystemConstructor
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.Process
+import typingsSlinky.node.pathMod.PlatformPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +43,7 @@ object distNodeMod extends js.Object {
   @JSName("BFSRequire")
   def BFSRequire_fs(module: fs): FSModule = js.native
   @JSName("BFSRequire")
-  def BFSRequire_path(module: path): Typeofpath = js.native
+  def BFSRequire_path(module: path): PlatformPath = js.native
   @JSName("BFSRequire")
   def BFSRequire_process(module: process): Process = js.native
   def configure(config: FileSystemConfiguration, cb: BFSOneArgCallback): Unit = js.native
@@ -111,8 +112,8 @@ object distNodeMod extends js.Object {
     
     @js.native
     object ErrorStrings
-      extends /* code */ StringDictionary[String]
-         with /* code */ NumberDictionary[String]
+      extends /* code */ NumberDictionary[String]
+         with /* code */ StringDictionary[String]
     
   }
   

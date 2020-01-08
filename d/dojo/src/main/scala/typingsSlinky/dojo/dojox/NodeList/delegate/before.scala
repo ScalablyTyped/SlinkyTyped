@@ -1,6 +1,7 @@
 package typingsSlinky.dojo.dojox.NodeList.delegate
 
 import typingsSlinky.std.HTMLElement
+import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +18,6 @@ import scala.scalajs.js.annotation._
 trait before extends js.Object {
   def apply(content: String): js.Any = js.native
   def apply(content: HTMLElement): js.Any = js.native
-  def apply(content: typingsSlinky.std.NodeList): js.Any = js.native
+  def apply(content: NodeList): js.Any = js.native
 }
 

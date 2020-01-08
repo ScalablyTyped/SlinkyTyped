@@ -1,6 +1,5 @@
 package typingsSlinky.phaser.Phaser.Input
 
-import typingsSlinky.phaser.Phaser.Input.Touch.TouchManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

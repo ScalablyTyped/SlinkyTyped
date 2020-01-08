@@ -1,5 +1,6 @@
 package typingsSlinky.socks.typingsCommonConstantsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object Socks5HostType extends js.Object {
   @js.native
   sealed trait IPv6 extends Socks5HostType
   
-  /* 3 */ val Hostname: typingsSlinky.socks.typingsCommonConstantsMod.Socks5HostType.Hostname with Double = js.native
-  /* 1 */ val IPv4: typingsSlinky.socks.typingsCommonConstantsMod.Socks5HostType.IPv4 with Double = js.native
-  /* 4 */ val IPv6: typingsSlinky.socks.typingsCommonConstantsMod.Socks5HostType.IPv6 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Socks5HostType with Double] = js.native
+  /* 3 */ @js.native
+  object Hostname extends TopLevel[Hostname with Double]
+  
+  /* 1 */ @js.native
+  object IPv4 extends TopLevel[IPv4 with Double]
+  
+  /* 4 */ @js.native
+  object IPv6 extends TopLevel[IPv6 with Double]
+  
 }
 

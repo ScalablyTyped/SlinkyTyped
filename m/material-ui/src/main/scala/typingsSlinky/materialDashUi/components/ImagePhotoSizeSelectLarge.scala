@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImagePhotoSizeSelectLarge
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePhotoSizeSelectLarge] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePhotoSizeSelectLarge] {
   @JSImport("material-ui/svg-icons", "ImagePhotoSizeSelectLarge")
   @js.native
   object componentImport extends js.Object

@@ -1,7 +1,6 @@
 package typingsSlinky.pkijs
 
 import typingsSlinky.asn1js.asn1jsMod.ObjectIdentifier
-import typingsSlinky.pkijs.srcAttributeTypeAndValueMod.AttributeTypeAndValue
 import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

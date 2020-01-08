@@ -1,8 +1,6 @@
 package typingsSlinky.riotDashRoute
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.riotDashRoute.libMod.RiotRoute
-import typingsSlinky.riotDashRoute.libMod.RiotSubRoute
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`

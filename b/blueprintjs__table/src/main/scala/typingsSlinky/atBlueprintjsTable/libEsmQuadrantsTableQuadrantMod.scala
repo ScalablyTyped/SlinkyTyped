@@ -1,5 +1,6 @@
 package typingsSlinky.atBlueprintjsTable
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticUIEvent
@@ -7,8 +8,6 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreMod.AbstractComponent2
 import typingsSlinky.atBlueprintjsCore.libEsmCommonPropsMod.IProps
 import typingsSlinky.atBlueprintjsTable.libEsmCommonGridMod.Grid
-import typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.ITableQuadrantProps
-import typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.EventHandler
 import typingsSlinky.react.reactMod._Global_.JSX.Element
@@ -123,12 +122,20 @@ object libEsmQuadrantsTableQuadrantMod extends js.Object {
     @js.native
     sealed trait TOP_LEFT extends QuadrantType
     
-    /* "left" */ val LEFT: typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType.LEFT with String = js.native
-    /* "main" */ val MAIN: typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType.MAIN with String = js.native
-    /* "top" */ val TOP: typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType.TOP with String = js.native
-    /* "top-left" */ val TOP_LEFT: typingsSlinky.atBlueprintjsTable.libEsmQuadrantsTableQuadrantMod.QuadrantType.TOP_LEFT with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[QuadrantType with String] = js.native
+    /* "left" */ @js.native
+    object LEFT extends TopLevel[LEFT with String]
+    
+    /* "main" */ @js.native
+    object MAIN extends TopLevel[MAIN with String]
+    
+    /* "top" */ @js.native
+    object TOP extends TopLevel[TOP with String]
+    
+    /* "top-left" */ @js.native
+    object TOP_LEFT extends TopLevel[TOP_LEFT with String]
+    
   }
   
   /* static members */

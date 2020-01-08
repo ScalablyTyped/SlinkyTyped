@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,24 +62,58 @@ object EBillingType extends js.Object {
   @js.native
   sealed trait Repurchaseable extends EBillingType
   
-  /* 7 */ val AutoGrant: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.AutoGrant with Double = js.native
-  /* 2 */ val BillMonthly: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.BillMonthly with Double = js.native
-  /* 1 */ val BillOnceOnly: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.BillOnceOnly with Double = js.native
-  /* 10 */ val BillOnceOrCDKey: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.BillOnceOrCDKey with Double = js.native
-  /* 14 */ val CommercialLicense: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.CommercialLicense with Double = js.native
-  /* 15 */ val FreeCommercialLicense: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.FreeCommercialLicense with Double = js.native
-  /* 12 */ val FreeOnDemand: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.FreeOnDemand with Double = js.native
-  /* 6 */ val Gift: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.Gift with Double = js.native
-  /* 4 */ val GuestPass: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.GuestPass with Double = js.native
-  /* 5 */ val HardwarePromo: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.HardwarePromo with Double = js.native
-  /* 0 */ val NoCost: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.NoCost with Double = js.native
-  /* 16 */ val NumBillingTypes: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.NumBillingTypes with Double = js.native
-  /* 8 */ val OEMTicket: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.OEMTicket with Double = js.native
-  /* 3 */ val ProofOfPrepurchaseOnly: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.ProofOfPrepurchaseOnly with Double = js.native
-  /* 9 */ val RecurringOption: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.RecurringOption with Double = js.native
-  /* 13 */ val Rental: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.Rental with Double = js.native
-  /* 11 */ val Repurchaseable: typingsSlinky.steamDashClient.steamDashClientMod.EBillingType.Repurchaseable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EBillingType with Double] = js.native
+  /* 7 */ @js.native
+  object AutoGrant extends TopLevel[AutoGrant with Double]
+  
+  /* 2 */ @js.native
+  object BillMonthly extends TopLevel[BillMonthly with Double]
+  
+  /* 1 */ @js.native
+  object BillOnceOnly extends TopLevel[BillOnceOnly with Double]
+  
+  /* 10 */ @js.native
+  object BillOnceOrCDKey extends TopLevel[BillOnceOrCDKey with Double]
+  
+  /* 14 */ @js.native
+  object CommercialLicense extends TopLevel[CommercialLicense with Double]
+  
+  /* 15 */ @js.native
+  object FreeCommercialLicense extends TopLevel[FreeCommercialLicense with Double]
+  
+  /* 12 */ @js.native
+  object FreeOnDemand extends TopLevel[FreeOnDemand with Double]
+  
+  /* 6 */ @js.native
+  object Gift extends TopLevel[Gift with Double]
+  
+  /* 4 */ @js.native
+  object GuestPass extends TopLevel[GuestPass with Double]
+  
+  /* 5 */ @js.native
+  object HardwarePromo extends TopLevel[HardwarePromo with Double]
+  
+  /* 0 */ @js.native
+  object NoCost extends TopLevel[NoCost with Double]
+  
+  /* 16 */ @js.native
+  object NumBillingTypes extends TopLevel[NumBillingTypes with Double]
+  
+  /* 8 */ @js.native
+  object OEMTicket extends TopLevel[OEMTicket with Double]
+  
+  /* 3 */ @js.native
+  object ProofOfPrepurchaseOnly extends TopLevel[ProofOfPrepurchaseOnly with Double]
+  
+  /* 9 */ @js.native
+  object RecurringOption extends TopLevel[RecurringOption with Double]
+  
+  /* 13 */ @js.native
+  object Rental extends TopLevel[Rental with Double]
+  
+  /* 11 */ @js.native
+  object Repurchaseable extends TopLevel[Repurchaseable with Double]
+  
 }
 

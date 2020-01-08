@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Rating
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Precision extends js.Object {
   @js.native
   sealed trait Half extends Precision
   
-  /* 0 */ val Exact: typingsSlinky.ejDotWebDotAll.ej.Rating.Precision.Exact with Double = js.native
-  /* 1 */ val Full: typingsSlinky.ejDotWebDotAll.ej.Rating.Precision.Full with Double = js.native
-  /* 2 */ val Half: typingsSlinky.ejDotWebDotAll.ej.Rating.Precision.Half with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Precision with Double] = js.native
+  /* 0 */ @js.native
+  object Exact extends TopLevel[Exact with Double]
+  
+  /* 1 */ @js.native
+  object Full extends TopLevel[Full with Double]
+  
+  /* 2 */ @js.native
+  object Half extends TopLevel[Half with Double]
+  
 }
 

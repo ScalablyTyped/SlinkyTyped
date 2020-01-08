@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EnhancedDashEncryption extends SharedApply_SvgIconProps657215518[default] {
+object EnhancedDashEncryption extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/notification/enhanced-encryption", JSImport.Default)
   @js.native
   object componentImport extends js.Object

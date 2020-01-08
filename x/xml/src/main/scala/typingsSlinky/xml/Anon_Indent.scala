@@ -1,6 +1,6 @@
 package typingsSlinky.xml
 
-import typingsSlinky.xml.xmlNumbers.`true`
+import typingsSlinky.xml.xmlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

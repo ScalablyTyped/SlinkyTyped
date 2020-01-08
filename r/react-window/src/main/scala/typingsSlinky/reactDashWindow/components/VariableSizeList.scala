@@ -24,10 +24,12 @@ object VariableSizeList
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, height, onScroll, width */
+  /* The following DOM/SVG props were specified: className, onScroll */
   def apply(
+    height: Double | String,
     itemCount: Double,
     itemSize: Double => Double,
+    width: Double | String,
     direction: CSSDirection | Direction = null,
     estimatedItemSize: Int | Double = null,
     initialScrollOffset: Int | Double = null,
@@ -46,7 +48,7 @@ object VariableSizeList
     useIsScrolling: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashWindow.reactDashWindowMod.VariableSizeList] = {
-    val __obj = js.Dynamic.literal(itemCount = itemCount.asInstanceOf[js.Any], itemSize = js.Any.fromFunction1(itemSize))
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], itemCount = itemCount.asInstanceOf[js.Any], itemSize = js.Any.fromFunction1(itemSize), width = width.asInstanceOf[js.Any])
     if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
     if (estimatedItemSize != null) __obj.updateDynamic("estimatedItemSize")(estimatedItemSize.asInstanceOf[js.Any])
     if (initialScrollOffset != null) __obj.updateDynamic("initialScrollOffset")(initialScrollOffset.asInstanceOf[js.Any])

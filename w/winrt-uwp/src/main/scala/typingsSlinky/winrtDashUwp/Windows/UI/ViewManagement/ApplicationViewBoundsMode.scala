@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ApplicationViewBoundsMode extends js.Object {
   @js.native
   sealed trait useVisible extends ApplicationViewBoundsMode
   
-  /* 1 */ val useCoreWindow: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow with Double = js.native
-  /* 0 */ val useVisible: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.ApplicationViewBoundsMode.useVisible with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApplicationViewBoundsMode with Double] = js.native
+  /* 1 */ @js.native
+  object useCoreWindow extends TopLevel[useCoreWindow with Double]
+  
+  /* 0 */ @js.native
+  object useVisible extends TopLevel[useVisible with Double]
+  
 }
 

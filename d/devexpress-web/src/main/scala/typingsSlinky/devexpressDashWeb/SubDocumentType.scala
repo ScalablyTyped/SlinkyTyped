@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,11 +38,19 @@ object SubDocumentType extends js.Object {
   @js.native
   sealed trait TextBox extends SubDocumentType
   
-  /* 2 */ val Footer: typingsSlinky.devexpressDashWeb.SubDocumentType.Footer with Double = js.native
-  /* 1 */ val Header: typingsSlinky.devexpressDashWeb.SubDocumentType.Header with Double = js.native
-  /* 0 */ val Main: typingsSlinky.devexpressDashWeb.SubDocumentType.Main with Double = js.native
-  /* 3 */ val TextBox: typingsSlinky.devexpressDashWeb.SubDocumentType.TextBox with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SubDocumentType with Double] = js.native
+  /* 2 */ @js.native
+  object Footer extends TopLevel[Footer with Double]
+  
+  /* 1 */ @js.native
+  object Header extends TopLevel[Header with Double]
+  
+  /* 0 */ @js.native
+  object Main extends TopLevel[Main with Double]
+  
+  /* 3 */ @js.native
+  object TextBox extends TopLevel[TextBox with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.expressDashValidator
 
-import typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`true`
+import typingsSlinky.expressDashValidator.expressDashValidatorBooleans.`true`
 import typingsSlinky.expressDashValidator.srcBaseMod.DynamicMessageCreator
 import typingsSlinky.expressDashValidator.srcBaseMod.Location
 import scala.scalajs.js

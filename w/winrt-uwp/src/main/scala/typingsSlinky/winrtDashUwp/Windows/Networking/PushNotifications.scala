@@ -1,11 +1,9 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.TypedEventHandler
-import typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationChannel
-import typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs
-import typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType
 import typingsSlinky.winrtDashUwp.Windows.UI.Notifications.BadgeNotification
 import typingsSlinky.winrtDashUwp.Windows.UI.Notifications.TileNotification
 import typingsSlinky.winrtDashUwp.Windows.UI.Notifications.ToastNotification
@@ -122,13 +120,23 @@ object PushNotifications extends js.Object {
     @js.native
     sealed trait toast extends PushNotificationType
     
-    /* 2 */ val badge: typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType.badge with Double = js.native
-    /* 3 */ val raw: typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType.raw with Double = js.native
-    /* 1 */ val tile: typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType.tile with Double = js.native
-    /* 4 */ val tileFlyout: typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType.tileFlyout with Double = js.native
-    /* 0 */ val toast: typingsSlinky.winrtDashUwp.Windows.Networking.PushNotifications.PushNotificationType.toast with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PushNotificationType with Double] = js.native
+    /* 2 */ @js.native
+    object badge extends TopLevel[badge with Double]
+    
+    /* 3 */ @js.native
+    object raw extends TopLevel[raw with Double]
+    
+    /* 1 */ @js.native
+    object tile extends TopLevel[tile with Double]
+    
+    /* 4 */ @js.native
+    object tileFlyout extends TopLevel[tileFlyout with Double]
+    
+    /* 0 */ @js.native
+    object toast extends TopLevel[toast with Double]
+    
   }
   
 }

@@ -6,11 +6,11 @@ import typingsSlinky.hexo.Anon_Key
 import typingsSlinky.hexo.hexoMod.Post.Data
 import typingsSlinky.hexo.hexoMod.TemplateLocals
 import typingsSlinky.hexo.hexoMod.extend.Filter.Options
-import typingsSlinky.hexo.hexoStrings.`after_render:html`
 import typingsSlinky.hexo.hexoStrings.after_clean
 import typingsSlinky.hexo.hexoStrings.after_generate
 import typingsSlinky.hexo.hexoStrings.after_init
 import typingsSlinky.hexo.hexoStrings.after_post_render
+import typingsSlinky.hexo.hexoStrings.after_renderColonhtml
 import typingsSlinky.hexo.hexoStrings.before_exit
 import typingsSlinky.hexo.hexoStrings.before_generate
 import typingsSlinky.hexo.hexoStrings.before_post_render
@@ -70,12 +70,12 @@ trait Filter_ extends js.Object {
     */
   @JSName("register")
   def register_afterrenderhtml(
-    `type`: `after_render:html`,
+    `type`: after_renderColonhtml,
     fn: js.Function2[/* result */ String, /* data */ Anon_Key, String | Unit]
   ): Unit = js.native
   @JSName("register")
   def register_afterrenderhtml(
-    `type`: `after_render:html`,
+    `type`: after_renderColonhtml,
     fn: js.Function2[/* result */ String, /* data */ Anon_Key, String | Unit],
     priority: Double
   ): Unit = js.native

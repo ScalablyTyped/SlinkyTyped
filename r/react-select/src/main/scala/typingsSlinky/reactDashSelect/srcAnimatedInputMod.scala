@@ -2,7 +2,6 @@ package typingsSlinky.reactDashSelect
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.reactDashSelect.srcAnimatedInputMod.AnimatedInputProps
 import typingsSlinky.reactDashSelect.srcAnimatedTransitionsMod.fn
 import typingsSlinky.reactDashSelect.srcComponentsInputMod.InputProps
 import typingsSlinky.reactDashSelect.srcTypesMod.ClassNamesState

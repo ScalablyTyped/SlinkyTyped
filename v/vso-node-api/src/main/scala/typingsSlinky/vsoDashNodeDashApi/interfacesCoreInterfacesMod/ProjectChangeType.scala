@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ProjectChangeType extends js.Object {
   @js.native
   sealed trait Modified extends ProjectChangeType
   
-  /* 2 */ val Added: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProjectChangeType.Added with Double = js.native
-  /* 1 */ val Deleted: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProjectChangeType.Deleted with Double = js.native
-  /* 0 */ val Modified: typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.ProjectChangeType.Modified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProjectChangeType with Double] = js.native
+  /* 2 */ @js.native
+  object Added extends TopLevel[Added with Double]
+  
+  /* 1 */ @js.native
+  object Deleted extends TopLevel[Deleted with Double]
+  
+  /* 0 */ @js.native
+  object Modified extends TopLevel[Modified with Double]
+  
 }
 

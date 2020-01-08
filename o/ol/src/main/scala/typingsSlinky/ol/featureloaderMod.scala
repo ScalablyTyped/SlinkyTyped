@@ -1,8 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.featureloaderMod.FeatureLoader
-import typingsSlinky.ol.featureloaderMod.FeatureUrlFunction
 import typingsSlinky.ol.formatFeatureMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 package object reactDashFloaterMod {
   import slinky.core.ReactComponentClass
 
-  type ReactFloater = ReactComponentClass[Props]
+  type ReactFloater = ReactComponentClass[PropsWithComponent | PropsWithContent]
 }

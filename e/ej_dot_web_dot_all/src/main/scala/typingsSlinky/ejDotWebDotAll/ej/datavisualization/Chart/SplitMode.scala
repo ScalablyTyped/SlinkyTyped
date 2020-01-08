@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,22 @@ object SplitMode extends js.Object {
   @js.native
   sealed trait Value extends SplitMode
   
-  /* 3 */ val Indexes: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.SplitMode.Indexes with Double = js.native
-  /* 2 */ val Percentage: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.SplitMode.Percentage with Double = js.native
-  /* 0 */ val Position: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.SplitMode.Position with Double = js.native
-  /* 1 */ val Value: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.SplitMode.Value with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SplitMode with Double] = js.native
+  /* 3 */ @js.native
+  object Indexes extends TopLevel[Indexes with Double]
+  
+  /* 2 */ @js.native
+  object Percentage extends TopLevel[Percentage with Double]
+  
+  /* 0 */ @js.native
+  object Position
+    extends TopLevel[
+          typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.SplitMode.Position with Double
+        ]
+  
+  /* 1 */ @js.native
+  object Value extends TopLevel[Value with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.timeGridMod.Default
 import typingsSlinky.moment.momentMod.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`

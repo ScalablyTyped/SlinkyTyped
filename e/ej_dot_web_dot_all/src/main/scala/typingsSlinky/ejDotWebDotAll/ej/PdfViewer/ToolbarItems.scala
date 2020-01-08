@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PdfViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,16 +47,34 @@ object ToolbarItems extends js.Object {
   @js.native
   sealed trait TextSearchTool extends ToolbarItems
   
-  /* 8 */ val All: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.All with Double = js.native
-  /* 3 */ val DownloadTool: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.DownloadTool with Double = js.native
-  /* 0 */ val MagnificationTools: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.MagnificationTools with Double = js.native
-  /* 1 */ val PageNavigationTools: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.PageNavigationTools with Double = js.native
-  /* 2 */ val PrintTools: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.PrintTools with Double = js.native
-  /* 7 */ val SelectionTool: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.SelectionTool with Double = js.native
-  /* 6 */ val SignatureTool: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.SignatureTool with Double = js.native
-  /* 5 */ val TextMarkupAnnotationTools: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.TextMarkupAnnotationTools with Double = js.native
-  /* 4 */ val TextSearchTool: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.ToolbarItems.TextSearchTool with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToolbarItems with Double] = js.native
+  /* 8 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 3 */ @js.native
+  object DownloadTool extends TopLevel[DownloadTool with Double]
+  
+  /* 0 */ @js.native
+  object MagnificationTools extends TopLevel[MagnificationTools with Double]
+  
+  /* 1 */ @js.native
+  object PageNavigationTools extends TopLevel[PageNavigationTools with Double]
+  
+  /* 2 */ @js.native
+  object PrintTools extends TopLevel[PrintTools with Double]
+  
+  /* 7 */ @js.native
+  object SelectionTool extends TopLevel[SelectionTool with Double]
+  
+  /* 6 */ @js.native
+  object SignatureTool extends TopLevel[SignatureTool with Double]
+  
+  /* 5 */ @js.native
+  object TextMarkupAnnotationTools extends TopLevel[TextMarkupAnnotationTools with Double]
+  
+  /* 4 */ @js.native
+  object TextSearchTool extends TopLevel[TextSearchTool with Double]
+  
 }
 

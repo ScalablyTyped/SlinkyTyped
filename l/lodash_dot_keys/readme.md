@@ -11,8 +11,8 @@ The lodash method `_.keys` exported as a module.
 | Full name          | lodash.keys |
 | Keywords           | lodash-modularized, keys |
 | # releases         | 0 |
-| # dependents       | 182 |
-| # downloads        | 182997915 |
+| # dependents       | 205 |
+| # downloads        | 189556145 |
 | # stars            | 0 |
 
 ## Links

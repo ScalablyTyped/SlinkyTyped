@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Authentication
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncActionCompletedHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncOperationCompletedHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.AsyncStatus
@@ -8,12 +9,6 @@ import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithOperation
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.CredentialPromptType
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.SignOutUserOperation
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.UserAuthenticationOperation
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.UserIdentity
 import typingsSlinky.winrtDashUwp.Windows.WinRTError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -170,11 +165,17 @@ object OnlineId extends js.Object {
     @js.native
     sealed trait retypeCredentials extends CredentialPromptType
     
-    /* 2 */ val doNotPrompt: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.CredentialPromptType.doNotPrompt with Double = js.native
-    /* 0 */ val promptIfNeeded: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.CredentialPromptType.promptIfNeeded with Double = js.native
-    /* 1 */ val retypeCredentials: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.OnlineId.CredentialPromptType.retypeCredentials with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[CredentialPromptType with Double] = js.native
+    /* 2 */ @js.native
+    object doNotPrompt extends TopLevel[doNotPrompt with Double]
+    
+    /* 0 */ @js.native
+    object promptIfNeeded extends TopLevel[promptIfNeeded with Double]
+    
+    /* 1 */ @js.native
+    object retypeCredentials extends TopLevel[retypeCredentials with Double]
+    
   }
   
 }

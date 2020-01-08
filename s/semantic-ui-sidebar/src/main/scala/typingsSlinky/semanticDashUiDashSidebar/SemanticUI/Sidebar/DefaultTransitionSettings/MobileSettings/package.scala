@@ -12,13 +12,5 @@ package object MobileSettings {
   import typingsSlinky.std.Partial
   import typingsSlinky.std.Pick
 
-  type Param = (Pick[
-    typingsSlinky.semanticDashUiDashSidebar.SemanticUI.Sidebar.DefaultTransitionSettings.MobileSettings._Impl, 
-    left | right | top | bottom
-  ]) with (Partial[
-    Pick[
-      typingsSlinky.semanticDashUiDashSidebar.SemanticUI.Sidebar.DefaultTransitionSettings.MobileSettings._Impl, 
-      left | right | top | bottom
-    ]
-  ])
+  type Param = (Pick[_Impl, left | right | top | bottom]) with (Partial[Pick[_Impl, left | right | top | bottom]])
 }

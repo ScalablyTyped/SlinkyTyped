@@ -1,6 +1,6 @@
 package typingsSlinky.atTestingDashLibraryVue.atTestingDashLibraryVueMod
 
-import typingsSlinky.atTestingDashLibraryVue.atTestingDashLibraryVueNumbers.`false`
+import typingsSlinky.atTestingDashLibraryVue.atTestingDashLibraryVueBooleans.`false`
 import typingsSlinky.prettyDashFormat.prettyDashFormatMod.OptionsReceived
 import typingsSlinky.std.Element
 import typingsSlinky.std.HTMLDocument

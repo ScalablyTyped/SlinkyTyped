@@ -8,6 +8,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IProcessedStyleSet
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
+import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesBooleans.`false`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`100`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`101`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`102`
@@ -107,7 +108,6 @@ import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`97`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`98`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`99`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`9`
-import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`false`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesStrings.`data-is-scrollable`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesStrings.`data-no-horizontal-wrap`
 import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesStrings.`data-no-vertical-wrap`
@@ -253,6 +253,11 @@ object atUifabricUtilitiesMod extends js.Object {
   val videoProperties: js.Array[String] = js.native
   def addDirectionalKeyCode(which: Double): Unit = js.native
   def addElementAtIndex[T](array: js.Array[T], index: Double, itemToAdd: T): js.Array[T] = js.native
+  def allowOverscrollOnElement(element: Null, events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup): Unit = js.native
+  def allowOverscrollOnElement(
+    element: typingsSlinky.std.HTMLElement,
+    events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup
+  ): Unit = js.native
   def allowScrollOnElement(element: Null, events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup): Unit = js.native
   def allowScrollOnElement(
     element: typingsSlinky.std.HTMLElement,
@@ -399,7 +404,9 @@ object atUifabricUtilitiesMod extends js.Object {
     tabbable: js.UndefOr[Boolean]
   ): HTMLElement | Null = js.native
   def getRTL(): Boolean = js.native
+  def getRTL(theme: Anon_Rtl): Boolean = js.native
   def getRTLSafeKeyCode(key: Double): Double = js.native
+  def getRTLSafeKeyCode(key: Double, theme: Anon_Rtl): Double = js.native
   def getRect(): js.UndefOr[IRectangle] = js.native
   def getRect(element: typingsSlinky.std.HTMLElement): js.UndefOr[IRectangle] = js.native
   def getRect(element: Window): js.UndefOr[IRectangle] = js.native

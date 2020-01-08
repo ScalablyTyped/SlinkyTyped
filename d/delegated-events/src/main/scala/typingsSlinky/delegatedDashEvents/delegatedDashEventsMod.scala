@@ -16,7 +16,6 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.delegatedDashEvents.delegatedDashEventsMod.DelegatedEventListener
 import typingsSlinky.delegatedDashEvents.delegatedDashEventsStrings.abort
 import typingsSlinky.delegatedDashEvents.delegatedDashEventsStrings.animationcancel
 import typingsSlinky.delegatedDashEvents.delegatedDashEventsStrings.animationend

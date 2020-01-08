@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Planet
-  extends SharedApply_KawaiiProps1724139982[typingsSlinky.reactDashKawaii.reactDashKawaiiMod.Planet] {
+  extends SharedApply_KawaiiProps_1813175547[typingsSlinky.reactDashKawaii.reactDashKawaiiMod.Planet] {
   @JSImport("react-kawaii", "Planet")
   @js.native
   object componentImport extends js.Object

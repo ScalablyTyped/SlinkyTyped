@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcMathSphericalMod.Spherical
 import typingsSlinky.three.srcMathVector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`

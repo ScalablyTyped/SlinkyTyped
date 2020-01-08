@@ -1,6 +1,7 @@
 package typingsSlinky.blessed.blessedMod.Widgets
 
 import typingsSlinky.blessed.blessedStrings.bg
+import typingsSlinky.blessed.blessedStrings.line
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +23,7 @@ trait Border extends js.Object {
   /**
     * Type of border (line or bg). bg by default.
     */
-  var `type`: js.UndefOr[typingsSlinky.blessed.blessedStrings.line | bg] = js.undefined
+  var `type`: js.UndefOr[line | bg] = js.undefined
   var underline: js.UndefOr[String] = js.undefined
 }
 
@@ -33,7 +34,7 @@ object Border {
     bold: String = null,
     ch: String = null,
     fg: Int | Double = null,
-    `type`: typingsSlinky.blessed.blessedStrings.line | bg = null,
+    `type`: line | bg = null,
     underline: String = null
   ): Border = {
     val __obj = js.Dynamic.literal()

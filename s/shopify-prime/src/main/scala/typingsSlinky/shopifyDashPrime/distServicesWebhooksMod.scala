@@ -6,7 +6,6 @@ import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.DateOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.ListOptions
 import typingsSlinky.shopifyDashPrime.distOptionsWebhooksMod.WebhookOptions
-import typingsSlinky.shopifyDashPrime.distServicesWebhooksMod.Webhooks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

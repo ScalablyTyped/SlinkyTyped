@@ -1,7 +1,5 @@
 package typingsSlinky.fromjs
 
-import typingsSlinky.fromjs.FromJS.IOrderedQueryable
-import typingsSlinky.fromjs.FromJS.IQueryable
 import typingsSlinky.std.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`

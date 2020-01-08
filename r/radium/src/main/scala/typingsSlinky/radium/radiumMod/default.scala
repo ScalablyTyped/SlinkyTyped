@@ -5,9 +5,9 @@ import typingsSlinky.radium.radiumMod.Radium.RadiumTestMode
 import typingsSlinky.radium.radiumMod.Radium.StyleProps
 import typingsSlinky.radium.radiumMod.Radium.StyleRootProps
 import typingsSlinky.radium.radiumMod.Radium.StyleRules
-import typingsSlinky.radium.radiumStrings.`:active`
-import typingsSlinky.radium.radiumStrings.`:focus`
-import typingsSlinky.radium.radiumStrings.`:hover`
+import typingsSlinky.radium.radiumStrings.Colonactive
+import typingsSlinky.radium.radiumStrings.Colonfocus
+import typingsSlinky.radium.radiumStrings.Colonhover
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,17 +29,17 @@ object default extends js.Object {
   // @Radium decorator
   def apply[TElement /* <: js.Function */](component: TElement): TElement = js.native
   @JSName("getState")
-  def getState_active(state: js.Any, elementKey: String, value: `:active`): Boolean = js.native
+  def getState_active(state: js.Any, elementKey: String, value: Colonactive): Boolean = js.native
   @JSName("getState")
-  def getState_active(state: js.Any, elementKey: Unit, value: `:active`): Boolean = js.native
+  def getState_active(state: js.Any, elementKey: Unit, value: Colonactive): Boolean = js.native
   @JSName("getState")
-  def getState_focus(state: js.Any, elementKey: String, value: `:focus`): Boolean = js.native
+  def getState_focus(state: js.Any, elementKey: String, value: Colonfocus): Boolean = js.native
   @JSName("getState")
-  def getState_focus(state: js.Any, elementKey: Unit, value: `:focus`): Boolean = js.native
+  def getState_focus(state: js.Any, elementKey: Unit, value: Colonfocus): Boolean = js.native
   @JSName("getState")
-  def getState_hover(state: js.Any, elementKey: String, value: `:hover`): Boolean = js.native
+  def getState_hover(state: js.Any, elementKey: String, value: Colonhover): Boolean = js.native
   @JSName("getState")
-  def getState_hover(state: js.Any, elementKey: Unit, value: `:hover`): Boolean = js.native
+  def getState_hover(state: js.Any, elementKey: Unit, value: Colonhover): Boolean = js.native
   def keyframes(keyframes: StyleRules): js.Object = js.native
   def keyframes(keyframes: StyleRules, name: String): js.Object = js.native
 }

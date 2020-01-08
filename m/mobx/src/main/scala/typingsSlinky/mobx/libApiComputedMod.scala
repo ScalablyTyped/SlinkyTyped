@@ -1,6 +1,5 @@
 package typingsSlinky.mobx
 
-import typingsSlinky.mobx.libApiComputedMod.IComputed
 import typingsSlinky.mobx.libCoreComputedvalueMod.IComputedValue
 import typingsSlinky.mobx.libCoreComputedvalueMod.IComputedValueOptions
 import scala.scalajs.js

@@ -1,5 +1,6 @@
 package typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object CSSNumericBaseType extends js.Object {
   @js.native
   sealed trait time extends CSSNumericBaseType
   
-  /* 1 */ val angle: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.angle with Double = js.native
-  /* 5 */ val flex: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.flex with Double = js.native
-  /* 3 */ val frequency: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.frequency with Double = js.native
-  /* 0 */ val length: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.length with Double = js.native
-  /* 6 */ val percent: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.percent with Double = js.native
-  /* 4 */ val resolution: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.resolution with Double = js.native
-  /* 2 */ val time: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSNumericBaseType.time with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CSSNumericBaseType with Double] = js.native
+  /* 1 */ @js.native
+  object angle extends TopLevel[angle with Double]
+  
+  /* 5 */ @js.native
+  object flex extends TopLevel[flex with Double]
+  
+  /* 3 */ @js.native
+  object frequency extends TopLevel[frequency with Double]
+  
+  /* 0 */ @js.native
+  object length extends TopLevel[length with Double]
+  
+  /* 6 */ @js.native
+  object percent extends TopLevel[percent with Double]
+  
+  /* 4 */ @js.native
+  object resolution extends TopLevel[resolution with Double]
+  
+  /* 2 */ @js.native
+  object time extends TopLevel[time with Double]
+  
 }
 

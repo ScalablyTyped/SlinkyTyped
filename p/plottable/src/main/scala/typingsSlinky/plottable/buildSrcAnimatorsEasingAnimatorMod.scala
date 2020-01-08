@@ -2,8 +2,6 @@ package typingsSlinky.plottable
 
 import typingsSlinky.d3DashTransition.d3DashTransitionMod.Transition
 import typingsSlinky.plottable.buildSrcAnimatorsAnimatorMod.IAnimator
-import typingsSlinky.plottable.buildSrcAnimatorsEasingAnimatorMod.EaseFn
-import typingsSlinky.plottable.buildSrcAnimatorsEasingAnimatorMod.EaseName
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.AttributeToAppliedProjector
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.SimpleSelection
 import scala.scalajs.js

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ImageSearch extends SharedApply_SvgIconProps1025744599[default] {
+object ImageSearch extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/ImageSearch", "default")
   @js.native
   object componentImport extends js.Object

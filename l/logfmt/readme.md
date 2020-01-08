@@ -12,7 +12,7 @@ key=value logger and parser
 | Keywords           | log, parser, logfmt |
 | # releases         | 4 |
 | # dependents       | 45 |
-| # downloads        | 2017249 |
+| # downloads        | 2219286 |
 | # stars            | 9 |
 
 ## Links

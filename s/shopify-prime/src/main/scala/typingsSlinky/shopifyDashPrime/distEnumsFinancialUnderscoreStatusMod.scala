@@ -1,6 +1,5 @@
 package typingsSlinky.shopifyDashPrime
 
-import typingsSlinky.shopifyDashPrime.distEnumsFinancialUnderscoreStatusMod._FinancialStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

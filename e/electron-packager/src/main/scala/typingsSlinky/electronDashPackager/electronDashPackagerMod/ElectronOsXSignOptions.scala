@@ -1,6 +1,6 @@
 package typingsSlinky.electronDashPackager.electronDashPackagerMod
 
-import typingsSlinky.electronDashPackager.electronDashPackagerNumbers.`true`
+import typingsSlinky.electronDashPackager.electronDashPackagerBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "filenamify-url"
-version := "2.1.0-5def76"
+version := "2.1.1-f38127"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

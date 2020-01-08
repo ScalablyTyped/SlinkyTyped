@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object Intersect extends js.Object {
   @js.native
   sealed trait OUTSIDE extends Intersect
   
-  /* 2 */ val INSIDE: typingsSlinky.cesium.cesiumMod.Intersect.INSIDE with Double = js.native
-  /* 1 */ val INTERSECTING: typingsSlinky.cesium.cesiumMod.Intersect.INTERSECTING with Double = js.native
-  /* 0 */ val OUTSIDE: typingsSlinky.cesium.cesiumMod.Intersect.OUTSIDE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Intersect with Double] = js.native
+  /* 2 */ @js.native
+  object INSIDE extends TopLevel[INSIDE with Double]
+  
+  /* 1 */ @js.native
+  object INTERSECTING extends TopLevel[INTERSECTING with Double]
+  
+  /* 0 */ @js.native
+  object OUTSIDE extends TopLevel[OUTSIDE with Double]
+  
 }
 

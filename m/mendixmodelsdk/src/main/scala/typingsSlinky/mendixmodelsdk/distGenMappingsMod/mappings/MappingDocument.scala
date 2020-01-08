@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenJsonstructuresMod.jsonstructures.IJsonStructure
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenMessagedefinitionsMod.messagedefinitions.IMessageDefinition
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Document
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.webservices.IImportedWebService
 import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IXmlSchema
@@ -24,7 +26,7 @@ import scala.scalajs.js.annotation._
 - typings.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable because Already inherited
 - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
 - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
-- typings.mendixmodelsdk.distGenMappingsMod.mappings.IMappingDocument because var conflicts: id, isLoaded, model, name, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/mappings", "mappings.MappingDocument")
+- typings.mendixmodelsdk.distGenMappingsMod.mappings.IMappingDocument because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/mappings", "mappings.MappingDocument")
 @js.native
 abstract class MappingDocument protected () extends Document {
   def this(
@@ -34,28 +36,48 @@ abstract class MappingDocument protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  var importedWebService: IImportedWebService | Null = js.native
-  val importedWebServiceQualifiedName: String | Null = js.native
+  @JSName("model")
+  var model_FMappingDocument: IModel = js.native
+  @JSName("containerAsFolderBase")
+  def containerAsFolderBase_MMappingDocument(): FolderBase = js.native
+  def importedWebService(): IImportedWebService | Null = js.native
+  def importedWebService(newValue: IImportedWebService): js.Any = js.native
+  def importedWebServiceQualifiedName(): String | Null = js.native
+  @JSName("importedWebService")
+  def importedWebService_Any(): js.Any = js.native
   /**
     * In version 6.4.0: introduced
     */
-  var jsonStructure: IJsonStructure | Null = js.native
-  val jsonStructureQualifiedName: String | Null = js.native
+  def jsonStructure(): IJsonStructure | Null = js.native
+  def jsonStructure(newValue: IJsonStructure): js.Any = js.native
+  def jsonStructureQualifiedName(): String | Null = js.native
+  @JSName("jsonStructure")
+  def jsonStructure_Any(): js.Any = js.native
   /**
     * In version 7.6.0: introduced
     */
-  var messageDefinition: IMessageDefinition | Null = js.native
-  val messageDefinitionQualifiedName: String | Null = js.native
-  var operationName: String = js.native
+  def messageDefinition(): IMessageDefinition | Null = js.native
+  def messageDefinition(newValue: IMessageDefinition): js.Any = js.native
+  def messageDefinitionQualifiedName(): String | Null = js.native
+  @JSName("messageDefinition")
+  def messageDefinition_Any(): js.Any = js.native
+  def operationName(): String = js.native
+  def operationName(newValue: String): js.Any = js.native
   /**
     * In version 7.14.0: introduced
     */
-  var publicName: String = js.native
-  var rootElementName: String = js.native
-  val rootMappingElements: IList[ObjectMappingElement] = js.native
-  var serviceName: String = js.native
-  var xmlSchema: IXmlSchema | Null = js.native
-  val xmlSchemaQualifiedName: String | Null = js.native
+  def publicName(): String = js.native
+  def publicName(newValue: String): js.Any = js.native
+  def rootElementName(): String = js.native
+  def rootElementName(newValue: String): js.Any = js.native
+  def rootMappingElements(): IList[ObjectMappingElement] = js.native
+  def serviceName(): String = js.native
+  def serviceName(newValue: String): js.Any = js.native
+  def xmlSchema(): IXmlSchema | Null = js.native
+  def xmlSchema(newValue: IXmlSchema): js.Any = js.native
+  def xmlSchemaQualifiedName(): String | Null = js.native
+  @JSName("xmlSchema")
+  def xmlSchema_Any(): js.Any = js.native
 }
 
 /* static members */

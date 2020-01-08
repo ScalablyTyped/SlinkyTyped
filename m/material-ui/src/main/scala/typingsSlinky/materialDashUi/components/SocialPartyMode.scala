@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SocialPartyMode
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.SocialPartyMode] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.SocialPartyMode] {
   @JSImport("material-ui/svg-icons", "SocialPartyMode")
   @js.native
   object componentImport extends js.Object

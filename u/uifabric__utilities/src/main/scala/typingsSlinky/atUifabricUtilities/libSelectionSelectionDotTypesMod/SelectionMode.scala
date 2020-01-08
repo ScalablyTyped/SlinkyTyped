@@ -1,5 +1,6 @@
 package typingsSlinky.atUifabricUtilities.libSelectionSelectionDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SelectionMode extends js.Object {
   @js.native
   sealed trait single extends SelectionMode
   
-  /* 2 */ val multiple: typingsSlinky.atUifabricUtilities.libSelectionSelectionDotTypesMod.SelectionMode.multiple with Double = js.native
-  /* 0 */ val none: typingsSlinky.atUifabricUtilities.libSelectionSelectionDotTypesMod.SelectionMode.none with Double = js.native
-  /* 1 */ val single: typingsSlinky.atUifabricUtilities.libSelectionSelectionDotTypesMod.SelectionMode.single with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SelectionMode with Double] = js.native
+  /* 2 */ @js.native
+  object multiple extends TopLevel[multiple with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object single extends TopLevel[single with Double]
+  
 }
 

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
@@ -88,6 +89,10 @@ object SvgAst
     hitSlop: Insets = null,
     importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
     isTVSelectable: js.UndefOr[Boolean] = js.undefined,
+    marker: String = null,
+    markerEnd: String = null,
+    markerMid: String = null,
+    markerStart: String = null,
     mask: String = null,
     nativeID: String = null,
     needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined,
@@ -184,6 +189,10 @@ object SvgAst
     if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
     if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
     if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
+    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
+    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
     if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
     if (!js.isUndefined(needsOffscreenAlphaCompositing)) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.asInstanceOf[js.Any])
@@ -252,6 +261,7 @@ object SvgAst
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = AstProps
 }
 

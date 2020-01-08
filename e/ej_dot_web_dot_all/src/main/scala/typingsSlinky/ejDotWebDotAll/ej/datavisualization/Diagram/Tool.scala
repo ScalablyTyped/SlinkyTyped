@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object Tool extends js.Object {
   @js.native
   sealed trait ZoomPan extends Tool
   
-  /* 5 */ val ContinuesDraw: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.ContinuesDraw with Double = js.native
-  /* 4 */ val DrawOnce: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.DrawOnce with Double = js.native
-  /* 2 */ val MultipleSelect: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.MultipleSelect with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.None with Double = js.native
-  /* 1 */ val SingleSelect: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.SingleSelect with Double = js.native
-  /* 3 */ val ZoomPan: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.Tool.ZoomPan with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Tool with Double] = js.native
+  /* 5 */ @js.native
+  object ContinuesDraw extends TopLevel[ContinuesDraw with Double]
+  
+  /* 4 */ @js.native
+  object DrawOnce extends TopLevel[DrawOnce with Double]
+  
+  /* 2 */ @js.native
+  object MultipleSelect extends TopLevel[MultipleSelect with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object SingleSelect extends TopLevel[SingleSelect with Double]
+  
+  /* 3 */ @js.native
+  object ZoomPan extends TopLevel[ZoomPan with Double]
+  
 }
 

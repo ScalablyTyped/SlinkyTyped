@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +20,6 @@ class DisplayList protected ()
     * 
     * @param scene The Scene that this Display List belongs to.
     */
-  def this(scene: typingsSlinky.phaser.Phaser.Scene) = this()
+  def this(scene: Scene) = this()
 }
 

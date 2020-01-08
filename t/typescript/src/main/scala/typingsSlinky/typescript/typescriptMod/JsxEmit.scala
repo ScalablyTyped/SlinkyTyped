@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object JsxEmit extends js.Object {
   @js.native
   sealed trait ReactNative extends JsxEmit
   
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.JsxEmit.None with Double = js.native
-  /* 1 */ val Preserve: typingsSlinky.typescript.typescriptMod.JsxEmit.Preserve with Double = js.native
-  /* 2 */ val React: typingsSlinky.typescript.typescriptMod.JsxEmit.React with Double = js.native
-  /* 3 */ val ReactNative: typingsSlinky.typescript.typescriptMod.JsxEmit.ReactNative with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[JsxEmit with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Preserve extends TopLevel[Preserve with Double]
+  
+  /* 2 */ @js.native
+  object React extends TopLevel[React with Double]
+  
+  /* 3 */ @js.native
+  object ReactNative extends TopLevel[ReactNative with Double]
+  
 }
 

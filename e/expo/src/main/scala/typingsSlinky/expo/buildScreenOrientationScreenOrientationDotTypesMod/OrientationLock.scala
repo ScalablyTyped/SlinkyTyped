@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object OrientationLock extends js.Object {
   @js.native
   sealed trait UNKNOWN extends OrientationLock
   
-  /* "ALL" */ val ALL: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.ALL with String = js.native
-  /* "ALL_BUT_UPSIDE_DOWN" */ val ALL_BUT_UPSIDE_DOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.ALL_BUT_UPSIDE_DOWN with String = js.native
-  /* "DEFAULT" */ val DEFAULT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.DEFAULT with String = js.native
-  /* "LANDSCAPE" */ val LANDSCAPE: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.LANDSCAPE with String = js.native
-  /* "LANDSCAPE_LEFT" */ val LANDSCAPE_LEFT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.LANDSCAPE_LEFT with String = js.native
-  /* "LANDSCAPE_RIGHT" */ val LANDSCAPE_RIGHT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.LANDSCAPE_RIGHT with String = js.native
-  /* "OTHER" */ val OTHER: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.OTHER with String = js.native
-  /* "PORTRAIT" */ val PORTRAIT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.PORTRAIT with String = js.native
-  /* "PORTRAIT_DOWN" */ val PORTRAIT_DOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.PORTRAIT_DOWN with String = js.native
-  /* "PORTRAIT_UP" */ val PORTRAIT_UP: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.PORTRAIT_UP with String = js.native
-  /* "UNKNOWN" */ val UNKNOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.OrientationLock.UNKNOWN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[OrientationLock with String] = js.native
+  /* "ALL" */ @js.native
+  object ALL extends TopLevel[ALL with String]
+  
+  /* "ALL_BUT_UPSIDE_DOWN" */ @js.native
+  object ALL_BUT_UPSIDE_DOWN extends TopLevel[ALL_BUT_UPSIDE_DOWN with String]
+  
+  /* "DEFAULT" */ @js.native
+  object DEFAULT extends TopLevel[DEFAULT with String]
+  
+  /* "LANDSCAPE" */ @js.native
+  object LANDSCAPE extends TopLevel[LANDSCAPE with String]
+  
+  /* "LANDSCAPE_LEFT" */ @js.native
+  object LANDSCAPE_LEFT extends TopLevel[LANDSCAPE_LEFT with String]
+  
+  /* "LANDSCAPE_RIGHT" */ @js.native
+  object LANDSCAPE_RIGHT extends TopLevel[LANDSCAPE_RIGHT with String]
+  
+  /* "OTHER" */ @js.native
+  object OTHER extends TopLevel[OTHER with String]
+  
+  /* "PORTRAIT" */ @js.native
+  object PORTRAIT extends TopLevel[PORTRAIT with String]
+  
+  /* "PORTRAIT_DOWN" */ @js.native
+  object PORTRAIT_DOWN extends TopLevel[PORTRAIT_DOWN with String]
+  
+  /* "PORTRAIT_UP" */ @js.native
+  object PORTRAIT_UP extends TopLevel[PORTRAIT_UP with String]
+  
+  /* "UNKNOWN" */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with String]
+  
 }
 

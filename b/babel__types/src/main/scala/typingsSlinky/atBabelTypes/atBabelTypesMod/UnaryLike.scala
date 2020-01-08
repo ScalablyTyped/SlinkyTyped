@@ -1,10 +1,10 @@
 package typingsSlinky.atBabelTypes.atBabelTypesMod
 
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`!`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`+`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`-`
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Exclamationmark
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Plussign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Tilde
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.`-_`
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.`throw`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`~`
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.delete
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.typeof
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.void
@@ -22,7 +22,7 @@ object UnaryLike {
   @scala.inline
   def UnaryExpression(
     argument: Expression,
-    operator: void | `throw` | delete | `!` | `+` | `-` | `~` | typeof,
+    operator: void | `throw` | delete | Exclamationmark | Plussign | `-_` | Tilde | typeof,
     prefix: Boolean,
     `type`: typingsSlinky.atBabelTypes.atBabelTypesStrings.UnaryExpression,
     end: Int | Double = null,

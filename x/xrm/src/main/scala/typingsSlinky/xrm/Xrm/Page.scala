@@ -2,8 +2,6 @@ package typingsSlinky.xrm.Xrm
 
 import typingsSlinky.xrm.Xrm.Controls.ProcessControl
 import typingsSlinky.xrm.Xrm.Controls.QuickFormControl
-import typingsSlinky.xrm.Xrm.Page.AutoLookupControl
-import typingsSlinky.xrm.Xrm.Page.StandardControl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

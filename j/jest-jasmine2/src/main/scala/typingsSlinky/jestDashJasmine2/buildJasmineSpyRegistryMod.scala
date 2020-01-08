@@ -1,6 +1,5 @@
 package typingsSlinky.jestDashJasmine2
 
-import typingsSlinky.jestDashJasmine2.buildJasmineSpyRegistryMod.SpyRegistry
 import typingsSlinky.jestDashJasmine2.buildTypesMod.Spy
 import typingsSlinky.jestDashJasmine2.jestDashJasmine2Strings.configurable
 import typingsSlinky.jestDashJasmine2.jestDashJasmine2Strings.enumerable

@@ -3,6 +3,7 @@ package typingsSlinky.polished
 import typingsSlinky.polished.polishedNumbers.`0`
 import typingsSlinky.polished.polishedNumbers.`2`
 import typingsSlinky.polished.polishedNumbers.`4`
+import typingsSlinky.polished.polishedStrings.Asterisk
 import typingsSlinky.polished.polishedStrings.infix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ trait Anon_0 extends js.Object {
   var notation: infix
   var precedence: `4`
   var rightToLeft: `0`
-  var symbol: typingsSlinky.polished.polishedStrings.`*`
+  var symbol: Asterisk
 }
 
 object Anon_0 {
@@ -25,7 +26,7 @@ object Anon_0 {
     notation: infix,
     precedence: `4`,
     rightToLeft: `0`,
-    symbol: typingsSlinky.polished.polishedStrings.`*`
+    symbol: Asterisk
   ): Anon_0 = {
     val __obj = js.Dynamic.literal(argCount = argCount.asInstanceOf[js.Any], f = f.asInstanceOf[js.Any], notation = notation.asInstanceOf[js.Any], precedence = precedence.asInstanceOf[js.Any], rightToLeft = rightToLeft.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any])
   

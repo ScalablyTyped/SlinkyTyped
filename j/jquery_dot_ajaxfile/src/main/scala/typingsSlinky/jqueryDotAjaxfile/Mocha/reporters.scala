@@ -2,7 +2,6 @@ package typingsSlinky.jqueryDotAjaxfile.Mocha
 
 import typingsSlinky.jqueryDotAjaxfile.Anon_Close
 import typingsSlinky.jqueryDotAjaxfile.Anon_Failures
-import typingsSlinky.jqueryDotAjaxfile.Mocha.reporters.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

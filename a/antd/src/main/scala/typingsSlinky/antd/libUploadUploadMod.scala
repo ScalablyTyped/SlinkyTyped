@@ -9,7 +9,6 @@ import typingsSlinky.antd.libUploadInterfaceMod.UploadFile
 import typingsSlinky.antd.libUploadInterfaceMod.UploadLocale
 import typingsSlinky.antd.libUploadInterfaceMod.UploadProps
 import typingsSlinky.antd.libUploadInterfaceMod.UploadState
-import typingsSlinky.antd.libUploadUploadMod.Upload
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod._Global_.JSX.Element
@@ -26,7 +25,7 @@ object libUploadUploadMod extends js.Object {
     var progressTimer: js.Any = js.native
     var recentUploadStatus: Boolean | js.Thenable[_] = js.native
     var upload: js.Any = js.native
-    def autoUpdateProgress(`_`: js.Any, file: UploadFile[_]): Unit = js.native
+    def autoUpdateProgress(_underscore: js.Any, file: UploadFile[_]): Unit = js.native
     def beforeUpload(file: RcFile, fileList: js.Array[RcFile]): Boolean | js.Thenable[Unit] = js.native
     def clearProgressTimer(): Unit = js.native
     @JSName("componentWillUnmount")

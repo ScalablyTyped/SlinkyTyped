@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object ASPxClientSpreadsheetEditMode extends js.Object {
   @js.native
   sealed trait None extends ASPxClientSpreadsheetEditMode
   
-  /* 1 */ val Cell: typingsSlinky.devexpressDashWeb.ASPxClientSpreadsheetEditMode.Cell with Double = js.native
-  /* 2 */ val Comment: typingsSlinky.devexpressDashWeb.ASPxClientSpreadsheetEditMode.Comment with Double = js.native
-  /* 0 */ val None: typingsSlinky.devexpressDashWeb.ASPxClientSpreadsheetEditMode.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ASPxClientSpreadsheetEditMode with Double] = js.native
+  /* 1 */ @js.native
+  object Cell extends TopLevel[Cell with Double]
+  
+  /* 2 */ @js.native
+  object Comment extends TopLevel[Comment with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

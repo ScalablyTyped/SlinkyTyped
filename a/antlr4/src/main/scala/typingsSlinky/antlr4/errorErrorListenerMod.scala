@@ -1,6 +1,5 @@
 package typingsSlinky.antlr4
 
-import typingsSlinky.antlr4.errorErrorListenerMod.ErrorListener
 import typingsSlinky.antlr4.recognizerMod.Recognizer
 import typingsSlinky.antlr4.tokenMod.Token
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.atBabelTypes.atBabelTypesMod
 
-import typingsSlinky.atBabelTypes.atBabelTypesNumbers.`false`
+import typingsSlinky.atBabelTypes.atBabelTypesBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

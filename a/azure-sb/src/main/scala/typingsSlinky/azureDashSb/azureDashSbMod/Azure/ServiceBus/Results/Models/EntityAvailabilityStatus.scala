@@ -1,5 +1,6 @@
 package typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object EntityAvailabilityStatus extends js.Object {
   @js.native
   sealed trait Unknown extends EntityAvailabilityStatus
   
-  /* "Available" */ val Available: typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models.EntityAvailabilityStatus.Available with String = js.native
-  /* "Limited" */ val Limited: typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models.EntityAvailabilityStatus.Limited with String = js.native
-  /* "Renaming" */ val Renaming: typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models.EntityAvailabilityStatus.Renaming with String = js.native
-  /* "Restoring" */ val Restoring: typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models.EntityAvailabilityStatus.Restoring with String = js.native
-  /* "Unknown" */ val Unknown: typingsSlinky.azureDashSb.azureDashSbMod.Azure.ServiceBus.Results.Models.EntityAvailabilityStatus.Unknown with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EntityAvailabilityStatus with String] = js.native
+  /* "Available" */ @js.native
+  object Available extends TopLevel[Available with String]
+  
+  /* "Limited" */ @js.native
+  object Limited extends TopLevel[Limited with String]
+  
+  /* "Renaming" */ @js.native
+  object Renaming extends TopLevel[Renaming with String]
+  
+  /* "Restoring" */ @js.native
+  object Restoring extends TopLevel[Restoring with String]
+  
+  /* "Unknown" */ @js.native
+  object Unknown extends TopLevel[Unknown with String]
+  
 }
 

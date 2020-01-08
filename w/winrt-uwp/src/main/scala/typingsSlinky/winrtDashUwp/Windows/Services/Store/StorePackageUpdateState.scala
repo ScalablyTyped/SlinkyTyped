@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Services.Store
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,16 +48,34 @@ object StorePackageUpdateState extends js.Object {
   @js.native
   sealed trait pending extends StorePackageUpdateState
   
-  /* 4 */ val canceled: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.canceled with Double = js.native
-  /* 3 */ val completed: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.completed with Double = js.native
-  /* 2 */ val deploying: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.deploying with Double = js.native
-  /* 1 */ val downloading: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.downloading with Double = js.native
-  /* 6 */ val errorLowBattery: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.errorLowBattery with Double = js.native
-  /* 7 */ val errorWiFiRecommended: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.errorWiFiRecommended with Double = js.native
-  /* 8 */ val errorWiFiRequired: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.errorWiFiRequired with Double = js.native
-  /* 5 */ val otherError: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.otherError with Double = js.native
-  /* 0 */ val pending: typingsSlinky.winrtDashUwp.Windows.Services.Store.StorePackageUpdateState.pending with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StorePackageUpdateState with Double] = js.native
+  /* 4 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 3 */ @js.native
+  object completed extends TopLevel[completed with Double]
+  
+  /* 2 */ @js.native
+  object deploying extends TopLevel[deploying with Double]
+  
+  /* 1 */ @js.native
+  object downloading extends TopLevel[downloading with Double]
+  
+  /* 6 */ @js.native
+  object errorLowBattery extends TopLevel[errorLowBattery with Double]
+  
+  /* 7 */ @js.native
+  object errorWiFiRecommended extends TopLevel[errorWiFiRecommended with Double]
+  
+  /* 8 */ @js.native
+  object errorWiFiRequired extends TopLevel[errorWiFiRequired with Double]
+  
+  /* 5 */ @js.native
+  object otherError extends TopLevel[otherError with Double]
+  
+  /* 0 */ @js.native
+  object pending extends TopLevel[pending with Double]
+  
 }
 

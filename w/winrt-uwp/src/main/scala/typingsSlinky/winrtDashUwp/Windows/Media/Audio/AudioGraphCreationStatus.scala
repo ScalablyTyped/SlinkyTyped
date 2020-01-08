@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Audio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object AudioGraphCreationStatus extends js.Object {
   @js.native
   sealed trait unknownFailure extends AudioGraphCreationStatus
   
-  /* 1 */ val deviceNotAvailable: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphCreationStatus.deviceNotAvailable with Double = js.native
-  /* 2 */ val formatNotSupported: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphCreationStatus.formatNotSupported with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphCreationStatus.success with Double = js.native
-  /* 3 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphCreationStatus.unknownFailure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AudioGraphCreationStatus with Double] = js.native
+  /* 1 */ @js.native
+  object deviceNotAvailable extends TopLevel[deviceNotAvailable with Double]
+  
+  /* 2 */ @js.native
+  object formatNotSupported extends TopLevel[formatNotSupported with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 3 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
 }
 

@@ -1,12 +1,13 @@
 package typingsSlinky.slateDashReact.slateDashReactMod
 
+import typingsSlinky.slate.slateMod.Controller
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.slateDashReact.slateDashReactMod.Plugin
-  - typings.slateDashReact.slateDashReactMod.Plugins
+  - typings.slateDashReact.slateDashReactMod.Plugin[T]
+  - typings.slateDashReact.slateDashReactMod.Plugins[T]
 */
-trait PluginOrPlugins extends js.Object
+trait PluginOrPlugins[T /* <: Controller */] extends js.Object
 

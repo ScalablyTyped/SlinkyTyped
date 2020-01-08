@@ -6,6 +6,8 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.FormEvent
+import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestBooleans.`false`
+import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestBooleans.`true`
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.AutosuggestProps
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.InputProps
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.RenderSuggestionParams
@@ -15,8 +17,6 @@ import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.SuggestionSele
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.SuggestionsFetchRequestedParams
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.Theme
 import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.^
-import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestNumbers.`false`
-import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,6 @@ object ReactDashAutosuggest
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
   def AutosuggestPropsSingleSection[T, T2](
     getSuggestionValue: T => String,
     inputProps: InputProps[T],
@@ -65,7 +64,6 @@ object ReactDashAutosuggest
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod.^[js.Any, js.Any]]]
   }
-  /* The following DOM/SVG props were specified: id */
   def AutosuggestPropsMultiSection[T, T2](
     getSuggestionValue: T => String,
     inputProps: InputProps[T],

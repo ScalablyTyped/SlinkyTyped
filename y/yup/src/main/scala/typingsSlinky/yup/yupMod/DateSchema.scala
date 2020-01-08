@@ -4,8 +4,8 @@ import typingsSlinky.std.Date
 import typingsSlinky.std.Exclude
 import typingsSlinky.yup.Anon_MaxDate
 import typingsSlinky.yup.Anon_MinDate
-import typingsSlinky.yup.yupNumbers.`false`
-import typingsSlinky.yup.yupNumbers.`true`
+import typingsSlinky.yup.yupBooleans.`false`
+import typingsSlinky.yup.yupBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

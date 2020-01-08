@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ColorPicker
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object Palette extends js.Object {
   @js.native
   sealed trait CustomPalette extends Palette
   
-  /* 0 */ val BasicPalette: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Palette.BasicPalette with Double = js.native
-  /* 1 */ val CustomPalette: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Palette.CustomPalette with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Palette with Double] = js.native
+  /* 0 */ @js.native
+  object BasicPalette extends TopLevel[BasicPalette with Double]
+  
+  /* 1 */ @js.native
+  object CustomPalette extends TopLevel[CustomPalette with Double]
+  
 }
 

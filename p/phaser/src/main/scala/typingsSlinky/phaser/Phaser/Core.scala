@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.phaser.Phaser.Core.TimeStep
 import typingsSlinky.phaser.Phaser.DOM.RequestAnimationFrame
 import typingsSlinky.phaser.Phaser.Display.Color
 import typingsSlinky.phaser.Phaser.Scale.CenterType

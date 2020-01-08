@@ -1,7 +1,6 @@
 package typingsSlinky.firebase.firebaseMod.auth
 
 import typingsSlinky.firebase.Anon_Email
-import typingsSlinky.firebase.firebaseMod.auth.ActionCodeInfo.Operation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object FilterLogicalOperator extends js.Object {
   @js.native
   sealed trait or extends FilterLogicalOperator
   
-  /* 0 */ val and: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterLogicalOperator.and with Double = js.native
-  /* 1 */ val or: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterLogicalOperator.or with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterLogicalOperator with Double] = js.native
+  /* 0 */ @js.native
+  object and extends TopLevel[and with Double]
+  
+  /* 1 */ @js.native
+  object or extends TopLevel[or with Double]
+  
 }
 

@@ -13,7 +13,7 @@ trait ErrorConstructor extends js.Object {
     *
     * @see https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
     */
-  var prepareStackTrace: js.UndefOr[js.Function2[/* err */ Error, /* stackTraces */ js.Array[CallSite], _]] = js.native
+  var prepareStackTrace: js.UndefOr[js.Function2[/* err */ js.Error, /* stackTraces */ js.Array[CallSite], _]] = js.native
   var stackTraceLimit: Double = js.native
   /** Create .stack property on a target object */
   def captureStackTrace(targetObject: js.Object): Unit = js.native

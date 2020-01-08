@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollo-server-types
 
-Typings are for version 0.2.8
+Typings are for version 0.2.10
 
 ## Library description:
 Apollo Server shared types
@@ -10,9 +10,9 @@ Apollo Server shared types
 | ------------------ | :-------------: |
 | Full name          | apollo-server-types |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 14 |
-| # downloads        | 365384 |
+| # releases         | 15 |
+| # dependents       | 26 |
+| # downloads        | 7183429 |
 | # stars            | 0 |
 
 ## Links

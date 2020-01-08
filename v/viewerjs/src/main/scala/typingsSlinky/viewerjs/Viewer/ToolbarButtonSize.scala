@@ -1,5 +1,6 @@
 package typingsSlinky.viewerjs.Viewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ToolbarButtonSize extends js.Object {
   @js.native
   sealed trait Small extends ToolbarButtonSize
   
-  /* "large" */ val Large: typingsSlinky.viewerjs.Viewer.ToolbarButtonSize.Large with String = js.native
-  /* "medium" */ val Medium: typingsSlinky.viewerjs.Viewer.ToolbarButtonSize.Medium with String = js.native
-  /* "small" */ val Small: typingsSlinky.viewerjs.Viewer.ToolbarButtonSize.Small with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ToolbarButtonSize with String] = js.native
+  /* "large" */ @js.native
+  object Large extends TopLevel[Large with String]
+  
+  /* "medium" */ @js.native
+  object Medium extends TopLevel[Medium with String]
+  
+  /* "small" */ @js.native
+  object Small extends TopLevel[Small with String]
+  
 }
 

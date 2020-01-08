@@ -1,9 +1,10 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atMaterialDashUiCore.chipChipMod.ChipProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +19,8 @@ object chipMod extends js.Object {
     def this(props: ChipProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[ChipProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[ChipProps]]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object UpgradeType extends js.Object {
   @js.native
   sealed trait versionUpgrade extends UpgradeType
   
-  /* 0 */ val buildUpgrade: typingsSlinky.sharepoint.SP.UpgradeType.buildUpgrade with Double = js.native
-  /* 1 */ val versionUpgrade: typingsSlinky.sharepoint.SP.UpgradeType.versionUpgrade with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UpgradeType with Double] = js.native
+  /* 0 */ @js.native
+  object buildUpgrade extends TopLevel[buildUpgrade with Double]
+  
+  /* 1 */ @js.native
+  object versionUpgrade extends TopLevel[versionUpgrade with Double]
+  
 }
 

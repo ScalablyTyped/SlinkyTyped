@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SettingsSystemDaydreamOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object SettingsSystemDaydreamOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/SettingsSystemDaydreamOutlined", "default")
   @js.native
   object componentImport extends js.Object

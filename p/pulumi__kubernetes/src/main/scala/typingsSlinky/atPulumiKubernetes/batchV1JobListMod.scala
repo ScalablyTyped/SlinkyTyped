@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`batch/v1`
-import typingsSlinky.atPulumiKubernetes.batchV1JobListMod.JobList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.batchSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.batch.v1.Job
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object batchV1JobListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`batch/v1`] = js.native
+    val apiVersion: Output[batchSlashv1] = js.native
     /**
       * items is the list of Jobs.
       */

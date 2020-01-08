@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "jaeger-client"
-version := "3.15-dt-20191118Z-2a9ec4"
+version := "3.15-dt-20191118Z-015fe2"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "opentracing" % "0.14.4-bb8776",
-  "org.scalablytyped.slinky" %%% "prom-client" % "11.5.3-5755bc",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "opentracing" % "0.14.4-376741",
+  "org.scalablytyped.slinky" %%% "prom-client" % "11.5.3-c9d466",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

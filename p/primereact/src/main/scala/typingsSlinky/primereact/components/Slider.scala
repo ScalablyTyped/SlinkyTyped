@@ -3,8 +3,9 @@ package typingsSlinky.primereact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_OriginalEventValueEventNumber_995925214
+import typingsSlinky.primereact.Anon_OriginalEventValueEventNumber_85709799
 import typingsSlinky.primereact.componentsSliderSliderMod.SliderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +22,7 @@ object Slider
   def apply(
     max: Int | Double = null,
     min: Int | Double = null,
-    onSlideEnd: /* e */ Anon_OriginalEventValueEventNumber_995925214 => Unit = null,
+    onSlideEnd: /* e */ Anon_OriginalEventValueEventNumber_85709799 => Unit = null,
     orientation: String = null,
     range: js.UndefOr[Boolean] = js.undefined,
     step: Int | Double = null,
@@ -41,6 +42,7 @@ object Slider
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.sliderMod.Slider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.sliderMod.Slider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SliderProps
 }
 

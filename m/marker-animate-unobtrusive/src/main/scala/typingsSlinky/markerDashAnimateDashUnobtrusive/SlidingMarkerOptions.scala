@@ -1,5 +1,6 @@
 package typingsSlinky.markerDashAnimateDashUnobtrusive
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.Animation
 import typingsSlinky.googlemaps.google.maps.Icon
 import typingsSlinky.googlemaps.google.maps.LatLng
@@ -46,7 +47,7 @@ object SlidingMarkerOptions {
     easing: IEasingType = null,
     icon: String | Icon | Symbol = null,
     label: String | MarkerLabel = null,
-    map: Map | StreetViewPanorama = null,
+    map: Map[Element] | StreetViewPanorama = null,
     opacity: Int | Double = null,
     optimized: js.UndefOr[Boolean] = js.undefined,
     position: LatLng | LatLngLiteral = null,

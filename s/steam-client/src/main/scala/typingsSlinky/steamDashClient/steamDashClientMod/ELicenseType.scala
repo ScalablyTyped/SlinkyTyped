@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object ELicenseType extends js.Object {
   @js.native
   sealed trait SinglePurchaseLimitedUse extends ELicenseType
   
-  /* 7 */ val LimitedUseDelayedActivation: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.LimitedUseDelayedActivation with Double = js.native
-  /* 0 */ val NoLicense: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.NoLicense with Double = js.native
-  /* 3 */ val RecurringCharge: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.RecurringCharge with Double = js.native
-  /* 4 */ val RecurringChargeLimitedUse: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.RecurringChargeLimitedUse with Double = js.native
-  /* 5 */ val RecurringChargeLimitedUseWithOverages: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.RecurringChargeLimitedUseWithOverages with Double = js.native
-  /* 6 */ val RecurringOption: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.RecurringOption with Double = js.native
-  /* 1 */ val SinglePurchase: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.SinglePurchase with Double = js.native
-  /* 2 */ val SinglePurchaseLimitedUse: typingsSlinky.steamDashClient.steamDashClientMod.ELicenseType.SinglePurchaseLimitedUse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ELicenseType with Double] = js.native
+  /* 7 */ @js.native
+  object LimitedUseDelayedActivation extends TopLevel[LimitedUseDelayedActivation with Double]
+  
+  /* 0 */ @js.native
+  object NoLicense extends TopLevel[NoLicense with Double]
+  
+  /* 3 */ @js.native
+  object RecurringCharge extends TopLevel[RecurringCharge with Double]
+  
+  /* 4 */ @js.native
+  object RecurringChargeLimitedUse extends TopLevel[RecurringChargeLimitedUse with Double]
+  
+  /* 5 */ @js.native
+  object RecurringChargeLimitedUseWithOverages extends TopLevel[RecurringChargeLimitedUseWithOverages with Double]
+  
+  /* 6 */ @js.native
+  object RecurringOption extends TopLevel[RecurringOption with Double]
+  
+  /* 1 */ @js.native
+  object SinglePurchase extends TopLevel[SinglePurchase with Double]
+  
+  /* 2 */ @js.native
+  object SinglePurchaseLimitedUse extends TopLevel[SinglePurchaseLimitedUse with Double]
+  
 }
 

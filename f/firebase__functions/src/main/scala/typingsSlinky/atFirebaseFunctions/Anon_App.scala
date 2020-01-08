@@ -1,7 +1,7 @@
 package typingsSlinky.atFirebaseFunctions
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.atFirebaseFunctions.atFirebaseFunctionsMod.atFirebaseAppDashTypesMod.FirebaseApp
+import typingsSlinky.atFirebaseFunctions.atFirebaseAppDashTypesMod.FirebaseApp
 import typingsSlinky.atFirebaseFunctionsDashTypes.atFirebaseFunctionsDashTypesMod.FirebaseFunctions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

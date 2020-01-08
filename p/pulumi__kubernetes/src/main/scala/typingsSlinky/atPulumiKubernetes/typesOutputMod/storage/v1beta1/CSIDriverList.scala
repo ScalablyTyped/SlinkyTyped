@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesOutputMod.storage.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`storageDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.storageDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait CSIDriverList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: `storageDOTk8sDOTio/v1beta1`
+  val apiVersion: storageDotk8sDotioSlashv1beta1
   /**
     * items is the list of CSIDriver
     */
@@ -38,7 +38,7 @@ trait CSIDriverList extends js.Object {
 object CSIDriverList {
   @scala.inline
   def apply(
-    apiVersion: `storageDOTk8sDOTio/v1beta1`,
+    apiVersion: storageDotk8sDotioSlashv1beta1,
     items: js.Array[CSIDriver],
     kind: typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.CSIDriverList,
     metadata: ListMeta

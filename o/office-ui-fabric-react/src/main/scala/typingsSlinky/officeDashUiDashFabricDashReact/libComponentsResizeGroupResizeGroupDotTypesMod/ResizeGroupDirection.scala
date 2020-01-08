@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsResizeGroupResizeGroupDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ResizeGroupDirection extends js.Object {
   @js.native
   sealed trait vertical extends ResizeGroupDirection
   
-  /* 0 */ val horizontal: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsResizeGroupResizeGroupDotTypesMod.ResizeGroupDirection.horizontal with Double = js.native
-  /* 1 */ val vertical: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsResizeGroupResizeGroupDotTypesMod.ResizeGroupDirection.vertical with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResizeGroupDirection with Double] = js.native
+  /* 0 */ @js.native
+  object horizontal extends TopLevel[horizontal with Double]
+  
+  /* 1 */ @js.native
+  object vertical extends TopLevel[vertical with Double]
+  
 }
 

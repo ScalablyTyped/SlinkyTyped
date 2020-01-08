@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,13 +39,25 @@ object Permission extends js.Object {
   @js.native
   sealed trait VIEW extends Permission
   
-  /* 2 */ val COMMENT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.COMMENT with Double = js.native
-  /* 1 */ val EDIT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.EDIT with Double = js.native
-  /* 5 */ val NONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.NONE with Double = js.native
-  /* 4 */ val ORGANIZER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.ORGANIZER with Double = js.native
-  /* 3 */ val OWNER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.OWNER with Double = js.native
-  /* 0 */ val VIEW: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Drive.Permission.VIEW with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Permission with Double] = js.native
+  /* 2 */ @js.native
+  object COMMENT extends TopLevel[COMMENT with Double]
+  
+  /* 1 */ @js.native
+  object EDIT extends TopLevel[EDIT with Double]
+  
+  /* 5 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 4 */ @js.native
+  object ORGANIZER extends TopLevel[ORGANIZER with Double]
+  
+  /* 3 */ @js.native
+  object OWNER extends TopLevel[OWNER with Double]
+  
+  /* 0 */ @js.native
+  object VIEW extends TopLevel[VIEW with Double]
+  
 }
 

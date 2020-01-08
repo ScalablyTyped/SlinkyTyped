@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object SpeechRecognizerState extends js.Object {
   @js.native
   sealed trait speechDetected extends SpeechRecognizerState
   
-  /* 1 */ val capturing: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.capturing with Double = js.native
-  /* 0 */ val idle: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.idle with Double = js.native
-  /* 6 */ val paused: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.paused with Double = js.native
-  /* 2 */ val processing: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.processing with Double = js.native
-  /* 4 */ val soundEnded: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.soundEnded with Double = js.native
-  /* 3 */ val soundStarted: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.soundStarted with Double = js.native
-  /* 5 */ val speechDetected: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState.speechDetected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpeechRecognizerState with Double] = js.native
+  /* 1 */ @js.native
+  object capturing extends TopLevel[capturing with Double]
+  
+  /* 0 */ @js.native
+  object idle extends TopLevel[idle with Double]
+  
+  /* 6 */ @js.native
+  object paused extends TopLevel[paused with Double]
+  
+  /* 2 */ @js.native
+  object processing extends TopLevel[processing with Double]
+  
+  /* 4 */ @js.native
+  object soundEnded extends TopLevel[soundEnded with Double]
+  
+  /* 3 */ @js.native
+  object soundStarted extends TopLevel[soundStarted with Double]
+  
+  /* 5 */ @js.native
+  object speechDetected extends TopLevel[speechDetected with Double]
+  
 }
 

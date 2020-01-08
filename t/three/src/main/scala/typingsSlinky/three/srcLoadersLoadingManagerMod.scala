@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import typingsSlinky.three.srcLoadersLoaderMod.Loader
-import typingsSlinky.three.srcLoadersLoadingManagerMod.LoadingManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

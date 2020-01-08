@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.ol.colorMod.Color
 import typingsSlinky.ol.imageStateMod.ImageState
 import typingsSlinky.ol.sizeMod.Size
-import typingsSlinky.ol.styleIconImageMod.IconImage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

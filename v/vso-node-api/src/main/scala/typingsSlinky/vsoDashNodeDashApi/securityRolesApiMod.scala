@@ -6,7 +6,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRe
 import typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod.RoleAssignment
 import typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod.SecurityRole
 import typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod.UserRoleAssignmentRef
-import typingsSlinky.vsoDashNodeDashApi.securityRolesApiMod.ISecurityRolesApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularHttp.srcEnumsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object ReadyState extends js.Object {
   @js.native
   sealed trait Unsent extends ReadyState
   
-  /* 5 */ val Cancelled: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.Cancelled with Double = js.native
-  /* 4 */ val Done: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.Done with Double = js.native
-  /* 2 */ val HeadersReceived: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.HeadersReceived with Double = js.native
-  /* 3 */ val Loading: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.Loading with Double = js.native
-  /* 1 */ val Open: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.Open with Double = js.native
-  /* 0 */ val Unsent: typingsSlinky.atAngularHttp.srcEnumsMod.ReadyState.Unsent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadyState with Double] = js.native
+  /* 5 */ @js.native
+  object Cancelled extends TopLevel[Cancelled with Double]
+  
+  /* 4 */ @js.native
+  object Done extends TopLevel[Done with Double]
+  
+  /* 2 */ @js.native
+  object HeadersReceived extends TopLevel[HeadersReceived with Double]
+  
+  /* 3 */ @js.native
+  object Loading extends TopLevel[Loading with Double]
+  
+  /* 1 */ @js.native
+  object Open extends TopLevel[Open with Double]
+  
+  /* 0 */ @js.native
+  object Unsent extends TopLevel[Unsent with Double]
+  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.atTensorflowTfjsDashCore
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.atTensorflowTfjsDashCore.distPlatformsPlatformMod.Platform
-import typingsSlinky.atTensorflowTfjsDashCore.distPlatformsPlatformUnderscoreNodeMod.FetchFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

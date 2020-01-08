@@ -23,24 +23,8 @@ trait Statement extends js.Object
 
 object Statement {
   @scala.inline
-  def IfStatement(
-    condition: Expression,
-    trueBody: Statement,
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.IfStatement,
-    falseBody: Statement = null,
-    loc: Location = null,
-    range: js.Tuple2[Double, Double] = null
-  ): Statement = {
-    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], trueBody = trueBody.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (falseBody != null) __obj.updateDynamic("falseBody")(falseBody.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Statement]
-  }
-  @scala.inline
-  def ContinueStatement(
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.ContinueStatement,
+  def BreakStatement(
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.BreakStatement,
     loc: Location = null,
     range: js.Tuple2[Double, Double] = null
   ): Statement = {
@@ -77,53 +61,8 @@ object Statement {
     __obj.asInstanceOf[Statement]
   }
   @scala.inline
-  def ForStatement(
-    body: Statement,
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.ForStatement,
-    conditionExpression: Expression = null,
-    initExpression: SimpleStatement = null,
-    loc: Location = null,
-    loopExpression: ExpressionStatement = null,
-    range: js.Tuple2[Double, Double] = null
-  ): Statement = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (conditionExpression != null) __obj.updateDynamic("conditionExpression")(conditionExpression.asInstanceOf[js.Any])
-    if (initExpression != null) __obj.updateDynamic("initExpression")(initExpression.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (loopExpression != null) __obj.updateDynamic("loopExpression")(loopExpression.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Statement]
-  }
-  @scala.inline
-  def InlineAssemblyStatement(
-    body: AssemblyBlock,
-    language: String,
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.InlineAssemblyStatement,
-    loc: Location = null,
-    range: js.Tuple2[Double, Double] = null
-  ): Statement = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Statement]
-  }
-  @scala.inline
   def ThrowStatement(
     `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.ThrowStatement,
-    loc: Location = null,
-    range: js.Tuple2[Double, Double] = null
-  ): Statement = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Statement]
-  }
-  @scala.inline
-  def BreakStatement(
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.BreakStatement,
     loc: Location = null,
     range: js.Tuple2[Double, Double] = null
   ): Statement = {
@@ -148,14 +87,17 @@ object Statement {
     __obj.asInstanceOf[Statement]
   }
   @scala.inline
-  def EmitStatement(
-    eventCall: FunctionCall,
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.EmitStatement,
+  def IfStatement(
+    condition: Expression,
+    trueBody: Statement,
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.IfStatement,
+    falseBody: Statement = null,
     loc: Location = null,
     range: js.Tuple2[Double, Double] = null
   ): Statement = {
-    val __obj = js.Dynamic.literal(eventCall = eventCall.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], trueBody = trueBody.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (falseBody != null) __obj.updateDynamic("falseBody")(falseBody.asInstanceOf[js.Any])
     if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
@@ -168,6 +110,47 @@ object Statement {
     range: js.Tuple2[Double, Double] = null
   ): Statement = {
     val __obj = js.Dynamic.literal(statements = statements.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
+  @scala.inline
+  def ContinueStatement(
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.ContinueStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
+  @scala.inline
+  def VariableDeclarationStatement(
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.VariableDeclarationStatement,
+    variables: js.Array[ASTNode],
+    initialValue: Expression = null,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
+  @scala.inline
+  def InlineAssemblyStatement(
+    body: AssemblyBlock,
+    language: String,
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.InlineAssemblyStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
@@ -187,16 +170,33 @@ object Statement {
     __obj.asInstanceOf[Statement]
   }
   @scala.inline
-  def VariableDeclarationStatement(
-    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.VariableDeclarationStatement,
-    variables: js.Array[ASTNode],
-    initialValue: Expression = null,
+  def ForStatement(
+    body: Statement,
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.ForStatement,
+    conditionExpression: Expression = null,
+    initExpression: SimpleStatement = null,
+    loc: Location = null,
+    loopExpression: ExpressionStatement = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (conditionExpression != null) __obj.updateDynamic("conditionExpression")(conditionExpression.asInstanceOf[js.Any])
+    if (initExpression != null) __obj.updateDynamic("initExpression")(initExpression.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (loopExpression != null) __obj.updateDynamic("loopExpression")(loopExpression.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
+  @scala.inline
+  def EmitStatement(
+    eventCall: FunctionCall,
+    `type`: typingsSlinky.solidityDashParserDashAntlr.solidityDashParserDashAntlrStrings.EmitStatement,
     loc: Location = null,
     range: js.Tuple2[Double, Double] = null
   ): Statement = {
-    val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(eventCall = eventCall.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
     if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]

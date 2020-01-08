@@ -1,7 +1,5 @@
 package typingsSlinky.atUifabricMergeDashStyles
 
-import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.Diff
-import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
 import typingsSlinky.std.Extract
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick

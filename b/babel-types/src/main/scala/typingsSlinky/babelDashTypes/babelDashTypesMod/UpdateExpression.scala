@@ -1,6 +1,6 @@
 package typingsSlinky.babelDashTypes.babelDashTypesMod
 
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`++`
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.PlussignPlussign
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.`--`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ trait UpdateExpression
   extends Node
      with Expression {
   var argument: Expression
-  var operator: `++` | `--`
+  var operator: PlussignPlussign | `--`
   var prefix: Boolean
   @JSName("type")
   var type_UpdateExpression: typingsSlinky.babelDashTypes.babelDashTypesStrings.UpdateExpression
@@ -22,7 +22,7 @@ object UpdateExpression {
     argument: Expression,
     end: Double,
     loc: SourceLocation,
-    operator: `++` | `--`,
+    operator: PlussignPlussign | `--`,
     prefix: Boolean,
     start: Double,
     `type`: typingsSlinky.babelDashTypes.babelDashTypesStrings.UpdateExpression,
@@ -43,9 +43,9 @@ object UpdateExpression {
 @js.native
 object updateExpression extends js.Object {
   def apply(): UpdateExpression = js.native
-  def apply(operator: `++`): UpdateExpression = js.native
-  def apply(operator: `++`, argument: Expression): UpdateExpression = js.native
-  def apply(operator: `++`, argument: Expression, prefix: Boolean): UpdateExpression = js.native
+  def apply(operator: PlussignPlussign): UpdateExpression = js.native
+  def apply(operator: PlussignPlussign, argument: Expression): UpdateExpression = js.native
+  def apply(operator: PlussignPlussign, argument: Expression, prefix: Boolean): UpdateExpression = js.native
   def apply(operator: `--`): UpdateExpression = js.native
   def apply(operator: `--`, argument: Expression): UpdateExpression = js.native
   def apply(operator: `--`, argument: Expression, prefix: Boolean): UpdateExpression = js.native

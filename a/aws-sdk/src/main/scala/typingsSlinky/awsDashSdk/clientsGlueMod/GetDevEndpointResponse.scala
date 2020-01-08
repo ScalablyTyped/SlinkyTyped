@@ -1,0 +1,23 @@
+package typingsSlinky.awsDashSdk.clientsGlueMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GetDevEndpointResponse extends js.Object {
+  /**
+    * A DevEndpoint definition.
+    */
+  var DevEndpoint: js.UndefOr[typingsSlinky.awsDashSdk.clientsGlueMod.DevEndpoint] = js.native
+}
+
+object GetDevEndpointResponse {
+  @scala.inline
+  def apply(DevEndpoint: DevEndpoint = null): GetDevEndpointResponse = {
+    val __obj = js.Dynamic.literal()
+    if (DevEndpoint != null) __obj.updateDynamic("DevEndpoint")(DevEndpoint.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GetDevEndpointResponse]
+  }
+}
+

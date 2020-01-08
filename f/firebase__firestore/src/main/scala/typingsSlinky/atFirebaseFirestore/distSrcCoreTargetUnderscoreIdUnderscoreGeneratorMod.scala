@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcCoreTargetUnderscoreIdUnderscoreGeneratorMod.TargetIdGenerator
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.TargetId
 import scala.scalajs.js
 import scala.scalajs.js.`|`

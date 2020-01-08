@@ -4,16 +4,10 @@ import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenJsonstructuresMod.jsonstructures.JsonStructure
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Document
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.webservices.WsdlDescription
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IMxSchema
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.MxSchema
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.XmlElement
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.XmlPrimitiveType
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.XmlSchema
-import typingsSlinky.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.XmlSchemaEntry
 import typingsSlinky.mendixmodelsdk.distSdkInternalInstancesMod.IList
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractEnum
@@ -56,7 +50,7 @@ object distGenXmlschemasMod extends js.Object {
     - typings.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
-    - typings.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IMxSchema because var conflicts: id, isLoaded, model, name, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IMxSchema because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined  */ @js.native
     abstract class MxSchema protected () extends Document {
       def this(
         model: AbstractModel,
@@ -65,6 +59,10 @@ object distGenXmlschemasMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
+      @JSName("model")
+      var model_FMxSchema: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MMxSchema(): FolderBase = js.native
     }
     
     /**
@@ -80,6 +78,8 @@ object distGenXmlschemasMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      @JSName("model")
+      var model_FXmlElement: IModel = js.native
     }
     
     @js.native
@@ -97,7 +97,7 @@ object distGenXmlschemasMod extends js.Object {
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
     - typings.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IMxSchema because Already inherited
-    - typings.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IXmlSchema because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenXmlschemasMod.xmlschemas.IXmlSchema because var conflicts: containerAsFolderBase, id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
     class XmlSchema protected () extends MxSchema {
       def this(
         model: AbstractModel,
@@ -106,8 +106,13 @@ object distGenXmlschemasMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
-      val entries: IList[XmlSchemaEntry] = js.native
-      var filePath: String = js.native
+      @JSName("model")
+      var model_FXmlSchema: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MXmlSchema(): FolderBase = js.native
+      def entries(): IList[XmlSchemaEntry] = js.native
+      def filePath(): String = js.native
+      def filePath(newValue: String): js.Any = js.native
     }
     
     @js.native
@@ -121,15 +126,20 @@ object distGenXmlschemasMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
-      val containerAsWsdlDescription: WsdlDescription = js.native
-      val containerAsXmlSchema: XmlSchema = js.native
-      var contents: String = js.native
-      var localizedContentsFormat: String = js.native
-      var localizedLocationFormat: String = js.native
-      var location: String = js.native
       @JSName("model")
-      var model_XmlSchemaEntry: IModel = js.native
-      var targetNamespace: String = js.native
+      var model_FXmlSchemaEntry: IModel = js.native
+      def containerAsWsdlDescription(): WsdlDescription = js.native
+      def containerAsXmlSchema(): XmlSchema = js.native
+      def contents(): String = js.native
+      def contents(newValue: String): js.Any = js.native
+      def localizedContentsFormat(): String = js.native
+      def localizedContentsFormat(newValue: String): js.Any = js.native
+      def localizedLocationFormat(): String = js.native
+      def localizedLocationFormat(newValue: String): js.Any = js.native
+      def location(): String = js.native
+      def location(newValue: String): js.Any = js.native
+      def targetNamespace(): String = js.native
+      def targetNamespace(newValue: String): js.Any = js.native
     }
     
     /* static members */

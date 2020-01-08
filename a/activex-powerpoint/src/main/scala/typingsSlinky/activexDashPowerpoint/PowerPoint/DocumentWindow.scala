@@ -17,7 +17,8 @@ class DocumentWindow protected () extends js.Object {
   var Left: Double = js.native
   val Panes: typingsSlinky.activexDashPowerpoint.PowerPoint.Panes = js.native
   val Parent: js.Any = js.native
-  var `PowerPoint.DocumentWindow_typekey`: DocumentWindow = js.native
+  @JSName("PowerPoint.DocumentWindow_typekey")
+  var PowerPointDotDocumentWindow_typekey: DocumentWindow = js.native
   val Presentation: typingsSlinky.activexDashPowerpoint.PowerPoint.Presentation = js.native
   val Selection: typingsSlinky.activexDashPowerpoint.PowerPoint.Selection = js.native
   var SplitHorizontal: Double = js.native

@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object libTypesMod {
   import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.poseDashCore.poseDashCoreBooleans.`false`
   import typingsSlinky.poseDashCore.poseDashCoreNumbers.`-1`
   import typingsSlinky.poseDashCore.poseDashCoreNumbers.`1`
-  import typingsSlinky.poseDashCore.poseDashCoreNumbers.`false`
   import typingsSlinky.std.Map
   import typingsSlinky.std.Set
 

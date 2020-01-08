@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object WatchDirectoryFlags extends js.Object {
   @js.native
   sealed trait Recursive extends WatchDirectoryFlags
   
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.WatchDirectoryFlags.None with Double = js.native
-  /* 1 */ val Recursive: typingsSlinky.typescript.typescriptMod.WatchDirectoryFlags.Recursive with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WatchDirectoryFlags with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Recursive extends TopLevel[Recursive with Double]
+  
 }
 

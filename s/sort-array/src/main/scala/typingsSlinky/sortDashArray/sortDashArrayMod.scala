@@ -1,8 +1,5 @@
 package typingsSlinky.sortDashArray
 
-import typingsSlinky.sortDashArray.sortDashArrayMod.ColumnNames
-import typingsSlinky.sortDashArray.sortDashArrayMod.CustomOrder
-import typingsSlinky.sortDashArray.sortDashArrayMod.CustomOrderTypes
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import scala.scalajs.js

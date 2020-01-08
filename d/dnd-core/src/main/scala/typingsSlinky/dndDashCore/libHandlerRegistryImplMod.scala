@@ -1,6 +1,5 @@
 package typingsSlinky.dndDashCore
 
-import typingsSlinky.dndDashCore.libHandlerRegistryImplMod.HandlerRegistryImpl
 import typingsSlinky.dndDashCore.libInterfacesMod.DragSource
 import typingsSlinky.dndDashCore.libInterfacesMod.DropTarget
 import typingsSlinky.dndDashCore.libInterfacesMod.HandlerRegistry

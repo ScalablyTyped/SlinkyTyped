@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.appsV1beta2ReplicaSetListMod.ReplicaSetList
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`apps/v1beta2`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.appsSlashv1beta2
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.apps.v1beta2.ReplicaSet
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object appsV1beta2ReplicaSetListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`apps/v1beta2`] = js.native
+    val apiVersion: Output[appsSlashv1beta2] = js.native
     /**
       * List of ReplicaSets. More info:
       * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller

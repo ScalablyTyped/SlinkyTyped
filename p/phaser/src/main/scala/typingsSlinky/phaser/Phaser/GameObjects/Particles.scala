@@ -7,11 +7,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Pipeline
 import typingsSlinky.phaser.Phaser.GameObjects.Components.ScrollFactor
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.GameObjects.Particles.EmitterOp
-import typingsSlinky.phaser.Phaser.GameObjects.Particles.GravityWell
-import typingsSlinky.phaser.Phaser.GameObjects.Particles.Particle
-import typingsSlinky.phaser.Phaser.GameObjects.Particles.ParticleEmitter
-import typingsSlinky.phaser.Phaser.GameObjects.Particles.ParticleEmitterManager
 import typingsSlinky.phaser.Phaser.GameObjects.Particles.Zones.DeathZone
 import typingsSlinky.phaser.Phaser.GameObjects.Particles.Zones.EdgeZone
 import typingsSlinky.phaser.Phaser.GameObjects.Particles.Zones.RandomZone

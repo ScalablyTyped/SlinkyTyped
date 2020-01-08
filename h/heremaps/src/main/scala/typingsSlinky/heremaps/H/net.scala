@@ -1,6 +1,6 @@
 package typingsSlinky.heremaps.H
 
-import typingsSlinky.heremaps.H.net.Request.State
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +25,17 @@ object net extends js.Object {
       @js.native
       sealed trait UNSENT extends State
       
-      /* 2 */ val DONE: typingsSlinky.heremaps.H.net.Request.State.DONE with Double = js.native
-      /* 1 */ val OPENED: typingsSlinky.heremaps.H.net.Request.State.OPENED with Double = js.native
-      /* 0 */ val UNSENT: typingsSlinky.heremaps.H.net.Request.State.UNSENT with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[State with Double] = js.native
+      /* 2 */ @js.native
+      object DONE extends TopLevel[DONE with Double]
+      
+      /* 1 */ @js.native
+      object OPENED extends TopLevel[OPENED with Double]
+      
+      /* 0 */ @js.native
+      object UNSENT extends TopLevel[UNSENT with Double]
+      
     }
     
     // TODO no idea how this interface is set up, investigate

@@ -1,9 +1,8 @@
 package typingsSlinky.enhancedDashResolve
 
-import typingsSlinky.enhancedDashResolve.enhancedDashResolveNumbers.`true`
+import typingsSlinky.enhancedDashResolve.enhancedDashResolveBooleans.`true`
 import typingsSlinky.enhancedDashResolve.libCommonDashTypesMod.CommonFileSystemMethod
 import typingsSlinky.enhancedDashResolve.libConcordMod.Dictionary
-import typingsSlinky.enhancedDashResolve.libStorageMod.Storage
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.NodeJS.Timer
 import scala.scalajs.js

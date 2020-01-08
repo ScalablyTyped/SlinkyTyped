@@ -1,13 +1,5 @@
 package typingsSlinky.glDashMatrix
 
-import typingsSlinky.glDashMatrix.glDashMatrixMod.mat2
-import typingsSlinky.glDashMatrix.glDashMatrixMod.mat2d
-import typingsSlinky.glDashMatrix.glDashMatrixMod.mat3
-import typingsSlinky.glDashMatrix.glDashMatrixMod.mat4
-import typingsSlinky.glDashMatrix.glDashMatrixMod.quat
-import typingsSlinky.glDashMatrix.glDashMatrixMod.vec2
-import typingsSlinky.glDashMatrix.glDashMatrixMod.vec3
-import typingsSlinky.glDashMatrix.glDashMatrixMod.vec4
 import typingsSlinky.std.Float32Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

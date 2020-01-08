@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ImeMode extends js.Object {
   @js.native
   sealed trait Inactive extends ImeMode
   
-  /* 0 */ val Active: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.ImeMode.Active with scala.Double = js.native
-  /* 1 */ val Auto: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.ImeMode.Auto with scala.Double = js.native
-  /* 2 */ val Disabled: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.ImeMode.Disabled with scala.Double = js.native
-  /* 3 */ val Inactive: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.ImeMode.Inactive with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[ImeMode with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[ImeMode with Double] = js.native
+  /* 0 */ @js.native
+  object Active extends TopLevel[Active with Double]
+  
+  /* 1 */ @js.native
+  object Auto extends TopLevel[Auto with Double]
+  
+  /* 2 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 3 */ @js.native
+  object Inactive extends TopLevel[Inactive with Double]
+  
 }
 

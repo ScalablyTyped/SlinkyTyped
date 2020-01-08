@@ -1,6 +1,5 @@
 package typingsSlinky.tarn
 
-import typingsSlinky.tarn.libPromiseInspectionMod.PromiseInspectionArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

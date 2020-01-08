@@ -1,5 +1,6 @@
 package typingsSlinky.jsDashClipper.ClipperLib
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object PolyType extends js.Object {
   @js.native
   sealed trait ptSubject extends PolyType
   
-  /* 1 */ val ptClip: typingsSlinky.jsDashClipper.ClipperLib.PolyType.ptClip with Double = js.native
-  /* 0 */ val ptSubject: typingsSlinky.jsDashClipper.ClipperLib.PolyType.ptSubject with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PolyType with Double] = js.native
+  /* 1 */ @js.native
+  object ptClip extends TopLevel[ptClip with Double]
+  
+  /* 0 */ @js.native
+  object ptSubject extends TopLevel[ptSubject with Double]
+  
 }
 

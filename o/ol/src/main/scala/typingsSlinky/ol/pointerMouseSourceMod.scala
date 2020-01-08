@@ -1,7 +1,6 @@
 package typingsSlinky.ol
 
 import org.scalajs.dom.raw.Event
-import typingsSlinky.ol.pointerMouseSourceMod.MouseSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

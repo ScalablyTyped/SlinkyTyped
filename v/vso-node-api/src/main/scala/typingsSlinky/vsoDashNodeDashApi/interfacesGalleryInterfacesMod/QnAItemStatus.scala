@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,10 +26,16 @@ object QnAItemStatus extends js.Object {
   @js.native
   sealed trait UserEditable extends QnAItemStatus
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.QnAItemStatus.None with Double = js.native
-  /* 2 */ val PublisherCreated: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.QnAItemStatus.PublisherCreated with Double = js.native
-  /* 1 */ val UserEditable: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.QnAItemStatus.UserEditable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QnAItemStatus with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object PublisherCreated extends TopLevel[PublisherCreated with Double]
+  
+  /* 1 */ @js.native
+  object UserEditable extends TopLevel[UserEditable with Double]
+  
 }
 

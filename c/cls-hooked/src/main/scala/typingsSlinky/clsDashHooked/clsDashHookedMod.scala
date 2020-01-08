@@ -1,6 +1,5 @@
 package typingsSlinky.clsDashHooked
 
-import typingsSlinky.clsDashHooked.clsDashHookedMod.Namespace
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

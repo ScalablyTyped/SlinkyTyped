@@ -4,7 +4,6 @@ import typingsSlinky.cometd.cometdMod.CometD
 import typingsSlinky.cometd.cometdMod.Extension
 import typingsSlinky.cometd.cometdMod.Listener
 import typingsSlinky.cometd.cometdMod.Message
-import typingsSlinky.cometd.timeSyncExtensionMod.TimeSyncExtension
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

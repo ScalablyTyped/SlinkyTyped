@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object NavigationBarMode extends js.Object {
   @js.native
   sealed trait minified extends NavigationBarMode
   
-  /* 0 */ val compact: typingsSlinky.bingmaps.Microsoft.Maps.NavigationBarMode.compact with Double = js.native
-  /* 1 */ val default: typingsSlinky.bingmaps.Microsoft.Maps.NavigationBarMode.default with Double = js.native
-  /* 2 */ val minified: typingsSlinky.bingmaps.Microsoft.Maps.NavigationBarMode.minified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NavigationBarMode with Double] = js.native
+  /* 0 */ @js.native
+  object compact extends TopLevel[compact with Double]
+  
+  /* 1 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 2 */ @js.native
+  object minified extends TopLevel[minified with Double]
+  
 }
 

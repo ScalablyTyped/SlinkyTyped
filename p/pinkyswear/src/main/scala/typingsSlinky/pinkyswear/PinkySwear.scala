@@ -1,8 +1,6 @@
 package typingsSlinky.pinkyswear
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.pinkyswear.PinkySwear.GenericPromise
-import typingsSlinky.pinkyswear.PinkySwear.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

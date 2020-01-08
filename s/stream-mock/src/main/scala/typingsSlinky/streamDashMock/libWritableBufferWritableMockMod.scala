@@ -3,7 +3,6 @@ package typingsSlinky.streamDashMock
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.WritableOptions
-import typingsSlinky.streamDashMock.libWritableBufferWritableMockMod.BufferWritableMock
 import typingsSlinky.streamDashMock.libWritableIWritableMockMod.IWritableMock
 import scala.scalajs.js
 import scala.scalajs.js.`|`

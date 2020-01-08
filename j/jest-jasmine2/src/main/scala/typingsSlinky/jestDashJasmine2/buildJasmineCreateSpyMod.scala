@@ -1,6 +1,5 @@
 package typingsSlinky.jestDashJasmine2
 
-import typingsSlinky.jestDashJasmine2.buildJasmineCreateSpyMod.Fn
 import typingsSlinky.jestDashJasmine2.buildTypesMod.Spy
 import scala.scalajs.js
 import scala.scalajs.js.`|`

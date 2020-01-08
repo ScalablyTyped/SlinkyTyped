@@ -1,5 +1,6 @@
 package typingsSlinky.popmotionDashPose.libTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object BoundingBoxDimension extends js.Object {
   @js.native
   sealed trait width extends BoundingBoxDimension
   
-  /* "bottom" */ val bottom: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.bottom with String = js.native
-  /* "height" */ val height: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.height with String = js.native
-  /* "left" */ val left: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.left with String = js.native
-  /* "right" */ val right: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.right with String = js.native
-  /* "top" */ val top: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.top with String = js.native
-  /* "width" */ val width: typingsSlinky.popmotionDashPose.libTypesMod.BoundingBoxDimension.width with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BoundingBoxDimension with String] = js.native
+  /* "bottom" */ @js.native
+  object bottom extends TopLevel[bottom with String]
+  
+  /* "height" */ @js.native
+  object height extends TopLevel[height with String]
+  
+  /* "left" */ @js.native
+  object left extends TopLevel[left with String]
+  
+  /* "right" */ @js.native
+  object right extends TopLevel[right with String]
+  
+  /* "top" */ @js.native
+  object top extends TopLevel[top with String]
+  
+  /* "width" */ @js.native
+  object width extends TopLevel[width with String]
+  
 }
 

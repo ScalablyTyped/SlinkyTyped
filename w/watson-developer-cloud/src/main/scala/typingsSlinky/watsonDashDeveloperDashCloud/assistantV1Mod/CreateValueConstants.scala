@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateValueConstants.ValueType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,14 @@ object CreateValueConstants extends js.Object {
     @js.native
     sealed trait SYNONYMS extends ValueType
     
-    /* "patterns" */ val PATTERNS: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateValueConstants.ValueType.PATTERNS with String = js.native
-    /* "synonyms" */ val SYNONYMS: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateValueConstants.ValueType.SYNONYMS with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[ValueType with String] = js.native
+    /* "patterns" */ @js.native
+    object PATTERNS extends TopLevel[PATTERNS with String]
+    
+    /* "synonyms" */ @js.native
+    object SYNONYMS extends TopLevel[SYNONYMS with String]
+    
   }
   
 }

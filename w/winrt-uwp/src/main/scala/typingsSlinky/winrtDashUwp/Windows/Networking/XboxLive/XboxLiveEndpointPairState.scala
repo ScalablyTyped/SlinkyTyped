@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object XboxLiveEndpointPairState extends js.Object {
   @js.native
   sealed trait remoteEndpointTerminating extends XboxLiveEndpointPairState
   
-  /* 2 */ val creatingInbound: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.creatingInbound with Double = js.native
-  /* 1 */ val creatingOutbound: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.creatingOutbound with Double = js.native
-  /* 6 */ val deleted: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.deleted with Double = js.native
-  /* 4 */ val deletingLocally: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.deletingLocally with Double = js.native
-  /* 0 */ val invalid: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.invalid with Double = js.native
-  /* 3 */ val ready: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.ready with Double = js.native
-  /* 5 */ val remoteEndpointTerminating: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState.remoteEndpointTerminating with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[XboxLiveEndpointPairState with Double] = js.native
+  /* 2 */ @js.native
+  object creatingInbound extends TopLevel[creatingInbound with Double]
+  
+  /* 1 */ @js.native
+  object creatingOutbound extends TopLevel[creatingOutbound with Double]
+  
+  /* 6 */ @js.native
+  object deleted extends TopLevel[deleted with Double]
+  
+  /* 4 */ @js.native
+  object deletingLocally extends TopLevel[deletingLocally with Double]
+  
+  /* 0 */ @js.native
+  object invalid extends TopLevel[invalid with Double]
+  
+  /* 3 */ @js.native
+  object ready extends TopLevel[ready with Double]
+  
+  /* 5 */ @js.native
+  object remoteEndpointTerminating extends TopLevel[remoteEndpointTerminating with Double]
+  
 }
 

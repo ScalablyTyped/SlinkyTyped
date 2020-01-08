@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.braintreeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object TransactionRequestSource extends js.Object {
   @js.native
   sealed trait unscheduled extends TransactionRequestSource
   
-  /* "moto" */ val moto: typingsSlinky.braintree.braintreeMod.TransactionRequestSource.moto with String = js.native
-  /* "recurring" */ val recurring: typingsSlinky.braintree.braintreeMod.TransactionRequestSource.recurring with String = js.native
-  /* "recurring_first" */ val recurring_first: typingsSlinky.braintree.braintreeMod.TransactionRequestSource.recurring_first with String = js.native
-  /* "unscheduled" */ val unscheduled: typingsSlinky.braintree.braintreeMod.TransactionRequestSource.unscheduled with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TransactionRequestSource with String] = js.native
+  /* "moto" */ @js.native
+  object moto extends TopLevel[moto with String]
+  
+  /* "recurring" */ @js.native
+  object recurring extends TopLevel[recurring with String]
+  
+  /* "recurring_first" */ @js.native
+  object recurring_first extends TopLevel[recurring_first with String]
+  
+  /* "unscheduled" */ @js.native
+  object unscheduled extends TopLevel[unscheduled with String]
+  
 }
 

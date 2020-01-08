@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,33 +12,36 @@ sealed trait invocationEvent extends js.Object
 @js.native
 object invocationEvent extends js.Object {
   @js.native
-  sealed trait floatingButton
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent
+  sealed trait floatingButton extends invocationEvent
   
   @js.native
-  sealed trait none
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent
+  sealed trait none extends invocationEvent
   
   @js.native
-  sealed trait screenshot
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent
+  sealed trait screenshot extends invocationEvent
   
   @js.native
-  sealed trait shake
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent
+  sealed trait shake extends invocationEvent
   
   @js.native
-  sealed trait twoFingersSwipe
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent
+  sealed trait twoFingersSwipe extends invocationEvent
   
-  /* 4 */ val floatingButton: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent.floatingButton with Double = js.native
-  /* 0 */ val none: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent.none with Double = js.native
-  /* 2 */ val screenshot: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent.screenshot with Double = js.native
-  /* 1 */ val shake: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent.shake with Double = js.native
-  /* 3 */ val twoFingersSwipe: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent.twoFingersSwipe with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationEvent with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[invocationEvent with Double] = js.native
+  /* 4 */ @js.native
+  object floatingButton extends TopLevel[floatingButton with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object screenshot extends TopLevel[screenshot with Double]
+  
+  /* 1 */ @js.native
+  object shake extends TopLevel[shake with Double]
+  
+  /* 3 */ @js.native
+  object twoFingersSwipe extends TopLevel[twoFingersSwipe with Double]
+  
 }
 

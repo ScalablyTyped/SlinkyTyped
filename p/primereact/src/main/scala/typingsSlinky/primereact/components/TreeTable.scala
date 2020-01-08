@@ -3,8 +3,9 @@ package typingsSlinky.primereact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Columns
+import typingsSlinky.primereact.Anon_ColumnsDragIndex
 import typingsSlinky.primereact.Anon_Delta
 import typingsSlinky.primereact.Anon_First
 import typingsSlinky.primereact.Anon_MultiSortMeta
@@ -49,7 +50,7 @@ object TreeTable
     loadingIcon: String = null,
     metaKeySelection: js.UndefOr[Boolean] = js.undefined,
     multiSortMeta: js.Array[_] = null,
-    onColReorder: /* e */ Anon_Columns => Unit = null,
+    onColReorder: /* e */ Anon_ColumnsDragIndex => Unit = null,
     onCollapse: /* e */ Anon_NodeOriginalEvent => Unit = null,
     onColumnResizeEnd: /* e */ Anon_Delta => Unit = null,
     onContextMenuSelectionChange: /* e */ Anon_OriginalEventValue => Unit = null,
@@ -153,6 +154,7 @@ object TreeTable
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.treetableMod.TreeTable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.treetableMod.TreeTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TreeTableProps
 }
 

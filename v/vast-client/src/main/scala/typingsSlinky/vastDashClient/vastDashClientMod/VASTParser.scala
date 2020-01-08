@@ -1,7 +1,7 @@
 package typingsSlinky.vastDashClient.vastDashClientMod
 
 import org.scalajs.dom.raw.Document
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import typingsSlinky.vastDashClient.vastDashClientStrings.ERRORCODE

@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object MarkerTag extends js.Object {
   @js.native
   sealed trait Unnecessary extends MarkerTag
   
-  /* 2 */ val Deprecated: typingsSlinky.monacoDashEditor.monacoDashEditorMod.MarkerTag.Deprecated with Double = js.native
-  /* 1 */ val Unnecessary: typingsSlinky.monacoDashEditor.monacoDashEditorMod.MarkerTag.Unnecessary with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MarkerTag with Double] = js.native
+  /* 2 */ @js.native
+  object Deprecated extends TopLevel[Deprecated with Double]
+  
+  /* 1 */ @js.native
+  object Unnecessary extends TopLevel[Unnecessary with Double]
+  
 }
 

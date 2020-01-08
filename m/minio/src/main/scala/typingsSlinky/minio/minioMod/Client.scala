@@ -2,7 +2,7 @@ package typingsSlinky.minio.minioMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpsMod.AgentOptions
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.std.Date

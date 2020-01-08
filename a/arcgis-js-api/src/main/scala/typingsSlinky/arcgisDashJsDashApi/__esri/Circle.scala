@@ -2,10 +2,10 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -50,7 +50,7 @@ trait Circle extends Polygon {
     *
     * @default meters
     */
-  var radiusUnit: feet | kilometers | meters | miles | `nautical-miles` | yards = js.native
+  var radiusUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = js.native
 }
 
 @JSGlobal("__esri.Circle")

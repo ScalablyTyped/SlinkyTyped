@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Management.Deployment
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DeploymentOptions extends js.Object {
   @js.native
   sealed trait none extends DeploymentOptions
   
-  /* 2 */ val developmentMode: typingsSlinky.winrt.Windows.Management.Deployment.DeploymentOptions.developmentMode with Double = js.native
-  /* 1 */ val forceApplicationShutdown: typingsSlinky.winrt.Windows.Management.Deployment.DeploymentOptions.forceApplicationShutdown with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrt.Windows.Management.Deployment.DeploymentOptions.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeploymentOptions with Double] = js.native
+  /* 2 */ @js.native
+  object developmentMode extends TopLevel[developmentMode with Double]
+  
+  /* 1 */ @js.native
+  object forceApplicationShutdown extends TopLevel[forceApplicationShutdown with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

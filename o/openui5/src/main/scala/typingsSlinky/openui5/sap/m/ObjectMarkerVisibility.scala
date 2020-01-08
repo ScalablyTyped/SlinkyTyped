@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ObjectMarkerVisibility extends js.Object {
   @js.native
   sealed trait TextOnly extends ObjectMarkerVisibility
   
-  /* 0 */ val IconAndText: typingsSlinky.openui5.sap.m.ObjectMarkerVisibility.IconAndText with Double = js.native
-  /* 1 */ val IconOnly: typingsSlinky.openui5.sap.m.ObjectMarkerVisibility.IconOnly with Double = js.native
-  /* 2 */ val TextOnly: typingsSlinky.openui5.sap.m.ObjectMarkerVisibility.TextOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ObjectMarkerVisibility with Double] = js.native
+  /* 0 */ @js.native
+  object IconAndText extends TopLevel[IconAndText with Double]
+  
+  /* 1 */ @js.native
+  object IconOnly extends TopLevel[IconOnly with Double]
+  
+  /* 2 */ @js.native
+  object TextOnly extends TopLevel[TextOnly with Double]
+  
 }
 

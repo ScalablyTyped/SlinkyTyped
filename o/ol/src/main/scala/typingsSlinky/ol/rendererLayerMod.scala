@@ -6,7 +6,6 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.featureMod.FeatureLike
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererLayerMod.LayerRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

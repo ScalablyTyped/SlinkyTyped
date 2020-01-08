@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,15 +78,31 @@ object DataChangeType extends js.Object {
   @js.native
   sealed trait unknown extends DataChangeType
   
-  /* "CellDeleted" */ val cellDeleted: typingsSlinky.officeDashJs.Excel.DataChangeType.cellDeleted with String = js.native
-  /* "CellInserted" */ val cellInserted: typingsSlinky.officeDashJs.Excel.DataChangeType.cellInserted with String = js.native
-  /* "ColumnDeleted" */ val columnDeleted: typingsSlinky.officeDashJs.Excel.DataChangeType.columnDeleted with String = js.native
-  /* "ColumnInserted" */ val columnInserted: typingsSlinky.officeDashJs.Excel.DataChangeType.columnInserted with String = js.native
-  /* "RangeEdited" */ val rangeEdited: typingsSlinky.officeDashJs.Excel.DataChangeType.rangeEdited with String = js.native
-  /* "RowDeleted" */ val rowDeleted: typingsSlinky.officeDashJs.Excel.DataChangeType.rowDeleted with String = js.native
-  /* "RowInserted" */ val rowInserted: typingsSlinky.officeDashJs.Excel.DataChangeType.rowInserted with String = js.native
-  /* "Unknown" */ val unknown: typingsSlinky.officeDashJs.Excel.DataChangeType.unknown with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DataChangeType with String] = js.native
+  /* "CellDeleted" */ @js.native
+  object cellDeleted extends TopLevel[cellDeleted with String]
+  
+  /* "CellInserted" */ @js.native
+  object cellInserted extends TopLevel[cellInserted with String]
+  
+  /* "ColumnDeleted" */ @js.native
+  object columnDeleted extends TopLevel[columnDeleted with String]
+  
+  /* "ColumnInserted" */ @js.native
+  object columnInserted extends TopLevel[columnInserted with String]
+  
+  /* "RangeEdited" */ @js.native
+  object rangeEdited extends TopLevel[rangeEdited with String]
+  
+  /* "RowDeleted" */ @js.native
+  object rowDeleted extends TopLevel[rowDeleted with String]
+  
+  /* "RowInserted" */ @js.native
+  object rowInserted extends TopLevel[rowInserted with String]
+  
+  /* "Unknown" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
 }
 

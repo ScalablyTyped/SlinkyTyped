@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sharepoint.Anon_High
-import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Administration.SearchObjectLevel
 import typingsSlinky.sharepoint.SP.ClientContext
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.JsonObjectResult
@@ -51,12 +51,20 @@ object Administration extends js.Object {
     @js.native
     sealed trait ssa extends SearchObjectLevel
     
-    /* 1 */ val spSite: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Administration.SearchObjectLevel.spSite with Double = js.native
-    /* 2 */ val spSiteSubscription: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Administration.SearchObjectLevel.spSiteSubscription with Double = js.native
-    /* 0 */ val spWeb: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Administration.SearchObjectLevel.spWeb with Double = js.native
-    /* 3 */ val ssa: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Administration.SearchObjectLevel.ssa with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[SearchObjectLevel with Double] = js.native
+    /* 1 */ @js.native
+    object spSite extends TopLevel[spSite with Double]
+    
+    /* 2 */ @js.native
+    object spSiteSubscription extends TopLevel[spSiteSubscription with Double]
+    
+    /* 0 */ @js.native
+    object spWeb extends TopLevel[spWeb with Double]
+    
+    /* 3 */ @js.native
+    object ssa extends TopLevel[ssa with Double]
+    
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.antdDashMobile
 
 import typingsSlinky.antdDashMobile.libPickerAbstractPickerMod.AbstractPicker
-import typingsSlinky.antdDashMobile.libPickerMod.Picker
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

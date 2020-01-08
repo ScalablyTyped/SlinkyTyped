@@ -1,6 +1,7 @@
 package typingsSlinky.validator.validatorMod
 
 import typingsSlinky.std.RegExp
+import typingsSlinky.validator.validatorBooleans.`false`
 import typingsSlinky.validator.validatorMod.validator.AlphaLocale
 import typingsSlinky.validator.validatorMod.validator.AlphanumericLocale
 import typingsSlinky.validator.validatorMod.validator.FloatLocale
@@ -26,7 +27,6 @@ import typingsSlinky.validator.validatorMod.validator.NormalizeEmailOptions
 import typingsSlinky.validator.validatorMod.validator.PostalCodeLocale
 import typingsSlinky.validator.validatorNumbers.`3`
 import typingsSlinky.validator.validatorNumbers.`5`
-import typingsSlinky.validator.validatorNumbers.`false`
 import typingsSlinky.validator.validatorStrings.`10`
 import typingsSlinky.validator.validatorStrings.`13`
 import typingsSlinky.validator.validatorStrings.`4`

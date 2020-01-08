@@ -12,6 +12,7 @@ import typingsSlinky.atNivoCore.atNivoCoreMod.CartesianMarkerProps
 import typingsSlinky.atNivoCore.atNivoCoreMod.Theme
 import typingsSlinky.atNivoLegends.atNivoLegendsMod.LegendProps
 import typingsSlinky.atNivoLine.LineSvgPropsDimensions
+import typingsSlinky.atNivoLine.atNivoLineBooleans.`false`
 import typingsSlinky.atNivoLine.atNivoLineMod.DataFormatter
 import typingsSlinky.atNivoLine.atNivoLineMod.Layer
 import typingsSlinky.atNivoLine.atNivoLineMod.LineSerieData
@@ -19,7 +20,6 @@ import typingsSlinky.atNivoLine.atNivoLineMod.LineSliceData
 import typingsSlinky.atNivoLine.atNivoLineMod.LineValue
 import typingsSlinky.atNivoLine.atNivoLineMod.TooltipFormatter
 import typingsSlinky.atNivoLine.atNivoLineMod.TooltipProp
-import typingsSlinky.atNivoLine.atNivoLineNumbers.`false`
 import typingsSlinky.atNivoLine.atNivoLineStrings.linear
 import typingsSlinky.atNivoLine.atNivoLineStrings.monotoneX
 import typingsSlinky.atNivoLine.atNivoLineStrings.monotoneY

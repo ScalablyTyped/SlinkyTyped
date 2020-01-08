@@ -1,5 +1,6 @@
 package typingsSlinky.epilogue.epilogueMod
 
+import typingsSlinky.sequelize.Anon_Plural
 import typingsSlinky.sequelize.sequelizeMod.AssociationForeignKeyOptions
 import typingsSlinky.sequelize.sequelizeMod.AssociationOptions
 import typingsSlinky.sequelize.sequelizeMod.AssociationScope
@@ -15,7 +16,7 @@ object ResourceAssociationOptions {
   @scala.inline
   def apply(
     removeForeignKeys: Boolean,
-    as: String | typingsSlinky.sequelize.Anon_Plural = null,
+    as: String | Anon_Plural = null,
     constraints: js.UndefOr[Boolean] = js.undefined,
     foreignKey: String | AssociationForeignKeyOptions = null,
     foreignKeyConstraint: js.UndefOr[Boolean] = js.undefined,

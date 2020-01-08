@@ -1,6 +1,5 @@
 package typingsSlinky.azureDashArmDashResource
 
-import typingsSlinky.azureDashArmDashResource.libLinkManagementLinkClientMod.ManagementLinkClient
 import typingsSlinky.azureDashArmDashResource.libLinkOperationsMod.Operations
 import typingsSlinky.azureDashArmDashResource.libLinkOperationsMod.ResourceLinks
 import typingsSlinky.msDashRest.msDashRestMod.ServiceClientCredentials

@@ -1,6 +1,5 @@
 package typingsSlinky.dojo.dojox
 
-import typingsSlinky.dojo.dojox.gantt.GanttTaskItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

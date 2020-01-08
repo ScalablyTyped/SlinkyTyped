@@ -1,6 +1,6 @@
 package typingsSlinky.connectDashPgDashSimple.connectDashPgDashSimpleMod
 
-import typingsSlinky.connectDashPgDashSimple.connectDashPgDashSimpleNumbers.`false`
+import typingsSlinky.connectDashPgDashSimple.connectDashPgDashSimpleBooleans.`false`
 import typingsSlinky.pg.pgMod.Pool
 import typingsSlinky.pg.pgMod.PoolConfig
 import scala.scalajs.js

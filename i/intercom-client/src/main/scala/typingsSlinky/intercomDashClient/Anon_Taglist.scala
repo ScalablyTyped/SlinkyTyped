@@ -1,6 +1,6 @@
 package typingsSlinky.intercomDashClient
 
-import typingsSlinky.intercomDashClient.intercomDashClientStrings.tagDOTlist
+import typingsSlinky.intercomDashClient.intercomDashClientStrings.tagDotlist
 import typingsSlinky.intercomDashClient.userMod.Tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 
 trait Anon_Taglist extends js.Object {
   var tags: js.Array[Tag]
-  var `type`: tagDOTlist
+  var `type`: tagDotlist
 }
 
 object Anon_Taglist {
   @scala.inline
-  def apply(tags: js.Array[Tag], `type`: tagDOTlist): Anon_Taglist = {
+  def apply(tags: js.Array[Tag], `type`: tagDotlist): Anon_Taglist = {
     val __obj = js.Dynamic.literal(tags = tags.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon_Taglist]

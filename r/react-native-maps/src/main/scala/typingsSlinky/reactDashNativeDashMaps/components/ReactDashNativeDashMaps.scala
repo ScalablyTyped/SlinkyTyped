@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashNativeDashMaps extends SharedApply_MapViewProps877434760[default] {
+object ReactDashNativeDashMaps extends SharedApply_MapViewProps1841398663[default] {
   @JSImport("react-native-maps", JSImport.Default)
   @js.native
   object componentImport extends js.Object

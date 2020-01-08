@@ -17,13 +17,14 @@ object File
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name, size, src, type */
+  /* The following DOM/SVG props were specified: name, size, type */
   def apply(
+    src: String,
     metadata: StringDictionary[js.Any] = null,
     origin: FilePondOrigin = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashFilepond.reactDashFilepondMod.File] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

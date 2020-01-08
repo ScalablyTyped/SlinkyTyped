@@ -1,6 +1,6 @@
 package typingsSlinky.fastifyDashAccepts
 
-import typingsSlinky.fastifyDashAccepts.fastifyDashAcceptsNumbers.`false`
+import typingsSlinky.fastifyDashAccepts.fastifyDashAcceptsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

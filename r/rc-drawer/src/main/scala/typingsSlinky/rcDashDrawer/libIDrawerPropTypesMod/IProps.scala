@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcDashDrawer.Anon_OpenTarget
-import typingsSlinky.rcDashDrawer.rcDashDrawerNumbers.`false`
+import typingsSlinky.rcDashDrawer.rcDashDrawerBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

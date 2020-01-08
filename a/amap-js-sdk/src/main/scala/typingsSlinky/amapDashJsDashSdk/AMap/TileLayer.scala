@@ -1,6 +1,5 @@
 package typingsSlinky.amapDashJsDashSdk.AMap
 
-import typingsSlinky.amapDashJsDashSdk.AMap.TileLayer.MapTypeLayer
 import typingsSlinky.amapDashJsDashSdk.Anon_AutoRefresh
 import typingsSlinky.amapDashJsDashSdk.Anon_DetectRetina
 import typingsSlinky.amapDashJsDashSdk.Anon_DetectRetinaMap

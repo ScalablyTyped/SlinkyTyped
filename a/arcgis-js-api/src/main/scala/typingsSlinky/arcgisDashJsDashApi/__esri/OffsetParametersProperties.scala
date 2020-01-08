@@ -1,5 +1,14 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.bevelled
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.mitered
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.rounded
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +44,13 @@ trait OffsetParametersProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-OffsetParameters.html#offsetHow)
     */
-  var offsetHow: js.UndefOr[String] = js.undefined
+  var offsetHow: js.UndefOr[bevelled | mitered | rounded] = js.undefined
   /**
-    * The offset distance unit. For a list of valid units see [esriSRUnitType constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnitType.htm) or [esriSRUnit2Type constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnit2Type.htm).  **Possible Values:** feet | kilometers | meters | miles | nautical-miles | yards
+    * The offset distance unit. For a list of valid units see [esriSRUnitType constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnitType.htm) or [esriSRUnit2Type constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnit2Type.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-OffsetParameters.html#offsetUnit)
     */
-  var offsetUnit: js.UndefOr[String] = js.undefined
+  var offsetUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
 }
 
 object OffsetParametersProperties {
@@ -50,8 +59,8 @@ object OffsetParametersProperties {
     bevelRatio: Int | Double = null,
     geometries: js.Array[GeometryProperties] = null,
     offsetDistance: Int | Double = null,
-    offsetHow: String = null,
-    offsetUnit: String = null
+    offsetHow: bevelled | mitered | rounded = null,
+    offsetUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null
   ): OffsetParametersProperties = {
     val __obj = js.Dynamic.literal()
     if (bevelRatio != null) __obj.updateDynamic("bevelRatio")(bevelRatio.asInstanceOf[js.Any])

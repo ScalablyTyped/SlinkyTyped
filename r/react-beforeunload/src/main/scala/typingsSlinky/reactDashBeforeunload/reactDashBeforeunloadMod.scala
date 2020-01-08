@@ -2,7 +2,6 @@ package typingsSlinky.reactDashBeforeunload
 
 import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactDashBeforeunload.reactDashBeforeunloadMod.UseBeforeunloadHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,7 +4,6 @@ import typingsSlinky.shopifyDashPrime.distInfrastructureMod.BaseService
 import typingsSlinky.shopifyDashPrime.distModelsPriceUnderscoreRuleMod.PriceRule
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.ListOptions
-import typingsSlinky.shopifyDashPrime.distServicesPriceUnderscoreRulesMod.PriceRules
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

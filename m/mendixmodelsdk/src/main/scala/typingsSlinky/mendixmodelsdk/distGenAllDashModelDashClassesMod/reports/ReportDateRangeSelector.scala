@@ -25,6 +25,7 @@ import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.WebLayoutContent
+import typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -54,7 +55,7 @@ class ReportDateRangeSelector protected ()
 @js.native
 object ReportDateRangeSelector extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -295,6 +296,15 @@ object ReportDateRangeSelector extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.distGenReportsMod.reports.ReportDateRangeSelector = js.native
+  /**
+    * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
+    * The new ReportDateRangeSelector will be automatically stored in the 'sidebarWidgets' property
+    * of the parent pages.NativeLayoutContent element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): typingsSlinky.mendixmodelsdk.distGenReportsMod.reports.ReportDateRangeSelector = js.native
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property

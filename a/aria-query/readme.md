@@ -10,9 +10,9 @@ Programmatic access to the ARIA specification
 | ------------------ | :-------------: |
 | Full name          | aria-query |
 | Keywords           | accessibility, ARIA |
-| # releases         | 9 |
-| # dependents       | 6 |
-| # downloads        | 86371946 |
+| # releases         | 8 |
+| # dependents       | 13 |
+| # downloads        | 149615815 |
 | # stars            | 0 |
 
 ## Links

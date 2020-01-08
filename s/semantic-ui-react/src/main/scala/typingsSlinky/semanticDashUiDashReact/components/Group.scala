@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Group extends SharedApply_IconGroupProps1625835420 {
+object Group extends SharedApply_IconGroupProps1271545576 {
   @JSImport("semantic-ui-react/dist/commonjs/elements/Icon/Icon", "default.Group")
   @js.native
   object componentImport extends js.Object

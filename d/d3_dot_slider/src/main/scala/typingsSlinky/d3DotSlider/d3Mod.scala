@@ -4,7 +4,6 @@ import typingsSlinky.d3DashSelection.d3DashSelectionMod.BaseType
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.Selection
 import typingsSlinky.d3DotSlider.d3DotSliderStrings.slide
 import typingsSlinky.d3DotSlider.d3DotSliderStrings.slideend
-import typingsSlinky.d3DotSlider.d3Mod.Slider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +17,9 @@ object d3Mod extends js.Object {
     def apply(
       sel: Selection[
           _, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for Datum */ _, 
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for Datum */ _, 
           BaseType, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for PDatum */ _
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for PDatum */ _
         ]
     ): Unit = js.native
     def animate(): Boolean | Double = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +22,16 @@ object HierarchyMode extends js.Object {
   @js.native
   sealed trait Standard extends HierarchyMode
   
-  /* 2 */ val Grouping: typingsSlinky.sharepoint.SP.JsGrid.HierarchyMode.Grouping with Double = js.native
-  /* 0 */ val None: typingsSlinky.sharepoint.SP.JsGrid.HierarchyMode.None with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.sharepoint.SP.JsGrid.HierarchyMode.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HierarchyMode with Double] = js.native
+  /* 2 */ @js.native
+  object Grouping extends TopLevel[Grouping with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

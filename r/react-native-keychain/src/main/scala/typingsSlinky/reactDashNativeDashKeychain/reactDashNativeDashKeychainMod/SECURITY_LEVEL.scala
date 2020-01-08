@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashKeychain.reactDashNativeDashKeychainMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SECURITY_LEVEL extends js.Object {
   @js.native
   sealed trait SECURE_SOFTWARE extends SECURITY_LEVEL
   
-  /* 2 */ val ANY: typingsSlinky.reactDashNativeDashKeychain.reactDashNativeDashKeychainMod.SECURITY_LEVEL.ANY with Double = js.native
-  /* 1 */ val SECURE_HARDWARE: typingsSlinky.reactDashNativeDashKeychain.reactDashNativeDashKeychainMod.SECURITY_LEVEL.SECURE_HARDWARE with Double = js.native
-  /* 0 */ val SECURE_SOFTWARE: typingsSlinky.reactDashNativeDashKeychain.reactDashNativeDashKeychainMod.SECURITY_LEVEL.SECURE_SOFTWARE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SECURITY_LEVEL with Double] = js.native
+  /* 2 */ @js.native
+  object ANY extends TopLevel[ANY with Double]
+  
+  /* 1 */ @js.native
+  object SECURE_HARDWARE extends TopLevel[SECURE_HARDWARE with Double]
+  
+  /* 0 */ @js.native
+  object SECURE_SOFTWARE extends TopLevel[SECURE_SOFTWARE with Double]
+  
 }
 

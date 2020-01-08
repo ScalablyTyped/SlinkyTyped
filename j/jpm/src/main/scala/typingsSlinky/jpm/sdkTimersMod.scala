@@ -1,7 +1,5 @@
 package typingsSlinky.jpm
 
-import typingsSlinky.jpm.sdkTimersMod.INTERVAL_ID
-import typingsSlinky.jpm.sdkTimersMod.TIMEOUT_ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

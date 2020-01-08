@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ZocialToolbarAndroid extends SharedApply_ToolbarAndroidProps1440336791[ToolbarAndroid] {
+object ZocialToolbarAndroid extends SharedApply_ToolbarAndroidProps1090159515[ToolbarAndroid] {
   @JSImport("react-native-vector-icons/Zocial", "default.ToolbarAndroid")
   @js.native
   object componentImport extends js.Object

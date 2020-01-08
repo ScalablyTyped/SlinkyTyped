@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Trash
-  extends SharedApply_BytesizeIconsProps219891393[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Trash] {
+  extends SharedApply_BytesizeIconsProps1658782493[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Trash] {
   @JSImport("react-bytesize-icons", "Trash")
   @js.native
   object componentImport extends js.Object

@@ -12,7 +12,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.atMaterialDashUiCore.Anon_Dense
 import typingsSlinky.atMaterialDashUiCore.PartialClassNameMapSelectClassKey
 import typingsSlinky.atMaterialDashUiCore.PartialMenuProps
@@ -312,6 +312,7 @@ object Select
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.atMaterialDashUiCore.selectMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SelectProps
 }
 

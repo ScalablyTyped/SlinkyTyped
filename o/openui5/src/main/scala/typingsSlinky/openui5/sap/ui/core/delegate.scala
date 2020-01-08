@@ -1,11 +1,10 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.openui5.sap.m.IconTabBar
 import typingsSlinky.openui5.sap.m.ListGrowingDirection
 import typingsSlinky.openui5.sap.ui.base.EventProvider
 import typingsSlinky.openui5.sap.ui.base.Object
-import typingsSlinky.openui5.sap.ui.core.delegate.ItemNavigation
-import typingsSlinky.openui5.sap.ui.core.delegate.ScrollEnablement
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -120,7 +119,7 @@ object delegate extends js.Object {
   
   @js.native
   class ScrollEnablement () extends Object {
-    def getChildPosition(vElement: typingsSlinky.jquery.JQueryStatic): js.Any = js.native
+    def getChildPosition(vElement: JQueryStatic): js.Any = js.native
     /**
       * Calculates scroll position of a child of a container.
       * @param vElement An element(DOM or jQuery) for which the scroll position will be calculated.

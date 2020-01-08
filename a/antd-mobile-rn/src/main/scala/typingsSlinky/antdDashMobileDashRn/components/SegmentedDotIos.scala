@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SegmentedDotIos extends SharedApply_SegmentedControlProps_1134990363[default] {
+object SegmentedDotIos extends SharedApply_SegmentedControlProps1018940630[default] {
   @JSImport("antd-mobile-rn/lib/segmented-control/segmented.ios", JSImport.Default)
   @js.native
   object componentImport extends js.Object

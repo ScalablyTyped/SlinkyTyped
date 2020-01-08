@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015ComponentCameraCameraMod.Camera
-import typingsSlinky.wonderDotJs.distEs2015ComponentCameraControllerBasicBasicCameraControllerMod.BasicCameraController
 import typingsSlinky.wonderDotJs.distEs2015ComponentCameraControllerCameraControllerMod.CameraController
 import scala.scalajs.js
 import scala.scalajs.js.`|`

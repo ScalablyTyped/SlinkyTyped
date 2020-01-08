@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object TimelineCriteriaStatusCode extends js.Object {
   @js.native
   sealed trait Unknown extends TimelineCriteriaStatusCode
   
-  /* 1 */ val InvalidFilterClause: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineCriteriaStatusCode.InvalidFilterClause with Double = js.native
-  /* 0 */ val OK: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineCriteriaStatusCode.OK with Double = js.native
-  /* 2 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineCriteriaStatusCode.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimelineCriteriaStatusCode with Double] = js.native
+  /* 1 */ @js.native
+  object InvalidFilterClause extends TopLevel[InvalidFilterClause with Double]
+  
+  /* 0 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
+  /* 2 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

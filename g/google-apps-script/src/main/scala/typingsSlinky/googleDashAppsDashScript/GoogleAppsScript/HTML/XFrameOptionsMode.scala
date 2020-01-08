@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.HTML
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,9 +31,13 @@ object XFrameOptionsMode extends js.Object {
   @js.native
   sealed trait DEFAULT extends XFrameOptionsMode
   
-  /* 0 */ val ALLOWALL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.HTML.XFrameOptionsMode.ALLOWALL with Double = js.native
-  /* 1 */ val DEFAULT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.HTML.XFrameOptionsMode.DEFAULT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[XFrameOptionsMode with Double] = js.native
+  /* 0 */ @js.native
+  object ALLOWALL extends TopLevel[ALLOWALL with Double]
+  
+  /* 1 */ @js.native
+  object DEFAULT extends TopLevel[DEFAULT with Double]
+  
 }
 

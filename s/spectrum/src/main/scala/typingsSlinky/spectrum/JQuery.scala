@@ -5,8 +5,8 @@ import typingsSlinky.spectrum.Spectrum.Options
 import typingsSlinky.spectrum.spectrumStrings.container
 import typingsSlinky.spectrum.spectrumStrings.destroy
 import typingsSlinky.spectrum.spectrumStrings.disable
-import typingsSlinky.spectrum.spectrumStrings.dragstartDOTspectrum
-import typingsSlinky.spectrum.spectrumStrings.dragstopDOTspectrum
+import typingsSlinky.spectrum.spectrumStrings.dragstartDotspectrum
+import typingsSlinky.spectrum.spectrumStrings.dragstopDotspectrum
 import typingsSlinky.spectrum.spectrumStrings.enable
 import typingsSlinky.spectrum.spectrumStrings.get
 import typingsSlinky.spectrum.spectrumStrings.hide
@@ -27,7 +27,7 @@ trait JQuery extends js.Object {
     */
   @JSName("on")
   def on_dragstartspectrum(
-    events: dragstartDOTspectrum,
+    events: dragstartDotspectrum,
     handler: js.Function2[/* eventObject */ JQueryEventObject, /* color */ Instance, _]
   ): JQuery = js.native
   /**
@@ -35,7 +35,7 @@ trait JQuery extends js.Object {
     */
   @JSName("on")
   def on_dragstopspectrum(
-    events: dragstopDOTspectrum,
+    events: dragstopDotspectrum,
     handler: js.Function2[/* eventObject */ JQueryEventObject, /* color */ Instance, _]
   ): JQuery = js.native
    // in most cases this is JQuery except for the get method which returns a tinycolorInstance

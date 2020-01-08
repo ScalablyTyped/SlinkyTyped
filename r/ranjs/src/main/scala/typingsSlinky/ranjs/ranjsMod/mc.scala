@@ -1,7 +1,6 @@
 package typingsSlinky.ranjs.ranjsMod
 
 import typingsSlinky.ranjs.Anon_Dim
-import typingsSlinky.ranjs.ranjsMod.mc.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

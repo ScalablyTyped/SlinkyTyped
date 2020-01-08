@@ -1,5 +1,6 @@
 package typingsSlinky.htmlDashValidator.htmlDashValidatorMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object ValidationMessageSubTypes extends js.Object {
   @js.native
   sealed trait warning extends ValidationMessageSubTypes
   
-  /* "fatal" */ val fatal: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageSubTypes.fatal with String = js.native
-  /* "internal" */ val internal: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageSubTypes.internal with String = js.native
-  /* "io" */ val io: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageSubTypes.io with String = js.native
-  /* "schema" */ val schema: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageSubTypes.schema with String = js.native
-  /* "warning" */ val warning: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageSubTypes.warning with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ValidationMessageSubTypes with String] = js.native
+  /* "fatal" */ @js.native
+  object fatal extends TopLevel[fatal with String]
+  
+  /* "internal" */ @js.native
+  object internal extends TopLevel[internal with String]
+  
+  /* "io" */ @js.native
+  object io extends TopLevel[io with String]
+  
+  /* "schema" */ @js.native
+  object schema extends TopLevel[schema with String]
+  
+  /* "warning" */ @js.native
+  object warning extends TopLevel[warning with String]
+  
 }
 

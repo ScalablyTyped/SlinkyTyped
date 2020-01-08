@@ -1,6 +1,6 @@
 package typingsSlinky.athenajs
 
-import typingsSlinky.athenajs.athenajsNumbers.`false`
+import typingsSlinky.athenajs.athenajsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -2,8 +2,6 @@ package typingsSlinky.atFirebaseDatabase
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilPathMod.Path
-import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilTreeMod.Tree
-import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilTreeMod.TreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

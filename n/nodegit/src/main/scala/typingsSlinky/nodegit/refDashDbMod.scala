@@ -1,6 +1,5 @@
 package typingsSlinky.nodegit
 
-import typingsSlinky.nodegit.refDashDbMod.Refdb
 import typingsSlinky.nodegit.repositoryMod.Repository
 import scala.scalajs.js
 import scala.scalajs.js.`|`

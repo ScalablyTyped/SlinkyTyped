@@ -7,7 +7,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.A
 import typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.ProjectActivityMetrics
 import typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.ProjectLanguageAnalytics
 import typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.RepositoryActivityMetrics
-import typingsSlinky.vsoDashNodeDashApi.projectAnalysisApiMod.IProjectAnalysisApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

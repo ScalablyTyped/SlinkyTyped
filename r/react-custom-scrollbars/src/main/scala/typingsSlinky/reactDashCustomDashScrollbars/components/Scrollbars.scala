@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Scrollbars
-  extends SharedApply_ScrollbarProps_463790660[
+  extends SharedApply_ScrollbarProps712037459[
       typingsSlinky.reactDashCustomDashScrollbars.reactDashCustomDashScrollbarsMod.Scrollbars
     ] {
   @JSImport("react-custom-scrollbars", "Scrollbars")

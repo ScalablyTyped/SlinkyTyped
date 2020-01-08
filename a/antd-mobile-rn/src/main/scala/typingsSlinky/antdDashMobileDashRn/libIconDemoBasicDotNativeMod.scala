@@ -2,7 +2,6 @@ package typingsSlinky.antdDashMobileDashRn
 
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.Icon
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.`Icon Example`
-import typingsSlinky.antdDashMobileDashRn.libIconDemoBasicDotNativeMod.IConDemo
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

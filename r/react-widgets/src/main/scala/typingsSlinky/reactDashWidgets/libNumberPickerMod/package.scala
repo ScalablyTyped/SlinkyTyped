@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libNumberPickerMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type NumberPicker = ReactElement
+  type NumberPickerClass = ReactComponentClass[NumberPickerProps]
 }

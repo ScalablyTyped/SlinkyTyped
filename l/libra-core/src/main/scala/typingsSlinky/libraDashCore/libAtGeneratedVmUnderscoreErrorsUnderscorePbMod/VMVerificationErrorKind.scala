@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -214,75 +215,211 @@ object VMVerificationErrorKind extends js.Object {
   @js.native
   sealed trait WRITEREFTYPEMISMATCHERROR extends VMVerificationErrorKind
   
-  /* 26 */ val ASSERTTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.ASSERTTYPEMISMATCHERROR with Double = js.native
-  /* 56 */ val BOOLEANOPTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BOOLEANOPTYPEMISMATCHERROR with Double = js.native
-  /* 34 */ val BORROWFIELDBADFIELDERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWFIELDBADFIELDERROR with Double = js.native
-  /* 35 */ val BORROWFIELDEXISTSMUTABLEBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWFIELDEXISTSMUTABLEBORROWERROR with Double = js.native
-  /* 33 */ val BORROWFIELDTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWFIELDTYPEMISMATCHERROR with Double = js.native
-  /* 60 */ val BORROWGLOBALNORESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWGLOBALNORESOURCEERROR with Double = js.native
-  /* 59 */ val BORROWGLOBALTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWGLOBALTYPEMISMATCHERROR with Double = js.native
-  /* 43 */ val BORROWLOCEXISTSBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWLOCEXISTSBORROWERROR with Double = js.native
-  /* 41 */ val BORROWLOCREFERENCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWLOCREFERENCEERROR with Double = js.native
-  /* 42 */ val BORROWLOCUNAVAILABLEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BORROWLOCUNAVAILABLEERROR with Double = js.native
-  /* 25 */ val BRTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.BRTYPEMISMATCHERROR with Double = js.native
-  /* 45 */ val CALLBORROWEDMUTABLEREFERENCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.CALLBORROWEDMUTABLEREFERENCEERROR with Double = js.native
-  /* 44 */ val CALLTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.CALLTYPEMISMATCHERROR with Double = js.native
-  /* 38 */ val COPYLOCEXISTSBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.COPYLOCEXISTSBORROWERROR with Double = js.native
-  /* 37 */ val COPYLOCRESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.COPYLOCRESOURCEERROR with Double = js.native
-  /* 36 */ val COPYLOCUNAVAILABLEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.COPYLOCUNAVAILABLEERROR with Double = js.native
-  /* 65 */ val CREATEACCOUNTTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.CREATEACCOUNTTYPEMISMATCHERROR with Double = js.native
-  /* 12 */ val DUPLICATEELEMENT: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.DUPLICATEELEMENT with Double = js.native
-  /* 57 */ val EQUALITYOPTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.EQUALITYOPTYPEMISMATCHERROR with Double = js.native
-  /* 58 */ val EXISTSRESOURCETYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.EXISTSRESOURCETYPEMISMATCHERROR with Double = js.native
-  /* 32 */ val FREEZEREFEXISTSMUTABLEBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.FREEZEREFEXISTSMUTABLEBORROWERROR with Double = js.native
-  /* 31 */ val FREEZEREFTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.FREEZEREFTYPEMISMATCHERROR with Double = js.native
-  /* 15 */ val INCONSISTENTFIELDS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INCONSISTENTFIELDS with Double = js.native
-  /* 1 */ val INDEXOUTOFBOUNDS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INDEXOUTOFBOUNDS with Double = js.native
-  /* 55 */ val INTEGEROPTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INTEGEROPTYPEMISMATCHERROR with Double = js.native
-  /* 7 */ val INVALIDFALLTHROUGH: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDFALLTHROUGH with Double = js.native
-  /* 4 */ val INVALIDFIELDDEFREFERENCE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDFIELDDEFREFERENCE with Double = js.native
-  /* 11 */ val INVALIDMAINFUNCTIONSIGNATURE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDMAINFUNCTIONSIGNATURE with Double = js.native
-  /* 13 */ val INVALIDMODULEHANDLE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDMODULEHANDLE with Double = js.native
-  /* 6 */ val INVALIDRESOURCEFIELD: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDRESOURCEFIELD with Double = js.native
-  /* 3 */ val INVALIDSIGNATURETOKEN: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.INVALIDSIGNATURETOKEN with Double = js.native
-  /* 8 */ val JOINFAILURE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.JOINFAILURE with Double = js.native
-  /* 17 */ val LOOKUPFAILED: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.LOOKUPFAILED with Double = js.native
-  /* 21 */ val MISSINGDEPENDENCY: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MISSINGDEPENDENCY with Double = js.native
-  /* 66 */ val MODULEADDRESSDOESNOTMATCHSENDER: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MODULEADDRESSDOESNOTMATCHSENDER with Double = js.native
-  /* 62 */ val MOVEFROMNORESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVEFROMNORESOURCEERROR with Double = js.native
-  /* 61 */ val MOVEFROMTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVEFROMTYPEMISMATCHERROR with Double = js.native
-  /* 40 */ val MOVELOCEXISTSBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVELOCEXISTSBORROWERROR with Double = js.native
-  /* 39 */ val MOVELOCUNAVAILABLEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVELOCUNAVAILABLEERROR with Double = js.native
-  /* 64 */ val MOVETOSENDERNORESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVETOSENDERNORESOURCEERROR with Double = js.native
-  /* 63 */ val MOVETOSENDERTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.MOVETOSENDERTYPEMISMATCHERROR with Double = js.native
-  /* 9 */ val NEGATIVESTACKSIZEWITHINBLOCK: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.NEGATIVESTACKSIZEWITHINBLOCK with Double = js.native
-  /* 67 */ val NOMODULEHANDLES: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.NOMODULEHANDLES with Double = js.native
-  /* 46 */ val PACKTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.PACKTYPEMISMATCHERROR with Double = js.native
-  /* 22 */ val POPREFERENCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.POPREFERENCEERROR with Double = js.native
-  /* 23 */ val POPRESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.POPRESOURCEERROR with Double = js.native
-  /* 2 */ val RANGEOUTOFBOUNDS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.RANGEOUTOFBOUNDS with Double = js.native
-  /* 50 */ val READREFEXISTSMUTABLEBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.READREFEXISTSMUTABLEBORROWERROR with Double = js.native
-  /* 49 */ val READREFRESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.READREFRESOURCEERROR with Double = js.native
-  /* 48 */ val READREFTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.READREFTYPEMISMATCHERROR with Double = js.native
-  /* 5 */ val RECURSIVESTRUCTDEFINITION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.RECURSIVESTRUCTDEFINITION with Double = js.native
-  /* 24 */ val RELEASEREFTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.RELEASEREFTYPEMISMATCHERROR with Double = js.native
-  /* 30 */ val RETTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.RETTYPEMISMATCHERROR with Double = js.native
-  /* 29 */ val RETUNSAFETODESTROYERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.RETUNSAFETODESTROYERROR with Double = js.native
-  /* 27 */ val STLOCTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.STLOCTYPEMISMATCHERROR with Double = js.native
-  /* 28 */ val STLOCUNSAFETODESTROYERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.STLOCUNSAFETODESTROYERROR with Double = js.native
-  /* 20 */ val TYPEMISMATCH: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.TYPEMISMATCH with Double = js.native
-  /* 19 */ val TYPERESOLUTIONFAILURE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.TYPERESOLUTIONFAILURE with Double = js.native
-  /* 10 */ val UNBALANCEDSTACK: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.UNBALANCEDSTACK with Double = js.native
-  /* 14 */ val UNIMPLEMENTEDHANDLE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.UNIMPLEMENTEDHANDLE with Double = js.native
-  /* 0 */ val UNKNOWNVERIFICATIONERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.UNKNOWNVERIFICATIONERROR with Double = js.native
-  /* 47 */ val UNPACKTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.UNPACKTYPEMISMATCHERROR with Double = js.native
-  /* 16 */ val UNUSEDFIELDS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.UNUSEDFIELDS with Double = js.native
-  /* 18 */ val VISIBILITYMISMATCH: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.VISIBILITYMISMATCH with Double = js.native
-  /* 53 */ val WRITEREFEXISTSBORROWERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.WRITEREFEXISTSBORROWERROR with Double = js.native
-  /* 54 */ val WRITEREFNOMUTABLEREFERENCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.WRITEREFNOMUTABLEREFERENCEERROR with Double = js.native
-  /* 52 */ val WRITEREFRESOURCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.WRITEREFRESOURCEERROR with Double = js.native
-  /* 51 */ val WRITEREFTYPEMISMATCHERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMVerificationErrorKind.WRITEREFTYPEMISMATCHERROR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VMVerificationErrorKind with Double] = js.native
+  /* 26 */ @js.native
+  object ASSERTTYPEMISMATCHERROR extends TopLevel[ASSERTTYPEMISMATCHERROR with Double]
+  
+  /* 56 */ @js.native
+  object BOOLEANOPTYPEMISMATCHERROR extends TopLevel[BOOLEANOPTYPEMISMATCHERROR with Double]
+  
+  /* 34 */ @js.native
+  object BORROWFIELDBADFIELDERROR extends TopLevel[BORROWFIELDBADFIELDERROR with Double]
+  
+  /* 35 */ @js.native
+  object BORROWFIELDEXISTSMUTABLEBORROWERROR extends TopLevel[BORROWFIELDEXISTSMUTABLEBORROWERROR with Double]
+  
+  /* 33 */ @js.native
+  object BORROWFIELDTYPEMISMATCHERROR extends TopLevel[BORROWFIELDTYPEMISMATCHERROR with Double]
+  
+  /* 60 */ @js.native
+  object BORROWGLOBALNORESOURCEERROR extends TopLevel[BORROWGLOBALNORESOURCEERROR with Double]
+  
+  /* 59 */ @js.native
+  object BORROWGLOBALTYPEMISMATCHERROR extends TopLevel[BORROWGLOBALTYPEMISMATCHERROR with Double]
+  
+  /* 43 */ @js.native
+  object BORROWLOCEXISTSBORROWERROR extends TopLevel[BORROWLOCEXISTSBORROWERROR with Double]
+  
+  /* 41 */ @js.native
+  object BORROWLOCREFERENCEERROR extends TopLevel[BORROWLOCREFERENCEERROR with Double]
+  
+  /* 42 */ @js.native
+  object BORROWLOCUNAVAILABLEERROR extends TopLevel[BORROWLOCUNAVAILABLEERROR with Double]
+  
+  /* 25 */ @js.native
+  object BRTYPEMISMATCHERROR extends TopLevel[BRTYPEMISMATCHERROR with Double]
+  
+  /* 45 */ @js.native
+  object CALLBORROWEDMUTABLEREFERENCEERROR extends TopLevel[CALLBORROWEDMUTABLEREFERENCEERROR with Double]
+  
+  /* 44 */ @js.native
+  object CALLTYPEMISMATCHERROR extends TopLevel[CALLTYPEMISMATCHERROR with Double]
+  
+  /* 38 */ @js.native
+  object COPYLOCEXISTSBORROWERROR extends TopLevel[COPYLOCEXISTSBORROWERROR with Double]
+  
+  /* 37 */ @js.native
+  object COPYLOCRESOURCEERROR extends TopLevel[COPYLOCRESOURCEERROR with Double]
+  
+  /* 36 */ @js.native
+  object COPYLOCUNAVAILABLEERROR extends TopLevel[COPYLOCUNAVAILABLEERROR with Double]
+  
+  /* 65 */ @js.native
+  object CREATEACCOUNTTYPEMISMATCHERROR extends TopLevel[CREATEACCOUNTTYPEMISMATCHERROR with Double]
+  
+  /* 12 */ @js.native
+  object DUPLICATEELEMENT extends TopLevel[DUPLICATEELEMENT with Double]
+  
+  /* 57 */ @js.native
+  object EQUALITYOPTYPEMISMATCHERROR extends TopLevel[EQUALITYOPTYPEMISMATCHERROR with Double]
+  
+  /* 58 */ @js.native
+  object EXISTSRESOURCETYPEMISMATCHERROR extends TopLevel[EXISTSRESOURCETYPEMISMATCHERROR with Double]
+  
+  /* 32 */ @js.native
+  object FREEZEREFEXISTSMUTABLEBORROWERROR extends TopLevel[FREEZEREFEXISTSMUTABLEBORROWERROR with Double]
+  
+  /* 31 */ @js.native
+  object FREEZEREFTYPEMISMATCHERROR extends TopLevel[FREEZEREFTYPEMISMATCHERROR with Double]
+  
+  /* 15 */ @js.native
+  object INCONSISTENTFIELDS extends TopLevel[INCONSISTENTFIELDS with Double]
+  
+  /* 1 */ @js.native
+  object INDEXOUTOFBOUNDS extends TopLevel[INDEXOUTOFBOUNDS with Double]
+  
+  /* 55 */ @js.native
+  object INTEGEROPTYPEMISMATCHERROR extends TopLevel[INTEGEROPTYPEMISMATCHERROR with Double]
+  
+  /* 7 */ @js.native
+  object INVALIDFALLTHROUGH extends TopLevel[INVALIDFALLTHROUGH with Double]
+  
+  /* 4 */ @js.native
+  object INVALIDFIELDDEFREFERENCE extends TopLevel[INVALIDFIELDDEFREFERENCE with Double]
+  
+  /* 11 */ @js.native
+  object INVALIDMAINFUNCTIONSIGNATURE extends TopLevel[INVALIDMAINFUNCTIONSIGNATURE with Double]
+  
+  /* 13 */ @js.native
+  object INVALIDMODULEHANDLE extends TopLevel[INVALIDMODULEHANDLE with Double]
+  
+  /* 6 */ @js.native
+  object INVALIDRESOURCEFIELD extends TopLevel[INVALIDRESOURCEFIELD with Double]
+  
+  /* 3 */ @js.native
+  object INVALIDSIGNATURETOKEN extends TopLevel[INVALIDSIGNATURETOKEN with Double]
+  
+  /* 8 */ @js.native
+  object JOINFAILURE extends TopLevel[JOINFAILURE with Double]
+  
+  /* 17 */ @js.native
+  object LOOKUPFAILED extends TopLevel[LOOKUPFAILED with Double]
+  
+  /* 21 */ @js.native
+  object MISSINGDEPENDENCY extends TopLevel[MISSINGDEPENDENCY with Double]
+  
+  /* 66 */ @js.native
+  object MODULEADDRESSDOESNOTMATCHSENDER extends TopLevel[MODULEADDRESSDOESNOTMATCHSENDER with Double]
+  
+  /* 62 */ @js.native
+  object MOVEFROMNORESOURCEERROR extends TopLevel[MOVEFROMNORESOURCEERROR with Double]
+  
+  /* 61 */ @js.native
+  object MOVEFROMTYPEMISMATCHERROR extends TopLevel[MOVEFROMTYPEMISMATCHERROR with Double]
+  
+  /* 40 */ @js.native
+  object MOVELOCEXISTSBORROWERROR extends TopLevel[MOVELOCEXISTSBORROWERROR with Double]
+  
+  /* 39 */ @js.native
+  object MOVELOCUNAVAILABLEERROR extends TopLevel[MOVELOCUNAVAILABLEERROR with Double]
+  
+  /* 64 */ @js.native
+  object MOVETOSENDERNORESOURCEERROR extends TopLevel[MOVETOSENDERNORESOURCEERROR with Double]
+  
+  /* 63 */ @js.native
+  object MOVETOSENDERTYPEMISMATCHERROR extends TopLevel[MOVETOSENDERTYPEMISMATCHERROR with Double]
+  
+  /* 9 */ @js.native
+  object NEGATIVESTACKSIZEWITHINBLOCK extends TopLevel[NEGATIVESTACKSIZEWITHINBLOCK with Double]
+  
+  /* 67 */ @js.native
+  object NOMODULEHANDLES extends TopLevel[NOMODULEHANDLES with Double]
+  
+  /* 46 */ @js.native
+  object PACKTYPEMISMATCHERROR extends TopLevel[PACKTYPEMISMATCHERROR with Double]
+  
+  /* 22 */ @js.native
+  object POPREFERENCEERROR extends TopLevel[POPREFERENCEERROR with Double]
+  
+  /* 23 */ @js.native
+  object POPRESOURCEERROR extends TopLevel[POPRESOURCEERROR with Double]
+  
+  /* 2 */ @js.native
+  object RANGEOUTOFBOUNDS extends TopLevel[RANGEOUTOFBOUNDS with Double]
+  
+  /* 50 */ @js.native
+  object READREFEXISTSMUTABLEBORROWERROR extends TopLevel[READREFEXISTSMUTABLEBORROWERROR with Double]
+  
+  /* 49 */ @js.native
+  object READREFRESOURCEERROR extends TopLevel[READREFRESOURCEERROR with Double]
+  
+  /* 48 */ @js.native
+  object READREFTYPEMISMATCHERROR extends TopLevel[READREFTYPEMISMATCHERROR with Double]
+  
+  /* 5 */ @js.native
+  object RECURSIVESTRUCTDEFINITION extends TopLevel[RECURSIVESTRUCTDEFINITION with Double]
+  
+  /* 24 */ @js.native
+  object RELEASEREFTYPEMISMATCHERROR extends TopLevel[RELEASEREFTYPEMISMATCHERROR with Double]
+  
+  /* 30 */ @js.native
+  object RETTYPEMISMATCHERROR extends TopLevel[RETTYPEMISMATCHERROR with Double]
+  
+  /* 29 */ @js.native
+  object RETUNSAFETODESTROYERROR extends TopLevel[RETUNSAFETODESTROYERROR with Double]
+  
+  /* 27 */ @js.native
+  object STLOCTYPEMISMATCHERROR extends TopLevel[STLOCTYPEMISMATCHERROR with Double]
+  
+  /* 28 */ @js.native
+  object STLOCUNSAFETODESTROYERROR extends TopLevel[STLOCUNSAFETODESTROYERROR with Double]
+  
+  /* 20 */ @js.native
+  object TYPEMISMATCH extends TopLevel[TYPEMISMATCH with Double]
+  
+  /* 19 */ @js.native
+  object TYPERESOLUTIONFAILURE extends TopLevel[TYPERESOLUTIONFAILURE with Double]
+  
+  /* 10 */ @js.native
+  object UNBALANCEDSTACK extends TopLevel[UNBALANCEDSTACK with Double]
+  
+  /* 14 */ @js.native
+  object UNIMPLEMENTEDHANDLE extends TopLevel[UNIMPLEMENTEDHANDLE with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWNVERIFICATIONERROR extends TopLevel[UNKNOWNVERIFICATIONERROR with Double]
+  
+  /* 47 */ @js.native
+  object UNPACKTYPEMISMATCHERROR extends TopLevel[UNPACKTYPEMISMATCHERROR with Double]
+  
+  /* 16 */ @js.native
+  object UNUSEDFIELDS extends TopLevel[UNUSEDFIELDS with Double]
+  
+  /* 18 */ @js.native
+  object VISIBILITYMISMATCH extends TopLevel[VISIBILITYMISMATCH with Double]
+  
+  /* 53 */ @js.native
+  object WRITEREFEXISTSBORROWERROR extends TopLevel[WRITEREFEXISTSBORROWERROR with Double]
+  
+  /* 54 */ @js.native
+  object WRITEREFNOMUTABLEREFERENCEERROR extends TopLevel[WRITEREFNOMUTABLEREFERENCEERROR with Double]
+  
+  /* 52 */ @js.native
+  object WRITEREFRESOURCEERROR extends TopLevel[WRITEREFRESOURCEERROR with Double]
+  
+  /* 51 */ @js.native
+  object WRITEREFTYPEMISMATCHERROR extends TopLevel[WRITEREFTYPEMISMATCHERROR with Double]
+  
 }
 

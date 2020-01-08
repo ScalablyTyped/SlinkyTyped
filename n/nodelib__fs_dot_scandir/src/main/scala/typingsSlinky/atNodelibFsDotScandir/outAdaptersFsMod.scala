@@ -1,7 +1,6 @@
 package typingsSlinky.atNodelibFsDotScandir
 
 import typingsSlinky.atNodelibFsDotScandir.atNodelibFsDotScandirStrings.buffer
-import typingsSlinky.atNodelibFsDotScandir.outAdaptersFsMod.FileSystemAdapter
 import typingsSlinky.node.Anon_BufferEncodingFalse
 import typingsSlinky.node.Anon_EncodingFalse
 import typingsSlinky.node.Anon_EncodingFalseWithFileTypes

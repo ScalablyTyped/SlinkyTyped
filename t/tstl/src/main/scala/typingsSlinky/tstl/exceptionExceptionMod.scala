@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.Error
-import typingsSlinky.tstl.exceptionExceptionMod.Exception
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +24,11 @@ object exceptionExceptionMod extends js.Object {
     override var message: String = js.native
     /* CompleteClass */
     override var name: String = js.native
+    /**
+      * The error name.
+      */
+    @JSName("name")
+    def name_MException(): String = js.native
     /**
       * Native function for `JSON.stringify()`.
       *

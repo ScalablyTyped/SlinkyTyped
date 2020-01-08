@@ -278,6 +278,9 @@ object CustomInput
   slinky.web.html.input.tag.type, 
   typingsSlinky.reactstrap.libCustomInputMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.input.tag.type, 
+  typingsSlinky.reactstrap.libCustomInputMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CustomInputProps
 }
 

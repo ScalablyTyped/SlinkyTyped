@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.apps.v1beta2
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`apps/v1beta2`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.appsSlashv1beta2
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait ReplicaSetList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`apps/v1beta2`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[appsSlashv1beta2]] = js.undefined
   /**
     * List of ReplicaSets. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
@@ -41,7 +41,7 @@ object ReplicaSetList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[ReplicaSet]]],
-    apiVersion: Input[`apps/v1beta2`] = null,
+    apiVersion: Input[appsSlashv1beta2] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.ReplicaSetList] = null,
     metadata: Input[ListMeta] = null
   ): ReplicaSetList = {

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,10 +10,6 @@ sealed trait FileType extends js.Object
 
 /**
   * Specifies the format in which to return the document.
-  *
-  * @remarks
-  * 
-  * `FileType.Text` is only supported in Word, `FileType.Pdf` is only supported in Word on the web, Windows, and Mac, and PowerPoint.
   */
 @JSGlobal("Office.FileType")
 @js.native
@@ -30,15 +27,21 @@ object FileType extends js.Object {
   sealed trait Pdf extends FileType
   
   /**
-    * Returns only the text of the document as a string. (Word only)
+    * Returns only the text of the document as a string.
     */
   @js.native
   sealed trait Text extends FileType
   
-  /* 1 */ val Compressed: typingsSlinky.officeDashJsDashPreview.Office.FileType.Compressed with Double = js.native
-  /* 2 */ val Pdf: typingsSlinky.officeDashJsDashPreview.Office.FileType.Pdf with Double = js.native
-  /* 0 */ val Text: typingsSlinky.officeDashJsDashPreview.Office.FileType.Text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileType with Double] = js.native
+  /* 1 */ @js.native
+  object Compressed extends TopLevel[Compressed with Double]
+  
+  /* 2 */ @js.native
+  object Pdf extends TopLevel[Pdf with Double]
+  
+  /* 0 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
 }
 

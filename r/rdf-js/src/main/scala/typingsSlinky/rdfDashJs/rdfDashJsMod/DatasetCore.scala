@@ -41,10 +41,21 @@ trait DatasetCore[Q /* <: BaseQuad */] extends js.Object {
     * @param object    The optional exact object to match.
     * @param graph     The optional exact graph to match.
     */
-  def `match`(): DatasetCore[Q] = js.native
-  def `match`(subject: Term): DatasetCore[Q] = js.native
-  def `match`(subject: Term, predicate: Term): DatasetCore[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term): DatasetCore[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term, graph: Term): DatasetCore[Q] = js.native
+  def `match`(): this.type = js.native
+  def `match`(subject: Null, predicate: Null, `object`: Null, graph: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Null, `object`: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Null, `object`: Term, graph: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Term, `object`: Null, graph: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Term, `object`: Term): this.type = js.native
+  def `match`(subject: Null, predicate: Term, `object`: Term, graph: Term): this.type = js.native
+  def `match`(subject: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Null, `object`: Null, graph: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Null, `object`: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Null, `object`: Term, graph: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Term, `object`: Null, graph: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Term, `object`: Term): this.type = js.native
+  def `match`(subject: Term, predicate: Term, `object`: Term, graph: Term): this.type = js.native
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.atAtlaskitButton.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.atAtlaskitButton.atAtlaskitButtonMod.ButtonAppearances
 import typingsSlinky.atAtlaskitButton.atAtlaskitButtonMod.ButtonGroupProps
@@ -23,6 +24,9 @@ object ButtonGroup
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.atAtlaskitButton.atAtlaskitButtonMod.ButtonGroup] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atAtlaskitButton.atAtlaskitButtonMod.ButtonGroup](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ButtonGroupProps
 }
 

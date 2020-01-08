@@ -3,7 +3,6 @@ package typingsSlinky.workboxDashStreams
 import typingsSlinky.std.HeadersInit
 import typingsSlinky.workboxDashRouting.typesRouteHandlerMod.RouteHandlerCallback
 import typingsSlinky.workboxDashRouting.typesRouteHandlerMod.RouteHandlerCallbackContext
-import typingsSlinky.workboxDashStreams.strategyMod.StreamsHandlerCallback
 import typingsSlinky.workboxDashStreams.typesStreamSourceMod.StreamSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`

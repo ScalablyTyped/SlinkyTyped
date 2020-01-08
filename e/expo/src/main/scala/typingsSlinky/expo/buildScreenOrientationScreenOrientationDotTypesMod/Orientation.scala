@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object Orientation extends js.Object {
   @js.native
   sealed trait UNKNOWN extends Orientation
   
-  /* "LANDSCAPE" */ val LANDSCAPE: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.LANDSCAPE with String = js.native
-  /* "LANDSCAPE_LEFT" */ val LANDSCAPE_LEFT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.LANDSCAPE_LEFT with String = js.native
-  /* "LANDSCAPE_RIGHT" */ val LANDSCAPE_RIGHT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.LANDSCAPE_RIGHT with String = js.native
-  /* "PORTRAIT" */ val PORTRAIT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.PORTRAIT with String = js.native
-  /* "PORTRAIT_DOWN" */ val PORTRAIT_DOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.PORTRAIT_DOWN with String = js.native
-  /* "PORTRAIT_UP" */ val PORTRAIT_UP: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.PORTRAIT_UP with String = js.native
-  /* "UNKNOWN" */ val UNKNOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.Orientation.UNKNOWN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Orientation with String] = js.native
+  /* "LANDSCAPE" */ @js.native
+  object LANDSCAPE extends TopLevel[LANDSCAPE with String]
+  
+  /* "LANDSCAPE_LEFT" */ @js.native
+  object LANDSCAPE_LEFT extends TopLevel[LANDSCAPE_LEFT with String]
+  
+  /* "LANDSCAPE_RIGHT" */ @js.native
+  object LANDSCAPE_RIGHT extends TopLevel[LANDSCAPE_RIGHT with String]
+  
+  /* "PORTRAIT" */ @js.native
+  object PORTRAIT extends TopLevel[PORTRAIT with String]
+  
+  /* "PORTRAIT_DOWN" */ @js.native
+  object PORTRAIT_DOWN extends TopLevel[PORTRAIT_DOWN with String]
+  
+  /* "PORTRAIT_UP" */ @js.native
+  object PORTRAIT_UP extends TopLevel[PORTRAIT_UP with String]
+  
+  /* "UNKNOWN" */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with String]
+  
 }
 

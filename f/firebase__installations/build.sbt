@@ -1,15 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "firebase__installations"
-version := "0.3.6-9aa394"
+version := "0.3.8-784c7a"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "firebase__app-types" % "0.4.7-fa5f63",
-  "org.scalablytyped.slinky" %%% "firebase__installations-types" % "0.2.2-35d213",
-  "org.scalablytyped.slinky" %%% "firebase__util" % "0.2.33-595e5d",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "firebase__app-types" % "0.5.0-b17dbb",
+  "org.scalablytyped.slinky" %%% "firebase__component" % "0.1.1-f087af",
+  "org.scalablytyped.slinky" %%% "firebase__installations-types" % "0.2.4-2be679",
+  "org.scalablytyped.slinky" %%% "firebase__util" % "0.2.36-7c6aeb",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

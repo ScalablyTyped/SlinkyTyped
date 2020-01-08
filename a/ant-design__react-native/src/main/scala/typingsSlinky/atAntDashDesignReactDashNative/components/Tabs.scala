@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeNumbers.`false`
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeBooleans.`false`
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.bottom
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.horizontal
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.top

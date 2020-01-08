@@ -1,6 +1,5 @@
 package typingsSlinky.atEsfxInternalDashTag
 
-import typingsSlinky.atEsfxInternalDashTag.atEsfxInternalDashTagMod.Tagged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

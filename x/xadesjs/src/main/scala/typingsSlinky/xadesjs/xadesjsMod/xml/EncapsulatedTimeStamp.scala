@@ -6,5 +6,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.EncapsulatedTimeStamp")
 @js.native
-class EncapsulatedTimeStamp () extends EncapsulatedPKIData
+class EncapsulatedTimeStamp ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.EncapsulatedTimeStamp
 

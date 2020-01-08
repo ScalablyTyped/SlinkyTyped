@@ -1,6 +1,5 @@
 package typingsSlinky.config
 
-import typingsSlinky.config.rawMod.RawConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

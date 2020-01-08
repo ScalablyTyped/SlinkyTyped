@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberComponent
 
-import typingsSlinky.atEmberComponent.helperMod.Helper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

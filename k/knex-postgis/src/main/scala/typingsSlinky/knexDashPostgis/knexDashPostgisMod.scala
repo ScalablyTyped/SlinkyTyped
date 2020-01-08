@@ -5,8 +5,6 @@ import typingsSlinky.knex.knexMod.Knex
 import typingsSlinky.knex.knexMod.QueryBuilder
 import typingsSlinky.knex.knexMod.Raw
 import typingsSlinky.knex.knexMod.SafePartial
-import typingsSlinky.knexDashPostgis.knexDashPostgisMod.ColumnName
-import typingsSlinky.knexDashPostgis.knexDashPostgisMod.KnexPostgis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

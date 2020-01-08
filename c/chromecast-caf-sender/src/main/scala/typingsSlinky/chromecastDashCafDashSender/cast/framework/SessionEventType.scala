@@ -1,5 +1,6 @@
 package typingsSlinky.chromecastDashCafDashSender.cast.framework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SessionEventType extends js.Object {
   @js.native
   sealed trait VOLUME_CHANGED extends SessionEventType
   
-  /* "activeinputstatechanged" */ val ACTIVE_INPUT_STATE_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.SessionEventType.ACTIVE_INPUT_STATE_CHANGED with String = js.native
-  /* "applicationmetadatachanged" */ val APPLICATION_METADATA_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.SessionEventType.APPLICATION_METADATA_CHANGED with String = js.native
-  /* "applicationstatuschanged" */ val APPLICATION_STATUS_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.SessionEventType.APPLICATION_STATUS_CHANGED with String = js.native
-  /* "mediasession" */ val MEDIA_SESSION: typingsSlinky.chromecastDashCafDashSender.cast.framework.SessionEventType.MEDIA_SESSION with String = js.native
-  /* "volumechanged" */ val VOLUME_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.SessionEventType.VOLUME_CHANGED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SessionEventType with String] = js.native
+  /* "activeinputstatechanged" */ @js.native
+  object ACTIVE_INPUT_STATE_CHANGED extends TopLevel[ACTIVE_INPUT_STATE_CHANGED with String]
+  
+  /* "applicationmetadatachanged" */ @js.native
+  object APPLICATION_METADATA_CHANGED extends TopLevel[APPLICATION_METADATA_CHANGED with String]
+  
+  /* "applicationstatuschanged" */ @js.native
+  object APPLICATION_STATUS_CHANGED extends TopLevel[APPLICATION_STATUS_CHANGED with String]
+  
+  /* "mediasession" */ @js.native
+  object MEDIA_SESSION extends TopLevel[MEDIA_SESSION with String]
+  
+  /* "volumechanged" */ @js.native
+  object VOLUME_CHANGED extends TopLevel[VOLUME_CHANGED with String]
+  
 }
 

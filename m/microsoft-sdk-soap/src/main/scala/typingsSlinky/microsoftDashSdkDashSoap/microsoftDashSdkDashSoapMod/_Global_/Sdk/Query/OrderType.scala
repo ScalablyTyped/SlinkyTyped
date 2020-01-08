@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object OrderType extends js.Object {
   @js.native
   sealed trait Descending extends OrderType
   
-  /* 0 */ val Ascending: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.OrderType.Ascending with scala.Double = js.native
-  /* 1 */ val Descending: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.OrderType.Descending with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[OrderType with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[OrderType with Double] = js.native
+  /* 0 */ @js.native
+  object Ascending extends TopLevel[Ascending with Double]
+  
+  /* 1 */ @js.native
+  object Descending extends TopLevel[Descending with Double]
+  
 }
 

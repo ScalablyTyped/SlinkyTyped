@@ -1,6 +1,6 @@
 package typingsSlinky.raven.ravenMod
 
-import typingsSlinky.raven.ravenNumbers.`false`
+import typingsSlinky.raven.ravenBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

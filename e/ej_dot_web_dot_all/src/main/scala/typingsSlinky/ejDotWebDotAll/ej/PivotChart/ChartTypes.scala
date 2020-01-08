@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PivotChart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,24 +79,58 @@ object ChartTypes extends js.Object {
   @js.native
   sealed trait StepLine extends ChartTypes
   
-  /* 3 */ val Area: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Area with Double = js.native
-  /* 8 */ val Bar: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Bar with Double = js.native
-  /* 16 */ val Bubble: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Bubble with Double = js.native
-  /* 2 */ val Column: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Column with Double = js.native
-  /* 14 */ val Doughnut: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Doughnut with Double = js.native
-  /* 13 */ val Funnel: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Funnel with Double = js.native
-  /* 0 */ val Line: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Line with Double = js.native
-  /* 7 */ val Pie: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Pie with Double = js.native
-  /* 12 */ val Pyramid: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Pyramid with Double = js.native
-  /* 15 */ val Scatter: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Scatter with Double = js.native
-  /* 1 */ val Spline: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.Spline with Double = js.native
-  /* 4 */ val SplineArea: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.SplineArea with Double = js.native
-  /* 9 */ val StackingArea: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.StackingArea with Double = js.native
-  /* 11 */ val StackingBar: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.StackingBar with Double = js.native
-  /* 10 */ val StackingColumn: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.StackingColumn with Double = js.native
-  /* 6 */ val StepArea: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.StepArea with Double = js.native
-  /* 5 */ val StepLine: typingsSlinky.ejDotWebDotAll.ej.PivotChart.ChartTypes.StepLine with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChartTypes with Double] = js.native
+  /* 3 */ @js.native
+  object Area extends TopLevel[Area with Double]
+  
+  /* 8 */ @js.native
+  object Bar extends TopLevel[Bar with Double]
+  
+  /* 16 */ @js.native
+  object Bubble extends TopLevel[Bubble with Double]
+  
+  /* 2 */ @js.native
+  object Column extends TopLevel[Column with Double]
+  
+  /* 14 */ @js.native
+  object Doughnut extends TopLevel[Doughnut with Double]
+  
+  /* 13 */ @js.native
+  object Funnel extends TopLevel[Funnel with Double]
+  
+  /* 0 */ @js.native
+  object Line extends TopLevel[Line with Double]
+  
+  /* 7 */ @js.native
+  object Pie extends TopLevel[Pie with Double]
+  
+  /* 12 */ @js.native
+  object Pyramid extends TopLevel[Pyramid with Double]
+  
+  /* 15 */ @js.native
+  object Scatter extends TopLevel[Scatter with Double]
+  
+  /* 1 */ @js.native
+  object Spline extends TopLevel[Spline with Double]
+  
+  /* 4 */ @js.native
+  object SplineArea extends TopLevel[SplineArea with Double]
+  
+  /* 9 */ @js.native
+  object StackingArea extends TopLevel[StackingArea with Double]
+  
+  /* 11 */ @js.native
+  object StackingBar extends TopLevel[StackingBar with Double]
+  
+  /* 10 */ @js.native
+  object StackingColumn extends TopLevel[StackingColumn with Double]
+  
+  /* 6 */ @js.native
+  object StepArea extends TopLevel[StepArea with Double]
+  
+  /* 5 */ @js.native
+  object StepLine extends TopLevel[StepLine with Double]
+  
 }
 

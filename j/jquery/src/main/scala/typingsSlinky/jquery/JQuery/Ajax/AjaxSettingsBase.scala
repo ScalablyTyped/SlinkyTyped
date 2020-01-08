@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.jquery.JQuery.PlainObject
 import typingsSlinky.jquery.JQuery.TypeOrArray
 import typingsSlinky.jquery.JQuery.jqXHR
-import typingsSlinky.jquery.jqueryNumbers.`false`
-import typingsSlinky.jquery.jqueryNumbers.`true`
+import typingsSlinky.jquery.jqueryBooleans.`false`
+import typingsSlinky.jquery.jqueryBooleans.`true`
 import typingsSlinky.jquery.jqueryStrings.html
 import typingsSlinky.jquery.jqueryStrings.json
 import typingsSlinky.jquery.jqueryStrings.jsonp

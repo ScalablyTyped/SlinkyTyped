@@ -9,7 +9,7 @@ import typingsSlinky.qlikDashEngineapi.Anon_QLineage
 import typingsSlinky.qlikDashEngineapi.Anon_QName
 import typingsSlinky.qlikDashEngineapi.Anon_Qk
 import typingsSlinky.qlikDashEngineapi.enigmaJS.IGeneratedAPI
-import typingsSlinky.qlikDashEngineapi.qlikDashEngineapiStrings.`/qListObjectDef`
+import typingsSlinky.qlikDashEngineapi.qlikDashEngineapiStrings.SlashqListObjectDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -109,9 +109,9 @@ trait IApp
   def clearAll(qLockedAlso: Boolean): js.Promise[Unit] = js.native
   def clearAll(qLockedAlso: Boolean, qStateName: String): js.Promise[Unit] = js.native
   @JSName("clearSelections")
-  def clearSelections_qListObjectDef(qPath: `/qListObjectDef`): js.Promise[Unit] = js.native
+  def clearSelections_qListObjectDef(qPath: SlashqListObjectDef): js.Promise[Unit] = js.native
   @JSName("clearSelections")
-  def clearSelections_qListObjectDef(qPath: `/qListObjectDef`, qColIndices: js.Array[Double]): js.Promise[Unit] = js.native
+  def clearSelections_qListObjectDef(qPath: SlashqListObjectDef, qColIndices: js.Array[Double]): js.Promise[Unit] = js.native
   /**
     * Clears entirely the undo and redo buffer.
     * @returns - A promise of a Qlik engine reply.

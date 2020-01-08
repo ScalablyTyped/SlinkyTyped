@@ -7,7 +7,6 @@ import typingsSlinky.plottable.buildSrcCoreInterfacesMod.IAccessor
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Projector
 import typingsSlinky.plottable.buildSrcPlotsCommonsMod.IPlotEntity
-import typingsSlinky.plottable.buildSrcPlotsLinePlotMod.CurveName
 import typingsSlinky.plottable.buildSrcPlotsXyPlotMod.XYPlot
 import scala.scalajs.js
 import scala.scalajs.js.`|`

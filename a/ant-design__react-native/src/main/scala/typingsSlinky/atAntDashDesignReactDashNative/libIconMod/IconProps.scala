@@ -7,6 +7,7 @@ import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNati
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.xs
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.xxs
 import typingsSlinky.reactDashNative.Anon_ActionName
+import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
@@ -48,7 +49,7 @@ object IconProps {
   @scala.inline
   def apply(
     name: IconNames,
-    accessibilityActions: js.Array[typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo] = null,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
     accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
     accessibilityHint: String = null,

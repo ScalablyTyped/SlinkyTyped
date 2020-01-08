@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Refresh extends SharedApply_SvgIconProps657215518[default] {
+object Refresh extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/navigation/refresh", JSImport.Default)
   @js.native
   object componentImport extends js.Object

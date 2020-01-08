@@ -1,11 +1,11 @@
 package typingsSlinky.sipDotJs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.events.eventsMod.EventEmitter
 import typingsSlinky.sipDotJs.libCoreMod.Logger
 import typingsSlinky.sipDotJs.libSessionMod.InviteClientContext
 import typingsSlinky.sipDotJs.libSessionMod.InviteServerContext
 import typingsSlinky.sipDotJs.libUAMod.UA
-import typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,13 +73,23 @@ object libWebSimpleMod extends js.Object {
     @js.native
     sealed trait STATUS_NULL extends SimpleStatus
     
-    /* 4 */ val STATUS_COMPLETED: typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus.STATUS_COMPLETED with Double = js.native
-    /* 3 */ val STATUS_CONNECTED: typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus.STATUS_CONNECTED with Double = js.native
-    /* 2 */ val STATUS_CONNECTING: typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus.STATUS_CONNECTING with Double = js.native
-    /* 1 */ val STATUS_NEW: typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus.STATUS_NEW with Double = js.native
-    /* 0 */ val STATUS_NULL: typingsSlinky.sipDotJs.libWebSimpleMod.SimpleStatus.STATUS_NULL with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[SimpleStatus with Double] = js.native
+    /* 4 */ @js.native
+    object STATUS_COMPLETED extends TopLevel[STATUS_COMPLETED with Double]
+    
+    /* 3 */ @js.native
+    object STATUS_CONNECTED extends TopLevel[STATUS_CONNECTED with Double]
+    
+    /* 2 */ @js.native
+    object STATUS_CONNECTING extends TopLevel[STATUS_CONNECTING with Double]
+    
+    /* 1 */ @js.native
+    object STATUS_NEW extends TopLevel[STATUS_NEW with Double]
+    
+    /* 0 */ @js.native
+    object STATUS_NULL extends TopLevel[STATUS_NULL with Double]
+    
   }
   
 }

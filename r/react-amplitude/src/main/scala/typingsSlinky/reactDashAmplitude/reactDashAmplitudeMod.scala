@@ -1,6 +1,5 @@
 package typingsSlinky.reactDashAmplitude
 
-import typingsSlinky.reactDashAmplitude.reactDashAmplitudeMod.AmplitudeInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

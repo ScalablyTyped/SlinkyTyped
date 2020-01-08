@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashBnet.passportDashBnetMod
 
-import typingsSlinky.passportDashBnet.passportDashBnetNumbers.`false`
+import typingsSlinky.passportDashBnet.passportDashBnetBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.vinylDashFs.vinylDashFsMod
 
-import typingsSlinky.vinylDashFs.vinylDashFsNumbers.`true`
+import typingsSlinky.vinylDashFs.vinylDashFsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MenuItem
-  extends SharedApply___MDLOtherProps_1000145419[typingsSlinky.reactDashMdl.reactDashMdlMod.MenuItem] {
+  extends SharedApply___MDLOtherProps980119514[typingsSlinky.reactDashMdl.reactDashMdlMod.MenuItem] {
   @JSImport("react-mdl", "MenuItem")
   @js.native
   object componentImport extends js.Object

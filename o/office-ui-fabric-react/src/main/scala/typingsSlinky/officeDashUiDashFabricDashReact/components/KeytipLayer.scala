@@ -26,8 +26,8 @@ object KeytipLayer
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: content */
   def apply(
+    content: String,
     componentRef: IRefObject[IKeytipLayer] = null,
     keytipExitSequences: js.Array[IKeytipTransitionKey] = null,
     keytipReturnSequences: js.Array[IKeytipTransitionKey] = null,
@@ -37,7 +37,7 @@ object KeytipLayer
     styles: IStyleFunctionOrObject[IKeytipLayerStyleProps, IKeytipLayerStyles] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
     if (keytipExitSequences != null) __obj.updateDynamic("keytipExitSequences")(keytipExitSequences.asInstanceOf[js.Any])
     if (keytipReturnSequences != null) __obj.updateDynamic("keytipReturnSequences")(keytipReturnSequences.asInstanceOf[js.Any])

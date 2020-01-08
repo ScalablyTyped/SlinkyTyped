@@ -1,6 +1,5 @@
 package typingsSlinky.jsmediatags
 
-import typingsSlinky.jsmediatags.build2MP4TagReaderMod.MP4TagReader
 import typingsSlinky.jsmediatags.typesMod.ByteRange
 import typingsSlinky.jsmediatags.typesMod.LoadCallbackType
 import typingsSlinky.jsmediatags.typesMod.TagFrame

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object EmailMailboxSmimeSigningAlgorithm extends js.Object {
   @js.native
   sealed trait sha1 extends EmailMailboxSmimeSigningAlgorithm
   
-  /* 0 */ val any: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm.any with Double = js.native
-  /* 2 */ val md5: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm.md5 with Double = js.native
-  /* 1 */ val sha1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm.sha1 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMailboxSmimeSigningAlgorithm with Double] = js.native
+  /* 0 */ @js.native
+  object any extends TopLevel[any with Double]
+  
+  /* 2 */ @js.native
+  object md5 extends TopLevel[md5 with Double]
+  
+  /* 1 */ @js.native
+  object sha1 extends TopLevel[sha1 with Double]
+  
 }
 

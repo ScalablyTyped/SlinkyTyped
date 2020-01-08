@@ -1,6 +1,6 @@
 package typingsSlinky.which.whichMod
 
-import typingsSlinky.which.whichNumbers.`true`
+import typingsSlinky.which.whichBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

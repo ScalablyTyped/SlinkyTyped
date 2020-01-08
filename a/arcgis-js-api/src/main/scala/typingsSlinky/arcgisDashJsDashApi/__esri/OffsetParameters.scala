@@ -1,6 +1,15 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.bevelled
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.mitered
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.rounded
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,13 +46,13 @@ trait OffsetParameters extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-OffsetParameters.html#offsetHow)
     */
-  var offsetHow: String = js.native
+  var offsetHow: bevelled | mitered | rounded = js.native
   /**
-    * The offset distance unit. For a list of valid units see [esriSRUnitType constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnitType.htm) or [esriSRUnit2Type constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnit2Type.htm).  **Possible Values:** feet | kilometers | meters | miles | nautical-miles | yards
+    * The offset distance unit. For a list of valid units see [esriSRUnitType constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnitType.htm) or [esriSRUnit2Type constants](http://resources.esri.com/help/9.3/ArcGISDesktop/ArcObjects/esriGeometry/esriSRUnit2Type.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-OffsetParameters.html#offsetUnit)
     */
-  var offsetUnit: String = js.native
+  var offsetUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = js.native
   /**
     * Converts an instance of  [this class]() to its ArcGIS portal JSON representation. See the [Using fromJSON()](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#using-fromjson) topic in the Guide for more information.
     *

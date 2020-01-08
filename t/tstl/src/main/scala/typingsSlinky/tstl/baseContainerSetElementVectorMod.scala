@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
-import typingsSlinky.tstl.baseContainerSetElementVectorMod.SetElementVector
 import typingsSlinky.tstl.baseContainerSetElementVectorMod.SetElementVector.Iterator
 import typingsSlinky.tstl.baseContainerSetElementVectorMod.SetElementVector.ReverseIterator
 import typingsSlinky.tstl.baseContainerVectorContainerMod.VectorContainer

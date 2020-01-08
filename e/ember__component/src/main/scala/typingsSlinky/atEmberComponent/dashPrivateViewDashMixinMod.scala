@@ -2,7 +2,6 @@ package typingsSlinky.atEmberComponent
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.atEmberComponent.dashPrivateViewDashMixinMod.ViewMixin
 import typingsSlinky.jquery.JQuery
 import typingsSlinky.jquery.JQuery.PlainObject
 import typingsSlinky.jquery.JQuery.Selector

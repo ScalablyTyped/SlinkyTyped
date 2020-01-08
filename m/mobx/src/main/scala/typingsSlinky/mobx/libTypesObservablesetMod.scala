@@ -4,10 +4,6 @@ import typingsSlinky.mobx.libTypesInterceptDashUtilsMod.IInterceptable
 import typingsSlinky.mobx.libTypesInterceptDashUtilsMod.IInterceptor
 import typingsSlinky.mobx.libTypesListenDashUtilsMod.IListenable
 import typingsSlinky.mobx.libTypesModifiersMod.IEnhancer
-import typingsSlinky.mobx.libTypesObservablesetMod.IObservableSetInitialValues
-import typingsSlinky.mobx.libTypesObservablesetMod.ISetDidChange
-import typingsSlinky.mobx.libTypesObservablesetMod.ISetWillChange
-import typingsSlinky.mobx.libTypesObservablesetMod.ObservableSet
 import typingsSlinky.mobx.libUtilsUtilsMod.Lambda
 import typingsSlinky.std.Set
 import scala.scalajs.js

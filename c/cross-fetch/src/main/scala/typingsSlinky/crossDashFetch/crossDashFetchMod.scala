@@ -182,8 +182,8 @@ object crossDashFetchMod extends js.Object {
   
   @js.native
   object Response
-    extends Instantiable1[/* body */ BodyInit, typingsSlinky.std.Response]
-       with Instantiable0[typingsSlinky.std.Response]
+    extends Instantiable0[typingsSlinky.std.Response]
+       with Instantiable1[/* body */ BodyInit, typingsSlinky.std.Response]
        with Instantiable2[
           (/* body */ BodyInit) | (/* body */ Null), 
           /* init */ typingsSlinky.std.ResponseInit, 

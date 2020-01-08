@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object PageType extends js.Object {
   @js.native
   sealed trait UNSUPPORTED extends PageType
   
-  /* 2 */ val LAYOUT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageType.LAYOUT with Double = js.native
-  /* 3 */ val MASTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageType.MASTER with Double = js.native
-  /* 1 */ val SLIDE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageType.SLIDE with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PageType.UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PageType with Double] = js.native
+  /* 2 */ @js.native
+  object LAYOUT extends TopLevel[LAYOUT with Double]
+  
+  /* 3 */ @js.native
+  object MASTER extends TopLevel[MASTER with Double]
+  
+  /* 1 */ @js.native
+  object SLIDE extends TopLevel[SLIDE with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
 }
 

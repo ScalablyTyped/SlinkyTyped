@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
-import typingsSlinky.plottable.buildSrcComponentsLegendMod.Legend
 import typingsSlinky.plottable.buildSrcCoreFormattersMod.Formatter
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.IEntity
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point

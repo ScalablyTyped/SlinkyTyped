@@ -1,7 +1,7 @@
 
 # Scala.js typings for vue
 
-Typings are for version 2.6.10
+Typings are for version 2.6.11
 
 ## Library description:
 Reactive, component-oriented view layer for modern web interfaces.
@@ -10,10 +10,10 @@ Reactive, component-oriented view layer for modern web interfaces.
 | ------------------ | :-------------: |
 | Full name          | vue |
 | Keywords           | vue |
-| # releases         | 51 |
-| # dependents       | 12768 |
-| # downloads        | 32080729 |
-| # stars            | 229 |
+| # releases         | 27 |
+| # dependents       | 20232 |
+| # downloads        | 52440663 |
+| # stars            | 234 |
 
 ## Links
 - [Homepage](https://github.com/vuejs/vue#readme)

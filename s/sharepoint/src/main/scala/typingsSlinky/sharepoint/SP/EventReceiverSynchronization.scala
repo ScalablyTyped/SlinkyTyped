@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object EventReceiverSynchronization extends js.Object {
   @js.native
   sealed trait synchronous extends EventReceiverSynchronization
   
-  /* 2 */ val asynchronous: typingsSlinky.sharepoint.SP.EventReceiverSynchronization.asynchronous with Double = js.native
-  /* 0 */ val defaultSynchronization: typingsSlinky.sharepoint.SP.EventReceiverSynchronization.defaultSynchronization with Double = js.native
-  /* 1 */ val synchronous: typingsSlinky.sharepoint.SP.EventReceiverSynchronization.synchronous with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EventReceiverSynchronization with Double] = js.native
+  /* 2 */ @js.native
+  object asynchronous extends TopLevel[asynchronous with Double]
+  
+  /* 0 */ @js.native
+  object defaultSynchronization extends TopLevel[defaultSynchronization with Double]
+  
+  /* 1 */ @js.native
+  object synchronous extends TopLevel[synchronous with Double]
+  
 }
 

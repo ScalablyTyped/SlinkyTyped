@@ -1,5 +1,6 @@
 package typingsSlinky.protractor.builtPluginsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object PromiseType extends js.Object {
   @js.native
   sealed trait WEBDRIVER extends PromiseType
   
-  /* 0 */ val Q: typingsSlinky.protractor.builtPluginsMod.PromiseType.Q with Double = js.native
-  /* 1 */ val WEBDRIVER: typingsSlinky.protractor.builtPluginsMod.PromiseType.WEBDRIVER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PromiseType with Double] = js.native
+  /* 0 */ @js.native
+  object Q extends TopLevel[Q with Double]
+  
+  /* 1 */ @js.native
+  object WEBDRIVER extends TopLevel[WEBDRIVER with Double]
+  
 }
 

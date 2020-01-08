@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object CommentThreadCollapsibleState extends js.Object {
   @js.native
   sealed trait Expanded extends CommentThreadCollapsibleState
   
-  /* 0 */ val Collapsed: typingsSlinky.vscode.vscodeMod.CommentThreadCollapsibleState.Collapsed with Double = js.native
-  /* 1 */ val Expanded: typingsSlinky.vscode.vscodeMod.CommentThreadCollapsibleState.Expanded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CommentThreadCollapsibleState with Double] = js.native
+  /* 0 */ @js.native
+  object Collapsed extends TopLevel[Collapsed with Double]
+  
+  /* 1 */ @js.native
+  object Expanded extends TopLevel[Expanded with Double]
+  
 }
 

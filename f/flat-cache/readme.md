@@ -10,9 +10,9 @@ A stupidly simple key/value storage using files to persist some data
 | ------------------ | :-------------: |
 | Full name          | flat-cache |
 | Keywords           | json cache, simple cache, file cache, key par, key value, cache |
-| # releases         | 7 |
-| # dependents       | 38 |
-| # downloads        | 181049488 |
+| # releases         | 6 |
+| # dependents       | 54 |
+| # downloads        | 322319918 |
 | # stars            | 6 |
 
 ## Links

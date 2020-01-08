@@ -1,6 +1,6 @@
 package typingsSlinky.atUifabricMergeDashStyles
 
-import typingsSlinky.atUifabricMergeDashStyles.atUifabricMergeDashStylesNumbers.`false`
+import typingsSlinky.atUifabricMergeDashStyles.atUifabricMergeDashStylesBooleans.`false`
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleMod.IStyle
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleMod.IStyleBaseArray
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleOptionsMod.IStyleOptions

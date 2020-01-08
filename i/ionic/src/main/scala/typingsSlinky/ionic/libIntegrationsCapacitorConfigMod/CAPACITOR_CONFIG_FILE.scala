@@ -1,12 +1,12 @@
 package typingsSlinky.ionic.libIntegrationsCapacitorConfigMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.ionic.ionicStrings.capacitorDOTconfigDOTjson
+import typingsSlinky.ionic.ionicStrings.capacitorDotconfigDotjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("ionic/lib/integrations/capacitor/config", "CAPACITOR_CONFIG_FILE")
 @js.native
-object CAPACITOR_CONFIG_FILE extends TopLevel[capacitorDOTconfigDOTjson]
+object CAPACITOR_CONFIG_FILE extends TopLevel[capacitorDotconfigDotjson]
 

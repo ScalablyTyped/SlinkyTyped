@@ -3,7 +3,6 @@ package typingsSlinky.atFirebaseStorage
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.atFirebaseStorage.distSrcImplementationErrorMod.FirebaseStorageError
-import typingsSlinky.atFirebaseStorage.distSrcImplementationRequestinfoMod.UrlParams
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.Headers
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.XhrIo
 import scala.scalajs.js

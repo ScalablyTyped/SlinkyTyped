@@ -939,9 +939,6 @@ object officeDashJsStrings {
   sealed trait Empty extends js.Object
   
   @js.native
-  sealed trait Empty_ extends js.Object
-  
-  @js.native
   sealed trait End extends js.Object
   
   @js.native
@@ -1855,12 +1852,6 @@ object officeDashJsStrings {
   
   @js.native
   sealed trait LinearTrend extends js.Object
-  
-  @js.native
-  sealed trait LinkedEntityFinanceIcon extends js.Object
-  
-  @js.native
-  sealed trait LinkedEntityMapIcon extends js.Object
   
   @js.native
   sealed trait List extends js.Object
@@ -3387,6 +3378,9 @@ object officeDashJsStrings {
   sealed trait Zodiac3 extends js.Object
   
   @js.native
+  sealed trait _empty extends js.Object
+  
+  @js.native
   sealed trait edit extends js.Object
   
   @js.native
@@ -4028,9 +4022,7 @@ object officeDashJsStrings {
   @scala.inline
   def Emphasis: Emphasis = "Emphasis".asInstanceOf[Emphasis]
   @scala.inline
-  def Empty: Empty = "".asInstanceOf[Empty]
-  @scala.inline
-  def Empty_ : Empty_ = "Empty".asInstanceOf[Empty_]
+  def Empty: Empty = "Empty".asInstanceOf[Empty]
   @scala.inline
   def End: End = "End".asInstanceOf[End]
   @scala.inline
@@ -4641,10 +4633,6 @@ object officeDashJsStrings {
   def LinearGradient: LinearGradient = "LinearGradient".asInstanceOf[LinearGradient]
   @scala.inline
   def LinearTrend: LinearTrend = "LinearTrend".asInstanceOf[LinearTrend]
-  @scala.inline
-  def LinkedEntityFinanceIcon: LinkedEntityFinanceIcon = "LinkedEntityFinanceIcon".asInstanceOf[LinkedEntityFinanceIcon]
-  @scala.inline
-  def LinkedEntityMapIcon: LinkedEntityMapIcon = "LinkedEntityMapIcon".asInstanceOf[LinkedEntityMapIcon]
   @scala.inline
   def List: List = "List".asInstanceOf[List]
   @scala.inline
@@ -5661,6 +5649,8 @@ object officeDashJsStrings {
   def Zodiac2: Zodiac2 = "Zodiac2".asInstanceOf[Zodiac2]
   @scala.inline
   def Zodiac3: Zodiac3 = "Zodiac3".asInstanceOf[Zodiac3]
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def edit: edit = "edit".asInstanceOf[edit]
   @scala.inline

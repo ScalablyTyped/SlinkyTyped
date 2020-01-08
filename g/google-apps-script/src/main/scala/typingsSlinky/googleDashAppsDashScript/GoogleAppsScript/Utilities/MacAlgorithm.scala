@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,33 +15,36 @@ sealed trait MacAlgorithm extends js.Object
 @js.native
 object MacAlgorithm extends js.Object {
   @js.native
-  sealed trait HMAC_MD5
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm
+  sealed trait HMAC_MD5 extends MacAlgorithm
   
   @js.native
-  sealed trait HMAC_SHA_1
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm
+  sealed trait HMAC_SHA_1 extends MacAlgorithm
   
   @js.native
-  sealed trait HMAC_SHA_256
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm
+  sealed trait HMAC_SHA_256 extends MacAlgorithm
   
   @js.native
-  sealed trait HMAC_SHA_384
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm
+  sealed trait HMAC_SHA_384 extends MacAlgorithm
   
   @js.native
-  sealed trait HMAC_SHA_512
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm
+  sealed trait HMAC_SHA_512 extends MacAlgorithm
   
-  /* 0 */ val HMAC_MD5: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm.HMAC_MD5 with Double = js.native
-  /* 1 */ val HMAC_SHA_1: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm.HMAC_SHA_1 with Double = js.native
-  /* 2 */ val HMAC_SHA_256: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm.HMAC_SHA_256 with Double = js.native
-  /* 3 */ val HMAC_SHA_384: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm.HMAC_SHA_384 with Double = js.native
-  /* 4 */ val HMAC_SHA_512: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm.HMAC_SHA_512 with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.MacAlgorithm with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[MacAlgorithm with Double] = js.native
+  /* 0 */ @js.native
+  object HMAC_MD5 extends TopLevel[HMAC_MD5 with Double]
+  
+  /* 1 */ @js.native
+  object HMAC_SHA_1 extends TopLevel[HMAC_SHA_1 with Double]
+  
+  /* 2 */ @js.native
+  object HMAC_SHA_256 extends TopLevel[HMAC_SHA_256 with Double]
+  
+  /* 3 */ @js.native
+  object HMAC_SHA_384 extends TopLevel[HMAC_SHA_384 with Double]
+  
+  /* 4 */ @js.native
+  object HMAC_SHA_512 extends TopLevel[HMAC_SHA_512 with Double]
+  
 }
 

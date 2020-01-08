@@ -2,7 +2,6 @@ package typingsSlinky.atUirouterCore
 
 import typingsSlinky.atUirouterCore.libResolveInterfaceMod.ResolvableLiteral
 import typingsSlinky.atUirouterCore.libResolveInterfaceMod.ResolvePolicy
-import typingsSlinky.atUirouterCore.libResolveResolvableMod.Resolvable
 import typingsSlinky.atUirouterCore.libResolveResolveContextMod.ResolveContext
 import typingsSlinky.atUirouterCore.libStateStateObjectMod.StateObject
 import typingsSlinky.atUirouterCore.libTransitionTransitionMod.Transition

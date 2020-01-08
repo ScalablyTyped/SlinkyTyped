@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NativeScreen
-  extends SharedApply_ScreenProps_382562364[
+  extends SharedApply_ScreenProps_811348465[
       typingsSlinky.reactDashNativeDashScreens.reactDashNativeDashScreensMod.NativeScreen
     ] {
   @JSImport("react-native-screens", "NativeScreen")

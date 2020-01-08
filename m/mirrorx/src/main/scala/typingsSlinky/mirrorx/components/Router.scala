@@ -3,6 +3,7 @@ package typingsSlinky.mirrorx.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.history.historyMod.History
 import typingsSlinky.history.historyMod.LocationState
@@ -29,6 +30,7 @@ object Router
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mirrorx.mirrorxMod.Router[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mirrorx.mirrorxMod.Router[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mirrorx.mirrorxMod.Router[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ConnectedRouterProps[js.Any]
 }
 

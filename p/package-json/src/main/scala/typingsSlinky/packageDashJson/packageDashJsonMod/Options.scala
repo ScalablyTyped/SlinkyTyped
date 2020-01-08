@@ -1,7 +1,7 @@
 package typingsSlinky.packageDashJson.packageDashJsonMod
 
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.packageDashJson.packageDashJsonNumbers.`false`
+import typingsSlinky.packageDashJson.packageDashJsonBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

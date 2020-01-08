@@ -1,5 +1,6 @@
 package typingsSlinky.ngmap.angular.map
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.PositionOptions
 import typingsSlinky.angular.angularMod.IPromise
@@ -38,15 +39,15 @@ trait INgMap extends js.Object {
     	 * @param  {IGetMapOptions}                    options optional
     	 * @return {angular.IPromise<google.maps.Map>}         promise
     	 */
-  def getMap(): IPromise[Map] = js.native
-  def getMap(options: IGetMapOptions): IPromise[Map] = js.native
+  def getMap(): IPromise[Map[Element]] = js.native
+  def getMap(options: IGetMapOptions): IPromise[Map[Element]] = js.native
   /**
     * Initialize map from mapId or the current first shown map
     * @param  {string}          mapId id of the map. default 0
     * @return {google.maps.Map}       map
     */
-  def initMap(): Map = js.native
-  def initMap(mapId: String): Map = js.native
+  def initMap(): Map[Element] = js.native
+  def initMap(mapId: String): Map[Element] = js.native
   /**
     * Observe attribute
     * @param  {string}             attrName attribute name

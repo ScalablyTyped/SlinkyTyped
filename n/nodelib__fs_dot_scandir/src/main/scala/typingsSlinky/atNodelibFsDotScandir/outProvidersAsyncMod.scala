@@ -1,6 +1,5 @@
 package typingsSlinky.atNodelibFsDotScandir
 
-import typingsSlinky.atNodelibFsDotScandir.outProvidersAsyncMod.AsyncCallback
 import typingsSlinky.atNodelibFsDotScandir.outSettingsMod.default
 import typingsSlinky.atNodelibFsDotScandir.outTypesMod.Entry
 import typingsSlinky.node.NodeJS.ErrnoException

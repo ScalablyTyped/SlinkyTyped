@@ -2,7 +2,7 @@ package typingsSlinky.officeDashJsDashPreview.Excel
 
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Boolean
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Double
-import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Empty_
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Empty
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Error
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Integer
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.RichValue
@@ -39,14 +39,14 @@ trait ChangedEventDetail extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueTypeAfter: RangeValueType | Unknown_ | Empty_ | String | Integer | Double | Boolean | Error | RichValue
+  var valueTypeAfter: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue
   /**
     *
     * Represents the type of value before changed
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueTypeBefore: RangeValueType | Unknown_ | Empty_ | String | Integer | Double | Boolean | Error | RichValue
+  var valueTypeBefore: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue
 }
 
 object ChangedEventDetail {
@@ -54,8 +54,8 @@ object ChangedEventDetail {
   def apply(
     valueAfter: js.Any,
     valueBefore: js.Any,
-    valueTypeAfter: RangeValueType | Unknown_ | Empty_ | String | Integer | Double | Boolean | Error | RichValue,
-    valueTypeBefore: RangeValueType | Unknown_ | Empty_ | String | Integer | Double | Boolean | Error | RichValue
+    valueTypeAfter: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue,
+    valueTypeBefore: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue
   ): ChangedEventDetail = {
     val __obj = js.Dynamic.literal(valueAfter = valueAfter.asInstanceOf[js.Any], valueBefore = valueBefore.asInstanceOf[js.Any], valueTypeAfter = valueTypeAfter.asInstanceOf[js.Any], valueTypeBefore = valueTypeBefore.asInstanceOf[js.Any])
   

@@ -2,7 +2,6 @@ package typingsSlinky.dojo.dojox.drawing
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.dojo.dojox.drawing.manager.Anchors
-import typingsSlinky.dojo.dojox.drawing.stencil._Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

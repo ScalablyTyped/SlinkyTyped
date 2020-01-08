@@ -1,6 +1,5 @@
 package typingsSlinky.geolib
 
-import typingsSlinky.geolib.esOrderByDistanceMod.DistanceFn
 import typingsSlinky.geolib.esTypesMod.GeolibInputCoordinates
 import scala.scalajs.js
 import scala.scalajs.js.`|`

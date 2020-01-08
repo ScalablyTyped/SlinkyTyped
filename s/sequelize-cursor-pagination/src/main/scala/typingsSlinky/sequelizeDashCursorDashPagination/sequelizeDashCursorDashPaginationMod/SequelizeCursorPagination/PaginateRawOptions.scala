@@ -10,7 +10,7 @@ import typingsSlinky.sequelize.sequelizeMod.col
 import typingsSlinky.sequelize.sequelizeMod.fn
 import typingsSlinky.sequelize.sequelizeMod.or
 import typingsSlinky.sequelize.sequelizeMod.where
-import typingsSlinky.sequelizeDashCursorDashPagination.sequelizeDashCursorDashPaginationNumbers.`true`
+import typingsSlinky.sequelizeDashCursorDashPagination.sequelizeDashCursorDashPaginationBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

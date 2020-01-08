@@ -1,5 +1,6 @@
 package typingsSlinky.ssDashUtils.ssutils
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ReadyState extends js.Object {
   @js.native
   sealed trait OPEN extends ReadyState
   
-  /* 2 */ val CLOSED: typingsSlinky.ssDashUtils.ssutils.ReadyState.CLOSED with Double = js.native
-  /* 0 */ val CONNECTING: typingsSlinky.ssDashUtils.ssutils.ReadyState.CONNECTING with Double = js.native
-  /* 1 */ val OPEN: typingsSlinky.ssDashUtils.ssutils.ReadyState.OPEN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadyState with Double] = js.native
+  /* 2 */ @js.native
+  object CLOSED extends TopLevel[CLOSED with Double]
+  
+  /* 0 */ @js.native
+  object CONNECTING extends TopLevel[CONNECTING with Double]
+  
+  /* 1 */ @js.native
+  object OPEN extends TopLevel[OPEN with Double]
+  
 }
 

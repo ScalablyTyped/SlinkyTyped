@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.DeleteFeedbackConstants.Model
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,14 @@ object DeleteFeedbackConstants extends js.Object {
     @js.native
     sealed trait TABLES extends Model
     
-    /* "contracts" */ val CONTRACTS: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.DeleteFeedbackConstants.Model.CONTRACTS with String = js.native
-    /* "tables" */ val TABLES: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.DeleteFeedbackConstants.Model.TABLES with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Model with String] = js.native
+    /* "contracts" */ @js.native
+    object CONTRACTS extends TopLevel[CONTRACTS with String]
+    
+    /* "tables" */ @js.native
+    object TABLES extends TopLevel[TABLES with String]
+    
   }
   
 }

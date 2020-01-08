@@ -1,5 +1,6 @@
 package typingsSlinky.synaptic.synapticMod.Layer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object connectionType extends js.Object {
   @js.native
   sealed trait ONE_TO_ONE extends connectionType
   
-  /* 0 */ val ALL_TO_ALL: typingsSlinky.synaptic.synapticMod.Layer.connectionType.ALL_TO_ALL with Double = js.native
-  /* 2 */ val ALL_TO_ELSE: typingsSlinky.synaptic.synapticMod.Layer.connectionType.ALL_TO_ELSE with Double = js.native
-  /* 1 */ val ONE_TO_ONE: typingsSlinky.synaptic.synapticMod.Layer.connectionType.ONE_TO_ONE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[connectionType with Double] = js.native
+  /* 0 */ @js.native
+  object ALL_TO_ALL extends TopLevel[ALL_TO_ALL with Double]
+  
+  /* 2 */ @js.native
+  object ALL_TO_ELSE extends TopLevel[ALL_TO_ELSE with Double]
+  
+  /* 1 */ @js.native
+  object ONE_TO_ONE extends TopLevel[ONE_TO_ONE with Double]
+  
 }
 

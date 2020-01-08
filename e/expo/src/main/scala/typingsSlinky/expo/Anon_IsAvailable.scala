@@ -2,7 +2,7 @@ package typingsSlinky.expo
 
 import typingsSlinky.expo.buildUpdatesUpdatesMod.Manifest
 import typingsSlinky.expo.buildUpdatesUpdatesMod.UpdateCheckResult
-import typingsSlinky.expo.expoNumbers.`true`
+import typingsSlinky.expo.expoBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

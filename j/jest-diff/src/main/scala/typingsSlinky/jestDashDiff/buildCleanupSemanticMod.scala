@@ -1,6 +1,5 @@
 package typingsSlinky.jestDashDiff
 
-import typingsSlinky.jestDashDiff.buildCleanupSemanticMod.Diff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

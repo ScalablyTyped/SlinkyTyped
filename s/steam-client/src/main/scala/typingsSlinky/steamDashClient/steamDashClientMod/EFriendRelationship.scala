@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object EFriendRelationship extends js.Object {
   @js.native
   sealed trait SuggestedFriend extends EFriendRelationship
   
-  /* 1 */ val Blocked: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.Blocked with Double = js.native
-  /* 3 */ val Friend: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.Friend with Double = js.native
-  /* 5 */ val Ignored: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.Ignored with Double = js.native
-  /* 6 */ val IgnoredFriend: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.IgnoredFriend with Double = js.native
-  /* 8 */ val Max: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.Max with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.None with Double = js.native
-  /* 4 */ val RequestInitiator: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.RequestInitiator with Double = js.native
-  /* 2 */ val RequestRecipient: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.RequestRecipient with Double = js.native
-  /* 7 */ val SuggestedFriend: typingsSlinky.steamDashClient.steamDashClientMod.EFriendRelationship.SuggestedFriend with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EFriendRelationship with Double] = js.native
+  /* 1 */ @js.native
+  object Blocked extends TopLevel[Blocked with Double]
+  
+  /* 3 */ @js.native
+  object Friend extends TopLevel[Friend with Double]
+  
+  /* 5 */ @js.native
+  object Ignored extends TopLevel[Ignored with Double]
+  
+  /* 6 */ @js.native
+  object IgnoredFriend extends TopLevel[IgnoredFriend with Double]
+  
+  /* 8 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object RequestInitiator extends TopLevel[RequestInitiator with Double]
+  
+  /* 2 */ @js.native
+  object RequestRecipient extends TopLevel[RequestRecipient with Double]
+  
+  /* 7 */ @js.native
+  object SuggestedFriend extends TopLevel[SuggestedFriend with Double]
+  
 }
 

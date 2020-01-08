@@ -1,6 +1,6 @@
 package typingsSlinky.viewportDashMercatorDashProject.viewportDashMercatorDashProjectMod
 
-import typingsSlinky.viewportDashMercatorDashProject.viewportDashMercatorDashProjectNumbers.`true`
+import typingsSlinky.viewportDashMercatorDashProject.viewportDashMercatorDashProjectBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.zdog.zdogMod
 
-import typingsSlinky.zdog.zdogNumbers.`false`
+import typingsSlinky.zdog.zdogBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

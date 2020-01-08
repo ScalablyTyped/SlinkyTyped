@@ -1,6 +1,5 @@
 package typingsSlinky.typescriptDashCollections
 
-import typingsSlinky.typescriptDashCollections.distLibFactoryDictionaryMod.FactoryDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

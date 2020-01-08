@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ReasonIdentifier extends js.Object {
   @js.native
   sealed trait KICK_SERVER extends ReasonIdentifier
   
-  /* 4 */ val KICK_CHANNEL: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.ReasonIdentifier.KICK_CHANNEL with Double = js.native
-  /* 5 */ val KICK_SERVER: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.ReasonIdentifier.KICK_SERVER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReasonIdentifier with Double] = js.native
+  /* 4 */ @js.native
+  object KICK_CHANNEL extends TopLevel[KICK_CHANNEL with Double]
+  
+  /* 5 */ @js.native
+  object KICK_SERVER extends TopLevel[KICK_SERVER with Double]
+  
 }
 

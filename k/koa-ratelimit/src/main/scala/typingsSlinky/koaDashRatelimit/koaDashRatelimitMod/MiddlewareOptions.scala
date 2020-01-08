@@ -1,7 +1,7 @@
 package typingsSlinky.koaDashRatelimit.koaDashRatelimitMod
 
 import typingsSlinky.koa.koaMod.Context
-import typingsSlinky.koaDashRatelimit.koaDashRatelimitNumbers.`false`
+import typingsSlinky.koaDashRatelimit.koaDashRatelimitBooleans.`false`
 import typingsSlinky.redis.redisMod.RedisClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -2,7 +2,6 @@ package typingsSlinky.jqueryDashMouseDashExit.jqueryDashMouseDashExitMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery.TriggeredEvent
-import typingsSlinky.jqueryDashMouseDashExit.jqueryDashMouseDashExitMod._Global_.JQuery
 import typingsSlinky.jqueryDashMouseDashExit.jqueryDashMouseDashExitStrings.mouseExit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TumblrShareCount extends SharedApply_ShareCountComponentProps_2142398689 {
+object TumblrShareCount extends SharedApply_ShareCountComponentProps_1842317732 {
   @JSImport("react-share", "TumblrShareCount")
   @js.native
   object componentImport extends js.Object

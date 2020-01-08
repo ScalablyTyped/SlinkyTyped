@@ -1,5 +1,6 @@
 package typingsSlinky.clearbladejsDashClient.CbClient
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object MessagingQOS extends js.Object {
   @js.native
   sealed trait MESSAGING_QOS_EXACTLY_ONCE extends MessagingQOS
   
-  /* 1 */ val MESSAGING_QOS_AT_LEAST_ONCE: typingsSlinky.clearbladejsDashClient.CbClient.MessagingQOS.MESSAGING_QOS_AT_LEAST_ONCE with Double = js.native
-  /* 0 */ val MESSAGING_QOS_AT_MOST_ONCE: typingsSlinky.clearbladejsDashClient.CbClient.MessagingQOS.MESSAGING_QOS_AT_MOST_ONCE with Double = js.native
-  /* 2 */ val MESSAGING_QOS_EXACTLY_ONCE: typingsSlinky.clearbladejsDashClient.CbClient.MessagingQOS.MESSAGING_QOS_EXACTLY_ONCE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MessagingQOS with Double] = js.native
+  /* 1 */ @js.native
+  object MESSAGING_QOS_AT_LEAST_ONCE extends TopLevel[MESSAGING_QOS_AT_LEAST_ONCE with Double]
+  
+  /* 0 */ @js.native
+  object MESSAGING_QOS_AT_MOST_ONCE extends TopLevel[MESSAGING_QOS_AT_MOST_ONCE with Double]
+  
+  /* 2 */ @js.native
+  object MESSAGING_QOS_EXACTLY_ONCE extends TopLevel[MESSAGING_QOS_EXACTLY_ONCE with Double]
+  
 }
 

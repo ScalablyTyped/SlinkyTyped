@@ -2,8 +2,6 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcScalesMod.IIncludedValuesProvider
 import typingsSlinky.plottable.buildSrcScalesMod.ITransformableScale
-import typingsSlinky.plottable.buildSrcScalesScaleMod.IScaleCallback
-import typingsSlinky.plottable.buildSrcScalesScaleMod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

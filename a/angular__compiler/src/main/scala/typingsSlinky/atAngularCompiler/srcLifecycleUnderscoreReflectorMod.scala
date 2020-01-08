@@ -1,7 +1,7 @@
 package typingsSlinky.atAngularCompiler
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atAngularCompiler.srcCompileUnderscoreReflectorMod.CompileReflector
-import typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,16 +41,32 @@ object srcLifecycleUnderscoreReflectorMod extends js.Object {
     @js.native
     sealed trait OnInit extends LifecycleHooks
     
-    /* 5 */ val AfterContentChecked: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.AfterContentChecked with Double = js.native
-    /* 4 */ val AfterContentInit: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.AfterContentInit with Double = js.native
-    /* 7 */ val AfterViewChecked: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.AfterViewChecked with Double = js.native
-    /* 6 */ val AfterViewInit: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.AfterViewInit with Double = js.native
-    /* 2 */ val DoCheck: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.DoCheck with Double = js.native
-    /* 3 */ val OnChanges: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.OnChanges with Double = js.native
-    /* 1 */ val OnDestroy: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.OnDestroy with Double = js.native
-    /* 0 */ val OnInit: typingsSlinky.atAngularCompiler.srcLifecycleUnderscoreReflectorMod.LifecycleHooks.OnInit with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[LifecycleHooks with Double] = js.native
+    /* 5 */ @js.native
+    object AfterContentChecked extends TopLevel[AfterContentChecked with Double]
+    
+    /* 4 */ @js.native
+    object AfterContentInit extends TopLevel[AfterContentInit with Double]
+    
+    /* 7 */ @js.native
+    object AfterViewChecked extends TopLevel[AfterViewChecked with Double]
+    
+    /* 6 */ @js.native
+    object AfterViewInit extends TopLevel[AfterViewInit with Double]
+    
+    /* 2 */ @js.native
+    object DoCheck extends TopLevel[DoCheck with Double]
+    
+    /* 3 */ @js.native
+    object OnChanges extends TopLevel[OnChanges with Double]
+    
+    /* 1 */ @js.native
+    object OnDestroy extends TopLevel[OnDestroy with Double]
+    
+    /* 0 */ @js.native
+    object OnInit extends TopLevel[OnInit with Double]
+    
   }
   
 }

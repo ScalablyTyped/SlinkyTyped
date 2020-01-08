@@ -1,7 +1,6 @@
 package typingsSlinky.protractor
 
 import typingsSlinky.protractor.builtConfigMod.Config
-import typingsSlinky.protractor.builtConfigParserMod.ConfigParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

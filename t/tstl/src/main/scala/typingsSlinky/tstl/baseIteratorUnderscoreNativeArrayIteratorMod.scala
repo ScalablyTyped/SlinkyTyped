@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseIteratorUnderscoreNativeArrayIteratorMod._NativeArrayIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ object baseIteratorUnderscoreNativeArrayIteratorMod extends js.Object {
     def this(data: js.Array[T], index: Double) = this()
     var data_ : js.Any = js.native
     var index_ : js.Any = js.native
-    val value: T = js.native
     def advance(n: Double): _NativeArrayIterator[T] = js.native
     def equals(obj: _NativeArrayIterator[T]): Boolean = js.native
     def index(): Double = js.native
     def next(): _NativeArrayIterator[T] = js.native
     def prev(): _NativeArrayIterator[T] = js.native
     def swap(obj: _NativeArrayIterator[T]): Unit = js.native
+    def value(): T = js.native
   }
   
 }

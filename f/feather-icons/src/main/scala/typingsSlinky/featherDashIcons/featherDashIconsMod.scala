@@ -1,7 +1,6 @@
 package typingsSlinky.featherDashIcons
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.featherDashIcons.featherDashIconsMod.FeatherAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

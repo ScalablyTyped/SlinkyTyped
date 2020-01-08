@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object HeightReference extends js.Object {
   @js.native
   sealed trait RELATIVE_TO_GROUND extends HeightReference
   
-  /* 0 */ val CLAMP_TO_GROUND: typingsSlinky.cesium.cesiumMod.HeightReference.CLAMP_TO_GROUND with Double = js.native
-  /* 1 */ val NONE: typingsSlinky.cesium.cesiumMod.HeightReference.NONE with Double = js.native
-  /* 2 */ val RELATIVE_TO_GROUND: typingsSlinky.cesium.cesiumMod.HeightReference.RELATIVE_TO_GROUND with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HeightReference with Double] = js.native
+  /* 0 */ @js.native
+  object CLAMP_TO_GROUND extends TopLevel[CLAMP_TO_GROUND with Double]
+  
+  /* 1 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 2 */ @js.native
+  object RELATIVE_TO_GROUND extends TopLevel[RELATIVE_TO_GROUND with Double]
+  
 }
 

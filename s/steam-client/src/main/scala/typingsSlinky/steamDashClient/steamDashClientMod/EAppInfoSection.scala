@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,29 +83,73 @@ object EAppInfoSection extends js.Object {
   @js.native
   sealed trait VAC_UNUSED extends EAppInfoSection
   
-  /* 1 */ val All: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.All with Double = js.native
-  /* 2 */ val Common: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Common with Double = js.native
-  /* 15 */ val Community: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Community with Double = js.native
-  /* 4 */ val Config: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Config with Double = js.native
-  /* 9 */ val DRM: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.DRM with Double = js.native
-  /* 9 */ val DRM_UNUSED: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.DRM_UNUSED with Double = js.native
-  /* 7 */ val Depots: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Depots with Double = js.native
-  /* 3 */ val Extended: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Extended with Double = js.native
-  /* 2 */ val First: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.First with Double = js.native
-  /* 6 */ val Install: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Install with Double = js.native
-  /* 12 */ val Items: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Items with Double = js.native
-  /* 12 */ val ItemsUNUSED: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.ItemsUNUSED with Double = js.native
-  /* 17 */ val Max: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Max with Double = js.native
-  /* 11 */ val OGG: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.OGG with Double = js.native
-  /* 13 */ val Policies: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Policies with Double = js.native
-  /* 5 */ val Stats: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Stats with Double = js.native
-  /* 16 */ val Store: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Store with Double = js.native
-  /* 14 */ val SysReqs: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.SysReqs with Double = js.native
-  /* 10 */ val UFS: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.UFS with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.Unknown with Double = js.native
-  /* 8 */ val VAC: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.VAC with Double = js.native
-  /* 8 */ val VAC_UNUSED: typingsSlinky.steamDashClient.steamDashClientMod.EAppInfoSection.VAC_UNUSED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EAppInfoSection with Double] = js.native
+  /* 1 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Common extends TopLevel[Common with Double]
+  
+  /* 15 */ @js.native
+  object Community extends TopLevel[Community with Double]
+  
+  /* 4 */ @js.native
+  object Config extends TopLevel[Config with Double]
+  
+  /* 9 */ @js.native
+  object DRM extends TopLevel[DRM with Double]
+  
+  /* 9 */ @js.native
+  object DRM_UNUSED extends TopLevel[DRM_UNUSED with Double]
+  
+  /* 7 */ @js.native
+  object Depots extends TopLevel[Depots with Double]
+  
+  /* 3 */ @js.native
+  object Extended extends TopLevel[Extended with Double]
+  
+  /* 2 */ @js.native
+  object First extends TopLevel[First with Double]
+  
+  /* 6 */ @js.native
+  object Install extends TopLevel[Install with Double]
+  
+  /* 12 */ @js.native
+  object Items extends TopLevel[Items with Double]
+  
+  /* 12 */ @js.native
+  object ItemsUNUSED extends TopLevel[ItemsUNUSED with Double]
+  
+  /* 17 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 11 */ @js.native
+  object OGG extends TopLevel[OGG with Double]
+  
+  /* 13 */ @js.native
+  object Policies extends TopLevel[Policies with Double]
+  
+  /* 5 */ @js.native
+  object Stats extends TopLevel[Stats with Double]
+  
+  /* 16 */ @js.native
+  object Store extends TopLevel[Store with Double]
+  
+  /* 14 */ @js.native
+  object SysReqs extends TopLevel[SysReqs with Double]
+  
+  /* 10 */ @js.native
+  object UFS extends TopLevel[UFS with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
+  /* 8 */ @js.native
+  object VAC extends TopLevel[VAC with Double]
+  
+  /* 8 */ @js.native
+  object VAC_UNUSED extends TopLevel[VAC_UNUSED with Double]
+  
 }
 

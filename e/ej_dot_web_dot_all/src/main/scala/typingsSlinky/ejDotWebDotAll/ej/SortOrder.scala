@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,14 @@ object SortOrder extends js.Object {
   @js.native
   sealed trait Descending extends SortOrder
   
-  /* 0 */ val Ascending: typingsSlinky.ejDotWebDotAll.ej.SortOrder.Ascending with Double = js.native
-  /* 1 */ val Descending: typingsSlinky.ejDotWebDotAll.ej.SortOrder.Descending with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SortOrder with Double] = js.native
+  /* 0 */ @js.native
+  object Ascending extends TopLevel[Ascending with Double]
+  
+  /* 1 */ @js.native
+  object Descending extends TopLevel[Descending with Double]
+  
 }
 
 @JSGlobal("ej.sortOrder")
@@ -36,9 +41,13 @@ object sortOrder extends js.Object {
   @js.native
   sealed trait Descending extends sortOrder
   
-  /* 0 */ val Ascending: typingsSlinky.ejDotWebDotAll.ej.sortOrder.Ascending with Double = js.native
-  /* 1 */ val Descending: typingsSlinky.ejDotWebDotAll.ej.sortOrder.Descending with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[sortOrder with Double] = js.native
+  /* 0 */ @js.native
+  object Ascending extends TopLevel[Ascending with Double]
+  
+  /* 1 */ @js.native
+  object Descending extends TopLevel[Descending with Double]
+  
 }
 

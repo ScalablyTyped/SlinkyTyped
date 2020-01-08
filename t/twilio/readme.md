@@ -1,6 +1,7 @@
 
 # Scala.js typings for twilio
 
+Typings are for version 2.11
 
 ## Library description:
 A Twilio helper library
@@ -9,9 +10,9 @@ A Twilio helper library
 | ------------------ | :-------------: |
 | Full name          | twilio |
 | Keywords           | twilio, sms, rest, api |
-| # releases         | 75 |
-| # dependents       | 261 |
-| # downloads        | 6334484 |
+| # releases         | 58 |
+| # dependents       | 296 |
+| # downloads        | 10534760 |
 | # stars            | 26 |
 
 ## Links

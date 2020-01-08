@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,16 @@ object CrosshairType extends js.Object {
   @js.native
   sealed trait Trackball extends CrosshairType
   
-  /* 0 */ val Crosshair: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CrosshairType.Crosshair with Double = js.native
-  /* 1 */ val Trackball: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CrosshairType.Trackball with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CrosshairType with Double] = js.native
+  /* 0 */ @js.native
+  object Crosshair
+    extends TopLevel[
+          typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CrosshairType.Crosshair with Double
+        ]
+  
+  /* 1 */ @js.native
+  object Trackball extends TopLevel[Trackball with Double]
+  
 }
 

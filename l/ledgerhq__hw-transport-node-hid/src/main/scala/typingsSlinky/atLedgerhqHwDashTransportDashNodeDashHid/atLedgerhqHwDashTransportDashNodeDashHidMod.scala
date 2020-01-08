@@ -1,6 +1,5 @@
 package typingsSlinky.atLedgerhqHwDashTransportDashNodeDashHid
 
-import typingsSlinky.atLedgerhqHwDashTransportDashNodeDashHid.atLedgerhqHwDashTransportDashNodeDashHidMod.TransportNodeHid
 import typingsSlinky.nodeDashHid.nodeDashHidMod.HID
 import scala.scalajs.js
 import scala.scalajs.js.`|`

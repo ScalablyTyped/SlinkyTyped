@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object TextEditorCursorStyle extends js.Object {
   @js.native
   sealed trait UnderlineThin extends TextEditorCursorStyle
   
-  /* 2 */ val Block: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.Block with Double = js.native
-  /* 5 */ val BlockOutline: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.BlockOutline with Double = js.native
-  /* 1 */ val Line: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.Line with Double = js.native
-  /* 4 */ val LineThin: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.LineThin with Double = js.native
-  /* 3 */ val Underline: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.Underline with Double = js.native
-  /* 6 */ val UnderlineThin: typingsSlinky.vscode.vscodeMod.TextEditorCursorStyle.UnderlineThin with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextEditorCursorStyle with Double] = js.native
+  /* 2 */ @js.native
+  object Block extends TopLevel[Block with Double]
+  
+  /* 5 */ @js.native
+  object BlockOutline extends TopLevel[BlockOutline with Double]
+  
+  /* 1 */ @js.native
+  object Line extends TopLevel[Line with Double]
+  
+  /* 4 */ @js.native
+  object LineThin extends TopLevel[LineThin with Double]
+  
+  /* 3 */ @js.native
+  object Underline extends TopLevel[Underline with Double]
+  
+  /* 6 */ @js.native
+  object UnderlineThin extends TopLevel[UnderlineThin with Double]
+  
 }
 

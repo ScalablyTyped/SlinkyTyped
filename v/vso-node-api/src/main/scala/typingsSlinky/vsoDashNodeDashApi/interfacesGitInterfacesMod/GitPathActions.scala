@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object GitPathActions extends js.Object {
   @js.native
   sealed trait Rename extends GitPathActions
   
-  /* 3 */ val Add: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPathActions.Add with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPathActions.Delete with Double = js.native
-  /* 1 */ val Edit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPathActions.Edit with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPathActions.None with Double = js.native
-  /* 4 */ val Rename: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPathActions.Rename with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitPathActions with Double] = js.native
+  /* 3 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object Rename extends TopLevel[Rename with Double]
+  
 }
 

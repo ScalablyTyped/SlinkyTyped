@@ -1,6 +1,6 @@
 package typingsSlinky.braftDashEditor
 
-import typingsSlinky.braftDashEditor.braftDashEditorNumbers.`false`
+import typingsSlinky.braftDashEditor.braftDashEditorBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

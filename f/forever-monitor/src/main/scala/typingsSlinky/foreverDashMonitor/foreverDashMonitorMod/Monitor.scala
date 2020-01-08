@@ -1,8 +1,8 @@
 package typingsSlinky.foreverDashMonitor.foreverDashMonitorMod
 
 import typingsSlinky.foreverDashMonitor.Anon_ArgsCommand
-import typingsSlinky.foreverDashMonitor.foreverDashMonitorNumbers.`false`
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.foreverDashMonitor.foreverDashMonitorBooleans.`false`
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

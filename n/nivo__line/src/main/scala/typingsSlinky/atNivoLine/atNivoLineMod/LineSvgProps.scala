@@ -8,7 +8,7 @@ import typingsSlinky.atNivoCore.atNivoCoreMod.CartesianMarkerProps
 import typingsSlinky.atNivoCore.atNivoCoreMod.MotionProps
 import typingsSlinky.atNivoCore.atNivoCoreMod.Theme
 import typingsSlinky.atNivoLegends.atNivoLegendsMod.LegendProps
-import typingsSlinky.atNivoLine.atNivoLineNumbers.`false`
+import typingsSlinky.atNivoLine.atNivoLineBooleans.`false`
 import typingsSlinky.atNivoLine.atNivoLineStrings.linear
 import typingsSlinky.atNivoLine.atNivoLineStrings.monotoneX
 import typingsSlinky.atNivoLine.atNivoLineStrings.monotoneY

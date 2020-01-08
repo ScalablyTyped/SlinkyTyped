@@ -1,14 +1,10 @@
 package typingsSlinky.browserDashHarness
 
-import typingsSlinky.browserDashHarness.browserDashHarnessMod.Driver
-import typingsSlinky.browserDashHarness.browserDashHarnessMod.DriverEvents
-import typingsSlinky.browserDashHarness.browserDashHarnessMod.ElementProxy
-import typingsSlinky.browserDashHarness.browserDashHarnessMod.HarnessEvents
-import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDOTerror
-import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDOTlog
-import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDOTwarn
+import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDoterror
+import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDotlog
+import typingsSlinky.browserDashHarness.browserDashHarnessStrings.consoleDotwarn
 import typingsSlinky.browserDashHarness.browserDashHarnessStrings.ready
-import typingsSlinky.browserDashHarness.browserDashHarnessStrings.windowDOTonerror
+import typingsSlinky.browserDashHarness.browserDashHarnessStrings.windowDotonerror
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -54,21 +50,21 @@ object browserDashHarnessMod extends js.Object {
   @js.native
   trait DriverEvents extends EventEmitter {
     @JSName("on")
-    def on_consoleerror(event: consoleDOTerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def on_consoleerror(event: consoleDoterror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("on")
-    def on_consolelog(event: consoleDOTlog, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def on_consolelog(event: consoleDotlog, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("on")
-    def on_consolewarn(event: consoleDOTwarn, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def on_consolewarn(event: consoleDotwarn, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("on")
-    def on_windowonerror(event: windowDOTonerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def on_windowonerror(event: windowDotonerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("once")
-    def once_consoleerror(event: consoleDOTerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def once_consoleerror(event: consoleDoterror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("once")
-    def once_consolelog(event: consoleDOTlog, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def once_consolelog(event: consoleDotlog, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("once")
-    def once_consolewarn(event: consoleDOTwarn, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def once_consolewarn(event: consoleDotwarn, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
     @JSName("once")
-    def once_windowonerror(event: windowDOTonerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
+    def once_windowonerror(event: windowDotonerror, listener: js.Function1[/* text */ String, Unit]): this.type = js.native
   }
   
   @js.native

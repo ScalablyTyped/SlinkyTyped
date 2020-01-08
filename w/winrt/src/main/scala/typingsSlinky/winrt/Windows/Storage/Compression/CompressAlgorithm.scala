@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage.Compression
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object CompressAlgorithm extends js.Object {
   @js.native
   sealed trait xpressHuff extends CompressAlgorithm
   
-  /* 0 */ val invalidAlgorithm: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.invalidAlgorithm with Double = js.native
-  /* 5 */ val lzms: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.lzms with Double = js.native
-  /* 2 */ val mszip: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.mszip with Double = js.native
-  /* 1 */ val nullAlgorithm: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.nullAlgorithm with Double = js.native
-  /* 3 */ val xpress: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.xpress with Double = js.native
-  /* 4 */ val xpressHuff: typingsSlinky.winrt.Windows.Storage.Compression.CompressAlgorithm.xpressHuff with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CompressAlgorithm with Double] = js.native
+  /* 0 */ @js.native
+  object invalidAlgorithm extends TopLevel[invalidAlgorithm with Double]
+  
+  /* 5 */ @js.native
+  object lzms extends TopLevel[lzms with Double]
+  
+  /* 2 */ @js.native
+  object mszip extends TopLevel[mszip with Double]
+  
+  /* 1 */ @js.native
+  object nullAlgorithm extends TopLevel[nullAlgorithm with Double]
+  
+  /* 3 */ @js.native
+  object xpress extends TopLevel[xpress with Double]
+  
+  /* 4 */ @js.native
+  object xpressHuff extends TopLevel[xpressHuff with Double]
+  
 }
 

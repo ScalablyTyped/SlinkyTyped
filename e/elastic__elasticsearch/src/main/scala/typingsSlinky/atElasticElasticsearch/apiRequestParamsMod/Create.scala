@@ -4,7 +4,6 @@ import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`false
 import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`true`
 import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.external
 import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.external_gte
-import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.force
 import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.internal
 import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.wait_for
 import scala.scalajs.js
@@ -21,7 +20,7 @@ trait Create[T] extends Generic {
   var timeout: js.UndefOr[String] = js.undefined
   var `type`: js.UndefOr[String] = js.undefined
   var version: js.UndefOr[Double] = js.undefined
-  var version_type: js.UndefOr[internal | external | external_gte | force] = js.undefined
+  var version_type: js.UndefOr[internal | external | external_gte] = js.undefined
   var wait_for_active_shards: js.UndefOr[String] = js.undefined
 }
 
@@ -44,7 +43,7 @@ object Create {
     timeout: String = null,
     `type`: String = null,
     version: Int | Double = null,
-    version_type: internal | external | external_gte | force = null,
+    version_type: internal | external | external_gte = null,
     wait_for_active_shards: String = null
   ): Create[T] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])

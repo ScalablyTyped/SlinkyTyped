@@ -1,7 +1,7 @@
 package typingsSlinky.nodeDashZookeeperDashClient.nodeDashZookeeperDashClientMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodeDashZookeeperDashClient.nodeDashZookeeperDashClientStrings.authenticationFailed
 import typingsSlinky.nodeDashZookeeperDashClient.nodeDashZookeeperDashClientStrings.connected
 import typingsSlinky.nodeDashZookeeperDashClient.nodeDashZookeeperDashClientStrings.connectedReadOnly

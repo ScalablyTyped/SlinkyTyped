@@ -1,10 +1,9 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtDashUwp.Windows.Media.Playlists.Playlist
-import typingsSlinky.winrtDashUwp.Windows.Media.Playlists.PlaylistFormat
 import typingsSlinky.winrtDashUwp.Windows.Storage.IStorageFile
 import typingsSlinky.winrtDashUwp.Windows.Storage.IStorageFolder
 import typingsSlinky.winrtDashUwp.Windows.Storage.NameCollisionOption
@@ -81,11 +80,17 @@ object Playlists extends js.Object {
     @js.native
     sealed trait zune extends PlaylistFormat
     
-    /* 2 */ val m3u: typingsSlinky.winrtDashUwp.Windows.Media.Playlists.PlaylistFormat.m3u with Double = js.native
-    /* 0 */ val windowsMedia: typingsSlinky.winrtDashUwp.Windows.Media.Playlists.PlaylistFormat.windowsMedia with Double = js.native
-    /* 1 */ val zune: typingsSlinky.winrtDashUwp.Windows.Media.Playlists.PlaylistFormat.zune with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PlaylistFormat with Double] = js.native
+    /* 2 */ @js.native
+    object m3u extends TopLevel[m3u with Double]
+    
+    /* 0 */ @js.native
+    object windowsMedia extends TopLevel[windowsMedia with Double]
+    
+    /* 1 */ @js.native
+    object zune extends TopLevel[zune with Double]
+    
   }
   
 }

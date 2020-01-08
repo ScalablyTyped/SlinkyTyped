@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,10 +41,16 @@ object ContentControlAppearance extends js.Object {
   @js.native
   sealed trait tags extends ContentControlAppearance
   
-  /* "BoundingBox" */ val boundingBox: typingsSlinky.officeDashJsDashPreview.Word.ContentControlAppearance.boundingBox with String = js.native
-  /* "Hidden" */ val hidden: typingsSlinky.officeDashJsDashPreview.Word.ContentControlAppearance.hidden with String = js.native
-  /* "Tags" */ val tags: typingsSlinky.officeDashJsDashPreview.Word.ContentControlAppearance.tags with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ContentControlAppearance with String] = js.native
+  /* "BoundingBox" */ @js.native
+  object boundingBox extends TopLevel[boundingBox with String]
+  
+  /* "Hidden" */ @js.native
+  object hidden extends TopLevel[hidden with String]
+  
+  /* "Tags" */ @js.native
+  object tags extends TopLevel[tags with String]
+  
 }
 

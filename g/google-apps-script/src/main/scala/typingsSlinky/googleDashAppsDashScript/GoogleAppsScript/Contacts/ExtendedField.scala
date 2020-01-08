@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,19 +50,43 @@ object ExtendedField extends js.Object {
   @js.native
   sealed trait WORK extends ExtendedField
   
-  /* 4 */ val BILLING_INFORMATION: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.BILLING_INFORMATION with Double = js.native
-  /* 5 */ val DIRECTORY_SERVER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.DIRECTORY_SERVER with Double = js.native
-  /* 3 */ val GENDER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.GENDER with Double = js.native
-  /* 0 */ val HOBBY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.HOBBY with Double = js.native
-  /* 8 */ val HOME: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.HOME with Double = js.native
-  /* 2 */ val LANGUAGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.LANGUAGE with Double = js.native
-  /* 1 */ val MILEAGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.MILEAGE with Double = js.native
-  /* 11 */ val OTHER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.OTHER with Double = js.native
-  /* 7 */ val PRIORITY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.PRIORITY with Double = js.native
-  /* 6 */ val SENSITIVITY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.SENSITIVITY with Double = js.native
-  /* 10 */ val USER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.USER with Double = js.native
-  /* 9 */ val WORK: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.ExtendedField.WORK with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtendedField with Double] = js.native
+  /* 4 */ @js.native
+  object BILLING_INFORMATION extends TopLevel[BILLING_INFORMATION with Double]
+  
+  /* 5 */ @js.native
+  object DIRECTORY_SERVER extends TopLevel[DIRECTORY_SERVER with Double]
+  
+  /* 3 */ @js.native
+  object GENDER extends TopLevel[GENDER with Double]
+  
+  /* 0 */ @js.native
+  object HOBBY extends TopLevel[HOBBY with Double]
+  
+  /* 8 */ @js.native
+  object HOME extends TopLevel[HOME with Double]
+  
+  /* 2 */ @js.native
+  object LANGUAGE extends TopLevel[LANGUAGE with Double]
+  
+  /* 1 */ @js.native
+  object MILEAGE extends TopLevel[MILEAGE with Double]
+  
+  /* 11 */ @js.native
+  object OTHER extends TopLevel[OTHER with Double]
+  
+  /* 7 */ @js.native
+  object PRIORITY extends TopLevel[PRIORITY with Double]
+  
+  /* 6 */ @js.native
+  object SENSITIVITY extends TopLevel[SENSITIVITY with Double]
+  
+  /* 10 */ @js.native
+  object USER extends TopLevel[USER with Double]
+  
+  /* 9 */ @js.native
+  object WORK extends TopLevel[WORK with Double]
+  
 }
 

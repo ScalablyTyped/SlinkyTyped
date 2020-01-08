@@ -1,7 +1,7 @@
 package typingsSlinky.atFirebaseFirestore.distTestUnitSpecsSpecUnderscoreTestUnderscoreRunnerMod
 
 import org.scalajs.dom.raw.VisibilityState
-import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreNumbers.`true`
+import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.angularDashGoogleDashAnalytics
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularDashGoogleDashAnalytics.angularMod.google.analytics.AnalyticsProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

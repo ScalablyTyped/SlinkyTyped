@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.libStartMod
 
-import typingsSlinky.ionic.ionicNumbers.`true`
+import typingsSlinky.ionic.ionicBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

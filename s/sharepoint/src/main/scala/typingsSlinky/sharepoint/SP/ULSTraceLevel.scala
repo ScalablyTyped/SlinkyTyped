@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object ULSTraceLevel extends js.Object {
   @js.native
   sealed trait verbose extends ULSTraceLevel
   
-  /* 0 */ val verbose: typingsSlinky.sharepoint.SP.ULSTraceLevel.verbose with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ULSTraceLevel with Double] = js.native
+  /* 0 */ @js.native
+  object verbose extends TopLevel[verbose with Double]
+  
 }
 

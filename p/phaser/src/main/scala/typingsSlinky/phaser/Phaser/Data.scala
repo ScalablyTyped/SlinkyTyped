@@ -2,7 +2,6 @@ package typingsSlinky.phaser.Phaser
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.phaser.DataEachCallback
-import typingsSlinky.phaser.Phaser.Data.DataManager
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Scenes.Systems
 import typingsSlinky.phaser.integer

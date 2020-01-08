@@ -20,6 +20,6 @@ object ^ extends js.Object {
     * to a string.
     */
   def apply(): FormatFunc = js.native
-  def apply(options: typingsSlinky.atPhosphorDatagrid.libTextrendererMod.TextRenderer.formatGeneric.IOptions): FormatFunc = js.native
+  def apply(options: IOptions): FormatFunc = js.native
 }
 

@@ -10,9 +10,9 @@ Captures and cleans stack traces
 | ------------------ | :-------------: |
 | Full name          | stack-utils |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 48 |
-| # downloads        | 89349013 |
+| # releases         | 4 |
+| # dependents       | 63 |
+| # downloads        | 190531235 |
 | # stars            | 3 |
 
 ## Links

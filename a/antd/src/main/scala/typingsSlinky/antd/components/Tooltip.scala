@@ -25,7 +25,6 @@ object Tooltip
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
   def TooltipPropsWithTitle(
     title: TagMod[Any] | RenderFunction,
     align: TooltipAlignConfig = null,
@@ -76,7 +75,6 @@ object Tooltip
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  /* The following DOM/SVG props were specified: className */
   def TooltipPropsWithOverlay(
     overlay: TagMod[Any] | RenderFunction,
     align: TooltipAlignConfig = null,

@@ -1,7 +1,6 @@
 package typingsSlinky.wepy
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.wepy.componentMod.component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

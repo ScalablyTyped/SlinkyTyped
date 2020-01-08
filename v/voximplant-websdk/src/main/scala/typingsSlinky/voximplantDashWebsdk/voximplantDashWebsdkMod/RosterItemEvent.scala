@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object RosterItemEvent extends js.Object {
   @js.native
   sealed trait Updated extends RosterItemEvent
   
-  /* 0 */ val Added: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.RosterItemEvent.Added with Double = js.native
-  /* 1 */ val Removed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.RosterItemEvent.Removed with Double = js.native
-  /* 2 */ val Subscribed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.RosterItemEvent.Subscribed with Double = js.native
-  /* 3 */ val Unsubscribed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.RosterItemEvent.Unsubscribed with Double = js.native
-  /* 4 */ val Updated: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.RosterItemEvent.Updated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RosterItemEvent with Double] = js.native
+  /* 0 */ @js.native
+  object Added extends TopLevel[Added with Double]
+  
+  /* 1 */ @js.native
+  object Removed extends TopLevel[Removed with Double]
+  
+  /* 2 */ @js.native
+  object Subscribed extends TopLevel[Subscribed with Double]
+  
+  /* 3 */ @js.native
+  object Unsubscribed extends TopLevel[Unsubscribed with Double]
+  
+  /* 4 */ @js.native
+  object Updated extends TopLevel[Updated with Double]
+  
 }
 

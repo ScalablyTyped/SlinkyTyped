@@ -10,9 +10,9 @@ AWS credential provider that sources credentials from known environment variable
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/credential-provider-env |
 | Keywords           | aws, credentials |
-| # releases         | 7 |
+| # releases         | 9 |
 | # dependents       | 1 |
-| # downloads        | 9250 |
+| # downloads        | 38775 |
 | # stars            | 0 |
 
 ## Links

@@ -5,8 +5,6 @@ import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.childUnderscoreProcessMod.ChildProcess
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.vscodeDashJsonrpc.libEventsMod.Disposable
-import typingsSlinky.vscodeDashJsonrpc.libMessageWriterMod.AbstractMessageWriter
-import typingsSlinky.vscodeDashJsonrpc.libMessageWriterMod.MessageWriter
 import typingsSlinky.vscodeDashJsonrpc.libMessagesMod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`

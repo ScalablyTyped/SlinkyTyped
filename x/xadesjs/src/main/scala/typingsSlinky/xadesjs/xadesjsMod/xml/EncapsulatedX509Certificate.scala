@@ -6,5 +6,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.EncapsulatedX509Certificate")
 @js.native
-class EncapsulatedX509Certificate () extends EncapsulatedPKIData
+class EncapsulatedX509Certificate ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.EncapsulatedX509Certificate
 

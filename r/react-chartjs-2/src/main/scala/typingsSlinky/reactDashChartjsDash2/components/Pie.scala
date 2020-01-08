@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pie
-  extends SharedApply_ChartComponentProps_213540963[typingsSlinky.reactDashChartjsDash2.reactDashChartjsDash2Mod.Pie] {
+  extends SharedApply_ChartComponentProps_185370781[typingsSlinky.reactDashChartjsDash2.reactDashChartjsDash2Mod.Pie] {
   @JSImport("react-chartjs-2", "Pie")
   @js.native
   object componentImport extends js.Object

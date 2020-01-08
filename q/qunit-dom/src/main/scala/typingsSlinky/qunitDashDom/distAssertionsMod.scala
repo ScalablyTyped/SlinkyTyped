@@ -1,7 +1,6 @@
 package typingsSlinky.qunitDashDom
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.qunitDashDom.distAssertionsMod.DOMAssertions
 import typingsSlinky.qunitDashDom.qunitDashDomMod._Global_.Assert
 import typingsSlinky.std.RegExp
 import scala.scalajs.js

@@ -2,7 +2,7 @@ package typingsSlinky.antd.libAnchorAnchorMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.antd.Anon_ActiveLink
-import typingsSlinky.antd.Anon_AntAnchor_1899638441
+import typingsSlinky.antd.Anon_AntAnchor_1351107620
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
@@ -27,7 +27,7 @@ trait Anchor
   def componentDidUpdate_MAnchor(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MAnchor(): Unit = js.native
-  def getChildContext(): Anon_AntAnchor_1899638441 = js.native
+  def getChildContext(): Anon_AntAnchor_1351107620 = js.native
   def getCurrentAnchor(): String = js.native
   def getCurrentAnchor(offsetTop: Double): String = js.native
   def getCurrentAnchor(offsetTop: Double, bounds: Double): String = js.native

@@ -10,9 +10,9 @@ Get a random useragent (with an optional filter)
 | ------------------ | :-------------: |
 | Full name          | random-useragent |
 | Keywords           | random, useragent, user-agent, user, agent, data, web, developer |
-| # releases         | 1 |
-| # dependents       | 25 |
-| # downloads        | 222873 |
+| # releases         | 0 |
+| # dependents       | 30 |
+| # downloads        | 108556 |
 | # stars            | 4 |
 
 ## Links

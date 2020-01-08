@@ -6,7 +6,6 @@ import typingsSlinky.atIonicCore.atIonicCoreMod.FrameworkDelegate
 import typingsSlinky.atIonicCore.atIonicCoreNumbers.`1`
 import typingsSlinky.atIonicCore.atIonicCoreNumbers.`2`
 import typingsSlinky.atIonicCore.atIonicCoreNumbers.`3`
-import typingsSlinky.atIonicCore.distTypesComponentsNavViewDashControllerMod.ViewController
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

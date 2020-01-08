@@ -8,23 +8,27 @@ import org.scalajs.dom.raw.SVGElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.react.reactMod.Booleanish
+import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`after-edge`
 import typingsSlinky.react.reactStrings.`before-edge`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.`text-after-edge`
 import typingsSlinky.react.reactStrings.`text-before-edge`
+import typingsSlinky.react.reactStrings.`use-credentials`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.alphabetic
+import typingsSlinky.react.reactStrings.anonymous
 import typingsSlinky.react.reactStrings.ascending
 import typingsSlinky.react.reactStrings.assertive
 import typingsSlinky.react.reactStrings.auto
 import typingsSlinky.react.reactStrings.baseline
 import typingsSlinky.react.reactStrings.both
-import typingsSlinky.react.reactStrings.butt
 import typingsSlinky.react.reactStrings.central
 import typingsSlinky.react.reactStrings.copy
 import typingsSlinky.react.reactStrings.date
@@ -64,11 +68,9 @@ import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
 import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.replace
-import typingsSlinky.react.reactStrings.round
 import typingsSlinky.react.reactStrings.sRGB
 import typingsSlinky.react.reactStrings.search
 import typingsSlinky.react.reactStrings.spelling
-import typingsSlinky.react.reactStrings.square
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.sum
 import typingsSlinky.react.reactStrings.tel
@@ -157,7 +159,7 @@ object ReactDashPointable
     attributeType: String = null,
     autoCapitalize: String = null,
     autoCorrect: String = null,
-    autoReverse: Double | String = null,
+    autoReverse: js.UndefOr[Boolean] = js.undefined,
     autoSave: String = null,
     azimuth: Double | String = null,
     baseFrequency: Double | String = null,
@@ -181,6 +183,7 @@ object ReactDashPointable
     contentScriptType: Double | String = null,
     contentStyleType: Double | String = null,
     contextMenu: String = null,
+    crossOrigin: anonymous | `use-credentials` | _empty = null,
     cursor: Double | String = null,
     cx: Double | String = null,
     cy: Double | String = null,
@@ -202,7 +205,7 @@ object ReactDashPointable
     enableBackground: Double | String = null,
     end: Double | String = null,
     exponent: Double | String = null,
-    externalResourcesRequired: Double | String = null,
+    externalResourcesRequired: js.UndefOr[Boolean] = js.undefined,
     fill: String = null,
     fillOpacity: Double | String = null,
     fillRule: nonzero | evenodd | inherit = null,
@@ -211,7 +214,7 @@ object ReactDashPointable
     filterUnits: Double | String = null,
     floodColor: Double | String = null,
     floodOpacity: Double | String = null,
-    focusable: Double | String = null,
+    focusable: Booleanish | auto = null,
     fontFamily: String = null,
     fontSize: Double | String = null,
     fontSizeAdjust: Double | String = null,
@@ -300,7 +303,7 @@ object ReactDashPointable
     pointsAtY: Double | String = null,
     pointsAtZ: Double | String = null,
     prefix: String = null,
-    preserveAlpha: Double | String = null,
+    preserveAlpha: js.UndefOr[Boolean] = js.undefined,
     preserveAspectRatio: String = null,
     primitiveUnits: Double | String = null,
     property: String = null,
@@ -346,7 +349,6 @@ object ReactDashPointable
     stroke: String = null,
     strokeDasharray: String | Double = null,
     strokeDashoffset: String | Double = null,
-    strokeLinecap: butt | round | square | inherit = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -413,7 +415,7 @@ object ReactDashPointable
     if (attributeType != null) __obj.updateDynamic("attributeType")(attributeType.asInstanceOf[js.Any])
     if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
     if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
-    if (autoReverse != null) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoReverse)) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (azimuth != null) __obj.updateDynamic("azimuth")(azimuth.asInstanceOf[js.Any])
     if (baseFrequency != null) __obj.updateDynamic("baseFrequency")(baseFrequency.asInstanceOf[js.Any])
@@ -437,6 +439,7 @@ object ReactDashPointable
     if (contentScriptType != null) __obj.updateDynamic("contentScriptType")(contentScriptType.asInstanceOf[js.Any])
     if (contentStyleType != null) __obj.updateDynamic("contentStyleType")(contentStyleType.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
     if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
     if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
@@ -458,7 +461,7 @@ object ReactDashPointable
     if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
     if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
     if (exponent != null) __obj.updateDynamic("exponent")(exponent.asInstanceOf[js.Any])
-    if (externalResourcesRequired != null) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
+    if (!js.isUndefined(externalResourcesRequired)) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
     if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
     if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
@@ -556,7 +559,7 @@ object ReactDashPointable
     if (pointsAtY != null) __obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
     if (pointsAtZ != null) __obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (preserveAlpha != null) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveAlpha)) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
     if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
     if (primitiveUnits != null) __obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
@@ -602,10 +605,12 @@ object ReactDashPointable
     if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
     if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
     if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashPointable.reactDashPointableMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PointableProps
 }
 

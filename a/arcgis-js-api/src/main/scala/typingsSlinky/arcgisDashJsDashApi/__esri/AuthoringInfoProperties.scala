@@ -12,12 +12,12 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`standard-de
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`univariate-color-size`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.centimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.manual
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.quantile
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
@@ -68,7 +68,7 @@ trait AuthoringInfoProperties extends js.Object {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-AuthoringInfo.html#lengthUnit)
     */
   var lengthUnit: js.UndefOr[
-    inches | feet | yards | miles | `nautical-miles` | millimeters | centimeters | decimeters | meters | kilometers | `decimal-degrees`
+    inches | feet_ | yards | miles_ | `nautical-miles` | millimeters | centimeters | decimeters | meters_ | kilometers_ | `decimal-degrees`
   ] = js.undefined
   /**
     * Indicates the value of the upper handle if a slider was used to generate the dot value for dot density renderer.
@@ -119,7 +119,7 @@ object AuthoringInfoProperties {
     field2: AuthoringInfoField2 = null,
     fields: js.Array[String] = null,
     focus: String = null,
-    lengthUnit: inches | feet | yards | miles | `nautical-miles` | millimeters | centimeters | decimeters | meters | kilometers | `decimal-degrees` = null,
+    lengthUnit: inches | feet_ | yards | miles_ | `nautical-miles` | millimeters | centimeters | decimeters | meters_ | kilometers_ | `decimal-degrees` = null,
     maxSliderValue: Int | Double = null,
     minSliderValue: Int | Double = null,
     numClasses: Int | Double = null,

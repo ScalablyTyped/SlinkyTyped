@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TableRow
-  extends SharedApply_BaseProps_250835050[typingsSlinky.spectacle.spectacleMod.TableRow] {
+  extends SharedApply_BaseProps1644682705[typingsSlinky.spectacle.spectacleMod.TableRow] {
   @JSImport("spectacle", "TableRow")
   @js.native
   object componentImport extends js.Object

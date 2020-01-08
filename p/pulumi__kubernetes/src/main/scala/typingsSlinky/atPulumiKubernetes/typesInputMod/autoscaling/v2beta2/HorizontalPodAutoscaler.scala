@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.autoscaling.v2beta2
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`autoscaling/v2beta2`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.autoscalingSlashv2beta2
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -19,7 +19,7 @@ trait HorizontalPodAutoscaler extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`autoscaling/v2beta2`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[autoscalingSlashv2beta2]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -46,7 +46,7 @@ trait HorizontalPodAutoscaler extends js.Object {
 object HorizontalPodAutoscaler {
   @scala.inline
   def apply(
-    apiVersion: Input[`autoscaling/v2beta2`] = null,
+    apiVersion: Input[autoscalingSlashv2beta2] = null,
     kind: Input[
       typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.HorizontalPodAutoscaler
     ] = null,

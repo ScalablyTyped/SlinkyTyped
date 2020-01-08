@@ -10,9 +10,9 @@ KeystoneJS GraphQL App.
 | ------------------ | :-------------: |
 | Full name          | @keystonejs/app-graphql |
 | Keywords           | - |
-| # releases         | 2 |
+| # releases         | 5 |
 | # dependents       | 2 |
-| # downloads        | 2331 |
+| # downloads        | 13023 |
 | # stars            | 0 |
 
 ## Links

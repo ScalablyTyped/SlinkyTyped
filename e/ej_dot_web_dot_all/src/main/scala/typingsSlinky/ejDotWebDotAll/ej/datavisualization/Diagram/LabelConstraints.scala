@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object LabelConstraints extends js.Object {
   @js.native
   sealed trait Selectable extends LabelConstraints
   
-  /* 5 */ val All: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.All with Double = js.native
-  /* 2 */ val Draggable: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.Draggable with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.None with Double = js.native
-  /* 3 */ val Resizable: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.Resizable with Double = js.native
-  /* 4 */ val Rotatable: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.Rotatable with Double = js.native
-  /* 1 */ val Selectable: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelConstraints.Selectable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelConstraints with Double] = js.native
+  /* 5 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Draggable extends TopLevel[Draggable with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object Resizable extends TopLevel[Resizable with Double]
+  
+  /* 4 */ @js.native
+  object Rotatable extends TopLevel[Rotatable with Double]
+  
+  /* 1 */ @js.native
+  object Selectable extends TopLevel[Selectable with Double]
+  
 }
 

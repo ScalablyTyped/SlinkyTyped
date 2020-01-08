@@ -1,7 +1,7 @@
 package typingsSlinky.atMaterialDashUiCore
 
 import slinky.core.TagMod
-import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreNumbers.`false`
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreBooleans.`false`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onClick
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onMouseDown
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onMouseUp
@@ -13,11 +13,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@material-ui/core.@material-ui/core/ClickAwayListener.ClickAwayListenerProps> */
+@js.native
 trait PartialClickAwayListenerProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var mouseEvent: js.UndefOr[onClick | onMouseDown | onMouseUp | `false`] = js.undefined
-  var onClickAway: js.UndefOr[js.Function1[/* event */ ChangeEvent[js.Object], Unit]] = js.undefined
-  var touchEvent: js.UndefOr[onTouchStart | onTouchEnd | `false`] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.native
+  var mouseEvent: js.UndefOr[onClick | onMouseDown | onMouseUp | `false`] = js.native
+  var onClickAway: js.UndefOr[js.Function1[/* event */ ChangeEvent[js.Object], Unit]] = js.native
+  var touchEvent: js.UndefOr[onTouchStart | onTouchEnd | `false`] = js.native
 }
 
 object PartialClickAwayListenerProps {

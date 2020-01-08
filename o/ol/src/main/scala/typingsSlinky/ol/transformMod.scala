@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.pixelMod.Pixel
-import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,5 @@
 package typingsSlinky.maxmind
 
-import typingsSlinky.maxmind.libReaderWalkerMod.NodeReader
-import typingsSlinky.maxmind.libReaderWalkerMod.Walker
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

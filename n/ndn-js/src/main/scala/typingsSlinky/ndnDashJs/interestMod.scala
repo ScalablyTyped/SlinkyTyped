@@ -2,9 +2,7 @@ package typingsSlinky.ndnDashJs
 
 import typingsSlinky.ndnDashJs.blobMod.Blob
 import typingsSlinky.ndnDashJs.dataMod.Data
-import typingsSlinky.ndnDashJs.interestMod.DelegationSet
 import typingsSlinky.ndnDashJs.interestMod.DelegationSet.Delegation
-import typingsSlinky.ndnDashJs.interestMod.Interest
 import typingsSlinky.ndnDashJs.nameMod.Name
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

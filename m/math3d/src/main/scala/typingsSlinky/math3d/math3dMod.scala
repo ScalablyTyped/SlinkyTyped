@@ -1,11 +1,7 @@
 package typingsSlinky.math3d
 
-import typingsSlinky.math3d.math3dMod.Matrix4x4
-import typingsSlinky.math3d.math3dMod.Quaternion
-import typingsSlinky.math3d.math3dMod.Transform
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.math3d.math3dMod.Transform.Space
-import typingsSlinky.math3d.math3dMod.Vector3
-import typingsSlinky.math3d.math3dMod.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -185,10 +181,14 @@ object math3dMod extends js.Object {
       @js.native
       sealed trait World extends Space
       
-      /* 0 */ val Self: typingsSlinky.math3d.math3dMod.Transform.Space.Self with Double = js.native
-      /* 1 */ val World: typingsSlinky.math3d.math3dMod.Transform.Space.World with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[Space with Double] = js.native
+      /* 0 */ @js.native
+      object Self extends TopLevel[Self with Double]
+      
+      /* 1 */ @js.native
+      object World extends TopLevel[World with Double]
+      
     }
     
   }

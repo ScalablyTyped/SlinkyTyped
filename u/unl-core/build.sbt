@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "unl-core"
-version := "1.0-dt-20190719Z-6cfc51"
+version := "1.0-dt-20190719Z-714638"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

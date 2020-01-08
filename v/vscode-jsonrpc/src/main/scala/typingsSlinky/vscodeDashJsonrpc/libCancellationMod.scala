@@ -1,6 +1,5 @@
 package typingsSlinky.vscodeDashJsonrpc
 
-import typingsSlinky.vscodeDashJsonrpc.libCancellationMod.CancellationToken
 import typingsSlinky.vscodeDashJsonrpc.libEventsMod.Disposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

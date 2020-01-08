@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.Anon_ActionName
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
@@ -161,6 +162,9 @@ object ReactDashNativeDashSwipeDashGestures
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashSwipeDashGestures.reactDashNativeDashSwipeDashGesturesMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GestureRecognizerProps
 }
 

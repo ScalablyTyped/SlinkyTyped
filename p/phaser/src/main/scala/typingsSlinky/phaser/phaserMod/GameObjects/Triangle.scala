@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +36,7 @@ class Triangle protected ()
     * @param fillAlpha The alpha the triangle will be filled with. You can also set the alpha of the overall Shape using its `alpha` property.
     */
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: js.UndefOr[Double],
     y: js.UndefOr[Double],
     x1: js.UndefOr[Double],

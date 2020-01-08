@@ -5,9 +5,6 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.popmotionDashPose.libTypesMod.DomPopmotionConfig
 import typingsSlinky.react.reactMod.HTMLProps
 import typingsSlinky.reactDashPose.libComponentsPoseElementTypesMod.PoseElementProps
-import typingsSlinky.reactDashPose.libPosedMod.ComponentFactory
-import typingsSlinky.reactDashPose.libPosedMod.DomPopmotionConfigFactory
-import typingsSlinky.reactDashPose.libPosedMod.Posed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

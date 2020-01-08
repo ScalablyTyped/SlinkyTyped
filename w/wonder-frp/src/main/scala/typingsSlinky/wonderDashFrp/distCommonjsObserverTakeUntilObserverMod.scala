@@ -2,7 +2,6 @@ package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distCommonjsCoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distCommonjsObserverIObserverMod.IObserver
-import typingsSlinky.wonderDashFrp.distCommonjsObserverTakeUntilObserverMod.TakeUntilObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

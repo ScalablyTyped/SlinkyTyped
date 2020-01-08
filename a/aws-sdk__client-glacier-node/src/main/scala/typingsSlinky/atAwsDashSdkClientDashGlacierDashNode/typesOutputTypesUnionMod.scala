@@ -1,7 +1,6 @@
 package typingsSlinky.atAwsDashSdkClientDashGlacierDashNode
 
 import typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesGetJobOutputOutputMod.GetJobOutputOutput
-import typingsSlinky.atAwsDashSdkClientDashGlacierDashNode.typesOutputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

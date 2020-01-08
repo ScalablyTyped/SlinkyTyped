@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.three.srcCoreBufferAttributeMod.BufferAttribute
-import typingsSlinky.three.srcCoreBufferGeometryMod.BufferGeometry
 import typingsSlinky.three.srcCoreDirectGeometryMod.DirectGeometry
 import typingsSlinky.three.srcCoreEventDispatcherMod.EventDispatcher
 import typingsSlinky.three.srcCoreGeometryMod.Geometry

@@ -4,7 +4,6 @@ import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.asn1js.asn1jsMod.BitString
 import typingsSlinky.asn1js.asn1jsMod.Integer
 import typingsSlinky.asn1js.asn1jsMod.Sequence
-import typingsSlinky.pkijs.srcCertificateMod.Certificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

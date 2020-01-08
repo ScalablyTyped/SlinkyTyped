@@ -1,7 +1,5 @@
 package typingsSlinky.sxml
 
-import typingsSlinky.sxml.libXMLListMod.XMLList.Iterator
-import typingsSlinky.sxml.libXMLListMod.XMLList.ReverseIterator
 import typingsSlinky.sxml.libXMLMod.XML
 import typingsSlinky.tstl.tstlMod.Vector
 import scala.scalajs.js

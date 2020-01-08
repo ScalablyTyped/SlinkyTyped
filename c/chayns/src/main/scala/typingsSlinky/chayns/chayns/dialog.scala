@@ -1,5 +1,6 @@
 package typingsSlinky.chayns.chayns
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chayns.DialogButton
 import typingsSlinky.chayns.DialogDateConfig
 import typingsSlinky.chayns.DialogDateResult
@@ -9,10 +10,6 @@ import typingsSlinky.chayns.DialogInputConfig
 import typingsSlinky.chayns.DialogInputResult
 import typingsSlinky.chayns.DialogSelectConfig
 import typingsSlinky.chayns.DialogSelectResult
-import typingsSlinky.chayns.chayns.dialog.buttonText
-import typingsSlinky.chayns.chayns.dialog.buttonType
-import typingsSlinky.chayns.chayns.dialog.dateType
-import typingsSlinky.chayns.chayns.dialog.inputType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,12 +56,20 @@ object dialog extends js.Object {
     @js.native
     sealed trait YES extends buttonText
     
-    /* "Abbrechen" */ val CANCEL: typingsSlinky.chayns.chayns.dialog.buttonText.CANCEL with String = js.native
-    /* "Nein" */ val NO: typingsSlinky.chayns.chayns.dialog.buttonText.NO with String = js.native
-    /* "OK" */ val OK: typingsSlinky.chayns.chayns.dialog.buttonText.OK with String = js.native
-    /* "Ja" */ val YES: typingsSlinky.chayns.chayns.dialog.buttonText.YES with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[buttonText with String] = js.native
+    /* "Abbrechen" */ @js.native
+    object CANCEL extends TopLevel[CANCEL with String]
+    
+    /* "Nein" */ @js.native
+    object NO extends TopLevel[NO with String]
+    
+    /* "OK" */ @js.native
+    object OK extends TopLevel[OK with String]
+    
+    /* "Ja" */ @js.native
+    object YES extends TopLevel[YES with String]
+    
   }
   
   @js.native
@@ -78,11 +83,17 @@ object dialog extends js.Object {
     @js.native
     sealed trait POSITIVE extends buttonType
     
-    /* -1 */ val CANCEL: typingsSlinky.chayns.chayns.dialog.buttonType.CANCEL with Double = js.native
-    /* 0 */ val NEGATIVE: typingsSlinky.chayns.chayns.dialog.buttonType.NEGATIVE with Double = js.native
-    /* 1 */ val POSITIVE: typingsSlinky.chayns.chayns.dialog.buttonType.POSITIVE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[buttonType with Double] = js.native
+    /* -1 */ @js.native
+    object CANCEL extends TopLevel[CANCEL with Double]
+    
+    /* 0 */ @js.native
+    object NEGATIVE extends TopLevel[NEGATIVE with Double]
+    
+    /* 1 */ @js.native
+    object POSITIVE extends TopLevel[POSITIVE with Double]
+    
   }
   
   @js.native
@@ -96,11 +107,17 @@ object dialog extends js.Object {
     @js.native
     sealed trait TIME extends dateType
     
-    /* 0 */ val DATE: typingsSlinky.chayns.chayns.dialog.dateType.DATE with Double = js.native
-    /* 2 */ val DATE_TIME: typingsSlinky.chayns.chayns.dialog.dateType.DATE_TIME with Double = js.native
-    /* 1 */ val TIME: typingsSlinky.chayns.chayns.dialog.dateType.TIME with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[dateType with Double] = js.native
+    /* 0 */ @js.native
+    object DATE extends TopLevel[DATE with Double]
+    
+    /* 2 */ @js.native
+    object DATE_TIME extends TopLevel[DATE_TIME with Double]
+    
+    /* 1 */ @js.native
+    object TIME extends TopLevel[TIME with Double]
+    
   }
   
   @js.native
@@ -111,10 +128,14 @@ object dialog extends js.Object {
     @js.native
     sealed trait PASSWORD extends inputType
     
-    /* 0 */ val DEFAULT: typingsSlinky.chayns.chayns.dialog.inputType.DEFAULT with Double = js.native
-    /* 1 */ val PASSWORD: typingsSlinky.chayns.chayns.dialog.inputType.PASSWORD with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[inputType with Double] = js.native
+    /* 0 */ @js.native
+    object DEFAULT extends TopLevel[DEFAULT with Double]
+    
+    /* 1 */ @js.native
+    object PASSWORD extends TopLevel[PASSWORD with Double]
+    
   }
   
 }

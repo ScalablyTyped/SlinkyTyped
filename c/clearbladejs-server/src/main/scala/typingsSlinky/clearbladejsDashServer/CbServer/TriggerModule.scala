@@ -1,5 +1,6 @@
 package typingsSlinky.clearbladejsDashServer.CbServer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object TriggerModule extends js.Object {
   @js.native
   sealed trait USER extends TriggerModule
   
-  /* "Device" */ val DEVICE: typingsSlinky.clearbladejsDashServer.CbServer.TriggerModule.DEVICE with String = js.native
-  /* "Data" */ val Data: typingsSlinky.clearbladejsDashServer.CbServer.TriggerModule.Data with String = js.native
-  /* "Messaging" */ val MESSAGING: typingsSlinky.clearbladejsDashServer.CbServer.TriggerModule.MESSAGING with String = js.native
-  /* "User" */ val USER: typingsSlinky.clearbladejsDashServer.CbServer.TriggerModule.USER with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TriggerModule with String] = js.native
+  /* "Device" */ @js.native
+  object DEVICE extends TopLevel[DEVICE with String]
+  
+  /* "Data" */ @js.native
+  object Data extends TopLevel[Data with String]
+  
+  /* "Messaging" */ @js.native
+  object MESSAGING extends TopLevel[MESSAGING with String]
+  
+  /* "User" */ @js.native
+  object USER extends TopLevel[USER with String]
+  
 }
 

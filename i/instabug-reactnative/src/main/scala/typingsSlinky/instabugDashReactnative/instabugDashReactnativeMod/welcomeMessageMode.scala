@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object welcomeMessageMode extends js.Object {
   @js.native
   sealed trait live extends welcomeMessageMode
   
-  /* 1 */ val beta: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.welcomeMessageMode.beta with Double = js.native
-  /* 2 */ val disabled: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.welcomeMessageMode.disabled with Double = js.native
-  /* 0 */ val live: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.welcomeMessageMode.live with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[welcomeMessageMode with Double] = js.native
+  /* 1 */ @js.native
+  object beta extends TopLevel[beta with Double]
+  
+  /* 2 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 0 */ @js.native
+  object live extends TopLevel[live with Double]
+  
 }
 

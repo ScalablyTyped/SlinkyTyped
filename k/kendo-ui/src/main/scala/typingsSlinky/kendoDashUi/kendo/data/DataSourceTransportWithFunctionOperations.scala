@@ -1,6 +1,7 @@
 package typingsSlinky.kendoDashUi.kendo.data
 
 import typingsSlinky.kendoDashUi.kendoDashUiStrings.create
+import typingsSlinky.kendoDashUi.kendoDashUiStrings.destroy
 import typingsSlinky.kendoDashUi.kendoDashUiStrings.read
 import typingsSlinky.kendoDashUi.kendoDashUiStrings.update
 import scala.scalajs.js
@@ -23,7 +24,7 @@ object DataSourceTransportWithFunctionOperations {
   def apply(
     create: /* options */ DataSourceTransportOptions => Unit = null,
     destroy: /* options */ DataSourceTransportOptions => Unit = null,
-    parameterMap: (/* data */ DataSourceTransportParameterMapData, /* type */ create | typingsSlinky.kendoDashUi.kendoDashUiStrings.destroy | read | update) => _ = null,
+    parameterMap: (/* data */ DataSourceTransportParameterMapData, /* type */ create | destroy | read | update) => _ = null,
     push: js.Function = null,
     read: /* options */ DataSourceTransportReadOptions => Unit = null,
     signalr: DataSourceTransportSignalr | (js.Function1[/* options */ DataSourceTransportOptions, Unit]) = null,

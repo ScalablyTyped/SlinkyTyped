@@ -33,7 +33,7 @@ import typingsSlinky.jquery.JQuery.ValHooks
 import typingsSlinky.jquery.JQuery.htmlString
 import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.jquery.JQuery.jqXHR.DoneCallback
-import typingsSlinky.jquery.jqueryNumbers.`true`
+import typingsSlinky.jquery.jqueryBooleans.`true`
 import typingsSlinky.jquery.jqueryStrings.`null`
 import typingsSlinky.jquery.jqueryStrings.`object`
 import typingsSlinky.jquery.jqueryStrings.array

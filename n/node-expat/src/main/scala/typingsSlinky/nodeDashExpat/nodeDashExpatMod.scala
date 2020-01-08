@@ -2,7 +2,6 @@ package typingsSlinky.nodeDashExpat
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.internal
-import typingsSlinky.nodeDashExpat.nodeDashExpatMod.Parser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

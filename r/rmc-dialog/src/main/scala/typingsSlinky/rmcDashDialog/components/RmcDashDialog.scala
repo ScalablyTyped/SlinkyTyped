@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcDashDialog extends SharedApply_IDialogPropTypes1921335498[default] {
+object RmcDashDialog extends SharedApply_IDialogPropTypes1878920582[default] {
   @JSImport("rmc-dialog", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015ComponentTransformETransformStateMod.ETransformState
-import typingsSlinky.wonderDotJs.distEs2015ComponentTransformTransformMod.Transform
 import typingsSlinky.wonderDotJs.distEs2015CoreComponentMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

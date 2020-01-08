@@ -12,7 +12,7 @@ waitMe ======
 | Keywords           | waitMe, spinner |
 | # releases         | 3 |
 | # dependents       | 0 |
-| # downloads        | 265 |
+| # downloads        | 317 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "gatsby-core-utils"
-version := "1.0.21-5a012c"
+version := "1.0.25-b611e8"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

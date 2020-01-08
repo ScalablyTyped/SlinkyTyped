@@ -1,9 +1,10 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atMaterialDashUiCore.tableSortLabelTableSortLabelMod.TableSortLabelProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +19,8 @@ object tableSortLabelMod extends js.Object {
     def this(props: TableSortLabelProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[TableSortLabelProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[TableSortLabelProps]]
+  
 }
 

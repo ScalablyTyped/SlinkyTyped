@@ -1,23 +1,25 @@
 package typingsSlinky.atBabelTypes.atBabelTypesMod
 
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`!==`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`!=`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`%`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`&`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`**`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`+`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`-`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`/`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`<<`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`<=`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`<`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`===`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`==`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`>=`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`>>>`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`>>`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`>`
-import typingsSlinky.atBabelTypes.atBabelTypesStrings.`_backtick^_backtick`
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Ampersand
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Asterisk
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.AsteriskAsterisk
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.EqualssignEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.EqualssignEqualssignEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.ExclamationmarkEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.ExclamationmarkEqualssignEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Greaterthansign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.GreaterthansignEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.GreaterthansignGreaterthansign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.GreaterthansignGreaterthansignGreaterthansign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Lessthansign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.LessthansignEqualssign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.LessthansignLessthansign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Percentsign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Plussign
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Slash
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.Verticalline
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.^
+import typingsSlinky.atBabelTypes.atBabelTypesStrings.`-_`
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.in
 import typingsSlinky.atBabelTypes.atBabelTypesStrings.instanceof
 import scala.scalajs.js
@@ -30,7 +32,7 @@ import scala.scalajs.js.annotation._
      with BaseNode
      with Expression {
   var left: Expression
-  var operator: `+` | `-` | `/` | `%` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`*` | `**` | `&` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`
+  var operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign
   var right: Expression
   @JSName("type")
   var type_BinaryExpression: typingsSlinky.atBabelTypes.atBabelTypesStrings.BinaryExpression
@@ -40,7 +42,7 @@ object BinaryExpression {
   @scala.inline
   def apply(
     left: Expression,
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`*` | `**` | `&` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
     right: Expression,
     `type`: typingsSlinky.atBabelTypes.atBabelTypesStrings.BinaryExpression,
     end: Int | Double = null,
@@ -66,7 +68,7 @@ object BinaryExpression {
 @js.native
 object binaryExpression extends js.Object {
   def apply(
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`*` | `**` | `&` | typingsSlinky.atBabelTypes.atBabelTypesStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
     left: Expression,
     right: Expression
   ): BinaryExpression = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesObservableMod.Property
-import typingsSlinky.baconjs.typesScanMod.Accumulator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

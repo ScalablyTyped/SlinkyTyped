@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.spine
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object AttachmentType extends js.Object {
   @js.native
   sealed trait Region extends AttachmentType
   
-  /* 1 */ val BoundingBox: typingsSlinky.phaser.spine.AttachmentType.BoundingBox with Double = js.native
-  /* 6 */ val Clipping: typingsSlinky.phaser.spine.AttachmentType.Clipping with Double = js.native
-  /* 3 */ val LinkedMesh: typingsSlinky.phaser.spine.AttachmentType.LinkedMesh with Double = js.native
-  /* 2 */ val Mesh: typingsSlinky.phaser.spine.AttachmentType.Mesh with Double = js.native
-  /* 4 */ val Path: typingsSlinky.phaser.spine.AttachmentType.Path with Double = js.native
-  /* 5 */ val Point: typingsSlinky.phaser.spine.AttachmentType.Point with Double = js.native
-  /* 0 */ val Region: typingsSlinky.phaser.spine.AttachmentType.Region with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AttachmentType with Double] = js.native
+  /* 1 */ @js.native
+  object BoundingBox extends TopLevel[BoundingBox with Double]
+  
+  /* 6 */ @js.native
+  object Clipping extends TopLevel[Clipping with Double]
+  
+  /* 3 */ @js.native
+  object LinkedMesh extends TopLevel[LinkedMesh with Double]
+  
+  /* 2 */ @js.native
+  object Mesh extends TopLevel[Mesh with Double]
+  
+  /* 4 */ @js.native
+  object Path extends TopLevel[Path with Double]
+  
+  /* 5 */ @js.native
+  object Point extends TopLevel[Point with Double]
+  
+  /* 0 */ @js.native
+  object Region extends TopLevel[Region with Double]
+  
 }
 

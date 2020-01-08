@@ -1,5 +1,6 @@
 package typingsSlinky.couchbase.couchbaseMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.couchbase.couchbaseMod.ViewQuery.ErrorMode
 import typingsSlinky.couchbase.couchbaseMod.ViewQuery.Order
 import typingsSlinky.couchbase.couchbaseMod.ViewQuery.Update
@@ -142,10 +143,14 @@ object ViewQuery extends js.Object {
     @js.native
     sealed trait STOP extends ErrorMode
     
-    /* 0 */ val CONTINUE: typingsSlinky.couchbase.couchbaseMod.ViewQuery.ErrorMode.CONTINUE with Double = js.native
-    /* 1 */ val STOP: typingsSlinky.couchbase.couchbaseMod.ViewQuery.ErrorMode.STOP with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ErrorMode with Double] = js.native
+    /* 0 */ @js.native
+    object CONTINUE extends TopLevel[CONTINUE with Double]
+    
+    /* 1 */ @js.native
+    object STOP extends TopLevel[STOP with Double]
+    
   }
   
   /**
@@ -165,10 +170,14 @@ object ViewQuery extends js.Object {
     @js.native
     sealed trait DESCENDING extends Order
     
-    /* 0 */ val ASCENDING: typingsSlinky.couchbase.couchbaseMod.ViewQuery.Order.ASCENDING with Double = js.native
-    /* 1 */ val DESCENDING: typingsSlinky.couchbase.couchbaseMod.ViewQuery.Order.DESCENDING with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Order with Double] = js.native
+    /* 0 */ @js.native
+    object ASCENDING extends TopLevel[ASCENDING with Double]
+    
+    /* 1 */ @js.native
+    object DESCENDING extends TopLevel[DESCENDING with Double]
+    
   }
   
   /**
@@ -194,11 +203,17 @@ object ViewQuery extends js.Object {
     @js.native
     sealed trait NONE extends Update
     
-    /* 2 */ val AFTER: typingsSlinky.couchbase.couchbaseMod.ViewQuery.Update.AFTER with Double = js.native
-    /* 0 */ val BEFORE: typingsSlinky.couchbase.couchbaseMod.ViewQuery.Update.BEFORE with Double = js.native
-    /* 1 */ val NONE: typingsSlinky.couchbase.couchbaseMod.ViewQuery.Update.NONE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Update with Double] = js.native
+    /* 2 */ @js.native
+    object AFTER extends TopLevel[AFTER with Double]
+    
+    /* 0 */ @js.native
+    object BEFORE extends TopLevel[BEFORE with Double]
+    
+    /* 1 */ @js.native
+    object NONE extends TopLevel[NONE with Double]
+    
   }
   
 }

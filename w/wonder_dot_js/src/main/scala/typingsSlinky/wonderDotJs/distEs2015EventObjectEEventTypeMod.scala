@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +28,23 @@ object distEs2015EventObjectEEventTypeMod extends js.Object {
     @js.native
     sealed trait TOUCH extends EEventType
     
-    /* 4 */ val CUSTOM: typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType.CUSTOM with Double = js.native
-    /* 3 */ val KEYBOARD: typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType.KEYBOARD with Double = js.native
-    /* 0 */ val MOUSE: typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType.MOUSE with Double = js.native
-    /* 2 */ val POINT: typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType.POINT with Double = js.native
-    /* 1 */ val TOUCH: typingsSlinky.wonderDotJs.distEs2015EventObjectEEventTypeMod.EEventType.TOUCH with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EEventType with Double] = js.native
+    /* 4 */ @js.native
+    object CUSTOM extends TopLevel[CUSTOM with Double]
+    
+    /* 3 */ @js.native
+    object KEYBOARD extends TopLevel[KEYBOARD with Double]
+    
+    /* 0 */ @js.native
+    object MOUSE extends TopLevel[MOUSE with Double]
+    
+    /* 2 */ @js.native
+    object POINT extends TopLevel[POINT with Double]
+    
+    /* 1 */ @js.native
+    object TOUCH extends TopLevel[TOUCH with Double]
+    
   }
   
 }

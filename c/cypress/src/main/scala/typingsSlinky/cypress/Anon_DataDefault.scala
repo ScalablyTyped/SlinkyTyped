@@ -2,7 +2,7 @@ package typingsSlinky.cypress
 
 import typingsSlinky.cypress.JQuery.TriggeredEvent
 import typingsSlinky.cypress.JQuery._SpecialEventHook
-import typingsSlinky.cypress.cypressNumbers.`false`
+import typingsSlinky.cypress.cypressBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

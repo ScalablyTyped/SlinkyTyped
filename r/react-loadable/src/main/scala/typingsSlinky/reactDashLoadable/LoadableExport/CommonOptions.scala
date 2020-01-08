@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashLoadable.LoadableExport
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactDashLoadable.reactDashLoadableNumbers.`false`
+import typingsSlinky.reactDashLoadable.reactDashLoadableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +19,7 @@ trait CommonOptions extends js.Object {
     * If you don't want to render anything you can pass a function that returns null
     * (this is considered a valid React component).
     */
-  // NOTE: () => null is only needed until React.SFC supports components returning null
-  var loading: ReactComponentClass[LoadingComponentProps] | js.Function0[Null]
+  var loading: ReactComponentClass[LoadingComponentProps]
   /**
     * Optional array of module paths that `Loadable.Capture`'s `report` function will be applied on during
     * server-side rendering. This helps the server know which modules were imported/used during SSR.
@@ -55,7 +54,7 @@ trait CommonOptions extends js.Object {
 object CommonOptions {
   @scala.inline
   def apply(
-    loading: ReactComponentClass[LoadingComponentProps] | js.Function0[Null],
+    loading: ReactComponentClass[LoadingComponentProps],
     delay: Double | `false` = null,
     modules: js.Array[String] = null,
     timeout: Double | `false` = null,

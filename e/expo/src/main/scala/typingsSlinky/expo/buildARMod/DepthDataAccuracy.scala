@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DepthDataAccuracy extends js.Object {
   @js.native
   sealed trait Relative extends DepthDataAccuracy
   
-  /* "AVDepthDataAccuracyAbsolute" */ val Absolute: typingsSlinky.expo.buildARMod.DepthDataAccuracy.Absolute with String = js.native
-  /* "AVDepthDataAccuracyRelative" */ val Relative: typingsSlinky.expo.buildARMod.DepthDataAccuracy.Relative with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DepthDataAccuracy with String] = js.native
+  /* "AVDepthDataAccuracyAbsolute" */ @js.native
+  object Absolute extends TopLevel[Absolute with String]
+  
+  /* "AVDepthDataAccuracyRelative" */ @js.native
+  object Relative extends TopLevel[Relative with String]
+  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.ol.imageTileMod.ImageTile
 import typingsSlinky.ol.tileMod.LoadFunction
 import typingsSlinky.ol.tileMod.Options
 import typingsSlinky.ol.tileStateMod.TileState

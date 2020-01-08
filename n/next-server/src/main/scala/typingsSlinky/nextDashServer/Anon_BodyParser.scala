@@ -1,6 +1,6 @@
 package typingsSlinky.nextDashServer
 
-import typingsSlinky.nextDashServer.nextDashServerNumbers.`false`
+import typingsSlinky.nextDashServer.nextDashServerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

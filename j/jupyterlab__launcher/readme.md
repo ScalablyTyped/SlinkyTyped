@@ -10,15 +10,13 @@ JupyterLab - Launcher Panel
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/launcher |
 | Keywords           | - |
-| # releases         | 44 |
-| # dependents       | 46 |
-| # downloads        | 605054 |
+| # releases         | 64 |
+| # dependents       | 67 |
+| # downloads        | 786851 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Flauncher)
     
 

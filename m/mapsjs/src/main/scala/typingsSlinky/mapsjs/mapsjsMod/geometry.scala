@@ -2,7 +2,6 @@ package typingsSlinky.mapsjs.mapsjsMod
 
 import typingsSlinky.mapsjs.Anon_Distance
 import typingsSlinky.mapsjs.Anon_Idx
-import typingsSlinky.mapsjs.mapsjsMod.geometry.polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

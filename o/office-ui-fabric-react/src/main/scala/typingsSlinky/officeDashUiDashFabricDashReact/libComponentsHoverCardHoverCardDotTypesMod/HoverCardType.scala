@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardHoverCardDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object HoverCardType extends js.Object {
   @js.native
   sealed trait plain extends HoverCardType
   
-  /* "ExpandingCard" */ val expanding: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardHoverCardDotTypesMod.HoverCardType.expanding with String = js.native
-  /* "PlainCard" */ val plain: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardHoverCardDotTypesMod.HoverCardType.plain with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[HoverCardType with String] = js.native
+  /* "ExpandingCard" */ @js.native
+  object expanding extends TopLevel[expanding with String]
+  
+  /* "PlainCard" */ @js.native
+  object plain extends TopLevel[plain with String]
+  
 }
 

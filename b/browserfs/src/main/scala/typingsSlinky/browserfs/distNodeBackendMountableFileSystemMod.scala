@@ -1,8 +1,6 @@
 package typingsSlinky.browserfs
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.browserfs.distNodeBackendMountableFileSystemMod.MountableFileSystem
-import typingsSlinky.browserfs.distNodeBackendMountableFileSystemMod.MountableFileSystemOptions
 import typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ApiError
 import typingsSlinky.browserfs.distNodeCoreFileMod.File
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.FileFlag

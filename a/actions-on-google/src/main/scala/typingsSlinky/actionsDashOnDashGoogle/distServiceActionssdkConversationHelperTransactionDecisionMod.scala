@@ -1,6 +1,6 @@
 package typingsSlinky.actionsDashOnDashGoogle
 
-import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDOTintentDOTTRANSACTION_DECISION
+import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDotintentDotTRANSACTION_DECISION
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsTransactionsV3TransactionDecisionValueSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsV2TransactionDecisionValueSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperHelperMod.Helper
@@ -19,7 +19,7 @@ object distServiceActionssdkConversationHelperTransactionDecisionMod extends js.
     * @public
     */
   class TransactionDecision () extends Helper[
-          actionsDOTintentDOTTRANSACTION_DECISION, 
+          actionsDotintentDotTRANSACTION_DECISION, 
           GoogleActionsV2TransactionDecisionValueSpec | GoogleActionsTransactionsV3TransactionDecisionValueSpec
         ] {
     def this(options: GoogleActionsTransactionsV3TransactionDecisionValueSpec) = this()

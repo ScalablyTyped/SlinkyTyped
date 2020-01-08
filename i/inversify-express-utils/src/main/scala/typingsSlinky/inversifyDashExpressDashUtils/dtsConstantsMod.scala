@@ -1,7 +1,7 @@
 package typingsSlinky.inversifyDashExpressDashUtils
 
-import typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE
-import typingsSlinky.inversifyDashExpressDashUtils.inversifyDashExpressDashUtilsStrings.`/`
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.inversifyDashExpressDashUtils.inversifyDashExpressDashUtilsStrings.Slash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ object dtsConstantsMod extends js.Object {
   @js.native
   sealed trait PARAMETER_TYPE extends js.Object
   
-  val DEFAULT_ROUTING_ROOT_PATH: `/` = js.native
+  val DEFAULT_ROUTING_ROOT_PATH: Slash = js.native
   val NO_CONTROLLERS_FOUND: String = js.native
   def DUPLICATED_CONTROLLER_NAME(name: String): String = js.native
   @js.native
@@ -52,17 +52,35 @@ object dtsConstantsMod extends js.Object {
     @js.native
     sealed trait RESPONSE extends PARAMETER_TYPE
     
-    /* 4 */ val BODY: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.BODY with Double = js.native
-    /* 6 */ val COOKIES: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.COOKIES with Double = js.native
-    /* 5 */ val HEADERS: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.HEADERS with Double = js.native
-    /* 7 */ val NEXT: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.NEXT with Double = js.native
-    /* 2 */ val PARAMS: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.PARAMS with Double = js.native
-    /* 8 */ val PRINCIPAL: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.PRINCIPAL with Double = js.native
-    /* 3 */ val QUERY: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.QUERY with Double = js.native
-    /* 0 */ val REQUEST: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.REQUEST with Double = js.native
-    /* 1 */ val RESPONSE: typingsSlinky.inversifyDashExpressDashUtils.dtsConstantsMod.PARAMETER_TYPE.RESPONSE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PARAMETER_TYPE with Double] = js.native
+    /* 4 */ @js.native
+    object BODY extends TopLevel[BODY with Double]
+    
+    /* 6 */ @js.native
+    object COOKIES extends TopLevel[COOKIES with Double]
+    
+    /* 5 */ @js.native
+    object HEADERS extends TopLevel[HEADERS with Double]
+    
+    /* 7 */ @js.native
+    object NEXT extends TopLevel[NEXT with Double]
+    
+    /* 2 */ @js.native
+    object PARAMS extends TopLevel[PARAMS with Double]
+    
+    /* 8 */ @js.native
+    object PRINCIPAL extends TopLevel[PRINCIPAL with Double]
+    
+    /* 3 */ @js.native
+    object QUERY extends TopLevel[QUERY with Double]
+    
+    /* 0 */ @js.native
+    object REQUEST extends TopLevel[REQUEST with Double]
+    
+    /* 1 */ @js.native
+    object RESPONSE extends TopLevel[RESPONSE with Double]
+    
   }
   
   @js.native

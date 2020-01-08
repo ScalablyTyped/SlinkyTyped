@@ -1,6 +1,5 @@
 package typingsSlinky.atUifabricMergeDashStyles
 
-import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunction
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
 import typingsSlinky.std.Partial
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.ejs
 
-import typingsSlinky.ejs.ejsNumbers.`true`
+import typingsSlinky.ejs.ejsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

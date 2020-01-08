@@ -1,7 +1,5 @@
 package typingsSlinky.vexdb
 
-import typingsSlinky.vexdb.outUtilFilterMod.Filter
-import typingsSlinky.vexdb.outUtilFilterMod.FilterFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

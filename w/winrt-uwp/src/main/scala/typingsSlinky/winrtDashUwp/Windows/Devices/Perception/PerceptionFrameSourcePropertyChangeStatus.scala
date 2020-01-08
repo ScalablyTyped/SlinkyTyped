@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Perception
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object PerceptionFrameSourcePropertyChangeStatus extends js.Object {
   @js.native
   sealed trait valueOutOfRange extends PerceptionFrameSourcePropertyChangeStatus
   
-  /* 1 */ val accepted: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.accepted with Double = js.native
-  /* 2 */ val lostControl: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.lostControl with Double = js.native
-  /* 3 */ val propertyNotSupported: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.propertyNotSupported with Double = js.native
-  /* 4 */ val propertyReadOnly: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.propertyReadOnly with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.unknown with Double = js.native
-  /* 5 */ val valueOutOfRange: typingsSlinky.winrtDashUwp.Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus.valueOutOfRange with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PerceptionFrameSourcePropertyChangeStatus with Double] = js.native
+  /* 1 */ @js.native
+  object accepted extends TopLevel[accepted with Double]
+  
+  /* 2 */ @js.native
+  object lostControl extends TopLevel[lostControl with Double]
+  
+  /* 3 */ @js.native
+  object propertyNotSupported extends TopLevel[propertyNotSupported with Double]
+  
+  /* 4 */ @js.native
+  object propertyReadOnly extends TopLevel[propertyReadOnly with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 5 */ @js.native
+  object valueOutOfRange extends TopLevel[valueOutOfRange with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.actionsDashOnDashGoogle
 
-import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDOTintentDOTDIGITAL_PURCHASE_CHECK
+import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDotintentDotDIGITAL_PURCHASE_CHECK
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsTransactionsV3DigitalPurchaseCheckResult
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsTransactionsV3DigitalPurchaseCheckSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperHelperMod.Helper
@@ -17,7 +17,7 @@ object distServiceActionssdkConversationHelperTransactionDigitalpurchasecheckMod
     * @public
     */
   class DigitalPurchaseCheck () extends Helper[
-          actionsDOTintentDOTDIGITAL_PURCHASE_CHECK, 
+          actionsDotintentDotDIGITAL_PURCHASE_CHECK, 
           GoogleActionsTransactionsV3DigitalPurchaseCheckSpec
         ] {
     def this(options: GoogleActionsTransactionsV3DigitalPurchaseCheckSpec) = this()

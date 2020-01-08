@@ -1,5 +1,6 @@
 package typingsSlinky.tableau.tableau
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ToolbarPosition extends js.Object {
   @js.native
   sealed trait TOP extends ToolbarPosition
   
-  /* "bottom" */ val BOTTOM: typingsSlinky.tableau.tableau.ToolbarPosition.BOTTOM with String = js.native
-  /* "top" */ val TOP: typingsSlinky.tableau.tableau.ToolbarPosition.TOP with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ToolbarPosition with String] = js.native
+  /* "bottom" */ @js.native
+  object BOTTOM extends TopLevel[BOTTOM with String]
+  
+  /* "top" */ @js.native
+  object TOP extends TopLevel[TOP with String]
+  
 }
 

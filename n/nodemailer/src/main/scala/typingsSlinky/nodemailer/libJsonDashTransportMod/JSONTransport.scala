@@ -1,8 +1,8 @@
 package typingsSlinky.nodemailer.libJsonDashTransportMod
 
 import typingsSlinky.nodemailer.libSharedMod.Logger
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.Transport
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

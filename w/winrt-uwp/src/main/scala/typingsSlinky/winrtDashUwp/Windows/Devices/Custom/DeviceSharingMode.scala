@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Custom
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object DeviceSharingMode extends js.Object {
   @js.native
   sealed trait shared extends DeviceSharingMode
   
-  /* 1 */ val exclusive: typingsSlinky.winrtDashUwp.Windows.Devices.Custom.DeviceSharingMode.exclusive with Double = js.native
-  /* 0 */ val shared: typingsSlinky.winrtDashUwp.Windows.Devices.Custom.DeviceSharingMode.shared with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeviceSharingMode with Double] = js.native
+  /* 1 */ @js.native
+  object exclusive extends TopLevel[exclusive with Double]
+  
+  /* 0 */ @js.native
+  object shared extends TopLevel[shared with Double]
+  
 }
 

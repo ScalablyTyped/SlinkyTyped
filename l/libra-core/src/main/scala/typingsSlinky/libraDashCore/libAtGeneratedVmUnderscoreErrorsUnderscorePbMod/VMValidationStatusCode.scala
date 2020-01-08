@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,24 +62,58 @@ object VMValidationStatusCode extends js.Object {
   @js.native
   sealed trait UNKNOWNVALIDATIONSTATUS extends VMValidationStatusCode
   
-  /* 10 */ val EXCEEDEDMAXTRANSACTIONSIZE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.EXCEEDEDMAXTRANSACTIONSIZE with Double = js.native
-  /* 16 */ val GASUNITPRICEABOVEMAXBOUND: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.GASUNITPRICEABOVEMAXBOUND with Double = js.native
-  /* 15 */ val GASUNITPRICEBELOWMINBOUND: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.GASUNITPRICEBELOWMINBOUND with Double = js.native
-  /* 5 */ val INSUFFICIENTBALANCEFORTRANSACTIONFEE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.INSUFFICIENTBALANCEFORTRANSACTIONFEE with Double = js.native
-  /* 2 */ val INVALIDAUTHKEY: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.INVALIDAUTHKEY with Double = js.native
-  /* 1 */ val INVALIDSIGNATURE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.INVALIDSIGNATURE with Double = js.native
-  /* 9 */ val INVALIDWRITESET: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.INVALIDWRITESET with Double = js.native
-  /* 14 */ val MAXGASUNITSBELOWMINTRANSACTIONGASUNITS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.MAXGASUNITSBELOWMINTRANSACTIONGASUNITS with Double = js.native
-  /* 13 */ val MAXGASUNITSEXCEEDSMAXGASUNITSBOUND: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.MAXGASUNITSEXCEEDSMAXGASUNITSBOUND with Double = js.native
-  /* 8 */ val REJECTEDWRITESET: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.REJECTEDWRITESET with Double = js.native
-  /* 7 */ val SENDINGACCOUNTDOESNOTEXIST: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.SENDINGACCOUNTDOESNOTEXIST with Double = js.native
-  /* 4 */ val SEQUENCENUMBERTOONEW: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.SEQUENCENUMBERTOONEW with Double = js.native
-  /* 3 */ val SEQUENCENUMBERTOOOLD: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.SEQUENCENUMBERTOOOLD with Double = js.native
-  /* 6 */ val TRANSACTIONEXPIRED: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.TRANSACTIONEXPIRED with Double = js.native
-  /* 12 */ val UNKNOWNMODULE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.UNKNOWNMODULE with Double = js.native
-  /* 11 */ val UNKNOWNSCRIPT: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.UNKNOWNSCRIPT with Double = js.native
-  /* 0 */ val UNKNOWNVALIDATIONSTATUS: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMValidationStatusCode.UNKNOWNVALIDATIONSTATUS with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VMValidationStatusCode with Double] = js.native
+  /* 10 */ @js.native
+  object EXCEEDEDMAXTRANSACTIONSIZE extends TopLevel[EXCEEDEDMAXTRANSACTIONSIZE with Double]
+  
+  /* 16 */ @js.native
+  object GASUNITPRICEABOVEMAXBOUND extends TopLevel[GASUNITPRICEABOVEMAXBOUND with Double]
+  
+  /* 15 */ @js.native
+  object GASUNITPRICEBELOWMINBOUND extends TopLevel[GASUNITPRICEBELOWMINBOUND with Double]
+  
+  /* 5 */ @js.native
+  object INSUFFICIENTBALANCEFORTRANSACTIONFEE extends TopLevel[INSUFFICIENTBALANCEFORTRANSACTIONFEE with Double]
+  
+  /* 2 */ @js.native
+  object INVALIDAUTHKEY extends TopLevel[INVALIDAUTHKEY with Double]
+  
+  /* 1 */ @js.native
+  object INVALIDSIGNATURE extends TopLevel[INVALIDSIGNATURE with Double]
+  
+  /* 9 */ @js.native
+  object INVALIDWRITESET extends TopLevel[INVALIDWRITESET with Double]
+  
+  /* 14 */ @js.native
+  object MAXGASUNITSBELOWMINTRANSACTIONGASUNITS extends TopLevel[MAXGASUNITSBELOWMINTRANSACTIONGASUNITS with Double]
+  
+  /* 13 */ @js.native
+  object MAXGASUNITSEXCEEDSMAXGASUNITSBOUND extends TopLevel[MAXGASUNITSEXCEEDSMAXGASUNITSBOUND with Double]
+  
+  /* 8 */ @js.native
+  object REJECTEDWRITESET extends TopLevel[REJECTEDWRITESET with Double]
+  
+  /* 7 */ @js.native
+  object SENDINGACCOUNTDOESNOTEXIST extends TopLevel[SENDINGACCOUNTDOESNOTEXIST with Double]
+  
+  /* 4 */ @js.native
+  object SEQUENCENUMBERTOONEW extends TopLevel[SEQUENCENUMBERTOONEW with Double]
+  
+  /* 3 */ @js.native
+  object SEQUENCENUMBERTOOOLD extends TopLevel[SEQUENCENUMBERTOOOLD with Double]
+  
+  /* 6 */ @js.native
+  object TRANSACTIONEXPIRED extends TopLevel[TRANSACTIONEXPIRED with Double]
+  
+  /* 12 */ @js.native
+  object UNKNOWNMODULE extends TopLevel[UNKNOWNMODULE with Double]
+  
+  /* 11 */ @js.native
+  object UNKNOWNSCRIPT extends TopLevel[UNKNOWNSCRIPT with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWNVALIDATIONSTATUS extends TopLevel[UNKNOWNVALIDATIONSTATUS with Double]
+  
 }
 

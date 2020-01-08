@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,11 +46,19 @@ object HeaderFooterState extends js.Object {
   @js.native
   sealed trait oddAndEven extends HeaderFooterState
   
-  /* "Default" */ val default: typingsSlinky.officeDashJsDashPreview.Excel.HeaderFooterState.default with String = js.native
-  /* "FirstAndDefault" */ val firstAndDefault: typingsSlinky.officeDashJsDashPreview.Excel.HeaderFooterState.firstAndDefault with String = js.native
-  /* "FirstOddAndEven" */ val firstOddAndEven: typingsSlinky.officeDashJsDashPreview.Excel.HeaderFooterState.firstOddAndEven with String = js.native
-  /* "OddAndEven" */ val oddAndEven: typingsSlinky.officeDashJsDashPreview.Excel.HeaderFooterState.oddAndEven with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[HeaderFooterState with String] = js.native
+  /* "Default" */ @js.native
+  object default extends TopLevel[default with String]
+  
+  /* "FirstAndDefault" */ @js.native
+  object firstAndDefault extends TopLevel[firstAndDefault with String]
+  
+  /* "FirstOddAndEven" */ @js.native
+  object firstOddAndEven extends TopLevel[firstOddAndEven with String]
+  
+  /* "OddAndEven" */ @js.native
+  object oddAndEven extends TopLevel[oddAndEven with String]
+  
 }
 

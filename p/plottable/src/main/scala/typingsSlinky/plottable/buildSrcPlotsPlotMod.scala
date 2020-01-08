@@ -21,7 +21,6 @@ import typingsSlinky.plottable.buildSrcDrawersDrawerMod.ProxyDrawer
 import typingsSlinky.plottable.buildSrcPlotsCommonsMod.IAccessorScaleBinding
 import typingsSlinky.plottable.buildSrcPlotsCommonsMod.ILightweightPlotEntity
 import typingsSlinky.plottable.buildSrcPlotsCommonsMod.IPlotEntity
-import typingsSlinky.plottable.buildSrcPlotsPlotMod.Renderer
 import typingsSlinky.plottable.buildSrcScalesScaleMod.Scale
 import typingsSlinky.plottable.buildSrcUtilsEntityStoreMod.IEntityStore
 import scala.scalajs.js

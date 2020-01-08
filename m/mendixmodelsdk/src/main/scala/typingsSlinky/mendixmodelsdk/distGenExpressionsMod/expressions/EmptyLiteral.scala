@@ -30,6 +30,7 @@ import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.WebServiceCa
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.WebServiceOperationParameterMapping
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ConditionalSettings
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.WidgetValidation
+import typingsSlinky.mendixmodelsdk.distGenRestMod.rest.ConsumedODataService
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -53,6 +54,8 @@ class EmptyLiteral protected () extends LiteralExpression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  @JSName("model")
+  var model_FEmptyLiteral: IModel = js.native
 }
 
 /* static members */
@@ -148,6 +151,15 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): EmptyLiteral = js.native
+  /**
+    * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
+    * The new EmptyLiteral will be automatically stored in the 'timeoutModel' property
+    * of the parent rest.ConsumedODataService element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): EmptyLiteral = js.native
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'initialValueModel' property

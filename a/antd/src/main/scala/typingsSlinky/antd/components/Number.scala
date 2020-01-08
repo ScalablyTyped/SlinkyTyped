@@ -6,6 +6,7 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.libStatisticNumberMod.NumberProps
 import typingsSlinky.antd.libStatisticUtilsMod.Formatter
+import typingsSlinky.antd.libStatisticUtilsMod.valueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +18,8 @@ object Number
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: value */
   def apply(
+    value: valueType,
     decimalSeparator: String = null,
     formatter: Formatter = null,
     groupSeparator: String = null,
@@ -26,7 +27,7 @@ object Number
     prefixCls: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
     if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
     if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])

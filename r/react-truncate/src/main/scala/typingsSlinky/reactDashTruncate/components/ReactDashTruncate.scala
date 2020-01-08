@@ -54,10 +54,10 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.reactDashTruncate.reactDashTruncateBooleans.`false`
 import typingsSlinky.reactDashTruncate.reactDashTruncateMod.Truncate
 import typingsSlinky.reactDashTruncate.reactDashTruncateMod.TruncateProps
 import typingsSlinky.reactDashTruncate.reactDashTruncateMod.default
-import typingsSlinky.reactDashTruncate.reactDashTruncateNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -331,6 +331,9 @@ object ReactDashTruncate
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashTruncate.reactDashTruncateMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TruncateProps
 }
 

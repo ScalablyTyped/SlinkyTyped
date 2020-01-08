@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object BadgePosition extends js.Object {
   @js.native
   sealed trait Topright extends BadgePosition
   
-  /* 1 */ val Bottomright: typingsSlinky.ejDotWebDotAll.ej.Tile.BadgePosition.Bottomright with Double = js.native
-  /* 0 */ val Topright: typingsSlinky.ejDotWebDotAll.ej.Tile.BadgePosition.Topright with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BadgePosition with Double] = js.native
+  /* 1 */ @js.native
+  object Bottomright extends TopLevel[Bottomright with Double]
+  
+  /* 0 */ @js.native
+  object Topright extends TopLevel[Topright with Double]
+  
 }
 

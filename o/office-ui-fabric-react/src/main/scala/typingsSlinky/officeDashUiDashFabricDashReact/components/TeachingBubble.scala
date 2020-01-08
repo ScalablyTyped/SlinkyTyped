@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TeachingBubble extends SharedApply_ITeachingBubbleProps1741767410 {
+object TeachingBubble extends SharedApply_ITeachingBubbleProps1792125397 {
   @JSImport("office-ui-fabric-react/lib/TeachingBubble", "TeachingBubble")
   @js.native
   object componentImport extends js.Object

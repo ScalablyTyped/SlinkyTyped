@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object FontStyle extends js.Object {
   @js.native
   sealed trait Underline extends FontStyle
   
-  /* 1 */ val Bold: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.FontStyle.Bold with Double = js.native
-  /* 2 */ val Italic: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.FontStyle.Italic with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.FontStyle.Normal with Double = js.native
-  /* 4 */ val Strikeout: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.FontStyle.Strikeout with Double = js.native
-  /* 3 */ val Underline: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.FontStyle.Underline with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FontStyle with Double] = js.native
+  /* 1 */ @js.native
+  object Bold extends TopLevel[Bold with Double]
+  
+  /* 2 */ @js.native
+  object Italic extends TopLevel[Italic with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
+  /* 4 */ @js.native
+  object Strikeout extends TopLevel[Strikeout with Double]
+  
+  /* 3 */ @js.native
+  object Underline extends TopLevel[Underline with Double]
+  
 }
 

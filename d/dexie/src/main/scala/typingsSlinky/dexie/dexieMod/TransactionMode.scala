@@ -6,11 +6,11 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typings.dexie.dexieStrings.r
-  - typings.dexie.dexieStrings.`r!`
-  - typings.dexie.dexieStrings.`r?`
+  - typings.dexie.dexieStrings.rExclamationmark
+  - typings.dexie.dexieStrings.rQuestionmark
   - typings.dexie.dexieStrings.rw
-  - typings.dexie.dexieStrings.`rw!`
-  - typings.dexie.dexieStrings.`rw?`
+  - typings.dexie.dexieStrings.rwExclamationmark
+  - typings.dexie.dexieStrings.rwQuestionmark
 */
 trait TransactionMode extends js.Object
 
@@ -20,14 +20,14 @@ object TransactionMode {
   @scala.inline
   def r: typingsSlinky.dexie.dexieStrings.r = this.cast("r")
   @scala.inline
-  def `r!`: typingsSlinky.dexie.dexieStrings.`r!` = this.cast("r!")
+  def rExclamationmark: typingsSlinky.dexie.dexieStrings.rExclamationmark = this.cast("r!")
   @scala.inline
-  def `r?`: typingsSlinky.dexie.dexieStrings.`r?` = this.cast("r?")
+  def rQuestionmark: typingsSlinky.dexie.dexieStrings.rQuestionmark = this.cast("r?")
   @scala.inline
   def rw: typingsSlinky.dexie.dexieStrings.rw = this.cast("rw")
   @scala.inline
-  def `rw!`: typingsSlinky.dexie.dexieStrings.`rw!` = this.cast("rw!")
+  def rwExclamationmark: typingsSlinky.dexie.dexieStrings.rwExclamationmark = this.cast("rw!")
   @scala.inline
-  def `rw?`: typingsSlinky.dexie.dexieStrings.`rw?` = this.cast("rw?")
+  def rwQuestionmark: typingsSlinky.dexie.dexieStrings.rwQuestionmark = this.cast("rw?")
 }
 

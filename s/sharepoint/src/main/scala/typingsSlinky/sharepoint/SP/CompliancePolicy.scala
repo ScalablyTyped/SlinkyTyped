@@ -1,11 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPContainerId
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPContainerType
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPPolicyAssociation
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPPolicyBinding
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPPolicyDefinition
-import typingsSlinky.sharepoint.SP.CompliancePolicy.SPPolicyRule
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -217,11 +212,17 @@ object CompliancePolicy extends js.Object {
     @js.native
     sealed trait web extends SPContainerType
     
-    /* 2 */ val list: typingsSlinky.sharepoint.SP.CompliancePolicy.SPContainerType.list with Double = js.native
-    /* 0 */ val site: typingsSlinky.sharepoint.SP.CompliancePolicy.SPContainerType.site with Double = js.native
-    /* 1 */ val web: typingsSlinky.sharepoint.SP.CompliancePolicy.SPContainerType.web with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[SPContainerType with Double] = js.native
+    /* 2 */ @js.native
+    object list extends TopLevel[list with Double]
+    
+    /* 0 */ @js.native
+    object site extends TopLevel[site with Double]
+    
+    /* 1 */ @js.native
+    object web extends TopLevel[web with Double]
+    
   }
   
   /* static members */

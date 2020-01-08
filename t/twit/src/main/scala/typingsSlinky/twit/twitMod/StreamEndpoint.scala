@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.twit.twitStrings.`statuses/filter`
-  - typings.twit.twitStrings.`statuses/sample`
-  - typings.twit.twitStrings.`statuses/firehose`
+  - typings.twit.twitStrings.statusesSlashfilter
+  - typings.twit.twitStrings.statusesSlashsample
+  - typings.twit.twitStrings.statusesSlashfirehose
   - typings.twit.twitStrings.user
   - typings.twit.twitStrings.site
 */
@@ -19,11 +19,11 @@ object StreamEndpoint {
   @scala.inline
   def site: typingsSlinky.twit.twitStrings.site = this.cast("site")
   @scala.inline
-  def `statuses/filter`: typingsSlinky.twit.twitStrings.`statuses/filter` = this.cast("statuses/filter")
+  def statusesSlashfilter: typingsSlinky.twit.twitStrings.statusesSlashfilter = this.cast("statuses/filter")
   @scala.inline
-  def `statuses/firehose`: typingsSlinky.twit.twitStrings.`statuses/firehose` = this.cast("statuses/firehose")
+  def statusesSlashfirehose: typingsSlinky.twit.twitStrings.statusesSlashfirehose = this.cast("statuses/firehose")
   @scala.inline
-  def `statuses/sample`: typingsSlinky.twit.twitStrings.`statuses/sample` = this.cast("statuses/sample")
+  def statusesSlashsample: typingsSlinky.twit.twitStrings.statusesSlashsample = this.cast("statuses/sample")
   @scala.inline
   def user: typingsSlinky.twit.twitStrings.user = this.cast("user")
 }

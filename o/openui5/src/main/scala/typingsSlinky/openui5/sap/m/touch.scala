@@ -1,6 +1,7 @@
 package typingsSlinky.openui5.sap.m
 
 import org.scalajs.dom.raw.TouchList
+import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.openui5.Anon_TouchInitDict
 import typingsSlinky.openui5.sap.ui.core.Element
 import scala.scalajs.js
@@ -17,7 +18,7 @@ object touch extends js.Object {
     * @param vElement A jQuery element or an element reference or an element id.
     * @returns The number of touches related with the given element.
     */
-  def countContained(oTouchList: TouchList, vElement: typingsSlinky.jquery.JQueryStatic): Double = js.native
+  def countContained(oTouchList: TouchList, vElement: JQueryStatic): Double = js.native
   def countContained(oTouchList: TouchList, vElement: Element): Double = js.native
   def find(oTouchList: TouchList, oTouch: Double): js.Any = js.native
   /**

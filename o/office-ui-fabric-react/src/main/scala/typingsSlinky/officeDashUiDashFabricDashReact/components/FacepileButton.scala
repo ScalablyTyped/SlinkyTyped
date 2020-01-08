@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FacepileButton
-  extends SharedApply_IButtonProps_1043969546[
+  extends SharedApply_IButtonProps_2021318183[
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFacepileFacepileButtonMod.FacepileButton
     ] {
   @JSImport("office-ui-fabric-react/lib/components/Facepile/FacepileButton", "FacepileButton")

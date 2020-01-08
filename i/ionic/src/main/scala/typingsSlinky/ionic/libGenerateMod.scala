@@ -17,7 +17,6 @@ import typingsSlinky.ionic.definitionsMod.IProject
 import typingsSlinky.ionic.definitionsMod.IShell
 import typingsSlinky.ionic.definitionsMod.IonicContext
 import typingsSlinky.ionic.definitionsMod.Runner
-import typingsSlinky.ionic.libGenerateMod.GenerateRunnerDeps
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CreatePayload extends js.Object {
-  val identity: typingsSlinky.nodeDashZendesk.nodeDashZendeskMod.Users.Identities.CreateModel
+  val identity: CreateModel
 }
 
 object CreatePayload {
   @scala.inline
-  def apply(identity: typingsSlinky.nodeDashZendesk.nodeDashZendeskMod.Users.Identities.CreateModel): CreatePayload = {
+  def apply(identity: CreateModel): CreatePayload = {
     val __obj = js.Dynamic.literal(identity = identity.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[CreatePayload]

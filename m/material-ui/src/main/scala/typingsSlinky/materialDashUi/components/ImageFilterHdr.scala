@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageFilterHdr
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilterHdr] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageFilterHdr] {
   @JSImport("material-ui/svg-icons", "ImageFilterHdr")
   @js.native
   object componentImport extends js.Object

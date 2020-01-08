@@ -1,7 +1,5 @@
 package typingsSlinky.mobx
 
-import typingsSlinky.mobx.libUtilsDecoratorsMod.BabelDescriptor
-import typingsSlinky.mobx.libUtilsDecoratorsMod.PropertyCreator
 import typingsSlinky.std.IArguments
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js

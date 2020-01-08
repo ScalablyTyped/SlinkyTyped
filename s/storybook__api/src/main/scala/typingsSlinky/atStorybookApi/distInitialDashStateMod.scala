@@ -2,7 +2,6 @@ package typingsSlinky.atStorybookApi
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atStorybookApi.atStorybookApiMod.State
-import typingsSlinky.atStorybookApi.distInitialDashStateMod.Addition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

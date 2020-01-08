@@ -1,6 +1,5 @@
 package typingsSlinky.logrocketDashReact
 
-import typingsSlinky.logrocketDashReact.logrocketDashReactMod.LR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

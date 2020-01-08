@@ -1,6 +1,7 @@
 package typingsSlinky.rcDashMentions.libKeywordTriggerMod
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcDashMentions.libMentionsMod.Placement
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
 import scala.scalajs.js
@@ -8,6 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait KeywordTriggerProps extends js.Object {
+  var children: js.UndefOr[ReactElement] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
   var options: js.Array[OptionProps]
@@ -21,6 +23,7 @@ object KeywordTriggerProps {
   @scala.inline
   def apply(
     options: js.Array[OptionProps],
+    children: ReactElement = null,
     getPopupContainer: () => HTMLElement = null,
     loading: js.UndefOr[Boolean] = js.undefined,
     placement: Placement = null,
@@ -29,6 +32,7 @@ object KeywordTriggerProps {
     visible: js.UndefOr[Boolean] = js.undefined
   ): KeywordTriggerProps = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction0(getPopupContainer))
     if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])

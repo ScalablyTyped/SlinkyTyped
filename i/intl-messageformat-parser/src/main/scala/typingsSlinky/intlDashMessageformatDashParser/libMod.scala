@@ -1,6 +1,6 @@
 package typingsSlinky.intlDashMessageformatDashParser
 
-import typingsSlinky.intlDashMessageformatDashParser.libMod.ParseOptions
+import typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.atFormatjsIntlDashUnifiedDashNumberformatMod.UnifiedNumberFormatOptions
 import typingsSlinky.intlDashMessageformatDashParser.libParserMod.Expectation
 import typingsSlinky.intlDashMessageformatDashParser.libParserMod.IFileRange
 import typingsSlinky.intlDashMessageformatDashParser.libParserMod.IParseOptions
@@ -11,6 +11,7 @@ import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.LiteralElement
 import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.MessageFormatElement
 import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.NumberElement
 import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.NumberSkeleton
+import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.NumberSkeletonToken
 import typingsSlinky.intlDashMessageformatDashParser.libTypesMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,6 +28,7 @@ object libMod extends js.Object {
   }
   
   val pegParse: ParseFunction = js.native
+  def convertNumberSkeletonToNumberFormatOptions(tokens: js.Array[NumberSkeletonToken]): UnifiedNumberFormatOptions = js.native
   def createLiteralElement(value: String): LiteralElement = js.native
   def createNumberElement(value: String): NumberElement = js.native
   def createNumberElement(value: String, style: String): NumberElement = js.native

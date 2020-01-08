@@ -1,7 +1,6 @@
 package typingsSlinky.ignoreDashStyles
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ignoreDashStyles.ignoreDashStylesMod.Handler
 import typingsSlinky.node.NodeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`

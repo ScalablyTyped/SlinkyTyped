@@ -8,9 +8,9 @@ import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsIconIconMod.Ico
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.HtmlIframeProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandContent
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandItem
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`16:9`
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`21:9`
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`4:3`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`16Colon9`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`21Colon9`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`4Colon3`
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.vimeo
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.youtube
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object EmbedProps {
     StringDictionary: /* key */ StringDictionary[js.Any] = null,
     active: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
-    aspectRatio: `4:3` | `16:9` | `21:9` = null,
+    aspectRatio: `4Colon3` | `16Colon9` | `21Colon9` = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
     brandedUI: js.UndefOr[Boolean] = js.undefined,
     children: TagMod[Any] = null,

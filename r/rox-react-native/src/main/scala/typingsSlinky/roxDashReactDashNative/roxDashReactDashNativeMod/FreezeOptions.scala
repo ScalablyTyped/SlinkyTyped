@@ -1,5 +1,6 @@
 package typingsSlinky.roxDashReactDashNative.roxDashReactDashNativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FreezeOptions extends js.Object {
   @js.native
   sealed trait freezeOptionUntilLaunch extends FreezeOptions
   
-  /* 3 */ val freezeOptionNone: typingsSlinky.roxDashReactDashNative.roxDashReactDashNativeMod.FreezeOptions.freezeOptionNone with Double = js.native
-  /* 2 */ val freezeOptionUntilForeground: typingsSlinky.roxDashReactDashNative.roxDashReactDashNativeMod.FreezeOptions.freezeOptionUntilForeground with Double = js.native
-  /* 1 */ val freezeOptionUntilLaunch: typingsSlinky.roxDashReactDashNative.roxDashReactDashNativeMod.FreezeOptions.freezeOptionUntilLaunch with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FreezeOptions with Double] = js.native
+  /* 3 */ @js.native
+  object freezeOptionNone extends TopLevel[freezeOptionNone with Double]
+  
+  /* 2 */ @js.native
+  object freezeOptionUntilForeground extends TopLevel[freezeOptionUntilForeground with Double]
+  
+  /* 1 */ @js.native
+  object freezeOptionUntilLaunch extends TopLevel[freezeOptionUntilLaunch with Double]
+  
 }
 

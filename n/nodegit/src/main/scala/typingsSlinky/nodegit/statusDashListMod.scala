@@ -2,7 +2,6 @@ package typingsSlinky.nodegit
 
 import typingsSlinky.nodegit.diffDashPerfDashDataMod.DiffPerfdata
 import typingsSlinky.nodegit.repositoryMod.Repository
-import typingsSlinky.nodegit.statusDashListMod.StatusList
 import typingsSlinky.nodegit.statusDashOptionsMod.StatusOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

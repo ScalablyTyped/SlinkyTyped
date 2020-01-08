@@ -2,8 +2,6 @@ package typingsSlinky.atReachAlertDashDialog
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.atReachAlertDashDialog.atReachAlertDashDialogMod.AlertDialogContentProps
-import typingsSlinky.atReachAlertDashDialog.atReachAlertDashDialogMod.AlertDialogProps
 import typingsSlinky.atReachDialog.atReachDialogMod.DialogContentProps
 import typingsSlinky.atReachDialog.atReachDialogMod.DialogProps
 import typingsSlinky.react.reactMod.HTMLProps

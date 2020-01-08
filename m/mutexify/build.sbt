@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "mutexify"
-version := "1.2-dt-20181012Z-db3050"
+version := "1.2-dt-20181012Z-b7c7eb"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

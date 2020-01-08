@@ -1,7 +1,5 @@
 package typingsSlinky.vectorious
 
-import typingsSlinky.vectorious.vectoriousMod.Matrix
-import typingsSlinky.vectorious.vectoriousMod.Vector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ReportViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object RenderMode extends js.Object {
   @js.native
   sealed trait Mobile extends RenderMode
   
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.RenderMode.Default with Double = js.native
-  /* 2 */ val Desktop: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.RenderMode.Desktop with Double = js.native
-  /* 1 */ val Mobile: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.RenderMode.Mobile with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RenderMode with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 2 */ @js.native
+  object Desktop extends TopLevel[Desktop with Double]
+  
+  /* 1 */ @js.native
+  object Mobile extends TopLevel[Mobile with Double]
+  
 }
 

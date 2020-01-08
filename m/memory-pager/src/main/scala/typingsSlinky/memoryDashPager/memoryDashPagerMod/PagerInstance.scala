@@ -1,7 +1,7 @@
 package typingsSlinky.memoryDashPager.memoryDashPagerMod
 
-import typingsSlinky.memoryDashPager.memoryDashPagerNumbers.`false`
-import typingsSlinky.memoryDashPager.memoryDashPagerNumbers.`true`
+import typingsSlinky.memoryDashPager.memoryDashPagerBooleans.`false`
+import typingsSlinky.memoryDashPager.memoryDashPagerBooleans.`true`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

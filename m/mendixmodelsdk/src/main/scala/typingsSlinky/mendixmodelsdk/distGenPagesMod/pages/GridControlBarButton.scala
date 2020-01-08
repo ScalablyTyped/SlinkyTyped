@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenPagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -19,6 +20,8 @@ abstract class GridControlBarButton protected () extends ControlBarButton {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  @JSName("model")
+  var model_FGridControlBarButton: IModel = js.native
 }
 
 /* static members */

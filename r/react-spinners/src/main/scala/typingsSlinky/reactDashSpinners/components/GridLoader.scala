@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GridLoader extends SharedApply_LoaderSizeMarginProps1778921353[default] {
+object GridLoader extends SharedApply_LoaderSizeMarginProps2112337662[default] {
   @JSImport("react-spinners/GridLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

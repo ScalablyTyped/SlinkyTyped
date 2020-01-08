@@ -1,6 +1,5 @@
 package typingsSlinky.jsmediatags
 
-import typingsSlinky.jsmediatags.build2ID3v2FrameReaderMod.ID3v2FrameReader
 import typingsSlinky.jsmediatags.typesMod.FrameReaderSignature
 import typingsSlinky.jsmediatags.typesMod.TagFrameFlags
 import typingsSlinky.jsmediatags.typesMod.TagFrameHeader

@@ -1,10 +1,11 @@
 package typingsSlinky.storybookDashReactDashRouter
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atStorybookAddons.distTypesMod.DecoratorFunction
 import typingsSlinky.atStorybookReact.distClientPreviewTypesMod.StoryFnReactReturnType
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.reactDashRouter.reactDashRouterMod.MemoryRouterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,9 +21,11 @@ object storybookDashReactDashRouterMod extends js.Object {
     def this(props: Anon_Links, context: js.Any) = this()
   }
   
-  val StoryRouter: ReactComponentClass[Anon_Links] = js.native
   def default(): DecoratorFunction[StoryFnReactReturnType] = js.native
   def default(links: js.Object): DecoratorFunction[StoryFnReactReturnType] = js.native
   def default(links: js.Object, routerProps: MemoryRouterProps): DecoratorFunction[StoryFnReactReturnType] = js.native
+  @js.native
+  object StoryRouter extends TopLevel[ComponentType[Anon_Links]]
+  
 }
 

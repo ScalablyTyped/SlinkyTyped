@@ -21,7 +21,7 @@ trait StatefulContainerProps extends js.Object {
   var getParentMenu: js.UndefOr[js.Function1[/* ref */ Ref[HTMLElement], Unit]] = js.undefined
   var getRequiredItemProps: js.UndefOr[GetRequiredItemProps] = js.undefined
   var initialState: js.UndefOr[StatefulContainerState] = js.undefined
-  var items: js.Array[_]
+  var items: ItemsT
   var onItemSelect: js.UndefOr[OnItemSelect] = js.undefined
   var removeMenuFromNesting: js.UndefOr[js.Function1[/* ref */ Ref[HTMLElement], Unit]] = js.undefined
   var rootRef: js.UndefOr[Ref[_]] = js.undefined
@@ -31,7 +31,7 @@ trait StatefulContainerProps extends js.Object {
 object StatefulContainerProps {
   @scala.inline
   def apply(
-    items: js.Array[_],
+    items: ItemsT,
     addMenuToNesting: /* ref */ Ref[HTMLElement] => Unit = null,
     children: /* args */ RenderProps => TagMod[Any] = null,
     getChildMenu: /* ref */ Ref[HTMLElement] => Unit = null,
@@ -41,7 +41,7 @@ object StatefulContainerProps {
     onItemSelect: /* args */ Anon_EventItem => js.Any = null,
     removeMenuFromNesting: /* ref */ Ref[HTMLElement] => Unit = null,
     rootRef: Ref[_] = null,
-    stateReducer: (/* changeType */ moveUp | mouseEnter | focus | click | reset | moveDown, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState = null
+    stateReducer: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState = null
   ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
     if (addMenuToNesting != null) __obj.updateDynamic("addMenuToNesting")(js.Any.fromFunction1(addMenuToNesting))

@@ -1,10 +1,10 @@
 package typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginMod.Critters
 
-import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.JS
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.`js-lazy`
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.all
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.body
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.critical
+import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.js_
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.media
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.none
 import typingsSlinky.crittersDashWebpackDashPlugin.crittersDashWebpackDashPluginStrings.swap
@@ -70,7 +70,7 @@ trait CrittersOptions extends js.Object {
     * - "js": Inject an asynchronous CSS loader similar to LoadCSS and use it to load stylesheets. [JS]
     * - "js-lazy": Like "js", but the stylesheet is disabled until fully loaded.
     */
-  var preload: js.UndefOr[body | media | swap | JS | `js-lazy`] = js.undefined
+  var preload: js.UndefOr[body | media | swap | js_ | `js-lazy`] = js.undefined
   /**
     * Preloads critical fonts.
     * @default true
@@ -95,7 +95,7 @@ object CrittersOptions {
     mergeStylesheets: js.UndefOr[Boolean] = js.undefined,
     minimumExternalSize: Int | Double = null,
     noscriptFallback: js.UndefOr[Boolean] = js.undefined,
-    preload: body | media | swap | JS | `js-lazy` = null,
+    preload: body | media | swap | js_ | `js-lazy` = null,
     preloadFonts: js.UndefOr[Boolean] = js.undefined,
     pruneSource: js.UndefOr[Boolean] = js.undefined
   ): CrittersOptions = {

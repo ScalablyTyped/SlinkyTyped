@@ -1,6 +1,7 @@
 package typingsSlinky.gulpDashConnect.gulpDashConnectMod
 
 import typingsSlinky.connect.connectMod.HandleFunction
+import typingsSlinky.gulpDashConnect.TypeofconnectModule
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.httpsMod.ServerOptions
 import scala.scalajs.js
@@ -47,7 +48,7 @@ object ConnectAppOptions {
     https: Boolean | ServerOptions = null,
     index: Boolean | String | js.Array[String] = null,
     livereload: Boolean | LiveReloadOptions = null,
-    middleware: (/* connect */ js.Function0[typingsSlinky.connect.connectMod.Server], /* options */ ConnectAppOptions) => js.Array[HandleFunction | ConnectRouteHandler] = null,
+    middleware: (/* connect */ js.Function0[typingsSlinky.connect.connectMod.Server] with TypeofconnectModule, /* options */ ConnectAppOptions) => js.Array[HandleFunction | ConnectRouteHandler] = null,
     name: String = null,
     port: Int | Double = null,
     root: String | js.Array[String] = null,

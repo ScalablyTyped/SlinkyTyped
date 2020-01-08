@@ -1,6 +1,6 @@
 package typingsSlinky.setDashCookieDashParser
 
-import typingsSlinky.setDashCookieDashParser.setDashCookieDashParserNumbers.`false`
+import typingsSlinky.setDashCookieDashParser.setDashCookieDashParserBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

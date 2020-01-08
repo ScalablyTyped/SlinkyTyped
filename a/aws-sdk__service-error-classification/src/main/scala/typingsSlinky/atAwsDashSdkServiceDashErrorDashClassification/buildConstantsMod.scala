@@ -1,8 +1,7 @@
 package typingsSlinky.atAwsDashSdkServiceDashErrorDashClassification
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atAwsDashSdkServiceDashErrorDashClassification.atAwsDashSdkServiceDashErrorDashClassificationNumbers.`true`
-import typingsSlinky.atAwsDashSdkServiceDashErrorDashClassification.buildConstantsMod.ErrorCodeSet
+import typingsSlinky.atAwsDashSdkServiceDashErrorDashClassification.atAwsDashSdkServiceDashErrorDashClassificationBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

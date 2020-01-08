@@ -1,7 +1,7 @@
 package typingsSlinky.onionoo.onionooMod.Onionoo
 
 import typingsSlinky.got.gotMod.Cache
-import typingsSlinky.onionoo.onionooNumbers.`false`
+import typingsSlinky.onionoo.onionooBooleans.`false`
 import typingsSlinky.onionoo.onionooStrings.bandwidth
 import typingsSlinky.onionoo.onionooStrings.clients
 import typingsSlinky.onionoo.onionooStrings.details

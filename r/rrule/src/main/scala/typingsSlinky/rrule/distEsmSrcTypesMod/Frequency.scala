@@ -1,5 +1,6 @@
 package typingsSlinky.rrule.distEsmSrcTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object Frequency extends js.Object {
   @js.native
   sealed trait YEARLY extends Frequency
   
-  /* 3 */ val DAILY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.DAILY with Double = js.native
-  /* 4 */ val HOURLY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.HOURLY with Double = js.native
-  /* 5 */ val MINUTELY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.MINUTELY with Double = js.native
-  /* 1 */ val MONTHLY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.MONTHLY with Double = js.native
-  /* 6 */ val SECONDLY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.SECONDLY with Double = js.native
-  /* 2 */ val WEEKLY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.WEEKLY with Double = js.native
-  /* 0 */ val YEARLY: typingsSlinky.rrule.distEsmSrcTypesMod.Frequency.YEARLY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Frequency with Double] = js.native
+  /* 3 */ @js.native
+  object DAILY extends TopLevel[DAILY with Double]
+  
+  /* 4 */ @js.native
+  object HOURLY extends TopLevel[HOURLY with Double]
+  
+  /* 5 */ @js.native
+  object MINUTELY extends TopLevel[MINUTELY with Double]
+  
+  /* 1 */ @js.native
+  object MONTHLY extends TopLevel[MONTHLY with Double]
+  
+  /* 6 */ @js.native
+  object SECONDLY extends TopLevel[SECONDLY with Double]
+  
+  /* 2 */ @js.native
+  object WEEKLY extends TopLevel[WEEKLY with Double]
+  
+  /* 0 */ @js.native
+  object YEARLY extends TopLevel[YEARLY with Double]
+  
 }
 

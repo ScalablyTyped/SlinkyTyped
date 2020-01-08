@@ -1,6 +1,5 @@
 package typingsSlinky.flaggedDashRespawn
 
-import typingsSlinky.flaggedDashRespawn.flaggedDashRespawnMod.Callback
 import typingsSlinky.node.NodeJS.Process
 import scala.scalajs.js
 import scala.scalajs.js.`|`

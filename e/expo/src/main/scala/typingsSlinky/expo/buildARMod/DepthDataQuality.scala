@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DepthDataQuality extends js.Object {
   @js.native
   sealed trait Low extends DepthDataQuality
   
-  /* "AVDepthDataQualityHigh" */ val High: typingsSlinky.expo.buildARMod.DepthDataQuality.High with String = js.native
-  /* "AVDepthDataQualityLow" */ val Low: typingsSlinky.expo.buildARMod.DepthDataQuality.Low with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DepthDataQuality with String] = js.native
+  /* "AVDepthDataQualityHigh" */ @js.native
+  object High extends TopLevel[High with String]
+  
+  /* "AVDepthDataQualityLow" */ @js.native
+  object Low extends TopLevel[Low with String]
+  
 }
 

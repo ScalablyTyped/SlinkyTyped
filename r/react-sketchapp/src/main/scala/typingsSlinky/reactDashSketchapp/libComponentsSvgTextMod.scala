@@ -2,7 +2,6 @@ package typingsSlinky.reactDashSketchapp
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashSketchapp.libComponentsSvgPropsMod.TextProps
-import typingsSlinky.reactDashSketchapp.libComponentsSvgTextMod.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

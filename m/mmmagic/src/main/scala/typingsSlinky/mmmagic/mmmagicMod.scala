@@ -1,6 +1,5 @@
 package typingsSlinky.mmmagic
 
-import typingsSlinky.mmmagic.mmmagicMod.bitmask
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

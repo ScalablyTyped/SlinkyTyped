@@ -2,8 +2,6 @@ package typingsSlinky.pDashCatchDashIf
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.pDashCatchDashIf.pDashCatchDashIfMod.ErrorConstructor
-import typingsSlinky.pDashCatchDashIf.pDashCatchDashIfMod.Predicate
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

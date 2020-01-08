@@ -1,7 +1,6 @@
 package typingsSlinky.agDashGrid
 
 import typingsSlinky.agDashGrid.distLibEntitiesColDefMod.AbstractColDef
-import typingsSlinky.agDashGrid.distLibEntitiesColumnGroupChildMod.ColumnGroupChild
 import typingsSlinky.agDashGrid.distLibEntitiesColumnGroupMod.ColumnGroup
 import typingsSlinky.agDashGrid.distLibInterfacesIEventEmitterMod.IEventEmitter
 import scala.scalajs.js

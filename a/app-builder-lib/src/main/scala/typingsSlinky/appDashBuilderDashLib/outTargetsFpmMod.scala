@@ -3,7 +3,6 @@ package typingsSlinky.appDashBuilderDashLib
 import typingsSlinky.appDashBuilderDashLib.outCoreMod.Target
 import typingsSlinky.appDashBuilderDashLib.outLinuxPackagerMod.LinuxPackager
 import typingsSlinky.appDashBuilderDashLib.outOptionsLinuxOptionsMod.LinuxTargetSpecificOptions
-import typingsSlinky.appDashBuilderDashLib.outTargetsFpmMod.FpmTarget
 import typingsSlinky.appDashBuilderDashLib.outTargetsLinuxTargetHelperMod.LinuxTargetHelper
 import scala.scalajs.js
 import scala.scalajs.js.`|`

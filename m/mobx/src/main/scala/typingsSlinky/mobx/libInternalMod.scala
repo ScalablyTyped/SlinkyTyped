@@ -26,10 +26,6 @@ import typingsSlinky.mobx.libCoreObservableMod.IDepTreeNode
 import typingsSlinky.mobx.libCoreObservableMod.IObservable
 import typingsSlinky.mobx.libCoreReactionMod.IReactionDisposer
 import typingsSlinky.mobx.libCoreReactionMod.IReactionPublic
-import typingsSlinky.mobx.libInternalMod.ComputedValue
-import typingsSlinky.mobx.libInternalMod.ObservableMap
-import typingsSlinky.mobx.libInternalMod.ObservableSet
-import typingsSlinky.mobx.libInternalMod.ObservableValue
 import typingsSlinky.mobx.libTypesInterceptDashUtilsMod.IInterceptable
 import typingsSlinky.mobx.libTypesInterceptDashUtilsMod.IInterceptor
 import typingsSlinky.mobx.libTypesListenDashUtilsMod.IListenable
@@ -55,9 +51,9 @@ import typingsSlinky.mobx.libUtilsComparerMod.IEqualsComparer
 import typingsSlinky.mobx.libUtilsDecoratorsMod.BabelDescriptor
 import typingsSlinky.mobx.libUtilsDecoratorsMod.PropertyCreator
 import typingsSlinky.mobx.libUtilsUtilsMod.Lambda
-import typingsSlinky.mobx.mobxNumbers.`false`
-import typingsSlinky.mobx.mobxNumbers.`true`
-import typingsSlinky.mobx.mobxStrings.`An invariant failed, however the error is obfuscated because this is an production buildDOT`
+import typingsSlinky.mobx.mobxBooleans.`false`
+import typingsSlinky.mobx.mobxBooleans.`true`
+import typingsSlinky.mobx.mobxStrings.`An invariant failedComma however the error is obfuscated because this is a production buildDot`
 import typingsSlinky.std.AsyncGenerator
 import typingsSlinky.std.Generator
 import typingsSlinky.std.IArguments
@@ -105,10 +101,6 @@ object libInternalMod extends js.Object {
       */
     def this(options: IComputedValueOptions[T]) = this()
   }
-  
-  @js.native
-  class FlowCancellationError ()
-    extends typingsSlinky.mobx.libApiFlowMod.FlowCancellationError
   
   @js.native
   class MobXGlobals ()
@@ -176,7 +168,7 @@ object libInternalMod extends js.Object {
   @JSName("$mobx")
   val $mobx: js.Symbol = js.native
   val EMPTY_ARRAY: js.Array[scala.Nothing] = js.native
-  val OBFUSCATED_ERROR: `An invariant failed, however the error is obfuscated because this is an production buildDOT` = js.native
+  val OBFUSCATED_ERROR: `An invariant failedComma however the error is obfuscated because this is a production buildDot` = js.native
   val action: IActionFactory = js.native
   val computed: IComputed = js.native
   val computedDecorator: js.Function = js.native
@@ -247,7 +239,7 @@ object libInternalMod extends js.Object {
   {[ P in keyof T ]:? std.MethodDecorator | std.PropertyDecorator | std.Array<std.MethodDecorator> | std.Array<std.PropertyDecorator>}
     */ typingsSlinky.mobx.mobxStrings.decorate with js.Any
   ): T = js.native
-  def deepEnhancer(v: js.Any, `_`: js.Any, name: js.Any): js.Any = js.native
+  def deepEnhancer(v: js.Any, _underscore: js.Any, name: js.Any): js.Any = js.native
   def deepEqual(a: js.Any, b: js.Any): Boolean = js.native
   def deepEqual(a: js.Any, b: js.Any, depth: Double): Boolean = js.native
   def defineBoundAction(target: js.Any, propertyName: String, fn: js.Function): Unit = js.native
@@ -512,7 +504,7 @@ object libInternalMod extends js.Object {
   def set[T](obj: IObservableArray[T], index: Double, value: T): js.Any = js.native
   def set[K, V](obj: ObservableMap[K, V], key: K, value: V): js.Any = js.native
   def setReactionScheduler(fn: js.Function1[/* f */ js.Function0[Unit], Unit]): Unit = js.native
-  def shallowEnhancer(v: js.Any, `_`: js.Any, name: js.Any): js.Any = js.native
+  def shallowEnhancer(v: js.Any, _underscore: js.Any, name: js.Any): js.Any = js.native
   def shouldCompute(derivation: IDerivation): Boolean = js.native
   def spy(listener: js.Function1[/* change */ js.Any, Unit]): Lambda = js.native
   def spyReport(event: js.Any): Unit = js.native
@@ -549,6 +541,12 @@ object libInternalMod extends js.Object {
   def when(predicate: js.Function0[Boolean], effect: Lambda): IReactionDisposer = js.native
   def when(predicate: js.Function0[Boolean], effect: Lambda, opts: IWhenOptions): IReactionDisposer = js.native
   def when(predicate: js.Function0[Boolean], opts: IWhenOptions): js.Promise[Unit] with Anon_Cancel = js.native
+  @js.native
+  object FlowCancellationError extends js.Object {
+    var prototype: js.Any = js.native
+    def apply(): Unit = js.native
+  }
+  
   @js.native
   object IDerivationState extends js.Object {
     /* -1 */ val NOT_TRACKING: typingsSlinky.mobx.libCoreDerivationMod.IDerivationState.NOT_TRACKING with Double = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.atAwsDashSdkTypes
 
 import typingsSlinky.atAwsDashSdkTypes.buildHttpMod.HttpEndpoint
-import typingsSlinky.atAwsDashSdkTypes.buildUtilMod.SdkError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

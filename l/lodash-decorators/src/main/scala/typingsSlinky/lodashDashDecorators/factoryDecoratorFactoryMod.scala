@@ -2,8 +2,6 @@ package typingsSlinky.lodashDashDecorators
 
 import typingsSlinky.lodashDashDecorators.factoryCommonMod.LodashDecorator
 import typingsSlinky.lodashDashDecorators.factoryDecoratorConfigMod.DecoratorConfig
-import typingsSlinky.lodashDashDecorators.factoryDecoratorFactoryMod.GenericDecorator
-import typingsSlinky.lodashDashDecorators.factoryDecoratorFactoryMod.InternalDecoratorFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AvSurroundSound
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.AvSurroundSound] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.AvSurroundSound] {
   @JSImport("material-ui/svg-icons", "AvSurroundSound")
   @js.native
   object componentImport extends js.Object

@@ -1,8 +1,6 @@
 package typingsSlinky.dotDashObject
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.dotDashObject.DotObject.Dot
-import typingsSlinky.dotDashObject.DotObject.ModifierFunctionWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

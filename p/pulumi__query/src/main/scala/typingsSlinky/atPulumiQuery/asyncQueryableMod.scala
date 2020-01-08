@@ -1,6 +1,5 @@
 package typingsSlinky.atPulumiQuery
 
-import typingsSlinky.atPulumiQuery.asyncQueryableMod.AsyncQueryableImpl
 import typingsSlinky.atPulumiQuery.baseMod.IterableBase
 import typingsSlinky.atPulumiQuery.interfacesMod.AsyncIterableIterator
 import typingsSlinky.atPulumiQuery.interfacesMod.AsyncQuerySource

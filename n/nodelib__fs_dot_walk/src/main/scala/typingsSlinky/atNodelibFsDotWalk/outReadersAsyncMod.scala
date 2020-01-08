@@ -1,9 +1,5 @@
 package typingsSlinky.atNodelibFsDotWalk
 
-import typingsSlinky.atNodelibFsDotWalk.outReadersAsyncMod.AsyncReader
-import typingsSlinky.atNodelibFsDotWalk.outReadersAsyncMod.EndEventCallback
-import typingsSlinky.atNodelibFsDotWalk.outReadersAsyncMod.EntryEventCallback
-import typingsSlinky.atNodelibFsDotWalk.outReadersAsyncMod.ErrorEventCallback
 import typingsSlinky.atNodelibFsDotWalk.outTypesMod.Entry
 import typingsSlinky.atNodelibFsDotWalk.outTypesMod.Errno
 import typingsSlinky.node.eventsMod.EventEmitter

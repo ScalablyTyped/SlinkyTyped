@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ContactNameOrder extends js.Object {
   @js.native
   sealed trait lastNameFirstName extends ContactNameOrder
   
-  /* 0 */ val firstNameLastName: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactNameOrder.firstNameLastName with Double = js.native
-  /* 1 */ val lastNameFirstName: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactNameOrder.lastNameFirstName with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactNameOrder with Double] = js.native
+  /* 0 */ @js.native
+  object firstNameLastName extends TopLevel[firstNameLastName with Double]
+  
+  /* 1 */ @js.native
+  object lastNameFirstName extends TopLevel[lastNameFirstName with Double]
+  
 }
 

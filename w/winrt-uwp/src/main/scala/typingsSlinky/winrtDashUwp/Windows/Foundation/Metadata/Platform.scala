@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation.Metadata
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object Platform extends js.Object {
   @js.native
   sealed trait windowsPhone extends Platform
   
-  /* 0 */ val windows: typingsSlinky.winrtDashUwp.Windows.Foundation.Metadata.Platform.windows with Double = js.native
-  /* 1 */ val windowsPhone: typingsSlinky.winrtDashUwp.Windows.Foundation.Metadata.Platform.windowsPhone with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Platform with Double] = js.native
+  /* 0 */ @js.native
+  object windows extends TopLevel[windows with Double]
+  
+  /* 1 */ @js.native
+  object windowsPhone extends TopLevel[windowsPhone with Double]
+  
 }
 

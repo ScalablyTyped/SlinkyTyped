@@ -1,6 +1,5 @@
 package typingsSlinky.cesium.cesiumMod
 
-import typingsSlinky.cesium.cesiumMod.throttleRequestByServer.RequestFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

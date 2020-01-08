@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimeUnderscorePicker extends SharedApply_TimePickerProps_1689126024[default] {
+object TimeUnderscorePicker extends SharedApply_TimePickerProps201491508[default] {
   @JSImport("react-toolbox/lib/time_picker", JSImport.Default)
   @js.native
   object componentImport extends js.Object

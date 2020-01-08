@@ -1,10 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Data
 
-import typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfDocument
-import typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPage
-import typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageDimensions
-import typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRenderOptions
-import typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRotation
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Rect
@@ -156,12 +152,20 @@ object Pdf extends js.Object {
     @js.native
     sealed trait rotate90 extends PdfPageRotation
     
-    /* 0 */ val normal: typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRotation.normal with Double = js.native
-    /* 2 */ val rotate180: typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRotation.rotate180 with Double = js.native
-    /* 3 */ val rotate270: typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRotation.rotate270 with Double = js.native
-    /* 1 */ val rotate90: typingsSlinky.winrtDashUwp.Windows.Data.Pdf.PdfPageRotation.rotate90 with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PdfPageRotation with Double] = js.native
+    /* 0 */ @js.native
+    object normal extends TopLevel[normal with Double]
+    
+    /* 2 */ @js.native
+    object rotate180 extends TopLevel[rotate180 with Double]
+    
+    /* 3 */ @js.native
+    object rotate270 extends TopLevel[rotate270 with Double]
+    
+    /* 1 */ @js.native
+    object rotate90 extends TopLevel[rotate90 with Double]
+    
   }
   
 }

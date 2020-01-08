@@ -1,9 +1,5 @@
 package typingsSlinky.multistream
 
-import typingsSlinky.multistream.multistreamMod.FactoryStream
-import typingsSlinky.multistream.multistreamMod.FactoryStreamCallback
-import typingsSlinky.multistream.multistreamMod.LazyStream
-import typingsSlinky.multistream.multistreamMod.Streams
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.std.Error

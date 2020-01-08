@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libCalendarMod.CalendarMessages
 import typingsSlinky.reactDashWidgets.libCalendarMod.CalendarProps
 import typingsSlinky.reactDashWidgets.libCalendarMod.CalendarView
+import typingsSlinky.reactDashWidgets.libCalendarMod.^
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.century
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.decade
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.month
@@ -18,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Calendar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/Calendar", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -55,7 +56,7 @@ object Calendar
     views: js.Array[CalendarView] = null,
     yearFormat: String | (js.Function1[/* day */ js.Date, String]) = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (centuryFormat != null) __obj.updateDynamic("centuryFormat")(centuryFormat.asInstanceOf[js.Any])
     if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
@@ -88,6 +89,7 @@ object Calendar
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashWidgets.libCalendarMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CalendarProps
 }
 

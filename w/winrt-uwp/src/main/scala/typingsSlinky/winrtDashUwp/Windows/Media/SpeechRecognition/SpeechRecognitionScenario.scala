@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object SpeechRecognitionScenario extends js.Object {
   @js.native
   sealed trait webSearch extends SpeechRecognitionScenario
   
-  /* 1 */ val dictation: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionScenario.dictation with Double = js.native
-  /* 2 */ val formFilling: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionScenario.formFilling with Double = js.native
-  /* 0 */ val webSearch: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionScenario.webSearch with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpeechRecognitionScenario with Double] = js.native
+  /* 1 */ @js.native
+  object dictation extends TopLevel[dictation with Double]
+  
+  /* 2 */ @js.native
+  object formFilling extends TopLevel[formFilling with Double]
+  
+  /* 0 */ @js.native
+  object webSearch extends TopLevel[webSearch with Double]
+  
 }
 

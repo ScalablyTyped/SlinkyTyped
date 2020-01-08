@@ -1,6 +1,5 @@
 package typingsSlinky.jsmediatags
 
-import typingsSlinky.jsmediatags.build2MediaFileReaderMod.MediaFileReader
 import typingsSlinky.jsmediatags.build2StringUtilsMod.DecodedString
 import typingsSlinky.jsmediatags.typesMod.CharsetType
 import typingsSlinky.jsmediatags.typesMod.LoadCallbackType

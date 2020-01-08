@@ -7,45 +7,45 @@ import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line:interface-name
 trait I18nOptions extends js.Object {
-  var dateTimeFormats: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.DateTimeFormats] = js.undefined
-  var fallbackLocale: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Locale] = js.undefined
+  var dateTimeFormats: js.UndefOr[DateTimeFormats] = js.undefined
+  var fallbackLocale: js.UndefOr[Locale] = js.undefined
   var fallbackRoot: js.UndefOr[Boolean] = js.undefined
   var formatFallbackMessages: js.UndefOr[Boolean] = js.undefined
-  var formatter: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Formatter] = js.undefined
-  var locale: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Locale] = js.undefined
-  var messages: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.LocaleMessages] = js.undefined
-  var missing: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.MissingHandler] = js.undefined
+  var formatter: js.UndefOr[Formatter] = js.undefined
+  var locale: js.UndefOr[Locale] = js.undefined
+  var messages: js.UndefOr[LocaleMessages] = js.undefined
+  var missing: js.UndefOr[MissingHandler] = js.undefined
   var modifiers: js.UndefOr[Modifiers] = js.undefined
-  var numberFormats: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.NumberFormats] = js.undefined
+  var numberFormats: js.UndefOr[NumberFormats] = js.undefined
   var pluralizationRules: js.UndefOr[PluralizationRulesMap] = js.undefined
   var preserveDirectiveContent: js.UndefOr[Boolean] = js.undefined
-  var sharedMessages: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.LocaleMessages] = js.undefined
+  var sharedMessages: js.UndefOr[LocaleMessages] = js.undefined
   var silentFallbackWarn: js.UndefOr[Boolean | js.RegExp] = js.undefined
   var silentTranslationWarn: js.UndefOr[Boolean | js.RegExp] = js.undefined
   var sync: js.UndefOr[Boolean] = js.undefined
-  var warnHtmlInMessage: js.UndefOr[typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.WarnHtmlInMessageLevel] = js.undefined
+  var warnHtmlInMessage: js.UndefOr[WarnHtmlInMessageLevel] = js.undefined
 }
 
 object I18nOptions {
   @scala.inline
   def apply(
-    dateTimeFormats: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.DateTimeFormats = null,
-    fallbackLocale: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Locale = null,
+    dateTimeFormats: DateTimeFormats = null,
+    fallbackLocale: Locale = null,
     fallbackRoot: js.UndefOr[Boolean] = js.undefined,
     formatFallbackMessages: js.UndefOr[Boolean] = js.undefined,
-    formatter: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Formatter = null,
-    locale: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Locale = null,
-    messages: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.LocaleMessages = null,
-    missing: (/* locale */ typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Locale, /* key */ typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.Path, /* vm */ Vue | Null, /* values */ js.Any) => String | Unit = null,
+    formatter: Formatter = null,
+    locale: Locale = null,
+    messages: LocaleMessages = null,
+    missing: (/* locale */ Locale, /* key */ Path, /* vm */ Vue | Null, /* values */ js.Any) => String | Unit = null,
     modifiers: Modifiers = null,
-    numberFormats: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.NumberFormats = null,
+    numberFormats: NumberFormats = null,
     pluralizationRules: PluralizationRulesMap = null,
     preserveDirectiveContent: js.UndefOr[Boolean] = js.undefined,
-    sharedMessages: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.LocaleMessages = null,
+    sharedMessages: LocaleMessages = null,
     silentFallbackWarn: Boolean | js.RegExp = null,
     silentTranslationWarn: Boolean | js.RegExp = null,
     sync: js.UndefOr[Boolean] = js.undefined,
-    warnHtmlInMessage: typingsSlinky.vueDashI18n.vueDashI18nMod.VueI18n.WarnHtmlInMessageLevel = null
+    warnHtmlInMessage: WarnHtmlInMessageLevel = null
   ): I18nOptions = {
     val __obj = js.Dynamic.literal()
     if (dateTimeFormats != null) __obj.updateDynamic("dateTimeFormats")(dateTimeFormats.asInstanceOf[js.Any])

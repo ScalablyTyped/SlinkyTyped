@@ -1,6 +1,6 @@
 package typingsSlinky.atTensorflowTfjsDashConverter
 
-import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.`1DOT3DOT2`
+import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.`1Dot5Dot1`
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcOperationsTypesMod.OpExecutor
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.IOHandler
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.LoadOptions
@@ -29,7 +29,7 @@ object atTensorflowTfjsDashConverterMod extends js.Object {
     def this(modelUrl: IOHandler, loadOptions: LoadOptions) = this()
   }
   
-  val version_converter: `1DOT3DOT2` = js.native
+  val version_converter: `1Dot5Dot1` = js.native
   def deregisterOp(name: String): Unit = js.native
   def loadGraphModel(modelUrl: String): js.Promise[
     typingsSlinky.atTensorflowTfjsDashConverter.distSrcExecutorGraphUnderscoreModelMod.GraphModel

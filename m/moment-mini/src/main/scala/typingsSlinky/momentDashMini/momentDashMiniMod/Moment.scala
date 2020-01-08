@@ -4,9 +4,9 @@ import typingsSlinky.momentDashMini.momentDashMiniMod.unitOfTime.All
 import typingsSlinky.momentDashMini.momentDashMiniMod.unitOfTime.Diff
 import typingsSlinky.momentDashMini.momentDashMiniMod.unitOfTime.DurationConstructor
 import typingsSlinky.momentDashMini.momentDashMiniMod.unitOfTime.StartOf
-import typingsSlinky.momentDashMini.momentDashMiniStrings.`()`
-import typingsSlinky.momentDashMini.momentDashMiniStrings.`(]`
-import typingsSlinky.momentDashMini.momentDashMiniStrings.`[)`
+import typingsSlinky.momentDashMini.momentDashMiniStrings.LeftparenthesisRightparenthesis
+import typingsSlinky.momentDashMini.momentDashMiniStrings.`Leftparenthesis]`
+import typingsSlinky.momentDashMini.momentDashMiniStrings.`[Rightparenthesis`
 import typingsSlinky.momentDashMini.momentDashMiniStrings.`[]`
 import typingsSlinky.std.Object
 import scala.scalajs.js
@@ -76,9 +76,9 @@ trait Moment
   def isBefore(inp: MomentInput, granularity: StartOf): Boolean = js.native
   def isBetween(a: MomentInput, b: MomentInput): Boolean = js.native
   def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf): Boolean = js.native
-  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `()`): Boolean = js.native
-  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `(]`): Boolean = js.native
-  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `[)`): Boolean = js.native
+  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: LeftparenthesisRightparenthesis): Boolean = js.native
+  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `Leftparenthesis]`): Boolean = js.native
+  def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `[Rightparenthesis`): Boolean = js.native
   def isBetween(a: MomentInput, b: MomentInput, granularity: StartOf, inclusivity: `[]`): Boolean = js.native
   def isDST(): Boolean = js.native
   /**

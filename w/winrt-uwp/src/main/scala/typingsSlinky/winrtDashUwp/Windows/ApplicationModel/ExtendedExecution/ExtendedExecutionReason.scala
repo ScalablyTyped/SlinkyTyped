@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object ExtendedExecutionReason extends js.Object {
   @js.native
   sealed trait unspecified extends ExtendedExecutionReason
   
-  /* 1 */ val locationTracking: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason.locationTracking with Double = js.native
-  /* 2 */ val savingData: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason.savingData with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtendedExecutionReason with Double] = js.native
+  /* 1 */ @js.native
+  object locationTracking extends TopLevel[locationTracking with Double]
+  
+  /* 2 */ @js.native
+  object savingData extends TopLevel[savingData with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

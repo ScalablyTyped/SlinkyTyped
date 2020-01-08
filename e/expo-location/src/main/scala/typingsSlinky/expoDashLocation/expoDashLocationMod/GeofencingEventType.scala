@@ -1,5 +1,6 @@
 package typingsSlinky.expoDashLocation.expoDashLocationMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object GeofencingEventType extends js.Object {
   @js.native
   sealed trait Exit extends GeofencingEventType
   
-  /* 1 */ val Enter: typingsSlinky.expoDashLocation.expoDashLocationMod.GeofencingEventType.Enter with Double = js.native
-  /* 2 */ val Exit: typingsSlinky.expoDashLocation.expoDashLocationMod.GeofencingEventType.Exit with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GeofencingEventType with Double] = js.native
+  /* 1 */ @js.native
+  object Enter extends TopLevel[Enter with Double]
+  
+  /* 2 */ @js.native
+  object Exit extends TopLevel[Exit with Double]
+  
 }
 

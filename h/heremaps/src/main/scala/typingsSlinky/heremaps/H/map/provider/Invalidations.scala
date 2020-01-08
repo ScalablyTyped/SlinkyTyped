@@ -1,6 +1,6 @@
 package typingsSlinky.heremaps.H.map.provider
 
-import typingsSlinky.heremaps.H.map.provider.Invalidations.Flag
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.map.provider.Invalidations.Mark
 import typingsSlinky.heremaps.H.math.BitMask
 import scala.scalajs.js
@@ -94,14 +94,26 @@ object Invalidations extends js.Object {
     @js.native
     sealed trait Z_ORDER extends Flag
     
-    /* 3 */ val ADD: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.ADD with Double = js.native
-    /* 0 */ val NONE: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.NONE with Double = js.native
-    /* 4 */ val REMOVE: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.REMOVE with Double = js.native
-    /* 2 */ val SPATIAL: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.SPATIAL with Double = js.native
-    /* 1 */ val VISUAL: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.VISUAL with Double = js.native
-    /* 5 */ val Z_ORDER: typingsSlinky.heremaps.H.map.provider.Invalidations.Flag.Z_ORDER with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Flag with Double] = js.native
+    /* 3 */ @js.native
+    object ADD extends TopLevel[ADD with Double]
+    
+    /* 0 */ @js.native
+    object NONE extends TopLevel[NONE with Double]
+    
+    /* 4 */ @js.native
+    object REMOVE extends TopLevel[REMOVE with Double]
+    
+    /* 2 */ @js.native
+    object SPATIAL extends TopLevel[SPATIAL with Double]
+    
+    /* 1 */ @js.native
+    object VISUAL extends TopLevel[VISUAL with Double]
+    
+    /* 5 */ @js.native
+    object Z_ORDER extends TopLevel[Z_ORDER with Double]
+    
   }
   
   /**

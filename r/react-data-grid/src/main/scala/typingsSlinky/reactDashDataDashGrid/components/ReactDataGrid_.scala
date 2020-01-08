@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ReactDataGrid_
-  extends SharedApply_GridProps_67560248[typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.ReactDataGrid_[js.Any]] {
+  extends SharedApply_GridProps2055870710[typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.ReactDataGrid_[js.Any]] {
   @JSGlobal("AdazzleReactDataGrid.ReactDataGrid")
   @js.native
   object componentImport extends js.Object

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "pulumi__kubernetes"
-version := "1.3.2-353d7d"
+version := "1.4.1-ca0fee"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "minimist" % "1.2.0-dt-20190322Z-322150",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
-  "org.scalablytyped.slinky" %%% "pulumi__pulumi" % "1.6.1-9e43c5",
-  "org.scalablytyped.slinky" %%% "pulumi__query" % "0.3.0-7570a5",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "minimist" % "1.2.0-dt-20190322Z-83bee2",
+  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
+  "org.scalablytyped.slinky" %%% "pulumi__pulumi" % "1.8.1-0df528",
+  "org.scalablytyped.slinky" %%% "pulumi__query" % "0.3.0-89b11d",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

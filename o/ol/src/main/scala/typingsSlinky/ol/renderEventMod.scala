@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.renderEventMod.RenderEvent
 import typingsSlinky.ol.renderEventTypeMod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

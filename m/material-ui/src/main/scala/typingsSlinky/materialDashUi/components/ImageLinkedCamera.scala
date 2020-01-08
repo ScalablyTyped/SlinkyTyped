@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageLinkedCamera
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImageLinkedCamera] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImageLinkedCamera] {
   @JSImport("material-ui/svg-icons", "ImageLinkedCamera")
   @js.native
   object componentImport extends js.Object

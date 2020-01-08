@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.cesium.Anon_ClosedFaceForward
 import typingsSlinky.cesium.cesiumMod.MaterialAppearance.MaterialSupport
 import scala.scalajs.js
@@ -33,11 +34,17 @@ object MaterialAppearance extends js.Object {
     @js.native
     sealed trait TEXTURED extends MaterialSupport
     
-    /* 2 */ val ALL: typingsSlinky.cesium.cesiumMod.MaterialAppearance.MaterialSupport.ALL with Double = js.native
-    /* 0 */ val BASIC: typingsSlinky.cesium.cesiumMod.MaterialAppearance.MaterialSupport.BASIC with Double = js.native
-    /* 1 */ val TEXTURED: typingsSlinky.cesium.cesiumMod.MaterialAppearance.MaterialSupport.TEXTURED with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MaterialSupport with Double] = js.native
+    /* 2 */ @js.native
+    object ALL extends TopLevel[ALL with Double]
+    
+    /* 0 */ @js.native
+    object BASIC extends TopLevel[BASIC with Double]
+    
+    /* 1 */ @js.native
+    object TEXTURED extends TopLevel[TEXTURED with Double]
+    
   }
   
 }

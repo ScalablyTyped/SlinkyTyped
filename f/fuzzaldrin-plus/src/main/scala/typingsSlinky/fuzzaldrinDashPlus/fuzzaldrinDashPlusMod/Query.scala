@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Query () extends js.Object {
   @JSName("$$__internal")
-  var $$__internal: js.Symbol = js.native
+  var DollarDollar__internal: js.Symbol = js.native
 }
 

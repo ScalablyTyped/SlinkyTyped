@@ -38,6 +38,7 @@ object ReactDashJsonschemaDashForm
     FieldTemplate: ReactComponentClass[FieldTemplateProps] = null,
     ObjectFieldTemplate: ReactComponentClass[ObjectFieldTemplateProps[_]] = null,
     acceptcharset: String = null,
+    additionalMetaSchemas: js.Array[js.Object] = null,
     autocomplete: String = null,
     enctype: String = null,
     fields: StringDictionary[Field] = null,
@@ -63,6 +64,7 @@ object ReactDashJsonschemaDashForm
     if (FieldTemplate != null) __obj.updateDynamic("FieldTemplate")(FieldTemplate.asInstanceOf[js.Any])
     if (ObjectFieldTemplate != null) __obj.updateDynamic("ObjectFieldTemplate")(ObjectFieldTemplate.asInstanceOf[js.Any])
     if (acceptcharset != null) __obj.updateDynamic("acceptcharset")(acceptcharset.asInstanceOf[js.Any])
+    if (additionalMetaSchemas != null) __obj.updateDynamic("additionalMetaSchemas")(additionalMetaSchemas.asInstanceOf[js.Any])
     if (autocomplete != null) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
     if (enctype != null) __obj.updateDynamic("enctype")(enctype.asInstanceOf[js.Any])
     if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])

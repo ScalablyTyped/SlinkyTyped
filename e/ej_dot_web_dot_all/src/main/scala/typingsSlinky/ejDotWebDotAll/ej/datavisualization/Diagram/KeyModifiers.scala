@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object KeyModifiers extends js.Object {
   @js.native
   sealed trait Shift extends KeyModifiers
   
-  /* 1 */ val Alt: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.KeyModifiers.Alt with Double = js.native
-  /* 2 */ val Control: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.KeyModifiers.Control with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.KeyModifiers.None with Double = js.native
-  /* 3 */ val Shift: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.KeyModifiers.Shift with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[KeyModifiers with Double] = js.native
+  /* 1 */ @js.native
+  object Alt extends TopLevel[Alt with Double]
+  
+  /* 2 */ @js.native
+  object Control extends TopLevel[Control with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object Shift extends TopLevel[Shift with Double]
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.ol.coordinateMod.Coordinate
-import typingsSlinky.ol.mapBrowserEventMod.MapBrowserEvent
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import scala.scalajs.js

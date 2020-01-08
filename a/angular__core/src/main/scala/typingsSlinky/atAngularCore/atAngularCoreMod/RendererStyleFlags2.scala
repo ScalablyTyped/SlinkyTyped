@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object RendererStyleFlags2 extends js.Object {
   @js.native
   sealed trait Important extends RendererStyleFlags2
   
-  /* 2 */ val DashCase: typingsSlinky.atAngularCore.atAngularCoreMod.RendererStyleFlags2.DashCase with Double = js.native
-  /* 1 */ val Important: typingsSlinky.atAngularCore.atAngularCoreMod.RendererStyleFlags2.Important with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RendererStyleFlags2 with Double] = js.native
+  /* 2 */ @js.native
+  object DashCase extends TopLevel[DashCase with Double]
+  
+  /* 1 */ @js.native
+  object Important extends TopLevel[Important with Double]
+  
 }
 

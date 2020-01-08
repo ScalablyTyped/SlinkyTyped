@@ -1,8 +1,5 @@
 package typingsSlinky.elgamal
 
-import typingsSlinky.elgamal.elgamalMod.DecryptedValue
-import typingsSlinky.elgamal.elgamalMod.ElGamal
-import typingsSlinky.elgamal.elgamalMod.EncryptedValue
 import typingsSlinky.jsbn.jsbnMod.BigInteger
 import typingsSlinky.jsbn.jsbnMod.RandomGenerator
 import typingsSlinky.std.Error

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Comment
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Text
-import typingsSlinky.prettyDashFormat.buildPluginsDOMElementMod.HandledType
 import typingsSlinky.prettyDashFormat.buildTypesMod.Config
 import typingsSlinky.prettyDashFormat.buildTypesMod.NewPlugin
 import typingsSlinky.prettyDashFormat.buildTypesMod.Printer

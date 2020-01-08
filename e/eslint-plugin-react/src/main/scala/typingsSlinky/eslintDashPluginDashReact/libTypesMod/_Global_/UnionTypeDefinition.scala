@@ -1,6 +1,6 @@
 package typingsSlinky.eslintDashPluginDashReact.libTypesMod._Global_
 
-import typingsSlinky.eslintDashPluginDashReact.eslintDashPluginDashReactNumbers.`true`
+import typingsSlinky.eslintDashPluginDashReact.eslintDashPluginDashReactBooleans.`true`
 import typingsSlinky.eslintDashPluginDashReact.eslintDashPluginDashReactStrings.shape
 import typingsSlinky.eslintDashPluginDashReact.eslintDashPluginDashReactStrings.union
 import scala.scalajs.js

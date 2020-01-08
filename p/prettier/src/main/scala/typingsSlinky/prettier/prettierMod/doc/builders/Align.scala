@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Align extends _Doc {
-  var contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc
+  var contents: Doc
   var n: Double | String | Anon_Root
   var `type`: typingsSlinky.prettier.prettierStrings.align
 }
@@ -14,7 +14,7 @@ trait Align extends _Doc {
 object Align {
   @scala.inline
   def apply(
-    contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc,
+    contents: Doc,
     n: Double | String | Anon_Root,
     `type`: typingsSlinky.prettier.prettierStrings.align
   ): Align = {
@@ -27,8 +27,8 @@ object Align {
 @JSImport("prettier", "doc.builders.align")
 @js.native
 object align extends js.Object {
-  def apply(n: String, contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc): Align = js.native
-  def apply(n: Double, contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc): Align = js.native
-  def apply(n: Anon_Root, contents: typingsSlinky.prettier.prettierMod.doc.builders.Doc): Align = js.native
+  def apply(n: String, contents: Doc): Align = js.native
+  def apply(n: Double, contents: Doc): Align = js.native
+  def apply(n: Anon_Root, contents: Doc): Align = js.native
 }
 

@@ -1,8 +1,5 @@
 package typingsSlinky.reactDashNativeDashBackgroundDashTimer
 
-import typingsSlinky.reactDashNativeDashBackgroundDashTimer.reactDashNativeDashBackgroundDashTimerMod.BackgroundTimer
-import typingsSlinky.reactDashNativeDashBackgroundDashTimer.reactDashNativeDashBackgroundDashTimerMod.IntervalId
-import typingsSlinky.reactDashNativeDashBackgroundDashTimer.reactDashNativeDashBackgroundDashTimerMod.TimeoutId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

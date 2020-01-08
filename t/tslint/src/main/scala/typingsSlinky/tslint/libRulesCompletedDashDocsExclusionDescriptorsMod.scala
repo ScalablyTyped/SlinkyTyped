@@ -1,8 +1,6 @@
 package typingsSlinky.tslint
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tslint.libRulesCompletedDashDocsExclusionDescriptorsMod.ExclusionDescriptor
-import typingsSlinky.tslint.libRulesCompletedDashDocsExclusionDescriptorsMod.InputExclusionDescriptor
 import typingsSlinky.tslint.libRulesCompletedDocsRuleMod.DocType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

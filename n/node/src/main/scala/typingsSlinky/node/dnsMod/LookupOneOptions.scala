@@ -1,6 +1,6 @@
 package typingsSlinky.node.dnsMod
 
-import typingsSlinky.node.nodeNumbers.`false`
+import typingsSlinky.node.nodeBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

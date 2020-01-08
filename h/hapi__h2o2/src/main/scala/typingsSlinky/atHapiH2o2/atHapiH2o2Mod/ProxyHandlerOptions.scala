@@ -1,6 +1,6 @@
 package typingsSlinky.atHapiH2o2.atHapiH2o2Mod
 
-import typingsSlinky.atHapiH2o2.atHapiH2o2Numbers.`false`
+import typingsSlinky.atHapiH2o2.atHapiH2o2Booleans.`false`
 import typingsSlinky.atHapiH2o2.atHapiH2o2Strings.http
 import typingsSlinky.atHapiH2o2.atHapiH2o2Strings.https
 import typingsSlinky.atHapiH2o2.atHapiH2o2Strings.upstream

@@ -1,6 +1,6 @@
 package typingsSlinky.nextDashServer.distLibUtilsMod
 
-import typingsSlinky.nextDashServer.nextDashServerNumbers.`true`
+import typingsSlinky.nextDashServer.nextDashServerBooleans.`true`
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

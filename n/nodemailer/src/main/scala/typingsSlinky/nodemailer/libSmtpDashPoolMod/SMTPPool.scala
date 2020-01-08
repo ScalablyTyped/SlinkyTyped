@@ -2,8 +2,8 @@ package typingsSlinky.nodemailer.libSmtpDashPoolMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodemailer.libSharedMod.Logger
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.Transport
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.idle
 import scala.scalajs.js
 import scala.scalajs.js.`|`

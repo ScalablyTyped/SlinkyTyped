@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object StorageDeleteOption extends js.Object {
   @js.native
   sealed trait permanentDelete extends StorageDeleteOption
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Storage.StorageDeleteOption.default with Double = js.native
-  /* 1 */ val permanentDelete: typingsSlinky.winrtDashUwp.Windows.Storage.StorageDeleteOption.permanentDelete with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StorageDeleteOption with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object permanentDelete extends TopLevel[permanentDelete with Double]
+  
 }
 

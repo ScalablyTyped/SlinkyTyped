@@ -6,16 +6,16 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.__all
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTincludes
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.TypedArrayDOTprototypeDOTincludes
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotincludes
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.TypedArrayDotprototypeDotincludes
 */
 trait ES2016Builtins extends js.Object
 
 object ES2016Builtins {
   @scala.inline
-  def ArrayDOTprototypeDOTincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTincludes = this.cast("Array.prototype.includes")
+  def ArrayDotprototypeDotincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotincludes = this.cast("Array.prototype.includes")
   @scala.inline
-  def TypedArrayDOTprototypeDOTincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.TypedArrayDOTprototypeDOTincludes = this.cast("TypedArray.prototype.includes")
+  def TypedArrayDotprototypeDotincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.TypedArrayDotprototypeDotincludes = this.cast("TypedArray.prototype.includes")
   @scala.inline
   def __all: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.__all = this.cast("__all")
   @scala.inline

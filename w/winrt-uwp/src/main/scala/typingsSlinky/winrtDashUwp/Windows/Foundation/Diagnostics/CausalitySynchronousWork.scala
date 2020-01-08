@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object CausalitySynchronousWork extends js.Object {
   @js.native
   sealed trait progressNotification extends CausalitySynchronousWork
   
-  /* 0 */ val completionNotification: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.CausalitySynchronousWork.completionNotification with Double = js.native
-  /* 2 */ val execution: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.CausalitySynchronousWork.execution with Double = js.native
-  /* 1 */ val progressNotification: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.CausalitySynchronousWork.progressNotification with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CausalitySynchronousWork with Double] = js.native
+  /* 0 */ @js.native
+  object completionNotification extends TopLevel[completionNotification with Double]
+  
+  /* 2 */ @js.native
+  object execution extends TopLevel[execution with Double]
+  
+  /* 1 */ @js.native
+  object progressNotification extends TopLevel[progressNotification with Double]
+  
 }
 

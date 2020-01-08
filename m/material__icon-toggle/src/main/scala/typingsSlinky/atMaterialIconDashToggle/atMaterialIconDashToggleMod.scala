@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialIconDashToggle
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialIconDashToggle.adapterMod.MDCIconToggleAdapter
-import typingsSlinky.atMaterialIconDashToggle.atMaterialIconDashToggleMod.MDCIconToggle
 import typingsSlinky.atMaterialIconDashToggle.foundationMod.default
 import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
 import scala.scalajs.js

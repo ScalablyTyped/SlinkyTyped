@@ -2,7 +2,6 @@ package typingsSlinky.ngDashTable
 
 import typingsSlinky.angular.angularMod.IScope
 import typingsSlinky.ngDashTable.srcBrowserNgTableFilterConfigMod.NgTableFilterConfig
-import typingsSlinky.ngDashTable.srcBrowserNgTableFilterRowControllerMod.IScopeExtensions
 import typingsSlinky.ngDashTable.srcBrowserPublicDashInterfacesMod.IFilterTemplateDef
 import typingsSlinky.ngDashTable.srcBrowserPublicDashInterfacesMod.IFilterTemplateDefMap
 import scala.scalajs.js

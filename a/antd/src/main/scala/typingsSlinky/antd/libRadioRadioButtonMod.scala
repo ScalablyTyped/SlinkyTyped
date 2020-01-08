@@ -3,8 +3,6 @@ package typingsSlinky.antd
 import typingsSlinky.antd.libCheckboxCheckboxMod.AbstractCheckboxProps
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libRadioInterfaceMod.RadioChangeEvent
-import typingsSlinky.antd.libRadioRadioButtonMod.RadioButton
-import typingsSlinky.antd.libRadioRadioButtonMod.RadioButtonProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

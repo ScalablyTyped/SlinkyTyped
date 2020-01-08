@@ -1,7 +1,6 @@
 package typingsSlinky.atJimpPluginDashContain
 
 import typingsSlinky.atJimpCore.typesEtcMod.ImageCallback
-import typingsSlinky.atJimpPluginDashContain.atJimpPluginDashContainMod.Contain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

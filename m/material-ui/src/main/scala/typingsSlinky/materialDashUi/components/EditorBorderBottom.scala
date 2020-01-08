@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EditorBorderBottom
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorBorderBottom] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.EditorBorderBottom] {
   @JSImport("material-ui/svg-icons", "EditorBorderBottom")
   @js.native
   object componentImport extends js.Object

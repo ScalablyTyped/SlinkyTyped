@@ -3,16 +3,17 @@ package typingsSlinky.reactDashNativeDashScrollableDashTabDashView.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.ScrollViewProps
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.TextStyle
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
+import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewBooleans.`false`
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewMod.ChangeTabProperties
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewMod.ScrollableTabViewProperties
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewMod.TabBarProps
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewMod.default
-import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewNumbers.`false`
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewStrings.bottom
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewStrings.overlayBottom
 import typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewStrings.overlayTop
@@ -69,6 +70,9 @@ object ReactDashNativeDashScrollableDashTabDashView
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashScrollableDashTabDashView.reactDashNativeDashScrollableDashTabDashViewMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ScrollableTabViewProperties
 }
 

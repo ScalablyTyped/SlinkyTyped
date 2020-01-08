@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,9 +22,13 @@ object LabelOverlay extends js.Object {
   @js.native
   sealed trait visible extends LabelOverlay
   
-  /* 0 */ val hidden: typingsSlinky.bingmaps.Microsoft.Maps.LabelOverlay.hidden with Double = js.native
-  /* 1 */ val visible: typingsSlinky.bingmaps.Microsoft.Maps.LabelOverlay.visible with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelOverlay with Double] = js.native
+  /* 0 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 1 */ @js.native
+  object visible extends TopLevel[visible with Double]
+  
 }
 

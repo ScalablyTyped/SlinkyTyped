@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object ModuleKind extends js.Object {
   @js.native
   sealed trait UMD extends ModuleKind
   
-  /* 2 */ val AMD: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.AMD with Double = js.native
-  /* 1 */ val CommonJS: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.CommonJS with Double = js.native
-  /* 5 */ val ES2015: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.ES2015 with Double = js.native
-  /* 99 */ val ESNext: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.ESNext with Double = js.native
-  /* 0 */ val None: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.None with Double = js.native
-  /* 4 */ val System: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.System with Double = js.native
-  /* 3 */ val UMD: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.typescript.ModuleKind.UMD with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ModuleKind with Double] = js.native
+  /* 2 */ @js.native
+  object AMD extends TopLevel[AMD with Double]
+  
+  /* 1 */ @js.native
+  object CommonJS extends TopLevel[CommonJS with Double]
+  
+  /* 5 */ @js.native
+  object ES2015 extends TopLevel[ES2015 with Double]
+  
+  /* 99 */ @js.native
+  object ESNext extends TopLevel[ESNext with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object System extends TopLevel[System with Double]
+  
+  /* 3 */ @js.native
+  object UMD extends TopLevel[UMD with Double]
+  
 }
 

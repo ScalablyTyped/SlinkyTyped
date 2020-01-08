@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Import
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PhotoImportItemSelectionMode extends js.Object {
   @js.native
   sealed trait selectNone extends PhotoImportItemSelectionMode
   
-  /* 0 */ val selectAll: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportItemSelectionMode.selectAll with Double = js.native
-  /* 2 */ val selectNew: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportItemSelectionMode.selectNew with Double = js.native
-  /* 1 */ val selectNone: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportItemSelectionMode.selectNone with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoImportItemSelectionMode with Double] = js.native
+  /* 0 */ @js.native
+  object selectAll extends TopLevel[selectAll with Double]
+  
+  /* 2 */ @js.native
+  object selectNew extends TopLevel[selectNew with Double]
+  
+  /* 1 */ @js.native
+  object selectNone extends TopLevel[selectNone with Double]
+  
 }
 

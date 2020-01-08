@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.contextMenus
 
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.all_
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.audio
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.browser_action
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.editable
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.frame
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ContextType extends js.Object {
   var ALL: all_ = js.native
-  var AUDIO: typingsSlinky.chromeDashApps.chromeDashAppsStrings.audio = js.native
+  var AUDIO: audio = js.native
   var BROWSER_ACTION: browser_action = js.native
   var EDITABLE: editable = js.native
   var FRAME: frame = js.native

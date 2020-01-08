@@ -31,6 +31,7 @@ object flatbuffers extends js.Object {
   val FILE_IDENTIFIER_LENGTH: Double = js.native
   val SIZEOF_INT: Double = js.native
   val SIZEOF_SHORT: Double = js.native
+  val SIZE_PREFIX_LENGTH: Double = js.native
   val float32: scala.scalajs.js.typedarray.Float32Array = js.native
   val float64: scala.scalajs.js.typedarray.Float64Array = js.native
   val int32: scala.scalajs.js.typedarray.Int32Array = js.native

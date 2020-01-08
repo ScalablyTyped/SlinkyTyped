@@ -1,7 +1,7 @@
 
 # Scala.js typings for blueprintjs__icons
 
-Typings are for version 3.12.0
+Typings are for version 3.13.0
 
 ## Library description:
 Components, fonts, icons, and css files for creating and displaying icons.
@@ -10,9 +10,9 @@ Components, fonts, icons, and css files for creating and displaying icons.
 | ------------------ | :-------------: |
 | Full name          | @blueprintjs/icons |
 | Keywords           | palantir, blueprint, theme, react, icon |
-| # releases         | 22 |
-| # dependents       | 18 |
-| # downloads        | 2025496 |
+| # releases         | 28 |
+| # dependents       | 35 |
+| # downloads        | 3020506 |
 | # stars            | 0 |
 
 ## Links

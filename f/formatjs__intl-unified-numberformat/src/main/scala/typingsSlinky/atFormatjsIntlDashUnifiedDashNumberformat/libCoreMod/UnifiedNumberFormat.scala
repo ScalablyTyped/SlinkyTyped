@@ -1,39 +1,38 @@
 package typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.libCoreMod
 
 import typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.atFormatjsIntlDashUnifiedDashNumberformatStrings.localeMatcher
-import typingsSlinky.atFormatjsIntlDashUtils.distUnifiedDashNumberformatDashTypesMod.UnifiedNumberFormatLocaleData
-import typingsSlinky.atFormatjsIntlDashUtils.distUnifiedDashNumberformatDashTypesMod.UnitData
-import typingsSlinky.std.Intl.NumberFormat
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.NumberLocaleInternalData
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.RawNumberLocaleData
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@formatjs/intl-unified-numberformat/lib/core", "UnifiedNumberFormat")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<keyof std.Intl.NumberFormat, 'formatToParts'> ]: std.Intl.NumberFormat[P]} */ @JSImport("@formatjs/intl-unified-numberformat/lib/core", "UnifiedNumberFormat")
 @js.native
-class UnifiedNumberFormat () extends NumberFormat {
+class UnifiedNumberFormat () extends js.Object {
   def this(locales: String) = this()
   def this(locales: js.Array[String]) = this()
   def this(locales: String, options: UnifiedNumberFormatOptions) = this()
   def this(locales: js.Array[String], options: UnifiedNumberFormatOptions) = this()
-  var nf: js.Any = js.native
-  var patternData: js.UndefOr[js.Any] = js.native
   var pl: js.Any = js.native
+  def format(num: Double): String = js.native
+  def formatToParts(x: Double): js.Array[UnifiedNumberFormatPart] = js.native
+  def resolvedOptions(): ResolvedUnifiedNumberFormatOptions = js.native
 }
 
 /* static members */
 @JSImport("@formatjs/intl-unified-numberformat/lib/core", "UnifiedNumberFormat")
 @js.native
 object UnifiedNumberFormat extends js.Object {
-  val __INTERNAL_SLOT_MAP__ : js.Any = js.native
   var __defaultLocale: js.Any = js.native
   var availableLocales: js.Any = js.native
-  var getDefaultLocale: js.Any = js.native
-  var localeData: Record[String, Record[String, UnitData]] = js.native
+  var localeData: Record[String, NumberLocaleInternalData] = js.native
   var polyfilled: Boolean = js.native
-  var relevantExtensionKeys: js.Any = js.native
-  def __addLocaleData(data: UnifiedNumberFormatLocaleData*): Unit = js.native
+  def __addLocaleData(data: RawNumberLocaleData*): Unit = js.native
+  def getDefaultLocale(): String = js.native
   def supportedLocalesOf(locales: String): js.Array[String] = js.native
   def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
   @JSName("supportedLocalesOf")

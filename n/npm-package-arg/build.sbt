@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "npm-package-arg"
-version := "6.1-dt-20181031Z-0f99f7"
+version := "6.1-dt-20181031Z-a2a9c8"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

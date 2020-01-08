@@ -2,6 +2,7 @@ package typingsSlinky.naverDashWhale.whale.tabs
 
 import typingsSlinky.naverDashWhale.naverDashWhaleStrings.app
 import typingsSlinky.naverDashWhale.naverDashWhaleStrings.complete
+import typingsSlinky.naverDashWhale.naverDashWhaleStrings.devtools
 import typingsSlinky.naverDashWhale.naverDashWhaleStrings.loading
 import typingsSlinky.naverDashWhale.naverDashWhaleStrings.normal
 import typingsSlinky.naverDashWhale.naverDashWhaleStrings.panel
@@ -69,9 +70,7 @@ trait QueryInfo extends js.Object {
     * Optional. The type of window the tabs are in.
     * One of: "normal", "popup", "panel", "app", or "devtools"
     */
-  var windowType: js.UndefOr[
-    normal | popup | panel | app | typingsSlinky.naverDashWhale.naverDashWhaleStrings.devtools
-  ] = js.undefined
+  var windowType: js.UndefOr[normal | popup | panel | app | devtools] = js.undefined
 }
 
 object QueryInfo {
@@ -91,7 +90,7 @@ object QueryInfo {
     title: String = null,
     url: String | js.Array[String] = null,
     windowId: Int | Double = null,
-    windowType: normal | popup | panel | app | typingsSlinky.naverDashWhale.naverDashWhaleStrings.devtools = null
+    windowType: normal | popup | panel | app | devtools = null
   ): QueryInfo = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])

@@ -1,13 +1,13 @@
 package typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod
 
-import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordStrings.BACKSLASHu2022
+import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordStrings.Bullet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait PasswordProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
-  var mask: js.UndefOr[BACKSLASHu2022 | String] = js.undefined
+  var mask: js.UndefOr[Bullet | String] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.undefined
   var placeholder: js.UndefOr[String] = js.undefined
   var show: js.UndefOr[Boolean] = js.undefined
@@ -19,7 +19,7 @@ object PasswordProps {
   @scala.inline
   def apply(
     className: String = null,
-    mask: BACKSLASHu2022 | String = null,
+    mask: Bullet | String = null,
     onChange: /* value */ String => Unit = null,
     placeholder: String = null,
     show: js.UndefOr[Boolean] = js.undefined,

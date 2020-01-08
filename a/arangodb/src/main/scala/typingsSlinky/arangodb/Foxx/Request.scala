@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.arangodb.Anon_Algorithm
 import typingsSlinky.arangodb.Anon_Basic
 import typingsSlinky.arangodb.ArangoDB.HttpMethod
-import typingsSlinky.arangodb.arangodbNumbers.`false`
+import typingsSlinky.arangodb.arangodbBooleans.`false`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

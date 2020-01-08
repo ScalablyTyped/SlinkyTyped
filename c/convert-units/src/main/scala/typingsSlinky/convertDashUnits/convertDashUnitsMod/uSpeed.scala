@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.convertDashUnits.convertDashUnitsStrings.`m/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`km/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m/h`
+  - typings.convertDashUnits.convertDashUnitsStrings.mSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.kmSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.mSlashh
   - typings.convertDashUnits.convertDashUnitsStrings.knot
-  - typings.convertDashUnits.convertDashUnitsStrings.`ft/s`
+  - typings.convertDashUnits.convertDashUnitsStrings.ftSlashs
 */
 trait uSpeed extends js.Object
 
@@ -17,14 +17,14 @@ object uSpeed {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def `ft/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft/s` = this.cast("ft/s")
+  def ftSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ftSlashs = this.cast("ft/s")
   @scala.inline
-  def `km/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`km/h` = this.cast("km/h")
+  def kmSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.kmSlashh = this.cast("km/h")
   @scala.inline
   def knot: typingsSlinky.convertDashUnits.convertDashUnitsStrings.knot = this.cast("knot")
   @scala.inline
-  def `m/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m/h` = this.cast("m/h")
+  def mSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mSlashh = this.cast("m/h")
   @scala.inline
-  def `m/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m/s` = this.cast("m/s")
+  def mSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mSlashs = this.cast("m/s")
 }
 

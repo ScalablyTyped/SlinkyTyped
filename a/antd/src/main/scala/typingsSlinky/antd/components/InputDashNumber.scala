@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InputDashNumber extends SharedApply_InputNumberProps1400180774[default] {
+object InputDashNumber extends SharedApply_InputNumberProps1772508033[default] {
   @JSImport("antd/lib/input-number", JSImport.Default)
   @js.native
   object componentImport extends js.Object

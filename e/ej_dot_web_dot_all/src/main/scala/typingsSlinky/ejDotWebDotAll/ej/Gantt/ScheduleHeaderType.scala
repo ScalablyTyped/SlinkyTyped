@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Gantt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object ScheduleHeaderType extends js.Object {
   @js.native
   sealed trait Year extends ScheduleHeaderType
   
-  /* 3 */ val Day: typingsSlinky.ejDotWebDotAll.ej.Gantt.ScheduleHeaderType.Day with Double = js.native
-  /* 4 */ val Hour: typingsSlinky.ejDotWebDotAll.ej.Gantt.ScheduleHeaderType.Hour with Double = js.native
-  /* 1 */ val Month: typingsSlinky.ejDotWebDotAll.ej.Gantt.ScheduleHeaderType.Month with Double = js.native
-  /* 2 */ val Week: typingsSlinky.ejDotWebDotAll.ej.Gantt.ScheduleHeaderType.Week with Double = js.native
-  /* 0 */ val Year: typingsSlinky.ejDotWebDotAll.ej.Gantt.ScheduleHeaderType.Year with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScheduleHeaderType with Double] = js.native
+  /* 3 */ @js.native
+  object Day extends TopLevel[Day with Double]
+  
+  /* 4 */ @js.native
+  object Hour extends TopLevel[Hour with Double]
+  
+  /* 1 */ @js.native
+  object Month extends TopLevel[Month with Double]
+  
+  /* 2 */ @js.native
+  object Week extends TopLevel[Week with Double]
+  
+  /* 0 */ @js.native
+  object Year extends TopLevel[Year with Double]
+  
 }
 

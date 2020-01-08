@@ -3,7 +3,7 @@ package typingsSlinky.atTensorflowTfjsDashNode
 import typingsSlinky.atTensorflowTfjsDashCore.distModelUnderscoreTypesMod.MetaGraph
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor3D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor4D
-import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.Empty
+import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings._empty
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.cm
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.grayscale
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.in
@@ -58,7 +58,7 @@ object distNodeMod extends js.Object {
     @JSName("encodeJpeg")
     var encodeJpeg_Original: js.Function10[
         /* image */ Tensor3D, 
-        /* format */ js.UndefOr[Empty | grayscale | rgb], 
+        /* format */ js.UndefOr[_empty | grayscale | rgb], 
         /* quality */ js.UndefOr[Double], 
         /* progressive */ js.UndefOr[Boolean], 
         /* optimizeSize */ js.UndefOr[Boolean], 
@@ -137,7 +137,7 @@ object distNodeMod extends js.Object {
     @JSName("encodeJpeg")
     def encodeJpeg_cm(
       image: Tensor3D,
-      format: js.UndefOr[Empty],
+      format: js.UndefOr[_empty],
       quality: js.UndefOr[Double],
       progressive: js.UndefOr[Boolean],
       optimizeSize: js.UndefOr[Boolean],
@@ -150,7 +150,7 @@ object distNodeMod extends js.Object {
     @JSName("encodeJpeg")
     def encodeJpeg_in(
       image: Tensor3D,
-      format: js.UndefOr[Empty],
+      format: js.UndefOr[_empty],
       quality: js.UndefOr[Double],
       progressive: js.UndefOr[Boolean],
       optimizeSize: js.UndefOr[Boolean],

@@ -10,9 +10,9 @@ Elliptic curve cryptography
 | ------------------ | :-------------: |
 | Full name          | ecurve |
 | Keywords           | cryptography, crypto, bitcoin, litecoin, elliptic, curve |
-| # releases         | 2 |
-| # dependents       | 259 |
-| # downloads        | 870225 |
+| # releases         | 1 |
+| # dependents       | 308 |
+| # downloads        | 1248049 |
 | # stars            | 2 |
 
 ## Links

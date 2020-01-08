@@ -12,7 +12,7 @@ This module provides a function that reads from AWS SDK configuration files and 
 | Keywords           | - |
 | # releases         | 4 |
 | # dependents       | 3 |
-| # downloads        | 8966 |
+| # downloads        | 38259 |
 | # stars            | 0 |
 
 ## Links

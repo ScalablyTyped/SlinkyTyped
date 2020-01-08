@@ -1,7 +1,5 @@
 package typingsSlinky.events
 
-import typingsSlinky.events.eventsMod.EventEmitter
-import typingsSlinky.events.eventsMod.Listener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

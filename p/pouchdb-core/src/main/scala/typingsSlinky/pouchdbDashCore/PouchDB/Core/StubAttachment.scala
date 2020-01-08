@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbDashCore.PouchDB.Core
 
-import typingsSlinky.pouchdbDashCore.pouchdbDashCoreNumbers.`true`
+import typingsSlinky.pouchdbDashCore.pouchdbDashCoreBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

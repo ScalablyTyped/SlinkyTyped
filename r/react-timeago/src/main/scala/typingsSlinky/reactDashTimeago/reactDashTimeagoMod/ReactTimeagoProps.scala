@@ -23,7 +23,7 @@ object ReactTimeagoProps {
     date: String | Double | js.Date,
     component: String | T = null,
     formatter: (/* value */ Double, /* unit */ Unit, /* suffix */ Suffix, /* epochMiliseconds */ Double, /* nextFormatter */ js.UndefOr[
-      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias react-timeago.react-timeago.Formatter */ js.Object
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias react-timeago.react-timeago.Formatter */ js.Object
     ]) => TagMod[Any] = null,
     live: js.UndefOr[Boolean] = js.undefined,
     maxPeriod: Int | Double = null,

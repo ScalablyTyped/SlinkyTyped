@@ -14,11 +14,14 @@ package object menuMod {
   import typingsSlinky.baseui.baseuiStrings.moveUp
   import typingsSlinky.baseui.baseuiStrings.reset
 
+  type ArrayItemsT = js.Array[ItemT]
   type GetRequiredItemProps = js.Function2[/* item */ js.Any, /* index */ Double, RenderItemProps]
+  type ItemT = js.Any
+  type ItemsT = ArrayItemsT | GroupedItemsT
   type OnItemSelect = js.Function1[/* args */ Anon_EventItem, js.Any]
   type RenderProps = StatefulContainerState with Anon_GetRequiredItemProps
   type StateReducer = js.Function3[
-    /* changeType */ moveUp | mouseEnter | focus | click | reset | moveDown, 
+    /* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, 
     /* changes */ StatefulContainerState, 
     /* currentState */ StatefulContainerState, 
     StatefulContainerState

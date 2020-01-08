@@ -5,13 +5,6 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.Extract
 import typingsSlinky.std.Pick
 import typingsSlinky.std.ReadonlyArray
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.DeepReadonly
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.DeepReadonlyArray
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.DeepReadonlyObject
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.DeepRequired
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.DeepRequiredArray
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.NonNullable
-import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +19,7 @@ object tsDashEssentialsMod extends js.Object {
   trait DeepRequiredArray[T] extends Array[DeepRequired[T]]
   
   type DeepPartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]:? T[P] extends std.Array<infer U>? std.Array</ * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<U> * / object> : T[P] extends std.ReadonlyArray<infer U>? std.ReadonlyArray</ * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<U> * / object> : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<T[P]> * / object}
+  {[ P in keyof T ]:? T[P] extends std.Array<infer U>? std.Array</ * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<U> * / object> : T[P] extends std.ReadonlyArray<infer U>? std.ReadonlyArray</ * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<U> * / object> : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepPartial<T[P]> * / object}
     */ typingsSlinky.tsDashEssentials.tsDashEssentialsStrings.DeepPartial with js.Any
   type DeepReadonly[T] = DeepReadonlyObject[T] | T | (DeepReadonlyArray[
     /* import warning: importer.ImportType#apply Failed type conversion: T[number] */ js.Any
@@ -35,7 +28,7 @@ object tsDashEssentialsMod extends js.Object {
   {readonly [ P in keyof T ]: ts-essentials.ts-essentials.DeepReadonly<T[P]>}
     */ typingsSlinky.tsDashEssentials.tsDashEssentialsStrings.DeepReadonlyObject with T
   type DeepRequired[T] = T | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof T ]: -? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepRequired<ts-essentials.ts-essentials.NonNullable<T[K]>> * / object}
+  {[ K in keyof T ]: -? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias ts-essentials.ts-essentials.DeepRequired<ts-essentials.ts-essentials.NonNullable<T[K]>> * / object}
     */ typingsSlinky.tsDashEssentials.tsDashEssentialsStrings.DeepRequired with js.Any) | (DeepRequiredArray[
     NonNullable[
       /* import warning: importer.ImportType#apply Failed type conversion: T[number] */ js.Any

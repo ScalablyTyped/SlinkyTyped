@@ -1,7 +1,7 @@
 
 # Scala.js typings for graphql-extensions
 
-Typings are for version 0.10.7
+Typings are for version 0.10.9
 
 ## Library description:
 Add extensions to GraphQL servers
@@ -10,15 +10,12 @@ Add extensions to GraphQL servers
 | ------------------ | :-------------: |
 | Full name          | graphql-extensions |
 | Keywords           | - |
-| # releases         | 79 |
-| # dependents       | 18 |
-| # downloads        | 16538963 |
+| # releases         | 130 |
+| # dependents       | 36 |
+| # downloads        | 37380508 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/apollographql/graphql-extensions#readme)
-- [Bugs](https://github.com/apollographql/graphql-extensions/issues)
-- [Repository](https://github.com/apollographql/graphql-extensions)
 - [Npm](https://www.npmjs.com/package/graphql-extensions)
     
 

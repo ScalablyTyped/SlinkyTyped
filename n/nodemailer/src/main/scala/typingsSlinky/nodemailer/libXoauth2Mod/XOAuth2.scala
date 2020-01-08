@@ -5,7 +5,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.internal
 import typingsSlinky.nodemailer.libSharedMod.Logger
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import typingsSlinky.nodemailer.nodemailerStrings.end
 import typingsSlinky.nodemailer.nodemailerStrings.error
 import typingsSlinky.nodemailer.nodemailerStrings.token

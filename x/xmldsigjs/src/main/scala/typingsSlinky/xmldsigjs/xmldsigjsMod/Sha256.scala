@@ -1,7 +1,6 @@
 package typingsSlinky.xmldsigjs.xmldsigjsMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.xmldsigjs.Anon_Name
 import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-256`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,10 +8,8 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xmldsigjs", "Sha256")
 @js.native
-class Sha256 () extends HashAlgorithm {
-  @JSName("algorithm")
-  var algorithm_Sha256: Anon_Name = js.native
-}
+class Sha256 ()
+  extends typingsSlinky.xmldsigjs.buildTypesAlgorithmsRsaUnderscoreHashMod.Sha256
 
 @JSImport("xmldsigjs", "SHA256")
 @js.native

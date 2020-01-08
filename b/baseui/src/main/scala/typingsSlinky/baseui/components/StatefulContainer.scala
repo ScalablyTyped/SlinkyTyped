@@ -12,6 +12,7 @@ import typingsSlinky.baseui.baseuiStrings.mouseEnter
 import typingsSlinky.baseui.baseuiStrings.moveDown
 import typingsSlinky.baseui.baseuiStrings.moveUp
 import typingsSlinky.baseui.baseuiStrings.reset
+import typingsSlinky.baseui.menuMod.ItemsT
 import typingsSlinky.baseui.menuMod.RenderItemProps
 import typingsSlinky.baseui.menuMod.StatefulContainerProps
 import typingsSlinky.baseui.menuMod.StatefulContainerState
@@ -28,7 +29,7 @@ object StatefulContainer
   
   override val component: String | js.Object = this.componentImport
   def apply(
-    items: js.Array[_],
+    items: ItemsT,
     addMenuToNesting: /* ref */ Ref[HTMLElement] => Unit = null,
     getChildMenu: /* ref */ Ref[HTMLElement] => Unit = null,
     getParentMenu: /* ref */ Ref[HTMLElement] => Unit = null,
@@ -37,7 +38,7 @@ object StatefulContainer
     onItemSelect: /* args */ Anon_EventItem => js.Any = null,
     removeMenuFromNesting: /* ref */ Ref[HTMLElement] => Unit = null,
     rootRef: Ref[_] = null,
-    stateReducer: (/* changeType */ moveUp | mouseEnter | focus | click | reset | moveDown, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState = null,
+    stateReducer: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.baseui.menuMod.StatefulContainer] = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.sparqljs.sparqljsMod
 
-import typingsSlinky.sparqljs.sparqljsNumbers.`false`
+import typingsSlinky.sparqljs.sparqljsBooleans.`false`
 import typingsSlinky.sparqljs.sparqljsStrings.add
 import typingsSlinky.sparqljs.sparqljsStrings.clear
 import typingsSlinky.sparqljs.sparqljsStrings.copy

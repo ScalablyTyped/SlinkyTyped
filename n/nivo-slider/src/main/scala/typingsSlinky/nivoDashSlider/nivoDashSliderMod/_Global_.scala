@@ -1,6 +1,5 @@
 package typingsSlinky.nivoDashSlider.nivoDashSliderMod
 
-import typingsSlinky.nivoDashSlider.nivoDashSliderMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

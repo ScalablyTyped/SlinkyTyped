@@ -3,6 +3,7 @@ package typingsSlinky.chromeDashApps.chrome.runtime
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chromeDashApps.Anon_APPUPDATE
 import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.app_update
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.os_update
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.periodic
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object onRestartRequired
   extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[
+      Event[
         js.Function1[
           /* reason */ ToStringLiteral[Anon_APPUPDATE, String, Exclude[String, app_update | os_update | periodic]], 
           Unit

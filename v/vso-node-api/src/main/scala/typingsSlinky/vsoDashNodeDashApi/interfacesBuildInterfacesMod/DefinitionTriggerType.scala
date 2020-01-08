@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,15 +59,34 @@ object DefinitionTriggerType extends js.Object {
   @js.native
   sealed trait Schedule extends DefinitionTriggerType
   
-  /* 127 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.All with Double = js.native
-  /* 4 */ val BatchedContinuousIntegration: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.BatchedContinuousIntegration with Double = js.native
-  /* 32 */ val BatchedGatedCheckIn: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.BatchedGatedCheckIn with Double = js.native
-  /* 2 */ val ContinuousIntegration: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.ContinuousIntegration with Double = js.native
-  /* 16 */ val GatedCheckIn: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.GatedCheckIn with Double = js.native
-  /* 1 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.None with Double = js.native
-  /* 64 */ val PullRequest: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.PullRequest with Double = js.native
-  /* 8 */ val Schedule: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.Schedule with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DefinitionTriggerType with Double] = js.native
+  /* 127 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 4 */ @js.native
+  object BatchedContinuousIntegration extends TopLevel[BatchedContinuousIntegration with Double]
+  
+  /* 32 */ @js.native
+  object BatchedGatedCheckIn extends TopLevel[BatchedGatedCheckIn with Double]
+  
+  /* 2 */ @js.native
+  object ContinuousIntegration extends TopLevel[ContinuousIntegration with Double]
+  
+  /* 16 */ @js.native
+  object GatedCheckIn extends TopLevel[GatedCheckIn with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 64 */ @js.native
+  object PullRequest extends TopLevel[PullRequest with Double]
+  
+  /* 8 */ @js.native
+  object Schedule
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DefinitionTriggerType.Schedule with Double
+        ]
+  
 }
 

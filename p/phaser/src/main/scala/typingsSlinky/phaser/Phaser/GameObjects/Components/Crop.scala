@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects.Components
 
+import typingsSlinky.phaser.Phaser.Geom.Rectangle
 import typingsSlinky.phaser.Phaser.Textures.CanvasTexture
 import typingsSlinky.phaser.Phaser.Textures.Frame
 import scala.scalajs.js
@@ -57,9 +58,9 @@ trait Crop extends js.Object {
   def setCrop(x: Double, y: Double): this.type = js.native
   def setCrop(x: Double, y: Double, width: Double): this.type = js.native
   def setCrop(x: Double, y: Double, width: Double, height: Double): this.type = js.native
-  def setCrop(x: typingsSlinky.phaser.Phaser.Geom.Rectangle): this.type = js.native
-  def setCrop(x: typingsSlinky.phaser.Phaser.Geom.Rectangle, y: Double): this.type = js.native
-  def setCrop(x: typingsSlinky.phaser.Phaser.Geom.Rectangle, y: Double, width: Double): this.type = js.native
-  def setCrop(x: typingsSlinky.phaser.Phaser.Geom.Rectangle, y: Double, width: Double, height: Double): this.type = js.native
+  def setCrop(x: Rectangle): this.type = js.native
+  def setCrop(x: Rectangle, y: Double): this.type = js.native
+  def setCrop(x: Rectangle, y: Double, width: Double): this.type = js.native
+  def setCrop(x: Rectangle, y: Double, width: Double, height: Double): this.type = js.native
 }
 

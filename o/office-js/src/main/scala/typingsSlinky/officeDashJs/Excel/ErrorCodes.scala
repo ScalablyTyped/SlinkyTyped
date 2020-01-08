@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,25 +65,61 @@ object ErrorCodes extends js.Object {
   @js.native
   sealed trait unsupportedOperation extends ErrorCodes
   
-  /* "AccessDenied" */ val accessDenied: typingsSlinky.officeDashJs.Excel.ErrorCodes.accessDenied with String = js.native
-  /* "ApiNotFound" */ val apiNotFound: typingsSlinky.officeDashJs.Excel.ErrorCodes.apiNotFound with String = js.native
-  /* "Conflict" */ val conflict: typingsSlinky.officeDashJs.Excel.ErrorCodes.conflict with String = js.native
-  /* "GeneralException" */ val generalException: typingsSlinky.officeDashJs.Excel.ErrorCodes.generalException with String = js.native
-  /* "InsertDeleteConflict" */ val insertDeleteConflict: typingsSlinky.officeDashJs.Excel.ErrorCodes.insertDeleteConflict with String = js.native
-  /* "InvalidArgument" */ val invalidArgument: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidArgument with String = js.native
-  /* "InvalidBinding" */ val invalidBinding: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidBinding with String = js.native
-  /* "InvalidOperation" */ val invalidOperation: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidOperation with String = js.native
-  /* "InvalidOperationInCellEditMode" */ val invalidOperationInCellEditMode: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidOperationInCellEditMode with String = js.native
-  /* "InvalidReference" */ val invalidReference: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidReference with String = js.native
-  /* "InvalidSelection" */ val invalidSelection: typingsSlinky.officeDashJs.Excel.ErrorCodes.invalidSelection with String = js.native
-  /* "ItemAlreadyExists" */ val itemAlreadyExists: typingsSlinky.officeDashJs.Excel.ErrorCodes.itemAlreadyExists with String = js.native
-  /* "ItemNotFound" */ val itemNotFound: typingsSlinky.officeDashJs.Excel.ErrorCodes.itemNotFound with String = js.native
-  /* "NonBlankCellOffSheet" */ val nonBlankCellOffSheet: typingsSlinky.officeDashJs.Excel.ErrorCodes.nonBlankCellOffSheet with String = js.native
-  /* "NotImplemented" */ val notImplemented: typingsSlinky.officeDashJs.Excel.ErrorCodes.notImplemented with String = js.native
-  /* "RangeExceedsLimit" */ val rangeExceedsLimit: typingsSlinky.officeDashJs.Excel.ErrorCodes.rangeExceedsLimit with String = js.native
-  /* "RequestAborted" */ val requestAborted: typingsSlinky.officeDashJs.Excel.ErrorCodes.requestAborted with String = js.native
-  /* "UnsupportedOperation" */ val unsupportedOperation: typingsSlinky.officeDashJs.Excel.ErrorCodes.unsupportedOperation with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ErrorCodes with String] = js.native
+  /* "AccessDenied" */ @js.native
+  object accessDenied extends TopLevel[accessDenied with String]
+  
+  /* "ApiNotFound" */ @js.native
+  object apiNotFound extends TopLevel[apiNotFound with String]
+  
+  /* "Conflict" */ @js.native
+  object conflict extends TopLevel[conflict with String]
+  
+  /* "GeneralException" */ @js.native
+  object generalException extends TopLevel[generalException with String]
+  
+  /* "InsertDeleteConflict" */ @js.native
+  object insertDeleteConflict extends TopLevel[insertDeleteConflict with String]
+  
+  /* "InvalidArgument" */ @js.native
+  object invalidArgument extends TopLevel[invalidArgument with String]
+  
+  /* "InvalidBinding" */ @js.native
+  object invalidBinding extends TopLevel[invalidBinding with String]
+  
+  /* "InvalidOperation" */ @js.native
+  object invalidOperation extends TopLevel[invalidOperation with String]
+  
+  /* "InvalidOperationInCellEditMode" */ @js.native
+  object invalidOperationInCellEditMode extends TopLevel[invalidOperationInCellEditMode with String]
+  
+  /* "InvalidReference" */ @js.native
+  object invalidReference extends TopLevel[invalidReference with String]
+  
+  /* "InvalidSelection" */ @js.native
+  object invalidSelection extends TopLevel[invalidSelection with String]
+  
+  /* "ItemAlreadyExists" */ @js.native
+  object itemAlreadyExists extends TopLevel[itemAlreadyExists with String]
+  
+  /* "ItemNotFound" */ @js.native
+  object itemNotFound extends TopLevel[itemNotFound with String]
+  
+  /* "NonBlankCellOffSheet" */ @js.native
+  object nonBlankCellOffSheet extends TopLevel[nonBlankCellOffSheet with String]
+  
+  /* "NotImplemented" */ @js.native
+  object notImplemented extends TopLevel[notImplemented with String]
+  
+  /* "RangeExceedsLimit" */ @js.native
+  object rangeExceedsLimit extends TopLevel[rangeExceedsLimit with String]
+  
+  /* "RequestAborted" */ @js.native
+  object requestAborted extends TopLevel[requestAborted with String]
+  
+  /* "UnsupportedOperation" */ @js.native
+  object unsupportedOperation extends TopLevel[unsupportedOperation with String]
+  
 }
 

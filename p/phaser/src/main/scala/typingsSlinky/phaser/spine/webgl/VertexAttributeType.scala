@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.spine.webgl
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object VertexAttributeType extends js.Object {
   @js.native
   sealed trait Float extends VertexAttributeType
   
-  /* 0 */ val Float: typingsSlinky.phaser.spine.webgl.VertexAttributeType.Float with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VertexAttributeType with Double] = js.native
+  /* 0 */ @js.native
+  object Float extends TopLevel[Float with Double]
+  
 }
 

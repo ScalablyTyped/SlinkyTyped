@@ -2,8 +2,8 @@ package typingsSlinky.pickadate.Pickadate
 
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.pickadate.JQuery
-import typingsSlinky.pickadate.pickadateStrings.DOLLARnode
-import typingsSlinky.pickadate.pickadateStrings.DOLLARroot
+import typingsSlinky.pickadate.pickadateStrings.$node
+import typingsSlinky.pickadate.pickadateStrings.$root
 import typingsSlinky.pickadate.pickadateStrings._hidden
 import typingsSlinky.pickadate.pickadateStrings.picker
 import scala.scalajs.js
@@ -25,8 +25,8 @@ trait Pickatime extends js.Object {
     * Invoke API methods after time picker initialization.
     */
   def apply(methodName: String, arguments: js.Any*): js.Any = js.native
-  def apply(objectName: DOLLARnode): JQuery = js.native
-  def apply(objectName: DOLLARroot): JQuery = js.native
+  def apply(objectName: $node): JQuery = js.native
+  def apply(objectName: $root): JQuery = js.native
   def apply(objectName: _hidden): HTMLInputElement = js.native
   def apply(options: TimeOptions): JQuery = js.native
 }

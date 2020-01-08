@@ -3,10 +3,6 @@ package typingsSlinky.baconjs
 import typingsSlinky.baconjs.typesDescribeMod.Desc
 import typingsSlinky.baconjs.typesObservableMod.Property
 import typingsSlinky.baconjs.typesObservableMod.default
-import typingsSlinky.baconjs.typesPredicateMod.Predicate
-import typingsSlinky.baconjs.typesPredicateMod.Predicate2Transformer
-import typingsSlinky.baconjs.typesPredicateMod.PredicateOrBoolean
-import typingsSlinky.baconjs.typesPredicateMod.PredicateOrProperty
 import typingsSlinky.baconjs.typesTransformMod.Transformer
 import typingsSlinky.baconjs.typesTypesMod.Function1
 import scala.scalajs.js

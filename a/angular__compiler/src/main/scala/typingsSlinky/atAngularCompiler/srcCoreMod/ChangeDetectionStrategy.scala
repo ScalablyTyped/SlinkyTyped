@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ChangeDetectionStrategy extends js.Object {
   @js.native
   sealed trait OnPush extends ChangeDetectionStrategy
   
-  /* 1 */ val Default: typingsSlinky.atAngularCompiler.srcCoreMod.ChangeDetectionStrategy.Default with Double = js.native
-  /* 0 */ val OnPush: typingsSlinky.atAngularCompiler.srcCoreMod.ChangeDetectionStrategy.OnPush with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChangeDetectionStrategy with Double] = js.native
+  /* 1 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 0 */ @js.native
+  object OnPush extends TopLevel[OnPush with Double]
+  
 }
 

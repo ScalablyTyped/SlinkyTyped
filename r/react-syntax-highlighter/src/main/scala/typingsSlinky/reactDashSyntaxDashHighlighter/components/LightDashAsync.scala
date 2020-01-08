@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashSyntaxDashHighlighter.components
 
-import typingsSlinky.reactDashSyntaxDashHighlighter.distEsmLightDashAsyncMod.default
+import typingsSlinky.reactDashSyntaxDashHighlighter.distCjsLightDashAsyncMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LightDashAsync extends SharedApply_SyntaxHighlighterProps_1713497095[default] {
-  @JSImport("react-syntax-highlighter/dist/esm/light-async", JSImport.Default)
+object LightDashAsync extends SharedApply_SyntaxHighlighterProps_1507978106[default] {
+  @JSImport("react-syntax-highlighter/dist/cjs/light-async", JSImport.Default)
   @js.native
   object componentImport extends js.Object
   

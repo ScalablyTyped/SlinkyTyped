@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`networkingDOTk8sDOTio/v1`
-import typingsSlinky.atPulumiKubernetes.networkingV1NetworkPolicyMod.NetworkPolicy
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.networkingDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.networking.v1.NetworkPolicySpec
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object networkingV1NetworkPolicyMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`networkingDOTk8sDOTio/v1`] = js.native
+    val apiVersion: Output[networkingDotk8sDotioSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

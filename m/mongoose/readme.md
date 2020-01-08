@@ -10,10 +10,10 @@ Mongoose MongoDB ODM
 | ------------------ | :-------------: |
 | Full name          | mongoose |
 | Keywords           | mongodb, document, model, schema, database, odm, data, datastore, query, nosql, orm, db |
-| # releases         | 149 |
-| # dependents       | 4290 |
-| # downloads        | 24522792 |
-| # stars            | 740 |
+| # releases         | 148 |
+| # dependents       | 5038 |
+| # downloads        | 29521213 |
+| # stars            | 743 |
 
 ## Links
 - [Homepage](http://mongoosejs.com)

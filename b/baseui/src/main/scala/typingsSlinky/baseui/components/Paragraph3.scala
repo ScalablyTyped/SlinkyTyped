@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Paragraph3 extends SharedApply_BlockProps2011988585 {
+object Paragraph3 extends SharedApply_BlockProps359346736 {
   @JSImport("baseui/typography", "Paragraph3")
   @js.native
   object componentImport extends js.Object

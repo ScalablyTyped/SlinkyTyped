@@ -3,7 +3,7 @@ package typingsSlinky.hapi.hapiMod
 import typingsSlinky.catbox.catboxMod.GenerateFuncFlags
 import typingsSlinky.catbox.catboxMod.Id
 import typingsSlinky.catbox.catboxMod.PolicyOptions
-import typingsSlinky.hapi.hapiNumbers.`false`
+import typingsSlinky.hapi.hapiBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

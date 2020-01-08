@@ -15,11 +15,11 @@ class Session protected () extends js.Object {
     *     capabilities.
     * @constructor
     */
-  def this(id: String, capabilities: Capabilities) = this()
+  def this(id: String, capabilities: typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.Capabilities) = this()
   /**
     * @return {!Capabilities} This session's capabilities.
     */
-  def getCapabilities(): Capabilities = js.native
+  def getCapabilities(): typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.Capabilities = js.native
   /**
     * Retrieves the value of a specific capability.
     * @param {string} key The capability to retrieve.

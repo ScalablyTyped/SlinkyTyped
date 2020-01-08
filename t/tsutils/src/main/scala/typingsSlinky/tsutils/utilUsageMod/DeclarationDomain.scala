@@ -1,5 +1,6 @@
 package typingsSlinky.tsutils.utilUsageMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object DeclarationDomain extends js.Object {
   @js.native
   sealed trait Value extends DeclarationDomain
   
-  /* 7 */ val Any: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Any with Double = js.native
-  /* 8 */ val Import: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Import with Double = js.native
-  /* 1 */ val Namespace: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Namespace with Double = js.native
-  /* 2 */ val Type: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Type with Double = js.native
-  /* 4 */ val Value: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Value with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeclarationDomain with Double] = js.native
+  /* 7 */ @js.native
+  object Any extends TopLevel[Any with Double]
+  
+  /* 8 */ @js.native
+  object Import extends TopLevel[Import with Double]
+  
+  /* 1 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
+  
+  /* 2 */ @js.native
+  object Type extends TopLevel[Type with Double]
+  
+  /* 4 */ @js.native
+  object Value extends TopLevel[Value with Double]
+  
 }
 

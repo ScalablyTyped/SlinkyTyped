@@ -5,7 +5,6 @@ import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialFloatingDashLabel.atMaterialFloatingDashLabelMod.MDCFloatingLabel
 import typingsSlinky.atMaterialLineDashRipple.atMaterialLineDashRippleMod.MDCLineRipple
 import typingsSlinky.atMaterialSelect.adapterMod.MDCSelectAdapter
-import typingsSlinky.atMaterialSelect.atMaterialSelectMod.MDCSelect
 import typingsSlinky.atMaterialSelect.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

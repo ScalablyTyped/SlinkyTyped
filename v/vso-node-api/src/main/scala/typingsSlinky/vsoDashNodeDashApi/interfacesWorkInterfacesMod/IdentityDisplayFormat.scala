@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object IdentityDisplayFormat extends js.Object {
   @js.native
   sealed trait FullName extends IdentityDisplayFormat
   
-  /* 2 */ val AvatarAndFullName: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.IdentityDisplayFormat.AvatarAndFullName with Double = js.native
-  /* 0 */ val AvatarOnly: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.IdentityDisplayFormat.AvatarOnly with Double = js.native
-  /* 1 */ val FullName: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.IdentityDisplayFormat.FullName with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IdentityDisplayFormat with Double] = js.native
+  /* 2 */ @js.native
+  object AvatarAndFullName extends TopLevel[AvatarAndFullName with Double]
+  
+  /* 0 */ @js.native
+  object AvatarOnly extends TopLevel[AvatarOnly with Double]
+  
+  /* 1 */ @js.native
+  object FullName extends TopLevel[FullName with Double]
+  
 }
 

@@ -1,13 +1,13 @@
 package typingsSlinky.awsDashLambda
 
 import typingsSlinky.awsDashLambda.awsDashLambdaMod.LexGenericAttachment
-import typingsSlinky.awsDashLambda.awsDashLambdaStrings.`application/vndDOTamazonawsDOTcardDOTgeneric`
+import typingsSlinky.awsDashLambda.awsDashLambdaStrings.applicationSlashvndDotamazonawsDotcardDotgeneric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_Applicationvndamazonawscardgeneric extends js.Object {
-  var contentType: `application/vndDOTamazonawsDOTcardDOTgeneric`
+  var contentType: applicationSlashvndDotamazonawsDotcardDotgeneric
   var genericAttachments: js.Array[LexGenericAttachment]
   var version: Double
 }
@@ -15,7 +15,7 @@ trait Anon_Applicationvndamazonawscardgeneric extends js.Object {
 object Anon_Applicationvndamazonawscardgeneric {
   @scala.inline
   def apply(
-    contentType: `application/vndDOTamazonawsDOTcardDOTgeneric`,
+    contentType: applicationSlashvndDotamazonawsDotcardDotgeneric,
     genericAttachments: js.Array[LexGenericAttachment],
     version: Double
   ): Anon_Applicationvndamazonawscardgeneric = {

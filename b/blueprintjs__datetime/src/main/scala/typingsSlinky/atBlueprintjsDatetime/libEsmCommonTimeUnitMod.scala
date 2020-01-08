@@ -1,6 +1,6 @@
 package typingsSlinky.atBlueprintjsDatetime
 
-import typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,13 +38,23 @@ object libEsmCommonTimeUnitMod extends js.Object {
     @js.native
     sealed trait SECOND extends TimeUnit
     
-    /* "hour12" */ val HOUR_12: typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit.HOUR_12 with String = js.native
-    /* "hour24" */ val HOUR_24: typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit.HOUR_24 with String = js.native
-    /* "minute" */ val MINUTE: typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit.MINUTE with String = js.native
-    /* "ms" */ val MS: typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit.MS with String = js.native
-    /* "second" */ val SECOND: typingsSlinky.atBlueprintjsDatetime.libEsmCommonTimeUnitMod.TimeUnit.SECOND with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[TimeUnit with String] = js.native
+    /* "hour12" */ @js.native
+    object HOUR_12 extends TopLevel[HOUR_12 with String]
+    
+    /* "hour24" */ @js.native
+    object HOUR_24 extends TopLevel[HOUR_24 with String]
+    
+    /* "minute" */ @js.native
+    object MINUTE extends TopLevel[MINUTE with String]
+    
+    /* "ms" */ @js.native
+    object MS extends TopLevel[MS with String]
+    
+    /* "second" */ @js.native
+    object SECOND extends TopLevel[SECOND with String]
+    
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`eventsDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.eventsV1beta1EventMod.Event
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.eventsDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.EventSource
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ObjectReference
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.events.v1beta1.EventSeries
@@ -44,7 +43,7 @@ object eventsV1beta1EventMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`eventsDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[eventsDotk8sDotioSlashv1beta1] = js.native
     /**
       * Deprecated field assuring backward compatibility with core.v1 Event type
       */

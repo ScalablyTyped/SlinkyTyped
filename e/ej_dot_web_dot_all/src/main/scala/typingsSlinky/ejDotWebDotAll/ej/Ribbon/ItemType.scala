@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Ribbon
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,14 @@ object ItemType extends js.Object {
   @js.native
   sealed trait Tab extends ItemType
   
-  /* 0 */ val Button: typingsSlinky.ejDotWebDotAll.ej.Ribbon.ItemType.Button with Double = js.native
-  /* 1 */ val Tab: typingsSlinky.ejDotWebDotAll.ej.Ribbon.ItemType.Tab with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ItemType with Double] = js.native
+  /* 0 */ @js.native
+  object Button extends TopLevel[Button with Double]
+  
+  /* 1 */ @js.native
+  object Tab
+    extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.Ribbon.ItemType.Tab with Double]
+  
 }
 

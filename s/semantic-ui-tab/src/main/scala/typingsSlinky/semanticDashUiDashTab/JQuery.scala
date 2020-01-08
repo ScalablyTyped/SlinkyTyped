@@ -2,7 +2,7 @@ package typingsSlinky.semanticDashUiDashTab
 
 import typingsSlinky.semanticDashUiDashTab.SemanticUI.Tab
 import typingsSlinky.semanticDashUiDashTab.SemanticUI.TabSettings
-import typingsSlinky.semanticDashUiDashTab.semanticDashUiDashTabNumbers.`false`
+import typingsSlinky.semanticDashUiDashTab.semanticDashUiDashTabBooleans.`false`
 import typingsSlinky.semanticDashUiDashTab.semanticDashUiDashTabStrings.`cache add`
 import typingsSlinky.semanticDashUiDashTab.semanticDashUiDashTabStrings.`cache read`
 import typingsSlinky.semanticDashUiDashTab.semanticDashUiDashTabStrings.`cache remove`

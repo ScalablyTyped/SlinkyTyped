@@ -1,6 +1,6 @@
 package typingsSlinky.h2o2.h2o2Mod
 
-import typingsSlinky.h2o2.h2o2Numbers.`false`
+import typingsSlinky.h2o2.h2o2Booleans.`false`
 import typingsSlinky.h2o2.h2o2Strings.http
 import typingsSlinky.h2o2.h2o2Strings.https
 import typingsSlinky.h2o2.h2o2Strings.upstream

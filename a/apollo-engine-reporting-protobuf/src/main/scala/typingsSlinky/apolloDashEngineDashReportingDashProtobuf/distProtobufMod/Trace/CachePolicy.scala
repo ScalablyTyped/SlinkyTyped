@@ -1,6 +1,7 @@
 package typingsSlinky.apolloDashEngineDashReportingDashProtobuf.distProtobufMod.Trace
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.apolloDashEngineDashReportingDashProtobuf.distProtobufMod.Trace.CachePolicy.Scope
 import typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod.IConversionOptions
 import typingsSlinky.atApolloProtobufjs.atApolloProtobufjsMod.Reader
@@ -115,11 +116,17 @@ object CachePolicy extends js.Object {
     @js.native
     sealed trait UNKNOWN extends Scope
     
-    /* 2 */ val PRIVATE: typingsSlinky.apolloDashEngineDashReportingDashProtobuf.distProtobufMod.Trace.CachePolicy.Scope.PRIVATE with Double = js.native
-    /* 1 */ val PUBLIC: typingsSlinky.apolloDashEngineDashReportingDashProtobuf.distProtobufMod.Trace.CachePolicy.Scope.PUBLIC with Double = js.native
-    /* 0 */ val UNKNOWN: typingsSlinky.apolloDashEngineDashReportingDashProtobuf.distProtobufMod.Trace.CachePolicy.Scope.UNKNOWN with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Scope with Double] = js.native
+    /* 2 */ @js.native
+    object PRIVATE extends TopLevel[PRIVATE with Double]
+    
+    /* 1 */ @js.native
+    object PUBLIC extends TopLevel[PUBLIC with Double]
+    
+    /* 0 */ @js.native
+    object UNKNOWN extends TopLevel[UNKNOWN with Double]
+    
   }
   
 }

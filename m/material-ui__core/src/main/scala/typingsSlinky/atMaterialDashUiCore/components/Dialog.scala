@@ -15,7 +15,7 @@ import slinky.web.html.div.tag
 import typingsSlinky.atMaterialDashUiCore.PartialBackdropProps
 import typingsSlinky.atMaterialDashUiCore.PartialClassNameMapDialogClassKey
 import typingsSlinky.atMaterialDashUiCore.PartialPaperProps
-import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreNumbers.`false`
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreBooleans.`false`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`additions text`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`inline`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.additions
@@ -88,8 +88,9 @@ object Dialog
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, manifest, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, open, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
+  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, manifest, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
   def apply(
+    open: Boolean,
     BackdropComponent: ReactComponentClass[BackdropProps] = null,
     BackdropProps: PartialBackdropProps = null,
     PaperComponent: ReactComponentClass[PaperProps] = null,
@@ -208,7 +209,7 @@ object Dialog
     vocab: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
     if (BackdropComponent != null) __obj.updateDynamic("BackdropComponent")(BackdropComponent.asInstanceOf[js.Any])
     if (BackdropProps != null) __obj.updateDynamic("BackdropProps")(BackdropProps.asInstanceOf[js.Any])
     if (PaperComponent != null) __obj.updateDynamic("PaperComponent")(PaperComponent.asInstanceOf[js.Any])

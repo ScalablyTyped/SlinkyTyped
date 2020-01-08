@@ -19,17 +19,18 @@ object RadioButton
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, disabled, value */
+  /* The following DOM/SVG props were specified: checked, disabled */
   def apply(
     label: String,
     onSelect: String => Unit,
+    value: String | Double,
     theme: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
     typingsSlinky.reactDashNativeDashMaterialDashUi.reactDashNativeDashMaterialDashUiMod.RadioButton
   ] = {
-    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onSelect = js.Any.fromFunction1(onSelect))
+    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onSelect = js.Any.fromFunction1(onSelect), value = value.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

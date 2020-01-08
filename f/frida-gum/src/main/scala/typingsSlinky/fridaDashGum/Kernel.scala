@@ -1,6 +1,5 @@
 package typingsSlinky.fridaDashGum
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,7 +54,7 @@ object Kernel extends js.Object {
     */
   def protect(address: UInt64, size: Double, protection: PageProtection): Boolean = js.native
   def protect(address: UInt64, size: UInt64, protection: PageProtection): Boolean = js.native
-  def readByteArray(address: UInt64, length: Double): scala.scalajs.js.typedarray.ArrayBuffer | Null = js.native
+  def readByteArray(address: UInt64, length: Double): ArrayBuffer | Null = js.native
   def readCString(address: UInt64, size: Double): String | Null = js.native
   def readDouble(address: UInt64): Double = js.native
   def readFloat(address: UInt64): Double = js.native

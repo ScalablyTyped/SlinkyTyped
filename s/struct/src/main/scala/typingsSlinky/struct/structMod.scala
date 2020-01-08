@@ -1,7 +1,6 @@
 package typingsSlinky.struct
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.struct.structMod.Struct
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -175,7 +175,12 @@ object ChoiceGroupOptionBase
         typingsSlinky.react.reactMod._Global_.JSX.Element | Null
       ]
     ]) => typingsSlinky.react.reactMod._Global_.JSX.Element | Null = null,
-    onRenderLabel: /* option */ IChoiceGroupOption => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    onRenderLabel: (/* props */ js.UndefOr[IChoiceGroupOption], /* defaultRender */ js.UndefOr[
+      js.Function1[
+        /* props */ js.UndefOr[IChoiceGroupOption], 
+        typingsSlinky.react.reactMod._Global_.JSX.Element | Null
+      ]
+    ]) => typingsSlinky.react.reactMod._Global_.JSX.Element | Null = null,
     onReset: SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event] => Unit = null,
     prefix: String = null,
     property: String = null,
@@ -288,7 +293,7 @@ object ChoiceGroupOptionBase
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
     if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
     if (onRenderField != null) __obj.updateDynamic("onRenderField")(js.Any.fromFunction2(onRenderField))
-    if (onRenderLabel != null) __obj.updateDynamic("onRenderLabel")(js.Any.fromFunction1(onRenderLabel))
+    if (onRenderLabel != null) __obj.updateDynamic("onRenderLabel")(js.Any.fromFunction2(onRenderLabel))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])

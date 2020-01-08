@@ -1,12 +1,5 @@
 package typingsSlinky.phaser.Phaser
 
-import typingsSlinky.phaser.Phaser.Curves.CubicBezier
-import typingsSlinky.phaser.Phaser.Curves.Curve
-import typingsSlinky.phaser.Phaser.Curves.Ellipse
-import typingsSlinky.phaser.Phaser.Curves.Line
-import typingsSlinky.phaser.Phaser.Curves.Path
-import typingsSlinky.phaser.Phaser.Curves.QuadraticBezier
-import typingsSlinky.phaser.Phaser.Curves.Spline
 import typingsSlinky.phaser.Phaser.GameObjects.Graphics
 import typingsSlinky.phaser.Phaser.Geom.Point
 import typingsSlinky.phaser.Phaser.Geom.Rectangle

@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object TokenType extends js.Object {
   @js.native
   sealed trait ServerGroup extends TokenType
   
-  /* 1 */ val ChannelGroup: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.TokenType.ChannelGroup with Double = js.native
-  /* 0 */ val ServerGroup: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.TokenType.ServerGroup with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TokenType with Double] = js.native
+  /* 1 */ @js.native
+  object ChannelGroup extends TopLevel[ChannelGroup with Double]
+  
+  /* 0 */ @js.native
+  object ServerGroup extends TopLevel[ServerGroup with Double]
+  
 }
 

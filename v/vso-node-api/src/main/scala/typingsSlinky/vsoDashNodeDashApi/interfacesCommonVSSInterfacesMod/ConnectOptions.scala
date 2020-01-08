@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object ConnectOptions extends js.Object {
   @js.native
   sealed trait None extends ConnectOptions
   
-  /* 4 */ val IncludeInheritedDefinitionsOnly: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.ConnectOptions.IncludeInheritedDefinitionsOnly with Double = js.native
-  /* 2 */ val IncludeLastUserAccess: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.ConnectOptions.IncludeLastUserAccess with Double = js.native
-  /* 8 */ val IncludeNonInheritedDefinitionsOnly: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.ConnectOptions.IncludeNonInheritedDefinitionsOnly with Double = js.native
-  /* 1 */ val IncludeServices: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.ConnectOptions.IncludeServices with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.ConnectOptions.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConnectOptions with Double] = js.native
+  /* 4 */ @js.native
+  object IncludeInheritedDefinitionsOnly extends TopLevel[IncludeInheritedDefinitionsOnly with Double]
+  
+  /* 2 */ @js.native
+  object IncludeLastUserAccess extends TopLevel[IncludeLastUserAccess with Double]
+  
+  /* 8 */ @js.native
+  object IncludeNonInheritedDefinitionsOnly extends TopLevel[IncludeNonInheritedDefinitionsOnly with Double]
+  
+  /* 1 */ @js.native
+  object IncludeServices extends TopLevel[IncludeServices with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.astDashTypes.genNamedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astDashTypes.astDashTypesStrings.`+`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`-`
+import typingsSlinky.astDashTypes.astDashTypesStrings.Plussign
+import typingsSlinky.astDashTypes.astDashTypesStrings.`-_`
 import typingsSlinky.astDashTypes.genKindsMod.NodeKind
 import typingsSlinky.astDashTypes.genKindsMod.PrintableKind
 import typingsSlinky.astDashTypes.genKindsMod.TSTypeKind
@@ -18,8 +18,8 @@ import scala.scalajs.js.annotation._
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var optional: js.UndefOr[Boolean | `+` | `-`] = js.undefined
-  var readonly: js.UndefOr[Boolean | `+` | `-`] = js.undefined
+  var optional: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
+  var readonly: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
   var `type`: typingsSlinky.astDashTypes.astDashTypesStrings.TSMappedType
   var typeAnnotation: js.UndefOr[TSTypeKind | Null] = js.undefined
   var typeParameter: TSTypeParameterKind

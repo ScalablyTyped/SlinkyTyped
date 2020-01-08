@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table
-  extends SharedApply_TableProps8731668[default[js.Any]] {
+  extends SharedApply_TableProps_1756568672[default[js.Any]] {
   @JSImport("rc-table/lib/Table", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,5 @@
 package typingsSlinky.postmark
 
-import typingsSlinky.postmark.distClientBaseClientMod.BaseClient
 import typingsSlinky.postmark.distClientErrorHandlerMod.ErrorHandler
 import typingsSlinky.postmark.distClientModelsClientCallbackMod.Callback
 import typingsSlinky.postmark.distClientModelsClientClientOptionsMod.ClientOptions.HttpMethod

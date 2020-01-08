@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object WiFiDirectServiceConfigurationMethod extends js.Object {
   @js.native
   sealed trait pinEntry extends WiFiDirectServiceConfigurationMethod
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod.default with Double = js.native
-  /* 1 */ val pinDisplay: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod.pinDisplay with Double = js.native
-  /* 2 */ val pinEntry: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod.pinEntry with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WiFiDirectServiceConfigurationMethod with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object pinDisplay extends TopLevel[pinDisplay with Double]
+  
+  /* 2 */ @js.native
+  object pinEntry extends TopLevel[pinEntry with Double]
+  
 }
 

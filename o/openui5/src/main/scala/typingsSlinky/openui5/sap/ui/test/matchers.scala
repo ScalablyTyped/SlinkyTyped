@@ -2,12 +2,6 @@ package typingsSlinky.openui5.sap.ui.test
 
 import typingsSlinky.openui5.sap.ui.base.ManagedObject
 import typingsSlinky.openui5.sap.ui.core.Control
-import typingsSlinky.openui5.sap.ui.test.matchers.AggregationContainsPropertyEqual
-import typingsSlinky.openui5.sap.ui.test.matchers.AggregationFilled
-import typingsSlinky.openui5.sap.ui.test.matchers.AggregationLengthEquals
-import typingsSlinky.openui5.sap.ui.test.matchers.BindingPath
-import typingsSlinky.openui5.sap.ui.test.matchers.Matcher
-import typingsSlinky.openui5.sap.ui.test.matchers.PropertyStrictEquals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

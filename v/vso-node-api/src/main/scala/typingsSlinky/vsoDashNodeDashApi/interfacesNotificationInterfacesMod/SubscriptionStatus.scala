@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,20 +89,46 @@ object SubscriptionStatus extends js.Object {
   @js.native
   sealed trait PendingDeletion extends SubscriptionStatus
   
-  /* -1 */ val Disabled: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.Disabled with Double = js.native
-  /* -3 */ val DisabledAsDuplicateOfDefault: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledAsDuplicateOfDefault with Double = js.native
-  /* -2 */ val DisabledByAdmin: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledByAdmin with Double = js.native
-  /* -9 */ val DisabledBySystem: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledBySystem with Double = js.native
-  /* -8 */ val DisabledInactiveIdentity: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledInactiveIdentity with Double = js.native
-  /* -4 */ val DisabledInvalidPathClause: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledInvalidPathClause with Double = js.native
-  /* -5 */ val DisabledInvalidRoleExpression: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledInvalidRoleExpression with Double = js.native
-  /* -7 */ val DisabledMessageQueueNotSupported: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledMessageQueueNotSupported with Double = js.native
-  /* -6 */ val DisabledMissingIdentity: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.DisabledMissingIdentity with Double = js.native
-  /* 0 */ val Enabled: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.Enabled with Double = js.native
-  /* 1 */ val EnabledOnProbation: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.EnabledOnProbation with Double = js.native
-  /* -200 */ val JailedByNotificationsVolume: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.JailedByNotificationsVolume with Double = js.native
-  /* -100 */ val PendingDeletion: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionStatus.PendingDeletion with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SubscriptionStatus with Double] = js.native
+  /* -1 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* -3 */ @js.native
+  object DisabledAsDuplicateOfDefault extends TopLevel[DisabledAsDuplicateOfDefault with Double]
+  
+  /* -2 */ @js.native
+  object DisabledByAdmin extends TopLevel[DisabledByAdmin with Double]
+  
+  /* -9 */ @js.native
+  object DisabledBySystem extends TopLevel[DisabledBySystem with Double]
+  
+  /* -8 */ @js.native
+  object DisabledInactiveIdentity extends TopLevel[DisabledInactiveIdentity with Double]
+  
+  /* -4 */ @js.native
+  object DisabledInvalidPathClause extends TopLevel[DisabledInvalidPathClause with Double]
+  
+  /* -5 */ @js.native
+  object DisabledInvalidRoleExpression extends TopLevel[DisabledInvalidRoleExpression with Double]
+  
+  /* -7 */ @js.native
+  object DisabledMessageQueueNotSupported extends TopLevel[DisabledMessageQueueNotSupported with Double]
+  
+  /* -6 */ @js.native
+  object DisabledMissingIdentity extends TopLevel[DisabledMissingIdentity with Double]
+  
+  /* 0 */ @js.native
+  object Enabled extends TopLevel[Enabled with Double]
+  
+  /* 1 */ @js.native
+  object EnabledOnProbation extends TopLevel[EnabledOnProbation with Double]
+  
+  /* -200 */ @js.native
+  object JailedByNotificationsVolume extends TopLevel[JailedByNotificationsVolume with Double]
+  
+  /* -100 */ @js.native
+  object PendingDeletion extends TopLevel[PendingDeletion with Double]
+  
 }
 

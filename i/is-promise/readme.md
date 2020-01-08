@@ -11,8 +11,8 @@ Test whether an object looks like a promises-a+ promise
 | Full name          | is-promise |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 362 |
-| # downloads        | 237779858 |
+| # dependents       | 440 |
+| # downloads        | 368294558 |
 | # stars            | 6 |
 
 ## Links

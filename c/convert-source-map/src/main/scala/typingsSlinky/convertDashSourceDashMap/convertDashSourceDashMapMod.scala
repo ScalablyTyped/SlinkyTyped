@@ -1,6 +1,5 @@
 package typingsSlinky.convertDashSourceDashMap
 
-import typingsSlinky.convertDashSourceDashMap.convertDashSourceDashMapMod.SourceMapConverter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

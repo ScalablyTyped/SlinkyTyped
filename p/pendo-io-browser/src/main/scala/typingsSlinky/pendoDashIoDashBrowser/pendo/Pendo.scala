@@ -3,8 +3,8 @@ package typingsSlinky.pendoDashIoDashBrowser.pendo
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.pendoDashIoDashBrowser.Anon_Reload
 import typingsSlinky.pendoDashIoDashBrowser.Anon_Steps
-import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserNumbers.`false`
-import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserNumbers.`true`
+import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserBooleans.`false`
+import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserBooleans.`true`
 import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserStrings.No
 import typingsSlinky.pendoDashIoDashBrowser.pendoDashIoDashBrowserStrings.Yes
 import scala.scalajs.js

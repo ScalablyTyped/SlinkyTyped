@@ -1,6 +1,6 @@
 package typingsSlinky.terser.terserMod
 
-import typingsSlinky.terser.terserNumbers.`false`
+import typingsSlinky.terser.terserBooleans.`false`
 import typingsSlinky.terser.terserStrings.all
 import typingsSlinky.terser.terserStrings.some
 import scala.scalajs.js

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ModalDotNative extends SharedApply_IModalNativeProps1726334215[default] {
+object ModalDotNative extends SharedApply_IModalNativeProps910182217[default] {
   @JSImport("antd-mobile-rn/lib/modal/Modal.native", JSImport.Default)
   @js.native
   object componentImport extends js.Object

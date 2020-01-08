@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Audio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object AudioGraphUnrecoverableError extends js.Object {
   @js.native
   sealed trait unknownFailure extends AudioGraphUnrecoverableError
   
-  /* 1 */ val audioDeviceLost: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphUnrecoverableError.audioDeviceLost with Double = js.native
-  /* 2 */ val audioSessionDisconnected: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphUnrecoverableError.audioSessionDisconnected with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphUnrecoverableError.none with Double = js.native
-  /* 3 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.Media.Audio.AudioGraphUnrecoverableError.unknownFailure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AudioGraphUnrecoverableError with Double] = js.native
+  /* 1 */ @js.native
+  object audioDeviceLost extends TopLevel[audioDeviceLost with Double]
+  
+  /* 2 */ @js.native
+  object audioSessionDisconnected extends TopLevel[audioSessionDisconnected with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
 }
 

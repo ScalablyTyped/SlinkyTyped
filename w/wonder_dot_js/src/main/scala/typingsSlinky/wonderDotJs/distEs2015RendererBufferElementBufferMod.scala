@@ -3,7 +3,6 @@ package typingsSlinky.wonderDotJs
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferCommonBufferMod.CommonBuffer
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage
-import typingsSlinky.wonderDotJs.distEs2015RendererBufferElementBufferMod.ElementBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

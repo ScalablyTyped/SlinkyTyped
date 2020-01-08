@@ -1,10 +1,10 @@
 package typingsSlinky.tinycolor2.tinycolor2Mod
 
+import typingsSlinky.tinycolor2.tinycolor2Booleans.`false`
 import typingsSlinky.tinycolor2.tinycolor2Mod.ColorFormats.HSLA
 import typingsSlinky.tinycolor2.tinycolor2Mod.ColorFormats.HSVA
 import typingsSlinky.tinycolor2.tinycolor2Mod.ColorFormats.PRGBA
 import typingsSlinky.tinycolor2.tinycolor2Mod.ColorFormats.RGBA
-import typingsSlinky.tinycolor2.tinycolor2Numbers.`false`
 import typingsSlinky.tinycolor2.tinycolor2Strings.hex
 import typingsSlinky.tinycolor2.tinycolor2Strings.hex3
 import typingsSlinky.tinycolor2.tinycolor2Strings.hex4

@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberObject
 
-import typingsSlinky.atEmberObject.computedMod.ComputedProperty
 import typingsSlinky.std.PropertyDecorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`

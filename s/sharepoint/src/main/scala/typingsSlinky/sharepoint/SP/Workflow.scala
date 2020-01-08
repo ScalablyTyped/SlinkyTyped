@@ -1,8 +1,5 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.sharepoint.SP.Workflow.WorkflowAssociation
-import typingsSlinky.sharepoint.SP.Workflow.WorkflowAssociationCreationInformation
-import typingsSlinky.sharepoint.SP.Workflow.WorkflowTemplate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

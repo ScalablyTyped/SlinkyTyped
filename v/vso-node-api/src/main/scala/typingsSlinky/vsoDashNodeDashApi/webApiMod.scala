@@ -23,7 +23,6 @@ import typingsSlinky.vsoDashNodeDashApi.taskApiMod.ITaskApi
 import typingsSlinky.vsoDashNodeDashApi.testApiMod.ITestApi
 import typingsSlinky.vsoDashNodeDashApi.tfvcApiMod.ITfvcApi
 import typingsSlinky.vsoDashNodeDashApi.vsoClientMod.VsoClient
-import typingsSlinky.vsoDashNodeDashApi.webApiMod.WebApi
 import typingsSlinky.vsoDashNodeDashApi.workApiMod.IWorkApi
 import typingsSlinky.vsoDashNodeDashApi.workItemTrackingApiMod.IWorkItemTrackingApi
 import typingsSlinky.vsoDashNodeDashApi.workItemTrackingProcessApiMod.IWorkItemTrackingProcessApi

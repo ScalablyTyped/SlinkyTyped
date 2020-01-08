@@ -1,6 +1,5 @@
 package typingsSlinky.formstate
 
-import typingsSlinky.formstate.libCoreFormStateLazyMod.ValidatableArray
 import typingsSlinky.formstate.libCoreTypesMod.Validatable
 import typingsSlinky.formstate.libCoreTypesMod.Validator
 import scala.scalajs.js

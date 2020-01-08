@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,16 +39,36 @@ object File2ContentType extends js.Object {
   @js.native
   sealed trait IMAGE_TIFF extends File2ContentType
   
-  /* "application/json" */ val APPLICATION_JSON: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.APPLICATION_JSON with String = js.native
-  /* "application/msword" */ val APPLICATION_MSWORD: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.APPLICATION_MSWORD with String = js.native
-  /* "application/pdf" */ val APPLICATION_PDF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.APPLICATION_PDF with String = js.native
-  /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ val APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String = js.native
-  /* "image/bmp" */ val IMAGE_BMP: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.IMAGE_BMP with String = js.native
-  /* "image/gif" */ val IMAGE_GIF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.IMAGE_GIF with String = js.native
-  /* "image/jpeg" */ val IMAGE_JPEG: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.IMAGE_JPEG with String = js.native
-  /* "image/png" */ val IMAGE_PNG: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.IMAGE_PNG with String = js.native
-  /* "image/tiff" */ val IMAGE_TIFF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.File2ContentType.IMAGE_TIFF with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[File2ContentType with String] = js.native
+  /* "application/json" */ @js.native
+  object APPLICATION_JSON extends TopLevel[APPLICATION_JSON with String]
+  
+  /* "application/msword" */ @js.native
+  object APPLICATION_MSWORD extends TopLevel[APPLICATION_MSWORD with String]
+  
+  /* "application/pdf" */ @js.native
+  object APPLICATION_PDF extends TopLevel[APPLICATION_PDF with String]
+  
+  /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ @js.native
+  object APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT extends TopLevel[
+          APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String
+        ]
+  
+  /* "image/bmp" */ @js.native
+  object IMAGE_BMP extends TopLevel[IMAGE_BMP with String]
+  
+  /* "image/gif" */ @js.native
+  object IMAGE_GIF extends TopLevel[IMAGE_GIF with String]
+  
+  /* "image/jpeg" */ @js.native
+  object IMAGE_JPEG extends TopLevel[IMAGE_JPEG with String]
+  
+  /* "image/png" */ @js.native
+  object IMAGE_PNG extends TopLevel[IMAGE_PNG with String]
+  
+  /* "image/tiff" */ @js.native
+  object IMAGE_TIFF extends TopLevel[IMAGE_TIFF with String]
+  
 }
 

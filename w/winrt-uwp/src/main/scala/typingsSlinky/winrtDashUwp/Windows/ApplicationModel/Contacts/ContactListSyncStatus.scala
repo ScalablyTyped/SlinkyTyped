@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object ContactListSyncStatus extends js.Object {
   @js.native
   sealed trait upToDate extends ContactListSyncStatus
   
-  /* 3 */ val authenticationError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.authenticationError with Double = js.native
-  /* 0 */ val idle: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.idle with Double = js.native
-  /* 6 */ val manualAccountRemovalRequired: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.manualAccountRemovalRequired with Double = js.native
-  /* 4 */ val policyError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.policyError with Double = js.native
-  /* 1 */ val syncing: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.syncing with Double = js.native
-  /* 5 */ val unknownError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.unknownError with Double = js.native
-  /* 2 */ val upToDate: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListSyncStatus.upToDate with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactListSyncStatus with Double] = js.native
+  /* 3 */ @js.native
+  object authenticationError extends TopLevel[authenticationError with Double]
+  
+  /* 0 */ @js.native
+  object idle extends TopLevel[idle with Double]
+  
+  /* 6 */ @js.native
+  object manualAccountRemovalRequired extends TopLevel[manualAccountRemovalRequired with Double]
+  
+  /* 4 */ @js.native
+  object policyError extends TopLevel[policyError with Double]
+  
+  /* 1 */ @js.native
+  object syncing extends TopLevel[syncing with Double]
+  
+  /* 5 */ @js.native
+  object unknownError extends TopLevel[unknownError with Double]
+  
+  /* 2 */ @js.native
+  object upToDate extends TopLevel[upToDate with Double]
+  
 }
 

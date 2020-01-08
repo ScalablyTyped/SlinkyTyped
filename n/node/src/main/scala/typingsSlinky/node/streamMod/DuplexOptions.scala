@@ -1,7 +1,6 @@
 package typingsSlinky.node.streamMod
 
 import typingsSlinky.node.Anon_Chunk
-import typingsSlinky.node.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +9,13 @@ import scala.scalajs.js.annotation._
 - typings.node.streamMod.WritableOptions because var conflicts: autoDestroy, destroy, highWaterMark, objectMode. Inlined decodeStrings, defaultEncoding, emitClose, write, writev, `final` */ trait DuplexOptions extends ReadableOptions {
   var allowHalfOpen: js.UndefOr[Boolean] = js.undefined
   var decodeStrings: js.UndefOr[Boolean] = js.undefined
-  var defaultEncoding: js.UndefOr[java.lang.String] = js.undefined
+  var defaultEncoding: js.UndefOr[String] = js.undefined
   @JSName("destroy")
   var destroy_DuplexOptions: js.UndefOr[
     js.ThisFunction2[
       /* this */ Duplex, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ]
   ] = js.undefined
@@ -24,20 +23,23 @@ import scala.scalajs.js.annotation._
   var `final`: js.UndefOr[
     js.ThisFunction1[
       (/* this */ Duplex) | (/* this */ Writable), 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
   @JSName("read")
   var read_DuplexOptions: js.UndefOr[js.ThisFunction1[/* this */ Duplex, /* size */ Double, Unit]] = js.undefined
+  var readableHighWaterMark: js.UndefOr[Double] = js.undefined
   var readableObjectMode: js.UndefOr[Boolean] = js.undefined
+  var writableCorked: js.UndefOr[Double] = js.undefined
+  var writableHighWaterMark: js.UndefOr[Double] = js.undefined
   var writableObjectMode: js.UndefOr[Boolean] = js.undefined
   var write: js.UndefOr[
     js.ThisFunction3[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunk */ js.Any, 
-      /* encoding */ java.lang.String, 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* encoding */ String, 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -45,7 +47,7 @@ import scala.scalajs.js.annotation._
     js.ThisFunction2[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -57,36 +59,39 @@ object DuplexOptions {
     allowHalfOpen: js.UndefOr[Boolean] = js.undefined,
     autoDestroy: js.UndefOr[Boolean] = js.undefined,
     decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: java.lang.String = null,
+    defaultEncoding: String = null,
     destroy: js.ThisFunction2[
       /* this */ Duplex, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: java.lang.String = null,
+    encoding: String = null,
     `final`: js.ThisFunction1[
       (/* this */ Duplex) | (/* this */ Writable), 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     highWaterMark: Int | Double = null,
     objectMode: js.UndefOr[Boolean] = js.undefined,
     read: js.ThisFunction1[/* this */ Duplex, /* size */ Double, Unit] = null,
+    readableHighWaterMark: Int | Double = null,
     readableObjectMode: js.UndefOr[Boolean] = js.undefined,
+    writableCorked: Int | Double = null,
+    writableHighWaterMark: Int | Double = null,
     writableObjectMode: js.UndefOr[Boolean] = js.undefined,
     write: js.ThisFunction3[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunk */ js.Any, 
-      /* encoding */ java.lang.String, 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* encoding */ String, 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     writev: js.ThisFunction2[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null
   ): DuplexOptions = {
@@ -102,7 +107,10 @@ object DuplexOptions {
     if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
     if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
+    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
+    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
     if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])

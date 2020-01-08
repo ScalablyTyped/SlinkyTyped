@@ -1,7 +1,6 @@
 package typingsSlinky.apolloDashUtilities
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apolloDashUtilities.libGetFromASTMod.FragmentMap
 import typingsSlinky.apolloDashUtilities.libStoreUtilsMod.JsonValue
 import typingsSlinky.graphql.languageAstMod.DocumentNode
 import typingsSlinky.graphql.languageAstMod.FragmentDefinitionNode

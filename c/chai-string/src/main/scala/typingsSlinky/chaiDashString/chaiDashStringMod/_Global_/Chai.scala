@@ -3,7 +3,6 @@ package typingsSlinky.chaiDashString.chaiDashStringMod._Global_
 import typingsSlinky.chai.Chai.LanguageChains
 import typingsSlinky.chai.Chai.NumericComparison
 import typingsSlinky.chai.Chai.TypeComparison
-import typingsSlinky.chaiDashString.chaiDashStringMod._Global_.Chai.Assertion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

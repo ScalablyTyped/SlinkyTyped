@@ -1,12 +1,8 @@
 package typingsSlinky.mendixmodelsdk
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
-import typingsSlinky.mendixmodelsdk.distGenImagesMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenImagesMod.images.IImage
-import typingsSlinky.mendixmodelsdk.distGenImagesMod.images.IImageCollection
-import typingsSlinky.mendixmodelsdk.distGenImagesMod.images.Image
-import typingsSlinky.mendixmodelsdk.distGenImagesMod.images.ImageCollection
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Document
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable
@@ -70,11 +66,12 @@ object distGenImagesMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
-      val containerAsImageCollection: IImageCollection | ImageCollection = js.native
-      var imageData: String | Null = js.native
+      @JSName("containerAsImageCollection")
+      val containerAsImageCollection_FImage: IImageCollection = js.native
       @JSName("model")
-      var model_Image: IModel = js.native
-      var name: String = js.native
+      var model_FImage: IModel = js.native
+      @JSName("name")
+      val name_FImage: String = js.native
       /**
         * Returns the qualified name of this element, or
         * null if this element is not a part of the model,
@@ -83,6 +80,15 @@ object distGenImagesMod extends js.Object {
         */
       /* CompleteClass */
       override val qualifiedName: String | Null = js.native
+      def containerAsImageCollection(): ImageCollection = js.native
+      def imageData(): String | Null = js.native
+      def imageData(newValue: String): js.Any = js.native
+      @JSName("imageData")
+      def imageData_Any(): js.Any = js.native
+      def name(): String = js.native
+      def name(newValue: String): js.Any = js.native
+      @JSName("qualifiedName")
+      def qualifiedName_MImage(): String | Null = js.native
     }
     
     /**
@@ -96,7 +102,7 @@ object distGenImagesMod extends js.Object {
     - typings.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
-    - typings.mendixmodelsdk.distGenImagesMod.images.IImageCollection because var conflicts: id, isLoaded, model, name, structureTypeName, unit. Inlined images */ @js.native
+    - typings.mendixmodelsdk.distGenImagesMod.images.IImageCollection because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined images */ @js.native
     class ImageCollection protected () extends Document {
       def this(
         model: AbstractModel,
@@ -105,7 +111,13 @@ object distGenImagesMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
-      val images: IList[IImage | Image] = js.native
+      @JSName("images")
+      val images_FImageCollection: IList[IImage] = js.native
+      @JSName("model")
+      var model_FImageCollection: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MImageCollection(): FolderBase = js.native
+      def images(): IList[Image] = js.native
     }
     
     /* static members */

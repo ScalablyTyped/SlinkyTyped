@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SwipeDashAction extends SharedApply_SwipeActionProps1602000079[default] {
+object SwipeDashAction extends SharedApply_SwipeActionProps_1684916655[default] {
   @JSImport("antd-mobile/lib/swipe-action", JSImport.Default)
   @js.native
   object componentImport extends js.Object

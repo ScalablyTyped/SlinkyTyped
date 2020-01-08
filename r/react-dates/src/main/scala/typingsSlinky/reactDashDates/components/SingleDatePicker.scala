@@ -27,9 +27,10 @@ object SingleDatePicker
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, placeholder, readOnly, required */
+  /* The following DOM/SVG props were specified: disabled, placeholder, readOnly, required */
   def apply(
     focused: Boolean,
+    id: String,
     onDateChange: js.UndefOr[momentObj] => Unit,
     onFocusChange: Anon_Focused => Unit,
     anchorDirection: AnchorDirectionShape = null,
@@ -85,7 +86,7 @@ object SingleDatePicker
     withPortal: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(focused = focused.asInstanceOf[js.Any], onDateChange = js.Any.fromFunction1(onDateChange), onFocusChange = js.Any.fromFunction1(onFocusChange))
+    val __obj = js.Dynamic.literal(focused = focused.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onDateChange = js.Any.fromFunction1(onDateChange), onFocusChange = js.Any.fromFunction1(onFocusChange))
     if (anchorDirection != null) __obj.updateDynamic("anchorDirection")(anchorDirection.asInstanceOf[js.Any])
     if (!js.isUndefined(appendToBody)) __obj.updateDynamic("appendToBody")(appendToBody.asInstanceOf[js.Any])
     if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])

@@ -1,10 +1,6 @@
 package typingsSlinky.tapeDashAsync
 
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.tapeDashAsync.tapeDashAsyncMod.StreamOptions
-import typingsSlinky.tapeDashAsync.tapeDashAsyncMod.Test
-import typingsSlinky.tapeDashAsync.tapeDashAsyncMod.TestCase
-import typingsSlinky.tapeDashAsync.tapeDashAsyncMod.TestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

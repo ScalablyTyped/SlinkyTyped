@@ -1,11 +1,14 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RatingButtonControlledExample
-  extends SharedApply_Object152536094[
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsRatingExamplesRatingDotButtonControlledDotExampleMod.RatingButtonControlledExample
     ] {
   @JSImport("office-ui-fabric-react/lib/components/Rating/examples/Rating.ButtonControlled.Example", "RatingButtonControlledExample")

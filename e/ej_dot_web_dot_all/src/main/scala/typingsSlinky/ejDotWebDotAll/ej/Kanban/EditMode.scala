@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Kanban
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object EditMode extends js.Object {
   @js.native
   sealed trait ExternalFormTemplate extends EditMode
   
-  /* 0 */ val Dialog: typingsSlinky.ejDotWebDotAll.ej.Kanban.EditMode.Dialog with Double = js.native
-  /* 1 */ val DialogTemplate: typingsSlinky.ejDotWebDotAll.ej.Kanban.EditMode.DialogTemplate with Double = js.native
-  /* 2 */ val ExternalForm: typingsSlinky.ejDotWebDotAll.ej.Kanban.EditMode.ExternalForm with Double = js.native
-  /* 3 */ val ExternalFormTemplate: typingsSlinky.ejDotWebDotAll.ej.Kanban.EditMode.ExternalFormTemplate with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EditMode with Double] = js.native
+  /* 0 */ @js.native
+  object Dialog extends TopLevel[Dialog with Double]
+  
+  /* 1 */ @js.native
+  object DialogTemplate extends TopLevel[DialogTemplate with Double]
+  
+  /* 2 */ @js.native
+  object ExternalForm extends TopLevel[ExternalForm with Double]
+  
+  /* 3 */ @js.native
+  object ExternalFormTemplate extends TopLevel[ExternalFormTemplate with Double]
+  
 }
 

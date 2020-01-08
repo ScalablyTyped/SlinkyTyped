@@ -4,13 +4,14 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberMod.DynamicNumberProps
 import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberMod.default
-import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.DOT
-import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.` `
-import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.`,`
+import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.Comma
+import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.Dot
+import typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberStrings.Space
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +30,8 @@ object ReactDashDynamicDashNumber
     negative: js.UndefOr[Boolean] = js.undefined,
     onChange: (/* event */ ChangeEvent[HTMLInputElement], /* modelValue */ Double, /* viewValue */ String) => Unit = null,
     positive: js.UndefOr[Boolean] = js.undefined,
-    separator: DOT | `,` = null,
-    thousand: Boolean | (` `) = null,
+    separator: Dot | Comma = null,
+    thousand: Boolean | Space = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -44,6 +45,9 @@ object ReactDashDynamicDashNumber
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashDynamicDashNumber.reactDashDynamicDashNumberMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DynamicNumberProps
 }
 

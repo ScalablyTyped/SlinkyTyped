@@ -1,6 +1,5 @@
 package typingsSlinky.typedoc
 
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesHelpersMod.Helper
 import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.Resource
 import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceStack
 import scala.scalajs.js

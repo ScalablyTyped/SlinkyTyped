@@ -4,7 +4,6 @@ import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libRadioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupContext
 import typingsSlinky.antd.libRadioInterfaceMod.RadioProps
-import typingsSlinky.antd.libRadioRadioMod.Radio
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

@@ -3,7 +3,6 @@ package typingsSlinky.atFirebaseFirestore
 import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Bound
 import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Filter
 import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.OrderBy
-import typingsSlinky.atFirebaseFirestore.distSrcCoreTargetMod.Target
 import typingsSlinky.atFirebaseFirestore.distSrcModelPathMod.ResourcePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`

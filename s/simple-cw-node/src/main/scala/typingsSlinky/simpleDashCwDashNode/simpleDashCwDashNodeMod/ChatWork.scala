@@ -1,9 +1,9 @@
 package typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeMod
 
-import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.`my/status`
-import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.`my/tasks`
 import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.contacts
 import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.me
+import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.mySlashstatus
+import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.mySlashtasks
 import typingsSlinky.simpleDashCwDashNode.simpleDashCwDashNodeStrings.rooms
 import typingsSlinky.std.Error
 import typingsSlinky.superagent.superagentMod.Response
@@ -60,9 +60,9 @@ trait ChatWork extends js.Object {
   def get_me(api: me, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   // http://developer.chatwork.com/ja/endpoint_my.html
   @JSName("get")
-  def get_mystatus(api: `my/status`, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
+  def get_mystatus(api: mySlashstatus, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   @JSName("get")
-  def get_mytasks(api: `my/tasks`, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
+  def get_mytasks(api: mySlashtasks, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   // http://developer.chatwork.com/ja/endpoint_rooms.html
   @JSName("get")
   def get_rooms(api: rooms, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native

@@ -1,13 +1,12 @@
 package typingsSlinky.atGrpcGrpcDashJs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelDashOptionsMod.ChannelOptions
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMakeDashClientMod.Deserialize
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMakeDashClientMod.Serialize
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMakeDashClientMod.ServiceDefinition
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcServerDashCallMod.HandleCall
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcServerDashCredentialsMod.ServerCredentials
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcServerMod.UntypedHandleCall
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcServerMod.UntypedServiceImplementation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,10 +16,11 @@ import scala.scalajs.js.annotation._
 object buildSrcServerMod extends js.Object {
   @js.native
   class Server () extends js.Object {
-    def this(options: js.Object) = this()
+    def this(options: ChannelOptions) = this()
     var _setupHandlers: js.Any = js.native
     var handlers: js.Any = js.native
     var http2Server: js.Any = js.native
+    var options: js.Any = js.native
     var sessions: js.Any = js.native
     var started: js.Any = js.native
     def addHttp2Port(): Unit = js.native

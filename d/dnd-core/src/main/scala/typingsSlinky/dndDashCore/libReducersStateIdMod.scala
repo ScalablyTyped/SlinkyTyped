@@ -1,6 +1,5 @@
 package typingsSlinky.dndDashCore
 
-import typingsSlinky.dndDashCore.libReducersStateIdMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,7 +4,6 @@ import typingsSlinky.wonderDashFrp.distEs2015CoreEntityMod.Entity
 import typingsSlinky.wonderDashFrp.distEs2015CoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distEs2015DisposableIDisposableMod.IDisposable
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
-import typingsSlinky.wonderDashFrp.distEs2015SubjectGeneratorSubjectMod.GeneratorSubject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

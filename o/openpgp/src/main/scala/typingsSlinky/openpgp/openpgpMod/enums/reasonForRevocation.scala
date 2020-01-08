@@ -1,5 +1,6 @@
 package typingsSlinky.openpgp.openpgpMod.enums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,12 +44,22 @@ object reasonForRevocation extends js.Object {
   @js.native
   sealed trait userid_invalid extends reasonForRevocation
   
-  /* 2 */ val key_comPromised: typingsSlinky.openpgp.openpgpMod.enums.reasonForRevocation.key_comPromised with Double = js.native
-  /* 3 */ val key_retired: typingsSlinky.openpgp.openpgpMod.enums.reasonForRevocation.key_retired with Double = js.native
-  /* 1 */ val key_superseded: typingsSlinky.openpgp.openpgpMod.enums.reasonForRevocation.key_superseded with Double = js.native
-  /* 0 */ val no_reason: typingsSlinky.openpgp.openpgpMod.enums.reasonForRevocation.no_reason with Double = js.native
-  /* 32 */ val userid_invalid: typingsSlinky.openpgp.openpgpMod.enums.reasonForRevocation.userid_invalid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[reasonForRevocation with Double] = js.native
+  /* 2 */ @js.native
+  object key_comPromised extends TopLevel[key_comPromised with Double]
+  
+  /* 3 */ @js.native
+  object key_retired extends TopLevel[key_retired with Double]
+  
+  /* 1 */ @js.native
+  object key_superseded extends TopLevel[key_superseded with Double]
+  
+  /* 0 */ @js.native
+  object no_reason extends TopLevel[no_reason with Double]
+  
+  /* 32 */ @js.native
+  object userid_invalid extends TopLevel[userid_invalid with Double]
+  
 }
 

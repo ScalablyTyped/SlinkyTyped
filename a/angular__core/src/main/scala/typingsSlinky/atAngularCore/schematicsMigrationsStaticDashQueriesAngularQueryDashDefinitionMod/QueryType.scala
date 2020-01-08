@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesAngularQueryDashDefinitionMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object QueryType extends js.Object {
   @js.native
   sealed trait ViewChild extends QueryType
   
-  /* 1 */ val ContentChild: typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesAngularQueryDashDefinitionMod.QueryType.ContentChild with Double = js.native
-  /* 0 */ val ViewChild: typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesAngularQueryDashDefinitionMod.QueryType.ViewChild with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryType with Double] = js.native
+  /* 1 */ @js.native
+  object ContentChild extends TopLevel[ContentChild with Double]
+  
+  /* 0 */ @js.native
+  object ViewChild extends TopLevel[ViewChild with Double]
+  
 }
 

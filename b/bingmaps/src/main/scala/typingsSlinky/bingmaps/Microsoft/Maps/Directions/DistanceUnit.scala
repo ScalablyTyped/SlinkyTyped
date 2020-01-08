@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Directions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object DistanceUnit extends js.Object {
   @js.native
   sealed trait miles extends DistanceUnit
   
-  /* 0 */ val km: typingsSlinky.bingmaps.Microsoft.Maps.Directions.DistanceUnit.km with Double = js.native
-  /* 1 */ val miles: typingsSlinky.bingmaps.Microsoft.Maps.Directions.DistanceUnit.miles with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DistanceUnit with Double] = js.native
+  /* 0 */ @js.native
+  object km extends TopLevel[km with Double]
+  
+  /* 1 */ @js.native
+  object miles extends TopLevel[miles with Double]
+  
 }
 

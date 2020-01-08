@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.libPaginationMiniSelectMod.MiniSelect
 import typingsSlinky.antd.libSelectMod.OptionProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

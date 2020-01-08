@@ -1,7 +1,7 @@
 package typingsSlinky.astDashTypes
 
-import typingsSlinky.astDashTypes.astDashTypesStrings.`+`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`-`
+import typingsSlinky.astDashTypes.astDashTypesStrings.Plussign
+import typingsSlinky.astDashTypes.astDashTypesStrings.`-_`
 import typingsSlinky.astDashTypes.genKindsMod.CommentKind
 import typingsSlinky.astDashTypes.genKindsMod.SourceLocationKind
 import typingsSlinky.astDashTypes.genKindsMod.TSTypeKind
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 trait Anon_CommentsLocOptional extends js.Object {
   var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
   var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var optional: js.UndefOr[Boolean | `+` | `-`] = js.undefined
-  var readonly: js.UndefOr[Boolean | `+` | `-`] = js.undefined
+  var optional: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
+  var readonly: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
   var typeAnnotation: js.UndefOr[TSTypeKind | Null] = js.undefined
   var typeParameter: TSTypeParameterKind
 }
@@ -25,8 +25,8 @@ object Anon_CommentsLocOptional {
     typeParameter: TSTypeParameterKind,
     comments: js.Array[CommentKind] = null,
     loc: SourceLocationKind = null,
-    optional: Boolean | `+` | `-` = null,
-    readonly: Boolean | `+` | `-` = null,
+    optional: Boolean | Plussign | `-_` = null,
+    readonly: Boolean | Plussign | `-_` = null,
     typeAnnotation: TSTypeKind = null
   ): Anon_CommentsLocOptional = {
     val __obj = js.Dynamic.literal(typeParameter = typeParameter.asInstanceOf[js.Any])

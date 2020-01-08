@@ -1,7 +1,6 @@
 package typingsSlinky.node.cryptoMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +13,8 @@ object pbkdf2 extends js.Object {
     salt: BinaryLike,
     iterations: Double,
     keylen: Double,
-    digest: java.lang.String,
-    callback: js.Function2[/* err */ Error | Null, /* derivedKey */ Buffer, _]
+    digest: String,
+    callback: js.Function2[/* err */ js.Error | Null, /* derivedKey */ Buffer, _]
   ): Unit = js.native
 }
 

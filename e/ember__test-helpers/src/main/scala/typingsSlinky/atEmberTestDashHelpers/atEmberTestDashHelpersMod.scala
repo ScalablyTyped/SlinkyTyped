@@ -2,7 +2,6 @@ package typingsSlinky.atEmberTestDashHelpers
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atEmberApplication.atEmberApplicationMod.default
-import typingsSlinky.atEmberTestDashHelpers.atEmberTestDashHelpersMod.Target
 import typingsSlinky.atEmberTestDashHelpers.domTriggerDashKeyDashEventMod.KeyEvent
 import typingsSlinky.atEmberTestDashHelpers.domTriggerDashKeyDashEventMod.KeyModifiers
 import typingsSlinky.atEmberTestDashHelpers.domWaitDashForMod.Options

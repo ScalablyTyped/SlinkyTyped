@@ -1,18 +1,8 @@
 package typingsSlinky.dockDashSpawn
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dockDashSpawn.dockspawn.Dialog
-import typingsSlinky.dockDashSpawn.dockspawn.DockManager
-import typingsSlinky.dockDashSpawn.dockspawn.DockManagerContext
-import typingsSlinky.dockDashSpawn.dockspawn.DockModel
-import typingsSlinky.dockDashSpawn.dockspawn.DockNode
-import typingsSlinky.dockDashSpawn.dockspawn.DocumentManagerContainer
-import typingsSlinky.dockDashSpawn.dockspawn.FillDockContainer
-import typingsSlinky.dockDashSpawn.dockspawn.PanelContainer
-import typingsSlinky.dockDashSpawn.dockspawn.TabHost
-import typingsSlinky.dockDashSpawn.dockspawn.TabPage
-import typingsSlinky.dockDashSpawn.dockspawn.TabStripDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -178,12 +168,20 @@ object dockspawn extends js.Object {
     @js.native
     sealed trait DIRECTION_TOP extends TabStripDirection
     
-    /* 1 */ val DIRECTION_BOTTOM: typingsSlinky.dockDashSpawn.dockspawn.TabStripDirection.DIRECTION_BOTTOM with Double = js.native
-    /* 2 */ val DIRECTION_LEFT: typingsSlinky.dockDashSpawn.dockspawn.TabStripDirection.DIRECTION_LEFT with Double = js.native
-    /* 3 */ val DIRECTION_RIGHT: typingsSlinky.dockDashSpawn.dockspawn.TabStripDirection.DIRECTION_RIGHT with Double = js.native
-    /* 0 */ val DIRECTION_TOP: typingsSlinky.dockDashSpawn.dockspawn.TabStripDirection.DIRECTION_TOP with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[TabStripDirection with Double] = js.native
+    /* 1 */ @js.native
+    object DIRECTION_BOTTOM extends TopLevel[DIRECTION_BOTTOM with Double]
+    
+    /* 2 */ @js.native
+    object DIRECTION_LEFT extends TopLevel[DIRECTION_LEFT with Double]
+    
+    /* 3 */ @js.native
+    object DIRECTION_RIGHT extends TopLevel[DIRECTION_RIGHT with Double]
+    
+    /* 0 */ @js.native
+    object DIRECTION_TOP extends TopLevel[DIRECTION_TOP with Double]
+    
   }
   
 }

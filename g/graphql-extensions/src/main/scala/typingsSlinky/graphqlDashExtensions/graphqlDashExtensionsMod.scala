@@ -6,8 +6,6 @@ import typingsSlinky.graphql.graphqlMod.GraphQLSchema
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLField
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLFieldResolver
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLResolveInfo
-import typingsSlinky.graphqlDashExtensions.graphqlDashExtensionsMod.EndHandler
-import typingsSlinky.graphqlDashExtensions.graphqlDashExtensionsMod.GraphQLExtension
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

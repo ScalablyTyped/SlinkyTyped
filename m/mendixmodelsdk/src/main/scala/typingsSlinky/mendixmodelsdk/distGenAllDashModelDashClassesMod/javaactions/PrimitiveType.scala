@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.distGenJavaactionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -30,6 +31,6 @@ abstract class PrimitiveType protected ()
 @js.native
 object PrimitiveType extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenJavaactionsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

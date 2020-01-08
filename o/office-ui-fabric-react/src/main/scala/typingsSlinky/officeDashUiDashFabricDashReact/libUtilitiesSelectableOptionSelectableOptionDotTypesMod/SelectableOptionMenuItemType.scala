@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectableOptionSelectableOptionDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SelectableOptionMenuItemType extends js.Object {
   @js.native
   sealed trait Normal extends SelectableOptionMenuItemType
   
-  /* 1 */ val Divider: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectableOptionSelectableOptionDotTypesMod.SelectableOptionMenuItemType.Divider with Double = js.native
-  /* 2 */ val Header: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectableOptionSelectableOptionDotTypesMod.SelectableOptionMenuItemType.Header with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectableOptionSelectableOptionDotTypesMod.SelectableOptionMenuItemType.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SelectableOptionMenuItemType with Double] = js.native
+  /* 1 */ @js.native
+  object Divider extends TopLevel[Divider with Double]
+  
+  /* 2 */ @js.native
+  object Header extends TopLevel[Header with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object RecurrenceType extends js.Object {
   @js.native
   sealed trait master extends RecurrenceType
   
-  /* 2 */ val exceptionInstance: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.RecurrenceType.exceptionInstance with Double = js.native
-  /* 1 */ val instance: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.RecurrenceType.instance with Double = js.native
-  /* 0 */ val master: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.RecurrenceType.master with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RecurrenceType with Double] = js.native
+  /* 2 */ @js.native
+  object exceptionInstance extends TopLevel[exceptionInstance with Double]
+  
+  /* 1 */ @js.native
+  object instance extends TopLevel[instance with Double]
+  
+  /* 0 */ @js.native
+  object master extends TopLevel[master with Double]
+  
 }
 

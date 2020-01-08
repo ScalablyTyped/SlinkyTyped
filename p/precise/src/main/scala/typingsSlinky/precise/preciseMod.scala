@@ -1,6 +1,5 @@
 package typingsSlinky.precise
 
-import typingsSlinky.precise.preciseMod.Precise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

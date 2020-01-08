@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object AppointmentDetailsKind extends js.Object {
   @js.native
   sealed trait plainText extends AppointmentDetailsKind
   
-  /* 1 */ val html: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentDetailsKind.html with Double = js.native
-  /* 0 */ val plainText: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentDetailsKind.plainText with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentDetailsKind with Double] = js.native
+  /* 1 */ @js.native
+  object html extends TopLevel[html with Double]
+  
+  /* 0 */ @js.native
+  object plainText extends TopLevel[plainText with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object StatusBarAlignment extends js.Object {
   @js.native
   sealed trait Right extends StatusBarAlignment
   
-  /* 1 */ val Left: typingsSlinky.vscode.vscodeMod.StatusBarAlignment.Left with Double = js.native
-  /* 2 */ val Right: typingsSlinky.vscode.vscodeMod.StatusBarAlignment.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StatusBarAlignment with Double] = js.native
+  /* 1 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 2 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

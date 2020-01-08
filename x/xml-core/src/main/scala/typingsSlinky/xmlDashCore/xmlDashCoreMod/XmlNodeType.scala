@@ -1,5 +1,6 @@
 package typingsSlinky.xmlDashCore.xmlDashCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,25 +65,61 @@ object XmlNodeType extends js.Object {
   @js.native
   sealed trait XmlDeclaration extends XmlNodeType
   
-  /* 2 */ val Attribute: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Attribute with Double = js.native
-  /* 4 */ val CDATA: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.CDATA with Double = js.native
-  /* 8 */ val Comment: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Comment with Double = js.native
-  /* 9 */ val Document: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Document with Double = js.native
-  /* 11 */ val DocumentFragment: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.DocumentFragment with Double = js.native
-  /* 10 */ val DocumentType: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.DocumentType with Double = js.native
-  /* 1 */ val Element: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Element with Double = js.native
-  /* 15 */ val EndElement: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.EndElement with Double = js.native
-  /* 16 */ val EndEntity: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.EndEntity with Double = js.native
-  /* 6 */ val Entity: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Entity with Double = js.native
-  /* 5 */ val EntityReference: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.EntityReference with Double = js.native
-  /* 0 */ val None: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.None with Double = js.native
-  /* 12 */ val Notation: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Notation with Double = js.native
-  /* 7 */ val ProcessingInstruction: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.ProcessingInstruction with Double = js.native
-  /* 14 */ val SignificantWhitespace: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.SignificantWhitespace with Double = js.native
-  /* 3 */ val Text: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Text with Double = js.native
-  /* 13 */ val Whitespace: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.Whitespace with Double = js.native
-  /* 17 */ val XmlDeclaration: typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlNodeType.XmlDeclaration with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[XmlNodeType with Double] = js.native
+  /* 2 */ @js.native
+  object Attribute extends TopLevel[Attribute with Double]
+  
+  /* 4 */ @js.native
+  object CDATA extends TopLevel[CDATA with Double]
+  
+  /* 8 */ @js.native
+  object Comment extends TopLevel[Comment with Double]
+  
+  /* 9 */ @js.native
+  object Document extends TopLevel[Document with Double]
+  
+  /* 11 */ @js.native
+  object DocumentFragment extends TopLevel[DocumentFragment with Double]
+  
+  /* 10 */ @js.native
+  object DocumentType extends TopLevel[DocumentType with Double]
+  
+  /* 1 */ @js.native
+  object Element extends TopLevel[Element with Double]
+  
+  /* 15 */ @js.native
+  object EndElement extends TopLevel[EndElement with Double]
+  
+  /* 16 */ @js.native
+  object EndEntity extends TopLevel[EndEntity with Double]
+  
+  /* 6 */ @js.native
+  object Entity extends TopLevel[Entity with Double]
+  
+  /* 5 */ @js.native
+  object EntityReference extends TopLevel[EntityReference with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 12 */ @js.native
+  object Notation extends TopLevel[Notation with Double]
+  
+  /* 7 */ @js.native
+  object ProcessingInstruction extends TopLevel[ProcessingInstruction with Double]
+  
+  /* 14 */ @js.native
+  object SignificantWhitespace extends TopLevel[SignificantWhitespace with Double]
+  
+  /* 3 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
+  /* 13 */ @js.native
+  object Whitespace extends TopLevel[Whitespace with Double]
+  
+  /* 17 */ @js.native
+  object XmlDeclaration extends TopLevel[XmlDeclaration with Double]
+  
 }
 

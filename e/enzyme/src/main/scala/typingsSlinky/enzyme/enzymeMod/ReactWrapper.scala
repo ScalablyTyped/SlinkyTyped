@@ -79,6 +79,16 @@ class ReactWrapper[P, S, C] protected () extends CommonWrapper[P, S, C] {
     * Finds every node in the render tree that returns true for the provided predicate function.
     */
   def findWhere(predicate: js.Function1[/* wrapper */ ReactWrapper[_, _, ReactComponentClass[js.Object]], Boolean]): ReactWrapper[_, _, ReactComponentClass[js.Object]] = js.native
+  @JSName("find")
+  def find_props[C2 /* <: ReactComponentClass[js.Object] */](
+    componentClass: ComponentClass[
+      /* import warning: importer.ImportType#apply Failed type conversion: C2['props'] */ js.Any
+    ]
+  ): ReactWrapper[
+    /* import warning: importer.ImportType#apply Failed type conversion: C2['props'] */ js.Any, 
+    /* import warning: importer.ImportType#apply Failed type conversion: C2['state'] */ js.Any, 
+    C2
+  ] = js.native
   /**
     * If a wrappingComponent was passed in options,
     * this methods returns a ReactWrapper around the rendered wrappingComponent.

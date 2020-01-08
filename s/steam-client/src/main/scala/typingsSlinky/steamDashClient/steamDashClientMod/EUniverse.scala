@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object EUniverse extends js.Object {
   @js.native
   sealed trait Public extends EUniverse
   
-  /* 2 */ val Beta: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Beta with Double = js.native
-  /* 4 */ val Dev: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Dev with Double = js.native
-  /* 3 */ val Internal: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Internal with Double = js.native
-  /* 0 */ val Invalid: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Invalid with Double = js.native
-  /* 5 */ val Max: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Max with Double = js.native
-  /* 1 */ val Public: typingsSlinky.steamDashClient.steamDashClientMod.EUniverse.Public with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EUniverse with Double] = js.native
+  /* 2 */ @js.native
+  object Beta extends TopLevel[Beta with Double]
+  
+  /* 4 */ @js.native
+  object Dev extends TopLevel[Dev with Double]
+  
+  /* 3 */ @js.native
+  object Internal extends TopLevel[Internal with Double]
+  
+  /* 0 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 5 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 1 */ @js.native
+  object Public extends TopLevel[Public with Double]
+  
 }
 

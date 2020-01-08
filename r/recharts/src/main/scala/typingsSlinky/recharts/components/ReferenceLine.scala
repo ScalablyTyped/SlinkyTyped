@@ -3,6 +3,7 @@ package typingsSlinky.recharts.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.recharts.Anon_X1
@@ -10,6 +11,7 @@ import typingsSlinky.recharts.rechartsMod.ContentRenderer
 import typingsSlinky.recharts.rechartsMod.EventAttributes
 import typingsSlinky.recharts.rechartsMod.IfOverflowType
 import typingsSlinky.recharts.rechartsMod.PresentationAttributes
+import typingsSlinky.recharts.rechartsMod.ReferenceLinePosition
 import typingsSlinky.recharts.rechartsMod.ReferenceLineProps
 import typingsSlinky.recharts.rechartsMod.ViewBox
 import typingsSlinky.std.Partial
@@ -30,6 +32,7 @@ object ReferenceLine
     ifOverflow: IfOverflowType = null,
     isFront: js.UndefOr[Boolean] = js.undefined,
     label: String | Double | ContentRenderer[_] | ReactElement = null,
+    position: ReferenceLinePosition = null,
     shape: (ContentRenderer[
       EventAttributes with (Partial[PresentationAttributes[Double | String, Double | String]]) with Anon_X1
     ]) | ReactElement = null,
@@ -48,6 +51,7 @@ object ReferenceLine
     if (ifOverflow != null) __obj.updateDynamic("ifOverflow")(ifOverflow.asInstanceOf[js.Any])
     if (!js.isUndefined(isFront)) __obj.updateDynamic("isFront")(isFront.asInstanceOf[js.Any])
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
     if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
     if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
@@ -59,6 +63,7 @@ object ReferenceLine
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.ReferenceLine] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.ReferenceLine](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ReferenceLineProps
 }
 

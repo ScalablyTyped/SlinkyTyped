@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Print
-  extends SharedApply_BytesizeIconsProps219891393[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Print] {
+  extends SharedApply_BytesizeIconsProps1658782493[typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.Print] {
   @JSImport("react-bytesize-icons", "Print")
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,19 +13,19 @@ sealed trait Orientation extends js.Object
 object Orientation extends js.Object {
   //string
   @js.native
-  sealed trait Horizontal
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.Orientation
+  sealed trait Horizontal extends Orientation
   
   //string
   @js.native
-  sealed trait Vertical
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.Orientation
+  sealed trait Vertical extends Orientation
   
-  /* 0 */ val Horizontal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.Orientation.Horizontal with Double = js.native
-  /* 1 */ val Vertical: typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.Orientation.Vertical with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.Orientation with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[Orientation with Double] = js.native
+  /* 0 */ @js.native
+  object Horizontal extends TopLevel[Horizontal with Double]
+  
+  /* 1 */ @js.native
+  object Vertical extends TopLevel[Vertical with Double]
+  
 }
 

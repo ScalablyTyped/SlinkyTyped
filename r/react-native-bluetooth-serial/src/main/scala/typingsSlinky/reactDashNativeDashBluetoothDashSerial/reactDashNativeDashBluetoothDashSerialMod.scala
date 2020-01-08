@@ -1,6 +1,5 @@
 package typingsSlinky.reactDashNativeDashBluetoothDashSerial
 
-import typingsSlinky.reactDashNativeDashBluetoothDashSerial.reactDashNativeDashBluetoothDashSerialMod.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Usb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object UsbEndpointType extends js.Object {
   @js.native
   sealed trait isochronous extends UsbEndpointType
   
-  /* 2 */ val bulk: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbEndpointType.bulk with Double = js.native
-  /* 0 */ val control: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbEndpointType.control with Double = js.native
-  /* 3 */ val interrupt: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbEndpointType.interrupt with Double = js.native
-  /* 1 */ val isochronous: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbEndpointType.isochronous with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UsbEndpointType with Double] = js.native
+  /* 2 */ @js.native
+  object bulk extends TopLevel[bulk with Double]
+  
+  /* 0 */ @js.native
+  object control extends TopLevel[control with Double]
+  
+  /* 3 */ @js.native
+  object interrupt extends TopLevel[interrupt with Double]
+  
+  /* 1 */ @js.native
+  object isochronous extends TopLevel[isochronous with Double]
+  
 }
 

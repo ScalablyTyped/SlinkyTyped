@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.layout
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BackgroundDesign extends js.Object {
   @js.native
   sealed trait Transparent extends BackgroundDesign
   
-  /* 0 */ val Solid: typingsSlinky.openui5.sap.ui.layout.BackgroundDesign.Solid with Double = js.native
-  /* 1 */ val Translucent: typingsSlinky.openui5.sap.ui.layout.BackgroundDesign.Translucent with Double = js.native
-  /* 2 */ val Transparent: typingsSlinky.openui5.sap.ui.layout.BackgroundDesign.Transparent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BackgroundDesign with Double] = js.native
+  /* 0 */ @js.native
+  object Solid extends TopLevel[Solid with Double]
+  
+  /* 1 */ @js.native
+  object Translucent extends TopLevel[Translucent with Double]
+  
+  /* 2 */ @js.native
+  object Transparent extends TopLevel[Transparent with Double]
+  
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerUniqueSetMod.UniqueSet
-import typingsSlinky.tstl.baseContainerUniqueTreeSetMod.UniqueTreeSet
 import typingsSlinky.tstl.baseIteratorISetIteratorMod.ISetIterator
 import typingsSlinky.tstl.baseIteratorISetIteratorMod.ISetReverseIterator
-import typingsSlinky.tstl.tstlNumbers.`true`
+import typingsSlinky.tstl.tstlBooleans.`true`
 import typingsSlinky.tstl.utilityPairMod.Pair
 import scala.scalajs.js
 import scala.scalajs.js.`|`

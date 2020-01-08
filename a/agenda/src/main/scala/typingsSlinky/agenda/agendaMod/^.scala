@@ -1,7 +1,7 @@
 package typingsSlinky.agenda.agendaMod
 
 import typingsSlinky.mongodb.mongodbMod.Collection
-import typingsSlinky.mongodb.mongodbMod.Default
+import typingsSlinky.mongodb.mongodbMod.DefaultSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ import scala.scalajs.js.annotation._
   */
 class ^ () extends Agenda {
   def this(config: AgendaConfiguration) = this()
-  def this(config: AgendaConfiguration, cb: ResultCallback[Collection[Default]]) = this()
+  def this(config: AgendaConfiguration, cb: ResultCallback[Collection[DefaultSchema]]) = this()
 }
 

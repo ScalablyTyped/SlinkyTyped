@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object IndexedResourceType extends js.Object {
   @js.native
   sealed trait string extends IndexedResourceType
   
-  /* 1 */ val path: typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceType.path with Double = js.native
-  /* 0 */ val string: typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceType.string with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndexedResourceType with Double] = js.native
+  /* 1 */ @js.native
+  object path extends TopLevel[path with Double]
+  
+  /* 0 */ @js.native
+  object string extends TopLevel[string with Double]
+  
 }
 

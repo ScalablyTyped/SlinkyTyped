@@ -4,9 +4,11 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactDashSound.reactDashSoundMod.PlayStatus
 import typingsSlinky.reactDashSound.reactDashSoundMod.ReactSoundProps
 import typingsSlinky.reactDashSound.reactDashSoundMod.default
+import typingsSlinky.reactDashSound.reactDashSoundStrings.PAUSED
+import typingsSlinky.reactDashSound.reactDashSoundStrings.PLAYING
+import typingsSlinky.reactDashSound.reactDashSoundStrings.STOPPED
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +22,7 @@ object ReactDashSound
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: loop */
   def apply(
-    playStatus: PlayStatus,
+    playStatus: PLAYING | STOPPED | PAUSED,
     url: String,
     autoLoad: js.UndefOr[Boolean] = js.undefined,
     onBufferChange: () => Unit = null,

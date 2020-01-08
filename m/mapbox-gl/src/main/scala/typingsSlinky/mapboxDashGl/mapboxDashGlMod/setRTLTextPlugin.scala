@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object setRTLTextPlugin extends js.Object {
   def apply(pluginURL: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
+  def apply(pluginURL: String, callback: js.Function1[/* error */ js.Error, Unit], deferred: Boolean): Unit = js.native
 }
 

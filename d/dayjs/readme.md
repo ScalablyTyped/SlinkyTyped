@@ -10,9 +10,9 @@ Typings are for version 1.8.17
 | ------------------ | :-------------: |
 | Full name          | dayjs |
 | Keywords           | dayjs, date, time, immutable, moment |
-| # releases         | 71 |
-| # dependents       | 748 |
-| # downloads        | 10153109 |
+| # releases         | 73 |
+| # dependents       | 866 |
+| # downloads        | 14193458 |
 | # stars            | 2 |
 
 ## Links

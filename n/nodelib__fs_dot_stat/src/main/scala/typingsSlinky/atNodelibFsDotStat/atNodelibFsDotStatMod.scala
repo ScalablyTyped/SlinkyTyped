@@ -1,6 +1,5 @@
 package typingsSlinky.atNodelibFsDotStat
 
-import typingsSlinky.atNodelibFsDotStat.atNodelibFsDotStatMod.AsyncCallback
 import typingsSlinky.atNodelibFsDotStat.outSettingsMod.Options
 import typingsSlinky.atNodelibFsDotStat.outSettingsMod.default
 import typingsSlinky.atNodelibFsDotStat.outTypesMod.Stats

@@ -1,7 +1,6 @@
 package typingsSlinky.twilioDashSync
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.twilioDashSync.libCloseableMod.Closeable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.turbostatus.turbostatusMod
 
-import typingsSlinky.turbostatus.turbostatusNumbers.`false`
+import typingsSlinky.turbostatus.turbostatusBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -3,7 +3,6 @@ package typingsSlinky.atBlueprintjsTable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atBlueprintjsTable.libEsmCommonGridMod.Grid
 import typingsSlinky.atBlueprintjsTable.libEsmCommonRectMod.Rect
-import typingsSlinky.atBlueprintjsTable.libEsmLocatorMod.ILocator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

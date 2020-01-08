@@ -1,6 +1,5 @@
 package typingsSlinky.seen.seenMod
 
-import typingsSlinky.seen.seenMod.Events.Dispatcher
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

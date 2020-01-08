@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object EnrollKeyUsages extends js.Object {
   @js.native
   sealed trait signing extends EnrollKeyUsages
   
-  /* 4 */ val all: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.EnrollKeyUsages.all with Double = js.native
-  /* 1 */ val decryption: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.EnrollKeyUsages.decryption with Double = js.native
-  /* 3 */ val keyAgreement: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.EnrollKeyUsages.keyAgreement with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.EnrollKeyUsages.none with Double = js.native
-  /* 2 */ val signing: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.EnrollKeyUsages.signing with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnrollKeyUsages with Double] = js.native
+  /* 4 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 1 */ @js.native
+  object decryption extends TopLevel[decryption with Double]
+  
+  /* 3 */ @js.native
+  object keyAgreement extends TopLevel[keyAgreement with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object signing extends TopLevel[signing with Double]
+  
 }
 

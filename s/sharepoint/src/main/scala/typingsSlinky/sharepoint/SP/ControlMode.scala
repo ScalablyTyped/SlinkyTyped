@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object ControlMode extends js.Object {
   @js.native
   sealed trait newMode extends ControlMode
   
-  /* 1 */ val displayMode: typingsSlinky.sharepoint.SP.ControlMode.displayMode with Double = js.native
-  /* 2 */ val editMode: typingsSlinky.sharepoint.SP.ControlMode.editMode with Double = js.native
-  /* 0 */ val invalid: typingsSlinky.sharepoint.SP.ControlMode.invalid with Double = js.native
-  /* 3 */ val newMode: typingsSlinky.sharepoint.SP.ControlMode.newMode with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ControlMode with Double] = js.native
+  /* 1 */ @js.native
+  object displayMode extends TopLevel[displayMode with Double]
+  
+  /* 2 */ @js.native
+  object editMode extends TopLevel[editMode with Double]
+  
+  /* 0 */ @js.native
+  object invalid extends TopLevel[invalid with Double]
+  
+  /* 3 */ @js.native
+  object newMode extends TopLevel[newMode with Double]
+  
 }
 

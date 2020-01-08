@@ -1,7 +1,7 @@
 package typingsSlinky.seamlessDashImmutable.seamlessDashImmutableMod
 
-import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableNumbers.`false`
-import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableNumbers.`true`
+import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableBooleans.`false`
+import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

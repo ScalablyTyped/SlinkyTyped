@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,15 +38,31 @@ object BorderIndex extends js.Object {
   @js.native
   sealed trait insideVertical extends BorderIndex
   
-  /* "DiagonalDown" */ val diagonalDown: typingsSlinky.officeDashJs.Excel.BorderIndex.diagonalDown with String = js.native
-  /* "DiagonalUp" */ val diagonalUp: typingsSlinky.officeDashJs.Excel.BorderIndex.diagonalUp with String = js.native
-  /* "EdgeBottom" */ val edgeBottom: typingsSlinky.officeDashJs.Excel.BorderIndex.edgeBottom with String = js.native
-  /* "EdgeLeft" */ val edgeLeft: typingsSlinky.officeDashJs.Excel.BorderIndex.edgeLeft with String = js.native
-  /* "EdgeRight" */ val edgeRight: typingsSlinky.officeDashJs.Excel.BorderIndex.edgeRight with String = js.native
-  /* "EdgeTop" */ val edgeTop: typingsSlinky.officeDashJs.Excel.BorderIndex.edgeTop with String = js.native
-  /* "InsideHorizontal" */ val insideHorizontal: typingsSlinky.officeDashJs.Excel.BorderIndex.insideHorizontal with String = js.native
-  /* "InsideVertical" */ val insideVertical: typingsSlinky.officeDashJs.Excel.BorderIndex.insideVertical with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BorderIndex with String] = js.native
+  /* "DiagonalDown" */ @js.native
+  object diagonalDown extends TopLevel[diagonalDown with String]
+  
+  /* "DiagonalUp" */ @js.native
+  object diagonalUp extends TopLevel[diagonalUp with String]
+  
+  /* "EdgeBottom" */ @js.native
+  object edgeBottom extends TopLevel[edgeBottom with String]
+  
+  /* "EdgeLeft" */ @js.native
+  object edgeLeft extends TopLevel[edgeLeft with String]
+  
+  /* "EdgeRight" */ @js.native
+  object edgeRight extends TopLevel[edgeRight with String]
+  
+  /* "EdgeTop" */ @js.native
+  object edgeTop extends TopLevel[edgeTop with String]
+  
+  /* "InsideHorizontal" */ @js.native
+  object insideHorizontal extends TopLevel[insideHorizontal with String]
+  
+  /* "InsideVertical" */ @js.native
+  object insideVertical extends TopLevel[insideVertical with String]
+  
 }
 

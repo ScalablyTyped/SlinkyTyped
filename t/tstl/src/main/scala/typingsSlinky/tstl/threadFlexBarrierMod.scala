@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.tstl.threadFlexBarrierMod.FlexBarrier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

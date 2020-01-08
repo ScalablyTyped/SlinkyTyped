@@ -1,6 +1,9 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.flat
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.smooth
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +34,7 @@ trait MeshComponent extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-MeshComponent.html#shading)
     */
-  var shading: String = js.native
+  var shading: source | flat | smooth = js.native
 }
 
 @JSGlobal("__esri.MeshComponent")

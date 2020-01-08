@@ -1,6 +1,5 @@
 package typingsSlinky.bigint
 
-import typingsSlinky.bigint.BigInt.IRandom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

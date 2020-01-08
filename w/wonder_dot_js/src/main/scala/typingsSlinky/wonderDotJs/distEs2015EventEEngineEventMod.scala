@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,21 +52,47 @@ object distEs2015EventEEngineEventMod extends js.Object {
     @js.native
     sealed trait TRANSFORM_TRANSLATE extends EEngineEvent
     
-    /* 1 */ val ENDLOOP: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.ENDLOOP with Double = js.native
-    /* 3 */ val POINT_DOWN: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_DOWN with Double = js.native
-    /* 9 */ val POINT_DRAG: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_DRAG with Double = js.native
-    /* 5 */ val POINT_MOVE: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_MOVE with Double = js.native
-    /* 7 */ val POINT_OUT: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_OUT with Double = js.native
-    /* 6 */ val POINT_OVER: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_OVER with Double = js.native
-    /* 8 */ val POINT_SCALE: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_SCALE with Double = js.native
-    /* 2 */ val POINT_TAP: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_TAP with Double = js.native
-    /* 4 */ val POINT_UP: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.POINT_UP with Double = js.native
-    /* 0 */ val STARTLOOP: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.STARTLOOP with Double = js.native
-    /* 11 */ val TRANSFORM_ROTATE: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.TRANSFORM_ROTATE with Double = js.native
-    /* 12 */ val TRANSFORM_SCALE: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.TRANSFORM_SCALE with Double = js.native
-    /* 10 */ val TRANSFORM_TRANSLATE: typingsSlinky.wonderDotJs.distEs2015EventEEngineEventMod.EEngineEvent.TRANSFORM_TRANSLATE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EEngineEvent with Double] = js.native
+    /* 1 */ @js.native
+    object ENDLOOP extends TopLevel[ENDLOOP with Double]
+    
+    /* 3 */ @js.native
+    object POINT_DOWN extends TopLevel[POINT_DOWN with Double]
+    
+    /* 9 */ @js.native
+    object POINT_DRAG extends TopLevel[POINT_DRAG with Double]
+    
+    /* 5 */ @js.native
+    object POINT_MOVE extends TopLevel[POINT_MOVE with Double]
+    
+    /* 7 */ @js.native
+    object POINT_OUT extends TopLevel[POINT_OUT with Double]
+    
+    /* 6 */ @js.native
+    object POINT_OVER extends TopLevel[POINT_OVER with Double]
+    
+    /* 8 */ @js.native
+    object POINT_SCALE extends TopLevel[POINT_SCALE with Double]
+    
+    /* 2 */ @js.native
+    object POINT_TAP extends TopLevel[POINT_TAP with Double]
+    
+    /* 4 */ @js.native
+    object POINT_UP extends TopLevel[POINT_UP with Double]
+    
+    /* 0 */ @js.native
+    object STARTLOOP extends TopLevel[STARTLOOP with Double]
+    
+    /* 11 */ @js.native
+    object TRANSFORM_ROTATE extends TopLevel[TRANSFORM_ROTATE with Double]
+    
+    /* 12 */ @js.native
+    object TRANSFORM_SCALE extends TopLevel[TRANSFORM_SCALE with Double]
+    
+    /* 10 */ @js.native
+    object TRANSFORM_TRANSLATE extends TopLevel[TRANSFORM_TRANSLATE with Double]
+    
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object StmtModifier extends js.Object {
   @js.native
   sealed trait Static extends StmtModifier
   
-  /* 2 */ val Exported: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.StmtModifier.Exported with Double = js.native
-  /* 0 */ val Final: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.StmtModifier.Final with Double = js.native
-  /* 1 */ val Private: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.StmtModifier.Private with Double = js.native
-  /* 3 */ val Static: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.StmtModifier.Static with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StmtModifier with Double] = js.native
+  /* 2 */ @js.native
+  object Exported extends TopLevel[Exported with Double]
+  
+  /* 0 */ @js.native
+  object Final extends TopLevel[Final with Double]
+  
+  /* 1 */ @js.native
+  object Private extends TopLevel[Private with Double]
+  
+  /* 3 */ @js.native
+  object Static extends TopLevel[Static with Double]
+  
 }
 

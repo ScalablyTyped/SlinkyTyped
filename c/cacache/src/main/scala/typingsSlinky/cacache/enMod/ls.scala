@@ -1,7 +1,6 @@
 package typingsSlinky.cacache.enMod
 
 import typingsSlinky.cacache.Anon_Size
-import typingsSlinky.cacache.enMod.ls.Cache
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.std.Record
 import scala.scalajs.js

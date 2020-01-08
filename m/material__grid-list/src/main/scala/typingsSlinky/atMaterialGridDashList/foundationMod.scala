@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialGridDashList
 
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCFoundation
 import typingsSlinky.atMaterialGridDashList.adapterMod.MDCGridListAdapter
-import typingsSlinky.atMaterialGridDashList.foundationMod.MDCGridListFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

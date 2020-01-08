@@ -2,13 +2,6 @@ package typingsSlinky.utilityDashTypes
 
 import typingsSlinky.std.Pick
 import typingsSlinky.std.ReadonlyArray
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod.DeepReadonly
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod.PromiseType
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod.SetComplement
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod.SetDifference
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod.SetIntersection
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod._DeepReadonlyArray
-import typingsSlinky.utilityDashTypes.distMappedDashTypesMod._DeepReadonlyObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

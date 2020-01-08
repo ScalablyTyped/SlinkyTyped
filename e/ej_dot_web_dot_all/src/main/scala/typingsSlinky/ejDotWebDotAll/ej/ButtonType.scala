@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,17 @@ object ButtonType extends js.Object {
   @js.native
   sealed trait Submit extends ButtonType
   
-  /* 0 */ val Button: typingsSlinky.ejDotWebDotAll.ej.ButtonType.Button with Double = js.native
-  /* 1 */ val Reset: typingsSlinky.ejDotWebDotAll.ej.ButtonType.Reset with Double = js.native
-  /* 2 */ val Submit: typingsSlinky.ejDotWebDotAll.ej.ButtonType.Submit with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ButtonType with Double] = js.native
+  /* 0 */ @js.native
+  object Button
+    extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.ButtonType.Button with Double]
+  
+  /* 1 */ @js.native
+  object Reset extends TopLevel[Reset with Double]
+  
+  /* 2 */ @js.native
+  object Submit extends TopLevel[Submit with Double]
+  
 }
 

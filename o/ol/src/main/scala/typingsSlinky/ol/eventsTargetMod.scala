@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.ol.eventsMod.ListenerFunction
-import typingsSlinky.ol.eventsTargetMod.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,19 @@ object ResultObjectType extends js.Object {
   @js.native
   sealed trait TestSuite extends ResultObjectType
   
-  /* 1 */ val TestPlan: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.ResultObjectType.TestPlan with Double = js.native
-  /* 0 */ val TestSuite: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.ResultObjectType.TestSuite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResultObjectType with Double] = js.native
+  /* 1 */ @js.native
+  object TestPlan
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.ResultObjectType.TestPlan with Double
+        ]
+  
+  /* 0 */ @js.native
+  object TestSuite
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.ResultObjectType.TestSuite with Double
+        ]
+  
 }
 

@@ -2,8 +2,8 @@ package typingsSlinky.atMaterialToolbar.constantsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atMaterialBase.foundationMod.MDCNumbers
-import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`1DOT25`
-import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`2DOT125`
+import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`1.25`
+import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`2.125`
 import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`56`
 import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`600`
 import typingsSlinky.atMaterialToolbar.atMaterialToolbarNumbers.`64`
@@ -12,8 +12,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait numbers extends MDCNumbers {
-  var MAX_TITLE_SIZE: `2DOT125`
-  var MIN_TITLE_SIZE: `1DOT25`
+  var MAX_TITLE_SIZE: `2.125`
+  var MIN_TITLE_SIZE: `1.25`
   var TOOLBAR_MOBILE_BREAKPOINT: `600`
   var TOOLBAR_ROW_HEIGHT: `64`
   var TOOLBAR_ROW_MOBILE_HEIGHT: `56`
@@ -22,8 +22,8 @@ trait numbers extends MDCNumbers {
 object numbers {
   @scala.inline
   def apply(
-    MAX_TITLE_SIZE: `2DOT125`,
-    MIN_TITLE_SIZE: `1DOT25`,
+    MAX_TITLE_SIZE: `2.125`,
+    MIN_TITLE_SIZE: `1.25`,
     TOOLBAR_MOBILE_BREAKPOINT: `600`,
     TOOLBAR_ROW_HEIGHT: `64`,
     TOOLBAR_ROW_MOBILE_HEIGHT: `56`,

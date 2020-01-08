@@ -1,7 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
-import typingsSlinky.ol.geomCircleMod.Circle
 import typingsSlinky.ol.geomGeometryLayoutMod.GeometryLayout
 import typingsSlinky.ol.projMod.ProjectionLike
 import scala.scalajs.js

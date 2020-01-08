@@ -4,6 +4,7 @@ import typingsSlinky.atStorybookAddonDashKnobs.Anon_CallbackDefaultValue
 import typingsSlinky.atStorybookAddonDashKnobs.Anon_CallbackDefaultValueGroupId
 import typingsSlinky.atStorybookAddonDashKnobs.atStorybookAddonDashKnobsStrings.value
 import typingsSlinky.atStorybookAddonDashKnobs.distComponentsTypesTypesMod.KnobControlConfig
+import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -33,5 +34,7 @@ class default () extends KnobStore {
   override def subscribe(cb: Callback): Unit = js.native
   /* CompleteClass */
   override def unsubscribe(cb: Callback): Unit = js.native
+  /* CompleteClass */
+  override def update(key: String, options: Partial[KnobStoreKnob]): Unit = js.native
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcCoreDatasetMod.Dataset
-import typingsSlinky.plottable.buildSrcCoreFormattersMod.Formatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

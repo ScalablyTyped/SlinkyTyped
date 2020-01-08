@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object FullScreenSystemOverlayMode extends js.Object {
   @js.native
   sealed trait standard extends FullScreenSystemOverlayMode
   
-  /* 1 */ val minimal: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.FullScreenSystemOverlayMode.minimal with Double = js.native
-  /* 0 */ val standard: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.FullScreenSystemOverlayMode.standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FullScreenSystemOverlayMode with Double] = js.native
+  /* 1 */ @js.native
+  object minimal extends TopLevel[minimal with Double]
+  
+  /* 0 */ @js.native
+  object standard extends TopLevel[standard with Double]
+  
 }
 

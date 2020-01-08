@@ -1,5 +1,6 @@
 package typingsSlinky.log4javascript.log4javascriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object Level extends js.Object {
   @js.native
   sealed trait WARN extends Level
   
-  /* 0 */ val ALL: typingsSlinky.log4javascript.log4javascriptMod.Level.ALL with Double = js.native
-  /* 2 */ val DEBUG: typingsSlinky.log4javascript.log4javascriptMod.Level.DEBUG with Double = js.native
-  /* 5 */ val ERROR: typingsSlinky.log4javascript.log4javascriptMod.Level.ERROR with Double = js.native
-  /* 6 */ val FATAL: typingsSlinky.log4javascript.log4javascriptMod.Level.FATAL with Double = js.native
-  /* 3 */ val INFO: typingsSlinky.log4javascript.log4javascriptMod.Level.INFO with Double = js.native
-  /* 7 */ val OFF: typingsSlinky.log4javascript.log4javascriptMod.Level.OFF with Double = js.native
-  /* 1 */ val TRACE: typingsSlinky.log4javascript.log4javascriptMod.Level.TRACE with Double = js.native
-  /* 4 */ val WARN: typingsSlinky.log4javascript.log4javascriptMod.Level.WARN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Level with Double] = js.native
+  /* 0 */ @js.native
+  object ALL extends TopLevel[ALL with Double]
+  
+  /* 2 */ @js.native
+  object DEBUG extends TopLevel[DEBUG with Double]
+  
+  /* 5 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 6 */ @js.native
+  object FATAL extends TopLevel[FATAL with Double]
+  
+  /* 3 */ @js.native
+  object INFO extends TopLevel[INFO with Double]
+  
+  /* 7 */ @js.native
+  object OFF extends TopLevel[OFF with Double]
+  
+  /* 1 */ @js.native
+  object TRACE extends TopLevel[TRACE with Double]
+  
+  /* 4 */ @js.native
+  object WARN extends TopLevel[WARN with Double]
+  
 }
 

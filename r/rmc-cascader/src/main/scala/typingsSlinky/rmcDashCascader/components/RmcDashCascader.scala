@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcDashCascader extends SharedApply_ICascaderProps1948611059[default] {
+object RmcDashCascader extends SharedApply_ICascaderProps1071686078[default] {
   @JSImport("rmc-cascader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

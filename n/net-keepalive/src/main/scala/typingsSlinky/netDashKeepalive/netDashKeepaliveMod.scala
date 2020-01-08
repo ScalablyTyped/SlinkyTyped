@@ -1,6 +1,5 @@
 package typingsSlinky.netDashKeepalive
 
-import typingsSlinky.netDashKeepalive.netDashKeepaliveMod.NodeJSSocketWithFileDescriptor
 import typingsSlinky.node.NodeJS.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`

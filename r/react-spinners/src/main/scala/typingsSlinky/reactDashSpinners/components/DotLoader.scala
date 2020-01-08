@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DotLoader extends SharedApply_LoaderSizeProps_1901975965[default] {
+object DotLoader extends SharedApply_LoaderSizeProps_2081143133[default] {
   @JSImport("react-spinners/DotLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

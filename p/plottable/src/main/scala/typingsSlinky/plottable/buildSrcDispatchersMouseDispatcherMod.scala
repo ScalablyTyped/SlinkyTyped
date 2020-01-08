@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
 import typingsSlinky.plottable.buildSrcDispatchersDispatcherMod.Dispatcher
-import typingsSlinky.plottable.buildSrcDispatchersMouseDispatcherMod.MouseCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

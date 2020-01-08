@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object headerOption extends js.Object {
   @js.native
   sealed trait tHead extends headerOption
   
-  /* 0 */ val row: typingsSlinky.ejDotWebDotAll.ej.headerOption.row with Double = js.native
-  /* 1 */ val tHead: typingsSlinky.ejDotWebDotAll.ej.headerOption.tHead with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[headerOption with Double] = js.native
+  /* 0 */ @js.native
+  object row extends TopLevel[row with Double]
+  
+  /* 1 */ @js.native
+  object tHead extends TopLevel[tHead with Double]
+  
 }
 

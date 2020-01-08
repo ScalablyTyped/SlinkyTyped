@@ -1,7 +1,7 @@
 package typingsSlinky.tabulatorDashTables.Tabulator
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`false`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`false`
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.add
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.bottom
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.click

@@ -1,7 +1,7 @@
 
 # Scala.js typings for node-cache
 
-Typings are for version 5.0.2
+Typings are for version 5.1.0
 
 ## Library description:
 Simple and fast NodeJS internal caching. Node internal in memory cache like memcached.
@@ -10,9 +10,9 @@ Simple and fast NodeJS internal caching. Node internal in memory cache like memc
 | ------------------ | :-------------: |
 | Full name          | node-cache |
 | Keywords           | cache, caching, local, variable, multi, memory, internal, node, memcached, object |
-| # releases         | 2 |
-| # dependents       | 415 |
-| # downloads        | 12105117 |
+| # releases         | 9 |
+| # dependents       | 517 |
+| # downloads        | 24994015 |
 | # stars            | 99 |
 
 ## Links

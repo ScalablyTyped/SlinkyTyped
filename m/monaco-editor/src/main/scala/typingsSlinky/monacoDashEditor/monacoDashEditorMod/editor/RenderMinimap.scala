@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object RenderMinimap extends js.Object {
   @js.native
   sealed trait SmallBlocks extends RenderMinimap
   
-  /* 2 */ val Large: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.RenderMinimap.Large with Double = js.native
-  /* 4 */ val LargeBlocks: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.RenderMinimap.LargeBlocks with Double = js.native
-  /* 0 */ val None: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.RenderMinimap.None with Double = js.native
-  /* 1 */ val Small: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.RenderMinimap.Small with Double = js.native
-  /* 3 */ val SmallBlocks: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.RenderMinimap.SmallBlocks with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RenderMinimap with Double] = js.native
+  /* 2 */ @js.native
+  object Large extends TopLevel[Large with Double]
+  
+  /* 4 */ @js.native
+  object LargeBlocks extends TopLevel[LargeBlocks with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Small extends TopLevel[Small with Double]
+  
+  /* 3 */ @js.native
+  object SmallBlocks extends TopLevel[SmallBlocks with Double]
+  
 }
 

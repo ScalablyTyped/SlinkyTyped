@@ -1,5 +1,6 @@
 package typingsSlinky.markerclustererplus
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.Map
@@ -51,7 +52,7 @@ class Cluster protected () extends js.Object {
     * @return The map.
     * @ignore
     */
-  def getMap(): Map = js.native
+  def getMap(): Map[Element] = js.native
   /**
     * Returns the <code>MarkerClusterer</code> object with which the cluster is associated.
     *

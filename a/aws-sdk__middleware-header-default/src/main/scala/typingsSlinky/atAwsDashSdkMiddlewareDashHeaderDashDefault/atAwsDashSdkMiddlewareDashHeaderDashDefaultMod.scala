@@ -1,7 +1,6 @@
 package typingsSlinky.atAwsDashSdkMiddlewareDashHeaderDashDefault
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atAwsDashSdkMiddlewareDashHeaderDashDefault.atAwsDashSdkMiddlewareDashHeaderDashDefaultMod.HeaderDefaultArgs
 import typingsSlinky.atAwsDashSdkTypes.buildMiddlewareMod.BuildMiddleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`

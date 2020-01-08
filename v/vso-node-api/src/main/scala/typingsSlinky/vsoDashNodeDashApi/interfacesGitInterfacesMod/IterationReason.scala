@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object IterationReason extends js.Object {
   @js.native
   sealed trait Unknown extends IterationReason
   
-  /* 2 */ val Create: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.IterationReason.Create with Double = js.native
-  /* 1 */ val ForcePush: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.IterationReason.ForcePush with Double = js.native
-  /* 0 */ val Push: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.IterationReason.Push with Double = js.native
-  /* 4 */ val Rebase: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.IterationReason.Rebase with Double = js.native
-  /* 8 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.IterationReason.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IterationReason with Double] = js.native
+  /* 2 */ @js.native
+  object Create extends TopLevel[Create with Double]
+  
+  /* 1 */ @js.native
+  object ForcePush extends TopLevel[ForcePush with Double]
+  
+  /* 0 */ @js.native
+  object Push extends TopLevel[Push with Double]
+  
+  /* 4 */ @js.native
+  object Rebase extends TopLevel[Rebase with Double]
+  
+  /* 8 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

@@ -65,15 +65,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SectionList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.reactDashNavigation.reactDashNavigationMod.SectionList[js.Any]
+    ] {
   @JSImport("react-navigation", "SectionList")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: onScroll, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
-  def apply(
-    sections: js.Array[SectionListData[js.Any]],
+  def apply[SectionT](
+    sections: js.Array[SectionListData[SectionT]],
     ItemSeparatorComponent: ReactComponentClass[_] = null,
     ListEmptyComponent: ReactComponentClass[_] | ReactElement = null,
     ListFooterComponent: ReactComponentClass[_] | ReactElement = null,
@@ -113,9 +116,9 @@ object SectionList
     disableVirtualization: js.UndefOr[Boolean] = js.undefined,
     endFillColor: String = null,
     extraData: js.Any = null,
-    getItem: (/* data */ js.Any, /* index */ Double) => js.Any = null,
+    getItem: (/* data */ js.Any, /* index */ Double) => SectionT = null,
     getItemCount: /* data */ js.Any => Double = null,
-    getItemLayout: (/* data */ js.Array[SectionListData[js.Any]] | Null, /* index */ Double) => Anon_Index = null,
+    getItemLayout: (/* data */ js.Array[SectionListData[SectionT]] | Null, /* index */ Double) => Anon_Index = null,
     hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
     hitSlop: Insets = null,
     horizontal: js.UndefOr[Boolean] = js.undefined,
@@ -126,7 +129,7 @@ object SectionList
     invertStickyHeaders: js.UndefOr[Boolean] = js.undefined,
     inverted: js.UndefOr[Boolean] = js.undefined,
     isTVSelectable: js.UndefOr[Boolean] = js.undefined,
-    keyExtractor: (js.Any, /* index */ Double) => String = null,
+    keyExtractor: (SectionT, /* index */ Double) => String = null,
     keyboardDismissMode: none | interactive | `on-drag` = null,
     keyboardShouldPersistTaps: Boolean | always | never | handled = null,
     legacyImplementation: js.UndefOr[Boolean] = js.undefined,
@@ -173,10 +176,10 @@ object SectionList
     refreshControl: ReactElement = null,
     refreshing: js.UndefOr[Boolean] = js.undefined,
     removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
-    renderItem: /* info */ SectionListRenderItemInfo[js.Any] => ReactElement | Null = null,
+    renderItem: /* info */ SectionListRenderItemInfo[SectionT] => ReactElement | Null = null,
     renderScrollComponent: /* props */ ScrollViewProps => ReactElement = null,
-    renderSectionFooter: /* info */ Anon_Section[js.Any] => ReactElement | Null = null,
-    renderSectionHeader: /* info */ Anon_Section[js.Any] => ReactElement | Null = null,
+    renderSectionFooter: /* info */ Anon_Section[SectionT] => ReactElement | Null = null,
+    renderSectionHeader: /* info */ Anon_Section[SectionT] => ReactElement | Null = null,
     renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined,
     scrollEnabled: js.UndefOr[Boolean] = js.undefined,
     scrollEventThrottle: Int | Double = null,
@@ -206,7 +209,10 @@ object SectionList
     windowSize: Int | Double = null,
     zoomScale: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNavigation.reactDashNavigationMod.SectionList[js.Any]
+  ] = {
     val __obj = js.Dynamic.literal(sections = sections.asInstanceOf[js.Any])
     if (ItemSeparatorComponent != null) __obj.updateDynamic("ItemSeparatorComponent")(ItemSeparatorComponent.asInstanceOf[js.Any])
     if (ListEmptyComponent != null) __obj.updateDynamic("ListEmptyComponent")(ListEmptyComponent.asInstanceOf[js.Any])
@@ -340,7 +346,9 @@ object SectionList
     if (windowSize != null) __obj.updateDynamic("windowSize")(windowSize.asInstanceOf[js.Any])
     if (zoomScale != null) __obj.updateDynamic("zoomScale")(zoomScale.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNavigation.reactDashNavigationMod.SectionList[js.Any]]]
   }
   type Props = SectionListProps[js.Any]
 }

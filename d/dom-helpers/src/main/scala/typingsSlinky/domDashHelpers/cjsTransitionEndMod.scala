@@ -2,7 +2,6 @@ package typingsSlinky.domDashHelpers
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TransitionEvent
-import typingsSlinky.domDashHelpers.cjsTransitionEndMod.Listener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

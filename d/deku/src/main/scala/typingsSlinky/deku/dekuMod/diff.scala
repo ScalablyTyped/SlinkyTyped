@@ -1,6 +1,5 @@
 package typingsSlinky.deku.dekuMod
 
-import typingsSlinky.deku.dekuMod.diff.Actions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

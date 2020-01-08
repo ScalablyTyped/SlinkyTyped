@@ -12,7 +12,7 @@ HIG Button
 | Keywords           | - |
 | # releases         | 147 |
 | # dependents       | 1 |
-| # downloads        | 103573 |
+| # downloads        | 101642 |
 | # stars            | 0 |
 
 ## Links

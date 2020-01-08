@@ -1,7 +1,5 @@
 package typingsSlinky.dateDashAndDashTime
 
-import typingsSlinky.dateDashAndDashTime.dateDashAndDashTimeMod.Subtract
-import typingsSlinky.dateDashAndDashTime.dateDashAndDashTimeMod.getDelta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

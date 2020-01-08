@@ -2,7 +2,6 @@ package typingsSlinky.atAntDashDesignReactDashNative
 
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.Portal
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.`Portal example`
-import typingsSlinky.atAntDashDesignReactDashNative.libPortalDemoBasicMod.PopoverExample
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

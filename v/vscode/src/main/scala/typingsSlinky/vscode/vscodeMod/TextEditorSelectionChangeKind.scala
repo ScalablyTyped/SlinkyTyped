@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,17 @@ object TextEditorSelectionChangeKind extends js.Object {
   @js.native
   sealed trait Mouse extends TextEditorSelectionChangeKind
   
-  /* 3 */ val Command: typingsSlinky.vscode.vscodeMod.TextEditorSelectionChangeKind.Command with Double = js.native
-  /* 1 */ val Keyboard: typingsSlinky.vscode.vscodeMod.TextEditorSelectionChangeKind.Keyboard with Double = js.native
-  /* 2 */ val Mouse: typingsSlinky.vscode.vscodeMod.TextEditorSelectionChangeKind.Mouse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextEditorSelectionChangeKind with Double] = js.native
+  /* 3 */ @js.native
+  object Command
+    extends TopLevel[typingsSlinky.vscode.vscodeMod.TextEditorSelectionChangeKind.Command with Double]
+  
+  /* 1 */ @js.native
+  object Keyboard extends TopLevel[Keyboard with Double]
+  
+  /* 2 */ @js.native
+  object Mouse extends TopLevel[Mouse with Double]
+  
 }
 

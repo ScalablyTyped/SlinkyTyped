@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object CommentMode extends js.Object {
   @js.native
   sealed trait Preview extends CommentMode
   
-  /* 0 */ val Editing: typingsSlinky.vscode.vscodeMod.CommentMode.Editing with Double = js.native
-  /* 1 */ val Preview: typingsSlinky.vscode.vscodeMod.CommentMode.Preview with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CommentMode with Double] = js.native
+  /* 0 */ @js.native
+  object Editing extends TopLevel[Editing with Double]
+  
+  /* 1 */ @js.native
+  object Preview extends TopLevel[Preview with Double]
+  
 }
 

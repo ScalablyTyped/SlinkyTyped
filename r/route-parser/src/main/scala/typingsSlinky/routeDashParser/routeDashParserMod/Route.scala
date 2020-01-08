@@ -1,6 +1,6 @@
 package typingsSlinky.routeDashParser.routeDashParserMod
 
-import typingsSlinky.routeDashParser.routeDashParserNumbers.`false`
+import typingsSlinky.routeDashParser.routeDashParserBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

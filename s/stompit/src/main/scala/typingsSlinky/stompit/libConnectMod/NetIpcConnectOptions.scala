@@ -5,7 +5,7 @@ import typingsSlinky.node.netMod.OnReadOpts
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.stompit.libSocketMod.CommandHandlers
 import typingsSlinky.stompit.libSocketMod.Heartbeat
-import typingsSlinky.stompit.stompitNumbers.`false`
+import typingsSlinky.stompit.stompitBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

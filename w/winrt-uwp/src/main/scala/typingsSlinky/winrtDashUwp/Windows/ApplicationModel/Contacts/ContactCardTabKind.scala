@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ContactCardTabKind extends js.Object {
   @js.native
   sealed trait video extends ContactCardTabKind
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactCardTabKind.default with Double = js.native
-  /* 1 */ val email: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactCardTabKind.email with Double = js.native
-  /* 2 */ val messaging: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactCardTabKind.messaging with Double = js.native
-  /* 3 */ val phone: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactCardTabKind.phone with Double = js.native
-  /* 4 */ val video: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactCardTabKind.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactCardTabKind with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object email extends TopLevel[email with Double]
+  
+  /* 2 */ @js.native
+  object messaging extends TopLevel[messaging with Double]
+  
+  /* 3 */ @js.native
+  object phone extends TopLevel[phone with Double]
+  
+  /* 4 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

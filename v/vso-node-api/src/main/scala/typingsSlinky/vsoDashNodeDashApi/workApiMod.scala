@@ -31,7 +31,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TeamSettings
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TeamSettingsIteration
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TeamSettingsPatch
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.UpdatePlan
-import typingsSlinky.vsoDashNodeDashApi.workApiMod.IWorkApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

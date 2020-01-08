@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,49 +137,133 @@ object ECurrencyCode extends js.Object {
   @js.native
   sealed trait ZAR extends ECurrencyCode
   
-  /* 32 */ val AED: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.AED with Double = js.native
-  /* 34 */ val ARS: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.ARS with Double = js.native
-  /* 21 */ val AUD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.AUD with Double = js.native
-  /* 7 */ val BRL: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.BRL with Double = js.native
-  /* 36 */ val BYN: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.BYN with Double = js.native
-  /* 20 */ val CAD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.CAD with Double = js.native
-  /* 4 */ val CHF: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.CHF with Double = js.native
-  /* 25 */ val CLP: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.CLP with Double = js.native
-  /* 23 */ val CNY: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.CNY with Double = js.native
-  /* 27 */ val COP: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.COP with Double = js.native
-  /* 40 */ val CRC: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.CRC with Double = js.native
-  /* 3 */ val EUR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.EUR with Double = js.native
-  /* 2 */ val GBP: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.GBP with Double = js.native
-  /* 29 */ val HKD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.HKD with Double = js.native
-  /* 10 */ val IDR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.IDR with Double = js.native
-  /* 35 */ val ILS: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.ILS with Double = js.native
-  /* 24 */ val INR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.INR with Double = js.native
-  /* 0 */ val Invalid: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.Invalid with Double = js.native
-  /* 8 */ val JPY: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.JPY with Double = js.native
-  /* 16 */ val KRW: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.KRW with Double = js.native
-  /* 38 */ val KWD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.KWD with Double = js.native
-  /* 37 */ val KZT: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.KZT with Double = js.native
-  /* 19 */ val MXN: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.MXN with Double = js.native
-  /* 11 */ val MYR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.MYR with Double = js.native
-  /* 42 */ val Max: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.Max with Double = js.native
-  /* 9 */ val NOK: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.NOK with Double = js.native
-  /* 22 */ val NZD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.NZD with Double = js.native
-  /* 26 */ val PEN: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.PEN with Double = js.native
-  /* 12 */ val PHP: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.PHP with Double = js.native
-  /* 6 */ val PLN: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.PLN with Double = js.native
-  /* 39 */ val QAR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.QAR with Double = js.native
-  /* 5 */ val RUB: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.RUB with Double = js.native
-  /* 31 */ val SAR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.SAR with Double = js.native
-  /* 13 */ val SGD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.SGD with Double = js.native
-  /* 14 */ val THB: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.THB with Double = js.native
-  /* 17 */ val TRY: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.TRY with Double = js.native
-  /* 30 */ val TWD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.TWD with Double = js.native
-  /* 18 */ val UAH: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.UAH with Double = js.native
-  /* 1 */ val USD: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.USD with Double = js.native
-  /* 41 */ val UYU: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.UYU with Double = js.native
-  /* 15 */ val VND: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.VND with Double = js.native
-  /* 28 */ val ZAR: typingsSlinky.steamDashClient.steamDashClientMod.ECurrencyCode.ZAR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ECurrencyCode with Double] = js.native
+  /* 32 */ @js.native
+  object AED extends TopLevel[AED with Double]
+  
+  /* 34 */ @js.native
+  object ARS extends TopLevel[ARS with Double]
+  
+  /* 21 */ @js.native
+  object AUD extends TopLevel[AUD with Double]
+  
+  /* 7 */ @js.native
+  object BRL extends TopLevel[BRL with Double]
+  
+  /* 36 */ @js.native
+  object BYN extends TopLevel[BYN with Double]
+  
+  /* 20 */ @js.native
+  object CAD extends TopLevel[CAD with Double]
+  
+  /* 4 */ @js.native
+  object CHF extends TopLevel[CHF with Double]
+  
+  /* 25 */ @js.native
+  object CLP extends TopLevel[CLP with Double]
+  
+  /* 23 */ @js.native
+  object CNY extends TopLevel[CNY with Double]
+  
+  /* 27 */ @js.native
+  object COP extends TopLevel[COP with Double]
+  
+  /* 40 */ @js.native
+  object CRC extends TopLevel[CRC with Double]
+  
+  /* 3 */ @js.native
+  object EUR extends TopLevel[EUR with Double]
+  
+  /* 2 */ @js.native
+  object GBP extends TopLevel[GBP with Double]
+  
+  /* 29 */ @js.native
+  object HKD extends TopLevel[HKD with Double]
+  
+  /* 10 */ @js.native
+  object IDR extends TopLevel[IDR with Double]
+  
+  /* 35 */ @js.native
+  object ILS extends TopLevel[ILS with Double]
+  
+  /* 24 */ @js.native
+  object INR extends TopLevel[INR with Double]
+  
+  /* 0 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 8 */ @js.native
+  object JPY extends TopLevel[JPY with Double]
+  
+  /* 16 */ @js.native
+  object KRW extends TopLevel[KRW with Double]
+  
+  /* 38 */ @js.native
+  object KWD extends TopLevel[KWD with Double]
+  
+  /* 37 */ @js.native
+  object KZT extends TopLevel[KZT with Double]
+  
+  /* 19 */ @js.native
+  object MXN extends TopLevel[MXN with Double]
+  
+  /* 11 */ @js.native
+  object MYR extends TopLevel[MYR with Double]
+  
+  /* 42 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 9 */ @js.native
+  object NOK extends TopLevel[NOK with Double]
+  
+  /* 22 */ @js.native
+  object NZD extends TopLevel[NZD with Double]
+  
+  /* 26 */ @js.native
+  object PEN extends TopLevel[PEN with Double]
+  
+  /* 12 */ @js.native
+  object PHP extends TopLevel[PHP with Double]
+  
+  /* 6 */ @js.native
+  object PLN extends TopLevel[PLN with Double]
+  
+  /* 39 */ @js.native
+  object QAR extends TopLevel[QAR with Double]
+  
+  /* 5 */ @js.native
+  object RUB extends TopLevel[RUB with Double]
+  
+  /* 31 */ @js.native
+  object SAR extends TopLevel[SAR with Double]
+  
+  /* 13 */ @js.native
+  object SGD extends TopLevel[SGD with Double]
+  
+  /* 14 */ @js.native
+  object THB extends TopLevel[THB with Double]
+  
+  /* 17 */ @js.native
+  object TRY extends TopLevel[TRY with Double]
+  
+  /* 30 */ @js.native
+  object TWD extends TopLevel[TWD with Double]
+  
+  /* 18 */ @js.native
+  object UAH extends TopLevel[UAH with Double]
+  
+  /* 1 */ @js.native
+  object USD extends TopLevel[USD with Double]
+  
+  /* 41 */ @js.native
+  object UYU extends TopLevel[UYU with Double]
+  
+  /* 15 */ @js.native
+  object VND extends TopLevel[VND with Double]
+  
+  /* 28 */ @js.native
+  object ZAR extends TopLevel[ZAR with Double]
+  
 }
 

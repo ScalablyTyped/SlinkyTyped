@@ -1,6 +1,6 @@
 package typingsSlinky.webpackDashAssetsDashManifest.webpackDashAssetsDashManifestMod
 
-import typingsSlinky.webpackDashAssetsDashManifest.webpackDashAssetsDashManifestNumbers.`false`
+import typingsSlinky.webpackDashAssetsDashManifest.webpackDashAssetsDashManifestBooleans.`false`
 import typingsSlinky.webpackDashAssetsDashManifest.webpackDashAssetsDashManifestStrings.customize
 import scala.scalajs.js
 import scala.scalajs.js.`|`

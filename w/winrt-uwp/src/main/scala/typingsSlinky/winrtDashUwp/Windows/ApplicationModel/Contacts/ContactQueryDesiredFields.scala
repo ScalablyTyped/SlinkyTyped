@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object ContactQueryDesiredFields extends js.Object {
   @js.native
   sealed trait postalAddress extends ContactQueryDesiredFields
   
-  /* 2 */ val emailAddress: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactQueryDesiredFields.emailAddress with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactQueryDesiredFields.none with Double = js.native
-  /* 1 */ val phoneNumber: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactQueryDesiredFields.phoneNumber with Double = js.native
-  /* 3 */ val postalAddress: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactQueryDesiredFields.postalAddress with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactQueryDesiredFields with Double] = js.native
+  /* 2 */ @js.native
+  object emailAddress extends TopLevel[emailAddress with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object phoneNumber extends TopLevel[phoneNumber with Double]
+  
+  /* 3 */ @js.native
+  object postalAddress extends TopLevel[postalAddress with Double]
+  
 }
 

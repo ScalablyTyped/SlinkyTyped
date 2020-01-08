@@ -1,36 +1,36 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-jasmine2"
-version := "24.9.0-f3dd45"
+version := "24.9.0-d26bf5"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "anymatch" % "1.3-dt-20190212Z-13b4ff",
-  "org.scalablytyped.slinky" %%% "assert" % "1.4-dt-20190725Z-16ee00",
-  "org.scalablytyped.slinky" %%% "callsites" % "3.1.0-231f46",
-  "org.scalablytyped.slinky" %%% "chalk" % "2.4.2-7b8616",
-  "org.scalablytyped.slinky" %%% "expect" % "24.9.0-e21b98",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20190425Z-10f02e",
-  "org.scalablytyped.slinky" %%% "jest-haste-map" % "24.9.0-e1c066",
-  "org.scalablytyped.slinky" %%% "jest-matcher-utils" % "21.0-dt-20190212Z-03ef0a",
-  "org.scalablytyped.slinky" %%% "jest-message-util" % "24.9.0-c3f322",
-  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-5ce22c",
-  "org.scalablytyped.slinky" %%% "jest-resolve" % "24.9.0-a67250",
-  "org.scalablytyped.slinky" %%% "jest-runtime" % "24.9.0-20e5dc",
-  "org.scalablytyped.slinky" %%% "jest-snapshot" % "24.9.0-f075a7",
-  "org.scalablytyped.slinky" %%% "jest__console" % "24.9.0-e33197",
-  "org.scalablytyped.slinky" %%% "jest__environment" % "24.9.0-1ef5b7",
-  "org.scalablytyped.slinky" %%% "jest__fake-timers" % "24.9.0-d8c77b",
-  "org.scalablytyped.slinky" %%% "jest__source-map" % "24.9.0-22d410",
-  "org.scalablytyped.slinky" %%% "jest__test-result" % "24.9.0-668707",
-  "org.scalablytyped.slinky" %%% "jest__types" % "24.9.0-d63b3a",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
-  "org.scalablytyped.slinky" %%% "pretty-format" % "24.9.0-35a608",
-  "org.scalablytyped.slinky" %%% "stack-utils" % "1.0-dt-20180214Z-0b44cd",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "yargs" % "13.0-dt-20191126Z-86e58c",
-  "org.scalablytyped.slinky" %%% "yargs-parser" % "13.1-dt-20190905Z-3625ad")
+  "org.scalablytyped.slinky" %%% "anymatch" % "1.3-dt-20190212Z-aec9d7",
+  "org.scalablytyped.slinky" %%% "assert" % "1.4-dt-20190725Z-68e480",
+  "org.scalablytyped.slinky" %%% "callsites" % "3.1.0-e3e0e3",
+  "org.scalablytyped.slinky" %%% "chalk" % "2.4.2-1e53bf",
+  "org.scalablytyped.slinky" %%% "expect" % "24.9.0-167a37",
+  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20190425Z-87edce",
+  "org.scalablytyped.slinky" %%% "jest-haste-map" % "24.9.0-eae8ca",
+  "org.scalablytyped.slinky" %%% "jest-matcher-utils" % "21.0-dt-20190212Z-8dfe23",
+  "org.scalablytyped.slinky" %%% "jest-message-util" % "24.9.0-c80187",
+  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-eaba3b",
+  "org.scalablytyped.slinky" %%% "jest-resolve" % "24.9.0-62eb5c",
+  "org.scalablytyped.slinky" %%% "jest-runtime" % "24.9.0-67116f",
+  "org.scalablytyped.slinky" %%% "jest-snapshot" % "24.9.0-b0d8d7",
+  "org.scalablytyped.slinky" %%% "jest__console" % "24.9.0-7a9b1d",
+  "org.scalablytyped.slinky" %%% "jest__environment" % "24.9.0-092fb2",
+  "org.scalablytyped.slinky" %%% "jest__fake-timers" % "24.9.0-b764a0",
+  "org.scalablytyped.slinky" %%% "jest__source-map" % "24.9.0-098f8f",
+  "org.scalablytyped.slinky" %%% "jest__test-result" % "24.9.0-52a141",
+  "org.scalablytyped.slinky" %%% "jest__types" % "24.9.0-6cab66",
+  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
+  "org.scalablytyped.slinky" %%% "pretty-format" % "24.9.0-496fef",
+  "org.scalablytyped.slinky" %%% "stack-utils" % "1.0-dt-20180214Z-e1721e",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "yargs" % "13.0-dt-20191223Z-026ba5",
+  "org.scalablytyped.slinky" %%% "yargs-parser" % "13.1-dt-20190905Z-51ca0c")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

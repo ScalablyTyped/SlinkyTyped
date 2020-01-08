@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object Position extends js.Object {
   @js.native
   sealed trait Top extends Position
   
-  /* 1 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Position.Bottom with Double = js.native
-  /* 0 */ val Top: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Position.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Position with Double] = js.native
+  /* 1 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

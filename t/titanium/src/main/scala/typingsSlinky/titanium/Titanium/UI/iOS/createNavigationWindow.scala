@@ -10,7 +10,7 @@ object createNavigationWindow extends js.Object {
   /**
   			 * Creates and returns an instance of <Titanium.UI.iOS.NavigationWindow>.
   			 */
-  def apply(): typingsSlinky.titanium.Titanium.UI.iOS.NavigationWindow = js.native
-  def apply(parameters: js.Any): typingsSlinky.titanium.Titanium.UI.iOS.NavigationWindow = js.native
+  def apply(): NavigationWindow = js.native
+  def apply(parameters: js.Any): NavigationWindow = js.native
 }
 

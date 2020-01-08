@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object DataUsageGranularity extends js.Object {
   @js.native
   sealed trait total extends DataUsageGranularity
   
-  /* 2 */ val perDay: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.DataUsageGranularity.perDay with Double = js.native
-  /* 1 */ val perHour: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.DataUsageGranularity.perHour with Double = js.native
-  /* 0 */ val perMinute: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.DataUsageGranularity.perMinute with Double = js.native
-  /* 3 */ val total: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.DataUsageGranularity.total with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DataUsageGranularity with Double] = js.native
+  /* 2 */ @js.native
+  object perDay extends TopLevel[perDay with Double]
+  
+  /* 1 */ @js.native
+  object perHour extends TopLevel[perHour with Double]
+  
+  /* 0 */ @js.native
+  object perMinute extends TopLevel[perMinute with Double]
+  
+  /* 3 */ @js.native
+  object total extends TopLevel[total with Double]
+  
 }
 

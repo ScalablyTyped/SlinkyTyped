@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015DeviceGPUDetectorMod.EGPUPrecision
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,11 +41,17 @@ object distEs2015DeviceGPUDetectorMod extends js.Object {
     @js.native
     sealed trait MEDIUMP extends EGPUPrecision
     
-    /* 0 */ val HIGHP: typingsSlinky.wonderDotJs.distEs2015DeviceGPUDetectorMod.EGPUPrecision.HIGHP with Double = js.native
-    /* 2 */ val LOWP: typingsSlinky.wonderDotJs.distEs2015DeviceGPUDetectorMod.EGPUPrecision.LOWP with Double = js.native
-    /* 1 */ val MEDIUMP: typingsSlinky.wonderDotJs.distEs2015DeviceGPUDetectorMod.EGPUPrecision.MEDIUMP with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EGPUPrecision with Double] = js.native
+    /* 0 */ @js.native
+    object HIGHP extends TopLevel[HIGHP with Double]
+    
+    /* 2 */ @js.native
+    object LOWP extends TopLevel[LOWP with Double]
+    
+    /* 1 */ @js.native
+    object MEDIUMP extends TopLevel[MEDIUMP with Double]
+    
   }
   
   /* static members */

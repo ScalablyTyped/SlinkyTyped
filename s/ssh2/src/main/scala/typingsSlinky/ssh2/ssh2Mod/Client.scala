@@ -1,7 +1,7 @@
 package typingsSlinky.ssh2.ssh2Mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.ssh2.ssh2Numbers.`false`
+import typingsSlinky.ssh2.ssh2Booleans.`false`
 import typingsSlinky.ssh2.ssh2Strings.`change password`
 import typingsSlinky.ssh2.ssh2Strings.`keyboard-interactive`
 import typingsSlinky.ssh2.ssh2Strings.`tcp connection`

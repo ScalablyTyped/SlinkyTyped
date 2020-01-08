@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
@@ -31,6 +32,7 @@ object ModalBase
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
+    allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined,
     closeButtonAriaLabel: String = null,
     componentRef: IRefObject[IModal] = null,
     containerClassName: String = null,
@@ -59,6 +61,7 @@ object ModalBase
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.officeDashUiDashFabricDashReact.libModalMod.ModalBase] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowTouchBodyScroll)) __obj.updateDynamic("allowTouchBodyScroll")(allowTouchBodyScroll.asInstanceOf[js.Any])
     if (closeButtonAriaLabel != null) __obj.updateDynamic("closeButtonAriaLabel")(closeButtonAriaLabel.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
     if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
@@ -87,6 +90,9 @@ object ModalBase
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeDashUiDashFabricDashReact.libModalMod.ModalBase] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libModalMod.ModalBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IModalProps
 }
 

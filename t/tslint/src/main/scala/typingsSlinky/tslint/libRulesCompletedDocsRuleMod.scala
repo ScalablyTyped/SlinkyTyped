@@ -2,11 +2,6 @@ package typingsSlinky.tslint
 
 import typingsSlinky.tslint.libLanguageRuleRuleMod.IRuleMetadata
 import typingsSlinky.tslint.libRulesCompletedDashDocsExclusionDescriptorsMod.IInputExclusionDescriptors
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod.All
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._DocType
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Location
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Privacy
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Visibility
 import typingsSlinky.tslint.tslintMod.Rules.AbstractRule
 import typingsSlinky.tslint.tslintStrings.`enum-members`
 import typingsSlinky.tslint.tslintStrings.`private`

@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialDialog
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialDialog.adapterMod.MDCDialogAdapter
-import typingsSlinky.atMaterialDialog.atMaterialDialogMod.MDCDialog
 import typingsSlinky.atMaterialDialog.foundationMod.default
 import typingsSlinky.atMaterialDialog.utilMod.MDCFocusTrapFactory
 import scala.scalajs.js

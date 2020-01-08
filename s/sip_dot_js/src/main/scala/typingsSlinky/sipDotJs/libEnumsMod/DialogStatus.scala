@@ -1,5 +1,6 @@
 package typingsSlinky.sipDotJs.libEnumsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DialogStatus extends js.Object {
   @js.native
   sealed trait STATUS_EARLY extends DialogStatus
   
-  /* 2 */ val STATUS_CONFIRMED: typingsSlinky.sipDotJs.libEnumsMod.DialogStatus.STATUS_CONFIRMED with Double = js.native
-  /* 1 */ val STATUS_EARLY: typingsSlinky.sipDotJs.libEnumsMod.DialogStatus.STATUS_EARLY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DialogStatus with Double] = js.native
+  /* 2 */ @js.native
+  object STATUS_CONFIRMED extends TopLevel[STATUS_CONFIRMED with Double]
+  
+  /* 1 */ @js.native
+  object STATUS_EARLY extends TopLevel[STATUS_EARLY with Double]
+  
 }
 

@@ -10,9 +10,9 @@ number, money and currency formatting library
 | ------------------ | :-------------: |
 | Full name          | accounting |
 | Keywords           | accounting, number, money, currency, format, utilities, finance, exchange |
-| # releases         | 1 |
-| # dependents       | 150 |
-| # downloads        | 6276117 |
+| # releases         | 0 |
+| # dependents       | 171 |
+| # downloads        | 7543550 |
 | # stars            | 24 |
 
 ## Links

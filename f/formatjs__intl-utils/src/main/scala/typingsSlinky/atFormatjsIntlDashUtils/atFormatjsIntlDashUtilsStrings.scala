@@ -1,6 +1,9 @@
 package typingsSlinky.atFormatjsIntlDashUtils
 
 import typingsSlinky.atFormatjsIntlDashUtils.distDiffMod.Unit
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.DecimalFormatNum
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.NumberFormatNotation
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.NumberFormatRoundingType
 import typingsSlinky.atFormatjsIntlDashUtils.distPluralDashRulesDashTypesMod.LDMLPluralRule
 import typingsSlinky.atFormatjsIntlDashUtils.distRelativeDashTimeDashTypesMod.RelativeTimeField
 import scala.scalajs.js
@@ -9,6 +12,42 @@ import scala.scalajs.js.annotation._
 
 object atFormatjsIntlDashUtilsStrings {
   @js.native
+  sealed trait `1000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `10000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `100000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `1000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `10000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `100000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `1000000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `10000000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `100000000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `1000000000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `10000000000000` extends DecimalFormatNum
+  
+  @js.native
+  sealed trait `100000000000000` extends DecimalFormatNum
+  
+  @js.native
   sealed trait RelativeTimeData extends js.Object
   
   @js.native
@@ -16,6 +55,12 @@ object atFormatjsIntlDashUtilsStrings {
   
   @js.native
   sealed trait boolean extends js.Object
+  
+  @js.native
+  sealed trait compact extends NumberFormatNotation
+  
+  @js.native
+  sealed trait compactRounding extends NumberFormatRoundingType
   
   @js.native
   sealed trait createResolveLocale extends js.Object
@@ -32,7 +77,13 @@ object atFormatjsIntlDashUtilsStrings {
   sealed trait `day-short` extends RelativeTimeField
   
   @js.native
+  sealed trait engineering extends NumberFormatNotation
+  
+  @js.native
   sealed trait few extends LDMLPluralRule
+  
+  @js.native
+  sealed trait fractionDigits extends NumberFormatRoundingType
   
   @js.native
   sealed trait hour
@@ -44,6 +95,9 @@ object atFormatjsIntlDashUtilsStrings {
   
   @js.native
   sealed trait `hour-short` extends RelativeTimeField
+  
+  @js.native
+  sealed trait literal extends js.Object
   
   @js.native
   sealed trait lookup extends js.Object
@@ -91,6 +145,9 @@ object atFormatjsIntlDashUtilsStrings {
   sealed trait `quarter-short` extends RelativeTimeField
   
   @js.native
+  sealed trait scientific extends NumberFormatNotation
+  
+  @js.native
   sealed trait second
     extends RelativeTimeField
        with Unit
@@ -100,6 +157,12 @@ object atFormatjsIntlDashUtilsStrings {
   
   @js.native
   sealed trait `second-short` extends RelativeTimeField
+  
+  @js.native
+  sealed trait significantDigits extends NumberFormatRoundingType
+  
+  @js.native
+  sealed trait standard extends NumberFormatNotation
   
   @js.native
   sealed trait string extends js.Object
@@ -133,11 +196,39 @@ object atFormatjsIntlDashUtilsStrings {
   sealed trait zero extends LDMLPluralRule
   
   @scala.inline
+  def `1000`: `1000` = "1000".asInstanceOf[`1000`]
+  @scala.inline
+  def `10000`: `10000` = "10000".asInstanceOf[`10000`]
+  @scala.inline
+  def `100000`: `100000` = "100000".asInstanceOf[`100000`]
+  @scala.inline
+  def `1000000`: `1000000` = "1000000".asInstanceOf[`1000000`]
+  @scala.inline
+  def `10000000`: `10000000` = "10000000".asInstanceOf[`10000000`]
+  @scala.inline
+  def `100000000`: `100000000` = "100000000".asInstanceOf[`100000000`]
+  @scala.inline
+  def `1000000000`: `1000000000` = "1000000000".asInstanceOf[`1000000000`]
+  @scala.inline
+  def `10000000000`: `10000000000` = "10000000000".asInstanceOf[`10000000000`]
+  @scala.inline
+  def `100000000000`: `100000000000` = "100000000000".asInstanceOf[`100000000000`]
+  @scala.inline
+  def `1000000000000`: `1000000000000` = "1000000000000".asInstanceOf[`1000000000000`]
+  @scala.inline
+  def `10000000000000`: `10000000000000` = "10000000000000".asInstanceOf[`10000000000000`]
+  @scala.inline
+  def `100000000000000`: `100000000000000` = "100000000000000".asInstanceOf[`100000000000000`]
+  @scala.inline
   def RelativeTimeData: RelativeTimeData = "RelativeTimeData".asInstanceOf[RelativeTimeData]
   @scala.inline
   def `best fit`: `best fit` = "best fit".asInstanceOf[`best fit`]
   @scala.inline
   def boolean: boolean = "boolean".asInstanceOf[boolean]
+  @scala.inline
+  def compact: compact = "compact".asInstanceOf[compact]
+  @scala.inline
+  def compactRounding: compactRounding = "compactRounding".asInstanceOf[compactRounding]
   @scala.inline
   def createResolveLocale: createResolveLocale = "createResolveLocale".asInstanceOf[createResolveLocale]
   @scala.inline
@@ -147,13 +238,19 @@ object atFormatjsIntlDashUtilsStrings {
   @scala.inline
   def `day-short`: `day-short` = "day-short".asInstanceOf[`day-short`]
   @scala.inline
+  def engineering: engineering = "engineering".asInstanceOf[engineering]
+  @scala.inline
   def few: few = "few".asInstanceOf[few]
+  @scala.inline
+  def fractionDigits: fractionDigits = "fractionDigits".asInstanceOf[fractionDigits]
   @scala.inline
   def hour: hour = "hour".asInstanceOf[hour]
   @scala.inline
   def `hour-narrow`: `hour-narrow` = "hour-narrow".asInstanceOf[`hour-narrow`]
   @scala.inline
   def `hour-short`: `hour-short` = "hour-short".asInstanceOf[`hour-short`]
+  @scala.inline
+  def literal: literal = "literal".asInstanceOf[literal]
   @scala.inline
   def lookup: lookup = "lookup".asInstanceOf[lookup]
   @scala.inline
@@ -181,11 +278,17 @@ object atFormatjsIntlDashUtilsStrings {
   @scala.inline
   def `quarter-short`: `quarter-short` = "quarter-short".asInstanceOf[`quarter-short`]
   @scala.inline
+  def scientific: scientific = "scientific".asInstanceOf[scientific]
+  @scala.inline
   def second: second = "second".asInstanceOf[second]
   @scala.inline
   def `second-narrow`: `second-narrow` = "second-narrow".asInstanceOf[`second-narrow`]
   @scala.inline
   def `second-short`: `second-short` = "second-short".asInstanceOf[`second-short`]
+  @scala.inline
+  def significantDigits: significantDigits = "significantDigits".asInstanceOf[significantDigits]
+  @scala.inline
+  def standard: standard = "standard".asInstanceOf[standard]
   @scala.inline
   def string: string = "string".asInstanceOf[string]
   @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcAnimationAnimationClipMod.AnimationClip
 import typingsSlinky.three.srcAnimationKeyframeTrackMod.KeyframeTrack
 import typingsSlinky.three.srcCoreGeometryMod.MorphTarget
 import typingsSlinky.three.srcObjectsBoneMod.Bone

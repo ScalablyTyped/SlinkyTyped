@@ -6,7 +6,6 @@ import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsBaseModelMod.BaseMo
 import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsLinkModelMod.LinkModel
 import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsLinkModelMod.LinkModelListener
 import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsNodeModelMod.NodeModel
-import typingsSlinky.stormDashReactDashDiagrams.distSrcModelsPortModelMod.PortModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

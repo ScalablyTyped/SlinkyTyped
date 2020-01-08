@@ -1,6 +1,6 @@
 package typingsSlinky.parentDashPackageDashJson.parentDashPackageDashJsonMod
 
-import typingsSlinky.parentDashPackageDashJson.parentDashPackageDashJsonNumbers.`false`
+import typingsSlinky.parentDashPackageDashJson.parentDashPackageDashJsonBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

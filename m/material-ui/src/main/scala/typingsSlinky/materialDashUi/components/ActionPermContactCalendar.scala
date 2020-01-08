@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionPermContactCalendar
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermContactCalendar] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermContactCalendar] {
   @JSImport("material-ui/svg-icons", "ActionPermContactCalendar")
   @js.native
   object componentImport extends js.Object

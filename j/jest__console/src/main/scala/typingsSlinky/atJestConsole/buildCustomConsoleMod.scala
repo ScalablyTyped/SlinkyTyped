@@ -1,7 +1,5 @@
 package typingsSlinky.atJestConsole
 
-import typingsSlinky.atJestConsole.buildCustomConsoleMod.CustomConsole
-import typingsSlinky.atJestConsole.buildCustomConsoleMod.Formatter
 import typingsSlinky.atJestConsole.buildTypesMod.LogMessage
 import typingsSlinky.atJestConsole.buildTypesMod.LogType
 import typingsSlinky.node.NodeJS.WritableStream

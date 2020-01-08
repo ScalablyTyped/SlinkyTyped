@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +22,16 @@ object ValidationState extends js.Object {
   @js.native
   sealed trait Valid extends ValidationState
   
-  /* 2 */ val Invalid: typingsSlinky.sharepoint.SP.JsGrid.ValidationState.Invalid with Double = js.native
-  /* 1 */ val Pending: typingsSlinky.sharepoint.SP.JsGrid.ValidationState.Pending with Double = js.native
-  /* 0 */ val Valid: typingsSlinky.sharepoint.SP.JsGrid.ValidationState.Valid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ValidationState with Double] = js.native
+  /* 2 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 1 */ @js.native
+  object Pending extends TopLevel[Pending with Double]
+  
+  /* 0 */ @js.native
+  object Valid extends TopLevel[Valid with Double]
+  
 }
 

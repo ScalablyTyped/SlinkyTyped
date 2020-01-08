@@ -2,6 +2,7 @@ package typingsSlinky.atSindresorhusJimp.jimpMod
 
 import typingsSlinky.atSindresorhusJimp.Anon_Diff
 import typingsSlinky.atSindresorhusJimp.Jimp.ImageCallback
+import typingsSlinky.atSindresorhusJimp.Jimp.Jimp
 import typingsSlinky.atSindresorhusJimp.Jimp.RGB
 import typingsSlinky.atSindresorhusJimp.Jimp.RGBA
 import typingsSlinky.node.Buffer
@@ -11,13 +12,12 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jimp", JSImport.Namespace)
 @js.native
-class ^ protected ()
-  extends typingsSlinky.atSindresorhusJimp.Jimp.Jimp {
+class ^ protected () extends Jimp {
   def this(data: Buffer) = this()
-  def this(image: typingsSlinky.atSindresorhusJimp.Jimp.Jimp) = this()
+  def this(image: Jimp) = this()
   def this(path: String) = this()
   def this(data: Buffer, cb: ImageCallback) = this()
-  def this(image: typingsSlinky.atSindresorhusJimp.Jimp.Jimp, cb: ImageCallback) = this()
+  def this(image: Jimp, cb: ImageCallback) = this()
   def this(path: String, cb: ImageCallback) = this()
   def this(w: Double, h: Double) = this()
   def this(w: Double, h: Double, background: Double) = this()
@@ -79,13 +79,9 @@ object ^ extends js.Object {
   def colorDiff(rgba1: RGBA, rgba2: RGBA): Double = js.native
   def colorDiff(rgba1: RGB, rgba2: RGB): Double = js.native
   def colorDiff(rgba1: RGB, rgba2: RGBA): Double = js.native
-  def diff(img1: typingsSlinky.atSindresorhusJimp.Jimp.Jimp, img2: typingsSlinky.atSindresorhusJimp.Jimp.Jimp): Anon_Diff = js.native
-  def diff(
-    img1: typingsSlinky.atSindresorhusJimp.Jimp.Jimp,
-    img2: typingsSlinky.atSindresorhusJimp.Jimp.Jimp,
-    threshold: Double
-  ): Anon_Diff = js.native
-  def distance(img1: typingsSlinky.atSindresorhusJimp.Jimp.Jimp, img2: typingsSlinky.atSindresorhusJimp.Jimp.Jimp): Double = js.native
+  def diff(img1: Jimp, img2: Jimp): Anon_Diff = js.native
+  def diff(img1: Jimp, img2: Jimp, threshold: Double): Anon_Diff = js.native
+  def distance(img1: Jimp, img2: Jimp): Double = js.native
   def intToRGBA(i: Double): RGBA = js.native
   def intToRGBA(i: Double, cb: js.Function2[/* err */ js.Error, /* rgba */ RGBA, _]): RGBA = js.native
   def limit255(n: Double): Double = js.native
@@ -98,10 +94,10 @@ object ^ extends js.Object {
     (w: number, h: number, cb?: Jimp.ImageCallback): void;
     (w: number, h: number, background?: number, cb?: Jimp.ImageCallback): void;
     */
-  def read(src: String): js.Promise[typingsSlinky.atSindresorhusJimp.Jimp.Jimp] = js.native
-  def read(src: String, cb: ImageCallback): js.Promise[typingsSlinky.atSindresorhusJimp.Jimp.Jimp] = js.native
-  def read(src: Buffer): js.Promise[typingsSlinky.atSindresorhusJimp.Jimp.Jimp] = js.native
-  def read(src: Buffer, cb: ImageCallback): js.Promise[typingsSlinky.atSindresorhusJimp.Jimp.Jimp] = js.native
+  def read(src: String): js.Promise[Jimp] = js.native
+  def read(src: String, cb: ImageCallback): js.Promise[Jimp] = js.native
+  def read(src: Buffer): js.Promise[Jimp] = js.native
+  def read(src: Buffer, cb: ImageCallback): js.Promise[Jimp] = js.native
   def rgbaToInt(r: Double, g: Double, b: Double, a: Double): Double = js.native
   def rgbaToInt(
     r: Double,

@@ -2,7 +2,7 @@ package typingsSlinky.typeDashFest.sourcePackageDashJsonMod.PackageJson
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.typeDashFest.Anon_Browser
-import typingsSlinky.typeDashFest.typeDashFestNumbers.`false`
+import typingsSlinky.typeDashFest.typeDashFestBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

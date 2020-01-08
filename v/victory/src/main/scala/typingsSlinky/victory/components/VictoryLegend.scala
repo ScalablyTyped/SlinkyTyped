@@ -3,12 +3,13 @@ package typingsSlinky.victory.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.victory.Anon_Left
 import typingsSlinky.victory.Anon_Name
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
 import typingsSlinky.victory.victoryMod.BlockProps
 import typingsSlinky.victory.victoryMod.CategoryPropType
@@ -65,8 +66,8 @@ object VictoryLegend
     itemsPerRow: Int | Double = null,
     label: String | (js.Function1[/* data */ js.Any, String]) = null,
     labelComponent: ReactElement = null,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     orientation: horizontal | vertical = null,
     padding: PaddingProps = null,
     rowGutter: Double | (Omit[BlockProps, left | right]) = null,
@@ -125,6 +126,7 @@ object VictoryLegend
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryLegend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryLegend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryLegendProps
 }
 

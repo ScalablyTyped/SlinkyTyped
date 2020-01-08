@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class ProjectTemplate protected () extends js.Object {
   val Application: typingsSlinky.activexDashVbide.VBIDE.Application = js.native
   val Parent: typingsSlinky.activexDashVbide.VBIDE.Application = js.native
-  var `VBIDE.ProjectTemplate_typekey`: ProjectTemplate = js.native
+  @JSName("VBIDE.ProjectTemplate_typekey")
+  var VBIDEDotProjectTemplate_typekey: ProjectTemplate = js.native
 }
 

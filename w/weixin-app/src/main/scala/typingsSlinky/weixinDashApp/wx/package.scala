@@ -28,9 +28,7 @@ package object wx {
   type BuiltInEvent[T /* <: EventType */, Detail] = BaseEvent[T, Detail]
   type CheckSessionOption = BaseOptions[js.Any, js.Any]
   // CombinedInstance models the `this`, i.e. instance type for (user defined) component
-  type CombinedInstance[Instance /* <: typingsSlinky.weixinDashApp.wx.Component[Data, Props, Behaviors] */, Data, Methods, Props, Behaviors /* <: js.Array[
-    (typingsSlinky.weixinDashApp.wx.Behavior[js.Object, js.Object, js.Object]) | String
-  ] */] = Methods with Instance with UnboxBehaviorsMethods[Behaviors]
+  type CombinedInstance[Instance /* <: Component[Data, Props, Behaviors] */, Data, Methods, Props, Behaviors /* <: js.Array[(Behavior[js.Object, js.Object, js.Object]) | String] */] = Methods with Instance with UnboxBehaviorsMethods[Behaviors]
   type CompassChangeCallback = js.Function1[/* res */ CompassData, Unit]
   type CompassOptions = BaseOptions[js.Any, js.Any]
   type CustomEvent[T /* <: String */, Detail] = BaseEvent[T, Detail]
@@ -150,9 +148,7 @@ package object wx {
   type SceneValues = _SceneValues | Double
   type ScrollEvent = BuiltInEvent[scroll, js.Object]
   type TapEvent = TouchEvent[tap]
-  type ThisTypedComponentOptionsWithRecordProps[V /* <: typingsSlinky.weixinDashApp.wx.Component[Data, Props, Behaviors] */, Data, Methods, Props, Behaviors /* <: js.Array[
-    (typingsSlinky.weixinDashApp.wx.Behavior[js.Object, js.Object, js.Object]) | String
-  ] */] = js.Object with (ComponentOptions[V, Data, Methods, Props, Behaviors]) with (ThisType[CombinedInstance[V, Data, Methods, Props, Behaviors]])
+  type ThisTypedComponentOptionsWithRecordProps[V /* <: Component[Data, Props, Behaviors] */, Data, Methods, Props, Behaviors /* <: js.Array[(Behavior[js.Object, js.Object, js.Object]) | String] */] = js.Object with (ComponentOptions[V, Data, Methods, Props, Behaviors]) with (ThisType[CombinedInstance[V, Data, Methods, Props, Behaviors]])
   type TouchCancelEvent = TouchEvent[touchcancel]
   type TouchEndEvent = TouchEvent[touchend]
   type TouchForceChangeEvent = TouchEvent[touchforcechange]
@@ -161,15 +157,9 @@ package object wx {
   type UnboxBehaviorData[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_DATA'] */ js.Any)
   type UnboxBehaviorMethods[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_METHODS'] */ js.Any)
   type UnboxBehaviorProps[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_PROPS'] */ js.Any)
-  type UnboxBehaviorsData[Behaviors /* <: js.Array[
-    (typingsSlinky.weixinDashApp.wx.Behavior[js.Object, js.Object, js.Object]) | String
-  ] */] = UnboxBehaviorData[UnionToIntersection[ArrayType[Behaviors]]]
-  type UnboxBehaviorsMethods[Behaviors /* <: js.Array[
-    (typingsSlinky.weixinDashApp.wx.Behavior[js.Object, js.Object, js.Object]) | String
-  ] */] = UnboxBehaviorMethods[UnionToIntersection[ArrayType[Behaviors]]]
-  type UnboxBehaviorsProps[Behaviors /* <: js.Array[
-    (typingsSlinky.weixinDashApp.wx.Behavior[js.Object, js.Object, js.Object]) | String
-  ] */] = UnboxBehaviorProps[UnionToIntersection[ArrayType[Behaviors]]]
+  type UnboxBehaviorsData[Behaviors /* <: js.Array[(Behavior[js.Object, js.Object, js.Object]) | String] */] = UnboxBehaviorData[UnionToIntersection[ArrayType[Behaviors]]]
+  type UnboxBehaviorsMethods[Behaviors /* <: js.Array[(Behavior[js.Object, js.Object, js.Object]) | String] */] = UnboxBehaviorMethods[UnionToIntersection[ArrayType[Behaviors]]]
+  type UnboxBehaviorsProps[Behaviors /* <: js.Array[(Behavior[js.Object, js.Object, js.Object]) | String] */] = UnboxBehaviorProps[UnionToIntersection[ArrayType[Behaviors]]]
   type UnionToIntersection[U] = js.Any
   type WriteFileOptions = AppendFileOptions
 }

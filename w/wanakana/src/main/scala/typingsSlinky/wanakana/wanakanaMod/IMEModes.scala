@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.wanakana.wanakanaNumbers.`true`
-  - typings.wanakana.wanakanaNumbers.`false`
+  - typings.wanakana.wanakanaBooleans.`true`
+  - typings.wanakana.wanakanaBooleans.`false`
   - typings.wanakana.wanakanaStrings.toHiragana
   - typings.wanakana.wanakanaStrings.toKatakana
 */
@@ -16,12 +16,12 @@ object IMEModes {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def `false`: typingsSlinky.wanakana.wanakanaNumbers.`false` = this.cast(false)
+  def `false`: typingsSlinky.wanakana.wanakanaBooleans.`false` = this.cast(false)
   @scala.inline
   def toHiragana: typingsSlinky.wanakana.wanakanaStrings.toHiragana = this.cast("toHiragana")
   @scala.inline
   def toKatakana: typingsSlinky.wanakana.wanakanaStrings.toKatakana = this.cast("toKatakana")
   @scala.inline
-  def `true`: typingsSlinky.wanakana.wanakanaNumbers.`true` = this.cast(true)
+  def `true`: typingsSlinky.wanakana.wanakanaBooleans.`true` = this.cast(true)
 }
 

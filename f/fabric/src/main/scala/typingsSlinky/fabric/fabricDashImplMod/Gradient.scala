@@ -3,13 +3,32 @@ package typingsSlinky.fabric.fabricDashImplMod
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.SVGGradientElement
+import typingsSlinky.fabric.Anon_ColorStops
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("fabric/fabric-impl", "Gradient")
 @js.native
-class Gradient () extends IGradientOptions {
+class Gradient protected () extends IGradientOptions {
+  /**
+    * Constructor
+    * @param {Object} options Options object with type, coords, gradientUnits and colorStops
+    * @param {Object} [options.type] gradient type linear or radial
+    * @param {Object} [options.gradientUnits] gradient units
+    * @param {Object} [options.offsetX] SVG import compatibility
+    * @param {Object} [options.offsetY] SVG import compatibility
+    * @param {Object[]} options.colorStops contains the colorstops.
+    * @param {Object} options.coords contains the coords of the gradient
+    * @param {Number} [options.coords.x1] X coordiante of the first point for linear or of the focal point for radial
+    * @param {Number} [options.coords.y1] Y coordiante of the first point for linear or of the focal point for radial
+    * @param {Number} [options.coords.x2] X coordiante of the second point for linear or of the center point for radial
+    * @param {Number} [options.coords.y2] Y coordiante of the second point for linear or of the center point for radial
+    * @param {Number} [options.coords.r1] only for radial gradient, radius of the inner circle
+    * @param {Number} [options.coords.r2] only for radial gradient, radius of the external circle
+    * @return {fabric.Gradient} thisArg
+    */
+  def this(options: Anon_ColorStops) = this()
   /**
   	 * Adds another colorStop
   	 * @param colorStop Object with offset and color

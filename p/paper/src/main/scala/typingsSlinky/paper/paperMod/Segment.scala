@@ -1,19 +1,10 @@
 package typingsSlinky.paper.paperMod
 
+import typingsSlinky.paper.paper.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** 
-  * The Segment object represents the points of a path through which its
-  * {@link Curve} objects pass. The segments of a path can be accessed through
-  * its {@link Path#segments} array.
-  * 
-  * Each segment consists of an anchor point ({@link Segment#point}) and
-  * optionaly an incoming and an outgoing handle ({@link Segment#handleIn} and
-  * {@link Segment#handleOut}), describing the tangents of the two {@link Curve}
-  * objects that are connected by this segment.
-  */
 @JSImport("paper", "Segment")
 @js.native
 /** 
@@ -29,19 +20,8 @@ import scala.scalajs.js.annotation._
   */
 class Segment ()
   extends typingsSlinky.paper.paper.Segment {
-  /** 
-    * Creates a new Segment object.
-    * 
-    * @param object - an object containing properties to be set on the
-    *     segment
-    */
-  def this(`object`: js.Object) = this()
-  def this(point: typingsSlinky.paper.paper.Point) = this()
-  def this(point: typingsSlinky.paper.paper.Point, handleIn: typingsSlinky.paper.paper.Point) = this()
-  def this(
-    point: typingsSlinky.paper.paper.Point,
-    handleIn: typingsSlinky.paper.paper.Point,
-    handleOut: typingsSlinky.paper.paper.Point
-  ) = this()
+  def this(point: Point) = this()
+  def this(point: Point, handleIn: Point) = this()
+  def this(point: Point, handleIn: Point, handleOut: Point) = this()
 }
 

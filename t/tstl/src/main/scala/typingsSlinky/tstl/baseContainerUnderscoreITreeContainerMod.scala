@@ -2,8 +2,6 @@ package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.tstl.baseContainerUnderscoreIAssociativeContainerMod._IAssociativeContainer
-import typingsSlinky.tstl.baseContainerUnderscoreITreeContainerMod._Factory
-import typingsSlinky.tstl.baseContainerUnderscoreITreeContainerMod._ITreeContainer
 import typingsSlinky.tstl.baseIteratorIteratorMod.Iterator
 import typingsSlinky.tstl.baseIteratorReverseIteratorMod.IReverseIterator
 import typingsSlinky.tstl.utilityPairMod.Pair

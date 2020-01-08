@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ClientType extends js.Object {
   @js.native
   sealed trait ServerQuery extends ClientType
   
-  /* 0 */ val Regular: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.ClientType.Regular with Double = js.native
-  /* 1 */ val ServerQuery: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.ClientType.ServerQuery with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ClientType with Double] = js.native
+  /* 0 */ @js.native
+  object Regular extends TopLevel[Regular with Double]
+  
+  /* 1 */ @js.native
+  object ServerQuery extends TopLevel[ServerQuery with Double]
+  
 }
 

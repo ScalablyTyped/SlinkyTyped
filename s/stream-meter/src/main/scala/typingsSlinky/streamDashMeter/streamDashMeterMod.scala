@@ -1,7 +1,6 @@
 package typingsSlinky.streamDashMeter
 
 import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.streamDashMeter.streamDashMeterMod.StreamMeter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

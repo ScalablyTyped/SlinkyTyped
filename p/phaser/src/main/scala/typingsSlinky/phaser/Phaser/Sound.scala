@@ -4,13 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.AudioContext
 import typingsSlinky.phaser.Phaser.Cache.BaseCache
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
-import typingsSlinky.phaser.Phaser.Sound.BaseSound
-import typingsSlinky.phaser.Phaser.Sound.BaseSoundManager
-import typingsSlinky.phaser.Phaser.Sound.HTML5AudioSound
-import typingsSlinky.phaser.Phaser.Sound.HTML5AudioSoundManager
-import typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager
-import typingsSlinky.phaser.Phaser.Sound.WebAudioSound
-import typingsSlinky.phaser.Phaser.Sound.WebAudioSoundManager
 import typingsSlinky.phaser.Phaser.Types.Sound.DecodeAudioConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundMarker

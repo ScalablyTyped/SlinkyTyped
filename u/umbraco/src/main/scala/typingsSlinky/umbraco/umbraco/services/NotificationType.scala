@@ -1,5 +1,6 @@
 package typingsSlinky.umbraco.umbraco.services
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object NotificationType extends js.Object {
   @js.native
   sealed trait warning extends NotificationType
   
-  /* 1 */ val error: typingsSlinky.umbraco.umbraco.services.NotificationType.error with Double = js.native
-  /* 3 */ val info: typingsSlinky.umbraco.umbraco.services.NotificationType.info with Double = js.native
-  /* 0 */ val success: typingsSlinky.umbraco.umbraco.services.NotificationType.success with Double = js.native
-  /* 2 */ val warning: typingsSlinky.umbraco.umbraco.services.NotificationType.warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationType with Double] = js.native
+  /* 1 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 3 */ @js.native
+  object info extends TopLevel[info with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 2 */ @js.native
+  object warning extends TopLevel[warning with Double]
+  
 }
 

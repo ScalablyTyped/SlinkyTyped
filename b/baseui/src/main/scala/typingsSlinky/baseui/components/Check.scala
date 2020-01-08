@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Check extends SharedApply_IconProps_2051139184 {
+object Check extends SharedApply_IconProps_550943370 {
   @JSImport("baseui/icon", "Check")
   @js.native
   object componentImport extends js.Object

@@ -17,7 +17,6 @@ import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.react.reactMod.DOMAttributes
 import typingsSlinky.react.reactMod.DetailedReactHTMLElement
 import typingsSlinky.react.reactMod.FunctionComponent
-import typingsSlinky.react.reactMod.FunctionComponentElement
 import typingsSlinky.react.reactMod.InputHTMLAttributes
 import typingsSlinky.react.reactMod.ReactNode
 import typingsSlinky.react.reactMod.ReactSVGElement
@@ -52,9 +51,9 @@ trait Fn_A extends js.Object {
   def apply[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState]): ReactElement = js.native
   def apply[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], children: ReactNode*): ReactElement = js.native
   def apply[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], props: Attributes with P, children: TagMod[Any]*): ReactElement = js.native
-  def apply[P /* <: js.Object */](`type`: FunctionComponent[P]): FunctionComponentElement[P] = js.native
-  def apply[P /* <: js.Object */](`type`: FunctionComponent[P], children: ReactNode*): FunctionComponentElement[P] = js.native
-  def apply[P /* <: js.Object */](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): FunctionComponentElement[P] = js.native
+  def apply[P /* <: js.Object */](`type`: FunctionComponent[P]): ReactElement = js.native
+  def apply[P /* <: js.Object */](`type`: FunctionComponent[P], children: ReactNode*): ReactElement = js.native
+  def apply[P /* <: js.Object */](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): ReactElement = js.native
   def apply[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String, props: ClassAttributes[T] with P, children: TagMod[Any]*): ReactElement = js.native
   def apply[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any): ReactSVGElement = js.native
   def apply[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](

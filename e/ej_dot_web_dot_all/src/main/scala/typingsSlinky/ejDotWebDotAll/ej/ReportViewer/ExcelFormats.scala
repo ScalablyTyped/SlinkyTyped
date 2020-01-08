@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ReportViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object ExcelFormats extends js.Object {
   @js.native
   sealed trait Excel97to2003 extends ExcelFormats
   
-  /* 1 */ val Excel2007: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ExcelFormats.Excel2007 with Double = js.native
-  /* 2 */ val Excel2010: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ExcelFormats.Excel2010 with Double = js.native
-  /* 3 */ val Excel2013: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ExcelFormats.Excel2013 with Double = js.native
-  /* 0 */ val Excel97to2003: typingsSlinky.ejDotWebDotAll.ej.ReportViewer.ExcelFormats.Excel97to2003 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExcelFormats with Double] = js.native
+  /* 1 */ @js.native
+  object Excel2007 extends TopLevel[Excel2007 with Double]
+  
+  /* 2 */ @js.native
+  object Excel2010 extends TopLevel[Excel2010 with Double]
+  
+  /* 3 */ @js.native
+  object Excel2013 extends TopLevel[Excel2013 with Double]
+  
+  /* 0 */ @js.native
+  object Excel97to2003 extends TopLevel[Excel97to2003 with Double]
+  
 }
 

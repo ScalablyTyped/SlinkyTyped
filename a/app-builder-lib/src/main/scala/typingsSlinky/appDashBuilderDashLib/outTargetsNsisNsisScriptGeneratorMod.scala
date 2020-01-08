@@ -1,6 +1,5 @@
 package typingsSlinky.appDashBuilderDashLib
 
-import typingsSlinky.appDashBuilderDashLib.outTargetsNsisNsisScriptGeneratorMod.NsisScriptGenerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

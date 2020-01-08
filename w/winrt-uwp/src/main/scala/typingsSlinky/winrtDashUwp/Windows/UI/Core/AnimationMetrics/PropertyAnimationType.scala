@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Core.AnimationMetrics
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PropertyAnimationType extends js.Object {
   @js.native
   sealed trait translation extends PropertyAnimationType
   
-  /* 2 */ val opacity: typingsSlinky.winrtDashUwp.Windows.UI.Core.AnimationMetrics.PropertyAnimationType.opacity with Double = js.native
-  /* 0 */ val scale: typingsSlinky.winrtDashUwp.Windows.UI.Core.AnimationMetrics.PropertyAnimationType.scale with Double = js.native
-  /* 1 */ val translation: typingsSlinky.winrtDashUwp.Windows.UI.Core.AnimationMetrics.PropertyAnimationType.translation with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PropertyAnimationType with Double] = js.native
+  /* 2 */ @js.native
+  object opacity extends TopLevel[opacity with Double]
+  
+  /* 0 */ @js.native
+  object scale extends TopLevel[scale with Double]
+  
+  /* 1 */ @js.native
+  object translation extends TopLevel[translation with Double]
+  
 }
 

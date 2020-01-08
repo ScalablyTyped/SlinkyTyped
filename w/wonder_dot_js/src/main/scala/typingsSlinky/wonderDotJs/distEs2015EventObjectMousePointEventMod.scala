@@ -2,7 +2,6 @@ package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015EventObjectEventNameHandlerMod.EEventName
 import typingsSlinky.wonderDotJs.distEs2015EventObjectMouseEventMod.MouseEvent
-import typingsSlinky.wonderDotJs.distEs2015EventObjectMousePointEventMod.MousePointEvent
 import typingsSlinky.wonderDotJs.distEs2015EventObjectPointEventMod.PointEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

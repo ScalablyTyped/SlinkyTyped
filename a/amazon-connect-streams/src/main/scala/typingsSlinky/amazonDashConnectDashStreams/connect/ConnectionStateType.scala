@@ -1,5 +1,6 @@
 package typingsSlinky.amazonDashConnectDashStreams.connect
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ConnectionStateType extends js.Object {
   @js.native
   sealed trait INIT extends ConnectionStateType
   
-  /* "connected" */ val CONNECTED: typingsSlinky.amazonDashConnectDashStreams.connect.ConnectionStateType.CONNECTED with String = js.native
-  /* "connecting" */ val CONNECTING: typingsSlinky.amazonDashConnectDashStreams.connect.ConnectionStateType.CONNECTING with String = js.native
-  /* "disconnected" */ val DISCONNECTED: typingsSlinky.amazonDashConnectDashStreams.connect.ConnectionStateType.DISCONNECTED with String = js.native
-  /* "hold" */ val HOLD: typingsSlinky.amazonDashConnectDashStreams.connect.ConnectionStateType.HOLD with String = js.native
-  /* "init" */ val INIT: typingsSlinky.amazonDashConnectDashStreams.connect.ConnectionStateType.INIT with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ConnectionStateType with String] = js.native
+  /* "connected" */ @js.native
+  object CONNECTED extends TopLevel[CONNECTED with String]
+  
+  /* "connecting" */ @js.native
+  object CONNECTING extends TopLevel[CONNECTING with String]
+  
+  /* "disconnected" */ @js.native
+  object DISCONNECTED extends TopLevel[DISCONNECTED with String]
+  
+  /* "hold" */ @js.native
+  object HOLD extends TopLevel[HOLD with String]
+  
+  /* "init" */ @js.native
+  object INIT extends TopLevel[INIT with String]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object PhoneTriggerType extends js.Object {
   @js.native
   sealed trait newVoicemailMessage extends PhoneTriggerType
   
-  /* 3 */ val airplaneModeDisabledForEmergencyCall: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.airplaneModeDisabledForEmergencyCall with Double = js.native
-  /* 5 */ val callBlocked: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.callBlocked with Double = js.native
-  /* 1 */ val callHistoryChanged: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.callHistoryChanged with Double = js.native
-  /* 4 */ val callOriginDataRequest: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.callOriginDataRequest with Double = js.native
-  /* 2 */ val lineChanged: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.lineChanged with Double = js.native
-  /* 0 */ val newVoicemailMessage: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType.newVoicemailMessage with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhoneTriggerType with Double] = js.native
+  /* 3 */ @js.native
+  object airplaneModeDisabledForEmergencyCall extends TopLevel[airplaneModeDisabledForEmergencyCall with Double]
+  
+  /* 5 */ @js.native
+  object callBlocked extends TopLevel[callBlocked with Double]
+  
+  /* 1 */ @js.native
+  object callHistoryChanged extends TopLevel[callHistoryChanged with Double]
+  
+  /* 4 */ @js.native
+  object callOriginDataRequest extends TopLevel[callOriginDataRequest with Double]
+  
+  /* 2 */ @js.native
+  object lineChanged extends TopLevel[lineChanged with Double]
+  
+  /* 0 */ @js.native
+  object newVoicemailMessage extends TopLevel[newVoicemailMessage with Double]
+  
 }
 

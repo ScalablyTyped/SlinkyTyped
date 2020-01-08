@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object AttributeRequiredLevel extends js.Object {
   @js.native
   sealed trait SystemRequired extends AttributeRequiredLevel
   
-  /* 0 */ val ApplicationRequired: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeRequiredLevel.ApplicationRequired with scala.Double = js.native
-  /* 1 */ val None: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeRequiredLevel.None with scala.Double = js.native
-  /* 2 */ val Recommended: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeRequiredLevel.Recommended with scala.Double = js.native
-  /* 3 */ val SystemRequired: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeRequiredLevel.SystemRequired with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[AttributeRequiredLevel with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[AttributeRequiredLevel with Double] = js.native
+  /* 0 */ @js.native
+  object ApplicationRequired extends TopLevel[ApplicationRequired with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Recommended extends TopLevel[Recommended with Double]
+  
+  /* 3 */ @js.native
+  object SystemRequired extends TopLevel[SystemRequired with Double]
+  
 }
 

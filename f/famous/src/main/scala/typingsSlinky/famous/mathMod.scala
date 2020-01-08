@@ -1,9 +1,5 @@
 package typingsSlinky.famous
 
-import typingsSlinky.famous.mathMod.Mat33
-import typingsSlinky.famous.mathMod.Quaternion
-import typingsSlinky.famous.mathMod.Vec2
-import typingsSlinky.famous.mathMod.Vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

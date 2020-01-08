@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object TimedTextUnit extends js.Object {
   @js.native
   sealed trait pixels extends TimedTextUnit
   
-  /* 1 */ val percentage: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedTextUnit.percentage with Double = js.native
-  /* 0 */ val pixels: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedTextUnit.pixels with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimedTextUnit with Double] = js.native
+  /* 1 */ @js.native
+  object percentage extends TopLevel[percentage with Double]
+  
+  /* 0 */ @js.native
+  object pixels extends TopLevel[pixels with Double]
+  
 }
 

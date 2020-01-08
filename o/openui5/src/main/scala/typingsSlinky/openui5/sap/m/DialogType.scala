@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object DialogType extends js.Object {
   @js.native
   sealed trait Standard extends DialogType
   
-  /* 0 */ val Message: typingsSlinky.openui5.sap.m.DialogType.Message with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.openui5.sap.m.DialogType.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DialogType with Double] = js.native
+  /* 0 */ @js.native
+  object Message extends TopLevel[Message with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

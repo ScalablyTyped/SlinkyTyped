@@ -1,6 +1,5 @@
 package typingsSlinky.atBlueprintjsDatetime
 
-import typingsSlinky.atBlueprintjsDatetime.libEsmDatePickerNavbarMod.IDatePickerNavbarProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashDayDashPicker.typesPropsMod.NavbarElementProps
 import scala.scalajs.js

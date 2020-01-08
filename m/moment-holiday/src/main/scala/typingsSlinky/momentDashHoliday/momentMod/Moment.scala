@@ -1,7 +1,7 @@
 package typingsSlinky.momentDashHoliday.momentMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.momentDashHoliday.momentDashHolidayNumbers.`false`
+import typingsSlinky.momentDashHoliday.momentDashHolidayBooleans.`false`
 import typingsSlinky.std.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`

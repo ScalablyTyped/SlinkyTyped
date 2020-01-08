@@ -1,7 +1,7 @@
 
 # Scala.js typings for intl-messageformat
 
-Typings are for version 7.6.1
+Typings are for version 7.7.5
 
 ## Library description:
 Formats ICU Message strings with number, date, plural, and select placeholders to create localized messages.
@@ -10,15 +10,15 @@ Formats ICU Message strings with number, date, plural, and select placeholders t
 | ------------------ | :-------------: |
 | Full name          | intl-messageformat |
 | Keywords           | i18n, intl, internationalization, localization, globalization, messageformat, parser, plural, icu |
-| # releases         | 4 |
-| # dependents       | 151 |
-| # downloads        | 17569888 |
+| # releases         | 76 |
+| # dependents       | 188 |
+| # downloads        | 28538883 |
 | # stars            | 6 |
 
 ## Links
-- [Homepage](https://github.com/yahoo/intl-messageformat)
-- [Bugs](https://github.com/yahoo/intl-messageformat/issues)
-- [Repository](https://github.com/yahoo/intl-messageformat)
+- [Homepage](https://github.com/formatjs/formatjs)
+- [Bugs](https://github.com/formatjs/formatjs/issues)
+- [Repository](https://github.com/formatjs/formatjs)
 - [Npm](https://www.npmjs.com/package/intl-messageformat)
     
 

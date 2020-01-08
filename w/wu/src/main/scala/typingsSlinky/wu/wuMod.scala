@@ -3,9 +3,6 @@ package typingsSlinky.wu
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
-import typingsSlinky.wu.wuMod.Consumer
-import typingsSlinky.wu.wuMod.Filter
-import typingsSlinky.wu.wuMod.WuIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

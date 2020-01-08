@@ -1,6 +1,5 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.distTypesUtilsAbiDashCoderMod.AbiCoder
 import typingsSlinky.ethers.distTypesUtilsTypesMod.Arrayish
 import typingsSlinky.ethers.distTypesUtilsTypesMod.CoerceFunc
 import typingsSlinky.ethers.distTypesUtilsTypesMod.EventFragment

@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object HostBannerMode extends js.Object {
   @js.native
   sealed trait NOADJUST extends HostBannerMode
   
-  /* 1 */ val IGNOREASPECT: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.HostBannerMode.IGNOREASPECT with Double = js.native
-  /* 2 */ val KEEPASPECT: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.HostBannerMode.KEEPASPECT with Double = js.native
-  /* 0 */ val NOADJUST: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.HostBannerMode.NOADJUST with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HostBannerMode with Double] = js.native
+  /* 1 */ @js.native
+  object IGNOREASPECT extends TopLevel[IGNOREASPECT with Double]
+  
+  /* 2 */ @js.native
+  object KEEPASPECT extends TopLevel[KEEPASPECT with Double]
+  
+  /* 0 */ @js.native
+  object NOADJUST extends TopLevel[NOADJUST with Double]
+  
 }
 

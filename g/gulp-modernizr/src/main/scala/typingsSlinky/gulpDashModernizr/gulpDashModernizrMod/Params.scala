@@ -2,7 +2,7 @@ package typingsSlinky.gulpDashModernizr.gulpDashModernizrMod
 
 import typingsSlinky.gulpDashModernizr.Anon_ClassPrefix
 import typingsSlinky.gulpDashModernizr.Anon_Src
-import typingsSlinky.gulpDashModernizr.gulpDashModernizrNumbers.`false`
+import typingsSlinky.gulpDashModernizr.gulpDashModernizrBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

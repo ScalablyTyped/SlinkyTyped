@@ -1,6 +1,5 @@
 package typingsSlinky.fileDashSelector
 
-import typingsSlinky.fileDashSelector.distFileMod.FileWithPath
 import typingsSlinky.std.File
 import typingsSlinky.std.Map
 import scala.scalajs.js

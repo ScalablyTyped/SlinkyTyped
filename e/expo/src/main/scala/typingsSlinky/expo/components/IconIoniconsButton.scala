@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconIoniconsButton extends SharedApply_IconButtonProps_562613305[Button] {
+object IconIoniconsButton extends SharedApply_IconButtonProps_1447369838[Button] {
   @JSImport("expo/build/globals.web", "Icon.Ionicons.Button")
   @js.native
   object componentImport extends js.Object

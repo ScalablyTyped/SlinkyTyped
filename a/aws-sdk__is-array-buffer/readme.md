@@ -12,7 +12,7 @@ Provides a function for detecting if an argument is an ArrayBuffer
 | Keywords           | - |
 | # releases         | 4 |
 | # dependents       | 11 |
-| # downloads        | 15414 |
+| # downloads        | 940075 |
 | # stars            | 0 |
 
 ## Links

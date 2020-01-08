@@ -1,8 +1,5 @@
 package typingsSlinky.snabbdom
 
-import typingsSlinky.snabbdom.hMod.ArrayOrElement
-import typingsSlinky.snabbdom.hMod.VNodeChildElement
-import typingsSlinky.snabbdom.hMod.VNodeChildren
 import typingsSlinky.snabbdom.vnodeMod.VNode
 import typingsSlinky.snabbdom.vnodeMod.VNodeData
 import scala.scalajs.js

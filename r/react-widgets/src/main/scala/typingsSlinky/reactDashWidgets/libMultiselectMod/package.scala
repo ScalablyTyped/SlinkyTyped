@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libMultiselectMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type Multiselect = ReactElement
+  type MultiselectClass = ReactComponentClass[MultiselectProps]
 }

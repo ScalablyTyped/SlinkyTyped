@@ -1,6 +1,5 @@
 package typingsSlinky.gitDashUrlDashParse
 
-import typingsSlinky.gitDashUrlDashParse.gitDashUrlDashParseMod.GitUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

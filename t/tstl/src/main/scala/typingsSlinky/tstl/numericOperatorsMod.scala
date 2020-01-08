@@ -3,7 +3,6 @@ package typingsSlinky.tstl
 import typingsSlinky.std.Pick
 import typingsSlinky.tstl.numericIComputableMod.IComputable
 import typingsSlinky.tstl.numericINegatableMod.INegatable
-import typingsSlinky.tstl.numericOperatorsMod.Param
 import typingsSlinky.tstl.tstlStrings.plus
 import scala.scalajs.js
 import scala.scalajs.js.`|`

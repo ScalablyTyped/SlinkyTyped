@@ -5,28 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`=`
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`>`
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`>=`
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`<`
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`<=`
-  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.`!=`
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.Equalssign
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.Greaterthansign
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.GreaterthansignEqualssign
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.Lessthansign
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.LessthansignEqualssign
+  - typings.algoliasearchDashHelper.algoliasearchDashHelperStrings.ExclamationmarkEqualssign
 */
 trait Operator extends js.Object
 
 object Operator {
   @scala.inline
-  def `!=`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`!=` = this.cast("!=")
+  def Equalssign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.Equalssign = this.cast("=")
   @scala.inline
-  def `<`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`<` = this.cast("<")
+  def ExclamationmarkEqualssign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.ExclamationmarkEqualssign = this.cast("!=")
   @scala.inline
-  def `<=`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`<=` = this.cast("<=")
+  def Greaterthansign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `=`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`=` = this.cast("=")
+  def GreaterthansignEqualssign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.algoliasearchDashHelper.algoliasearchDashHelperStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FilledTextField
-  extends SharedApply_TextFieldProps2007863510[
+  extends SharedApply_TextFieldProps_324166679[
       typingsSlinky.reactDashNativeDashMaterialDashTextfield.reactDashNativeDashMaterialDashTextfieldMod.FilledTextField
     ] {
   @JSImport("react-native-material-textfield", "FilledTextField")

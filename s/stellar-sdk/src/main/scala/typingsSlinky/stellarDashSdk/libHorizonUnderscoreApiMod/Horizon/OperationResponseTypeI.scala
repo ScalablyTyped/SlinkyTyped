@@ -1,5 +1,6 @@
 package typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,19 +47,43 @@ object OperationResponseTypeI extends js.Object {
   @js.native
   sealed trait setOptions extends OperationResponseTypeI
   
-  /* 8 */ val accountMerge: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.accountMerge with Double = js.native
-  /* 7 */ val allowTrust: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.allowTrust with Double = js.native
-  /* 11 */ val bumpSequence: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.bumpSequence with Double = js.native
-  /* 6 */ val changeTrust: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.changeTrust with Double = js.native
-  /* 0 */ val createAccount: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.createAccount with Double = js.native
-  /* 3 */ val createPassiveOffer: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.createPassiveOffer with Double = js.native
-  /* 9 */ val inflation: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.inflation with Double = js.native
-  /* 10 */ val manageData: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.manageData with Double = js.native
-  /* 4 */ val manageOffer: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.manageOffer with Double = js.native
-  /* 2 */ val pathPayment: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.pathPayment with Double = js.native
-  /* 1 */ val payment: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.payment with Double = js.native
-  /* 5 */ val setOptions: typingsSlinky.stellarDashSdk.libHorizonUnderscoreApiMod.Horizon.OperationResponseTypeI.setOptions with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OperationResponseTypeI with Double] = js.native
+  /* 8 */ @js.native
+  object accountMerge extends TopLevel[accountMerge with Double]
+  
+  /* 7 */ @js.native
+  object allowTrust extends TopLevel[allowTrust with Double]
+  
+  /* 11 */ @js.native
+  object bumpSequence extends TopLevel[bumpSequence with Double]
+  
+  /* 6 */ @js.native
+  object changeTrust extends TopLevel[changeTrust with Double]
+  
+  /* 0 */ @js.native
+  object createAccount extends TopLevel[createAccount with Double]
+  
+  /* 3 */ @js.native
+  object createPassiveOffer extends TopLevel[createPassiveOffer with Double]
+  
+  /* 9 */ @js.native
+  object inflation extends TopLevel[inflation with Double]
+  
+  /* 10 */ @js.native
+  object manageData extends TopLevel[manageData with Double]
+  
+  /* 4 */ @js.native
+  object manageOffer extends TopLevel[manageOffer with Double]
+  
+  /* 2 */ @js.native
+  object pathPayment extends TopLevel[pathPayment with Double]
+  
+  /* 1 */ @js.native
+  object payment extends TopLevel[payment with Double]
+  
+  /* 5 */ @js.native
+  object setOptions extends TopLevel[setOptions with Double]
+  
 }
 

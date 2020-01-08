@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +32,13 @@ object AttachmentStatus extends js.Object {
   @js.native
   sealed trait Removed extends AttachmentStatus
   
-  /* "added" */ val Added: typingsSlinky.officeDashJs.Office.MailboxEnums.AttachmentStatus.Added with String = js.native
-  /* "removed" */ val Removed: typingsSlinky.officeDashJs.Office.MailboxEnums.AttachmentStatus.Removed with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[AttachmentStatus with String] = js.native
+  /* "added" */ @js.native
+  object Added extends TopLevel[Added with String]
+  
+  /* "removed" */ @js.native
+  object Removed extends TopLevel[Removed with String]
+  
 }
 

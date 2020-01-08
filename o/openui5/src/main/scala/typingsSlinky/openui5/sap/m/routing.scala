@@ -1,8 +1,5 @@
 package typingsSlinky.openui5.sap.m
 
-import typingsSlinky.openui5.sap.m.routing.RouteMatchedHandler
-import typingsSlinky.openui5.sap.m.routing.Router
-import typingsSlinky.openui5.sap.m.routing.TargetHandler
 import typingsSlinky.openui5.sap.ui.base.Metadata
 import typingsSlinky.openui5.sap.ui.core.UIComponent
 import scala.scalajs.js

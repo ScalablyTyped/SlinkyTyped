@@ -1,6 +1,6 @@
 package typingsSlinky.expoDashAsset
 
-import typingsSlinky.expoDashAsset.expoDashAssetNumbers.`false`
+import typingsSlinky.expoDashAsset.expoDashAssetBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

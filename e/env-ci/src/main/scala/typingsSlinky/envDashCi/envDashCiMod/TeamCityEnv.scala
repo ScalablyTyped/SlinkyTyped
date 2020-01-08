@@ -1,6 +1,6 @@
 package typingsSlinky.envDashCi.envDashCiMod
 
-import typingsSlinky.envDashCi.envDashCiNumbers.`true`
+import typingsSlinky.envDashCi.envDashCiBooleans.`true`
 import typingsSlinky.envDashCi.envDashCiStrings.TeamCity
 import typingsSlinky.envDashCi.envDashCiStrings.teamcity_
 import scala.scalajs.js

@@ -2,7 +2,6 @@ package typingsSlinky.reactDashSelect
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactDashSelect.srcAnimatedValueContainerMod.AnimatedValueContainerProps
 import typingsSlinky.reactDashSelect.srcComponentsContainersMod.ValueContainerProps
 import typingsSlinky.reactDashSelect.srcSelectMod.Props
 import typingsSlinky.reactDashSelect.srcTypesMod.ActionTypes

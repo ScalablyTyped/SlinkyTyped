@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object inkDashSpinnerMod {
+  import slinky.core.ReactComponentClass
   import typingsSlinky.chalk.chalkMod.Chalk
   import typingsSlinky.inkDashSpinner.inkDashSpinnerStrings.bgHex
   import typingsSlinky.inkDashSpinner.inkDashSpinnerStrings.bgHsl
@@ -33,7 +34,7 @@ package object inkDashSpinnerMod {
   type ChalkProps = BooleansPartial[ChalkCommons] with StringifyPartial[ChalkKeywordsAndHexes] with TupleOfNumbersPartial[ChalkColorModels]
   // Omit taken from https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
   type Omit[T, K] = Pick[T, Exclude[String, K]]
-  type Spinner = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<SpinnerProps & ChalkProps> */ js.Any
+  type Spinner = ReactComponentClass[SpinnerProps with ChalkProps]
   type StringifyPartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? string}
     */ typingsSlinky.inkDashSpinner.inkDashSpinnerStrings.StringifyPartial with js.Any

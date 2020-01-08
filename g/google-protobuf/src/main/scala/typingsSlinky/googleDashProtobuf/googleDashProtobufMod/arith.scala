@@ -1,7 +1,5 @@
 package typingsSlinky.googleDashProtobuf.googleDashProtobufMod
 
-import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.arith.Int64
-import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.arith.UInt64
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

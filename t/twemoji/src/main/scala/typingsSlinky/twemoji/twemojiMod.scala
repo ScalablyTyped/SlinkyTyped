@@ -2,9 +2,7 @@ package typingsSlinky.twemoji
 
 import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Partial
-import typingsSlinky.twemoji.twemojiMod.ParseCallback
-import typingsSlinky.twemoji.twemojiMod.ParseObject
-import typingsSlinky.twemoji.twemojiNumbers.`false`
+import typingsSlinky.twemoji.twemojiBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

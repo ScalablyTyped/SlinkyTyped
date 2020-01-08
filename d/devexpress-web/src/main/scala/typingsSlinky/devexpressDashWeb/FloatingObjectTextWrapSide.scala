@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,11 +38,19 @@ object FloatingObjectTextWrapSide extends js.Object {
   @js.native
   sealed trait Right extends FloatingObjectTextWrapSide
   
-  /* 0 */ val Both: typingsSlinky.devexpressDashWeb.FloatingObjectTextWrapSide.Both with Double = js.native
-  /* 3 */ val Largest: typingsSlinky.devexpressDashWeb.FloatingObjectTextWrapSide.Largest with Double = js.native
-  /* 1 */ val Left: typingsSlinky.devexpressDashWeb.FloatingObjectTextWrapSide.Left with Double = js.native
-  /* 2 */ val Right: typingsSlinky.devexpressDashWeb.FloatingObjectTextWrapSide.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FloatingObjectTextWrapSide with Double] = js.native
+  /* 0 */ @js.native
+  object Both extends TopLevel[Both with Double]
+  
+  /* 3 */ @js.native
+  object Largest extends TopLevel[Largest with Double]
+  
+  /* 1 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 2 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

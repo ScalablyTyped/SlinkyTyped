@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CreateSelectorInstance extends js.Object {
-  def apply[S, R1, T](
-    selectors: js.Array[typingsSlinky.reselect.reselectMod.Selector[S, R1]],
-    combiner: js.Function1[/* res */ R1, T]
-  ): typingsSlinky.reselect.reselectMod.OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
-  def apply[S, R1, T](
-    selector: typingsSlinky.reselect.reselectMod.Selector[S, R1],
-    combiner: js.Function1[/* res */ R1, T]
-  ): typingsSlinky.reselect.reselectMod.OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
+  def apply[S1, R1, T](
+    selector1: typingsSlinky.reselect.reselectMod.Selector[S1, R1],
+    combiner: js.Function1[/* res1 */ R1, T]
+  ): typingsSlinky.reselect.reselectMod.OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
+  def apply[S1, R1, T](
+    selectors: js.Array[typingsSlinky.reselect.reselectMod.Selector[S1, R1]],
+    combiner: js.Function1[/* res1 */ R1, T]
+  ): typingsSlinky.reselect.reselectMod.OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
   def apply[S1, P1, R1, T](
     selector1: typingsSlinky.reselect.reselectMod.ParametricSelector[S1, P1, R1],
     combiner: js.Function1[/* res1 */ R1, T]

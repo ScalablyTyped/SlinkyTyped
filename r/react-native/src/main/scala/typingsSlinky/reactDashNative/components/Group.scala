@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Group
-  extends SharedApply_ARTGroupProps_107905800[typingsSlinky.reactDashNative.reactDashNativeMod.Group] {
+  extends SharedApply_ARTGroupProps_1757151433[typingsSlinky.reactDashNative.reactDashNativeMod.Group] {
   @JSImport("react-native", "Group")
   @js.native
   object componentImport extends js.Object

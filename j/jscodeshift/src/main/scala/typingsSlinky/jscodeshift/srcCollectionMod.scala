@@ -2,8 +2,6 @@ package typingsSlinky.jscodeshift
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.jscodeshift.srcCollectionMod.ASTPath
-import typingsSlinky.jscodeshift.srcCollectionMod.Collection
 import typingsSlinky.jscodeshift.srcCollectionsNodeMod.MutationMethods
 import typingsSlinky.jscodeshift.srcCollectionsNodeMod.TraversalMethods
 import typingsSlinky.jscodeshift.srcCollectionsVariableDeclaratorMod.GlobalMethods

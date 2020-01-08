@@ -1,6 +1,7 @@
 package typingsSlinky.ember.emberMod.Ember
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.atEmberObject.atEmberObjectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object Evented
   extends TopLevel[
-      typingsSlinky.atEmberObject.mixinMod.default[
-        typingsSlinky.atEmberObject.eventedMod.Evented, 
-        typingsSlinky.atEmberObject.atEmberObjectMod.default
-      ]
+      typingsSlinky.atEmberObject.mixinMod.default[typingsSlinky.atEmberObject.eventedMod.Evented, default]
     ]
 

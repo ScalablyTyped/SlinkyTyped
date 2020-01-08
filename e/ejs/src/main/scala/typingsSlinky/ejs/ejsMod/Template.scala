@@ -1,6 +1,6 @@
 package typingsSlinky.ejs.ejsMod
 
-import typingsSlinky.ejs.ejsMod.Template.modes
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,6 @@ import scala.scalajs.js.annotation._
 class Template protected () extends js.Object {
   def this(text: String) = this()
   def this(text: String, opts: Options) = this()
-  /**
-  	 * The compiled dependencies of this template.
-  	 *
-  	 * Always empty if legacy include directives are disabled.
-  	 */
-  val dependencies: js.Array[String] = js.native
   /**
   	 * The compiled JavaScript function source, or the empty string
   	 * if the template hasn't been compiled yet.
@@ -54,13 +48,23 @@ object Template extends js.Object {
     @js.native
     sealed trait RAW extends modes
     
-    /* "comment" */ val COMMENT: typingsSlinky.ejs.ejsMod.Template.modes.COMMENT with String = js.native
-    /* "escaped" */ val ESCAPED: typingsSlinky.ejs.ejsMod.Template.modes.ESCAPED with String = js.native
-    /* "eval" */ val EVAL: typingsSlinky.ejs.ejsMod.Template.modes.EVAL with String = js.native
-    /* "literal" */ val LITERAL: typingsSlinky.ejs.ejsMod.Template.modes.LITERAL with String = js.native
-    /* "raw" */ val RAW: typingsSlinky.ejs.ejsMod.Template.modes.RAW with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[modes with String] = js.native
+    /* "comment" */ @js.native
+    object COMMENT extends TopLevel[COMMENT with String]
+    
+    /* "escaped" */ @js.native
+    object ESCAPED extends TopLevel[ESCAPED with String]
+    
+    /* "eval" */ @js.native
+    object EVAL extends TopLevel[EVAL with String]
+    
+    /* "literal" */ @js.native
+    object LITERAL extends TopLevel[LITERAL with String]
+    
+    /* "raw" */ @js.native
+    object RAW extends TopLevel[RAW with String]
+    
   }
   
 }

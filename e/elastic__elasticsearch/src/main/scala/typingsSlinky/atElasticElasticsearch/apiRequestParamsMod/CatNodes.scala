@@ -1,10 +1,29 @@
 package typingsSlinky.atElasticElasticsearch.apiRequestParamsMod
 
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`d LeftparenthesisDaysRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`h LeftparenthesisHoursRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`m LeftparenthesisMinutesRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`micros LeftparenthesisMicrosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`ms LeftparenthesisMillisecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`nanos LeftparenthesisNanosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`s LeftparenthesisSecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.b
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.g
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.gb
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.k
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.kb
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.m
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.mb
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.p
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.pb
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.t
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.tb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CatNodes extends Generic {
+  var bytes: js.UndefOr[b | k | kb | m | mb | g | gb | t | tb | p | pb] = js.undefined
   var format: js.UndefOr[String] = js.undefined
   var full_id: js.UndefOr[Boolean] = js.undefined
   var h: js.UndefOr[String | js.Array[String]] = js.undefined
@@ -12,12 +31,16 @@ trait CatNodes extends Generic {
   var local: js.UndefOr[Boolean] = js.undefined
   var master_timeout: js.UndefOr[String] = js.undefined
   var s: js.UndefOr[String | js.Array[String]] = js.undefined
+  var time: js.UndefOr[
+    (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`)
+  ] = js.undefined
   var v: js.UndefOr[Boolean] = js.undefined
 }
 
 object CatNodes {
   @scala.inline
   def apply(
+    bytes: b | k | kb | m | mb | g | gb | t | tb | p | pb = null,
     error_trace: js.UndefOr[Boolean] = js.undefined,
     filter_path: String | js.Array[String] = null,
     format: String = null,
@@ -32,9 +55,11 @@ object CatNodes {
     pretty: js.UndefOr[Boolean] = js.undefined,
     s: String | js.Array[String] = null,
     source: String = null,
+    time: (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`) = null,
     v: js.UndefOr[Boolean] = js.undefined
   ): CatNodes = {
     val __obj = js.Dynamic.literal()
+    if (bytes != null) __obj.updateDynamic("bytes")(bytes.asInstanceOf[js.Any])
     if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
     if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
     if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
@@ -49,6 +74,7 @@ object CatNodes {
     if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
     if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
     if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatNodes]
   }

@@ -3,6 +3,7 @@ package typingsSlinky.reactDashBreadcrumbsDashDynamic.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashBreadcrumbsDashDynamic.reactDashBreadcrumbsDashDynamicMod.BreadcrumbsProps
 import scala.scalajs.js
@@ -45,6 +46,12 @@ object Breadcrumbs
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashBreadcrumbsDashDynamic.reactDashBreadcrumbsDashDynamicMod.Breadcrumbs
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashBreadcrumbsDashDynamic.reactDashBreadcrumbsDashDynamicMod.Breadcrumbs](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BreadcrumbsProps
 }
 

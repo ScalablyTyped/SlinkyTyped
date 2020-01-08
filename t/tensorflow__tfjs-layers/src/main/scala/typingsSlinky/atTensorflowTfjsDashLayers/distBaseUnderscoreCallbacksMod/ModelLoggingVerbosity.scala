@@ -1,5 +1,6 @@
 package typingsSlinky.atTensorflowTfjsDashLayers.distBaseUnderscoreCallbacksMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ModelLoggingVerbosity extends js.Object {
   @js.native
   sealed trait VERBOSE extends ModelLoggingVerbosity
   
-  /* 0 */ val SILENT: typingsSlinky.atTensorflowTfjsDashLayers.distBaseUnderscoreCallbacksMod.ModelLoggingVerbosity.SILENT with Double = js.native
-  /* 1 */ val VERBOSE: typingsSlinky.atTensorflowTfjsDashLayers.distBaseUnderscoreCallbacksMod.ModelLoggingVerbosity.VERBOSE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ModelLoggingVerbosity with Double] = js.native
+  /* 0 */ @js.native
+  object SILENT extends TopLevel[SILENT with Double]
+  
+  /* 1 */ @js.native
+  object VERBOSE extends TopLevel[VERBOSE with Double]
+  
 }
 

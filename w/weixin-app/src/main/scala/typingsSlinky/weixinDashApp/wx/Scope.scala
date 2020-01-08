@@ -6,15 +6,15 @@ import scala.scalajs.js.annotation._
 
 // scope 列表
 /* Rewritten from type alias, can be one of: 
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTuserInfo
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTuserLocation
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTaddress
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTinvoiceTitle
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTinvoice
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTwerun
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTrecord
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTwritePhotosAlbum
-  - typings.weixinDashApp.weixinDashAppStrings.scopeDOTcamera
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotuserInfo
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotuserLocation
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotaddress
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotinvoiceTitle
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotinvoice
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotwerun
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotrecord
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotwritePhotosAlbum
+  - typings.weixinDashApp.weixinDashAppStrings.scopeDotcamera
 */
 trait Scope extends js.Object
 
@@ -22,22 +22,22 @@ object Scope {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def scopeDOTaddress: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTaddress = this.cast("scope.address")
+  def scopeDotaddress: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotaddress = this.cast("scope.address")
   @scala.inline
-  def scopeDOTcamera: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTcamera = this.cast("scope.camera")
+  def scopeDotcamera: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotcamera = this.cast("scope.camera")
   @scala.inline
-  def scopeDOTinvoice: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTinvoice = this.cast("scope.invoice")
+  def scopeDotinvoice: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotinvoice = this.cast("scope.invoice")
   @scala.inline
-  def scopeDOTinvoiceTitle: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTinvoiceTitle = this.cast("scope.invoiceTitle")
+  def scopeDotinvoiceTitle: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotinvoiceTitle = this.cast("scope.invoiceTitle")
   @scala.inline
-  def scopeDOTrecord: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTrecord = this.cast("scope.record")
+  def scopeDotrecord: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotrecord = this.cast("scope.record")
   @scala.inline
-  def scopeDOTuserInfo: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTuserInfo = this.cast("scope.userInfo")
+  def scopeDotuserInfo: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotuserInfo = this.cast("scope.userInfo")
   @scala.inline
-  def scopeDOTuserLocation: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTuserLocation = this.cast("scope.userLocation")
+  def scopeDotuserLocation: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotuserLocation = this.cast("scope.userLocation")
   @scala.inline
-  def scopeDOTwerun: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTwerun = this.cast("scope.werun")
+  def scopeDotwerun: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotwerun = this.cast("scope.werun")
   @scala.inline
-  def scopeDOTwritePhotosAlbum: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDOTwritePhotosAlbum = this.cast("scope.writePhotosAlbum")
+  def scopeDotwritePhotosAlbum: typingsSlinky.weixinDashApp.weixinDashAppStrings.scopeDotwritePhotosAlbum = this.cast("scope.writePhotosAlbum")
 }
 

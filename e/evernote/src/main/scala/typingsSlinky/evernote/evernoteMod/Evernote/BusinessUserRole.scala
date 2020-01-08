@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +24,13 @@ object BusinessUserRole extends js.Object {
   @js.native
   sealed trait NORMAL extends BusinessUserRole
   
-  /* 1 */ val ADMIN: typingsSlinky.evernote.evernoteMod.Evernote.BusinessUserRole.ADMIN with Double = js.native
-  /* 2 */ val NORMAL: typingsSlinky.evernote.evernoteMod.Evernote.BusinessUserRole.NORMAL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BusinessUserRole with Double] = js.native
+  /* 1 */ @js.native
+  object ADMIN extends TopLevel[ADMIN with Double]
+  
+  /* 2 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
 }
 

@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,7 +48,7 @@ trait CircleProperties extends PolygonProperties {
     *
     * @default meters
     */
-  var radiusUnit: js.UndefOr[feet | kilometers | meters | miles | `nautical-miles` | yards] = js.undefined
+  var radiusUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
 }
 
 object CircleProperties {
@@ -62,7 +62,7 @@ object CircleProperties {
     isSelfIntersecting: js.UndefOr[Boolean] = js.undefined,
     numberOfPoints: Int | Double = null,
     radius: Int | Double = null,
-    radiusUnit: feet | kilometers | meters | miles | `nautical-miles` | yards = null,
+    radiusUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null,
     rings: js.Array[js.Array[js.Array[Double]]] = null,
     spatialReference: SpatialReferenceProperties = null
   ): CircleProperties = {

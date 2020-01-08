@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.applicationinsights.Anon_Code
 import typingsSlinky.node.httpMod.ClientRequest
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.httpsMod.Agent
+import typingsSlinky.node.httpsMod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,7 +78,7 @@ object ^ extends js.Object {
   def makeRequest(
     config: typingsSlinky.applicationinsights.outLibraryConfigMod.^,
     requestUrl: String,
-    requestOptions: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions,
+    requestOptions: RequestOptions | typingsSlinky.node.httpMod.RequestOptions,
     requestCallback: js.Function1[/* res */ IncomingMessage, Unit]
   ): ClientRequest = js.native
   /**

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object AdaptiveMediaSourceCreationStatus extends js.Object {
   @js.native
   sealed trait unsupportedManifestVersion extends AdaptiveMediaSourceCreationStatus
   
-  /* 1 */ val manifestDownloadFailure: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.manifestDownloadFailure with Double = js.native
-  /* 2 */ val manifestParseFailure: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.manifestParseFailure with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.success with Double = js.native
-  /* 6 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.unknownFailure with Double = js.native
-  /* 3 */ val unsupportedManifestContentType: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.unsupportedManifestContentType with Double = js.native
-  /* 5 */ val unsupportedManifestProfile: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.unsupportedManifestProfile with Double = js.native
-  /* 4 */ val unsupportedManifestVersion: typingsSlinky.winrtDashUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus.unsupportedManifestVersion with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AdaptiveMediaSourceCreationStatus with Double] = js.native
+  /* 1 */ @js.native
+  object manifestDownloadFailure extends TopLevel[manifestDownloadFailure with Double]
+  
+  /* 2 */ @js.native
+  object manifestParseFailure extends TopLevel[manifestParseFailure with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 6 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
+  /* 3 */ @js.native
+  object unsupportedManifestContentType extends TopLevel[unsupportedManifestContentType with Double]
+  
+  /* 5 */ @js.native
+  object unsupportedManifestProfile extends TopLevel[unsupportedManifestProfile with Double]
+  
+  /* 4 */ @js.native
+  object unsupportedManifestVersion extends TopLevel[unsupportedManifestVersion with Double]
+  
 }
 

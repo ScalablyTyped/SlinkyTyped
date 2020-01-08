@@ -1,14 +1,14 @@
 package typingsSlinky.promiseDashFs.promiseDashFsMod
 
 import typingsSlinky.node.Anon_BufferEncodingFalse
+import typingsSlinky.node.Anon_EncodingFalse
+import typingsSlinky.node.Anon_EncodingFalseWithFileTypes
+import typingsSlinky.node.Anon_EncodingTrue
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.promiseDashFs.Anon_BufferEncoding
-import typingsSlinky.promiseDashFs.Anon_EncodingFalse
-import typingsSlinky.promiseDashFs.Anon_EncodingFalseWithFileTypes
-import typingsSlinky.promiseDashFs.Anon_EncodingTrue
 import typingsSlinky.promiseDashFs.promiseDashFsStrings.buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,7 +60,7 @@ object readdir extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_EncodingFalseWithFileTypes,
+    options: Anon_EncodingFalseWithFileTypes,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
   ): Unit = js.native
   /**
@@ -70,7 +70,7 @@ object readdir extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_EncodingFalse,
+    options: Anon_EncodingFalse,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
   ): Unit = js.native
   /**
@@ -80,7 +80,7 @@ object readdir extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: typingsSlinky.node.Anon_EncodingTrue,
+    options: Anon_EncodingTrue,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
       /* files */ js.Array[typingsSlinky.node.fsMod.Dirent], 
@@ -94,9 +94,9 @@ object readdir extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: Anon_BufferEncoding): js.Promise[js.Array[Buffer]] = js.native
-  def apply(path: PathLike, options: Anon_EncodingFalse): js.Promise[js.Array[String]] = js.native
-  def apply(path: PathLike, options: Anon_EncodingFalseWithFileTypes): js.Promise[js.Array[Buffer | String]] = js.native
-  def apply(path: PathLike, options: Anon_EncodingTrue): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
+  def apply(path: PathLike, options: typingsSlinky.promiseDashFs.Anon_EncodingFalse): js.Promise[js.Array[String]] = js.native
+  def apply(path: PathLike, options: typingsSlinky.promiseDashFs.Anon_EncodingFalseWithFileTypes): js.Promise[js.Array[Buffer | String]] = js.native
+  def apply(path: PathLike, options: typingsSlinky.promiseDashFs.Anon_EncodingTrue): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
   def apply(path: PathLike, options: buffer): js.Promise[js.Array[Buffer]] = js.native
   def apply(
     path: PathLike,
@@ -111,14 +111,14 @@ object readdir extends js.Object {
   def __promisify__(path: PathLike): js.Promise[js.Array[String]] = js.native
   def __promisify__(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
   def __promisify__(path: PathLike, options: Anon_BufferEncodingFalse): js.Promise[js.Array[Buffer]] = js.native
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_EncodingFalse): js.Promise[js.Array[String]] = js.native
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_EncodingFalseWithFileTypes): js.Promise[js.Array[Buffer | String]] = js.native
+  def __promisify__(path: PathLike, options: Anon_EncodingFalse): js.Promise[js.Array[String]] = js.native
+  def __promisify__(path: PathLike, options: Anon_EncodingFalseWithFileTypes): js.Promise[js.Array[Buffer | String]] = js.native
   /**
     * Asynchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options If called with `withFileTypes: true` the result data will be an array of Dirent
     */
-  def __promisify__(path: PathLike, options: typingsSlinky.node.Anon_EncodingTrue): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
+  def __promisify__(path: PathLike, options: Anon_EncodingTrue): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
   def __promisify__(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
   /**
     * Asynchronous readdir(3) - read a directory.

@@ -62,6 +62,8 @@ object DateRangePicker
     isRTL: js.UndefOr[Boolean] = js.undefined,
     keepFocusOnInput: js.UndefOr[Boolean] = js.undefined,
     keepOpenOnDateSelect: js.UndefOr[Boolean] = js.undefined,
+    maxDate: momentObj = null,
+    minDate: momentObj = null,
     minimumNights: Int | Double = null,
     monthFormat: String = null,
     navNext: String | typingsSlinky.react.reactMod._Global_.JSX.Element = null,
@@ -123,6 +125,8 @@ object DateRangePicker
     if (!js.isUndefined(isRTL)) __obj.updateDynamic("isRTL")(isRTL.asInstanceOf[js.Any])
     if (!js.isUndefined(keepFocusOnInput)) __obj.updateDynamic("keepFocusOnInput")(keepFocusOnInput.asInstanceOf[js.Any])
     if (!js.isUndefined(keepOpenOnDateSelect)) __obj.updateDynamic("keepOpenOnDateSelect")(keepOpenOnDateSelect.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
     if (minimumNights != null) __obj.updateDynamic("minimumNights")(minimumNights.asInstanceOf[js.Any])
     if (monthFormat != null) __obj.updateDynamic("monthFormat")(monthFormat.asInstanceOf[js.Any])
     if (navNext != null) __obj.updateDynamic("navNext")(navNext.asInstanceOf[js.Any])

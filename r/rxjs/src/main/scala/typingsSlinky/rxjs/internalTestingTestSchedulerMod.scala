@@ -7,7 +7,6 @@ import typingsSlinky.rxjs.internalTestingColdObservableMod.ColdObservable
 import typingsSlinky.rxjs.internalTestingHotObservableMod.HotObservable
 import typingsSlinky.rxjs.internalTestingSubscriptionLogMod.SubscriptionLog
 import typingsSlinky.rxjs.internalTestingTestMessageMod.TestMessage
-import typingsSlinky.rxjs.internalTestingTestSchedulerMod.RunHelpers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberRouting
 
-import typingsSlinky.atEmberRouting.linkDashComponentMod.LinkComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

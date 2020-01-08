@@ -7,8 +7,6 @@ import typingsSlinky.openlayers.openlayersMod.geom.Geometry
 import typingsSlinky.openlayers.openlayersMod.geom.GeometryType
 import typingsSlinky.openlayers.openlayersMod.olx.FrameState
 import typingsSlinky.openlayers.openlayersMod.olx.render.ToContextOptions
-import typingsSlinky.openlayers.openlayersMod.render.EventType
-import typingsSlinky.openlayers.openlayersMod.render.VectorContext
 import typingsSlinky.openlayers.openlayersMod.render.canvas.Immediate
 import typingsSlinky.openlayers.openlayersMod.style.Style
 import scala.scalajs.js

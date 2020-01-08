@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.fabric.Anon_Baseline
 import typingsSlinky.fabric.Anon_BlBrMbMl
 import typingsSlinky.fabric.Anon_BlBrTlTr
-import typingsSlinky.fabric.fabricStrings.Empty
+import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.circle
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
@@ -145,13 +145,13 @@ object ITextOptions {
     editingBorderColor: String = null,
     evented: js.UndefOr[Boolean] = js.undefined,
     excludeFromExport: js.UndefOr[Boolean] = js.undefined,
-    fill: String | Pattern = null,
+    fill: String | Pattern | Gradient = null,
     fillRule: String = null,
     flipX: js.UndefOr[Boolean] = js.undefined,
     flipY: js.UndefOr[Boolean] = js.undefined,
     fontFamily: String = null,
     fontSize: Int | Double = null,
-    fontStyle: Empty | normal | italic | oblique = null,
+    fontStyle: _empty | normal | italic | oblique = null,
     fontWeight: String | Double = null,
     globalCompositeOperation: String = null,
     group: Group = null,

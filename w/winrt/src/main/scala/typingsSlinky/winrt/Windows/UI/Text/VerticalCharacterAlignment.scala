@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object VerticalCharacterAlignment extends js.Object {
   @js.native
   sealed trait top extends VerticalCharacterAlignment
   
-  /* 1 */ val baseline: typingsSlinky.winrt.Windows.UI.Text.VerticalCharacterAlignment.baseline with Double = js.native
-  /* 2 */ val bottom: typingsSlinky.winrt.Windows.UI.Text.VerticalCharacterAlignment.bottom with Double = js.native
-  /* 0 */ val top: typingsSlinky.winrt.Windows.UI.Text.VerticalCharacterAlignment.top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VerticalCharacterAlignment with Double] = js.native
+  /* 1 */ @js.native
+  object baseline extends TopLevel[baseline with Double]
+  
+  /* 2 */ @js.native
+  object bottom extends TopLevel[bottom with Double]
+  
+  /* 0 */ @js.native
+  object top extends TopLevel[top with Double]
+  
 }
 

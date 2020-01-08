@@ -1,14 +1,13 @@
 package typingsSlinky.firefoxDashWebextDashBrowser.browser.geckoProfiler
 
-import typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.java
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* geckoProfiler types */
 /* Rewritten from type alias, can be one of: 
-  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.java
-  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.JS
+  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.java_
+  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.js_
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.leaf
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.mainthreadio
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.privacy
@@ -27,12 +26,13 @@ trait ProfilerFeature extends js.Object
 
 object ProfilerFeature {
   @scala.inline
-  def JS: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.JS = this.cast("js")
-  @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @JSName("java")
   @scala.inline
-  def java_ : java = this.cast("java")
+  def java_ : typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.java_ = this.cast("java")
+  @JSName("js")
+  @scala.inline
+  def js_ : typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.js_ = this.cast("js")
   @scala.inline
   def jsallocations: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.jsallocations = this.cast("jsallocations")
   @scala.inline

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashDaumDashPostcode extends SharedApply_DaumPostcodeProps2112282185[default] {
+object ReactDashDaumDashPostcode extends SharedApply_DaumPostcodeProps_519330571[default] {
   @JSImport("react-daum-postcode", JSImport.Default)
   @js.native
   object componentImport extends js.Object

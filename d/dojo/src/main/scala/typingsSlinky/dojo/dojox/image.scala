@@ -19,7 +19,6 @@ import typingsSlinky.dojo.dojoStrings.style
 import typingsSlinky.dojo.dojoStrings.templatePath
 import typingsSlinky.dojo.dojoStrings.templateString
 import typingsSlinky.dojo.dojoStrings.threads
-import typingsSlinky.dojo.dojox.image.MagnifierLite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

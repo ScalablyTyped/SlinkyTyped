@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object LabelType extends js.Object {
   @js.native
   sealed trait Minor extends LabelType
   
-  /* 0 */ val Major: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.LabelType.Major with Double = js.native
-  /* 1 */ val Minor: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.LabelType.Minor with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelType with Double] = js.native
+  /* 0 */ @js.native
+  object Major extends TopLevel[Major with Double]
+  
+  /* 1 */ @js.native
+  object Minor extends TopLevel[Minor with Double]
+  
 }
 

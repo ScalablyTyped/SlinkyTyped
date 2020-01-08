@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ENewsUpdateType extends js.Object {
   @js.native
   sealed trait SteamNews extends ENewsUpdateType
   
-  /* 0 */ val AppNews: typingsSlinky.steamDashClient.steamDashClientMod.ENewsUpdateType.AppNews with Double = js.native
-  /* 3 */ val CDDBUpdate: typingsSlinky.steamDashClient.steamDashClientMod.ENewsUpdateType.CDDBUpdate with Double = js.native
-  /* 4 */ val ClientUpdate: typingsSlinky.steamDashClient.steamDashClientMod.ENewsUpdateType.ClientUpdate with Double = js.native
-  /* 1 */ val SteamAds: typingsSlinky.steamDashClient.steamDashClientMod.ENewsUpdateType.SteamAds with Double = js.native
-  /* 2 */ val SteamNews: typingsSlinky.steamDashClient.steamDashClientMod.ENewsUpdateType.SteamNews with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ENewsUpdateType with Double] = js.native
+  /* 0 */ @js.native
+  object AppNews extends TopLevel[AppNews with Double]
+  
+  /* 3 */ @js.native
+  object CDDBUpdate extends TopLevel[CDDBUpdate with Double]
+  
+  /* 4 */ @js.native
+  object ClientUpdate extends TopLevel[ClientUpdate with Double]
+  
+  /* 1 */ @js.native
+  object SteamAds extends TopLevel[SteamAds with Double]
+  
+  /* 2 */ @js.native
+  object SteamNews extends TopLevel[SteamNews with Double]
+  
 }
 

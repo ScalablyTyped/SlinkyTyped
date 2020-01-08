@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Import
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PhotoImportStorageMediumType extends js.Object {
   @js.native
   sealed trait undefined extends PhotoImportStorageMediumType
   
-  /* 1 */ val fixed: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportStorageMediumType.fixed with Double = js.native
-  /* 2 */ val removable: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportStorageMediumType.removable with Double = js.native
-  /* 0 */ val undefined: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportStorageMediumType.undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoImportStorageMediumType with Double] = js.native
+  /* 1 */ @js.native
+  object fixed extends TopLevel[fixed with Double]
+  
+  /* 2 */ @js.native
+  object removable extends TopLevel[removable with Double]
+  
+  /* 0 */ @js.native
+  object undefined extends TopLevel[undefined with Double]
+  
 }
 

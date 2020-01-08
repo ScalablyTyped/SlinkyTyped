@@ -1,8 +1,8 @@
 package typingsSlinky.expressDashValidator.srcOptionsMod
 
-import typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`5`
-import typingsSlinky.expressDashValidator.expressDashValidatorStrings.`3`
-import typingsSlinky.expressDashValidator.expressDashValidatorStrings.`4`
+import typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`3`
+import typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`4`
+import typingsSlinky.expressDashValidator.expressDashValidatorStrings.`5`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,20 +20,20 @@ trait UUIDVersion extends js.Object
 
 object UUIDVersion {
   @scala.inline
-  def `3`: typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.expressDashValidator.expressDashValidatorStrings.`3` = this.cast("3")
   @JSName("3")
   @scala.inline
-  def `3_3`: `3` = this.cast("3")
+  def `3_3`: `3` = this.cast(3)
   @scala.inline
-  def `4`: typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.expressDashValidator.expressDashValidatorStrings.`4` = this.cast("4")
   @JSName("4")
   @scala.inline
-  def `4_4`: `4` = this.cast("4")
+  def `4_4`: `4` = this.cast(4)
   @scala.inline
-  def `5`: typingsSlinky.expressDashValidator.expressDashValidatorStrings.`5` = this.cast("5")
+  def `5`: typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`5` = this.cast(5)
   @JSName("5")
   @scala.inline
-  def `5_5`: `5` = this.cast(5)
+  def `5_5`: `5` = this.cast("5")
   @scala.inline
   def all: typingsSlinky.expressDashValidator.expressDashValidatorStrings.all = this.cast("all")
   @scala.inline

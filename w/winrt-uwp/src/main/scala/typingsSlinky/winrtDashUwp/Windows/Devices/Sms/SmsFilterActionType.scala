@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object SmsFilterActionType extends js.Object {
   @js.native
   sealed trait peek extends SmsFilterActionType
   
-  /* 3 */ val accept: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsFilterActionType.accept with Double = js.native
-  /* 0 */ val acceptImmediately: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsFilterActionType.acceptImmediately with Double = js.native
-  /* 1 */ val drop: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsFilterActionType.drop with Double = js.native
-  /* 2 */ val peek: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsFilterActionType.peek with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmsFilterActionType with Double] = js.native
+  /* 3 */ @js.native
+  object accept extends TopLevel[accept with Double]
+  
+  /* 0 */ @js.native
+  object acceptImmediately extends TopLevel[acceptImmediately with Double]
+  
+  /* 1 */ @js.native
+  object drop extends TopLevel[drop with Double]
+  
+  /* 2 */ @js.native
+  object peek extends TopLevel[peek with Double]
+  
 }
 

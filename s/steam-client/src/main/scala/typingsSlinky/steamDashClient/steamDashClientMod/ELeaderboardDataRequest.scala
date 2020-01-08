@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ELeaderboardDataRequest extends js.Object {
   @js.native
   sealed trait Users extends ELeaderboardDataRequest
   
-  /* 2 */ val Friends: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDataRequest.Friends with Double = js.native
-  /* 0 */ val Global: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDataRequest.Global with Double = js.native
-  /* 1 */ val GlobalAroundUser: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDataRequest.GlobalAroundUser with Double = js.native
-  /* 3 */ val Users: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDataRequest.Users with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ELeaderboardDataRequest with Double] = js.native
+  /* 2 */ @js.native
+  object Friends extends TopLevel[Friends with Double]
+  
+  /* 0 */ @js.native
+  object Global extends TopLevel[Global with Double]
+  
+  /* 1 */ @js.native
+  object GlobalAroundUser extends TopLevel[GlobalAroundUser with Double]
+  
+  /* 3 */ @js.native
+  object Users extends TopLevel[Users with Double]
+  
 }
 

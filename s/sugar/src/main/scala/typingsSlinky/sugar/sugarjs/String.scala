@@ -8,9 +8,6 @@ import typingsSlinky.sugar.sugarStrings.NFC
 import typingsSlinky.sugar.sugarStrings.NFD
 import typingsSlinky.sugar.sugarStrings.NFKC
 import typingsSlinky.sugar.sugarStrings.NFKD
-import typingsSlinky.sugar.sugarjs.String.Chainable
-import typingsSlinky.sugar.sugarjs.String.ChainableBase
-import typingsSlinky.sugar.sugarjs.String.replaceFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

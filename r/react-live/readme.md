@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-live
 
-Typings are for version 2.2.1
+Typings are for version 2.2.2
 
 ## Library description:
 A production-focused playground for live editing React code
@@ -10,9 +10,9 @@ A production-focused playground for live editing React code
 | ------------------ | :-------------: |
 | Full name          | react-live |
 | Keywords           | react, live, live edit, component playground, react live |
-| # releases         | 31 |
-| # dependents       | 68 |
-| # downloads        | 850126 |
+| # releases         | 16 |
+| # dependents       | 144 |
+| # downloads        | 2704792 |
 | # stars            | 2 |
 
 ## Links

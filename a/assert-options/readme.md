@@ -4,15 +4,15 @@
 Typings are for version 0.6.0
 
 ## Library description:
-Generic options parameter handling
+Generic options parameter handling.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | assert-options |
 | Keywords           | assert, options |
-| # releases         | 14 |
+| # releases         | 19 |
 | # dependents       | 1 |
-| # downloads        | 101776 |
+| # downloads        | 1761747 |
 | # stars            | 0 |
 
 ## Links

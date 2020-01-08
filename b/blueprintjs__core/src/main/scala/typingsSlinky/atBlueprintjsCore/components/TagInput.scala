@@ -11,7 +11,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreNumbers.`false`
+import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreBooleans.`false`
 import typingsSlinky.atBlueprintjsCore.libEsmCommonIntentMod.Intent
 import typingsSlinky.atBlueprintjsCore.libEsmCommonPropsMod.HTMLInputProps
 import typingsSlinky.atBlueprintjsCore.libEsmCommonPropsMod.MaybeElement

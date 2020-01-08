@@ -2,8 +2,6 @@ package typingsSlinky.heremaps.H.ui
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.heremaps.H.ui.base.Container
-import typingsSlinky.heremaps.H.ui.base.Element
 import typingsSlinky.heremaps.H.util.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`

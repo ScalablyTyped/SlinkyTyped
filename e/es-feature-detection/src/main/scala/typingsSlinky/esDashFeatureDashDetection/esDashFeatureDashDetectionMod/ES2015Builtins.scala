@@ -6,146 +6,146 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.__all
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTfrom
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTof
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfill
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfind
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfindIndex
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTentries
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTkeys
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTcopyWithin
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotfrom
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotof
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfill
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfind
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfindIndex
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotentries
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotkeys
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotcopyWithin
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.base64
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Map
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Set
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.WeakMap
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.WeakSet
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTimul
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTclz32
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTfround
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog10
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog2
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog1p
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTexpm1
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTcosh
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTsinh
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTtanh
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTacosh
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTasinh
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOThypot
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTtrunc
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTsign
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTcbrt
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisNaN
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisFinite
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisInteger
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTparseInt
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTparseFloat
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTEPSILON
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTMAX_SAFE_INTEGER
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTMIN_SAFE_INTEGER
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisSafeInteger
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTprototypeDOT__proto__
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTis
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTsetPrototypeOf
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTassign
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTgetOwnPropertySymbols
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotimul
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotclz32
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotfround
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog10
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog2
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog1p
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotexpm1
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotcosh
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotsinh
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDottanh
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotacosh
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotasinh
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDothypot
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDottrunc
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotsign
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotcbrt
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisNaN
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisFinite
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisInteger
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotparseInt
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotparseFloat
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotEPSILON
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotMAX_SAFE_INTEGER
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotMIN_SAFE_INTEGER
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisSafeInteger
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotprototypeDot__proto__
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotis
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotsetPrototypeOf
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotassign
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotgetOwnPropertySymbols
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Promise
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Proxy
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Reflect
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.requestAnimationFrame
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTfromCodePoint
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTcodePointAt
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTstartsWith
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTendsWith
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTincludes
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTrepeat
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTnormalize
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTraw
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotfromCodePoint
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotcodePointAt
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotstartsWith
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotendsWith
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotincludes
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotrepeat
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotnormalize
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotraw
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Symbol
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.TypedArrays
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.newDOTtarget
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.newDottarget
 */
 trait ES2015Builtins extends js.Object
 
 object ES2015Builtins {
   @scala.inline
-  def ArrayDOTfrom: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTfrom = this.cast("Array.from")
+  def ArrayDotfrom: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotfrom = this.cast("Array.from")
   @scala.inline
-  def ArrayDOTof: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTof = this.cast("Array.of")
+  def ArrayDotof: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotof = this.cast("Array.of")
   @scala.inline
-  def ArrayDOTprototypeDOTcopyWithin: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTcopyWithin = this.cast("Array.prototype.copyWithin")
+  def ArrayDotprototypeDotcopyWithin: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotcopyWithin = this.cast("Array.prototype.copyWithin")
   @scala.inline
-  def ArrayDOTprototypeDOTentries: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTentries = this.cast("Array.prototype.entries")
+  def ArrayDotprototypeDotentries: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotentries = this.cast("Array.prototype.entries")
   @scala.inline
-  def ArrayDOTprototypeDOTfill: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfill = this.cast("Array.prototype.fill")
+  def ArrayDotprototypeDotfill: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfill = this.cast("Array.prototype.fill")
   @scala.inline
-  def ArrayDOTprototypeDOTfind: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfind = this.cast("Array.prototype.find")
+  def ArrayDotprototypeDotfind: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfind = this.cast("Array.prototype.find")
   @scala.inline
-  def ArrayDOTprototypeDOTfindIndex: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTfindIndex = this.cast("Array.prototype.findIndex")
+  def ArrayDotprototypeDotfindIndex: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotfindIndex = this.cast("Array.prototype.findIndex")
   @scala.inline
-  def ArrayDOTprototypeDOTkeys: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDOTprototypeDOTkeys = this.cast("Array.prototype.keys")
+  def ArrayDotprototypeDotkeys: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ArrayDotprototypeDotkeys = this.cast("Array.prototype.keys")
   @scala.inline
   def Map: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Map = this.cast("Map")
   @scala.inline
-  def MathDOTacosh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTacosh = this.cast("Math.acosh")
+  def MathDotacosh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotacosh = this.cast("Math.acosh")
   @scala.inline
-  def MathDOTasinh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTasinh = this.cast("Math.asinh")
+  def MathDotasinh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotasinh = this.cast("Math.asinh")
   @scala.inline
-  def MathDOTcbrt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTcbrt = this.cast("Math.cbrt")
+  def MathDotcbrt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotcbrt = this.cast("Math.cbrt")
   @scala.inline
-  def MathDOTclz32: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTclz32 = this.cast("Math.clz32")
+  def MathDotclz32: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotclz32 = this.cast("Math.clz32")
   @scala.inline
-  def MathDOTcosh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTcosh = this.cast("Math.cosh")
+  def MathDotcosh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotcosh = this.cast("Math.cosh")
   @scala.inline
-  def MathDOTexpm1: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTexpm1 = this.cast("Math.expm1")
+  def MathDotexpm1: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotexpm1 = this.cast("Math.expm1")
   @scala.inline
-  def MathDOTfround: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTfround = this.cast("Math.fround")
+  def MathDotfround: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotfround = this.cast("Math.fround")
   @scala.inline
-  def MathDOThypot: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOThypot = this.cast("Math.hypot")
+  def MathDothypot: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDothypot = this.cast("Math.hypot")
   @scala.inline
-  def MathDOTimul: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTimul = this.cast("Math.imul")
+  def MathDotimul: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotimul = this.cast("Math.imul")
   @scala.inline
-  def MathDOTlog10: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog10 = this.cast("Math.log10")
+  def MathDotlog10: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog10 = this.cast("Math.log10")
   @scala.inline
-  def MathDOTlog1p: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog1p = this.cast("Math.log1p")
+  def MathDotlog1p: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog1p = this.cast("Math.log1p")
   @scala.inline
-  def MathDOTlog2: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTlog2 = this.cast("Math.log2")
+  def MathDotlog2: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotlog2 = this.cast("Math.log2")
   @scala.inline
-  def MathDOTsign: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTsign = this.cast("Math.sign")
+  def MathDotsign: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotsign = this.cast("Math.sign")
   @scala.inline
-  def MathDOTsinh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTsinh = this.cast("Math.sinh")
+  def MathDotsinh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDotsinh = this.cast("Math.sinh")
   @scala.inline
-  def MathDOTtanh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTtanh = this.cast("Math.tanh")
+  def MathDottanh: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDottanh = this.cast("Math.tanh")
   @scala.inline
-  def MathDOTtrunc: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDOTtrunc = this.cast("Math.trunc")
+  def MathDottrunc: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.MathDottrunc = this.cast("Math.trunc")
   @scala.inline
-  def NumberDOTEPSILON: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTEPSILON = this.cast("Number.EPSILON")
+  def NumberDotEPSILON: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotEPSILON = this.cast("Number.EPSILON")
   @scala.inline
-  def NumberDOTMAX_SAFE_INTEGER: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTMAX_SAFE_INTEGER = this.cast("Number.MAX_SAFE_INTEGER")
+  def NumberDotMAX_SAFE_INTEGER: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotMAX_SAFE_INTEGER = this.cast("Number.MAX_SAFE_INTEGER")
   @scala.inline
-  def NumberDOTMIN_SAFE_INTEGER: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTMIN_SAFE_INTEGER = this.cast("Number.MIN_SAFE_INTEGER")
+  def NumberDotMIN_SAFE_INTEGER: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotMIN_SAFE_INTEGER = this.cast("Number.MIN_SAFE_INTEGER")
   @scala.inline
-  def NumberDOTisFinite: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisFinite = this.cast("Number.isFinite")
+  def NumberDotisFinite: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisFinite = this.cast("Number.isFinite")
   @scala.inline
-  def NumberDOTisInteger: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisInteger = this.cast("Number.isInteger")
+  def NumberDotisInteger: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisInteger = this.cast("Number.isInteger")
   @scala.inline
-  def NumberDOTisNaN: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisNaN = this.cast("Number.isNaN")
+  def NumberDotisNaN: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisNaN = this.cast("Number.isNaN")
   @scala.inline
-  def NumberDOTisSafeInteger: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTisSafeInteger = this.cast("Number.isSafeInteger")
+  def NumberDotisSafeInteger: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotisSafeInteger = this.cast("Number.isSafeInteger")
   @scala.inline
-  def NumberDOTparseFloat: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTparseFloat = this.cast("Number.parseFloat")
+  def NumberDotparseFloat: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotparseFloat = this.cast("Number.parseFloat")
   @scala.inline
-  def NumberDOTparseInt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDOTparseInt = this.cast("Number.parseInt")
+  def NumberDotparseInt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.NumberDotparseInt = this.cast("Number.parseInt")
   @scala.inline
-  def ObjectDOTassign: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTassign = this.cast("Object.assign")
+  def ObjectDotassign: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotassign = this.cast("Object.assign")
   @scala.inline
-  def ObjectDOTgetOwnPropertySymbols: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTgetOwnPropertySymbols = this.cast("Object.getOwnPropertySymbols")
+  def ObjectDotgetOwnPropertySymbols: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotgetOwnPropertySymbols = this.cast("Object.getOwnPropertySymbols")
   @scala.inline
-  def ObjectDOTis: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTis = this.cast("Object.is")
+  def ObjectDotis: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotis = this.cast("Object.is")
   @scala.inline
-  def ObjectDOTprototypeDOT__proto__ : typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTprototypeDOT__proto__ = this.cast("Object.prototype.__proto__")
+  def ObjectDotprototypeDot__proto__ : typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotprototypeDot__proto__ = this.cast("Object.prototype.__proto__")
   @scala.inline
-  def ObjectDOTsetPrototypeOf: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTsetPrototypeOf = this.cast("Object.setPrototypeOf")
+  def ObjectDotsetPrototypeOf: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotsetPrototypeOf = this.cast("Object.setPrototypeOf")
   @scala.inline
   def Promise: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Promise = this.cast("Promise")
   @scala.inline
@@ -155,21 +155,21 @@ object ES2015Builtins {
   @scala.inline
   def Set: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Set = this.cast("Set")
   @scala.inline
-  def StringDOTfromCodePoint: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTfromCodePoint = this.cast("String.fromCodePoint")
+  def StringDotfromCodePoint: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotfromCodePoint = this.cast("String.fromCodePoint")
   @scala.inline
-  def StringDOTprototypeDOTcodePointAt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTcodePointAt = this.cast("String.prototype.codePointAt")
+  def StringDotprototypeDotcodePointAt: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotcodePointAt = this.cast("String.prototype.codePointAt")
   @scala.inline
-  def StringDOTprototypeDOTendsWith: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTendsWith = this.cast("String.prototype.endsWith")
+  def StringDotprototypeDotendsWith: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotendsWith = this.cast("String.prototype.endsWith")
   @scala.inline
-  def StringDOTprototypeDOTincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTincludes = this.cast("String.prototype.includes")
+  def StringDotprototypeDotincludes: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotincludes = this.cast("String.prototype.includes")
   @scala.inline
-  def StringDOTprototypeDOTnormalize: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTnormalize = this.cast("String.prototype.normalize")
+  def StringDotprototypeDotnormalize: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotnormalize = this.cast("String.prototype.normalize")
   @scala.inline
-  def StringDOTprototypeDOTrepeat: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTrepeat = this.cast("String.prototype.repeat")
+  def StringDotprototypeDotrepeat: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotrepeat = this.cast("String.prototype.repeat")
   @scala.inline
-  def StringDOTprototypeDOTstartsWith: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTstartsWith = this.cast("String.prototype.startsWith")
+  def StringDotprototypeDotstartsWith: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotstartsWith = this.cast("String.prototype.startsWith")
   @scala.inline
-  def StringDOTraw: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTraw = this.cast("String.raw")
+  def StringDotraw: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotraw = this.cast("String.raw")
   @scala.inline
   def Symbol: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Symbol = this.cast("Symbol")
   @scala.inline
@@ -185,7 +185,7 @@ object ES2015Builtins {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def newDOTtarget: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.newDOTtarget = this.cast("new.target")
+  def newDottarget: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.newDottarget = this.cast("new.target")
   @scala.inline
   def requestAnimationFrame: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.requestAnimationFrame = this.cast("requestAnimationFrame")
 }

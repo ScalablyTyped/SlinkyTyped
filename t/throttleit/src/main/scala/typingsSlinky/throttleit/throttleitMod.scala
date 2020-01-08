@@ -1,6 +1,5 @@
 package typingsSlinky.throttleit
 
-import typingsSlinky.throttleit.throttleitMod.AnyFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

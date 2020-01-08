@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object TestRunSubstate extends js.Object {
   @js.native
   sealed trait TimedOut extends TestRunSubstate
   
-  /* 4 */ val AbortedBySystem: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.AbortedBySystem with Double = js.native
-  /* 7 */ val Analyzed: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.Analyzed with Double = js.native
-  /* 3 */ val CanceledByUser: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.CanceledByUser with Double = js.native
-  /* 8 */ val CancellationInProgress: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.CancellationInProgress with Double = js.native
-  /* 1 */ val CreatingEnvironment: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.CreatingEnvironment with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.None with Double = js.native
-  /* 6 */ val PendingAnalysis: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.PendingAnalysis with Double = js.native
-  /* 2 */ val RunningTests: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.RunningTests with Double = js.native
-  /* 5 */ val TimedOut: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestRunSubstate.TimedOut with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TestRunSubstate with Double] = js.native
+  /* 4 */ @js.native
+  object AbortedBySystem extends TopLevel[AbortedBySystem with Double]
+  
+  /* 7 */ @js.native
+  object Analyzed extends TopLevel[Analyzed with Double]
+  
+  /* 3 */ @js.native
+  object CanceledByUser extends TopLevel[CanceledByUser with Double]
+  
+  /* 8 */ @js.native
+  object CancellationInProgress extends TopLevel[CancellationInProgress with Double]
+  
+  /* 1 */ @js.native
+  object CreatingEnvironment extends TopLevel[CreatingEnvironment with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 6 */ @js.native
+  object PendingAnalysis extends TopLevel[PendingAnalysis with Double]
+  
+  /* 2 */ @js.native
+  object RunningTests extends TopLevel[RunningTests with Double]
+  
+  /* 5 */ @js.native
+  object TimedOut extends TopLevel[TimedOut with Double]
+  
 }
 

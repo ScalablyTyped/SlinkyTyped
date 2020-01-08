@@ -4,18 +4,21 @@
 Typings are for version 0.1
 
 ## Library description:
-Screenreader friendly alert messages.
+Screen-reader-friendly alert messages.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @reach/alert |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 5 |
-| # downloads        | 28765 |
+| # releases         | 20 |
+| # dependents       | 13 |
+| # downloads        | 207057 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/reach/reach-ui#readme)
+- [Bugs](https://github.com/reach/reach-ui/issues)
+- [Repository](https://github.com/reach/reach-ui)
 - [Npm](https://www.npmjs.com/package/%40reach%2Falert)
     
 

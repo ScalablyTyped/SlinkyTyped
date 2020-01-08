@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object EmailMailboxDeleteFolderStatus extends js.Object {
   @js.native
   sealed trait unknownFailure extends EmailMailboxDeleteFolderStatus
   
-  /* 5 */ val couldNotDeleteEverything: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.couldNotDeleteEverything with Double = js.native
-  /* 1 */ val networkError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.networkError with Double = js.native
-  /* 2 */ val permissionsError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.permissionsError with Double = js.native
-  /* 3 */ val serverError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.serverError with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.success with Double = js.native
-  /* 4 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus.unknownFailure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMailboxDeleteFolderStatus with Double] = js.native
+  /* 5 */ @js.native
+  object couldNotDeleteEverything extends TopLevel[couldNotDeleteEverything with Double]
+  
+  /* 1 */ @js.native
+  object networkError extends TopLevel[networkError with Double]
+  
+  /* 2 */ @js.native
+  object permissionsError extends TopLevel[permissionsError with Double]
+  
+  /* 3 */ @js.native
+  object serverError extends TopLevel[serverError with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 4 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobileDashRn
 
-import typingsSlinky.antdDashMobileDashRn.libToastDemoBasicDotNativeMod.ToastExample
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

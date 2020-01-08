@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ContactDashMail extends SharedApply_SvgIconProps657215518[default] {
+object ContactDashMail extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/communication/contact-mail", JSImport.Default)
   @js.native
   object componentImport extends js.Object

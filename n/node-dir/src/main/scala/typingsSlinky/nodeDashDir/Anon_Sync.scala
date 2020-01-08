@@ -1,6 +1,6 @@
 package typingsSlinky.nodeDashDir
 
-import typingsSlinky.nodeDashDir.nodeDashDirNumbers.`true`
+import typingsSlinky.nodeDashDir.nodeDashDirBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

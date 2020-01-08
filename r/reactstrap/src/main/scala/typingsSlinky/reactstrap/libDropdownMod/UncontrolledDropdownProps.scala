@@ -1,5 +1,6 @@
 package typingsSlinky.reactstrap.libDropdownMod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
@@ -18,6 +19,7 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactStrings.`additions text`
@@ -37,6 +39,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -73,11 +76,19 @@ import scala.scalajs.js.annotation._
 
 trait UncontrolledDropdownProps extends DropdownProps {
   var defaultOpen: js.UndefOr[Boolean] = js.undefined
+  var onToggle: js.UndefOr[
+    js.Function2[
+      /* event */ SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element], 
+      /* isOpen */ Boolean, 
+      Unit
+    ]
+  ] = js.undefined
 }
 
 object UncontrolledDropdownProps {
   @scala.inline
   def apply(
+    a11y: js.UndefOr[Boolean] = js.undefined,
     about: String = null,
     accessKey: String = null,
     active: js.UndefOr[Boolean] = js.undefined,
@@ -136,7 +147,7 @@ object UncontrolledDropdownProps {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     cssModule: CSSModule = null,
     dangerouslySetInnerHTML: Anon_Html = null,
@@ -234,6 +245,7 @@ object UncontrolledDropdownProps {
     onSubmit: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
     onSuspend: SyntheticEvent[Event, HTMLElement] => Unit = null,
     onTimeUpdate: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onToggle: (/* event */ SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element], /* isOpen */ Boolean) => Unit = null,
     onTouchCancel: SyntheticTouchEvent[HTMLElement] => Unit = null,
     onTouchEnd: SyntheticTouchEvent[HTMLElement] => Unit = null,
     onTouchMove: SyntheticTouchEvent[HTMLElement] => Unit = null,
@@ -267,6 +279,7 @@ object UncontrolledDropdownProps {
     vocab: String = null
   ): UncontrolledDropdownProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(a11y)) __obj.updateDynamic("a11y")(a11y.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -325,7 +338,7 @@ object UncontrolledDropdownProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
@@ -423,6 +436,7 @@ object UncontrolledDropdownProps {
     if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
     if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
     if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
+    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction2(onToggle))
     if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
     if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
     if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))

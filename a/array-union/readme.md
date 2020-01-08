@@ -10,9 +10,9 @@ Create an array of unique values, in order, from the input arrays
 | ------------------ | :-------------: |
 | Full name          | array-union |
 | Keywords           | array, set, uniq, unique, duplicate, remove, union, combine, merge |
-| # releases         | 2 |
-| # dependents       | 63 |
-| # downloads        | 242038012 |
+| # releases         | 3 |
+| # dependents       | 73 |
+| # downloads        | 355387261 |
 | # stars            | 4 |
 
 ## Links

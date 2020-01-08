@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PullDashToDashRefresh extends SharedApply_PropsType_151597660[default] {
+object PullDashToDashRefresh extends SharedApply_PropsType844165933[default] {
   @JSImport("antd-mobile/lib/pull-to-refresh", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.pdfmake.buildPdfmakeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object PageOrientation extends js.Object {
   @js.native
   sealed trait PORTRAIT extends PageOrientation
   
-  /* "LANDSCAPE" */ val LANDSCAPE: typingsSlinky.pdfmake.buildPdfmakeMod.PageOrientation.LANDSCAPE with String = js.native
-  /* "PORTRAIT" */ val PORTRAIT: typingsSlinky.pdfmake.buildPdfmakeMod.PageOrientation.PORTRAIT with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[PageOrientation with String] = js.native
+  /* "LANDSCAPE" */ @js.native
+  object LANDSCAPE extends TopLevel[LANDSCAPE with String]
+  
+  /* "PORTRAIT" */ @js.native
+  object PORTRAIT extends TopLevel[PORTRAIT with String]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -121,12 +122,20 @@ object RbmMedia extends js.Object {
     @js.native
     sealed trait TALL extends Height
     
-    /* 0 */ val HEIGHT_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height.HEIGHT_UNSPECIFIED with Double = js.native
-    /* 2 */ val MEDIUM: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height.MEDIUM with Double = js.native
-    /* 1 */ val SHORT: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height.SHORT with Double = js.native
-    /* 3 */ val TALL: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height.TALL with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Height with Double] = js.native
+    /* 0 */ @js.native
+    object HEIGHT_UNSPECIFIED extends TopLevel[HEIGHT_UNSPECIFIED with Double]
+    
+    /* 2 */ @js.native
+    object MEDIUM extends TopLevel[MEDIUM with Double]
+    
+    /* 1 */ @js.native
+    object SHORT extends TopLevel[SHORT with Double]
+    
+    /* 3 */ @js.native
+    object TALL extends TopLevel[TALL with Double]
+    
   }
   
 }

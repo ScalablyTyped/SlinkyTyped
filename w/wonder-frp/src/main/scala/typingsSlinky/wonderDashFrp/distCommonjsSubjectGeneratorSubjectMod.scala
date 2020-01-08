@@ -4,7 +4,6 @@ import typingsSlinky.wonderDashFrp.distCommonjsCoreEntityMod.Entity
 import typingsSlinky.wonderDashFrp.distCommonjsCoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distCommonjsDisposableIDisposableMod.IDisposable
 import typingsSlinky.wonderDashFrp.distCommonjsObserverIObserverMod.IObserver
-import typingsSlinky.wonderDashFrp.distCommonjsSubjectGeneratorSubjectMod.GeneratorSubject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

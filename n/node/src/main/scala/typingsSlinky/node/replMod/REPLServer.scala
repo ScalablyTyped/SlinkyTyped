@@ -1,7 +1,6 @@
 package typingsSlinky.node.replMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.nodeStrings.exit
@@ -134,7 +133,7 @@ class REPLServer protected () extends Interface {
     * @since v9.0.0
     */
   def clearBufferedCommand(): Unit = js.native
-  def defineCommand(keyword: java.lang.String, cmd: REPLCommand): Unit = js.native
+  def defineCommand(keyword: String, cmd: REPLCommand): Unit = js.native
   /**
     * Used to add new `.`-prefixed commands to the REPL instance. Such commands are invoked
     * by typing a `.` followed by the `keyword`.
@@ -144,7 +143,7 @@ class REPLServer protected () extends Interface {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_replserver_definecommand_keyword_cmd
     */
-  def defineCommand(keyword: java.lang.String, cmd: REPLCommandAction): Unit = js.native
+  def defineCommand(keyword: String, cmd: REPLCommandAction): Unit = js.native
   /**
     * Readies the REPL instance for input from the user, printing the configured `prompt` to a
     * new line in the `output` and resuming the `input` to accept new input.
@@ -168,11 +167,10 @@ class REPLServer protected () extends Interface {
     * for the JavaScript `eval()` function.
     */
   def eval(
-    `this`: REPLServer,
-    evalCmd: java.lang.String,
+    evalCmd: String,
     context: Context,
-    file: java.lang.String,
-    cb: js.Function2[/* err */ Error | Null, /* result */ js.Any, Unit]
+    file: String,
+    cb: js.Function2[/* err */ js.Error | Null, /* result */ js.Any, Unit]
   ): Unit = js.native
   @JSName("on")
   def on_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
@@ -198,12 +196,12 @@ class REPLServer protected () extends Interface {
     * with REPL instances programmatically.
     * @param path The path to the history file
     */
-  def setupHistory(path: java.lang.String, cb: js.Function2[/* err */ Error | Null, /* repl */ this.type, Unit]): Unit = js.native
+  def setupHistory(path: String, cb: js.Function2[/* err */ js.Error | Null, /* repl */ this.type, Unit]): Unit = js.native
   /**
     * Specified in the REPL options, this is the function to invoke to format the output of
     * each command before writing to `outputStream`. If not specified in the REPL options,
     * this will be a wrapper for `util.inspect`.
     */
-  def writer(`this`: REPLServer, obj: js.Any): java.lang.String = js.native
+  def writer(obj: js.Any): String = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Sockets
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object SocketSslErrorSeverity extends js.Object {
   @js.native
   sealed trait none extends SocketSslErrorSeverity
   
-  /* 2 */ val fatal: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketSslErrorSeverity.fatal with Double = js.native
-  /* 1 */ val ignorable: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketSslErrorSeverity.ignorable with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketSslErrorSeverity.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocketSslErrorSeverity with Double] = js.native
+  /* 2 */ @js.native
+  object fatal extends TopLevel[fatal with Double]
+  
+  /* 1 */ @js.native
+  object ignorable extends TopLevel[ignorable with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

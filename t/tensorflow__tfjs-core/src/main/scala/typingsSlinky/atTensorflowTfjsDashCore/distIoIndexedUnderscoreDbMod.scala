@@ -2,7 +2,7 @@ package typingsSlinky.atTensorflowTfjsDashCore
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.IDBFactory
-import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreStrings.`indexeddb://`
+import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreStrings.indexeddbColonSlashSlash
 import typingsSlinky.atTensorflowTfjsDashCore.distIoRouterUnderscoreRegistryMod.IORouter
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.IOHandler
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.ModelArtifacts
@@ -72,7 +72,7 @@ object distIoIndexedUnderscoreDbMod extends js.Object {
   /* static members */
   @js.native
   object BrowserIndexedDB extends js.Object {
-    val URL_SCHEME: `indexeddb://` = js.native
+    val URL_SCHEME: indexeddbColonSlashSlash = js.native
   }
   
 }

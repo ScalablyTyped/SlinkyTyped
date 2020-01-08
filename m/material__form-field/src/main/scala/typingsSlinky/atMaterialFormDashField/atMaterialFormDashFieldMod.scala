@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialFormDashField
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialFormDashField.adapterMod.MDCFormFieldAdapter
-import typingsSlinky.atMaterialFormDashField.atMaterialFormDashFieldMod.MDCFormField
 import typingsSlinky.atMaterialFormDashField.foundationMod.default
 import typingsSlinky.atMaterialSelectionDashControl.atMaterialSelectionDashControlMod.MDCSelectionControl
 import scala.scalajs.js

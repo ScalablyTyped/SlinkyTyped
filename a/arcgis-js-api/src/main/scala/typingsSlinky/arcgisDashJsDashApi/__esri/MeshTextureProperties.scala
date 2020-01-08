@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ImageData
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.clamp
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.mirror
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.repeat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,7 +44,7 @@ trait MeshTextureProperties extends js.Object {
     *
     * @default "repeat"
     */
-  var wrap: js.UndefOr[clamp | repeat | SeparableWrapModes] = js.undefined
+  var wrap: js.UndefOr[clamp | repeat | mirror | SeparableWrapModes] = js.undefined
 }
 
 object MeshTextureProperties {
@@ -52,7 +53,7 @@ object MeshTextureProperties {
     data: HTMLImageElement | HTMLCanvasElement | ImageData = null,
     transparent: js.UndefOr[Boolean] = js.undefined,
     url: String = null,
-    wrap: clamp | repeat | SeparableWrapModes = null
+    wrap: clamp | repeat | mirror | SeparableWrapModes = null
   ): MeshTextureProperties = {
     val __obj = js.Dynamic.literal()
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])

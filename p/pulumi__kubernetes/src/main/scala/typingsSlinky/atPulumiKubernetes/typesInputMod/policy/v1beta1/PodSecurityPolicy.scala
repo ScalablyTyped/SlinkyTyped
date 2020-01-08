@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.policy.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`policy/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.policySlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait PodSecurityPolicy extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`policy/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[policySlashv1beta1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -42,7 +42,7 @@ trait PodSecurityPolicy extends js.Object {
 object PodSecurityPolicy {
   @scala.inline
   def apply(
-    apiVersion: Input[`policy/v1beta1`] = null,
+    apiVersion: Input[policySlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.PodSecurityPolicy] = null,
     metadata: Input[ObjectMeta] = null,
     spec: Input[PodSecurityPolicySpec] = null

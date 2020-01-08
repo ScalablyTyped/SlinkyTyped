@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.img.tag
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
@@ -18,7 +19,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsImageImageDotT
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsImageImageDotTypesMod.ImageFit
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsImageImageDotTypesMod.ImageLoadState
 import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactStrings.Empty
+import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.`use-credentials`
@@ -137,7 +138,7 @@ object ImageBase
     color: String = null,
     contextMenu: String = null,
     coverStyle: ImageCoverStyle = null,
-    crossOrigin: anonymous | `use-credentials` | Empty = null,
+    crossOrigin: anonymous | `use-credentials` | _empty = null,
     datatype: String = null,
     decoding: async | auto | sync = null,
     errorSrc: String = null,
@@ -277,6 +278,9 @@ object ImageBase
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeDashUiDashFabricDashReact.libImageMod.ImageBase] = new slinky.core.BuildingComponent[
+  slinky.web.html.img.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libImageMod.ImageBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IImageProps
 }
 

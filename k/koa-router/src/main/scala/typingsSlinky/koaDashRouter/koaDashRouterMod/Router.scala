@@ -421,12 +421,12 @@ trait Router[StateT, CustomT] extends js.Object {
     middleware: IMiddleware[StateT, CustomT],
     opts: ILayerOptions
   ): Layer = js.native
-  def route(name: String): Boolean = js.native
   /**
     * Lookup route with given `name`.
     */
+  def route(name: String): Layer = js.native
   @JSName("route")
-  def route_Layer(name: String): Layer = js.native
+  def route_Boolean(name: String): Boolean = js.native
   /**
     * Returns router middleware which dispatches a route matching the request.
     */

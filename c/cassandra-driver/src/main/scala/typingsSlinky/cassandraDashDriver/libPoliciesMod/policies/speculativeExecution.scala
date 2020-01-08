@@ -2,7 +2,6 @@ package typingsSlinky.cassandraDashDriver.libPoliciesMod.policies
 
 import typingsSlinky.cassandraDashDriver.Anon_NextExecution
 import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.Client
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.speculativeExecution.SpeculativeExecutionPolicy
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -2,7 +2,6 @@ package typingsSlinky.pythonDashStruct
 
 import typingsSlinky.long.longMod.^
 import typingsSlinky.node.Buffer
-import typingsSlinky.pythonDashStruct.pythonDashStructMod.DataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextareaItem
-  extends SharedApply_TextareaItemProps727543102[
+  extends SharedApply_TextareaItemProps643003652[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.TextareaItem
     ] {
   @JSImport("@ant-design/react-native", "TextareaItem")

@@ -1,12 +1,12 @@
 package typingsSlinky.tslint.libConfigurationMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tslint.tslintStrings.tslintDOTjson
+import typingsSlinky.tslint.tslintStrings.tslintDotjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("tslint/lib/configuration", "JSON_CONFIG_FILENAME")
 @js.native
-object JSON_CONFIG_FILENAME extends TopLevel[tslintDOTjson]
+object JSON_CONFIG_FILENAME extends TopLevel[tslintDotjson]
 

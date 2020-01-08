@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object GroupScopeType extends js.Object {
   @js.native
   sealed trait TeamProject extends GroupScopeType
   
-  /* 0 */ val Generic: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.GroupScopeType.Generic with Double = js.native
-  /* 1 */ val ServiceHost: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.GroupScopeType.ServiceHost with Double = js.native
-  /* 2 */ val TeamProject: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.GroupScopeType.TeamProject with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GroupScopeType with Double] = js.native
+  /* 0 */ @js.native
+  object Generic extends TopLevel[Generic with Double]
+  
+  /* 1 */ @js.native
+  object ServiceHost extends TopLevel[ServiceHost with Double]
+  
+  /* 2 */ @js.native
+  object TeamProject extends TopLevel[TeamProject with Double]
+  
 }
 

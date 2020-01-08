@@ -1,13 +1,14 @@
 package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.dnsMod.LookupOneOptions
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.tlsMod.ConnectionOptions
+import typingsSlinky.node.tlsMod.KeyObject
 import typingsSlinky.node.tlsMod.PeerCertificate
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.urlMod.URL
@@ -22,27 +23,22 @@ trait SecureClientSessionOptions
 object SecureClientSessionOptions {
   @scala.inline
   def apply(
-    ALPNProtocols: (js.Array[java.lang.String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ java.lang.String, /* cb */ js.Function2[/* err */ Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
-    ca: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    cert: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    checkServerIdentity: (/* host */ java.lang.String, /* cert */ PeerCertificate) => js.UndefOr[Error] = null,
-    ciphers: java.lang.String = null,
-    clientCertEngine: java.lang.String = null,
+    ALPNProtocols: (js.Array[String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    ca: String | Buffer | (js.Array[String | Buffer]) = null,
+    cert: String | Buffer | (js.Array[String | Buffer]) = null,
+    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
+    ciphers: String = null,
+    clientCertEngine: String = null,
     createConnection: (/* authority */ URL, /* option */ SessionOptions) => Duplex = null,
-    crl: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    dhparam: java.lang.String | Buffer = null,
-    ecdhCurve: java.lang.String = null,
+    crl: String | Buffer | (js.Array[String | Buffer]) = null,
+    dhparam: String | Buffer = null,
+    ecdhCurve: String = null,
     enableTrace: js.UndefOr[Boolean] = js.undefined,
     honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    host: java.lang.String = null,
-    key: java.lang.String | Buffer | (js.Array[Buffer | js.Object]) = null,
-    lookup: (/* hostname */ java.lang.String, /* options */ LookupOneOptions, /* callback */ js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String, 
-      /* family */ Double, 
-      Unit
-    ]) => Unit = null,
+    host: String = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
+    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
     maxDeflateDynamicTableSize: Int | Double = null,
     maxHeaderListPairs: Int | Double = null,
     maxOutstandingPings: Int | Double = null,
@@ -53,21 +49,24 @@ object SecureClientSessionOptions {
     minDHSize: Int | Double = null,
     minVersion: SecureVersion = null,
     paddingStrategy: Int | Double = null,
-    passphrase: java.lang.String = null,
-    path: java.lang.String = null,
+    passphrase: String = null,
+    path: String = null,
     peerMaxConcurrentStreams: Int | Double = null,
-    pfx: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
     port: Int | Double = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
     secureOptions: Int | Double = null,
-    secureProtocol: java.lang.String = null,
+    secureProtocol: String = null,
     selectPadding: (/* frameLen */ Double, /* maxFrameLen */ Double) => Double = null,
-    servername: java.lang.String = null,
+    servername: String = null,
     session: Buffer = null,
-    sessionIdContext: java.lang.String = null,
+    sessionIdContext: String = null,
     settings: Settings = null,
+    sigalgs: String = null,
     socket: Socket = null,
     timeout: Int | Double = null
   ): SecureClientSessionOptions = {
@@ -103,6 +102,8 @@ object SecureClientSessionOptions {
     if (peerMaxConcurrentStreams != null) __obj.updateDynamic("peerMaxConcurrentStreams")(peerMaxConcurrentStreams.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
@@ -113,6 +114,7 @@ object SecureClientSessionOptions {
     if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
     if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
     if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureClientSessionOptions]

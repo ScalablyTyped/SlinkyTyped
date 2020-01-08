@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 sealed trait ɵChangeDetectorStatus extends js.Object
 
-@JSImport("@angular/core", "ɵChangeDetectorStatus")
+@JSImport("@angular/core", "\u0275ChangeDetectorStatus")
 @js.native
 object ɵChangeDetectorStatus extends js.Object {
   /**
@@ -52,13 +53,25 @@ object ɵChangeDetectorStatus extends js.Object {
   @js.native
   sealed trait Errored extends ɵChangeDetectorStatus
   
-  /* 2 */ val CheckAlways: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.CheckAlways with Double = js.native
-  /* 0 */ val CheckOnce: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.CheckOnce with Double = js.native
-  /* 1 */ val Checked: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.Checked with Double = js.native
-  /* 5 */ val Destroyed: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.Destroyed with Double = js.native
-  /* 3 */ val Detached: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.Detached with Double = js.native
-  /* 4 */ val Errored: typingsSlinky.atAngularCore.atAngularCoreMod.ɵChangeDetectorStatus.Errored with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ɵChangeDetectorStatus with Double] = js.native
+  /* 2 */ @js.native
+  object CheckAlways extends TopLevel[CheckAlways with Double]
+  
+  /* 0 */ @js.native
+  object CheckOnce extends TopLevel[CheckOnce with Double]
+  
+  /* 1 */ @js.native
+  object Checked extends TopLevel[Checked with Double]
+  
+  /* 5 */ @js.native
+  object Destroyed extends TopLevel[Destroyed with Double]
+  
+  /* 3 */ @js.native
+  object Detached extends TopLevel[Detached with Double]
+  
+  /* 4 */ @js.native
+  object Errored extends TopLevel[Errored with Double]
+  
 }
 

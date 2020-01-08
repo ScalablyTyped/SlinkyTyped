@@ -41,6 +41,10 @@ trait IntlFormatters extends js.Object {
   def formatHTMLMessage(descriptor: MessageDescriptor, values: Record[String, PrimitiveType]): TagMod[Any] = js.native
   def formatList(values: js.Array[String | TagMod[Any]]): TagMod[Any] = js.native
   def formatList(values: js.Array[String | TagMod[Any]], opts: FormatListOptions): TagMod[Any] = js.native
+  @JSName("formatList")
+  def formatList_String(values: js.Array[String]): String = js.native
+  @JSName("formatList")
+  def formatList_String(values: js.Array[String], opts: FormatListOptions): String = js.native
   def formatMessage(descriptor: MessageDescriptor): String | ReactNodeArray = js.native
   def formatMessage(
     descriptor: MessageDescriptor,

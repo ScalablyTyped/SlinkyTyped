@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashVirtualizedDashSelect
 
-import typingsSlinky.reactDashVirtualizedDashSelect.reactDashVirtualizedDashSelectNumbers.`true`
+import typingsSlinky.reactDashVirtualizedDashSelect.reactDashVirtualizedDashSelectBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

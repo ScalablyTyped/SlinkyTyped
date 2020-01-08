@@ -5,5 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object randomaMod {
-  type Color = typingsSlinky.color.colorMod.Color
+  import typingsSlinky.color.colorMod.ColorParam
+
+  type Color = typingsSlinky.color.colorMod.Color[ColorParam]
 }

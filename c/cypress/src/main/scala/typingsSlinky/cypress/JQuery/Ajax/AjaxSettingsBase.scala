@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.cypress.JQuery.PlainObject
 import typingsSlinky.cypress.JQuery.TypeOrArray
 import typingsSlinky.cypress.JQuery.jqXHR
-import typingsSlinky.cypress.cypressNumbers.`false`
-import typingsSlinky.cypress.cypressNumbers.`true`
+import typingsSlinky.cypress.cypressBooleans.`false`
+import typingsSlinky.cypress.cypressBooleans.`true`
 import typingsSlinky.cypress.cypressStrings.html_
 import typingsSlinky.cypress.cypressStrings.json_
 import typingsSlinky.cypress.cypressStrings.jsonp

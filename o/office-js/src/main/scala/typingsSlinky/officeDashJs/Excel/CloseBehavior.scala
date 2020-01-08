@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,9 +33,13 @@ object CloseBehavior extends js.Object {
   @js.native
   sealed trait skipSave extends CloseBehavior
   
-  /* "Save" */ val save: typingsSlinky.officeDashJs.Excel.CloseBehavior.save with String = js.native
-  /* "SkipSave" */ val skipSave: typingsSlinky.officeDashJs.Excel.CloseBehavior.skipSave with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[CloseBehavior with String] = js.native
+  /* "Save" */ @js.native
+  object save extends TopLevel[save with String]
+  
+  /* "SkipSave" */ @js.native
+  object skipSave extends TopLevel[skipSave with String]
+  
 }
 

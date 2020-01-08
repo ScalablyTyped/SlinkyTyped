@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PivotClient
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object DisplayMode extends js.Object {
   @js.native
   sealed trait GridOnly extends DisplayMode
   
-  /* 2 */ val ChartAndGrid: typingsSlinky.ejDotWebDotAll.ej.PivotClient.DisplayMode.ChartAndGrid with Double = js.native
-  /* 0 */ val ChartOnly: typingsSlinky.ejDotWebDotAll.ej.PivotClient.DisplayMode.ChartOnly with Double = js.native
-  /* 1 */ val GridOnly: typingsSlinky.ejDotWebDotAll.ej.PivotClient.DisplayMode.GridOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DisplayMode with Double] = js.native
+  /* 2 */ @js.native
+  object ChartAndGrid extends TopLevel[ChartAndGrid with Double]
+  
+  /* 0 */ @js.native
+  object ChartOnly extends TopLevel[ChartOnly with Double]
+  
+  /* 1 */ @js.native
+  object GridOnly extends TopLevel[GridOnly with Double]
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.atAngularHttp
 
-import typingsSlinky.atAngularHttp.srcUrlUnderscoreSearchUnderscoreParamsMod.QueryEncoder
-import typingsSlinky.atAngularHttp.srcUrlUnderscoreSearchUnderscoreParamsMod.URLSearchParams
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

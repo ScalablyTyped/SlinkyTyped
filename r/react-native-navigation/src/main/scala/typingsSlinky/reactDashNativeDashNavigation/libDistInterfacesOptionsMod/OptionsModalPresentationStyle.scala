@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object OptionsModalPresentationStyle extends js.Object {
   @js.native
   sealed trait popOver extends OptionsModalPresentationStyle
   
-  /* "currentContext" */ val currentContext: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.currentContext with String = js.native
-  /* "formSheet" */ val formSheet: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.formSheet with String = js.native
-  /* "fullScreen" */ val fullScreen: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.fullScreen with String = js.native
-  /* "none" */ val none: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.none with String = js.native
-  /* "overCurrentContext" */ val overCurrentContext: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.overCurrentContext with String = js.native
-  /* "overFullScreen" */ val overFullScreen: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.overFullScreen with String = js.native
-  /* "pageSheet" */ val pageSheet: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.pageSheet with String = js.native
-  /* "popOver" */ val popOver: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalPresentationStyle.popOver with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[OptionsModalPresentationStyle with String] = js.native
+  /* "currentContext" */ @js.native
+  object currentContext extends TopLevel[currentContext with String]
+  
+  /* "formSheet" */ @js.native
+  object formSheet extends TopLevel[formSheet with String]
+  
+  /* "fullScreen" */ @js.native
+  object fullScreen extends TopLevel[fullScreen with String]
+  
+  /* "none" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "overCurrentContext" */ @js.native
+  object overCurrentContext extends TopLevel[overCurrentContext with String]
+  
+  /* "overFullScreen" */ @js.native
+  object overFullScreen extends TopLevel[overFullScreen with String]
+  
+  /* "pageSheet" */ @js.native
+  object pageSheet extends TopLevel[pageSheet with String]
+  
+  /* "popOver" */ @js.native
+  object popOver extends TopLevel[popOver with String]
+  
 }
 

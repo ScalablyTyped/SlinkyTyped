@@ -1,12 +1,10 @@
 package typingsSlinky.atFirebaseStorage
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.Headers
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.XhrIo
-import typingsSlinky.atFirebaseStorage.distTestXhrioMod.SendHook
-import typingsSlinky.atFirebaseStorage.distTestXhrioMod.State
-import typingsSlinky.atFirebaseStorage.distTestXhrioMod.TestingXhrIo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,11 +42,17 @@ object distTestXhrioMod extends js.Object {
     @js.native
     sealed trait START extends State
     
-    /* 2 */ val DONE: typingsSlinky.atFirebaseStorage.distTestXhrioMod.State.DONE with Double = js.native
-    /* 1 */ val SENT: typingsSlinky.atFirebaseStorage.distTestXhrioMod.State.SENT with Double = js.native
-    /* 0 */ val START: typingsSlinky.atFirebaseStorage.distTestXhrioMod.State.START with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[State with Double] = js.native
+    /* 2 */ @js.native
+    object DONE extends TopLevel[DONE with Double]
+    
+    /* 1 */ @js.native
+    object SENT extends TopLevel[SENT with Double]
+    
+    /* 0 */ @js.native
+    object START extends TopLevel[START with Double]
+    
   }
   
   type SendHook = js.Function5[

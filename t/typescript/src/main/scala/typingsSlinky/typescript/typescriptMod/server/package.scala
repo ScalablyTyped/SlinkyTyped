@@ -5,19 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object server {
-  import typingsSlinky.typescript.typescriptStrings.`action::invalidate`
-  import typingsSlinky.typescript.typescriptStrings.`action::packageInstalled`
-  import typingsSlinky.typescript.typescriptStrings.`action::set`
-  import typingsSlinky.typescript.typescriptStrings.`event::beginInstallTypes`
-  import typingsSlinky.typescript.typescriptStrings.`event::endInstallTypes`
-  import typingsSlinky.typescript.typescriptStrings.`event::initializationFailed`
-  import typingsSlinky.typescript.typescriptStrings.`event::typesRegistry`
+  import typingsSlinky.typescript.typescriptStrings.actionColonColoninvalidate
+  import typingsSlinky.typescript.typescriptStrings.actionColonColonpackageInstalled
+  import typingsSlinky.typescript.typescriptStrings.actionColonColonset
+  import typingsSlinky.typescript.typescriptStrings.eventColonColonbeginInstallTypes
+  import typingsSlinky.typescript.typescriptStrings.eventColonColonendInstallTypes
+  import typingsSlinky.typescript.typescriptStrings.eventColonColoninitializationFailed
+  import typingsSlinky.typescript.typescriptStrings.eventColonColontypesRegistry
 
-  type ActionInvalidate = `action::invalidate`
-  type ActionPackageInstalled = `action::packageInstalled`
-  type ActionSet = `action::set`
-  type EventBeginInstallTypes = `event::beginInstallTypes`
-  type EventEndInstallTypes = `event::endInstallTypes`
-  type EventInitializationFailed = `event::initializationFailed`
-  type EventTypesRegistry = `event::typesRegistry`
+  type ActionInvalidate = actionColonColoninvalidate
+  type ActionPackageInstalled = actionColonColonpackageInstalled
+  type ActionSet = actionColonColonset
+  type EventBeginInstallTypes = eventColonColonbeginInstallTypes
+  type EventEndInstallTypes = eventColonColonendInstallTypes
+  type EventInitializationFailed = eventColonColoninitializationFailed
+  type EventTypesRegistry = eventColonColontypesRegistry
 }

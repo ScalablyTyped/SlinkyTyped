@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Capture
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object MediaCaptureThermalStatus extends js.Object {
   @js.native
   sealed trait overheated extends MediaCaptureThermalStatus
   
-  /* 0 */ val normal: typingsSlinky.winrtDashUwp.Windows.Media.Capture.MediaCaptureThermalStatus.normal with Double = js.native
-  /* 1 */ val overheated: typingsSlinky.winrtDashUwp.Windows.Media.Capture.MediaCaptureThermalStatus.overheated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaCaptureThermalStatus with Double] = js.native
+  /* 0 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
+  /* 1 */ @js.native
+  object overheated extends TopLevel[overheated with Double]
+  
 }
 

@@ -9,9 +9,9 @@ Typings are for version 24.9.0
 | ------------------ | :-------------: |
 | Full name          | jest-message-util |
 | Keywords           | - |
-| # releases         | 65 |
-| # dependents       | 45 |
-| # downloads        | 242854548 |
+| # releases         | 54 |
+| # dependents       | 46 |
+| # downloads        | 264021642 |
 | # stars            | 0 |
 
 ## Links

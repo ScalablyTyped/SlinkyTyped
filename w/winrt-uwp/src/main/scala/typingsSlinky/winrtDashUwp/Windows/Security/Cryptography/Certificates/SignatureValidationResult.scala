@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object SignatureValidationResult extends js.Object {
   @js.native
   sealed trait success extends SignatureValidationResult
   
-  /* 2 */ val badMessage: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult.badMessage with Double = js.native
-  /* 1 */ val invalidParameter: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult.invalidParameter with Double = js.native
-  /* 3 */ val invalidSignature: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult.invalidSignature with Double = js.native
-  /* 4 */ val otherErrors: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult.otherErrors with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult.success with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SignatureValidationResult with Double] = js.native
+  /* 2 */ @js.native
+  object badMessage extends TopLevel[badMessage with Double]
+  
+  /* 1 */ @js.native
+  object invalidParameter extends TopLevel[invalidParameter with Double]
+  
+  /* 3 */ @js.native
+  object invalidSignature extends TopLevel[invalidSignature with Double]
+  
+  /* 4 */ @js.native
+  object otherErrors extends TopLevel[otherErrors with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object FilterHierarchyMode extends js.Object {
   @js.native
   sealed trait Parent extends FilterHierarchyMode
   
-  /* 2 */ val Both: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.FilterHierarchyMode.Both with Double = js.native
-  /* 1 */ val Child: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.FilterHierarchyMode.Child with Double = js.native
-  /* 3 */ val None: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.FilterHierarchyMode.None with Double = js.native
-  /* 0 */ val Parent: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.FilterHierarchyMode.Parent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterHierarchyMode with Double] = js.native
+  /* 2 */ @js.native
+  object Both extends TopLevel[Both with Double]
+  
+  /* 1 */ @js.native
+  object Child extends TopLevel[Child with Double]
+  
+  /* 3 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 0 */ @js.native
+  object Parent extends TopLevel[Parent with Double]
+  
 }
 

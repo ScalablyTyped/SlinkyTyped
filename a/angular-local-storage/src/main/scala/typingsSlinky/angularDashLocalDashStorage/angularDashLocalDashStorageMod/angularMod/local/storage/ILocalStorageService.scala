@@ -11,7 +11,7 @@ trait ILocalStorageService extends js.Object {
   /**
     * Deal with browser's cookies directly.
     */
-  var cookie: typingsSlinky.angularDashLocalDashStorage.angularDashLocalDashStorageMod.angularMod.local.storage.ICookie = js.native
+  var cookie: ICookie = js.native
   /**
     * Checks if the browser support the current storage type(e.g: localStorage, sessionStorage).
     * Returns: Boolean

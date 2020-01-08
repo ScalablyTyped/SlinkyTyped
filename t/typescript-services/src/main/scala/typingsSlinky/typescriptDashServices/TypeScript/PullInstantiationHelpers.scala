@@ -1,6 +1,5 @@
 package typingsSlinky.typescriptDashServices.TypeScript
 
-import typingsSlinky.typescriptDashServices.TypeScript.PullInstantiationHelpers.MutableTypeArgumentMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcRender3ViewTemplateMod
 
-import typingsSlinky.atAngularCompiler.atAngularCompilerNumbers.`true`
+import typingsSlinky.atAngularCompiler.atAngularCompilerBooleans.`true`
 import typingsSlinky.atAngularCompiler.srcCompilerUnderscoreUtilExpressionUnderscoreConverterMod.LocalResolver
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.Expression
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.ReadVarExpr

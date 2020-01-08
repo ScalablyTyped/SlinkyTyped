@@ -1,8 +1,6 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.std.ClassDecorator
-import typingsSlinky.typedoc.distLibConverterComponentsMod.ConverterTypeComponent
-import typingsSlinky.typedoc.distLibConverterComponentsMod.TypeTypeConverter
 import typingsSlinky.typedoc.distLibConverterContextMod.Context
 import typingsSlinky.typedoc.distLibConverterConverterMod.Converter
 import typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.Reflection

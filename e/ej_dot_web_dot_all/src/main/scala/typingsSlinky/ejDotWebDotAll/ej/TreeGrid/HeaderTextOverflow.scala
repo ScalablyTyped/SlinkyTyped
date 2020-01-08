@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object HeaderTextOverflow extends js.Object {
   @js.native
   sealed trait Wrap extends HeaderTextOverflow
   
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.HeaderTextOverflow.None with Double = js.native
-  /* 1 */ val Wrap: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.HeaderTextOverflow.Wrap with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HeaderTextOverflow with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Wrap extends TopLevel[Wrap with Double]
+  
 }
 

@@ -4,15 +4,15 @@
 Typings are for version 2.1
 
 ## Library description:
-A tiny (141 bytes), secure URL-friendly unique string ID generator
+A tiny (137 bytes), secure URL-friendly unique string ID generator
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | nanoid |
 | Keywords           | uuid, random, id, url |
-| # releases         | 31 |
-| # dependents       | 343 |
-| # downloads        | 21058714 |
+| # releases         | 34 |
+| # dependents       | 609 |
+| # downloads        | 52701610 |
 | # stars            | 16 |
 
 ## Links

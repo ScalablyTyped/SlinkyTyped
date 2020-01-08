@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ class GameObject protected ()
     * @param scene The Scene to which this Game Object belongs.
     * @param type A textual representation of the type of Game Object, i.e. `sprite`.
     */
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, `type`: String) = this()
+  def this(scene: Scene, `type`: String) = this()
 }
 
 /* static members */

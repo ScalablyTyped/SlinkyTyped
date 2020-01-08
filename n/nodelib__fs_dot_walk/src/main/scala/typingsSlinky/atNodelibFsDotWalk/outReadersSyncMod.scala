@@ -2,7 +2,6 @@ package typingsSlinky.atNodelibFsDotWalk
 
 import typingsSlinky.atNodelibFsDotScandir.outSettingsMod.Options
 import typingsSlinky.atNodelibFsDotScandir.outTypesMod.Entry
-import typingsSlinky.atNodelibFsDotWalk.outReadersSyncMod.SyncReader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

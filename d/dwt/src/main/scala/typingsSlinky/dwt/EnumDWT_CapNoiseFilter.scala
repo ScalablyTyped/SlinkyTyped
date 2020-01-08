@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object EnumDWT_CapNoiseFilter extends js.Object {
   @js.native
   sealed trait TWNF_NONE extends EnumDWT_CapNoiseFilter
   
-  /* 1 */ val TWNF_AUTO: typingsSlinky.dwt.EnumDWT_CapNoiseFilter.TWNF_AUTO with Double = js.native
-  /* 2 */ val TWNF_LONEPIXEL: typingsSlinky.dwt.EnumDWT_CapNoiseFilter.TWNF_LONEPIXEL with Double = js.native
-  /* 3 */ val TWNF_MAJORITYRULE: typingsSlinky.dwt.EnumDWT_CapNoiseFilter.TWNF_MAJORITYRULE with Double = js.native
-  /* 0 */ val TWNF_NONE: typingsSlinky.dwt.EnumDWT_CapNoiseFilter.TWNF_NONE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_CapNoiseFilter with Double] = js.native
+  /* 1 */ @js.native
+  object TWNF_AUTO extends TopLevel[TWNF_AUTO with Double]
+  
+  /* 2 */ @js.native
+  object TWNF_LONEPIXEL extends TopLevel[TWNF_LONEPIXEL with Double]
+  
+  /* 3 */ @js.native
+  object TWNF_MAJORITYRULE extends TopLevel[TWNF_MAJORITYRULE with Double]
+  
+  /* 0 */ @js.native
+  object TWNF_NONE extends TopLevel[TWNF_NONE with Double]
+  
 }
 

@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "react-notification-system-redux"
-version := "1.1-dt-20180806Z-7a0f1d"
+version := "1.1-dt-20180806Z-3f3838"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-243f84",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-6c3558",
-  "org.scalablytyped.slinky" %%% "react-notification-system" % "0.2-dt-20190322Z-72f3ea",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.4-1fd55d",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-f22bc8",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-1d231d",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191220Z-f02704",
+  "org.scalablytyped.slinky" %%% "react-notification-system" % "0.2-dt-20190322Z-2de849",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-95021d",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

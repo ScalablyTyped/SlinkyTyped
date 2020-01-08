@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ContextualMenuItemWrapper
-  extends SharedApply_IContextualMenuItemWrapperProps593486878[
+  extends SharedApply_IContextualMenuItemWrapperProps_1838680411[
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsContextualMenuContextualMenuItemWrapperMod.ContextualMenuItemWrapper
     ] {
   @JSImport("office-ui-fabric-react/lib/components/ContextualMenu/ContextualMenuItemWrapper", "ContextualMenuItemWrapper")

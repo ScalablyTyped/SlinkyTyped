@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashHelmet extends SharedApply_HelmetProps_325476768[default] {
+object ReactDashHelmet extends SharedApply_HelmetProps225269477[default] {
   @JSImport("react-helmet", JSImport.Default)
   @js.native
   object componentImport extends js.Object

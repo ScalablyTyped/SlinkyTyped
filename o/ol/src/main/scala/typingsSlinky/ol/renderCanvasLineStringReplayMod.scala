@@ -1,7 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.renderCanvasLineStringReplayMod.CanvasLineStringReplay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,25 +1,21 @@
 package typingsSlinky.baseui
 
 import typingsSlinky.baseui.baseuiStrings.LY
-import typingsSlinky.baseui.baseuiStrings.`+218`
-import typingsSlinky.baseui.baseuiStrings.`Libya (BACKSLASHu202BBACKSLASHu0644BACKSLASHu064ABACKSLASHu0628BACKSLASHu064ABACKSLASHu0627BACKSLASHu202CBACKSLASHu200E)`
+import typingsSlinky.baseui.baseuiStrings.Plussign218
+import typingsSlinky.baseui.baseuiStrings.`Libya Leftparenthesis‫ليبيا‬‎Rightparenthesis`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_218 extends js.Object {
-  var dialCode: `+218`
+  var dialCode: Plussign218
   var id: LY
-  var label: `Libya (BACKSLASHu202BBACKSLASHu0644BACKSLASHu064ABACKSLASHu0628BACKSLASHu064ABACKSLASHu0627BACKSLASHu202CBACKSLASHu200E)`
+  var label: `Libya Leftparenthesis‫ليبيا‬‎Rightparenthesis`
 }
 
 object Anon_218 {
   @scala.inline
-  def apply(
-    dialCode: `+218`,
-    id: LY,
-    label: `Libya (BACKSLASHu202BBACKSLASHu0644BACKSLASHu064ABACKSLASHu0628BACKSLASHu064ABACKSLASHu0627BACKSLASHu202CBACKSLASHu200E)`
-  ): Anon_218 = {
+  def apply(dialCode: Plussign218, id: LY, label: `Libya Leftparenthesis‫ليبيا‬‎Rightparenthesis`): Anon_218 = {
     val __obj = js.Dynamic.literal(dialCode = dialCode.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[Anon_218]

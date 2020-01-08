@@ -4,7 +4,6 @@ import typingsSlinky.shopifyDashPrime.distInfrastructureMod.BaseService
 import typingsSlinky.shopifyDashPrime.distModelsBlogMod.Blog
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBlogsMod.BlogListOptions
-import typingsSlinky.shopifyDashPrime.distServicesBlogsMod.Blogs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

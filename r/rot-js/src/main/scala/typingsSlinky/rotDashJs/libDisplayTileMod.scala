@@ -1,7 +1,6 @@
 package typingsSlinky.rotDashJs
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.rotDashJs.libDisplayTileMod.Tile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

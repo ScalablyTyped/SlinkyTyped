@@ -3,8 +3,6 @@ package typingsSlinky.openlayers.openlayersMod
 import typingsSlinky.openlayers.openlayersMod.olx.tilegrid.TileGridOptions
 import typingsSlinky.openlayers.openlayersMod.olx.tilegrid.WMTSOptions
 import typingsSlinky.openlayers.openlayersMod.olx.tilegrid.XYZOptions
-import typingsSlinky.openlayers.openlayersMod.tilegrid.TileGrid
-import typingsSlinky.openlayers.openlayersMod.tilegrid.WMTS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

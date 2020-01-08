@@ -18,8 +18,8 @@ object SplitButton
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
   def apply(
+    id: String,
     title: TagMod[Any],
     bsSize: Sizes = null,
     bsStyle: String = null,
@@ -28,7 +28,7 @@ object SplitButton
     pullRight: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashBootstrap.libMod.SplitButton] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
     if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
     if (dropdownTitle != null) __obj.updateDynamic("dropdownTitle")(dropdownTitle.asInstanceOf[js.Any])

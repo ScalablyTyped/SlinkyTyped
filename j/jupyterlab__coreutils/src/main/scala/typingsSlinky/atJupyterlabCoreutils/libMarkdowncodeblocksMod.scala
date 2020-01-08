@@ -1,7 +1,6 @@
 package typingsSlinky.atJupyterlabCoreutils
 
-import typingsSlinky.atJupyterlabCoreutils.atJupyterlabCoreutilsStrings.BACKTICKBACKTICKBACKTICK
-import typingsSlinky.atJupyterlabCoreutils.libMarkdowncodeblocksMod.MarkdownCodeBlocks.MarkdownCodeBlock
+import typingsSlinky.atJupyterlabCoreutils.atJupyterlabCoreutilsStrings.GraveaccentGraveaccentGraveaccent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object libMarkdowncodeblocksMod extends js.Object {
       var startLine: Double = js.native
     }
     
-    val CODE_BLOCK_MARKER: BACKTICKBACKTICKBACKTICK = js.native
+    val CODE_BLOCK_MARKER: GraveaccentGraveaccentGraveaccent = js.native
     /**
       * Construct all code snippets from current text
       * (this could be potentially optimized if we can cache and detect differences)

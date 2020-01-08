@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object UserWatcherStatus extends js.Object {
   @js.native
   sealed trait stopping extends UserWatcherStatus
   
-  /* 5 */ val aborted: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.aborted with Double = js.native
-  /* 0 */ val created: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.created with Double = js.native
-  /* 2 */ val enumerationCompleted: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.enumerationCompleted with Double = js.native
-  /* 1 */ val started: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.started with Double = js.native
-  /* 4 */ val stopped: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.stopped with Double = js.native
-  /* 3 */ val stopping: typingsSlinky.winrtDashUwp.Windows.System.UserWatcherStatus.stopping with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserWatcherStatus with Double] = js.native
+  /* 5 */ @js.native
+  object aborted extends TopLevel[aborted with Double]
+  
+  /* 0 */ @js.native
+  object created extends TopLevel[created with Double]
+  
+  /* 2 */ @js.native
+  object enumerationCompleted extends TopLevel[enumerationCompleted with Double]
+  
+  /* 1 */ @js.native
+  object started extends TopLevel[started with Double]
+  
+  /* 4 */ @js.native
+  object stopped extends TopLevel[stopped with Double]
+  
+  /* 3 */ @js.native
+  object stopping extends TopLevel[stopping with Double]
+  
 }
 

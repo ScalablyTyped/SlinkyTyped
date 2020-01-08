@@ -19,8 +19,8 @@ object ValidatorComponent
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
   def apply(
+    name: String,
     value: js.Any,
     errorMessages: js.Array[_] | String = null,
     validatorListener: /* isValid */ Boolean => Unit = null,
@@ -31,7 +31,7 @@ object ValidatorComponent
     tag.type, 
     typingsSlinky.reactDashMaterialDashUiDashFormDashValidator.reactDashMaterialDashUiDashFormDashValidatorMod.ValidatorComponent
   ] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     if (errorMessages != null) __obj.updateDynamic("errorMessages")(errorMessages.asInstanceOf[js.Any])
     if (validatorListener != null) __obj.updateDynamic("validatorListener")(js.Any.fromFunction1(validatorListener))
     if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.koaDashRequestid
 
-import typingsSlinky.koaDashRequestid.koaDashRequestidNumbers.`false`
+import typingsSlinky.koaDashRequestid.koaDashRequestidBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

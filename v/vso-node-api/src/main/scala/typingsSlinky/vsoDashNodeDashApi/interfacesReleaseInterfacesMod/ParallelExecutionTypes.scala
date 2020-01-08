@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ParallelExecutionTypes extends js.Object {
   @js.native
   sealed trait None extends ParallelExecutionTypes
   
-  /* 1 */ val MultiConfiguration: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ParallelExecutionTypes.MultiConfiguration with Double = js.native
-  /* 2 */ val MultiMachine: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ParallelExecutionTypes.MultiMachine with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ParallelExecutionTypes.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ParallelExecutionTypes with Double] = js.native
+  /* 1 */ @js.native
+  object MultiConfiguration extends TopLevel[MultiConfiguration with Double]
+  
+  /* 2 */ @js.native
+  object MultiMachine extends TopLevel[MultiMachine with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

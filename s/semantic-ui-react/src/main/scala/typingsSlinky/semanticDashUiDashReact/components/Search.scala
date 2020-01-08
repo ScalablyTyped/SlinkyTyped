@@ -39,6 +39,7 @@ object Search
     aligned: String = null,
     as: js.Any = null,
     category: js.UndefOr[Boolean] = js.undefined,
+    categoryLayoutRenderer: /* props */ SearchCategoryProps => ReactElement = null,
     categoryRenderer: /* props */ SearchCategoryProps => ReactElement = null,
     defaultOpen: js.UndefOr[Boolean] = js.undefined,
     defaultValue: String = null,
@@ -67,6 +68,7 @@ object Search
     if (aligned != null) __obj.updateDynamic("aligned")(aligned.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (categoryLayoutRenderer != null) __obj.updateDynamic("categoryLayoutRenderer")(js.Any.fromFunction1(categoryLayoutRenderer))
     if (categoryRenderer != null) __obj.updateDynamic("categoryRenderer")(js.Any.fromFunction1(categoryRenderer))
     if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.asInstanceOf[js.Any])
     if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
@@ -92,6 +94,9 @@ object Search
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.semanticDashUiDashReact.distCommonjsModulesSearchMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SearchProps
 }
 

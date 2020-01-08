@@ -2,7 +2,6 @@ package typingsSlinky.writeDashFileDashAtomically
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.writeDashFileDashAtomic.writeDashFileDashAtomicMod.Options
-import typingsSlinky.writeDashFileDashAtomically.writeDashFileDashAtomicallyMod.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

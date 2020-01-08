@@ -5,8 +5,6 @@ import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelDashCredentialsMod.ChannelC
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelDashOptionsMod.ChannelOptions
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelMod.ConnectivityState
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMetadataMod.Metadata
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcSubchannelMod.ConnectivityStateListener
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcSubchannelMod.Subchannel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

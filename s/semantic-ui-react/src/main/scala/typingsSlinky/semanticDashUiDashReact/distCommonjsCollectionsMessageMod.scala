@@ -1,5 +1,6 @@
 package typingsSlinky.semanticDashUiDashReact
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsMessageMessageMod.MessageComponent
@@ -18,6 +19,8 @@ object distCommonjsCollectionsMessageMod extends js.Object {
     def this(props: MessageProps, context: js.Any) = this()
   }
   
-  val default: MessageComponent = js.native
+  @js.native
+  object default extends TopLevel[MessageComponent]
+  
 }
 

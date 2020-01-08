@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object dismissType extends js.Object {
   @js.native
   sealed trait submit extends dismissType
   
-  /* 2 */ val addAttachment: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.dismissType.addAttachment with Double = js.native
-  /* 1 */ val cancel: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.dismissType.cancel with Double = js.native
-  /* 0 */ val submit: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.dismissType.submit with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[dismissType with Double] = js.native
+  /* 2 */ @js.native
+  object addAttachment extends TopLevel[addAttachment with Double]
+  
+  /* 1 */ @js.native
+  object cancel extends TopLevel[cancel with Double]
+  
+  /* 0 */ @js.native
+  object submit extends TopLevel[submit with Double]
+  
 }
 

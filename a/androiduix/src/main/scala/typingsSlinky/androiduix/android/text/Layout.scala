@@ -1,12 +1,12 @@
 package typingsSlinky.androiduix.android.text
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.androiduix.android.graphics.Canvas
 import typingsSlinky.androiduix.android.graphics.Paint
 import typingsSlinky.androiduix.android.graphics.Path
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.text.Layout.Alignment
 import typingsSlinky.androiduix.android.text.Layout.Directions
-import typingsSlinky.androiduix.android.text.Layout.Ellipsizer
 import typingsSlinky.androiduix.android.text.TextUtils.TruncateAt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -221,13 +221,23 @@ object Layout extends js.Object {
     @js.native
     sealed trait ALIGN_RIGHT extends Alignment
     
-    /* 2 */ val ALIGN_CENTER: typingsSlinky.androiduix.android.text.Layout.Alignment.ALIGN_CENTER with Double = js.native
-    /* 3 */ val ALIGN_LEFT: typingsSlinky.androiduix.android.text.Layout.Alignment.ALIGN_LEFT with Double = js.native
-    /* 0 */ val ALIGN_NORMAL: typingsSlinky.androiduix.android.text.Layout.Alignment.ALIGN_NORMAL with Double = js.native
-    /* 1 */ val ALIGN_OPPOSITE: typingsSlinky.androiduix.android.text.Layout.Alignment.ALIGN_OPPOSITE with Double = js.native
-    /* 4 */ val ALIGN_RIGHT: typingsSlinky.androiduix.android.text.Layout.Alignment.ALIGN_RIGHT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Alignment with Double] = js.native
+    /* 2 */ @js.native
+    object ALIGN_CENTER extends TopLevel[ALIGN_CENTER with Double]
+    
+    /* 3 */ @js.native
+    object ALIGN_LEFT extends TopLevel[ALIGN_LEFT with Double]
+    
+    /* 0 */ @js.native
+    object ALIGN_NORMAL extends TopLevel[ALIGN_NORMAL with Double]
+    
+    /* 1 */ @js.native
+    object ALIGN_OPPOSITE extends TopLevel[ALIGN_OPPOSITE with Double]
+    
+    /* 4 */ @js.native
+    object ALIGN_RIGHT extends TopLevel[ALIGN_RIGHT with Double]
+    
   }
   
   /* static members */

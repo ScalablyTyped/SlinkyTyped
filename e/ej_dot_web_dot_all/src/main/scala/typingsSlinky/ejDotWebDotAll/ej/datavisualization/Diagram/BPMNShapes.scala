@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,28 @@ object BPMNShapes extends js.Object {
   @js.native
   sealed trait Message extends BPMNShapes
   
-  /* 5 */ val Activity: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.Activity with Double = js.native
-  /* 3 */ val DataObject: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.DataObject with Double = js.native
-  /* 4 */ val DataSource: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.DataSource with Double = js.native
-  /* 0 */ val Event: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.Event with Double = js.native
-  /* 1 */ val Gateway: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.Gateway with Double = js.native
-  /* 6 */ val Group: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.Group with Double = js.native
-  /* 2 */ val Message: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNShapes.Message with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNShapes with Double] = js.native
+  /* 5 */ @js.native
+  object Activity extends TopLevel[Activity with Double]
+  
+  /* 3 */ @js.native
+  object DataObject extends TopLevel[DataObject with Double]
+  
+  /* 4 */ @js.native
+  object DataSource extends TopLevel[DataSource with Double]
+  
+  /* 0 */ @js.native
+  object Event extends TopLevel[Event with Double]
+  
+  /* 1 */ @js.native
+  object Gateway extends TopLevel[Gateway with Double]
+  
+  /* 6 */ @js.native
+  object Group extends TopLevel[Group with Double]
+  
+  /* 2 */ @js.native
+  object Message extends TopLevel[Message with Double]
+  
 }
 

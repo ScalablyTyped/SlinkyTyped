@@ -1,13 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TooltipOverflowExample
-  extends SharedApply_Object152536094[
-      typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTooltipExamplesTooltipDotOverflowDotExampleMod.TooltipOverflowExample
-    ] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Tooltip/examples/Tooltip.Overflow.Example", "TooltipOverflowExample")
   @js.native
   object componentImport extends js.Object

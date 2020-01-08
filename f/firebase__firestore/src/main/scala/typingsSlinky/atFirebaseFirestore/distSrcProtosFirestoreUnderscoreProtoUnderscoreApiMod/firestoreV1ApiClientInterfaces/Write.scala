@@ -5,29 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Write extends js.Object {
-  var currentDocument: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.Precondition
-  ] = js.undefined
+  var currentDocument: js.UndefOr[Precondition] = js.undefined
   var delete: js.UndefOr[String] = js.undefined
-  var transform: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.DocumentTransform
-  ] = js.undefined
-  var update: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.Document
-  ] = js.undefined
-  var updateMask: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.DocumentMask
-  ] = js.undefined
+  var transform: js.UndefOr[DocumentTransform] = js.undefined
+  var update: js.UndefOr[Document] = js.undefined
+  var updateMask: js.UndefOr[DocumentMask] = js.undefined
 }
 
 object Write {
   @scala.inline
   def apply(
-    currentDocument: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.Precondition = null,
+    currentDocument: Precondition = null,
     delete: String = null,
-    transform: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.DocumentTransform = null,
-    update: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.Document = null,
-    updateMask: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.DocumentMask = null
+    transform: DocumentTransform = null,
+    update: Document = null,
+    updateMask: DocumentMask = null
   ): Write = {
     val __obj = js.Dynamic.literal()
     if (currentDocument != null) __obj.updateDynamic("currentDocument")(currentDocument.asInstanceOf[js.Any])

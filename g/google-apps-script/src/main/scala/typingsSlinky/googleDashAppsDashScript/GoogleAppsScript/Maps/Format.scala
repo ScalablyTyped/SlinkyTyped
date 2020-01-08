@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object Format extends js.Object {
   @js.native
   sealed trait PNG8 extends Format
   
-  /* 3 */ val GIF: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.GIF with Double = js.native
-  /* 4 */ val JPG: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.JPG with Double = js.native
-  /* 5 */ val JPG_BASELINE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.JPG_BASELINE with Double = js.native
-  /* 0 */ val PNG: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.PNG with Double = js.native
-  /* 2 */ val PNG32: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.PNG32 with Double = js.native
-  /* 1 */ val PNG8: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Format.PNG8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Format with Double] = js.native
+  /* 3 */ @js.native
+  object GIF extends TopLevel[GIF with Double]
+  
+  /* 4 */ @js.native
+  object JPG extends TopLevel[JPG with Double]
+  
+  /* 5 */ @js.native
+  object JPG_BASELINE extends TopLevel[JPG_BASELINE with Double]
+  
+  /* 0 */ @js.native
+  object PNG extends TopLevel[PNG with Double]
+  
+  /* 2 */ @js.native
+  object PNG32 extends TopLevel[PNG32 with Double]
+  
+  /* 1 */ @js.native
+  object PNG8 extends TopLevel[PNG8 with Double]
+  
 }
 

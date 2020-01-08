@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object BarColor extends js.Object {
   @js.native
   sealed trait POSITIVE extends BarColor
   
-  /* 0 */ val CRITICAL: typingsSlinky.openui5.sap.ui.core.BarColor.CRITICAL with Double = js.native
-  /* 1 */ val NEGATIVE: typingsSlinky.openui5.sap.ui.core.BarColor.NEGATIVE with Double = js.native
-  /* 2 */ val NEUTRAL: typingsSlinky.openui5.sap.ui.core.BarColor.NEUTRAL with Double = js.native
-  /* 3 */ val POSITIVE: typingsSlinky.openui5.sap.ui.core.BarColor.POSITIVE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BarColor with Double] = js.native
+  /* 0 */ @js.native
+  object CRITICAL extends TopLevel[CRITICAL with Double]
+  
+  /* 1 */ @js.native
+  object NEGATIVE extends TopLevel[NEGATIVE with Double]
+  
+  /* 2 */ @js.native
+  object NEUTRAL extends TopLevel[NEUTRAL with Double]
+  
+  /* 3 */ @js.native
+  object POSITIVE extends TopLevel[POSITIVE with Double]
+  
 }
 

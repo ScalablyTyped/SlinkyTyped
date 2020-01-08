@@ -2,11 +2,6 @@ package typingsSlinky.chaiDashThings
 
 import typingsSlinky.chai.Chai.Assertion
 import typingsSlinky.chai.Chai.Equal
-import typingsSlinky.chaiDashThings.Chai.Anything
-import typingsSlinky.chaiDashThings.Chai.ArrayAssertion
-import typingsSlinky.chaiDashThings.Chai.ArrayInclude
-import typingsSlinky.chaiDashThings.Chai.Item
-import typingsSlinky.chaiDashThings.Chai.Something
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

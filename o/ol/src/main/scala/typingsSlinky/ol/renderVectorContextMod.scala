@@ -1,7 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.renderCanvasMod.DeclutterGroup
-import typingsSlinky.ol.renderVectorContextMod.VectorContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object LinkType extends js.Object {
   @js.native
   sealed trait undefined extends LinkType
   
-  /* 5 */ val autoLink: typingsSlinky.winrt.Windows.UI.Text.LinkType.autoLink with Double = js.native
-  /* 6 */ val autoLinkEmail: typingsSlinky.winrt.Windows.UI.Text.LinkType.autoLinkEmail with Double = js.native
-  /* 8 */ val autoLinkPath: typingsSlinky.winrt.Windows.UI.Text.LinkType.autoLinkPath with Double = js.native
-  /* 7 */ val autoLinkPhone: typingsSlinky.winrt.Windows.UI.Text.LinkType.autoLinkPhone with Double = js.native
-  /* 2 */ val clientLink: typingsSlinky.winrt.Windows.UI.Text.LinkType.clientLink with Double = js.native
-  /* 4 */ val friendlyLinkAddress: typingsSlinky.winrt.Windows.UI.Text.LinkType.friendlyLinkAddress with Double = js.native
-  /* 3 */ val friendlyLinkName: typingsSlinky.winrt.Windows.UI.Text.LinkType.friendlyLinkName with Double = js.native
-  /* 1 */ val notALink: typingsSlinky.winrt.Windows.UI.Text.LinkType.notALink with Double = js.native
-  /* 0 */ val undefined: typingsSlinky.winrt.Windows.UI.Text.LinkType.undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LinkType with Double] = js.native
+  /* 5 */ @js.native
+  object autoLink extends TopLevel[autoLink with Double]
+  
+  /* 6 */ @js.native
+  object autoLinkEmail extends TopLevel[autoLinkEmail with Double]
+  
+  /* 8 */ @js.native
+  object autoLinkPath extends TopLevel[autoLinkPath with Double]
+  
+  /* 7 */ @js.native
+  object autoLinkPhone extends TopLevel[autoLinkPhone with Double]
+  
+  /* 2 */ @js.native
+  object clientLink extends TopLevel[clientLink with Double]
+  
+  /* 4 */ @js.native
+  object friendlyLinkAddress extends TopLevel[friendlyLinkAddress with Double]
+  
+  /* 3 */ @js.native
+  object friendlyLinkName extends TopLevel[friendlyLinkName with Double]
+  
+  /* 1 */ @js.native
+  object notALink extends TopLevel[notALink with Double]
+  
+  /* 0 */ @js.native
+  object undefined extends TopLevel[undefined with Double]
+  
 }
 

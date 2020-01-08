@@ -1,8 +1,10 @@
 package typingsSlinky.officeDashJsDashPreview.OneNote.Interfaces
 
 import typingsSlinky.officeDashJsDashPreview.OneNote.PageContentType
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Ink
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Other
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Outline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,9 +59,7 @@ trait PageContentData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var `type`: js.UndefOr[
-    PageContentType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Outline | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | Ink | Other
-  ] = js.undefined
+  var `type`: js.UndefOr[PageContentType | Outline | Image | Ink | Other] = js.undefined
 }
 
 object PageContentData {
@@ -71,7 +71,7 @@ object PageContentData {
     left: Int | Double = null,
     outline: OutlineData = null,
     top: Int | Double = null,
-    `type`: PageContentType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Outline | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | Ink | Other = null
+    `type`: PageContentType | Outline | Image | Ink | Other = null
   ): PageContentData = {
     val __obj = js.Dynamic.literal()
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])

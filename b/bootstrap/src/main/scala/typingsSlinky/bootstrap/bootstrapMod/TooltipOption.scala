@@ -3,7 +3,7 @@ package typingsSlinky.bootstrap.bootstrapMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.bootstrap.bootstrapNumbers.`false`
+import typingsSlinky.bootstrap.bootstrapBooleans.`false`
 import typingsSlinky.popperDotJs.popperDotJsMod.Behavior
 import typingsSlinky.popperDotJs.popperDotJsMod.Boundary
 import scala.scalajs.js

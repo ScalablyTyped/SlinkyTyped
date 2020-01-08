@@ -1,6 +1,6 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.tslintStrings.`tslint:recommended`
+import typingsSlinky.tslint.tslintStrings.tslintColonrecommended
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tslint/lib/configs/latest", JSImport.Namespace)
 @js.native
 object libConfigsLatestMod extends js.Object {
-  val `extends`: `tslint:recommended` = js.native
+  val `extends`: tslintColonrecommended = js.native
   @js.native
   object rules extends js.Object {
     var align: Anon_OptionsArray = js.native

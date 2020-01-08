@@ -19,15 +19,13 @@ import typingsSlinky.ionic.definitionsMod.IProject
 import typingsSlinky.ionic.definitionsMod.IShell
 import typingsSlinky.ionic.definitionsMod.NpmClient
 import typingsSlinky.ionic.definitionsMod.Runner
-import typingsSlinky.ionic.ionicNumbers.`true`
+import typingsSlinky.ionic.ionicBooleans.`true`
 import typingsSlinky.ionic.ionicStrings.Yarn
-import typingsSlinky.ionic.ionicStrings.`ionic:build`
 import typingsSlinky.ionic.ionicStrings.`npm CLI`
+import typingsSlinky.ionic.ionicStrings.ionicColonbuild
 import typingsSlinky.ionic.ionicStrings.npm
 import typingsSlinky.ionic.ionicStrings.yarn_
-import typingsSlinky.ionic.libBuildMod.BuildCLI
-import typingsSlinky.ionic.libBuildMod.BuildRunnerDeps
-import typingsSlinky.ionic.libBuildMod.PkgManagerBuildCLI
+import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -57,7 +55,6 @@ object libBuildMod extends js.Object {
       * The bin program to use for this Build CLI.
       */
     val program: String = js.native
-    val resolvedProgram: String = js.native
     /**
       * If specified, `package.json` is inspected for this script to use instead
       * of `program`.
@@ -68,9 +65,14 @@ object libBuildMod extends js.Object {
       * Build the arguments for starting this Build CLI. Called by `this.run()`.
       */
     /* protected */ def buildArgs(options: T): js.Promise[js.Array[String]] = js.native
+    /**
+      * Build the environment variables for this Build CLI. Called by `this.run()`.
+      */
+    /* protected */ def buildEnvVars(options: T): js.Promise[ProcessEnv] = js.native
     /* protected */ def promptToInstall(): js.Promise[Boolean] = js.native
     /* protected */ def resolveProgram(): js.Promise[String] = js.native
     def resolveScript(): js.Promise[js.UndefOr[String]] = js.native
+    def resolvedProgram(): String = js.native
     /* protected */ def run(options: T): js.Promise[Unit] = js.native
     /* protected */ def runWrapper(options: T): js.Promise[Unit] = js.native
   }
@@ -120,7 +122,7 @@ object libBuildMod extends js.Object {
     @JSName("program")
     val program_PkgManagerBuildCLI: NpmClient = js.native
     @JSName("script")
-    val script_PkgManagerBuildCLI: `ionic:build` = js.native
+    val script_PkgManagerBuildCLI: ionicColonbuild = js.native
   }
   
   @js.native
@@ -133,7 +135,7 @@ object libBuildMod extends js.Object {
     val program_YarnBuildCLI: yarn_ = js.native
   }
   
-  val BUILD_SCRIPT: `ionic:build` = js.native
+  val BUILD_SCRIPT: ionicColonbuild = js.native
   val COMMON_BUILD_COMMAND_OPTIONS: js.Array[CommandMetadataOption] = js.native
 }
 

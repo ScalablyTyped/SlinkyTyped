@@ -2,7 +2,6 @@ package typingsSlinky.angularDashSanitize.angularDashSanitizeMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angularDashSanitize.Anon_HtmlElements
-import typingsSlinky.angularDashSanitize.angularDashSanitizeMod.angularMod.sanitize.ISanitizeProvider
 import typingsSlinky.angularDashSanitize.angularDashSanitizeMod.angularMod.sanitize.filter.ILinky
 import typingsSlinky.angularDashSanitize.angularDashSanitizeStrings.linky
 import scala.scalajs.js

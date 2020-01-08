@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object EnumDWT_CapOverscan extends js.Object {
   @js.native
   sealed trait TWOV_TOPBOTTOM extends EnumDWT_CapOverscan
   
-  /* 4 */ val TWOV_ALL: typingsSlinky.dwt.EnumDWT_CapOverscan.TWOV_ALL with Double = js.native
-  /* 1 */ val TWOV_AUTO: typingsSlinky.dwt.EnumDWT_CapOverscan.TWOV_AUTO with Double = js.native
-  /* 3 */ val TWOV_LEFTRIGHT: typingsSlinky.dwt.EnumDWT_CapOverscan.TWOV_LEFTRIGHT with Double = js.native
-  /* 0 */ val TWOV_NONE: typingsSlinky.dwt.EnumDWT_CapOverscan.TWOV_NONE with Double = js.native
-  /* 2 */ val TWOV_TOPBOTTOM: typingsSlinky.dwt.EnumDWT_CapOverscan.TWOV_TOPBOTTOM with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_CapOverscan with Double] = js.native
+  /* 4 */ @js.native
+  object TWOV_ALL extends TopLevel[TWOV_ALL with Double]
+  
+  /* 1 */ @js.native
+  object TWOV_AUTO extends TopLevel[TWOV_AUTO with Double]
+  
+  /* 3 */ @js.native
+  object TWOV_LEFTRIGHT extends TopLevel[TWOV_LEFTRIGHT with Double]
+  
+  /* 0 */ @js.native
+  object TWOV_NONE extends TopLevel[TWOV_NONE with Double]
+  
+  /* 2 */ @js.native
+  object TWOV_TOPBOTTOM extends TopLevel[TWOV_TOPBOTTOM with Double]
+  
 }
 

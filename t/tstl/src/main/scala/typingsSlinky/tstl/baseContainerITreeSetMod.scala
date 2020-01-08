@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseContainerITreeSetMod.ITreeSet
 import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
 import typingsSlinky.tstl.baseIteratorISetIteratorMod.ISetIterator
 import typingsSlinky.tstl.baseIteratorISetIteratorMod.ISetReverseIterator

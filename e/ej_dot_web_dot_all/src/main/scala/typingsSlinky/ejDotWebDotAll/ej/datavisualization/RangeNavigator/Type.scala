@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,43 +13,47 @@ sealed trait Type extends js.Object
 object Type extends js.Object {
   //string
   @js.native
-  sealed trait Area
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait Area extends Type
   
   //string
   @js.native
-  sealed trait Line
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait Line extends Type
   
   //string
   @js.native
-  sealed trait Spline
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait Spline extends Type
   
   //string
   @js.native
-  sealed trait SplineArea
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait SplineArea extends Type
   
   //string
   @js.native
-  sealed trait StepArea
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait StepArea extends Type
   
   //string
   @js.native
-  sealed trait StepLine
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type
+  sealed trait StepLine extends Type
   
-  /* 0 */ val Area: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.Area with Double = js.native
-  /* 1 */ val Line: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.Line with Double = js.native
-  /* 2 */ val Spline: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.Spline with Double = js.native
-  /* 4 */ val SplineArea: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.SplineArea with Double = js.native
-  /* 3 */ val StepArea: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.StepArea with Double = js.native
-  /* 5 */ val StepLine: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type.StepLine with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.Type with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[Type with Double] = js.native
+  /* 0 */ @js.native
+  object Area extends TopLevel[Area with Double]
+  
+  /* 1 */ @js.native
+  object Line extends TopLevel[Line with Double]
+  
+  /* 2 */ @js.native
+  object Spline extends TopLevel[Spline with Double]
+  
+  /* 4 */ @js.native
+  object SplineArea extends TopLevel[SplineArea with Double]
+  
+  /* 3 */ @js.native
+  object StepArea extends TopLevel[StepArea with Double]
+  
+  /* 5 */ @js.native
+  object StepLine extends TopLevel[StepLine with Double]
+  
 }
 

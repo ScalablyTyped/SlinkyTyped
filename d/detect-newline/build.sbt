@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "detect-newline"
-version := "3.1.0-436d17"
+version := "3.1.0-20057c"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

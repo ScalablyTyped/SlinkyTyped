@@ -1,13 +1,9 @@
 package typingsSlinky.bser
 
-import typingsSlinky.bser.bserMod.Accumulator
-import typingsSlinky.bser.bserMod.AnyWrapper
-import typingsSlinky.bser.bserMod.InputWrapper
-import typingsSlinky.bser.bserMod.IntWrapper
+import typingsSlinky.bser.bserBooleans.`false`
+import typingsSlinky.bser.bserBooleans.`true`
 import typingsSlinky.bser.bserNumbers.`0`
 import typingsSlinky.bser.bserNumbers.`1`
-import typingsSlinky.bser.bserNumbers.`false`
-import typingsSlinky.bser.bserNumbers.`true`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.TypedArray
 import typingsSlinky.node.eventsMod.EventEmitter

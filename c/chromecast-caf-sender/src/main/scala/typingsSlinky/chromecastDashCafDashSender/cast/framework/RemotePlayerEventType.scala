@@ -1,5 +1,6 @@
 package typingsSlinky.chromecastDashCafDashSender.cast.framework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,25 +65,61 @@ object RemotePlayerEventType extends js.Object {
   @js.native
   sealed trait VOLUME_LEVEL_CHANGED extends RemotePlayerEventType
   
-  /* "anyChanged" */ val ANY_CHANGE: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.ANY_CHANGE with String = js.native
-  /* "canControlVolumeChanged" */ val CAN_CONTROL_VOLUME_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.CAN_CONTROL_VOLUME_CHANGED with String = js.native
-  /* "canPauseChanged" */ val CAN_PAUSE_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.CAN_PAUSE_CHANGED with String = js.native
-  /* "canSeekChanged" */ val CAN_SEEK_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.CAN_SEEK_CHANGED with String = js.native
-  /* "currentTimeChanged" */ val CURRENT_TIME_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.CURRENT_TIME_CHANGED with String = js.native
-  /* "displayNameChanged" */ val DISPLAY_NAME_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.DISPLAY_NAME_CHANGED with String = js.native
-  /* "displayStatusChanged" */ val DISPLAY_STATUS_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.DISPLAY_STATUS_CHANGED with String = js.native
-  /* "durationChanged" */ val DURATION_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.DURATION_CHANGED with String = js.native
-  /* "imageUrlChanged" */ val IMAGE_URL_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.IMAGE_URL_CHANGED with String = js.native
-  /* "isConnectedChanged" */ val IS_CONNECTED_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED with String = js.native
-  /* "isMediaLoadedChanged" */ val IS_MEDIA_LOADED_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.IS_MEDIA_LOADED_CHANGED with String = js.native
-  /* "isMutedChanged" */ val IS_MUTED_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.IS_MUTED_CHANGED with String = js.native
-  /* "isPausedChanged" */ val IS_PAUSED_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.IS_PAUSED_CHANGED with String = js.native
-  /* "mediaInfoChanged" */ val MEDIA_INFO_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.MEDIA_INFO_CHANGED with String = js.native
-  /* "playerStateChanged" */ val PLAYER_STATE_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.PLAYER_STATE_CHANGED with String = js.native
-  /* "statusTextChanged" */ val STATUS_TEXT_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.STATUS_TEXT_CHANGED with String = js.native
-  /* "titleChanged" */ val TITLE_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.TITLE_CHANGED with String = js.native
-  /* "volumeLevelChanged" */ val VOLUME_LEVEL_CHANGED: typingsSlinky.chromecastDashCafDashSender.cast.framework.RemotePlayerEventType.VOLUME_LEVEL_CHANGED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[RemotePlayerEventType with String] = js.native
+  /* "anyChanged" */ @js.native
+  object ANY_CHANGE extends TopLevel[ANY_CHANGE with String]
+  
+  /* "canControlVolumeChanged" */ @js.native
+  object CAN_CONTROL_VOLUME_CHANGED extends TopLevel[CAN_CONTROL_VOLUME_CHANGED with String]
+  
+  /* "canPauseChanged" */ @js.native
+  object CAN_PAUSE_CHANGED extends TopLevel[CAN_PAUSE_CHANGED with String]
+  
+  /* "canSeekChanged" */ @js.native
+  object CAN_SEEK_CHANGED extends TopLevel[CAN_SEEK_CHANGED with String]
+  
+  /* "currentTimeChanged" */ @js.native
+  object CURRENT_TIME_CHANGED extends TopLevel[CURRENT_TIME_CHANGED with String]
+  
+  /* "displayNameChanged" */ @js.native
+  object DISPLAY_NAME_CHANGED extends TopLevel[DISPLAY_NAME_CHANGED with String]
+  
+  /* "displayStatusChanged" */ @js.native
+  object DISPLAY_STATUS_CHANGED extends TopLevel[DISPLAY_STATUS_CHANGED with String]
+  
+  /* "durationChanged" */ @js.native
+  object DURATION_CHANGED extends TopLevel[DURATION_CHANGED with String]
+  
+  /* "imageUrlChanged" */ @js.native
+  object IMAGE_URL_CHANGED extends TopLevel[IMAGE_URL_CHANGED with String]
+  
+  /* "isConnectedChanged" */ @js.native
+  object IS_CONNECTED_CHANGED extends TopLevel[IS_CONNECTED_CHANGED with String]
+  
+  /* "isMediaLoadedChanged" */ @js.native
+  object IS_MEDIA_LOADED_CHANGED extends TopLevel[IS_MEDIA_LOADED_CHANGED with String]
+  
+  /* "isMutedChanged" */ @js.native
+  object IS_MUTED_CHANGED extends TopLevel[IS_MUTED_CHANGED with String]
+  
+  /* "isPausedChanged" */ @js.native
+  object IS_PAUSED_CHANGED extends TopLevel[IS_PAUSED_CHANGED with String]
+  
+  /* "mediaInfoChanged" */ @js.native
+  object MEDIA_INFO_CHANGED extends TopLevel[MEDIA_INFO_CHANGED with String]
+  
+  /* "playerStateChanged" */ @js.native
+  object PLAYER_STATE_CHANGED extends TopLevel[PLAYER_STATE_CHANGED with String]
+  
+  /* "statusTextChanged" */ @js.native
+  object STATUS_TEXT_CHANGED extends TopLevel[STATUS_TEXT_CHANGED with String]
+  
+  /* "titleChanged" */ @js.native
+  object TITLE_CHANGED extends TopLevel[TITLE_CHANGED with String]
+  
+  /* "volumeLevelChanged" */ @js.native
+  object VOLUME_LEVEL_CHANGED extends TopLevel[VOLUME_LEVEL_CHANGED with String]
+  
 }
 

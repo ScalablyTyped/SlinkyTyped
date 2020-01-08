@@ -2,7 +2,7 @@ package typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageMod
 
 import org.scalajs.dom.raw.FileReader
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageNumbers.`false`
+import typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageBooleans.`false`
 import typingsSlinky.std.Blob
 import typingsSlinky.std.File
 import scala.scalajs.js
@@ -15,9 +15,9 @@ trait LoadImage extends js.Object {
   def apply(file: String, callback: LoadImageCallback, options: LoadImageOptions): HTMLImageElement | FileReader | `false` = js.native
   def apply(file: Blob, callback: LoadImageCallback, options: LoadImageOptions): HTMLImageElement | FileReader | `false` = js.native
   def apply(file: File, callback: LoadImageCallback, options: LoadImageOptions): HTMLImageElement | FileReader | `false` = js.native
-  def blobSlice(`this`: org.scalajs.dom.raw.Blob): org.scalajs.dom.raw.Blob = js.native
-  def blobSlice(`this`: org.scalajs.dom.raw.Blob, start: Double): org.scalajs.dom.raw.Blob = js.native
-  def blobSlice(`this`: org.scalajs.dom.raw.Blob, start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
+  def blobSlice(): org.scalajs.dom.raw.Blob = js.native
+  def blobSlice(start: Double): org.scalajs.dom.raw.Blob = js.native
+  def blobSlice(start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
   def parseMetaData(file: String, callback: ParseMetaDataCallback): Unit = js.native
   def parseMetaData(file: String, callback: ParseMetaDataCallback, options: ParseOptions): Unit = js.native
   def parseMetaData(file: String, callback: ParseMetaDataCallback, options: ParseOptions, data: ImageHead): Unit = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Credentials
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object WebAccountPictureSize extends js.Object {
   @js.native
   sealed trait size64x64 extends WebAccountPictureSize
   
-  /* 3 */ val size1080x1080: typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccountPictureSize.size1080x1080 with Double = js.native
-  /* 1 */ val size208x208: typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccountPictureSize.size208x208 with Double = js.native
-  /* 2 */ val size424x424: typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccountPictureSize.size424x424 with Double = js.native
-  /* 0 */ val size64x64: typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccountPictureSize.size64x64 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WebAccountPictureSize with Double] = js.native
+  /* 3 */ @js.native
+  object size1080x1080 extends TopLevel[size1080x1080 with Double]
+  
+  /* 1 */ @js.native
+  object size208x208 extends TopLevel[size208x208 with Double]
+  
+  /* 2 */ @js.native
+  object size424x424 extends TopLevel[size424x424 with Double]
+  
+  /* 0 */ @js.native
+  object size64x64 extends TopLevel[size64x64 with Double]
+  
 }
 

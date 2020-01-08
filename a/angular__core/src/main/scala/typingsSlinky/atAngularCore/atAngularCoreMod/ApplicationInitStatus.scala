@@ -1,6 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
-import typingsSlinky.atAngularCore.atAngularCoreNumbers.`false`
+import typingsSlinky.atAngularCore.atAngularCoreBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

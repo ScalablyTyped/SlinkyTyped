@@ -3,7 +3,6 @@ package typingsSlinky.smoothDashScrollbar
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.Touch
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.smoothDashScrollbar.utilsTouchDashRecordMod.Tracker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

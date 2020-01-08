@@ -1,7 +1,7 @@
 
 # Scala.js typings for acme-client
 
-Typings are for version 3.0
+Typings are for version 3.3.0
 
 ## Library description:
 Simple and unopinionated ACME client
@@ -9,10 +9,10 @@ Simple and unopinionated ACME client
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | acme-client |
-| Keywords           | simple, acme, acmev2, client, boulder, lets, encrypt |
-| # releases         | 13 |
-| # dependents       | 6 |
-| # downloads        | 7133 |
+| Keywords           | acme, client, lets, encrypt, acmev2, boulder |
+| # releases         | 14 |
+| # dependents       | 11 |
+| # downloads        | 16497 |
 | # stars            | 0 |
 
 ## Links
@@ -24,7 +24,7 @@ Simple and unopinionated ACME client
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

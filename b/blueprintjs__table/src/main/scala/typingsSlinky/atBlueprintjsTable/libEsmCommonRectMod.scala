@@ -1,8 +1,6 @@
 package typingsSlinky.atBlueprintjsTable
 
 import org.scalajs.dom.raw.ClientRect
-import typingsSlinky.atBlueprintjsTable.libEsmCommonRectMod.AnyRect
-import typingsSlinky.atBlueprintjsTable.libEsmCommonRectMod.Rect
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

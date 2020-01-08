@@ -16,9 +16,8 @@ object Animated
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(additional: js.Object = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.conductorDashAnimate.conductorDashAnimateMod.Animated] = {
-    val __obj = js.Dynamic.literal()
+  def apply(id: String, additional: js.Object = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.conductorDashAnimate.conductorDashAnimateMod.Animated] = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     if (additional != null) __obj.updateDynamic("additional")(additional.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

@@ -1,6 +1,5 @@
 package typingsSlinky.nodeDashJsonDashDb
 
-import typingsSlinky.nodeDashJsonDashDb.distLibArrayInfoMod.ArrayInfo
 import typingsSlinky.nodeDashJsonDashDb.distLibUtilsMod.KeyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,6 +4,7 @@ import typingsSlinky.kendoDashUi.kendo.Observable
 import typingsSlinky.kendoDashUi.kendo.Router
 import typingsSlinky.kendoDashUi.kendo.mobile.ui.Pane
 import typingsSlinky.kendoDashUi.kendo.mobile.ui.Scroller
+import typingsSlinky.kendoDashUi.kendo.mobile.ui.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +28,6 @@ class Application () extends Observable {
   def replace(url: String, transition: String): Unit = js.native
   def scroller(): Scroller = js.native
   def showLoading(): Unit = js.native
-  def view(): typingsSlinky.kendoDashUi.kendo.mobile.ui.View = js.native
+  def view(): View = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ShadowMode extends js.Object {
   @js.native
   sealed trait RECEIVE_ONLY extends ShadowMode
   
-  /* 0 */ val CAST_ONLY: typingsSlinky.cesium.cesiumMod.ShadowMode.CAST_ONLY with Double = js.native
-  /* 1 */ val DISABLED: typingsSlinky.cesium.cesiumMod.ShadowMode.DISABLED with Double = js.native
-  /* 2 */ val ENABLED: typingsSlinky.cesium.cesiumMod.ShadowMode.ENABLED with Double = js.native
-  /* 3 */ val RECEIVE_ONLY: typingsSlinky.cesium.cesiumMod.ShadowMode.RECEIVE_ONLY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ShadowMode with Double] = js.native
+  /* 0 */ @js.native
+  object CAST_ONLY extends TopLevel[CAST_ONLY with Double]
+  
+  /* 1 */ @js.native
+  object DISABLED extends TopLevel[DISABLED with Double]
+  
+  /* 2 */ @js.native
+  object ENABLED extends TopLevel[ENABLED with Double]
+  
+  /* 3 */ @js.native
+  object RECEIVE_ONLY extends TopLevel[RECEIVE_ONLY with Double]
+  
 }
 

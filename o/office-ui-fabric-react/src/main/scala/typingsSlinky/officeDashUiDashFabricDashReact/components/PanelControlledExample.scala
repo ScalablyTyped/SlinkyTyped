@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PanelControlledExample extends SharedApply_Object857666606 {
+object PanelControlledExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Panel/examples/Panel.Controlled.Example", "PanelControlledExample")
   @js.native
   object componentImport extends js.Object

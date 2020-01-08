@@ -4,7 +4,7 @@ import typingsSlinky.three.srcCoreBufferGeometryMod.BufferGeometry
 import typingsSlinky.three.srcCoreObject3DMod.Object3D
 import typingsSlinky.three.srcMaterialsMaterialsMod.SpriteMaterial
 import typingsSlinky.three.srcMathVector2Mod.Vector2
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

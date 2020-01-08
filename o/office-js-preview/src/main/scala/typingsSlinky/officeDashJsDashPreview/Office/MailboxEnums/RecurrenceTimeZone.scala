@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,1093 +24,1227 @@ object RecurrenceTimeZone extends js.Object {
     * Australia Central Standard Time
     */
   @js.native
-  sealed trait AUSCentralStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AUSCentralStandardTime extends RecurrenceTimeZone
   
   /**
     * AUS Eastern Standard Time
     */
   @js.native
-  sealed trait AUSEasternStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AUSEasternStandardTime extends RecurrenceTimeZone
   
   /**
     * Afghanistan Standard Time
     */
   @js.native
-  sealed trait AfghanistanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AfghanistanStandardTime extends RecurrenceTimeZone
   
   /**
     * Alaskan Standard Time
     */
   @js.native
-  sealed trait AlaskanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AlaskanStandardTime extends RecurrenceTimeZone
   
   /**
     * Aleutian Standard Time
     */
   @js.native
-  sealed trait AleutianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AleutianStandardTime extends RecurrenceTimeZone
   
   /**
     * Altai Standard Time
     */
   @js.native
-  sealed trait AltaiStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AltaiStandardTime extends RecurrenceTimeZone
   
   /**
     * Arab Standard Time
     */
   @js.native
-  sealed trait ArabStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ArabStandardTime extends RecurrenceTimeZone
   
   /**
     * Arabian Standard Time
     */
   @js.native
-  sealed trait ArabianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ArabianStandardTime extends RecurrenceTimeZone
   
   /**
     * Arabic Standard Time
     */
   @js.native
-  sealed trait ArabicStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ArabicStandardTime extends RecurrenceTimeZone
   
   /**
     * Argentina Standard Time
     */
   @js.native
-  sealed trait ArgentinaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ArgentinaStandardTime extends RecurrenceTimeZone
   
   /**
     * Astrakhan Standard Time
     */
   @js.native
-  sealed trait AstrakhanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AstrakhanStandardTime extends RecurrenceTimeZone
   
   /**
     * Atlantic Standard Time
     */
   @js.native
-  sealed trait AtlanticStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AtlanticStandardTime extends RecurrenceTimeZone
   
   /**
     * Australia Central West Standard Time
     */
   @js.native
-  sealed trait AusCentralW_StandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AusCentralW_StandardTime extends RecurrenceTimeZone
   
   /**
     * Azerbaijan Standard Time
     */
   @js.native
-  sealed trait AzerbaijanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AzerbaijanStandardTime extends RecurrenceTimeZone
   
   /**
     * Azores Standard Time
     */
   @js.native
-  sealed trait AzoresStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait AzoresStandardTime extends RecurrenceTimeZone
   
   /**
     * Bahia Standard Time
     */
   @js.native
-  sealed trait BahiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait BahiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Bangladesh Standard Time
     */
   @js.native
-  sealed trait BangladeshStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait BangladeshStandardTime extends RecurrenceTimeZone
   
   /**
     * Belarus Standard Time
     */
   @js.native
-  sealed trait BelarusStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait BelarusStandardTime extends RecurrenceTimeZone
   
   /**
     * Bougainville Standard Time
     */
   @js.native
-  sealed trait BougainvilleStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait BougainvilleStandardTime extends RecurrenceTimeZone
   
   /**
     * Canada Central Standard Time
     */
   @js.native
-  sealed trait CanadaCentralStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CanadaCentralStandardTime extends RecurrenceTimeZone
   
   /**
     * Cape Verde Standard Time
     */
   @js.native
-  sealed trait CapeVerdeStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CapeVerdeStandardTime extends RecurrenceTimeZone
   
   /**
     * Caucasus Standard Time
     */
   @js.native
-  sealed trait CaucasusStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CaucasusStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Australia Standard Time
     */
   @js.native
-  sealed trait CenAustraliaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CenAustraliaStandardTime extends RecurrenceTimeZone
   
   /**
     * Central America Standard Time
     */
   @js.native
-  sealed trait CentralAmericaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralAmericaStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Asia Standard Time
     */
   @js.native
-  sealed trait CentralAsiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralAsiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Brazilian Standard Time
     */
   @js.native
-  sealed trait CentralBrazilianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralBrazilianStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Europe Standard Time
     */
   @js.native
-  sealed trait CentralEuropeStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralEuropeStandardTime extends RecurrenceTimeZone
   
   /**
     * Central European Standard Time
     */
   @js.native
-  sealed trait CentralEuropeanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralEuropeanStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Pacific Standard Time
     */
   @js.native
-  sealed trait CentralPacificStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralPacificStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Standard Time
     */
   @js.native
-  sealed trait CentralStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralStandardTime extends RecurrenceTimeZone
   
   /**
     * Central Standard Time (Mexico)
     */
   @js.native
-  sealed trait CentralStandardTime_Mexico
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CentralStandardTime_Mexico extends RecurrenceTimeZone
   
   /**
     * Chatham Islands Standard Time
     */
   @js.native
-  sealed trait ChathamIslandsStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ChathamIslandsStandardTime extends RecurrenceTimeZone
   
   /**
     * China Standard Time
     */
   @js.native
-  sealed trait ChinaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ChinaStandardTime extends RecurrenceTimeZone
   
   /**
     * Cuba Standard Time
     */
   @js.native
-  sealed trait CubaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait CubaStandardTime extends RecurrenceTimeZone
   
   /**
     * Dateline Standard Time
     */
   @js.native
-  sealed trait DatelineStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait DatelineStandardTime extends RecurrenceTimeZone
   
   /**
     * East Africa Standard Time
     */
   @js.native
-  sealed trait E_AfricaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait E_AfricaStandardTime extends RecurrenceTimeZone
   
   /**
     * East Australia Standard Time
     */
   @js.native
-  sealed trait E_AustraliaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait E_AustraliaStandardTime extends RecurrenceTimeZone
   
   /**
     * East Europe Standard Time
     */
   @js.native
-  sealed trait E_EuropeStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait E_EuropeStandardTime extends RecurrenceTimeZone
   
   /**
     * East South America Standard Time
     */
   @js.native
-  sealed trait E_SouthAmericaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait E_SouthAmericaStandardTime extends RecurrenceTimeZone
   
   /**
     * Easter Island Standard Time
     */
   @js.native
-  sealed trait EasterIslandStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait EasterIslandStandardTime extends RecurrenceTimeZone
   
   /**
     * Eastern Standard Time
     */
   @js.native
-  sealed trait EasternStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait EasternStandardTime extends RecurrenceTimeZone
   
   /**
     * Eastern Standard Time (Mexico)
     */
   @js.native
-  sealed trait EasternStandardTime_Mexico
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait EasternStandardTime_Mexico extends RecurrenceTimeZone
   
   /**
     * Egypt Standard Time
     */
   @js.native
-  sealed trait EgyptStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait EgyptStandardTime extends RecurrenceTimeZone
   
   /**
     * Ekaterinburg Standard Time
     */
   @js.native
-  sealed trait EkaterinburgStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait EkaterinburgStandardTime extends RecurrenceTimeZone
   
   /**
     * FLE Standard Time
     */
   @js.native
-  sealed trait FLEStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait FLEStandardTime extends RecurrenceTimeZone
   
   /**
     * Fiji Standard Time
     */
   @js.native
-  sealed trait FijiStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait FijiStandardTime extends RecurrenceTimeZone
   
   /**
     * GMT Standard Time
     */
   @js.native
-  sealed trait GMTStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait GMTStandardTime extends RecurrenceTimeZone
   
   /**
     * GTB Standard Time
     */
   @js.native
-  sealed trait GTBStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait GTBStandardTime extends RecurrenceTimeZone
   
   /**
     * Georgian Standard Time
     */
   @js.native
-  sealed trait GeorgianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait GeorgianStandardTime extends RecurrenceTimeZone
   
   /**
     * Greenland Standard Time
     */
   @js.native
-  sealed trait GreenlandStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait GreenlandStandardTime extends RecurrenceTimeZone
   
   /**
     * Greenwich Standard Time
     */
   @js.native
-  sealed trait GreenwichStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait GreenwichStandardTime extends RecurrenceTimeZone
   
   /**
     * Haiti Standard Time
     */
   @js.native
-  sealed trait HaitiStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait HaitiStandardTime extends RecurrenceTimeZone
   
   /**
     * Hawaiian Standard Time
     */
   @js.native
-  sealed trait HawaiianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait HawaiianStandardTime extends RecurrenceTimeZone
   
   /**
     * India Standard Time
     */
   @js.native
-  sealed trait IndiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait IndiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Iran Standard Time
     */
   @js.native
-  sealed trait IranStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait IranStandardTime extends RecurrenceTimeZone
   
   /**
     * Israel Standard Time
     */
   @js.native
-  sealed trait IsraelStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait IsraelStandardTime extends RecurrenceTimeZone
   
   /**
     * Jordan Standard Time
     */
   @js.native
-  sealed trait JordanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait JordanStandardTime extends RecurrenceTimeZone
   
   /**
     * Kaliningrad Standard Time
     */
   @js.native
-  sealed trait KaliningradStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait KaliningradStandardTime extends RecurrenceTimeZone
   
   /**
     * Kamchatka Standard Time
     */
   @js.native
-  sealed trait KamchatkaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait KamchatkaStandardTime extends RecurrenceTimeZone
   
   /**
     * Korea Standard Time
     */
   @js.native
-  sealed trait KoreaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait KoreaStandardTime extends RecurrenceTimeZone
   
   /**
     * Libya Standard Time
     */
   @js.native
-  sealed trait LibyaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait LibyaStandardTime extends RecurrenceTimeZone
   
   /**
     * Line Islands Standard Time
     */
   @js.native
-  sealed trait LineIslandsStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait LineIslandsStandardTime extends RecurrenceTimeZone
   
   /**
     * Lord Howe Standard Time
     */
   @js.native
-  sealed trait LordHoweStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait LordHoweStandardTime extends RecurrenceTimeZone
   
   /**
     * Magadan Standard Time
     */
   @js.native
-  sealed trait MagadanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MagadanStandardTime extends RecurrenceTimeZone
   
   /**
     * Magallanes Standard Time
     */
   @js.native
-  sealed trait MagallanesStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MagallanesStandardTime extends RecurrenceTimeZone
   
   /**
     * Marquesas Standard Time
     */
   @js.native
-  sealed trait MarquesasStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MarquesasStandardTime extends RecurrenceTimeZone
   
   /**
     * Mauritius Standard Time
     */
   @js.native
-  sealed trait MauritiusStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MauritiusStandardTime extends RecurrenceTimeZone
   
   /**
     * Mid-Atlantic Standard Time
     */
   @js.native
-  sealed trait MidAtlanticStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MidAtlanticStandardTime extends RecurrenceTimeZone
   
   /**
     * Middle East Standard Time
     */
   @js.native
-  sealed trait MiddleEastStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MiddleEastStandardTime extends RecurrenceTimeZone
   
   /**
     * Montevideo Standard Time
     */
   @js.native
-  sealed trait MontevideoStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MontevideoStandardTime extends RecurrenceTimeZone
   
   /**
     * Morocco Standard Time
     */
   @js.native
-  sealed trait MoroccoStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MoroccoStandardTime extends RecurrenceTimeZone
   
   /**
     * Mountain Standard Time
     */
   @js.native
-  sealed trait MountainStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MountainStandardTime extends RecurrenceTimeZone
   
   /**
     * Mountain Standard Time (Mexico)
     */
   @js.native
-  sealed trait MountainStandardTime_Mexico
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MountainStandardTime_Mexico extends RecurrenceTimeZone
   
   /**
     * Myanmar Standard Time
     */
   @js.native
-  sealed trait MyanmarStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait MyanmarStandardTime extends RecurrenceTimeZone
   
   /**
     * North Central Asia Standard Time
     */
   @js.native
-  sealed trait N_CentralAsiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait N_CentralAsiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Namibia Standard Time
     */
   @js.native
-  sealed trait NamibiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NamibiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Nepal Standard Time
     */
   @js.native
-  sealed trait NepalStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NepalStandardTime extends RecurrenceTimeZone
   
   /**
     * New Zealand Standard Time
     */
   @js.native
-  sealed trait NewZealandStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NewZealandStandardTime extends RecurrenceTimeZone
   
   /**
     * Newfoundland Standard Time
     */
   @js.native
-  sealed trait NewfoundlandStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NewfoundlandStandardTime extends RecurrenceTimeZone
   
   /**
     * Norfolk Standard Time
     */
   @js.native
-  sealed trait NorfolkStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NorfolkStandardTime extends RecurrenceTimeZone
   
   /**
     * North Asia East Standard Time
     */
   @js.native
-  sealed trait NorthAsiaEastStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NorthAsiaEastStandardTime extends RecurrenceTimeZone
   
   /**
     * North Asia Standard Time
     */
   @js.native
-  sealed trait NorthAsiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NorthAsiaStandardTime extends RecurrenceTimeZone
   
   /**
     * North Korea Standard Time
     */
   @js.native
-  sealed trait NorthKoreaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait NorthKoreaStandardTime extends RecurrenceTimeZone
   
   /**
     * Omsk Standard Time
     */
   @js.native
-  sealed trait OmskStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait OmskStandardTime extends RecurrenceTimeZone
   
   /**
     * Pacific SA Standard Time
     */
   @js.native
-  sealed trait PacificSAStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait PacificSAStandardTime extends RecurrenceTimeZone
   
   /**
     * Pacific Standard Time
     */
   @js.native
-  sealed trait PacificStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait PacificStandardTime extends RecurrenceTimeZone
   
   /**
     * Pacific Standard Time (Mexico)
     */
   @js.native
-  sealed trait PacificStandardTimeMexico
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait PacificStandardTimeMexico extends RecurrenceTimeZone
   
   /**
     * Pakistan Standard Time
     */
   @js.native
-  sealed trait PakistanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait PakistanStandardTime extends RecurrenceTimeZone
   
   /**
     * Paraguay Standard Time
     */
   @js.native
-  sealed trait ParaguayStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait ParaguayStandardTime extends RecurrenceTimeZone
   
   /**
     * Romance Standard Time
     */
   @js.native
-  sealed trait RomanceStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait RomanceStandardTime extends RecurrenceTimeZone
   
   /**
     * Russia Time Zone 10
     */
   @js.native
-  sealed trait RussiaTimeZone10
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait RussiaTimeZone10 extends RecurrenceTimeZone
   
   /**
     * Russia Time Zone 11
     */
   @js.native
-  sealed trait RussiaTimeZone11
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait RussiaTimeZone11 extends RecurrenceTimeZone
   
   /**
     * Russia Time Zone 3
     */
   @js.native
-  sealed trait RussiaTimeZone3
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait RussiaTimeZone3 extends RecurrenceTimeZone
   
   /**
     * Russian Standard Time
     */
   @js.native
-  sealed trait RussianStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait RussianStandardTime extends RecurrenceTimeZone
   
   /**
     * SA Eastern Standard Time
     */
   @js.native
-  sealed trait SAEasternStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SAEasternStandardTime extends RecurrenceTimeZone
   
   /**
     * SA Pacific Standard Time
     */
   @js.native
-  sealed trait SAPacificStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SAPacificStandardTime extends RecurrenceTimeZone
   
   /**
     * SA Western Standard Time
     */
   @js.native
-  sealed trait SAWesternStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SAWesternStandardTime extends RecurrenceTimeZone
   
   /**
     * Southeast Asia Standard Time
     */
   @js.native
-  sealed trait SEAsiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SEAsiaStandardTime extends RecurrenceTimeZone
   
   /**
     * Saint Pierre Standard Time
     */
   @js.native
-  sealed trait SaintPierreStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SaintPierreStandardTime extends RecurrenceTimeZone
   
   /**
     * Sakhalin Standard Time
     */
   @js.native
-  sealed trait SakhalinStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SakhalinStandardTime extends RecurrenceTimeZone
   
   /**
     * Samoa Standard Time
     */
   @js.native
-  sealed trait SamoaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SamoaStandardTime extends RecurrenceTimeZone
   
   /**
     * Saratov Standard Time
     */
   @js.native
-  sealed trait SaratovStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SaratovStandardTime extends RecurrenceTimeZone
   
   /**
     * Singapore Standard Time
     */
   @js.native
-  sealed trait SingaporeStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SingaporeStandardTime extends RecurrenceTimeZone
   
   /**
     * South Africa Standard Time
     */
   @js.native
-  sealed trait SouthAfricaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SouthAfricaStandardTime extends RecurrenceTimeZone
   
   /**
     * Sri Lanka Standard Time
     */
   @js.native
-  sealed trait SriLankaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SriLankaStandardTime extends RecurrenceTimeZone
   
   /**
     * Sudan Standard Time
     */
   @js.native
-  sealed trait SudanStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SudanStandardTime extends RecurrenceTimeZone
   
   /**
     * Syria Standard Time
     */
   @js.native
-  sealed trait SyriaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait SyriaStandardTime extends RecurrenceTimeZone
   
   /**
     * Taipei Standard Time
     */
   @js.native
-  sealed trait TaipeiStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TaipeiStandardTime extends RecurrenceTimeZone
   
   /**
     * Tasmania Standard Time
     */
   @js.native
-  sealed trait TasmaniaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TasmaniaStandardTime extends RecurrenceTimeZone
   
   /**
     * Tocantins Standard Time
     */
   @js.native
-  sealed trait TocantinsStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TocantinsStandardTime extends RecurrenceTimeZone
   
   /**
     * Tokyo Standard Time
     */
   @js.native
-  sealed trait TokyoStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TokyoStandardTime extends RecurrenceTimeZone
   
   /**
     * Tomsk Standard Time
     */
   @js.native
-  sealed trait TomskStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TomskStandardTime extends RecurrenceTimeZone
   
   /**
     * Tonga Standard Time
     */
   @js.native
-  sealed trait TongaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TongaStandardTime extends RecurrenceTimeZone
   
   /**
     * Transbaikal Standard Time
     */
   @js.native
-  sealed trait TransbaikalStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TransbaikalStandardTime extends RecurrenceTimeZone
   
   /**
     * Turkey Standard Time
     */
   @js.native
-  sealed trait TurkeyStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TurkeyStandardTime extends RecurrenceTimeZone
   
   /**
     * Turks And Caicos Standard Time
     */
   @js.native
-  sealed trait TurksAndCaicosStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait TurksAndCaicosStandardTime extends RecurrenceTimeZone
   
   /**
     * United States Eastern Standard Time
     */
   @js.native
-  sealed trait USEasternStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait USEasternStandardTime extends RecurrenceTimeZone
   
   /**
     * United States Mountain Standard Time
     */
   @js.native
-  sealed trait USMountainStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait USMountainStandardTime extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC)
     */
   @js.native
-  sealed trait UTC
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTC extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) - 2 hours
     */
   @js.native
-  sealed trait UTCMINUS02
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCMINUS02 extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) - 8 hours
     */
   @js.native
-  sealed trait UTCMINUS08
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCMINUS08 extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) - 9 hours
     */
   @js.native
-  sealed trait UTCMINUS09
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCMINUS09 extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) - 11 hours
     */
   @js.native
-  sealed trait UTCMINUS11
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCMINUS11 extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) + 12 hours
     */
   @js.native
-  sealed trait UTCPLUS12
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCPLUS12 extends RecurrenceTimeZone
   
   /**
     * Coordinated Universal Time (UTC) + 13 hours
     */
   @js.native
-  sealed trait UTCPLUS13
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UTCPLUS13 extends RecurrenceTimeZone
   
   /**
     * Ulaanbaatar Standard Time
     */
   @js.native
-  sealed trait UlaanbaatarStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait UlaanbaatarStandardTime extends RecurrenceTimeZone
   
   /**
     * Venezuela Standard Time
     */
   @js.native
-  sealed trait VenezuelaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait VenezuelaStandardTime extends RecurrenceTimeZone
   
   /**
     * Vladivostok Standard Time
     */
   @js.native
-  sealed trait VladivostokStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait VladivostokStandardTime extends RecurrenceTimeZone
   
   /**
     * West Australia Standard Time
     */
   @js.native
-  sealed trait W_AustraliaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait W_AustraliaStandardTime extends RecurrenceTimeZone
   
   /**
     * West Central Africa Standard Time
     */
   @js.native
-  sealed trait W_CentralAfricaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait W_CentralAfricaStandardTime extends RecurrenceTimeZone
   
   /**
     * West Europe Standard Time
     */
   @js.native
-  sealed trait W_EuropeStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait W_EuropeStandardTime extends RecurrenceTimeZone
   
   /**
     * West Mongolia Standard Time
     */
   @js.native
-  sealed trait W_MongoliaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait W_MongoliaStandardTime extends RecurrenceTimeZone
   
   /**
     * West Asia Standard Time
     */
   @js.native
-  sealed trait WestAsiaStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait WestAsiaStandardTime extends RecurrenceTimeZone
   
   /**
     * West Bank Standard Time
     */
   @js.native
-  sealed trait WestBankStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait WestBankStandardTime extends RecurrenceTimeZone
   
   /**
     * West Pacific Standard Time
     */
   @js.native
-  sealed trait WestPacificStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait WestPacificStandardTime extends RecurrenceTimeZone
   
   /**
     * Yakutsk Standard Time
     */
   @js.native
-  sealed trait YakutskStandardTime
-    extends typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone
+  sealed trait YakutskStandardTime extends RecurrenceTimeZone
   
-  /* "AUS Central Standard Time" */ val AUSCentralStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AUSCentralStandardTime with String = js.native
-  /* "AUS Eastern Standard Time" */ val AUSEasternStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AUSEasternStandardTime with String = js.native
-  /* "Afghanistan Standard Time" */ val AfghanistanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AfghanistanStandardTime with String = js.native
-  /* "Alaskan Standard Time" */ val AlaskanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AlaskanStandardTime with String = js.native
-  /* "Aleutian Standard Time" */ val AleutianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AleutianStandardTime with String = js.native
-  /* "Altai Standard Time" */ val AltaiStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AltaiStandardTime with String = js.native
-  /* "Arab Standard Time" */ val ArabStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ArabStandardTime with String = js.native
-  /* "Arabian Standard Time" */ val ArabianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ArabianStandardTime with String = js.native
-  /* "Arabic Standard Time" */ val ArabicStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ArabicStandardTime with String = js.native
-  /* "Argentina Standard Time" */ val ArgentinaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ArgentinaStandardTime with String = js.native
-  /* "Astrakhan Standard Time" */ val AstrakhanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AstrakhanStandardTime with String = js.native
-  /* "Atlantic Standard Time" */ val AtlanticStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AtlanticStandardTime with String = js.native
-  /* "Aus Central W. Standard Time" */ val AusCentralW_StandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AusCentralW_StandardTime with String = js.native
-  /* "Azerbaijan Standard Time" */ val AzerbaijanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AzerbaijanStandardTime with String = js.native
-  /* "Azores Standard Time" */ val AzoresStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.AzoresStandardTime with String = js.native
-  /* "Bahia Standard Time" */ val BahiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.BahiaStandardTime with String = js.native
-  /* "Bangladesh Standard Time" */ val BangladeshStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.BangladeshStandardTime with String = js.native
-  /* "Belarus Standard Time" */ val BelarusStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.BelarusStandardTime with String = js.native
-  /* "Bougainville Standard Time" */ val BougainvilleStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.BougainvilleStandardTime with String = js.native
-  /* "Canada Central Standard Time" */ val CanadaCentralStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CanadaCentralStandardTime with String = js.native
-  /* "Cape Verde Standard Time" */ val CapeVerdeStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CapeVerdeStandardTime with String = js.native
-  /* "Caucasus Standard Time" */ val CaucasusStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CaucasusStandardTime with String = js.native
-  /* "Cen. Australia Standard Time" */ val CenAustraliaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CenAustraliaStandardTime with String = js.native
-  /* "Central America Standard Time" */ val CentralAmericaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralAmericaStandardTime with String = js.native
-  /* "Central Asia Standard Time" */ val CentralAsiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralAsiaStandardTime with String = js.native
-  /* "Central Brazilian Standard Time" */ val CentralBrazilianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralBrazilianStandardTime with String = js.native
-  /* "Central Europe Standard Time" */ val CentralEuropeStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralEuropeStandardTime with String = js.native
-  /* "Central European Standard Time" */ val CentralEuropeanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralEuropeanStandardTime with String = js.native
-  /* "Central Pacific Standard Time" */ val CentralPacificStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralPacificStandardTime with String = js.native
-  /* "Central Standard Time" */ val CentralStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralStandardTime with String = js.native
-  /* "Central Standard Time (Mexico)" */ val CentralStandardTime_Mexico: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CentralStandardTime_Mexico with String = js.native
-  /* "Chatham Islands Standard Time" */ val ChathamIslandsStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ChathamIslandsStandardTime with String = js.native
-  /* "China Standard Time" */ val ChinaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ChinaStandardTime with String = js.native
-  /* "Cuba Standard Time" */ val CubaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.CubaStandardTime with String = js.native
-  /* "Dateline Standard Time" */ val DatelineStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.DatelineStandardTime with String = js.native
-  /* "E. Africa Standard Time" */ val E_AfricaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.E_AfricaStandardTime with String = js.native
-  /* "E. Australia Standard Time" */ val E_AustraliaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.E_AustraliaStandardTime with String = js.native
-  /* "E. Europe Standard Time" */ val E_EuropeStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.E_EuropeStandardTime with String = js.native
-  /* "E. South America Standard Time" */ val E_SouthAmericaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.E_SouthAmericaStandardTime with String = js.native
-  /* "Easter Island Standard Time" */ val EasterIslandStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.EasterIslandStandardTime with String = js.native
-  /* "Eastern Standard Time" */ val EasternStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.EasternStandardTime with String = js.native
-  /* "Eastern Standard Time (Mexico)" */ val EasternStandardTime_Mexico: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.EasternStandardTime_Mexico with String = js.native
-  /* "Egypt Standard Time" */ val EgyptStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.EgyptStandardTime with String = js.native
-  /* "Ekaterinburg Standard Time" */ val EkaterinburgStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.EkaterinburgStandardTime with String = js.native
-  /* "FLE Standard Time" */ val FLEStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.FLEStandardTime with String = js.native
-  /* "Fiji Standard Time" */ val FijiStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.FijiStandardTime with String = js.native
-  /* "GMT Standard Time" */ val GMTStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.GMTStandardTime with String = js.native
-  /* "GTB Standard Time" */ val GTBStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.GTBStandardTime with String = js.native
-  /* "Georgian Standard Time" */ val GeorgianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.GeorgianStandardTime with String = js.native
-  /* "Greenland Standard Time" */ val GreenlandStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.GreenlandStandardTime with String = js.native
-  /* "Greenwich Standard Time" */ val GreenwichStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.GreenwichStandardTime with String = js.native
-  /* "Haiti Standard Time" */ val HaitiStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.HaitiStandardTime with String = js.native
-  /* "Hawaiian Standard Time" */ val HawaiianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.HawaiianStandardTime with String = js.native
-  /* "India Standard Time" */ val IndiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.IndiaStandardTime with String = js.native
-  /* "Iran Standard Time" */ val IranStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.IranStandardTime with String = js.native
-  /* "Israel Standard Time" */ val IsraelStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.IsraelStandardTime with String = js.native
-  /* "Jordan Standard Time" */ val JordanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.JordanStandardTime with String = js.native
-  /* "Kaliningrad Standard Time" */ val KaliningradStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.KaliningradStandardTime with String = js.native
-  /* "Kamchatka Standard Time" */ val KamchatkaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.KamchatkaStandardTime with String = js.native
-  /* "Korea Standard Time" */ val KoreaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.KoreaStandardTime with String = js.native
-  /* "Libya Standard Time" */ val LibyaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.LibyaStandardTime with String = js.native
-  /* "Line Islands Standard Time" */ val LineIslandsStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.LineIslandsStandardTime with String = js.native
-  /* "Lord Howe Standard Time" */ val LordHoweStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.LordHoweStandardTime with String = js.native
-  /* "Magadan Standard Time" */ val MagadanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MagadanStandardTime with String = js.native
-  /* "Magallanes Standard Time" */ val MagallanesStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MagallanesStandardTime with String = js.native
-  /* "Marquesas Standard Time" */ val MarquesasStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MarquesasStandardTime with String = js.native
-  /* "Mauritius Standard Time" */ val MauritiusStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MauritiusStandardTime with String = js.native
-  /* "Mid-Atlantic Standard Time" */ val MidAtlanticStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MidAtlanticStandardTime with String = js.native
-  /* "Middle East Standard Time" */ val MiddleEastStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MiddleEastStandardTime with String = js.native
-  /* "Montevideo Standard Time" */ val MontevideoStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MontevideoStandardTime with String = js.native
-  /* "Morocco Standard Time" */ val MoroccoStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MoroccoStandardTime with String = js.native
-  /* "Mountain Standard Time" */ val MountainStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MountainStandardTime with String = js.native
-  /* "Mountain Standard Time (Mexico)" */ val MountainStandardTime_Mexico: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MountainStandardTime_Mexico with String = js.native
-  /* "Myanmar Standard Time" */ val MyanmarStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.MyanmarStandardTime with String = js.native
-  /* "N. Central Asia Standard Time" */ val N_CentralAsiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.N_CentralAsiaStandardTime with String = js.native
-  /* "Namibia Standard Time" */ val NamibiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NamibiaStandardTime with String = js.native
-  /* "Nepal Standard Time" */ val NepalStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NepalStandardTime with String = js.native
-  /* "New Zealand Standard Time" */ val NewZealandStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NewZealandStandardTime with String = js.native
-  /* "Newfoundland Standard Time" */ val NewfoundlandStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NewfoundlandStandardTime with String = js.native
-  /* "Norfolk Standard Time" */ val NorfolkStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NorfolkStandardTime with String = js.native
-  /* "North Asia East Standard Time" */ val NorthAsiaEastStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NorthAsiaEastStandardTime with String = js.native
-  /* "North Asia Standard Time" */ val NorthAsiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NorthAsiaStandardTime with String = js.native
-  /* "North Korea Standard Time" */ val NorthKoreaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.NorthKoreaStandardTime with String = js.native
-  /* "Omsk Standard Time" */ val OmskStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.OmskStandardTime with String = js.native
-  /* "Pacific SA Standard Time" */ val PacificSAStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.PacificSAStandardTime with String = js.native
-  /* "Pacific Standard Time" */ val PacificStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.PacificStandardTime with String = js.native
-  /* "Pacific Standard Time (Mexico)" */ val PacificStandardTimeMexico: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.PacificStandardTimeMexico with String = js.native
-  /* "Pakistan Standard Time" */ val PakistanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.PakistanStandardTime with String = js.native
-  /* "Paraguay Standard Time" */ val ParaguayStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.ParaguayStandardTime with String = js.native
-  /* "Romance Standard Time" */ val RomanceStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.RomanceStandardTime with String = js.native
-  /* "Russia Time Zone 10" */ val RussiaTimeZone10: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.RussiaTimeZone10 with String = js.native
-  /* "Russia Time Zone 11" */ val RussiaTimeZone11: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.RussiaTimeZone11 with String = js.native
-  /* "Russia Time Zone 3" */ val RussiaTimeZone3: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.RussiaTimeZone3 with String = js.native
-  /* "Russian Standard Time" */ val RussianStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.RussianStandardTime with String = js.native
-  /* "SA Eastern Standard Time" */ val SAEasternStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SAEasternStandardTime with String = js.native
-  /* "SA Pacific Standard Time" */ val SAPacificStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SAPacificStandardTime with String = js.native
-  /* "SA Western Standard Time" */ val SAWesternStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SAWesternStandardTime with String = js.native
-  /* "SE Asia Standard Time" */ val SEAsiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SEAsiaStandardTime with String = js.native
-  /* "Saint Pierre Standard Time" */ val SaintPierreStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SaintPierreStandardTime with String = js.native
-  /* "Sakhalin Standard Time" */ val SakhalinStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SakhalinStandardTime with String = js.native
-  /* "Samoa Standard Time" */ val SamoaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SamoaStandardTime with String = js.native
-  /* "Saratov Standard Time" */ val SaratovStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SaratovStandardTime with String = js.native
-  /* "Singapore Standard Time" */ val SingaporeStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SingaporeStandardTime with String = js.native
-  /* "South Africa Standard Time" */ val SouthAfricaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SouthAfricaStandardTime with String = js.native
-  /* "Sri Lanka Standard Time" */ val SriLankaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SriLankaStandardTime with String = js.native
-  /* "Sudan Standard Time" */ val SudanStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SudanStandardTime with String = js.native
-  /* "Syria Standard Time" */ val SyriaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.SyriaStandardTime with String = js.native
-  /* "Taipei Standard Time" */ val TaipeiStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TaipeiStandardTime with String = js.native
-  /* "Tasmania Standard Time" */ val TasmaniaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TasmaniaStandardTime with String = js.native
-  /* "Tocantins Standard Time" */ val TocantinsStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TocantinsStandardTime with String = js.native
-  /* "Tokyo Standard Time" */ val TokyoStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TokyoStandardTime with String = js.native
-  /* "Tomsk Standard Time" */ val TomskStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TomskStandardTime with String = js.native
-  /* "Tonga Standard Time" */ val TongaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TongaStandardTime with String = js.native
-  /* "Transbaikal Standard Time" */ val TransbaikalStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TransbaikalStandardTime with String = js.native
-  /* "Turkey Standard Time" */ val TurkeyStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TurkeyStandardTime with String = js.native
-  /* "Turks And Caicos Standard Time" */ val TurksAndCaicosStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.TurksAndCaicosStandardTime with String = js.native
-  /* "US Eastern Standard Time" */ val USEasternStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.USEasternStandardTime with String = js.native
-  /* "US Mountain Standard Time" */ val USMountainStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.USMountainStandardTime with String = js.native
-  /* "UTC" */ val UTC: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTC with String = js.native
-  /* "UTC-02" */ val UTCMINUS02: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCMINUS02 with String = js.native
-  /* "UTC-08" */ val UTCMINUS08: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCMINUS08 with String = js.native
-  /* "UTC-09" */ val UTCMINUS09: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCMINUS09 with String = js.native
-  /* "UTC-11" */ val UTCMINUS11: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCMINUS11 with String = js.native
-  /* "UTC+12" */ val UTCPLUS12: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCPLUS12 with String = js.native
-  /* "UTC+13" */ val UTCPLUS13: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UTCPLUS13 with String = js.native
-  /* "Ulaanbaatar Standard Time" */ val UlaanbaatarStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.UlaanbaatarStandardTime with String = js.native
-  /* "Venezuela Standard Time" */ val VenezuelaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.VenezuelaStandardTime with String = js.native
-  /* "Vladivostok Standard Time" */ val VladivostokStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.VladivostokStandardTime with String = js.native
-  /* "W. Australia Standard Time" */ val W_AustraliaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.W_AustraliaStandardTime with String = js.native
-  /* "W. Central Africa Standard Time" */ val W_CentralAfricaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.W_CentralAfricaStandardTime with String = js.native
-  /* "W. Europe Standard Time" */ val W_EuropeStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.W_EuropeStandardTime with String = js.native
-  /* "W. Mongolia Standard Time" */ val W_MongoliaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.W_MongoliaStandardTime with String = js.native
-  /* "West Asia Standard Time" */ val WestAsiaStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.WestAsiaStandardTime with String = js.native
-  /* "West Bank Standard Time" */ val WestBankStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.WestBankStandardTime with String = js.native
-  /* "West Pacific Standard Time" */ val WestPacificStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.WestPacificStandardTime with String = js.native
-  /* "Yakutsk Standard Time" */ val YakutskStandardTime: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone.YakutskStandardTime with String = js.native
   @JSBracketAccess
-  def apply(value: String): js.UndefOr[
-    typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.RecurrenceTimeZone with String
-  ] = js.native
+  def apply(value: String): js.UndefOr[RecurrenceTimeZone with String] = js.native
+  /* "AUS Central Standard Time" */ @js.native
+  object AUSCentralStandardTime extends TopLevel[AUSCentralStandardTime with String]
+  
+  /* "AUS Eastern Standard Time" */ @js.native
+  object AUSEasternStandardTime extends TopLevel[AUSEasternStandardTime with String]
+  
+  /* "Afghanistan Standard Time" */ @js.native
+  object AfghanistanStandardTime extends TopLevel[AfghanistanStandardTime with String]
+  
+  /* "Alaskan Standard Time" */ @js.native
+  object AlaskanStandardTime extends TopLevel[AlaskanStandardTime with String]
+  
+  /* "Aleutian Standard Time" */ @js.native
+  object AleutianStandardTime extends TopLevel[AleutianStandardTime with String]
+  
+  /* "Altai Standard Time" */ @js.native
+  object AltaiStandardTime extends TopLevel[AltaiStandardTime with String]
+  
+  /* "Arab Standard Time" */ @js.native
+  object ArabStandardTime extends TopLevel[ArabStandardTime with String]
+  
+  /* "Arabian Standard Time" */ @js.native
+  object ArabianStandardTime extends TopLevel[ArabianStandardTime with String]
+  
+  /* "Arabic Standard Time" */ @js.native
+  object ArabicStandardTime extends TopLevel[ArabicStandardTime with String]
+  
+  /* "Argentina Standard Time" */ @js.native
+  object ArgentinaStandardTime extends TopLevel[ArgentinaStandardTime with String]
+  
+  /* "Astrakhan Standard Time" */ @js.native
+  object AstrakhanStandardTime extends TopLevel[AstrakhanStandardTime with String]
+  
+  /* "Atlantic Standard Time" */ @js.native
+  object AtlanticStandardTime extends TopLevel[AtlanticStandardTime with String]
+  
+  /* "Aus Central W. Standard Time" */ @js.native
+  object AusCentralW_StandardTime extends TopLevel[AusCentralW_StandardTime with String]
+  
+  /* "Azerbaijan Standard Time" */ @js.native
+  object AzerbaijanStandardTime extends TopLevel[AzerbaijanStandardTime with String]
+  
+  /* "Azores Standard Time" */ @js.native
+  object AzoresStandardTime extends TopLevel[AzoresStandardTime with String]
+  
+  /* "Bahia Standard Time" */ @js.native
+  object BahiaStandardTime extends TopLevel[BahiaStandardTime with String]
+  
+  /* "Bangladesh Standard Time" */ @js.native
+  object BangladeshStandardTime extends TopLevel[BangladeshStandardTime with String]
+  
+  /* "Belarus Standard Time" */ @js.native
+  object BelarusStandardTime extends TopLevel[BelarusStandardTime with String]
+  
+  /* "Bougainville Standard Time" */ @js.native
+  object BougainvilleStandardTime extends TopLevel[BougainvilleStandardTime with String]
+  
+  /* "Canada Central Standard Time" */ @js.native
+  object CanadaCentralStandardTime extends TopLevel[CanadaCentralStandardTime with String]
+  
+  /* "Cape Verde Standard Time" */ @js.native
+  object CapeVerdeStandardTime extends TopLevel[CapeVerdeStandardTime with String]
+  
+  /* "Caucasus Standard Time" */ @js.native
+  object CaucasusStandardTime extends TopLevel[CaucasusStandardTime with String]
+  
+  /* "Cen. Australia Standard Time" */ @js.native
+  object CenAustraliaStandardTime extends TopLevel[CenAustraliaStandardTime with String]
+  
+  /* "Central America Standard Time" */ @js.native
+  object CentralAmericaStandardTime extends TopLevel[CentralAmericaStandardTime with String]
+  
+  /* "Central Asia Standard Time" */ @js.native
+  object CentralAsiaStandardTime extends TopLevel[CentralAsiaStandardTime with String]
+  
+  /* "Central Brazilian Standard Time" */ @js.native
+  object CentralBrazilianStandardTime extends TopLevel[CentralBrazilianStandardTime with String]
+  
+  /* "Central Europe Standard Time" */ @js.native
+  object CentralEuropeStandardTime extends TopLevel[CentralEuropeStandardTime with String]
+  
+  /* "Central European Standard Time" */ @js.native
+  object CentralEuropeanStandardTime extends TopLevel[CentralEuropeanStandardTime with String]
+  
+  /* "Central Pacific Standard Time" */ @js.native
+  object CentralPacificStandardTime extends TopLevel[CentralPacificStandardTime with String]
+  
+  /* "Central Standard Time" */ @js.native
+  object CentralStandardTime extends TopLevel[CentralStandardTime with String]
+  
+  /* "Central Standard Time (Mexico)" */ @js.native
+  object CentralStandardTime_Mexico extends TopLevel[CentralStandardTime_Mexico with String]
+  
+  /* "Chatham Islands Standard Time" */ @js.native
+  object ChathamIslandsStandardTime extends TopLevel[ChathamIslandsStandardTime with String]
+  
+  /* "China Standard Time" */ @js.native
+  object ChinaStandardTime extends TopLevel[ChinaStandardTime with String]
+  
+  /* "Cuba Standard Time" */ @js.native
+  object CubaStandardTime extends TopLevel[CubaStandardTime with String]
+  
+  /* "Dateline Standard Time" */ @js.native
+  object DatelineStandardTime extends TopLevel[DatelineStandardTime with String]
+  
+  /* "E. Africa Standard Time" */ @js.native
+  object E_AfricaStandardTime extends TopLevel[E_AfricaStandardTime with String]
+  
+  /* "E. Australia Standard Time" */ @js.native
+  object E_AustraliaStandardTime extends TopLevel[E_AustraliaStandardTime with String]
+  
+  /* "E. Europe Standard Time" */ @js.native
+  object E_EuropeStandardTime extends TopLevel[E_EuropeStandardTime with String]
+  
+  /* "E. South America Standard Time" */ @js.native
+  object E_SouthAmericaStandardTime extends TopLevel[E_SouthAmericaStandardTime with String]
+  
+  /* "Easter Island Standard Time" */ @js.native
+  object EasterIslandStandardTime extends TopLevel[EasterIslandStandardTime with String]
+  
+  /* "Eastern Standard Time" */ @js.native
+  object EasternStandardTime extends TopLevel[EasternStandardTime with String]
+  
+  /* "Eastern Standard Time (Mexico)" */ @js.native
+  object EasternStandardTime_Mexico extends TopLevel[EasternStandardTime_Mexico with String]
+  
+  /* "Egypt Standard Time" */ @js.native
+  object EgyptStandardTime extends TopLevel[EgyptStandardTime with String]
+  
+  /* "Ekaterinburg Standard Time" */ @js.native
+  object EkaterinburgStandardTime extends TopLevel[EkaterinburgStandardTime with String]
+  
+  /* "FLE Standard Time" */ @js.native
+  object FLEStandardTime extends TopLevel[FLEStandardTime with String]
+  
+  /* "Fiji Standard Time" */ @js.native
+  object FijiStandardTime extends TopLevel[FijiStandardTime with String]
+  
+  /* "GMT Standard Time" */ @js.native
+  object GMTStandardTime extends TopLevel[GMTStandardTime with String]
+  
+  /* "GTB Standard Time" */ @js.native
+  object GTBStandardTime extends TopLevel[GTBStandardTime with String]
+  
+  /* "Georgian Standard Time" */ @js.native
+  object GeorgianStandardTime extends TopLevel[GeorgianStandardTime with String]
+  
+  /* "Greenland Standard Time" */ @js.native
+  object GreenlandStandardTime extends TopLevel[GreenlandStandardTime with String]
+  
+  /* "Greenwich Standard Time" */ @js.native
+  object GreenwichStandardTime extends TopLevel[GreenwichStandardTime with String]
+  
+  /* "Haiti Standard Time" */ @js.native
+  object HaitiStandardTime extends TopLevel[HaitiStandardTime with String]
+  
+  /* "Hawaiian Standard Time" */ @js.native
+  object HawaiianStandardTime extends TopLevel[HawaiianStandardTime with String]
+  
+  /* "India Standard Time" */ @js.native
+  object IndiaStandardTime extends TopLevel[IndiaStandardTime with String]
+  
+  /* "Iran Standard Time" */ @js.native
+  object IranStandardTime extends TopLevel[IranStandardTime with String]
+  
+  /* "Israel Standard Time" */ @js.native
+  object IsraelStandardTime extends TopLevel[IsraelStandardTime with String]
+  
+  /* "Jordan Standard Time" */ @js.native
+  object JordanStandardTime extends TopLevel[JordanStandardTime with String]
+  
+  /* "Kaliningrad Standard Time" */ @js.native
+  object KaliningradStandardTime extends TopLevel[KaliningradStandardTime with String]
+  
+  /* "Kamchatka Standard Time" */ @js.native
+  object KamchatkaStandardTime extends TopLevel[KamchatkaStandardTime with String]
+  
+  /* "Korea Standard Time" */ @js.native
+  object KoreaStandardTime extends TopLevel[KoreaStandardTime with String]
+  
+  /* "Libya Standard Time" */ @js.native
+  object LibyaStandardTime extends TopLevel[LibyaStandardTime with String]
+  
+  /* "Line Islands Standard Time" */ @js.native
+  object LineIslandsStandardTime extends TopLevel[LineIslandsStandardTime with String]
+  
+  /* "Lord Howe Standard Time" */ @js.native
+  object LordHoweStandardTime extends TopLevel[LordHoweStandardTime with String]
+  
+  /* "Magadan Standard Time" */ @js.native
+  object MagadanStandardTime extends TopLevel[MagadanStandardTime with String]
+  
+  /* "Magallanes Standard Time" */ @js.native
+  object MagallanesStandardTime extends TopLevel[MagallanesStandardTime with String]
+  
+  /* "Marquesas Standard Time" */ @js.native
+  object MarquesasStandardTime extends TopLevel[MarquesasStandardTime with String]
+  
+  /* "Mauritius Standard Time" */ @js.native
+  object MauritiusStandardTime extends TopLevel[MauritiusStandardTime with String]
+  
+  /* "Mid-Atlantic Standard Time" */ @js.native
+  object MidAtlanticStandardTime extends TopLevel[MidAtlanticStandardTime with String]
+  
+  /* "Middle East Standard Time" */ @js.native
+  object MiddleEastStandardTime extends TopLevel[MiddleEastStandardTime with String]
+  
+  /* "Montevideo Standard Time" */ @js.native
+  object MontevideoStandardTime extends TopLevel[MontevideoStandardTime with String]
+  
+  /* "Morocco Standard Time" */ @js.native
+  object MoroccoStandardTime extends TopLevel[MoroccoStandardTime with String]
+  
+  /* "Mountain Standard Time" */ @js.native
+  object MountainStandardTime extends TopLevel[MountainStandardTime with String]
+  
+  /* "Mountain Standard Time (Mexico)" */ @js.native
+  object MountainStandardTime_Mexico extends TopLevel[MountainStandardTime_Mexico with String]
+  
+  /* "Myanmar Standard Time" */ @js.native
+  object MyanmarStandardTime extends TopLevel[MyanmarStandardTime with String]
+  
+  /* "N. Central Asia Standard Time" */ @js.native
+  object N_CentralAsiaStandardTime extends TopLevel[N_CentralAsiaStandardTime with String]
+  
+  /* "Namibia Standard Time" */ @js.native
+  object NamibiaStandardTime extends TopLevel[NamibiaStandardTime with String]
+  
+  /* "Nepal Standard Time" */ @js.native
+  object NepalStandardTime extends TopLevel[NepalStandardTime with String]
+  
+  /* "New Zealand Standard Time" */ @js.native
+  object NewZealandStandardTime extends TopLevel[NewZealandStandardTime with String]
+  
+  /* "Newfoundland Standard Time" */ @js.native
+  object NewfoundlandStandardTime extends TopLevel[NewfoundlandStandardTime with String]
+  
+  /* "Norfolk Standard Time" */ @js.native
+  object NorfolkStandardTime extends TopLevel[NorfolkStandardTime with String]
+  
+  /* "North Asia East Standard Time" */ @js.native
+  object NorthAsiaEastStandardTime extends TopLevel[NorthAsiaEastStandardTime with String]
+  
+  /* "North Asia Standard Time" */ @js.native
+  object NorthAsiaStandardTime extends TopLevel[NorthAsiaStandardTime with String]
+  
+  /* "North Korea Standard Time" */ @js.native
+  object NorthKoreaStandardTime extends TopLevel[NorthKoreaStandardTime with String]
+  
+  /* "Omsk Standard Time" */ @js.native
+  object OmskStandardTime extends TopLevel[OmskStandardTime with String]
+  
+  /* "Pacific SA Standard Time" */ @js.native
+  object PacificSAStandardTime extends TopLevel[PacificSAStandardTime with String]
+  
+  /* "Pacific Standard Time" */ @js.native
+  object PacificStandardTime extends TopLevel[PacificStandardTime with String]
+  
+  /* "Pacific Standard Time (Mexico)" */ @js.native
+  object PacificStandardTimeMexico extends TopLevel[PacificStandardTimeMexico with String]
+  
+  /* "Pakistan Standard Time" */ @js.native
+  object PakistanStandardTime extends TopLevel[PakistanStandardTime with String]
+  
+  /* "Paraguay Standard Time" */ @js.native
+  object ParaguayStandardTime extends TopLevel[ParaguayStandardTime with String]
+  
+  /* "Romance Standard Time" */ @js.native
+  object RomanceStandardTime extends TopLevel[RomanceStandardTime with String]
+  
+  /* "Russia Time Zone 10" */ @js.native
+  object RussiaTimeZone10 extends TopLevel[RussiaTimeZone10 with String]
+  
+  /* "Russia Time Zone 11" */ @js.native
+  object RussiaTimeZone11 extends TopLevel[RussiaTimeZone11 with String]
+  
+  /* "Russia Time Zone 3" */ @js.native
+  object RussiaTimeZone3 extends TopLevel[RussiaTimeZone3 with String]
+  
+  /* "Russian Standard Time" */ @js.native
+  object RussianStandardTime extends TopLevel[RussianStandardTime with String]
+  
+  /* "SA Eastern Standard Time" */ @js.native
+  object SAEasternStandardTime extends TopLevel[SAEasternStandardTime with String]
+  
+  /* "SA Pacific Standard Time" */ @js.native
+  object SAPacificStandardTime extends TopLevel[SAPacificStandardTime with String]
+  
+  /* "SA Western Standard Time" */ @js.native
+  object SAWesternStandardTime extends TopLevel[SAWesternStandardTime with String]
+  
+  /* "SE Asia Standard Time" */ @js.native
+  object SEAsiaStandardTime extends TopLevel[SEAsiaStandardTime with String]
+  
+  /* "Saint Pierre Standard Time" */ @js.native
+  object SaintPierreStandardTime extends TopLevel[SaintPierreStandardTime with String]
+  
+  /* "Sakhalin Standard Time" */ @js.native
+  object SakhalinStandardTime extends TopLevel[SakhalinStandardTime with String]
+  
+  /* "Samoa Standard Time" */ @js.native
+  object SamoaStandardTime extends TopLevel[SamoaStandardTime with String]
+  
+  /* "Saratov Standard Time" */ @js.native
+  object SaratovStandardTime extends TopLevel[SaratovStandardTime with String]
+  
+  /* "Singapore Standard Time" */ @js.native
+  object SingaporeStandardTime extends TopLevel[SingaporeStandardTime with String]
+  
+  /* "South Africa Standard Time" */ @js.native
+  object SouthAfricaStandardTime extends TopLevel[SouthAfricaStandardTime with String]
+  
+  /* "Sri Lanka Standard Time" */ @js.native
+  object SriLankaStandardTime extends TopLevel[SriLankaStandardTime with String]
+  
+  /* "Sudan Standard Time" */ @js.native
+  object SudanStandardTime extends TopLevel[SudanStandardTime with String]
+  
+  /* "Syria Standard Time" */ @js.native
+  object SyriaStandardTime extends TopLevel[SyriaStandardTime with String]
+  
+  /* "Taipei Standard Time" */ @js.native
+  object TaipeiStandardTime extends TopLevel[TaipeiStandardTime with String]
+  
+  /* "Tasmania Standard Time" */ @js.native
+  object TasmaniaStandardTime extends TopLevel[TasmaniaStandardTime with String]
+  
+  /* "Tocantins Standard Time" */ @js.native
+  object TocantinsStandardTime extends TopLevel[TocantinsStandardTime with String]
+  
+  /* "Tokyo Standard Time" */ @js.native
+  object TokyoStandardTime extends TopLevel[TokyoStandardTime with String]
+  
+  /* "Tomsk Standard Time" */ @js.native
+  object TomskStandardTime extends TopLevel[TomskStandardTime with String]
+  
+  /* "Tonga Standard Time" */ @js.native
+  object TongaStandardTime extends TopLevel[TongaStandardTime with String]
+  
+  /* "Transbaikal Standard Time" */ @js.native
+  object TransbaikalStandardTime extends TopLevel[TransbaikalStandardTime with String]
+  
+  /* "Turkey Standard Time" */ @js.native
+  object TurkeyStandardTime extends TopLevel[TurkeyStandardTime with String]
+  
+  /* "Turks And Caicos Standard Time" */ @js.native
+  object TurksAndCaicosStandardTime extends TopLevel[TurksAndCaicosStandardTime with String]
+  
+  /* "US Eastern Standard Time" */ @js.native
+  object USEasternStandardTime extends TopLevel[USEasternStandardTime with String]
+  
+  /* "US Mountain Standard Time" */ @js.native
+  object USMountainStandardTime extends TopLevel[USMountainStandardTime with String]
+  
+  /* "UTC" */ @js.native
+  object UTC extends TopLevel[UTC with String]
+  
+  /* "UTC-02" */ @js.native
+  object UTCMINUS02 extends TopLevel[UTCMINUS02 with String]
+  
+  /* "UTC-08" */ @js.native
+  object UTCMINUS08 extends TopLevel[UTCMINUS08 with String]
+  
+  /* "UTC-09" */ @js.native
+  object UTCMINUS09 extends TopLevel[UTCMINUS09 with String]
+  
+  /* "UTC-11" */ @js.native
+  object UTCMINUS11 extends TopLevel[UTCMINUS11 with String]
+  
+  /* "UTC+12" */ @js.native
+  object UTCPLUS12 extends TopLevel[UTCPLUS12 with String]
+  
+  /* "UTC+13" */ @js.native
+  object UTCPLUS13 extends TopLevel[UTCPLUS13 with String]
+  
+  /* "Ulaanbaatar Standard Time" */ @js.native
+  object UlaanbaatarStandardTime extends TopLevel[UlaanbaatarStandardTime with String]
+  
+  /* "Venezuela Standard Time" */ @js.native
+  object VenezuelaStandardTime extends TopLevel[VenezuelaStandardTime with String]
+  
+  /* "Vladivostok Standard Time" */ @js.native
+  object VladivostokStandardTime extends TopLevel[VladivostokStandardTime with String]
+  
+  /* "W. Australia Standard Time" */ @js.native
+  object W_AustraliaStandardTime extends TopLevel[W_AustraliaStandardTime with String]
+  
+  /* "W. Central Africa Standard Time" */ @js.native
+  object W_CentralAfricaStandardTime extends TopLevel[W_CentralAfricaStandardTime with String]
+  
+  /* "W. Europe Standard Time" */ @js.native
+  object W_EuropeStandardTime extends TopLevel[W_EuropeStandardTime with String]
+  
+  /* "W. Mongolia Standard Time" */ @js.native
+  object W_MongoliaStandardTime extends TopLevel[W_MongoliaStandardTime with String]
+  
+  /* "West Asia Standard Time" */ @js.native
+  object WestAsiaStandardTime extends TopLevel[WestAsiaStandardTime with String]
+  
+  /* "West Bank Standard Time" */ @js.native
+  object WestBankStandardTime extends TopLevel[WestBankStandardTime with String]
+  
+  /* "West Pacific Standard Time" */ @js.native
+  object WestPacificStandardTime extends TopLevel[WestPacificStandardTime with String]
+  
+  /* "Yakutsk Standard Time" */ @js.native
+  object YakutskStandardTime extends TopLevel[YakutskStandardTime with String]
+  
 }
 

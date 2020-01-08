@@ -2,8 +2,6 @@ package typingsSlinky.pump
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.pump.pumpMod.Callback
-import typingsSlinky.pump.pumpMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

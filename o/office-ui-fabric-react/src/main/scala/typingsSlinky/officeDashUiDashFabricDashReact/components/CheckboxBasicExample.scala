@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CheckboxBasicExample extends SharedApply_Object857666606 {
+object CheckboxBasicExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Checkbox/examples/Checkbox.Basic.Example", "CheckboxBasicExample")
   @js.native
   object componentImport extends js.Object

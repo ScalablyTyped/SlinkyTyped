@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mongooseMod {
   import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.node.TypeofClassBuffer
   import typingsSlinky.std.DateConstructor
   import typingsSlinky.std.ErrorConstructor
   import typingsSlinky.std.Map
@@ -36,7 +37,7 @@ package object mongooseMod {
     * Some mongoose classes have the same name as the native JS classes
     * Keep references to native classes using a "Native" prefix
     */
-  type NativeBuffer = typingsSlinky.node.TypeofClassBuffer
+  type NativeBuffer = TypeofClassBuffer
   type NativeDate = DateConstructor
   type NativeError = ErrorConstructor
   /*

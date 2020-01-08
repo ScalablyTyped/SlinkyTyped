@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 sealed trait ɵLocaleDataIndex extends js.Object
 
-@JSImport("@angular/core", "ɵLocaleDataIndex")
+@JSImport("@angular/core", "\u0275LocaleDataIndex")
 @js.native
 object ɵLocaleDataIndex extends js.Object {
   @js.native
@@ -70,27 +71,67 @@ object ɵLocaleDataIndex extends js.Object {
   @js.native
   sealed trait WeekendRange extends ɵLocaleDataIndex
   
-  /* 17 */ val Currencies: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.Currencies with Double = js.native
-  /* 16 */ val CurrencyName: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.CurrencyName with Double = js.native
-  /* 15 */ val CurrencySymbol: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.CurrencySymbol with Double = js.native
-  /* 10 */ val DateFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DateFormat with Double = js.native
-  /* 12 */ val DateTimeFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DateTimeFormat with Double = js.native
-  /* 1 */ val DayPeriodsFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DayPeriodsFormat with Double = js.native
-  /* 2 */ val DayPeriodsStandalone: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DayPeriodsStandalone with Double = js.native
-  /* 3 */ val DaysFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DaysFormat with Double = js.native
-  /* 4 */ val DaysStandalone: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.DaysStandalone with Double = js.native
-  /* 7 */ val Eras: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.Eras with Double = js.native
-  /* 19 */ val ExtraData: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.ExtraData with Double = js.native
-  /* 8 */ val FirstDayOfWeek: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.FirstDayOfWeek with Double = js.native
-  /* 0 */ val LocaleId: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.LocaleId with Double = js.native
-  /* 5 */ val MonthsFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.MonthsFormat with Double = js.native
-  /* 6 */ val MonthsStandalone: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.MonthsStandalone with Double = js.native
-  /* 14 */ val NumberFormats: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.NumberFormats with Double = js.native
-  /* 13 */ val NumberSymbols: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.NumberSymbols with Double = js.native
-  /* 18 */ val PluralCase: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.PluralCase with Double = js.native
-  /* 11 */ val TimeFormat: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.TimeFormat with Double = js.native
-  /* 9 */ val WeekendRange: typingsSlinky.atAngularCore.atAngularCoreMod.ɵLocaleDataIndex.WeekendRange with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ɵLocaleDataIndex with Double] = js.native
+  /* 17 */ @js.native
+  object Currencies extends TopLevel[Currencies with Double]
+  
+  /* 16 */ @js.native
+  object CurrencyName extends TopLevel[CurrencyName with Double]
+  
+  /* 15 */ @js.native
+  object CurrencySymbol extends TopLevel[CurrencySymbol with Double]
+  
+  /* 10 */ @js.native
+  object DateFormat extends TopLevel[DateFormat with Double]
+  
+  /* 12 */ @js.native
+  object DateTimeFormat extends TopLevel[DateTimeFormat with Double]
+  
+  /* 1 */ @js.native
+  object DayPeriodsFormat extends TopLevel[DayPeriodsFormat with Double]
+  
+  /* 2 */ @js.native
+  object DayPeriodsStandalone extends TopLevel[DayPeriodsStandalone with Double]
+  
+  /* 3 */ @js.native
+  object DaysFormat extends TopLevel[DaysFormat with Double]
+  
+  /* 4 */ @js.native
+  object DaysStandalone extends TopLevel[DaysStandalone with Double]
+  
+  /* 7 */ @js.native
+  object Eras extends TopLevel[Eras with Double]
+  
+  /* 19 */ @js.native
+  object ExtraData extends TopLevel[ExtraData with Double]
+  
+  /* 8 */ @js.native
+  object FirstDayOfWeek extends TopLevel[FirstDayOfWeek with Double]
+  
+  /* 0 */ @js.native
+  object LocaleId extends TopLevel[LocaleId with Double]
+  
+  /* 5 */ @js.native
+  object MonthsFormat extends TopLevel[MonthsFormat with Double]
+  
+  /* 6 */ @js.native
+  object MonthsStandalone extends TopLevel[MonthsStandalone with Double]
+  
+  /* 14 */ @js.native
+  object NumberFormats extends TopLevel[NumberFormats with Double]
+  
+  /* 13 */ @js.native
+  object NumberSymbols extends TopLevel[NumberSymbols with Double]
+  
+  /* 18 */ @js.native
+  object PluralCase extends TopLevel[PluralCase with Double]
+  
+  /* 11 */ @js.native
+  object TimeFormat extends TopLevel[TimeFormat with Double]
+  
+  /* 9 */ @js.native
+  object WeekendRange extends TopLevel[WeekendRange with Double]
+  
 }
 

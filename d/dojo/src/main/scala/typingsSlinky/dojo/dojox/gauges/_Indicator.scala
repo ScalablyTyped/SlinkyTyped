@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dijit._Widget
 import typingsSlinky.dojo.dojoStrings.`type`
+import typingsSlinky.dojo.dojoStrings.color
 import typingsSlinky.dojo.dojoStrings.duration
 import typingsSlinky.dojo.dojoStrings.font
 import typingsSlinky.dojo.dojoStrings.front
@@ -138,7 +139,7 @@ class _Indicator () extends _Widget {
     */
   def easing(n: Double): Double = js.native
   @JSName("get")
-  def get_color(property: typingsSlinky.dojo.dojoStrings.color): String = js.native
+  def get_color(property: color): String = js.native
   @JSName("get")
   def get_duration(property: duration): Double = js.native
   @JSName("get")
@@ -202,7 +203,7 @@ class _Indicator () extends _Widget {
     */
   def remove(): Unit = js.native
   @JSName("set")
-  def set_color(property: typingsSlinky.dojo.dojoStrings.color, value: String): Unit = js.native
+  def set_color(property: color, value: String): Unit = js.native
   @JSName("set")
   def set_duration(property: duration, value: Double): Unit = js.native
   @JSName("set")
@@ -248,7 +249,7 @@ class _Indicator () extends _Widget {
   def valueChanged(): Unit = js.native
   @JSName("watch")
   def watch_color(
-    property: typingsSlinky.dojo.dojoStrings.color,
+    property: color,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[String], 

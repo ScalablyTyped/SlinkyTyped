@@ -1,10 +1,7 @@
 package typingsSlinky.atTensorflowTfjsDashData
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorUnderscoreTypesMod.TensorContainer
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.IteratorContainer
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.LazyIterator
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.PrefetchIterator
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.ZipMismatchMode
 import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.Container
 import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.DataElement
 import typingsSlinky.atTensorflowTfjsDashData.distUtilDeepUnderscoreMapMod.DeepMapResult
@@ -341,11 +338,17 @@ object distIteratorsLazyUnderscoreIteratorMod extends js.Object {
     @js.native
     sealed trait SHORTEST extends ZipMismatchMode
     
-    /* 0 */ val FAIL: typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.ZipMismatchMode.FAIL with Double = js.native
-    /* 2 */ val LONGEST: typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.ZipMismatchMode.LONGEST with Double = js.native
-    /* 1 */ val SHORTEST: typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.ZipMismatchMode.SHORTEST with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ZipMismatchMode with Double] = js.native
+    /* 0 */ @js.native
+    object FAIL extends TopLevel[FAIL with Double]
+    
+    /* 2 */ @js.native
+    object LONGEST extends TopLevel[LONGEST with Double]
+    
+    /* 1 */ @js.native
+    object SHORTEST extends TopLevel[SHORTEST with Double]
+    
   }
   
   type IteratorContainer = Container[LazyIterator[DataElement]]

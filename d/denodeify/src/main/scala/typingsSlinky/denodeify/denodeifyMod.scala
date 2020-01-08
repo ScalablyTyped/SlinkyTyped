@@ -1,16 +1,5 @@
 package typingsSlinky.denodeify
 
-import typingsSlinky.denodeify.denodeifyMod.Callback
-import typingsSlinky.denodeify.denodeifyMod.F
-import typingsSlinky.denodeify.denodeifyMod.F1
-import typingsSlinky.denodeify.denodeifyMod.F2
-import typingsSlinky.denodeify.denodeifyMod.F3
-import typingsSlinky.denodeify.denodeifyMod.F4
-import typingsSlinky.denodeify.denodeifyMod.F5
-import typingsSlinky.denodeify.denodeifyMod.F6
-import typingsSlinky.denodeify.denodeifyMod.F7
-import typingsSlinky.denodeify.denodeifyMod.F8
-import typingsSlinky.denodeify.denodeifyMod.M
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

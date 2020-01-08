@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.sockets.tcp
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import typingsSlinky.chromeDashApps.chrome.sockets.ReceiveEventArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.sockets.tcp.onReceive")
 @js.native
 object onReceive
-  extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[js.Function1[/* args */ ReceiveEventArgs, Unit]]
-    ]
+  extends TopLevel[Event[js.Function1[/* args */ ReceiveEventArgs, Unit]]]
 

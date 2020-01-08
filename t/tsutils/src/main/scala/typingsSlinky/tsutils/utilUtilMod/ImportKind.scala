@@ -1,5 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object ImportKind extends js.Object {
   @js.native
   sealed trait Require extends ImportKind
   
-  /* 63 */ val All: typingsSlinky.tsutils.utilUtilMod.ImportKind.All with Double = js.native
-  /* 24 */ val AllImportExpressions: typingsSlinky.tsutils.utilUtilMod.ImportKind.AllImportExpressions with Double = js.native
-  /* 59 */ val AllImports: typingsSlinky.tsutils.utilUtilMod.ImportKind.AllImports with Double = js.native
-  /* 18 */ val AllRequireLike: typingsSlinky.tsutils.utilUtilMod.ImportKind.AllRequireLike with Double = js.native
-  /* 3 */ val AllStaticImports: typingsSlinky.tsutils.utilUtilMod.ImportKind.AllStaticImports with Double = js.native
-  /* 8 */ val DynamicImport: typingsSlinky.tsutils.utilUtilMod.ImportKind.DynamicImport with Double = js.native
-  /* 4 */ val ExportFrom: typingsSlinky.tsutils.utilUtilMod.ImportKind.ExportFrom with Double = js.native
-  /* 1 */ val ImportDeclaration: typingsSlinky.tsutils.utilUtilMod.ImportKind.ImportDeclaration with Double = js.native
-  /* 2 */ val ImportEquals: typingsSlinky.tsutils.utilUtilMod.ImportKind.ImportEquals with Double = js.native
-  /* 32 */ val ImportType: typingsSlinky.tsutils.utilUtilMod.ImportKind.ImportType with Double = js.native
-  /* 16 */ val Require: typingsSlinky.tsutils.utilUtilMod.ImportKind.Require with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ImportKind with Double] = js.native
+  /* 63 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 24 */ @js.native
+  object AllImportExpressions extends TopLevel[AllImportExpressions with Double]
+  
+  /* 59 */ @js.native
+  object AllImports extends TopLevel[AllImports with Double]
+  
+  /* 18 */ @js.native
+  object AllRequireLike extends TopLevel[AllRequireLike with Double]
+  
+  /* 3 */ @js.native
+  object AllStaticImports extends TopLevel[AllStaticImports with Double]
+  
+  /* 8 */ @js.native
+  object DynamicImport extends TopLevel[DynamicImport with Double]
+  
+  /* 4 */ @js.native
+  object ExportFrom extends TopLevel[ExportFrom with Double]
+  
+  /* 1 */ @js.native
+  object ImportDeclaration extends TopLevel[ImportDeclaration with Double]
+  
+  /* 2 */ @js.native
+  object ImportEquals extends TopLevel[ImportEquals with Double]
+  
+  /* 32 */ @js.native
+  object ImportType extends TopLevel[ImportType with Double]
+  
+  /* 16 */ @js.native
+  object Require extends TopLevel[Require with Double]
+  
 }
 

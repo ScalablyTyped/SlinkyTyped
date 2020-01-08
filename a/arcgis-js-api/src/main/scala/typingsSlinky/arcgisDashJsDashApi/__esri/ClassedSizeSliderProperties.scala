@@ -1,6 +1,11 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +17,12 @@ trait ClassedSizeSliderProperties extends SmartMappingSliderBaseProperties {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedSizeSlider.html#breaks)
     */
   var breaks: js.UndefOr[js.Array[ClassedSizeSliderBreaks]] = js.undefined
+  /**
+    * Exposes various properties of the widget that can be styled.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedSizeSlider.html#style)
+    */
+  var style: js.UndefOr[ClassedSizeSliderStyle] = js.undefined
   /**
     * The view model for the ClassedSizeSlider widget. This class contains all the logic (properties and methods) that controls this widget's behavior. See the [ClassedSizeSliderViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedSizeSlider-ClassedSizeSliderViewModel.html) class to access all properties and methods on the ClassedSizeSlider widget.
     *
@@ -28,10 +39,14 @@ object ClassedSizeSliderProperties {
     destroyed: js.UndefOr[Boolean] = js.undefined,
     histogramConfig: HistogramConfig = null,
     id: String = null,
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
     label: String = null,
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | value], /* index */ js.UndefOr[Double]) => String = null,
     max: Int | Double = null,
     min: Int | Double = null,
+    precision: Int | Double = null,
+    style: ClassedSizeSliderStyle = null,
     viewModel: ClassedSizeSliderViewModelProperties = null,
     zoomOptions: SmartMappingSliderBaseZoomOptions = null
   ): ClassedSizeSliderProperties = {
@@ -41,10 +56,14 @@ object ClassedSizeSliderProperties {
     if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.asInstanceOf[js.Any])
     if (histogramConfig != null) __obj.updateDynamic("histogramConfig")(histogramConfig.asInstanceOf[js.Any])
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inputFormatFunction != null) __obj.updateDynamic("inputFormatFunction")(js.Any.fromFunction3(inputFormatFunction))
+    if (inputParseFunction != null) __obj.updateDynamic("inputParseFunction")(js.Any.fromFunction3(inputParseFunction))
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     if (labelFormatFunction != null) __obj.updateDynamic("labelFormatFunction")(js.Any.fromFunction3(labelFormatFunction))
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
     if (zoomOptions != null) __obj.updateDynamic("zoomOptions")(zoomOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassedSizeSliderProperties]

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,18 +15,18 @@ sealed trait Charset extends js.Object
 @js.native
 object Charset extends js.Object {
   @js.native
-  sealed trait US_ASCII
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.Charset
+  sealed trait US_ASCII extends Charset
   
   @js.native
-  sealed trait UTF_8
-    extends typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.Charset
+  sealed trait UTF_8 extends Charset
   
-  /* 0 */ val US_ASCII: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.Charset.US_ASCII with Double = js.native
-  /* 1 */ val UTF_8: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.Charset.UTF_8 with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Utilities.Charset with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[Charset with Double] = js.native
+  /* 0 */ @js.native
+  object US_ASCII extends TopLevel[US_ASCII with Double]
+  
+  /* 1 */ @js.native
+  object UTF_8 extends TopLevel[UTF_8 with Double]
+  
 }
 

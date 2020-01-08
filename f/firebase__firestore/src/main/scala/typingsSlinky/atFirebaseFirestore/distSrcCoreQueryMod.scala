@@ -1,13 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Bound
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Direction
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.FieldFilter
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Filter
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.LimitType
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Operator
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.OrderBy
-import typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.Query
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTargetMod.Target
 import typingsSlinky.atFirebaseFirestore.distSrcModelDocumentMod.Document
 import typingsSlinky.atFirebaseFirestore.distSrcModelFieldUnderscoreValueMod.ArrayValue
@@ -144,7 +137,7 @@ object distSrcCoreQueryMod extends js.Object {
     var matchesOrderBy: js.Any = js.native
     var matchesPathAndCollectionGroup: js.Any = js.native
     var memoizedOrderBy: js.Any = js.native
-    var memorizedTarget: js.Any = js.native
+    var memoizedTarget: js.Any = js.native
     val path: ResourcePath = js.native
     val startAt: Bound | Null = js.native
     def addFilter(filter: Filter): Query = js.native
@@ -210,10 +203,14 @@ object distSrcCoreQueryMod extends js.Object {
     @js.native
     sealed trait Last extends LimitType
     
-    /* "F" */ val First: typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.LimitType.First with String = js.native
-    /* "L" */ val Last: typingsSlinky.atFirebaseFirestore.distSrcCoreQueryMod.LimitType.Last with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[LimitType with String] = js.native
+    /* "F" */ @js.native
+    object First extends TopLevel[First with String]
+    
+    /* "L" */ @js.native
+    object Last extends TopLevel[Last with String]
+    
   }
   
   /* static members */

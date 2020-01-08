@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NotificationAirlineSeatLegroomReduced
-  extends SharedApply_SvgIconProps657215518[
+  extends SharedApply_SvgIconProps221151894[
       typingsSlinky.materialDashUi.svgDashIconsMod.NotificationAirlineSeatLegroomReduced
     ] {
   @JSImport("material-ui/svg-icons", "NotificationAirlineSeatLegroomReduced")

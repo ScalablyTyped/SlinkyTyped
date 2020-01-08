@@ -1,7 +1,7 @@
 package typingsSlinky.momentDashDurationDashFormat.momentDashDurationDashFormatMod.momentMod
 
-import typingsSlinky.momentDashDurationDashFormat.momentDashDurationDashFormatNumbers.`false`
-import typingsSlinky.momentDashDurationDashFormat.momentDashDurationDashFormatNumbers.`true`
+import typingsSlinky.momentDashDurationDashFormat.momentDashDurationDashFormatBooleans.`false`
+import typingsSlinky.momentDashDurationDashFormat.momentDashDurationDashFormatBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

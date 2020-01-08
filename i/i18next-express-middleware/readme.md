@@ -1,7 +1,7 @@
 
 # Scala.js typings for i18next-express-middleware
 
-Typings are for version 1.8.2
+Typings are for version 1.9.1
 
 ## Library description:
 express middleware for i18next
@@ -11,8 +11,8 @@ express middleware for i18next
 | Full name          | i18next-express-middleware |
 | Keywords           | i18next, i18next-express, express, middleware |
 | # releases         | 23 |
-| # dependents       | 44 |
-| # downloads        | 1131025 |
+| # dependents       | 57 |
+| # downloads        | 2143702 |
 | # stars            | 1 |
 
 ## Links

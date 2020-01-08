@@ -1,7 +1,8 @@
 package typingsSlinky.atFirebaseStorage
 
 import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
-import typingsSlinky.atFirebaseStorage.distSrcImplementationAuthwrapperMod.AuthWrapper
+import typingsSlinky.atFirebaseAuthDashInteropDashTypes.atFirebaseAuthDashInteropDashTypesMod.FirebaseAuthInternalName
+import typingsSlinky.atFirebaseComponent.atFirebaseComponentMod.Provider
 import typingsSlinky.atFirebaseStorage.distSrcImplementationLocationMod.Location
 import typingsSlinky.atFirebaseStorage.distSrcImplementationRequestMod.Request
 import typingsSlinky.atFirebaseStorage.distSrcImplementationRequestinfoMod.RequestInfo
@@ -20,6 +21,7 @@ object distSrcImplementationAuthwrapperMod extends js.Object {
   class AuthWrapper protected () extends js.Object {
     def this(
       app: Null,
+      authProvider: Provider[FirebaseAuthInternalName],
       maker: js.Function2[/* p1 */ AuthWrapper, /* p2 */ Location, Reference],
       requestMaker: requestMaker,
       service: Service,
@@ -27,12 +29,14 @@ object distSrcImplementationAuthwrapperMod extends js.Object {
     ) = this()
     def this(
       app: FirebaseApp,
+      authProvider: Provider[FirebaseAuthInternalName],
       maker: js.Function2[/* p1 */ AuthWrapper, /* p2 */ Location, Reference],
       requestMaker: requestMaker,
       service: Service,
       pool: XhrIoPool
     ) = this()
     var app_ : js.Any = js.native
+    var authProvider_ : js.Any = js.native
     var bucket_ : js.Any = js.native
     var deleted_ : js.Any = js.native
     var maxOperationRetryTime_ : js.Any = js.native

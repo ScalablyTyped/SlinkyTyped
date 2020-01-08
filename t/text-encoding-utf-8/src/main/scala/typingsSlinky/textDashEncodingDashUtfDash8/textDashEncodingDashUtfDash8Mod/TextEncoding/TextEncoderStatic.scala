@@ -9,20 +9,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TextEncoderStatic
-  extends Instantiable0[
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder
-    ]
-     with Instantiable1[
-      /* utfLabel */ String, 
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder
-    ]
-     with Instantiable2[
-      /* utfLabel */ String, 
-      /* options */ TextEncoderOptions, 
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder
-    ] {
-  def apply(): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder = js.native
-  def apply(utfLabel: String): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder = js.native
-  def apply(utfLabel: String, options: TextEncoderOptions): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextEncoder = js.native
+  extends Instantiable0[TextEncoder]
+     with Instantiable1[/* utfLabel */ String, TextEncoder]
+     with Instantiable2[/* utfLabel */ String, /* options */ TextEncoderOptions, TextEncoder] {
+  def apply(): TextEncoder = js.native
+  def apply(utfLabel: String): TextEncoder = js.native
+  def apply(utfLabel: String, options: TextEncoderOptions): TextEncoder = js.native
 }
 

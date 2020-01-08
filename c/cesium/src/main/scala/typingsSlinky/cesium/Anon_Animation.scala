@@ -1,6 +1,7 @@
 package typingsSlinky.cesium
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.cesium.cesiumBooleans.`false`
 import typingsSlinky.cesium.cesiumMod.ClockViewModel
 import typingsSlinky.cesium.cesiumMod.DataSourceCollection
 import typingsSlinky.cesium.cesiumMod.Globe
@@ -13,7 +14,6 @@ import typingsSlinky.cesium.cesiumMod.ShadowMode
 import typingsSlinky.cesium.cesiumMod.SkyAtmosphere
 import typingsSlinky.cesium.cesiumMod.SkyBox
 import typingsSlinky.cesium.cesiumMod.TerrainProvider
-import typingsSlinky.cesium.cesiumNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

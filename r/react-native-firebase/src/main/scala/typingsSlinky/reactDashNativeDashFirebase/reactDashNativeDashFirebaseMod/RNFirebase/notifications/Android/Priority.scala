@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object Priority extends js.Object {
   @js.native
   sealed trait Min extends Priority
   
-  /* 0 */ val Default: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android.Priority.Default with Double = js.native
-  /* 1 */ val High: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android.Priority.High with Double = js.native
-  /* -1 */ val Low: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android.Priority.Low with Double = js.native
-  /* 2 */ val Max: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android.Priority.Max with Double = js.native
-  /* -2 */ val Min: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.notifications.Android.Priority.Min with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Priority with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object High extends TopLevel[High with Double]
+  
+  /* -1 */ @js.native
+  object Low extends TopLevel[Low with Double]
+  
+  /* 2 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* -2 */ @js.native
+  object Min extends TopLevel[Min with Double]
+  
 }
 

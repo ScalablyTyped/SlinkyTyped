@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashLibphonenumber.libphonenumber
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType
 import typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult
 import scala.scalajs.js
@@ -75,13 +76,23 @@ object PhoneNumberUtil extends js.Object {
     @js.native
     sealed trait SHORT_NSN_MATCH extends MatchType
     
-    /* 0 */ val EXACT_MATCH: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.EXACT_MATCH with Double = js.native
-    /* 2 */ val NOT_A_NUMBER: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.NOT_A_NUMBER with Double = js.native
-    /* 1 */ val NO_MATCH: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.NO_MATCH with Double = js.native
-    /* 3 */ val NSN_MATCH: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.NSN_MATCH with Double = js.native
-    /* 4 */ val SHORT_NSN_MATCH: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.SHORT_NSN_MATCH with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MatchType with Double] = js.native
+    /* 0 */ @js.native
+    object EXACT_MATCH extends TopLevel[EXACT_MATCH with Double]
+    
+    /* 2 */ @js.native
+    object NOT_A_NUMBER extends TopLevel[NOT_A_NUMBER with Double]
+    
+    /* 1 */ @js.native
+    object NO_MATCH extends TopLevel[NO_MATCH with Double]
+    
+    /* 3 */ @js.native
+    object NSN_MATCH extends TopLevel[NSN_MATCH with Double]
+    
+    /* 4 */ @js.native
+    object SHORT_NSN_MATCH extends TopLevel[SHORT_NSN_MATCH with Double]
+    
   }
   
   @js.native
@@ -98,12 +109,20 @@ object PhoneNumberUtil extends js.Object {
     @js.native
     sealed trait TOO_SHORT extends ValidationResult
     
-    /* 1 */ val INVALID_COUNTRY_CODE: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult.INVALID_COUNTRY_CODE with Double = js.native
-    /* 0 */ val IS_POSSIBLE: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult.IS_POSSIBLE with Double = js.native
-    /* 3 */ val TOO_LONG: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult.TOO_LONG with Double = js.native
-    /* 2 */ val TOO_SHORT: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult.TOO_SHORT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ValidationResult with Double] = js.native
+    /* 1 */ @js.native
+    object INVALID_COUNTRY_CODE extends TopLevel[INVALID_COUNTRY_CODE with Double]
+    
+    /* 0 */ @js.native
+    object IS_POSSIBLE extends TopLevel[IS_POSSIBLE with Double]
+    
+    /* 3 */ @js.native
+    object TOO_LONG extends TopLevel[TOO_LONG with Double]
+    
+    /* 2 */ @js.native
+    object TOO_SHORT extends TopLevel[TOO_SHORT with Double]
+    
   }
   
 }

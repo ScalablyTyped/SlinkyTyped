@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenPagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -19,7 +20,10 @@ abstract class TextWidget protected () extends AttributeWidgetWithPlaceholder {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  var maxLengthCode: Double = js.native
+  @JSName("model")
+  var model_FTextWidget: IModel = js.native
+  def maxLengthCode(): Double = js.native
+  def maxLengthCode(newValue: Double): js.Any = js.native
 }
 
 /* static members */

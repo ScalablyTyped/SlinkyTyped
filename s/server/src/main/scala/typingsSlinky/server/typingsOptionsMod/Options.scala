@@ -5,7 +5,7 @@ import typingsSlinky.helmet.helmetMod.IHelmetConfiguration
 import typingsSlinky.server.Anon_Body
 import typingsSlinky.server.Anon_Content
 import typingsSlinky.server.Anon_Csurf
-import typingsSlinky.server.serverNumbers.`false`
+import typingsSlinky.server.serverBooleans.`false`
 import typingsSlinky.server.typingsCommonMod.LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`

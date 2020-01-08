@@ -1,7 +1,7 @@
 package typingsSlinky.promiseDashSftp.promiseDashSftpMod
 
 import typingsSlinky.promiseDashSftp.Anon_Group
-import typingsSlinky.promiseDashSftp.promiseDashSftpStrings.`-`
+import typingsSlinky.promiseDashSftp.promiseDashSftpStrings.`-_`
 import typingsSlinky.promiseDashSftp.promiseDashSftpStrings.d
 import typingsSlinky.promiseDashSftp.promiseDashSftpStrings.l
 import scala.scalajs.js
@@ -25,7 +25,7 @@ trait DirectoryListing extends js.Object {
   /** For symlink entries, this is the symlink's target. *NIX only */
   var target: js.UndefOr[String] = js.undefined
   /** `d` for directory, `-` for file, and `l` for symlink only on *NIX. */
-  var `type`: d | `-` | l
+  var `type`: d | `-_` | l
 }
 
 object DirectoryListing {
@@ -33,7 +33,7 @@ object DirectoryListing {
   def apply(
     date: js.Date,
     name: String,
-    `type`: d | `-` | l,
+    `type`: d | `-_` | l,
     group: String = null,
     owner: String = null,
     rights: Anon_Group = null,

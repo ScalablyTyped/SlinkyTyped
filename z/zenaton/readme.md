@@ -9,10 +9,10 @@ Zenaton library
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | zenaton |
-| Keywords           | - |
-| # releases         | 21 |
+| Keywords           | workflow, queue, jobs, background-jobs, cron, scheduler, delayed |
+| # releases         | 28 |
 | # dependents       | 0 |
-| # downloads        | 4250 |
+| # downloads        | 13010 |
 | # stars            | 0 |
 
 ## Links

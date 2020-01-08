@@ -1,6 +1,6 @@
 name := "sbt-SlinkyTyped"
 organization := "org.scalablytyped.slinky"
-version := "201912050848"
+version := "202001080757"
 sbtPlugin := true
 bintrayRepository := "SlinkyTyped"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

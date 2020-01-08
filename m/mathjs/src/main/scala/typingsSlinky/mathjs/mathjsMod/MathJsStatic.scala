@@ -5,8 +5,8 @@ import typingsSlinky.mathjs.Anon_L
 import typingsSlinky.mathjs.Anon_LR
 import typingsSlinky.mathjs.Anon_Q
 import typingsSlinky.mathjs.Anon_Simplify
-import typingsSlinky.mathjs.mathjsNumbers.`false`
-import typingsSlinky.mathjs.mathjsNumbers.`true`
+import typingsSlinky.mathjs.mathjsBooleans.`false`
+import typingsSlinky.mathjs.mathjsBooleans.`true`
 import typingsSlinky.mathjs.mathjsStrings.asc
 import typingsSlinky.mathjs.mathjsStrings.biased
 import typingsSlinky.mathjs.mathjsStrings.dense
@@ -161,11 +161,11 @@ trait MathJsStatic extends FactoryDependencies {
     */
   def arg(x: Double): Double = js.native
   def arg(x: BigNumber): BigNumber = js.native
-  def arg(x: Complex): Double = js.native
+  def arg(x: Complex): BigNumber = js.native
   def arg(x: MathArray): MathArray = js.native
   def arg(x: Matrix): Matrix = js.native
   @JSName("arg")
-  def arg_BigNumber(x: Complex): BigNumber = js.native
+  def arg_Double(x: Complex): Double = js.native
   /**
     * Calculate the inverse secant of a value. For matrices, the function
     * is evaluated element wise.
@@ -1073,7 +1073,7 @@ trait MathJsStatic extends FactoryDependencies {
   def gamma(n: Double): Double | MathArray | Matrix = js.native
   def gamma(n: MathArray): Double | MathArray | Matrix = js.native
   def gamma(n: Matrix): Double | MathArray | Matrix = js.native
-  def gcd(args: Matrix*): Matrix = js.native
+  def gcd(args: Fraction*): Fraction = js.native
   @JSName("gcd")
   def gcd_BigNumber(args: BigNumber*): BigNumber = js.native
   /**
@@ -1085,9 +1085,9 @@ trait MathJsStatic extends FactoryDependencies {
   @JSName("gcd")
   def gcd_Double(args: Double*): Double = js.native
   @JSName("gcd")
-  def gcd_Fraction(args: Fraction*): Fraction = js.native
-  @JSName("gcd")
   def gcd_MathArray(args: MathArray*): MathArray = js.native
+  @JSName("gcd")
+  def gcd_Matrix(args: Matrix*): Matrix = js.native
   /**
     * Retrieve help on a function or data type. Help files are retrieved
     * from the documentation in math.expression.docs.
@@ -1095,6 +1095,7 @@ trait MathJsStatic extends FactoryDependencies {
     * @returns A help object
     */
   def help(search: js.Function0[_]): Help = js.native
+  def hypot(args: BigNumber*): BigNumber = js.native
   /**
     * Calculate the hypotenusa of a list with values. The hypotenusa is
     * defined as: hypot(a, b, c, ...) = sqrt(a^2 + b^2 + c^2 + ...) For
@@ -1105,9 +1106,8 @@ trait MathJsStatic extends FactoryDependencies {
     * whole matrix.
     * @returns Returns the hypothenuse of the input values.
     */
-  def hypot(args: Double*): Double = js.native
   @JSName("hypot")
-  def hypot_BigNumber(args: BigNumber*): BigNumber = js.native
+  def hypot_Double(args: Double*): Double = js.native
   /**
     * @param m The x dimension for the matrix
     * @param n The y dimension for the matrix
@@ -2020,9 +2020,18 @@ trait MathJsStatic extends FactoryDependencies {
     */
   def range(str: String): Matrix = js.native
   def range(str: String, includeEnd: Boolean): Matrix = js.native
-  def rationalize(expr: String): Anon_Coefficients = js.native
-  def rationalize(expr: String, optional: js.Object): Anon_Coefficients = js.native
-  def rationalize(expr: String, optional: Boolean): Anon_Coefficients = js.native
+  def rationalize(expr: String): MathNode = js.native
+  def rationalize(expr: String, optional: js.Object): MathNode = js.native
+  def rationalize(expr: String, optional: Boolean): MathNode = js.native
+  def rationalize(expr: MathNode): MathNode = js.native
+  def rationalize(expr: MathNode, optional: js.Object): MathNode = js.native
+  def rationalize(expr: MathNode, optional: Boolean): MathNode = js.native
+  @JSName("rationalize")
+  def rationalize_Anon_Coefficients(expr: String): Anon_Coefficients = js.native
+  @JSName("rationalize")
+  def rationalize_Anon_Coefficients(expr: String, optional: js.Object): Anon_Coefficients = js.native
+  @JSName("rationalize")
+  def rationalize_Anon_Coefficients(expr: String, optional: Boolean): Anon_Coefficients = js.native
   /**
     * Transform a rationalizable expression in a rational fraction. If
     * rational fraction is one variable polynomial then converts the
@@ -2035,21 +2044,12 @@ trait MathJsStatic extends FactoryDependencies {
     * expression node (default)
     * @returns The rational polynomial of expr
     */
-  def rationalize(expr: MathNode): Anon_Coefficients = js.native
-  def rationalize(expr: MathNode, optional: js.Object): Anon_Coefficients = js.native
-  def rationalize(expr: MathNode, optional: Boolean): Anon_Coefficients = js.native
   @JSName("rationalize")
-  def rationalize_MathNode(expr: String): MathNode = js.native
+  def rationalize_Anon_Coefficients(expr: MathNode): Anon_Coefficients = js.native
   @JSName("rationalize")
-  def rationalize_MathNode(expr: String, optional: js.Object): MathNode = js.native
+  def rationalize_Anon_Coefficients(expr: MathNode, optional: js.Object): Anon_Coefficients = js.native
   @JSName("rationalize")
-  def rationalize_MathNode(expr: String, optional: Boolean): MathNode = js.native
-  @JSName("rationalize")
-  def rationalize_MathNode(expr: MathNode): MathNode = js.native
-  @JSName("rationalize")
-  def rationalize_MathNode(expr: MathNode, optional: js.Object): MathNode = js.native
-  @JSName("rationalize")
-  def rationalize_MathNode(expr: MathNode, optional: Boolean): MathNode = js.native
+  def rationalize_Anon_Coefficients(expr: MathNode, optional: Boolean): Anon_Coefficients = js.native
   @JSName("rationalize")
   def rationalize_false(expr: String, optional: js.Object, detailed: `false`): MathNode = js.native
   @JSName("rationalize")

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.atPhosphorKeyboard.atPhosphorKeyboardMod.KeycodeLayout.CodeMap
-import typingsSlinky.atPhosphorKeyboard.atPhosphorKeyboardMod.KeycodeLayout.KeySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

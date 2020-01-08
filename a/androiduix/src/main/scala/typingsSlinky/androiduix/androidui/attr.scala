@@ -6,10 +6,7 @@ import typingsSlinky.androiduix.android.content.res.Resources
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.ViewGroup.LayoutParams
-import typingsSlinky.androiduix.androidui.attr.AttrBinder
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderValue
-import typingsSlinky.androiduix.androidui.attr.StateAttr
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

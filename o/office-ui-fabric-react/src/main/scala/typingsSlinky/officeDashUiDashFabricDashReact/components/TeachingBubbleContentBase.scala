@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TeachingBubbleContentBase
-  extends SharedApply_ITeachingBubbleProps_1963242032[
+  extends SharedApply_ITeachingBubbleProps1814766960[
       typingsSlinky.officeDashUiDashFabricDashReact.libTeachingBubbleMod.TeachingBubbleContentBase
     ] {
   @JSImport("office-ui-fabric-react/lib/TeachingBubble", "TeachingBubbleContentBase")

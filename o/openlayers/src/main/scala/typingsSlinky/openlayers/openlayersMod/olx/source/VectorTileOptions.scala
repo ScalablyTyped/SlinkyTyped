@@ -7,6 +7,7 @@ import typingsSlinky.openlayers.openlayersMod.TileCoord
 import typingsSlinky.openlayers.openlayersMod.TileLoadFunctionType
 import typingsSlinky.openlayers.openlayersMod.TileUrlFunctionType
 import typingsSlinky.openlayers.openlayersMod.VectorTile
+import typingsSlinky.openlayers.openlayersMod.format.Feature
 import typingsSlinky.openlayers.openlayersMod.olx.LogoOptions
 import typingsSlinky.openlayers.openlayersMod.proj.Projection
 import typingsSlinky.openlayers.openlayersMod.source.State
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation._
 trait VectorTileOptions extends js.Object {
   var attributions: js.UndefOr[AttributionLike] = js.undefined
   var cacheSize: js.UndefOr[Double] = js.undefined
-  var format: js.UndefOr[typingsSlinky.openlayers.openlayersMod.format.Feature] = js.undefined
+  var format: js.UndefOr[Feature] = js.undefined
   var logo: js.UndefOr[String | LogoOptions] = js.undefined
   var overlaps: js.UndefOr[Boolean] = js.undefined
   var projection: ProjectionLike
@@ -29,7 +30,7 @@ trait VectorTileOptions extends js.Object {
       /* coords */ TileCoord, 
       /* state */ typingsSlinky.openlayers.openlayersMod.Tile.State, 
       /* s */ String, 
-      /* feature */ typingsSlinky.openlayers.openlayersMod.format.Feature, 
+      /* feature */ Feature, 
       /* type */ TileLoadFunctionType, 
       _
     ]
@@ -47,12 +48,12 @@ object VectorTileOptions {
   def apply(
     attributions: AttributionLike = null,
     cacheSize: Int | Double = null,
-    format: typingsSlinky.openlayers.openlayersMod.format.Feature = null,
+    format: Feature = null,
     logo: String | LogoOptions = null,
     overlaps: js.UndefOr[Boolean] = js.undefined,
     projection: ProjectionLike = null,
     state: State = null,
-    tileClass: (/* n */ VectorTile, /* coords */ TileCoord, /* state */ typingsSlinky.openlayers.openlayersMod.Tile.State, /* s */ String, /* feature */ typingsSlinky.openlayers.openlayersMod.format.Feature, /* type */ TileLoadFunctionType) => _ = null,
+    tileClass: (/* n */ VectorTile, /* coords */ TileCoord, /* state */ typingsSlinky.openlayers.openlayersMod.Tile.State, /* s */ String, /* feature */ Feature, /* type */ TileLoadFunctionType) => _ = null,
     tileGrid: TileGrid = null,
     tileLoadFunction: (/* tile */ Tile, /* url */ String) => Unit = null,
     tileUrlFunction: (/* coords */ TileCoord, /* pixelRatio */ Double, /* proj */ Projection) => String = null,

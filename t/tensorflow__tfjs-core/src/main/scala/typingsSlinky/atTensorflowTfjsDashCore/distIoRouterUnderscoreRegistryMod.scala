@@ -1,6 +1,5 @@
 package typingsSlinky.atTensorflowTfjsDashCore
 
-import typingsSlinky.atTensorflowTfjsDashCore.distIoRouterUnderscoreRegistryMod.IORouter
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.IOHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.reduxDashPersist.esTypesMod
 
-import typingsSlinky.reduxDashPersist.reduxDashPersistNumbers.`false`
+import typingsSlinky.reduxDashPersist.reduxDashPersistBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

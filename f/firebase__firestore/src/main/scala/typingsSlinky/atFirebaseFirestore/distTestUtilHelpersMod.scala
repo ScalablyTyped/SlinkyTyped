@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreStrings.`<DELETE>`
+import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreStrings.LessthansignDELETEGreaterthansign
 import typingsSlinky.atFirebaseFirestore.distSrcApiBlobMod.Blob
 import typingsSlinky.atFirebaseFirestore.distSrcApiUserUnderscoreDataUnderscoreConverterMod.DocumentKeyReference
 import typingsSlinky.atFirebaseFirestore.distSrcCoreDatabaseUnderscoreInfoMod.DatabaseId
@@ -43,7 +43,6 @@ import typingsSlinky.atFirebaseFirestore.distSrcRemoteRemoteUnderscoreEventMod.T
 import typingsSlinky.atFirebaseFirestore.distSrcUtilObjMod.Dict
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreMapMod.SortedMap
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreSetMod.SortedSet
-import typingsSlinky.atFirebaseFirestore.distTestUtilHelpersMod.TestSnapshotVersion
 import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.OrderByDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,7 +54,7 @@ object distTestUtilHelpersMod extends js.Object {
   @js.native
   class DocComparator () extends js.Object
   
-  val DELETE_SENTINEL: `<DELETE>` = js.native
+  val DELETE_SENTINEL: LessthansignDELETEGreaterthansign = js.native
   def ackTarget(docsOrKeys: (Document | String)*): TargetChange = js.native
   def addTargetMapping(docsOrKeys: (Document | String)*): TargetChange = js.native
   def applyDocChanges(view: View, docsOrKeys: (Document | DocumentKey)*): ViewChange = js.native

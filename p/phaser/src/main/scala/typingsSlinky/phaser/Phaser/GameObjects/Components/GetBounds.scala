@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects.Components
 
+import typingsSlinky.phaser.Phaser.Geom.Rectangle
 import typingsSlinky.phaser.Phaser.Math.Vector2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,8 +44,8 @@ trait GetBounds extends js.Object {
     * The values are stored and returned in a Rectangle, or Rectangle-like, object.
     * @param output An object to store the values in. If not provided a new Rectangle will be created.
     */
-  def getBounds[O /* <: typingsSlinky.phaser.Phaser.Geom.Rectangle */](): O = js.native
-  def getBounds[O /* <: typingsSlinky.phaser.Phaser.Geom.Rectangle */](output: O): O = js.native
+  def getBounds[O /* <: Rectangle */](): O = js.native
+  def getBounds[O /* <: Rectangle */](output: O): O = js.native
   /**
     * Gets the center coordinate of this Game Object, regardless of origin.
     * The returned point is calculated in local space and does not factor in any parent containers

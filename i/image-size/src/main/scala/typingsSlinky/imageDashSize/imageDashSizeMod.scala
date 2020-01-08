@@ -1,7 +1,6 @@
 package typingsSlinky.imageDashSize
 
 import typingsSlinky.imageDashSize.distTypesInterfaceMod.ISizeCalculationResult
-import typingsSlinky.imageDashSize.imageDashSizeMod.CallbackFn
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -3,6 +3,7 @@ package typingsSlinky.reactDashNativeDashRatings.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.ImageURISource
 import typingsSlinky.reactDashNativeDashRatings.reactDashNativeDashRatingsMod.RatingProps
@@ -67,6 +68,12 @@ object Rating
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashRatings.reactDashNativeDashRatingsMod.Rating
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashRatings.reactDashNativeDashRatingsMod.Rating](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = RatingProps
 }
 

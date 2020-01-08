@@ -34,11 +34,12 @@ import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.AllByAttribute
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.BuiltQueryMethods
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.GetAllBy
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.QueryByAttribute
+import typingsSlinky.atTestingDashLibraryDom.screenMod.Screen
 import typingsSlinky.atTestingDashLibraryDom.waitDashForDashElementMod.WaitForElementOptions
+import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactBooleans.`false`
 import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactMod.Omit
 import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactMod.RenderOptions
 import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactMod.RenderResult
-import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactNumbers.`false`
 import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactStrings.queries
 import typingsSlinky.prettyDashFormat.prettyDashFormatMod.OptionsReceived
 import typingsSlinky.std.HTMLDocument
@@ -103,6 +104,7 @@ object pureMod extends js.Object {
   val queryByTestId: QueryByBoundAttribute = js.native
   val queryByText: QueryByText = js.native
   val queryByTitle: QueryByBoundAttribute = js.native
+  val screen: Screen[typingsSlinky.atTestingDashLibraryDom.Typeofqueries] = js.native
   def buildQueries[Arguments /* <: js.Array[_] */](
     queryByAll: GetAllBy[Arguments],
     getMultipleError: js.Function2[/* container */ HTMLElement, /* args */ Arguments, String],

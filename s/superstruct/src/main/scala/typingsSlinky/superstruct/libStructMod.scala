@@ -3,7 +3,6 @@ package typingsSlinky.superstruct
 import typingsSlinky.superstruct.libStructDashErrorMod.Branch
 import typingsSlinky.superstruct.libStructDashErrorMod.Failure
 import typingsSlinky.superstruct.libStructDashErrorMod.Path
-import typingsSlinky.superstruct.libStructMod.Struct
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

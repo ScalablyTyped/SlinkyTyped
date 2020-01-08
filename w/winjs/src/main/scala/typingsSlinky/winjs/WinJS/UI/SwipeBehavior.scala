@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.UI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,13 @@ object SwipeBehavior extends js.Object {
   @js.native
   sealed trait select extends SwipeBehavior
   
-  /* 1 */ val none: typingsSlinky.winjs.WinJS.UI.SwipeBehavior.none with Double = js.native
-  /* 0 */ val select: typingsSlinky.winjs.WinJS.UI.SwipeBehavior.select with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SwipeBehavior with Double] = js.native
+  /* 1 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 0 */ @js.native
+  object select extends TopLevel[select with Double]
+  
 }
 

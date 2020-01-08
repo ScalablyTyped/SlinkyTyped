@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object CoreWindowFlowDirection extends js.Object {
   @js.native
   sealed trait rightToLeft extends CoreWindowFlowDirection
   
-  /* 0 */ val leftToRight: typingsSlinky.winrt.Windows.UI.Core.CoreWindowFlowDirection.leftToRight with Double = js.native
-  /* 1 */ val rightToLeft: typingsSlinky.winrt.Windows.UI.Core.CoreWindowFlowDirection.rightToLeft with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoreWindowFlowDirection with Double] = js.native
+  /* 0 */ @js.native
+  object leftToRight extends TopLevel[leftToRight with Double]
+  
+  /* 1 */ @js.native
+  object rightToLeft extends TopLevel[rightToLeft with Double]
+  
 }
 

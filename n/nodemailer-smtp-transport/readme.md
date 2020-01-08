@@ -10,9 +10,9 @@ SMTP transport for Nodemailer
 | ------------------ | :-------------: |
 | Full name          | nodemailer-smtp-transport |
 | Keywords           | SMTP, Nodemailer |
-| # releases         | 3 |
-| # dependents       | 182 |
-| # downloads        | 22397843 |
+| # releases         | 1 |
+| # dependents       | 193 |
+| # downloads        | 15849592 |
 | # stars            | 12 |
 
 ## Links

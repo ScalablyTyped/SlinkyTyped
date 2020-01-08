@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "semaphore"
-version := "v1.1.0-dt-20190322Z-89ab08"
+version := "v1.1.0-dt-20190322Z-c1a693"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

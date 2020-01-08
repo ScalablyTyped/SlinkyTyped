@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.Alert
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Level extends js.Object {
   @js.native
   sealed trait warning extends Level
   
-  /* 2 */ val fatal: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.Alert.Level.fatal with Double = js.native
-  /* 1 */ val warning: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.Alert.Level.warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Level with Double] = js.native
+  /* 2 */ @js.native
+  object fatal extends TopLevel[fatal with Double]
+  
+  /* 1 */ @js.native
+  object warning extends TopLevel[warning with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.applicationinsightsDashJs.Microsoft
 
-import typingsSlinky.applicationinsightsDashJs.Microsoft.Telemetry.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

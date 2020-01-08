@@ -4,7 +4,6 @@ import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.readdirDashEnhanced.libTypesDashPublicMod.Callback
 import typingsSlinky.readdirDashEnhanced.libTypesDashPublicMod.Options
 import typingsSlinky.readdirDashEnhanced.libTypesDashPublicMod.Stats
-import typingsSlinky.readdirDashEnhanced.readdirDashEnhancedMod.Readdir
 import typingsSlinky.std.AsyncIterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`

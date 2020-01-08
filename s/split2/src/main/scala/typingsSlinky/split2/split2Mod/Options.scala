@@ -1,7 +1,6 @@
 package typingsSlinky.split2.split2Mod
 
 import typingsSlinky.node.Anon_Chunk
-import typingsSlinky.node.Error
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.node.streamMod.TransformOptions
@@ -22,15 +21,15 @@ object Options {
     defaultEncoding: String = null,
     destroy: js.ThisFunction2[
       /* this */ Transform, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     emitClose: js.UndefOr[Boolean] = js.undefined,
     encoding: String = null,
     `final`: js.ThisFunction1[
       /* this */ Transform, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     flush: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit] = null,
@@ -38,6 +37,7 @@ object Options {
     maxLength: Int | Double = null,
     objectMode: js.UndefOr[Boolean] = js.undefined,
     read: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit] = null,
+    readableHighWaterMark: Int | Double = null,
     readableObjectMode: js.UndefOr[Boolean] = js.undefined,
     transform: js.ThisFunction3[
       /* this */ Transform, 
@@ -46,18 +46,20 @@ object Options {
       /* callback */ TransformCallback, 
       Unit
     ] = null,
+    writableCorked: Int | Double = null,
+    writableHighWaterMark: Int | Double = null,
     writableObjectMode: js.UndefOr[Boolean] = js.undefined,
     write: js.ThisFunction3[
       /* this */ Transform, 
       /* chunk */ js.Any, 
       /* encoding */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     writev: js.ThisFunction2[
       /* this */ Transform, 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null
   ): Options = {
@@ -75,8 +77,11 @@ object Options {
     if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
     if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
     if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
     if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
+    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
     if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])

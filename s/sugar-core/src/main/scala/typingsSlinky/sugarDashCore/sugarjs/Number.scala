@@ -1,7 +1,6 @@
 package typingsSlinky.sugarDashCore.sugarjs
 
 import typingsSlinky.std.Intl.NumberFormatOptions
-import typingsSlinky.sugarDashCore.sugarjs.Number.ChainableBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

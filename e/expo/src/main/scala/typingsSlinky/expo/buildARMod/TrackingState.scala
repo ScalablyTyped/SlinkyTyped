@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object TrackingState extends js.Object {
   @js.native
   sealed trait NotAvailable extends TrackingState
   
-  /* "ARTrackingStateLimited" */ val Limited: typingsSlinky.expo.buildARMod.TrackingState.Limited with String = js.native
-  /* "ARTrackingStateNormal" */ val Normal: typingsSlinky.expo.buildARMod.TrackingState.Normal with String = js.native
-  /* "ARTrackingStateNotAvailable" */ val NotAvailable: typingsSlinky.expo.buildARMod.TrackingState.NotAvailable with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TrackingState with String] = js.native
+  /* "ARTrackingStateLimited" */ @js.native
+  object Limited extends TopLevel[Limited with String]
+  
+  /* "ARTrackingStateNormal" */ @js.native
+  object Normal extends TopLevel[Normal with String]
+  
+  /* "ARTrackingStateNotAvailable" */ @js.native
+  object NotAvailable extends TopLevel[NotAvailable with String]
+  
 }
 

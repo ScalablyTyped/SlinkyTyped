@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PivotSchemaDesigner
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Layouts extends js.Object {
   @js.native
   sealed trait OneByOne extends Layouts
   
-  /* 0 */ val Excel: typingsSlinky.ejDotWebDotAll.ej.PivotSchemaDesigner.Layouts.Excel with Double = js.native
-  /* 1 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.PivotSchemaDesigner.Layouts.Normal with Double = js.native
-  /* 2 */ val OneByOne: typingsSlinky.ejDotWebDotAll.ej.PivotSchemaDesigner.Layouts.OneByOne with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Layouts with Double] = js.native
+  /* 0 */ @js.native
+  object Excel extends TopLevel[Excel with Double]
+  
+  /* 1 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
+  /* 2 */ @js.native
+  object OneByOne extends TopLevel[OneByOne with Double]
+  
 }
 

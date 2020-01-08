@@ -3,6 +3,18 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 import org.scalajs.dom.experimental.AbortSignal
 import org.scalajs.dom.raw.FormData
 import org.scalajs.dom.raw.HTMLFormElement
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`array-buffer`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`no-prompt`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.anonymous
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.auto
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.blob
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.document
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.image
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.immediate
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.json
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.post
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.text
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.xml
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -23,7 +35,7 @@ trait RequestOptions extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
-  var authMode: js.UndefOr[String] = js.undefined
+  var authMode: js.UndefOr[auto | anonymous | immediate | `no-prompt`] = js.undefined
   /**
     * If uploading a file, specify the form data or element used to submit the file here. If specified, the parameters of the `query` will be added to the URL.
     *
@@ -43,11 +55,11 @@ trait RequestOptions extends Object {
     */
   var headers: js.UndefOr[js.Any] = js.undefined
   /**
-    * Indicates if the request should be made using the HTTP POST method. By default, this is determined automatically based on the request size.  **Possible Values:** auto | post
+    * Indicates if the request should be made using the HTTP POST method. By default, this is determined automatically based on the request size.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
-  var method: js.UndefOr[String] = js.undefined
+  var method: js.UndefOr[auto | post] = js.undefined
   /**
     * Query parameters for the request. The query parameters will be added to the URL if: a GET request is used, or if the `body` property is set. Otherwise, the query parameters will be added to the body request parameters if: the `body` property is not set, and a POST request is used.
     *
@@ -55,11 +67,11 @@ trait RequestOptions extends Object {
     */
   var query: js.UndefOr[js.Any] = js.undefined
   /**
-    * Response format.  **Possible Values:** json | xml | text | blob | array-buffer | document | image
+    * Response format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
-  var responseType: js.UndefOr[String] = js.undefined
+  var responseType: js.UndefOr[json | xml | text | blob | `array-buffer` | document | image] = js.undefined
   /**
     * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).  Example:
     * ```js
@@ -105,13 +117,13 @@ object RequestOptions {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
-    authMode: String = null,
+    authMode: auto | anonymous | immediate | `no-prompt` = null,
     body: FormData | HTMLFormElement | String = null,
     cacheBust: js.UndefOr[Boolean] = js.undefined,
     headers: js.Any = null,
-    method: String = null,
+    method: auto | post = null,
     query: js.Any = null,
-    responseType: String = null,
+    responseType: json | xml | text | blob | `array-buffer` | document | image = null,
     signal: AbortSignal = null,
     timeout: Int | Double = null,
     useProxy: js.UndefOr[Boolean] = js.undefined

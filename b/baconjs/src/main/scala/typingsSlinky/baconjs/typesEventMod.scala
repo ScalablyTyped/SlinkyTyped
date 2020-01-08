@@ -1,11 +1,5 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.typesEventMod.End
-import typingsSlinky.baconjs.typesEventMod.Event
-import typingsSlinky.baconjs.typesEventMod.Initial
-import typingsSlinky.baconjs.typesEventMod.Next
-import typingsSlinky.baconjs.typesEventMod.NoValue
-import typingsSlinky.baconjs.typesEventMod.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,7 +82,7 @@ object typesEventMod extends js.Object {
   def isEnd[V](e: Event[V]): /* is baconjs.baconjs/types/event.End */ Boolean = js.native
   def isError[V](e: Event[V]): /* is baconjs.baconjs/types/event.Error */ Boolean = js.native
   def isEvent[V](e: js.Any): /* is baconjs.baconjs/types/event.Event<V> */ Boolean = js.native
-  def isInitial[V](e: js.Any): /* is baconjs.baconjs/types/event.Initial<V> */ Boolean = js.native
+  def isInitial[V](e: Event[V]): /* is baconjs.baconjs/types/event.Initial<V> */ Boolean = js.native
   def isNext[V](e: Event[V]): /* is baconjs.baconjs/types/event.Next<V> */ Boolean = js.native
   def nextEvent[V](value: V): Next[V] = js.native
   def toEvent[V](x: V): Event[V] = js.native

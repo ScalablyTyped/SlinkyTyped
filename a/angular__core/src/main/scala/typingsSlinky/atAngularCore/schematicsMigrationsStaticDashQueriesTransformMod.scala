@@ -2,7 +2,6 @@ package typingsSlinky.atAngularCore
 
 import typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesAngularQueryDashDefinitionMod.NgQueryDefinition
 import typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesAngularQueryDashDefinitionMod.QueryTiming
-import typingsSlinky.atAngularCore.schematicsMigrationsStaticDashQueriesTransformMod.TransformedQueryResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

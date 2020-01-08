@@ -2,7 +2,7 @@ package typingsSlinky.lusca.luscaMod
 
 import typingsSlinky.express.expressMod.RequestHandler
 import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod.ParamsDictionary
-import typingsSlinky.lusca.luscaNumbers.`true`
+import typingsSlinky.lusca.luscaBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

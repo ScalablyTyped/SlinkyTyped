@@ -1,5 +1,6 @@
 package typingsSlinky.apolloDashClient.coreTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FetchType extends js.Object {
   @js.native
   sealed trait refetch extends FetchType
   
-  /* 1 */ val normal: typingsSlinky.apolloDashClient.coreTypesMod.FetchType.normal with Double = js.native
-  /* 3 */ val poll: typingsSlinky.apolloDashClient.coreTypesMod.FetchType.poll with Double = js.native
-  /* 2 */ val refetch: typingsSlinky.apolloDashClient.coreTypesMod.FetchType.refetch with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FetchType with Double] = js.native
+  /* 1 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
+  /* 3 */ @js.native
+  object poll extends TopLevel[poll with Double]
+  
+  /* 2 */ @js.native
+  object refetch extends TopLevel[refetch with Double]
+  
 }
 

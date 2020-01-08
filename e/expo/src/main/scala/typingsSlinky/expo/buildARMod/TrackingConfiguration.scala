@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object TrackingConfiguration extends js.Object {
   @js.native
   sealed trait World extends TrackingConfiguration
   
-  /* "ARFaceTrackingConfiguration" */ val Face: typingsSlinky.expo.buildARMod.TrackingConfiguration.Face with String = js.native
-  /* "AROrientationTrackingConfiguration" */ val Orientation: typingsSlinky.expo.buildARMod.TrackingConfiguration.Orientation with String = js.native
-  /* "ARWorldTrackingConfiguration" */ val World: typingsSlinky.expo.buildARMod.TrackingConfiguration.World with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TrackingConfiguration with String] = js.native
+  /* "ARFaceTrackingConfiguration" */ @js.native
+  object Face extends TopLevel[Face with String]
+  
+  /* "AROrientationTrackingConfiguration" */ @js.native
+  object Orientation extends TopLevel[Orientation with String]
+  
+  /* "ARWorldTrackingConfiguration" */ @js.native
+  object World extends TopLevel[World with String]
+  
 }
 

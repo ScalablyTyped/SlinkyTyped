@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.functionalIComparableMod.IComparable
-import typingsSlinky.tstl.utilityEntryMod.Entry
 import typingsSlinky.tstl.utilityIPairMod.IPair
 import scala.scalajs.js
 import scala.scalajs.js.`|`

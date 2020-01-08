@@ -1,6 +1,5 @@
 package typingsSlinky.openpgp.openpgpMod
 
-import typingsSlinky.openpgp.openpgpMod.`type`.keyid.Keyid
 import typingsSlinky.openpgp.openpgpMod.enums.hash
 import typingsSlinky.openpgp.openpgpMod.enums.symmetric
 import scala.scalajs.js

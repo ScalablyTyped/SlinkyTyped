@@ -11,24 +11,24 @@ object subscribeToResult extends js.Object {
   def apply[T, R](
     outerSubscriber: typingsSlinky.rxjs.internalOuterSubscriberMod.OuterSubscriber[T, R],
     result: js.Any
-  ): Subscription = js.native
+  ): js.UndefOr[Subscription] = js.native
   def apply[T, R](
     outerSubscriber: typingsSlinky.rxjs.internalOuterSubscriberMod.OuterSubscriber[T, R],
     result: js.Any,
     outerValue: T
-  ): Subscription = js.native
+  ): js.UndefOr[Subscription] = js.native
   def apply[T, R](
     outerSubscriber: typingsSlinky.rxjs.internalOuterSubscriberMod.OuterSubscriber[T, R],
     result: js.Any,
     outerValue: T,
     outerIndex: Double
-  ): Subscription = js.native
+  ): js.UndefOr[Subscription] = js.native
   def apply[T, R](
     outerSubscriber: typingsSlinky.rxjs.internalOuterSubscriberMod.OuterSubscriber[T, R],
     result: js.Any,
-    outerValue: T,
-    outerIndex: Double,
-    destination: typingsSlinky.rxjs.internalSubscriberMod.Subscriber[_]
-  ): Subscription = js.native
+    outerValue: js.UndefOr[scala.Nothing],
+    outerIndex: js.UndefOr[scala.Nothing],
+    innerSubscriber: typingsSlinky.rxjs.internalInnerSubscriberMod.InnerSubscriber[T, R]
+  ): js.UndefOr[Subscription] = js.native
 }
 

@@ -1,0 +1,8 @@
+package typingsSlinky.awsDashSdk.clientsCloudsearchdomainMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait _QueryParser extends js.Object
+

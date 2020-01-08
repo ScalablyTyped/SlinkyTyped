@@ -3,7 +3,12 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`horizontal-reversed`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`vertical-reversed`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.horizontal
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -192,10 +197,10 @@ object SliderProperties {
     disabled: js.UndefOr[Boolean] = js.undefined,
     draggableSegmentsEnabled: js.UndefOr[Boolean] = js.undefined,
     id: String = null,
-    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
-    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => Double = null,
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
     label: String = null,
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
     labelInputsEnabled: js.UndefOr[Boolean] = js.undefined,
     labelsVisible: js.UndefOr[Boolean] = js.undefined,
     layout: horizontal | `horizontal-reversed` | vertical | `vertical-reversed` = null,

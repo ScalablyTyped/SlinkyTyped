@@ -2,6 +2,7 @@ package typingsSlinky.ts3DashNodejsDashLibrary
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.ts3DashNodejsDashLibrary.libNodeAbstractMod.Abstract
+import typingsSlinky.ts3DashNodejsDashLibrary.libTeamSpeakMod.TeamSpeak
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.ClientType
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesPropertyTypesMod.ClientDBEdit
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesPropertyTypesMod.ClientEdit
@@ -12,7 +13,6 @@ import typingsSlinky.ts3DashNodejsDashLibrary.libTypesResponseTypesMod.ClientInf
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesResponseTypesMod.ClientList
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesResponseTypesMod.CustomInfo
 import typingsSlinky.ts3DashNodejsDashLibrary.libTypesResponseTypesMod.PermList
-import typingsSlinky.ts3DashNodejsDashLibrary.ts3DashNodejsDashLibraryMod.TeamSpeak
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

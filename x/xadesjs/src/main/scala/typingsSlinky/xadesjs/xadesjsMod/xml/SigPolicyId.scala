@@ -6,5 +6,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.SigPolicyId")
 @js.native
-class SigPolicyId () extends ObjectIdentifier
+class SigPolicyId ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.SigPolicyId
 

@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`auditregistrationDOTk8sDOTio/v1alpha1`
-import typingsSlinky.atPulumiKubernetes.auditregistrationV1alpha1AuditSinkMod.AuditSink
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.auditregistrationDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.auditregistration.v1alpha1.AuditSinkSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object auditregistrationV1alpha1AuditSinkMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`auditregistrationDOTk8sDOTio/v1alpha1`] = js.native
+    val apiVersion: Output[auditregistrationDotk8sDotioSlashv1alpha1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("leaflet", "esri.Task")
 @js.native
 class Task protected () extends Class {
-  def this(options: typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.Service) = this()
+  def this(options: Service) = this()
   def this(options: TaskOptions) = this()
   def format(returnUnformattedValues: Boolean): this.type = js.native
   /**
@@ -33,11 +33,11 @@ class Task protected () extends Class {
 @JSImport("leaflet", "esri.task")
 @js.native
 object task extends js.Object {
-  def apply(options: typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.Service): typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.Task = js.native
+  def apply(options: Service): Task = js.native
   /**
     * `L.esri.Task` is a generic class that provides the foundation for calling operations on ArcGIS Online and
     * ArcGIS Server Services like query, find and identify.
     */
-  def apply(options: TaskOptions): typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.Task = js.native
+  def apply(options: TaskOptions): Task = js.native
 }
 

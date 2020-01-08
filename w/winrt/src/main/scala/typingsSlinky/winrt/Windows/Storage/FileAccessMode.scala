@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object FileAccessMode extends js.Object {
   @js.native
   sealed trait readWrite extends FileAccessMode
   
-  /* 0 */ val read: typingsSlinky.winrt.Windows.Storage.FileAccessMode.read with Double = js.native
-  /* 1 */ val readWrite: typingsSlinky.winrt.Windows.Storage.FileAccessMode.readWrite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileAccessMode with Double] = js.native
+  /* 0 */ @js.native
+  object read extends TopLevel[read with Double]
+  
+  /* 1 */ @js.native
+  object readWrite extends TopLevel[readWrite with Double]
+  
 }
 

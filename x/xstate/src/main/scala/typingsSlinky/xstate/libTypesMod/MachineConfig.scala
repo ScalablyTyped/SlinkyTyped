@@ -1,13 +1,18 @@
 package typingsSlinky.xstate.libTypesMod
 
 import typingsSlinky.xstate.libStateNodeMod.StateNode
+import typingsSlinky.xstate.xstateStrings.`final`
+import typingsSlinky.xstate.xstateStrings.atomic
+import typingsSlinky.xstate.xstateStrings.compound
 import typingsSlinky.xstate.xstateStrings.deep
+import typingsSlinky.xstate.xstateStrings.history
+import typingsSlinky.xstate.xstateStrings.parallel
 import typingsSlinky.xstate.xstateStrings.shallow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait MachineConfig[TContext, TStateSchema /* <: StateSchema */, TEvent /* <: EventObject */] extends CompoundStateNodeConfig[TContext, TStateSchema, TEvent] {
+trait MachineConfig[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */] extends StateNodeConfig[TContext, TStateSchema, TEvent] {
   /**
     * The machine's own version.
     */
@@ -16,30 +21,30 @@ trait MachineConfig[TContext, TStateSchema /* <: StateSchema */, TEvent /* <: Ev
 
 object MachineConfig {
   @scala.inline
-  def apply[TContext, TStateSchema /* <: StateSchema */, TEvent /* <: EventObject */](
+  def apply[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](
     activities: SingleOrArray[Activity[TContext, TEvent]] = null,
     after: DelayedTransitions[TContext, TEvent] = null,
-    context: TContext = null,
+    context: TContext | js.Function0[TContext] = null,
     data: (Mapper[TContext, TEvent]) | (PropertyMapper[TContext, TEvent]) = null,
     delimiter: String = null,
-    entry: SingleOrArray[Action[TContext, TEvent]] = null,
-    exit: SingleOrArray[Action[TContext, TEvent]] = null,
+    entry: Actions[TContext, TEvent] = null,
+    exit: Actions[TContext, TEvent] = null,
     history: shallow | deep | Boolean = null,
     id: String = null,
     initial: /* import warning: importer.ImportType#apply Failed type conversion: keyof TStateSchema['states'] */ js.Any = null,
-    invoke: InvokesConfig[TContext, TEvent] = null,
+    invoke: SingleOrArray[InvokeConfig[TContext, TEvent]] = null,
     key: String = null,
     meta: js.Any = null,
     on: TransitionsConfig[TContext, TEvent] = null,
     onDone: String | (SingleOrArray[TransitionConfig[TContext, DoneEventObject]]) = null,
-    onEntry: SingleOrArray[Action[TContext, TEvent]] = null,
-    onExit: SingleOrArray[Action[TContext, TEvent]] = null,
+    onEntry: Actions[TContext, TEvent] = null,
+    onExit: Actions[TContext, TEvent] = null,
     order: Int | Double = null,
     parallel: js.UndefOr[Boolean] = js.undefined,
-    parent: StateNode[TContext, _, TEvent] = null,
+    parent: StateNode[TContext, _, TEvent, _] = null,
     states: StatesConfig[TContext, TStateSchema, TEvent] = null,
     strict: js.UndefOr[Boolean] = js.undefined,
-    `type`: StateTypes = null,
+    `type`: atomic | compound | parallel | `final` | history = null,
     version: String = null
   ): MachineConfig[TContext, TStateSchema, TEvent] = {
     val __obj = js.Dynamic.literal()

@@ -1,7 +1,7 @@
 package typingsSlinky.ethers
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ethers.distTypesUtilsTypesMod.Arrayish
-import typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,13 +32,23 @@ object distTypesUtilsUtf8Mod extends js.Object {
     @js.native
     sealed trait current extends UnicodeNormalizationForm
     
-    /* "NFC" */ val NFC: typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm.NFC with String = js.native
-    /* "NFD" */ val NFD: typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm.NFD with String = js.native
-    /* "NFKC" */ val NFKC: typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm.NFKC with String = js.native
-    /* "NFKD" */ val NFKD: typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm.NFKD with String = js.native
-    /* "" */ val current: typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm.current with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[UnicodeNormalizationForm with String] = js.native
+    /* "NFC" */ @js.native
+    object NFC extends TopLevel[NFC with String]
+    
+    /* "NFD" */ @js.native
+    object NFD extends TopLevel[NFD with String]
+    
+    /* "NFKC" */ @js.native
+    object NFKC extends TopLevel[NFKC with String]
+    
+    /* "NFKD" */ @js.native
+    object NFKD extends TopLevel[NFKD with String]
+    
+    /* "" */ @js.native
+    object current extends TopLevel[current with String]
+    
   }
   
 }

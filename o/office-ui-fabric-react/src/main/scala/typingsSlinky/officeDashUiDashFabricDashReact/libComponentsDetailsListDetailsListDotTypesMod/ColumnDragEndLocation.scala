@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object ColumnDragEndLocation extends js.Object {
   @js.native
   sealed trait surface extends ColumnDragEndLocation
   
-  /* 2 */ val header: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.ColumnDragEndLocation.header with Double = js.native
-  /* 0 */ val outside: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.ColumnDragEndLocation.outside with Double = js.native
-  /* 1 */ val surface: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.ColumnDragEndLocation.surface with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ColumnDragEndLocation with Double] = js.native
+  /* 2 */ @js.native
+  object header extends TopLevel[header with Double]
+  
+  /* 0 */ @js.native
+  object outside extends TopLevel[outside with Double]
+  
+  /* 1 */ @js.native
+  object surface extends TopLevel[surface with Double]
+  
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTextFieldMaskedTextFieldMaskedTextFieldMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.Underscore
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings._underscore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/TextField/MaskedTextField/MaskedTextField", "DEFAULT_MASK_CHAR")
 @js.native
-object DEFAULT_MASK_CHAR extends TopLevel[Underscore]
+object DEFAULT_MASK_CHAR extends TopLevel[_underscore]
 

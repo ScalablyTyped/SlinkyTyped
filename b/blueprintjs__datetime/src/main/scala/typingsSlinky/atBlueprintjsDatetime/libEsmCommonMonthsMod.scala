@@ -1,6 +1,6 @@
 package typingsSlinky.atBlueprintjsDatetime
 
-import typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,20 +49,44 @@ object libEsmCommonMonthsMod extends js.Object {
     @js.native
     sealed trait SEPTEMBER extends Months
     
-    /* 3 */ val APRIL: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.APRIL with Double = js.native
-    /* 7 */ val AUGUST: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.AUGUST with Double = js.native
-    /* 11 */ val DECEMBER: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.DECEMBER with Double = js.native
-    /* 1 */ val FEBRUARY: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.FEBRUARY with Double = js.native
-    /* 0 */ val JANUARY: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.JANUARY with Double = js.native
-    /* 6 */ val JULY: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.JULY with Double = js.native
-    /* 5 */ val JUNE: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.JUNE with Double = js.native
-    /* 2 */ val MARCH: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.MARCH with Double = js.native
-    /* 4 */ val MAY: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.MAY with Double = js.native
-    /* 10 */ val NOVEMBER: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.NOVEMBER with Double = js.native
-    /* 9 */ val OCTOBER: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.OCTOBER with Double = js.native
-    /* 8 */ val SEPTEMBER: typingsSlinky.atBlueprintjsDatetime.libEsmCommonMonthsMod.Months.SEPTEMBER with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Months with Double] = js.native
+    /* 3 */ @js.native
+    object APRIL extends TopLevel[APRIL with Double]
+    
+    /* 7 */ @js.native
+    object AUGUST extends TopLevel[AUGUST with Double]
+    
+    /* 11 */ @js.native
+    object DECEMBER extends TopLevel[DECEMBER with Double]
+    
+    /* 1 */ @js.native
+    object FEBRUARY extends TopLevel[FEBRUARY with Double]
+    
+    /* 0 */ @js.native
+    object JANUARY extends TopLevel[JANUARY with Double]
+    
+    /* 6 */ @js.native
+    object JULY extends TopLevel[JULY with Double]
+    
+    /* 5 */ @js.native
+    object JUNE extends TopLevel[JUNE with Double]
+    
+    /* 2 */ @js.native
+    object MARCH extends TopLevel[MARCH with Double]
+    
+    /* 4 */ @js.native
+    object MAY extends TopLevel[MAY with Double]
+    
+    /* 10 */ @js.native
+    object NOVEMBER extends TopLevel[NOVEMBER with Double]
+    
+    /* 9 */ @js.native
+    object OCTOBER extends TopLevel[OCTOBER with Double]
+    
+    /* 8 */ @js.native
+    object SEPTEMBER extends TopLevel[SEPTEMBER with Double]
+    
   }
   
 }

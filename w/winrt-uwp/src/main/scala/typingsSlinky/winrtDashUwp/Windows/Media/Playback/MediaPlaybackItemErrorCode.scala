@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Playback
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object MediaPlaybackItemErrorCode extends js.Object {
   @js.native
   sealed trait sourceNotSupportedError extends MediaPlaybackItemErrorCode
   
-  /* 1 */ val aborted: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.aborted with Double = js.native
-  /* 3 */ val decodeError: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.decodeError with Double = js.native
-  /* 5 */ val encryptionError: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.encryptionError with Double = js.native
-  /* 2 */ val networkError: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.networkError with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.none with Double = js.native
-  /* 4 */ val sourceNotSupportedError: typingsSlinky.winrtDashUwp.Windows.Media.Playback.MediaPlaybackItemErrorCode.sourceNotSupportedError with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaPlaybackItemErrorCode with Double] = js.native
+  /* 1 */ @js.native
+  object aborted extends TopLevel[aborted with Double]
+  
+  /* 3 */ @js.native
+  object decodeError extends TopLevel[decodeError with Double]
+  
+  /* 5 */ @js.native
+  object encryptionError extends TopLevel[encryptionError with Double]
+  
+  /* 2 */ @js.native
+  object networkError extends TopLevel[networkError with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 4 */ @js.native
+  object sourceNotSupportedError extends TopLevel[sourceNotSupportedError with Double]
+  
 }
 

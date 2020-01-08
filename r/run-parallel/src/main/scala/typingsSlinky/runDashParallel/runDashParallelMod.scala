@@ -1,9 +1,5 @@
 package typingsSlinky.runDashParallel
 
-import typingsSlinky.runDashParallel.runDashParallelMod.Callback
-import typingsSlinky.runDashParallel.runDashParallelMod.Task
-import typingsSlinky.runDashParallel.runDashParallelMod.TaskCallback
-import typingsSlinky.runDashParallel.runDashParallelMod.TaskObj
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

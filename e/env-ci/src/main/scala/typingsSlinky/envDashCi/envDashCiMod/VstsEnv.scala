@@ -1,6 +1,6 @@
 package typingsSlinky.envDashCi.envDashCiMod
 
-import typingsSlinky.envDashCi.envDashCiNumbers.`true`
+import typingsSlinky.envDashCi.envDashCiBooleans.`true`
 import typingsSlinky.envDashCi.envDashCiStrings.`Visual Studio Team Services`
 import typingsSlinky.envDashCi.envDashCiStrings.vsts
 import scala.scalajs.js

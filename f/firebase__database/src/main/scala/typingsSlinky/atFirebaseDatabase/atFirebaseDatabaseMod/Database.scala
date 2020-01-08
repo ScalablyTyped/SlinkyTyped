@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseDatabase.atFirebaseDatabaseMod
 
-import typingsSlinky.atFirebaseDatabase.Anon_TIMESTAMP
+import typingsSlinky.atFirebaseDatabase.Anon_IncrementTIMESTAMP
 import typingsSlinky.atFirebaseDatabase.distSrcCoreRepoMod.Repo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +21,6 @@ class Database protected ()
 @JSImport("@firebase/database", "Database")
 @js.native
 object Database extends js.Object {
-  val ServerValue: Anon_TIMESTAMP = js.native
+  val ServerValue: Anon_IncrementTIMESTAMP = js.native
 }
 

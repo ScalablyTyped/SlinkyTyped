@@ -5,12 +5,6 @@ import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.wepy.appMod.AppConfig
 import typingsSlinky.wepy.appMod.AppConstructor
 import typingsSlinky.wepy.pageMod.PageConstructor
-import typingsSlinky.wepy.wepyMod.App
-import typingsSlinky.wepy.wepyMod.Component
-import typingsSlinky.wepy.wepyMod.DefaultExport
-import typingsSlinky.wepy.wepyMod.Event
-import typingsSlinky.wepy.wepyMod.Mixin
-import typingsSlinky.wepy.wepyMod.Page
 import typingsSlinky.wepy.wxUnderscoreEnhancedMod.WxEnhances
 import scala.scalajs.js
 import scala.scalajs.js.`|`

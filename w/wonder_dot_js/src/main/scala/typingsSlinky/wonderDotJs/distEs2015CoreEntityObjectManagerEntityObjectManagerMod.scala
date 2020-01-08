@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015CoreEntityObjectEntityObjectMod.EntityObject
-import typingsSlinky.wonderDotJs.distEs2015CoreEntityObjectManagerEntityObjectManagerMod.EntityObjectManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

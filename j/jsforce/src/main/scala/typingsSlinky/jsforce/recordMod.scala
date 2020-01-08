@@ -2,7 +2,6 @@ package typingsSlinky.jsforce
 
 import typingsSlinky.jsforce.connectionMod.Connection
 import typingsSlinky.jsforce.recordDashResultMod.RecordResult
-import typingsSlinky.jsforce.recordMod.Record
 import typingsSlinky.jsforce.salesforceDashIdMod.SalesforceId
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.std.Partial

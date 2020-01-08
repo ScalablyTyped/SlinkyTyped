@@ -1,7 +1,7 @@
 package typingsSlinky.expoDashFileDashSystem
 
 import typingsSlinky.expoDashFileDashSystem.buildFileSystemDotTypesMod.FileInfo
-import typingsSlinky.expoDashFileDashSystem.expoDashFileDashSystemNumbers.`true`
+import typingsSlinky.expoDashFileDashSystem.expoDashFileDashSystemBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

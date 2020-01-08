@@ -8,7 +8,7 @@ import typingsSlinky.gapiDotPlus.Anon_Max
 import typingsSlinky.gapiDotPlus.Anon_Primary
 import typingsSlinky.gapiDotPlus.Anon_Type
 import typingsSlinky.gapiDotPlus.Anon_Url
-import typingsSlinky.gapiDotPlus.gapiDotPlusStrings.`plus#person`
+import typingsSlinky.gapiDotPlus.gapiDotPlusStrings.plusNumbersignperson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait Person extends js.Object {
   var id: String
   var image: Anon_Url
   var isPlusUser: Boolean
-  var kind: `plus#person`
+  var kind: plusNumbersignperson
   var language: String
   var name: Anon_FamilyName
   var nickname: String
@@ -62,7 +62,7 @@ object Person {
     id: String,
     image: Anon_Url,
     isPlusUser: Boolean,
-    kind: `plus#person`,
+    kind: plusNumbersignperson,
     language: String,
     name: Anon_FamilyName,
     nickname: String,

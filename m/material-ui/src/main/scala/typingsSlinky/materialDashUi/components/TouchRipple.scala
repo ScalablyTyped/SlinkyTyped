@@ -3,6 +3,7 @@ package typingsSlinky.materialDashUi.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.materialDashUi.internalTouchRippleMod.TouchRippleProps
 import typingsSlinky.materialDashUi.internalTouchRippleMod.default
@@ -35,6 +36,9 @@ object TouchRipple
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.materialDashUi.internalTouchRippleMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TouchRippleProps
 }
 

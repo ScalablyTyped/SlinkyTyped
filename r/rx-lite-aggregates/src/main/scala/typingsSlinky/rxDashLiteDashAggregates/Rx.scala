@@ -1,7 +1,6 @@
 package typingsSlinky.rxDashLiteDashAggregates
 
 import typingsSlinky.rxDashCore.Rx.IPromise
-import typingsSlinky.rxDashLiteDashAggregates.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

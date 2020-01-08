@@ -6,8 +6,8 @@ import org.scalajs.dom.raw.TouchEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reDashResizable.reDashResizableMod.ResizeDirection
+import typingsSlinky.reactDashDraggable.reactDashDraggableBooleans.`false`
 import typingsSlinky.reactDashDraggable.reactDashDraggableMod.DraggableEvent
-import typingsSlinky.reactDashDraggable.reactDashDraggableNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

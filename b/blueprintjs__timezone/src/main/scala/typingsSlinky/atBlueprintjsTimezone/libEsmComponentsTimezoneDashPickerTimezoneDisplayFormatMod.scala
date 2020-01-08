@@ -4,7 +4,6 @@ import typingsSlinky.atBlueprintjsTimezone.atBlueprintjsTimezoneStrings.abbrevia
 import typingsSlinky.atBlueprintjsTimezone.atBlueprintjsTimezoneStrings.composite
 import typingsSlinky.atBlueprintjsTimezone.atBlueprintjsTimezoneStrings.name
 import typingsSlinky.atBlueprintjsTimezone.atBlueprintjsTimezoneStrings.offset
-import typingsSlinky.atBlueprintjsTimezone.libEsmComponentsTimezoneDashPickerTimezoneDisplayFormatMod.TimezoneDisplayFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -2,7 +2,7 @@ package typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashType
 
 import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadStrings.Empty
+import typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object TypeaheadMulitInputWithHocProps {
     labelKey: TypeaheadLabelKey[T],
     onRemove: Event => Unit,
     renderToken: (T, TypeaheadMenuProps[T], Double) => TagMod[Any],
-    role: Empty,
+    role: _empty,
     selected: js.Array[T]
   ): TypeaheadMulitInputWithHocProps[T] = {
     val __obj = js.Dynamic.literal(inputClassName = inputClassName.asInstanceOf[js.Any], labelKey = labelKey.asInstanceOf[js.Any], onRemove = js.Any.fromFunction1(onRemove), renderToken = js.Any.fromFunction3(renderToken), role = role.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])

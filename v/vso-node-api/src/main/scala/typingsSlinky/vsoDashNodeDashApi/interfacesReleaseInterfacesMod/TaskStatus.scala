@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,17 +41,37 @@ object TaskStatus extends js.Object {
   @js.native
   sealed trait Unknown extends TaskStatus
   
-  /* 5 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Canceled with Double = js.native
-  /* 8 */ val Failed: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Failed with Double = js.native
-  /* 4 */ val Failure: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Failure with Double = js.native
-  /* 2 */ val InProgress: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.InProgress with Double = js.native
-  /* 9 */ val PartiallySucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.PartiallySucceeded with Double = js.native
-  /* 1 */ val Pending: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Pending with Double = js.native
-  /* 6 */ val Skipped: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Skipped with Double = js.native
-  /* 7 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Succeeded with Double = js.native
-  /* 3 */ val Success: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Success with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.TaskStatus.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TaskStatus with Double] = js.native
+  /* 5 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 8 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 4 */ @js.native
+  object Failure extends TopLevel[Failure with Double]
+  
+  /* 2 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
+  /* 9 */ @js.native
+  object PartiallySucceeded extends TopLevel[PartiallySucceeded with Double]
+  
+  /* 1 */ @js.native
+  object Pending extends TopLevel[Pending with Double]
+  
+  /* 6 */ @js.native
+  object Skipped extends TopLevel[Skipped with Double]
+  
+  /* 7 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
+  /* 3 */ @js.native
+  object Success extends TopLevel[Success with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

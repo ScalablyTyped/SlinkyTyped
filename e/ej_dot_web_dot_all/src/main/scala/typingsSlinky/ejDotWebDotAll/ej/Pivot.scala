@@ -1,7 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
-import typingsSlinky.ejDotWebDotAll.ej.Pivot.AnalysisMode
-import typingsSlinky.ejDotWebDotAll.ej.Pivot.OperationalMode
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,10 +24,15 @@ object Pivot extends js.Object {
     @js.native
     sealed trait Pivot extends AnalysisMode
     
-    /* 0 */ val OLAP: typingsSlinky.ejDotWebDotAll.ej.Pivot.AnalysisMode.OLAP with Double = js.native
-    /* 1 */ val Pivot: typingsSlinky.ejDotWebDotAll.ej.Pivot.AnalysisMode.Pivot with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[AnalysisMode with Double] = js.native
+    /* 0 */ @js.native
+    object OLAP extends TopLevel[OLAP with Double]
+    
+    /* 1 */ @js.native
+    object Pivot
+      extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.Pivot.AnalysisMode.Pivot with Double]
+    
   }
   
   @js.native
@@ -41,10 +45,14 @@ object Pivot extends js.Object {
     @js.native
     sealed trait ServerMode extends OperationalMode
     
-    /* 0 */ val ClientMode: typingsSlinky.ejDotWebDotAll.ej.Pivot.OperationalMode.ClientMode with Double = js.native
-    /* 1 */ val ServerMode: typingsSlinky.ejDotWebDotAll.ej.Pivot.OperationalMode.ServerMode with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[OperationalMode with Double] = js.native
+    /* 0 */ @js.native
+    object ClientMode extends TopLevel[ClientMode with Double]
+    
+    /* 1 */ @js.native
+    object ServerMode extends TopLevel[ServerMode with Double]
+    
   }
   
 }

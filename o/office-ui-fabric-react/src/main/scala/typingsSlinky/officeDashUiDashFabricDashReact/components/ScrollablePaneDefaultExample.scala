@@ -1,11 +1,14 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ScrollablePaneDefaultExample
-  extends SharedApply_Object152536094[
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsScrollablePaneExamplesScrollablePaneDotDefaultDotExampleMod.ScrollablePaneDefaultExample
     ] {
   @JSImport("office-ui-fabric-react/lib/components/ScrollablePane/examples/ScrollablePane.Default.Example", "ScrollablePaneDefaultExample")

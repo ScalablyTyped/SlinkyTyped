@@ -1,5 +1,6 @@
 package typingsSlinky.amazonDashConnectDashStreams.connect
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CONTACT_ACTIVE_STATES extends js.Object {
   @js.native
   sealed trait INCOMING extends CONTACT_ACTIVE_STATES
   
-  /* "connected" */ val CONNECTED: typingsSlinky.amazonDashConnectDashStreams.connect.CONTACT_ACTIVE_STATES.CONNECTED with String = js.native
-  /* "connecting" */ val CONNECTING: typingsSlinky.amazonDashConnectDashStreams.connect.CONTACT_ACTIVE_STATES.CONNECTING with String = js.native
-  /* "incoming" */ val INCOMING: typingsSlinky.amazonDashConnectDashStreams.connect.CONTACT_ACTIVE_STATES.INCOMING with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[CONTACT_ACTIVE_STATES with String] = js.native
+  /* "connected" */ @js.native
+  object CONNECTED extends TopLevel[CONNECTED with String]
+  
+  /* "connecting" */ @js.native
+  object CONNECTING extends TopLevel[CONNECTING with String]
+  
+  /* "incoming" */ @js.native
+  object INCOMING extends TopLevel[INCOMING with String]
+  
 }
 

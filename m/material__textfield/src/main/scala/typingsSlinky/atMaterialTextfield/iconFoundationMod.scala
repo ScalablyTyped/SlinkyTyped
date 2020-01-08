@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialTextfield
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialTextfield.iconAdapterMod.MDCTextFieldIconAdapter
-import typingsSlinky.atMaterialTextfield.iconFoundationMod.MDCTextFieldIconFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SecureFileActionFilter extends js.Object {
   @js.native
   sealed trait Use extends SecureFileActionFilter
   
-  /* 2 */ val Manage: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.SecureFileActionFilter.Manage with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.SecureFileActionFilter.None with Double = js.native
-  /* 16 */ val Use: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.SecureFileActionFilter.Use with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SecureFileActionFilter with Double] = js.native
+  /* 2 */ @js.native
+  object Manage extends TopLevel[Manage with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 16 */ @js.native
+  object Use extends TopLevel[Use with Double]
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.atEmberArray
 
 import typingsSlinky.atEmberArray.atEmberArrayMod.Array
 import typingsSlinky.atEmberArray.dashPrivateEnumerableMod.Enumerable
-import typingsSlinky.atEmberArray.mutableMod.MutableArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

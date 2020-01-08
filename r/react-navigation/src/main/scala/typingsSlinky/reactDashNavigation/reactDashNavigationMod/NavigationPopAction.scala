@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/POP`
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashPOP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ trait NavigationPopAction
   extends NavigationStackAction
      with NavigationPopActionPayload {
   var key: js.UndefOr[String] = js.undefined
-  var `type`: `Navigation/POP`
+  var `type`: NavigationSlashPOP
 }
 
 object NavigationPopAction {
   @scala.inline
   def apply(
-    `type`: `Navigation/POP`,
+    `type`: NavigationSlashPOP,
     immediate: js.UndefOr[Boolean] = js.undefined,
     key: String = null,
     n: Int | Double = null

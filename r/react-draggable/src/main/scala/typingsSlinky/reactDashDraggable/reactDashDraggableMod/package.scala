@@ -12,7 +12,7 @@ package object reactDashDraggableMod {
   import slinky.core.ReactComponentClass
   import slinky.web.SyntheticMouseEvent
   import slinky.web.SyntheticTouchEvent
-  import typingsSlinky.reactDashDraggable.reactDashDraggableNumbers.`false`
+  import typingsSlinky.reactDashDraggable.reactDashDraggableBooleans.`false`
   import typingsSlinky.std.Partial
 
   type Draggable = ReactComponentClass[Partial[DraggableProps]]

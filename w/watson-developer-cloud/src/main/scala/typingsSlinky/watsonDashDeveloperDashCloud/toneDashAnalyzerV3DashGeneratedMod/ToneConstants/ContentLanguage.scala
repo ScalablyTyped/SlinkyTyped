@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.toneDashAnalyzerV3DashGeneratedMod.ToneConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object ContentLanguage extends js.Object {
   @js.native
   sealed trait FR extends ContentLanguage
   
-  /* "en" */ val EN: typingsSlinky.watsonDashDeveloperDashCloud.toneDashAnalyzerV3DashGeneratedMod.ToneConstants.ContentLanguage.EN with String = js.native
-  /* "fr" */ val FR: typingsSlinky.watsonDashDeveloperDashCloud.toneDashAnalyzerV3DashGeneratedMod.ToneConstants.ContentLanguage.FR with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ContentLanguage with String] = js.native
+  /* "en" */ @js.native
+  object EN extends TopLevel[EN with String]
+  
+  /* "fr" */ @js.native
+  object FR extends TopLevel[FR with String]
+  
 }
 

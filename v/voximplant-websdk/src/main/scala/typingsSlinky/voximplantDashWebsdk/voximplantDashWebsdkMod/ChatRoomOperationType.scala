@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ChatRoomOperationType extends js.Object {
   @js.native
   sealed trait Unban extends ChatRoomOperationType
   
-  /* 0 */ val Ban: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.ChatRoomOperationType.Ban with Double = js.native
-  /* 1 */ val Unban: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.ChatRoomOperationType.Unban with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChatRoomOperationType with Double] = js.native
+  /* 0 */ @js.native
+  object Ban extends TopLevel[Ban with Double]
+  
+  /* 1 */ @js.native
+  object Unban extends TopLevel[Unban with Double]
+  
 }
 

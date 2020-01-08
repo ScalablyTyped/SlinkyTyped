@@ -1,5 +1,8 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`pointer-leave`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.mouse
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,10 +12,10 @@ trait SceneViewPointerLeaveEvent extends js.Object {
   var buttons: Double
   var native: js.Any
   var pointerId: Double
-  var pointerType: String
+  var pointerType: mouse | touch
   var stopPropagation: js.Function
   var timestamp: Double
-  var `type`: String
+  var `type`: `pointer-leave`
   var x: Double
   var y: Double
 }
@@ -24,10 +27,10 @@ object SceneViewPointerLeaveEvent {
     buttons: Double,
     native: js.Any,
     pointerId: Double,
-    pointerType: String,
+    pointerType: mouse | touch,
     stopPropagation: js.Function,
     timestamp: Double,
-    `type`: String,
+    `type`: `pointer-leave`,
     x: Double,
     y: Double
   ): SceneViewPointerLeaveEvent = {

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Import
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PhotoImportAccessMode extends js.Object {
   @js.native
   sealed trait readWrite extends PhotoImportAccessMode
   
-  /* 2 */ val readAndDelete: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportAccessMode.readAndDelete with Double = js.native
-  /* 1 */ val readOnly: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportAccessMode.readOnly with Double = js.native
-  /* 0 */ val readWrite: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportAccessMode.readWrite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoImportAccessMode with Double] = js.native
+  /* 2 */ @js.native
+  object readAndDelete extends TopLevel[readAndDelete with Double]
+  
+  /* 1 */ @js.native
+  object readOnly extends TopLevel[readOnly with Double]
+  
+  /* 0 */ @js.native
+  object readWrite extends TopLevel[readWrite with Double]
+  
 }
 

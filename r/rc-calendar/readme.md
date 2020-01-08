@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-calendar
 
-Typings are for version 9.15.8
+Typings are for version 9.15.9
 
 ## Library description:
 React Calendar
@@ -9,10 +9,10 @@ React Calendar
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rc-calendar |
-| Keywords           | react, react-calendar, react-component, calendar, ui component, ui, component |
-| # releases         | 78 |
-| # dependents       | 180 |
-| # downloads        | 6322595 |
+| Keywords           | calendar, component, react, react-calendar, react-component, ui, ui component |
+| # releases         | 56 |
+| # dependents       | 238 |
+| # downloads        | 11304923 |
 | # stars            | 10 |
 
 ## Links

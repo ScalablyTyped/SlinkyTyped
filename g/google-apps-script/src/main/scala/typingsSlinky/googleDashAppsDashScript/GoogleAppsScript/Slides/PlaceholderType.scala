@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,25 +72,61 @@ object PlaceholderType extends js.Object {
   @js.native
   sealed trait UNSUPPORTED extends PlaceholderType
   
-  /* 2 */ val BODY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.BODY with Double = js.native
-  /* 5 */ val CENTERED_TITLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.CENTERED_TITLE with Double = js.native
-  /* 3 */ val CHART: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.CHART with Double = js.native
-  /* 4 */ val CLIP_ART: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.CLIP_ART with Double = js.native
-  /* 7 */ val DATE_AND_TIME: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.DATE_AND_TIME with Double = js.native
-  /* 6 */ val DIAGRAM: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.DIAGRAM with Double = js.native
-  /* 8 */ val FOOTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.FOOTER with Double = js.native
-  /* 9 */ val HEADER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.HEADER with Double = js.native
-  /* 10 */ val MEDIA: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.MEDIA with Double = js.native
-  /* 1 */ val NONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.NONE with Double = js.native
-  /* 11 */ val OBJECT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.OBJECT with Double = js.native
-  /* 12 */ val PICTURE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.PICTURE with Double = js.native
-  /* 17 */ val SLIDE_IMAGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.SLIDE_IMAGE with Double = js.native
-  /* 13 */ val SLIDE_NUMBER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.SLIDE_NUMBER with Double = js.native
-  /* 14 */ val SUBTITLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.SUBTITLE with Double = js.native
-  /* 15 */ val TABLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.TABLE with Double = js.native
-  /* 16 */ val TITLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.TITLE with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.PlaceholderType.UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlaceholderType with Double] = js.native
+  /* 2 */ @js.native
+  object BODY extends TopLevel[BODY with Double]
+  
+  /* 5 */ @js.native
+  object CENTERED_TITLE extends TopLevel[CENTERED_TITLE with Double]
+  
+  /* 3 */ @js.native
+  object CHART extends TopLevel[CHART with Double]
+  
+  /* 4 */ @js.native
+  object CLIP_ART extends TopLevel[CLIP_ART with Double]
+  
+  /* 7 */ @js.native
+  object DATE_AND_TIME extends TopLevel[DATE_AND_TIME with Double]
+  
+  /* 6 */ @js.native
+  object DIAGRAM extends TopLevel[DIAGRAM with Double]
+  
+  /* 8 */ @js.native
+  object FOOTER extends TopLevel[FOOTER with Double]
+  
+  /* 9 */ @js.native
+  object HEADER extends TopLevel[HEADER with Double]
+  
+  /* 10 */ @js.native
+  object MEDIA extends TopLevel[MEDIA with Double]
+  
+  /* 1 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 11 */ @js.native
+  object OBJECT extends TopLevel[OBJECT with Double]
+  
+  /* 12 */ @js.native
+  object PICTURE extends TopLevel[PICTURE with Double]
+  
+  /* 17 */ @js.native
+  object SLIDE_IMAGE extends TopLevel[SLIDE_IMAGE with Double]
+  
+  /* 13 */ @js.native
+  object SLIDE_NUMBER extends TopLevel[SLIDE_NUMBER with Double]
+  
+  /* 14 */ @js.native
+  object SUBTITLE extends TopLevel[SUBTITLE with Double]
+  
+  /* 15 */ @js.native
+  object TABLE extends TopLevel[TABLE with Double]
+  
+  /* 16 */ @js.native
+  object TITLE extends TopLevel[TITLE with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
 }
 

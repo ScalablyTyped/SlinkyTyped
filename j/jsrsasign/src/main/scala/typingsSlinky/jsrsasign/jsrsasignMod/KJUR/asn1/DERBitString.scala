@@ -4,7 +4,7 @@ import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1ObjectParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ArrayParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.BinParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.HexParam
-import typingsSlinky.jsrsasign.jsrsasignNumbers.`false`
+import typingsSlinky.jsrsasign.jsrsasignBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

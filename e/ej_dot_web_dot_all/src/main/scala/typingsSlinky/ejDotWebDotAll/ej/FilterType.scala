@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +22,14 @@ object FilterType extends js.Object {
   @js.native
   sealed trait StartsWith extends FilterType
   
-  /* 0 */ val Contains: typingsSlinky.ejDotWebDotAll.ej.FilterType.Contains with Double = js.native
-  /* 1 */ val StartsWith: typingsSlinky.ejDotWebDotAll.ej.FilterType.StartsWith with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterType with Double] = js.native
+  /* 0 */ @js.native
+  object Contains extends TopLevel[Contains with Double]
+  
+  /* 1 */ @js.native
+  object StartsWith extends TopLevel[StartsWith with Double]
+  
 }
 
 @JSGlobal("ej.filterType")
@@ -57,16 +62,34 @@ object filterType extends js.Object {
   @js.native
   sealed trait StartsWith extends filterType
   
-  /* 1 */ val Contains: typingsSlinky.ejDotWebDotAll.ej.filterType.Contains with Double = js.native
-  /* 2 */ val EndsWith: typingsSlinky.ejDotWebDotAll.ej.filterType.EndsWith with Double = js.native
-  /* 7 */ val Equal: typingsSlinky.ejDotWebDotAll.ej.filterType.Equal with Double = js.native
-  /* 4 */ val GreaterThan: typingsSlinky.ejDotWebDotAll.ej.filterType.GreaterThan with Double = js.native
-  /* 6 */ val GreaterThanOrEqual: typingsSlinky.ejDotWebDotAll.ej.filterType.GreaterThanOrEqual with Double = js.native
-  /* 3 */ val LessThan: typingsSlinky.ejDotWebDotAll.ej.filterType.LessThan with Double = js.native
-  /* 5 */ val LessThanOrEqual: typingsSlinky.ejDotWebDotAll.ej.filterType.LessThanOrEqual with Double = js.native
-  /* 8 */ val NotEqual: typingsSlinky.ejDotWebDotAll.ej.filterType.NotEqual with Double = js.native
-  /* 0 */ val StartsWith: typingsSlinky.ejDotWebDotAll.ej.filterType.StartsWith with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[filterType with Double] = js.native
+  /* 1 */ @js.native
+  object Contains extends TopLevel[Contains with Double]
+  
+  /* 2 */ @js.native
+  object EndsWith extends TopLevel[EndsWith with Double]
+  
+  /* 7 */ @js.native
+  object Equal extends TopLevel[Equal with Double]
+  
+  /* 4 */ @js.native
+  object GreaterThan extends TopLevel[GreaterThan with Double]
+  
+  /* 6 */ @js.native
+  object GreaterThanOrEqual extends TopLevel[GreaterThanOrEqual with Double]
+  
+  /* 3 */ @js.native
+  object LessThan extends TopLevel[LessThan with Double]
+  
+  /* 5 */ @js.native
+  object LessThanOrEqual extends TopLevel[LessThanOrEqual with Double]
+  
+  /* 8 */ @js.native
+  object NotEqual extends TopLevel[NotEqual with Double]
+  
+  /* 0 */ @js.native
+  object StartsWith extends TopLevel[StartsWith with Double]
+  
 }
 

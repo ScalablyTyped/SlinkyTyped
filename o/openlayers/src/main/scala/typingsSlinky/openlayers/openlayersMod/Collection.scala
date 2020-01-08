@@ -1,6 +1,5 @@
 package typingsSlinky.openlayers.openlayersMod
 
-import typingsSlinky.openlayers.openlayersMod.Collection.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

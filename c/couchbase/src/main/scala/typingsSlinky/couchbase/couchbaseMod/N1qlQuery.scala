@@ -1,6 +1,6 @@
 package typingsSlinky.couchbase.couchbaseMod
 
-import typingsSlinky.couchbase.couchbaseMod.N1qlQuery.Consistency
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,11 +50,17 @@ object N1qlQuery extends js.Object {
     @js.native
     sealed trait STATEMENT_PLUS extends Consistency
     
-    /* 0 */ val NOT_BOUND: typingsSlinky.couchbase.couchbaseMod.N1qlQuery.Consistency.NOT_BOUND with Double = js.native
-    /* 1 */ val REQUEST_PLUS: typingsSlinky.couchbase.couchbaseMod.N1qlQuery.Consistency.REQUEST_PLUS with Double = js.native
-    /* 2 */ val STATEMENT_PLUS: typingsSlinky.couchbase.couchbaseMod.N1qlQuery.Consistency.STATEMENT_PLUS with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Consistency with Double] = js.native
+    /* 0 */ @js.native
+    object NOT_BOUND extends TopLevel[NOT_BOUND with Double]
+    
+    /* 1 */ @js.native
+    object REQUEST_PLUS extends TopLevel[REQUEST_PLUS with Double]
+    
+    /* 2 */ @js.native
+    object STATEMENT_PLUS extends TopLevel[STATEMENT_PLUS with Double]
+    
   }
   
 }

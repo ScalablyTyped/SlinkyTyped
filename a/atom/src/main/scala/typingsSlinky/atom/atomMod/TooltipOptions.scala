@@ -2,7 +2,7 @@ package typingsSlinky.atom.atomMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atom.Anon_Hide
-import typingsSlinky.atom.atomNumbers.`false`
+import typingsSlinky.atom.atomBooleans.`false`
 import typingsSlinky.atom.atomStrings.auto
 import typingsSlinky.atom.atomStrings.bottom
 import typingsSlinky.atom.atomStrings.left

@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,6 @@ object IndexDatatype extends js.Object {
   @js.native
   sealed trait UNSIGNED_SHORT extends IndexDatatype
   
-  /* 0 */ val UNSIGNED_BYTE: typingsSlinky.cesium.cesiumMod.IndexDatatype.UNSIGNED_BYTE with Double = js.native
-  /* 2 */ val UNSIGNED_INT: typingsSlinky.cesium.cesiumMod.IndexDatatype.UNSIGNED_INT with Double = js.native
-  /* 1 */ val UNSIGNED_SHORT: typingsSlinky.cesium.cesiumMod.IndexDatatype.UNSIGNED_SHORT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndexDatatype with Double] = js.native
   def createTypedArray(numberOfVertices: Double, indicesLengthOrArray: js.Any): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
@@ -33,5 +31,14 @@ object IndexDatatype extends js.Object {
   ): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
   def getSizeInBytes(indexDatatype: IndexDatatype): Double = js.native
   def validate(indexDatatype: IndexDatatype): Boolean = js.native
+  /* 0 */ @js.native
+  object UNSIGNED_BYTE extends TopLevel[UNSIGNED_BYTE with Double]
+  
+  /* 2 */ @js.native
+  object UNSIGNED_INT extends TopLevel[UNSIGNED_INT with Double]
+  
+  /* 1 */ @js.native
+  object UNSIGNED_SHORT extends TopLevel[UNSIGNED_SHORT with Double]
+  
 }
 

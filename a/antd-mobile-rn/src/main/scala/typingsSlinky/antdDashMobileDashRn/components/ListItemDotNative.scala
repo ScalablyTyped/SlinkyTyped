@@ -6,7 +6,7 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antdDashMobileDashRn.Anon_Arrow
-import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.Empty
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings._empty
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.android
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.bottom
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.down
@@ -35,7 +35,7 @@ object ListItemDotNative
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     error: js.UndefOr[Boolean] = js.undefined,
     extra: TagMod[Any] = null,
     multipleLine: js.UndefOr[Boolean] = js.undefined,
@@ -67,6 +67,9 @@ object ListItemDotNative
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.antdDashMobileDashRn.libListListItemDotNativeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListItemProps
 }
 

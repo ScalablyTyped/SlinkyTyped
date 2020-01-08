@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenPagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -19,7 +20,10 @@ abstract class GridBaseSource protected () extends SortableEntityPathSource {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  var searchBar: SearchBar = js.native
+  @JSName("model")
+  var model_FGridBaseSource: IModel = js.native
+  def searchBar(): SearchBar = js.native
+  def searchBar(newValue: SearchBar): js.Any = js.native
 }
 
 /* static members */

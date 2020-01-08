@@ -1,13 +1,6 @@
 package typingsSlinky.phaser.Phaser
 
 import typingsSlinky.phaser.CenterFunction
-import typingsSlinky.phaser.Phaser.Geom.Circle
-import typingsSlinky.phaser.Phaser.Geom.Ellipse
-import typingsSlinky.phaser.Phaser.Geom.Line
-import typingsSlinky.phaser.Phaser.Geom.Point
-import typingsSlinky.phaser.Phaser.Geom.Polygon
-import typingsSlinky.phaser.Phaser.Geom.Rectangle
-import typingsSlinky.phaser.Phaser.Geom.Triangle
 import typingsSlinky.phaser.Phaser.Math.Vector2
 import typingsSlinky.phaser.integer
 import scala.scalajs.js

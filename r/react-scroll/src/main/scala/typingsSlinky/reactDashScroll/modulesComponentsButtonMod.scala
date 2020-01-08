@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.HTMLProps
-import typingsSlinky.reactDashScroll.modulesComponentsButtonMod.ButtonProps
 import typingsSlinky.reactDashScroll.modulesComponentsLinkMod.ReactScrollLinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

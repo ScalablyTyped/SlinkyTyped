@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object SpellCheckerState extends js.Object {
   @js.native
   sealed trait InProgress extends SpellCheckerState
   
-  /* 0 */ val Disabled: typingsSlinky.devexpressDashWeb.SpellCheckerState.Disabled with Double = js.native
-  /* 2 */ val Done: typingsSlinky.devexpressDashWeb.SpellCheckerState.Done with Double = js.native
-  /* 1 */ val InProgress: typingsSlinky.devexpressDashWeb.SpellCheckerState.InProgress with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpellCheckerState with Double] = js.native
+  /* 0 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 2 */ @js.native
+  object Done extends TopLevel[Done with Double]
+  
+  /* 1 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
 }
 

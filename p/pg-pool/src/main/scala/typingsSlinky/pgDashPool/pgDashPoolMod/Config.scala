@@ -2,9 +2,9 @@ package typingsSlinky.pgDashPool.pgDashPoolMod
 
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.tlsMod.ConnectionOptions
+import typingsSlinky.pg.pgBooleans.`false`
 import typingsSlinky.pg.pgMod.Client
 import typingsSlinky.pg.pgMod.PoolConfig
-import typingsSlinky.pg.pgNumbers.`false`
 import typingsSlinky.std.PromiseConstructorLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,6 +32,7 @@ object Config {
     min: Int | Double = null,
     password: String = null,
     port: Int | Double = null,
+    query_timeout: Int | Double = null,
     ssl: Boolean | ConnectionOptions = null,
     statement_timeout: `false` | Double = null,
     stream: Duplex = null,
@@ -53,6 +54,7 @@ object Config {
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (query_timeout != null) __obj.updateDynamic("query_timeout")(query_timeout.asInstanceOf[js.Any])
     if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
     if (statement_timeout != null) __obj.updateDynamic("statement_timeout")(statement_timeout.asInstanceOf[js.Any])
     if (stream != null) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])

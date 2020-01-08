@@ -1,5 +1,6 @@
 package typingsSlinky.rxDashDom.rxDashDomMod.rxMod.DOM
 
+import typingsSlinky.rxDashCoreDashBinding.Rx.Subject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object fromWebWorker extends js.Object {
   // Web Workers
-  def apply(url: String): typingsSlinky.rxDashCoreDashBinding.Rx.Subject[String] = js.native
+  def apply(url: String): Subject[String] = js.native
 }
 

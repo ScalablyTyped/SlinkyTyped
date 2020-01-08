@@ -1,5 +1,6 @@
 package typingsSlinky.lovefield.lovefieldMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ConstraintAction extends js.Object {
   @js.native
   sealed trait RESTRICT extends ConstraintAction
   
-  /* 1 */ val CASCADE: typingsSlinky.lovefield.lovefieldMod.ConstraintAction.CASCADE with Double = js.native
-  /* 0 */ val RESTRICT: typingsSlinky.lovefield.lovefieldMod.ConstraintAction.RESTRICT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConstraintAction with Double] = js.native
+  /* 1 */ @js.native
+  object CASCADE extends TopLevel[CASCADE with Double]
+  
+  /* 0 */ @js.native
+  object RESTRICT extends TopLevel[RESTRICT with Double]
+  
 }
 

@@ -11,8 +11,8 @@ A lightweight Promises/A+ and when() implementation, plus other async goodies.
 | Full name          | when |
 | Keywords           | cujo, Promises/A+, promises-aplus, promise, promises, deferred, deferreds, when, async, asynchronous, ender |
 | # releases         | 1 |
-| # dependents       | 1119 |
-| # downloads        | 66291905 |
+| # dependents       | 1142 |
+| # downloads        | 83198502 |
 | # stars            | 55 |
 
 ## Links

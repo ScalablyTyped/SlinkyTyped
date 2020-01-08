@@ -1,5 +1,6 @@
 package typingsSlinky.htmlDashValidator.htmlDashValidatorMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +30,25 @@ object ValidationResultsOutputFormats extends js.Object {
   @js.native
   sealed trait xml extends ValidationResultsOutputFormats
   
-  /* "gnu" */ val gnu: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.gnu with String = js.native
-  /* "html" */ val html: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.html with String = js.native
-  /* "json" */ val json: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.json with String = js.native
-  /* "text" */ val text: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.text with String = js.native
-  /* "xhtml" */ val xhtml: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.xhtml with String = js.native
-  /* "xml" */ val xml: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationResultsOutputFormats.xml with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ValidationResultsOutputFormats with String] = js.native
+  /* "gnu" */ @js.native
+  object gnu extends TopLevel[gnu with String]
+  
+  /* "html" */ @js.native
+  object html extends TopLevel[html with String]
+  
+  /* "json" */ @js.native
+  object json extends TopLevel[json with String]
+  
+  /* "text" */ @js.native
+  object text extends TopLevel[text with String]
+  
+  /* "xhtml" */ @js.native
+  object xhtml extends TopLevel[xhtml with String]
+  
+  /* "xml" */ @js.native
+  object xml extends TopLevel[xml with String]
+  
 }
 

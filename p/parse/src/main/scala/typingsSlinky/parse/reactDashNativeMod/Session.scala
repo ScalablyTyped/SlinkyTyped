@@ -1,18 +1,12 @@
 package typingsSlinky.parse.reactDashNativeMod
 
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.parse.parseMod._Global_.Parse.SessionConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("parse/react-native", "Session")
 @js.native
-class Session[T /* <: js.Any */] ()
-  extends typingsSlinky.parse.nodeMod.Session[T]
-
-/* static members */
-@JSImport("parse/react-native", "Session")
-@js.native
-object Session extends js.Object {
-  def current(): js.Promise[typingsSlinky.parse.Parse.Session[_]] = js.native
-}
+object Session extends TopLevel[SessionConstructor]
 

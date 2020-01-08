@@ -10,9 +10,9 @@ Hammer.js wrapper for Vue 2.x to support some touching operation in the mobile.
 | ------------------ | :-------------: |
 | Full name          | vue2-hammer |
 | Keywords           | vue2-hammer |
-| # releases         | 9 |
-| # dependents       | 4 |
-| # downloads        | 139182 |
+| # releases         | 8 |
+| # dependents       | 5 |
+| # downloads        | 181699 |
 | # stars            | 0 |
 
 ## Links

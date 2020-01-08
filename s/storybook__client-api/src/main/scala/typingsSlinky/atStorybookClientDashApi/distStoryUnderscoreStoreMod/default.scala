@@ -1,6 +1,6 @@
 package typingsSlinky.atStorybookClientDashApi.distStoryUnderscoreStoreMod
 
-import typingsSlinky.atStorybookClientDashApi.Anon_Channel_1428041883
+import typingsSlinky.atStorybookClientDashApi.Anon_Channel_287620681
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/client-api/dist/story_store", JSImport.Default)
 @js.native
 class default protected () extends StoryStore {
-  def this(params: Anon_Channel_1428041883) = this()
+  def this(params: Anon_Channel_287620681) = this()
 }
 

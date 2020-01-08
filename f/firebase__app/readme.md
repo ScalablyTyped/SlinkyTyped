@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__app
 
-Typings are for version 0.4.25
+Typings are for version 0.5.0
 
 ## Library description:
 The primary entrypoint to the Firebase JS SDK
@@ -10,9 +10,9 @@ The primary entrypoint to the Firebase JS SDK
 | ------------------ | :-------------: |
 | Full name          | @firebase/app |
 | Keywords           | - |
-| # releases         | 541 |
-| # dependents       | 28 |
-| # downloads        | 33726314 |
+| # releases         | 949 |
+| # dependents       | 34 |
+| # downloads        | 28426251 |
 | # stars            | 1 |
 
 ## Links

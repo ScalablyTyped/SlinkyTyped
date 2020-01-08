@@ -1,11 +1,6 @@
 package typingsSlinky.interpret
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.interpret.interpretMod.Extension
-import typingsSlinky.interpret.interpretMod.ExtensionDescriptor
-import typingsSlinky.interpret.interpretMod.Extensions
-import typingsSlinky.interpret.interpretMod.Hook
-import typingsSlinky.interpret.interpretMod.RegisterFn
 import typingsSlinky.node.NodeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`

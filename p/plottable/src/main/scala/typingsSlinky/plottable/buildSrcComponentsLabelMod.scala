@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
-import typingsSlinky.plottable.buildSrcComponentsLabelMod.Label
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.SimpleSelection
 import typingsSlinky.typesettable.typesettableMod.CacheMeasurer
 import typingsSlinky.typesettable.typesettableMod.Wrapper

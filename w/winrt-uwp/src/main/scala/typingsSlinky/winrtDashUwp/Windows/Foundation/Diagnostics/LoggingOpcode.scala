@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object LoggingOpcode extends js.Object {
   @js.native
   sealed trait suspend extends LoggingOpcode
   
-  /* 0 */ val info: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.info with Double = js.native
-  /* 3 */ val reply: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.reply with Double = js.native
-  /* 4 */ val resume: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.resume with Double = js.native
-  /* 6 */ val send: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.send with Double = js.native
-  /* 1 */ val start: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.start with Double = js.native
-  /* 2 */ val stop: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.stop with Double = js.native
-  /* 5 */ val suspend: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingOpcode.suspend with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LoggingOpcode with Double] = js.native
+  /* 0 */ @js.native
+  object info extends TopLevel[info with Double]
+  
+  /* 3 */ @js.native
+  object reply extends TopLevel[reply with Double]
+  
+  /* 4 */ @js.native
+  object resume extends TopLevel[resume with Double]
+  
+  /* 6 */ @js.native
+  object send extends TopLevel[send with Double]
+  
+  /* 1 */ @js.native
+  object start extends TopLevel[start with Double]
+  
+  /* 2 */ @js.native
+  object stop extends TopLevel[stop with Double]
+  
+  /* 5 */ @js.native
+  object suspend extends TopLevel[suspend with Double]
+  
 }
 

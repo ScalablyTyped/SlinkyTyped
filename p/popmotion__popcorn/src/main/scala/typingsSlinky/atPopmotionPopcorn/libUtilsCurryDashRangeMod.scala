@@ -1,6 +1,5 @@
 package typingsSlinky.atPopmotionPopcorn
 
-import typingsSlinky.atPopmotionPopcorn.libUtilsCurryDashRangeMod.RangeFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

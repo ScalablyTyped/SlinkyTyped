@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,15 +50,31 @@ object GlyphType extends js.Object {
   @js.native
   sealed trait SQUARE_BULLET extends GlyphType
   
-  /* 0 */ val BULLET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.BULLET with Double = js.native
-  /* 1 */ val HOLLOW_BULLET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.HOLLOW_BULLET with Double = js.native
-  /* 5 */ val LATIN_LOWER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.LATIN_LOWER with Double = js.native
-  /* 4 */ val LATIN_UPPER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.LATIN_UPPER with Double = js.native
-  /* 3 */ val NUMBER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.NUMBER with Double = js.native
-  /* 7 */ val ROMAN_LOWER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.ROMAN_LOWER with Double = js.native
-  /* 6 */ val ROMAN_UPPER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.ROMAN_UPPER with Double = js.native
-  /* 2 */ val SQUARE_BULLET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.GlyphType.SQUARE_BULLET with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GlyphType with Double] = js.native
+  /* 0 */ @js.native
+  object BULLET extends TopLevel[BULLET with Double]
+  
+  /* 1 */ @js.native
+  object HOLLOW_BULLET extends TopLevel[HOLLOW_BULLET with Double]
+  
+  /* 5 */ @js.native
+  object LATIN_LOWER extends TopLevel[LATIN_LOWER with Double]
+  
+  /* 4 */ @js.native
+  object LATIN_UPPER extends TopLevel[LATIN_UPPER with Double]
+  
+  /* 3 */ @js.native
+  object NUMBER extends TopLevel[NUMBER with Double]
+  
+  /* 7 */ @js.native
+  object ROMAN_LOWER extends TopLevel[ROMAN_LOWER with Double]
+  
+  /* 6 */ @js.native
+  object ROMAN_UPPER extends TopLevel[ROMAN_UPPER with Double]
+  
+  /* 2 */ @js.native
+  object SQUARE_BULLET extends TopLevel[SQUARE_BULLET with Double]
+  
 }
 

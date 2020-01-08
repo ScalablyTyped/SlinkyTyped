@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.formstate.formstateStrings.`object`
 import typingsSlinky.formstate.formstateStrings.array
 import typingsSlinky.formstate.formstateStrings.map
-import typingsSlinky.formstate.libCoreFormStateMod.ValidatableMapOrArray
 import typingsSlinky.formstate.libCoreTypesMod.ComposibleValidatable
 import typingsSlinky.formstate.libCoreTypesMod.Validator
 import typingsSlinky.std.Map

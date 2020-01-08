@@ -10,9 +10,9 @@ Recognizes certain classes of webpack errors and cleans, aggregates and prioriti
 | ------------------ | :-------------: |
 | Full name          | friendly-errors-webpack-plugin |
 | Keywords           | friendly, errors, webpack, plugin |
-| # releases         | 2 |
-| # dependents       | 551 |
-| # downloads        | 25318173 |
+| # releases         | 5 |
+| # dependents       | 762 |
+| # downloads        | 27174686 |
 | # stars            | 19 |
 
 ## Links

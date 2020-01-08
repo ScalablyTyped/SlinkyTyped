@@ -6,11 +6,11 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.webpack.webpackMod.Compiler
-import typingsSlinky.webpack.webpackMod.Compiler.Handler
 import typingsSlinky.webpack.webpackMod.Compiler.Watching
 import typingsSlinky.webpack.webpackMod.Configuration
 import typingsSlinky.webpack.webpackMod.ConfigurationFactory
 import typingsSlinky.webpack.webpackMod.MultiCompiler
+import typingsSlinky.webpack.webpackMod.MultiCompiler.Handler
 import typingsSlinky.webpack.webpackMod.MultiConfigurationFactory
 import typingsSlinky.webpack.webpackMod.MultiWatching
 import scala.scalajs.js
@@ -99,11 +99,11 @@ trait Anon_BannerPlugin extends js.Object {
   def apply(): Compiler = js.native
   def apply(
     options: ConfigurationFactory | MultiConfigurationFactory,
-    handler: Handler | typingsSlinky.webpack.webpackMod.MultiCompiler.Handler
+    handler: Handler | typingsSlinky.webpack.webpackMod.Compiler.Handler
   ): MultiWatching | MultiCompiler = js.native
   def apply(options: js.Array[Configuration]): MultiCompiler = js.native
-  def apply(options: js.Array[Configuration], handler: typingsSlinky.webpack.webpackMod.MultiCompiler.Handler): MultiWatching | MultiCompiler = js.native
+  def apply(options: js.Array[Configuration], handler: Handler): MultiWatching | MultiCompiler = js.native
   def apply(options: Configuration): Compiler = js.native
-  def apply(options: Configuration, handler: Handler): Watching | Compiler = js.native
+  def apply(options: Configuration, handler: typingsSlinky.webpack.webpackMod.Compiler.Handler): Watching | Compiler = js.native
 }
 

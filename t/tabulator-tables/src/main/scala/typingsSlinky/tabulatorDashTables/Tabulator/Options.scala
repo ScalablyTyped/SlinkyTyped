@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
 import typingsSlinky.tabulatorDashTables.Anon_ColumnCalcs
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`false`
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`true`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`false`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`true`
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.active
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.add
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.arrow

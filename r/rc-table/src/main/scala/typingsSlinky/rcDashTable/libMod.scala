@@ -2,12 +2,10 @@ package typingsSlinky.rcDashTable
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.rcDashTable.libColumnMod.ColumnProps
-import typingsSlinky.rcDashTable.libInterfaceMod.ColumnType
 import typingsSlinky.rcDashTable.libInterfaceMod.DefaultValueType
 import typingsSlinky.rcDashTable.libTableMod.TableProps
 import typingsSlinky.rcDashTable.libTableMod.TableState
 import typingsSlinky.rcDashTable.rcDashTableStrings.RC_TABLE_INTERNAL_COL_DEFINE
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +34,7 @@ object libMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var Column: ReactComponentClass[ColumnType[Record[String, _]]] = js.native
+    var Column: ReactComponentClass[ColumnProps] = js.native
     var ColumnGroup: TypeofClassColumnGroup = js.native
     var childContextTypes: Anon_Components = js.native
     var defaultProps: Anon_BodyStyle = js.native

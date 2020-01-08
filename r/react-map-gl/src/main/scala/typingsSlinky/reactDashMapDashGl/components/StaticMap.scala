@@ -20,8 +20,10 @@ object StaticMap
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, height, onError, onLoad, width */
+  /* The following DOM/SVG props were specified: className, onError, onLoad */
   def apply(
+    height: Double | String,
+    width: Double | String,
     attributionControl: js.UndefOr[Boolean] = js.undefined,
     container: js.Object = null,
     disableTokenWarning: js.UndefOr[Boolean] = js.undefined,
@@ -41,7 +43,7 @@ object StaticMap
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashMapDashGl.reactDashMapDashGlMod.StaticMap] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     if (!js.isUndefined(attributionControl)) __obj.updateDynamic("attributionControl")(attributionControl.asInstanceOf[js.Any])
     if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
     if (!js.isUndefined(disableTokenWarning)) __obj.updateDynamic("disableTokenWarning")(disableTokenWarning.asInstanceOf[js.Any])

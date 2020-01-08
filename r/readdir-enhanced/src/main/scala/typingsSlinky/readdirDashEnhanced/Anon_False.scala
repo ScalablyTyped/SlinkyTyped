@@ -1,6 +1,6 @@
 package typingsSlinky.readdirDashEnhanced
 
-import typingsSlinky.readdirDashEnhanced.readdirDashEnhancedNumbers.`false`
+import typingsSlinky.readdirDashEnhanced.readdirDashEnhancedBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.atUifabricUtilities
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.atUifabricUtilities.libIComponentAsMod.IComponentAsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

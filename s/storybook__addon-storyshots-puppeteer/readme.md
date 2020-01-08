@@ -4,15 +4,15 @@
 Typings are for version 5.1
 
 ## Library description:
-Image snappshots addition to StoryShots base on puppeteer
+Image snapshots addition to StoryShots based on puppeteer
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-storyshots-puppeteer |
 | Keywords           | addon, storybook |
-| # releases         | 217 |
-| # dependents       | 1 |
-| # downloads        | 330235 |
+| # releases         | 383 |
+| # dependents       | 2 |
+| # downloads        | 643949 |
 | # stars            | 0 |
 
 ## Links

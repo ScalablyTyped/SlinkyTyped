@@ -1,9 +1,9 @@
 package typingsSlinky.babelDashTypes.babelDashTypesMod
 
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`!`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`+`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`~`
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Exclamationmark
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Plussign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Tilde
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-_`
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.delete
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.typeof
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.void
@@ -25,7 +25,7 @@ object UnaryLike {
     argument: Expression,
     end: Double,
     loc: SourceLocation,
-    operator: `-` | `+` | `!` | `~` | typeof | void | delete,
+    operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete,
     prefix: Boolean,
     start: Double,
     `type`: typingsSlinky.babelDashTypes.babelDashTypesStrings.UnaryExpression,

@@ -3,6 +3,7 @@ package typingsSlinky.remarkable.libMod
 import typingsSlinky.remarkable.TypeofUtils
 import typingsSlinky.remarkable.remarkableStrings.commonmark
 import typingsSlinky.remarkable.remarkableStrings.full
+import typingsSlinky.remarkable.remarkableStrings.remarkable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,10 +21,10 @@ class ^ () extends Remarkable {
     */
   def this(preset: commonmark) = this()
   def this(preset: full) = this()
-  def this(preset: typingsSlinky.remarkable.remarkableStrings.remarkable) = this()
+  def this(preset: remarkable) = this()
   def this(preset: commonmark, options: Options) = this()
   def this(preset: full, options: Options) = this()
-  def this(preset: typingsSlinky.remarkable.remarkableStrings.remarkable, options: Options) = this()
+  def this(preset: remarkable, options: Options) = this()
 }
 
 @JSImport("remarkable/lib", JSImport.Namespace)

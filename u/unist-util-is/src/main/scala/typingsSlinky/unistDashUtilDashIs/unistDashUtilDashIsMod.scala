@@ -3,10 +3,6 @@ package typingsSlinky.unistDashUtilDashIs
 import typingsSlinky.std.Partial
 import typingsSlinky.unist.unistMod.Node
 import typingsSlinky.unist.unistMod.Parent
-import typingsSlinky.unistDashUtilDashIs.unistDashUtilDashIsMod.Test
-import typingsSlinky.unistDashUtilDashIs.unistDashUtilDashIsMod.TestFunction
-import typingsSlinky.unistDashUtilDashIs.unistDashUtilDashIsMod.TestObject
-import typingsSlinky.unistDashUtilDashIs.unistDashUtilDashIsMod.TestType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

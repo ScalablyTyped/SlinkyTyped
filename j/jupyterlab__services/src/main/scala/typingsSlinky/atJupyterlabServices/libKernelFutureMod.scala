@@ -1,6 +1,5 @@
 package typingsSlinky.atJupyterlabServices
 
-import typingsSlinky.atJupyterlabServices.libKernelFutureMod.KernelFutureHandler
 import typingsSlinky.atJupyterlabServices.libKernelKernelMod.Kernel.IFuture
 import typingsSlinky.atJupyterlabServices.libKernelKernelMod.Kernel.IKernel
 import typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.ControlMessageType

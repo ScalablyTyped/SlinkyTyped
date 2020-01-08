@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation._
 
 object nodeDashSqlDashParserStrings {
   @js.native
-  sealed trait `*` extends js.Object
+  sealed trait ASC extends js.Object
   
   @js.native
-  sealed trait ASC extends js.Object
+  sealed trait Asterisk extends js.Object
   
   @js.native
   sealed trait DESC extends js.Object
@@ -51,10 +51,13 @@ object nodeDashSqlDashParserStrings {
   @js.native
   sealed trait update extends js.Object
   
-  @scala.inline
-  def `*`: `*` = "*".asInstanceOf[`*`]
+  @js.native
+  sealed trait use extends js.Object
+  
   @scala.inline
   def ASC: ASC = "ASC".asInstanceOf[ASC]
+  @scala.inline
+  def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
   @scala.inline
   def DESC: DESC = "DESC".asInstanceOf[DESC]
   @scala.inline
@@ -81,5 +84,7 @@ object nodeDashSqlDashParserStrings {
   def table: table = "table".asInstanceOf[table]
   @scala.inline
   def update: update = "update".asInstanceOf[update]
+  @scala.inline
+  def use: use = "use".asInstanceOf[use]
 }
 

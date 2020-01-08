@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashNativeDashNavigation
 
-import typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +43,38 @@ object libDistCommandsLayoutTypeMod extends js.Object {
     @js.native
     sealed trait TopTabs extends LayoutType
     
-    /* "BottomTabs" */ val BottomTabs: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.BottomTabs with String = js.native
-    /* "Component" */ val Component: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.Component with String = js.native
-    /* "ExternalComponent" */ val ExternalComponent: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.ExternalComponent with String = js.native
-    /* "SideMenuCenter" */ val SideMenuCenter: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.SideMenuCenter with String = js.native
-    /* "SideMenuLeft" */ val SideMenuLeft: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.SideMenuLeft with String = js.native
-    /* "SideMenuRight" */ val SideMenuRight: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.SideMenuRight with String = js.native
-    /* "SideMenuRoot" */ val SideMenuRoot: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.SideMenuRoot with String = js.native
-    /* "SplitView" */ val SplitView: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.SplitView with String = js.native
-    /* "Stack" */ val Stack: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.Stack with String = js.native
-    /* "TopTabs" */ val TopTabs: typingsSlinky.reactDashNativeDashNavigation.libDistCommandsLayoutTypeMod.LayoutType.TopTabs with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[LayoutType with String] = js.native
+    /* "BottomTabs" */ @js.native
+    object BottomTabs extends TopLevel[BottomTabs with String]
+    
+    /* "Component" */ @js.native
+    object Component extends TopLevel[Component with String]
+    
+    /* "ExternalComponent" */ @js.native
+    object ExternalComponent extends TopLevel[ExternalComponent with String]
+    
+    /* "SideMenuCenter" */ @js.native
+    object SideMenuCenter extends TopLevel[SideMenuCenter with String]
+    
+    /* "SideMenuLeft" */ @js.native
+    object SideMenuLeft extends TopLevel[SideMenuLeft with String]
+    
+    /* "SideMenuRight" */ @js.native
+    object SideMenuRight extends TopLevel[SideMenuRight with String]
+    
+    /* "SideMenuRoot" */ @js.native
+    object SideMenuRoot extends TopLevel[SideMenuRoot with String]
+    
+    /* "SplitView" */ @js.native
+    object SplitView extends TopLevel[SplitView with String]
+    
+    /* "Stack" */ @js.native
+    object Stack extends TopLevel[Stack with String]
+    
+    /* "TopTabs" */ @js.native
+    object TopTabs extends TopLevel[TopTabs with String]
+    
   }
   
 }

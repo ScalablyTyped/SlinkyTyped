@@ -6,9 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * @experimental
-  */
 @JSImport("v8", "Deserializer")
 @js.native
 class Deserializer protected () extends js.Object {

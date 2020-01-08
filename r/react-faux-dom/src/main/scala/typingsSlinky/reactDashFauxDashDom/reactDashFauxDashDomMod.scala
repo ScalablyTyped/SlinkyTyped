@@ -3,7 +3,6 @@ package typingsSlinky.reactDashFauxDashDom
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactDashFauxDashDom.reactDashFauxDashDomMod.Element
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.HTMLSlotElement

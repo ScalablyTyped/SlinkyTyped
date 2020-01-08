@@ -1,7 +1,6 @@
 package typingsSlinky.jqueryDotAppear.jqueryDotAppearMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jqueryDotAppear.jqueryDotAppearMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

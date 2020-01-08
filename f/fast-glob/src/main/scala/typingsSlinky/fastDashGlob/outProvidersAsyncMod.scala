@@ -1,7 +1,6 @@
 package typingsSlinky.fastDashGlob
 
 import typingsSlinky.fastDashGlob.outManagersTasksMod.Task
-import typingsSlinky.fastDashGlob.outProvidersAsyncMod.ProviderAsync
 import typingsSlinky.fastDashGlob.outTypesMod.EntryItem
 import typingsSlinky.fastDashGlob.outTypesMod.ReaderOptions
 import typingsSlinky.node.NodeJS.ReadableStream

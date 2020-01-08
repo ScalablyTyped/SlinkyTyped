@@ -117,6 +117,5 @@ class MessageStream protected () extends Transform {
     * @returns {Promise}
     */
   var _waitForClientReady: js.Any = js.native
-  def destroy(err: js.Error): Unit = js.native
 }
 

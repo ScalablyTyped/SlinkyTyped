@@ -1,11 +1,11 @@
 package typingsSlinky.plotlyDotJs.plotlyDotJsMod
 
-import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`false`
-import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`true`
+import typingsSlinky.plotlyDotJs.plotlyDotJsBooleans.`false`
+import typingsSlinky.plotlyDotJs.plotlyDotJsBooleans.`true`
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.B
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.E
-import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.Empty
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.SI
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings._empty
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`category ascending`
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`category descending`
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.all
@@ -66,7 +66,7 @@ trait Axis extends js.Object {
   var ticklen: Double
   var tickmode: auto | linear | array
   var tickprefix: String
-  var ticks: outside | inside | Empty
+  var ticks: outside | inside | _empty
   var ticksuffix: String
   var ticktext: js.Array[String]
   var tickvals: js.Array[_]
@@ -117,7 +117,7 @@ object Axis {
     ticklen: Double,
     tickmode: auto | linear | array,
     tickprefix: String,
-    ticks: outside | inside | Empty,
+    ticks: outside | inside | _empty,
     ticksuffix: String,
     ticktext: js.Array[String],
     tickvals: js.Array[_],

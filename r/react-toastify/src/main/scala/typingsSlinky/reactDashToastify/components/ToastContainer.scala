@@ -6,9 +6,9 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashToastify.reactDashToastifyBooleans.`false`
 import typingsSlinky.reactDashToastify.reactDashToastifyMod.PositionOptions
 import typingsSlinky.reactDashToastify.reactDashToastifyMod.ToastContainerProps
-import typingsSlinky.reactDashToastify.reactDashToastifyNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,6 +70,9 @@ object ToastContainer
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashToastify.reactDashToastifyMod.ToastContainer] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashToastify.reactDashToastifyMod.ToastContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ToastContainerProps
 }
 

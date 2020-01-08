@@ -1,7 +1,6 @@
 package typingsSlinky.stompit.libClientMod
 
 import typingsSlinky.node.Anon_Chunk
-import typingsSlinky.node.Error
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.streamMod.WritableOptions
 import scala.scalajs.js
@@ -23,14 +22,14 @@ object SendOptions {
     defaultEncoding: String = null,
     destroy: js.ThisFunction2[
       /* this */ Writable, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     emitClose: js.UndefOr[Boolean] = js.undefined,
     `final`: js.ThisFunction1[
       /* this */ Writable, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     highWaterMark: Int | Double = null,
@@ -39,13 +38,13 @@ object SendOptions {
       /* this */ Writable, 
       /* chunk */ js.Any, 
       /* encoding */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     writev: js.ThisFunction2[
       /* this */ Writable, 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null
   ): SendOptions = {

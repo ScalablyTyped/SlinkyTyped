@@ -1,6 +1,6 @@
 package typingsSlinky.chartDotJs.chartDotJsMod
 
-import typingsSlinky.chartDotJs.chartDotJsNumbers.`false`
+import typingsSlinky.chartDotJs.chartDotJsBooleans.`false`
 import typingsSlinky.chartDotJs.chartDotJsStrings.auto
 import typingsSlinky.chartDotJs.chartDotJsStrings.data
 import typingsSlinky.chartDotJs.chartDotJsStrings.labels

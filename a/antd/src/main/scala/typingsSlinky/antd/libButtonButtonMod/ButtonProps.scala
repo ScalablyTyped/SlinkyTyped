@@ -34,6 +34,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -63,6 +64,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ClipboardEventHandler
 import typingsSlinky.react.reactMod.CompositionEventHandler
@@ -142,7 +144,7 @@ trait ButtonProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
-  var contentEditable: js.UndefOr[Boolean] = js.undefined
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
   var dangerouslySetInnerHTML: js.UndefOr[Anon_Html] = js.undefined
   var datatype: js.UndefOr[String] = js.undefined
@@ -151,7 +153,7 @@ trait ButtonProps extends js.Object {
   var dir: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var download: js.UndefOr[js.Any] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
+  var draggable: js.UndefOr[Booleanish] = js.undefined
   var form: js.UndefOr[String] = js.undefined
   var formAction: js.UndefOr[String] = js.undefined
   var formEncType: js.UndefOr[String] = js.undefined
@@ -271,7 +273,7 @@ trait ButtonProps extends js.Object {
   var shape: js.UndefOr[ButtonShape] = js.undefined
   var size: js.UndefOr[ButtonSize] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
-  var spellCheck: js.UndefOr[Boolean] = js.undefined
+  var spellCheck: js.UndefOr[Booleanish] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
@@ -347,7 +349,7 @@ object ButtonProps {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -387,11 +389,11 @@ object ButtonProps {
     onAnimationIteration: SyntheticAnimationEvent[_] => Unit = null,
     onAnimationStart: SyntheticAnimationEvent[_] => Unit = null,
     onAuxClick: SyntheticMouseEvent[_] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget, Event] => Unit = null,
     onBlur: SyntheticFocusEvent[_] => Unit = null,
     onCanPlay: SyntheticEvent[Event, _] => Unit = null,
     onCanPlayThrough: SyntheticEvent[Event, _] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget, Event] => Unit = null,
     onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[_] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[_] => Unit = null,
@@ -414,8 +416,8 @@ object ButtonProps {
     onEnded: SyntheticEvent[Event, _] => Unit = null,
     onError: SyntheticEvent[Event, _] => Unit = null,
     onFocus: SyntheticFocusEvent[_] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with _, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onInput: SyntheticEvent[EventTarget, Event] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget, Event] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[_] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[_] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[_] => Unit = null,
@@ -444,13 +446,13 @@ object ButtonProps {
     onPointerUp: SyntheticPointerEvent[_] => Unit = null,
     onProgress: SyntheticEvent[Event, _] => Unit = null,
     onRateChange: SyntheticEvent[Event, _] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget, Event] => Unit = null,
     onScroll: SyntheticUIEvent[_] => Unit = null,
     onSeeked: SyntheticEvent[Event, _] => Unit = null,
     onSeeking: SyntheticEvent[Event, _] => Unit = null,
     onSelect: SyntheticEvent[Event, _] => Unit = null,
     onStalled: SyntheticEvent[Event, _] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with _, Event] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget, Event] => Unit = null,
     onSuspend: SyntheticEvent[Event, _] => Unit = null,
     onTimeUpdate: SyntheticEvent[Event, _] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[_] => Unit = null,
@@ -549,7 +551,7 @@ object ButtonProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

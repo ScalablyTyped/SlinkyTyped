@@ -3,7 +3,6 @@ package typingsSlinky.rotDashJs
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.rotDashJs.libDisplayDisplayMod.Display
 import typingsSlinky.rotDashJs.libDisplayTypesMod.DisplayData
 import typingsSlinky.rotDashJs.libDisplayTypesMod.DisplayOptions
 import typingsSlinky.std.MouseEvent

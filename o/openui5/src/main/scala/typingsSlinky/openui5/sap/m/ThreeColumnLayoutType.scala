@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ThreeColumnLayoutType extends js.Object {
   @js.native
   sealed trait MidColumnEmphasized extends ThreeColumnLayoutType
   
-  /* 0 */ val EndColumnEmphasized: typingsSlinky.openui5.sap.m.ThreeColumnLayoutType.EndColumnEmphasized with Double = js.native
-  /* 1 */ val MidColumnEmphasized: typingsSlinky.openui5.sap.m.ThreeColumnLayoutType.MidColumnEmphasized with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ThreeColumnLayoutType with Double] = js.native
+  /* 0 */ @js.native
+  object EndColumnEmphasized extends TopLevel[EndColumnEmphasized with Double]
+  
+  /* 1 */ @js.native
+  object MidColumnEmphasized extends TopLevel[MidColumnEmphasized with Double]
+  
 }
 

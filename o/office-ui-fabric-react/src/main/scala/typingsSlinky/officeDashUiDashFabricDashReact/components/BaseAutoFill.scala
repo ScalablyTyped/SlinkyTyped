@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BaseAutoFill
-  extends SharedApply_IAutofillProps1152339019[typingsSlinky.officeDashUiDashFabricDashReact.libPickersMod.BaseAutoFill] {
+  extends SharedApply_IAutofillProps1441739969[typingsSlinky.officeDashUiDashFabricDashReact.libPickersMod.BaseAutoFill] {
   @JSImport("office-ui-fabric-react/lib/Pickers", "BaseAutoFill")
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.timezonecomplete.distLibPeriodMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,10 +41,16 @@ object PeriodDst extends js.Object {
   @js.native
   sealed trait RegularLocalTime extends PeriodDst
   
-  /* 2 */ val MAX: typingsSlinky.timezonecomplete.distLibPeriodMod.PeriodDst.MAX with Double = js.native
-  /* 0 */ val RegularIntervals: typingsSlinky.timezonecomplete.distLibPeriodMod.PeriodDst.RegularIntervals with Double = js.native
-  /* 1 */ val RegularLocalTime: typingsSlinky.timezonecomplete.distLibPeriodMod.PeriodDst.RegularLocalTime with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PeriodDst with Double] = js.native
+  /* 2 */ @js.native
+  object MAX extends TopLevel[MAX with Double]
+  
+  /* 0 */ @js.native
+  object RegularIntervals extends TopLevel[RegularIntervals with Double]
+  
+  /* 1 */ @js.native
+  object RegularLocalTime extends TopLevel[RegularLocalTime with Double]
+  
 }
 

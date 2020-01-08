@@ -1,6 +1,5 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.plottable.buildSrcComponentsDragBoxLayerMod.DragBoxCallback
 import typingsSlinky.plottable.buildSrcComponentsSelectionBoxLayerMod.SelectionBoxLayer
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Bounds
 import typingsSlinky.plottable.buildSrcInteractionsMod.Drag

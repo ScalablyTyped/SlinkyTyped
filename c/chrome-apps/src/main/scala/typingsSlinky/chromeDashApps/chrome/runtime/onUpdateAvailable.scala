@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.runtime
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +20,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.runtime.onUpdateAvailable")
 @js.native
 object onUpdateAvailable
-  extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[js.Function1[/* details */ UpdateAvailableDetails, Unit]]
-    ]
+  extends TopLevel[Event[js.Function1[/* details */ UpdateAvailableDetails, Unit]]]
 

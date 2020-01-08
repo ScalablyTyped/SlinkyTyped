@@ -1,6 +1,5 @@
 package typingsSlinky.mobx
 
-import typingsSlinky.mobx.libApiObservabledecoratorMod.IObservableDecorator
 import typingsSlinky.mobx.libTypesModifiersMod.IEnhancer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

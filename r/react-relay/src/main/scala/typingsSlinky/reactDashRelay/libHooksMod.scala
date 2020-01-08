@@ -122,28 +122,28 @@ object libHooksMod extends js.Object {
   ReturnType[TQuery, TKey | Null, $Call[KeyReturnType[TKey]] | Null] = js.native
   def useBlockingPaginationFragment[TQuery /* <: OperationType */, TKey /* <: KeyType */](fragmentInput: GraphQLTaggedNode, parentFragmentRef: Null, componentDisplayName: String): // tslint:disable-next-line no-unnecessary-generics
   ReturnType[TQuery, TKey | Null, $Call[KeyReturnType[TKey]] | Null] = js.native
-  def useFragment[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode): (js.Array[
+  def useFragment[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): (typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
+    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyReturnType[TKey]
+  ]) | Null = js.native
+  def useFragment[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): (typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
+    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyReturnType[TKey]
+  ]) | Null = js.native
+  @JSName("useFragment")
+  def useFragment_TKey_ArrayKeyType[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode): (js.Array[
     typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[ArrayKeyReturnType[TKey]]
   ]) | Null = js.native
-  def useFragment[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
-    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyReturnType[TKey]
-  ] = js.native
+  @JSName("useFragment")
+  def useFragment_TKey_ArrayKeyType[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): (js.Array[
+    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[ArrayKeyReturnType[TKey]]
+  ]) | Null = js.native
   @JSName("useFragment")
   def useFragment_TKey_ArrayKeyType_Array[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): js.Array[
     typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[ArrayKeyReturnType[TKey]]
   ] = js.native
   @JSName("useFragment")
-  def useFragment_TKey_ArrayKeyType_Union[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): (js.Array[
-    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[ArrayKeyReturnType[TKey]]
-  ]) | Null = js.native
-  @JSName("useFragment")
-  def useFragment_TKey_KeyType[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): (typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
+  def useFragment_TKey_KeyType_$Call[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
     typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyReturnType[TKey]
-  ]) | Null = js.native
-  @JSName("useFragment")
-  def useFragment_TKey_KeyType_Union[TKey /* <: typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): (typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.$Call[
-    typingsSlinky.reactDashRelay.libRelayDashExperimentalUseFragmentMod.KeyReturnType[TKey]
-  ]) | Null = js.native
+  ] = js.native
   @JSName("useLazyLoadQuery")
   def useLazyLoadQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,

@@ -1,6 +1,6 @@
 package typingsSlinky.sharp
 
-import typingsSlinky.sharp.sharpNumbers.`true`
+import typingsSlinky.sharp.sharpBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,13 +32,25 @@ object ListNumbering extends js.Object {
   @js.native
   sealed trait upperRoman extends ListNumbering
   
-  /* "Arabic" */ val arabic: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.arabic with String = js.native
-  /* "LowerLetter" */ val lowerLetter: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.lowerLetter with String = js.native
-  /* "LowerRoman" */ val lowerRoman: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.lowerRoman with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.none with String = js.native
-  /* "UpperLetter" */ val upperLetter: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.upperLetter with String = js.native
-  /* "UpperRoman" */ val upperRoman: typingsSlinky.officeDashJsDashPreview.Word.ListNumbering.upperRoman with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ListNumbering with String] = js.native
+  /* "Arabic" */ @js.native
+  object arabic extends TopLevel[arabic with String]
+  
+  /* "LowerLetter" */ @js.native
+  object lowerLetter extends TopLevel[lowerLetter with String]
+  
+  /* "LowerRoman" */ @js.native
+  object lowerRoman extends TopLevel[lowerRoman with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "UpperLetter" */ @js.native
+  object upperLetter extends TopLevel[upperLetter with String]
+  
+  /* "UpperRoman" */ @js.native
+  object upperRoman extends TopLevel[upperRoman with String]
+  
 }
 

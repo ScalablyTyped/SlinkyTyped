@@ -43,6 +43,7 @@ package object reactMod {
   type AnimationEventHandler[T] = EventHandler[SyntheticAnimationEvent[T]]
   // tslint:disable-next-line:no-empty-interface
   type AudioHTMLAttributes[T] = MediaHTMLAttributes[T]
+  type Booleanish = Boolean
   type CElement[P, T /* <: ReactComponentClass[P] */] = ComponentElement[P, T]
   type CFactory[P, T /* <: ReactComponentClass[P] */] = ComponentFactory[P, T]
   type ChangeEventHandler[T] = EventHandler[ChangeEvent[T]]
@@ -82,13 +83,14 @@ package object reactMod {
   // If declared props have indexed properties, ignore default props entirely as keyof gets widened
   // Wrap in an outer-level conditional type to allow distribution over props that are unions
   type Defaultize[P, D] = ((Pick[P, Exclude[String, String]]) with (Partial[Pick[P, Extract[String, String]]]) with (Partial[Pick[D, Exclude[String, String]]])) | P
-  // The identity check is done with the SameValue algorithm (Object.is), which is stricter than ===
   // TODO (TypeScript 3.0): ReadonlyArray<unknown>
   type DependencyList = js.Array[js.Any]
   type DetailedHTMLProps[E /* <: HTMLAttributes[T] */, T] = ClassAttributes[T] with E
   // this technically does accept a second argument, but it's already under a deprecation warning
   // and it's not even released so probably better to not define it.
   type Dispatch[A] = js.Function1[/* value */ A, Unit]
+  // Since action _can_ be undefined, dispatch may be called without any parameters.
+  type DispatchWithoutAction = js.Function0[Unit]
   type DragEventHandler[T] = EventHandler[DragEvent[T]]
   // NOTE: callbacks are _only_ allowed to return either void, or a destructor.
   // The destructor is itself only allowed to return void.
@@ -209,6 +211,10 @@ package object reactMod {
   // types used to try and prevent the compiler from reducing S
   // to a supertype common with the second argument to useReducer()
   type ReducerState[R /* <: Reducer[_, _] */] = js.Any
+  // The identity check is done with the SameValue algorithm (Object.is), which is stricter than ===
+  type ReducerStateWithoutAction[R /* <: ReducerWithoutAction[_] */] = js.Any
+  // If useReducer accepts a reducer without action, dispatch may be called without any parameters.
+  type ReducerWithoutAction[S] = js.Function1[/* prevState */ S, S]
   type Ref[T] = (js.Function1[/* instance */ T | Null, Unit]) | ReactRef[T] | Null
   type Requireable[T] = typingsSlinky.propDashTypes.propDashTypesMod.Requireable[T]
   //

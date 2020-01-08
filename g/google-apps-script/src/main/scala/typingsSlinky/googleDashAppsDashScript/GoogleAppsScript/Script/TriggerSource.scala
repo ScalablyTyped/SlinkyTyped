@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object TriggerSource extends js.Object {
   @js.native
   sealed trait SPREADSHEETS extends TriggerSource
   
-  /* 4 */ val CALENDAR: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.TriggerSource.CALENDAR with Double = js.native
-  /* 1 */ val CLOCK: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.TriggerSource.CLOCK with Double = js.native
-  /* 3 */ val DOCUMENTS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.TriggerSource.DOCUMENTS with Double = js.native
-  /* 2 */ val FORMS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.TriggerSource.FORMS with Double = js.native
-  /* 0 */ val SPREADSHEETS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.TriggerSource.SPREADSHEETS with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TriggerSource with Double] = js.native
+  /* 4 */ @js.native
+  object CALENDAR extends TopLevel[CALENDAR with Double]
+  
+  /* 1 */ @js.native
+  object CLOCK extends TopLevel[CLOCK with Double]
+  
+  /* 3 */ @js.native
+  object DOCUMENTS extends TopLevel[DOCUMENTS with Double]
+  
+  /* 2 */ @js.native
+  object FORMS extends TopLevel[FORMS with Double]
+  
+  /* 0 */ @js.native
+  object SPREADSHEETS extends TopLevel[SPREADSHEETS with Double]
+  
 }
 

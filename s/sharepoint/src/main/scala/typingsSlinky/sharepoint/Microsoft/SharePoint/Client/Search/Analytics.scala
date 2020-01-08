@@ -1,8 +1,8 @@
 package typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search
 
-import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Analytics.AnalyticsItemData
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.Guid
+import typingsSlinky.sharepoint.SP.ListItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +26,8 @@ object Analytics extends js.Object {
   class UsageAnalytics () extends ClientObject {
     def deleteCustomEventUsageData(appEventTypeId: Guid): Unit = js.native
     def deleteStandardEventUsageData(eventType: Double): Unit = js.native
-    def getAnalyticsItemData[T](eventType: Double, listItem: typingsSlinky.sharepoint.SP.ListItem[T]): AnalyticsItemData = js.native
-    def getAnalyticsItemDataForApplicationEventType[T](appEventType: Guid, listItem: typingsSlinky.sharepoint.SP.ListItem[T]): AnalyticsItemData = js.native
+    def getAnalyticsItemData[T](eventType: Double, listItem: ListItem[T]): AnalyticsItemData = js.native
+    def getAnalyticsItemDataForApplicationEventType[T](appEventType: Guid, listItem: ListItem[T]): AnalyticsItemData = js.native
   }
   
 }

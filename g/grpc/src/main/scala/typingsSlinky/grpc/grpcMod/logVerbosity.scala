@@ -1,5 +1,6 @@
 package typingsSlinky.grpc.grpcMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object logVerbosity extends js.Object {
   @js.native
   sealed trait INFO extends logVerbosity
   
-  /* 0 */ val DEBUG: typingsSlinky.grpc.grpcMod.logVerbosity.DEBUG with Double = js.native
-  /* 2 */ val ERROR: typingsSlinky.grpc.grpcMod.logVerbosity.ERROR with Double = js.native
-  /* 1 */ val INFO: typingsSlinky.grpc.grpcMod.logVerbosity.INFO with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[logVerbosity with Double] = js.native
+  /* 0 */ @js.native
+  object DEBUG extends TopLevel[DEBUG with Double]
+  
+  /* 2 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 1 */ @js.native
+  object INFO extends TopLevel[INFO with Double]
+  
 }
 

@@ -2,8 +2,8 @@ package typingsSlinky.graphqlDashConfig
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.graphqlMod.GraphQLSchema
-import typingsSlinky.graphqlDashConfig.graphqlDashConfigStrings.DOTgraphqlconfig
-import typingsSlinky.graphqlDashConfig.graphqlDashConfigStrings.DOTgraphqlconfigDOTyaml
+import typingsSlinky.graphqlDashConfig.graphqlDashConfigStrings.Dotgraphqlconfig
+import typingsSlinky.graphqlDashConfig.graphqlDashConfigStrings.DotgraphqlconfigDotyaml
 import typingsSlinky.graphqlDashConfig.libExtensionsEndpointsEndpointsExtensionMod.GraphQLConfigEnpointConfig
 import typingsSlinky.graphqlDashConfig.libExtensionsEndpointsEndpointsExtensionMod.GraphQLConfigEnpointsMapData
 import typingsSlinky.graphqlDashConfig.libTypesMod.GraphQLConfigData
@@ -45,8 +45,8 @@ object graphqlDashConfigMod extends js.Object {
     def this(config: GraphQLConfigData, configPath: String, projectName: String) = this()
   }
   
-  val GRAPHQL_CONFIG_NAME: DOTgraphqlconfig = js.native
-  val GRAPHQL_CONFIG_YAML_NAME: DOTgraphqlconfigDOTyaml = js.native
+  val GRAPHQL_CONFIG_NAME: Dotgraphqlconfig = js.native
+  val GRAPHQL_CONFIG_YAML_NAME: DotgraphqlconfigDotyaml = js.native
   def findGraphQLConfigFile(filePath: String): String = js.native
   def getGraphQLConfig(): typingsSlinky.graphqlDashConfig.libGraphQLConfigMod.GraphQLConfig = js.native
   def getGraphQLConfig(rootDir: String): typingsSlinky.graphqlDashConfig.libGraphQLConfigMod.GraphQLConfig = js.native

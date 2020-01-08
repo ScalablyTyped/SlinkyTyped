@@ -12,7 +12,8 @@ class AxisTitle protected () extends js.Object {
   val Border: typingsSlinky.activexDashExcel.Excel.Border = js.native
   var Caption: String = js.native
   val Creator: XlCreator = js.native
-  var `Excel.AxisTitle_typekey`: AxisTitle = js.native
+  @JSName("Excel.AxisTitle_typekey")
+  var ExcelDotAxisTitle_typekey: AxisTitle = js.native
   val Fill: ChartFillFormat = js.native
   val Font: typingsSlinky.activexDashExcel.Excel.Font = js.native
   val Format: ChartFormat = js.native

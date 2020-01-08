@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.Physics.Impact
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,12 +50,22 @@ object COLLIDES extends js.Object {
   @js.native
   sealed trait PASSIVE extends COLLIDES
   
-  /* 3 */ val ACTIVE: typingsSlinky.phaser.Phaser.Physics.Impact.COLLIDES.ACTIVE with Double = js.native
-  /* 4 */ val FIXED: typingsSlinky.phaser.Phaser.Physics.Impact.COLLIDES.FIXED with Double = js.native
-  /* 1 */ val LITE: typingsSlinky.phaser.Phaser.Physics.Impact.COLLIDES.LITE with Double = js.native
-  /* 0 */ val NEVER: typingsSlinky.phaser.Phaser.Physics.Impact.COLLIDES.NEVER with Double = js.native
-  /* 2 */ val PASSIVE: typingsSlinky.phaser.Phaser.Physics.Impact.COLLIDES.PASSIVE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[COLLIDES with Double] = js.native
+  /* 3 */ @js.native
+  object ACTIVE extends TopLevel[ACTIVE with Double]
+  
+  /* 4 */ @js.native
+  object FIXED extends TopLevel[FIXED with Double]
+  
+  /* 1 */ @js.native
+  object LITE extends TopLevel[LITE with Double]
+  
+  /* 0 */ @js.native
+  object NEVER extends TopLevel[NEVER with Double]
+  
+  /* 2 */ @js.native
+  object PASSIVE extends TopLevel[PASSIVE with Double]
+  
 }
 

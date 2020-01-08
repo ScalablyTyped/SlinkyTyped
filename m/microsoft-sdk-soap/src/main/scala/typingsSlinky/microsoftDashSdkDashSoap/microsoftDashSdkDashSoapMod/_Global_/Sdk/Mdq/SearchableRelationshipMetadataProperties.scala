@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,26 +68,67 @@ object SearchableRelationshipMetadataProperties extends js.Object {
   @js.native
   sealed trait SecurityTypes extends SearchableRelationshipMetadataProperties
   
-  /* 1 */ val Entity1IntersectAttribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.Entity1IntersectAttribute with scala.Double = js.native
-  /* 2 */ val Entity1LogicalName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.Entity1LogicalName with scala.Double = js.native
-  /* 3 */ val Entity2IntersectAttribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.Entity2IntersectAttribute with scala.Double = js.native
-  /* 4 */ val Entity2LogicalName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.Entity2LogicalName with scala.Double = js.native
-  /* 0 */ val HasChanged: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.HasChanged with scala.Double = js.native
-  /* 5 */ val IntersectEntityName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IntersectEntityName with scala.Double = js.native
-  /* 7 */ val IntroducedVersion: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IntroducedVersion with scala.Double = js.native
-  /* 8 */ val IsCustomRelationship: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IsCustomRelationship with scala.Double = js.native
-  /* 6 */ val IsCustomizable: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IsCustomizable with scala.Double = js.native
-  /* 9 */ val IsManaged: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IsManaged with scala.Double = js.native
-  /* 10 */ val IsValidForAdvancedFind: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.IsValidForAdvancedFind with scala.Double = js.native
-  /* 11 */ val MetadataId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.MetadataId with scala.Double = js.native
-  /* 12 */ val ReferencedAttribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.ReferencedAttribute with scala.Double = js.native
-  /* 13 */ val ReferencedEntity: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.ReferencedEntity with scala.Double = js.native
-  /* 14 */ val ReferencingAttribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.ReferencingAttribute with scala.Double = js.native
-  /* 15 */ val ReferencingEntity: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.ReferencingEntity with scala.Double = js.native
-  /* 16 */ val RelationshipType: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.RelationshipType with scala.Double = js.native
-  /* 17 */ val SchemaName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.SchemaName with scala.Double = js.native
-  /* 18 */ val SecurityTypes: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.SecurityTypes with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[SearchableRelationshipMetadataProperties with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[SearchableRelationshipMetadataProperties with Double] = js.native
+  /* 1 */ @js.native
+  object Entity1IntersectAttribute extends TopLevel[Entity1IntersectAttribute with Double]
+  
+  /* 2 */ @js.native
+  object Entity1LogicalName extends TopLevel[Entity1LogicalName with Double]
+  
+  /* 3 */ @js.native
+  object Entity2IntersectAttribute extends TopLevel[Entity2IntersectAttribute with Double]
+  
+  /* 4 */ @js.native
+  object Entity2LogicalName extends TopLevel[Entity2LogicalName with Double]
+  
+  /* 0 */ @js.native
+  object HasChanged extends TopLevel[HasChanged with Double]
+  
+  /* 5 */ @js.native
+  object IntersectEntityName extends TopLevel[IntersectEntityName with Double]
+  
+  /* 7 */ @js.native
+  object IntroducedVersion extends TopLevel[IntroducedVersion with Double]
+  
+  /* 8 */ @js.native
+  object IsCustomRelationship extends TopLevel[IsCustomRelationship with Double]
+  
+  /* 6 */ @js.native
+  object IsCustomizable extends TopLevel[IsCustomizable with Double]
+  
+  /* 9 */ @js.native
+  object IsManaged extends TopLevel[IsManaged with Double]
+  
+  /* 10 */ @js.native
+  object IsValidForAdvancedFind extends TopLevel[IsValidForAdvancedFind with Double]
+  
+  /* 11 */ @js.native
+  object MetadataId extends TopLevel[MetadataId with Double]
+  
+  /* 12 */ @js.native
+  object ReferencedAttribute extends TopLevel[ReferencedAttribute with Double]
+  
+  /* 13 */ @js.native
+  object ReferencedEntity extends TopLevel[ReferencedEntity with Double]
+  
+  /* 14 */ @js.native
+  object ReferencingAttribute extends TopLevel[ReferencingAttribute with Double]
+  
+  /* 15 */ @js.native
+  object ReferencingEntity extends TopLevel[ReferencingEntity with Double]
+  
+  /* 16 */ @js.native
+  object RelationshipType
+    extends TopLevel[
+          typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableRelationshipMetadataProperties.RelationshipType with Double
+        ]
+  
+  /* 17 */ @js.native
+  object SchemaName extends TopLevel[SchemaName with Double]
+  
+  /* 18 */ @js.native
+  object SecurityTypes extends TopLevel[SecurityTypes with Double]
+  
 }
 

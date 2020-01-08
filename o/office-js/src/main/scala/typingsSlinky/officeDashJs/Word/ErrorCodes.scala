@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ErrorCodes extends js.Object {
   @js.native
   sealed trait notImplemented extends ErrorCodes
   
-  /* "AccessDenied" */ val accessDenied: typingsSlinky.officeDashJs.Word.ErrorCodes.accessDenied with String = js.native
-  /* "GeneralException" */ val generalException: typingsSlinky.officeDashJs.Word.ErrorCodes.generalException with String = js.native
-  /* "InvalidArgument" */ val invalidArgument: typingsSlinky.officeDashJs.Word.ErrorCodes.invalidArgument with String = js.native
-  /* "ItemNotFound" */ val itemNotFound: typingsSlinky.officeDashJs.Word.ErrorCodes.itemNotFound with String = js.native
-  /* "NotImplemented" */ val notImplemented: typingsSlinky.officeDashJs.Word.ErrorCodes.notImplemented with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ErrorCodes with String] = js.native
+  /* "AccessDenied" */ @js.native
+  object accessDenied extends TopLevel[accessDenied with String]
+  
+  /* "GeneralException" */ @js.native
+  object generalException extends TopLevel[generalException with String]
+  
+  /* "InvalidArgument" */ @js.native
+  object invalidArgument extends TopLevel[invalidArgument with String]
+  
+  /* "ItemNotFound" */ @js.native
+  object itemNotFound extends TopLevel[itemNotFound with String]
+  
+  /* "NotImplemented" */ @js.native
+  object notImplemented extends TopLevel[notImplemented with String]
+  
 }
 

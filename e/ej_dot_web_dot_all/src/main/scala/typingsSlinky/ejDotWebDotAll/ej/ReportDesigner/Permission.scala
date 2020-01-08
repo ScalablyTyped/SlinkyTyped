@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ReportDesigner
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object Permission extends js.Object {
   @js.native
   sealed trait Edit extends Permission
   
-  /* 3 */ val All: typingsSlinky.ejDotWebDotAll.ej.ReportDesigner.Permission.All with Double = js.native
-  /* 0 */ val Create: typingsSlinky.ejDotWebDotAll.ej.ReportDesigner.Permission.Create with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.ejDotWebDotAll.ej.ReportDesigner.Permission.Delete with Double = js.native
-  /* 1 */ val Edit: typingsSlinky.ejDotWebDotAll.ej.ReportDesigner.Permission.Edit with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Permission with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 0 */ @js.native
+  object Create extends TopLevel[Create with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TaskAgentStatus extends js.Object {
   @js.native
   sealed trait Online extends TaskAgentStatus
   
-  /* 1 */ val Offline: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskAgentStatus.Offline with Double = js.native
-  /* 2 */ val Online: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskAgentStatus.Online with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TaskAgentStatus with Double] = js.native
+  /* 1 */ @js.native
+  object Offline extends TopLevel[Offline with Double]
+  
+  /* 2 */ @js.native
+  object Online extends TopLevel[Online with Double]
+  
 }
 

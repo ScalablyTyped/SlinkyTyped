@@ -1,7 +1,6 @@
 package typingsSlinky.atUirouterCore
 
-import typingsSlinky.atUirouterCore.libCommonTraceMod.Category
-import typingsSlinky.atUirouterCore.libCommonTraceMod.Trace
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atUirouterCore.libPathPathNodeMod.PathNode
 import typingsSlinky.atUirouterCore.libResolveInterfaceMod.PolicyWhen
 import typingsSlinky.atUirouterCore.libResolveResolvableMod.Resolvable
@@ -139,13 +138,23 @@ object libCommonTraceMod extends js.Object {
     @js.native
     sealed trait VIEWCONFIG extends Category
     
-    /* 2 */ val HOOK: typingsSlinky.atUirouterCore.libCommonTraceMod.Category.HOOK with Double = js.native
-    /* 0 */ val RESOLVE: typingsSlinky.atUirouterCore.libCommonTraceMod.Category.RESOLVE with Double = js.native
-    /* 1 */ val TRANSITION: typingsSlinky.atUirouterCore.libCommonTraceMod.Category.TRANSITION with Double = js.native
-    /* 3 */ val UIVIEW: typingsSlinky.atUirouterCore.libCommonTraceMod.Category.UIVIEW with Double = js.native
-    /* 4 */ val VIEWCONFIG: typingsSlinky.atUirouterCore.libCommonTraceMod.Category.VIEWCONFIG with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Category with Double] = js.native
+    /* 2 */ @js.native
+    object HOOK extends TopLevel[HOOK with Double]
+    
+    /* 0 */ @js.native
+    object RESOLVE extends TopLevel[RESOLVE with Double]
+    
+    /* 1 */ @js.native
+    object TRANSITION extends TopLevel[TRANSITION with Double]
+    
+    /* 3 */ @js.native
+    object UIVIEW extends TopLevel[UIVIEW with Double]
+    
+    /* 4 */ @js.native
+    object VIEWCONFIG extends TopLevel[VIEWCONFIG with Double]
+    
   }
   
 }

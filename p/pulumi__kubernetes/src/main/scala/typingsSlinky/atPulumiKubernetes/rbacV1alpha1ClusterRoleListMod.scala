@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1alpha1`
-import typingsSlinky.atPulumiKubernetes.rbacV1alpha1ClusterRoleListMod.ClusterRoleList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.rbac.v1alpha1.ClusterRole
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object rbacV1alpha1ClusterRoleListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`rbacDOTauthorizationDOTk8sDOTio/v1alpha1`] = js.native
+    val apiVersion: Output[rbacDotauthorizationDotk8sDotioSlashv1alpha1] = js.native
     /**
       * Items is a list of ClusterRoles
       */

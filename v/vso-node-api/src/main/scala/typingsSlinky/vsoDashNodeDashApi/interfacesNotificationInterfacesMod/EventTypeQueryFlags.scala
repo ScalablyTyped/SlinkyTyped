@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object EventTypeQueryFlags extends js.Object {
   @js.native
   sealed trait None extends EventTypeQueryFlags
   
-  /* 1 */ val IncludeFields: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EventTypeQueryFlags.IncludeFields with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EventTypeQueryFlags.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EventTypeQueryFlags with Double] = js.native
+  /* 1 */ @js.native
+  object IncludeFields extends TopLevel[IncludeFields with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

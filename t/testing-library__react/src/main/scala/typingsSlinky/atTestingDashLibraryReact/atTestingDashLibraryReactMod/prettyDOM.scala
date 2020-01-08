@@ -1,6 +1,6 @@
 package typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactMod
 
-import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactNumbers.`false`
+import typingsSlinky.atTestingDashLibraryReact.atTestingDashLibraryReactBooleans.`false`
 import typingsSlinky.prettyDashFormat.prettyDashFormatMod.OptionsReceived
 import typingsSlinky.std.Element
 import typingsSlinky.std.HTMLDocument

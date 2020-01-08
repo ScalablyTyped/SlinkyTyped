@@ -2,9 +2,6 @@ package typingsSlinky.dropboxjs.Dropbox
 
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.dropboxjs.Anon_Cancelable
-import typingsSlinky.dropboxjs.Dropbox.Util.EventSource
-import typingsSlinky.dropboxjs.Dropbox.Util.Oauth
-import typingsSlinky.dropboxjs.Dropbox.Util.Xhr
 import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Blob
 import scala.scalajs.js

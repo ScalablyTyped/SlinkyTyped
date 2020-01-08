@@ -6,7 +6,7 @@ import typingsSlinky.atAngularCore.atAngularCoreMod.ElementRef
 import typingsSlinky.atAngularCore.atAngularCoreMod.Renderer2
 import typingsSlinky.atAngularCore.atAngularCoreMod.RendererFactory2
 import typingsSlinky.atAngularPlatformDashBrowser.atAngularPlatformDashBrowserMod.DomSanitizer
-import typingsSlinky.atAntDashDesignIconsDashAngular.atAntDashDesignIconsDashAngularStrings.`[@ant-design/icons-angular]:`
+import typingsSlinky.atAntDashDesignIconsDashAngular.atAntDashDesignIconsDashAngularStrings.`[@ant-designSlashicons-angular]Colon`
 import typingsSlinky.atAntDashDesignIconsDashAngular.typesMod.IconDefinition
 import typingsSlinky.atAntDashDesignIconsDashAngular.typesMod.Manifest
 import typingsSlinky.atAntDashDesignIconsDashAngular.typesMod.ThemeType
@@ -42,7 +42,7 @@ object publicUnderscoreApiMod extends js.Object {
     ) = this()
   }
   
-  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: `[@ant-design/icons-angular]:` = js.native
+  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: `[@ant-designSlashicons-angular]Colon` = js.native
   val manifest: Manifest = js.native
   def DynamicLoadingTimeoutError(): js.Error = js.native
   def HttpModuleNotImport(): Null = js.native

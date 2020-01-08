@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1ReplicationControllerMod.ReplicationController
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ReplicationControllerSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ReplicationControllerStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta

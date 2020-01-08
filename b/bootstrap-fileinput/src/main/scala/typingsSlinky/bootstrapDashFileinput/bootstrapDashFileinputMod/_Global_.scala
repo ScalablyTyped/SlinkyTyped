@@ -1,6 +1,5 @@
 package typingsSlinky.bootstrapDashFileinput.bootstrapDashFileinputMod
 
-import typingsSlinky.bootstrapDashFileinput.bootstrapDashFileinputMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

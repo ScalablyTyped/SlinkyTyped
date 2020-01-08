@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.pages
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -31,7 +32,7 @@ class RetrievalSchema protected ()
 @js.native
 object RetrievalSchema extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new RetrievalSchema instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

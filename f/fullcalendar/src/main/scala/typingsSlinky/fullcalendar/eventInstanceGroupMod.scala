@@ -1,6 +1,5 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.eventInstanceGroupMod.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

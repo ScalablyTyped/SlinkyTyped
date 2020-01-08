@@ -9,6 +9,7 @@ import typingsSlinky.blessed.blessedStrings.bottom
 import typingsSlinky.blessed.blessedStrings.center
 import typingsSlinky.blessed.blessedStrings.grid
 import typingsSlinky.blessed.blessedStrings.left
+import typingsSlinky.blessed.blessedStrings.line
 import typingsSlinky.blessed.blessedStrings.middle
 import typingsSlinky.blessed.blessedStrings.right
 import typingsSlinky.blessed.blessedStrings.top
@@ -37,7 +38,7 @@ object LayoutOptions {
     align: left | center | right = null,
     bg: String = null,
     bold: String = null,
-    border: Border | typingsSlinky.blessed.blessedStrings.line | bg = null,
+    border: Border | line | bg = null,
     bottom: TPosition = null,
     ch: String = null,
     children: js.Array[Node] = null,

@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.unified
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object CalendarAppointmentVisualization extends js.Object {
   @js.native
   sealed trait Standard extends CalendarAppointmentVisualization
   
-  /* 0 */ val Filled: typingsSlinky.openui5.sap.ui.unified.CalendarAppointmentVisualization.Filled with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.openui5.sap.ui.unified.CalendarAppointmentVisualization.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CalendarAppointmentVisualization with Double] = js.native
+  /* 0 */ @js.native
+  object Filled extends TopLevel[Filled with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

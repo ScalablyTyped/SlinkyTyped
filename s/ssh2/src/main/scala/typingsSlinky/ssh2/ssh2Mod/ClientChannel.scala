@@ -1,7 +1,7 @@
 package typingsSlinky.ssh2.ssh2Mod
 
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.ssh2.ssh2Numbers.`false`
+import typingsSlinky.ssh2.ssh2Booleans.`false`
 import typingsSlinky.ssh2.ssh2Strings.close
 import typingsSlinky.ssh2.ssh2Strings.exit
 import scala.scalajs.js

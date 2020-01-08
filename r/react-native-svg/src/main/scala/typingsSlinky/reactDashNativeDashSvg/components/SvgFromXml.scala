@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SvgFromXml
-  extends SharedApply_XmlProps1372616713[typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.SvgFromXml] {
+  extends SharedApply_XmlProps_630450008[typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.SvgFromXml] {
   @JSImport("react-native-svg", "SvgFromXml")
   @js.native
   object componentImport extends js.Object

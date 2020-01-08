@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Search
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object MatchConfidence extends js.Object {
   @js.native
   sealed trait unknown extends MatchConfidence
   
-  /* 0 */ val high: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchConfidence.high with Double = js.native
-  /* 2 */ val low: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchConfidence.low with Double = js.native
-  /* 1 */ val medium: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchConfidence.medium with Double = js.native
-  /* 3 */ val unknown: typingsSlinky.bingmaps.Microsoft.Maps.Search.MatchConfidence.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MatchConfidence with Double] = js.native
+  /* 0 */ @js.native
+  object high extends TopLevel[high with Double]
+  
+  /* 2 */ @js.native
+  object low extends TopLevel[low with Double]
+  
+  /* 1 */ @js.native
+  object medium extends TopLevel[medium with Double]
+  
+  /* 3 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

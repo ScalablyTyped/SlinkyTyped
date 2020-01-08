@@ -1,9 +1,10 @@
 package typingsSlinky.reactDashTagcloud
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.reactDashTagcloud.ReactTagCloud.DefaultRendererFactory
+import typingsSlinky.reactDashTagcloud.ReactTagCloud.TagCloudClass
 import typingsSlinky.reactDashTagcloud.ReactTagCloud.TagCloudProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,6 +21,8 @@ object reactDashTagcloudMod extends js.Object {
   }
   
   val DefaultRenderer: DefaultRendererFactory = js.native
-  val TagCloud: ReactComponentClass[TagCloudProps] = js.native
+  @js.native
+  object TagCloud extends TopLevel[TagCloudClass]
+  
 }
 

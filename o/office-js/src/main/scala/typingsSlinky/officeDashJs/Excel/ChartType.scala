@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -259,89 +260,253 @@ object ChartType extends js.Object {
   @js.native
   sealed trait xyscatterSmoothNoMarkers extends ChartType
   
-  /* "3DArea" */ val _3DArea: typingsSlinky.officeDashJs.Excel.ChartType._3DArea with String = js.native
-  /* "3DAreaStacked" */ val _3DAreaStacked: typingsSlinky.officeDashJs.Excel.ChartType._3DAreaStacked with String = js.native
-  /* "3DAreaStacked100" */ val _3DAreaStacked100: typingsSlinky.officeDashJs.Excel.ChartType._3DAreaStacked100 with String = js.native
-  /* "3DBarClustered" */ val _3DBarClustered: typingsSlinky.officeDashJs.Excel.ChartType._3DBarClustered with String = js.native
-  /* "3DBarStacked" */ val _3DBarStacked: typingsSlinky.officeDashJs.Excel.ChartType._3DBarStacked with String = js.native
-  /* "3DBarStacked100" */ val _3DBarStacked100: typingsSlinky.officeDashJs.Excel.ChartType._3DBarStacked100 with String = js.native
-  /* "3DColumn" */ val _3DColumn: typingsSlinky.officeDashJs.Excel.ChartType._3DColumn with String = js.native
-  /* "3DColumnClustered" */ val _3DColumnClustered: typingsSlinky.officeDashJs.Excel.ChartType._3DColumnClustered with String = js.native
-  /* "3DColumnStacked" */ val _3DColumnStacked: typingsSlinky.officeDashJs.Excel.ChartType._3DColumnStacked with String = js.native
-  /* "3DColumnStacked100" */ val _3DColumnStacked100: typingsSlinky.officeDashJs.Excel.ChartType._3DColumnStacked100 with String = js.native
-  /* "3DLine" */ val _3DLine: typingsSlinky.officeDashJs.Excel.ChartType._3DLine with String = js.native
-  /* "3DPie" */ val _3DPie: typingsSlinky.officeDashJs.Excel.ChartType._3DPie with String = js.native
-  /* "3DPieExploded" */ val _3DPieExploded: typingsSlinky.officeDashJs.Excel.ChartType._3DPieExploded with String = js.native
-  /* "Area" */ val area: typingsSlinky.officeDashJs.Excel.ChartType.area with String = js.native
-  /* "AreaStacked" */ val areaStacked: typingsSlinky.officeDashJs.Excel.ChartType.areaStacked with String = js.native
-  /* "AreaStacked100" */ val areaStacked100: typingsSlinky.officeDashJs.Excel.ChartType.areaStacked100 with String = js.native
-  /* "BarClustered" */ val barClustered: typingsSlinky.officeDashJs.Excel.ChartType.barClustered with String = js.native
-  /* "BarOfPie" */ val barOfPie: typingsSlinky.officeDashJs.Excel.ChartType.barOfPie with String = js.native
-  /* "BarStacked" */ val barStacked: typingsSlinky.officeDashJs.Excel.ChartType.barStacked with String = js.native
-  /* "BarStacked100" */ val barStacked100: typingsSlinky.officeDashJs.Excel.ChartType.barStacked100 with String = js.native
-  /* "Boxwhisker" */ val boxwhisker: typingsSlinky.officeDashJs.Excel.ChartType.boxwhisker with String = js.native
-  /* "Bubble" */ val bubble: typingsSlinky.officeDashJs.Excel.ChartType.bubble with String = js.native
-  /* "Bubble3DEffect" */ val bubble3DEffect: typingsSlinky.officeDashJs.Excel.ChartType.bubble3DEffect with String = js.native
-  /* "ColumnClustered" */ val columnClustered: typingsSlinky.officeDashJs.Excel.ChartType.columnClustered with String = js.native
-  /* "ColumnStacked" */ val columnStacked: typingsSlinky.officeDashJs.Excel.ChartType.columnStacked with String = js.native
-  /* "ColumnStacked100" */ val columnStacked100: typingsSlinky.officeDashJs.Excel.ChartType.columnStacked100 with String = js.native
-  /* "ConeBarClustered" */ val coneBarClustered: typingsSlinky.officeDashJs.Excel.ChartType.coneBarClustered with String = js.native
-  /* "ConeBarStacked" */ val coneBarStacked: typingsSlinky.officeDashJs.Excel.ChartType.coneBarStacked with String = js.native
-  /* "ConeBarStacked100" */ val coneBarStacked100: typingsSlinky.officeDashJs.Excel.ChartType.coneBarStacked100 with String = js.native
-  /* "ConeCol" */ val coneCol: typingsSlinky.officeDashJs.Excel.ChartType.coneCol with String = js.native
-  /* "ConeColClustered" */ val coneColClustered: typingsSlinky.officeDashJs.Excel.ChartType.coneColClustered with String = js.native
-  /* "ConeColStacked" */ val coneColStacked: typingsSlinky.officeDashJs.Excel.ChartType.coneColStacked with String = js.native
-  /* "ConeColStacked100" */ val coneColStacked100: typingsSlinky.officeDashJs.Excel.ChartType.coneColStacked100 with String = js.native
-  /* "CylinderBarClustered" */ val cylinderBarClustered: typingsSlinky.officeDashJs.Excel.ChartType.cylinderBarClustered with String = js.native
-  /* "CylinderBarStacked" */ val cylinderBarStacked: typingsSlinky.officeDashJs.Excel.ChartType.cylinderBarStacked with String = js.native
-  /* "CylinderBarStacked100" */ val cylinderBarStacked100: typingsSlinky.officeDashJs.Excel.ChartType.cylinderBarStacked100 with String = js.native
-  /* "CylinderCol" */ val cylinderCol: typingsSlinky.officeDashJs.Excel.ChartType.cylinderCol with String = js.native
-  /* "CylinderColClustered" */ val cylinderColClustered: typingsSlinky.officeDashJs.Excel.ChartType.cylinderColClustered with String = js.native
-  /* "CylinderColStacked" */ val cylinderColStacked: typingsSlinky.officeDashJs.Excel.ChartType.cylinderColStacked with String = js.native
-  /* "CylinderColStacked100" */ val cylinderColStacked100: typingsSlinky.officeDashJs.Excel.ChartType.cylinderColStacked100 with String = js.native
-  /* "Doughnut" */ val doughnut: typingsSlinky.officeDashJs.Excel.ChartType.doughnut with String = js.native
-  /* "DoughnutExploded" */ val doughnutExploded: typingsSlinky.officeDashJs.Excel.ChartType.doughnutExploded with String = js.native
-  /* "Funnel" */ val funnel: typingsSlinky.officeDashJs.Excel.ChartType.funnel with String = js.native
-  /* "Histogram" */ val histogram: typingsSlinky.officeDashJs.Excel.ChartType.histogram with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJs.Excel.ChartType.invalid with String = js.native
-  /* "Line" */ val line: typingsSlinky.officeDashJs.Excel.ChartType.line with String = js.native
-  /* "LineMarkers" */ val lineMarkers: typingsSlinky.officeDashJs.Excel.ChartType.lineMarkers with String = js.native
-  /* "LineMarkersStacked" */ val lineMarkersStacked: typingsSlinky.officeDashJs.Excel.ChartType.lineMarkersStacked with String = js.native
-  /* "LineMarkersStacked100" */ val lineMarkersStacked100: typingsSlinky.officeDashJs.Excel.ChartType.lineMarkersStacked100 with String = js.native
-  /* "LineStacked" */ val lineStacked: typingsSlinky.officeDashJs.Excel.ChartType.lineStacked with String = js.native
-  /* "LineStacked100" */ val lineStacked100: typingsSlinky.officeDashJs.Excel.ChartType.lineStacked100 with String = js.native
-  /* "Pareto" */ val pareto: typingsSlinky.officeDashJs.Excel.ChartType.pareto with String = js.native
-  /* "Pie" */ val pie: typingsSlinky.officeDashJs.Excel.ChartType.pie with String = js.native
-  /* "PieExploded" */ val pieExploded: typingsSlinky.officeDashJs.Excel.ChartType.pieExploded with String = js.native
-  /* "PieOfPie" */ val pieOfPie: typingsSlinky.officeDashJs.Excel.ChartType.pieOfPie with String = js.native
-  /* "PyramidBarClustered" */ val pyramidBarClustered: typingsSlinky.officeDashJs.Excel.ChartType.pyramidBarClustered with String = js.native
-  /* "PyramidBarStacked" */ val pyramidBarStacked: typingsSlinky.officeDashJs.Excel.ChartType.pyramidBarStacked with String = js.native
-  /* "PyramidBarStacked100" */ val pyramidBarStacked100: typingsSlinky.officeDashJs.Excel.ChartType.pyramidBarStacked100 with String = js.native
-  /* "PyramidCol" */ val pyramidCol: typingsSlinky.officeDashJs.Excel.ChartType.pyramidCol with String = js.native
-  /* "PyramidColClustered" */ val pyramidColClustered: typingsSlinky.officeDashJs.Excel.ChartType.pyramidColClustered with String = js.native
-  /* "PyramidColStacked" */ val pyramidColStacked: typingsSlinky.officeDashJs.Excel.ChartType.pyramidColStacked with String = js.native
-  /* "PyramidColStacked100" */ val pyramidColStacked100: typingsSlinky.officeDashJs.Excel.ChartType.pyramidColStacked100 with String = js.native
-  /* "Radar" */ val radar: typingsSlinky.officeDashJs.Excel.ChartType.radar with String = js.native
-  /* "RadarFilled" */ val radarFilled: typingsSlinky.officeDashJs.Excel.ChartType.radarFilled with String = js.native
-  /* "RadarMarkers" */ val radarMarkers: typingsSlinky.officeDashJs.Excel.ChartType.radarMarkers with String = js.native
-  /* "RegionMap" */ val regionMap: typingsSlinky.officeDashJs.Excel.ChartType.regionMap with String = js.native
-  /* "StockHLC" */ val stockHLC: typingsSlinky.officeDashJs.Excel.ChartType.stockHLC with String = js.native
-  /* "StockOHLC" */ val stockOHLC: typingsSlinky.officeDashJs.Excel.ChartType.stockOHLC with String = js.native
-  /* "StockVHLC" */ val stockVHLC: typingsSlinky.officeDashJs.Excel.ChartType.stockVHLC with String = js.native
-  /* "StockVOHLC" */ val stockVOHLC: typingsSlinky.officeDashJs.Excel.ChartType.stockVOHLC with String = js.native
-  /* "Sunburst" */ val sunburst: typingsSlinky.officeDashJs.Excel.ChartType.sunburst with String = js.native
-  /* "Surface" */ val surface: typingsSlinky.officeDashJs.Excel.ChartType.surface with String = js.native
-  /* "SurfaceTopView" */ val surfaceTopView: typingsSlinky.officeDashJs.Excel.ChartType.surfaceTopView with String = js.native
-  /* "SurfaceTopViewWireframe" */ val surfaceTopViewWireframe: typingsSlinky.officeDashJs.Excel.ChartType.surfaceTopViewWireframe with String = js.native
-  /* "SurfaceWireframe" */ val surfaceWireframe: typingsSlinky.officeDashJs.Excel.ChartType.surfaceWireframe with String = js.native
-  /* "Treemap" */ val treemap: typingsSlinky.officeDashJs.Excel.ChartType.treemap with String = js.native
-  /* "Waterfall" */ val waterfall: typingsSlinky.officeDashJs.Excel.ChartType.waterfall with String = js.native
-  /* "XYScatter" */ val xyscatter: typingsSlinky.officeDashJs.Excel.ChartType.xyscatter with String = js.native
-  /* "XYScatterLines" */ val xyscatterLines: typingsSlinky.officeDashJs.Excel.ChartType.xyscatterLines with String = js.native
-  /* "XYScatterLinesNoMarkers" */ val xyscatterLinesNoMarkers: typingsSlinky.officeDashJs.Excel.ChartType.xyscatterLinesNoMarkers with String = js.native
-  /* "XYScatterSmooth" */ val xyscatterSmooth: typingsSlinky.officeDashJs.Excel.ChartType.xyscatterSmooth with String = js.native
-  /* "XYScatterSmoothNoMarkers" */ val xyscatterSmoothNoMarkers: typingsSlinky.officeDashJs.Excel.ChartType.xyscatterSmoothNoMarkers with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartType with String] = js.native
+  /* "3DArea" */ @js.native
+  object _3DArea extends TopLevel[_3DArea with String]
+  
+  /* "3DAreaStacked" */ @js.native
+  object _3DAreaStacked extends TopLevel[_3DAreaStacked with String]
+  
+  /* "3DAreaStacked100" */ @js.native
+  object _3DAreaStacked100 extends TopLevel[_3DAreaStacked100 with String]
+  
+  /* "3DBarClustered" */ @js.native
+  object _3DBarClustered extends TopLevel[_3DBarClustered with String]
+  
+  /* "3DBarStacked" */ @js.native
+  object _3DBarStacked extends TopLevel[_3DBarStacked with String]
+  
+  /* "3DBarStacked100" */ @js.native
+  object _3DBarStacked100 extends TopLevel[_3DBarStacked100 with String]
+  
+  /* "3DColumn" */ @js.native
+  object _3DColumn extends TopLevel[_3DColumn with String]
+  
+  /* "3DColumnClustered" */ @js.native
+  object _3DColumnClustered extends TopLevel[_3DColumnClustered with String]
+  
+  /* "3DColumnStacked" */ @js.native
+  object _3DColumnStacked extends TopLevel[_3DColumnStacked with String]
+  
+  /* "3DColumnStacked100" */ @js.native
+  object _3DColumnStacked100 extends TopLevel[_3DColumnStacked100 with String]
+  
+  /* "3DLine" */ @js.native
+  object _3DLine extends TopLevel[_3DLine with String]
+  
+  /* "3DPie" */ @js.native
+  object _3DPie extends TopLevel[_3DPie with String]
+  
+  /* "3DPieExploded" */ @js.native
+  object _3DPieExploded extends TopLevel[_3DPieExploded with String]
+  
+  /* "Area" */ @js.native
+  object area extends TopLevel[area with String]
+  
+  /* "AreaStacked" */ @js.native
+  object areaStacked extends TopLevel[areaStacked with String]
+  
+  /* "AreaStacked100" */ @js.native
+  object areaStacked100 extends TopLevel[areaStacked100 with String]
+  
+  /* "BarClustered" */ @js.native
+  object barClustered extends TopLevel[barClustered with String]
+  
+  /* "BarOfPie" */ @js.native
+  object barOfPie extends TopLevel[barOfPie with String]
+  
+  /* "BarStacked" */ @js.native
+  object barStacked extends TopLevel[barStacked with String]
+  
+  /* "BarStacked100" */ @js.native
+  object barStacked100 extends TopLevel[barStacked100 with String]
+  
+  /* "Boxwhisker" */ @js.native
+  object boxwhisker extends TopLevel[boxwhisker with String]
+  
+  /* "Bubble" */ @js.native
+  object bubble extends TopLevel[bubble with String]
+  
+  /* "Bubble3DEffect" */ @js.native
+  object bubble3DEffect extends TopLevel[bubble3DEffect with String]
+  
+  /* "ColumnClustered" */ @js.native
+  object columnClustered extends TopLevel[columnClustered with String]
+  
+  /* "ColumnStacked" */ @js.native
+  object columnStacked extends TopLevel[columnStacked with String]
+  
+  /* "ColumnStacked100" */ @js.native
+  object columnStacked100 extends TopLevel[columnStacked100 with String]
+  
+  /* "ConeBarClustered" */ @js.native
+  object coneBarClustered extends TopLevel[coneBarClustered with String]
+  
+  /* "ConeBarStacked" */ @js.native
+  object coneBarStacked extends TopLevel[coneBarStacked with String]
+  
+  /* "ConeBarStacked100" */ @js.native
+  object coneBarStacked100 extends TopLevel[coneBarStacked100 with String]
+  
+  /* "ConeCol" */ @js.native
+  object coneCol extends TopLevel[coneCol with String]
+  
+  /* "ConeColClustered" */ @js.native
+  object coneColClustered extends TopLevel[coneColClustered with String]
+  
+  /* "ConeColStacked" */ @js.native
+  object coneColStacked extends TopLevel[coneColStacked with String]
+  
+  /* "ConeColStacked100" */ @js.native
+  object coneColStacked100 extends TopLevel[coneColStacked100 with String]
+  
+  /* "CylinderBarClustered" */ @js.native
+  object cylinderBarClustered extends TopLevel[cylinderBarClustered with String]
+  
+  /* "CylinderBarStacked" */ @js.native
+  object cylinderBarStacked extends TopLevel[cylinderBarStacked with String]
+  
+  /* "CylinderBarStacked100" */ @js.native
+  object cylinderBarStacked100 extends TopLevel[cylinderBarStacked100 with String]
+  
+  /* "CylinderCol" */ @js.native
+  object cylinderCol extends TopLevel[cylinderCol with String]
+  
+  /* "CylinderColClustered" */ @js.native
+  object cylinderColClustered extends TopLevel[cylinderColClustered with String]
+  
+  /* "CylinderColStacked" */ @js.native
+  object cylinderColStacked extends TopLevel[cylinderColStacked with String]
+  
+  /* "CylinderColStacked100" */ @js.native
+  object cylinderColStacked100 extends TopLevel[cylinderColStacked100 with String]
+  
+  /* "Doughnut" */ @js.native
+  object doughnut extends TopLevel[doughnut with String]
+  
+  /* "DoughnutExploded" */ @js.native
+  object doughnutExploded extends TopLevel[doughnutExploded with String]
+  
+  /* "Funnel" */ @js.native
+  object funnel extends TopLevel[funnel with String]
+  
+  /* "Histogram" */ @js.native
+  object histogram extends TopLevel[histogram with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "Line" */ @js.native
+  object line extends TopLevel[line with String]
+  
+  /* "LineMarkers" */ @js.native
+  object lineMarkers extends TopLevel[lineMarkers with String]
+  
+  /* "LineMarkersStacked" */ @js.native
+  object lineMarkersStacked extends TopLevel[lineMarkersStacked with String]
+  
+  /* "LineMarkersStacked100" */ @js.native
+  object lineMarkersStacked100 extends TopLevel[lineMarkersStacked100 with String]
+  
+  /* "LineStacked" */ @js.native
+  object lineStacked extends TopLevel[lineStacked with String]
+  
+  /* "LineStacked100" */ @js.native
+  object lineStacked100 extends TopLevel[lineStacked100 with String]
+  
+  /* "Pareto" */ @js.native
+  object pareto extends TopLevel[pareto with String]
+  
+  /* "Pie" */ @js.native
+  object pie extends TopLevel[pie with String]
+  
+  /* "PieExploded" */ @js.native
+  object pieExploded extends TopLevel[pieExploded with String]
+  
+  /* "PieOfPie" */ @js.native
+  object pieOfPie extends TopLevel[pieOfPie with String]
+  
+  /* "PyramidBarClustered" */ @js.native
+  object pyramidBarClustered extends TopLevel[pyramidBarClustered with String]
+  
+  /* "PyramidBarStacked" */ @js.native
+  object pyramidBarStacked extends TopLevel[pyramidBarStacked with String]
+  
+  /* "PyramidBarStacked100" */ @js.native
+  object pyramidBarStacked100 extends TopLevel[pyramidBarStacked100 with String]
+  
+  /* "PyramidCol" */ @js.native
+  object pyramidCol extends TopLevel[pyramidCol with String]
+  
+  /* "PyramidColClustered" */ @js.native
+  object pyramidColClustered extends TopLevel[pyramidColClustered with String]
+  
+  /* "PyramidColStacked" */ @js.native
+  object pyramidColStacked extends TopLevel[pyramidColStacked with String]
+  
+  /* "PyramidColStacked100" */ @js.native
+  object pyramidColStacked100 extends TopLevel[pyramidColStacked100 with String]
+  
+  /* "Radar" */ @js.native
+  object radar extends TopLevel[radar with String]
+  
+  /* "RadarFilled" */ @js.native
+  object radarFilled extends TopLevel[radarFilled with String]
+  
+  /* "RadarMarkers" */ @js.native
+  object radarMarkers extends TopLevel[radarMarkers with String]
+  
+  /* "RegionMap" */ @js.native
+  object regionMap extends TopLevel[regionMap with String]
+  
+  /* "StockHLC" */ @js.native
+  object stockHLC extends TopLevel[stockHLC with String]
+  
+  /* "StockOHLC" */ @js.native
+  object stockOHLC extends TopLevel[stockOHLC with String]
+  
+  /* "StockVHLC" */ @js.native
+  object stockVHLC extends TopLevel[stockVHLC with String]
+  
+  /* "StockVOHLC" */ @js.native
+  object stockVOHLC extends TopLevel[stockVOHLC with String]
+  
+  /* "Sunburst" */ @js.native
+  object sunburst extends TopLevel[sunburst with String]
+  
+  /* "Surface" */ @js.native
+  object surface extends TopLevel[surface with String]
+  
+  /* "SurfaceTopView" */ @js.native
+  object surfaceTopView extends TopLevel[surfaceTopView with String]
+  
+  /* "SurfaceTopViewWireframe" */ @js.native
+  object surfaceTopViewWireframe extends TopLevel[surfaceTopViewWireframe with String]
+  
+  /* "SurfaceWireframe" */ @js.native
+  object surfaceWireframe extends TopLevel[surfaceWireframe with String]
+  
+  /* "Treemap" */ @js.native
+  object treemap extends TopLevel[treemap with String]
+  
+  /* "Waterfall" */ @js.native
+  object waterfall extends TopLevel[waterfall with String]
+  
+  /* "XYScatter" */ @js.native
+  object xyscatter extends TopLevel[xyscatter with String]
+  
+  /* "XYScatterLines" */ @js.native
+  object xyscatterLines extends TopLevel[xyscatterLines with String]
+  
+  /* "XYScatterLinesNoMarkers" */ @js.native
+  object xyscatterLinesNoMarkers extends TopLevel[xyscatterLinesNoMarkers with String]
+  
+  /* "XYScatterSmooth" */ @js.native
+  object xyscatterSmooth extends TopLevel[xyscatterSmooth with String]
+  
+  /* "XYScatterSmoothNoMarkers" */ @js.native
+  object xyscatterSmoothNoMarkers extends TopLevel[xyscatterSmoothNoMarkers with String]
+  
 }
 

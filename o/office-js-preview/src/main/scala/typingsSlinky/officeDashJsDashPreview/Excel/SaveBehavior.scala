@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,9 +35,13 @@ object SaveBehavior extends js.Object {
   @js.native
   sealed trait save extends SaveBehavior
   
-  /* "Prompt" */ val prompt: typingsSlinky.officeDashJsDashPreview.Excel.SaveBehavior.prompt with String = js.native
-  /* "Save" */ val save: typingsSlinky.officeDashJsDashPreview.Excel.SaveBehavior.save with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SaveBehavior with String] = js.native
+  /* "Prompt" */ @js.native
+  object prompt extends TopLevel[prompt with String]
+  
+  /* "Save" */ @js.native
+  object save extends TopLevel[save with String]
+  
 }
 

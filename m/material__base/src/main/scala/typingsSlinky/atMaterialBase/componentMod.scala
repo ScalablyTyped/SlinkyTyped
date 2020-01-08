@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialBase
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

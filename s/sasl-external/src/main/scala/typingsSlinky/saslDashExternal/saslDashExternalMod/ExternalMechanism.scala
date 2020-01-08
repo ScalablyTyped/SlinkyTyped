@@ -1,6 +1,6 @@
 package typingsSlinky.saslDashExternal.saslDashExternalMod
 
-import typingsSlinky.saslDashExternal.saslDashExternalNumbers.`true`
+import typingsSlinky.saslDashExternal.saslDashExternalBooleans.`true`
 import typingsSlinky.saslDashExternal.saslDashExternalStrings.EXTERNAL
 import typingsSlinky.saslmechanisms.saslmechanismsMod.Mechanism
 import scala.scalajs.js

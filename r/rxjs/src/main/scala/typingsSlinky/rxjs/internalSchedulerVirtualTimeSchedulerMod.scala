@@ -3,8 +3,6 @@ package typingsSlinky.rxjs
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.rxjs.internalSchedulerAsyncActionMod.AsyncAction
 import typingsSlinky.rxjs.internalSchedulerAsyncSchedulerMod.AsyncScheduler
-import typingsSlinky.rxjs.internalSchedulerVirtualTimeSchedulerMod.VirtualAction
-import typingsSlinky.rxjs.internalSchedulerVirtualTimeSchedulerMod.VirtualTimeScheduler
 import typingsSlinky.rxjs.internalTypesMod.SchedulerAction
 import typingsSlinky.rxjs.rxjsNumbers.`-1`
 import typingsSlinky.rxjs.rxjsNumbers.`0`
@@ -44,8 +42,8 @@ object internalSchedulerVirtualTimeSchedulerMod extends js.Object {
     def this(SchedulerAction: Instantiable2[
             /* scheduler */ AsyncScheduler, 
             /* work */ js.ThisFunction1[
-              /* this */ SchedulerAction[/* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any], 
-              /* state */ js.UndefOr[/* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any], 
+              /* this */ SchedulerAction[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
+              /* state */ js.UndefOr[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
               Unit
             ], 
             AsyncAction[js.Object]
@@ -54,8 +52,8 @@ object internalSchedulerVirtualTimeSchedulerMod extends js.Object {
       SchedulerAction: Instantiable2[
             /* scheduler */ AsyncScheduler, 
             /* work */ js.ThisFunction1[
-              /* this */ SchedulerAction[/* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any], 
-              /* state */ js.UndefOr[/* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any], 
+              /* this */ SchedulerAction[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
+              /* state */ js.UndefOr[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
               Unit
             ], 
             AsyncAction[js.Object]

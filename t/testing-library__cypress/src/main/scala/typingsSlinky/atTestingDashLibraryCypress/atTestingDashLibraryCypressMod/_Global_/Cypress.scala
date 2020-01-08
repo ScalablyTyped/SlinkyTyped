@@ -3,7 +3,6 @@ package typingsSlinky.atTestingDashLibraryCypress.atTestingDashLibraryCypressMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atTestingDashLibraryCypress.atTestingDashLibraryCypressMod.MatcherOptions
 import typingsSlinky.atTestingDashLibraryCypress.atTestingDashLibraryCypressMod.SelectorMatcherOptions
-import typingsSlinky.atTestingDashLibraryCypress.atTestingDashLibraryCypressMod._Global_.Cypress.Chainable
 import typingsSlinky.atTestingDashLibraryDom.matchesMod.Matcher
 import typingsSlinky.cypress.JQuery
 import scala.scalajs.js

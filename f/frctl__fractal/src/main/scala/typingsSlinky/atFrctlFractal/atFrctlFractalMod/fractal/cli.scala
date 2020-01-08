@@ -5,8 +5,6 @@ import typingsSlinky.atFrctlFractal.Anon_Current
 import typingsSlinky.atFrctlFractal.Anon_Description
 import typingsSlinky.atFrctlFractal.Anon_Fractal
 import typingsSlinky.atFrctlFractal.atFrctlFractalMod.CliTheme
-import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.cli.Console
-import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.cli.Notifier
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

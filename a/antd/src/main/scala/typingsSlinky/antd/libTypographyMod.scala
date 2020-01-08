@@ -2,7 +2,6 @@ package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.libTypographyMod.TypographyProps
 import typingsSlinky.antd.libTypographyParagraphMod.ParagraphProps
 import typingsSlinky.antd.libTypographyTextMod.TextProps
 import typingsSlinky.antd.libTypographyTitleMod.TitleProps

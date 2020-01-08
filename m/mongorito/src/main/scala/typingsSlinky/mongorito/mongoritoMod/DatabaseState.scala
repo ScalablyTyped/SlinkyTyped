@@ -1,5 +1,6 @@
 package typingsSlinky.mongorito.mongoritoMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DatabaseState extends js.Object {
   @js.native
   sealed trait STATE_DISCONNECTED extends DatabaseState
   
-  /* 0 */ val STATE_CONNECTED: typingsSlinky.mongorito.mongoritoMod.DatabaseState.STATE_CONNECTED with Double = js.native
-  /* 1 */ val STATE_CONNECTING: typingsSlinky.mongorito.mongoritoMod.DatabaseState.STATE_CONNECTING with Double = js.native
-  /* 2 */ val STATE_DISCONNECTED: typingsSlinky.mongorito.mongoritoMod.DatabaseState.STATE_DISCONNECTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DatabaseState with Double] = js.native
+  /* 0 */ @js.native
+  object STATE_CONNECTED extends TopLevel[STATE_CONNECTED with Double]
+  
+  /* 1 */ @js.native
+  object STATE_CONNECTING extends TopLevel[STATE_CONNECTING with Double]
+  
+  /* 2 */ @js.native
+  object STATE_DISCONNECTED extends TopLevel[STATE_DISCONNECTED with Double]
+  
 }
 

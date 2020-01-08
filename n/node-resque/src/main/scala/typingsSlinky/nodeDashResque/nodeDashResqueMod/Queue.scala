@@ -1,7 +1,7 @@
 package typingsSlinky.nodeDashResque.nodeDashResqueMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodeDashResque.Anon_RTimestamp
 import typingsSlinky.nodeDashResque.nodeDashResqueStrings.error
 import scala.scalajs.js

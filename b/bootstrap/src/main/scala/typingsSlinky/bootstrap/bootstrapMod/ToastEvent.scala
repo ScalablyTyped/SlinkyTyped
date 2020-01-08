@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.bootstrap.bootstrapStrings.showDOTbsDOTtoast
-  - typings.bootstrap.bootstrapStrings.shownDOTbsDOTtoast
-  - typings.bootstrap.bootstrapStrings.hideDOTbsDOTtoast
-  - typings.bootstrap.bootstrapStrings.hiddenDOTbsDOTtoast
+  - typings.bootstrap.bootstrapStrings.showDotbsDottoast
+  - typings.bootstrap.bootstrapStrings.shownDotbsDottoast
+  - typings.bootstrap.bootstrapStrings.hideDotbsDottoast
+  - typings.bootstrap.bootstrapStrings.hiddenDotbsDottoast
 */
 trait ToastEvent extends js.Object
 
@@ -16,12 +16,12 @@ object ToastEvent {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def hiddenDOTbsDOTtoast: typingsSlinky.bootstrap.bootstrapStrings.hiddenDOTbsDOTtoast = this.cast("hidden.bs.toast")
+  def hiddenDotbsDottoast: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottoast = this.cast("hidden.bs.toast")
   @scala.inline
-  def hideDOTbsDOTtoast: typingsSlinky.bootstrap.bootstrapStrings.hideDOTbsDOTtoast = this.cast("hide.bs.toast")
+  def hideDotbsDottoast: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottoast = this.cast("hide.bs.toast")
   @scala.inline
-  def showDOTbsDOTtoast: typingsSlinky.bootstrap.bootstrapStrings.showDOTbsDOTtoast = this.cast("show.bs.toast")
+  def showDotbsDottoast: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottoast = this.cast("show.bs.toast")
   @scala.inline
-  def shownDOTbsDOTtoast: typingsSlinky.bootstrap.bootstrapStrings.shownDOTbsDOTtoast = this.cast("shown.bs.toast")
+  def shownDotbsDottoast: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottoast = this.cast("shown.bs.toast")
 }
 

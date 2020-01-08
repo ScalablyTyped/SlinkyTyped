@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object DeployPhaseTypes extends js.Object {
   @js.native
   sealed trait Undefined extends DeployPhaseTypes
   
-  /* 1 */ val AgentBasedDeployment: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseTypes.AgentBasedDeployment with Double = js.native
-  /* 4 */ val MachineGroupBasedDeployment: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseTypes.MachineGroupBasedDeployment with Double = js.native
-  /* 2 */ val RunOnServer: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseTypes.RunOnServer with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseTypes.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeployPhaseTypes with Double] = js.native
+  /* 1 */ @js.native
+  object AgentBasedDeployment extends TopLevel[AgentBasedDeployment with Double]
+  
+  /* 4 */ @js.native
+  object MachineGroupBasedDeployment extends TopLevel[MachineGroupBasedDeployment with Double]
+  
+  /* 2 */ @js.native
+  object RunOnServer extends TopLevel[RunOnServer with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

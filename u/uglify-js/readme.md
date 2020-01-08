@@ -10,9 +10,9 @@ JavaScript parser, mangler/compressor and beautifier toolkit
 | ------------------ | :-------------: |
 | Full name          | uglify-js |
 | Keywords           | cli, compress, compressor, ecma, ecmascript, es, es5, javascript, js, jsmin, min, minification, minifier, minify, optimize, optimizer, pack, packer, parse, parser, uglifier, uglify |
-| # releases         | 96 |
-| # dependents       | 3046 |
-| # downloads        | 499029672 |
+| # releases         | 65 |
+| # dependents       | 3177 |
+| # downloads        | 679764294 |
 | # stars            | 267 |
 
 ## Links

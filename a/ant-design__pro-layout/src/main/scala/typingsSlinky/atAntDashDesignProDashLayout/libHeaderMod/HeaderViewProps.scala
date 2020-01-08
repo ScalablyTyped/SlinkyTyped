@@ -1,7 +1,7 @@
 package typingsSlinky.atAntDashDesignProDashLayout.libHeaderMod
 
 import slinky.core.TagMod
-import typingsSlinky.atAntDashDesignProDashLayout.Anon_Locale
+import typingsSlinky.atAntDashDesignProDashLayout.Anon_DefaultOpenAll
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.realDark
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.sidemenu
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.topmenu
@@ -18,9 +18,11 @@ trait HeaderViewProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var collapsed: js.UndefOr[Boolean] = js.undefined
   var collapsedButtonRender: js.UndefOr[WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]] = js.undefined
+  var colorWeak: js.UndefOr[Boolean] = js.undefined
   var contentWidth: js.UndefOr[ContentWidth] = js.undefined
   var fixSiderbar: js.UndefOr[Boolean] = js.undefined
   var fixedHeader: js.UndefOr[Boolean] = js.undefined
+  var hasSiderMenu: js.UndefOr[Boolean] = js.undefined
   var headerRender: js.UndefOr[
     WithFalse[
       js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
@@ -30,9 +32,16 @@ trait HeaderViewProps extends js.Object {
   var isMobile: js.UndefOr[Boolean] = js.undefined
   var layout: js.UndefOr[sidemenu | topmenu] = js.undefined
   var logo: js.UndefOr[TagMod[Any]] = js.undefined
-  var menu: js.UndefOr[Anon_Locale] = js.undefined
+  var menu: js.UndefOr[Anon_DefaultOpenAll] = js.undefined
   var menuHeaderRender: js.UndefOr[
-    WithFalse[js.Function2[/* logo */ TagMod[Any], /* title */ TagMod[Any], TagMod[Any]]]
+    WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[this.type], 
+        TagMod[Any]
+      ]
+    ]
   ] = js.undefined
   var menuRender: js.UndefOr[
     WithFalse[
@@ -56,9 +65,11 @@ object HeaderViewProps {
     className: String = null,
     collapsed: js.UndefOr[Boolean] = js.undefined,
     collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
+    colorWeak: js.UndefOr[Boolean] = js.undefined,
     contentWidth: ContentWidth = null,
     fixSiderbar: js.UndefOr[Boolean] = js.undefined,
     fixedHeader: js.UndefOr[Boolean] = js.undefined,
+    hasSiderMenu: js.UndefOr[Boolean] = js.undefined,
     headerRender: WithFalse[
       js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
     ] = null,
@@ -66,8 +77,15 @@ object HeaderViewProps {
     isMobile: js.UndefOr[Boolean] = js.undefined,
     layout: sidemenu | topmenu = null,
     logo: TagMod[Any] = null,
-    menu: Anon_Locale = null,
-    menuHeaderRender: WithFalse[js.Function2[/* logo */ TagMod[Any], /* title */ TagMod[Any], TagMod[Any]]] = null,
+    menu: Anon_DefaultOpenAll = null,
+    menuHeaderRender: WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[HeaderViewProps], 
+        TagMod[Any]
+      ]
+    ] = null,
     menuRender: WithFalse[
       js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
     ] = null,
@@ -83,9 +101,11 @@ object HeaderViewProps {
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
     if (collapsedButtonRender != null) __obj.updateDynamic("collapsedButtonRender")(collapsedButtonRender.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorWeak)) __obj.updateDynamic("colorWeak")(colorWeak.asInstanceOf[js.Any])
     if (contentWidth != null) __obj.updateDynamic("contentWidth")(contentWidth.asInstanceOf[js.Any])
     if (!js.isUndefined(fixSiderbar)) __obj.updateDynamic("fixSiderbar")(fixSiderbar.asInstanceOf[js.Any])
     if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasSiderMenu)) __obj.updateDynamic("hasSiderMenu")(hasSiderMenu.asInstanceOf[js.Any])
     if (headerRender != null) __obj.updateDynamic("headerRender")(headerRender.asInstanceOf[js.Any])
     if (iconfontUrl != null) __obj.updateDynamic("iconfontUrl")(iconfontUrl.asInstanceOf[js.Any])
     if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])

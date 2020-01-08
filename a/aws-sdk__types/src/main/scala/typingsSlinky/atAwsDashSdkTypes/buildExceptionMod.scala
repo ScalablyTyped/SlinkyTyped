@@ -1,6 +1,5 @@
 package typingsSlinky.atAwsDashSdkTypes
 
-import typingsSlinky.atAwsDashSdkTypes.buildExceptionMod.ServiceException
 import typingsSlinky.atAwsDashSdkTypes.buildResponseMod.MetadataBearer
 import typingsSlinky.std.Error
 import scala.scalajs.js

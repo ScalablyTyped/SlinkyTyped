@@ -1,6 +1,5 @@
 package typingsSlinky.chmodr
 
-import typingsSlinky.chmodr.chmodrMod.PathLike
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.urlMod.URL

@@ -1,20 +1,11 @@
 package typingsSlinky.openui5.sap.ui.layout
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.openui5.sap.ui.core.Control
 import typingsSlinky.openui5.sap.ui.core.Element
 import typingsSlinky.openui5.sap.ui.core.LayoutData
 import typingsSlinky.openui5.sap.ui.core.Title
 import typingsSlinky.openui5.sap.ui.core.Toolbar
-import typingsSlinky.openui5.sap.ui.layout.form.Form
-import typingsSlinky.openui5.sap.ui.layout.form.FormContainer
-import typingsSlinky.openui5.sap.ui.layout.form.FormElement
-import typingsSlinky.openui5.sap.ui.layout.form.FormLayout
-import typingsSlinky.openui5.sap.ui.layout.form.GridContainerData
-import typingsSlinky.openui5.sap.ui.layout.form.GridElementData
-import typingsSlinky.openui5.sap.ui.layout.form.GridLayout
-import typingsSlinky.openui5.sap.ui.layout.form.ResponsiveGridLayout
-import typingsSlinky.openui5.sap.ui.layout.form.SimpleForm
-import typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1597,11 +1588,24 @@ object form extends js.Object {
     @js.native
     sealed trait ResponsiveLayout extends SimpleFormLayout
     
-    /* 0 */ val GridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.GridLayout with Double = js.native
-    /* 1 */ val ResponsiveGridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout with Double = js.native
-    /* 2 */ val ResponsiveLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveLayout with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[SimpleFormLayout with Double] = js.native
+    /* 0 */ @js.native
+    object GridLayout
+      extends TopLevel[typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.GridLayout with Double]
+    
+    /* 1 */ @js.native
+    object ResponsiveGridLayout
+      extends TopLevel[
+              typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout with Double
+            ]
+    
+    /* 2 */ @js.native
+    object ResponsiveLayout
+      extends TopLevel[
+              typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveLayout with Double
+            ]
+    
   }
   
 }

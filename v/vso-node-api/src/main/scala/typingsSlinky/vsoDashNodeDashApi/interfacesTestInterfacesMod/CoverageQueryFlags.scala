@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object CoverageQueryFlags extends js.Object {
   @js.native
   sealed trait Modules extends CoverageQueryFlags
   
-  /* 4 */ val BlockData: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CoverageQueryFlags.BlockData with Double = js.native
-  /* 2 */ val Functions: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CoverageQueryFlags.Functions with Double = js.native
-  /* 1 */ val Modules: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CoverageQueryFlags.Modules with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoverageQueryFlags with Double] = js.native
+  /* 4 */ @js.native
+  object BlockData extends TopLevel[BlockData with Double]
+  
+  /* 2 */ @js.native
+  object Functions extends TopLevel[Functions with Double]
+  
+  /* 1 */ @js.native
+  object Modules extends TopLevel[Modules with Double]
+  
 }
 

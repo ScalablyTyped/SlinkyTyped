@@ -1,6 +1,5 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.rxjs.internalSubscriberMod.Subscriber
 import typingsSlinky.rxjs.internalSubscriptionMod.Subscription
 import typingsSlinky.rxjs.internalTypesMod.PartialObserver
 import scala.scalajs.js

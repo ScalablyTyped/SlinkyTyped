@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CoordinateUnit extends js.Object {
   @js.native
   sealed trait Points extends CoordinateUnit
   
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CoordinateUnit.None with Double = js.native
-  /* 1 */ val Pixels: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CoordinateUnit.Pixels with Double = js.native
-  /* 2 */ val Points: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.CoordinateUnit.Points with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoordinateUnit with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Pixels extends TopLevel[Pixels with Double]
+  
+  /* 2 */ @js.native
+  object Points extends TopLevel[Points with Double]
+  
 }
 

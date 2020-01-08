@@ -1,6 +1,5 @@
 package typingsSlinky.pDashLog
 
-import typingsSlinky.pDashLog.pDashLogMod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

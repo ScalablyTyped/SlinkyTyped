@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/property-provider |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 8 |
 | # dependents       | 7 |
-| # downloads        | 9339 |
+| # downloads        | 39391 |
 | # stars            | 0 |
 
 ## Links

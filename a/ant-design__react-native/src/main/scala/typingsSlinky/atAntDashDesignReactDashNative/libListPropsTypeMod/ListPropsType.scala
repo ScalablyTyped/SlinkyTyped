@@ -1,7 +1,7 @@
 package typingsSlinky.atAntDashDesignReactDashNative.libListPropsTypeMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeNumbers.`false`
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeBooleans.`false`
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

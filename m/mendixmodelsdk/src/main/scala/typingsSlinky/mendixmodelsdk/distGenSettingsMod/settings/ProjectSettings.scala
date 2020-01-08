@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenSettingsMod.settings
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IProject
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Project
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.ProjectDocument
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation._
 - typings.mendixmodelsdk.distSdkInternalUnitsMod.IAbstractUnit because Already inherited
 - typings.mendixmodelsdk.distSdkInternalUnitsMod.IModelUnit because Already inherited
 - typings.mendixmodelsdk.distGenProjectsMod.projects.IProjectDocument because Already inherited
-- typings.mendixmodelsdk.distGenSettingsMod.settings.IProjectSettings because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettings")
+- typings.mendixmodelsdk.distGenSettingsMod.settings.IProjectSettings because var conflicts: containerAsProject, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettings")
 @js.native
 class ProjectSettings protected () extends ProjectDocument {
   def this(
@@ -29,9 +30,11 @@ class ProjectSettings protected () extends ProjectDocument {
     isPartial: Boolean,
     container: IProject
   ) = this()
+  @JSName("model")
+  var model_FProjectSettings: IModel = js.native
   @JSName("containerAsProject")
-  val containerAsProject_ProjectSettings: Project = js.native
-  val settingsParts: IList[ProjectSettingsPart] = js.native
+  def containerAsProject_MProjectSettings(): Project = js.native
+  def settingsParts(): IList[ProjectSettingsPart] = js.native
 }
 
 /* static members */

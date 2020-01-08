@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +19,9 @@ object ReflectionKind extends js.Object {
   
   @js.native
   sealed trait Class extends ReflectionKind
+  
+  @js.native
+  sealed trait ClassMember extends ReflectionKind
   
   @js.native
   sealed trait ClassOrInterface extends ReflectionKind
@@ -103,38 +107,103 @@ object ReflectionKind extends js.Object {
   @js.native
   sealed trait VariableOrProperty extends ReflectionKind
   
-  /* 262144 */ val Accessor: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Accessor with Double = js.native
-  /* 4096 */ val CallSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.CallSignature with Double = js.native
-  /* 128 */ val Class: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Class with Double = js.native
-  /* 384 */ val ClassOrInterface: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.ClassOrInterface with Double = js.native
-  /* 512 */ val Constructor: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Constructor with Double = js.native
-  /* 16384 */ val ConstructorSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.ConstructorSignature with Double = js.native
-  /* 4 */ val Enum: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Enum with Double = js.native
-  /* 16 */ val EnumMember: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.EnumMember with Double = js.native
-  /* 8388608 */ val Event: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Event with Double = js.native
-  /* 1 */ val ExternalModule: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.ExternalModule with Double = js.native
-  /* 64 */ val Function: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Function with Double = js.native
-  /* 2112 */ val FunctionOrMethod: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.FunctionOrMethod with Double = js.native
-  /* 524288 */ val GetSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.GetSignature with Double = js.native
-  /* 0 */ val Global: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Global with Double = js.native
-  /* 8192 */ val IndexSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.IndexSignature with Double = js.native
-  /* 256 */ val Interface: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Interface with Double = js.native
-  /* 2048 */ val Method: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Method with Double = js.native
-  /* 2 */ val Module: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Module with Double = js.native
-  /* 2097152 */ val ObjectLiteral: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.ObjectLiteral with Double = js.native
-  /* 32768 */ val Parameter: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Parameter with Double = js.native
-  /* 1024 */ val Property: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Property with Double = js.native
-  /* 1048576 */ val SetSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.SetSignature with Double = js.native
-  /* 3 */ val SomeModule: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.SomeModule with Double = js.native
-  /* 1601536 */ val SomeSignature: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.SomeSignature with Double = js.native
-  /* 4391168 */ val SomeType: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.SomeType with Double = js.native
-  /* 2097248 */ val SomeValue: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.SomeValue with Double = js.native
-  /* 4194304 */ val TypeAlias: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.TypeAlias with Double = js.native
-  /* 65536 */ val TypeLiteral: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.TypeLiteral with Double = js.native
-  /* 131072 */ val TypeParameter: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.TypeParameter with Double = js.native
-  /* 32 */ val Variable: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.Variable with Double = js.native
-  /* 1056 */ val VariableOrProperty: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionKind.VariableOrProperty with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReflectionKind with Double] = js.native
+  /* 262144 */ @js.native
+  object Accessor extends TopLevel[Accessor with Double]
+  
+  /* 4096 */ @js.native
+  object CallSignature extends TopLevel[CallSignature with Double]
+  
+  /* 128 */ @js.native
+  object Class extends TopLevel[Class with Double]
+  
+  /* 8654336 */ @js.native
+  object ClassMember extends TopLevel[ClassMember with Double]
+  
+  /* 384 */ @js.native
+  object ClassOrInterface extends TopLevel[ClassOrInterface with Double]
+  
+  /* 512 */ @js.native
+  object Constructor extends TopLevel[Constructor with Double]
+  
+  /* 16384 */ @js.native
+  object ConstructorSignature extends TopLevel[ConstructorSignature with Double]
+  
+  /* 4 */ @js.native
+  object Enum extends TopLevel[Enum with Double]
+  
+  /* 16 */ @js.native
+  object EnumMember extends TopLevel[EnumMember with Double]
+  
+  /* 8388608 */ @js.native
+  object Event extends TopLevel[Event with Double]
+  
+  /* 1 */ @js.native
+  object ExternalModule extends TopLevel[ExternalModule with Double]
+  
+  /* 64 */ @js.native
+  object Function extends TopLevel[Function with Double]
+  
+  /* 2112 */ @js.native
+  object FunctionOrMethod extends TopLevel[FunctionOrMethod with Double]
+  
+  /* 524288 */ @js.native
+  object GetSignature extends TopLevel[GetSignature with Double]
+  
+  /* 0 */ @js.native
+  object Global extends TopLevel[Global with Double]
+  
+  /* 8192 */ @js.native
+  object IndexSignature extends TopLevel[IndexSignature with Double]
+  
+  /* 256 */ @js.native
+  object Interface extends TopLevel[Interface with Double]
+  
+  /* 2048 */ @js.native
+  object Method extends TopLevel[Method with Double]
+  
+  /* 2 */ @js.native
+  object Module extends TopLevel[Module with Double]
+  
+  /* 2097152 */ @js.native
+  object ObjectLiteral extends TopLevel[ObjectLiteral with Double]
+  
+  /* 32768 */ @js.native
+  object Parameter extends TopLevel[Parameter with Double]
+  
+  /* 1024 */ @js.native
+  object Property extends TopLevel[Property with Double]
+  
+  /* 1048576 */ @js.native
+  object SetSignature extends TopLevel[SetSignature with Double]
+  
+  /* 3 */ @js.native
+  object SomeModule extends TopLevel[SomeModule with Double]
+  
+  /* 1601536 */ @js.native
+  object SomeSignature extends TopLevel[SomeSignature with Double]
+  
+  /* 4391168 */ @js.native
+  object SomeType extends TopLevel[SomeType with Double]
+  
+  /* 2097248 */ @js.native
+  object SomeValue extends TopLevel[SomeValue with Double]
+  
+  /* 4194304 */ @js.native
+  object TypeAlias extends TopLevel[TypeAlias with Double]
+  
+  /* 65536 */ @js.native
+  object TypeLiteral extends TopLevel[TypeLiteral with Double]
+  
+  /* 131072 */ @js.native
+  object TypeParameter extends TopLevel[TypeParameter with Double]
+  
+  /* 32 */ @js.native
+  object Variable extends TopLevel[Variable with Double]
+  
+  /* 1056 */ @js.native
+  object VariableOrProperty extends TopLevel[VariableOrProperty with Double]
+  
 }
 

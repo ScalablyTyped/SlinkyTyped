@@ -1,7 +1,5 @@
 package typingsSlinky.rsocketDashFlowable
 
-import typingsSlinky.rsocketDashFlowable.flowableMod.Flowable
-import typingsSlinky.rsocketDashFlowable.flowableMod.Source
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

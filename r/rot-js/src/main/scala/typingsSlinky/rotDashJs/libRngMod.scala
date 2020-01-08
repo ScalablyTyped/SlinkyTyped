@@ -2,7 +2,6 @@ package typingsSlinky.rotDashJs
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.rotDashJs.libRngMod.RNG
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

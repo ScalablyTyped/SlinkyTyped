@@ -2,7 +2,6 @@ package typingsSlinky.appDashBuilderDashLib
 
 import typingsSlinky.appDashBuilderDashLib.outCoreMod.Target
 import typingsSlinky.appDashBuilderDashLib.outOptionsAppXOptionsMod.AppXOptions
-import typingsSlinky.appDashBuilderDashLib.outTargetsAppxTargetMod.AppXTarget
 import typingsSlinky.appDashBuilderDashLib.outWinPackagerMod.WinPackager
 import scala.scalajs.js
 import scala.scalajs.js.`|`

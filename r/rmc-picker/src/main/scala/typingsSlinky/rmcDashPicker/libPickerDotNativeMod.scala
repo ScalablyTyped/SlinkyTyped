@@ -1,7 +1,6 @@
 package typingsSlinky.rmcDashPicker
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.rmcDashPicker.libPickerDotNativeMod.Picker
 import typingsSlinky.rmcDashPicker.libPickerTypesMod.IPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

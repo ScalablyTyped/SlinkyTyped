@@ -1,7 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcUtilPromiseMod.Rejecter
-import typingsSlinky.atFirebaseFirestore.distSrcUtilPromiseMod.Resolver
 import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`

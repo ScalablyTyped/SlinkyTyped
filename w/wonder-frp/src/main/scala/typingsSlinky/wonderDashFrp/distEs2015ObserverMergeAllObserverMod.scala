@@ -3,7 +3,6 @@ package typingsSlinky.wonderDashFrp
 import typingsSlinky.wonderDashFrp.distEs2015CoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distEs2015DisposableGroupDisposableMod.GroupDisposable
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
-import typingsSlinky.wonderDashFrp.distEs2015ObserverMergeAllObserverMod.MergeAllObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

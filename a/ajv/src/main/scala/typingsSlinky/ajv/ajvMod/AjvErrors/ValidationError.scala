@@ -1,7 +1,7 @@
 package typingsSlinky.ajv.ajvMod.AjvErrors
 
+import typingsSlinky.ajv.ajvBooleans.`true`
 import typingsSlinky.ajv.ajvMod.ErrorObject
-import typingsSlinky.ajv.ajvNumbers.`true`
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

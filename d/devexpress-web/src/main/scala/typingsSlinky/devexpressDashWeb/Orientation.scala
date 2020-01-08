@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,13 @@ object Orientation extends js.Object {
   @js.native
   sealed trait Portrait extends Orientation
   
-  /* 0 */ val Landscape: typingsSlinky.devexpressDashWeb.Orientation.Landscape with Double = js.native
-  /* 1 */ val Portrait: typingsSlinky.devexpressDashWeb.Orientation.Portrait with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Orientation with Double] = js.native
+  /* 0 */ @js.native
+  object Landscape extends TopLevel[Landscape with Double]
+  
+  /* 1 */ @js.native
+  object Portrait extends TopLevel[Portrait with Double]
+  
 }
 

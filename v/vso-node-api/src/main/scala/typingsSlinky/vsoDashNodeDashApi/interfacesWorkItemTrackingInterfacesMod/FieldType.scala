@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,21 +95,63 @@ object FieldType extends js.Object {
   @js.native
   sealed trait TreePath extends FieldType
   
-  /* 9 */ val Boolean: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Boolean with scala.Double = js.native
-  /* 2 */ val DateTime: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.DateTime with scala.Double = js.native
-  /* 7 */ val Double: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Double with scala.Double = js.native
-  /* 8 */ val Guid: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Guid with scala.Double = js.native
-  /* 6 */ val History: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.History with scala.Double = js.native
-  /* 4 */ val Html: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Html with scala.Double = js.native
-  /* 10 */ val Identity: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Identity with scala.Double = js.native
-  /* 1 */ val Integer: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.Integer with scala.Double = js.native
-  /* 13 */ val PicklistDouble: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.PicklistDouble with scala.Double = js.native
-  /* 12 */ val PicklistInteger: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.PicklistInteger with scala.Double = js.native
-  /* 11 */ val PicklistString: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.PicklistString with scala.Double = js.native
-  /* 3 */ val PlainText: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.PlainText with scala.Double = js.native
-  /* 0 */ val String: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.String with scala.Double = js.native
-  /* 5 */ val TreePath: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.FieldType.TreePath with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[FieldType with scala.Double] = js.native
+  /* 9 */ @js.native
+  object Boolean
+    extends TopLevel[Boolean with scala.Double]
+  
+  /* 2 */ @js.native
+  object DateTime
+    extends TopLevel[DateTime with scala.Double]
+  
+  /* 7 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 8 */ @js.native
+  object Guid
+    extends TopLevel[Guid with scala.Double]
+  
+  /* 6 */ @js.native
+  object History
+    extends TopLevel[History with scala.Double]
+  
+  /* 4 */ @js.native
+  object Html
+    extends TopLevel[Html with scala.Double]
+  
+  /* 10 */ @js.native
+  object Identity
+    extends TopLevel[Identity with scala.Double]
+  
+  /* 1 */ @js.native
+  object Integer
+    extends TopLevel[Integer with scala.Double]
+  
+  /* 13 */ @js.native
+  object PicklistDouble
+    extends TopLevel[PicklistDouble with scala.Double]
+  
+  /* 12 */ @js.native
+  object PicklistInteger
+    extends TopLevel[PicklistInteger with scala.Double]
+  
+  /* 11 */ @js.native
+  object PicklistString
+    extends TopLevel[PicklistString with scala.Double]
+  
+  /* 3 */ @js.native
+  object PlainText
+    extends TopLevel[PlainText with scala.Double]
+  
+  /* 0 */ @js.native
+  object String
+    extends TopLevel[String with scala.Double]
+  
+  /* 5 */ @js.native
+  object TreePath
+    extends TopLevel[TreePath with scala.Double]
+  
 }
 

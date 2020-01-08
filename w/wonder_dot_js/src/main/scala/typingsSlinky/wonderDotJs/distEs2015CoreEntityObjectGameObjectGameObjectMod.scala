@@ -2,7 +2,6 @@ package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015ComponentTransformThreeDTransformMod.ThreeDTransform
 import typingsSlinky.wonderDotJs.distEs2015CoreEntityObjectEntityObjectMod.EntityObject
-import typingsSlinky.wonderDotJs.distEs2015CoreEntityObjectGameObjectGameObjectMod.GameObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

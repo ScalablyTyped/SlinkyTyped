@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -135,38 +136,100 @@ object ActivationKind extends js.Object {
   @js.native
   sealed trait webAuthenticationBrokerContinuation extends ActivationKind
   
-  /* 13 */ val appointmentsProvider: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.appointmentsProvider with Double = js.native
-  /* 7 */ val cachedFileUpdater: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.cachedFileUpdater with Double = js.native
-  /* 11 */ val cameraSettings: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.cameraSettings with Double = js.native
-  /* 25 */ val componentUI: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.componentUI with Double = js.native
-  /* 14 */ val contact: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.contact with Double = js.native
-  /* 8 */ val contactPicker: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.contactPicker with Double = js.native
-  /* 9 */ val device: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.device with Double = js.native
-  /* 30 */ val devicePairing: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.devicePairing with Double = js.native
-  /* 29 */ val dialReceiver: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.dialReceiver with Double = js.native
-  /* 3 */ val file: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.file with Double = js.native
-  /* 5 */ val fileOpenPicker: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.fileOpenPicker with Double = js.native
-  /* 6 */ val fileSavePicker: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.fileSavePicker with Double = js.native
-  /* 0 */ val launch: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.launch with Double = js.native
-  /* 17 */ val lockScreen: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.lockScreen with Double = js.native
-  /* 15 */ val lockScreenCall: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.lockScreenCall with Double = js.native
-  /* 20 */ val pickFileContinuation: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.pickFileContinuation with Double = js.native
-  /* 22 */ val pickFolderContinuation: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.pickFolderContinuation with Double = js.native
-  /* 21 */ val pickSaveFileContinuation: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.pickSaveFileContinuation with Double = js.native
-  /* 18 */ val pickerReturned: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.pickerReturned with Double = js.native
-  /* 28 */ val print3DWorkflow: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.print3DWorkflow with Double = js.native
-  /* 10 */ val printTaskSettings: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.printTaskSettings with Double = js.native
-  /* 4 */ val protocol: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.protocol with Double = js.native
-  /* 26 */ val protocolForResults: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.protocolForResults with Double = js.native
-  /* 12 */ val restrictedLaunch: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.restrictedLaunch with Double = js.native
-  /* 1 */ val search: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.search with Double = js.native
-  /* 2 */ val shareTarget: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.shareTarget with Double = js.native
-  /* 27 */ val toastNotification: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.toastNotification with Double = js.native
-  /* 16 */ val voiceCommand: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.voiceCommand with Double = js.native
-  /* 19 */ val walletAction: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.walletAction with Double = js.native
-  /* 24 */ val webAccountProvider: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.webAccountProvider with Double = js.native
-  /* 23 */ val webAuthenticationBrokerContinuation: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Activation.ActivationKind.webAuthenticationBrokerContinuation with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ActivationKind with Double] = js.native
+  /* 13 */ @js.native
+  object appointmentsProvider extends TopLevel[appointmentsProvider with Double]
+  
+  /* 7 */ @js.native
+  object cachedFileUpdater extends TopLevel[cachedFileUpdater with Double]
+  
+  /* 11 */ @js.native
+  object cameraSettings extends TopLevel[cameraSettings with Double]
+  
+  /* 25 */ @js.native
+  object componentUI extends TopLevel[componentUI with Double]
+  
+  /* 14 */ @js.native
+  object contact extends TopLevel[contact with Double]
+  
+  /* 8 */ @js.native
+  object contactPicker extends TopLevel[contactPicker with Double]
+  
+  /* 9 */ @js.native
+  object device extends TopLevel[device with Double]
+  
+  /* 30 */ @js.native
+  object devicePairing extends TopLevel[devicePairing with Double]
+  
+  /* 29 */ @js.native
+  object dialReceiver extends TopLevel[dialReceiver with Double]
+  
+  /* 3 */ @js.native
+  object file extends TopLevel[file with Double]
+  
+  /* 5 */ @js.native
+  object fileOpenPicker extends TopLevel[fileOpenPicker with Double]
+  
+  /* 6 */ @js.native
+  object fileSavePicker extends TopLevel[fileSavePicker with Double]
+  
+  /* 0 */ @js.native
+  object launch extends TopLevel[launch with Double]
+  
+  /* 17 */ @js.native
+  object lockScreen extends TopLevel[lockScreen with Double]
+  
+  /* 15 */ @js.native
+  object lockScreenCall extends TopLevel[lockScreenCall with Double]
+  
+  /* 20 */ @js.native
+  object pickFileContinuation extends TopLevel[pickFileContinuation with Double]
+  
+  /* 22 */ @js.native
+  object pickFolderContinuation extends TopLevel[pickFolderContinuation with Double]
+  
+  /* 21 */ @js.native
+  object pickSaveFileContinuation extends TopLevel[pickSaveFileContinuation with Double]
+  
+  /* 18 */ @js.native
+  object pickerReturned extends TopLevel[pickerReturned with Double]
+  
+  /* 28 */ @js.native
+  object print3DWorkflow extends TopLevel[print3DWorkflow with Double]
+  
+  /* 10 */ @js.native
+  object printTaskSettings extends TopLevel[printTaskSettings with Double]
+  
+  /* 4 */ @js.native
+  object protocol extends TopLevel[protocol with Double]
+  
+  /* 26 */ @js.native
+  object protocolForResults extends TopLevel[protocolForResults with Double]
+  
+  /* 12 */ @js.native
+  object restrictedLaunch extends TopLevel[restrictedLaunch with Double]
+  
+  /* 1 */ @js.native
+  object search extends TopLevel[search with Double]
+  
+  /* 2 */ @js.native
+  object shareTarget extends TopLevel[shareTarget with Double]
+  
+  /* 27 */ @js.native
+  object toastNotification extends TopLevel[toastNotification with Double]
+  
+  /* 16 */ @js.native
+  object voiceCommand extends TopLevel[voiceCommand with Double]
+  
+  /* 19 */ @js.native
+  object walletAction extends TopLevel[walletAction with Double]
+  
+  /* 24 */ @js.native
+  object webAccountProvider extends TopLevel[webAccountProvider with Double]
+  
+  /* 23 */ @js.native
+  object webAuthenticationBrokerContinuation extends TopLevel[webAuthenticationBrokerContinuation with Double]
+  
 }
 

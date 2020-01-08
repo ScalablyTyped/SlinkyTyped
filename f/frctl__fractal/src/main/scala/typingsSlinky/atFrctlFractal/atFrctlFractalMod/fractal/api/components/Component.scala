@@ -1,10 +1,10 @@
 package typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.api.components
 
+import typingsSlinky.atFrctlFractal.atFrctlFractalBooleans.`true`
 import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.api.assets.AssetCollection
 import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.api.files.FileCollection
 import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.api.variants.VariantCollection
 import typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.core.entities.Entity
-import typingsSlinky.atFrctlFractal.atFrctlFractalNumbers.`true`
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`

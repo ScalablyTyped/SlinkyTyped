@@ -1,12 +1,13 @@
 package typingsSlinky.screeps
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.screeps.screepsNumbers.`0DOT01`
+import typingsSlinky.screeps.screepsNumbers.`0.01`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("REPAIR_COST")
 @js.native
-object REPAIR_COST extends TopLevel[`0DOT01`]
+object REPAIR_COST
+  extends TopLevel[`0.01`]
 

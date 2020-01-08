@@ -1,15 +1,13 @@
 package typingsSlinky.parse.parseMod
 
-import typingsSlinky.parse.Parse.Push.PushData
-import typingsSlinky.parse.Parse.Push.SendOptions
+import typingsSlinky.parse.parseMod._Global_.Parse.Push.PushData
+import typingsSlinky.parse.parseMod._Global_.Parse.Push.SendOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
   * Contains functions to deal with Push in Parse
-  * @name Parse.Push
-  * @namespace
   */
 @JSImport("parse", "Push")
 @js.native

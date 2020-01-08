@@ -1,7 +1,7 @@
 package typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelNumbers.`false`
+import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelBooleans.`false`
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelStrings.full
 import scala.scalajs.js
 import scala.scalajs.js.`|`

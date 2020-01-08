@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 */
 trait Symbol2D
   extends typingsSlinky.arcgisDashJsDashApi.__esri.symbols.Symbol
-     with Symbol2D3D
      with typingsSlinky.arcgisDashJsDashApi.__esri.symbols.Symbol2D3D
+     with Symbol2D3D
      with symbolsSymbol
 

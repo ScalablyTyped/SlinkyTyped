@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015ComponentTransformThreeDTransformMod.ThreeDTransform
 import typingsSlinky.wonderDotJs.distEs2015ComponentTransformTransformMod.Transform
 import typingsSlinky.wonderDotJs.distEs2015MathMatrix3Mod.Matrix3
 import typingsSlinky.wonderDotJs.distEs2015MathMatrix4Mod.Matrix4

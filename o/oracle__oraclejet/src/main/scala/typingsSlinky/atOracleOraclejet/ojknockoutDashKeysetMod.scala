@@ -2,7 +2,6 @@ package typingsSlinky.atOracleOraclejet
 
 import typingsSlinky.atOracleOraclejet.ojkeysetMod.ExpandAllKeySet
 import typingsSlinky.atOracleOraclejet.ojkeysetMod.ExpandedKeySet
-import typingsSlinky.atOracleOraclejet.ojknockoutDashKeysetMod.ObservableExpandedKeySet
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

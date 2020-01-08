@@ -2,7 +2,6 @@ package typingsSlinky.reactDashConfirm
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactDashConfirm.reactDashConfirmMod.ReactConfirmProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

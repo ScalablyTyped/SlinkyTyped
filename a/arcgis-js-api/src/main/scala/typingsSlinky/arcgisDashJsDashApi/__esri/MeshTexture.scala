@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ImageData
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.clamp
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.mirror
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.repeat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,7 +46,7 @@ trait MeshTexture extends Accessor {
     *
     * @default "repeat"
     */
-  var wrap: clamp | repeat | SeparableWrapModes = js.native
+  var wrap: clamp | repeat | mirror | SeparableWrapModes = js.native
 }
 
 @JSGlobal("__esri.MeshTexture")

@@ -19,8 +19,9 @@ object Handle
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, tabIndex */
+  /* The following DOM/SVG props were specified: disabled, tabIndex */
   def apply(
+    className: String,
     offset: Double,
     vertical: Boolean,
     activeDotStyle: CSSProperties = null,
@@ -41,7 +42,7 @@ object Handle
     trackStyle: js.Array[CSSProperties] | CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.rcDashSlider.rcDashSliderMod.Handle] = {
-    val __obj = js.Dynamic.literal(offset = offset.asInstanceOf[js.Any], vertical = vertical.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], vertical = vertical.asInstanceOf[js.Any])
     if (activeDotStyle != null) __obj.updateDynamic("activeDotStyle")(activeDotStyle.asInstanceOf[js.Any])
     if (dotStyle != null) __obj.updateDynamic("dotStyle")(dotStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])

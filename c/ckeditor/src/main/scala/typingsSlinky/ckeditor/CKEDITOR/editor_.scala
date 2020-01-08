@@ -12,8 +12,8 @@ import typingsSlinky.ckeditor.CKEDITOR.plugins.notification
 import typingsSlinky.ckeditor.CKEDITOR.plugins.notification.`type`
 import typingsSlinky.ckeditor.CKEDITOR.plugins.widget.repository
 import typingsSlinky.ckeditor.CKEDITOR.style.definition
-import typingsSlinky.ckeditor.ckeditorNumbers.`false`
-import typingsSlinky.ckeditor.ckeditorNumbers.`true`
+import typingsSlinky.ckeditor.ckeditorBooleans.`false`
+import typingsSlinky.ckeditor.ckeditorBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

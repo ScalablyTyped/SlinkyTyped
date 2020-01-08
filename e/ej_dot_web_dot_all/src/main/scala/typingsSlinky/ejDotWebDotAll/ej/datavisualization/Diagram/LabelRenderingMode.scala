@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object LabelRenderingMode extends js.Object {
   @js.native
   sealed trait SVG extends LabelRenderingMode
   
-  /* 0 */ val HTML: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelRenderingMode.HTML with Double = js.native
-  /* 1 */ val SVG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.LabelRenderingMode.SVG with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelRenderingMode with Double] = js.native
+  /* 0 */ @js.native
+  object HTML extends TopLevel[HTML with Double]
+  
+  /* 1 */ @js.native
+  object SVG extends TopLevel[SVG with Double]
+  
 }
 

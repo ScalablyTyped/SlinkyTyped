@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ProvisioningActionType extends js.Object {
   @js.native
   sealed trait Validate extends ProvisioningActionType
   
-  /* 0 */ val Import: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.ProvisioningActionType.Import with Double = js.native
-  /* 1 */ val Validate: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.ProvisioningActionType.Validate with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProvisioningActionType with Double] = js.native
+  /* 0 */ @js.native
+  object Import extends TopLevel[Import with Double]
+  
+  /* 1 */ @js.native
+  object Validate extends TopLevel[Validate with Double]
+  
 }
 

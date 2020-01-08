@@ -2,8 +2,6 @@ package typingsSlinky.reactDashNativeDashTabDashView
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewProps
-import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTouchableItemMod.Props
-import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTouchableItemMod.TouchableItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

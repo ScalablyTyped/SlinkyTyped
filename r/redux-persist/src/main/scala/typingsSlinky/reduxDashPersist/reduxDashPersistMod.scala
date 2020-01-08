@@ -17,13 +17,13 @@ import typingsSlinky.reduxDashPersist.esTypesMod.PersistorOptions
 import typingsSlinky.reduxDashPersist.esTypesMod.Transform
 import typingsSlinky.reduxDashPersist.esTypesMod.TransformInbound
 import typingsSlinky.reduxDashPersist.esTypesMod.TransformOutbound
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/FLUSH`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/PAUSE`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/PERSIST`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/PURGE`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/REGISTER`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist/REHYDRATE`
-import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.`persist:`
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistColon
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashFLUSH
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashPAUSE
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashPERSIST
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashPURGE
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashREGISTER
+import typingsSlinky.reduxDashPersist.reduxDashPersistStrings.persistSlashREHYDRATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +34,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object reduxDashPersistMod extends js.Object {
   val DEFAULT_VERSION: Double = js.native
-  val FLUSH: `persist/FLUSH` = js.native
-  val KEY_PREFIX: `persist:` = js.native
-  val PAUSE: `persist/PAUSE` = js.native
-  val PERSIST: `persist/PERSIST` = js.native
-  val PURGE: `persist/PURGE` = js.native
-  val REGISTER: `persist/REGISTER` = js.native
-  val REHYDRATE: `persist/REHYDRATE` = js.native
+  val FLUSH: persistSlashFLUSH = js.native
+  val KEY_PREFIX: persistColon = js.native
+  val PAUSE: persistSlashPAUSE = js.native
+  val PERSIST: persistSlashPERSIST = js.native
+  val PURGE: persistSlashPURGE = js.native
+  val REGISTER: persistSlashREGISTER = js.native
+  val REHYDRATE: persistSlashREHYDRATE = js.native
   def createMigrate(migrations: MigrationManifest): PersistMigrate = js.native
   def createMigrate(migrations: MigrationManifest, config: MigrationConfig): PersistMigrate = js.native
   def createPersistoid(config: PersistConfig[_, _, _, _]): Persistoid = js.native

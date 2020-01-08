@@ -1,10 +1,7 @@
 package typingsSlinky.cassandraDashDriver.libPoliciesMod.policies
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.ExecutionOptions
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.DecisionInfo
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.OperationInfo
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryDecision.retryDecision
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryPolicy
 import typingsSlinky.cassandraDashDriver.libTypesMod.types.consistencies
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -70,11 +67,20 @@ object retry extends js.Object {
       @js.native
       sealed trait retry extends retryDecision
       
-      /* 0 */ val ignore: typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryDecision.retryDecision.ignore with Double = js.native
-      /* 1 */ val rethrow: typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryDecision.retryDecision.rethrow with Double = js.native
-      /* 2 */ val retry: typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryDecision.retryDecision.retry with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[retryDecision with Double] = js.native
+      /* 0 */ @js.native
+      object ignore extends TopLevel[ignore with Double]
+      
+      /* 1 */ @js.native
+      object rethrow extends TopLevel[rethrow with Double]
+      
+      /* 2 */ @js.native
+      object retry
+        extends TopLevel[
+                  typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.retry.RetryDecision.retryDecision.retry with Double
+                ]
+      
     }
     
   }

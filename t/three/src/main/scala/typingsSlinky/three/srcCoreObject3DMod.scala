@@ -6,7 +6,6 @@ import typingsSlinky.three.srcCoreBufferGeometryMod.BufferGeometry
 import typingsSlinky.three.srcCoreEventDispatcherMod.EventDispatcher
 import typingsSlinky.three.srcCoreGeometryMod.Geometry
 import typingsSlinky.three.srcCoreLayersMod.Layers
-import typingsSlinky.three.srcCoreObject3DMod.Object3D
 import typingsSlinky.three.srcCoreRaycasterMod.Intersection
 import typingsSlinky.three.srcCoreRaycasterMod.Raycaster
 import typingsSlinky.three.srcMaterialsMaterialMod.Material
@@ -18,7 +17,7 @@ import typingsSlinky.three.srcMathVector3Mod.Vector3
 import typingsSlinky.three.srcObjectsGroupMod.Group
 import typingsSlinky.three.srcRenderersWebGLRendererMod.WebGLRenderer
 import typingsSlinky.three.srcScenesSceneMod.Scene
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

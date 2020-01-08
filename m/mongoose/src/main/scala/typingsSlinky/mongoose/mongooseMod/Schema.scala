@@ -6,7 +6,6 @@ import typingsSlinky.mongoose.Anon_AutoIndexId
 import typingsSlinky.mongoose.Anon_Expires
 import typingsSlinky.mongoose.Anon_J
 import typingsSlinky.mongoose.Anon_Length
-import typingsSlinky.mongoose.mongooseMod.Schema.Types.Array
 import typingsSlinky.mongoose.mongooseStrings._id
 import typingsSlinky.mongoose.mongooseStrings.`throw`
 import typingsSlinky.mongoose.mongooseStrings.aggregate
@@ -40,6 +39,7 @@ import typingsSlinky.mongoose.mongooseStrings.timestamps
 import typingsSlinky.mongoose.mongooseStrings.toJSON
 import typingsSlinky.mongoose.mongooseStrings.toObject
 import typingsSlinky.mongoose.mongooseStrings.typeKey
+import typingsSlinky.mongoose.mongooseStrings.typePojoToMixed
 import typingsSlinky.mongoose.mongooseStrings.update
 import typingsSlinky.mongoose.mongooseStrings.updateMany
 import typingsSlinky.mongoose.mongooseStrings.updateOne
@@ -424,6 +424,10 @@ trait Schema[T] extends EventEmitter {
   def set_typeKey(key: typeKey): String = js.native
   @JSName("set")
   def set_typeKey(key: typeKey, value: String): this.type = js.native
+  @JSName("set")
+  def set_typePojoToMixed(key: typePojoToMixed): Boolean = js.native
+  @JSName("set")
+  def set_typePojoToMixed(key: typePojoToMixed, value: Boolean): this.type = js.native
   @JSName("set")
   def set_useNestedStrict(key: useNestedStrict): Boolean = js.native
   @JSName("set")

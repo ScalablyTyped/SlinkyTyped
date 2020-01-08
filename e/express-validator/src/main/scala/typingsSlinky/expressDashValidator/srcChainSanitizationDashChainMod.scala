@@ -2,7 +2,6 @@ package typingsSlinky.expressDashValidator
 
 import typingsSlinky.expressDashValidator.srcBaseMod.Request
 import typingsSlinky.expressDashValidator.srcChainContextDashRunnerMod.ContextRunner
-import typingsSlinky.expressDashValidator.srcChainSanitizationDashChainMod.SanitizationChain
 import typingsSlinky.expressDashValidator.srcChainSanitizersMod.Sanitizers
 import typingsSlinky.expressDashValidator.srcContextDashBuilderMod.ContextBuilder
 import scala.scalajs.js

@@ -2,7 +2,6 @@ package typingsSlinky.antdDashMobileDashRn
 
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.ActionSheet
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.`ActionSheet example`
-import typingsSlinky.antdDashMobileDashRn.libActionDashSheetDemoBasicDotNativeMod.Test
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

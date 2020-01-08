@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object GitResolutionWhichAction extends js.Object {
   @js.native
   sealed trait Undecided extends GitResolutionWhichAction
   
-  /* 1 */ val PickSourceAction: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionWhichAction.PickSourceAction with Double = js.native
-  /* 2 */ val PickTargetAction: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionWhichAction.PickTargetAction with Double = js.native
-  /* 0 */ val Undecided: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionWhichAction.Undecided with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitResolutionWhichAction with Double] = js.native
+  /* 1 */ @js.native
+  object PickSourceAction extends TopLevel[PickSourceAction with Double]
+  
+  /* 2 */ @js.native
+  object PickTargetAction extends TopLevel[PickTargetAction with Double]
+  
+  /* 0 */ @js.native
+  object Undecided extends TopLevel[Undecided with Double]
+  
 }
 

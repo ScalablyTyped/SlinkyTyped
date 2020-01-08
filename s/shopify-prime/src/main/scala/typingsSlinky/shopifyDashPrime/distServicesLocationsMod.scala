@@ -3,7 +3,6 @@ package typingsSlinky.shopifyDashPrime
 import typingsSlinky.shopifyDashPrime.distInfrastructureMod.BaseService
 import typingsSlinky.shopifyDashPrime.distModelsLocationMod.Location
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
-import typingsSlinky.shopifyDashPrime.distServicesLocationsMod.Locations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

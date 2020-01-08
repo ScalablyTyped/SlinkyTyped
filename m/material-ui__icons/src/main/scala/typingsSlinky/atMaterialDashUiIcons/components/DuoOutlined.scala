@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DuoOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object DuoOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/DuoOutlined", "default")
   @js.native
   object componentImport extends js.Object

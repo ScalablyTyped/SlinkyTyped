@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object ApprovalFilters extends js.Object {
   @js.native
   sealed trait None extends ApprovalFilters
   
-  /* 7 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalFilters.All with Double = js.native
-  /* 4 */ val ApprovalSnapshots: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalFilters.ApprovalSnapshots with Double = js.native
-  /* 2 */ val AutomatedApprovals: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalFilters.AutomatedApprovals with Double = js.native
-  /* 1 */ val ManualApprovals: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalFilters.ManualApprovals with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalFilters.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApprovalFilters with Double] = js.native
+  /* 7 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 4 */ @js.native
+  object ApprovalSnapshots extends TopLevel[ApprovalSnapshots with Double]
+  
+  /* 2 */ @js.native
+  object AutomatedApprovals extends TopLevel[AutomatedApprovals with Double]
+  
+  /* 1 */ @js.native
+  object ManualApprovals extends TopLevel[ManualApprovals with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

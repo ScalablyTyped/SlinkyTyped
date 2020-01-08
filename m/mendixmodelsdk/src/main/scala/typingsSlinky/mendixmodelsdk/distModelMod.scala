@@ -2,9 +2,6 @@ package typingsSlinky.mendixmodelsdk
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.BaseModel
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IModule
-import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IProject
-import typingsSlinky.mendixmodelsdk.distModelMod.IModel
-import typingsSlinky.mendixmodelsdk.distModelMod.Model
 import typingsSlinky.mendixmodelsdk.distModelSdkClientImplMod.ModelSdkClientImpl
 import typingsSlinky.mendixmodelsdk.distSdkConfigurationMod.configuration.ISdkConfig
 import scala.scalajs.js
@@ -20,12 +17,6 @@ object distModelMod extends js.Object {
   - typings.mendixmodelsdk.distGenBaseDashModelMod.IModel because var conflicts: id, metaModelVersion, mxVersionForModel, root, workingCopy. Inlined findModuleByQualifiedName */ @js.native
   class Model () extends BaseModel {
     var allModelClasses: js.Any = js.native
-    /**
-      * Returns the structural unit of type "Projects$Project" which is the project's root,
-      * cast to the appropriate type.
-      */
-    @JSName("root")
-    val root_Model: IProject = js.native
     /**
       * Given a qualified name, returns a Module.
       */

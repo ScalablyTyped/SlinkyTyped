@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +27,13 @@ object OpenAs extends js.Object {
   @js.native
   sealed trait OVERLAY extends OpenAs
   
-  /* 0 */ val FULL_SIZE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.OpenAs.FULL_SIZE with Double = js.native
-  /* 1 */ val OVERLAY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.OpenAs.OVERLAY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OpenAs with Double] = js.native
+  /* 0 */ @js.native
+  object FULL_SIZE extends TopLevel[FULL_SIZE with Double]
+  
+  /* 1 */ @js.native
+  object OVERLAY extends TopLevel[OVERLAY with Double]
+  
 }
 

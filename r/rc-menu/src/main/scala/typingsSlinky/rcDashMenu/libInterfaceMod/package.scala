@@ -12,7 +12,7 @@ package object libInterfaceMod {
   import typingsSlinky.rcDashMenu.Anon_DomEventKey
   import typingsSlinky.rcDashMenu.Anon_Hover
   import typingsSlinky.rcDashMenu.Anon_Item
-  import typingsSlinky.rcDashMenu.rcDashMenuNumbers.`false`
+  import typingsSlinky.rcDashMenu.rcDashMenuBooleans.`false`
   import typingsSlinky.react.reactMod.CSSProperties
   import typingsSlinky.react.reactMod.Key
   import typingsSlinky.react.reactMod.ReactInstance

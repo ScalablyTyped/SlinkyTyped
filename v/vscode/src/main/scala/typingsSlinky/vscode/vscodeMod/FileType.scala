@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object FileType extends js.Object {
   @js.native
   sealed trait Unknown extends FileType
   
-  /* 2 */ val Directory: typingsSlinky.vscode.vscodeMod.FileType.Directory with Double = js.native
-  /* 1 */ val File: typingsSlinky.vscode.vscodeMod.FileType.File with Double = js.native
-  /* 64 */ val SymbolicLink: typingsSlinky.vscode.vscodeMod.FileType.SymbolicLink with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vscode.vscodeMod.FileType.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileType with Double] = js.native
+  /* 2 */ @js.native
+  object Directory extends TopLevel[Directory with Double]
+  
+  /* 1 */ @js.native
+  object File extends TopLevel[File with Double]
+  
+  /* 64 */ @js.native
+  object SymbolicLink extends TopLevel[SymbolicLink with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.antdDashMobile.libListPropsTypeMod
 
 import slinky.core.TagMod
-import typingsSlinky.antdDashMobile.antdDashMobileStrings.Empty
+import typingsSlinky.antdDashMobile.antdDashMobileStrings._empty
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.android
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.bottom
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.down
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 trait ListItemPropsType extends js.Object {
   var activeStyle: js.UndefOr[CSSProperties] = js.undefined
   var align: js.UndefOr[top | middle | bottom] = js.undefined
-  var arrow: js.UndefOr[horizontal | down | up | empty | Empty] = js.undefined
+  var arrow: js.UndefOr[horizontal | down | up | empty | _empty] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var error: js.UndefOr[Boolean] = js.undefined
   var extra: js.UndefOr[TagMod[Any]] = js.undefined
@@ -34,7 +34,7 @@ object ListItemPropsType {
   def apply(
     activeStyle: CSSProperties = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     extra: TagMod[Any] = null,

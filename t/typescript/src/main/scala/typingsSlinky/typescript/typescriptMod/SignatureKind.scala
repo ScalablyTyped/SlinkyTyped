@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object SignatureKind extends js.Object {
   @js.native
   sealed trait Construct extends SignatureKind
   
-  /* 0 */ val Call: typingsSlinky.typescript.typescriptMod.SignatureKind.Call with Double = js.native
-  /* 1 */ val Construct: typingsSlinky.typescript.typescriptMod.SignatureKind.Construct with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SignatureKind with Double] = js.native
+  /* 0 */ @js.native
+  object Call extends TopLevel[Call with Double]
+  
+  /* 1 */ @js.native
+  object Construct extends TopLevel[Construct with Double]
+  
 }
 

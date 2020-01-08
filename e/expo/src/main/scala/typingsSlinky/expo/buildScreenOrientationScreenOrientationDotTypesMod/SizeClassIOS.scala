@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SizeClassIOS extends js.Object {
   @js.native
   sealed trait UNKNOWN extends SizeClassIOS
   
-  /* "COMPACT" */ val COMPACT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.SizeClassIOS.COMPACT with String = js.native
-  /* "REGULAR" */ val REGULAR: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.SizeClassIOS.REGULAR with String = js.native
-  /* "UNKNOWN" */ val UNKNOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.SizeClassIOS.UNKNOWN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SizeClassIOS with String] = js.native
+  /* "COMPACT" */ @js.native
+  object COMPACT extends TopLevel[COMPACT with String]
+  
+  /* "REGULAR" */ @js.native
+  object REGULAR extends TopLevel[REGULAR with String]
+  
+  /* "UNKNOWN" */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with String]
+  
 }
 

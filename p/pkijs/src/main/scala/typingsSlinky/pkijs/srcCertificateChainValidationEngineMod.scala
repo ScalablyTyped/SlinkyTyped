@@ -1,6 +1,5 @@
 package typingsSlinky.pkijs
 
-import typingsSlinky.pkijs.srcCertificateChainValidationEngineMod.CertificateChainValidationEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

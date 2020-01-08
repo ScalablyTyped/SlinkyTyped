@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps.Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Status extends js.Object {
   @js.native
   sealed trait OK extends Status
   
-  /* 1 */ val ERROR: typingsSlinky.navermaps.naver.maps.Service.Status.ERROR with Double = js.native
-  /* 0 */ val OK: typingsSlinky.navermaps.naver.maps.Service.Status.OK with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Status with Double] = js.native
+  /* 1 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 0 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
 }
 

@@ -1,8 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.AddContactResult
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
@@ -88,11 +86,17 @@ object Provider extends js.Object {
     @js.native
     sealed trait unavailable extends AddContactResult
     
-    /* 0 */ val added: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.AddContactResult.added with Double = js.native
-    /* 1 */ val alreadyAdded: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.AddContactResult.alreadyAdded with Double = js.native
-    /* 2 */ val unavailable: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.Provider.AddContactResult.unavailable with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[AddContactResult with Double] = js.native
+    /* 0 */ @js.native
+    object added extends TopLevel[added with Double]
+    
+    /* 1 */ @js.native
+    object alreadyAdded extends TopLevel[alreadyAdded with Double]
+    
+    /* 2 */ @js.native
+    object unavailable extends TopLevel[unavailable with Double]
+    
   }
   
 }

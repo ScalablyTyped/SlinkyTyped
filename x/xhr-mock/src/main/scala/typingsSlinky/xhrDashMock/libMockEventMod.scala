@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.std.Event
 import typingsSlinky.std.EventInit
-import typingsSlinky.xhrDashMock.libMockEventMod.MockEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

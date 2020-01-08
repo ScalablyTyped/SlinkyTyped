@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object OnlineStateSource extends js.Object {
   @js.native
   sealed trait SharedClientState extends OnlineStateSource
   
-  /* 0 */ val RemoteStore: typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.OnlineStateSource.RemoteStore with Double = js.native
-  /* 1 */ val SharedClientState: typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.OnlineStateSource.SharedClientState with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OnlineStateSource with Double] = js.native
+  /* 0 */ @js.native
+  object RemoteStore extends TopLevel[RemoteStore with Double]
+  
+  /* 1 */ @js.native
+  object SharedClientState extends TopLevel[SharedClientState with Double]
+  
 }
 

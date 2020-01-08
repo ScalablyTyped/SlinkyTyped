@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +10,6 @@ sealed trait EntityType extends js.Object
 
 /**
   * Specifies an entity's type.
-  *
-  * [Api set: Mailbox 1.0]
   *
   * @remarks
   * 
@@ -61,14 +60,28 @@ object EntityType extends js.Object {
   @js.native
   sealed trait Url extends EntityType
   
-  /* "address" */ val Address: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.Address with String = js.native
-  /* "contact" */ val Contact: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.Contact with String = js.native
-  /* "emailAddress" */ val EmailAddress: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.EmailAddress with String = js.native
-  /* "meetingSuggestion" */ val MeetingSuggestion: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.MeetingSuggestion with String = js.native
-  /* "phoneNumber" */ val PhoneNumber: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.PhoneNumber with String = js.native
-  /* "taskSuggestion" */ val TaskSuggestion: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.TaskSuggestion with String = js.native
-  /* "url" */ val Url: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.EntityType.Url with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EntityType with String] = js.native
+  /* "address" */ @js.native
+  object Address extends TopLevel[Address with String]
+  
+  /* "contact" */ @js.native
+  object Contact extends TopLevel[Contact with String]
+  
+  /* "emailAddress" */ @js.native
+  object EmailAddress extends TopLevel[EmailAddress with String]
+  
+  /* "meetingSuggestion" */ @js.native
+  object MeetingSuggestion extends TopLevel[MeetingSuggestion with String]
+  
+  /* "phoneNumber" */ @js.native
+  object PhoneNumber extends TopLevel[PhoneNumber with String]
+  
+  /* "taskSuggestion" */ @js.native
+  object TaskSuggestion extends TopLevel[TaskSuggestion with String]
+  
+  /* "url" */ @js.native
+  object Url extends TopLevel[Url with String]
+  
 }
 

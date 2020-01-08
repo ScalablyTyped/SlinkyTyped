@@ -3,6 +3,7 @@ package typingsSlinky.glDashReact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.glDashReact.glDashReactMod.SurfaceProps
 import typingsSlinky.glDashReact.glDashReactMod.Visitor
@@ -36,6 +37,9 @@ object Surface
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.glDashReact.glDashReactMod.Surface[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.glDashReact.glDashReactMod.Surface[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.glDashReact.glDashReactMod.Surface[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SurfaceProps
 }
 

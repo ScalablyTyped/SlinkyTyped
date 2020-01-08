@@ -1,6 +1,6 @@
 package typingsSlinky.parsimmon.parsimmonMod
 
-import typingsSlinky.parsimmon.parsimmonNumbers.`false`
+import typingsSlinky.parsimmon.parsimmonBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

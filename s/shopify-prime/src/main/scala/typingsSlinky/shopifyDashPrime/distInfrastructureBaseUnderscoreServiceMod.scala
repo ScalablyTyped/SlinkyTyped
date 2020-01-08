@@ -1,6 +1,5 @@
 package typingsSlinky.shopifyDashPrime
 
-import typingsSlinky.shopifyDashPrime.distInfrastructureBaseUnderscoreServiceMod.BaseService
 import typingsSlinky.shopifyDashPrime.shopifyDashPrimeStrings.DELETE
 import typingsSlinky.shopifyDashPrime.shopifyDashPrimeStrings.GET
 import typingsSlinky.shopifyDashPrime.shopifyDashPrimeStrings.POST

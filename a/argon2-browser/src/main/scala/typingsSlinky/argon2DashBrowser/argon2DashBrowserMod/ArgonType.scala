@@ -1,5 +1,6 @@
 package typingsSlinky.argon2DashBrowser.argon2DashBrowserMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ArgonType extends js.Object {
   @js.native
   sealed trait Argon2id extends ArgonType
   
-  /* 0 */ val Argon2d: typingsSlinky.argon2DashBrowser.argon2DashBrowserMod.ArgonType.Argon2d with Double = js.native
-  /* 1 */ val Argon2i: typingsSlinky.argon2DashBrowser.argon2DashBrowserMod.ArgonType.Argon2i with Double = js.native
-  /* 2 */ val Argon2id: typingsSlinky.argon2DashBrowser.argon2DashBrowserMod.ArgonType.Argon2id with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ArgonType with Double] = js.native
+  /* 0 */ @js.native
+  object Argon2d extends TopLevel[Argon2d with Double]
+  
+  /* 1 */ @js.native
+  object Argon2i extends TopLevel[Argon2i with Double]
+  
+  /* 2 */ @js.native
+  object Argon2id extends TopLevel[Argon2id with Double]
+  
 }
 

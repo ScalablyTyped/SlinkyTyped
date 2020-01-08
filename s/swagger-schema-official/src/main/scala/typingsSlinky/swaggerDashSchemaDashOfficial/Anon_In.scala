@@ -1,6 +1,6 @@
 package typingsSlinky.swaggerDashSchemaDashOfficial
 
-import typingsSlinky.swaggerDashSchemaDashOfficial.swaggerDashSchemaDashOfficialNumbers.`true`
+import typingsSlinky.swaggerDashSchemaDashOfficial.swaggerDashSchemaDashOfficialBooleans.`true`
 import typingsSlinky.swaggerDashSchemaDashOfficial.swaggerDashSchemaDashOfficialStrings.path
 import scala.scalajs.js
 import scala.scalajs.js.`|`

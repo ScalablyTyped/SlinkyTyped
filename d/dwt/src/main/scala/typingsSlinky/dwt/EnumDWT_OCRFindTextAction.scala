@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object EnumDWT_OCRFindTextAction extends js.Object {
   @js.native
   sealed trait OCRFT_STRIKEOUT extends EnumDWT_OCRFindTextAction
   
-  /* 0 */ val OCRFT_HIGHLIGHT: typingsSlinky.dwt.EnumDWT_OCRFindTextAction.OCRFT_HIGHLIGHT with Double = js.native
-  /* 2 */ val OCRFT_MARKFORREDACT: typingsSlinky.dwt.EnumDWT_OCRFindTextAction.OCRFT_MARKFORREDACT with Double = js.native
-  /* 1 */ val OCRFT_STRIKEOUT: typingsSlinky.dwt.EnumDWT_OCRFindTextAction.OCRFT_STRIKEOUT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_OCRFindTextAction with Double] = js.native
+  /* 0 */ @js.native
+  object OCRFT_HIGHLIGHT extends TopLevel[OCRFT_HIGHLIGHT with Double]
+  
+  /* 2 */ @js.native
+  object OCRFT_MARKFORREDACT extends TopLevel[OCRFT_MARKFORREDACT with Double]
+  
+  /* 1 */ @js.native
+  object OCRFT_STRIKEOUT extends TopLevel[OCRFT_STRIKEOUT with Double]
+  
 }
 

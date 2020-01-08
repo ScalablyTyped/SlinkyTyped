@@ -20,7 +20,13 @@ trait LodashReduceRight extends js.Object {
       TResult
     ]
   ): LodashReduceRight3x1[T, TResult] = js.native
-  def apply[T, TResult](callback: MemoIteratorCappedRight[T, TResult], accumulator: TResult): TResult = js.native
+  def apply[T /* <: js.Object */, TResult](
+    callback: MemoIteratorCappedRight[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
+      TResult
+    ],
+    accumulator: TResult
+  ): TResult = js.native
   def apply[T /* <: js.Object */, TResult](
     callback: MemoIteratorCappedRight[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

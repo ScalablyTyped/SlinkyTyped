@@ -1,7 +1,6 @@
 package typingsSlinky.atJimpPluginDashRotate
 
 import typingsSlinky.atJimpCore.typesEtcMod.ImageCallback
-import typingsSlinky.atJimpPluginDashRotate.atJimpPluginDashRotateMod.Rotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.VideoFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
@@ -27,38 +28,16 @@ class VideoFile protected ()
     * @param noAudio Does the video have an audio track? If not you can enable auto-playing on it.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: VideoFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, urlConfig: js.Any) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: VideoFileConfig, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: VideoFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: VideoFileConfig, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: js.Any, loadEvent: String) = this()
+  def this(loader: LoaderPlugin, key: VideoFileConfig, urlConfig: js.Any, loadEvent: String) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: js.Any, loadEvent: String, asBlob: Boolean) = this()
+  def this(loader: LoaderPlugin, key: VideoFileConfig, urlConfig: js.Any, loadEvent: String, asBlob: Boolean) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    urlConfig: js.Any,
-    loadEvent: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: VideoFileConfig,
-    urlConfig: js.Any,
-    loadEvent: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    urlConfig: js.Any,
-    loadEvent: String,
-    asBlob: Boolean
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: VideoFileConfig,
-    urlConfig: js.Any,
-    loadEvent: String,
-    asBlob: Boolean
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     urlConfig: js.Any,
     loadEvent: String,
@@ -66,7 +45,7 @@ class VideoFile protected ()
     noAudio: Boolean
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: VideoFileConfig,
     urlConfig: js.Any,
     loadEvent: String,
@@ -74,7 +53,7 @@ class VideoFile protected ()
     noAudio: Boolean
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     urlConfig: js.Any,
     loadEvent: String,
@@ -83,7 +62,7 @@ class VideoFile protected ()
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: VideoFileConfig,
     urlConfig: js.Any,
     loadEvent: String,

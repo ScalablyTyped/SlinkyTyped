@@ -1,5 +1,6 @@
 package typingsSlinky.socks.typingsCommonConstantsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object Socks4Response extends js.Object {
   @js.native
   sealed trait RejectedIdent extends Socks4Response
   
-  /* 91 */ val Failed: typingsSlinky.socks.typingsCommonConstantsMod.Socks4Response.Failed with Double = js.native
-  /* 90 */ val Granted: typingsSlinky.socks.typingsCommonConstantsMod.Socks4Response.Granted with Double = js.native
-  /* 92 */ val Rejected: typingsSlinky.socks.typingsCommonConstantsMod.Socks4Response.Rejected with Double = js.native
-  /* 93 */ val RejectedIdent: typingsSlinky.socks.typingsCommonConstantsMod.Socks4Response.RejectedIdent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Socks4Response with Double] = js.native
+  /* 91 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 90 */ @js.native
+  object Granted extends TopLevel[Granted with Double]
+  
+  /* 92 */ @js.native
+  object Rejected extends TopLevel[Rejected with Double]
+  
+  /* 93 */ @js.native
+  object RejectedIdent extends TopLevel[RejectedIdent with Double]
+  
 }
 

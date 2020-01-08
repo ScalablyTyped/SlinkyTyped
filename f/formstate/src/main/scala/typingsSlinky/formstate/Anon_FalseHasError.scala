@@ -1,6 +1,6 @@
 package typingsSlinky.formstate
 
-import typingsSlinky.formstate.formstateNumbers.`false`
+import typingsSlinky.formstate.formstateBooleans.`false`
 import typingsSlinky.formstate.libCoreFormStateMod.ValidatableMapOrArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`

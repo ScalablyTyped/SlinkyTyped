@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`storageDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.storageV1beta1VolumeAttachmentMod.VolumeAttachment
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.storageDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.storage.v1beta1.VolumeAttachmentSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.storage.v1beta1.VolumeAttachmentStatus
@@ -42,7 +41,7 @@ object storageV1beta1VolumeAttachmentMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`storageDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[storageDotk8sDotioSlashv1beta1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

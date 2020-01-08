@@ -11,8 +11,8 @@ A node.js notifier for honeybadger.io
 | Full name          | honeybadger |
 | Keywords           | - |
 | # releases         | 2 |
-| # dependents       | 9 |
-| # downloads        | 207727 |
+| # dependents       | 8 |
+| # downloads        | 229038 |
 | # stars            | 1 |
 
 ## Links

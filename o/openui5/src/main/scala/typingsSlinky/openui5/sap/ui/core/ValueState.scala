@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object ValueState extends js.Object {
   @js.native
   sealed trait Warning extends ValueState
   
-  /* 0 */ val Error: typingsSlinky.openui5.sap.ui.core.ValueState.Error with Double = js.native
-  /* 1 */ val None: typingsSlinky.openui5.sap.ui.core.ValueState.None with Double = js.native
-  /* 2 */ val Success: typingsSlinky.openui5.sap.ui.core.ValueState.Success with Double = js.native
-  /* 3 */ val Warning: typingsSlinky.openui5.sap.ui.core.ValueState.Warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ValueState with Double] = js.native
+  /* 0 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Success extends TopLevel[Success with Double]
+  
+  /* 3 */ @js.native
+  object Warning extends TopLevel[Warning with Double]
+  
 }
 

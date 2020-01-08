@@ -1,6 +1,5 @@
 package typingsSlinky.gulpDashTypescript
 
-import typingsSlinky.gulpDashTypescript.releaseCompilerMod.ICompiler
 import typingsSlinky.gulpDashTypescript.releaseHostMod.Host
 import typingsSlinky.gulpDashTypescript.releaseInputMod.File
 import typingsSlinky.gulpDashTypescript.releaseProjectMod.ProjectInfo

@@ -1,13 +1,13 @@
 package typingsSlinky.atTensorflowTfjsDashNode
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor3D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor4D
-import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.Empty
+import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings._empty
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.cm
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.grayscale
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.in
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.rgb
-import typingsSlinky.atTensorflowTfjsDashNode.distImageMod.ImageType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ object distImageMod extends js.Object {
   @JSName("encodeJpeg")
   def encodeJpeg_cm(
     image: Tensor3D,
-    format: js.UndefOr[Empty],
+    format: js.UndefOr[_empty],
     quality: js.UndefOr[Double],
     progressive: js.UndefOr[Boolean],
     optimizeSize: js.UndefOr[Boolean],
@@ -70,7 +70,7 @@ object distImageMod extends js.Object {
   @JSName("encodeJpeg")
   def encodeJpeg_in(
     image: Tensor3D,
-    format: js.UndefOr[Empty],
+    format: js.UndefOr[_empty],
     quality: js.UndefOr[Double],
     progressive: js.UndefOr[Boolean],
     optimizeSize: js.UndefOr[Boolean],
@@ -97,12 +97,20 @@ object distImageMod extends js.Object {
     @js.native
     sealed trait PNG extends ImageType
     
-    /* "BMP" */ val BMP: typingsSlinky.atTensorflowTfjsDashNode.distImageMod.ImageType.BMP with String = js.native
-    /* "gif" */ val GIF: typingsSlinky.atTensorflowTfjsDashNode.distImageMod.ImageType.GIF with String = js.native
-    /* "jpeg" */ val JPEG: typingsSlinky.atTensorflowTfjsDashNode.distImageMod.ImageType.JPEG with String = js.native
-    /* "png" */ val PNG: typingsSlinky.atTensorflowTfjsDashNode.distImageMod.ImageType.PNG with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[ImageType with String] = js.native
+    /* "BMP" */ @js.native
+    object BMP extends TopLevel[BMP with String]
+    
+    /* "gif" */ @js.native
+    object GIF extends TopLevel[GIF with String]
+    
+    /* "jpeg" */ @js.native
+    object JPEG extends TopLevel[JPEG with String]
+    
+    /* "png" */ @js.native
+    object PNG extends TopLevel[PNG with String]
+    
   }
   
 }

@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation._
   - typings.reactDashGeosuggest.reactDashGeosuggestStrings.address
   - typings.reactDashGeosuggest.reactDashGeosuggestStrings.establishment
   - typings.reactDashGeosuggest.reactDashGeosuggestStrings.geocode
-  - typings.reactDashGeosuggest.reactDashGeosuggestStrings.`(cities)`
-  - typings.reactDashGeosuggest.reactDashGeosuggestStrings.`(regions)`
+  - typings.reactDashGeosuggest.reactDashGeosuggestStrings.LeftparenthesiscitiesRightparenthesis
+  - typings.reactDashGeosuggest.reactDashGeosuggestStrings.LeftparenthesisregionsRightparenthesis
 */
 trait QueryType extends js.Object
 
 object QueryType {
   @scala.inline
-  def `(cities)`: typingsSlinky.reactDashGeosuggest.reactDashGeosuggestStrings.`(cities)` = this.cast("(cities)")
+  def LeftparenthesiscitiesRightparenthesis: typingsSlinky.reactDashGeosuggest.reactDashGeosuggestStrings.LeftparenthesiscitiesRightparenthesis = this.cast("(cities)")
   @scala.inline
-  def `(regions)`: typingsSlinky.reactDashGeosuggest.reactDashGeosuggestStrings.`(regions)` = this.cast("(regions)")
+  def LeftparenthesisregionsRightparenthesis: typingsSlinky.reactDashGeosuggest.reactDashGeosuggestStrings.LeftparenthesisregionsRightparenthesis = this.cast("(regions)")
   @scala.inline
   def address: typingsSlinky.reactDashGeosuggest.reactDashGeosuggestStrings.address = this.cast("address")
   @scala.inline

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Lib extends SharedApply_ICarouselProps1301225742[default] {
+object Lib extends SharedApply_ICarouselProps_292188666[default] {
   @JSImport("rmc-nuka-carousel/lib", JSImport.Default)
   @js.native
   object componentImport extends js.Object

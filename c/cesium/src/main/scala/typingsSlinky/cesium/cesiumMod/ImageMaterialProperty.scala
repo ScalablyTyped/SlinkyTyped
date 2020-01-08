@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
-import typingsSlinky.cesium.Anon_Image
+import typingsSlinky.cesium.Anon_Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "ImageMaterialProperty")
 @js.native
 class ImageMaterialProperty () extends MaterialProperty {
-  def this(options: Anon_Image) = this()
+  def this(options: Anon_Color) = this()
   var image: Property = js.native
   var repeat: Property = js.native
 }

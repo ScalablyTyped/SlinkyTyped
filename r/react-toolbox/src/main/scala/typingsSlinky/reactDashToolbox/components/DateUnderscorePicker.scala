@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateUnderscorePicker extends SharedApply_DatePickerProps1704808917[default] {
+object DateUnderscorePicker extends SharedApply_DatePickerProps1571545802[default] {
   @JSImport("react-toolbox/lib/date_picker", JSImport.Default)
   @js.native
   object componentImport extends js.Object

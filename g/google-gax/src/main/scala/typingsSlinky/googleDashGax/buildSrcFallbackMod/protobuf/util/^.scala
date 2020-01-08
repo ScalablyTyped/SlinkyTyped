@@ -2,6 +2,7 @@ package typingsSlinky.googleDashGax.buildSrcFallbackMod.protobuf.util
 
 import typingsSlinky.protobufjs.protobufjsMod.Constructor
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
+import typingsSlinky.protobufjs.protobufjsMod.Root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,7 @@ object ^ extends js.Object {
   /** Long.js's Long class if available. */
   var Long: Constructor[typingsSlinky.protobufjs.protobufjsMod.Long] = js.native
   /** Decorator root (TypeScript). */
-  var decorateRoot: typingsSlinky.protobufjs.protobufjsMod.Root = js.native
+  var decorateRoot: Root = js.native
   /**
     * Default conversion options used for {@link Message#toJSON} implementations.
     *

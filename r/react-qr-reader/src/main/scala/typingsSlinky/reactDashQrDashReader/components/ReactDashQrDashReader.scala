@@ -7,9 +7,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderBooleans.`false`
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderMod.^
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderMod.props
-import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderNumbers.`false`
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderStrings.environment
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderStrings.user
 import scala.scalajs.js

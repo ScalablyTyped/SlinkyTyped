@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object VerticalAlignment extends js.Object {
   @js.native
   sealed trait Top extends VerticalAlignment
   
-  /* 2 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.VerticalAlignment.Bottom with Double = js.native
-  /* 1 */ val Center: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.VerticalAlignment.Center with Double = js.native
-  /* 0 */ val Top: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.VerticalAlignment.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VerticalAlignment with Double] = js.native
+  /* 2 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 1 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

@@ -3,9 +3,6 @@ package typingsSlinky.officeDashUiDashFabricDashReact
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsOverflowSetOverflowSetDotTypesMod.IOverflowSet
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsOverflowSetOverflowSetDotTypesMod.IOverflowSetProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesMod.BaseComponent
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.role
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.vertical
-import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +37,6 @@ object libComponentsOverflowSetOverflowSetDotBaseMod extends js.Object {
     def componentDidUpdate_MOverflowSetBase(): Unit = js.native
     @JSName("componentWillUnmount")
     def componentWillUnmount_MOverflowSetBase(): Unit = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object OverflowSetBase extends js.Object {
-    var defaultProps: Pick[IOverflowSetProps, vertical | role] = js.native
   }
   
 }

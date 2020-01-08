@@ -1,7 +1,5 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.plottable.buildSrcComponentsDragLineLayerMod.DragLineLayer
-import typingsSlinky.plottable.buildSrcComponentsDragLineLayerMod.IDragLineCallback
 import typingsSlinky.plottable.buildSrcComponentsGuideLineLayerMod.GuideLineLayer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

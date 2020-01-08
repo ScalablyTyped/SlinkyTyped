@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`schedulingDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.schedulingV1beta1PriorityClassListMod.PriorityClassList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.schedulingDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.scheduling.v1beta1.PriorityClass
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object schedulingV1beta1PriorityClassListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`schedulingDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[schedulingDotk8sDotioSlashv1beta1] = js.native
     /**
       * items is the list of PriorityClasses
       */

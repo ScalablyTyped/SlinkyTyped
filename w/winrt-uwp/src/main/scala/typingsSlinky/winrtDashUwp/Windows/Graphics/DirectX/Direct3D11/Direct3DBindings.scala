@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,17 +52,37 @@ object Direct3DBindings extends js.Object {
   @js.native
   sealed trait videoEncoder extends Direct3DBindings
   
-  /* 2 */ val constantBuffer: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.constantBuffer with Double = js.native
-  /* 8 */ val decoder: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.decoder with Double = js.native
-  /* 6 */ val depthStencil: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.depthStencil with Double = js.native
-  /* 1 */ val indexBuffer: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.indexBuffer with Double = js.native
-  /* 5 */ val renderTarget: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.renderTarget with Double = js.native
-  /* 3 */ val shaderResource: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.shaderResource with Double = js.native
-  /* 4 */ val streamOutput: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.streamOutput with Double = js.native
-  /* 7 */ val unorderedAccess: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.unorderedAccess with Double = js.native
-  /* 0 */ val vertexBuffer: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.vertexBuffer with Double = js.native
-  /* 9 */ val videoEncoder: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.Direct3DBindings.videoEncoder with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Direct3DBindings with Double] = js.native
+  /* 2 */ @js.native
+  object constantBuffer extends TopLevel[constantBuffer with Double]
+  
+  /* 8 */ @js.native
+  object decoder extends TopLevel[decoder with Double]
+  
+  /* 6 */ @js.native
+  object depthStencil extends TopLevel[depthStencil with Double]
+  
+  /* 1 */ @js.native
+  object indexBuffer extends TopLevel[indexBuffer with Double]
+  
+  /* 5 */ @js.native
+  object renderTarget extends TopLevel[renderTarget with Double]
+  
+  /* 3 */ @js.native
+  object shaderResource extends TopLevel[shaderResource with Double]
+  
+  /* 4 */ @js.native
+  object streamOutput extends TopLevel[streamOutput with Double]
+  
+  /* 7 */ @js.native
+  object unorderedAccess extends TopLevel[unorderedAccess with Double]
+  
+  /* 0 */ @js.native
+  object vertexBuffer extends TopLevel[vertexBuffer with Double]
+  
+  /* 9 */ @js.native
+  object videoEncoder extends TopLevel[videoEncoder with Double]
+  
 }
 

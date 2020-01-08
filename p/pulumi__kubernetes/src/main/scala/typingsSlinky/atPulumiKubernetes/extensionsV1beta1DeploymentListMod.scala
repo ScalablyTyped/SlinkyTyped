@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`extensions/v1beta1`
-import typingsSlinky.atPulumiKubernetes.extensionsV1beta1DeploymentListMod.DeploymentList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.extensionsSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.extensions.v1beta1.Deployment
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object extensionsV1beta1DeploymentListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`extensions/v1beta1`] = js.native
+    val apiVersion: Output[extensionsSlashv1beta1] = js.native
     /**
       * Items is the list of Deployments.
       */

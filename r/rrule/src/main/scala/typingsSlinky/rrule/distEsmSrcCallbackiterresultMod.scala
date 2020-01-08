@@ -1,7 +1,5 @@
 package typingsSlinky.rrule
 
-import typingsSlinky.rrule.distEsmSrcCallbackiterresultMod.CallbackIterResult
-import typingsSlinky.rrule.distEsmSrcCallbackiterresultMod.Iterator
 import typingsSlinky.rrule.distEsmSrcIterresultMod.IterArgs
 import typingsSlinky.rrule.rruleStrings.all
 import typingsSlinky.rrule.rruleStrings.between

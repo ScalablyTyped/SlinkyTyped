@@ -5,6 +5,9 @@ import slinky.core.TagMod
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Key
 import typingsSlinky.react.reactMod.LegacyRef
+import typingsSlinky.react.reactMod.ReactChild
+import typingsSlinky.react.reactMod.ReactFragment
+import typingsSlinky.react.reactMod.ReactPortal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +25,7 @@ trait Props
   var mouseLeaveDelay: js.UndefOr[Double] = js.undefined
   var onPopupAlign: js.UndefOr[js.Function2[/* popupDomNode */ Element, /* align */ js.Object, Unit]] = js.undefined
   var onVisibleChange: js.UndefOr[js.Function1[/* visible */ js.UndefOr[Boolean], Unit]] = js.undefined
-  var overlay: TagMod[Any]
+  var overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal
   var overlayClassName: js.UndefOr[String] = js.undefined
   var overlayStyle: js.UndefOr[CSSProperties] = js.undefined
   var placement: js.UndefOr[Placement | js.Object] = js.undefined
@@ -35,7 +38,7 @@ trait Props
 object Props {
   @scala.inline
   def apply(
-    overlay: TagMod[Any],
+    overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal,
     afterVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
     align: js.Object = null,
     arrowContent: TagMod[Any] = null,

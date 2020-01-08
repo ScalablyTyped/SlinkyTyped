@@ -12,7 +12,6 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.atNteractTransformDashVdom.libEventDashToDashObjectMod.SerializedEvent
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.std.Partial
 import scala.scalajs.js

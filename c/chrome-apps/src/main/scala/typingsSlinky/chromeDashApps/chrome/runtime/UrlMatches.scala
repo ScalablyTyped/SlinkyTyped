@@ -5,32 +5,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.chromeDashApps.chromeDashAppsStrings.`https://wwwDOTgoogle-analyticsDOTcom/ *`
-  - typings.chromeDashApps.chromeDashAppsStrings.`https://wwwDOTgoogleapisDOTcom/ *`
-  - typings.chromeDashApps.chromeDashAppsStrings.`<all_urls>`
-  - typings.chromeDashApps.chromeDashAppsStrings.`http:// * / *`
-  - typings.chromeDashApps.chromeDashAppsStrings.`https:// * / *`
-  - typings.chromeDashApps.chromeDashAppsStrings.`file:/// * / *`
-  - typings.chromeDashApps.chromeDashAppsStrings.`chrome://favicon/`
+  - typings.chromeDashApps.chromeDashAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`
+  - typings.chromeDashApps.chromeDashAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk
+  - typings.chromeDashApps.chromeDashAppsStrings.Lessthansignall_urlsGreaterthansign
+  - typings.chromeDashApps.chromeDashAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk
+  - typings.chromeDashApps.chromeDashAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk
+  - typings.chromeDashApps.chromeDashAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk
+  - typings.chromeDashApps.chromeDashAppsStrings.chromeColonSlashSlashfaviconSlash
 */
 trait UrlMatches extends Permission
 
 object UrlMatches {
   @scala.inline
-  def `<all_urls>`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`<all_urls>` = this.cast("<all_urls>")
+  def Lessthansignall_urlsGreaterthansign: typingsSlinky.chromeDashApps.chromeDashAppsStrings.Lessthansignall_urlsGreaterthansign = this.cast("<all_urls>")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def `chrome://favicon/`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`chrome://favicon/` = this.cast("chrome://favicon/")
+  def chromeColonSlashSlashfaviconSlash: typingsSlinky.chromeDashApps.chromeDashAppsStrings.chromeColonSlashSlashfaviconSlash = this.cast("chrome://favicon/")
   @scala.inline
-  def `file:///*/*`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`file:///*/*` = this.cast("file:///*/*")
+  def fileColonSlashSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeDashApps.chromeDashAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk = this.cast("file:///*/*")
   @scala.inline
-  def `http://*/*`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`http://*/*` = this.cast("http://*/*")
+  def httpColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeDashApps.chromeDashAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk = this.cast("http://*/*")
   @scala.inline
-  def `https://*/*`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`https://*/*` = this.cast("https://*/*")
+  def httpsColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeDashApps.chromeDashAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk = this.cast("https://*/*")
   @scala.inline
-  def `https://wwwDOTgoogle-analyticsDOTcom/*`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`https://wwwDOTgoogle-analyticsDOTcom/*` = this.cast("https://www.google-analytics.com/*")
+  def `httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk` = this.cast("https://www.google-analytics.com/*")
   @scala.inline
-  def `https://wwwDOTgoogleapisDOTcom/*`: typingsSlinky.chromeDashApps.chromeDashAppsStrings.`https://wwwDOTgoogleapisDOTcom/*` = this.cast("https://www.googleapis.com/*")
+  def httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk: typingsSlinky.chromeDashApps.chromeDashAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk = this.cast("https://www.googleapis.com/*")
 }
 

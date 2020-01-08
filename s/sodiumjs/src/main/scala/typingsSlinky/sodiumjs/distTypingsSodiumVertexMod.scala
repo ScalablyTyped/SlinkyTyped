@@ -1,8 +1,6 @@
 package typingsSlinky.sodiumjs
 
-import typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Color
-import typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Source
-import typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Vertex
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.typescriptDashCollections.typescriptDashCollectionsMod.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -75,12 +73,20 @@ object distTypingsSodiumVertexMod extends js.Object {
     @js.native
     sealed trait white extends Color
     
-    /* 0 */ val black: typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Color.black with Double = js.native
-    /* 1 */ val gray: typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Color.gray with Double = js.native
-    /* 3 */ val purple: typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Color.purple with Double = js.native
-    /* 2 */ val white: typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Color.white with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Color with Double] = js.native
+    /* 0 */ @js.native
+    object black extends TopLevel[black with Double]
+    
+    /* 1 */ @js.native
+    object gray extends TopLevel[gray with Double]
+    
+    /* 3 */ @js.native
+    object purple extends TopLevel[purple with Double]
+    
+    /* 2 */ @js.native
+    object white extends TopLevel[white with Double]
+    
   }
   
   /* static members */

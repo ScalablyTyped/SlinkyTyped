@@ -21,8 +21,9 @@ object DatePickerNavbar
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, dir */
+  /* The following DOM/SVG props were specified: dir */
   def apply(
+    className: String,
     classNames: ClassNames,
     labels: Anon_NextMonth,
     locale: String,
@@ -43,7 +44,7 @@ object DatePickerNavbar
     tag.type, 
     typingsSlinky.atBlueprintjsDatetime.libEsmDatePickerNavbarMod.DatePickerNavbar
   ] = {
-    val __obj = js.Dynamic.literal(classNames = classNames.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], localeUtils = localeUtils.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], month = month.asInstanceOf[js.Any], nextMonth = nextMonth.asInstanceOf[js.Any], onNextClick = js.Any.fromFunction1(onNextClick), onPreviousClick = js.Any.fromFunction1(onPreviousClick), previousMonth = previousMonth.asInstanceOf[js.Any], showNextButton = showNextButton.asInstanceOf[js.Any], showPreviousButton = showPreviousButton.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], classNames = classNames.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], localeUtils = localeUtils.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], month = month.asInstanceOf[js.Any], nextMonth = nextMonth.asInstanceOf[js.Any], onNextClick = js.Any.fromFunction1(onNextClick), onPreviousClick = js.Any.fromFunction1(onPreviousClick), previousMonth = previousMonth.asInstanceOf[js.Any], showNextButton = showNextButton.asInstanceOf[js.Any], showPreviousButton = showPreviousButton.asInstanceOf[js.Any])
     if (!js.isUndefined(hideLeftNavButton)) __obj.updateDynamic("hideLeftNavButton")(hideLeftNavButton.asInstanceOf[js.Any])
     if (!js.isUndefined(hideRightNavButton)) __obj.updateDynamic("hideRightNavButton")(hideRightNavButton.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

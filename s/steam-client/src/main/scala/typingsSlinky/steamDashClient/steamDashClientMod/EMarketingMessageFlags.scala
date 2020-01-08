@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object EMarketingMessageFlags extends js.Object {
   @js.native
   sealed trait PlatformWindows extends EMarketingMessageFlags
   
-  /* 1 */ val HighPriority: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.HighPriority with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.None with Double = js.native
-  /* 8 */ val PlatformLinux: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.PlatformLinux with Double = js.native
-  /* 4 */ val PlatformMac: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.PlatformMac with Double = js.native
-  /* 2 | 4 | 8 */ val PlatformRestrictions: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.PlatformRestrictions with Double = js.native
-  /* 2 */ val PlatformWindows: typingsSlinky.steamDashClient.steamDashClientMod.EMarketingMessageFlags.PlatformWindows with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EMarketingMessageFlags with Double] = js.native
+  /* 1 */ @js.native
+  object HighPriority extends TopLevel[HighPriority with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 8 */ @js.native
+  object PlatformLinux extends TopLevel[PlatformLinux with Double]
+  
+  /* 4 */ @js.native
+  object PlatformMac extends TopLevel[PlatformMac with Double]
+  
+  /* 2 | 4 | 8 */ @js.native
+  object PlatformRestrictions extends TopLevel[PlatformRestrictions with Double]
+  
+  /* 2 */ @js.native
+  object PlatformWindows extends TopLevel[PlatformWindows with Double]
+  
 }
 

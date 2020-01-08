@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Directions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object TimeType extends js.Object {
   @js.native
   sealed trait lastAvailable extends TimeType
   
-  /* 0 */ val arrival: typingsSlinky.bingmaps.Microsoft.Maps.Directions.TimeType.arrival with Double = js.native
-  /* 1 */ val departure: typingsSlinky.bingmaps.Microsoft.Maps.Directions.TimeType.departure with Double = js.native
-  /* 2 */ val firstAvailable: typingsSlinky.bingmaps.Microsoft.Maps.Directions.TimeType.firstAvailable with Double = js.native
-  /* 3 */ val lastAvailable: typingsSlinky.bingmaps.Microsoft.Maps.Directions.TimeType.lastAvailable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimeType with Double] = js.native
+  /* 0 */ @js.native
+  object arrival extends TopLevel[arrival with Double]
+  
+  /* 1 */ @js.native
+  object departure extends TopLevel[departure with Double]
+  
+  /* 2 */ @js.native
+  object firstAvailable extends TopLevel[firstAvailable with Double]
+  
+  /* 3 */ @js.native
+  object lastAvailable extends TopLevel[lastAvailable with Double]
+  
 }
 

@@ -1,15 +1,25 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`envelope-intersects`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`index-intersects`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.contains
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.crosses
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.disjoint
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.intersects
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.native
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.none
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.overlaps
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.relation
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.standard
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.touches
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.within
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -217,6 +227,7 @@ trait Query
   var returnQueryGeometry: Boolean = js.native
   /**
     * If `true`, and [returnGeometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#returnGeometry) is `true`, then z-values are included in the geometry.
+    * > **Known Limitations**  [FeatureLayerView.queryFeatures()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-FeatureLayerView.html#queryFeatures) and [GeoJSONLayerView.queryFeatures()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-GeoJSONLayerView.html#queryFeatures) results do not include the z-values when called in [2D MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) even if `returnZ` is set to `true`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#returnZ)
     */
@@ -234,7 +245,7 @@ trait Query
     *
     * @default intersects
     */
-  var spatialRelationship: String = js.native
+  var spatialRelationship: intersects | contains | crosses | disjoint | `envelope-intersects` | `index-intersects` | overlaps | touches | within | relation = js.native
   /**
     * This parameter can be either standard SQL92 `standard` or it can use the native SQL of the underlying datastore `native`. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/query-feature-service-.htm) for more information.
     * > **Known Limitations**  This property does not apply to layer view or [CSVLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html) queries.
@@ -272,7 +283,7 @@ trait Query
     *
     * @default null
     */
-  var units: feet | miles | `nautical-miles` | `us-nautical-miles` | meters | kilometers = js.native
+  var units: feet_ | miles_ | `nautical-miles` | `us-nautical-miles` | meters_ | kilometers_ = js.native
   /**
     * A where clause for the query. Any legal SQL where clause operating on the fields in the layer is allowed. Be sure to have the correct sequence of single and double quotes when writing the where clause in JavaScript.
     *

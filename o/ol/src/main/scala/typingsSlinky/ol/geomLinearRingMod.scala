@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.geomGeometryLayoutMod.GeometryLayout
-import typingsSlinky.ol.geomLinearRingMod.LinearRing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.envDashCi.envDashCiMod
 
-import typingsSlinky.envDashCi.envDashCiNumbers.`true`
+import typingsSlinky.envDashCi.envDashCiBooleans.`true`
 import typingsSlinky.envDashCi.envDashCiStrings.Jenkins
 import typingsSlinky.envDashCi.envDashCiStrings.jenkins_
 import scala.scalajs.js

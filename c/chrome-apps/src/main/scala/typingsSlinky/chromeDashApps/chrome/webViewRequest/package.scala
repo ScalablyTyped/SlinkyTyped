@@ -5,15 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object webViewRequest {
+  import typingsSlinky.chromeDashApps.chrome.events.Event
   import typingsSlinky.chromeDashApps.chrome.events.Rule
-  import typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTPageStateMatcher
+  import typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotPageStateMatcher
 
-  type DeclarativeWebRequestConditionsList = declarativeContentDOTPageStateMatcher
+  type DeclarativeWebRequestConditionsList = declarativeContentDotPageStateMatcher
   /**
     * Fired when a message is sent via **declarativeWebRequest.SendMessageToExtension**
     * from an action of the declarative web request API.
     */
-  type OnMessageEvent = typingsSlinky.chromeDashApps.chrome.events.Event[js.Function1[/* details */ OnMessageEventDetails, Unit]]
+  type OnMessageEvent = Event[js.Function1[/* details */ OnMessageEventDetails, Unit]]
   /** Supported conditions */
   type OnRequestConditions = RequestMatcher
   /**

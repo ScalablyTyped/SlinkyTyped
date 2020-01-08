@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object PageSizeMode extends js.Object {
   @js.native
   sealed trait Root extends PageSizeMode
   
-  /* 0 */ val All: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.PageSizeMode.All with Double = js.native
-  /* 1 */ val Root: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.PageSizeMode.Root with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PageSizeMode with Double] = js.native
+  /* 0 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 1 */ @js.native
+  object Root extends TopLevel[Root with Double]
+  
 }
 

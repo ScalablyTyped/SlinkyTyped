@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebaseDatabase.distSrcCoreOperationOperationMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object OperationType extends js.Object {
   @js.native
   sealed trait OVERWRITE extends OperationType
   
-  /* 2 */ val ACK_USER_WRITE: typingsSlinky.atFirebaseDatabase.distSrcCoreOperationOperationMod.OperationType.ACK_USER_WRITE with Double = js.native
-  /* 3 */ val LISTEN_COMPLETE: typingsSlinky.atFirebaseDatabase.distSrcCoreOperationOperationMod.OperationType.LISTEN_COMPLETE with Double = js.native
-  /* 1 */ val MERGE: typingsSlinky.atFirebaseDatabase.distSrcCoreOperationOperationMod.OperationType.MERGE with Double = js.native
-  /* 0 */ val OVERWRITE: typingsSlinky.atFirebaseDatabase.distSrcCoreOperationOperationMod.OperationType.OVERWRITE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OperationType with Double] = js.native
+  /* 2 */ @js.native
+  object ACK_USER_WRITE extends TopLevel[ACK_USER_WRITE with Double]
+  
+  /* 3 */ @js.native
+  object LISTEN_COMPLETE extends TopLevel[LISTEN_COMPLETE with Double]
+  
+  /* 1 */ @js.native
+  object MERGE extends TopLevel[MERGE with Double]
+  
+  /* 0 */ @js.native
+  object OVERWRITE extends TopLevel[OVERWRITE with Double]
+  
 }
 

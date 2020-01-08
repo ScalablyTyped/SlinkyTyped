@@ -2,8 +2,7 @@ package typingsSlinky.ionic
 
 import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkMod.BaseConfig
 import typingsSlinky.ionic.definitionsMod.EnterpriseProjectIntegration
-import typingsSlinky.ionic.ionicStrings.`Ionic Enterprise Edition provides premier native solutions, UI, & support for companies building cross-platform appsDOT`
-import typingsSlinky.ionic.libIntegrationsEnterpriseMod.EnterpriseIntegrationConfig
+import typingsSlinky.ionic.ionicStrings.`Ionic Enterprise Edition provides premier native solutionsComma UIComma Ampersand support for companies building cross-platform appsDot`
 import typingsSlinky.ionic.libIntegrationsMod.BaseIntegration
 import typingsSlinky.ionic.libIntegrationsMod.IntegationUnion
 import scala.scalajs.js
@@ -24,16 +23,16 @@ object libIntegrationsEnterpriseMod extends js.Object {
     val archiveUrl_Integration: js.UndefOr[scala.Nothing] = js.native
     var chooseApp: js.Any = js.native
     var chooseAppToLink: js.Any = js.native
-    @JSName("config")
-    val config_Integration: EnterpriseIntegrationConfig = js.native
     var createNewApp: js.Any = js.native
     var getAppClient: js.Any = js.native
     var getPK: js.Any = js.native
     var registerKey: js.Any = js.native
     @JSName("summary")
-    val summary_Integration: `Ionic Enterprise Edition provides premier native solutions, UI, & support for companies building cross-platform appsDOT` = js.native
+    val summary_Integration: `Ionic Enterprise Edition provides premier native solutionsComma UIComma Ampersand support for companies building cross-platform appsDot` = js.native
     var updateNPMRC: js.Any = js.native
     var validatePK: js.Any = js.native
+    @JSName("config")
+    def config_MIntegration(): EnterpriseIntegrationConfig = js.native
   }
   
 }

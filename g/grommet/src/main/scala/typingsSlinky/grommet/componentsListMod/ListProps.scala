@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.grommet.Anon_BackgroundBorder
 import typingsSlinky.grommet.Anon_DarkLight
+import typingsSlinky.grommet.Anon_Index
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.GridAreaType
@@ -23,7 +24,9 @@ trait ListProps extends js.Object {
   var gridArea: js.UndefOr[GridAreaType] = js.undefined
   var itemProps: js.UndefOr[StringDictionary[Anon_BackgroundBorder]] = js.undefined
   var margin: js.UndefOr[MarginType] = js.undefined
-  var onClickItem: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[Element], Unit]] = js.undefined
+  var onClickItem: js.UndefOr[
+    js.Function1[(/* event */ Anon_Index) | (/* event */ SyntheticMouseEvent[Element]), Unit]
+  ] = js.undefined
   var onMore: js.UndefOr[js.Function0[Unit]] = js.undefined
   var pad: js.UndefOr[PadType] = js.undefined
   var primaryKey: js.UndefOr[String | (js.Function1[/* repeated */ js.Any, _])] = js.undefined
@@ -43,7 +46,7 @@ object ListProps {
     gridArea: GridAreaType = null,
     itemProps: StringDictionary[Anon_BackgroundBorder] = null,
     margin: MarginType = null,
-    onClickItem: /* event */ SyntheticMouseEvent[Element] => Unit = null,
+    onClickItem: (/* event */ Anon_Index) | (/* event */ SyntheticMouseEvent[Element]) => Unit = null,
     onMore: () => Unit = null,
     pad: PadType = null,
     primaryKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,

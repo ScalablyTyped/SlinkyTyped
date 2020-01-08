@@ -13,7 +13,6 @@ import typingsSlinky.three.srcConstantsMod.Wrapping
 import typingsSlinky.three.srcCoreEventDispatcherMod.EventDispatcher
 import typingsSlinky.three.srcMathVector2Mod.Vector
 import typingsSlinky.three.srcMathVector2Mod.Vector2
-import typingsSlinky.three.srcTexturesTextureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

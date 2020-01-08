@@ -1,9 +1,6 @@
 package typingsSlinky.sharepoint.SP.BusinessData
 
-import typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityEventType
-import typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityIdentity
-import typingsSlinky.sharepoint.SP.BusinessData.Runtime.NotificationCallback
-import typingsSlinky.sharepoint.SP.BusinessData.Runtime.Subscription
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.ClientRuntimeContext
 import typingsSlinky.sharepoint.SP.IntResult
@@ -83,12 +80,20 @@ object Runtime extends js.Object {
     @js.native
     sealed trait none extends EntityEventType
     
-    /* 1 */ val itemAdded: typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityEventType.itemAdded with Double = js.native
-    /* 3 */ val itemDeleted: typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityEventType.itemDeleted with Double = js.native
-    /* 2 */ val itemUpdated: typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityEventType.itemUpdated with Double = js.native
-    /* 0 */ val none: typingsSlinky.sharepoint.SP.BusinessData.Runtime.EntityEventType.none with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EntityEventType with Double] = js.native
+    /* 1 */ @js.native
+    object itemAdded extends TopLevel[itemAdded with Double]
+    
+    /* 3 */ @js.native
+    object itemDeleted extends TopLevel[itemDeleted with Double]
+    
+    /* 2 */ @js.native
+    object itemUpdated extends TopLevel[itemUpdated with Double]
+    
+    /* 0 */ @js.native
+    object none extends TopLevel[none with Double]
+    
   }
   
   /* static members */

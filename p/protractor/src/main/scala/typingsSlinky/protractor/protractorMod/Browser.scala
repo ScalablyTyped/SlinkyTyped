@@ -1,7 +1,7 @@
 package typingsSlinky.protractor.protractorMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.IBrowser
+import typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.IBrowser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

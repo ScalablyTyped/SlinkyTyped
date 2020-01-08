@@ -1,9 +1,9 @@
 package typingsSlinky.seamlessDashImmutable.seamlessDashImmutableMod.ImmutableArray
 
+import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableBooleans.`false`
+import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableBooleans.`true`
 import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableMod.AsMutableOptions
 import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableMod.Immutable
-import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableNumbers.`false`
-import typingsSlinky.seamlessDashImmutable.seamlessDashImmutableNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

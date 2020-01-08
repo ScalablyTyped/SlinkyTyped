@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Separator extends SharedApply_ISeparatorProps_871974344 {
+object Separator extends SharedApply_ISeparatorProps673609628 {
   @JSImport("office-ui-fabric-react/lib/Separator", "Separator")
   @js.native
   object componentImport extends js.Object

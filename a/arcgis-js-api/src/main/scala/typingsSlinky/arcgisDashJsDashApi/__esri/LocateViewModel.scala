@@ -2,7 +2,6 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisDashJsDashApi.IHandle
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`locate-error`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.disabled
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.locating
@@ -40,7 +39,7 @@ trait LocateViewModel
     *
     *
     */
-  def locate(): IPromise[_] = js.native
+  def locate(): js.Promise[_] = js.native
   @JSName("on")
   def on_locateerror(name: `locate-error`, eventHandler: LocateViewModelLocateErrorEventHandler): IHandle = js.native
 }

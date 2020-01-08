@@ -1,9 +1,6 @@
 package typingsSlinky.dojo.dojox.charting
 
 import typingsSlinky.dojo.dojo.Evented
-import typingsSlinky.dojo.dojox.charting.action2d.Base
-import typingsSlinky.dojo.dojox.charting.action2d.ChartAction
-import typingsSlinky.dojo.dojox.charting.action2d.PlotAction
 import typingsSlinky.dojo.dojox.charting.plot2d.Indicator
 import typingsSlinky.dojo.dojox.gfx.Surface
 import typingsSlinky.dojo.dojox.gfx.shape.Shape

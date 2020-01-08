@@ -1,7 +1,7 @@
 package typingsSlinky.d20
 
-import typingsSlinky.d20.d20Numbers.`false`
-import typingsSlinky.d20.d20Numbers.`true`
+import typingsSlinky.d20.d20Booleans.`false`
+import typingsSlinky.d20.d20Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

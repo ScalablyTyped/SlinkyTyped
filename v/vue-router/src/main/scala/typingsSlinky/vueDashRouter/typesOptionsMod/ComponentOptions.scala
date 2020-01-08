@@ -4,8 +4,8 @@ import typingsSlinky.vue.typesVueMod.Vue
 import typingsSlinky.vueDashRouter.typesRouterMod.NavigationGuard
 import typingsSlinky.vueDashRouter.typesRouterMod.RawLocation
 import typingsSlinky.vueDashRouter.typesRouterMod.Route
+import typingsSlinky.vueDashRouter.vueDashRouterBooleans.`false`
 import typingsSlinky.vueDashRouter.vueDashRouterMod.default
-import typingsSlinky.vueDashRouter.vueDashRouterNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

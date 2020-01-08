@@ -3,7 +3,7 @@ package typingsSlinky.reactDashTruncate.reactDashTruncateMod
 import slinky.core.TagMod
 import typingsSlinky.react.reactMod.AllHTMLAttributes
 import typingsSlinky.react.reactMod.ClassAttributes
-import typingsSlinky.reactDashTruncate.reactDashTruncateNumbers.`false`
+import typingsSlinky.reactDashTruncate.reactDashTruncateBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

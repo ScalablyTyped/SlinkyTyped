@@ -1,6 +1,5 @@
 package typingsSlinky.scopedDashHttpDashClient.scopedDashHttpDashClientMod
 
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
@@ -25,7 +24,7 @@ object Options {
     _defaultAgent: Agent = null,
     agent: Agent | Boolean = null,
     auth: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ Error, /* socket */ Socket, Unit]) => Socket = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
     defaultPort: Double | String = null,
     encoding: String = null,
     family: Int | Double = null,

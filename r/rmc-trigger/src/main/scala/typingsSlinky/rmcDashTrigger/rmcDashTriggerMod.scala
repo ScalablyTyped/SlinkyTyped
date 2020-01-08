@@ -2,7 +2,6 @@ package typingsSlinky.rmcDashTrigger
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.rmcDashTrigger.libPropsTypeMod.ITriggerProps
-import typingsSlinky.rmcDashTrigger.rmcDashTriggerMod.TriggerWrap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

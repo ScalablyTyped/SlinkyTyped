@@ -1,7 +1,6 @@
 package typingsSlinky.riotDashApiDashNodejs
 
-import typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.API
-import typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.riotDashGamesDashApi.RiotGamesAPI.Champion.ChampionDto
 import typingsSlinky.riotDashGamesDashApi.RiotGamesAPI.Champion.ChampionListDto
 import typingsSlinky.riotDashGamesDashApi.RiotGamesAPI.ChampionMastery.ChampionMasteryDto
@@ -466,19 +465,41 @@ object riotDashApiDashNodejsMod extends js.Object {
     @js.native
     sealed trait TR extends region_e
     
-    /* 0 */ val BR: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.BR with Double = js.native
-    /* 1 */ val EUNE: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.EUNE with Double = js.native
-    /* 2 */ val EUW: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.EUW with Double = js.native
-    /* 3 */ val KR: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.KR with Double = js.native
-    /* 4 */ val LAN: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.LAN with Double = js.native
-    /* 5 */ val LAS: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.LAS with Double = js.native
-    /* 6 */ val NA: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.NA with Double = js.native
-    /* 7 */ val OCE: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.OCE with Double = js.native
-    /* 10 */ val PBE: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.PBE with Double = js.native
-    /* 9 */ val RU: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.RU with Double = js.native
-    /* 8 */ val TR: typingsSlinky.riotDashApiDashNodejs.riotDashApiDashNodejsMod.region_e.TR with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[region_e with Double] = js.native
+    /* 0 */ @js.native
+    object BR extends TopLevel[BR with Double]
+    
+    /* 1 */ @js.native
+    object EUNE extends TopLevel[EUNE with Double]
+    
+    /* 2 */ @js.native
+    object EUW extends TopLevel[EUW with Double]
+    
+    /* 3 */ @js.native
+    object KR extends TopLevel[KR with Double]
+    
+    /* 4 */ @js.native
+    object LAN extends TopLevel[LAN with Double]
+    
+    /* 5 */ @js.native
+    object LAS extends TopLevel[LAS with Double]
+    
+    /* 6 */ @js.native
+    object NA extends TopLevel[NA with Double]
+    
+    /* 7 */ @js.native
+    object OCE extends TopLevel[OCE with Double]
+    
+    /* 10 */ @js.native
+    object PBE extends TopLevel[PBE with Double]
+    
+    /* 9 */ @js.native
+    object RU extends TopLevel[RU with Double]
+    
+    /* 8 */ @js.native
+    object TR extends TopLevel[TR with Double]
+    
   }
   
 }

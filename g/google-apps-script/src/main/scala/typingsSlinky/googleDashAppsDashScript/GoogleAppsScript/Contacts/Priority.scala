@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Priority extends js.Object {
   @js.native
   sealed trait NORMAL extends Priority
   
-  /* 0 */ val HIGH: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Priority.HIGH with Double = js.native
-  /* 1 */ val LOW: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Priority.LOW with Double = js.native
-  /* 2 */ val NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Priority.NORMAL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Priority with Double] = js.native
+  /* 0 */ @js.native
+  object HIGH extends TopLevel[HIGH with Double]
+  
+  /* 1 */ @js.native
+  object LOW extends TopLevel[LOW with Double]
+  
+  /* 2 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
 }
 

@@ -2,6 +2,7 @@ package typingsSlinky.rotDashJs
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.rotDashJs.libMapCellularMod.Options
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -58,39 +59,73 @@ object libMapMod extends js.Object {
       def this(width: Double, height: Double, options: Partial[typingsSlinky.rotDashJs.libMapUniformMod.Options]) = this()
     }
     
-    var Arena: Instantiable0[typingsSlinky.rotDashJs.libMapArenaMod.default] = js.native
-    var Cellular: Instantiable3[
-        /* width */ Double, 
-        /* height */ Double, 
-        js.UndefOr[/* options */ Partial[Options]], 
-        typingsSlinky.rotDashJs.libMapCellularMod.default
-      ] = js.native
-    var Digger: Instantiable3[
-        /* width */ Double, 
-        /* height */ Double, 
-        js.UndefOr[/* options */ Partial[typingsSlinky.rotDashJs.libMapDiggerMod.Options]], 
-        typingsSlinky.rotDashJs.libMapDiggerMod.default
-      ] = js.native
-    var DividedMaze: Instantiable0[typingsSlinky.rotDashJs.libMapDividedmazeMod.default] = js.native
-    var EllerMaze: Instantiable0[typingsSlinky.rotDashJs.libMapEllermazeMod.default] = js.native
-    var IceyMaze: Instantiable3[
-        /* width */ Double, 
-        /* height */ Double, 
-        js.UndefOr[/* regularity */ Double], 
-        typingsSlinky.rotDashJs.libMapIceymazeMod.default
-      ] = js.native
-    var Rogue: Instantiable3[
-        /* width */ Double, 
-        /* height */ Double, 
-        /* options */ Partial[typingsSlinky.rotDashJs.libMapRogueMod.Options], 
-        typingsSlinky.rotDashJs.libMapRogueMod.default
-      ] = js.native
-    var Uniform: Instantiable3[
-        /* width */ Double, 
-        /* height */ Double, 
-        /* options */ Partial[typingsSlinky.rotDashJs.libMapUniformMod.Options], 
-        typingsSlinky.rotDashJs.libMapUniformMod.default
-      ] = js.native
+    @js.native
+    object Arena
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libMapArenaMod.default]]
+    
+    @js.native
+    object Cellular
+      extends TopLevel[
+              Instantiable3[
+                /* width */ Double, 
+                /* height */ Double, 
+                js.UndefOr[/* options */ Partial[Options]], 
+                typingsSlinky.rotDashJs.libMapCellularMod.default
+              ]
+            ]
+    
+    @js.native
+    object Digger
+      extends TopLevel[
+              Instantiable3[
+                /* width */ Double, 
+                /* height */ Double, 
+                js.UndefOr[/* options */ Partial[typingsSlinky.rotDashJs.libMapDiggerMod.Options]], 
+                typingsSlinky.rotDashJs.libMapDiggerMod.default
+              ]
+            ]
+    
+    @js.native
+    object DividedMaze
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libMapDividedmazeMod.default]]
+    
+    @js.native
+    object EllerMaze
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libMapEllermazeMod.default]]
+    
+    @js.native
+    object IceyMaze
+      extends TopLevel[
+              Instantiable3[
+                /* width */ Double, 
+                /* height */ Double, 
+                js.UndefOr[/* regularity */ Double], 
+                typingsSlinky.rotDashJs.libMapIceymazeMod.default
+              ]
+            ]
+    
+    @js.native
+    object Rogue
+      extends TopLevel[
+              Instantiable3[
+                /* width */ Double, 
+                /* height */ Double, 
+                /* options */ Partial[typingsSlinky.rotDashJs.libMapRogueMod.Options], 
+                typingsSlinky.rotDashJs.libMapRogueMod.default
+              ]
+            ]
+    
+    @js.native
+    object Uniform
+      extends TopLevel[
+              Instantiable3[
+                /* width */ Double, 
+                /* height */ Double, 
+                /* options */ Partial[typingsSlinky.rotDashJs.libMapUniformMod.Options], 
+                typingsSlinky.rotDashJs.libMapUniformMod.default
+              ]
+            ]
+    
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.settings.v1alpha1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`settingsDOTk8sDOTio/v1alpha1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.settingsDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait PodPreset extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`settingsDOTk8sDOTio/v1alpha1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[settingsDotk8sDotioSlashv1alpha1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -32,7 +32,7 @@ trait PodPreset extends js.Object {
 object PodPreset {
   @scala.inline
   def apply(
-    apiVersion: Input[`settingsDOTk8sDOTio/v1alpha1`] = null,
+    apiVersion: Input[settingsDotk8sDotioSlashv1alpha1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.PodPreset] = null,
     metadata: Input[ObjectMeta] = null,
     spec: Input[PodPresetSpec] = null

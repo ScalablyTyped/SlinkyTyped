@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object postcssDashLoadDashConfigMod {
-  import typingsSlinky.postcss.postcssMod.Plugin
   import typingsSlinky.postcss.postcssMod.ProcessOptions
   import typingsSlinky.postcss.postcssMod.Processor
-  import typingsSlinky.postcss.postcssMod.Transformer
   import typingsSlinky.postcssDashLoadDashConfig.postcssDashLoadDashConfigStrings.from
   import typingsSlinky.postcssDashLoadDashConfig.postcssDashLoadDashConfigStrings.map
   import typingsSlinky.postcssDashLoadDashConfig.postcssDashLoadDashConfigStrings.parser
@@ -17,6 +15,8 @@ package object postcssDashLoadDashConfigMod {
   import typingsSlinky.postcssDashLoadDashConfig.postcssDashLoadDashConfigStrings.to
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Pick
+  import typingsSlinky.std.Plugin
+  import typingsSlinky.std.Transformer
 
   // The full shape of the ConfigContext.
   type ConfigContext = Context with ProcessOptionsPreload with RemainingProcessOptions
@@ -27,5 +27,5 @@ package object postcssDashLoadDashConfigMod {
   ]
   // Result of postcssrc is a Promise containing the filename plus the options
   // and plugins that are ready to pass on to postcss.
-  type ResultPlugin = Plugin[js.Any] | Transformer | Processor
+  type ResultPlugin = Plugin | (Transformer[js.Any, js.Any]) | Processor
 }

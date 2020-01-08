@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,15 +36,31 @@ object ERemoteStoragePlatform extends js.Object {
   @js.native
   sealed trait Windows extends ERemoteStoragePlatform
   
-  /* -1 */ val All: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.All with Double = js.native
-  /* 8 */ val Linux: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.Linux with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.None with Double = js.native
-  /* 2 */ val OSX: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.OSX with Double = js.native
-  /* 4 */ val PS3: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.PS3 with Double = js.native
-  /* 8 */ val Reserved1: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.Reserved1 with Double = js.native
-  /* 16 */ val Reserved2: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.Reserved2 with Double = js.native
-  /* 1 */ val Windows: typingsSlinky.steamDashClient.steamDashClientMod.ERemoteStoragePlatform.Windows with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ERemoteStoragePlatform with Double] = js.native
+  /* -1 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 8 */ @js.native
+  object Linux extends TopLevel[Linux with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object OSX extends TopLevel[OSX with Double]
+  
+  /* 4 */ @js.native
+  object PS3 extends TopLevel[PS3 with Double]
+  
+  /* 8 */ @js.native
+  object Reserved1 extends TopLevel[Reserved1 with Double]
+  
+  /* 16 */ @js.native
+  object Reserved2 extends TopLevel[Reserved2 with Double]
+  
+  /* 1 */ @js.native
+  object Windows extends TopLevel[Windows with Double]
+  
 }
 

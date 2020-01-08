@@ -1,7 +1,7 @@
 
 # Scala.js typings for parse
 
-Typings are for version 2.9
+Typings are for version 2.10
 
 ## Library description:
 The Parse JavaScript SDK
@@ -10,9 +10,9 @@ The Parse JavaScript SDK
 | ------------------ | :-------------: |
 | Full name          | parse |
 | Keywords           | cloud, mobile, api |
-| # releases         | 13 |
-| # dependents       | 163 |
-| # downloads        | 1672056 |
+| # releases         | 21 |
+| # dependents       | 196 |
+| # downloads        | 2682320 |
 | # stars            | 28 |
 
 ## Links

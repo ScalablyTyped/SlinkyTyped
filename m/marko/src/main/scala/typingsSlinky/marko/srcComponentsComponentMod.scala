@@ -1,7 +1,6 @@
 package typingsSlinky.marko
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.marko.srcComponentsComponentMod.Component
 import typingsSlinky.marko.srcRuntimeDomElementMod.DomElement
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js

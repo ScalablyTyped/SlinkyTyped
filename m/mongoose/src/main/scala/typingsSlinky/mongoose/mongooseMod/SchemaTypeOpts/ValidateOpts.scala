@@ -1,6 +1,6 @@
 package typingsSlinky.mongoose.mongooseMod.SchemaTypeOpts
 
-import typingsSlinky.mongoose.mongooseNumbers.`false`
+import typingsSlinky.mongoose.mongooseBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTfvcInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object TfvcVersionOption extends js.Object {
   @js.native
   sealed trait UseRename extends TfvcVersionOption
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesTfvcInterfacesMod.TfvcVersionOption.None with Double = js.native
-  /* 1 */ val Previous: typingsSlinky.vsoDashNodeDashApi.interfacesTfvcInterfacesMod.TfvcVersionOption.Previous with Double = js.native
-  /* 2 */ val UseRename: typingsSlinky.vsoDashNodeDashApi.interfacesTfvcInterfacesMod.TfvcVersionOption.UseRename with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TfvcVersionOption with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Previous extends TopLevel[Previous with Double]
+  
+  /* 2 */ @js.native
+  object UseRename extends TopLevel[UseRename with Double]
+  
 }
 

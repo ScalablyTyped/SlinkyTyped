@@ -12,7 +12,7 @@ Fetch DB entries in batches to improve performance while respecting IPC size con
 | Keywords           | batch, bulk, dexie, fetch, get |
 | # releases         | 6 |
 | # dependents       | 0 |
-| # downloads        | 8131 |
+| # downloads        | 3501 |
 | # stars            | 0 |
 
 ## Links

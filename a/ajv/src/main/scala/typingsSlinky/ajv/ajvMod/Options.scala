@@ -1,8 +1,8 @@
 package typingsSlinky.ajv.ajvMod
 
-import typingsSlinky.ajv.ajvNumbers.`false`
-import typingsSlinky.ajv.ajvNumbers.`true`
-import typingsSlinky.ajv.ajvStrings.DOLLARid
+import typingsSlinky.ajv.ajvBooleans.`false`
+import typingsSlinky.ajv.ajvBooleans.`true`
+import typingsSlinky.ajv.ajvStrings.$id
 import typingsSlinky.ajv.ajvStrings.all
 import typingsSlinky.ajv.ajvStrings.array
 import typingsSlinky.ajv.ajvStrings.auto
@@ -50,7 +50,7 @@ trait Options extends js.Object {
   var passContext: js.UndefOr[Boolean] = js.native
   var processCode: js.UndefOr[js.Function1[/* code */ String, String]] = js.native
   var removeAdditional: js.UndefOr[Boolean | all | failing] = js.native
-  var schemaId: js.UndefOr[DOLLARid | id | auto] = js.native
+  var schemaId: js.UndefOr[$id | id | auto] = js.native
   var schemas: js.UndefOr[js.Array[js.Object] | js.Object] = js.native
   var serialize: js.UndefOr[(js.Function1[/* schema */ js.Object | Boolean, _]) | `false`] = js.native
   var sourceCode: js.UndefOr[Boolean] = js.native

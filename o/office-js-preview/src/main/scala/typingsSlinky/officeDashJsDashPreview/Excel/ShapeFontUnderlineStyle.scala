@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,24 +68,58 @@ object ShapeFontUnderlineStyle extends js.Object {
   @js.native
   sealed trait wavyHeavy extends ShapeFontUnderlineStyle
   
-  /* "Dash" */ val dash: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dash with String = js.native
-  /* "DashHeavy" */ val dashHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dashHeavy with String = js.native
-  /* "DashLong" */ val dashLong: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dashLong with String = js.native
-  /* "DashLongHeavy" */ val dashLongHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dashLongHeavy with String = js.native
-  /* "DotDash" */ val dotDash: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dotDash with String = js.native
-  /* "DotDashHeavy" */ val dotDashHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dotDashHeavy with String = js.native
-  /* "DotDotDash" */ val dotDotDash: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dotDotDash with String = js.native
-  /* "DotDotDashHeavy" */ val dotDotDashHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dotDotDashHeavy with String = js.native
-  /* "Dotted" */ val dotted: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dotted with String = js.native
-  /* "DottedHeavy" */ val dottedHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.dottedHeavy with String = js.native
-  /* "Double" */ val double: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.double with String = js.native
-  /* "Heavy" */ val heavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.heavy with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.none with String = js.native
-  /* "Single" */ val single: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.single with String = js.native
-  /* "Wavy" */ val wavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.wavy with String = js.native
-  /* "WavyDouble" */ val wavyDouble: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.wavyDouble with String = js.native
-  /* "WavyHeavy" */ val wavyHeavy: typingsSlinky.officeDashJsDashPreview.Excel.ShapeFontUnderlineStyle.wavyHeavy with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeFontUnderlineStyle with String] = js.native
+  /* "Dash" */ @js.native
+  object dash extends TopLevel[dash with String]
+  
+  /* "DashHeavy" */ @js.native
+  object dashHeavy extends TopLevel[dashHeavy with String]
+  
+  /* "DashLong" */ @js.native
+  object dashLong extends TopLevel[dashLong with String]
+  
+  /* "DashLongHeavy" */ @js.native
+  object dashLongHeavy extends TopLevel[dashLongHeavy with String]
+  
+  /* "DotDash" */ @js.native
+  object dotDash extends TopLevel[dotDash with String]
+  
+  /* "DotDashHeavy" */ @js.native
+  object dotDashHeavy extends TopLevel[dotDashHeavy with String]
+  
+  /* "DotDotDash" */ @js.native
+  object dotDotDash extends TopLevel[dotDotDash with String]
+  
+  /* "DotDotDashHeavy" */ @js.native
+  object dotDotDashHeavy extends TopLevel[dotDotDashHeavy with String]
+  
+  /* "Dotted" */ @js.native
+  object dotted extends TopLevel[dotted with String]
+  
+  /* "DottedHeavy" */ @js.native
+  object dottedHeavy extends TopLevel[dottedHeavy with String]
+  
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "Heavy" */ @js.native
+  object heavy extends TopLevel[heavy with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Single" */ @js.native
+  object single extends TopLevel[single with String]
+  
+  /* "Wavy" */ @js.native
+  object wavy extends TopLevel[wavy with String]
+  
+  /* "WavyDouble" */ @js.native
+  object wavyDouble extends TopLevel[wavyDouble with String]
+  
+  /* "WavyHeavy" */ @js.native
+  object wavyHeavy extends TopLevel[wavyHeavy with String]
+  
 }
 

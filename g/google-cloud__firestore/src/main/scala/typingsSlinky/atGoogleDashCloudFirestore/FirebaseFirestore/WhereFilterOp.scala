@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`<`
-  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`<=`
-  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`==`
-  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`>=`
-  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`>`
+  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.Lessthansign
+  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.LessthansignEqualssign
+  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.EqualssignEqualssign
+  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.GreaterthansignEqualssign
+  - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.Greaterthansign
   - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`array-contains`
   - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.in
   - typings.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`array-contains-any`
@@ -18,15 +18,15 @@ trait WhereFilterOp extends js.Object
 
 object WhereFilterOp {
   @scala.inline
-  def `<`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`<` = this.cast("<")
+  def EqualssignEqualssign: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.EqualssignEqualssign = this.cast("==")
   @scala.inline
-  def `<=`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`<=` = this.cast("<=")
+  def Greaterthansign: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `==`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`==` = this.cast("==")
+  def GreaterthansignEqualssign: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   def `array-contains`: typingsSlinky.atGoogleDashCloudFirestore.atGoogleDashCloudFirestoreStrings.`array-contains` = this.cast("array-contains")
   @scala.inline

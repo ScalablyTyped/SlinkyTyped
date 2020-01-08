@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distCommonjsCoreEntityMod.Entity
-import typingsSlinky.wonderDashFrp.distCommonjsDisposableGroupDisposableMod.GroupDisposable
 import typingsSlinky.wonderDashFrp.distCommonjsDisposableIDisposableMod.IDisposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

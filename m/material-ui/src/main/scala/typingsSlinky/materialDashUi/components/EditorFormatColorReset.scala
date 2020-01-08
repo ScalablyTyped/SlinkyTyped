@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EditorFormatColorReset
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatColorReset] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.EditorFormatColorReset] {
   @JSImport("material-ui/svg-icons", "EditorFormatColorReset")
   @js.native
   object componentImport extends js.Object

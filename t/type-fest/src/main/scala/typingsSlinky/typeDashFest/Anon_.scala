@@ -7,25 +7,25 @@ import typingsSlinky.typeDashFest.sourcePackageDashJsonMod.PackageJson.Directory
 import typingsSlinky.typeDashFest.sourcePackageDashJsonMod.PackageJson.Person
 import typingsSlinky.typeDashFest.sourcePackageDashJsonMod.PackageJson.Scripts
 import typingsSlinky.typeDashFest.typeDashFestMod.LiteralUnion
-import typingsSlinky.typeDashFest.typeDashFestStrings.DOT
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!aix`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!arm64`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!arm`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!darwin`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!freebsd`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!ia32`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!linux`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!mips`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!mipsel`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!openbsd`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!ppc64`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!ppc`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!s390`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!s390x`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!sunos`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!win32`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!x32`
-import typingsSlinky.typeDashFest.typeDashFestStrings.`!x64`
+import typingsSlinky.typeDashFest.typeDashFestStrings.Dot
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkaix
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkarm
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkarm64
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkdarwin
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkfreebsd
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkia32
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarklinux
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkmips
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkmipsel
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkopenbsd
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkppc
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkppc64
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarks390
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarks390x
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarksunos
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkwin32
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkx32
+import typingsSlinky.typeDashFest.typeDashFestStrings.Exclamationmarkx64
 import typingsSlinky.typeDashFest.typeDashFestStrings.aix
 import typingsSlinky.typeDashFest.typeDashFestStrings.arm
 import typingsSlinky.typeDashFest.typeDashFestStrings.arm64
@@ -81,7 +81,7 @@ trait Anon_
   var cpu: js.UndefOr[
     js.Array[
       LiteralUnion[
-        arm | arm64 | ia32 | mips | mipsel | ppc | ppc64 | s390 | s390x | x32 | x64 | `!arm` | `!arm64` | `!ia32` | `!mips` | `!mipsel` | `!ppc` | `!ppc64` | `!s390` | `!s390x` | `!x32` | `!x64`, 
+        arm | arm64 | ia32 | mips | mipsel | ppc | ppc64 | s390 | s390x | x32 | x64 | Exclamationmarkarm | Exclamationmarkarm64 | Exclamationmarkia32 | Exclamationmarkmips | Exclamationmarkmipsel | Exclamationmarkppc | Exclamationmarkppc64 | Exclamationmarks390 | Exclamationmarks390x | Exclamationmarkx32 | Exclamationmarkx64, 
         String
       ]
     ]
@@ -121,7 +121,7 @@ trait Anon_
   /**
   	The URL to the package's homepage.
   	*/
-  var homepage: js.UndefOr[LiteralUnion[DOT, String]] = js.undefined
+  var homepage: js.UndefOr[LiteralUnion[Dot, String]] = js.undefined
   /**
   	Keywords associated with package, listed in `npm search`.
   	*/
@@ -160,7 +160,7 @@ trait Anon_
   var os: js.UndefOr[
     js.Array[
       LiteralUnion[
-        aix | darwin | freebsd | linux | openbsd | sunos | win32 | `!aix` | `!darwin` | `!freebsd` | `!linux` | `!openbsd` | `!sunos` | `!win32`, 
+        aix | darwin | freebsd | linux | openbsd | sunos | win32 | Exclamationmarkaix | Exclamationmarkdarwin | Exclamationmarkfreebsd | Exclamationmarklinux | Exclamationmarkopenbsd | Exclamationmarksunos | Exclamationmarkwin32, 
         String
       ]
     ]
@@ -209,7 +209,7 @@ object Anon_ {
     contributors: js.Array[Person] = null,
     cpu: js.Array[
       LiteralUnion[
-        arm | arm64 | ia32 | mips | mipsel | ppc | ppc64 | s390 | s390x | x32 | x64 | `!arm` | `!arm64` | `!ia32` | `!mips` | `!mipsel` | `!ppc` | `!ppc64` | `!s390` | `!s390x` | `!x32` | `!x64`, 
+        arm | arm64 | ia32 | mips | mipsel | ppc | ppc64 | s390 | s390x | x32 | x64 | Exclamationmarkarm | Exclamationmarkarm64 | Exclamationmarkia32 | Exclamationmarkmips | Exclamationmarkmipsel | Exclamationmarkppc | Exclamationmarkppc64 | Exclamationmarks390 | Exclamationmarks390x | Exclamationmarkx32 | Exclamationmarkx64, 
         String
       ]
     ] = null,
@@ -222,7 +222,7 @@ object Anon_ {
   {[ EngineName in 'npm' | 'node' | string ]: string}
     */ typingsSlinky.typeDashFest.typeDashFestStrings.Anon_ with js.Any = null,
     files: js.Array[String] = null,
-    homepage: LiteralUnion[DOT, String] = null,
+    homepage: LiteralUnion[Dot, String] = null,
     keywords: js.Array[String] = null,
     license: String = null,
     licenses: js.Array[Anon_Type] = null,
@@ -233,7 +233,7 @@ object Anon_ {
     optionalDependencies: Dependency = null,
     os: js.Array[
       LiteralUnion[
-        aix | darwin | freebsd | linux | openbsd | sunos | win32 | `!aix` | `!darwin` | `!freebsd` | `!linux` | `!openbsd` | `!sunos` | `!win32`, 
+        aix | darwin | freebsd | linux | openbsd | sunos | win32 | Exclamationmarkaix | Exclamationmarkdarwin | Exclamationmarkfreebsd | Exclamationmarklinux | Exclamationmarkopenbsd | Exclamationmarksunos | Exclamationmarkwin32, 
         String
       ]
     ] = null,

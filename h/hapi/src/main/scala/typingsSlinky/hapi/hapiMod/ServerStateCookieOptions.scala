@@ -1,7 +1,7 @@
 package typingsSlinky.hapi.hapiMod
 
 import typingsSlinky.hapi.Anon_Integrity
-import typingsSlinky.hapi.hapiNumbers.`false`
+import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiStrings.Lax
 import typingsSlinky.hapi.hapiStrings.Strict
 import typingsSlinky.hapi.hapiStrings.base64

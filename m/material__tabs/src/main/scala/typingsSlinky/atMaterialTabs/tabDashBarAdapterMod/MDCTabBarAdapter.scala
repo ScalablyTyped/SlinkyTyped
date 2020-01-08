@@ -1,7 +1,7 @@
 package typingsSlinky.atMaterialTabs.tabDashBarAdapterMod
 
 import typingsSlinky.atMaterialTabs.Anon_ActiveTabIndex
-import typingsSlinky.atMaterialTabs.atMaterialTabsNumbers.`true`
+import typingsSlinky.atMaterialTabs.atMaterialTabsBooleans.`true`
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

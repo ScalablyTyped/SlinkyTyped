@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object TextTrackReadyState extends js.Object {
   @js.native
   sealed trait none extends TextTrackReadyState
   
-  /* 3 */ val error: typingsSlinky.playerframework.PlayerFramework.TextTrackReadyState.error with Double = js.native
-  /* 2 */ val loaded: typingsSlinky.playerframework.PlayerFramework.TextTrackReadyState.loaded with Double = js.native
-  /* 1 */ val loading: typingsSlinky.playerframework.PlayerFramework.TextTrackReadyState.loading with Double = js.native
-  /* 0 */ val none: typingsSlinky.playerframework.PlayerFramework.TextTrackReadyState.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextTrackReadyState with Double] = js.native
+  /* 3 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 2 */ @js.native
+  object loaded extends TopLevel[loaded with Double]
+  
+  /* 1 */ @js.native
+  object loading extends TopLevel[loading with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

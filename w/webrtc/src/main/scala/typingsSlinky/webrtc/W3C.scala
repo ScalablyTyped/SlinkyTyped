@@ -1,6 +1,5 @@
 package typingsSlinky.webrtc
 
-import typingsSlinky.webrtc.W3C.ConstrainNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

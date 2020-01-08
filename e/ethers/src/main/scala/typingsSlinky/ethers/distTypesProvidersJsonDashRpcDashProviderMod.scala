@@ -1,7 +1,5 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.distTypesProvidersJsonDashRpcDashProviderMod.JsonRpcProvider
-import typingsSlinky.ethers.distTypesProvidersJsonDashRpcDashProviderMod.JsonRpcSigner
 import typingsSlinky.ethers.distTypesProvidersProviderMod.Provider
 import typingsSlinky.ethers.distTypesUtilsTypesMod.BigNumber
 import typingsSlinky.ethers.distTypesUtilsTypesMod.BlockTag

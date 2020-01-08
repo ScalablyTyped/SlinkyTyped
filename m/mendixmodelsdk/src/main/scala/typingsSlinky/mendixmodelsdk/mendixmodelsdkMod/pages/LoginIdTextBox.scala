@@ -4,6 +4,10 @@ import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayoutCallArgument
+import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +22,12 @@ import scala.scalajs.js.annotation._
 class LoginIdTextBox protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.pages.LoginIdTextBox {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -32,7 +36,7 @@ class LoginIdTextBox protected ()
 @js.native
 object LoginIdTextBox extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new LoginIdTextBox instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -273,6 +277,15 @@ object LoginIdTextBox extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.LoginIdTextBox = js.native
+  /**
+    * Creates and returns a new LoginIdTextBox instance in the SDK and on the server.
+    * The new LoginIdTextBox will be automatically stored in the 'sidebarWidgets' property
+    * of the parent NativeLayoutContent element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInNativeLayoutContentUnderSidebarWidgets(container: typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.LoginIdTextBox = js.native
   /**
     * Creates and returns a new LoginIdTextBox instance in the SDK and on the server.
     * The new LoginIdTextBox will be automatically stored in the 'widgets' property

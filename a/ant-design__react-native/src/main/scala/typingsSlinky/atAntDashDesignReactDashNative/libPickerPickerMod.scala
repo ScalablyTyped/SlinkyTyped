@@ -1,6 +1,5 @@
 package typingsSlinky.atAntDashDesignReactDashNative
 
-import typingsSlinky.atAntDashDesignReactDashNative.libPickerPickerMod.Picker
 import typingsSlinky.atAntDashDesignReactDashNative.libPickerPickerTypesMod.PickerProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

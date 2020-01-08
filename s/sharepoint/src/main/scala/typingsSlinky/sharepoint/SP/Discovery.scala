@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.sharepoint.SP.Discovery.ExportStatus
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ object Discovery extends js.Object {
   
   @js.native
   class Export protected () extends ClientObject {
-    def this(context: ClientRuntimeContext, item: typingsSlinky.sharepoint.SP.ListItem[_]) = this()
+    def this(context: ClientRuntimeContext, item: ListItem[_]) = this()
     def getExportContent(): StringResult = js.native
     def get_status(): ExportStatus = js.native
     def set_status(value: ExportStatus): ExportStatus = js.native
@@ -43,12 +43,20 @@ object Discovery extends js.Object {
     @js.native
     sealed trait started extends ExportStatus
     
-    /* 2 */ val complete: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.complete with Double = js.native
-    /* 3 */ val failed: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.failed with Double = js.native
-    /* 0 */ val notStarted: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.notStarted with Double = js.native
-    /* 1 */ val started: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.started with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ExportStatus with Double] = js.native
+    /* 2 */ @js.native
+    object complete extends TopLevel[complete with Double]
+    
+    /* 3 */ @js.native
+    object failed extends TopLevel[failed with Double]
+    
+    /* 0 */ @js.native
+    object notStarted extends TopLevel[notStarted with Double]
+    
+    /* 1 */ @js.native
+    object started extends TopLevel[started with Double]
+    
   }
   
 }

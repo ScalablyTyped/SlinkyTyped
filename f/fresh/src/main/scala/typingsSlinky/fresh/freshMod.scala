@@ -1,7 +1,6 @@
 package typingsSlinky.fresh
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fresh.freshMod.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

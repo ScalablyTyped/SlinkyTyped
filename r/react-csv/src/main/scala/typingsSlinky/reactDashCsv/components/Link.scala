@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Link extends SharedApply_LinkProps2124954162[default] {
+object Link extends SharedApply_LinkProps1770942291[default] {
   @JSImport("react-csv/components/Link", JSImport.Default)
   @js.native
   object componentImport extends js.Object

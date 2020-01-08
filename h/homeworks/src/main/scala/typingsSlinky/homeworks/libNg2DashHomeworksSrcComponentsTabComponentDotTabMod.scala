@@ -5,7 +5,6 @@ import typingsSlinky.atAngularCore.atAngularCoreMod.ElementRef
 import typingsSlinky.atAngularCore.atAngularCoreMod.EventEmitter
 import typingsSlinky.atAngularCore.atAngularCoreMod.Renderer2
 import typingsSlinky.homeworks.homeworks.TabEvent
-import typingsSlinky.homeworks.libNg2DashHomeworksSrcComponentsTabComponentDotTabMod.WorksTabTitle
 import typingsSlinky.homeworks.libNg2DashHomeworksSrcCoreManagerMod.HomeworksManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`

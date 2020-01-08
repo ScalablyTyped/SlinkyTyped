@@ -7,6 +7,7 @@ import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPublisherMod.Attributes
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPublisherMod.PublishCallback
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPublisherMod.PublishOptions
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPublisherMod.Publisher
+import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPublisherMod.PubsubMessage
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPubsubMod.EmptyCallback
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPubsubMod.EmptyResponse
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcPubsubMod.ExistsCallback
@@ -23,23 +24,6 @@ import typingsSlinky.atGoogleDashCloudPubsub.buildSrcSubscriptionMod.CreateSubsc
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcSubscriptionMod.CreateSubscriptionResponse
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcSubscriptionMod.Subscription
 import typingsSlinky.atGoogleDashCloudPubsub.buildSrcSubscriptionMod.SubscriptionOptions
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.CreateTopicCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.CreateTopicResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicMetadataCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicMetadataResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicOptions
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicSubscriptionsCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.GetTopicSubscriptionsResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.MetadataCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.MetadataResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.SetTopicMetadataCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.SetTopicMetadataResponse
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.Topic
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.TopicCallback
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.TopicMetadata
-import typingsSlinky.atGoogleDashCloudPubsub.buildSrcTopicMod.TopicResponse
 import typingsSlinky.googleDashGax.buildSrcGaxMod.CallOptions
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.PromiseConstructor
@@ -98,7 +82,32 @@ object buildSrcTopicMod extends js.Object {
     def publishJSON(json: js.Object, attributes: Attributes): js.Promise[String] = js.native
     def publishJSON(json: js.Object, attributes: Attributes, callback: PublishCallback): Unit = js.native
     def publishJSON(json: js.Object, callback: PublishCallback): Unit = js.native
+    def publishMessage(message: MessageOptions): js.Promise[js.Array[String]] = js.native
+    def publishMessage(message: MessageOptions, callback: PublishCallback): Unit = js.native
     def request[T, R](config: RequestConfig, callback: RequestCallback[T, R]): Unit = js.native
+    /**
+      * In the event that the client fails to publish an ordered message, all
+      * subsequent publish calls using the same ordering key will fail. Calling
+      * this method will disregard the publish failure, allowing the supplied
+      * ordering key to be used again in the future.
+      *
+      * @param {string} orderingKey The ordering key in question.
+      *
+      * @example
+      * const {PubSub} = require('@google-cloud/pubsub');
+      * const pubsub = new PubSub();
+      * const topic = pubsub.topic('my-topic', {messageOrdering: true});
+      *
+      * const orderingKey = 'foo';
+      * const data = Buffer.from('Hello, order!');
+      *
+      * topic.publishMessage({data, orderingKey}, err => {
+      *   if (err) {
+      *     topic.resumePublishing(orderingKey);
+      *   }
+      * });
+      */
+    def resumePublishing(orderingKey: String): Unit = js.native
     def setMetadata(options: TopicMetadata): js.Promise[SetTopicMetadataResponse] = js.native
     def setMetadata(options: TopicMetadata, callback: SetTopicMetadataCallback): Unit = js.native
     def setMetadata(options: TopicMetadata, gaxOpts: CallOptions): js.Promise[SetTopicMetadataResponse] = js.native
@@ -176,6 +185,7 @@ object buildSrcTopicMod extends js.Object {
   type GetTopicResponse = TopicResponse
   type GetTopicSubscriptionsCallback = RequestCallback[Subscription, IListTopicSubscriptionsResponse]
   type GetTopicSubscriptionsResponse = PagedResponse[Subscription, IListTopicSubscriptionsResponse]
+  type MessageOptions = PubsubMessage with Anon_Json
   type MetadataCallback = RequestCallback[TopicMetadata, Unit]
   type MetadataResponse = js.Array[TopicMetadata]
   type SetTopicMetadataCallback = MetadataCallback

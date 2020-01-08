@@ -12,7 +12,7 @@ A minimal but effective logging mechanism with support for log levels and plugga
 | Keywords           | aurelia, logging |
 | # releases         | 4 |
 | # dependents       | 66 |
-| # downloads        | 430160 |
+| # downloads        | 592817 |
 | # stars            | 0 |
 
 ## Links

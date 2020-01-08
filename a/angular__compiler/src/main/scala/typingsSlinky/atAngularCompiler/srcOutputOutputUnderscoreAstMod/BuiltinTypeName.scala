@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object BuiltinTypeName extends js.Object {
   @js.native
   sealed trait String extends BuiltinTypeName
   
-  /* 1 */ val Bool: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Bool with Double = js.native
-  /* 0 */ val Dynamic: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Dynamic with Double = js.native
-  /* 5 */ val Function: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Function with Double = js.native
-  /* 6 */ val Inferred: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Inferred with Double = js.native
-  /* 3 */ val Int: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Int with Double = js.native
-  /* 7 */ val None: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.None with Double = js.native
-  /* 4 */ val Number: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.Number with Double = js.native
-  /* 2 */ val String: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BuiltinTypeName.String with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BuiltinTypeName with Double] = js.native
+  /* 1 */ @js.native
+  object Bool extends TopLevel[Bool with Double]
+  
+  /* 0 */ @js.native
+  object Dynamic extends TopLevel[Dynamic with Double]
+  
+  /* 5 */ @js.native
+  object Function extends TopLevel[Function with Double]
+  
+  /* 6 */ @js.native
+  object Inferred extends TopLevel[Inferred with Double]
+  
+  /* 3 */ @js.native
+  object Int extends TopLevel[Int with Double]
+  
+  /* 7 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object Number extends TopLevel[Number with Double]
+  
+  /* 2 */ @js.native
+  object String extends TopLevel[String with Double]
+  
 }
 

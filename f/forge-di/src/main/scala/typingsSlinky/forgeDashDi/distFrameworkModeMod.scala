@@ -1,6 +1,5 @@
 package typingsSlinky.forgeDashDi
 
-import typingsSlinky.forgeDashDi.distFrameworkModeMod.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

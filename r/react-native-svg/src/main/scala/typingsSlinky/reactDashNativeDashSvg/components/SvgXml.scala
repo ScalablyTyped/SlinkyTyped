@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SvgXml extends SharedApply_XmlProps197349434 {
+object SvgXml extends SharedApply_XmlProps1250515804 {
   @JSImport("react-native-svg", "SvgXml")
   @js.native
   object componentImport extends js.Object

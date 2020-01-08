@@ -1,9 +1,7 @@
 package typingsSlinky.ndnDashJs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ndnDashJs.blobMod.Blob
-import typingsSlinky.ndnDashJs.dataMod.ContentType
-import typingsSlinky.ndnDashJs.dataMod.Data
-import typingsSlinky.ndnDashJs.dataMod.MetaInfo
 import typingsSlinky.ndnDashJs.nameMod.Name
 import typingsSlinky.ndnDashJs.nameMod.Name.Component
 import typingsSlinky.ndnDashJs.signatureMod.Signature
@@ -70,13 +68,23 @@ object dataMod extends js.Object {
     @js.native
     sealed trait OTHER_CODE extends ContentType
     
-    /* 0 */ val BLOB: typingsSlinky.ndnDashJs.dataMod.ContentType.BLOB with Double = js.native
-    /* 2 */ val KEY: typingsSlinky.ndnDashJs.dataMod.ContentType.KEY with Double = js.native
-    /* 1 */ val LINK: typingsSlinky.ndnDashJs.dataMod.ContentType.LINK with Double = js.native
-    /* 3 */ val NACK: typingsSlinky.ndnDashJs.dataMod.ContentType.NACK with Double = js.native
-    /* 0x7fff */ val OTHER_CODE: typingsSlinky.ndnDashJs.dataMod.ContentType.OTHER_CODE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ContentType with Double] = js.native
+    /* 0 */ @js.native
+    object BLOB extends TopLevel[BLOB with Double]
+    
+    /* 2 */ @js.native
+    object KEY extends TopLevel[KEY with Double]
+    
+    /* 1 */ @js.native
+    object LINK extends TopLevel[LINK with Double]
+    
+    /* 3 */ @js.native
+    object NACK extends TopLevel[NACK with Double]
+    
+    /* 0x7fff */ @js.native
+    object OTHER_CODE extends TopLevel[OTHER_CODE with Double]
+    
   }
   
 }

@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerArrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.baseContainerIContainerMod.IContainer
-import typingsSlinky.tstl.baseContainerVectorContainerMod.VectorContainer
 import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayIteratorBase
 import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayReverseIteratorBase
 import scala.scalajs.js

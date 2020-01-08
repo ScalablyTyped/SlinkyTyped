@@ -1,7 +1,6 @@
 package typingsSlinky.rcDashTable
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.rcDashTable.libColumnMod.ColumnProps
 import typingsSlinky.rcDashTable.libInterfaceMod.ColumnType
 import typingsSlinky.rcDashTable.libInterfaceMod.DefaultValueType
 import scala.scalajs.js

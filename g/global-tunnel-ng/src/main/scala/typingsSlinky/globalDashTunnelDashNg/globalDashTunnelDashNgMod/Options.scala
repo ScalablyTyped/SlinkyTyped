@@ -1,10 +1,10 @@
 package typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.`http:`
-import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.`https:`
 import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.both
+import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.httpColon
 import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.https
+import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.httpsColon
 import typingsSlinky.globalDashTunnelDashNg.globalDashTunnelDashNgStrings.neither
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait Options extends js.Object {
   var host: String
   var originHttpsOptions: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   var port: Double
-  var protocol: js.UndefOr[`http:` | `https:`] = js.undefined
+  var protocol: js.UndefOr[httpColon | httpsColon] = js.undefined
   var proxyAuth: js.UndefOr[String] = js.undefined
   var proxyHttpsOptions: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   var sockets: js.UndefOr[Double] = js.undefined
@@ -28,7 +28,7 @@ object Options {
     port: Double,
     connect: neither | https | both = null,
     originHttpsOptions: StringDictionary[js.Any] = null,
-    protocol: `http:` | `https:` = null,
+    protocol: httpColon | httpsColon = null,
     proxyAuth: String = null,
     proxyHttpsOptions: StringDictionary[js.Any] = null,
     sockets: Int | Double = null

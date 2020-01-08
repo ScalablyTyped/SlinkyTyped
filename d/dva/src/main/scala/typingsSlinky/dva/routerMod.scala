@@ -2,8 +2,8 @@ package typingsSlinky.dva
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.dva.dvaStrings.`@@router/CALL_HISTORY_METHOD`
-import typingsSlinky.dva.dvaStrings.`@@router/LOCATION_CHANGE`
+import typingsSlinky.dva.dvaStrings.`@@routerSlashCALL_HISTORY_METHOD`
+import typingsSlinky.dva.dvaStrings.`@@routerSlashLOCATION_CHANGE`
 import typingsSlinky.history.historyMod.History
 import typingsSlinky.history.historyMod.Location
 import typingsSlinky.history.historyMod.LocationDescriptor
@@ -131,8 +131,8 @@ object routerMod extends js.Object {
     class ConnectedRouter[State] ()
       extends Component[ConnectedRouterProps[State], js.Object, js.Any]
     
-    val CALL_HISTORY_METHOD: `@@router/CALL_HISTORY_METHOD` = js.native
-    val LOCATION_CHANGE: `@@router/LOCATION_CHANGE` = js.native
+    val CALL_HISTORY_METHOD: `@@routerSlashCALL_HISTORY_METHOD` = js.native
+    val LOCATION_CHANGE: `@@routerSlashLOCATION_CHANGE` = js.native
     val routerReducer: Reducer[RouterState, AnyAction] = js.native
     def createMatchSelector(path: String): js.Function1[/* state */ Anon_Router, `match`[js.Object] | Null] = js.native
     def go(n: Double): RouterAction = js.native

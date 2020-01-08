@@ -18,12 +18,13 @@ object BlockCheckbox
   
   override val component: String | js.Object = this.componentImport
   def apply(
-    list: js.Array[Anon_Key],
     onChange: String => Unit,
     value: String,
+    list: js.Array[Anon_Key] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(list = list.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
+    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

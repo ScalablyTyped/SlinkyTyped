@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,33 +89,85 @@ object SymbolKind extends js.Object {
   @js.native
   sealed trait Variable extends SymbolKind
   
-  /* 17 */ val Array: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Array with Double = js.native
-  /* 16 */ val Boolean: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Boolean with Double = js.native
-  /* 4 */ val Class: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Class with Double = js.native
-  /* 13 */ val Constant: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Constant with Double = js.native
-  /* 8 */ val Constructor: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Constructor with Double = js.native
-  /* 9 */ val Enum: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Enum with Double = js.native
-  /* 21 */ val EnumMember: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.EnumMember with Double = js.native
-  /* 23 */ val Event: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Event with Double = js.native
-  /* 7 */ val Field: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Field with Double = js.native
-  /* 0 */ val File: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.File with Double = js.native
-  /* 11 */ val Function: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Function with Double = js.native
-  /* 10 */ val Interface: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Interface with Double = js.native
-  /* 19 */ val Key: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Key with Double = js.native
-  /* 5 */ val Method: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Method with Double = js.native
-  /* 1 */ val Module: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Module with Double = js.native
-  /* 2 */ val Namespace: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Namespace with Double = js.native
-  /* 20 */ val Null: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Null with Double = js.native
-  /* 15 */ val Number: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Number with Double = js.native
-  /* 18 */ val Object: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Object with Double = js.native
-  /* 24 */ val Operator: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Operator with Double = js.native
-  /* 3 */ val Package: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Package with Double = js.native
-  /* 6 */ val Property: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Property with Double = js.native
-  /* 14 */ val String: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.String with Double = js.native
-  /* 22 */ val Struct: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Struct with Double = js.native
-  /* 25 */ val TypeParameter: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.TypeParameter with Double = js.native
-  /* 12 */ val Variable: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SymbolKind.Variable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SymbolKind with Double] = js.native
+  /* 17 */ @js.native
+  object Array extends TopLevel[Array with Double]
+  
+  /* 16 */ @js.native
+  object Boolean extends TopLevel[Boolean with Double]
+  
+  /* 4 */ @js.native
+  object Class extends TopLevel[Class with Double]
+  
+  /* 13 */ @js.native
+  object Constant extends TopLevel[Constant with Double]
+  
+  /* 8 */ @js.native
+  object Constructor extends TopLevel[Constructor with Double]
+  
+  /* 9 */ @js.native
+  object Enum extends TopLevel[Enum with Double]
+  
+  /* 21 */ @js.native
+  object EnumMember extends TopLevel[EnumMember with Double]
+  
+  /* 23 */ @js.native
+  object Event extends TopLevel[Event with Double]
+  
+  /* 7 */ @js.native
+  object Field extends TopLevel[Field with Double]
+  
+  /* 0 */ @js.native
+  object File extends TopLevel[File with Double]
+  
+  /* 11 */ @js.native
+  object Function extends TopLevel[Function with Double]
+  
+  /* 10 */ @js.native
+  object Interface extends TopLevel[Interface with Double]
+  
+  /* 19 */ @js.native
+  object Key extends TopLevel[Key with Double]
+  
+  /* 5 */ @js.native
+  object Method extends TopLevel[Method with Double]
+  
+  /* 1 */ @js.native
+  object Module extends TopLevel[Module with Double]
+  
+  /* 2 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
+  
+  /* 20 */ @js.native
+  object Null extends TopLevel[Null with Double]
+  
+  /* 15 */ @js.native
+  object Number extends TopLevel[Number with Double]
+  
+  /* 18 */ @js.native
+  object Object extends TopLevel[Object with Double]
+  
+  /* 24 */ @js.native
+  object Operator extends TopLevel[Operator with Double]
+  
+  /* 3 */ @js.native
+  object Package extends TopLevel[Package with Double]
+  
+  /* 6 */ @js.native
+  object Property extends TopLevel[Property with Double]
+  
+  /* 14 */ @js.native
+  object String extends TopLevel[String with Double]
+  
+  /* 22 */ @js.native
+  object Struct extends TopLevel[Struct with Double]
+  
+  /* 25 */ @js.native
+  object TypeParameter extends TopLevel[TypeParameter with Double]
+  
+  /* 12 */ @js.native
+  object Variable extends TopLevel[Variable with Double]
+  
 }
 

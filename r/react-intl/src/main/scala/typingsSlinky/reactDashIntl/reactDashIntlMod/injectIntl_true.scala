@@ -5,7 +5,7 @@ import typingsSlinky.react.reactMod.ForwardRefExoticComponent
 import typingsSlinky.react.reactMod.PropsWithoutRef
 import typingsSlinky.react.reactMod.RefAttributes
 import typingsSlinky.reactDashIntl.Anon_WrappedComponentComponentTypeP
-import typingsSlinky.reactDashIntl.reactDashIntlNumbers.`true`
+import typingsSlinky.reactDashIntl.reactDashIntlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

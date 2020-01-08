@@ -1,5 +1,6 @@
 package typingsSlinky.atUirouterCore.libTransitionInterfaceMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object TransitionHookPhase extends js.Object {
   @js.native
   sealed trait SUCCESS extends TransitionHookPhase
   
-  /* 1 */ val BEFORE: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookPhase.BEFORE with Double = js.native
-  /* 0 */ val CREATE: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookPhase.CREATE with Double = js.native
-  /* 4 */ val ERROR: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookPhase.ERROR with Double = js.native
-  /* 2 */ val RUN: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookPhase.RUN with Double = js.native
-  /* 3 */ val SUCCESS: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookPhase.SUCCESS with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TransitionHookPhase with Double] = js.native
+  /* 1 */ @js.native
+  object BEFORE extends TopLevel[BEFORE with Double]
+  
+  /* 0 */ @js.native
+  object CREATE extends TopLevel[CREATE with Double]
+  
+  /* 4 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 2 */ @js.native
+  object RUN extends TopLevel[RUN with Double]
+  
+  /* 3 */ @js.native
+  object SUCCESS extends TopLevel[SUCCESS with Double]
+  
 }
 

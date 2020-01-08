@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ZoomCommand extends js.Object {
   @js.native
   sealed trait ZoomOut extends ZoomCommand
   
-  /* 0 */ val ZoomIn: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ZoomCommand.ZoomIn with Double = js.native
-  /* 1 */ val ZoomOut: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ZoomCommand.ZoomOut with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ZoomCommand with Double] = js.native
+  /* 0 */ @js.native
+  object ZoomIn extends TopLevel[ZoomIn with Double]
+  
+  /* 1 */ @js.native
+  object ZoomOut extends TopLevel[ZoomOut with Double]
+  
 }
 

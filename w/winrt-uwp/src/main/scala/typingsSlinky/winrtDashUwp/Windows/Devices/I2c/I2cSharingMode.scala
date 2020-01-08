@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.I2c
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object I2cSharingMode extends js.Object {
   @js.native
   sealed trait shared extends I2cSharingMode
   
-  /* 0 */ val exclusive: typingsSlinky.winrtDashUwp.Windows.Devices.I2c.I2cSharingMode.exclusive with Double = js.native
-  /* 1 */ val shared: typingsSlinky.winrtDashUwp.Windows.Devices.I2c.I2cSharingMode.shared with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[I2cSharingMode with Double] = js.native
+  /* 0 */ @js.native
+  object exclusive extends TopLevel[exclusive with Double]
+  
+  /* 1 */ @js.native
+  object shared extends TopLevel[shared with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,10 +39,16 @@ object VerticalAlignment extends js.Object {
   @js.native
   sealed trait TOP extends VerticalAlignment
   
-  /* 0 */ val BOTTOM: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.VerticalAlignment.BOTTOM with Double = js.native
-  /* 1 */ val CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.VerticalAlignment.CENTER with Double = js.native
-  /* 2 */ val TOP: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.VerticalAlignment.TOP with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VerticalAlignment with Double] = js.native
+  /* 0 */ @js.native
+  object BOTTOM extends TopLevel[BOTTOM with Double]
+  
+  /* 1 */ @js.native
+  object CENTER extends TopLevel[CENTER with Double]
+  
+  /* 2 */ @js.native
+  object TOP extends TopLevel[TOP with Double]
+  
 }
 

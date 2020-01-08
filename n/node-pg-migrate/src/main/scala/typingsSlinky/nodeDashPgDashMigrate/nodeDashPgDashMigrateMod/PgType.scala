@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -238,64 +239,178 @@ object PgType extends js.Object {
   @js.native
   sealed trait XML extends PgType
   
-  /* "bigint" */ val BIGINT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BIGINT with String = js.native
-  /* "bigserial" */ val BIGSERIAL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BIGSERIAL with String = js.native
-  /* "bit" */ val BIT_1: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BIT_1 with String = js.native
-  /* "bit varying" */ val BIT_VARYING: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BIT_VARYING with String = js.native
-  /* "bool" */ val BOOL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BOOL with String = js.native
-  /* "boolean" */ val BOOLEAN: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BOOLEAN with String = js.native
-  /* "box" */ val BOX: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BOX with String = js.native
-  /* "bytea" */ val BYTEA: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.BYTEA with String = js.native
-  /* "char" */ val CHAR: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.CHAR with String = js.native
-  /* "character" */ val CHARACTER: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.CHARACTER with String = js.native
-  /* "character varying" */ val CHARACTER_VARYING: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.CHARACTER_VARYING with String = js.native
-  /* "cidr" */ val CIDR: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.CIDR with String = js.native
-  /* "circle" */ val CIRCLE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.CIRCLE with String = js.native
-  /* "date" */ val DATE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.DATE with String = js.native
-  /* "double precision" */ val DOUBLE_PRECISION: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.DOUBLE_PRECISION with String = js.native
-  /* "float4" */ val FLOAT4: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.FLOAT4 with String = js.native
-  /* "inet" */ val INET: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INET with String = js.native
-  /* "int" */ val INT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INT with String = js.native
-  /* "int2" */ val INT2: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INT2 with String = js.native
-  /* "int4" */ val INT4: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INT4 with String = js.native
-  /* "int8" */ val INT8: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INT8 with String = js.native
-  /* "integer" */ val INTEGER: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INTEGER with String = js.native
-  /* "interval" */ val INTERVAL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.INTERVAL with String = js.native
-  /* "json" */ val JSON: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.JSON with String = js.native
-  /* "jsonb" */ val JSONB: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.JSONB with String = js.native
-  /* "line" */ val LINE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.LINE with String = js.native
-  /* "lseg" */ val LSEG: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.LSEG with String = js.native
-  /* "macaddr" */ val MACADDR: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.MACADDR with String = js.native
-  /* "money" */ val MONEY: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.MONEY with String = js.native
-  /* "numeric" */ val NUMERIC: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.NUMERIC with String = js.native
-  /* "path" */ val PATH: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.PATH with String = js.native
-  /* "pg_lsn" */ val PG_LSN: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.PG_LSN with String = js.native
-  /* "point" */ val POINT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.POINT with String = js.native
-  /* "polygon" */ val POLYGON: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.POLYGON with String = js.native
-  /* "real" */ val REAL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.REAL with String = js.native
-  /* "serial" */ val SERIAL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SERIAL with String = js.native
-  /* "serial2" */ val SERIAL2: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SERIAL2 with String = js.native
-  /* "serial4" */ val SERIAL4: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SERIAL4 with String = js.native
-  /* "serial8" */ val SERIAL8: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SERIAL8 with String = js.native
-  /* "smallint" */ val SMALLINT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SMALLINT with String = js.native
-  /* "smallserial" */ val SMALLSERIAL: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.SMALLSERIAL with String = js.native
-  /* "text" */ val TEXT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TEXT with String = js.native
-  /* "time" */ val TIME: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIME with String = js.native
-  /* "timestamp" */ val TIMESTAMP: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIMESTAMP with String = js.native
-  /* "timestamptz" */ val TIMESTAMPTZ: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIMESTAMPTZ with String = js.native
-  /* "timestamp without time zone" */ val TIMESTAMP_WITHOUT_TIME_ZONE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIMESTAMP_WITHOUT_TIME_ZONE with String = js.native
-  /* "timestamp with time zone" */ val TIMESTAMP_WITH_TIME_ZONE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIMESTAMP_WITH_TIME_ZONE with String = js.native
-  /* "timetz" */ val TIMETZ: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIMETZ with String = js.native
-  /* "without time zone" */ val TIME_WITHOUT_TIME_ZONE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIME_WITHOUT_TIME_ZONE with String = js.native
-  /* "time with time zone" */ val TIME_WITH_TIME_ZONE: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TIME_WITH_TIME_ZONE with String = js.native
-  /* "tsquery" */ val TSQUERY: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TSQUERY with String = js.native
-  /* "tsvector" */ val TSVECTOR: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TSVECTOR with String = js.native
-  /* "txid_snapshot" */ val TXID_SNAPSHOT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.TXID_SNAPSHOT with String = js.native
-  /* "uuid" */ val UUID: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.UUID with String = js.native
-  /* "varbit" */ val VARBIT: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.VARBIT with String = js.native
-  /* "varchar" */ val VARCHAR: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.VARCHAR with String = js.native
-  /* "xml" */ val XML: typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod.PgType.XML with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[PgType with String] = js.native
+  /* "bigint" */ @js.native
+  object BIGINT extends TopLevel[BIGINT with String]
+  
+  /* "bigserial" */ @js.native
+  object BIGSERIAL extends TopLevel[BIGSERIAL with String]
+  
+  /* "bit" */ @js.native
+  object BIT_1 extends TopLevel[BIT_1 with String]
+  
+  /* "bit varying" */ @js.native
+  object BIT_VARYING extends TopLevel[BIT_VARYING with String]
+  
+  /* "bool" */ @js.native
+  object BOOL extends TopLevel[BOOL with String]
+  
+  /* "boolean" */ @js.native
+  object BOOLEAN extends TopLevel[BOOLEAN with String]
+  
+  /* "box" */ @js.native
+  object BOX extends TopLevel[BOX with String]
+  
+  /* "bytea" */ @js.native
+  object BYTEA extends TopLevel[BYTEA with String]
+  
+  /* "char" */ @js.native
+  object CHAR extends TopLevel[CHAR with String]
+  
+  /* "character" */ @js.native
+  object CHARACTER extends TopLevel[CHARACTER with String]
+  
+  /* "character varying" */ @js.native
+  object CHARACTER_VARYING extends TopLevel[CHARACTER_VARYING with String]
+  
+  /* "cidr" */ @js.native
+  object CIDR extends TopLevel[CIDR with String]
+  
+  /* "circle" */ @js.native
+  object CIRCLE extends TopLevel[CIRCLE with String]
+  
+  /* "date" */ @js.native
+  object DATE extends TopLevel[DATE with String]
+  
+  /* "double precision" */ @js.native
+  object DOUBLE_PRECISION extends TopLevel[DOUBLE_PRECISION with String]
+  
+  /* "float4" */ @js.native
+  object FLOAT4 extends TopLevel[FLOAT4 with String]
+  
+  /* "inet" */ @js.native
+  object INET extends TopLevel[INET with String]
+  
+  /* "int" */ @js.native
+  object INT extends TopLevel[INT with String]
+  
+  /* "int2" */ @js.native
+  object INT2 extends TopLevel[INT2 with String]
+  
+  /* "int4" */ @js.native
+  object INT4 extends TopLevel[INT4 with String]
+  
+  /* "int8" */ @js.native
+  object INT8 extends TopLevel[INT8 with String]
+  
+  /* "integer" */ @js.native
+  object INTEGER extends TopLevel[INTEGER with String]
+  
+  /* "interval" */ @js.native
+  object INTERVAL extends TopLevel[INTERVAL with String]
+  
+  /* "json" */ @js.native
+  object JSON extends TopLevel[JSON with String]
+  
+  /* "jsonb" */ @js.native
+  object JSONB extends TopLevel[JSONB with String]
+  
+  /* "line" */ @js.native
+  object LINE extends TopLevel[LINE with String]
+  
+  /* "lseg" */ @js.native
+  object LSEG extends TopLevel[LSEG with String]
+  
+  /* "macaddr" */ @js.native
+  object MACADDR extends TopLevel[MACADDR with String]
+  
+  /* "money" */ @js.native
+  object MONEY extends TopLevel[MONEY with String]
+  
+  /* "numeric" */ @js.native
+  object NUMERIC extends TopLevel[NUMERIC with String]
+  
+  /* "path" */ @js.native
+  object PATH extends TopLevel[PATH with String]
+  
+  /* "pg_lsn" */ @js.native
+  object PG_LSN extends TopLevel[PG_LSN with String]
+  
+  /* "point" */ @js.native
+  object POINT extends TopLevel[POINT with String]
+  
+  /* "polygon" */ @js.native
+  object POLYGON extends TopLevel[POLYGON with String]
+  
+  /* "real" */ @js.native
+  object REAL extends TopLevel[REAL with String]
+  
+  /* "serial" */ @js.native
+  object SERIAL extends TopLevel[SERIAL with String]
+  
+  /* "serial2" */ @js.native
+  object SERIAL2 extends TopLevel[SERIAL2 with String]
+  
+  /* "serial4" */ @js.native
+  object SERIAL4 extends TopLevel[SERIAL4 with String]
+  
+  /* "serial8" */ @js.native
+  object SERIAL8 extends TopLevel[SERIAL8 with String]
+  
+  /* "smallint" */ @js.native
+  object SMALLINT extends TopLevel[SMALLINT with String]
+  
+  /* "smallserial" */ @js.native
+  object SMALLSERIAL extends TopLevel[SMALLSERIAL with String]
+  
+  /* "text" */ @js.native
+  object TEXT extends TopLevel[TEXT with String]
+  
+  /* "time" */ @js.native
+  object TIME extends TopLevel[TIME with String]
+  
+  /* "timestamp" */ @js.native
+  object TIMESTAMP extends TopLevel[TIMESTAMP with String]
+  
+  /* "timestamptz" */ @js.native
+  object TIMESTAMPTZ extends TopLevel[TIMESTAMPTZ with String]
+  
+  /* "timestamp without time zone" */ @js.native
+  object TIMESTAMP_WITHOUT_TIME_ZONE extends TopLevel[TIMESTAMP_WITHOUT_TIME_ZONE with String]
+  
+  /* "timestamp with time zone" */ @js.native
+  object TIMESTAMP_WITH_TIME_ZONE extends TopLevel[TIMESTAMP_WITH_TIME_ZONE with String]
+  
+  /* "timetz" */ @js.native
+  object TIMETZ extends TopLevel[TIMETZ with String]
+  
+  /* "without time zone" */ @js.native
+  object TIME_WITHOUT_TIME_ZONE extends TopLevel[TIME_WITHOUT_TIME_ZONE with String]
+  
+  /* "time with time zone" */ @js.native
+  object TIME_WITH_TIME_ZONE extends TopLevel[TIME_WITH_TIME_ZONE with String]
+  
+  /* "tsquery" */ @js.native
+  object TSQUERY extends TopLevel[TSQUERY with String]
+  
+  /* "tsvector" */ @js.native
+  object TSVECTOR extends TopLevel[TSVECTOR with String]
+  
+  /* "txid_snapshot" */ @js.native
+  object TXID_SNAPSHOT extends TopLevel[TXID_SNAPSHOT with String]
+  
+  /* "uuid" */ @js.native
+  object UUID extends TopLevel[UUID with String]
+  
+  /* "varbit" */ @js.native
+  object VARBIT extends TopLevel[VARBIT with String]
+  
+  /* "varchar" */ @js.native
+  object VARCHAR extends TopLevel[VARCHAR with String]
+  
+  /* "xml" */ @js.native
+  object XML extends TopLevel[XML with String]
+  
 }
 

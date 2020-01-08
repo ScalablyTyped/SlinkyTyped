@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object TimedMetadataKind extends js.Object {
   @js.native
   sealed trait subtitle extends TimedMetadataKind
   
-  /* 0 */ val caption: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.caption with Double = js.native
-  /* 1 */ val chapter: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.chapter with Double = js.native
-  /* 2 */ val custom: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.custom with Double = js.native
-  /* 3 */ val data: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.data with Double = js.native
-  /* 4 */ val description: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.description with Double = js.native
-  /* 5 */ val subtitle: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedMetadataKind.subtitle with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimedMetadataKind with Double] = js.native
+  /* 0 */ @js.native
+  object caption extends TopLevel[caption with Double]
+  
+  /* 1 */ @js.native
+  object chapter extends TopLevel[chapter with Double]
+  
+  /* 2 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 3 */ @js.native
+  object data extends TopLevel[data with Double]
+  
+  /* 4 */ @js.native
+  object description extends TopLevel[description with Double]
+  
+  /* 5 */ @js.native
+  object subtitle extends TopLevel[subtitle with Double]
+  
 }
 

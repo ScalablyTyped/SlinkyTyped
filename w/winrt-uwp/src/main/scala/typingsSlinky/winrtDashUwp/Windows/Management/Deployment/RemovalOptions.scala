@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Management.Deployment
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object RemovalOptions extends js.Object {
   @js.native
   sealed trait preserveApplicationData extends RemovalOptions
   
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.RemovalOptions.none with Double = js.native
-  /* 1 */ val preserveApplicationData: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.RemovalOptions.preserveApplicationData with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RemovalOptions with Double] = js.native
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object preserveApplicationData extends TopLevel[preserveApplicationData with Double]
+  
 }
 

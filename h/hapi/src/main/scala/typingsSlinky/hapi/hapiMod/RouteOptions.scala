@@ -4,10 +4,10 @@ import typingsSlinky.hapi.Anon_Collect
 import typingsSlinky.hapi.Anon_FailAction
 import typingsSlinky.hapi.Anon_RelativeTo
 import typingsSlinky.hapi.Anon_Server
+import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiMod.Json.StringifyArguments
 import typingsSlinky.hapi.hapiMod.Lifecycle.Method
 import typingsSlinky.hapi.hapiMod.Util.Dictionary
-import typingsSlinky.hapi.hapiNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Elastic extends SharedApply_Props_1510102771[elastic] {
+object Elastic extends SharedApply_Props1167272165[elastic] {
   @JSImport("react-burger-menu", "elastic")
   @js.native
   object componentImport extends js.Object

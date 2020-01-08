@@ -1,6 +1,5 @@
 package typingsSlinky.jsDashSchema
 
-import typingsSlinky.jsDashSchema.jsDashSchemaMod.Schema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

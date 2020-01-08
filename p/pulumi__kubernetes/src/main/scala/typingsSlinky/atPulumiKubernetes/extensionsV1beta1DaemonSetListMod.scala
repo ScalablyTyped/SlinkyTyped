@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`extensions/v1beta1`
-import typingsSlinky.atPulumiKubernetes.extensionsV1beta1DaemonSetListMod.DaemonSetList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.extensionsSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.extensions.v1beta1.DaemonSet
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object extensionsV1beta1DaemonSetListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`extensions/v1beta1`] = js.native
+    val apiVersion: Output[extensionsSlashv1beta1] = js.native
     /**
       * A list of daemon sets.
       */

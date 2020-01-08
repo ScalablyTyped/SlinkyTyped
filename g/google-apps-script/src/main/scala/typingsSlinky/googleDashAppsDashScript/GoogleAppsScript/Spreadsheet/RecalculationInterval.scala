@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object RecalculationInterval extends js.Object {
   @js.native
   sealed trait ON_CHANGE extends RecalculationInterval
   
-  /* 2 */ val HOUR: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.RecalculationInterval.HOUR with Double = js.native
-  /* 1 */ val MINUTE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.RecalculationInterval.MINUTE with Double = js.native
-  /* 0 */ val ON_CHANGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.RecalculationInterval.ON_CHANGE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RecalculationInterval with Double] = js.native
+  /* 2 */ @js.native
+  object HOUR extends TopLevel[HOUR with Double]
+  
+  /* 1 */ @js.native
+  object MINUTE extends TopLevel[MINUTE with Double]
+  
+  /* 0 */ @js.native
+  object ON_CHANGE extends TopLevel[ON_CHANGE with Double]
+  
 }
 

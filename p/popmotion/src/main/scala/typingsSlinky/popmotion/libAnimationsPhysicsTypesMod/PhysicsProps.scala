@@ -1,6 +1,6 @@
 package typingsSlinky.popmotion.libAnimationsPhysicsTypesMod
 
-import typingsSlinky.popmotion.popmotionNumbers.`false`
+import typingsSlinky.popmotion.popmotionBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

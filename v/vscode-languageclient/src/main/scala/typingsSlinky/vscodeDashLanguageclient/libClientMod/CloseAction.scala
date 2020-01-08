@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeDashLanguageclient.libClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object CloseAction extends js.Object {
   @js.native
   sealed trait Restart extends CloseAction
   
-  /* 1 */ val DoNotRestart: typingsSlinky.vscodeDashLanguageclient.libClientMod.CloseAction.DoNotRestart with Double = js.native
-  /* 2 */ val Restart: typingsSlinky.vscodeDashLanguageclient.libClientMod.CloseAction.Restart with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CloseAction with Double] = js.native
+  /* 1 */ @js.native
+  object DoNotRestart extends TopLevel[DoNotRestart with Double]
+  
+  /* 2 */ @js.native
+  object Restart extends TopLevel[Restart with Double]
+  
 }
 

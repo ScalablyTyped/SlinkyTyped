@@ -2,8 +2,8 @@ package typingsSlinky.victory.victoryMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.std.Pick
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryStrings.parent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -95,8 +95,8 @@ object VictoryChartProps {
     groupComponent: ReactElement = null,
     height: Int | Double = null,
     horizontal: js.UndefOr[Boolean] = js.undefined,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     name: String = null,
     padding: PaddingProps = null,
     scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,

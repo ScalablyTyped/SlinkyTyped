@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -102,30 +103,76 @@ object FlowShapes extends js.Object {
   @js.native
   sealed trait Terminator extends FlowShapes
   
-  /* 19 */ val Annotation1: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Annotation1 with Double = js.native
-  /* 20 */ val Annotation2: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Annotation2 with Double = js.native
-  /* 22 */ val Card: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Card with Double = js.native
-  /* 10 */ val Collate: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Collate with Double = js.native
-  /* 21 */ val Data: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Data with Double = js.native
-  /* 1 */ val Decision: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Decision with Double = js.native
-  /* 6 */ val DirectData: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.DirectData with Double = js.native
-  /* 2 */ val Document: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Document with Double = js.native
-  /* 14 */ val Extract: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Extract with Double = js.native
-  /* 13 */ val InternalStorage: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.InternalStorage with Double = js.native
-  /* 15 */ val ManualOperation: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.ManualOperation with Double = js.native
-  /* 16 */ val Merge: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Merge with Double = js.native
-  /* 9 */ val MultiDocument: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.MultiDocument with Double = js.native
-  /* 17 */ val OffPageReference: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.OffPageReference with Double = js.native
-  /* 12 */ val Or: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Or with Double = js.native
-  /* 5 */ val PaperTap: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.PaperTap with Double = js.native
-  /* 3 */ val PreDefinedProcess: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.PreDefinedProcess with Double = js.native
-  /* 0 */ val Process: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Process with Double = js.native
-  /* 18 */ val SequentialAccessStorage: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.SequentialAccessStorage with Double = js.native
-  /* 7 */ val SequentialData: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.SequentialData with Double = js.native
-  /* 8 */ val Sort: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Sort with Double = js.native
-  /* 11 */ val SummingJunction: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.SummingJunction with Double = js.native
-  /* 4 */ val Terminator: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FlowShapes.Terminator with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FlowShapes with Double] = js.native
+  /* 19 */ @js.native
+  object Annotation1 extends TopLevel[Annotation1 with Double]
+  
+  /* 20 */ @js.native
+  object Annotation2 extends TopLevel[Annotation2 with Double]
+  
+  /* 22 */ @js.native
+  object Card extends TopLevel[Card with Double]
+  
+  /* 10 */ @js.native
+  object Collate extends TopLevel[Collate with Double]
+  
+  /* 21 */ @js.native
+  object Data extends TopLevel[Data with Double]
+  
+  /* 1 */ @js.native
+  object Decision extends TopLevel[Decision with Double]
+  
+  /* 6 */ @js.native
+  object DirectData extends TopLevel[DirectData with Double]
+  
+  /* 2 */ @js.native
+  object Document extends TopLevel[Document with Double]
+  
+  /* 14 */ @js.native
+  object Extract extends TopLevel[Extract with Double]
+  
+  /* 13 */ @js.native
+  object InternalStorage extends TopLevel[InternalStorage with Double]
+  
+  /* 15 */ @js.native
+  object ManualOperation extends TopLevel[ManualOperation with Double]
+  
+  /* 16 */ @js.native
+  object Merge extends TopLevel[Merge with Double]
+  
+  /* 9 */ @js.native
+  object MultiDocument extends TopLevel[MultiDocument with Double]
+  
+  /* 17 */ @js.native
+  object OffPageReference extends TopLevel[OffPageReference with Double]
+  
+  /* 12 */ @js.native
+  object Or extends TopLevel[Or with Double]
+  
+  /* 5 */ @js.native
+  object PaperTap extends TopLevel[PaperTap with Double]
+  
+  /* 3 */ @js.native
+  object PreDefinedProcess extends TopLevel[PreDefinedProcess with Double]
+  
+  /* 0 */ @js.native
+  object Process extends TopLevel[Process with Double]
+  
+  /* 18 */ @js.native
+  object SequentialAccessStorage extends TopLevel[SequentialAccessStorage with Double]
+  
+  /* 7 */ @js.native
+  object SequentialData extends TopLevel[SequentialData with Double]
+  
+  /* 8 */ @js.native
+  object Sort extends TopLevel[Sort with Double]
+  
+  /* 11 */ @js.native
+  object SummingJunction extends TopLevel[SummingJunction with Double]
+  
+  /* 4 */ @js.native
+  object Terminator extends TopLevel[Terminator with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,16 +47,34 @@ object ToolBarItems extends js.Object {
   @js.native
   sealed trait WordExport extends ToolBarItems
   
-  /* 0 */ val Add: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Add with Double = js.native
-  /* 4 */ val Cancel: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Cancel with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Delete with Double = js.native
-  /* 1 */ val Edit: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Edit with Double = js.native
-  /* 6 */ val PdfExport: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.PdfExport with Double = js.native
-  /* 7 */ val PrintGrid: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.PrintGrid with Double = js.native
-  /* 5 */ val Search: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Search with Double = js.native
-  /* 3 */ val Update: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.Update with Double = js.native
-  /* 8 */ val WordExport: typingsSlinky.ejDotWebDotAll.ej.Grid.ToolBarItems.WordExport with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToolBarItems with Double] = js.native
+  /* 0 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 4 */ @js.native
+  object Cancel extends TopLevel[Cancel with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 6 */ @js.native
+  object PdfExport extends TopLevel[PdfExport with Double]
+  
+  /* 7 */ @js.native
+  object PrintGrid extends TopLevel[PrintGrid with Double]
+  
+  /* 5 */ @js.native
+  object Search extends TopLevel[Search with Double]
+  
+  /* 3 */ @js.native
+  object Update extends TopLevel[Update with Double]
+  
+  /* 8 */ @js.native
+  object WordExport extends TopLevel[WordExport with Double]
+  
 }
 

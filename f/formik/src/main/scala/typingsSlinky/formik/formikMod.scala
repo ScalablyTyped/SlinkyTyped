@@ -1,5 +1,6 @@
 package typingsSlinky.formik
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
@@ -14,6 +15,7 @@ import typingsSlinky.formik.distWithFormikMod.ComponentDecorator
 import typingsSlinky.formik.distWithFormikMod.WithFormikConfig
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.react.reactMod.FormHTMLAttributes
 import typingsSlinky.react.reactMod.ProviderProps
 import typingsSlinky.std.HTMLFormElement
@@ -83,17 +85,7 @@ object formikMod extends js.Object {
     def this(props: FormikConfig[Values]) = this()
   }
   
-  val ErrorMessage: ReactComponentClass[ErrorMessageProps] = js.native
-  val FastField: ReactComponentClass[js.Any] = js.native
-  val Field: ReactComponentClass[js.Any] = js.native
-  val FieldArray: ReactComponentClass[FieldArrayConfig] = js.native
-  val Form: ReactComponentClass[
-    Pick[
-      FormHTMLAttributes[org.scalajs.dom.raw.HTMLFormElement], 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 255 */ js.Any
-    ]
-  ] = js.native
-  /* import warning: parser.TsParser#tsDeclVar $anonfun Dropped List(FormikConsumer) */ val FormikProvider: ReactComponentClass[ProviderProps[FormikContext[js.Any]]] = js.native
+  /* import warning: parser.TsParser#tsDeclVar Dropped IArray(FormikConsumer) */ val FormikProvider: ReactComponentClass[ProviderProps[FormikContext[js.Any]]] = js.native
   def connect[OuterProps, Values](Comp: ReactComponentClass[OuterProps with Anon_FormikFormikContext[Values]]): ReactComponentClass[OuterProps] = js.native
   def getActiveElement(): Element | Null = js.native
   def getActiveElement(doc: Document): Element | Null = js.native
@@ -125,6 +117,31 @@ object formikMod extends js.Object {
   def validateYupSchema[T /* <: FormikValues */](values: T, schema: js.Any, sync: Boolean, context: js.Any): js.Promise[Partial[T]] = js.native
   def withFormik[OuterProps, Values /* <: FormikValues */, Payload](hasMapPropsToValuesConfig: WithFormikConfig[OuterProps, Values, Payload]): ComponentDecorator[OuterProps, OuterProps with FormikProps[Values]] = js.native
   def yupToFormErrors[Values](yupError: js.Any): FormikErrors[Values] = js.native
+  @js.native
+  object ErrorMessage extends TopLevel[ComponentType[ErrorMessageProps]]
+  
+  @js.native
+  object FastField
+    extends TopLevel[ComponentType[js.Any]]
+  
+  @js.native
+  object Field
+    extends TopLevel[ComponentType[js.Any]]
+  
+  @js.native
+  object FieldArray extends TopLevel[ComponentType[FieldArrayConfig]]
+  
+  @js.native
+  object Form
+    extends TopLevel[
+          ComponentType[
+            Pick[
+              FormHTMLAttributes[HTMLFormElement], 
+              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 255 */ js.Any
+            ]
+          ]
+        ]
+  
   /* static members */
   @js.native
   object Formik extends js.Object {

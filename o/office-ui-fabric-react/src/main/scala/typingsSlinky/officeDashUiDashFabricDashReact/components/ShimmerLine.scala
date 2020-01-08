@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ShimmerLine extends SharedApply_IShimmerLineProps_1817986395 {
+object ShimmerLine extends SharedApply_IShimmerLineProps_2045982347 {
   @JSImport("office-ui-fabric-react/lib/Shimmer", "ShimmerLine")
   @js.native
   object componentImport extends js.Object

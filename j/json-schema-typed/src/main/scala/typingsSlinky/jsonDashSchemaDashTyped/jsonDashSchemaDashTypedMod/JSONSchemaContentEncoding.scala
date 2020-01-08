@@ -1,5 +1,6 @@
 package typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,14 +61,28 @@ object JSONSchemaContentEncoding extends js.Object {
   @js.native
   sealed trait XToken extends JSONSchemaContentEncoding
   
-  /* "7bit" */ val `7bit`: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.`7bit` with String = js.native
-  /* "8bit" */ val `8bit`: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.`8bit` with String = js.native
-  /* "base64" */ val Base64: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.Base64 with String = js.native
-  /* "binary" */ val Binary: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.Binary with String = js.native
-  /* "ietf-token" */ val IETFToken: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.IETFToken with String = js.native
-  /* "quoted-printable" */ val QuotedPrintable: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.QuotedPrintable with String = js.native
-  /* "x-token" */ val XToken: typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod.JSONSchemaContentEncoding.XToken with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[JSONSchemaContentEncoding with String] = js.native
+  /* "7bit" */ @js.native
+  object `7bit` extends TopLevel[`7bit` with String]
+  
+  /* "8bit" */ @js.native
+  object `8bit` extends TopLevel[`8bit` with String]
+  
+  /* "base64" */ @js.native
+  object Base64 extends TopLevel[Base64 with String]
+  
+  /* "binary" */ @js.native
+  object Binary extends TopLevel[Binary with String]
+  
+  /* "ietf-token" */ @js.native
+  object IETFToken extends TopLevel[IETFToken with String]
+  
+  /* "quoted-printable" */ @js.native
+  object QuotedPrintable extends TopLevel[QuotedPrintable with String]
+  
+  /* "x-token" */ @js.native
+  object XToken extends TopLevel[XToken with String]
+  
 }
 

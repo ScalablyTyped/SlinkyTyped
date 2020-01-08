@@ -1,6 +1,8 @@
 package typingsSlinky.officeDashJs.Excel.Interfaces
 
 import typingsSlinky.officeDashJs.Excel.BindingType
+import typingsSlinky.officeDashJs.officeDashJsStrings.Range
+import typingsSlinky.officeDashJs.officeDashJsStrings.Table
 import typingsSlinky.officeDashJs.officeDashJsStrings.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,17 +23,12 @@ trait BindingData extends js.Object {
     *
     * [Api set: ExcelApi 1.1]
     */
-  var `type`: js.UndefOr[
-    BindingType | typingsSlinky.officeDashJs.officeDashJsStrings.Range | typingsSlinky.officeDashJs.officeDashJsStrings.Table | Text
-  ] = js.undefined
+  var `type`: js.UndefOr[BindingType | Range | Table | Text] = js.undefined
 }
 
 object BindingData {
   @scala.inline
-  def apply(
-    id: String = null,
-    `type`: BindingType | typingsSlinky.officeDashJs.officeDashJsStrings.Range | typingsSlinky.officeDashJs.officeDashJsStrings.Table | Text = null
-  ): BindingData = {
+  def apply(id: String = null, `type`: BindingType | Range | Table | Text = null): BindingData = {
     val __obj = js.Dynamic.literal()
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])

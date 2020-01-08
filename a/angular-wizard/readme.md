@@ -1,7 +1,7 @@
 
 # Scala.js typings for angular-wizard
 
-Typings are for version 0.6.1
+Typings are for version 1.1.1
 
 ## Library description:
 Easy to use Wizard library for Angular JS
@@ -10,9 +10,9 @@ Easy to use Wizard library for Angular JS
 | ------------------ | :-------------: |
 | Full name          | angular-wizard |
 | Keywords           | angular, client, browser, wizard, form, steps |
-| # releases         | 5 |
+| # releases         | 1 |
 | # dependents       | 1 |
-| # downloads        | 110840 |
+| # downloads        | 122549 |
 | # stars            | 1 |
 
 ## Links

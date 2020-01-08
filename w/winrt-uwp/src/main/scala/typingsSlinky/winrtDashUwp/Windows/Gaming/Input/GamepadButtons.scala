@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Gaming.Input
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,22 +72,52 @@ object GamepadButtons extends js.Object {
   @js.native
   sealed trait y extends GamepadButtons
   
-  /* 3 */ val a: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.a with Double = js.native
-  /* 4 */ val b: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.b with Double = js.native
-  /* 8 */ val dpadDown: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.dpadDown with Double = js.native
-  /* 9 */ val dpadLeft: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.dpadLeft with Double = js.native
-  /* 10 */ val dpadRight: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.dpadRight with Double = js.native
-  /* 7 */ val dpadUp: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.dpadUp with Double = js.native
-  /* 11 */ val leftShoulder: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.leftShoulder with Double = js.native
-  /* 13 */ val leftThumbstick: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.leftThumbstick with Double = js.native
-  /* 1 */ val menu: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.menu with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.none with Double = js.native
-  /* 12 */ val rightShoulder: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.rightShoulder with Double = js.native
-  /* 14 */ val rightThumbstick: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.rightThumbstick with Double = js.native
-  /* 2 */ val view: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.view with Double = js.native
-  /* 5 */ val x: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.x with Double = js.native
-  /* 6 */ val y: typingsSlinky.winrtDashUwp.Windows.Gaming.Input.GamepadButtons.y with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GamepadButtons with Double] = js.native
+  /* 3 */ @js.native
+  object a extends TopLevel[a with Double]
+  
+  /* 4 */ @js.native
+  object b extends TopLevel[b with Double]
+  
+  /* 8 */ @js.native
+  object dpadDown extends TopLevel[dpadDown with Double]
+  
+  /* 9 */ @js.native
+  object dpadLeft extends TopLevel[dpadLeft with Double]
+  
+  /* 10 */ @js.native
+  object dpadRight extends TopLevel[dpadRight with Double]
+  
+  /* 7 */ @js.native
+  object dpadUp extends TopLevel[dpadUp with Double]
+  
+  /* 11 */ @js.native
+  object leftShoulder extends TopLevel[leftShoulder with Double]
+  
+  /* 13 */ @js.native
+  object leftThumbstick extends TopLevel[leftThumbstick with Double]
+  
+  /* 1 */ @js.native
+  object menu extends TopLevel[menu with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 12 */ @js.native
+  object rightShoulder extends TopLevel[rightShoulder with Double]
+  
+  /* 14 */ @js.native
+  object rightThumbstick extends TopLevel[rightThumbstick with Double]
+  
+  /* 2 */ @js.native
+  object view extends TopLevel[view with Double]
+  
+  /* 5 */ @js.native
+  object x extends TopLevel[x with Double]
+  
+  /* 6 */ @js.native
+  object y extends TopLevel[y with Double]
+  
 }
 

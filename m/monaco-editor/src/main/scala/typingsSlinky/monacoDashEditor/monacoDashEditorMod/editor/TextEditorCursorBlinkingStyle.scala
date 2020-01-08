@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object TextEditorCursorBlinkingStyle extends js.Object {
   @js.native
   sealed trait Solid extends TextEditorCursorBlinkingStyle
   
-  /* 1 */ val Blink: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Blink with Double = js.native
-  /* 4 */ val Expand: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Expand with Double = js.native
-  /* 0 */ val Hidden: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Hidden with Double = js.native
-  /* 3 */ val Phase: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Phase with Double = js.native
-  /* 2 */ val Smooth: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Smooth with Double = js.native
-  /* 5 */ val Solid: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TextEditorCursorBlinkingStyle.Solid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextEditorCursorBlinkingStyle with Double] = js.native
+  /* 1 */ @js.native
+  object Blink extends TopLevel[Blink with Double]
+  
+  /* 4 */ @js.native
+  object Expand extends TopLevel[Expand with Double]
+  
+  /* 0 */ @js.native
+  object Hidden extends TopLevel[Hidden with Double]
+  
+  /* 3 */ @js.native
+  object Phase extends TopLevel[Phase with Double]
+  
+  /* 2 */ @js.native
+  object Smooth extends TopLevel[Smooth with Double]
+  
+  /* 5 */ @js.native
+  object Solid extends TopLevel[Solid with Double]
+  
 }
 

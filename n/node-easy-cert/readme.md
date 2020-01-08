@@ -10,9 +10,9 @@ A tool for managing self-signed certifications
 | ------------------ | :-------------: |
 | Full name          | node-easy-cert |
 | Keywords           | certification, https |
-| # releases         | 5 |
-| # dependents       | 18 |
-| # downloads        | 213299 |
+| # releases         | 2 |
+| # dependents       | 19 |
+| # downloads        | 239373 |
 | # stars            | 1 |
 
 ## Links

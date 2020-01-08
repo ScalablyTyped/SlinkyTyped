@@ -1,6 +1,7 @@
 
 # Scala.js typings for resolve
 
+Typings are for version 1.14.1
 
 ## Library description:
 resolve like require.resolve() on behalf of files asynchronously and synchronously
@@ -9,9 +10,9 @@ resolve like require.resolve() on behalf of files asynchronously and synchronous
 | ------------------ | :-------------: |
 | Full name          | resolve |
 | Keywords           | resolve, require, node, module |
-| # releases         | 11 |
-| # dependents       | 3048 |
-| # downloads        | 539257757 |
+| # releases         | 19 |
+| # dependents       | 4083 |
+| # downloads        | 963589517 |
 | # stars            | 29 |
 
 ## Links

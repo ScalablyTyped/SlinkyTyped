@@ -9,9 +9,9 @@ Typings are for version 24.9.0
 | ------------------ | :-------------: |
 | Full name          | jest-util |
 | Keywords           | - |
-| # releases         | 73 |
-| # dependents       | 72 |
-| # downloads        | 237298994 |
+| # releases         | 61 |
+| # dependents       | 74 |
+| # downloads        | 257383814 |
 | # stars            | 0 |
 
 ## Links

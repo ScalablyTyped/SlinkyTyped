@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dijit._Widget
+import typingsSlinky.dojo.dojo.date
 import typingsSlinky.dojo.dojoStrings.active
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.contextRequire
@@ -236,7 +237,7 @@ class MultiSelectCalendar protected () extends _Widget {
     * @param dateToSelect
     * @param selectedDates
     */
-  def selectDate(dateToSelect: typingsSlinky.dojo.dojo.date, selectedDates: js.Array[js.Date]): Unit = js.native
+  def selectDate(dateToSelect: date, selectedDates: js.Array[js.Date]): Unit = js.native
   @JSName("set")
   def set_active(property: active, value: Boolean): Unit = js.native
   @JSName("set")
@@ -275,17 +276,13 @@ class MultiSelectCalendar protected () extends _Widget {
     * @param selectedDates
     * @param unselectedDates
     */
-  def toggleDate(
-    dateToToggle: typingsSlinky.dojo.dojo.date,
-    selectedDates: js.Array[js.Date],
-    unselectedDates: js.Array[js.Date]
-  ): Unit = js.native
+  def toggleDate(dateToToggle: date, selectedDates: js.Array[js.Date], unselectedDates: js.Array[js.Date]): Unit = js.native
   /**
     *
     * @param dateToUnselect
     * @param unselectedDates
     */
-  def unselectDate(dateToUnselect: typingsSlinky.dojo.dojo.date, unselectedDates: js.Array[js.Date]): Unit = js.native
+  def unselectDate(dateToUnselect: date, unselectedDates: js.Array[js.Date]): Unit = js.native
   @JSName("watch")
   def watch_active(
     property: active,

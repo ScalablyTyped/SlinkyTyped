@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,25 +65,61 @@ object locale extends js.Object {
   @js.native
   sealed trait turkish extends locale
   
-  /* 0 */ val arabic: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.arabic with Double = js.native
-  /* 1 */ val chineseSimplified: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.chineseSimplified with Double = js.native
-  /* 2 */ val chineseTraditional: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.chineseTraditional with Double = js.native
-  /* 3 */ val czech: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.czech with Double = js.native
-  /* 4 */ val danish: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.danish with Double = js.native
-  /* 5 */ val dutch: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.dutch with Double = js.native
-  /* 6 */ val english: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.english with Double = js.native
-  /* 7 */ val french: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.french with Double = js.native
-  /* 8 */ val german: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.german with Double = js.native
-  /* 9 */ val italian: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.italian with Double = js.native
-  /* 10 */ val japanese: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.japanese with Double = js.native
-  /* 17 */ val korean: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.korean with Double = js.native
-  /* 11 */ val polish: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.polish with Double = js.native
-  /* 12 */ val portugueseBrazil: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.portugueseBrazil with Double = js.native
-  /* 13 */ val russian: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.russian with Double = js.native
-  /* 14 */ val spanish: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.spanish with Double = js.native
-  /* 15 */ val swedish: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.swedish with Double = js.native
-  /* 16 */ val turkish: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.locale.turkish with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[locale with Double] = js.native
+  /* 0 */ @js.native
+  object arabic extends TopLevel[arabic with Double]
+  
+  /* 1 */ @js.native
+  object chineseSimplified extends TopLevel[chineseSimplified with Double]
+  
+  /* 2 */ @js.native
+  object chineseTraditional extends TopLevel[chineseTraditional with Double]
+  
+  /* 3 */ @js.native
+  object czech extends TopLevel[czech with Double]
+  
+  /* 4 */ @js.native
+  object danish extends TopLevel[danish with Double]
+  
+  /* 5 */ @js.native
+  object dutch extends TopLevel[dutch with Double]
+  
+  /* 6 */ @js.native
+  object english extends TopLevel[english with Double]
+  
+  /* 7 */ @js.native
+  object french extends TopLevel[french with Double]
+  
+  /* 8 */ @js.native
+  object german extends TopLevel[german with Double]
+  
+  /* 9 */ @js.native
+  object italian extends TopLevel[italian with Double]
+  
+  /* 10 */ @js.native
+  object japanese extends TopLevel[japanese with Double]
+  
+  /* 17 */ @js.native
+  object korean extends TopLevel[korean with Double]
+  
+  /* 11 */ @js.native
+  object polish extends TopLevel[polish with Double]
+  
+  /* 12 */ @js.native
+  object portugueseBrazil extends TopLevel[portugueseBrazil with Double]
+  
+  /* 13 */ @js.native
+  object russian extends TopLevel[russian with Double]
+  
+  /* 14 */ @js.native
+  object spanish extends TopLevel[spanish with Double]
+  
+  /* 15 */ @js.native
+  object swedish extends TopLevel[swedish with Double]
+  
+  /* 16 */ @js.native
+  object turkish extends TopLevel[turkish with Double]
+  
 }
 

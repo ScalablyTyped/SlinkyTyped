@@ -1,13 +1,16 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.codeactions
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenCodeactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
-  *
+  * In version 8.5.0: removed experimental
   * In version 8.4.0: introduced
   */
 @JSImport("mendixmodelsdk", "codeactions.StringTemplateParameterType")
@@ -15,12 +18,12 @@ import scala.scalajs.js.annotation._
 class StringTemplateParameterType protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.codeactions.StringTemplateParameterType {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -29,7 +32,7 @@ class StringTemplateParameterType protected ()
 @js.native
 object StringTemplateParameterType extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenCodeactionsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new StringTemplateParameterType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

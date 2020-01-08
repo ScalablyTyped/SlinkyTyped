@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.System
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -403,138 +404,400 @@ object VirtualKey extends js.Object {
   @js.native
   sealed trait z extends VirtualKey
   
-  /* 53 */ val a: typingsSlinky.winrt.Windows.System.VirtualKey.a with Double = js.native
-  /* 25 */ val accept: typingsSlinky.winrt.Windows.System.VirtualKey.accept with Double = js.native
-  /* 94 */ val add: typingsSlinky.winrt.Windows.System.VirtualKey.add with Double = js.native
-  /* 81 */ val application: typingsSlinky.winrt.Windows.System.VirtualKey.application with Double = js.native
-  /* 54 */ val b: typingsSlinky.winrt.Windows.System.VirtualKey.b with Double = js.native
-  /* 7 */ val back: typingsSlinky.winrt.Windows.System.VirtualKey.back with Double = js.native
-  /* 55 */ val c: typingsSlinky.winrt.Windows.System.VirtualKey.c with Double = js.native
-  /* 3 */ val cancel: typingsSlinky.winrt.Windows.System.VirtualKey.cancel with Double = js.native
-  /* 15 */ val capitalLock: typingsSlinky.winrt.Windows.System.VirtualKey.capitalLock with Double = js.native
-  /* 9 */ val clear: typingsSlinky.winrt.Windows.System.VirtualKey.clear with Double = js.native
-  /* 12 */ val control: typingsSlinky.winrt.Windows.System.VirtualKey.control with Double = js.native
-  /* 23 */ val convert: typingsSlinky.winrt.Windows.System.VirtualKey.convert with Double = js.native
-  /* 56 */ val d: typingsSlinky.winrt.Windows.System.VirtualKey.d with Double = js.native
-  /* 97 */ val decimal: typingsSlinky.winrt.Windows.System.VirtualKey.decimal with Double = js.native
-  /* 41 */ val delete_ : typingsSlinky.winrt.Windows.System.VirtualKey.delete_ with Double = js.native
-  /* 98 */ val divide: typingsSlinky.winrt.Windows.System.VirtualKey.divide with Double = js.native
-  /* 35 */ val down: typingsSlinky.winrt.Windows.System.VirtualKey.down with Double = js.native
-  /* 57 */ val e: typingsSlinky.winrt.Windows.System.VirtualKey.e with Double = js.native
-  /* 30 */ val end: typingsSlinky.winrt.Windows.System.VirtualKey.end with Double = js.native
-  /* 10 */ val enter: typingsSlinky.winrt.Windows.System.VirtualKey.enter with Double = js.native
-  /* 22 */ val escape: typingsSlinky.winrt.Windows.System.VirtualKey.escape with Double = js.native
-  /* 38 */ val execute: typingsSlinky.winrt.Windows.System.VirtualKey.execute with Double = js.native
-  /* 58 */ val f: typingsSlinky.winrt.Windows.System.VirtualKey.f with Double = js.native
-  /* 99 */ val f1: typingsSlinky.winrt.Windows.System.VirtualKey.f1 with Double = js.native
-  /* 108 */ val f10: typingsSlinky.winrt.Windows.System.VirtualKey.f10 with Double = js.native
-  /* 109 */ val f11: typingsSlinky.winrt.Windows.System.VirtualKey.f11 with Double = js.native
-  /* 110 */ val f12: typingsSlinky.winrt.Windows.System.VirtualKey.f12 with Double = js.native
-  /* 111 */ val f13: typingsSlinky.winrt.Windows.System.VirtualKey.f13 with Double = js.native
-  /* 112 */ val f14: typingsSlinky.winrt.Windows.System.VirtualKey.f14 with Double = js.native
-  /* 113 */ val f15: typingsSlinky.winrt.Windows.System.VirtualKey.f15 with Double = js.native
-  /* 114 */ val f16: typingsSlinky.winrt.Windows.System.VirtualKey.f16 with Double = js.native
-  /* 115 */ val f17: typingsSlinky.winrt.Windows.System.VirtualKey.f17 with Double = js.native
-  /* 116 */ val f18: typingsSlinky.winrt.Windows.System.VirtualKey.f18 with Double = js.native
-  /* 117 */ val f19: typingsSlinky.winrt.Windows.System.VirtualKey.f19 with Double = js.native
-  /* 100 */ val f2: typingsSlinky.winrt.Windows.System.VirtualKey.f2 with Double = js.native
-  /* 118 */ val f20: typingsSlinky.winrt.Windows.System.VirtualKey.f20 with Double = js.native
-  /* 119 */ val f21: typingsSlinky.winrt.Windows.System.VirtualKey.f21 with Double = js.native
-  /* 120 */ val f22: typingsSlinky.winrt.Windows.System.VirtualKey.f22 with Double = js.native
-  /* 121 */ val f23: typingsSlinky.winrt.Windows.System.VirtualKey.f23 with Double = js.native
-  /* 122 */ val f24: typingsSlinky.winrt.Windows.System.VirtualKey.f24 with Double = js.native
-  /* 101 */ val f3: typingsSlinky.winrt.Windows.System.VirtualKey.f3 with Double = js.native
-  /* 102 */ val f4: typingsSlinky.winrt.Windows.System.VirtualKey.f4 with Double = js.native
-  /* 103 */ val f5: typingsSlinky.winrt.Windows.System.VirtualKey.f5 with Double = js.native
-  /* 104 */ val f6: typingsSlinky.winrt.Windows.System.VirtualKey.f6 with Double = js.native
-  /* 105 */ val f7: typingsSlinky.winrt.Windows.System.VirtualKey.f7 with Double = js.native
-  /* 106 */ val f8: typingsSlinky.winrt.Windows.System.VirtualKey.f8 with Double = js.native
-  /* 107 */ val f9: typingsSlinky.winrt.Windows.System.VirtualKey.f9 with Double = js.native
-  /* 19 */ val `final`: typingsSlinky.winrt.Windows.System.VirtualKey.`final` with Double = js.native
-  /* 59 */ val g: typingsSlinky.winrt.Windows.System.VirtualKey.g with Double = js.native
-  /* 60 */ val h: typingsSlinky.winrt.Windows.System.VirtualKey.h with Double = js.native
-  /* 17 */ val hangul: typingsSlinky.winrt.Windows.System.VirtualKey.hangul with Double = js.native
-  /* 20 */ val hanja: typingsSlinky.winrt.Windows.System.VirtualKey.hanja with Double = js.native
-  /* 42 */ val help: typingsSlinky.winrt.Windows.System.VirtualKey.help with Double = js.native
-  /* 31 */ val home: typingsSlinky.winrt.Windows.System.VirtualKey.home with Double = js.native
-  /* 61 */ val i: typingsSlinky.winrt.Windows.System.VirtualKey.i with Double = js.native
-  /* 40 */ val insert: typingsSlinky.winrt.Windows.System.VirtualKey.insert with Double = js.native
-  /* 62 */ val j: typingsSlinky.winrt.Windows.System.VirtualKey.j with Double = js.native
-  /* 18 */ val junja: typingsSlinky.winrt.Windows.System.VirtualKey.junja with Double = js.native
-  /* 63 */ val k: typingsSlinky.winrt.Windows.System.VirtualKey.k with Double = js.native
-  /* 16 */ val kana: typingsSlinky.winrt.Windows.System.VirtualKey.kana with Double = js.native
-  /* 21 */ val kanji: typingsSlinky.winrt.Windows.System.VirtualKey.kanji with Double = js.native
-  /* 64 */ val l: typingsSlinky.winrt.Windows.System.VirtualKey.l with Double = js.native
-  /* 32 */ val left: typingsSlinky.winrt.Windows.System.VirtualKey.left with Double = js.native
-  /* 1 */ val leftButton: typingsSlinky.winrt.Windows.System.VirtualKey.leftButton with Double = js.native
-  /* 127 */ val leftControl: typingsSlinky.winrt.Windows.System.VirtualKey.leftControl with Double = js.native
-  /* 129 */ val leftMenu: typingsSlinky.winrt.Windows.System.VirtualKey.leftMenu with Double = js.native
-  /* 125 */ val leftShift: typingsSlinky.winrt.Windows.System.VirtualKey.leftShift with Double = js.native
-  /* 79 */ val leftWindows: typingsSlinky.winrt.Windows.System.VirtualKey.leftWindows with Double = js.native
-  /* 65 */ val m: typingsSlinky.winrt.Windows.System.VirtualKey.m with Double = js.native
-  /* 13 */ val menu: typingsSlinky.winrt.Windows.System.VirtualKey.menu with Double = js.native
-  /* 4 */ val middleButton: typingsSlinky.winrt.Windows.System.VirtualKey.middleButton with Double = js.native
-  /* 26 */ val modeChange: typingsSlinky.winrt.Windows.System.VirtualKey.modeChange with Double = js.native
-  /* 93 */ val multiply: typingsSlinky.winrt.Windows.System.VirtualKey.multiply with Double = js.native
-  /* 66 */ val n: typingsSlinky.winrt.Windows.System.VirtualKey.n with Double = js.native
-  /* 24 */ val nonConvert: typingsSlinky.winrt.Windows.System.VirtualKey.nonConvert with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrt.Windows.System.VirtualKey.none with Double = js.native
-  /* 43 */ val number0: typingsSlinky.winrt.Windows.System.VirtualKey.number0 with Double = js.native
-  /* 44 */ val number1: typingsSlinky.winrt.Windows.System.VirtualKey.number1 with Double = js.native
-  /* 45 */ val number2: typingsSlinky.winrt.Windows.System.VirtualKey.number2 with Double = js.native
-  /* 46 */ val number3: typingsSlinky.winrt.Windows.System.VirtualKey.number3 with Double = js.native
-  /* 47 */ val number4: typingsSlinky.winrt.Windows.System.VirtualKey.number4 with Double = js.native
-  /* 48 */ val number5: typingsSlinky.winrt.Windows.System.VirtualKey.number5 with Double = js.native
-  /* 49 */ val number6: typingsSlinky.winrt.Windows.System.VirtualKey.number6 with Double = js.native
-  /* 50 */ val number7: typingsSlinky.winrt.Windows.System.VirtualKey.number7 with Double = js.native
-  /* 51 */ val number8: typingsSlinky.winrt.Windows.System.VirtualKey.number8 with Double = js.native
-  /* 52 */ val number9: typingsSlinky.winrt.Windows.System.VirtualKey.number9 with Double = js.native
-  /* 123 */ val numberKeyLock: typingsSlinky.winrt.Windows.System.VirtualKey.numberKeyLock with Double = js.native
-  /* 83 */ val numberPad0: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad0 with Double = js.native
-  /* 84 */ val numberPad1: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad1 with Double = js.native
-  /* 85 */ val numberPad2: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad2 with Double = js.native
-  /* 86 */ val numberPad3: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad3 with Double = js.native
-  /* 87 */ val numberPad4: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad4 with Double = js.native
-  /* 88 */ val numberPad5: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad5 with Double = js.native
-  /* 89 */ val numberPad6: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad6 with Double = js.native
-  /* 90 */ val numberPad7: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad7 with Double = js.native
-  /* 91 */ val numberPad8: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad8 with Double = js.native
-  /* 92 */ val numberPad9: typingsSlinky.winrt.Windows.System.VirtualKey.numberPad9 with Double = js.native
-  /* 67 */ val o: typingsSlinky.winrt.Windows.System.VirtualKey.o with Double = js.native
-  /* 68 */ val p: typingsSlinky.winrt.Windows.System.VirtualKey.p with Double = js.native
-  /* 29 */ val pageDown: typingsSlinky.winrt.Windows.System.VirtualKey.pageDown with Double = js.native
-  /* 28 */ val pageUp: typingsSlinky.winrt.Windows.System.VirtualKey.pageUp with Double = js.native
-  /* 14 */ val pause: typingsSlinky.winrt.Windows.System.VirtualKey.pause with Double = js.native
-  /* 37 */ val print: typingsSlinky.winrt.Windows.System.VirtualKey.print with Double = js.native
-  /* 69 */ val q: typingsSlinky.winrt.Windows.System.VirtualKey.q with Double = js.native
-  /* 70 */ val r: typingsSlinky.winrt.Windows.System.VirtualKey.r with Double = js.native
-  /* 34 */ val right: typingsSlinky.winrt.Windows.System.VirtualKey.right with Double = js.native
-  /* 2 */ val rightButton: typingsSlinky.winrt.Windows.System.VirtualKey.rightButton with Double = js.native
-  /* 128 */ val rightControl: typingsSlinky.winrt.Windows.System.VirtualKey.rightControl with Double = js.native
-  /* 130 */ val rightMenu: typingsSlinky.winrt.Windows.System.VirtualKey.rightMenu with Double = js.native
-  /* 126 */ val rightShift: typingsSlinky.winrt.Windows.System.VirtualKey.rightShift with Double = js.native
-  /* 80 */ val rightWindows: typingsSlinky.winrt.Windows.System.VirtualKey.rightWindows with Double = js.native
-  /* 71 */ val s: typingsSlinky.winrt.Windows.System.VirtualKey.s with Double = js.native
-  /* 124 */ val scroll: typingsSlinky.winrt.Windows.System.VirtualKey.scroll with Double = js.native
-  /* 36 */ val select: typingsSlinky.winrt.Windows.System.VirtualKey.select with Double = js.native
-  /* 95 */ val separator: typingsSlinky.winrt.Windows.System.VirtualKey.separator with Double = js.native
-  /* 11 */ val shift: typingsSlinky.winrt.Windows.System.VirtualKey.shift with Double = js.native
-  /* 82 */ val sleep: typingsSlinky.winrt.Windows.System.VirtualKey.sleep with Double = js.native
-  /* 39 */ val snapshot: typingsSlinky.winrt.Windows.System.VirtualKey.snapshot with Double = js.native
-  /* 27 */ val space: typingsSlinky.winrt.Windows.System.VirtualKey.space with Double = js.native
-  /* 96 */ val subtract: typingsSlinky.winrt.Windows.System.VirtualKey.subtract with Double = js.native
-  /* 72 */ val t: typingsSlinky.winrt.Windows.System.VirtualKey.t with Double = js.native
-  /* 8 */ val tab: typingsSlinky.winrt.Windows.System.VirtualKey.tab with Double = js.native
-  /* 73 */ val u: typingsSlinky.winrt.Windows.System.VirtualKey.u with Double = js.native
-  /* 33 */ val up: typingsSlinky.winrt.Windows.System.VirtualKey.up with Double = js.native
-  /* 74 */ val v: typingsSlinky.winrt.Windows.System.VirtualKey.v with Double = js.native
-  /* 75 */ val w: typingsSlinky.winrt.Windows.System.VirtualKey.w with Double = js.native
-  /* 76 */ val x: typingsSlinky.winrt.Windows.System.VirtualKey.x with Double = js.native
-  /* 5 */ val xButton1: typingsSlinky.winrt.Windows.System.VirtualKey.xButton1 with Double = js.native
-  /* 6 */ val xButton2: typingsSlinky.winrt.Windows.System.VirtualKey.xButton2 with Double = js.native
-  /* 77 */ val y: typingsSlinky.winrt.Windows.System.VirtualKey.y with Double = js.native
-  /* 78 */ val z: typingsSlinky.winrt.Windows.System.VirtualKey.z with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VirtualKey with Double] = js.native
+  /* 53 */ @js.native
+  object a extends TopLevel[a with Double]
+  
+  /* 25 */ @js.native
+  object accept extends TopLevel[accept with Double]
+  
+  /* 94 */ @js.native
+  object add extends TopLevel[add with Double]
+  
+  /* 81 */ @js.native
+  object application extends TopLevel[application with Double]
+  
+  /* 54 */ @js.native
+  object b extends TopLevel[b with Double]
+  
+  /* 7 */ @js.native
+  object back extends TopLevel[back with Double]
+  
+  /* 55 */ @js.native
+  object c extends TopLevel[c with Double]
+  
+  /* 3 */ @js.native
+  object cancel extends TopLevel[cancel with Double]
+  
+  /* 15 */ @js.native
+  object capitalLock extends TopLevel[capitalLock with Double]
+  
+  /* 9 */ @js.native
+  object clear extends TopLevel[clear with Double]
+  
+  /* 12 */ @js.native
+  object control extends TopLevel[control with Double]
+  
+  /* 23 */ @js.native
+  object convert extends TopLevel[convert with Double]
+  
+  /* 56 */ @js.native
+  object d extends TopLevel[d with Double]
+  
+  /* 97 */ @js.native
+  object decimal extends TopLevel[decimal with Double]
+  
+  /* 41 */ @js.native
+  object delete_ extends TopLevel[delete_ with Double]
+  
+  /* 98 */ @js.native
+  object divide extends TopLevel[divide with Double]
+  
+  /* 35 */ @js.native
+  object down extends TopLevel[down with Double]
+  
+  /* 57 */ @js.native
+  object e extends TopLevel[e with Double]
+  
+  /* 30 */ @js.native
+  object end extends TopLevel[end with Double]
+  
+  /* 10 */ @js.native
+  object enter extends TopLevel[enter with Double]
+  
+  /* 22 */ @js.native
+  object escape extends TopLevel[escape with Double]
+  
+  /* 38 */ @js.native
+  object execute extends TopLevel[execute with Double]
+  
+  /* 58 */ @js.native
+  object f extends TopLevel[f with Double]
+  
+  /* 99 */ @js.native
+  object f1 extends TopLevel[f1 with Double]
+  
+  /* 108 */ @js.native
+  object f10 extends TopLevel[f10 with Double]
+  
+  /* 109 */ @js.native
+  object f11 extends TopLevel[f11 with Double]
+  
+  /* 110 */ @js.native
+  object f12 extends TopLevel[f12 with Double]
+  
+  /* 111 */ @js.native
+  object f13 extends TopLevel[f13 with Double]
+  
+  /* 112 */ @js.native
+  object f14 extends TopLevel[f14 with Double]
+  
+  /* 113 */ @js.native
+  object f15 extends TopLevel[f15 with Double]
+  
+  /* 114 */ @js.native
+  object f16 extends TopLevel[f16 with Double]
+  
+  /* 115 */ @js.native
+  object f17 extends TopLevel[f17 with Double]
+  
+  /* 116 */ @js.native
+  object f18 extends TopLevel[f18 with Double]
+  
+  /* 117 */ @js.native
+  object f19 extends TopLevel[f19 with Double]
+  
+  /* 100 */ @js.native
+  object f2 extends TopLevel[f2 with Double]
+  
+  /* 118 */ @js.native
+  object f20 extends TopLevel[f20 with Double]
+  
+  /* 119 */ @js.native
+  object f21 extends TopLevel[f21 with Double]
+  
+  /* 120 */ @js.native
+  object f22 extends TopLevel[f22 with Double]
+  
+  /* 121 */ @js.native
+  object f23 extends TopLevel[f23 with Double]
+  
+  /* 122 */ @js.native
+  object f24 extends TopLevel[f24 with Double]
+  
+  /* 101 */ @js.native
+  object f3 extends TopLevel[f3 with Double]
+  
+  /* 102 */ @js.native
+  object f4 extends TopLevel[f4 with Double]
+  
+  /* 103 */ @js.native
+  object f5 extends TopLevel[f5 with Double]
+  
+  /* 104 */ @js.native
+  object f6 extends TopLevel[f6 with Double]
+  
+  /* 105 */ @js.native
+  object f7 extends TopLevel[f7 with Double]
+  
+  /* 106 */ @js.native
+  object f8 extends TopLevel[f8 with Double]
+  
+  /* 107 */ @js.native
+  object f9 extends TopLevel[f9 with Double]
+  
+  /* 19 */ @js.native
+  object `final` extends TopLevel[`final` with Double]
+  
+  /* 59 */ @js.native
+  object g extends TopLevel[g with Double]
+  
+  /* 60 */ @js.native
+  object h extends TopLevel[h with Double]
+  
+  /* 17 */ @js.native
+  object hangul extends TopLevel[hangul with Double]
+  
+  /* 20 */ @js.native
+  object hanja extends TopLevel[hanja with Double]
+  
+  /* 42 */ @js.native
+  object help extends TopLevel[help with Double]
+  
+  /* 31 */ @js.native
+  object home extends TopLevel[home with Double]
+  
+  /* 61 */ @js.native
+  object i extends TopLevel[i with Double]
+  
+  /* 40 */ @js.native
+  object insert extends TopLevel[insert with Double]
+  
+  /* 62 */ @js.native
+  object j extends TopLevel[j with Double]
+  
+  /* 18 */ @js.native
+  object junja extends TopLevel[junja with Double]
+  
+  /* 63 */ @js.native
+  object k extends TopLevel[k with Double]
+  
+  /* 16 */ @js.native
+  object kana extends TopLevel[kana with Double]
+  
+  /* 21 */ @js.native
+  object kanji extends TopLevel[kanji with Double]
+  
+  /* 64 */ @js.native
+  object l extends TopLevel[l with Double]
+  
+  /* 32 */ @js.native
+  object left extends TopLevel[left with Double]
+  
+  /* 1 */ @js.native
+  object leftButton extends TopLevel[leftButton with Double]
+  
+  /* 127 */ @js.native
+  object leftControl extends TopLevel[leftControl with Double]
+  
+  /* 129 */ @js.native
+  object leftMenu extends TopLevel[leftMenu with Double]
+  
+  /* 125 */ @js.native
+  object leftShift extends TopLevel[leftShift with Double]
+  
+  /* 79 */ @js.native
+  object leftWindows extends TopLevel[leftWindows with Double]
+  
+  /* 65 */ @js.native
+  object m extends TopLevel[m with Double]
+  
+  /* 13 */ @js.native
+  object menu extends TopLevel[menu with Double]
+  
+  /* 4 */ @js.native
+  object middleButton extends TopLevel[middleButton with Double]
+  
+  /* 26 */ @js.native
+  object modeChange extends TopLevel[modeChange with Double]
+  
+  /* 93 */ @js.native
+  object multiply extends TopLevel[multiply with Double]
+  
+  /* 66 */ @js.native
+  object n extends TopLevel[n with Double]
+  
+  /* 24 */ @js.native
+  object nonConvert extends TopLevel[nonConvert with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 43 */ @js.native
+  object number0 extends TopLevel[number0 with Double]
+  
+  /* 44 */ @js.native
+  object number1 extends TopLevel[number1 with Double]
+  
+  /* 45 */ @js.native
+  object number2 extends TopLevel[number2 with Double]
+  
+  /* 46 */ @js.native
+  object number3 extends TopLevel[number3 with Double]
+  
+  /* 47 */ @js.native
+  object number4 extends TopLevel[number4 with Double]
+  
+  /* 48 */ @js.native
+  object number5 extends TopLevel[number5 with Double]
+  
+  /* 49 */ @js.native
+  object number6 extends TopLevel[number6 with Double]
+  
+  /* 50 */ @js.native
+  object number7 extends TopLevel[number7 with Double]
+  
+  /* 51 */ @js.native
+  object number8 extends TopLevel[number8 with Double]
+  
+  /* 52 */ @js.native
+  object number9 extends TopLevel[number9 with Double]
+  
+  /* 123 */ @js.native
+  object numberKeyLock extends TopLevel[numberKeyLock with Double]
+  
+  /* 83 */ @js.native
+  object numberPad0 extends TopLevel[numberPad0 with Double]
+  
+  /* 84 */ @js.native
+  object numberPad1 extends TopLevel[numberPad1 with Double]
+  
+  /* 85 */ @js.native
+  object numberPad2 extends TopLevel[numberPad2 with Double]
+  
+  /* 86 */ @js.native
+  object numberPad3 extends TopLevel[numberPad3 with Double]
+  
+  /* 87 */ @js.native
+  object numberPad4 extends TopLevel[numberPad4 with Double]
+  
+  /* 88 */ @js.native
+  object numberPad5 extends TopLevel[numberPad5 with Double]
+  
+  /* 89 */ @js.native
+  object numberPad6 extends TopLevel[numberPad6 with Double]
+  
+  /* 90 */ @js.native
+  object numberPad7 extends TopLevel[numberPad7 with Double]
+  
+  /* 91 */ @js.native
+  object numberPad8 extends TopLevel[numberPad8 with Double]
+  
+  /* 92 */ @js.native
+  object numberPad9 extends TopLevel[numberPad9 with Double]
+  
+  /* 67 */ @js.native
+  object o extends TopLevel[o with Double]
+  
+  /* 68 */ @js.native
+  object p extends TopLevel[p with Double]
+  
+  /* 29 */ @js.native
+  object pageDown extends TopLevel[pageDown with Double]
+  
+  /* 28 */ @js.native
+  object pageUp extends TopLevel[pageUp with Double]
+  
+  /* 14 */ @js.native
+  object pause extends TopLevel[pause with Double]
+  
+  /* 37 */ @js.native
+  object print extends TopLevel[print with Double]
+  
+  /* 69 */ @js.native
+  object q extends TopLevel[q with Double]
+  
+  /* 70 */ @js.native
+  object r extends TopLevel[r with Double]
+  
+  /* 34 */ @js.native
+  object right extends TopLevel[right with Double]
+  
+  /* 2 */ @js.native
+  object rightButton extends TopLevel[rightButton with Double]
+  
+  /* 128 */ @js.native
+  object rightControl extends TopLevel[rightControl with Double]
+  
+  /* 130 */ @js.native
+  object rightMenu extends TopLevel[rightMenu with Double]
+  
+  /* 126 */ @js.native
+  object rightShift extends TopLevel[rightShift with Double]
+  
+  /* 80 */ @js.native
+  object rightWindows extends TopLevel[rightWindows with Double]
+  
+  /* 71 */ @js.native
+  object s extends TopLevel[s with Double]
+  
+  /* 124 */ @js.native
+  object scroll extends TopLevel[scroll with Double]
+  
+  /* 36 */ @js.native
+  object select extends TopLevel[select with Double]
+  
+  /* 95 */ @js.native
+  object separator extends TopLevel[separator with Double]
+  
+  /* 11 */ @js.native
+  object shift extends TopLevel[shift with Double]
+  
+  /* 82 */ @js.native
+  object sleep extends TopLevel[sleep with Double]
+  
+  /* 39 */ @js.native
+  object snapshot extends TopLevel[snapshot with Double]
+  
+  /* 27 */ @js.native
+  object space extends TopLevel[space with Double]
+  
+  /* 96 */ @js.native
+  object subtract extends TopLevel[subtract with Double]
+  
+  /* 72 */ @js.native
+  object t extends TopLevel[t with Double]
+  
+  /* 8 */ @js.native
+  object tab extends TopLevel[tab with Double]
+  
+  /* 73 */ @js.native
+  object u extends TopLevel[u with Double]
+  
+  /* 33 */ @js.native
+  object up extends TopLevel[up with Double]
+  
+  /* 74 */ @js.native
+  object v extends TopLevel[v with Double]
+  
+  /* 75 */ @js.native
+  object w extends TopLevel[w with Double]
+  
+  /* 76 */ @js.native
+  object x extends TopLevel[x with Double]
+  
+  /* 5 */ @js.native
+  object xButton1 extends TopLevel[xButton1 with Double]
+  
+  /* 6 */ @js.native
+  object xButton2 extends TopLevel[xButton2 with Double]
+  
+  /* 77 */ @js.native
+  object y extends TopLevel[y with Double]
+  
+  /* 78 */ @js.native
+  object z extends TopLevel[z with Double]
+  
 }
 

@@ -1,5 +1,8 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.flat
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.smooth
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +34,7 @@ trait MeshComponentProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-MeshComponent.html#shading)
     */
-  var shading: js.UndefOr[String] = js.undefined
+  var shading: js.UndefOr[source | flat | smooth] = js.undefined
 }
 
 object MeshComponentProperties {
@@ -39,7 +42,7 @@ object MeshComponentProperties {
   def apply(
     faces: scala.scalajs.js.typedarray.Uint32Array | js.Array[Double] | scala.scalajs.js.typedarray.Uint16Array = null,
     material: MeshMaterialProperties = null,
-    shading: String = null
+    shading: source | flat | smooth = null
   ): MeshComponentProperties = {
     val __obj = js.Dynamic.literal()
     if (faces != null) __obj.updateDynamic("faces")(faces.asInstanceOf[js.Any])

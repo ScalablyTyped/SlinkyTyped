@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashUniqueDashToken.passportDashUniqueDashTokenMod
 
-import typingsSlinky.passportDashUniqueDashToken.passportDashUniqueDashTokenNumbers.`false`
+import typingsSlinky.passportDashUniqueDashToken.passportDashUniqueDashTokenBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

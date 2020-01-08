@@ -1,22 +1,10 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Devices
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Numerics.Vector2
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Numerics.Vector3
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Point
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameControlCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameController
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameExposureCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameExposureCompensationCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameExposureCompensationControl
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameExposureControl
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashControl
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashMode
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFocusCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFocusControl
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameIsoSpeedCapabilities
-import typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameIsoSpeedControl
 import typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties.IMediaEncodingProperties
 import typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties.MediaRatio
 import scala.scalajs.js
@@ -272,11 +260,17 @@ object Core extends js.Object {
     @js.native
     sealed trait global extends FrameFlashMode
     
-    /* 0 */ val disable: typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashMode.disable with Double = js.native
-    /* 1 */ val enable: typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashMode.enable with Double = js.native
-    /* 2 */ val global: typingsSlinky.winrtDashUwp.Windows.Media.Devices.Core.FrameFlashMode.global with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[FrameFlashMode with Double] = js.native
+    /* 0 */ @js.native
+    object disable extends TopLevel[disable with Double]
+    
+    /* 1 */ @js.native
+    object enable extends TopLevel[enable with Double]
+    
+    /* 2 */ @js.native
+    object global extends TopLevel[global with Double]
+    
   }
   
 }

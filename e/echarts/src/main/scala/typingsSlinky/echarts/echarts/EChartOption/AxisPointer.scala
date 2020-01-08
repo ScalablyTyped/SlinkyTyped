@@ -4,10 +4,10 @@ import typingsSlinky.echarts.Anon_ColorIcon
 import typingsSlinky.echarts.Anon_ColorOpacity
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Pointer
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.PointerLabel
-import typingsSlinky.echarts.echartsStrings.`mousemove|click`
 import typingsSlinky.echarts.echartsStrings.click
 import typingsSlinky.echarts.echartsStrings.line
 import typingsSlinky.echarts.echartsStrings.mousemove
+import typingsSlinky.echarts.echartsStrings.mousemoveVerticallineclick
 import typingsSlinky.echarts.echartsStrings.none
 import typingsSlinky.echarts.echartsStrings.shadow
 import scala.scalajs.js
@@ -30,9 +30,9 @@ trait AxisPointer extends Pointer {
     * and move together.
     * Axes are linked according to the value of axisPointer.
     * See
-    * [sampleA](https://ecomfe.github.io/echarts-examples/public/view.html?c=candlestick-brush&edit=1&reset=1)
+    * [sampleA](https://echarts.apache.org/examples/en/view.html?c=candlestick-brush&edit=1&reset=1)
     * and
-    * [sampleB](https://ecomfe.github.io/echarts-examples/public/view.html?c=scatter-nutrients-matrix&edit=1&reset=1).
+    * [sampleB](https://echarts.apache.org/examples/en/view.html?c=scatter-nutrients-matrix&edit=1&reset=1).
     * link is an array, where each item represents a 'link group'.
     * Axes will be linked when they are refered
     * in the same link group.
@@ -52,7 +52,7 @@ trait AxisPointer extends Pointer {
     *     ...
     * ]
     *
-    * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#axisPointer.link
+    * @see https://echarts.apache.org/en/option.html#axisPointer.link
     */
   var link: js.UndefOr[js.Array[js.Object]] = js.undefined
   /**
@@ -70,7 +70,7 @@ trait AxisPointer extends Pointer {
     *
     * @default 'mousemove|click'
     */
-  var triggerOn: js.UndefOr[mousemove | click | `mousemove|click` | none] = js.undefined
+  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.undefined
 }
 
 object AxisPointer {
@@ -85,7 +85,7 @@ object AxisPointer {
     show: js.UndefOr[Boolean] = js.undefined,
     snap: js.UndefOr[Boolean] = js.undefined,
     status: js.UndefOr[Boolean] = js.undefined,
-    triggerOn: mousemove | click | `mousemove|click` | none = null,
+    triggerOn: mousemove | click | mousemoveVerticallineclick | none = null,
     triggerTooltip: js.UndefOr[Boolean] = js.undefined,
     `type`: line | shadow | none = null,
     value: Int | Double = null,

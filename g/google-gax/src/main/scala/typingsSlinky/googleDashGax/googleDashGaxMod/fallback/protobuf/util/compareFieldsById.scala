@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashGax.googleDashGaxMod.fallback.protobuf.util
 
+import typingsSlinky.protobufjs.protobufjsMod.Field
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,6 @@ object compareFieldsById extends js.Object {
     * @param b Second field
     * @returns Comparison value
     */
-  def apply(a: typingsSlinky.protobufjs.protobufjsMod.Field, b: typingsSlinky.protobufjs.protobufjsMod.Field): Double = js.native
+  def apply(a: Field, b: Field): Double = js.native
 }
 

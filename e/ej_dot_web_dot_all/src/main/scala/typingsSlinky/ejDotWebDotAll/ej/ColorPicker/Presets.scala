@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ColorPicker
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,18 +55,40 @@ object Presets extends js.Object {
   @js.native
   sealed trait WebColors extends Presets
   
-  /* 0 */ val Basic: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.Basic with Double = js.native
-  /* 1 */ val CandyCrush: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.CandyCrush with Double = js.native
-  /* 2 */ val Citrus: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.Citrus with Double = js.native
-  /* 3 */ val FlatColors: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.FlatColors with Double = js.native
-  /* 4 */ val Misty: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.Misty with Double = js.native
-  /* 5 */ val MoonLight: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.MoonLight with Double = js.native
-  /* 6 */ val PinkShades: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.PinkShades with Double = js.native
-  /* 7 */ val Sandy: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.Sandy with Double = js.native
-  /* 8 */ val SeaWolf: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.SeaWolf with Double = js.native
-  /* 9 */ val Vintage: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.Vintage with Double = js.native
-  /* 10 */ val WebColors: typingsSlinky.ejDotWebDotAll.ej.ColorPicker.Presets.WebColors with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Presets with Double] = js.native
+  /* 0 */ @js.native
+  object Basic extends TopLevel[Basic with Double]
+  
+  /* 1 */ @js.native
+  object CandyCrush extends TopLevel[CandyCrush with Double]
+  
+  /* 2 */ @js.native
+  object Citrus extends TopLevel[Citrus with Double]
+  
+  /* 3 */ @js.native
+  object FlatColors extends TopLevel[FlatColors with Double]
+  
+  /* 4 */ @js.native
+  object Misty extends TopLevel[Misty with Double]
+  
+  /* 5 */ @js.native
+  object MoonLight extends TopLevel[MoonLight with Double]
+  
+  /* 6 */ @js.native
+  object PinkShades extends TopLevel[PinkShades with Double]
+  
+  /* 7 */ @js.native
+  object Sandy extends TopLevel[Sandy with Double]
+  
+  /* 8 */ @js.native
+  object SeaWolf extends TopLevel[SeaWolf with Double]
+  
+  /* 9 */ @js.native
+  object Vintage extends TopLevel[Vintage with Double]
+  
+  /* 10 */ @js.native
+  object WebColors extends TopLevel[WebColors with Double]
+  
 }
 

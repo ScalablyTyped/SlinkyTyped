@@ -1,5 +1,7 @@
 package typingsSlinky.atPollyjsAdapter.atPollyjsAdapterMod
 
+import typingsSlinky.atPollyjsAdapter.Anon_Body
+import typingsSlinky.atPollyjsCore.atPollyjsCoreMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +13,8 @@ class default () extends Adapter {
   override def connect(): Unit = js.native
   /* CompleteClass */
   override def disconnect(): Unit = js.native
+  /* CompleteClass */
+  override def passthroughRequest(pollyRequest: Request): js.Promise[Anon_Body] = js.native
 }
 
 /* static members */

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object VariableGroupActionFilter extends js.Object {
   @js.native
   sealed trait Use extends VariableGroupActionFilter
   
-  /* 2 */ val Manage: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.VariableGroupActionFilter.Manage with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.VariableGroupActionFilter.None with Double = js.native
-  /* 16 */ val Use: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.VariableGroupActionFilter.Use with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VariableGroupActionFilter with Double] = js.native
+  /* 2 */ @js.native
+  object Manage extends TopLevel[Manage with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 16 */ @js.native
+  object Use extends TopLevel[Use with Double]
+  
 }
 

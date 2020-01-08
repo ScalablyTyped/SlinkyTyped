@@ -6,8 +6,6 @@ import typingsSlinky.geodesy.geodesyMod.Datums
 import typingsSlinky.geodesy.geodesyMod.Dp
 import typingsSlinky.geodesy.geodesyMod.Ellipsoids
 import typingsSlinky.geodesy.geodesyMod.Format
-import typingsSlinky.geodesy.latlonDashEllipsoidalDashDatumMod.Cartesian_Datum
-import typingsSlinky.geodesy.latlonDashEllipsoidalDashDatumMod.LatLonEllipsoidal_Datum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

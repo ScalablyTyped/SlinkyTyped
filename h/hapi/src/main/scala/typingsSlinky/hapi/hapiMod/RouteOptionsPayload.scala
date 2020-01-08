@@ -1,9 +1,9 @@
 package typingsSlinky.hapi.hapiMod
 
 import typingsSlinky.hapi.Anon_Annotated
+import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiMod.Lifecycle.FailAction
 import typingsSlinky.hapi.hapiMod.Util.Dictionary
-import typingsSlinky.hapi.hapiNumbers.`false`
 import typingsSlinky.hapi.hapiStrings.gunzip
 import scala.scalajs.js
 import scala.scalajs.js.`|`

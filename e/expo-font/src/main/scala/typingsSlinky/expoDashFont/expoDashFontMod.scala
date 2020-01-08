@@ -2,7 +2,6 @@ package typingsSlinky.expoDashFont
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.expoDashAsset.expoDashAssetMod.Asset
-import typingsSlinky.expoDashFont.expoDashFontMod.FontSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

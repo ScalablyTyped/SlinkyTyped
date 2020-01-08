@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,19 +50,43 @@ object RibbonTab extends js.Object {
   @js.native
   sealed trait view extends RibbonTab
   
-  /* "AddIns" */ val addIns: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.addIns with String = js.native
-  /* "Data" */ val data: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.data with String = js.native
-  /* "Developer" */ val developer: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.developer with String = js.native
-  /* "Draw" */ val draw: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.draw with String = js.native
-  /* "Formulas" */ val formulas: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.formulas with String = js.native
-  /* "Help" */ val help: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.help with String = js.native
-  /* "Home" */ val home: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.home with String = js.native
-  /* "Insert" */ val insert: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.insert with String = js.native
-  /* "Others" */ val others: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.others with String = js.native
-  /* "PageLayout" */ val pageLayout: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.pageLayout with String = js.native
-  /* "Review" */ val review: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.review with String = js.native
-  /* "View" */ val view: typingsSlinky.officeDashJsDashPreview.Excel.RibbonTab.view with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[RibbonTab with String] = js.native
+  /* "AddIns" */ @js.native
+  object addIns extends TopLevel[addIns with String]
+  
+  /* "Data" */ @js.native
+  object data extends TopLevel[data with String]
+  
+  /* "Developer" */ @js.native
+  object developer extends TopLevel[developer with String]
+  
+  /* "Draw" */ @js.native
+  object draw extends TopLevel[draw with String]
+  
+  /* "Formulas" */ @js.native
+  object formulas extends TopLevel[formulas with String]
+  
+  /* "Help" */ @js.native
+  object help extends TopLevel[help with String]
+  
+  /* "Home" */ @js.native
+  object home extends TopLevel[home with String]
+  
+  /* "Insert" */ @js.native
+  object insert extends TopLevel[insert with String]
+  
+  /* "Others" */ @js.native
+  object others extends TopLevel[others with String]
+  
+  /* "PageLayout" */ @js.native
+  object pageLayout extends TopLevel[pageLayout with String]
+  
+  /* "Review" */ @js.native
+  object review extends TopLevel[review with String]
+  
+  /* "View" */ @js.native
+  object view extends TopLevel[view with String]
+  
 }
 

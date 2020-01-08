@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,10 +26,16 @@ object DataValidationAlertStyle extends js.Object {
   @js.native
   sealed trait warning extends DataValidationAlertStyle
   
-  /* "Information" */ val information: typingsSlinky.officeDashJs.Excel.DataValidationAlertStyle.information with String = js.native
-  /* "Stop" */ val stop: typingsSlinky.officeDashJs.Excel.DataValidationAlertStyle.stop with String = js.native
-  /* "Warning" */ val warning: typingsSlinky.officeDashJs.Excel.DataValidationAlertStyle.warning with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DataValidationAlertStyle with String] = js.native
+  /* "Information" */ @js.native
+  object information extends TopLevel[information with String]
+  
+  /* "Stop" */ @js.native
+  object stop extends TopLevel[stop with String]
+  
+  /* "Warning" */ @js.native
+  object warning extends TopLevel[warning with String]
+  
 }
 

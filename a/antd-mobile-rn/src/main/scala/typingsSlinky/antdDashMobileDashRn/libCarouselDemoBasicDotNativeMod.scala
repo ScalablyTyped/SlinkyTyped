@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobileDashRn
 
-import typingsSlinky.antdDashMobileDashRn.libCarouselDemoBasicDotNativeMod.BasicCarouselExample
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.indefiniteDashObservable
 
-import typingsSlinky.indefiniteDashObservable.distIndefiniteObservableMod.IndefiniteObservable
 import typingsSlinky.indefiniteDashObservable.distTypesMod.Connect
 import typingsSlinky.indefiniteDashObservable.distTypesMod.Observable
 import typingsSlinky.indefiniteDashObservable.distTypesMod.ObserverOrNext

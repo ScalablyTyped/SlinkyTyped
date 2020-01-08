@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LinkBasicExample extends SharedApply_Object857666606 {
+object LinkBasicExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Link/examples/Link.Basic.Example", "LinkBasicExample")
   @js.native
   object componentImport extends js.Object

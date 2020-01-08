@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionPermIdentity
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermIdentity] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionPermIdentity] {
   @JSImport("material-ui/svg-icons", "ActionPermIdentity")
   @js.native
   object componentImport extends js.Object

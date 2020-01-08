@@ -1,6 +1,5 @@
 package typingsSlinky.ansicolors
 
-import typingsSlinky.ansicolors.ansicolorsMod.Colors
 import typingsSlinky.std.String
 import scala.scalajs.js
 import scala.scalajs.js.`|`

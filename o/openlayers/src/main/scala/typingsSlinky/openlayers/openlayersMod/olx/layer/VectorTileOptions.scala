@@ -5,6 +5,7 @@ import typingsSlinky.openlayers.openlayersMod.Feature
 import typingsSlinky.openlayers.openlayersMod.Map
 import typingsSlinky.openlayers.openlayersMod.StyleFunction
 import typingsSlinky.openlayers.openlayersMod.layer.VectorTileRenderType
+import typingsSlinky.openlayers.openlayersMod.source.VectorTile
 import typingsSlinky.openlayers.openlayersMod.style.Style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ trait VectorTileOptions extends js.Object {
   var renderBuffer: js.UndefOr[Double] = js.undefined
   var renderMode: js.UndefOr[VectorTileRenderType | String] = js.undefined
   var renderOrder: js.UndefOr[js.Function2[/* feature1 */ Feature, /* feature2 */ Feature, Double]] = js.undefined
-  var source: js.UndefOr[typingsSlinky.openlayers.openlayersMod.source.VectorTile] = js.undefined
+  var source: js.UndefOr[VectorTile] = js.undefined
   var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.undefined
   var updateWhileAnimating: js.UndefOr[Boolean] = js.undefined
   var updateWhileInteracting: js.UndefOr[Boolean] = js.undefined
@@ -38,7 +39,7 @@ object VectorTileOptions {
     renderBuffer: Int | Double = null,
     renderMode: VectorTileRenderType | String = null,
     renderOrder: (/* feature1 */ Feature, /* feature2 */ Feature) => Double = null,
-    source: typingsSlinky.openlayers.openlayersMod.source.VectorTile = null,
+    source: VectorTile = null,
     style: Style | js.Array[Style] | StyleFunction = null,
     updateWhileAnimating: js.UndefOr[Boolean] = js.undefined,
     updateWhileInteracting: js.UndefOr[Boolean] = js.undefined,

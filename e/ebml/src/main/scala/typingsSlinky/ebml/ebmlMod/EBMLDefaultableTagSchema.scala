@@ -1,7 +1,7 @@
 package typingsSlinky.ebml.ebmlMod
 
 import typingsSlinky.ebml.ebmlStrings.Informational
-import typingsSlinky.ebml.ebmlStrings.`1 - bzlib,`
+import typingsSlinky.ebml.ebmlStrings.`1 - bzlibComma`
 import typingsSlinky.ebml.ebmlStrings.`2 - lzo1x`
 import typingsSlinky.ebml.ebmlStrings.informational_
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object EBMLDefaultableTagSchema {
     `type`: TagType,
     cppname: String = null,
     default: js.Any = null,
-    del: (js.Tuple2[`1 - bzlib,`, `2 - lzo1x`]) | (`1 - bzlib,`) | (`2 - lzo1x`) = null,
+    del: (js.Tuple2[`1 - bzlibComma`, `2 - lzo1x`]) | (`1 - bzlibComma`) | (`2 - lzo1x`) = null,
     divx: js.UndefOr[Boolean] = js.undefined,
     i: String = null,
     mandatory: js.UndefOr[Boolean] = js.undefined,

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object MediaSourceState extends js.Object {
   @js.native
   sealed trait opening extends MediaSourceState
   
-  /* 4 */ val closed: typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaSourceState.closed with Double = js.native
-  /* 3 */ val failed: typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaSourceState.failed with Double = js.native
-  /* 0 */ val initial: typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaSourceState.initial with Double = js.native
-  /* 2 */ val opened: typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaSourceState.opened with Double = js.native
-  /* 1 */ val opening: typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaSourceState.opening with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaSourceState with Double] = js.native
+  /* 4 */ @js.native
+  object closed extends TopLevel[closed with Double]
+  
+  /* 3 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 0 */ @js.native
+  object initial extends TopLevel[initial with Double]
+  
+  /* 2 */ @js.native
+  object opened extends TopLevel[opened with Double]
+  
+  /* 1 */ @js.native
+  object opening extends TopLevel[opening with Double]
+  
 }
 

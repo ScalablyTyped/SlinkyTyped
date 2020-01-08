@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Plural
-  extends SharedApply_PluralPropsWithoutI18n1337670846[typingsSlinky.atLinguiMacro.reactSelectMod.Plural] {
+  extends SharedApply_PluralPropsWithoutI18n23844798[typingsSlinky.atLinguiMacro.reactSelectMod.Plural] {
   @JSImport("@lingui/macro/ReactSelect", "Plural")
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,6 @@
 package typingsSlinky.parse.reactDashNativeMod
 
-import typingsSlinky.parse.Parse.ScopeOptions
+import typingsSlinky.parse.parseMod._Global_.Parse.ScopeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * A Parse.Schema object is for handling schema data from Parse.
   * All the schemas methods require MasterKey.
   *
-  * @param {String} className Parse Class string
+  * @param className Parse Class string
   *
   * https://parseplatform.org/Parse-SDK-JS/api/master/Parse.Schema.html
   *
@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
 @JSImport("parse/react-native", "Schema")
 @js.native
 class Schema protected ()
-  extends typingsSlinky.parse.nodeMod.Schema {
+  extends typingsSlinky.parse.parseMod.Schema {
   def this(className: String) = this()
 }
 
@@ -37,7 +37,7 @@ object Schema extends js.Object {
     * - useMasterKey: In Cloud Code and Node only, causes the Master Key to be used for this request.
     * - sessionToken: A valid session token, used for making a request on behalf of a specific user.
     */
-  def all(): js.Promise[js.Array[typingsSlinky.parse.Parse.Schema]] = js.native
-  def all(options: ScopeOptions): js.Promise[js.Array[typingsSlinky.parse.Parse.Schema]] = js.native
+  def all(): js.Promise[js.Array[typingsSlinky.parse.parseMod._Global_.Parse.Schema]] = js.native
+  def all(options: ScopeOptions): js.Promise[js.Array[typingsSlinky.parse.parseMod._Global_.Parse.Schema]] = js.native
 }
 

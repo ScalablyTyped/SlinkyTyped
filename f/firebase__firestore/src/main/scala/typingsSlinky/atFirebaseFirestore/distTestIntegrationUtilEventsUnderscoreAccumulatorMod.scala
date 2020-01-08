@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
+import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentData
 import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentSnapshot
 import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.QuerySnapshot
 import scala.scalajs.js
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object distTestIntegrationUtilEventsUnderscoreAccumulatorMod extends js.Object {
   @js.native
-  class EventsAccumulator[T /* <: DocumentSnapshot | QuerySnapshot */] () extends js.Object {
+  class EventsAccumulator[T /* <: DocumentSnapshot[DocumentData] | QuerySnapshot[DocumentData] */] () extends js.Object {
     var checkFulfilled: js.Any = js.native
     var deferred: js.Any = js.native
     var events: js.Any = js.native

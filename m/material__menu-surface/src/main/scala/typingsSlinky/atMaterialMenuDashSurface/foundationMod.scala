@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.atMaterialBase.foundationMod.MDCFoundation
 import typingsSlinky.atMaterialMenuDashSurface.adapterMod.MDCMenuSurfaceAdapter
 import typingsSlinky.atMaterialMenuDashSurface.constantsMod.Corner
-import typingsSlinky.atMaterialMenuDashSurface.foundationMod.MDCMenuSurfaceFoundation
 import typingsSlinky.atMaterialMenuDashSurface.typesMod.MDCMenuDistance
 import typingsSlinky.std.Partial
 import scala.scalajs.js

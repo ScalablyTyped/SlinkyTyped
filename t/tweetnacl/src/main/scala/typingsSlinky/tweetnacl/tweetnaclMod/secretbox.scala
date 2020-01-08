@@ -1,6 +1,6 @@
 package typingsSlinky.tweetnacl.tweetnaclMod
 
-import typingsSlinky.tweetnacl.tweetnaclNumbers.`false`
+import typingsSlinky.tweetnacl.tweetnaclBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

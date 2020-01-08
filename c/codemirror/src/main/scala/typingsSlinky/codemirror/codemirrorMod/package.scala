@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object codemirrorMod {
   import org.scalablytyped.runtime.StringDictionary
   import typingsSlinky.codemirror.Anon_CodeMirrorPASS
-  import typingsSlinky.codemirror.codemirrorNumbers.`false`
+  import typingsSlinky.codemirror.codemirrorBooleans.`false`
 
   /**
     * A function that calls the updateLintingCallback with any errors found during the linting process.

@@ -1,8 +1,11 @@
 package typingsSlinky.officeDashJsDashPreview.OneNote.Interfaces
 
 import typingsSlinky.officeDashJsDashPreview.OneNote.ParagraphType
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Ink
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Other
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.RichText
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Table
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,9 +60,7 @@ trait ParagraphData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var `type`: js.UndefOr[
-    ParagraphType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.RichText | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Table | Ink | Other
-  ] = js.undefined
+  var `type`: js.UndefOr[ParagraphType | RichText | Image | Table | Ink | Other] = js.undefined
 }
 
 object ParagraphData {
@@ -71,7 +72,7 @@ object ParagraphData {
     paragraphs: js.Array[ParagraphData] = null,
     richText: RichTextData = null,
     table: TableData = null,
-    `type`: ParagraphType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.RichText | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Image | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Table | Ink | Other = null
+    `type`: ParagraphType | RichText | Image | Table | Ink | Other = null
   ): ParagraphData = {
     val __obj = js.Dynamic.literal()
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])

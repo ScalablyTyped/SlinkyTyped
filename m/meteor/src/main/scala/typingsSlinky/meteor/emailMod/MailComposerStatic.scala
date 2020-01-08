@@ -6,9 +6,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MailComposerStatic
-  extends Instantiable1[
-      /* options */ typingsSlinky.meteor.emailMod.MailComposerOptions, 
-      typingsSlinky.meteor.emailMod.MailComposer
-    ]
+trait MailComposerStatic extends Instantiable1[/* options */ MailComposerOptions, MailComposer]
 

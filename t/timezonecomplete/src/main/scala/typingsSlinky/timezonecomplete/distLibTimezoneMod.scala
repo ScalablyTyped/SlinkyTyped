@@ -1,9 +1,8 @@
 package typingsSlinky.timezonecomplete
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.timezonecomplete.distLibBasicsMod.TimeStruct
 import typingsSlinky.timezonecomplete.distLibJavascriptMod.DateFunctions
-import typingsSlinky.timezonecomplete.distLibTimezoneMod.TimeZone
-import typingsSlinky.timezonecomplete.distLibTimezoneMod.TimeZoneKind
 import typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.NormalizeOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -382,11 +381,17 @@ object distLibTimezoneMod extends js.Object {
     @js.native
     sealed trait Proper extends TimeZoneKind
     
-    /* 0 */ val Local: typingsSlinky.timezonecomplete.distLibTimezoneMod.TimeZoneKind.Local with Double = js.native
-    /* 1 */ val Offset: typingsSlinky.timezonecomplete.distLibTimezoneMod.TimeZoneKind.Offset with Double = js.native
-    /* 2 */ val Proper: typingsSlinky.timezonecomplete.distLibTimezoneMod.TimeZoneKind.Proper with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[TimeZoneKind with Double] = js.native
+    /* 0 */ @js.native
+    object Local extends TopLevel[Local with Double]
+    
+    /* 1 */ @js.native
+    object Offset extends TopLevel[Offset with Double]
+    
+    /* 2 */ @js.native
+    object Proper extends TopLevel[Proper with Double]
+    
   }
   
 }

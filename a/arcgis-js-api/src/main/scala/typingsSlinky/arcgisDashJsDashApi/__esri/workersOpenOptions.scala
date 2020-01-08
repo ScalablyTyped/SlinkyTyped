@@ -1,6 +1,9 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.experimental.AbortSignal
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.dedicated
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.distributed
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.local
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -34,7 +37,7 @@ trait workersOpenOptions extends Object {
     *
     * @default distributed
     */
-  var strategy: js.UndefOr[String] = js.undefined
+  var strategy: js.UndefOr[distributed | dedicated | local] = js.undefined
 }
 
 object workersOpenOptions {
@@ -45,7 +48,7 @@ object workersOpenOptions {
     propertyIsEnumerable: PropertyKey => Boolean,
     client: js.Any = null,
     signal: AbortSignal = null,
-    strategy: String = null
+    strategy: distributed | dedicated | local = null
   ): workersOpenOptions = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])

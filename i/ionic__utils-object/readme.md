@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic__utils-object
 
-Typings are for version 1.0.5
+Typings are for version 1.0.6
 
 ## Library description:
 Object utils
@@ -10,9 +10,9 @@ Object utils
 | ------------------ | :-------------: |
 | Full name          | @ionic/utils-object |
 | Keywords           | - |
-| # releases         | 3 |
+| # releases         | 14 |
 | # dependents       | 2 |
-| # downloads        | 530128 |
+| # downloads        | 1945397 |
 | # stars            | 0 |
 
 ## Links

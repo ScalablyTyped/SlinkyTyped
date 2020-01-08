@@ -1,6 +1,6 @@
 package typingsSlinky.next.distNextDashServerServerRouterMod
 
-import typingsSlinky.next.nextNumbers.`false`
+import typingsSlinky.next.nextBooleans.`false`
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.urlMod.UrlWithParsedQuery

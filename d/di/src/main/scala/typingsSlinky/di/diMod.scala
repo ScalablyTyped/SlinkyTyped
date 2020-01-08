@@ -1,6 +1,5 @@
 package typingsSlinky.di
 
-import typingsSlinky.di.diMod.Injector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

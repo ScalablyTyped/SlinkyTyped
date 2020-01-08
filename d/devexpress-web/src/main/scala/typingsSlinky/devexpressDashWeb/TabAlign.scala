@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,12 +44,22 @@ object TabAlign extends js.Object {
   @js.native
   sealed trait Right extends TabAlign
   
-  /* 1 */ val Center: typingsSlinky.devexpressDashWeb.TabAlign.Center with Double = js.native
-  /* 3 */ val Decimal: typingsSlinky.devexpressDashWeb.TabAlign.Decimal with Double = js.native
-  /* 0 */ val Left: typingsSlinky.devexpressDashWeb.TabAlign.Left with Double = js.native
-  /* 4 */ val Numbering: typingsSlinky.devexpressDashWeb.TabAlign.Numbering with Double = js.native
-  /* 2 */ val Right: typingsSlinky.devexpressDashWeb.TabAlign.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TabAlign with Double] = js.native
+  /* 1 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 3 */ @js.native
+  object Decimal extends TopLevel[Decimal with Double]
+  
+  /* 0 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 4 */ @js.native
+  object Numbering extends TopLevel[Numbering with Double]
+  
+  /* 2 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

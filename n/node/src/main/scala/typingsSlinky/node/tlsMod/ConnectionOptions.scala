@@ -1,7 +1,6 @@
 package typingsSlinky.node.tlsMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.dnsMod.LookupOneOptions
 import typingsSlinky.node.netMod.LookupFunction
@@ -15,14 +14,14 @@ trait ConnectionOptions
      with CommonConnectionOptions {
    // Establish secure connection on a given socket rather than creating a new socket
   var checkServerIdentity: js.UndefOr[
-    js.Function2[/* host */ java.lang.String, /* cert */ PeerCertificate, js.UndefOr[Error]]
+    js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
   ] = js.undefined
-  var host: js.UndefOr[java.lang.String] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
   var lookup: js.UndefOr[LookupFunction] = js.undefined
   var minDHSize: js.UndefOr[Double] = js.undefined
-  var path: js.UndefOr[java.lang.String] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
   var port: js.UndefOr[Double] = js.undefined
-  var servername: js.UndefOr[java.lang.String] = js.undefined
+  var servername: js.UndefOr[String] = js.undefined
    // SNI TLS Extension
   var session: js.UndefOr[Buffer] = js.undefined
    // Creates unix socket connection to path. If this option is specified, `host` and `port` are ignored.
@@ -33,41 +32,39 @@ trait ConnectionOptions
 object ConnectionOptions {
   @scala.inline
   def apply(
-    ALPNProtocols: (js.Array[java.lang.String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ java.lang.String, /* cb */ js.Function2[/* err */ Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
-    ca: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    cert: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    checkServerIdentity: (/* host */ java.lang.String, /* cert */ PeerCertificate) => js.UndefOr[Error] = null,
-    ciphers: java.lang.String = null,
-    clientCertEngine: java.lang.String = null,
-    crl: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    dhparam: java.lang.String | Buffer = null,
-    ecdhCurve: java.lang.String = null,
+    ALPNProtocols: (js.Array[String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    ca: String | Buffer | (js.Array[String | Buffer]) = null,
+    cert: String | Buffer | (js.Array[String | Buffer]) = null,
+    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
+    ciphers: String = null,
+    clientCertEngine: String = null,
+    crl: String | Buffer | (js.Array[String | Buffer]) = null,
+    dhparam: String | Buffer = null,
+    ecdhCurve: String = null,
     enableTrace: js.UndefOr[Boolean] = js.undefined,
     honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    host: java.lang.String = null,
-    key: java.lang.String | Buffer | (js.Array[Buffer | js.Object]) = null,
-    lookup: (/* hostname */ java.lang.String, /* options */ LookupOneOptions, /* callback */ js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String, 
-      /* family */ Double, 
-      Unit
-    ]) => Unit = null,
+    host: String = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
+    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
     maxVersion: SecureVersion = null,
     minDHSize: Int | Double = null,
     minVersion: SecureVersion = null,
-    passphrase: java.lang.String = null,
-    path: java.lang.String = null,
-    pfx: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer | js.Object]) = null,
+    passphrase: String = null,
+    path: String = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
     port: Int | Double = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
     secureOptions: Int | Double = null,
-    secureProtocol: java.lang.String = null,
-    servername: java.lang.String = null,
+    secureProtocol: String = null,
+    servername: String = null,
     session: Buffer = null,
-    sessionIdContext: java.lang.String = null,
+    sessionIdContext: String = null,
+    sigalgs: String = null,
     socket: Socket = null,
     timeout: Int | Double = null
   ): ConnectionOptions = {
@@ -94,6 +91,8 @@ object ConnectionOptions {
     if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
@@ -102,6 +101,7 @@ object ConnectionOptions {
     if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
     if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
     if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionOptions]

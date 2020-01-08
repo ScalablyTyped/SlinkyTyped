@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Blot
-import typingsSlinky.quill.quillNumbers.`false`
-import typingsSlinky.quill.quillNumbers.`true`
+import typingsSlinky.quill.quillBooleans.`false`
+import typingsSlinky.quill.quillBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

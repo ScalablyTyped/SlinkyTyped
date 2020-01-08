@@ -3,7 +3,7 @@ package typingsSlinky.semanticDashUiDashApi
 import typingsSlinky.jquery.JQueryDeferred
 import typingsSlinky.semanticDashUiDashApi.SemanticUI.Api
 import typingsSlinky.semanticDashUiDashApi.SemanticUI.ApiSettings
-import typingsSlinky.semanticDashUiDashApi.semanticDashUiDashApiNumbers.`false`
+import typingsSlinky.semanticDashUiDashApi.semanticDashUiDashApiBooleans.`false`
 import typingsSlinky.semanticDashUiDashApi.semanticDashUiDashApiStrings.`add url data`
 import typingsSlinky.semanticDashUiDashApi.semanticDashUiDashApiStrings.`create cache`
 import typingsSlinky.semanticDashUiDashApi.semanticDashUiDashApiStrings.`get event`

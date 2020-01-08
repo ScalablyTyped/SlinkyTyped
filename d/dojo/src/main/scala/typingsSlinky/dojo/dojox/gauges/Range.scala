@@ -3,6 +3,7 @@ package typingsSlinky.dojo.dojox.gauges
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dijit._Widget
+import typingsSlinky.dojo.dojoStrings.color
 import typingsSlinky.dojo.dojoStrings.high
 import typingsSlinky.dojo.dojoStrings.hover
 import typingsSlinky.dojo.dojoStrings.low
@@ -62,7 +63,7 @@ class Range () extends _Widget {
   @JSName("style")
   var style_Range: String = js.native
   @JSName("get")
-  def get_color(property: typingsSlinky.dojo.dojoStrings.color): js.Object = js.native
+  def get_color(property: color): js.Object = js.native
   @JSName("get")
   def get_high(property: high): Double = js.native
   @JSName("get")
@@ -72,7 +73,7 @@ class Range () extends _Widget {
   @JSName("get")
   def get_size(property: size): Double = js.native
   @JSName("set")
-  def set_color(property: typingsSlinky.dojo.dojoStrings.color, value: js.Object): Unit = js.native
+  def set_color(property: color, value: js.Object): Unit = js.native
   @JSName("set")
   def set_high(property: high, value: Double): Unit = js.native
   @JSName("set")
@@ -85,7 +86,7 @@ class Range () extends _Widget {
   def set_style(property: style, value: String): Unit = js.native
   @JSName("watch")
   def watch_color(
-    property: typingsSlinky.dojo.dojoStrings.color,
+    property: color,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Object], 

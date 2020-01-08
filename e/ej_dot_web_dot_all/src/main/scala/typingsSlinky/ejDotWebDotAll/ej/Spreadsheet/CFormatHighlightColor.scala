@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object CFormatHighlightColor extends js.Object {
   @js.native
   sealed trait YellowFillwithDarkYellowText extends CFormatHighlightColor
   
-  /* 2 */ val GreenFillwithDarkGreenText: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CFormatHighlightColor.GreenFillwithDarkGreenText with Double = js.native
-  /* 3 */ val RedFill: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CFormatHighlightColor.RedFill with Double = js.native
-  /* 0 */ val RedFillwithDarkRedText: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CFormatHighlightColor.RedFillwithDarkRedText with Double = js.native
-  /* 4 */ val RedText: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CFormatHighlightColor.RedText with Double = js.native
-  /* 1 */ val YellowFillwithDarkYellowText: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CFormatHighlightColor.YellowFillwithDarkYellowText with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CFormatHighlightColor with Double] = js.native
+  /* 2 */ @js.native
+  object GreenFillwithDarkGreenText extends TopLevel[GreenFillwithDarkGreenText with Double]
+  
+  /* 3 */ @js.native
+  object RedFill extends TopLevel[RedFill with Double]
+  
+  /* 0 */ @js.native
+  object RedFillwithDarkRedText extends TopLevel[RedFillwithDarkRedText with Double]
+  
+  /* 4 */ @js.native
+  object RedText extends TopLevel[RedText with Double]
+  
+  /* 1 */ @js.native
+  object YellowFillwithDarkYellowText extends TopLevel[YellowFillwithDarkYellowText with Double]
+  
 }
 

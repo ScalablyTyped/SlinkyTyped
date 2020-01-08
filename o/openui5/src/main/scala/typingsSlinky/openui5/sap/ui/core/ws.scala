@@ -2,8 +2,6 @@ package typingsSlinky.openui5.sap.ui.core
 
 import typingsSlinky.openui5.TypeofReadyState
 import typingsSlinky.openui5.sap.ui.base.EventProvider
-import typingsSlinky.openui5.sap.ui.core.ws.SapPcpWebSocket
-import typingsSlinky.openui5.sap.ui.core.ws.WebSocket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

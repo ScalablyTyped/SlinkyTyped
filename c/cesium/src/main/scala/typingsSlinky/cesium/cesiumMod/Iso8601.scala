@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object Iso8601 extends js.Object {
   @js.native
   sealed trait MINIMUM_VALUE extends Iso8601
   
-  /* 2 */ val MAXIMUM_INTERVAL: typingsSlinky.cesium.cesiumMod.Iso8601.MAXIMUM_INTERVAL with Double = js.native
-  /* 1 */ val MAXIMUM_VALUE: typingsSlinky.cesium.cesiumMod.Iso8601.MAXIMUM_VALUE with Double = js.native
-  /* 0 */ val MINIMUM_VALUE: typingsSlinky.cesium.cesiumMod.Iso8601.MINIMUM_VALUE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Iso8601 with Double] = js.native
+  /* 2 */ @js.native
+  object MAXIMUM_INTERVAL extends TopLevel[MAXIMUM_INTERVAL with Double]
+  
+  /* 1 */ @js.native
+  object MAXIMUM_VALUE extends TopLevel[MAXIMUM_VALUE with Double]
+  
+  /* 0 */ @js.native
+  object MINIMUM_VALUE extends TopLevel[MINIMUM_VALUE with Double]
+  
 }
 

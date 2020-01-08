@@ -3,6 +3,7 @@ package typingsSlinky.reactDashFlex.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashFlex.reactDashFlexMod.ItemProps
 import typingsSlinky.reactDashFlex.reactDashFlexStrings.`fit-content`
@@ -58,6 +59,7 @@ object Item
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashFlex.reactDashFlexMod.Item] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashFlex.reactDashFlexMod.Item](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ItemProps
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDash
 
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleMod.IStyle
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleMod.IStyleBaseArray
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`false`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

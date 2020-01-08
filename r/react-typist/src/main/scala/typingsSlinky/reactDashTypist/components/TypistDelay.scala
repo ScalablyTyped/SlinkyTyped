@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TypistDelay extends SharedApply_DelayProps_1646964161[Delay] {
+object TypistDelay extends SharedApply_DelayProps_1798624415[Delay] {
   @JSImport("react-typist", "Typist.Delay")
   @js.native
   object componentImport extends js.Object

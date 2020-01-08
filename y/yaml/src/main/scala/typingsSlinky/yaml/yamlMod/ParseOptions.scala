@@ -1,6 +1,6 @@
 package typingsSlinky.yaml.yamlMod
 
-import typingsSlinky.yaml.yamlStrings.`yaml-1DOT1`
+import typingsSlinky.yaml.yamlStrings.`yaml-1Dot1`
 import typingsSlinky.yaml.yamlStrings.core
 import typingsSlinky.yaml.yamlStrings.failsafe
 import typingsSlinky.yaml.yamlStrings.json
@@ -33,7 +33,7 @@ trait ParseOptions extends js.Object {
   /**
     * The base schema to use. By default `"core"` for YAML 1.2 and `"yaml-1.1"` for earlier versions.
     */
-  var schema: js.UndefOr[core | failsafe | json | `yaml-1DOT1`] = js.undefined
+  var schema: js.UndefOr[core | failsafe | json | `yaml-1Dot1`] = js.undefined
   /**
     * Array of additional (custom) tags to include in the schema.
     */
@@ -52,7 +52,7 @@ object ParseOptions {
     keepNodeTypes: js.UndefOr[Boolean] = js.undefined,
     mapAsMap: js.UndefOr[Boolean] = js.undefined,
     merge: js.UndefOr[Boolean] = js.undefined,
-    schema: core | failsafe | json | `yaml-1DOT1` = null,
+    schema: core | failsafe | json | `yaml-1Dot1` = null,
     tags: js.Array[Tag] | (js.Function1[/* tags */ js.Array[Tag], js.Array[Tag]]) = null,
     version: String = null
   ): ParseOptions = {

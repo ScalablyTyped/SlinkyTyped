@@ -1,9 +1,9 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import slinky.core.ReactComponentClass
-import typingsSlinky.atMaterialDashUiCore.tablePaginationTablePaginationActionsMod.TablePaginationActionsProps
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.react.reactMod.HTMLAttributes
 import typingsSlinky.react.reactMod.MouseEvent
 import typingsSlinky.react.reactMod.NativeMouseEvent
@@ -34,6 +34,8 @@ object tablePaginationTablePaginationActionsMod extends js.Object {
     def this(props: TablePaginationActionsProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[TablePaginationActionsProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[TablePaginationActionsProps]]
+  
 }
 

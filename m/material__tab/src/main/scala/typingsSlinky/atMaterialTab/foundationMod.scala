@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialTab
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialTab.adapterMod.MDCTabAdapter
-import typingsSlinky.atMaterialTab.foundationMod.MDCTabFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

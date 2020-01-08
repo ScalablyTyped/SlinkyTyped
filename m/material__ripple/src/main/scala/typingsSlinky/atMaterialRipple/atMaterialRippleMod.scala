@@ -5,8 +5,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Window
 import typingsSlinky.atMaterialRipple.adapterMod.MDCRippleAdapter
-import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
-import typingsSlinky.atMaterialRipple.atMaterialRippleMod.RippleCapableSurface
 import typingsSlinky.atMaterialRipple.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

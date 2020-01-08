@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PdfViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object LinkTarget extends js.Object {
   @js.native
   sealed trait NewWindow extends LinkTarget
   
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.LinkTarget.Default with Double = js.native
-  /* 1 */ val NewTab: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.LinkTarget.NewTab with Double = js.native
-  /* 2 */ val NewWindow: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.LinkTarget.NewWindow with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LinkTarget with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object NewTab extends TopLevel[NewTab with Double]
+  
+  /* 2 */ @js.native
+  object NewWindow extends TopLevel[NewWindow with Double]
+  
 }
 

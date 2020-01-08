@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ExtensionVersionFlags extends js.Object {
   @js.native
   sealed trait Validated extends ExtensionVersionFlags
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionVersionFlags.None with Double = js.native
-  /* 1 */ val Validated: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionVersionFlags.Validated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionVersionFlags with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Validated extends TopLevel[Validated with Double]
+  
 }
 

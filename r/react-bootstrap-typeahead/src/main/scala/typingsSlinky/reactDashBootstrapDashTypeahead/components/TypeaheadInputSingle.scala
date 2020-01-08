@@ -27,8 +27,10 @@ object TypeaheadInputSingle
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, disabled, placeholder */
+  /* The following DOM/SVG props were specified: placeholder */
   def apply[T /* <: TypeaheadModel */](
+    autoComplete: String,
+    disabled: Boolean,
     onBlur: Event => Unit,
     onChange: js.Array[T] => Unit,
     onClick: Event => Unit,
@@ -47,7 +49,7 @@ object TypeaheadInputSingle
     tag.type, 
     typingsSlinky.reactDashBootstrapDashTypeahead.reactDashBootstrapDashTypeaheadMod.TypeaheadInputSingle[js.Any]
   ] = {
-    val __obj = js.Dynamic.literal(onBlur = js.Any.fromFunction1(onBlur), onChange = js.Any.fromFunction1(onChange), onClick = js.Any.fromFunction1(onClick), onFocus = js.Any.fromFunction1(onFocus), onKeyDown = js.Any.fromFunction1(onKeyDown), role = role.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autoComplete = autoComplete.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], onBlur = js.Any.fromFunction1(onBlur), onChange = js.Any.fromFunction1(onChange), onClick = js.Any.fromFunction1(onClick), onFocus = js.Any.fromFunction1(onFocus), onKeyDown = js.Any.fromFunction1(onKeyDown), role = role.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
     __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.libpq.libpqMod
 
-import typingsSlinky.libpq.libpqNumbers.`true`
+import typingsSlinky.libpq.libpqBooleans.`true`
 import typingsSlinky.node.bufferMod.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Error

@@ -3,10 +3,6 @@ package typingsSlinky.mobservable
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mobservable.libInterfacesMod.IObjectChange
 import typingsSlinky.mobservable.libInterfacesMod.Lambda
-import typingsSlinky.mobservable.libObservablemapMod.Entries
-import typingsSlinky.mobservable.libObservablemapMod.IObservableMapChange
-import typingsSlinky.mobservable.libObservablemapMod.KeyValueMap
-import typingsSlinky.mobservable.libObservablemapMod.ObservableMap
 import typingsSlinky.mobservable.libObservablevalueMod.ObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`

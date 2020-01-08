@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1361,363 +1362,1314 @@ object SyntaxKind extends js.Object {
     extends KeywordSyntaxKind
        with SyntaxKind
   
-  /* 121 */ val AbstractKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AbstractKeyword with Double = js.native
-  /* 55 */ val AmpersandAmpersandToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AmpersandAmpersandToken with Double = js.native
-  /* 72 */ val AmpersandEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AmpersandEqualsToken with Double = js.native
-  /* 50 */ val AmpersandToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AmpersandToken with Double = js.native
-  /* 124 */ val AnyKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AnyKeyword with Double = js.native
-  /* 189 */ val ArrayBindingPattern: typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrayBindingPattern with Double = js.native
-  /* 191 */ val ArrayLiteralExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrayLiteralExpression with Double = js.native
-  /* 173 */ val ArrayType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrayType with Double = js.native
-  /* 201 */ val ArrowFunction: typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrowFunction with Double = js.native
-  /* 216 */ val AsExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsExpression with Double = js.native
-  /* 122 */ val AsKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsKeyword with Double = js.native
-  /* 123 */ val AssertsKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AssertsKeyword with Double = js.native
-  /* 66 */ val AsteriskAsteriskEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsteriskAsteriskEqualsToken with Double = js.native
-  /* 42 */ val AsteriskAsteriskToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsteriskAsteriskToken with Double = js.native
-  /* 65 */ val AsteriskEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsteriskEqualsToken with Double = js.native
-  /* 41 */ val AsteriskToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsteriskToken with Double = js.native
-  /* 125 */ val AsyncKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AsyncKeyword with Double = js.native
-  /* 59 */ val AtToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.AtToken with Double = js.native
-  /* 205 */ val AwaitExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.AwaitExpression with Double = js.native
-  /* 126 */ val AwaitKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.AwaitKeyword with Double = js.native
-  /* 61 */ val BacktickToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.BacktickToken with Double = js.native
-  /* 56 */ val BarBarToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.BarBarToken with Double = js.native
-  /* 73 */ val BarEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.BarEqualsToken with Double = js.native
-  /* 51 */ val BarToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.BarToken with Double = js.native
-  /* 150 */ val BigIntKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.BigIntKeyword with Double = js.native
-  /* 9 */ val BigIntLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.BigIntLiteral with Double = js.native
-  /* 208 */ val BinaryExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.BinaryExpression with Double = js.native
-  /* 190 */ val BindingElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.BindingElement with Double = js.native
-  /* 222 */ val Block: typingsSlinky.typescript.typescriptMod.SyntaxKind.Block with Double = js.native
-  /* 127 */ val BooleanKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.BooleanKeyword with Double = js.native
-  /* 76 */ val BreakKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.BreakKeyword with Double = js.native
-  /* 233 */ val BreakStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.BreakStatement with Double = js.native
-  /* 289 */ val Bundle: typingsSlinky.typescript.typescriptMod.SyntaxKind.Bundle with Double = js.native
-  /* 195 */ val CallExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.CallExpression with Double = js.native
-  /* 164 */ val CallSignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.CallSignature with Double = js.native
-  /* 74 */ val CaretEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CaretEqualsToken with Double = js.native
-  /* 52 */ val CaretToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CaretToken with Double = js.native
-  /* 250 */ val CaseBlock: typingsSlinky.typescript.typescriptMod.SyntaxKind.CaseBlock with Double = js.native
-  /* 275 */ val CaseClause: typingsSlinky.typescript.typescriptMod.SyntaxKind.CaseClause with Double = js.native
-  /* 77 */ val CaseKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.CaseKeyword with Double = js.native
-  /* 278 */ val CatchClause: typingsSlinky.typescript.typescriptMod.SyntaxKind.CatchClause with Double = js.native
-  /* 78 */ val CatchKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.CatchKeyword with Double = js.native
-  /* 244 */ val ClassDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.ClassDeclaration with Double = js.native
-  /* 213 */ val ClassExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ClassExpression with Double = js.native
-  /* 79 */ val ClassKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ClassKeyword with Double = js.native
-  /* 19 */ val CloseBraceToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CloseBraceToken with Double = js.native
-  /* 23 */ val CloseBracketToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CloseBracketToken with Double = js.native
-  /* 21 */ val CloseParenToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CloseParenToken with Double = js.native
-  /* 58 */ val ColonToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.ColonToken with Double = js.native
-  /* 320 */ val CommaListExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.CommaListExpression with Double = js.native
-  /* 27 */ val CommaToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.CommaToken with Double = js.native
-  /* 153 */ val ComputedPropertyName: typingsSlinky.typescript.typescriptMod.SyntaxKind.ComputedPropertyName with Double = js.native
-  /* 209 */ val ConditionalExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConditionalExpression with Double = js.native
-  /* 179 */ val ConditionalType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConditionalType with Double = js.native
-  /* 7 */ val ConflictMarkerTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConflictMarkerTrivia with Double = js.native
-  /* 80 */ val ConstKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConstKeyword with Double = js.native
-  /* 165 */ val ConstructSignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConstructSignature with Double = js.native
-  /* 161 */ val Constructor: typingsSlinky.typescript.typescriptMod.SyntaxKind.Constructor with Double = js.native
-  /* 128 */ val ConstructorKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConstructorKeyword with Double = js.native
-  /* 170 */ val ConstructorType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ConstructorType with Double = js.native
-  /* 81 */ val ContinueKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ContinueKeyword with Double = js.native
-  /* 232 */ val ContinueStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ContinueStatement with Double = js.native
-  /* 324 */ val Count: typingsSlinky.typescript.typescriptMod.SyntaxKind.Count with Double = js.native
-  /* 82 */ val DebuggerKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.DebuggerKeyword with Double = js.native
-  /* 240 */ val DebuggerStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.DebuggerStatement with Double = js.native
-  /* 129 */ val DeclareKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.DeclareKeyword with Double = js.native
-  /* 156 */ val Decorator: typingsSlinky.typescript.typescriptMod.SyntaxKind.Decorator with Double = js.native
-  /* 276 */ val DefaultClause: typingsSlinky.typescript.typescriptMod.SyntaxKind.DefaultClause with Double = js.native
-  /* 83 */ val DefaultKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.DefaultKeyword with Double = js.native
-  /* 202 */ val DeleteExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.DeleteExpression with Double = js.native
-  /* 84 */ val DeleteKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.DeleteKeyword with Double = js.native
-  /* 85 */ val DoKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.DoKeyword with Double = js.native
-  /* 227 */ val DoStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.DoStatement with Double = js.native
-  /* 25 */ val DotDotDotToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.DotDotDotToken with Double = js.native
-  /* 24 */ val DotToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.DotToken with Double = js.native
-  /* 194 */ val ElementAccessExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ElementAccessExpression with Double = js.native
-  /* 86 */ val ElseKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ElseKeyword with Double = js.native
-  /* 223 */ val EmptyStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.EmptyStatement with Double = js.native
-  /* 322 */ val EndOfDeclarationMarker: typingsSlinky.typescript.typescriptMod.SyntaxKind.EndOfDeclarationMarker with Double = js.native
-  /* 1 */ val EndOfFileToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.EndOfFileToken with Double = js.native
-  /* 247 */ val EnumDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.EnumDeclaration with Double = js.native
-  /* 87 */ val EnumKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.EnumKeyword with Double = js.native
-  /* 282 */ val EnumMember: typingsSlinky.typescript.typescriptMod.SyntaxKind.EnumMember with Double = js.native
-  /* 36 */ val EqualsEqualsEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsEqualsEqualsToken with Double = js.native
-  /* 34 */ val EqualsEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsEqualsToken with Double = js.native
-  /* 38 */ val EqualsGreaterThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsGreaterThanToken with Double = js.native
-  /* 62 */ val EqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsToken with Double = js.native
-  /* 37 */ val ExclamationEqualsEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExclamationEqualsEqualsToken with Double = js.native
-  /* 35 */ val ExclamationEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExclamationEqualsToken with Double = js.native
-  /* 53 */ val ExclamationToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExclamationToken with Double = js.native
-  /* 258 */ val ExportAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportAssignment with Double = js.native
-  /* 259 */ val ExportDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportDeclaration with Double = js.native
-  /* 88 */ val ExportKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportKeyword with Double = js.native
-  /* 261 */ val ExportSpecifier: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportSpecifier with Double = js.native
-  /* 225 */ val ExpressionStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExpressionStatement with Double = js.native
-  /* 215 */ val ExpressionWithTypeArguments: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExpressionWithTypeArguments with Double = js.native
-  /* 89 */ val ExtendsKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExtendsKeyword with Double = js.native
-  /* 263 */ val ExternalModuleReference: typingsSlinky.typescript.typescriptMod.SyntaxKind.ExternalModuleReference with Double = js.native
-  /* 90 */ val FalseKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.FalseKeyword with Double = js.native
-  /* 91 */ val FinallyKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.FinallyKeyword with Double = js.native
-  /* 62 */ val FirstAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstAssignment with Double = js.native
-  /* 29 */ val FirstBinaryOperator: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstBinaryOperator with Double = js.native
-  /* 63 */ val FirstCompoundAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstCompoundAssignment with Double = js.native
-  /* 112 */ val FirstFutureReservedWord: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstFutureReservedWord with Double = js.native
-  /* 292 */ val FirstJSDocNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstJSDocNode with Double = js.native
-  /* 304 */ val FirstJSDocTagNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstJSDocTagNode with Double = js.native
-  /* 76 */ val FirstKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstKeyword with Double = js.native
-  /* 8 */ val FirstLiteralToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstLiteralToken with Double = js.native
-  /* 152 */ val FirstNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstNode with Double = js.native
-  /* 18 */ val FirstPunctuation: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstPunctuation with Double = js.native
-  /* 76 */ val FirstReservedWord: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstReservedWord with Double = js.native
-  /* 224 */ val FirstStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstStatement with Double = js.native
-  /* 14 */ val FirstTemplateToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstTemplateToken with Double = js.native
-  /* 0 */ val FirstToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstToken with Double = js.native
-  /* 2 */ val FirstTriviaToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstTriviaToken with Double = js.native
-  /* 167 */ val FirstTypeNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.FirstTypeNode with Double = js.native
-  /* 230 */ val ForInStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ForInStatement with Double = js.native
-  /* 92 */ val ForKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ForKeyword with Double = js.native
-  /* 231 */ val ForOfStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ForOfStatement with Double = js.native
-  /* 229 */ val ForStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ForStatement with Double = js.native
-  /* 148 */ val FromKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.FromKeyword with Double = js.native
-  /* 243 */ val FunctionDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionDeclaration with Double = js.native
-  /* 200 */ val FunctionExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionExpression with Double = js.native
-  /* 93 */ val FunctionKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionKeyword with Double = js.native
-  /* 169 */ val FunctionType: typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionType with Double = js.native
-  /* 162 */ val GetAccessor: typingsSlinky.typescript.typescriptMod.SyntaxKind.GetAccessor with Double = js.native
-  /* 130 */ val GetKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.GetKeyword with Double = js.native
-  /* 149 */ val GlobalKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.GlobalKeyword with Double = js.native
-  /* 33 */ val GreaterThanEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanEqualsToken with Double = js.native
-  /* 70 */ val GreaterThanGreaterThanEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanGreaterThanEqualsToken with Double = js.native
-  /* 71 */ val GreaterThanGreaterThanGreaterThanEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanGreaterThanGreaterThanEqualsToken with Double = js.native
-  /* 49 */ val GreaterThanGreaterThanGreaterThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanGreaterThanGreaterThanToken with Double = js.native
-  /* 48 */ val GreaterThanGreaterThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanGreaterThanToken with Double = js.native
-  /* 31 */ val GreaterThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.GreaterThanToken with Double = js.native
-  /* 277 */ val HeritageClause: typingsSlinky.typescript.typescriptMod.SyntaxKind.HeritageClause with Double = js.native
-  /* 75 */ val Identifier: typingsSlinky.typescript.typescriptMod.SyntaxKind.Identifier with Double = js.native
-  /* 94 */ val IfKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.IfKeyword with Double = js.native
-  /* 226 */ val IfStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.IfStatement with Double = js.native
-  /* 112 */ val ImplementsKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImplementsKeyword with Double = js.native
-  /* 254 */ val ImportClause: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportClause with Double = js.native
-  /* 253 */ val ImportDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportDeclaration with Double = js.native
-  /* 252 */ val ImportEqualsDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportEqualsDeclaration with Double = js.native
-  /* 95 */ val ImportKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportKeyword with Double = js.native
-  /* 257 */ val ImportSpecifier: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportSpecifier with Double = js.native
-  /* 187 */ val ImportType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportType with Double = js.native
-  /* 96 */ val InKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.InKeyword with Double = js.native
-  /* 166 */ val IndexSignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.IndexSignature with Double = js.native
-  /* 184 */ val IndexedAccessType: typingsSlinky.typescript.typescriptMod.SyntaxKind.IndexedAccessType with Double = js.native
-  /* 131 */ val InferKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.InferKeyword with Double = js.native
-  /* 180 */ val InferType: typingsSlinky.typescript.typescriptMod.SyntaxKind.InferType with Double = js.native
-  /* 291 */ val InputFiles: typingsSlinky.typescript.typescriptMod.SyntaxKind.InputFiles with Double = js.native
-  /* 97 */ val InstanceOfKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.InstanceOfKeyword with Double = js.native
-  /* 245 */ val InterfaceDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.InterfaceDeclaration with Double = js.native
-  /* 113 */ val InterfaceKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.InterfaceKeyword with Double = js.native
-  /* 178 */ val IntersectionType: typingsSlinky.typescript.typescriptMod.SyntaxKind.IntersectionType with Double = js.native
-  /* 132 */ val IsKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.IsKeyword with Double = js.native
-  /* 293 */ val JSDocAllType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAllType with Double = js.native
-  /* 305 */ val JSDocAugmentsTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAugmentsTag with Double = js.native
-  /* 306 */ val JSDocAuthorTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAuthorTag with Double = js.native
-  /* 308 */ val JSDocCallbackTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocCallbackTag with Double = js.native
-  /* 307 */ val JSDocClassTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocClassTag with Double = js.native
-  /* 301 */ val JSDocComment: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocComment with Double = js.native
-  /* 309 */ val JSDocEnumTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocEnumTag with Double = js.native
-  /* 298 */ val JSDocFunctionType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocFunctionType with Double = js.native
-  /* 300 */ val JSDocNamepathType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNamepathType with Double = js.native
-  /* 296 */ val JSDocNonNullableType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNonNullableType with Double = js.native
-  /* 295 */ val JSDocNullableType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNullableType with Double = js.native
-  /* 297 */ val JSDocOptionalType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocOptionalType with Double = js.native
-  /* 310 */ val JSDocParameterTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocParameterTag with Double = js.native
-  /* 316 */ val JSDocPropertyTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocPropertyTag with Double = js.native
-  /* 311 */ val JSDocReturnTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocReturnTag with Double = js.native
-  /* 303 */ val JSDocSignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocSignature with Double = js.native
-  /* 304 */ val JSDocTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTag with Double = js.native
-  /* 314 */ val JSDocTemplateTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTemplateTag with Double = js.native
-  /* 312 */ val JSDocThisTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocThisTag with Double = js.native
-  /* 292 */ val JSDocTypeExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeExpression with Double = js.native
-  /* 302 */ val JSDocTypeLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeLiteral with Double = js.native
-  /* 313 */ val JSDocTypeTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeTag with Double = js.native
-  /* 315 */ val JSDocTypedefTag: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypedefTag with Double = js.native
-  /* 294 */ val JSDocUnknownType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocUnknownType with Double = js.native
-  /* 299 */ val JSDocVariadicType: typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocVariadicType with Double = js.native
-  /* 271 */ val JsxAttribute: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxAttribute with Double = js.native
-  /* 272 */ val JsxAttributes: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxAttributes with Double = js.native
-  /* 267 */ val JsxClosingElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxClosingElement with Double = js.native
-  /* 270 */ val JsxClosingFragment: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxClosingFragment with Double = js.native
-  /* 264 */ val JsxElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxElement with Double = js.native
-  /* 274 */ val JsxExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxExpression with Double = js.native
-  /* 268 */ val JsxFragment: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxFragment with Double = js.native
-  /* 266 */ val JsxOpeningElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxOpeningElement with Double = js.native
-  /* 269 */ val JsxOpeningFragment: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxOpeningFragment with Double = js.native
-  /* 265 */ val JsxSelfClosingElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxSelfClosingElement with Double = js.native
-  /* 273 */ val JsxSpreadAttribute: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxSpreadAttribute with Double = js.native
-  /* 11 */ val JsxText: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxText with Double = js.native
-  /* 12 */ val JsxTextAllWhiteSpaces: typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxTextAllWhiteSpaces with Double = js.native
-  /* 133 */ val KeyOfKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.KeyOfKeyword with Double = js.native
-  /* 237 */ val LabeledStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.LabeledStatement with Double = js.native
-  /* 74 */ val LastAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastAssignment with Double = js.native
-  /* 74 */ val LastBinaryOperator: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastBinaryOperator with Double = js.native
-  /* 74 */ val LastCompoundAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastCompoundAssignment with Double = js.native
-  /* 120 */ val LastFutureReservedWord: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastFutureReservedWord with Double = js.native
-  /* 316 */ val LastJSDocNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastJSDocNode with Double = js.native
-  /* 316 */ val LastJSDocTagNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastJSDocTagNode with Double = js.native
-  /* 151 */ val LastKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastKeyword with Double = js.native
-  /* 14 */ val LastLiteralToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastLiteralToken with Double = js.native
-  /* 74 */ val LastPunctuation: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastPunctuation with Double = js.native
-  /* 111 */ val LastReservedWord: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastReservedWord with Double = js.native
-  /* 240 */ val LastStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastStatement with Double = js.native
-  /* 17 */ val LastTemplateToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastTemplateToken with Double = js.native
-  /* 151 */ val LastToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastToken with Double = js.native
-  /* 7 */ val LastTriviaToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastTriviaToken with Double = js.native
-  /* 187 */ val LastTypeNode: typingsSlinky.typescript.typescriptMod.SyntaxKind.LastTypeNode with Double = js.native
-  /* 32 */ val LessThanEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LessThanEqualsToken with Double = js.native
-  /* 69 */ val LessThanLessThanEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LessThanLessThanEqualsToken with Double = js.native
-  /* 47 */ val LessThanLessThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LessThanLessThanToken with Double = js.native
-  /* 30 */ val LessThanSlashToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LessThanSlashToken with Double = js.native
-  /* 29 */ val LessThanToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.LessThanToken with Double = js.native
-  /* 114 */ val LetKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.LetKeyword with Double = js.native
-  /* 186 */ val LiteralType: typingsSlinky.typescript.typescriptMod.SyntaxKind.LiteralType with Double = js.native
-  /* 185 */ val MappedType: typingsSlinky.typescript.typescriptMod.SyntaxKind.MappedType with Double = js.native
-  /* 321 */ val MergeDeclarationMarker: typingsSlinky.typescript.typescriptMod.SyntaxKind.MergeDeclarationMarker with Double = js.native
-  /* 218 */ val MetaProperty: typingsSlinky.typescript.typescriptMod.SyntaxKind.MetaProperty with Double = js.native
-  /* 160 */ val MethodDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.MethodDeclaration with Double = js.native
-  /* 159 */ val MethodSignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.MethodSignature with Double = js.native
-  /* 64 */ val MinusEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.MinusEqualsToken with Double = js.native
-  /* 46 */ val MinusMinusToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.MinusMinusToken with Double = js.native
-  /* 40 */ val MinusToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.MinusToken with Double = js.native
-  /* 262 */ val MissingDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.MissingDeclaration with Double = js.native
-  /* 249 */ val ModuleBlock: typingsSlinky.typescript.typescriptMod.SyntaxKind.ModuleBlock with Double = js.native
-  /* 248 */ val ModuleDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.ModuleDeclaration with Double = js.native
-  /* 134 */ val ModuleKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ModuleKeyword with Double = js.native
-  /* 3 */ val MultiLineCommentTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.MultiLineCommentTrivia with Double = js.native
-  /* 260 */ val NamedExports: typingsSlinky.typescript.typescriptMod.SyntaxKind.NamedExports with Double = js.native
-  /* 256 */ val NamedImports: typingsSlinky.typescript.typescriptMod.SyntaxKind.NamedImports with Double = js.native
-  /* 251 */ val NamespaceExportDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.NamespaceExportDeclaration with Double = js.native
-  /* 255 */ val NamespaceImport: typingsSlinky.typescript.typescriptMod.SyntaxKind.NamespaceImport with Double = js.native
-  /* 135 */ val NamespaceKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.NamespaceKeyword with Double = js.native
-  /* 136 */ val NeverKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.NeverKeyword with Double = js.native
-  /* 196 */ val NewExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.NewExpression with Double = js.native
-  /* 98 */ val NewKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.NewKeyword with Double = js.native
-  /* 4 */ val NewLineTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.NewLineTrivia with Double = js.native
-  /* 14 */ val NoSubstitutionTemplateLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.NoSubstitutionTemplateLiteral with Double = js.native
-  /* 217 */ val NonNullExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.NonNullExpression with Double = js.native
-  /* 318 */ val NotEmittedStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.NotEmittedStatement with Double = js.native
-  /* 99 */ val NullKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.NullKeyword with Double = js.native
-  /* 139 */ val NumberKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.NumberKeyword with Double = js.native
-  /* 8 */ val NumericLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.NumericLiteral with Double = js.native
-  /* 188 */ val ObjectBindingPattern: typingsSlinky.typescript.typescriptMod.SyntaxKind.ObjectBindingPattern with Double = js.native
-  /* 140 */ val ObjectKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ObjectKeyword with Double = js.native
-  /* 192 */ val ObjectLiteralExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ObjectLiteralExpression with Double = js.native
-  /* 151 */ val OfKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.OfKeyword with Double = js.native
-  /* 214 */ val OmittedExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.OmittedExpression with Double = js.native
-  /* 18 */ val OpenBraceToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.OpenBraceToken with Double = js.native
-  /* 22 */ val OpenBracketToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.OpenBracketToken with Double = js.native
-  /* 20 */ val OpenParenToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.OpenParenToken with Double = js.native
-  /* 175 */ val OptionalType: typingsSlinky.typescript.typescriptMod.SyntaxKind.OptionalType with Double = js.native
-  /* 115 */ val PackageKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.PackageKeyword with Double = js.native
-  /* 155 */ val Parameter: typingsSlinky.typescript.typescriptMod.SyntaxKind.Parameter with Double = js.native
-  /* 199 */ val ParenthesizedExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.ParenthesizedExpression with Double = js.native
-  /* 181 */ val ParenthesizedType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ParenthesizedType with Double = js.native
-  /* 319 */ val PartiallyEmittedExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.PartiallyEmittedExpression with Double = js.native
-  /* 68 */ val PercentEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.PercentEqualsToken with Double = js.native
-  /* 44 */ val PercentToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.PercentToken with Double = js.native
-  /* 63 */ val PlusEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.PlusEqualsToken with Double = js.native
-  /* 45 */ val PlusPlusToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.PlusPlusToken with Double = js.native
-  /* 39 */ val PlusToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.PlusToken with Double = js.native
-  /* 207 */ val PostfixUnaryExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.PostfixUnaryExpression with Double = js.native
-  /* 206 */ val PrefixUnaryExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.PrefixUnaryExpression with Double = js.native
-  /* 116 */ val PrivateKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.PrivateKeyword with Double = js.native
-  /* 193 */ val PropertyAccessExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyAccessExpression with Double = js.native
-  /* 279 */ val PropertyAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyAssignment with Double = js.native
-  /* 158 */ val PropertyDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyDeclaration with Double = js.native
-  /* 157 */ val PropertySignature: typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertySignature with Double = js.native
-  /* 117 */ val ProtectedKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ProtectedKeyword with Double = js.native
-  /* 118 */ val PublicKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.PublicKeyword with Double = js.native
-  /* 152 */ val QualifiedName: typingsSlinky.typescript.typescriptMod.SyntaxKind.QualifiedName with Double = js.native
-  /* 28 */ val QuestionDotToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.QuestionDotToken with Double = js.native
-  /* 60 */ val QuestionQuestionToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.QuestionQuestionToken with Double = js.native
-  /* 57 */ val QuestionToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.QuestionToken with Double = js.native
-  /* 137 */ val ReadonlyKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ReadonlyKeyword with Double = js.native
-  /* 13 */ val RegularExpressionLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.RegularExpressionLiteral with Double = js.native
-  /* 138 */ val RequireKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.RequireKeyword with Double = js.native
-  /* 176 */ val RestType: typingsSlinky.typescript.typescriptMod.SyntaxKind.RestType with Double = js.native
-  /* 100 */ val ReturnKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ReturnKeyword with Double = js.native
-  /* 234 */ val ReturnStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ReturnStatement with Double = js.native
-  /* 221 */ val SemicolonClassElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.SemicolonClassElement with Double = js.native
-  /* 26 */ val SemicolonToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.SemicolonToken with Double = js.native
-  /* 163 */ val SetAccessor: typingsSlinky.typescript.typescriptMod.SyntaxKind.SetAccessor with Double = js.native
-  /* 141 */ val SetKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.SetKeyword with Double = js.native
-  /* 6 */ val ShebangTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.ShebangTrivia with Double = js.native
-  /* 280 */ val ShorthandPropertyAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.ShorthandPropertyAssignment with Double = js.native
-  /* 2 */ val SingleLineCommentTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.SingleLineCommentTrivia with Double = js.native
-  /* 67 */ val SlashEqualsToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.SlashEqualsToken with Double = js.native
-  /* 43 */ val SlashToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.SlashToken with Double = js.native
-  /* 288 */ val SourceFile: typingsSlinky.typescript.typescriptMod.SyntaxKind.SourceFile with Double = js.native
-  /* 281 */ val SpreadAssignment: typingsSlinky.typescript.typescriptMod.SyntaxKind.SpreadAssignment with Double = js.native
-  /* 212 */ val SpreadElement: typingsSlinky.typescript.typescriptMod.SyntaxKind.SpreadElement with Double = js.native
-  /* 119 */ val StaticKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.StaticKeyword with Double = js.native
-  /* 142 */ val StringKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.StringKeyword with Double = js.native
-  /* 10 */ val StringLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.StringLiteral with Double = js.native
-  /* 101 */ val SuperKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.SuperKeyword with Double = js.native
-  /* 102 */ val SwitchKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.SwitchKeyword with Double = js.native
-  /* 236 */ val SwitchStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.SwitchStatement with Double = js.native
-  /* 143 */ val SymbolKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.SymbolKeyword with Double = js.native
-  /* 317 */ val SyntaxList: typingsSlinky.typescript.typescriptMod.SyntaxKind.SyntaxList with Double = js.native
-  /* 219 */ val SyntheticExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.SyntheticExpression with Double = js.native
-  /* 323 */ val SyntheticReferenceExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.SyntheticReferenceExpression with Double = js.native
-  /* 197 */ val TaggedTemplateExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.TaggedTemplateExpression with Double = js.native
-  /* 210 */ val TemplateExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateExpression with Double = js.native
-  /* 15 */ val TemplateHead: typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateHead with Double = js.native
-  /* 16 */ val TemplateMiddle: typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateMiddle with Double = js.native
-  /* 220 */ val TemplateSpan: typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateSpan with Double = js.native
-  /* 17 */ val TemplateTail: typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateTail with Double = js.native
-  /* 103 */ val ThisKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ThisKeyword with Double = js.native
-  /* 182 */ val ThisType: typingsSlinky.typescript.typescriptMod.SyntaxKind.ThisType with Double = js.native
-  /* 104 */ val ThrowKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.ThrowKeyword with Double = js.native
-  /* 238 */ val ThrowStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.ThrowStatement with Double = js.native
-  /* 54 */ val TildeToken: typingsSlinky.typescript.typescriptMod.SyntaxKind.TildeToken with Double = js.native
-  /* 105 */ val TrueKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.TrueKeyword with Double = js.native
-  /* 106 */ val TryKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.TryKeyword with Double = js.native
-  /* 239 */ val TryStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.TryStatement with Double = js.native
-  /* 174 */ val TupleType: typingsSlinky.typescript.typescriptMod.SyntaxKind.TupleType with Double = js.native
-  /* 246 */ val TypeAliasDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeAliasDeclaration with Double = js.native
-  /* 198 */ val TypeAssertionExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeAssertionExpression with Double = js.native
-  /* 144 */ val TypeKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeKeyword with Double = js.native
-  /* 172 */ val TypeLiteral: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeLiteral with Double = js.native
-  /* 203 */ val TypeOfExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeOfExpression with Double = js.native
-  /* 107 */ val TypeOfKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeOfKeyword with Double = js.native
-  /* 183 */ val TypeOperator: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeOperator with Double = js.native
-  /* 154 */ val TypeParameter: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeParameter with Double = js.native
-  /* 167 */ val TypePredicate: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypePredicate with Double = js.native
-  /* 171 */ val TypeQuery: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeQuery with Double = js.native
-  /* 168 */ val TypeReference: typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeReference with Double = js.native
-  /* 145 */ val UndefinedKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.UndefinedKeyword with Double = js.native
-  /* 177 */ val UnionType: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnionType with Double = js.native
-  /* 146 */ val UniqueKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.UniqueKeyword with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.typescript.typescriptMod.SyntaxKind.Unknown with Double = js.native
-  /* 147 */ val UnknownKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnknownKeyword with Double = js.native
-  /* 286 */ val UnparsedInternalText: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedInternalText with Double = js.native
-  /* 284 */ val UnparsedPrepend: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedPrepend with Double = js.native
-  /* 283 */ val UnparsedPrologue: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedPrologue with Double = js.native
-  /* 290 */ val UnparsedSource: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedSource with Double = js.native
-  /* 287 */ val UnparsedSyntheticReference: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedSyntheticReference with Double = js.native
-  /* 285 */ val UnparsedText: typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedText with Double = js.native
-  /* 108 */ val VarKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.VarKeyword with Double = js.native
-  /* 241 */ val VariableDeclaration: typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableDeclaration with Double = js.native
-  /* 242 */ val VariableDeclarationList: typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableDeclarationList with Double = js.native
-  /* 224 */ val VariableStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableStatement with Double = js.native
-  /* 204 */ val VoidExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.VoidExpression with Double = js.native
-  /* 109 */ val VoidKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.VoidKeyword with Double = js.native
-  /* 110 */ val WhileKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.WhileKeyword with Double = js.native
-  /* 228 */ val WhileStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.WhileStatement with Double = js.native
-  /* 5 */ val WhitespaceTrivia: typingsSlinky.typescript.typescriptMod.SyntaxKind.WhitespaceTrivia with Double = js.native
-  /* 111 */ val WithKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.WithKeyword with Double = js.native
-  /* 235 */ val WithStatement: typingsSlinky.typescript.typescriptMod.SyntaxKind.WithStatement with Double = js.native
-  /* 211 */ val YieldExpression: typingsSlinky.typescript.typescriptMod.SyntaxKind.YieldExpression with Double = js.native
-  /* 120 */ val YieldKeyword: typingsSlinky.typescript.typescriptMod.SyntaxKind.YieldKeyword with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SyntaxKind with Double] = js.native
+  /* 121 */ @js.native
+  object AbstractKeyword extends TopLevel[AbstractKeyword with Double]
+  
+  /* 55 */ @js.native
+  object AmpersandAmpersandToken extends TopLevel[AmpersandAmpersandToken with Double]
+  
+  /* 72 */ @js.native
+  object AmpersandEqualsToken extends TopLevel[AmpersandEqualsToken with Double]
+  
+  /* 50 */ @js.native
+  object AmpersandToken extends TopLevel[AmpersandToken with Double]
+  
+  /* 124 */ @js.native
+  object AnyKeyword extends TopLevel[AnyKeyword with Double]
+  
+  /* 189 */ @js.native
+  object ArrayBindingPattern
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrayBindingPattern with Double
+        ]
+  
+  /* 191 */ @js.native
+  object ArrayLiteralExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrayLiteralExpression with Double
+        ]
+  
+  /* 173 */ @js.native
+  object ArrayType extends TopLevel[ArrayType with Double]
+  
+  /* 201 */ @js.native
+  object ArrowFunction
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ArrowFunction with Double]
+  
+  /* 216 */ @js.native
+  object AsExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.AsExpression with Double]
+  
+  /* 122 */ @js.native
+  object AsKeyword extends TopLevel[AsKeyword with Double]
+  
+  /* 123 */ @js.native
+  object AssertsKeyword extends TopLevel[AssertsKeyword with Double]
+  
+  /* 66 */ @js.native
+  object AsteriskAsteriskEqualsToken extends TopLevel[AsteriskAsteriskEqualsToken with Double]
+  
+  /* 42 */ @js.native
+  object AsteriskAsteriskToken extends TopLevel[AsteriskAsteriskToken with Double]
+  
+  /* 65 */ @js.native
+  object AsteriskEqualsToken extends TopLevel[AsteriskEqualsToken with Double]
+  
+  /* 41 */ @js.native
+  object AsteriskToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.AsteriskToken with Double]
+  
+  /* 125 */ @js.native
+  object AsyncKeyword extends TopLevel[AsyncKeyword with Double]
+  
+  /* 59 */ @js.native
+  object AtToken extends TopLevel[AtToken with Double]
+  
+  /* 205 */ @js.native
+  object AwaitExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.AwaitExpression with Double]
+  
+  /* 126 */ @js.native
+  object AwaitKeyword extends TopLevel[AwaitKeyword with Double]
+  
+  /* 61 */ @js.native
+  object BacktickToken extends TopLevel[BacktickToken with Double]
+  
+  /* 56 */ @js.native
+  object BarBarToken extends TopLevel[BarBarToken with Double]
+  
+  /* 73 */ @js.native
+  object BarEqualsToken extends TopLevel[BarEqualsToken with Double]
+  
+  /* 51 */ @js.native
+  object BarToken extends TopLevel[BarToken with Double]
+  
+  /* 150 */ @js.native
+  object BigIntKeyword extends TopLevel[BigIntKeyword with Double]
+  
+  /* 9 */ @js.native
+  object BigIntLiteral
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.BigIntLiteral with Double]
+  
+  /* 208 */ @js.native
+  object BinaryExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.BinaryExpression with Double]
+  
+  /* 190 */ @js.native
+  object BindingElement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.BindingElement with Double]
+  
+  /* 222 */ @js.native
+  object Block
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.Block with Double]
+  
+  /* 127 */ @js.native
+  object BooleanKeyword extends TopLevel[BooleanKeyword with Double]
+  
+  /* 76 */ @js.native
+  object BreakKeyword extends TopLevel[BreakKeyword with Double]
+  
+  /* 233 */ @js.native
+  object BreakStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.BreakStatement with Double]
+  
+  /* 289 */ @js.native
+  object Bundle
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.Bundle with Double]
+  
+  /* 195 */ @js.native
+  object CallExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.CallExpression with Double]
+  
+  /* 164 */ @js.native
+  object CallSignature extends TopLevel[CallSignature with Double]
+  
+  /* 74 */ @js.native
+  object CaretEqualsToken extends TopLevel[CaretEqualsToken with Double]
+  
+  /* 52 */ @js.native
+  object CaretToken extends TopLevel[CaretToken with Double]
+  
+  /* 250 */ @js.native
+  object CaseBlock
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.CaseBlock with Double]
+  
+  /* 275 */ @js.native
+  object CaseClause
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.CaseClause with Double]
+  
+  /* 77 */ @js.native
+  object CaseKeyword extends TopLevel[CaseKeyword with Double]
+  
+  /* 278 */ @js.native
+  object CatchClause
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.CatchClause with Double]
+  
+  /* 78 */ @js.native
+  object CatchKeyword extends TopLevel[CatchKeyword with Double]
+  
+  /* 244 */ @js.native
+  object ClassDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ClassDeclaration with Double]
+  
+  /* 213 */ @js.native
+  object ClassExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ClassExpression with Double]
+  
+  /* 79 */ @js.native
+  object ClassKeyword extends TopLevel[ClassKeyword with Double]
+  
+  /* 19 */ @js.native
+  object CloseBraceToken extends TopLevel[CloseBraceToken with Double]
+  
+  /* 23 */ @js.native
+  object CloseBracketToken extends TopLevel[CloseBracketToken with Double]
+  
+  /* 21 */ @js.native
+  object CloseParenToken extends TopLevel[CloseParenToken with Double]
+  
+  /* 58 */ @js.native
+  object ColonToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ColonToken with Double]
+  
+  /* 320 */ @js.native
+  object CommaListExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.CommaListExpression with Double
+        ]
+  
+  /* 27 */ @js.native
+  object CommaToken extends TopLevel[CommaToken with Double]
+  
+  /* 153 */ @js.native
+  object ComputedPropertyName
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ComputedPropertyName with Double
+        ]
+  
+  /* 209 */ @js.native
+  object ConditionalExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ConditionalExpression with Double
+        ]
+  
+  /* 179 */ @js.native
+  object ConditionalType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ConditionalType with Double]
+  
+  /* 7 */ @js.native
+  object ConflictMarkerTrivia extends TopLevel[ConflictMarkerTrivia with Double]
+  
+  /* 80 */ @js.native
+  object ConstKeyword extends TopLevel[ConstKeyword with Double]
+  
+  /* 165 */ @js.native
+  object ConstructSignature extends TopLevel[ConstructSignature with Double]
+  
+  /* 161 */ @js.native
+  object Constructor extends TopLevel[Constructor with Double]
+  
+  /* 128 */ @js.native
+  object ConstructorKeyword extends TopLevel[ConstructorKeyword with Double]
+  
+  /* 170 */ @js.native
+  object ConstructorType extends TopLevel[ConstructorType with Double]
+  
+  /* 81 */ @js.native
+  object ContinueKeyword extends TopLevel[ContinueKeyword with Double]
+  
+  /* 232 */ @js.native
+  object ContinueStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ContinueStatement with Double]
+  
+  /* 324 */ @js.native
+  object Count extends TopLevel[Count with Double]
+  
+  /* 82 */ @js.native
+  object DebuggerKeyword extends TopLevel[DebuggerKeyword with Double]
+  
+  /* 240 */ @js.native
+  object DebuggerStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DebuggerStatement with Double]
+  
+  /* 129 */ @js.native
+  object DeclareKeyword extends TopLevel[DeclareKeyword with Double]
+  
+  /* 156 */ @js.native
+  object Decorator
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.Decorator with Double]
+  
+  /* 276 */ @js.native
+  object DefaultClause
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DefaultClause with Double]
+  
+  /* 83 */ @js.native
+  object DefaultKeyword extends TopLevel[DefaultKeyword with Double]
+  
+  /* 202 */ @js.native
+  object DeleteExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DeleteExpression with Double]
+  
+  /* 84 */ @js.native
+  object DeleteKeyword extends TopLevel[DeleteKeyword with Double]
+  
+  /* 85 */ @js.native
+  object DoKeyword extends TopLevel[DoKeyword with Double]
+  
+  /* 227 */ @js.native
+  object DoStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DoStatement with Double]
+  
+  /* 25 */ @js.native
+  object DotDotDotToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DotDotDotToken with Double]
+  
+  /* 24 */ @js.native
+  object DotToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.DotToken with Double]
+  
+  /* 194 */ @js.native
+  object ElementAccessExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ElementAccessExpression with Double
+        ]
+  
+  /* 86 */ @js.native
+  object ElseKeyword extends TopLevel[ElseKeyword with Double]
+  
+  /* 223 */ @js.native
+  object EmptyStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.EmptyStatement with Double]
+  
+  /* 322 */ @js.native
+  object EndOfDeclarationMarker extends TopLevel[EndOfDeclarationMarker with Double]
+  
+  /* 1 */ @js.native
+  object EndOfFileToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.EndOfFileToken with Double]
+  
+  /* 247 */ @js.native
+  object EnumDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.EnumDeclaration with Double]
+  
+  /* 87 */ @js.native
+  object EnumKeyword extends TopLevel[EnumKeyword with Double]
+  
+  /* 282 */ @js.native
+  object EnumMember
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.EnumMember with Double]
+  
+  /* 36 */ @js.native
+  object EqualsEqualsEqualsToken extends TopLevel[EqualsEqualsEqualsToken with Double]
+  
+  /* 34 */ @js.native
+  object EqualsEqualsToken extends TopLevel[EqualsEqualsToken with Double]
+  
+  /* 38 */ @js.native
+  object EqualsGreaterThanToken
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsGreaterThanToken with Double
+        ]
+  
+  /* 62 */ @js.native
+  object EqualsToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.EqualsToken with Double]
+  
+  /* 37 */ @js.native
+  object ExclamationEqualsEqualsToken extends TopLevel[ExclamationEqualsEqualsToken with Double]
+  
+  /* 35 */ @js.native
+  object ExclamationEqualsToken extends TopLevel[ExclamationEqualsToken with Double]
+  
+  /* 53 */ @js.native
+  object ExclamationToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ExclamationToken with Double]
+  
+  /* 258 */ @js.native
+  object ExportAssignment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportAssignment with Double]
+  
+  /* 259 */ @js.native
+  object ExportDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportDeclaration with Double]
+  
+  /* 88 */ @js.native
+  object ExportKeyword extends TopLevel[ExportKeyword with Double]
+  
+  /* 261 */ @js.native
+  object ExportSpecifier
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ExportSpecifier with Double]
+  
+  /* 225 */ @js.native
+  object ExpressionStatement
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ExpressionStatement with Double
+        ]
+  
+  /* 215 */ @js.native
+  object ExpressionWithTypeArguments
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ExpressionWithTypeArguments with Double
+        ]
+  
+  /* 89 */ @js.native
+  object ExtendsKeyword extends TopLevel[ExtendsKeyword with Double]
+  
+  /* 263 */ @js.native
+  object ExternalModuleReference
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ExternalModuleReference with Double
+        ]
+  
+  /* 90 */ @js.native
+  object FalseKeyword extends TopLevel[FalseKeyword with Double]
+  
+  /* 91 */ @js.native
+  object FinallyKeyword extends TopLevel[FinallyKeyword with Double]
+  
+  /* 62 */ @js.native
+  object FirstAssignment extends TopLevel[FirstAssignment with Double]
+  
+  /* 29 */ @js.native
+  object FirstBinaryOperator extends TopLevel[FirstBinaryOperator with Double]
+  
+  /* 63 */ @js.native
+  object FirstCompoundAssignment extends TopLevel[FirstCompoundAssignment with Double]
+  
+  /* 112 */ @js.native
+  object FirstFutureReservedWord extends TopLevel[FirstFutureReservedWord with Double]
+  
+  /* 292 */ @js.native
+  object FirstJSDocNode extends TopLevel[FirstJSDocNode with Double]
+  
+  /* 304 */ @js.native
+  object FirstJSDocTagNode extends TopLevel[FirstJSDocTagNode with Double]
+  
+  /* 76 */ @js.native
+  object FirstKeyword extends TopLevel[FirstKeyword with Double]
+  
+  /* 8 */ @js.native
+  object FirstLiteralToken extends TopLevel[FirstLiteralToken with Double]
+  
+  /* 152 */ @js.native
+  object FirstNode extends TopLevel[FirstNode with Double]
+  
+  /* 18 */ @js.native
+  object FirstPunctuation extends TopLevel[FirstPunctuation with Double]
+  
+  /* 76 */ @js.native
+  object FirstReservedWord extends TopLevel[FirstReservedWord with Double]
+  
+  /* 224 */ @js.native
+  object FirstStatement extends TopLevel[FirstStatement with Double]
+  
+  /* 14 */ @js.native
+  object FirstTemplateToken extends TopLevel[FirstTemplateToken with Double]
+  
+  /* 0 */ @js.native
+  object FirstToken extends TopLevel[FirstToken with Double]
+  
+  /* 2 */ @js.native
+  object FirstTriviaToken extends TopLevel[FirstTriviaToken with Double]
+  
+  /* 167 */ @js.native
+  object FirstTypeNode extends TopLevel[FirstTypeNode with Double]
+  
+  /* 230 */ @js.native
+  object ForInStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ForInStatement with Double]
+  
+  /* 92 */ @js.native
+  object ForKeyword extends TopLevel[ForKeyword with Double]
+  
+  /* 231 */ @js.native
+  object ForOfStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ForOfStatement with Double]
+  
+  /* 229 */ @js.native
+  object ForStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ForStatement with Double]
+  
+  /* 148 */ @js.native
+  object FromKeyword extends TopLevel[FromKeyword with Double]
+  
+  /* 243 */ @js.native
+  object FunctionDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionDeclaration with Double
+        ]
+  
+  /* 200 */ @js.native
+  object FunctionExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.FunctionExpression with Double]
+  
+  /* 93 */ @js.native
+  object FunctionKeyword extends TopLevel[FunctionKeyword with Double]
+  
+  /* 169 */ @js.native
+  object FunctionType extends TopLevel[FunctionType with Double]
+  
+  /* 162 */ @js.native
+  object GetAccessor extends TopLevel[GetAccessor with Double]
+  
+  /* 130 */ @js.native
+  object GetKeyword extends TopLevel[GetKeyword with Double]
+  
+  /* 149 */ @js.native
+  object GlobalKeyword extends TopLevel[GlobalKeyword with Double]
+  
+  /* 33 */ @js.native
+  object GreaterThanEqualsToken extends TopLevel[GreaterThanEqualsToken with Double]
+  
+  /* 70 */ @js.native
+  object GreaterThanGreaterThanEqualsToken extends TopLevel[GreaterThanGreaterThanEqualsToken with Double]
+  
+  /* 71 */ @js.native
+  object GreaterThanGreaterThanGreaterThanEqualsToken extends TopLevel[GreaterThanGreaterThanGreaterThanEqualsToken with Double]
+  
+  /* 49 */ @js.native
+  object GreaterThanGreaterThanGreaterThanToken extends TopLevel[GreaterThanGreaterThanGreaterThanToken with Double]
+  
+  /* 48 */ @js.native
+  object GreaterThanGreaterThanToken extends TopLevel[GreaterThanGreaterThanToken with Double]
+  
+  /* 31 */ @js.native
+  object GreaterThanToken extends TopLevel[GreaterThanToken with Double]
+  
+  /* 277 */ @js.native
+  object HeritageClause
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.HeritageClause with Double]
+  
+  /* 75 */ @js.native
+  object Identifier
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.Identifier with Double]
+  
+  /* 94 */ @js.native
+  object IfKeyword extends TopLevel[IfKeyword with Double]
+  
+  /* 226 */ @js.native
+  object IfStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.IfStatement with Double]
+  
+  /* 112 */ @js.native
+  object ImplementsKeyword extends TopLevel[ImplementsKeyword with Double]
+  
+  /* 254 */ @js.native
+  object ImportClause
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportClause with Double]
+  
+  /* 253 */ @js.native
+  object ImportDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportDeclaration with Double]
+  
+  /* 252 */ @js.native
+  object ImportEqualsDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportEqualsDeclaration with Double
+        ]
+  
+  /* 95 */ @js.native
+  object ImportKeyword extends TopLevel[ImportKeyword with Double]
+  
+  /* 257 */ @js.native
+  object ImportSpecifier
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ImportSpecifier with Double]
+  
+  /* 187 */ @js.native
+  object ImportType extends TopLevel[ImportType with Double]
+  
+  /* 96 */ @js.native
+  object InKeyword extends TopLevel[InKeyword with Double]
+  
+  /* 166 */ @js.native
+  object IndexSignature extends TopLevel[IndexSignature with Double]
+  
+  /* 184 */ @js.native
+  object IndexedAccessType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.IndexedAccessType with Double]
+  
+  /* 131 */ @js.native
+  object InferKeyword extends TopLevel[InferKeyword with Double]
+  
+  /* 180 */ @js.native
+  object InferType extends TopLevel[InferType with Double]
+  
+  /* 291 */ @js.native
+  object InputFiles
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.InputFiles with Double]
+  
+  /* 97 */ @js.native
+  object InstanceOfKeyword extends TopLevel[InstanceOfKeyword with Double]
+  
+  /* 245 */ @js.native
+  object InterfaceDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.InterfaceDeclaration with Double
+        ]
+  
+  /* 113 */ @js.native
+  object InterfaceKeyword extends TopLevel[InterfaceKeyword with Double]
+  
+  /* 178 */ @js.native
+  object IntersectionType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.IntersectionType with Double]
+  
+  /* 132 */ @js.native
+  object IsKeyword extends TopLevel[IsKeyword with Double]
+  
+  /* 293 */ @js.native
+  object JSDocAllType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAllType with Double]
+  
+  /* 305 */ @js.native
+  object JSDocAugmentsTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAugmentsTag with Double]
+  
+  /* 306 */ @js.native
+  object JSDocAuthorTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocAuthorTag with Double]
+  
+  /* 308 */ @js.native
+  object JSDocCallbackTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocCallbackTag with Double]
+  
+  /* 307 */ @js.native
+  object JSDocClassTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocClassTag with Double]
+  
+  /* 301 */ @js.native
+  object JSDocComment extends TopLevel[JSDocComment with Double]
+  
+  /* 309 */ @js.native
+  object JSDocEnumTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocEnumTag with Double]
+  
+  /* 298 */ @js.native
+  object JSDocFunctionType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocFunctionType with Double]
+  
+  /* 300 */ @js.native
+  object JSDocNamepathType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNamepathType with Double]
+  
+  /* 296 */ @js.native
+  object JSDocNonNullableType
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNonNullableType with Double
+        ]
+  
+  /* 295 */ @js.native
+  object JSDocNullableType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocNullableType with Double]
+  
+  /* 297 */ @js.native
+  object JSDocOptionalType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocOptionalType with Double]
+  
+  /* 310 */ @js.native
+  object JSDocParameterTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocParameterTag with Double]
+  
+  /* 316 */ @js.native
+  object JSDocPropertyTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocPropertyTag with Double]
+  
+  /* 311 */ @js.native
+  object JSDocReturnTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocReturnTag with Double]
+  
+  /* 303 */ @js.native
+  object JSDocSignature
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocSignature with Double]
+  
+  /* 304 */ @js.native
+  object JSDocTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTag with Double]
+  
+  /* 314 */ @js.native
+  object JSDocTemplateTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTemplateTag with Double]
+  
+  /* 312 */ @js.native
+  object JSDocThisTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocThisTag with Double]
+  
+  /* 292 */ @js.native
+  object JSDocTypeExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeExpression with Double
+        ]
+  
+  /* 302 */ @js.native
+  object JSDocTypeLiteral
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeLiteral with Double]
+  
+  /* 313 */ @js.native
+  object JSDocTypeTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypeTag with Double]
+  
+  /* 315 */ @js.native
+  object JSDocTypedefTag
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocTypedefTag with Double]
+  
+  /* 294 */ @js.native
+  object JSDocUnknownType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocUnknownType with Double]
+  
+  /* 299 */ @js.native
+  object JSDocVariadicType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JSDocVariadicType with Double]
+  
+  /* 271 */ @js.native
+  object JsxAttribute
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxAttribute with Double]
+  
+  /* 272 */ @js.native
+  object JsxAttributes
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxAttributes with Double]
+  
+  /* 267 */ @js.native
+  object JsxClosingElement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxClosingElement with Double]
+  
+  /* 270 */ @js.native
+  object JsxClosingFragment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxClosingFragment with Double]
+  
+  /* 264 */ @js.native
+  object JsxElement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxElement with Double]
+  
+  /* 274 */ @js.native
+  object JsxExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxExpression with Double]
+  
+  /* 268 */ @js.native
+  object JsxFragment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxFragment with Double]
+  
+  /* 266 */ @js.native
+  object JsxOpeningElement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxOpeningElement with Double]
+  
+  /* 269 */ @js.native
+  object JsxOpeningFragment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxOpeningFragment with Double]
+  
+  /* 265 */ @js.native
+  object JsxSelfClosingElement
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxSelfClosingElement with Double
+        ]
+  
+  /* 273 */ @js.native
+  object JsxSpreadAttribute
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxSpreadAttribute with Double]
+  
+  /* 11 */ @js.native
+  object JsxText
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.JsxText with Double]
+  
+  /* 12 */ @js.native
+  object JsxTextAllWhiteSpaces extends TopLevel[JsxTextAllWhiteSpaces with Double]
+  
+  /* 133 */ @js.native
+  object KeyOfKeyword extends TopLevel[KeyOfKeyword with Double]
+  
+  /* 237 */ @js.native
+  object LabeledStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.LabeledStatement with Double]
+  
+  /* 74 */ @js.native
+  object LastAssignment extends TopLevel[LastAssignment with Double]
+  
+  /* 74 */ @js.native
+  object LastBinaryOperator extends TopLevel[LastBinaryOperator with Double]
+  
+  /* 74 */ @js.native
+  object LastCompoundAssignment extends TopLevel[LastCompoundAssignment with Double]
+  
+  /* 120 */ @js.native
+  object LastFutureReservedWord extends TopLevel[LastFutureReservedWord with Double]
+  
+  /* 316 */ @js.native
+  object LastJSDocNode extends TopLevel[LastJSDocNode with Double]
+  
+  /* 316 */ @js.native
+  object LastJSDocTagNode extends TopLevel[LastJSDocTagNode with Double]
+  
+  /* 151 */ @js.native
+  object LastKeyword extends TopLevel[LastKeyword with Double]
+  
+  /* 14 */ @js.native
+  object LastLiteralToken extends TopLevel[LastLiteralToken with Double]
+  
+  /* 74 */ @js.native
+  object LastPunctuation extends TopLevel[LastPunctuation with Double]
+  
+  /* 111 */ @js.native
+  object LastReservedWord extends TopLevel[LastReservedWord with Double]
+  
+  /* 240 */ @js.native
+  object LastStatement extends TopLevel[LastStatement with Double]
+  
+  /* 17 */ @js.native
+  object LastTemplateToken extends TopLevel[LastTemplateToken with Double]
+  
+  /* 151 */ @js.native
+  object LastToken extends TopLevel[LastToken with Double]
+  
+  /* 7 */ @js.native
+  object LastTriviaToken extends TopLevel[LastTriviaToken with Double]
+  
+  /* 187 */ @js.native
+  object LastTypeNode extends TopLevel[LastTypeNode with Double]
+  
+  /* 32 */ @js.native
+  object LessThanEqualsToken extends TopLevel[LessThanEqualsToken with Double]
+  
+  /* 69 */ @js.native
+  object LessThanLessThanEqualsToken extends TopLevel[LessThanLessThanEqualsToken with Double]
+  
+  /* 47 */ @js.native
+  object LessThanLessThanToken extends TopLevel[LessThanLessThanToken with Double]
+  
+  /* 30 */ @js.native
+  object LessThanSlashToken extends TopLevel[LessThanSlashToken with Double]
+  
+  /* 29 */ @js.native
+  object LessThanToken extends TopLevel[LessThanToken with Double]
+  
+  /* 114 */ @js.native
+  object LetKeyword extends TopLevel[LetKeyword with Double]
+  
+  /* 186 */ @js.native
+  object LiteralType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.LiteralType with Double]
+  
+  /* 185 */ @js.native
+  object MappedType extends TopLevel[MappedType with Double]
+  
+  /* 321 */ @js.native
+  object MergeDeclarationMarker extends TopLevel[MergeDeclarationMarker with Double]
+  
+  /* 218 */ @js.native
+  object MetaProperty
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.MetaProperty with Double]
+  
+  /* 160 */ @js.native
+  object MethodDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.MethodDeclaration with Double]
+  
+  /* 159 */ @js.native
+  object MethodSignature
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.MethodSignature with Double]
+  
+  /* 64 */ @js.native
+  object MinusEqualsToken extends TopLevel[MinusEqualsToken with Double]
+  
+  /* 46 */ @js.native
+  object MinusMinusToken extends TopLevel[MinusMinusToken with Double]
+  
+  /* 40 */ @js.native
+  object MinusToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.MinusToken with Double]
+  
+  /* 262 */ @js.native
+  object MissingDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.MissingDeclaration with Double]
+  
+  /* 249 */ @js.native
+  object ModuleBlock
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ModuleBlock with Double]
+  
+  /* 248 */ @js.native
+  object ModuleDeclaration
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ModuleDeclaration with Double]
+  
+  /* 134 */ @js.native
+  object ModuleKeyword extends TopLevel[ModuleKeyword with Double]
+  
+  /* 3 */ @js.native
+  object MultiLineCommentTrivia extends TopLevel[MultiLineCommentTrivia with Double]
+  
+  /* 260 */ @js.native
+  object NamedExports
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NamedExports with Double]
+  
+  /* 256 */ @js.native
+  object NamedImports
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NamedImports with Double]
+  
+  /* 251 */ @js.native
+  object NamespaceExportDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.NamespaceExportDeclaration with Double
+        ]
+  
+  /* 255 */ @js.native
+  object NamespaceImport
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NamespaceImport with Double]
+  
+  /* 135 */ @js.native
+  object NamespaceKeyword extends TopLevel[NamespaceKeyword with Double]
+  
+  /* 136 */ @js.native
+  object NeverKeyword extends TopLevel[NeverKeyword with Double]
+  
+  /* 196 */ @js.native
+  object NewExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NewExpression with Double]
+  
+  /* 98 */ @js.native
+  object NewKeyword extends TopLevel[NewKeyword with Double]
+  
+  /* 4 */ @js.native
+  object NewLineTrivia extends TopLevel[NewLineTrivia with Double]
+  
+  /* 14 */ @js.native
+  object NoSubstitutionTemplateLiteral
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.NoSubstitutionTemplateLiteral with Double
+        ]
+  
+  /* 217 */ @js.native
+  object NonNullExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NonNullExpression with Double]
+  
+  /* 318 */ @js.native
+  object NotEmittedStatement
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.NotEmittedStatement with Double
+        ]
+  
+  /* 99 */ @js.native
+  object NullKeyword extends TopLevel[NullKeyword with Double]
+  
+  /* 139 */ @js.native
+  object NumberKeyword extends TopLevel[NumberKeyword with Double]
+  
+  /* 8 */ @js.native
+  object NumericLiteral
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.NumericLiteral with Double]
+  
+  /* 188 */ @js.native
+  object ObjectBindingPattern
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ObjectBindingPattern with Double
+        ]
+  
+  /* 140 */ @js.native
+  object ObjectKeyword extends TopLevel[ObjectKeyword with Double]
+  
+  /* 192 */ @js.native
+  object ObjectLiteralExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ObjectLiteralExpression with Double
+        ]
+  
+  /* 151 */ @js.native
+  object OfKeyword extends TopLevel[OfKeyword with Double]
+  
+  /* 214 */ @js.native
+  object OmittedExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.OmittedExpression with Double]
+  
+  /* 18 */ @js.native
+  object OpenBraceToken extends TopLevel[OpenBraceToken with Double]
+  
+  /* 22 */ @js.native
+  object OpenBracketToken extends TopLevel[OpenBracketToken with Double]
+  
+  /* 20 */ @js.native
+  object OpenParenToken extends TopLevel[OpenParenToken with Double]
+  
+  /* 175 */ @js.native
+  object OptionalType extends TopLevel[OptionalType with Double]
+  
+  /* 115 */ @js.native
+  object PackageKeyword extends TopLevel[PackageKeyword with Double]
+  
+  /* 155 */ @js.native
+  object Parameter extends TopLevel[Parameter with Double]
+  
+  /* 199 */ @js.native
+  object ParenthesizedExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ParenthesizedExpression with Double
+        ]
+  
+  /* 181 */ @js.native
+  object ParenthesizedType extends TopLevel[ParenthesizedType with Double]
+  
+  /* 319 */ @js.native
+  object PartiallyEmittedExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.PartiallyEmittedExpression with Double
+        ]
+  
+  /* 68 */ @js.native
+  object PercentEqualsToken extends TopLevel[PercentEqualsToken with Double]
+  
+  /* 44 */ @js.native
+  object PercentToken extends TopLevel[PercentToken with Double]
+  
+  /* 63 */ @js.native
+  object PlusEqualsToken extends TopLevel[PlusEqualsToken with Double]
+  
+  /* 45 */ @js.native
+  object PlusPlusToken extends TopLevel[PlusPlusToken with Double]
+  
+  /* 39 */ @js.native
+  object PlusToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.PlusToken with Double]
+  
+  /* 207 */ @js.native
+  object PostfixUnaryExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.PostfixUnaryExpression with Double
+        ]
+  
+  /* 206 */ @js.native
+  object PrefixUnaryExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.PrefixUnaryExpression with Double
+        ]
+  
+  /* 116 */ @js.native
+  object PrivateKeyword extends TopLevel[PrivateKeyword with Double]
+  
+  /* 193 */ @js.native
+  object PropertyAccessExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyAccessExpression with Double
+        ]
+  
+  /* 279 */ @js.native
+  object PropertyAssignment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyAssignment with Double]
+  
+  /* 158 */ @js.native
+  object PropertyDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertyDeclaration with Double
+        ]
+  
+  /* 157 */ @js.native
+  object PropertySignature
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.PropertySignature with Double]
+  
+  /* 117 */ @js.native
+  object ProtectedKeyword extends TopLevel[ProtectedKeyword with Double]
+  
+  /* 118 */ @js.native
+  object PublicKeyword extends TopLevel[PublicKeyword with Double]
+  
+  /* 152 */ @js.native
+  object QualifiedName
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.QualifiedName with Double]
+  
+  /* 28 */ @js.native
+  object QuestionDotToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.QuestionDotToken with Double]
+  
+  /* 60 */ @js.native
+  object QuestionQuestionToken extends TopLevel[QuestionQuestionToken with Double]
+  
+  /* 57 */ @js.native
+  object QuestionToken
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.QuestionToken with Double]
+  
+  /* 137 */ @js.native
+  object ReadonlyKeyword extends TopLevel[ReadonlyKeyword with Double]
+  
+  /* 13 */ @js.native
+  object RegularExpressionLiteral
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.RegularExpressionLiteral with Double
+        ]
+  
+  /* 138 */ @js.native
+  object RequireKeyword extends TopLevel[RequireKeyword with Double]
+  
+  /* 176 */ @js.native
+  object RestType extends TopLevel[RestType with Double]
+  
+  /* 100 */ @js.native
+  object ReturnKeyword extends TopLevel[ReturnKeyword with Double]
+  
+  /* 234 */ @js.native
+  object ReturnStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ReturnStatement with Double]
+  
+  /* 221 */ @js.native
+  object SemicolonClassElement
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.SemicolonClassElement with Double
+        ]
+  
+  /* 26 */ @js.native
+  object SemicolonToken extends TopLevel[SemicolonToken with Double]
+  
+  /* 163 */ @js.native
+  object SetAccessor extends TopLevel[SetAccessor with Double]
+  
+  /* 141 */ @js.native
+  object SetKeyword extends TopLevel[SetKeyword with Double]
+  
+  /* 6 */ @js.native
+  object ShebangTrivia extends TopLevel[ShebangTrivia with Double]
+  
+  /* 280 */ @js.native
+  object ShorthandPropertyAssignment
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.ShorthandPropertyAssignment with Double
+        ]
+  
+  /* 2 */ @js.native
+  object SingleLineCommentTrivia extends TopLevel[SingleLineCommentTrivia with Double]
+  
+  /* 67 */ @js.native
+  object SlashEqualsToken extends TopLevel[SlashEqualsToken with Double]
+  
+  /* 43 */ @js.native
+  object SlashToken extends TopLevel[SlashToken with Double]
+  
+  /* 288 */ @js.native
+  object SourceFile
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.SourceFile with Double]
+  
+  /* 281 */ @js.native
+  object SpreadAssignment
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.SpreadAssignment with Double]
+  
+  /* 212 */ @js.native
+  object SpreadElement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.SpreadElement with Double]
+  
+  /* 119 */ @js.native
+  object StaticKeyword extends TopLevel[StaticKeyword with Double]
+  
+  /* 142 */ @js.native
+  object StringKeyword extends TopLevel[StringKeyword with Double]
+  
+  /* 10 */ @js.native
+  object StringLiteral
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.StringLiteral with Double]
+  
+  /* 101 */ @js.native
+  object SuperKeyword extends TopLevel[SuperKeyword with Double]
+  
+  /* 102 */ @js.native
+  object SwitchKeyword extends TopLevel[SwitchKeyword with Double]
+  
+  /* 236 */ @js.native
+  object SwitchStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.SwitchStatement with Double]
+  
+  /* 143 */ @js.native
+  object SymbolKeyword extends TopLevel[SymbolKeyword with Double]
+  
+  /* 317 */ @js.native
+  object SyntaxList
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.SyntaxList with Double]
+  
+  /* 219 */ @js.native
+  object SyntheticExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.SyntheticExpression with Double
+        ]
+  
+  /* 323 */ @js.native
+  object SyntheticReferenceExpression extends TopLevel[SyntheticReferenceExpression with Double]
+  
+  /* 197 */ @js.native
+  object TaggedTemplateExpression
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.TaggedTemplateExpression with Double
+        ]
+  
+  /* 210 */ @js.native
+  object TemplateExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateExpression with Double]
+  
+  /* 15 */ @js.native
+  object TemplateHead
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateHead with Double]
+  
+  /* 16 */ @js.native
+  object TemplateMiddle
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateMiddle with Double]
+  
+  /* 220 */ @js.native
+  object TemplateSpan
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateSpan with Double]
+  
+  /* 17 */ @js.native
+  object TemplateTail
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TemplateTail with Double]
+  
+  /* 103 */ @js.native
+  object ThisKeyword extends TopLevel[ThisKeyword with Double]
+  
+  /* 182 */ @js.native
+  object ThisType extends TopLevel[ThisType with Double]
+  
+  /* 104 */ @js.native
+  object ThrowKeyword extends TopLevel[ThrowKeyword with Double]
+  
+  /* 238 */ @js.native
+  object ThrowStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.ThrowStatement with Double]
+  
+  /* 54 */ @js.native
+  object TildeToken extends TopLevel[TildeToken with Double]
+  
+  /* 105 */ @js.native
+  object TrueKeyword extends TopLevel[TrueKeyword with Double]
+  
+  /* 106 */ @js.native
+  object TryKeyword extends TopLevel[TryKeyword with Double]
+  
+  /* 239 */ @js.native
+  object TryStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TryStatement with Double]
+  
+  /* 174 */ @js.native
+  object TupleType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TupleType with Double]
+  
+  /* 246 */ @js.native
+  object TypeAliasDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeAliasDeclaration with Double
+        ]
+  
+  /* 198 */ @js.native
+  object TypeAssertionExpression extends TopLevel[TypeAssertionExpression with Double]
+  
+  /* 144 */ @js.native
+  object TypeKeyword extends TopLevel[TypeKeyword with Double]
+  
+  /* 172 */ @js.native
+  object TypeLiteral extends TopLevel[TypeLiteral with Double]
+  
+  /* 203 */ @js.native
+  object TypeOfExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeOfExpression with Double]
+  
+  /* 107 */ @js.native
+  object TypeOfKeyword extends TopLevel[TypeOfKeyword with Double]
+  
+  /* 183 */ @js.native
+  object TypeOperator extends TopLevel[TypeOperator with Double]
+  
+  /* 154 */ @js.native
+  object TypeParameter
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeParameter with Double]
+  
+  /* 167 */ @js.native
+  object TypePredicate
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TypePredicate with Double]
+  
+  /* 171 */ @js.native
+  object TypeQuery extends TopLevel[TypeQuery with Double]
+  
+  /* 168 */ @js.native
+  object TypeReference
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.TypeReference with Double]
+  
+  /* 145 */ @js.native
+  object UndefinedKeyword extends TopLevel[UndefinedKeyword with Double]
+  
+  /* 177 */ @js.native
+  object UnionType
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.UnionType with Double]
+  
+  /* 146 */ @js.native
+  object UniqueKeyword extends TopLevel[UniqueKeyword with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
+  /* 147 */ @js.native
+  object UnknownKeyword extends TopLevel[UnknownKeyword with Double]
+  
+  /* 286 */ @js.native
+  object UnparsedInternalText extends TopLevel[UnparsedInternalText with Double]
+  
+  /* 284 */ @js.native
+  object UnparsedPrepend
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedPrepend with Double]
+  
+  /* 283 */ @js.native
+  object UnparsedPrologue
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedPrologue with Double]
+  
+  /* 290 */ @js.native
+  object UnparsedSource
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedSource with Double]
+  
+  /* 287 */ @js.native
+  object UnparsedSyntheticReference
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.UnparsedSyntheticReference with Double
+        ]
+  
+  /* 285 */ @js.native
+  object UnparsedText extends TopLevel[UnparsedText with Double]
+  
+  /* 108 */ @js.native
+  object VarKeyword extends TopLevel[VarKeyword with Double]
+  
+  /* 241 */ @js.native
+  object VariableDeclaration
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableDeclaration with Double
+        ]
+  
+  /* 242 */ @js.native
+  object VariableDeclarationList
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableDeclarationList with Double
+        ]
+  
+  /* 224 */ @js.native
+  object VariableStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.VariableStatement with Double]
+  
+  /* 204 */ @js.native
+  object VoidExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.VoidExpression with Double]
+  
+  /* 109 */ @js.native
+  object VoidKeyword extends TopLevel[VoidKeyword with Double]
+  
+  /* 110 */ @js.native
+  object WhileKeyword extends TopLevel[WhileKeyword with Double]
+  
+  /* 228 */ @js.native
+  object WhileStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.WhileStatement with Double]
+  
+  /* 5 */ @js.native
+  object WhitespaceTrivia extends TopLevel[WhitespaceTrivia with Double]
+  
+  /* 111 */ @js.native
+  object WithKeyword extends TopLevel[WithKeyword with Double]
+  
+  /* 235 */ @js.native
+  object WithStatement
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.WithStatement with Double]
+  
+  /* 211 */ @js.native
+  object YieldExpression
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SyntaxKind.YieldExpression with Double]
+  
+  /* 120 */ @js.native
+  object YieldKeyword extends TopLevel[YieldKeyword with Double]
+  
 }
 

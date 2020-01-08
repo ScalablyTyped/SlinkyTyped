@@ -13,12 +13,12 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`standard-de
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`univariate-color-size`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.centimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.manual
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.quantile
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
@@ -71,7 +71,7 @@ trait AuthoringInfo
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-AuthoringInfo.html#lengthUnit)
     */
-  var lengthUnit: inches | feet | yards | miles | `nautical-miles` | millimeters | centimeters | decimeters | meters | kilometers | `decimal-degrees` = js.native
+  var lengthUnit: inches | feet_ | yards | miles_ | `nautical-miles` | millimeters | centimeters | decimeters | meters_ | kilometers_ | `decimal-degrees` = js.native
   /**
     * Indicates the value of the upper handle if a slider was used to generate the dot value for dot density renderer.
     *

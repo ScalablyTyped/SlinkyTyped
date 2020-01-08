@@ -1,6 +1,5 @@
 package typingsSlinky.bitcoreDashLib.bitcoreDashLibMod
 
-import typingsSlinky.bitcoreDashLib.bitcoreDashLibMod.crypto.Signature
 import typingsSlinky.bitcoreDashLib.bitcoreDashLibStrings.little
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

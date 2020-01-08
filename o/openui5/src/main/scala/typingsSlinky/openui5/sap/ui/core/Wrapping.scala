@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object Wrapping extends js.Object {
   @js.native
   sealed trait Soft extends Wrapping
   
-  /* 0 */ val Hard: typingsSlinky.openui5.sap.ui.core.Wrapping.Hard with Double = js.native
-  /* 1 */ val None: typingsSlinky.openui5.sap.ui.core.Wrapping.None with Double = js.native
-  /* 2 */ val Off: typingsSlinky.openui5.sap.ui.core.Wrapping.Off with Double = js.native
-  /* 3 */ val Soft: typingsSlinky.openui5.sap.ui.core.Wrapping.Soft with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Wrapping with Double] = js.native
+  /* 0 */ @js.native
+  object Hard extends TopLevel[Hard with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Off extends TopLevel[Off with Double]
+  
+  /* 3 */ @js.native
+  object Soft extends TopLevel[Soft with Double]
+  
 }
 

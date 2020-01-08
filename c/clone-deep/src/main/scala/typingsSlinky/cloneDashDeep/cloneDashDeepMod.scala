@@ -1,6 +1,6 @@
 package typingsSlinky.cloneDashDeep
 
-import typingsSlinky.cloneDashDeep.cloneDashDeepNumbers.`true`
+import typingsSlinky.cloneDashDeep.cloneDashDeepBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

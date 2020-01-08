@@ -1,7 +1,6 @@
 package typingsSlinky.inversifyDashBindingDashDecorators
 
 import typingsSlinky.inversifyDashBindingDashDecorators.dtsInterfacesInterfacesMod.interfaces.BindConstraint
-import typingsSlinky.inversifyDashBindingDashDecorators.dtsSyntaxProvideUnderscoreDoneUnderscoreSyntaxMod.ProvideDoneSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

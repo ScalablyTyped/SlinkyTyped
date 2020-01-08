@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object AnimationType extends js.Object {
   @js.native
   sealed trait None extends AnimationType
   
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.AnimationType.Default with Double = js.native
-  /* 1 */ val None: typingsSlinky.ejDotWebDotAll.ej.AnimationType.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AnimationType with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.gun
 
+import typingsSlinky.gun.gunBooleans.`false`
 import typingsSlinky.gun.gunMod.Gun.ArrayAsRecord
 import typingsSlinky.gun.gunMod.Gun.ChainReference
-import typingsSlinky.gun.gunNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

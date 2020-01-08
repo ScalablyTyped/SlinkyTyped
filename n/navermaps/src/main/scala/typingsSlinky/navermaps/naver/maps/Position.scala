@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,20 +50,46 @@ object Position extends js.Object {
   @js.native
   sealed trait TOP_RIGHT extends Position
   
-  /* 10 */ val BOTTOM_CENTER: typingsSlinky.navermaps.naver.maps.Position.BOTTOM_CENTER with Double = js.native
-  /* 9 */ val BOTTOM_LEFT: typingsSlinky.navermaps.naver.maps.Position.BOTTOM_LEFT with Double = js.native
-  /* 11 */ val BOTTOM_RIGHT: typingsSlinky.navermaps.naver.maps.Position.BOTTOM_RIGHT with Double = js.native
-  /* 0 */ val CENTER: typingsSlinky.navermaps.naver.maps.Position.CENTER with Double = js.native
-  /* 5 */ val LEFT_BOTTOM: typingsSlinky.navermaps.naver.maps.Position.LEFT_BOTTOM with Double = js.native
-  /* 3 */ val LEFT_CENTER: typingsSlinky.navermaps.naver.maps.Position.LEFT_CENTER with Double = js.native
-  /* 4 */ val LEFT_TOP: typingsSlinky.navermaps.naver.maps.Position.LEFT_TOP with Double = js.native
-  /* 8 */ val RIGHT_BOTTOM: typingsSlinky.navermaps.naver.maps.Position.RIGHT_BOTTOM with Double = js.native
-  /* 7 */ val RIGHT_CENTER: typingsSlinky.navermaps.naver.maps.Position.RIGHT_CENTER with Double = js.native
-  /* 6 */ val RIGHT_TOP: typingsSlinky.navermaps.naver.maps.Position.RIGHT_TOP with Double = js.native
-  /* 1 */ val TOP_CENTER: typingsSlinky.navermaps.naver.maps.Position.TOP_CENTER with Double = js.native
-  /* 0 */ val TOP_LEFT: typingsSlinky.navermaps.naver.maps.Position.TOP_LEFT with Double = js.native
-  /* 2 */ val TOP_RIGHT: typingsSlinky.navermaps.naver.maps.Position.TOP_RIGHT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Position with Double] = js.native
+  /* 10 */ @js.native
+  object BOTTOM_CENTER extends TopLevel[BOTTOM_CENTER with Double]
+  
+  /* 9 */ @js.native
+  object BOTTOM_LEFT extends TopLevel[BOTTOM_LEFT with Double]
+  
+  /* 11 */ @js.native
+  object BOTTOM_RIGHT extends TopLevel[BOTTOM_RIGHT with Double]
+  
+  /* 0 */ @js.native
+  object CENTER extends TopLevel[CENTER with Double]
+  
+  /* 5 */ @js.native
+  object LEFT_BOTTOM extends TopLevel[LEFT_BOTTOM with Double]
+  
+  /* 3 */ @js.native
+  object LEFT_CENTER extends TopLevel[LEFT_CENTER with Double]
+  
+  /* 4 */ @js.native
+  object LEFT_TOP extends TopLevel[LEFT_TOP with Double]
+  
+  /* 8 */ @js.native
+  object RIGHT_BOTTOM extends TopLevel[RIGHT_BOTTOM with Double]
+  
+  /* 7 */ @js.native
+  object RIGHT_CENTER extends TopLevel[RIGHT_CENTER with Double]
+  
+  /* 6 */ @js.native
+  object RIGHT_TOP extends TopLevel[RIGHT_TOP with Double]
+  
+  /* 1 */ @js.native
+  object TOP_CENTER extends TopLevel[TOP_CENTER with Double]
+  
+  /* 0 */ @js.native
+  object TOP_LEFT extends TopLevel[TOP_LEFT with Double]
+  
+  /* 2 */ @js.native
+  object TOP_RIGHT extends TopLevel[TOP_RIGHT with Double]
+  
 }
 

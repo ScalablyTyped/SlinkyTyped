@@ -2,7 +2,7 @@ package typingsSlinky.ecol
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.ecol.ecolNumbers.`false`
+import typingsSlinky.ecol.ecolBooleans.`false`
 import typingsSlinky.ecol.libBasicCollectionEventMod.CollectionEvent
 import typingsSlinky.ecol.libBasicCollectionEventMod.CollectionEvent.Listener
 import typingsSlinky.ecol.libBasicCollectionEventMod.CollectionEvent.Type
@@ -48,7 +48,6 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
       *
       * @return Iterator to the first element.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def begin(): typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
         Entry[Key, T], 
@@ -64,7 +63,6 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
     /**
       * Test whether container is empty.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def empty(): Boolean = js.native
     /**
@@ -72,7 +70,6 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
       *
       * @return Iterator to the end.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
         Entry[Key, T], 
@@ -89,7 +86,6 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
       * @param items Items to insert.
       * @return Number of elements in the container after insertion.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def push(items: (IPair[Key, T])*): Double = js.native
     /**
@@ -97,7 +93,6 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
       *
       * @return Reverse iterator to the first.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[Key, T] = js.native
     /**
@@ -122,13 +117,11 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
       *
       * @return Reverse iterator to the end.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[Key, T] = js.native
     /**
       * Number of elements in the container.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def size(): Double = js.native
   }
@@ -137,30 +130,30 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
   object HashMultiMapCollection extends js.Object {
     val Event: Instantiable3[
         /* type */ String, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ /* first */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ /* last */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* first */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* last */ js.Any, 
         CollectionEvent[
           js.Object, 
           Container[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
           typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
           typingsSlinky.tstl.tstlMod.base.ReverseIterator[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native
@@ -170,21 +163,21 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
           js.Object, 
           Boolean, 
           MapContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]
@@ -195,21 +188,21 @@ object libMapsHashMultiMapCollectionMod extends js.Object {
           js.Object, 
           Boolean, 
           MapContainer[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
             typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.Iterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ], 
             typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.ReverseIterator[
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Key */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Unique */ js.Any, 
-              /* import warning: RewrittenClass.unapply cls $anonfun was tparam Source */ js.Any
+              /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
+              /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
             ]
           ]
         ]

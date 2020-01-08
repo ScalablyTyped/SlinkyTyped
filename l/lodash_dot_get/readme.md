@@ -11,8 +11,8 @@ The lodash method `_.get` exported as a module.
 | Full name          | lodash.get |
 | Keywords           | lodash-modularized, get |
 | # releases         | 0 |
-| # dependents       | 1327 |
-| # downloads        | 115924643 |
+| # dependents       | 1931 |
+| # downloads        | 188069137 |
 | # stars            | 1 |
 
 ## Links

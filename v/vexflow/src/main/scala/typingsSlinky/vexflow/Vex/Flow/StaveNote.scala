@@ -28,9 +28,8 @@ class StaveNote protected () extends StemmableNote {
   def autoStem(): Unit = js.native
    //inconsistent type: void -> StaveNote
   def buildNoteHeads(): Unit = js.native
-  //TODO remove the following lines once TypeScript allows subclass overrides with type changes and/or inconsistencies mentioned below are fixed
   @JSName("buildStem")
-  def buildStem_StemmableNote(): StemmableNote = js.native
+  def buildStem_Unit(): Unit = js.native
   def calcExtraPx(): Unit = js.native
   def calculateKeyProps(): Unit = js.native
   def draw(): Unit = js.native

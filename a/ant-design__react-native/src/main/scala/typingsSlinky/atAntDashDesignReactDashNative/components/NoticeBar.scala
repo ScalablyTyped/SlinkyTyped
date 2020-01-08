@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NoticeBar
-  extends SharedApply_NoticeNativeProps527846132[
+  extends SharedApply_NoticeNativeProps_1312572130[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.NoticeBar
     ] {
   @JSImport("@ant-design/react-native", "NoticeBar")

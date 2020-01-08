@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
 import typingsSlinky.ol.colorMod.Color
-import typingsSlinky.ol.colorlikeMod.ColorLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

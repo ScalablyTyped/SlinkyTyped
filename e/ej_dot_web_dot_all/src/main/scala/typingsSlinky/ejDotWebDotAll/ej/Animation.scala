@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object Animation extends js.Object {
   @js.native
   sealed trait Slide extends Animation
   
-  /* 0 */ val Fade: typingsSlinky.ejDotWebDotAll.ej.Animation.Fade with Double = js.native
-  /* 1 */ val None: typingsSlinky.ejDotWebDotAll.ej.Animation.None with Double = js.native
-  /* 2 */ val Slide: typingsSlinky.ejDotWebDotAll.ej.Animation.Slide with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Animation with Double] = js.native
+  /* 0 */ @js.native
+  object Fade extends TopLevel[Fade with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Slide extends TopLevel[Slide with Double]
+  
 }
 

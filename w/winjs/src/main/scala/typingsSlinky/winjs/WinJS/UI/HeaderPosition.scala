@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.UI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,13 @@ object HeaderPosition extends js.Object {
   @js.native
   sealed trait top extends HeaderPosition
   
-  /* 0 */ val left: typingsSlinky.winjs.WinJS.UI.HeaderPosition.left with Double = js.native
-  /* 1 */ val top: typingsSlinky.winjs.WinJS.UI.HeaderPosition.top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HeaderPosition with Double] = js.native
+  /* 0 */ @js.native
+  object left extends TopLevel[left with Double]
+  
+  /* 1 */ @js.native
+  object top extends TopLevel[top with Double]
+  
 }
 

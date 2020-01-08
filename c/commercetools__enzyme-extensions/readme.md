@@ -12,7 +12,7 @@ Enzyme extensions tailored at improving dealing with shallowly rendered wrappers
 | Keywords           | - |
 | # releases         | 12 |
 | # dependents       | 1 |
-| # downloads        | 254888 |
+| # downloads        | 264858 |
 | # stars            | 0 |
 
 ## Links

@@ -4,7 +4,6 @@ import typingsSlinky.geojson.geojsonMod.BBox
 import typingsSlinky.geojson.geojsonMod.Feature
 import typingsSlinky.geojson.geojsonMod.FeatureCollection
 import typingsSlinky.geojson.geojsonMod.GeometryObject
-import typingsSlinky.topojsonDashClient.topojsonDashClientMod.Transformer
 import typingsSlinky.topojsonDashSpecification.topojsonDashSpecificationMod.GeometryCollection
 import typingsSlinky.topojsonDashSpecification.topojsonDashSpecificationMod.LineString
 import typingsSlinky.topojsonDashSpecification.topojsonDashSpecificationMod.MultiLineString

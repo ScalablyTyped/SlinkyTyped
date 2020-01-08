@@ -1,5 +1,6 @@
 package typingsSlinky.htmlDashValidator.htmlDashValidatorMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,10 +21,16 @@ object ValidationMessageTypes extends js.Object {
   @js.native
   sealed trait `non-document-error` extends ValidationMessageTypes
   
-  /* "error" */ val error: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageTypes.error with String = js.native
-  /* "info" */ val info: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageTypes.info with String = js.native
-  /* "non-document-error" */ val `non-document-error`: typingsSlinky.htmlDashValidator.htmlDashValidatorMod.ValidationMessageTypes.`non-document-error` with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ValidationMessageTypes with String] = js.native
+  /* "error" */ @js.native
+  object error extends TopLevel[error with String]
+  
+  /* "info" */ @js.native
+  object info extends TopLevel[info with String]
+  
+  /* "non-document-error" */ @js.native
+  object `non-document-error` extends TopLevel[`non-document-error` with String]
+  
 }
 

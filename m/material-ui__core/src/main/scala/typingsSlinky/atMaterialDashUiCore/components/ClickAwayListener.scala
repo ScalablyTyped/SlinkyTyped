@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreNumbers.`false`
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreBooleans.`false`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onClick
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onMouseDown
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.onMouseUp

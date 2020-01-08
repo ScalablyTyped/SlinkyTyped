@@ -1,13 +1,11 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IPropertySet
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncActionWithProgress
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Media.Core.IMediaSource
 import typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties.MediaEncodingProfile
-import typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.MediaVideoProcessingAlgorithm
-import typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.PrepareTranscodeResult
-import typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.TranscodeFailureReason
 import typingsSlinky.winrtDashUwp.Windows.Storage.IStorageFile
 import typingsSlinky.winrtDashUwp.Windows.Storage.Streams.IRandomAccessStream
 import scala.scalajs.js
@@ -115,10 +113,14 @@ object Transcoding extends js.Object {
     @js.native
     sealed trait mrfCrf444 extends MediaVideoProcessingAlgorithm
     
-    /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.MediaVideoProcessingAlgorithm.default with Double = js.native
-    /* 1 */ val mrfCrf444: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.MediaVideoProcessingAlgorithm.mrfCrf444 with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MediaVideoProcessingAlgorithm with Double] = js.native
+    /* 0 */ @js.native
+    object default extends TopLevel[default with Double]
+    
+    /* 1 */ @js.native
+    object mrfCrf444 extends TopLevel[mrfCrf444 with Double]
+    
   }
   
   /** Specifies the reason the transcode operation failed. */
@@ -140,12 +142,20 @@ object Transcoding extends js.Object {
     @js.native
     sealed trait unknown extends TranscodeFailureReason
     
-    /* 3 */ val codecNotFound: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.TranscodeFailureReason.codecNotFound with Double = js.native
-    /* 2 */ val invalidProfile: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.TranscodeFailureReason.invalidProfile with Double = js.native
-    /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.TranscodeFailureReason.none with Double = js.native
-    /* 1 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Media.Transcoding.TranscodeFailureReason.unknown with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[TranscodeFailureReason with Double] = js.native
+    /* 3 */ @js.native
+    object codecNotFound extends TopLevel[codecNotFound with Double]
+    
+    /* 2 */ @js.native
+    object invalidProfile extends TopLevel[invalidProfile with Double]
+    
+    /* 0 */ @js.native
+    object none extends TopLevel[none with Double]
+    
+    /* 1 */ @js.native
+    object unknown extends TopLevel[unknown with Double]
+    
   }
   
 }

@@ -2,6 +2,7 @@ package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services.
 
 import typingsSlinky.typescriptDashServices.FormattingOptions
 import typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.ITextSnapshot
+import typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ class SingleTokenIndenter protected ()
   extends typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.SingleTokenIndenter {
   def this(
     indentationPosition: Double,
-    sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax,
+    sourceUnit: SourceUnitSyntax,
     snapshot: ITextSnapshot,
     indentFirstToken: Boolean,
     options: FormattingOptions
@@ -25,7 +26,7 @@ class SingleTokenIndenter protected ()
 object SingleTokenIndenter extends js.Object {
   def getIndentationAmount(
     position: Double,
-    sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax,
+    sourceUnit: SourceUnitSyntax,
     snapshot: ITextSnapshot,
     options: FormattingOptions
   ): Double = js.native

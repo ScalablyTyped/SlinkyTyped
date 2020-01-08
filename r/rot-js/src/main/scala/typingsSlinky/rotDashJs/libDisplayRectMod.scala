@@ -2,7 +2,6 @@ package typingsSlinky.rotDashJs
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.rotDashJs.libDisplayRectMod.Rect
 import typingsSlinky.rotDashJs.libDisplayTypesMod.DisplayData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

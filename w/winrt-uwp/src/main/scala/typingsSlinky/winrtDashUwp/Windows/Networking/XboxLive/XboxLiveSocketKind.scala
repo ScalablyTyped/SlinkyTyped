@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object XboxLiveSocketKind extends js.Object {
   @js.native
   sealed trait stream extends XboxLiveSocketKind
   
-  /* 1 */ val datagram: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveSocketKind.datagram with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveSocketKind.none with Double = js.native
-  /* 2 */ val stream: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveSocketKind.stream with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[XboxLiveSocketKind with Double] = js.native
+  /* 1 */ @js.native
+  object datagram extends TopLevel[datagram with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object stream extends TopLevel[stream with Double]
+  
 }
 

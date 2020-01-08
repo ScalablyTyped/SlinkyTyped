@@ -1,7 +1,5 @@
 package typingsSlinky.atFirebaseStorage
 
-import typingsSlinky.atFirebaseStorage.distSrcImplementationErrorMod.Code
-import typingsSlinky.atFirebaseStorage.distSrcImplementationErrorMod.FirebaseStorageError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

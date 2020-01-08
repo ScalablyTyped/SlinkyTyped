@@ -11,8 +11,8 @@ Local username and password authentication strategy for Passport.
 | Full name          | passport-local |
 | Keywords           | passport, local, auth, authn, authentication, username, password |
 | # releases         | 1 |
-| # dependents       | 969 |
-| # downloads        | 8321249 |
+| # dependents       | 1061 |
+| # downloads        | 12776178 |
 | # stars            | 108 |
 
 ## Links

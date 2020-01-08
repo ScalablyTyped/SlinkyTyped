@@ -27,7 +27,7 @@ object MochaInstanceOptions {
     ignoreLeaks: js.UndefOr[Boolean] = js.undefined,
     inlineDiffs: js.UndefOr[Boolean] = js.undefined,
     noHighlighting: js.UndefOr[Boolean] = js.undefined,
-    reporter: String | typingsSlinky.cypress.Mocha.ReporterConstructor = null,
+    reporter: String | ReporterConstructor = null,
     reporterOptions: js.Any = null,
     retries: Int | Double = null,
     slow: Int | Double = null,

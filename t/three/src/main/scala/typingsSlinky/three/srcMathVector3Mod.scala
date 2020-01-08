@@ -10,8 +10,7 @@ import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
 import typingsSlinky.three.srcMathQuaternionMod.Quaternion
 import typingsSlinky.three.srcMathSphericalMod.Spherical
 import typingsSlinky.three.srcMathVector2Mod.Vector
-import typingsSlinky.three.srcMathVector3Mod.Vector3
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

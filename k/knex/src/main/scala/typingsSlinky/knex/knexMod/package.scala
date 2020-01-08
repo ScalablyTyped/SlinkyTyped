@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object knexMod {
   import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.knex.knexBooleans.`false`
+  import typingsSlinky.knex.knexBooleans.`true`
   import typingsSlinky.knex.knexMod.DeferredKeySelection.Resolve
-  import typingsSlinky.knex.knexNumbers.`false`
-  import typingsSlinky.knex.knexNumbers.`true`
   import typingsSlinky.node.Buffer
   import typingsSlinky.std.Partial
   import typingsSlinky.std.Pick

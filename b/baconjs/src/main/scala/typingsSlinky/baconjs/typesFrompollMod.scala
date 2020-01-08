@@ -1,7 +1,6 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesFrombinderMod.EventLike
-import typingsSlinky.baconjs.typesFrompollMod.PollFunction
 import typingsSlinky.baconjs.typesObservableMod.EventStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

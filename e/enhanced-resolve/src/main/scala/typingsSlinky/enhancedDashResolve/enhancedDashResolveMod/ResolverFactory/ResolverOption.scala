@@ -3,6 +3,7 @@ package typingsSlinky.enhancedDashResolve.enhancedDashResolveMod.ResolverFactory
 import typingsSlinky.enhancedDashResolve.libCommonDashTypesMod.AbstractInputFileSystem
 import typingsSlinky.enhancedDashResolve.libCommonDashTypesMod.ResolverRequest
 import typingsSlinky.enhancedDashResolve.libConcordMod.Dictionary
+import typingsSlinky.enhancedDashResolve.libResolverMod.^
 import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,7 @@ trait ResolverOption extends js.Object {
   var modules: js.UndefOr[js.Array[String]] = js.undefined
   var plugins: js.UndefOr[js.Array[Plugin]] = js.undefined
   var resolveToContext: js.UndefOr[Boolean] = js.undefined
-  var resolver: js.UndefOr[typingsSlinky.enhancedDashResolve.libResolverMod.^] = js.undefined
+  var resolver: js.UndefOr[^] = js.undefined
   var symlinks: js.UndefOr[js.Array[String] | Boolean] = js.undefined
   var unsafeCache: js.UndefOr[Boolean | Dictionary[_]] = js.undefined
   var useSyncFileSystemCalls: js.UndefOr[Boolean] = js.undefined
@@ -46,7 +47,7 @@ object ResolverOption {
     modules: js.Array[String] = null,
     plugins: js.Array[Plugin] = null,
     resolveToContext: js.UndefOr[Boolean] = js.undefined,
-    resolver: typingsSlinky.enhancedDashResolve.libResolverMod.^ = null,
+    resolver: ^ = null,
     symlinks: js.Array[String] | Boolean = null,
     unsafeCache: Boolean | Dictionary[_] = null,
     useSyncFileSystemCalls: js.UndefOr[Boolean] = js.undefined

@@ -1,8 +1,8 @@
 package typingsSlinky.weixinDashApp.wx
 
 import typingsSlinky.weixinDashApp.Anon_Duration
-import typingsSlinky.weixinDashApp.weixinDashAppStrings.`#000000`
-import typingsSlinky.weixinDashApp.weixinDashAppStrings.`#ffffff`
+import typingsSlinky.weixinDashApp.weixinDashAppStrings.Numbersign000000
+import typingsSlinky.weixinDashApp.weixinDashAppStrings.Numbersignffffff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,14 +20,14 @@ trait SetNavigationBarColorOptions
   /**
   		 * 前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000
   		 */
-  var frontColor: `#ffffff` | `#000000`
+  var frontColor: Numbersignffffff | Numbersign000000
 }
 
 object SetNavigationBarColorOptions {
   @scala.inline
   def apply(
     backgroundColor: String,
-    frontColor: `#ffffff` | `#000000`,
+    frontColor: Numbersignffffff | Numbersign000000,
     animation: Anon_Duration = null,
     complete: /* res */ js.Any => Unit = null,
     fail: js.Any => Unit = null,

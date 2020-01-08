@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sites
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +24,13 @@ object AttachmentType extends js.Object {
   @js.native
   sealed trait WEB extends AttachmentType
   
-  /* 1 */ val HOSTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sites.AttachmentType.HOSTED with Double = js.native
-  /* 0 */ val WEB: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sites.AttachmentType.WEB with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AttachmentType with Double] = js.native
+  /* 1 */ @js.native
+  object HOSTED extends TopLevel[HOSTED with Double]
+  
+  /* 0 */ @js.native
+  object WEB extends TopLevel[WEB with Double]
+  
 }
 

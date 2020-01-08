@@ -1,6 +1,6 @@
 package typingsSlinky.atLinguiMacro
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atLinguiCore.i18nMod.MessageDescriptor
 import typingsSlinky.atLinguiMacro.createFormatMod.FormatPropsWithoutI18n
 import typingsSlinky.atLinguiMacro.reactSelectMod.PluralPropsWithoutI18n
@@ -9,6 +9,7 @@ import typingsSlinky.atLinguiMacro.selectMod.PluralProps
 import typingsSlinky.atLinguiMacro.selectMod.SelectProps
 import typingsSlinky.atLinguiMacro.transMod.TransPropsWithoutI18n
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.ComponentClass
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.std.Date
 import typingsSlinky.std.Intl.DateTimeFormatOptions
@@ -51,8 +52,6 @@ object atLinguiMacroMod extends js.Object {
   class Trans ()
     extends Component[TransPropsWithoutI18n, js.Object, js.Any]
   
-  val DateFormat: ReactComponentClass[FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions]] = js.native
-  val NumberFormat: ReactComponentClass[FormatPropsWithoutI18n[Double, NumberFormatOptions]] = js.native
   def date(value: js.Date): MessageDescriptor = js.native
   def date(value: js.Date, format: DateTimeFormatOptions): MessageDescriptor = js.native
   def number(value: Double): MessageDescriptor = js.native
@@ -65,5 +64,15 @@ object atLinguiMacroMod extends js.Object {
   def selectOrdinal(id: String, config: PluralProps): MessageDescriptor = js.native
   def t(id: String): js.Function2[/* strings */ TemplateStringsArray, /* repeated */ js.Any, MessageDescriptor] = js.native
   def t(strings: TemplateStringsArray, values: js.Any*): MessageDescriptor = js.native
+  @js.native
+  object DateFormat extends TopLevel[
+          ComponentClass[FormatPropsWithoutI18n[Date, DateTimeFormatOptions], ComponentState]
+        ]
+  
+  @js.native
+  object NumberFormat extends TopLevel[
+          ComponentClass[FormatPropsWithoutI18n[Double, NumberFormatOptions], ComponentState]
+        ]
+  
 }
 

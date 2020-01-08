@@ -3,12 +3,6 @@ package typingsSlinky.reactDashLocalization
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.FormatObject
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.Formatted
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.GlobalStrings
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.LocalizedStrings
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.LocalizedStringsFactory
-import typingsSlinky.reactDashLocalization.reactDashLocalizationMod.LocalizedStringsMethods
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

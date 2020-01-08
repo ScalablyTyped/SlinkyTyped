@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ChartMapProjectionType extends js.Object {
   @js.native
   sealed trait robinson extends ChartMapProjectionType
   
-  /* "Albers" */ val albers: typingsSlinky.officeDashJs.Excel.ChartMapProjectionType.albers with String = js.native
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJs.Excel.ChartMapProjectionType.automatic with String = js.native
-  /* "Mercator" */ val mercator: typingsSlinky.officeDashJs.Excel.ChartMapProjectionType.mercator with String = js.native
-  /* "Miller" */ val miller: typingsSlinky.officeDashJs.Excel.ChartMapProjectionType.miller with String = js.native
-  /* "Robinson" */ val robinson: typingsSlinky.officeDashJs.Excel.ChartMapProjectionType.robinson with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartMapProjectionType with String] = js.native
+  /* "Albers" */ @js.native
+  object albers extends TopLevel[albers with String]
+  
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "Mercator" */ @js.native
+  object mercator extends TopLevel[mercator with String]
+  
+  /* "Miller" */ @js.native
+  object miller extends TopLevel[miller with String]
+  
+  /* "Robinson" */ @js.native
+  object robinson extends TopLevel[robinson with String]
+  
 }
 

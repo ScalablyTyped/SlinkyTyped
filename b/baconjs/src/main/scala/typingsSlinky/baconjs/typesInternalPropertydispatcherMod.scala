@@ -1,7 +1,6 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesEventMod.Value
-import typingsSlinky.baconjs.typesInternalPropertydispatcherMod.PropertyDispatcher
 import typingsSlinky.baconjs.typesOptionalMod.Option
 import typingsSlinky.baconjs.typesTypesMod.EventSink
 import typingsSlinky.baconjs.typesTypesMod.Subscribe

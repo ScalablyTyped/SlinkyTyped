@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadioButtonUncheckedTwoTone extends SharedApply_SvgIconProps1025744599[default] {
+object RadioButtonUncheckedTwoTone extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/RadioButtonUncheckedTwoTone", "default")
   @js.native
   object componentImport extends js.Object

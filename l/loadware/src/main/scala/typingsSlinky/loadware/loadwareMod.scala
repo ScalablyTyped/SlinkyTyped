@@ -1,8 +1,5 @@
 package typingsSlinky.loadware
 
-import typingsSlinky.loadware.loadwareMod.AnyFunction
-import typingsSlinky.loadware.loadwareMod.Loadable
-import typingsSlinky.loadware.loadwareMod.RecursiveLoadable
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

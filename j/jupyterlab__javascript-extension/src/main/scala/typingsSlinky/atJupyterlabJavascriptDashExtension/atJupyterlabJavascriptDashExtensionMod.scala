@@ -1,7 +1,7 @@
 package typingsSlinky.atJupyterlabJavascriptDashExtension
 
-import typingsSlinky.atJupyterlabJavascriptDashExtension.atJupyterlabJavascriptDashExtensionStrings.`application/javascript`
-import typingsSlinky.atJupyterlabJavascriptDashExtension.atJupyterlabJavascriptDashExtensionStrings.`text/javascript`
+import typingsSlinky.atJupyterlabJavascriptDashExtension.atJupyterlabJavascriptDashExtensionStrings.applicationSlashjavascript
+import typingsSlinky.atJupyterlabJavascriptDashExtension.atJupyterlabJavascriptDashExtensionStrings.textSlashjavascript
 import typingsSlinky.atJupyterlabRendermime.atJupyterlabRendermimeMod.RenderedJavaScript
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IExtension
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRendererFactory
@@ -15,8 +15,8 @@ object atJupyterlabJavascriptDashExtensionMod extends js.Object {
   @js.native
   class ExperimentalRenderedJavascript () extends RenderedJavaScript
   
-  val APPLICATION_JAVASCRIPT_MIMETYPE: `application/javascript` = js.native
-  val TEXT_JAVASCRIPT_MIMETYPE: `text/javascript` = js.native
+  val APPLICATION_JAVASCRIPT_MIMETYPE: applicationSlashjavascript = js.native
+  val TEXT_JAVASCRIPT_MIMETYPE: textSlashjavascript = js.native
   val default: IExtension = js.native
   val rendererFactory: IRendererFactory = js.native
 }

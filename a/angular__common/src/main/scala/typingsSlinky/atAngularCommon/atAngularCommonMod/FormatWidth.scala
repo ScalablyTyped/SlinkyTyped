@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCommon.atAngularCommonMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,11 +39,19 @@ object FormatWidth extends js.Object {
   @js.native
   sealed trait Short extends FormatWidth
   
-  /* 3 */ val Full: typingsSlinky.atAngularCommon.atAngularCommonMod.FormatWidth.Full with Double = js.native
-  /* 2 */ val Long: typingsSlinky.atAngularCommon.atAngularCommonMod.FormatWidth.Long with Double = js.native
-  /* 1 */ val Medium: typingsSlinky.atAngularCommon.atAngularCommonMod.FormatWidth.Medium with Double = js.native
-  /* 0 */ val Short: typingsSlinky.atAngularCommon.atAngularCommonMod.FormatWidth.Short with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FormatWidth with Double] = js.native
+  /* 3 */ @js.native
+  object Full extends TopLevel[Full with Double]
+  
+  /* 2 */ @js.native
+  object Long extends TopLevel[Long with Double]
+  
+  /* 1 */ @js.native
+  object Medium extends TopLevel[Medium with Double]
+  
+  /* 0 */ @js.native
+  object Short extends TopLevel[Short with Double]
+  
 }
 

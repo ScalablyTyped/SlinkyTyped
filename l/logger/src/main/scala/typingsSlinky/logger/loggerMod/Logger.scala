@@ -1,6 +1,6 @@
 package typingsSlinky.logger.loggerMod
 
-import typingsSlinky.logger.loggerNumbers.`false`
+import typingsSlinky.logger.loggerBooleans.`false`
 import typingsSlinky.logger.loggerStrings.debug
 import typingsSlinky.logger.loggerStrings.error
 import typingsSlinky.logger.loggerStrings.fatal

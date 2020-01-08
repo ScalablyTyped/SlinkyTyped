@@ -1,6 +1,6 @@
 package typingsSlinky.screenfull
 
-import typingsSlinky.screenfull.screenfullNumbers.`false`
+import typingsSlinky.screenfull.screenfullBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

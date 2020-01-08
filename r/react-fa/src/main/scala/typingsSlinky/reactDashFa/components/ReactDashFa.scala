@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashFa extends SharedApply_IconProps472498505 {
+object ReactDashFa extends SharedApply_IconProps_2063129387 {
   @JSImport("react-fa", JSImport.Default)
   @js.native
   object componentImport extends js.Object

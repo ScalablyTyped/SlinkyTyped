@@ -1,7 +1,6 @@
 package typingsSlinky.steamDashTotp
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.steamDashTotp.steamDashTotpMod.TimeOffsetFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.chaiDashAlmost.chaiDashAlmostMod._Global_
 
 import typingsSlinky.chai.Chai.Equal
-import typingsSlinky.chaiDashAlmost.chaiDashAlmostMod._Global_.Chai.Assertion
 import typingsSlinky.chaiDashAlmost.chaiDashAlmostMod._Global_.Chai.ChaiAlmost.Almost
 import typingsSlinky.chaiDashAlmost.chaiDashAlmostMod._Global_.Chai.ChaiAlmost.DeepAlmost
 import scala.scalajs.js

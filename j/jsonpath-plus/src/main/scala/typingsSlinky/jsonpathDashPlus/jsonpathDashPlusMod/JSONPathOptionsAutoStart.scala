@@ -1,6 +1,6 @@
 package typingsSlinky.jsonpathDashPlus.jsonpathDashPlusMod
 
-import typingsSlinky.jsonpathDashPlus.jsonpathDashPlusNumbers.`false`
+import typingsSlinky.jsonpathDashPlus.jsonpathDashPlusBooleans.`false`
 import typingsSlinky.jsonpathDashPlus.jsonpathDashPlusStrings.all
 import typingsSlinky.jsonpathDashPlus.jsonpathDashPlusStrings.parent
 import typingsSlinky.jsonpathDashPlus.jsonpathDashPlusStrings.parentProperty

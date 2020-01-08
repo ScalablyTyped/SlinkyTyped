@@ -1,8 +1,6 @@
 package typingsSlinky.reactDashPose
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactDashPose.libUtilsPickDashAssignMod.Props
-import typingsSlinky.reactDashPose.libUtilsPickDashAssignMod.TestString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,16 +1,16 @@
 package typingsSlinky.lokijs
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.lokijs.lokijsNumbers.`true`
-import typingsSlinky.lokijs.lokijsStrings.DOLLARaeq
-import typingsSlinky.lokijs.lokijsStrings.DOLLARbetween
-import typingsSlinky.lokijs.lokijsStrings.DOLLARdteq
-import typingsSlinky.lokijs.lokijsStrings.DOLLAReq
-import typingsSlinky.lokijs.lokijsStrings.DOLLARgt
-import typingsSlinky.lokijs.lokijsStrings.DOLLARgte
-import typingsSlinky.lokijs.lokijsStrings.DOLLARin
-import typingsSlinky.lokijs.lokijsStrings.DOLLARlt
-import typingsSlinky.lokijs.lokijsStrings.DOLLARlte
+import typingsSlinky.lokijs.lokijsBooleans.`true`
+import typingsSlinky.lokijs.lokijsStrings.$aeq
+import typingsSlinky.lokijs.lokijsStrings.$between
+import typingsSlinky.lokijs.lokijsStrings.$dteq
+import typingsSlinky.lokijs.lokijsStrings.$eq
+import typingsSlinky.lokijs.lokijsStrings.$gt
+import typingsSlinky.lokijs.lokijsStrings.$gte
+import typingsSlinky.lokijs.lokijsStrings.$in
+import typingsSlinky.lokijs.lokijsStrings.$lt
+import typingsSlinky.lokijs.lokijsStrings.$lte
 import typingsSlinky.lokijs.lokijsStrings.`jquery-extend-deep`
 import typingsSlinky.lokijs.lokijsStrings.`parse-stringify`
 import typingsSlinky.lokijs.lokijsStrings.`shallow-assign`
@@ -187,11 +187,11 @@ class Collection[E /* <: js.Object */] protected () extends LokiEventEmitter {
   def calculateRangeStart(prop: String, `val`: js.Any): Double = js.native
   def calculateRangeStart(prop: String, `val`: js.Any, adaptive: Boolean): Double = js.native
   @JSName("calculateRange")
-  def calculateRange_aeq(op: DOLLARaeq, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_aeq(op: $aeq, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_between(op: DOLLARbetween, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_between(op: $between, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_dteq(op: DOLLARdteq, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_dteq(op: $dteq, prop: String, `val`: js.Any): js.Array[Double] = js.native
   /**
     * calculateRange() - Binary Search utility method to find range/segment of values matching criteria.
     *    this is used for collection.find() and first find filter of resultset/dynview
@@ -203,17 +203,17 @@ class Collection[E /* <: js.Object */] protected () extends LokiEventEmitter {
     * @returns [start, end] index array positions
     */
   @JSName("calculateRange")
-  def calculateRange_eq(op: DOLLAReq, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_eq(op: $eq, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_gt(op: DOLLARgt, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_gt(op: $gt, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_gte(op: DOLLARgte, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_gte(op: $gte, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_in(op: DOLLARin, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_in(op: $in, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_lt(op: DOLLARlt, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_lt(op: $lt, prop: String, `val`: js.Any): js.Array[Double] = js.native
   @JSName("calculateRange")
-  def calculateRange_lte(op: DOLLARlte, prop: String, `val`: js.Any): js.Array[Double] = js.native
+  def calculateRange_lte(op: $lte, prop: String, `val`: js.Any): js.Array[Double] = js.native
   /**
     * Chain method, used for beginning a series of chained find() and/or view() operations
     * on a collection.

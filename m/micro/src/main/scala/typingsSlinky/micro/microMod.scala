@@ -1,6 +1,5 @@
 package typingsSlinky.micro
 
-import typingsSlinky.micro.microMod.RequestHandler
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.Server

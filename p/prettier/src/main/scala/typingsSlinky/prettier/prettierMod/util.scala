@@ -1,7 +1,7 @@
 package typingsSlinky.prettier.prettierMod
 
-import typingsSlinky.prettier.prettierStrings.BACKSLASH
-import typingsSlinky.prettier.prettierStrings._quote
+import typingsSlinky.prettier.prettierStrings.Apostrophe
+import typingsSlinky.prettier.prettierStrings.Quotationmark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ object util extends js.Object {
   def getNextNonSpaceNonCommentCharacterIndex(text: String, node: js.Any, options: ParserOptions): Double = js.native
   def isNextLineEmpty(text: String, node: js.Any, options: ParserOptions): Boolean = js.native
   def isNextLineEmptyAfterIndex(text: String, index: Double): Boolean = js.native
-  def makeString(rawContent: String, enclosingQuote: BACKSLASH, unescapeUnnecessaryEscapes: Boolean): String = js.native
-  def makeString(rawContent: String, enclosingQuote: _quote, unescapeUnnecessaryEscapes: Boolean): String = js.native
+  def makeString(rawContent: String, enclosingQuote: Apostrophe, unescapeUnnecessaryEscapes: Boolean): String = js.native
+  def makeString(rawContent: String, enclosingQuote: Quotationmark, unescapeUnnecessaryEscapes: Boolean): String = js.native
 }
 

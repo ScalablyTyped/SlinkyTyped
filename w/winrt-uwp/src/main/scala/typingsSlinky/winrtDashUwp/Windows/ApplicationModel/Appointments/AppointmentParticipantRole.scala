@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object AppointmentParticipantRole extends js.Object {
   @js.native
   sealed trait resource extends AppointmentParticipantRole
   
-  /* 1 */ val optionalAttendee: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantRole.optionalAttendee with Double = js.native
-  /* 0 */ val requiredAttendee: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantRole.requiredAttendee with Double = js.native
-  /* 2 */ val resource: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentParticipantRole.resource with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentParticipantRole with Double] = js.native
+  /* 1 */ @js.native
+  object optionalAttendee extends TopLevel[optionalAttendee with Double]
+  
+  /* 0 */ @js.native
+  object requiredAttendee extends TopLevel[requiredAttendee with Double]
+  
+  /* 2 */ @js.native
+  object resource extends TopLevel[resource with Double]
+  
 }
 

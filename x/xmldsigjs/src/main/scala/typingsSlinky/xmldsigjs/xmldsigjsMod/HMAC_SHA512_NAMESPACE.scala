@@ -1,12 +1,14 @@
 package typingsSlinky.xmldsigjs.xmldsigjsMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`http://wwwDOTw3DOTorg/2001/04/xmldsig-more#hmac-sha512`
+import typingsSlinky.xmldsigjs.xmldsigjsStrings.`httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04Slashxmldsig-moreNumbersignhmac-sha512`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("xmldsigjs", "HMAC_SHA512_NAMESPACE")
 @js.native
-object HMAC_SHA512_NAMESPACE extends TopLevel[`http://wwwDOTw3DOTorg/2001/04/xmldsig-more#hmac-sha512`]
+object HMAC_SHA512_NAMESPACE extends TopLevel[
+      `httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04Slashxmldsig-moreNumbersignhmac-sha512`
+    ]
 

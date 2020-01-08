@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,20 +121,46 @@ object AggregationFunction extends js.Object {
   @js.native
   sealed trait varianceP extends AggregationFunction
   
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.automatic with String = js.native
-  /* "Average" */ val average: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.average with String = js.native
-  /* "Count" */ val count: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.count with String = js.native
-  /* "CountNumbers" */ val countNumbers: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.countNumbers with String = js.native
-  /* "Max" */ val max: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.max with String = js.native
-  /* "Min" */ val min: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.min with String = js.native
-  /* "Product" */ val product: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.product with String = js.native
-  /* "StandardDeviation" */ val standardDeviation: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.standardDeviation with String = js.native
-  /* "StandardDeviationP" */ val standardDeviationP: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.standardDeviationP with String = js.native
-  /* "Sum" */ val sum: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.sum with String = js.native
-  /* "Unknown" */ val unknown: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.unknown with String = js.native
-  /* "Variance" */ val variance: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.variance with String = js.native
-  /* "VarianceP" */ val varianceP: typingsSlinky.officeDashJsDashPreview.Excel.AggregationFunction.varianceP with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[AggregationFunction with String] = js.native
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "Average" */ @js.native
+  object average extends TopLevel[average with String]
+  
+  /* "Count" */ @js.native
+  object count extends TopLevel[count with String]
+  
+  /* "CountNumbers" */ @js.native
+  object countNumbers extends TopLevel[countNumbers with String]
+  
+  /* "Max" */ @js.native
+  object max extends TopLevel[max with String]
+  
+  /* "Min" */ @js.native
+  object min extends TopLevel[min with String]
+  
+  /* "Product" */ @js.native
+  object product extends TopLevel[product with String]
+  
+  /* "StandardDeviation" */ @js.native
+  object standardDeviation extends TopLevel[standardDeviation with String]
+  
+  /* "StandardDeviationP" */ @js.native
+  object standardDeviationP extends TopLevel[standardDeviationP with String]
+  
+  /* "Sum" */ @js.native
+  object sum extends TopLevel[sum with String]
+  
+  /* "Unknown" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
+  /* "Variance" */ @js.native
+  object variance extends TopLevel[variance with String]
+  
+  /* "VarianceP" */ @js.native
+  object varianceP extends TopLevel[varianceP with String]
+  
 }
 

@@ -4,6 +4,7 @@ import typingsSlinky.stripe.stripeMod.IMetadata
 import typingsSlinky.stripe.stripeMod.IResourceObject
 import typingsSlinky.stripe.stripeMod.accounts.IAccount
 import typingsSlinky.stripe.stripeMod.balance.IBalanceTransaction
+import typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount
 import typingsSlinky.stripe.stripeMod.cards.ICardHash
 import typingsSlinky.stripe.stripeMod.charges.ICharge
 import typingsSlinky.stripe.stripeStrings.bank_account
@@ -47,7 +48,7 @@ trait ITransfer extends IResourceObject {
   /**
     * ID of the bank account, card, or Stripe account the transfer was sent to. [Expandable]
     */
-  var destination: String | typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount | ICardHash | IAccount
+  var destination: String | IBankAccount | ICardHash | IAccount
   /**
     * If the destination is a Stripe account, this will be the ID of the
     * payment that the destination account received for the transfer. [Expandable]
@@ -122,7 +123,7 @@ object ITransfer {
     currency: String,
     date: Double,
     description: String,
-    destination: String | typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount | ICardHash | IAccount,
+    destination: String | IBankAccount | ICardHash | IAccount,
     destination_payment: String,
     failure_code: String,
     failure_message: String,

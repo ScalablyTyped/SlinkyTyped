@@ -1,7 +1,8 @@
 package typingsSlinky.semanticDashUiDashReact
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.ComponentClass
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsConfirmConfirmMod.ConfirmProps
 import scala.scalajs.js
@@ -18,6 +19,8 @@ object distCommonjsAddonsConfirmMod extends js.Object {
     def this(props: ConfirmProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[ConfirmProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentClass[ConfirmProps, ComponentState]]
+  
 }
 

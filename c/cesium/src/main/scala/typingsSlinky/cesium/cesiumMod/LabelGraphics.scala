@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
-import typingsSlinky.cesium.Anon_EyeOffset
+import typingsSlinky.cesium.Anon_BackgroundColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "LabelGraphics")
 @js.native
 class LabelGraphics () extends js.Object {
-  def this(options: Anon_EyeOffset) = this()
+  def this(options: Anon_BackgroundColor) = this()
   var definitionChanged: Event[js.Array[_]] = js.native
   var eyeOffset: Property = js.native
   var fillColor: Color = js.native

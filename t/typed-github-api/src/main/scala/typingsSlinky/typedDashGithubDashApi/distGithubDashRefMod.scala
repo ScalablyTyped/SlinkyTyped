@@ -2,7 +2,6 @@ package typingsSlinky.typedDashGithubDashApi
 
 import typingsSlinky.typedDashGithubDashApi.distApiDashFetchMod.Options
 import typingsSlinky.typedDashGithubDashApi.distApiDashFetchMod.Response
-import typingsSlinky.typedDashGithubDashApi.distGithubDashRefMod.OptionsOrRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

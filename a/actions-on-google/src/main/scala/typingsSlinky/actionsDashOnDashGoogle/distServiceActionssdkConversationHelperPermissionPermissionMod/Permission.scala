@@ -1,6 +1,6 @@
 package typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperPermissionPermissionMod
 
-import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDOTintentDOTPERMISSION
+import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDotintentDotPERMISSION
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsV2PermissionValueSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperHelperMod.Helper
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("actions-on-google/dist/service/actionssdk/conversation/helper/permission/permission", "Permission")
 @js.native
-class Permission protected () extends Helper[actionsDOTintentDOTPERMISSION, GoogleActionsV2PermissionValueSpec] {
+class Permission protected () extends Helper[actionsDotintentDotPERMISSION, GoogleActionsV2PermissionValueSpec] {
   /**
     * @param options Permission options
     * @public

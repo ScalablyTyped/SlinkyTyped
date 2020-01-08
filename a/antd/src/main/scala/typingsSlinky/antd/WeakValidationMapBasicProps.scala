@@ -19,6 +19,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -48,6 +49,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ClipboardEventHandler
 import typingsSlinky.react.reactMod.CompositionEventHandler
@@ -127,14 +129,14 @@ trait WeakValidationMapBasicProps extends js.Object {
   var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var color: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var contentEditable: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var contentEditable: js.UndefOr[Validator[js.UndefOr[inherit | Booleanish | Null]]] = js.undefined
   var contextMenu: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var dangerouslySetInnerHTML: js.UndefOr[Validator[js.UndefOr[Anon_Html | Null]]] = js.undefined
   var datatype: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var defaultChecked: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var defaultValue: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Double | Null | String]]] = js.undefined
   var dir: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var draggable: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var draggable: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.undefined
   var hasSider: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var hidden: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
@@ -238,7 +240,7 @@ trait WeakValidationMapBasicProps extends js.Object {
   var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var security: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var slot: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var spellCheck: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var spellCheck: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.undefined
   var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
@@ -309,14 +311,14 @@ object WeakValidationMapBasicProps {
     children: Validator[js.UndefOr[Null | TagMod[Any]]] = null,
     className: Validator[js.UndefOr[Null | String]] = null,
     color: Validator[js.UndefOr[Null | String]] = null,
-    contentEditable: Validator[js.UndefOr[Boolean | Null]] = null,
+    contentEditable: Validator[js.UndefOr[inherit | Booleanish | Null]] = null,
     contextMenu: Validator[js.UndefOr[Null | String]] = null,
     dangerouslySetInnerHTML: Validator[js.UndefOr[Anon_Html | Null]] = null,
     datatype: Validator[js.UndefOr[Null | String]] = null,
     defaultChecked: Validator[js.UndefOr[Boolean | Null]] = null,
     defaultValue: Validator[js.UndefOr[js.Array[String] | Double | Null | String]] = null,
     dir: Validator[js.UndefOr[Null | String]] = null,
-    draggable: Validator[js.UndefOr[Boolean | Null]] = null,
+    draggable: Validator[js.UndefOr[Booleanish | Null]] = null,
     hasSider: Validator[js.UndefOr[Boolean | Null]] = null,
     hidden: Validator[js.UndefOr[Boolean | Null]] = null,
     id: Validator[js.UndefOr[Null | String]] = null,
@@ -418,7 +420,7 @@ object WeakValidationMapBasicProps {
     role: Validator[js.UndefOr[Null | String]] = null,
     security: Validator[js.UndefOr[Null | String]] = null,
     slot: Validator[js.UndefOr[Null | String]] = null,
-    spellCheck: Validator[js.UndefOr[Boolean | Null]] = null,
+    spellCheck: Validator[js.UndefOr[Booleanish | Null]] = null,
     style: Validator[js.UndefOr[CSSProperties | Null]] = null,
     suppressContentEditableWarning: Validator[js.UndefOr[Boolean | Null]] = null,
     suppressHydrationWarning: Validator[js.UndefOr[Boolean | Null]] = null,

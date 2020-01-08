@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object UserStatuses extends js.Object {
   @js.native
   sealed trait XA extends UserStatuses
   
-  /* 0 */ val Away: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.Away with Double = js.native
-  /* 1 */ val Chat: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.Chat with Double = js.native
-  /* 2 */ val DND: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.DND with Double = js.native
-  /* 3 */ val Offline: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.Offline with Double = js.native
-  /* 4 */ val Online: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.Online with Double = js.native
-  /* 5 */ val XA: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.UserStatuses.XA with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserStatuses with Double] = js.native
+  /* 0 */ @js.native
+  object Away extends TopLevel[Away with Double]
+  
+  /* 1 */ @js.native
+  object Chat extends TopLevel[Chat with Double]
+  
+  /* 2 */ @js.native
+  object DND extends TopLevel[DND with Double]
+  
+  /* 3 */ @js.native
+  object Offline extends TopLevel[Offline with Double]
+  
+  /* 4 */ @js.native
+  object Online extends TopLevel[Online with Double]
+  
+  /* 5 */ @js.native
+  object XA extends TopLevel[XA with Double]
+  
 }
 

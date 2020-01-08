@@ -9,7 +9,6 @@ import typingsSlinky.androiduix.android.view.KeyEvent
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.Predicate
 import typingsSlinky.androiduix.android.widget.ListView.FixedViewInfo
-import typingsSlinky.androiduix.android.widget.ListView.FocusSelector
 import typingsSlinky.androiduix.java.lang.Runnable
 import typingsSlinky.androiduix.java.util.ArrayList
 import typingsSlinky.std.Map

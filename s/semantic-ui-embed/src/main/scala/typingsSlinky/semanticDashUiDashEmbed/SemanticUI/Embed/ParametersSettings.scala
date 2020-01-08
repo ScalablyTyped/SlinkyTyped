@@ -1,7 +1,6 @@
 package typingsSlinky.semanticDashUiDashEmbed.SemanticUI.Embed
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.semanticDashUiDashEmbed.SemanticUI.Embed.ParametersSettings._Impl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

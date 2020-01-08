@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.three.srcCoreObject3DMod.Object3D
 import typingsSlinky.three.srcMathBox3Mod.Box3
-import typingsSlinky.three.srcMathFrustumMod.Frustum
 import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
 import typingsSlinky.three.srcMathPlaneMod.Plane
 import typingsSlinky.three.srcMathSphereMod.Sphere

@@ -3,7 +3,6 @@ package typingsSlinky.rmcDashDialog
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.rmcDashDialog.libIDialogPropTypesMod.IDialogPropTypes
-import typingsSlinky.rmcDashDialog.rmcDashDialogMod.DialogWrap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

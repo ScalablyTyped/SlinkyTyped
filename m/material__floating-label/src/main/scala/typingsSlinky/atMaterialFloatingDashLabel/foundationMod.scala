@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialFloatingDashLabel
 
 import typingsSlinky.atMaterialFloatingDashLabel.adapterMod.MDCFloatingLabelAdapter
-import typingsSlinky.atMaterialFloatingDashLabel.foundationMod.MDCFloatingLabelFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

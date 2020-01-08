@@ -1,6 +1,7 @@
 package typingsSlinky.sipDotJs.sipDotJsMod.Core
 
 import typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashUserMod.ServerTransactionUser
+import typingsSlinky.sipDotJs.libCoreTransportMod.Transport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +22,7 @@ class InviteServerTransaction protected ()
     */
   def this(
     request: typingsSlinky.sipDotJs.libCoreMessagesMod.IncomingRequestMessage,
-    transport: typingsSlinky.sipDotJs.libCoreTransportMod.Transport,
+    transport: Transport,
     user: ServerTransactionUser
   ) = this()
 }

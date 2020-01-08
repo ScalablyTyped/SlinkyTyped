@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object EnumDWT_DataSourceStatus extends js.Object {
   @js.native
   sealed trait TWDSS_OPENED extends EnumDWT_DataSourceStatus
   
-  /* 3 */ val TWDSS_ACQUIRING: typingsSlinky.dwt.EnumDWT_DataSourceStatus.TWDSS_ACQUIRING with Double = js.native
-  /* 0 */ val TWDSS_CLOSED: typingsSlinky.dwt.EnumDWT_DataSourceStatus.TWDSS_CLOSED with Double = js.native
-  /* 2 */ val TWDSS_ENABLED: typingsSlinky.dwt.EnumDWT_DataSourceStatus.TWDSS_ENABLED with Double = js.native
-  /* 1 */ val TWDSS_OPENED: typingsSlinky.dwt.EnumDWT_DataSourceStatus.TWDSS_OPENED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_DataSourceStatus with Double] = js.native
+  /* 3 */ @js.native
+  object TWDSS_ACQUIRING extends TopLevel[TWDSS_ACQUIRING with Double]
+  
+  /* 0 */ @js.native
+  object TWDSS_CLOSED extends TopLevel[TWDSS_CLOSED with Double]
+  
+  /* 2 */ @js.native
+  object TWDSS_ENABLED extends TopLevel[TWDSS_ENABLED with Double]
+  
+  /* 1 */ @js.native
+  object TWDSS_OPENED extends TopLevel[TWDSS_OPENED with Double]
+  
 }
 

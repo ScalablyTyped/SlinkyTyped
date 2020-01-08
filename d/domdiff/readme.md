@@ -1,7 +1,7 @@
 
 # Scala.js typings for domdiff
 
-Typings are for version 2.1.0
+Typings are for version 2.2.1
 
 ## Library description:
 A fast and simple way to diff childNodes
@@ -12,7 +12,7 @@ A fast and simple way to diff childNodes
 | Keywords           | dom, diff |
 | # releases         | 33 |
 | # dependents       | 10 |
-| # downloads        | 120630 |
+| # downloads        | 129561 |
 | # stars            | 0 |
 
 ## Links

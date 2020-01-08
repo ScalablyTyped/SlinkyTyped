@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.web3DashCore.web3DashCoreMod.PromiEvent
 import typingsSlinky.web3DashCore.web3DashCoreMod.TransactionConfig
 import typingsSlinky.web3DashEthDashContract.web3DashEthDashContractMod.Contract
-import typingsSlinky.web3DashEthDashEns.web3DashEthDashEnsMod.Ens
-import typingsSlinky.web3DashEthDashEns.web3DashEthDashEnsMod.Registry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

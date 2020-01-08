@@ -1,7 +1,6 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.atIonicDiscover.distCommMod.CommServer
-import typingsSlinky.ionic.libDevappMod.Publisher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

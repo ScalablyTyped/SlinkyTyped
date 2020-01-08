@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialSnackbar
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialSnackbar.adapterMod.MDCSnackbarAdapter
-import typingsSlinky.atMaterialSnackbar.atMaterialSnackbarMod.MDCSnackbar
 import typingsSlinky.atMaterialSnackbar.foundationMod.MDCSnackbarData
 import typingsSlinky.atMaterialSnackbar.foundationMod.default
 import scala.scalajs.js

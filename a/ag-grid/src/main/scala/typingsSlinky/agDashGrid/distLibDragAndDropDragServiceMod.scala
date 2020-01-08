@@ -3,7 +3,6 @@ package typingsSlinky.agDashGrid
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.agDashGrid.distLibDragAndDropDragServiceMod.DragListenerParams
 import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -10,9 +10,9 @@ JupyterLab - Abstract Code Editor
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/codeeditor |
 | Keywords           | - |
-| # releases         | 44 |
-| # dependents       | 40 |
-| # downloads        | 790920 |
+| # releases         | 58 |
+| # dependents       | 46 |
+| # downloads        | 1018800 |
 | # stars            | 0 |
 
 ## Links

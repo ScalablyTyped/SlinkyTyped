@@ -1,7 +1,7 @@
 package typingsSlinky.antd.libCascaderMod
 
 import slinky.core.TagMod
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

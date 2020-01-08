@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,12 +34,26 @@ object InjectFlags extends js.Object {
   @js.native
   sealed trait SkipSelf extends InjectFlags
   
-  /* 0 */ val Default: typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Default with Double = js.native
-  /* 1 */ val Host: typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Host with Double = js.native
-  /* 8 */ val Optional: typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Optional with Double = js.native
-  /* 2 */ val Self: typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Self with Double = js.native
-  /* 4 */ val SkipSelf: typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.SkipSelf with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InjectFlags with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object Host
+    extends TopLevel[typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Host with Double]
+  
+  /* 8 */ @js.native
+  object Optional
+    extends TopLevel[typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Optional with Double]
+  
+  /* 2 */ @js.native
+  object Self
+    extends TopLevel[typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.Self with Double]
+  
+  /* 4 */ @js.native
+  object SkipSelf
+    extends TopLevel[typingsSlinky.atAngularCore.atAngularCoreMod.InjectFlags.SkipSelf with Double]
+  
 }
 

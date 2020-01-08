@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object FilterBarMode extends js.Object {
   @js.native
   sealed trait OnEnter extends FilterBarMode
   
-  /* 0 */ val Immediate: typingsSlinky.ejDotWebDotAll.ej.Grid.FilterBarMode.Immediate with Double = js.native
-  /* 1 */ val OnEnter: typingsSlinky.ejDotWebDotAll.ej.Grid.FilterBarMode.OnEnter with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterBarMode with Double] = js.native
+  /* 0 */ @js.native
+  object Immediate extends TopLevel[Immediate with Double]
+  
+  /* 1 */ @js.native
+  object OnEnter extends TopLevel[OnEnter with Double]
+  
 }
 

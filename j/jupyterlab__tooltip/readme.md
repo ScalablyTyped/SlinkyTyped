@@ -10,9 +10,9 @@ JupyterLab - Tooltip Widget
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/tooltip |
 | Keywords           | - |
-| # releases         | 43 |
-| # dependents       | 4 |
-| # downloads        | 581380 |
+| # releases         | 63 |
+| # dependents       | 3 |
+| # downloads        | 756419 |
 | # stars            | 0 |
 
 ## Links

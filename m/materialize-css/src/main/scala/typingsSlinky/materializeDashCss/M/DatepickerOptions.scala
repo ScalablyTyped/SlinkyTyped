@@ -90,19 +90,19 @@ trait DatepickerOptions extends js.Object {
   /**
     * Callback function when Datepicker is closed
     */
-  def onClose(`this`: Datepicker): Unit
+  def onClose(): Unit
   /**
     * Callback function when Datepicker HTML is refreshed
     */
-  def onDraw(`this`: Datepicker): Unit
+  def onDraw(): Unit
   /**
     * Callback function when Datepicker is opened
     */
-  def onOpen(`this`: Datepicker): Unit
+  def onOpen(): Unit
   /**
     * Callback function when date is selected, first parameter is the newly selected date.
     */
-  def onSelect(`this`: Datepicker, selectedDate: js.Date): Unit
+  def onSelect(selectedDate: js.Date): Unit
   /**
     * Used to create date object from current input string.
     */
@@ -124,10 +124,10 @@ object DatepickerOptions {
     isRTL: Boolean,
     maxDate: js.Date,
     minDate: js.Date,
-    onClose: Datepicker => Unit,
-    onDraw: Datepicker => Unit,
-    onOpen: Datepicker => Unit,
-    onSelect: (Datepicker, js.Date) => Unit,
+    onClose: () => Unit,
+    onDraw: () => Unit,
+    onOpen: () => Unit,
+    onSelect: js.Date => Unit,
     parse: (String, String) => js.Date,
     setDefaultDate: Boolean,
     showClearBtn: Boolean,
@@ -135,7 +135,7 @@ object DatepickerOptions {
     showMonthAfterYear: Boolean,
     yearRange: Double | js.Array[Double]
   ): DatepickerOptions = {
-    val __obj = js.Dynamic.literal(autoClose = autoClose.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], defaultDate = defaultDate.asInstanceOf[js.Any], disableDayFn = js.Any.fromFunction1(disableDayFn), disableWeekends = disableWeekends.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], firstDay = firstDay.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], isRTL = isRTL.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], onClose = js.Any.fromFunction1(onClose), onDraw = js.Any.fromFunction1(onDraw), onOpen = js.Any.fromFunction1(onOpen), onSelect = js.Any.fromFunction2(onSelect), parse = js.Any.fromFunction2(parse), setDefaultDate = setDefaultDate.asInstanceOf[js.Any], showClearBtn = showClearBtn.asInstanceOf[js.Any], showDaysInNextAndPreviousMonths = showDaysInNextAndPreviousMonths.asInstanceOf[js.Any], showMonthAfterYear = showMonthAfterYear.asInstanceOf[js.Any], yearRange = yearRange.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autoClose = autoClose.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], defaultDate = defaultDate.asInstanceOf[js.Any], disableDayFn = js.Any.fromFunction1(disableDayFn), disableWeekends = disableWeekends.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], firstDay = firstDay.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], isRTL = isRTL.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose), onDraw = js.Any.fromFunction0(onDraw), onOpen = js.Any.fromFunction0(onOpen), onSelect = js.Any.fromFunction1(onSelect), parse = js.Any.fromFunction2(parse), setDefaultDate = setDefaultDate.asInstanceOf[js.Any], showClearBtn = showClearBtn.asInstanceOf[js.Any], showDaysInNextAndPreviousMonths = showDaysInNextAndPreviousMonths.asInstanceOf[js.Any], showMonthAfterYear = showMonthAfterYear.asInstanceOf[js.Any], yearRange = yearRange.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[DatepickerOptions]
   }

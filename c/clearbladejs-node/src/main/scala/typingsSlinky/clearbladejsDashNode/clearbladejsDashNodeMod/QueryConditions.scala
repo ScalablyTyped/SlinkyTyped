@@ -1,5 +1,6 @@
 package typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object QueryConditions extends js.Object {
   @js.native
   sealed trait QUERY_NOTEQUAL extends QueryConditions
   
-  /* "EQ" */ val QUERY_EQUAL: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_EQUAL with String = js.native
-  /* "GT" */ val QUERY_GREATERTHAN: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_GREATERTHAN with String = js.native
-  /* "GTE" */ val QUERY_GREATERTHAN_EQUAL: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_GREATERTHAN_EQUAL with String = js.native
-  /* "LT" */ val QUERY_LESSTHAN: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_LESSTHAN with String = js.native
-  /* "LTE" */ val QUERY_LESSTHAN_EQUAL: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_LESSTHAN_EQUAL with String = js.native
-  /* "RE" */ val QUERY_MATCHES: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_MATCHES with String = js.native
-  /* "NEQ" */ val QUERY_NOTEQUAL: typingsSlinky.clearbladejsDashNode.clearbladejsDashNodeMod.QueryConditions.QUERY_NOTEQUAL with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[QueryConditions with String] = js.native
+  /* "EQ" */ @js.native
+  object QUERY_EQUAL extends TopLevel[QUERY_EQUAL with String]
+  
+  /* "GT" */ @js.native
+  object QUERY_GREATERTHAN extends TopLevel[QUERY_GREATERTHAN with String]
+  
+  /* "GTE" */ @js.native
+  object QUERY_GREATERTHAN_EQUAL extends TopLevel[QUERY_GREATERTHAN_EQUAL with String]
+  
+  /* "LT" */ @js.native
+  object QUERY_LESSTHAN extends TopLevel[QUERY_LESSTHAN with String]
+  
+  /* "LTE" */ @js.native
+  object QUERY_LESSTHAN_EQUAL extends TopLevel[QUERY_LESSTHAN_EQUAL with String]
+  
+  /* "RE" */ @js.native
+  object QUERY_MATCHES extends TopLevel[QUERY_MATCHES with String]
+  
+  /* "NEQ" */ @js.native
+  object QUERY_NOTEQUAL extends TopLevel[QUERY_NOTEQUAL with String]
+  
 }
 

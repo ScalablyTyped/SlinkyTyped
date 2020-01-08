@@ -10,9 +10,9 @@ React Native CLI
 | ------------------ | :-------------: |
 | Full name          | @react-native-community/cli |
 | Keywords           | - |
-| # releases         | 94 |
-| # dependents       | 8 |
-| # downloads        | 4406752 |
+| # releases         | 104 |
+| # dependents       | 16 |
+| # downloads        | 9569237 |
 | # stars            | 0 |
 
 ## Links

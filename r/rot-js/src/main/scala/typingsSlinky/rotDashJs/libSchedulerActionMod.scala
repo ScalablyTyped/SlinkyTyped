@@ -1,6 +1,5 @@
 package typingsSlinky.rotDashJs
 
-import typingsSlinky.rotDashJs.libSchedulerActionMod.Action
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

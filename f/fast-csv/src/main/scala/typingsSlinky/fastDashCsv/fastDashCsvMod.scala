@@ -1,7 +1,7 @@
 package typingsSlinky.fastDashCsv
 
+import typingsSlinky.fastDashCsv.buildSrcFormatterCsvFormatterStreamMod.default
 import typingsSlinky.fastDashCsv.buildSrcFormatterFormatterOptionsMod.FormatterOptionsArgs
-import typingsSlinky.fastDashCsv.buildSrcFormatterMod.CsvFormatterStream
 import typingsSlinky.fastDashCsv.buildSrcFormatterTypesMod.Row
 import typingsSlinky.fastDashCsv.buildSrcParserMod.CsvParserStream
 import typingsSlinky.fastDashCsv.buildSrcParserParserOptionsMod.ParserOptionsArgs
@@ -16,24 +16,24 @@ import scala.scalajs.js.annotation._
 @JSImport("fast-csv", JSImport.Namespace)
 @js.native
 object fastDashCsvMod extends js.Object {
-  def format(): CsvFormatterStream = js.native
-  def format(options: FormatterOptionsArgs): CsvFormatterStream = js.native
+  def format(): default = js.native
+  def format(options: FormatterOptionsArgs): default = js.native
   def fromPath(location: String): CsvParserStream = js.native
   def fromPath(location: String, options: ParserOptionsArgs): CsvParserStream = js.native
   def fromStream(stream: ReadableStream): CsvParserStream = js.native
   def fromStream(stream: ReadableStream, options: ParserOptionsArgs): CsvParserStream = js.native
   def fromString(string: String): CsvParserStream = js.native
   def fromString(string: String, options: ParserOptionsArgs): CsvParserStream = js.native
-  def parse(): CsvParserStream = js.native
-  def parse(args: ParserOptionsArgs): CsvParserStream = js.native
-  def parseFile(location: String): CsvParserStream = js.native
-  def parseFile(location: String, options: ParserOptionsArgs): CsvParserStream = js.native
-  def parseStream(stream: ReadableStream): CsvParserStream = js.native
-  def parseStream(stream: ReadableStream, options: ParserOptionsArgs): CsvParserStream = js.native
-  def parseString(string: String): CsvParserStream = js.native
-  def parseString(string: String, options: ParserOptionsArgs): CsvParserStream = js.native
-  def write(rows: js.Array[Row]): CsvFormatterStream = js.native
-  def write(rows: js.Array[Row], options: FormatterOptionsArgs): CsvFormatterStream = js.native
+  def parse(): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parse(args: ParserOptionsArgs): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseFile(location: String): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseFile(location: String, options: ParserOptionsArgs): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseStream(stream: ReadableStream): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseStream(stream: ReadableStream, options: ParserOptionsArgs): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseString(string: String): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def parseString(string: String, options: ParserOptionsArgs): typingsSlinky.fastDashCsv.buildSrcParserCsvParserStreamMod.default = js.native
+  def write(rows: js.Array[Row]): default = js.native
+  def write(rows: js.Array[Row], options: FormatterOptionsArgs): default = js.native
   def writeToBuffer(rows: js.Array[Row]): js.Promise[Buffer] = js.native
   def writeToBuffer(rows: js.Array[Row], opts: FormatterOptionsArgs): js.Promise[Buffer] = js.native
   def writeToPath(path: String, rows: js.Array[Row]): WriteStream = js.native

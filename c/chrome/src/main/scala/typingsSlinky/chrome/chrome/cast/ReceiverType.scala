@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.chrome.cast
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ReceiverType extends js.Object {
   @js.native
   sealed trait HANGOUT extends ReceiverType
   
-  /* "cast" */ val CAST: typingsSlinky.chrome.chrome.cast.ReceiverType.CAST with String = js.native
-  /* "custom" */ val CUSTOM: typingsSlinky.chrome.chrome.cast.ReceiverType.CUSTOM with String = js.native
-  /* "dial" */ val DIAL: typingsSlinky.chrome.chrome.cast.ReceiverType.DIAL with String = js.native
-  /* "hangout" */ val HANGOUT: typingsSlinky.chrome.chrome.cast.ReceiverType.HANGOUT with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ReceiverType with String] = js.native
+  /* "cast" */ @js.native
+  object CAST extends TopLevel[CAST with String]
+  
+  /* "custom" */ @js.native
+  object CUSTOM extends TopLevel[CUSTOM with String]
+  
+  /* "dial" */ @js.native
+  object DIAL extends TopLevel[DIAL with String]
+  
+  /* "hangout" */ @js.native
+  object HANGOUT extends TopLevel[HANGOUT with String]
+  
 }
 

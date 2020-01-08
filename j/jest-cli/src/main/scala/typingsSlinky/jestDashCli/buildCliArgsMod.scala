@@ -1,7 +1,7 @@
 package typingsSlinky.jestDashCli
 
-import typingsSlinky.jestDashCli.jestDashCliStrings.`Documentation: https://jestjsDOTio/`
-import typingsSlinky.jestDashCli.jestDashCliStrings.`Usage: DOLLAR0 [--config=<pathToConfigFile>] [TestPathPattern]`
+import typingsSlinky.jestDashCli.jestDashCliStrings.`DocumentationColon httpsColonSlashSlashjestjsDotioSlash`
+import typingsSlinky.jestDashCli.jestDashCliStrings.`UsageColon $0 [--configEqualssignLessthansignpathToConfigFileGreaterthansign] [TestPathPattern]`
 import typingsSlinky.std.Partial
 import typingsSlinky.yargs.yargsMod.Arguments
 import scala.scalajs.js
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-cli/build/cli/args", JSImport.Namespace)
 @js.native
 object buildCliArgsMod extends js.Object {
-  val docs: `Documentation: https://jestjsDOTio/` = js.native
-  val usage: `Usage: DOLLAR0 [--config=<pathToConfigFile>] [TestPathPattern]` = js.native
+  val docs: `DocumentationColon httpsColonSlashSlashjestjsDotioSlash` = js.native
+  val usage: `UsageColon $0 [--configEqualssignLessthansignpathToConfigFileGreaterthansign] [TestPathPattern]` = js.native
   def check(argv: Arguments[Partial[Anon_All]]): Boolean = js.native
   @js.native
   object options extends js.Object {

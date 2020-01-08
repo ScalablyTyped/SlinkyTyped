@@ -1,7 +1,6 @@
 package typingsSlinky.googleDashFonts
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleDashFonts.googleDashFontsMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

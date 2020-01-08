@@ -9,7 +9,7 @@ import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Window
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.hellojs.Anon_Code
-import typingsSlinky.hellojs.hellojsNumbers.`false`
+import typingsSlinky.hellojs.hellojsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

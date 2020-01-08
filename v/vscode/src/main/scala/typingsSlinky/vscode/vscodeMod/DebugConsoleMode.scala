@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +24,13 @@ object DebugConsoleMode extends js.Object {
   @js.native
   sealed trait Separate extends DebugConsoleMode
   
-  /* 1 */ val MergeWithParent: typingsSlinky.vscode.vscodeMod.DebugConsoleMode.MergeWithParent with Double = js.native
-  /* 0 */ val Separate: typingsSlinky.vscode.vscodeMod.DebugConsoleMode.Separate with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DebugConsoleMode with Double] = js.native
+  /* 1 */ @js.native
+  object MergeWithParent extends TopLevel[MergeWithParent with Double]
+  
+  /* 0 */ @js.native
+  object Separate extends TopLevel[Separate with Double]
+  
 }
 

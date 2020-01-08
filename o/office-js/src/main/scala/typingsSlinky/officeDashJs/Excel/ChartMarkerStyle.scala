@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,20 +53,46 @@ object ChartMarkerStyle extends js.Object {
   @js.native
   sealed trait x extends ChartMarkerStyle
   
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.automatic with String = js.native
-  /* "Circle" */ val circle: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.circle with String = js.native
-  /* "Dash" */ val dash: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.dash with String = js.native
-  /* "Diamond" */ val diamond: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.diamond with String = js.native
-  /* "Dot" */ val dot: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.dot with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.invalid with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.none with String = js.native
-  /* "Picture" */ val picture: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.picture with String = js.native
-  /* "Plus" */ val plus: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.plus with String = js.native
-  /* "Square" */ val square: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.square with String = js.native
-  /* "Star" */ val star: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.star with String = js.native
-  /* "Triangle" */ val triangle: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.triangle with String = js.native
-  /* "X" */ val x: typingsSlinky.officeDashJs.Excel.ChartMarkerStyle.x with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartMarkerStyle with String] = js.native
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "Circle" */ @js.native
+  object circle extends TopLevel[circle with String]
+  
+  /* "Dash" */ @js.native
+  object dash extends TopLevel[dash with String]
+  
+  /* "Diamond" */ @js.native
+  object diamond extends TopLevel[diamond with String]
+  
+  /* "Dot" */ @js.native
+  object dot extends TopLevel[dot with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Picture" */ @js.native
+  object picture extends TopLevel[picture with String]
+  
+  /* "Plus" */ @js.native
+  object plus extends TopLevel[plus with String]
+  
+  /* "Square" */ @js.native
+  object square extends TopLevel[square with String]
+  
+  /* "Star" */ @js.native
+  object star extends TopLevel[star with String]
+  
+  /* "Triangle" */ @js.native
+  object triangle extends TopLevel[triangle with String]
+  
+  /* "X" */ @js.native
+  object x extends TopLevel[x with String]
+  
 }
 

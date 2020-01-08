@@ -1,7 +1,7 @@
 package typingsSlinky.nextDashServer
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nextDashServer.nextDashServerNumbers.`false`
+import typingsSlinky.nextDashServer.nextDashServerBooleans.`false`
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

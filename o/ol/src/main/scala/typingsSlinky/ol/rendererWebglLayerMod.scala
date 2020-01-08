@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.ol.layerLayerMod.State
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererWebglLayerMod.WebGLLayerRenderer
 import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

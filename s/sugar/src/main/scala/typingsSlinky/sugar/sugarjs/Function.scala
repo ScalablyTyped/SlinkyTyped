@@ -2,8 +2,6 @@ package typingsSlinky.sugar.sugarjs
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.sugar.sugarjs.Function.Chainable
-import typingsSlinky.sugar.sugarjs.Function.ChainableBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

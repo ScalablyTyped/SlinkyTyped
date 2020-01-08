@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Proximity
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PeerRole extends js.Object {
   @js.native
   sealed trait peer extends PeerRole
   
-  /* 2 */ val client: typingsSlinky.winrtDashUwp.Windows.Networking.Proximity.PeerRole.client with Double = js.native
-  /* 1 */ val host: typingsSlinky.winrtDashUwp.Windows.Networking.Proximity.PeerRole.host with Double = js.native
-  /* 0 */ val peer: typingsSlinky.winrtDashUwp.Windows.Networking.Proximity.PeerRole.peer with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PeerRole with Double] = js.native
+  /* 2 */ @js.native
+  object client extends TopLevel[client with Double]
+  
+  /* 1 */ @js.native
+  object host extends TopLevel[host with Double]
+  
+  /* 0 */ @js.native
+  object peer extends TopLevel[peer with Double]
+  
 }
 

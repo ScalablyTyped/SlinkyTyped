@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object GattWriteOption extends js.Object {
   @js.native
   sealed trait writeWithoutResponse extends GattWriteOption
   
-  /* 0 */ val writeWithResponse: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption.writeWithResponse with Double = js.native
-  /* 1 */ val writeWithoutResponse: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption.writeWithoutResponse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GattWriteOption with Double] = js.native
+  /* 0 */ @js.native
+  object writeWithResponse extends TopLevel[writeWithResponse with Double]
+  
+  /* 1 */ @js.native
+  object writeWithoutResponse extends TopLevel[writeWithoutResponse with Double]
+  
 }
 

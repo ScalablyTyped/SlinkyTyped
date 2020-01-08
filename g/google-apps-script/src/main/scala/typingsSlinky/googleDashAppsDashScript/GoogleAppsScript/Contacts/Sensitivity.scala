@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object Sensitivity extends js.Object {
   @js.native
   sealed trait PRIVATE extends Sensitivity
   
-  /* 0 */ val CONFIDENTIAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Sensitivity.CONFIDENTIAL with Double = js.native
-  /* 1 */ val NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Sensitivity.NORMAL with Double = js.native
-  /* 2 */ val PERSONAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Sensitivity.PERSONAL with Double = js.native
-  /* 3 */ val PRIVATE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Sensitivity.PRIVATE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Sensitivity with Double] = js.native
+  /* 0 */ @js.native
+  object CONFIDENTIAL extends TopLevel[CONFIDENTIAL with Double]
+  
+  /* 1 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
+  /* 2 */ @js.native
+  object PERSONAL extends TopLevel[PERSONAL with Double]
+  
+  /* 3 */ @js.native
+  object PRIVATE extends TopLevel[PRIVATE with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object MagneticStripeReaderAuthenticationProtocol extends js.Object {
   @js.native
   sealed trait none extends MagneticStripeReaderAuthenticationProtocol
   
-  /* 1 */ val challengeResponse: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationProtocol.challengeResponse with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationProtocol.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MagneticStripeReaderAuthenticationProtocol with Double] = js.native
+  /* 1 */ @js.native
+  object challengeResponse extends TopLevel[challengeResponse with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

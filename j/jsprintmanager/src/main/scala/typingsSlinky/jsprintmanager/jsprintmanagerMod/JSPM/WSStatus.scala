@@ -1,5 +1,6 @@
 package typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object WSStatus extends js.Object {
   @js.native
   sealed trait WaitingForUserResponse extends WSStatus
   
-  /* 2 */ val BlackListed: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.WSStatus.BlackListed with Double = js.native
-  /* 1 */ val Closed: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.WSStatus.Closed with Double = js.native
-  /* 0 */ val Open: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.WSStatus.Open with Double = js.native
-  /* 3 */ val WaitingForUserResponse: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.WSStatus.WaitingForUserResponse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WSStatus with Double] = js.native
+  /* 2 */ @js.native
+  object BlackListed extends TopLevel[BlackListed with Double]
+  
+  /* 1 */ @js.native
+  object Closed extends TopLevel[Closed with Double]
+  
+  /* 0 */ @js.native
+  object Open extends TopLevel[Open with Double]
+  
+  /* 3 */ @js.native
+  object WaitingForUserResponse extends TopLevel[WaitingForUserResponse with Double]
+  
 }
 

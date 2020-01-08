@@ -11,8 +11,6 @@ import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Four
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.FourRedToBlack
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.FourTrafficLights
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Invalid
-import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.LinkedEntityFinanceIcon
-import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.LinkedEntityMapIcon
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.ThreeArrows
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.ThreeArrowsGray
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.ThreeFlags
@@ -47,14 +45,14 @@ trait Icon extends js.Object {
     *
     * [Api set: ExcelApi 1.2]
     */
-  var set: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes | LinkedEntityFinanceIcon | LinkedEntityMapIcon
+  var set: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes
 }
 
 object Icon {
   @scala.inline
   def apply(
     index: Double,
-    set: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes | LinkedEntityFinanceIcon | LinkedEntityMapIcon
+    set: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes
   ): Icon = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], set = set.asInstanceOf[js.Any])
   

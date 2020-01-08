@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CSVLink
-  extends SharedApply_LinkProps2124954162[typingsSlinky.reactDashCsv.reactDashCsvMod.CSVLink] {
+  extends SharedApply_LinkProps1770942291[typingsSlinky.reactDashCsv.reactDashCsvMod.CSVLink] {
   @JSImport("react-csv", "CSVLink")
   @js.native
   object componentImport extends js.Object

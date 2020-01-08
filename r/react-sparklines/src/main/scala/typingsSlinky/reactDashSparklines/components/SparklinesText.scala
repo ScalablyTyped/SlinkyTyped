@@ -3,6 +3,7 @@ package typingsSlinky.reactDashSparklines.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashSparklines.reactDashSparklinesMod.Point
 import typingsSlinky.reactDashSparklines.reactDashSparklinesMod.SparklinesTextProps
@@ -32,6 +33,9 @@ object SparklinesText
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashSparklines.reactDashSparklinesMod.SparklinesText] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashSparklines.reactDashSparklinesMod.SparklinesText](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SparklinesTextProps
 }
 

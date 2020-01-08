@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Gpio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object GpioPinEdge extends js.Object {
   @js.native
   sealed trait risingEdge extends GpioPinEdge
   
-  /* 0 */ val fallingEdge: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioPinEdge.fallingEdge with Double = js.native
-  /* 1 */ val risingEdge: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioPinEdge.risingEdge with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GpioPinEdge with Double] = js.native
+  /* 0 */ @js.native
+  object fallingEdge extends TopLevel[fallingEdge with Double]
+  
+  /* 1 */ @js.native
+  object risingEdge extends TopLevel[risingEdge with Double]
+  
 }
 

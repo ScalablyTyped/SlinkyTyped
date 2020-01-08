@@ -1,7 +1,7 @@
 package typingsSlinky.atStorybookAddonDashActions
 
-import typingsSlinky.atStorybookAddonDashActions.atStorybookAddonDashActionsStrings.DOLLAR___storybookDOTisCyclic
-import typingsSlinky.atStorybookAddonDashActions.atStorybookAddonDashActionsStrings.`storybook/actions`
+import typingsSlinky.atStorybookAddonDashActions.atStorybookAddonDashActionsStrings.$___storybookDotisCyclic
+import typingsSlinky.atStorybookAddonDashActions.atStorybookAddonDashActionsStrings.storybookSlashactions
 import typingsSlinky.atStorybookAddonDashActions.distModelsActionOptionsMod.ActionOptions
 import typingsSlinky.atStorybookAddonDashActions.distModelsActionsFunctionMod.ActionsFunction
 import typingsSlinky.atStorybookAddonDashActions.distModelsDecoratorFunctionMod.DecoratorFunction
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/addon-actions", JSImport.Namespace)
 @js.native
 object atStorybookAddonDashActionsMod extends js.Object {
-  val ADDON_ID: `storybook/actions` = js.native
-  val CYCLIC_KEY: DOLLAR___storybookDOTisCyclic = js.native
+  val ADDON_ID: storybookSlashactions = js.native
+  val CYCLIC_KEY: $___storybookDotisCyclic = js.native
   val EVENT_ID: String = js.native
   val PANEL_ID: String = js.native
   val PARAM_KEY: typingsSlinky.atStorybookAddonDashActions.atStorybookAddonDashActionsStrings.actions = js.native

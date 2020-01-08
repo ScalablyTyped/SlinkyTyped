@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object PortConstraints extends js.Object {
   @js.native
   sealed trait None extends PortConstraints
   
-  /* 1 */ val Connect: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortConstraints.Connect with Double = js.native
-  /* 2 */ val ConnectOnDrag: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortConstraints.ConnectOnDrag with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.PortConstraints.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PortConstraints with Double] = js.native
+  /* 1 */ @js.native
+  object Connect extends TopLevel[Connect with Double]
+  
+  /* 2 */ @js.native
+  object ConnectOnDrag extends TopLevel[ConnectOnDrag with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

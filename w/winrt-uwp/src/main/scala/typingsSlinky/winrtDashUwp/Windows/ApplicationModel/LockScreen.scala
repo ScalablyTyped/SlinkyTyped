@@ -1,10 +1,5 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel
 
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.LockScreen.LockApplicationHost
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.LockScreen.LockScreenBadge
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.LockScreen.LockScreenInfo
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.TypedEventHandler

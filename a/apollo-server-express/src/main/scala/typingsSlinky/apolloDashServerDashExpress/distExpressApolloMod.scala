@@ -1,7 +1,6 @@
 package typingsSlinky.apolloDashServerDashExpress
 
 import typingsSlinky.apolloDashServerDashCore.distGraphqlOptionsMod.GraphQLServerOptions
-import typingsSlinky.apolloDashServerDashExpress.distExpressApolloMod.ExpressGraphQLOptionsFunction
 import typingsSlinky.apolloDashServerDashTypes.apolloDashServerDashTypesMod.ValueOrPromise
 import typingsSlinky.express.expressMod.Handler
 import typingsSlinky.express.expressMod.Request

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object SelectionType extends js.Object {
   @js.native
   sealed trait Single extends SelectionType
   
-  /* 2 */ val Checkbox: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SelectionType.Checkbox with Double = js.native
-  /* 1 */ val Multiple: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SelectionType.Multiple with Double = js.native
-  /* 0 */ val Single: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SelectionType.Single with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SelectionType with Double] = js.native
+  /* 2 */ @js.native
+  object Checkbox extends TopLevel[Checkbox with Double]
+  
+  /* 1 */ @js.native
+  object Multiple extends TopLevel[Multiple with Double]
+  
+  /* 0 */ @js.native
+  object Single extends TopLevel[Single with Double]
+  
 }
 

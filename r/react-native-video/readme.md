@@ -10,9 +10,9 @@ A <Video /> element for react-native
 | ------------------ | :-------------: |
 | Full name          | react-native-video |
 | Keywords           | - |
-| # releases         | 20 |
-| # dependents       | 44 |
-| # downloads        | 1272070 |
+| # releases         | 25 |
+| # dependents       | 67 |
+| # downloads        | 2381224 |
 | # stars            | 14 |
 
 ## Links

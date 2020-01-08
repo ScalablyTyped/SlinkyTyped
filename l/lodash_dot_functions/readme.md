@@ -12,7 +12,7 @@ The lodash method `_.functions` exported as a module.
 | Keywords           | lodash-modularized, functions |
 | # releases         | 0 |
 | # dependents       | 5 |
-| # downloads        | 76109 |
+| # downloads        | 31892 |
 | # stars            | 0 |
 
 ## Links

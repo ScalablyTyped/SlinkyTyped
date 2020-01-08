@@ -3,7 +3,7 @@ package typingsSlinky.atTestingDashLibraryDom
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.atTestingDashLibraryDom.atTestingDashLibraryDomNumbers.`false`
+import typingsSlinky.atTestingDashLibraryDom.atTestingDashLibraryDomBooleans.`false`
 import typingsSlinky.atTestingDashLibraryDom.configMod.Config
 import typingsSlinky.atTestingDashLibraryDom.configMod.ConfigFn
 import typingsSlinky.atTestingDashLibraryDom.eventsMod.CreateObject
@@ -32,6 +32,7 @@ import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.AllByAttribute
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.BuiltQueryMethods
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.GetAllBy
 import typingsSlinky.atTestingDashLibraryDom.queryDashHelpersMod.QueryByAttribute
+import typingsSlinky.atTestingDashLibraryDom.screenMod.Screen
 import typingsSlinky.atTestingDashLibraryDom.waitDashForDashElementMod.WaitForElementOptions
 import typingsSlinky.prettyDashFormat.prettyDashFormatMod.OptionsReceived
 import typingsSlinky.std.HTMLDocument
@@ -95,6 +96,7 @@ object atTestingDashLibraryDomMod extends js.Object {
   val queryByTestId: QueryByBoundAttribute = js.native
   val queryByText: QueryByText = js.native
   val queryByTitle: QueryByBoundAttribute = js.native
+  val screen: Screen[Typeofqueries] = js.native
   def buildQueries[Arguments /* <: js.Array[_] */](
     queryByAll: GetAllBy[Arguments],
     getMultipleError: js.Function2[/* container */ HTMLElement, /* args */ Arguments, String],

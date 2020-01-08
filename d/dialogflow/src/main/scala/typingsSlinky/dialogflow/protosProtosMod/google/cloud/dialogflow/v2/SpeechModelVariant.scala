@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object SpeechModelVariant extends js.Object {
   @js.native
   sealed trait USE_STANDARD extends SpeechModelVariant
   
-  /* 0 */ val SPEECH_MODEL_VARIANT_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SpeechModelVariant.SPEECH_MODEL_VARIANT_UNSPECIFIED with Double = js.native
-  /* 1 */ val USE_BEST_AVAILABLE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SpeechModelVariant.USE_BEST_AVAILABLE with Double = js.native
-  /* 3 */ val USE_ENHANCED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SpeechModelVariant.USE_ENHANCED with Double = js.native
-  /* 2 */ val USE_STANDARD: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SpeechModelVariant.USE_STANDARD with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpeechModelVariant with Double] = js.native
+  /* 0 */ @js.native
+  object SPEECH_MODEL_VARIANT_UNSPECIFIED extends TopLevel[SPEECH_MODEL_VARIANT_UNSPECIFIED with Double]
+  
+  /* 1 */ @js.native
+  object USE_BEST_AVAILABLE extends TopLevel[USE_BEST_AVAILABLE with Double]
+  
+  /* 3 */ @js.native
+  object USE_ENHANCED extends TopLevel[USE_ENHANCED with Double]
+  
+  /* 2 */ @js.native
+  object USE_STANDARD extends TopLevel[USE_STANDARD with Double]
+  
 }
 

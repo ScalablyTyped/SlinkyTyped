@@ -3,6 +3,7 @@ package typingsSlinky.jestDashUtil
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atJestConsole.atJestConsoleMod.CustomConsole
 import typingsSlinky.atJestConsole.buildTypesMod.LogEntry
 import typingsSlinky.atJestFakeDashTimers.Anon_Config
@@ -42,7 +43,7 @@ object jestDashUtilMod extends js.Object {
   
   @js.native
   class FakeTimers[TimerRef] protected () extends JestFakeTimers[TimerRef] {
-    def this(hasGlobalModuleMockerTimerConfigConfigMaxLoops: Anon_Config[/* import warning: RewrittenClass.unapply cls $anonfun was tparam TimerRef */ _]) = this()
+    def this(hasGlobalModuleMockerTimerConfigConfigMaxLoops: Anon_Config[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ _]) = this()
   }
   
   @js.native
@@ -50,15 +51,6 @@ object jestDashUtilMod extends js.Object {
     extends typingsSlinky.atJestConsole.atJestConsoleMod.NullConsole
   
   var BufferedConsole: TypeofClassBufferedConsole = js.native
-  var Console: Instantiable2[/* stdout */ WritableStream, /* stderr */ WritableStream, CustomConsole] = js.native
-  var ErrorWithStack: Instantiable2[/* message */ js.UndefOr[String], /* callsite */ js.Function, default] = js.native
-  var FakeTimers: Instantiable1[
-    /* hasGlobalModuleMockerTimerConfigConfigMaxLoops */ Anon_Config[
-      /* import warning: RewrittenClass.unapply cls $anonfun was tparam TimerRef */ js.Any
-    ], 
-    JestFakeTimers[js.Object]
-  ] = js.native
-  var NullConsole: Instantiable0[typingsSlinky.atJestConsole.atJestConsoleMod.NullConsole] = js.native
   @JSName("convertDescriptorToString")
   var convertDescriptorToString_Original: Fn_Descriptor = js.native
   @JSName("createDirectory")
@@ -108,5 +100,29 @@ object jestDashUtilMod extends js.Object {
   def setGlobal(globalToMutate: Global, key: String, value: js.Any): Unit = js.native
   def setGlobal(globalToMutate: Window, key: String, value: js.Any): Unit = js.native
   def testPathPatternToRegExp(testPathPattern: String): js.RegExp = js.native
+  @js.native
+  object Console extends TopLevel[
+          Instantiable2[/* stdout */ WritableStream, /* stderr */ WritableStream, CustomConsole]
+        ]
+  
+  @js.native
+  object ErrorWithStack
+    extends TopLevel[
+          Instantiable2[/* message */ js.UndefOr[String], /* callsite */ js.Function, default]
+        ]
+  
+  @js.native
+  object FakeTimers
+    extends TopLevel[
+          Instantiable1[
+            /* hasGlobalModuleMockerTimerConfigConfigMaxLoops */ Anon_Config[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ js.Any], 
+            JestFakeTimers[js.Object]
+          ]
+        ]
+  
+  @js.native
+  object NullConsole
+    extends TopLevel[Instantiable0[typingsSlinky.atJestConsole.atJestConsoleMod.NullConsole]]
+  
 }
 

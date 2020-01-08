@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ExportingType extends js.Object {
   @js.native
   sealed trait PNG extends ExportingType
   
-  /* 1 */ val JPG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.ExportingType.JPG with Double = js.native
-  /* 0 */ val PNG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.DigitalGauge.ExportingType.PNG with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExportingType with Double] = js.native
+  /* 1 */ @js.native
+  object JPG extends TopLevel[JPG with Double]
+  
+  /* 0 */ @js.native
+  object PNG extends TopLevel[PNG with Double]
+  
 }
 

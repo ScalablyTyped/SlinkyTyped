@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobile
 
-import typingsSlinky.antdDashMobile.libCalendarMod.Calendar
 import typingsSlinky.antdDashMobile.libCalendarPropsTypeMod.CalendarProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

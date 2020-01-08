@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/NAVIGATE`
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashNAVIGATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ trait NavigationNavigateAction
   extends NavigationStackAction
      with NavigationNavigateActionPayload
      with NavigationTabAction {
-  var `type`: `Navigation/NAVIGATE`
+  var `type`: NavigationSlashNAVIGATE
 }
 
 object NavigationNavigateAction {
   @scala.inline
   def apply(
     routeName: String,
-    `type`: `Navigation/NAVIGATE`,
+    `type`: NavigationSlashNAVIGATE,
     action: NavigationNavigateAction = null,
     key: String = null,
     params: NavigationParams = null

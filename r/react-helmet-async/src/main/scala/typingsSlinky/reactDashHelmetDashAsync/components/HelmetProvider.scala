@@ -3,6 +3,7 @@ package typingsSlinky.reactDashHelmetDashAsync.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashHelmetDashAsync.reactDashHelmetDashAsyncMod.ProviderProps
 import scala.scalajs.js
@@ -28,6 +29,12 @@ object HelmetProvider
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashHelmetDashAsync.reactDashHelmetDashAsyncMod.HelmetProvider
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashHelmetDashAsync.reactDashHelmetDashAsyncMod.HelmetProvider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ProviderProps
 }
 

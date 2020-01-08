@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Networking.Sockets
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object SocketMessageType extends js.Object {
   @js.native
   sealed trait utf8 extends SocketMessageType
   
-  /* 0 */ val binary: typingsSlinky.winrt.Windows.Networking.Sockets.SocketMessageType.binary with Double = js.native
-  /* 1 */ val utf8: typingsSlinky.winrt.Windows.Networking.Sockets.SocketMessageType.utf8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocketMessageType with Double] = js.native
+  /* 0 */ @js.native
+  object binary extends TopLevel[binary with Double]
+  
+  /* 1 */ @js.native
+  object utf8 extends TopLevel[utf8 with Double]
+  
 }
 

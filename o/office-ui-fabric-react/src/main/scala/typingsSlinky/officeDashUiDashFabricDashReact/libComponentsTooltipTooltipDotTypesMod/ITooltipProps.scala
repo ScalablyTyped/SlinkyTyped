@@ -24,6 +24,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.libCommonDirectionalHintMod
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsCalloutCalloutDotTypesMod.ICalloutProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTooltipTooltipDotBaseMod.TooltipBase
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -45,6 +46,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -79,8 +81,8 @@ import scala.scalajs.js.annotation._
 
 trait ITooltipProps extends HTMLAttributes[HTMLDivElement | TooltipBase] {
   /**
-    * Properties to pass through for Callout, reference detail properties in ICalloutProps
-    * @defaultvalue isBeakVisible: true, beakWidth: 16, gapSpace: 0, setInitialFocus: true, doNotLayer: false
+    * Properties to pass through for Callout.
+    * @defaultvalue `{ isBeakVisible: true, beakWidth: 16, gapSpace: 0, setInitialFocus: true, doNotLayer: false }`
     */
   var calloutProps: js.UndefOr[ICalloutProps] = js.undefined
   /**
@@ -89,16 +91,16 @@ trait ITooltipProps extends HTMLAttributes[HTMLDivElement | TooltipBase] {
     */
   var componentRef: js.UndefOr[IRefObject[ITooltip]] = js.undefined
   /**
-    *  Content to be passed to the tooltip
+    * Content to be passed to the tooltip
     */
   var content: js.UndefOr[String | Element | js.Array[Element]] = js.undefined
   /**
-    * Length of delay. Can be set to zero if you do not want a delay.
-    * @defaultvalue medium
+    * Length of delay. Set to `TooltipDelay.zero` if you do not want a delay.
+    * @defaultvalue TooltipDelay.medium
     */
   var delay: js.UndefOr[TooltipDelay] = js.undefined
   /**
-    * Indicator of how the tooltip should be anchored to its targetElement.
+    * How the tooltip should be anchored to its `targetElement`.
     * @defaultvalue DirectionalHint.topCenter
     */
   var directionalHint: js.UndefOr[DirectionalHint] = js.undefined
@@ -113,7 +115,7 @@ trait ITooltipProps extends HTMLAttributes[HTMLDivElement | TooltipBase] {
     */
   var maxWidth: js.UndefOr[String | Null] = js.undefined
   /**
-    *  Render function to populate content area
+    * Render function to populate tooltip content.
     */
   var onRenderContent: js.UndefOr[IRenderFunction[ITooltipProps]] = js.undefined
   /**
@@ -125,7 +127,7 @@ trait ITooltipProps extends HTMLAttributes[HTMLDivElement | TooltipBase] {
     */
   var targetElement: js.UndefOr[HTMLElement] = js.undefined
   /**
-    * Theme to apply to the component.
+    * Theme provided by higher-order component.
     */
   var theme: js.UndefOr[ITheme] = js.undefined
 }
@@ -192,7 +194,7 @@ object ITooltipProps {
     color: String = null,
     componentRef: IRefObject[ITooltip] = null,
     content: String | Element | js.Array[Element] = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -378,7 +380,7 @@ object ITooltipProps {
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

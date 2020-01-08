@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Directions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object RouteMode extends js.Object {
   @js.native
   sealed trait walking extends RouteMode
   
-  /* 0 */ val driving: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteMode.driving with Double = js.native
-  /* 1 */ val transit: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteMode.transit with Double = js.native
-  /* 2 */ val truck: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteMode.truck with Double = js.native
-  /* 3 */ val walking: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteMode.walking with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RouteMode with Double] = js.native
+  /* 0 */ @js.native
+  object driving extends TopLevel[driving with Double]
+  
+  /* 1 */ @js.native
+  object transit extends TopLevel[transit with Double]
+  
+  /* 2 */ @js.native
+  object truck extends TopLevel[truck with Double]
+  
+  /* 3 */ @js.native
+  object walking extends TopLevel[walking with Double]
+  
 }
 

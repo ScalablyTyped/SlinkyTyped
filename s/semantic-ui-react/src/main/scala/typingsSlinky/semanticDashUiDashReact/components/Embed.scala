@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsIconIconMod.IconProps
@@ -12,9 +13,9 @@ import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShor
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandItem
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesEmbedEmbedMod.EmbedProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesEmbedMod.default
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`16:9`
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`21:9`
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`4:3`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`16Colon9`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`21Colon9`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.`4Colon3`
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.vimeo
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.youtube
 import scala.scalajs.js
@@ -32,7 +33,7 @@ object Embed
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
-    aspectRatio: `4:3` | `16:9` | `21:9` = null,
+    aspectRatio: `4Colon3` | `16Colon9` | `21Colon9` = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
     brandedUI: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
@@ -64,6 +65,9 @@ object Embed
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.semanticDashUiDashReact.distCommonjsModulesEmbedMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = EmbedProps
 }
 

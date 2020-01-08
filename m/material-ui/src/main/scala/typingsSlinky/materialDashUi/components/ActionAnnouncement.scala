@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionAnnouncement
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionAnnouncement] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionAnnouncement] {
   @JSImport("material-ui/svg-icons", "ActionAnnouncement")
   @js.native
   object componentImport extends js.Object

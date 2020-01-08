@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object NDContentIDType extends js.Object {
   @js.native
   sealed trait playReadyObject extends NDContentIDType
   
-  /* 2 */ val custom: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDContentIDType.custom with Double = js.native
-  /* 0 */ val keyID: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDContentIDType.keyID with Double = js.native
-  /* 1 */ val playReadyObject: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDContentIDType.playReadyObject with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NDContentIDType with Double] = js.native
+  /* 2 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 0 */ @js.native
+  object keyID extends TopLevel[keyID with Double]
+  
+  /* 1 */ @js.native
+  object playReadyObject extends TopLevel[playReadyObject with Double]
+  
 }
 

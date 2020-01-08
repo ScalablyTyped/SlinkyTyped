@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,23 +13,26 @@ sealed trait TextAlign extends js.Object
 object TextAlign extends js.Object {
   //Used to align text on center of node/connector
   @js.native
-  sealed trait Center
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign
+  sealed trait Center extends TextAlign
   
   //Used to align text on left side of node/connector
   @js.native
-  sealed trait Left
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign
+  sealed trait Left extends TextAlign
   
   //Used to align text on Right side of node/connector
   @js.native
-  sealed trait Right
-    extends typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign
+  sealed trait Right extends TextAlign
   
-  /* 1 */ val Center: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign.Center with Double = js.native
-  /* 0 */ val Left: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign.Left with Double = js.native
-  /* 2 */ val Right: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign.Right with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.TextAlign with Double] = js.native
+  def apply(value: Double): js.UndefOr[TextAlign with Double] = js.native
+  /* 1 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 0 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 2 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

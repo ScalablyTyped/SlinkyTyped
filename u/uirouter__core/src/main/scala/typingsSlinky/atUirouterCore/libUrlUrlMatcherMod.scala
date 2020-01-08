@@ -5,7 +5,6 @@ import typingsSlinky.atUirouterCore.libParamsParamMod.Param
 import typingsSlinky.atUirouterCore.libParamsParamTypesMod.ParamTypes
 import typingsSlinky.atUirouterCore.libUrlInterfaceMod.UrlMatcherCompileConfig
 import typingsSlinky.atUirouterCore.libUrlUrlMatcherFactoryMod.ParamFactory
-import typingsSlinky.atUirouterCore.libUrlUrlMatcherMod.UrlMatcher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

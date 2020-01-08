@@ -1,7 +1,6 @@
 package typingsSlinky.fillDashPdf
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fillDashPdf.fillDashPdfMod.FormData
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

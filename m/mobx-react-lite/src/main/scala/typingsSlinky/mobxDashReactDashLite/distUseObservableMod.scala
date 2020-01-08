@@ -1,6 +1,5 @@
 package typingsSlinky.mobxDashReactDashLite
 
-import typingsSlinky.mobxDashReactDashLite.distUseObservableMod.SupportedValues
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

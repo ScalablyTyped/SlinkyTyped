@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1PersistentVolumeClaimMod.PersistentVolumeClaim
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.PersistentVolumeClaimSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.PersistentVolumeClaimStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta

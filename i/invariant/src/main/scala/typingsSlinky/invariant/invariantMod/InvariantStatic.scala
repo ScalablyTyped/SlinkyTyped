@@ -1,6 +1,6 @@
 package typingsSlinky.invariant.invariantMod
 
-import typingsSlinky.invariant.invariantNumbers.`false`
+import typingsSlinky.invariant.invariantBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

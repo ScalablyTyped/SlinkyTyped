@@ -1,7 +1,6 @@
 package typingsSlinky.node.streamMod
 
 import typingsSlinky.node.Anon_Chunk
-import typingsSlinky.node.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +8,12 @@ import scala.scalajs.js.annotation._
 trait WritableOptions extends js.Object {
   var autoDestroy: js.UndefOr[Boolean] = js.undefined
   var decodeStrings: js.UndefOr[Boolean] = js.undefined
-  var defaultEncoding: js.UndefOr[java.lang.String] = js.undefined
+  var defaultEncoding: js.UndefOr[String] = js.undefined
   var destroy: js.UndefOr[
     js.ThisFunction2[
       /* this */ Writable, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ]
   ] = js.undefined
@@ -22,7 +21,7 @@ trait WritableOptions extends js.Object {
   var `final`: js.UndefOr[
     js.ThisFunction1[
       /* this */ Writable, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -32,8 +31,8 @@ trait WritableOptions extends js.Object {
     js.ThisFunction3[
       /* this */ Writable, 
       /* chunk */ js.Any, 
-      /* encoding */ java.lang.String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* encoding */ String, 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -41,7 +40,7 @@ trait WritableOptions extends js.Object {
     js.ThisFunction2[
       /* this */ Writable, 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -52,17 +51,17 @@ object WritableOptions {
   def apply(
     autoDestroy: js.UndefOr[Boolean] = js.undefined,
     decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: java.lang.String = null,
+    defaultEncoding: String = null,
     destroy: js.ThisFunction2[
       /* this */ Writable, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     emitClose: js.UndefOr[Boolean] = js.undefined,
     `final`: js.ThisFunction1[
       /* this */ Writable, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     highWaterMark: Int | Double = null,
@@ -70,14 +69,14 @@ object WritableOptions {
     write: js.ThisFunction3[
       /* this */ Writable, 
       /* chunk */ js.Any, 
-      /* encoding */ java.lang.String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* encoding */ String, 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     writev: js.ThisFunction2[
       /* this */ Writable, 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null
   ): WritableOptions = {

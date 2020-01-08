@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Gantt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,22 +71,52 @@ object ToolbarItems extends js.Object {
   @js.native
   sealed trait Update extends ToolbarItems
   
-  /* 0 */ val Add: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Add with Double = js.native
-  /* 4 */ val Cancel: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Cancel with Double = js.native
-  /* 9 */ val CollapseAll: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.CollapseAll with Double = js.native
-  /* 12 */ val CriticalPath: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.CriticalPath with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Delete with Double = js.native
-  /* 1 */ val Edit: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Edit with Double = js.native
-  /* 13 */ val ExcelExport: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.ExcelExport with Double = js.native
-  /* 8 */ val ExpandAll: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.ExpandAll with Double = js.native
-  /* 6 */ val Indent: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Indent with Double = js.native
-  /* 11 */ val NextTimeSpan: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.NextTimeSpan with Double = js.native
-  /* 7 */ val Outdent: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Outdent with Double = js.native
-  /* 14 */ val PdfExport: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.PdfExport with Double = js.native
-  /* 10 */ val PrevTimeSpan: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.PrevTimeSpan with Double = js.native
-  /* 5 */ val Search: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Search with Double = js.native
-  /* 3 */ val Update: typingsSlinky.ejDotWebDotAll.ej.Gantt.ToolbarItems.Update with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToolbarItems with Double] = js.native
+  /* 0 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 4 */ @js.native
+  object Cancel extends TopLevel[Cancel with Double]
+  
+  /* 9 */ @js.native
+  object CollapseAll extends TopLevel[CollapseAll with Double]
+  
+  /* 12 */ @js.native
+  object CriticalPath extends TopLevel[CriticalPath with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 13 */ @js.native
+  object ExcelExport extends TopLevel[ExcelExport with Double]
+  
+  /* 8 */ @js.native
+  object ExpandAll extends TopLevel[ExpandAll with Double]
+  
+  /* 6 */ @js.native
+  object Indent extends TopLevel[Indent with Double]
+  
+  /* 11 */ @js.native
+  object NextTimeSpan extends TopLevel[NextTimeSpan with Double]
+  
+  /* 7 */ @js.native
+  object Outdent extends TopLevel[Outdent with Double]
+  
+  /* 14 */ @js.native
+  object PdfExport extends TopLevel[PdfExport with Double]
+  
+  /* 10 */ @js.native
+  object PrevTimeSpan extends TopLevel[PrevTimeSpan with Double]
+  
+  /* 5 */ @js.native
+  object Search extends TopLevel[Search with Double]
+  
+  /* 3 */ @js.native
+  object Update extends TopLevel[Update with Double]
+  
 }
 

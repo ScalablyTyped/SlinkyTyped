@@ -3,9 +3,6 @@ package typingsSlinky.phaser.Phaser.Input
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Game
-import typingsSlinky.phaser.Phaser.Input.Keyboard.Key
-import typingsSlinky.phaser.Phaser.Input.Keyboard.KeyCombo
-import typingsSlinky.phaser.Phaser.Input.Keyboard.KeyboardPlugin
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.Input.Keyboard.CursorKeys
 import typingsSlinky.phaser.Phaser.Types.Input.Keyboard.KeyComboConfig

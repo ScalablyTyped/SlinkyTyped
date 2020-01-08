@@ -1,5 +1,6 @@
 package typingsSlinky.cordovaDashPluginDashFile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object LocalFileSystem extends js.Object {
   @js.native
   sealed trait TEMPORARY extends LocalFileSystem
   
-  /* 1 */ val PERSISTENT: typingsSlinky.cordovaDashPluginDashFile.LocalFileSystem.PERSISTENT with Double = js.native
-  /* 0 */ val TEMPORARY: typingsSlinky.cordovaDashPluginDashFile.LocalFileSystem.TEMPORARY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LocalFileSystem with Double] = js.native
+  /* 1 */ @js.native
+  object PERSISTENT extends TopLevel[PERSISTENT with Double]
+  
+  /* 0 */ @js.native
+  object TEMPORARY extends TopLevel[TEMPORARY with Double]
+  
 }
 

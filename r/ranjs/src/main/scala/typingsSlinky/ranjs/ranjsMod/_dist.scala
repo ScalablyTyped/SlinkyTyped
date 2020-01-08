@@ -2,7 +2,6 @@ package typingsSlinky.ranjs.ranjsMod
 
 import typingsSlinky.ranjs.Anon_Closed
 import typingsSlinky.ranjs.Anon_PassedStatistics
-import typingsSlinky.ranjs.ranjsMod._dist.State
 import typingsSlinky.ranjs.ranjsStrings.continuous
 import typingsSlinky.ranjs.ranjsStrings.discrete
 import scala.scalajs.js

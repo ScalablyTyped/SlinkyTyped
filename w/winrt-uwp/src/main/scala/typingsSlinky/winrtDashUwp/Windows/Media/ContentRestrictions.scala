@@ -1,12 +1,9 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel
-import typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy
-import typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory
-import typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentDescription
 import typingsSlinky.winrtDashUwp.Windows.Storage.Streams.IRandomAccessStreamReference
 import typingsSlinky.winrtDashUwp.Windows.WinRTEvent
 import typingsSlinky.winrtDashUwp.winrtDashUwpStrings.restrictionschanged
@@ -115,12 +112,20 @@ object ContentRestrictions extends js.Object {
     @js.native
     sealed trait warn extends ContentAccessRestrictionLevel
     
-    /* 0 */ val allow: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel.allow with Double = js.native
-    /* 2 */ val block: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel.block with Double = js.native
-    /* 3 */ val hide: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel.hide with Double = js.native
-    /* 1 */ val warn: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel.warn with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ContentAccessRestrictionLevel with Double] = js.native
+    /* 0 */ @js.native
+    object allow extends TopLevel[allow with Double]
+    
+    /* 2 */ @js.native
+    object block extends TopLevel[block with Double]
+    
+    /* 3 */ @js.native
+    object hide extends TopLevel[hide with Double]
+    
+    /* 1 */ @js.native
+    object warn extends TopLevel[warn with Double]
+    
   }
   
   /** Specifies the type of a piece of content. */
@@ -150,14 +155,26 @@ object ContentRestrictions extends js.Object {
     @js.native
     sealed trait television extends RatedContentCategory
     
-    /* 1 */ val application: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.application with Double = js.native
-    /* 2 */ val game: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.game with Double = js.native
-    /* 0 */ val general: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.general with Double = js.native
-    /* 3 */ val movie: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.movie with Double = js.native
-    /* 5 */ val music: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.music with Double = js.native
-    /* 4 */ val television: typingsSlinky.winrtDashUwp.Windows.Media.ContentRestrictions.RatedContentCategory.television with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[RatedContentCategory with Double] = js.native
+    /* 1 */ @js.native
+    object application extends TopLevel[application with Double]
+    
+    /* 2 */ @js.native
+    object game extends TopLevel[game with Double]
+    
+    /* 0 */ @js.native
+    object general extends TopLevel[general with Double]
+    
+    /* 3 */ @js.native
+    object movie extends TopLevel[movie with Double]
+    
+    /* 5 */ @js.native
+    object music extends TopLevel[music with Double]
+    
+    /* 4 */ @js.native
+    object television extends TopLevel[television with Double]
+    
   }
   
 }

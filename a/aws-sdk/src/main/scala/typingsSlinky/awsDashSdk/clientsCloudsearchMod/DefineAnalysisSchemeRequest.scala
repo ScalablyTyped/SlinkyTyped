@@ -1,0 +1,21 @@
+package typingsSlinky.awsDashSdk.clientsCloudsearchMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DefineAnalysisSchemeRequest extends js.Object {
+  var AnalysisScheme: typingsSlinky.awsDashSdk.clientsCloudsearchMod.AnalysisScheme = js.native
+  var DomainName: typingsSlinky.awsDashSdk.clientsCloudsearchMod.DomainName = js.native
+}
+
+object DefineAnalysisSchemeRequest {
+  @scala.inline
+  def apply(AnalysisScheme: AnalysisScheme, DomainName: DomainName): DefineAnalysisSchemeRequest = {
+    val __obj = js.Dynamic.literal(AnalysisScheme = AnalysisScheme.asInstanceOf[js.Any], DomainName = DomainName.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[DefineAnalysisSchemeRequest]
+  }
+}
+

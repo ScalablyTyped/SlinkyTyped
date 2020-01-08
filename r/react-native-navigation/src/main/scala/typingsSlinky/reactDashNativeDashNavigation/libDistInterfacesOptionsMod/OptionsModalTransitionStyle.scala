@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object OptionsModalTransitionStyle extends js.Object {
   @js.native
   sealed trait partialCurl extends OptionsModalTransitionStyle
   
-  /* "coverVertical" */ val coverVertical: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalTransitionStyle.coverVertical with String = js.native
-  /* "crossDissolve" */ val crossDissolve: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalTransitionStyle.crossDissolve with String = js.native
-  /* "flipHorizontal" */ val flipHorizontal: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalTransitionStyle.flipHorizontal with String = js.native
-  /* "partialCurl" */ val partialCurl: typingsSlinky.reactDashNativeDashNavigation.libDistInterfacesOptionsMod.OptionsModalTransitionStyle.partialCurl with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[OptionsModalTransitionStyle with String] = js.native
+  /* "coverVertical" */ @js.native
+  object coverVertical extends TopLevel[coverVertical with String]
+  
+  /* "crossDissolve" */ @js.native
+  object crossDissolve extends TopLevel[crossDissolve with String]
+  
+  /* "flipHorizontal" */ @js.native
+  object flipHorizontal extends TopLevel[flipHorizontal with String]
+  
+  /* "partialCurl" */ @js.native
+  object partialCurl extends TopLevel[partialCurl with String]
+  
 }
 

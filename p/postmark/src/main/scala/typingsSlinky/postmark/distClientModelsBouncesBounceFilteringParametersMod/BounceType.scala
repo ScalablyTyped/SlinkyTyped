@@ -1,5 +1,6 @@
 package typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,29 +77,73 @@ object BounceType extends js.Object {
   @js.native
   sealed trait VirusNotification extends BounceType
   
-  /* "AddressChange" */ val AddressChange: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.AddressChange with String = js.native
-  /* "AutoResponder" */ val AutoResponder: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.AutoResponder with String = js.native
-  /* "BadEmailAddress" */ val BadEmailAddress: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.BadEmailAddress with String = js.native
-  /* "Blocked" */ val Blocked: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Blocked with String = js.native
-  /* "ChallengeVerification" */ val ChallengeVerification: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.ChallengeVerification with String = js.native
-  /* "DMARCPolicy" */ val DMARCPolicy: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.DMARCPolicy with String = js.native
-  /* "DnsError" */ val DnsError: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.DnsError with String = js.native
-  /* "HardBounce" */ val HardBounce: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.HardBounce with String = js.native
-  /* "InboundError" */ val InboundError: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.InboundError with String = js.native
-  /* "ManuallyDeactivated" */ val ManuallyDeactivated: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.ManuallyDeactivated with String = js.native
-  /* "OpenRelayTest" */ val OpenRelayTest: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.OpenRelayTest with String = js.native
-  /* "SMTPApiError" */ val SMTPApiError: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.SMTPApiError with String = js.native
-  /* "SoftBounce" */ val SoftBounce: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.SoftBounce with String = js.native
-  /* "SpamComplaint" */ val SpamComplaint: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.SpamComplaint with String = js.native
-  /* "SpamNotification" */ val SpamNotification: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.SpamNotification with String = js.native
-  /* "Subscribe" */ val Subscribe: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Subscribe with String = js.native
-  /* "TemplateRenderingFailed" */ val TemplateRenderingFailed: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.TemplateRenderingFailed with String = js.native
-  /* "Transient" */ val Transient: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Transient with String = js.native
-  /* "Unconfirmed" */ val Unconfirmed: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Unconfirmed with String = js.native
-  /* "Unknown" */ val Unknown: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Unknown with String = js.native
-  /* "Unsubscribe" */ val Unsubscribe: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.Unsubscribe with String = js.native
-  /* "VirusNotification" */ val VirusNotification: typingsSlinky.postmark.distClientModelsBouncesBounceFilteringParametersMod.BounceType.VirusNotification with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BounceType with String] = js.native
+  /* "AddressChange" */ @js.native
+  object AddressChange extends TopLevel[AddressChange with String]
+  
+  /* "AutoResponder" */ @js.native
+  object AutoResponder extends TopLevel[AutoResponder with String]
+  
+  /* "BadEmailAddress" */ @js.native
+  object BadEmailAddress extends TopLevel[BadEmailAddress with String]
+  
+  /* "Blocked" */ @js.native
+  object Blocked extends TopLevel[Blocked with String]
+  
+  /* "ChallengeVerification" */ @js.native
+  object ChallengeVerification extends TopLevel[ChallengeVerification with String]
+  
+  /* "DMARCPolicy" */ @js.native
+  object DMARCPolicy extends TopLevel[DMARCPolicy with String]
+  
+  /* "DnsError" */ @js.native
+  object DnsError extends TopLevel[DnsError with String]
+  
+  /* "HardBounce" */ @js.native
+  object HardBounce extends TopLevel[HardBounce with String]
+  
+  /* "InboundError" */ @js.native
+  object InboundError extends TopLevel[InboundError with String]
+  
+  /* "ManuallyDeactivated" */ @js.native
+  object ManuallyDeactivated extends TopLevel[ManuallyDeactivated with String]
+  
+  /* "OpenRelayTest" */ @js.native
+  object OpenRelayTest extends TopLevel[OpenRelayTest with String]
+  
+  /* "SMTPApiError" */ @js.native
+  object SMTPApiError extends TopLevel[SMTPApiError with String]
+  
+  /* "SoftBounce" */ @js.native
+  object SoftBounce extends TopLevel[SoftBounce with String]
+  
+  /* "SpamComplaint" */ @js.native
+  object SpamComplaint extends TopLevel[SpamComplaint with String]
+  
+  /* "SpamNotification" */ @js.native
+  object SpamNotification extends TopLevel[SpamNotification with String]
+  
+  /* "Subscribe" */ @js.native
+  object Subscribe extends TopLevel[Subscribe with String]
+  
+  /* "TemplateRenderingFailed" */ @js.native
+  object TemplateRenderingFailed extends TopLevel[TemplateRenderingFailed with String]
+  
+  /* "Transient" */ @js.native
+  object Transient extends TopLevel[Transient with String]
+  
+  /* "Unconfirmed" */ @js.native
+  object Unconfirmed extends TopLevel[Unconfirmed with String]
+  
+  /* "Unknown" */ @js.native
+  object Unknown extends TopLevel[Unknown with String]
+  
+  /* "Unsubscribe" */ @js.native
+  object Unsubscribe extends TopLevel[Unsubscribe with String]
+  
+  /* "VirusNotification" */ @js.native
+  object VirusNotification extends TopLevel[VirusNotification with String]
+  
 }
 

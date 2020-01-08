@@ -1,6 +1,6 @@
 package typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateMod
 
-import typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateNumbers.`false`
+import typingsSlinky.nodeDashPgDashMigrate.nodeDashPgDashMigrateBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

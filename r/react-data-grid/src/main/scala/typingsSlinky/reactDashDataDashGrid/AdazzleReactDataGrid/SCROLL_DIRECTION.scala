@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SCROLL_DIRECTION extends js.Object {
   @js.native
   sealed trait UP extends SCROLL_DIRECTION
   
-  /* "downwards" */ val DOWN: typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.SCROLL_DIRECTION.DOWN with String = js.native
-  /* "left" */ val LEFT: typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.SCROLL_DIRECTION.LEFT with String = js.native
-  /* "none" */ val NONE: typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.SCROLL_DIRECTION.NONE with String = js.native
-  /* "right" */ val RIGHT: typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.SCROLL_DIRECTION.RIGHT with String = js.native
-  /* "upwards" */ val UP: typingsSlinky.reactDashDataDashGrid.AdazzleReactDataGrid.SCROLL_DIRECTION.UP with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SCROLL_DIRECTION with String] = js.native
+  /* "downwards" */ @js.native
+  object DOWN extends TopLevel[DOWN with String]
+  
+  /* "left" */ @js.native
+  object LEFT extends TopLevel[LEFT with String]
+  
+  /* "none" */ @js.native
+  object NONE extends TopLevel[NONE with String]
+  
+  /* "right" */ @js.native
+  object RIGHT extends TopLevel[RIGHT with String]
+  
+  /* "upwards" */ @js.native
+  object UP extends TopLevel[UP with String]
+  
 }
 

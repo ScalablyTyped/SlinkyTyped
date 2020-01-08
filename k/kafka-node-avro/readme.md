@@ -10,9 +10,9 @@ kafka avro serialization
 | ------------------ | :-------------: |
 | Full name          | kafka-node-avro |
 | Keywords           | kafka, node, avro, kafka-node, avsc |
-| # releases         | 12 |
+| # releases         | 14 |
 | # dependents       | 0 |
-| # downloads        | 3318 |
+| # downloads        | 4744 |
 | # stars            | 0 |
 
 ## Links

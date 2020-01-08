@@ -1,6 +1,6 @@
 package typingsSlinky.xml2json
 
-import typingsSlinky.xml2json.xml2jsonNumbers.`true`
+import typingsSlinky.xml2json.xml2jsonBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTransportTeamSpeakQueryMod.TeamSpeakQuery
 
-import typingsSlinky.ts3DashNodejsDashLibrary.ts3DashNodejsDashLibraryMod.ConnectionParams
+import typingsSlinky.ts3DashNodejsDashLibrary.libTeamSpeakMod.ConnectionParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

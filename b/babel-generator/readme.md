@@ -10,9 +10,9 @@ Turns an AST into code.
 | ------------------ | :-------------: |
 | Full name          | babel-generator |
 | Keywords           | - |
-| # releases         | 20 |
-| # dependents       | 433 |
-| # downloads        | 235315349 |
+| # releases         | 2 |
+| # dependents       | 472 |
+| # downloads        | 249514222 |
 | # stars            | 4 |
 
 ## Links

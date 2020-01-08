@@ -11,7 +11,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.atMaterialDashUiCore.Anon_Dense
 import typingsSlinky.atMaterialDashUiCore.PartialClassNameMapOutlinedInputClassKey
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`additions text`

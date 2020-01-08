@@ -1,0 +1,16 @@
+package typingsSlinky.atPulumiAws.atPulumiAwsMod.iam
+
+import typingsSlinky.atPulumiAws.iamGetUserMod.GetUserArgs
+import typingsSlinky.atPulumiAws.iamGetUserMod.GetUserResult
+import typingsSlinky.atPulumiPulumi.invokeMod.InvokeOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@pulumi/aws", "iam.getUser")
+@js.native
+object getUser extends js.Object {
+  def apply(args: GetUserArgs): js.Promise[GetUserResult] with GetUserResult = js.native
+  def apply(args: GetUserArgs, opts: InvokeOptions): js.Promise[GetUserResult] with GetUserResult = js.native
+}
+

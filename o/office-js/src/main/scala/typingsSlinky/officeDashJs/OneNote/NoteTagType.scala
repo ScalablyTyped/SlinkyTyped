@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.OneNote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,19 +50,43 @@ object NoteTagType extends js.Object {
   @js.native
   sealed trait website extends NoteTagType
   
-  /* "Address" */ val address: typingsSlinky.officeDashJs.OneNote.NoteTagType.address with String = js.native
-  /* "Contact" */ val contact: typingsSlinky.officeDashJs.OneNote.NoteTagType.contact with String = js.native
-  /* "Critical" */ val critical: typingsSlinky.officeDashJs.OneNote.NoteTagType.critical with String = js.native
-  /* "Idea" */ val idea: typingsSlinky.officeDashJs.OneNote.NoteTagType.idea with String = js.native
-  /* "Important" */ val important: typingsSlinky.officeDashJs.OneNote.NoteTagType.important with String = js.native
-  /* "PhoneNumber" */ val phoneNumber: typingsSlinky.officeDashJs.OneNote.NoteTagType.phoneNumber with String = js.native
-  /* "Question" */ val question: typingsSlinky.officeDashJs.OneNote.NoteTagType.question with String = js.native
-  /* "ToDo" */ val toDo: typingsSlinky.officeDashJs.OneNote.NoteTagType.toDo with String = js.native
-  /* "ToDoPriority1" */ val toDoPriority1: typingsSlinky.officeDashJs.OneNote.NoteTagType.toDoPriority1 with String = js.native
-  /* "ToDoPriority2" */ val toDoPriority2: typingsSlinky.officeDashJs.OneNote.NoteTagType.toDoPriority2 with String = js.native
-  /* "Unknown" */ val unknown: typingsSlinky.officeDashJs.OneNote.NoteTagType.unknown with String = js.native
-  /* "Website" */ val website: typingsSlinky.officeDashJs.OneNote.NoteTagType.website with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[NoteTagType with String] = js.native
+  /* "Address" */ @js.native
+  object address extends TopLevel[address with String]
+  
+  /* "Contact" */ @js.native
+  object contact extends TopLevel[contact with String]
+  
+  /* "Critical" */ @js.native
+  object critical extends TopLevel[critical with String]
+  
+  /* "Idea" */ @js.native
+  object idea extends TopLevel[idea with String]
+  
+  /* "Important" */ @js.native
+  object important extends TopLevel[important with String]
+  
+  /* "PhoneNumber" */ @js.native
+  object phoneNumber extends TopLevel[phoneNumber with String]
+  
+  /* "Question" */ @js.native
+  object question extends TopLevel[question with String]
+  
+  /* "ToDo" */ @js.native
+  object toDo extends TopLevel[toDo with String]
+  
+  /* "ToDoPriority1" */ @js.native
+  object toDoPriority1 extends TopLevel[toDoPriority1 with String]
+  
+  /* "ToDoPriority2" */ @js.native
+  object toDoPriority2 extends TopLevel[toDoPriority2 with String]
+  
+  /* "Unknown" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
+  /* "Website" */ @js.native
+  object website extends TopLevel[website with String]
+  
 }
 

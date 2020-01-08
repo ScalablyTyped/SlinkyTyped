@@ -2,7 +2,6 @@ package typingsSlinky.atPulumiKubernetes
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1SecretMod.Secret
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
 import typingsSlinky.atPulumiPulumi.outputMod.Input

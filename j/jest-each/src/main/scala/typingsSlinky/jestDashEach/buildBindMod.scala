@@ -3,8 +3,6 @@ package typingsSlinky.jestDashEach
 import typingsSlinky.atJestTypes.buildGlobalMod.DoneFn
 import typingsSlinky.atJestTypes.buildGlobalMod.EachTable
 import typingsSlinky.atJestTypes.buildGlobalMod.EachTestFn
-import typingsSlinky.jestDashEach.buildBindMod.GlobalCallback
-import typingsSlinky.jestDashEach.buildBindMod.TestFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -2,8 +2,6 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerArrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.baseContainerIContainerMod.IContainer
-import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayIteratorBase
-import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayReverseIteratorBase
 import typingsSlinky.tstl.baseIteratorIteratorMod.Iterator
 import typingsSlinky.tstl.baseIteratorReverseIteratorMod.ReverseIterator
 import typingsSlinky.tstl.iteratorIRandomAccessIteratorMod.IRandomAccessIterator
@@ -79,6 +77,16 @@ object baseIteratorArrayIteratorBaseMod extends js.Object {
       */
     /* CompleteClass */
     override def source(): SourceT = js.native
+    /**
+      * @inheritDoc
+      */
+    @JSName("value")
+    def value_MArrayIteratorBase(): T = js.native
+    /**
+      * @inheritDoc
+      */
+    @JSName("value")
+    def value_MArrayIteratorBase(`val`: T): js.Any = js.native
   }
   
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
@@ -106,6 +114,10 @@ object baseIteratorArrayIteratorBaseMod extends js.Object {
       * @return The index.
       */
     def index(): Double = js.native
+    /**
+      * @inheritDoc
+      */
+    def value(`val`: T): js.Any = js.native
   }
   
 }

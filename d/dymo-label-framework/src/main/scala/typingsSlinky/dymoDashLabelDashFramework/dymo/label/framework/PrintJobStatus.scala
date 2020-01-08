@@ -1,5 +1,6 @@
 package typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,17 +42,37 @@ object PrintJobStatus extends js.Object {
   @js.native
   sealed trait Unknown extends PrintJobStatus
   
-  /* 0 */ val Error: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.Error with Double = js.native
-  /* 1 */ val Finished: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.Finished with Double = js.native
-  /* 2 */ val InQueue: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.InQueue with Double = js.native
-  /* 3 */ val InvalidJobId: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.InvalidJobId with Double = js.native
-  /* 4 */ val NotSpooled: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.NotSpooled with Double = js.native
-  /* 5 */ val PaperOut: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.PaperOut with Double = js.native
-  /* 6 */ val PrinterBusy: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.PrinterBusy with Double = js.native
-  /* 7 */ val Printing: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.Printing with Double = js.native
-  /* 8 */ val ProcessingError: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.ProcessingError with Double = js.native
-  /* 9 */ val Unknown: typingsSlinky.dymoDashLabelDashFramework.dymo.label.framework.PrintJobStatus.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrintJobStatus with Double] = js.native
+  /* 0 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 1 */ @js.native
+  object Finished extends TopLevel[Finished with Double]
+  
+  /* 2 */ @js.native
+  object InQueue extends TopLevel[InQueue with Double]
+  
+  /* 3 */ @js.native
+  object InvalidJobId extends TopLevel[InvalidJobId with Double]
+  
+  /* 4 */ @js.native
+  object NotSpooled extends TopLevel[NotSpooled with Double]
+  
+  /* 5 */ @js.native
+  object PaperOut extends TopLevel[PaperOut with Double]
+  
+  /* 6 */ @js.native
+  object PrinterBusy extends TopLevel[PrinterBusy with Double]
+  
+  /* 7 */ @js.native
+  object Printing extends TopLevel[Printing with Double]
+  
+  /* 8 */ @js.native
+  object ProcessingError extends TopLevel[ProcessingError with Double]
+  
+  /* 9 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

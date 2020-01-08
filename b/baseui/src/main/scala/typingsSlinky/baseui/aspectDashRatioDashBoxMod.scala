@@ -1,7 +1,6 @@
 package typingsSlinky.baseui
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.baseui.aspectDashRatioDashBoxMod.AspectRatioBoxProps
 import typingsSlinky.baseui.blockMod.BlockProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

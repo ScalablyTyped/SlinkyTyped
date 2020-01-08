@@ -1,7 +1,7 @@
 
 # Scala.js typings for devalue
 
-Typings are for version 2.0.0
+Typings are for version 2.0.1
 
 ## Library description:
 Gets the job done when JSON.stringify can't
@@ -10,9 +10,9 @@ Gets the job done when JSON.stringify can't
 | ------------------ | :-------------: |
 | Full name          | devalue |
 | Keywords           | - |
-| # releases         | 10 |
-| # dependents       | 8 |
-| # downloads        | 197480 |
+| # releases         | 11 |
+| # dependents       | 21 |
+| # downloads        | 2560842 |
 | # stars            | 0 |
 
 ## Links

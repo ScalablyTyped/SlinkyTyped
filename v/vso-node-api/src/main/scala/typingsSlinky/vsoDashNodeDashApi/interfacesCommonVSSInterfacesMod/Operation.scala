@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object Operation extends js.Object {
   @js.native
   sealed trait Test extends Operation
   
-  /* 0 */ val Add: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Add with Double = js.native
-  /* 4 */ val Copy: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Copy with Double = js.native
-  /* 3 */ val Move: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Move with Double = js.native
-  /* 1 */ val Remove: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Remove with Double = js.native
-  /* 2 */ val Replace: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Replace with Double = js.native
-  /* 5 */ val Test: typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.Operation.Test with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Operation with Double] = js.native
+  /* 0 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 4 */ @js.native
+  object Copy extends TopLevel[Copy with Double]
+  
+  /* 3 */ @js.native
+  object Move extends TopLevel[Move with Double]
+  
+  /* 1 */ @js.native
+  object Remove extends TopLevel[Remove with Double]
+  
+  /* 2 */ @js.native
+  object Replace extends TopLevel[Replace with Double]
+  
+  /* 5 */ @js.native
+  object Test extends TopLevel[Test with Double]
+  
 }
 

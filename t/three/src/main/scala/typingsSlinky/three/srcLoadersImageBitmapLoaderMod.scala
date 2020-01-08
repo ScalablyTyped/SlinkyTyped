@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.three.srcLoadersImageBitmapLoaderMod.ImageBitmapLoader
 import typingsSlinky.three.srcLoadersLoaderMod.Loader
 import typingsSlinky.three.srcLoadersLoadingManagerMod.LoadingManager
 import scala.scalajs.js

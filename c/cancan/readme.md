@@ -10,9 +10,9 @@ Authorize easily
 | ------------------ | :-------------: |
 | Full name          | cancan |
 | Keywords           | acl, authorization |
-| # releases         | 4 |
+| # releases         | 0 |
 | # dependents       | 2 |
-| # downloads        | 27449 |
+| # downloads        | 23868 |
 | # stars            | 5 |
 
 ## Links

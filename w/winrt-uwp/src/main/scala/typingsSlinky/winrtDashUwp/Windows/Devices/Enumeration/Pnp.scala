@@ -1,13 +1,9 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Array
 import typingsSlinky.winrtDashUwp.Anon_Index
 import typingsSlinky.winrtDashUwp.Anon_ItemsReturnValueNumberPnpObject
-import typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObject
-import typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectCollection
-import typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType
-import typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectUpdate
-import typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMapView
@@ -66,12 +62,9 @@ object Pnp extends js.Object {
       */
     def getMany(startIndex: Double): Anon_ItemsReturnValueNumberPnpObject = js.native
     def indexOf(value: PnpObject, extra: js.Any*): Anon_Index = js.native
-    /**
-      * Retrieves the index of the specified item.
-      * @param value The value to find in the collection.
-      */
+    /* hack */
     @JSName("indexOf")
-    def indexOf_Anon_Index(value: PnpObject): Anon_Index = js.native
+    def indexOf_Double(searchElement: PnpObject): Double = js.native
   }
   
   @js.native
@@ -224,16 +217,32 @@ object Pnp extends js.Object {
     @js.native
     sealed trait unknown extends PnpObjectType
     
-    /* 5 */ val associationEndpoint: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.associationEndpoint with Double = js.native
-    /* 6 */ val associationEndpointContainer: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.associationEndpointContainer with Double = js.native
-    /* 7 */ val associationEndpointService: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.associationEndpointService with Double = js.native
-    /* 3 */ val device: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.device with Double = js.native
-    /* 2 */ val deviceContainer: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceContainer with Double = js.native
-    /* 1 */ val deviceInterface: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceInterface with Double = js.native
-    /* 4 */ val deviceInterfaceClass: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceInterfaceClass with Double = js.native
-    /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.Pnp.PnpObjectType.unknown with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PnpObjectType with Double] = js.native
+    /* 5 */ @js.native
+    object associationEndpoint extends TopLevel[associationEndpoint with Double]
+    
+    /* 6 */ @js.native
+    object associationEndpointContainer extends TopLevel[associationEndpointContainer with Double]
+    
+    /* 7 */ @js.native
+    object associationEndpointService extends TopLevel[associationEndpointService with Double]
+    
+    /* 3 */ @js.native
+    object device extends TopLevel[device with Double]
+    
+    /* 2 */ @js.native
+    object deviceContainer extends TopLevel[deviceContainer with Double]
+    
+    /* 1 */ @js.native
+    object deviceInterface extends TopLevel[deviceInterface with Double]
+    
+    /* 4 */ @js.native
+    object deviceInterfaceClass extends TopLevel[deviceInterfaceClass with Double]
+    
+    /* 0 */ @js.native
+    object unknown extends TopLevel[unknown with Double]
+    
   }
   
 }

@@ -5,7 +5,6 @@ import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.EmptyCallback
 import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.ExecutionOptions
 import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.Host
 import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.HostMap
-import typingsSlinky.cassandraDashDriver.libPoliciesMod.policies.loadBalancing.LoadBalancingPolicy
 import typingsSlinky.cassandraDashDriver.libTypesMod.types.distance
 import typingsSlinky.std.Map
 import scala.scalajs.js

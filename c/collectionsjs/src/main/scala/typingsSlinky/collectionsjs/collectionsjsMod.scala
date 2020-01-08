@@ -1,6 +1,5 @@
 package typingsSlinky.collectionsjs
 
-import typingsSlinky.collectionsjs.collectionsjsMod.Collection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

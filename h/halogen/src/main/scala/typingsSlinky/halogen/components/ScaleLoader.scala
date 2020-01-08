@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScaleLoader extends SharedApply_RadiusLoaderProps_1456142098 {
+object ScaleLoader extends SharedApply_RadiusLoaderProps160196961 {
   @JSImport("halogen", "ScaleLoader")
   @js.native
   object componentImport extends js.Object

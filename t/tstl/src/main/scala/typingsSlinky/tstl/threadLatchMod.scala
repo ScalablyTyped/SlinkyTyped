@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.tstl.threadLatchMod.Latch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

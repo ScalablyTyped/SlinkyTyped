@@ -1,7 +1,7 @@
 package typingsSlinky.koaDashCors.koaDashCorsMod
 
 import typingsSlinky.koa.koaMod.Request
-import typingsSlinky.koaDashCors.koaDashCorsNumbers.`true`
+import typingsSlinky.koaDashCors.koaDashCorsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

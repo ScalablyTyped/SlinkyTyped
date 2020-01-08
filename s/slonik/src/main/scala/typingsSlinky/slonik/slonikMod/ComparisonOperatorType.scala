@@ -5,31 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.slonik.slonikStrings.`<`
-  - typings.slonik.slonikStrings.`>`
-  - typings.slonik.slonikStrings.`<=`
-  - typings.slonik.slonikStrings.`>=`
-  - typings.slonik.slonikStrings.`=`
-  - typings.slonik.slonikStrings.`<>`
-  - typings.slonik.slonikStrings.`!=`
+  - typings.slonik.slonikStrings.Lessthansign
+  - typings.slonik.slonikStrings.Greaterthansign
+  - typings.slonik.slonikStrings.LessthansignEqualssign
+  - typings.slonik.slonikStrings.GreaterthansignEqualssign
+  - typings.slonik.slonikStrings.Equalssign
+  - typings.slonik.slonikStrings.LessthansignGreaterthansign
+  - typings.slonik.slonikStrings.ExclamationmarkEqualssign
 */
 trait ComparisonOperatorType extends js.Object
 
 object ComparisonOperatorType {
   @scala.inline
-  def `!=`: typingsSlinky.slonik.slonikStrings.`!=` = this.cast("!=")
+  def Equalssign: typingsSlinky.slonik.slonikStrings.Equalssign = this.cast("=")
   @scala.inline
-  def `<`: typingsSlinky.slonik.slonikStrings.`<` = this.cast("<")
+  def ExclamationmarkEqualssign: typingsSlinky.slonik.slonikStrings.ExclamationmarkEqualssign = this.cast("!=")
   @scala.inline
-  def `<=`: typingsSlinky.slonik.slonikStrings.`<=` = this.cast("<=")
+  def Greaterthansign: typingsSlinky.slonik.slonikStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `<>`: typingsSlinky.slonik.slonikStrings.`<>` = this.cast("<>")
+  def GreaterthansignEqualssign: typingsSlinky.slonik.slonikStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `=`: typingsSlinky.slonik.slonikStrings.`=` = this.cast("=")
+  def Lessthansign: typingsSlinky.slonik.slonikStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>`: typingsSlinky.slonik.slonikStrings.`>` = this.cast(">")
+  def LessthansignEqualssign: typingsSlinky.slonik.slonikStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
-  def `>=`: typingsSlinky.slonik.slonikStrings.`>=` = this.cast(">=")
+  def LessthansignGreaterthansign: typingsSlinky.slonik.slonikStrings.LessthansignGreaterthansign = this.cast("<>")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
 }

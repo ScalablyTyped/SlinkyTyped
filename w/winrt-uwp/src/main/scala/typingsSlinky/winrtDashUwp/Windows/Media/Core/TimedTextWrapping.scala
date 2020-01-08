@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object TimedTextWrapping extends js.Object {
   @js.native
   sealed trait wrap extends TimedTextWrapping
   
-  /* 0 */ val noWrap: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedTextWrapping.noWrap with Double = js.native
-  /* 1 */ val wrap: typingsSlinky.winrtDashUwp.Windows.Media.Core.TimedTextWrapping.wrap with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimedTextWrapping with Double] = js.native
+  /* 0 */ @js.native
+  object noWrap extends TopLevel[noWrap with Double]
+  
+  /* 1 */ @js.native
+  object wrap extends TopLevel[wrap with Double]
+  
 }
 

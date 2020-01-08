@@ -1,6 +1,6 @@
 package typingsSlinky.ember.emberMod.Ember
 
-import typingsSlinky.ember.emberMod.Ember.Test.Promise
+import typingsSlinky.atEmberTest.adapterMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,7 +73,7 @@ object Test extends js.Object {
     * Used to allow ember-testing to communicate with a specific testing
     * framework.
     */
-  val adapter: typingsSlinky.atEmberTest.adapterMod.default = js.native
+  val adapter: default = js.native
   val registerAsyncHelper: js.Function2[
     /* name */ java.lang.String, 
     /* helperMethod */ js.Function2[

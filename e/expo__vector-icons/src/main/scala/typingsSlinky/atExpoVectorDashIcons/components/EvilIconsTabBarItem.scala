@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EvilIconsTabBarItem extends SharedApply_TabBarItemIOSProps929810654[TabBarItem] {
+object EvilIconsTabBarItem extends SharedApply_TabBarItemIOSProps1445960788[TabBarItem] {
   @JSImport("@expo/vector-icons", "EvilIcons.TabBarItem")
   @js.native
   object componentImport extends js.Object

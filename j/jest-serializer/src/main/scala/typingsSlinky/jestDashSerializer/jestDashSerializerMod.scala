@@ -1,6 +1,5 @@
 package typingsSlinky.jestDashSerializer
 
-import typingsSlinky.jestDashSerializer.jestDashSerializerMod.Path
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

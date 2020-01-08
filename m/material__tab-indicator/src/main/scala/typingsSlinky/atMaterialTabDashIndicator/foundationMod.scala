@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTabDashIndicator
 import org.scalajs.dom.raw.ClientRect
 import typingsSlinky.atMaterialBase.foundationMod.MDCFoundation
 import typingsSlinky.atMaterialTabDashIndicator.adapterMod.MDCTabIndicatorAdapter
-import typingsSlinky.atMaterialTabDashIndicator.foundationMod.MDCTabIndicatorFoundation
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

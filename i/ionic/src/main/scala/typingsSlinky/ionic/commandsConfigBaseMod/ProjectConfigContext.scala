@@ -2,7 +2,7 @@ package typingsSlinky.ionic.commandsConfigBaseMod
 
 import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkMod.BaseConfig
 import typingsSlinky.ionic.definitionsMod.IProjectConfig
-import typingsSlinky.ionic.ionicNumbers.`false`
+import typingsSlinky.ionic.ionicBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

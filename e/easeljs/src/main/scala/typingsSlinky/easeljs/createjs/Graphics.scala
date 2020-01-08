@@ -2,9 +2,6 @@ package typingsSlinky.easeljs.createjs
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.easeljs.createjs.Graphics.BeginPath
-import typingsSlinky.easeljs.createjs.Graphics.Fill
-import typingsSlinky.easeljs.createjs.Graphics.Stroke
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

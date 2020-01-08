@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1ServiceMod.Service
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ServiceSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ServiceStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta

@@ -1,6 +1,6 @@
 package typingsSlinky.amapDashJsDashApiDashPlaceDashSearch
 
-import typingsSlinky.amapDashJsDashApiDashPlaceDashSearch.amapDashJsDashApiDashPlaceDashSearchNumbers.`true`
+import typingsSlinky.amapDashJsDashApiDashPlaceDashSearch.amapDashJsDashApiDashPlaceDashSearchBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -19,7 +19,6 @@ import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Cshe
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Dash
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.DownThenOver
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Dsheet
-import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Empty
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.EndSheet
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Envelope10
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Envelope11
@@ -62,6 +61,7 @@ import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Port
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Quatro
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Statement
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Tabloid
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -119,7 +119,7 @@ class PageLayout () extends ClientObject {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var firstPageNumber: Double | Empty = js.native
+  var firstPageNumber: Double | _empty = js.native
   /**
     *
     * Gets or sets the worksheet's footer margin, in points, for use when printing.

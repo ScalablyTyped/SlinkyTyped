@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Github extends SharedApply_GithubPickerProps988060618[default] {
+object Github extends SharedApply_GithubPickerProps_623162025[default] {
   @JSImport("react-color/lib/components/github/Github", JSImport.Default)
   @js.native
   object componentImport extends js.Object

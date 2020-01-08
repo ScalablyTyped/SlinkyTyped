@@ -1,6 +1,6 @@
 package typingsSlinky.nodemailer.libDkimMod
 
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

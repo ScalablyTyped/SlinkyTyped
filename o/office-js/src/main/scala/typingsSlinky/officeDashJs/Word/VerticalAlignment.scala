@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object VerticalAlignment extends js.Object {
   @js.native
   sealed trait top extends VerticalAlignment
   
-  /* "Bottom" */ val bottom: typingsSlinky.officeDashJs.Word.VerticalAlignment.bottom with String = js.native
-  /* "Center" */ val center: typingsSlinky.officeDashJs.Word.VerticalAlignment.center with String = js.native
-  /* "Mixed" */ val mixed: typingsSlinky.officeDashJs.Word.VerticalAlignment.mixed with String = js.native
-  /* "Top" */ val top: typingsSlinky.officeDashJs.Word.VerticalAlignment.top with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[VerticalAlignment with String] = js.native
+  /* "Bottom" */ @js.native
+  object bottom extends TopLevel[bottom with String]
+  
+  /* "Center" */ @js.native
+  object center extends TopLevel[center with String]
+  
+  /* "Mixed" */ @js.native
+  object mixed extends TopLevel[mixed with String]
+  
+  /* "Top" */ @js.native
+  object top extends TopLevel[top with String]
+  
 }
 

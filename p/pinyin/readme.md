@@ -10,9 +10,9 @@ Typings are for version 2.8
 | ------------------ | :-------------: |
 | Full name          | pinyin |
 | Keywords           | 拼音, 汉语, 汉字, 中文, Pinyin |
-| # releases         | 1 |
-| # dependents       | 68 |
-| # downloads        | 567147 |
+| # releases         | 2 |
+| # dependents       | 88 |
+| # downloads        | 455683 |
 | # stars            | 35 |
 
 ## Links

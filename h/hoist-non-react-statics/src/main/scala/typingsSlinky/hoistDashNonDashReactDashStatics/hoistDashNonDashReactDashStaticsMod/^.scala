@@ -2,7 +2,7 @@ package typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDash
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsNumbers.`true`
+import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

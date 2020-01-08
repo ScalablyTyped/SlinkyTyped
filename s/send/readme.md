@@ -10,9 +10,9 @@ Better streaming static file server with Range and conditional-GET support
 | ------------------ | :-------------: |
 | Full name          | send |
 | Keywords           | static, file, server |
-| # releases         | 9 |
-| # dependents       | 642 |
-| # downloads        | 345055485 |
+| # releases         | 4 |
+| # dependents       | 695 |
+| # downloads        | 501762925 |
 | # stars            | 25 |
 
 ## Links

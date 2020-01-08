@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLTableCellElement
 import typingsSlinky.handsontable.handsontableMod.Handsontable.CellProperties
 import typingsSlinky.handsontable.handsontableMod._Handsontable.Core
-import typingsSlinky.handsontable.handsontableStrings.Empty
+import typingsSlinky.handsontable.handsontableStrings._empty
 import typingsSlinky.handsontable.handsontableStrings.`bottom-left-corner`
 import typingsSlinky.handsontable.handsontableStrings.`top-left-corner`
 import typingsSlinky.handsontable.handsontableStrings.bottom
@@ -29,7 +29,7 @@ trait Base extends js.Object {
   def beginEditing(initialValue: js.Any): Unit = js.native
   def beginEditing(initialValue: js.Any, event: Event): Unit = js.native
   def cancelChanges(): Unit = js.native
-  def checkEditorSection(): `top-left-corner` | top | `bottom-left-corner` | bottom | left | Empty = js.native
+  def checkEditorSection(): `top-left-corner` | top | `bottom-left-corner` | bottom | left | _empty = js.native
   def close(): Unit = js.native
   def discardEditor(): Unit = js.native
   def discardEditor(validationResult: Boolean): Unit = js.native

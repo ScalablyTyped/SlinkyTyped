@@ -1,5 +1,6 @@
 package typingsSlinky.notyf.notyfDotModelsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object NotyfArrayEvent extends js.Object {
   @js.native
   sealed trait Remove extends NotyfArrayEvent
   
-  /* 0 */ val Add: typingsSlinky.notyf.notyfDotModelsMod.NotyfArrayEvent.Add with Double = js.native
-  /* 1 */ val Remove: typingsSlinky.notyf.notyfDotModelsMod.NotyfArrayEvent.Remove with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotyfArrayEvent with Double] = js.native
+  /* 0 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 1 */ @js.native
+  object Remove extends TopLevel[Remove with Double]
+  
 }
 

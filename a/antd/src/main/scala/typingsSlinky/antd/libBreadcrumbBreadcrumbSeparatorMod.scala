@@ -1,6 +1,5 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.libBreadcrumbBreadcrumbSeparatorMod.BreadcrumbSeparator
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element

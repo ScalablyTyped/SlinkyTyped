@@ -1,6 +1,5 @@
 package typingsSlinky.atOracleOraclejet
 
-import typingsSlinky.atOracleOraclejet.ojkeysetMod.KeySet
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

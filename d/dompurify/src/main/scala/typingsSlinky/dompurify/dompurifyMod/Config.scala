@@ -1,7 +1,7 @@
 package typingsSlinky.dompurify.dompurifyMod
 
 import typingsSlinky.dompurify.Anon_Html
-import typingsSlinky.dompurify.dompurifyNumbers.`false`
+import typingsSlinky.dompurify.dompurifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

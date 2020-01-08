@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Social
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object SocialDataItemType extends js.Object {
   @js.native
   sealed trait user extends SocialDataItemType
   
-  /* 1 */ val document: typingsSlinky.sharepoint.SP.Social.SocialDataItemType.document with Double = js.native
-  /* 4 */ val link: typingsSlinky.sharepoint.SP.Social.SocialDataItemType.link with Double = js.native
-  /* 2 */ val site: typingsSlinky.sharepoint.SP.Social.SocialDataItemType.site with Double = js.native
-  /* 3 */ val tag: typingsSlinky.sharepoint.SP.Social.SocialDataItemType.tag with Double = js.native
-  /* 0 */ val user: typingsSlinky.sharepoint.SP.Social.SocialDataItemType.user with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocialDataItemType with Double] = js.native
+  /* 1 */ @js.native
+  object document extends TopLevel[document with Double]
+  
+  /* 4 */ @js.native
+  object link extends TopLevel[link with Double]
+  
+  /* 2 */ @js.native
+  object site extends TopLevel[site with Double]
+  
+  /* 3 */ @js.native
+  object tag extends TopLevel[tag with Double]
+  
+  /* 0 */ @js.native
+  object user extends TopLevel[user with Double]
+  
 }
 

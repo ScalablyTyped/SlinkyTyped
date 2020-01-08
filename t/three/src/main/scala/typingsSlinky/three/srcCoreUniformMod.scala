@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcCoreUniformMod.Uniform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

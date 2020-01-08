@@ -1,7 +1,6 @@
 package typingsSlinky.atUifabricStyling
 
 import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
-import typingsSlinky.atUifabricStyling.libStylesGetGlobalClassNamesMod.GlobalClassNames
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import scala.scalajs.js

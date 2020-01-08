@@ -3,7 +3,6 @@ package typingsSlinky.graphqlDashImport
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.languageAstMod.DirectiveDefinitionNode
 import typingsSlinky.graphql.languageAstMod.TypeDefinitionNode
-import typingsSlinky.graphqlDashImport.distDefinitionMod.ValidDefinitionNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

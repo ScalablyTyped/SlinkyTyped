@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Ribbon
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ApplicationTabType extends js.Object {
   @js.native
   sealed trait Menu extends ApplicationTabType
   
-  /* 1 */ val Backstage: typingsSlinky.ejDotWebDotAll.ej.Ribbon.ApplicationTabType.Backstage with Double = js.native
-  /* 0 */ val Menu: typingsSlinky.ejDotWebDotAll.ej.Ribbon.ApplicationTabType.Menu with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApplicationTabType with Double] = js.native
+  /* 1 */ @js.native
+  object Backstage extends TopLevel[Backstage with Double]
+  
+  /* 0 */ @js.native
+  object Menu extends TopLevel[Menu with Double]
+  
 }
 

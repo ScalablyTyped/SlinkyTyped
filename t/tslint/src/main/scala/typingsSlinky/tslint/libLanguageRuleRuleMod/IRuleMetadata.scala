@@ -1,7 +1,7 @@
 package typingsSlinky.tslint.libLanguageRuleRuleMod
 
 import typingsSlinky.tslint.Anon_OptionsAny
-import typingsSlinky.tslint.tslintNumbers.`true`
+import typingsSlinky.tslint.tslintBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

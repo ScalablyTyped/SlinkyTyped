@@ -1,7 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.atFirebaseFirestore.distSrcApiBlobMod.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

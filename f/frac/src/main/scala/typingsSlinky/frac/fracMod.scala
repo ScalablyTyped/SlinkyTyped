@@ -1,6 +1,5 @@
 package typingsSlinky.frac
 
-import typingsSlinky.frac.fracMod.Frac$Module
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

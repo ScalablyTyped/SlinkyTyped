@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "kythe"
-version := "0.0-dt-20190711Z-3b3865"
+version := "0.0-dt-20190711Z-6fd35b"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

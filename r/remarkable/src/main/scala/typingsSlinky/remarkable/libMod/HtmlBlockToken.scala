@@ -1,6 +1,6 @@
 package typingsSlinky.remarkable.libMod
 
-import typingsSlinky.remarkable.remarkableNumbers.`false`
+import typingsSlinky.remarkable.remarkableBooleans.`false`
 import typingsSlinky.remarkable.remarkableStrings.htmlblock
 import scala.scalajs.js
 import scala.scalajs.js.`|`

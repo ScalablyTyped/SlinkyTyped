@@ -1,14 +1,17 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.SVGSVGElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.libIconMod.CustomIconComponentProps
 import typingsSlinky.antd.libIconMod.IconProps
 import typingsSlinky.antd.libIconMod.ThemeType
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +25,7 @@ object Icon
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onClick, onKeyUp, tabIndex, type */
   def apply(
-    component: ReactComponentClass[CustomIconComponentProps] = null,
+    component: ReactComponentClass[CustomIconComponentProps | SVGProps[SVGSVGElement]] = null,
     prefixCls: String = null,
     role: String = null,
     rotate: Int | Double = null,
@@ -48,6 +51,7 @@ object Icon
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IconProps
 }
 

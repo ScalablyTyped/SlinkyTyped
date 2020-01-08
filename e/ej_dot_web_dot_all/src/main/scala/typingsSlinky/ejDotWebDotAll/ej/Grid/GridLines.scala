@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object GridLines extends js.Object {
   @js.native
   sealed trait Vertical extends GridLines
   
-  /* 0 */ val Both: typingsSlinky.ejDotWebDotAll.ej.Grid.GridLines.Both with Double = js.native
-  /* 1 */ val Horizontal: typingsSlinky.ejDotWebDotAll.ej.Grid.GridLines.Horizontal with Double = js.native
-  /* 3 */ val None: typingsSlinky.ejDotWebDotAll.ej.Grid.GridLines.None with Double = js.native
-  /* 2 */ val Vertical: typingsSlinky.ejDotWebDotAll.ej.Grid.GridLines.Vertical with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GridLines with Double] = js.native
+  /* 0 */ @js.native
+  object Both extends TopLevel[Both with Double]
+  
+  /* 1 */ @js.native
+  object Horizontal extends TopLevel[Horizontal with Double]
+  
+  /* 3 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Vertical extends TopLevel[Vertical with Double]
+  
 }
 

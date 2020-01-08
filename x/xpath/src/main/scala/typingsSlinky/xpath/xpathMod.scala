@@ -5,9 +5,7 @@ import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.XPathResult
 import typingsSlinky.std.XPathNSResolver
-import typingsSlinky.xpath.xpathMod.SelectedValue
-import typingsSlinky.xpath.xpathMod.XPathSelect
-import typingsSlinky.xpath.xpathNumbers.`true`
+import typingsSlinky.xpath.xpathBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.tern.libTernMod
 
-import typingsSlinky.tern.ternNumbers.`true`
+import typingsSlinky.tern.ternBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsMod
 
-import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsNumbers.`true`
+import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

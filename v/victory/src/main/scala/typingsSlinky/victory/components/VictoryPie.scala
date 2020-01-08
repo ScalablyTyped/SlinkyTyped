@@ -3,10 +3,11 @@ package typingsSlinky.victory.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
 import typingsSlinky.victory.victoryMod.ColorScalePropType
 import typingsSlinky.victory.victoryMod.D3Scale
@@ -52,8 +53,8 @@ object VictoryPie
     labelComponent: ReactElement = null,
     labelRadius: Int | Double = null,
     labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     padAngle: Int | Double = null,
     padding: PaddingProps = null,
     radius: Int | Double = null,
@@ -100,6 +101,7 @@ object VictoryPie
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryPie] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryPie](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryPieProps
 }
 

@@ -10,7 +10,7 @@ import typingsSlinky.uws.Anon_CodeReason
 import typingsSlinky.uws.Anon_Data
 import typingsSlinky.uws.Anon_DataTarget
 import typingsSlinky.uws.Anon_Target
-import typingsSlinky.uws.Anon_Target_853582707
+import typingsSlinky.uws.Anon_Target_1916242669
 import typingsSlinky.uws.uwsStrings.close
 import typingsSlinky.uws.uwsStrings.error
 import typingsSlinky.uws.uwsStrings.message
@@ -52,7 +52,7 @@ trait WebSocket extends EventEmitter {
   @JSName("addEventListener")
   def addEventListener_open(method: open): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_open(method: open, cb: js.Function1[/* event */ Anon_Target_853582707, Unit]): Unit = js.native
+  def addEventListener_open(method: open, cb: js.Function1[/* event */ Anon_Target_1916242669, Unit]): Unit = js.native
   @JSName("addListener")
   def addListener_close(event: close, cb: js.Function2[/* code */ Double, /* message */ String, Unit]): this.type = js.native
   @JSName("addListener")

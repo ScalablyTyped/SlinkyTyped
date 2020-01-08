@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashDevDashUtils
 
-import typingsSlinky.reactDashDevDashUtils.reactDashDevDashUtilsNumbers.`false`
+import typingsSlinky.reactDashDevDashUtils.reactDashDevDashUtilsBooleans.`false`
 import typingsSlinky.webpack.Anon_IdNumber
 import typingsSlinky.webpack.webpackMod.compilation.Chunk
 import typingsSlinky.webpack.webpackMod.compilation.Module

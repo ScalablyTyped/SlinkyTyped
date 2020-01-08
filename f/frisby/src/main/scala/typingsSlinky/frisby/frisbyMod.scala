@@ -1,7 +1,6 @@
 package typingsSlinky.frisby
 
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.frisby.frisbyMod.FrisbySpec
 import typingsSlinky.frisby.frisbyMod.nodeFetch.Response
 import typingsSlinky.joi.joiMod.AlternativesSchema
 import typingsSlinky.joi.joiMod.AnySchema

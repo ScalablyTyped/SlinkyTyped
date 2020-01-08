@@ -5,9 +5,6 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery
 import typingsSlinky.react.reactMod.AllHTMLAttributes
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselMod.ComponentProps
-import typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselMod.OwlCarouselProps
-import typingsSlinky.reactDashOwlDashCarousel.reactDashOwlDashCarouselMod.ReactOwlCarousel
 import typingsSlinky.reactDashOwlDashCarousel.umdOptionsMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`

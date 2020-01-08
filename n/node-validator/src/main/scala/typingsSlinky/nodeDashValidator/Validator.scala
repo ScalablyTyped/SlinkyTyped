@@ -1,8 +1,5 @@
 package typingsSlinky.nodeDashValidator
 
-import typingsSlinky.nodeDashValidator.Validator.IsObjectValidator
-import typingsSlinky.nodeDashValidator.Validator.Validatable
-import typingsSlinky.nodeDashValidator.Validator.ValidateFn
 import typingsSlinky.nodeDashValidator.ValidatorOptions.IsDateOptions
 import typingsSlinky.nodeDashValidator.ValidatorOptions.IsNumberOptions
 import typingsSlinky.nodeDashValidator.ValidatorOptions.IsStringOptions

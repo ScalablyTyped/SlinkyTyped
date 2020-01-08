@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Effects
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,25 +84,61 @@ object AudioEffectType extends js.Object {
   @js.native
   sealed trait virtualSurround extends AudioEffectType
   
-  /* 1 */ val acousticEchoCancellation: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.acousticEchoCancellation with Double = js.native
-  /* 3 */ val automaticGainControl: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.automaticGainControl with Double = js.native
-  /* 8 */ val bassBoost: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.bassBoost with Double = js.native
-  /* 13 */ val bassManagement: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.bassManagement with Double = js.native
-  /* 4 */ val beamForming: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.beamForming with Double = js.native
-  /* 5 */ val constantToneRemoval: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.constantToneRemoval with Double = js.native
-  /* 17 */ val dynamicRangeCompression: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.dynamicRangeCompression with Double = js.native
-  /* 14 */ val environmentalEffects: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.environmentalEffects with Double = js.native
-  /* 6 */ val equalizer: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.equalizer with Double = js.native
-  /* 7 */ val loudnessEqualizer: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.loudnessEqualizer with Double = js.native
-  /* 2 */ val noiseSuppression: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.noiseSuppression with Double = js.native
-  /* 0 */ val other: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.other with Double = js.native
-  /* 12 */ val roomCorrection: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.roomCorrection with Double = js.native
-  /* 16 */ val speakerCompensation: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.speakerCompensation with Double = js.native
-  /* 11 */ val speakerFill: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.speakerFill with Double = js.native
-  /* 15 */ val speakerProtection: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.speakerProtection with Double = js.native
-  /* 10 */ val virtualHeadphones: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.virtualHeadphones with Double = js.native
-  /* 9 */ val virtualSurround: typingsSlinky.winrtDashUwp.Windows.Media.Effects.AudioEffectType.virtualSurround with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AudioEffectType with Double] = js.native
+  /* 1 */ @js.native
+  object acousticEchoCancellation extends TopLevel[acousticEchoCancellation with Double]
+  
+  /* 3 */ @js.native
+  object automaticGainControl extends TopLevel[automaticGainControl with Double]
+  
+  /* 8 */ @js.native
+  object bassBoost extends TopLevel[bassBoost with Double]
+  
+  /* 13 */ @js.native
+  object bassManagement extends TopLevel[bassManagement with Double]
+  
+  /* 4 */ @js.native
+  object beamForming extends TopLevel[beamForming with Double]
+  
+  /* 5 */ @js.native
+  object constantToneRemoval extends TopLevel[constantToneRemoval with Double]
+  
+  /* 17 */ @js.native
+  object dynamicRangeCompression extends TopLevel[dynamicRangeCompression with Double]
+  
+  /* 14 */ @js.native
+  object environmentalEffects extends TopLevel[environmentalEffects with Double]
+  
+  /* 6 */ @js.native
+  object equalizer extends TopLevel[equalizer with Double]
+  
+  /* 7 */ @js.native
+  object loudnessEqualizer extends TopLevel[loudnessEqualizer with Double]
+  
+  /* 2 */ @js.native
+  object noiseSuppression extends TopLevel[noiseSuppression with Double]
+  
+  /* 0 */ @js.native
+  object other extends TopLevel[other with Double]
+  
+  /* 12 */ @js.native
+  object roomCorrection extends TopLevel[roomCorrection with Double]
+  
+  /* 16 */ @js.native
+  object speakerCompensation extends TopLevel[speakerCompensation with Double]
+  
+  /* 11 */ @js.native
+  object speakerFill extends TopLevel[speakerFill with Double]
+  
+  /* 15 */ @js.native
+  object speakerProtection extends TopLevel[speakerProtection with Double]
+  
+  /* 10 */ @js.native
+  object virtualHeadphones extends TopLevel[virtualHeadphones with Double]
+  
+  /* 9 */ @js.native
+  object virtualSurround extends TopLevel[virtualSurround with Double]
+  
 }
 

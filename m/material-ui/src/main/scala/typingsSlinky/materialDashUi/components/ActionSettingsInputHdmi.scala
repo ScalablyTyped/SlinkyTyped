@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionSettingsInputHdmi
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsInputHdmi] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionSettingsInputHdmi] {
   @JSImport("material-ui/svg-icons", "ActionSettingsInputHdmi")
   @js.native
   object componentImport extends js.Object

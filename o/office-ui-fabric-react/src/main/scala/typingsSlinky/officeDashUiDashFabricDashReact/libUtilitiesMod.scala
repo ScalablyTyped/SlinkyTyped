@@ -11,6 +11,7 @@ import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
 import typingsSlinky.atUifabricUtilities.Anon_AsyncPlaceholder
 import typingsSlinky.atUifabricUtilities.Anon_Configurable
 import typingsSlinky.atUifabricUtilities.Anon_Focus
+import typingsSlinky.atUifabricUtilities.Anon_Rtl
 import typingsSlinky.atUifabricUtilities.libAsAsyncMod.IAsAsyncOptions
 import typingsSlinky.atUifabricUtilities.libBaseComponentDotTypesMod.IBaseProps
 import typingsSlinky.atUifabricUtilities.libClassNamesFunctionMod.IClassNamesFunctionOptions
@@ -33,6 +34,7 @@ import typingsSlinky.atUifabricUtilities.libStyledMod.ICustomizableProps
 import typingsSlinky.atUifabricUtilities.libStyledMod.IPropsWithStyles
 import typingsSlinky.atUifabricUtilities.libWarnWarnControlledUsageMod.IWarnControlledUsageParams
 import typingsSlinky.atUifabricUtilities.libWarnWarnMod.ISettingsMap
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactBooleans.`false`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`100`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`101`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`102`
@@ -132,7 +134,6 @@ import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashR
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`98`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`99`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`9`
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`false`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`data-is-scrollable`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`data-no-horizontal-wrap`
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.`data-no-vertical-wrap`
@@ -256,6 +257,11 @@ object libUtilitiesMod extends js.Object {
   val videoProperties: js.Array[String] = js.native
   def addDirectionalKeyCode(which: Double): Unit = js.native
   def addElementAtIndex[T](array: js.Array[T], index: Double, itemToAdd: T): js.Array[T] = js.native
+  def allowOverscrollOnElement(element: Null, events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup): Unit = js.native
+  def allowOverscrollOnElement(
+    element: typingsSlinky.std.HTMLElement,
+    events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup
+  ): Unit = js.native
   def allowScrollOnElement(element: Null, events: typingsSlinky.atUifabricUtilities.libEventGroupMod.EventGroup): Unit = js.native
   def allowScrollOnElement(
     element: typingsSlinky.std.HTMLElement,
@@ -402,7 +408,9 @@ object libUtilitiesMod extends js.Object {
     tabbable: js.UndefOr[Boolean]
   ): HTMLElement | Null = js.native
   def getRTL(): Boolean = js.native
+  def getRTL(theme: Anon_Rtl): Boolean = js.native
   def getRTLSafeKeyCode(key: Double): Double = js.native
+  def getRTLSafeKeyCode(key: Double, theme: Anon_Rtl): Double = js.native
   def getRect(): js.UndefOr[IRectangle] = js.native
   def getRect(element: typingsSlinky.std.HTMLElement): js.UndefOr[IRectangle] = js.native
   def getRect(element: Window): js.UndefOr[IRectangle] = js.native

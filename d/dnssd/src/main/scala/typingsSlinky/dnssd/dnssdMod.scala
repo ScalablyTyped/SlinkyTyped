@@ -1,8 +1,5 @@
 package typingsSlinky.dnssd
 
-import typingsSlinky.dnssd.dnssdMod.Advertisement
-import typingsSlinky.dnssd.dnssdMod.Browser
-import typingsSlinky.dnssd.dnssdMod.ServiceType
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

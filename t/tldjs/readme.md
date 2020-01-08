@@ -10,9 +10,9 @@ JavaScript API to work against complex domain names, subdomains and URIs.
 | ------------------ | :-------------: |
 | Full name          | tldjs |
 | Keywords           | tld, sld, domain, browser, uri, url, domain name, subdomain, public suffix |
-| # releases         | 8 |
-| # dependents       | 63 |
-| # downloads        | 5596162 |
+| # releases         | 3 |
+| # dependents       | 72 |
+| # downloads        | 5041413 |
 | # stars            | 9 |
 
 ## Links

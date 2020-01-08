@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,11 +41,19 @@ object ChartAxisType extends js.Object {
   @js.native
   sealed trait value extends ChartAxisType
   
-  /* "Category" */ val category: typingsSlinky.officeDashJs.Excel.ChartAxisType.category with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJs.Excel.ChartAxisType.invalid with String = js.native
-  /* "Series" */ val series: typingsSlinky.officeDashJs.Excel.ChartAxisType.series with String = js.native
-  /* "Value" */ val value: typingsSlinky.officeDashJs.Excel.ChartAxisType.value with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartAxisType with String] = js.native
+  /* "Category" */ @js.native
+  object category extends TopLevel[category with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "Series" */ @js.native
+  object series extends TopLevel[series with String]
+  
+  /* "Value" */ @js.native
+  object value extends TopLevel[value with String]
+  
 }
 

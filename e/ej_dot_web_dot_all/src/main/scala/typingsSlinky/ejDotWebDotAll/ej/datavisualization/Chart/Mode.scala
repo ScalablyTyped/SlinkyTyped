@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,20 @@ object Mode extends js.Object {
   @js.native
   sealed trait Series extends Mode
   
-  /* 2 */ val Cluster: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Mode.Cluster with Double = js.native
-  /* 1 */ val Point: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Mode.Point with Double = js.native
-  /* 3 */ val Range: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Mode.Range with Double = js.native
-  /* 0 */ val Series: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Mode.Series with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Mode with Double] = js.native
+  /* 2 */ @js.native
+  object Cluster extends TopLevel[Cluster with Double]
+  
+  /* 1 */ @js.native
+  object Point extends TopLevel[Point with Double]
+  
+  /* 3 */ @js.native
+  object Range extends TopLevel[Range with Double]
+  
+  /* 0 */ @js.native
+  object Series
+    extends TopLevel[typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Mode.Series with Double]
+  
 }
 

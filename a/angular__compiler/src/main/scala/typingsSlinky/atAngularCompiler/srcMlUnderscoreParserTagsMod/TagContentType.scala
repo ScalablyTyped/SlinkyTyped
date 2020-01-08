@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcMlUnderscoreParserTagsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object TagContentType extends js.Object {
   @js.native
   sealed trait RAW_TEXT extends TagContentType
   
-  /* 1 */ val ESCAPABLE_RAW_TEXT: typingsSlinky.atAngularCompiler.srcMlUnderscoreParserTagsMod.TagContentType.ESCAPABLE_RAW_TEXT with Double = js.native
-  /* 2 */ val PARSABLE_DATA: typingsSlinky.atAngularCompiler.srcMlUnderscoreParserTagsMod.TagContentType.PARSABLE_DATA with Double = js.native
-  /* 0 */ val RAW_TEXT: typingsSlinky.atAngularCompiler.srcMlUnderscoreParserTagsMod.TagContentType.RAW_TEXT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TagContentType with Double] = js.native
+  /* 1 */ @js.native
+  object ESCAPABLE_RAW_TEXT extends TopLevel[ESCAPABLE_RAW_TEXT with Double]
+  
+  /* 2 */ @js.native
+  object PARSABLE_DATA extends TopLevel[PARSABLE_DATA with Double]
+  
+  /* 0 */ @js.native
+  object RAW_TEXT extends TopLevel[RAW_TEXT with Double]
+  
 }
 

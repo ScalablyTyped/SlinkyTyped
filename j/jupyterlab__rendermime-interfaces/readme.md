@@ -10,9 +10,9 @@ JupyterLab - Interfaces for Mime Renderers
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/rendermime-interfaces |
 | Keywords           | - |
-| # releases         | 36 |
-| # dependents       | 53 |
-| # downloads        | 763059 |
+| # releases         | 55 |
+| # dependents       | 62 |
+| # downloads        | 993106 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object QueryRecursionOption extends js.Object {
   @js.native
   sealed trait ParentFirst extends QueryRecursionOption
   
-  /* 1 */ val ChildFirst: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryRecursionOption.ChildFirst with Double = js.native
-  /* 0 */ val ParentFirst: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryRecursionOption.ParentFirst with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryRecursionOption with Double] = js.native
+  /* 1 */ @js.native
+  object ChildFirst extends TopLevel[ChildFirst with Double]
+  
+  /* 0 */ @js.native
+  object ParentFirst extends TopLevel[ParentFirst with Double]
+  
 }
 

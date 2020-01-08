@@ -1,7 +1,7 @@
 
 # Scala.js typings for handsontable
 
-Typings are for version 7.2.2
+Typings are for version 7.3.0
 
 ## Library description:
 Handsontable is a JavaScript Spreadsheet Component available for React, Angular and Vue.
@@ -10,9 +10,9 @@ Handsontable is a JavaScript Spreadsheet Component available for React, Angular 
 | ------------------ | :-------------: |
 | Full name          | handsontable |
 | Keywords           | data, grid, table, editor, grid-editor, data-grid, data-table, spreadsheet, excel, tabular-data, edit-cell, editable-table, data-spreadsheet |
-| # releases         | 31 |
-| # dependents       | 49 |
-| # downloads        | 1479572 |
+| # releases         | 30 |
+| # dependents       | 62 |
+| # downloads        | 1993283 |
 | # stars            | 5 |
 
 ## Links

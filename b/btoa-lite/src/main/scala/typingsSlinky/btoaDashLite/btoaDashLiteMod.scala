@@ -1,6 +1,5 @@
 package typingsSlinky.btoaDashLite
 
-import typingsSlinky.btoaDashLite.btoaDashLiteMod.EncodedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

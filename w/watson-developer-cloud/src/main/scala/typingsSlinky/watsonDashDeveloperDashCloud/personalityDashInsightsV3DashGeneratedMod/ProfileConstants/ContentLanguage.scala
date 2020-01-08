@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object ContentLanguage extends js.Object {
   @js.native
   sealed trait KO extends ContentLanguage
   
-  /* "ar" */ val AR: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants.ContentLanguage.AR with String = js.native
-  /* "en" */ val EN: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants.ContentLanguage.EN with String = js.native
-  /* "es" */ val ES: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants.ContentLanguage.ES with String = js.native
-  /* "ja" */ val JA: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants.ContentLanguage.JA with String = js.native
-  /* "ko" */ val KO: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileConstants.ContentLanguage.KO with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ContentLanguage with String] = js.native
+  /* "ar" */ @js.native
+  object AR extends TopLevel[AR with String]
+  
+  /* "en" */ @js.native
+  object EN extends TopLevel[EN with String]
+  
+  /* "es" */ @js.native
+  object ES extends TopLevel[ES with String]
+  
+  /* "ja" */ @js.native
+  object JA extends TopLevel[JA with String]
+  
+  /* "ko" */ @js.native
+  object KO extends TopLevel[KO with String]
+  
 }
 

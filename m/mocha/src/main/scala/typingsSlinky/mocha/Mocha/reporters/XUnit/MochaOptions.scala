@@ -1,6 +1,7 @@
 package typingsSlinky.mocha.Mocha.reporters.XUnit
 
 import typingsSlinky.mocha.Mocha.Interface
+import typingsSlinky.mocha.Mocha.ReporterConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +27,7 @@ object MochaOptions {
     ignoreLeaks: js.UndefOr[Boolean] = js.undefined,
     inlineDiffs: js.UndefOr[Boolean] = js.undefined,
     noHighlighting: js.UndefOr[Boolean] = js.undefined,
-    reporter: String | typingsSlinky.mocha.Mocha.ReporterConstructor = null,
+    reporter: String | ReporterConstructor = null,
     reporterOptions: js.Any = null,
     retries: Int | Double = null,
     slow: Int | Double = null,

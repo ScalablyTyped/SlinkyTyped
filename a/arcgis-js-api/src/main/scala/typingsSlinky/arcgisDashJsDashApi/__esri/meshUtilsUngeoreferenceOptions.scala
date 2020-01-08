@@ -1,5 +1,16 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-feet`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.centimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -14,11 +25,13 @@ trait meshUtilsUngeoreferenceOptions extends Object {
     */
   var geographic: js.UndefOr[Boolean] = js.undefined
   /**
-    * Indicates the unit of the resulting data. A linear scale will be applied to the position attributes to convert the source data to the specified unit. By default the unit of the resulting data will be the same as the source spatial reference.  **Possible Values:** millimeters | centimeters | decimeters | meters | kilometers | inches | feet | yards | miles | nautical-miles | us-feet
+    * Indicates the unit of the resulting data. A linear scale will be applied to the position attributes to convert the source data to the specified unit. By default the unit of the resulting data will be the same as the source spatial reference.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-meshUtils.html#ungeoreference)
     */
-  var unit: js.UndefOr[String] = js.undefined
+  var unit: js.UndefOr[
+    millimeters | centimeters | decimeters | meters_ | kilometers_ | inches | feet_ | yards | miles_ | `nautical-miles` | `us-feet`
+  ] = js.undefined
 }
 
 object meshUtilsUngeoreferenceOptions {
@@ -28,7 +41,7 @@ object meshUtilsUngeoreferenceOptions {
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
     geographic: js.UndefOr[Boolean] = js.undefined,
-    unit: String = null
+    unit: millimeters | centimeters | decimeters | meters_ | kilometers_ | inches | feet_ | yards | miles_ | `nautical-miles` | `us-feet` = null
   ): meshUtilsUngeoreferenceOptions = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     if (!js.isUndefined(geographic)) __obj.updateDynamic("geographic")(geographic.asInstanceOf[js.Any])

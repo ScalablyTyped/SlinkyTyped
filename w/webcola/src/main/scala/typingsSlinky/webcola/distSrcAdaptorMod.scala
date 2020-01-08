@@ -1,6 +1,5 @@
 package typingsSlinky.webcola
 
-import typingsSlinky.webcola.distSrcAdaptorMod.LayoutAdaptor
 import typingsSlinky.webcola.distSrcLayoutMod.EventType
 import typingsSlinky.webcola.distSrcLayoutMod.Layout
 import scala.scalajs.js

@@ -12,7 +12,7 @@ UI Fabric React hooks.
 | Keywords           | - |
 | # releases         | 3 |
 | # dependents       | 3 |
-| # downloads        | 82824 |
+| # downloads        | 178519 |
 | # stars            | 0 |
 
 ## Links

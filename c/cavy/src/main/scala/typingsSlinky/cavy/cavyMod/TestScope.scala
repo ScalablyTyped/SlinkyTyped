@@ -1,7 +1,7 @@
 package typingsSlinky.cavy.cavyMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.cavy.cavyNumbers.`true`
+import typingsSlinky.cavy.cavyBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1
 
-import typingsSlinky.jsrsasign.jsrsasignNumbers.`false`
+import typingsSlinky.jsrsasign.jsrsasignBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,9 +1,14 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.count
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.percent
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.position
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -58,7 +63,7 @@ object TickConfig {
     mode: count | percent | position,
     propertyIsEnumerable: PropertyKey => Boolean,
     values: Double | js.Array[Double],
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
     labelsVisible: js.UndefOr[Boolean] = js.undefined,
     tickCreatedFunction: (/* value */ Double, /* tickElement */ HTMLElement, /* labelElement */ js.UndefOr[HTMLElement]) => Unit = null
   ): TickConfig = {

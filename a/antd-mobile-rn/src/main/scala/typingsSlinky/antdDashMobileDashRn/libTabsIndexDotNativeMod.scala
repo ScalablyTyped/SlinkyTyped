@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobileDashRn
 
-import typingsSlinky.antdDashMobileDashRn.libTabsIndexDotNativeMod.Tabs
 import typingsSlinky.antdDashMobileDashRn.libTabsPropsTypeMod.TabsProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element

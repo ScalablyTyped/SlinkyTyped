@@ -12,7 +12,7 @@ The lodash method `_.repeat` exported as a module.
 | Keywords           | lodash-modularized, repeat |
 | # releases         | 0 |
 | # dependents       | 21 |
-| # downloads        | 4963450 |
+| # downloads        | 6964021 |
 | # stars            | 0 |
 
 ## Links

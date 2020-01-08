@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StrikethroughS extends SharedApply_SvgIconProps1025744599[default] {
+object StrikethroughS extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/StrikethroughS", "default")
   @js.native
   object componentImport extends js.Object

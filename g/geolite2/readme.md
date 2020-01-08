@@ -1,7 +1,7 @@
 
 # Scala.js typings for geolite2
 
-Typings are for version 1.2
+Typings are for version 2.0
 
 ## Library description:
 Maxmind's GeoLite2 Free Databases
@@ -10,9 +10,9 @@ Maxmind's GeoLite2 Free Databases
 | ------------------ | :-------------: |
 | Full name          | geolite2 |
 | Keywords           | maxmind, mmdb, geo, geoip, geoip2, geobase, geo lookup |
-| # releases         | 3 |
-| # dependents       | 4 |
-| # downloads        | 60701 |
+| # releases         | 7 |
+| # dependents       | 6 |
+| # downloads        | 186804 |
 | # stars            | 0 |
 
 ## Links

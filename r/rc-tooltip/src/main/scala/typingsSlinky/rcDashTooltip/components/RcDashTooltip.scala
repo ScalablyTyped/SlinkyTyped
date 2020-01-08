@@ -9,6 +9,9 @@ import typingsSlinky.rcDashTooltip.rcDashTooltipMod.RCTooltip.Placement
 import typingsSlinky.rcDashTooltip.rcDashTooltipMod.RCTooltip.Trigger
 import typingsSlinky.rcDashTooltip.rcDashTooltipMod.default
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.reactMod.ReactChild
+import typingsSlinky.react.reactMod.ReactFragment
+import typingsSlinky.react.reactMod.ReactPortal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +25,7 @@ object RcDashTooltip
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
-    overlay: TagMod[Any],
+    overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal,
     afterVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
     align: js.Object = null,
     arrowContent: TagMod[Any] = null,

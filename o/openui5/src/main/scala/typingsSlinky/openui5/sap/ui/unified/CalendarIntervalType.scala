@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.unified
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CalendarIntervalType extends js.Object {
   @js.native
   sealed trait Month extends CalendarIntervalType
   
-  /* 0 */ val Day: typingsSlinky.openui5.sap.ui.unified.CalendarIntervalType.Day with Double = js.native
-  /* 1 */ val Hour: typingsSlinky.openui5.sap.ui.unified.CalendarIntervalType.Hour with Double = js.native
-  /* 2 */ val Month: typingsSlinky.openui5.sap.ui.unified.CalendarIntervalType.Month with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CalendarIntervalType with Double] = js.native
+  /* 0 */ @js.native
+  object Day extends TopLevel[Day with Double]
+  
+  /* 1 */ @js.native
+  object Hour extends TopLevel[Hour with Double]
+  
+  /* 2 */ @js.native
+  object Month extends TopLevel[Month with Double]
+  
 }
 

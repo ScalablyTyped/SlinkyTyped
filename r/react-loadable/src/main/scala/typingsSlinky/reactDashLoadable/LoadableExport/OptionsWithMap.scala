@@ -3,7 +3,7 @@ package typingsSlinky.reactDashLoadable.LoadableExport
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactDashLoadable.reactDashLoadableNumbers.`false`
+import typingsSlinky.reactDashLoadable.reactDashLoadableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object OptionsWithMap {
     loader: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof Exports ]: (): std.Promise<Exports[P]>}
     */ typingsSlinky.reactDashLoadable.reactDashLoadableStrings.OptionsWithMap with Exports,
-    loading: ReactComponentClass[LoadingComponentProps] | js.Function0[Null],
+    loading: ReactComponentClass[LoadingComponentProps],
     render: (Exports, Props) => TagMod[Any],
     delay: Double | `false` = null,
     modules: js.Array[String] = null,

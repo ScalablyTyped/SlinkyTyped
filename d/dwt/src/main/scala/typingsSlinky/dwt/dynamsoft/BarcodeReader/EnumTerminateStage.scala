@@ -1,5 +1,6 @@
 package typingsSlinky.dwt.dynamsoft.BarcodeReader
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object EnumTerminateStage extends js.Object {
   @js.native
   sealed trait ETS_Recognized extends EnumTerminateStage
   
-  /* 1 */ val ETS_Localized: typingsSlinky.dwt.dynamsoft.BarcodeReader.EnumTerminateStage.ETS_Localized with Double = js.native
-  /* 0 */ val ETS_Prelocalized: typingsSlinky.dwt.dynamsoft.BarcodeReader.EnumTerminateStage.ETS_Prelocalized with Double = js.native
-  /* 2 */ val ETS_Recognized: typingsSlinky.dwt.dynamsoft.BarcodeReader.EnumTerminateStage.ETS_Recognized with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumTerminateStage with Double] = js.native
+  /* 1 */ @js.native
+  object ETS_Localized extends TopLevel[ETS_Localized with Double]
+  
+  /* 0 */ @js.native
+  object ETS_Prelocalized extends TopLevel[ETS_Prelocalized with Double]
+  
+  /* 2 */ @js.native
+  object ETS_Recognized extends TopLevel[ETS_Recognized with Double]
+  
 }
 

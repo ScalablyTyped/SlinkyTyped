@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Collection
 
+import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Page
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Thumbnail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ object Presentations extends js.Object {
   @js.native
   trait PagesCollection extends js.Object {
     // Gets the latest version of the specified page in the presentation.
-    def get(presentationId: String, pageObjectId: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Page = js.native
+    def get(presentationId: String, pageObjectId: String): Page = js.native
     // Generates a thumbnail of the latest version of the specified page in the
     // presentation and returns a URL to the thumbnail image.
     // This request counts as an [expensive read request](/slides/limits) for

@@ -2,8 +2,8 @@ package typingsSlinky.yargs.yargsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Partial
-import typingsSlinky.yargs.yargsNumbers.`false`
-import typingsSlinky.yargs.yargsNumbers.`true`
+import typingsSlinky.yargs.yargsBooleans.`false`
+import typingsSlinky.yargs.yargsBooleans.`true`
 import typingsSlinky.yargsDashParser.yargsDashParserMod.Configuration
 import typingsSlinky.yargsDashParser.yargsDashParserMod.DetailedArguments
 import scala.scalajs.js

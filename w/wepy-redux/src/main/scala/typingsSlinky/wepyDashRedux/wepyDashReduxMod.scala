@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.redux.reduxMod.AnyAction
 import typingsSlinky.redux.reduxMod.Store
 import typingsSlinky.wepy.wepyMod.Component
-import typingsSlinky.wepyDashRedux.wepyDashReduxMod.MapDispatchToProps
-import typingsSlinky.wepyDashRedux.wepyDashReduxMod.MapStateToProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

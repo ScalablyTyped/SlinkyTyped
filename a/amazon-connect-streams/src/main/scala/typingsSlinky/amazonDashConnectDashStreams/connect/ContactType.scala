@@ -1,5 +1,6 @@
 package typingsSlinky.amazonDashConnectDashStreams.connect
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ContactType extends js.Object {
   @js.native
   sealed trait VOICE extends ContactType
   
-  /* "queue_callback" */ val QUEUE_CALLBACK: typingsSlinky.amazonDashConnectDashStreams.connect.ContactType.QUEUE_CALLBACK with String = js.native
-  /* "voice" */ val VOICE: typingsSlinky.amazonDashConnectDashStreams.connect.ContactType.VOICE with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ContactType with String] = js.native
+  /* "queue_callback" */ @js.native
+  object QUEUE_CALLBACK extends TopLevel[QUEUE_CALLBACK with String]
+  
+  /* "voice" */ @js.native
+  object VOICE extends TopLevel[VOICE with String]
+  
 }
 

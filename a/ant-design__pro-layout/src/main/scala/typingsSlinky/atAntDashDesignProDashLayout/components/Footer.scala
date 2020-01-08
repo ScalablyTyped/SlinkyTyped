@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Footer extends SharedApply_FooterProps_790296999 {
+object Footer extends SharedApply_FooterProps_806861140 {
   @JSImport("@ant-design/pro-layout/lib/Footer", JSImport.Default)
   @js.native
   object componentImport extends js.Object

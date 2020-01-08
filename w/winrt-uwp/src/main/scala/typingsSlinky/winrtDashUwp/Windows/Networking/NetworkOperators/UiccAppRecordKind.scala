@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object UiccAppRecordKind extends js.Object {
   @js.native
   sealed trait unknown extends UiccAppRecordKind
   
-  /* 2 */ val recordOriented: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAppRecordKind.recordOriented with Double = js.native
-  /* 1 */ val transparent: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAppRecordKind.transparent with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.UiccAppRecordKind.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UiccAppRecordKind with Double] = js.native
+  /* 2 */ @js.native
+  object recordOriented extends TopLevel[recordOriented with Double]
+  
+  /* 1 */ @js.native
+  object transparent extends TopLevel[transparent with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

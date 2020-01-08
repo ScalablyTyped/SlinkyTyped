@@ -12,6 +12,7 @@ package object utilsMod {
   import typingsSlinky.grommet.Anon_ColorContain
   import typingsSlinky.grommet.Anon_ColorSideSizeStyleBoxStyleType
   import typingsSlinky.grommet.Anon_Dark
+  import typingsSlinky.grommet.Anon_DarkLightArray
   import typingsSlinky.react.reactMod._Global_.JSX.Element
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Pick
@@ -28,12 +29,12 @@ package object utilsMod {
     - typings.grommet.grommetStrings.xlarge
     - typings.grommet.grommetStrings.xxlarge
     - typings.grommet.grommetStrings.full
-    - typings.grommet.grommetStrings.`1/2`
-    - typings.grommet.grommetStrings.`1/3`
-    - typings.grommet.grommetStrings.`2/3`
-    - typings.grommet.grommetStrings.`1/4`
-    - typings.grommet.grommetStrings.`2/4`
-    - typings.grommet.grommetStrings.`3/4`
+    - typings.grommet.grommetStrings.`1Slash2`
+    - typings.grommet.grommetStrings.`1Slash3`
+    - typings.grommet.grommetStrings.`2Slash3`
+    - typings.grommet.grommetStrings.`1Slash4`
+    - typings.grommet.grommetStrings.`2Slash4`
+    - typings.grommet.grommetStrings.`3Slash4`
     - typings.grommet.grommetStrings.auto
     - java.lang.String
   */
@@ -57,7 +58,7 @@ package object utilsMod {
   type ColorType = String | Anon_Dark
   type DeepFreeze = js.Function1[/* obj */ js.Object, DeepReadonly[js.Object]]
   type DeepReadonly[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias grommet.grommet/utils.DeepReadonly<T[K]> * / object : T[K]}
+  {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias grommet.grommet/utils.DeepReadonly<T[K]> * / object : T[K]}
     */ typingsSlinky.grommet.grommetStrings.DeepReadonly with js.Any
   /* Rewritten from type alias, can be one of: 
     - typings.grommet.grommetStrings.none
@@ -86,6 +87,7 @@ package object utilsMod {
     - java.lang.String
   */
   type GapType = _GapType | String
+  type GraphColorsType = js.Array[String] | Anon_DarkLightArray
   type GridAreaType = String
   type KeyboardType = js.Function1[/* event */ SyntheticKeyboardEvent[HTMLElement], Unit]
   /* Rewritten from type alias, can be one of: 
@@ -110,8 +112,8 @@ package object utilsMod {
     - typings.grommet.grommetStrings.medium
     - typings.grommet.grommetStrings.strong
     - java.lang.String
-    - typings.grommet.grommetNumbers.`true`
-    - typings.grommet.grommetNumbers.`false`
+    - typings.grommet.grommetBooleans.`true`
+    - typings.grommet.grommetBooleans.`false`
     - scala.Double
   */
   type OpacityType = _OpacityType | String | Double

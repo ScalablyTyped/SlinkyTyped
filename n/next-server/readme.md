@@ -9,12 +9,15 @@ Typings are for version 9.0.5
 | ------------------ | :-------------: |
 | Full name          | next-server |
 | Keywords           | - |
-| # releases         | 153 |
-| # dependents       | 3 |
-| # downloads        | 1035316 |
+| # releases         | 256 |
+| # dependents       | 8 |
+| # downloads        | 5988486 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/zeit/next.js#readme)
+- [Bugs](https://github.com/zeit/next.js/issues)
+- [Repository](https://github.com/zeit/next.js)
 - [Npm](https://www.npmjs.com/package/next-server)
     
 

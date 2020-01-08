@@ -1,7 +1,6 @@
 package typingsSlinky.twilioDashChat
 
 import typingsSlinky.twilioDashChat.libLoggerMod.Logger
-import typingsSlinky.twilioDashChat.libUtilMod.UriBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

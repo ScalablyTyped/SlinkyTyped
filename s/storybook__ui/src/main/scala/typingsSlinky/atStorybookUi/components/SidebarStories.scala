@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SidebarStories extends SharedApply_StoriesProps102236026 {
+object SidebarStories extends SharedApply_StoriesProps_2116909245 {
   @JSImport("@storybook/ui/dist/components/sidebar/SidebarStories", JSImport.Default)
   @js.native
   object componentImport extends js.Object

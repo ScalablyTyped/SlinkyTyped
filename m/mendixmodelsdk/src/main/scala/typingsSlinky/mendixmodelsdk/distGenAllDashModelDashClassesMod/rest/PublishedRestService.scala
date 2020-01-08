@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.rest
 
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.distGenRestMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +31,7 @@ class PublishedRestService protected ()
 @js.native
 object PublishedRestService extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenRestMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new PublishedRestService unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.

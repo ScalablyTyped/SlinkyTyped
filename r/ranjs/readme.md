@@ -12,7 +12,7 @@ Library for generating various random variables.
 | Keywords           | random, generator, distributions, mcmc, statistics, test |
 | # releases         | 52 |
 | # dependents       | 0 |
-| # downloads        | 5848 |
+| # downloads        | 6067 |
 | # stars            | 0 |
 
 ## Links

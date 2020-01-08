@@ -2,6 +2,7 @@ package typingsSlinky.atAngularCommon.atAngularCommonMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable4
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atAngularCore.atAngularCoreMod.ElementRef
 import typingsSlinky.atAngularCore.atAngularCoreMod.IterableDiffers
 import typingsSlinky.atAngularCore.atAngularCoreMod.KeyValueDiffers
@@ -10,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@angular/common", "ɵangular_packages_common_common_h")
+@JSImport("@angular/common", "\u0275angular_packages_common_common_h")
 @js.native
 object ɵangular_packages_common_common_h extends js.Object {
   @js.native
@@ -26,13 +27,20 @@ object ɵangular_packages_common_common_h extends js.Object {
     ) = this()
   }
   
-  var provide: Instantiable0[ɵNgClassImpl] = js.native
-  var useClass: Instantiable4[
-    /* _iterableDiffers */ IterableDiffers, 
-    /* _keyValueDiffers */ KeyValueDiffers, 
-    /* _ngEl */ ElementRef[js.Any], 
-    /* _renderer */ Renderer2, 
-    ɵNgClassR2Impl
-  ] = js.native
+  @js.native
+  object provide extends TopLevel[Instantiable0[ɵNgClassImpl]]
+  
+  @js.native
+  object useClass
+    extends TopLevel[
+          Instantiable4[
+            /* _iterableDiffers */ IterableDiffers, 
+            /* _keyValueDiffers */ KeyValueDiffers, 
+            /* _ngEl */ ElementRef[js.Any], 
+            /* _renderer */ Renderer2, 
+            ɵNgClassR2Impl
+          ]
+        ]
+  
 }
 

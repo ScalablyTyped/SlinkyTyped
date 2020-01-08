@@ -22,9 +22,9 @@ object SelectionCheckboxAll
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
   def apply[T](
     data: js.Array[T],
+    disabled: Boolean,
     getCheckboxPropsByItem: (T, Double) => Anon_DefaultChecked,
     getRecordKey: (T, js.UndefOr[Double]) => String,
     locale: TableLocale,
@@ -36,7 +36,7 @@ object SelectionCheckboxAll
     selections: js.Array[SelectionItem] | Boolean = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], getCheckboxPropsByItem = js.Any.fromFunction2(getCheckboxPropsByItem), getRecordKey = js.Any.fromFunction2(getRecordKey), locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction3(onSelect), store = store.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], getCheckboxPropsByItem = js.Any.fromFunction2(getCheckboxPropsByItem), getRecordKey = js.Any.fromFunction2(getRecordKey), locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction3(onSelect), store = store.asInstanceOf[js.Any])
     if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
     if (!js.isUndefined(hideDefaultSelections)) __obj.updateDynamic("hideDefaultSelections")(hideDefaultSelections.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])

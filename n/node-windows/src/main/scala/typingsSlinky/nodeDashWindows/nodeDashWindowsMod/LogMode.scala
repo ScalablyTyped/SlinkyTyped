@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashWindows.nodeDashWindowsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object LogMode extends js.Object {
   @js.native
   sealed trait rotate extends LogMode
   
-  /* "append" */ val append: typingsSlinky.nodeDashWindows.nodeDashWindowsMod.LogMode.append with String = js.native
-  /* "reset" */ val reset: typingsSlinky.nodeDashWindows.nodeDashWindowsMod.LogMode.reset with String = js.native
-  /* "roll" */ val roll: typingsSlinky.nodeDashWindows.nodeDashWindowsMod.LogMode.roll with String = js.native
-  /* "rotate" */ val rotate: typingsSlinky.nodeDashWindows.nodeDashWindowsMod.LogMode.rotate with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[LogMode with String] = js.native
+  /* "append" */ @js.native
+  object append extends TopLevel[append with String]
+  
+  /* "reset" */ @js.native
+  object reset extends TopLevel[reset with String]
+  
+  /* "roll" */ @js.native
+  object roll extends TopLevel[roll with String]
+  
+  /* "rotate" */ @js.native
+  object rotate extends TopLevel[rotate with String]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.EntityType.IEntity
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SessionEntityType.EntityOverrideMode
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
@@ -119,11 +120,17 @@ object SessionEntityType extends js.Object {
     @js.native
     sealed trait ENTITY_OVERRIDE_MODE_UNSPECIFIED extends EntityOverrideMode
     
-    /* 1 */ val ENTITY_OVERRIDE_MODE_OVERRIDE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SessionEntityType.EntityOverrideMode.ENTITY_OVERRIDE_MODE_OVERRIDE with Double = js.native
-    /* 2 */ val ENTITY_OVERRIDE_MODE_SUPPLEMENT: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SessionEntityType.EntityOverrideMode.ENTITY_OVERRIDE_MODE_SUPPLEMENT with Double = js.native
-    /* 0 */ val ENTITY_OVERRIDE_MODE_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.SessionEntityType.EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EntityOverrideMode with Double] = js.native
+    /* 1 */ @js.native
+    object ENTITY_OVERRIDE_MODE_OVERRIDE extends TopLevel[ENTITY_OVERRIDE_MODE_OVERRIDE with Double]
+    
+    /* 2 */ @js.native
+    object ENTITY_OVERRIDE_MODE_SUPPLEMENT extends TopLevel[ENTITY_OVERRIDE_MODE_SUPPLEMENT with Double]
+    
+    /* 0 */ @js.native
+    object ENTITY_OVERRIDE_MODE_UNSPECIFIED extends TopLevel[ENTITY_OVERRIDE_MODE_UNSPECIFIED with Double]
+    
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.nodemailer.libSmtpDashConnectionMod
 
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

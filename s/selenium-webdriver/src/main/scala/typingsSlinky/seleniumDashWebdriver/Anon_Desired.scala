@@ -1,6 +1,6 @@
 package typingsSlinky.seleniumDashWebdriver
 
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Capabilities
+import typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.Capabilities
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.CreateSessionCapabilities
 import scala.scalajs.js
 import scala.scalajs.js.`|`

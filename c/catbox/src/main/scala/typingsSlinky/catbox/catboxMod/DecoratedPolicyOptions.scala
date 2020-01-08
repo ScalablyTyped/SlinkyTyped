@@ -1,6 +1,6 @@
 package typingsSlinky.catbox.catboxMod
 
-import typingsSlinky.catbox.catboxNumbers.`false`
+import typingsSlinky.catbox.catboxBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

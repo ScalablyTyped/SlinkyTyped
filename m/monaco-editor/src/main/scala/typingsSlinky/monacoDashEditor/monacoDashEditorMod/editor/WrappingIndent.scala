@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object WrappingIndent extends js.Object {
   @js.native
   sealed trait Same extends WrappingIndent
   
-  /* 3 */ val DeepIndent: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.WrappingIndent.DeepIndent with Double = js.native
-  /* 2 */ val Indent: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.WrappingIndent.Indent with Double = js.native
-  /* 0 */ val None: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.WrappingIndent.None with Double = js.native
-  /* 1 */ val Same: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.WrappingIndent.Same with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WrappingIndent with Double] = js.native
+  /* 3 */ @js.native
+  object DeepIndent extends TopLevel[DeepIndent with Double]
+  
+  /* 2 */ @js.native
+  object Indent extends TopLevel[Indent with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Same extends TopLevel[Same with Double]
+  
 }
 

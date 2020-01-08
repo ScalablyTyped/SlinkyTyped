@@ -3,7 +3,6 @@ package typingsSlinky.wonderDotJs
 import typingsSlinky.wonderDotJs.distEs2015EventObjectEventNameHandlerMod.EEventName
 import typingsSlinky.wonderDotJs.distEs2015EventObjectPointEventMod.PointEvent
 import typingsSlinky.wonderDotJs.distEs2015EventObjectTouchEventMod.TouchEvent
-import typingsSlinky.wonderDotJs.distEs2015EventObjectTouchPointEventMod.TouchPointEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

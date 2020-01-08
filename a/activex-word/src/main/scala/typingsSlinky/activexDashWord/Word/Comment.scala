@@ -20,7 +20,8 @@ class Comment protected () extends js.Object {
   val Reference: typingsSlinky.activexDashWord.Word.Range = js.native
   val Scope: typingsSlinky.activexDashWord.Word.Range = js.native
   var ShowTip: Boolean = js.native
-  var `Word.Comment_typekey`: Comment = js.native
+  @JSName("Word.Comment_typekey")
+  var WordDotComment_typekey: Comment = js.native
   def Delete(): Unit = js.native
   def Edit(): Unit = js.native
 }

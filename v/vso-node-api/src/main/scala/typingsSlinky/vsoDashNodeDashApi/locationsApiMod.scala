@@ -8,7 +8,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRe
 import typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.ConnectionData
 import typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.ResourceAreaInfo
 import typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.ServiceDefinition
-import typingsSlinky.vsoDashNodeDashApi.locationsApiMod.ILocationsApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

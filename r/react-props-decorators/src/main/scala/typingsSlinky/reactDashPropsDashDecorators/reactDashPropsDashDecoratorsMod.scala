@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashPropsDashDecorators
 
 import typingsSlinky.react.reactMod.ValidationMap
-import typingsSlinky.reactDashPropsDashDecorators.reactDashPropsDashDecoratorsMod.ClassDecorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,8 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.move
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.reshape
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.transform
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -51,7 +54,7 @@ trait SketchUpdateUpdateOptions extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update)
     */
-  var tool: js.UndefOr[String] = js.undefined
+  var tool: js.UndefOr[transform | reshape | move] = js.undefined
 }
 
 object SketchUpdateUpdateOptions {
@@ -64,7 +67,7 @@ object SketchUpdateUpdateOptions {
     enableScaling: js.UndefOr[Boolean] = js.undefined,
     preserveAspectRatio: js.UndefOr[Boolean] = js.undefined,
     toggleToolOnClick: js.UndefOr[Boolean] = js.undefined,
-    tool: String = null
+    tool: transform | reshape | move = null
   ): SketchUpdateUpdateOptions = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     if (!js.isUndefined(enableRotation)) __obj.updateDynamic("enableRotation")(enableRotation.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object ContactListOtherAppReadAccess extends js.Object {
   @js.native
   sealed trait systemOnly extends ContactListOtherAppReadAccess
   
-  /* 2 */ val full: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess.full with Double = js.native
-  /* 1 */ val limited: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess.limited with Double = js.native
-  /* 0 */ val systemOnly: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess.systemOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactListOtherAppReadAccess with Double] = js.native
+  /* 2 */ @js.native
+  object full extends TopLevel[full with Double]
+  
+  /* 1 */ @js.native
+  object limited extends TopLevel[limited with Double]
+  
+  /* 0 */ @js.native
+  object systemOnly extends TopLevel[systemOnly with Double]
+  
 }
 

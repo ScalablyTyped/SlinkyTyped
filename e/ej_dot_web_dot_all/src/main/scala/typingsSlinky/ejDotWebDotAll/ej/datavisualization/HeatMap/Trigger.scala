@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object Trigger extends js.Object {
   @js.native
   sealed trait Hover extends Trigger
   
-  /* 1 */ val Click: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Trigger.Click with Double = js.native
-  /* 0 */ val Hover: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Trigger.Hover with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Trigger with Double] = js.native
+  /* 1 */ @js.native
+  object Click extends TopLevel[Click with Double]
+  
+  /* 0 */ @js.native
+  object Hover extends TopLevel[Hover with Double]
+  
 }
 

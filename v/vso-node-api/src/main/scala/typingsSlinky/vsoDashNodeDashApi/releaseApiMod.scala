@@ -49,7 +49,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseTa
 import typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseUpdateMetadata
 import typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseWorkItemRef
 import typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.SummaryMailSection
-import typingsSlinky.vsoDashNodeDashApi.releaseApiMod.IReleaseApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

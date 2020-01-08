@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ButtonMode extends js.Object {
   @js.native
   sealed trait Split extends ButtonMode
   
-  /* 1 */ val Dropdown: typingsSlinky.ejDotWebDotAll.ej.ButtonMode.Dropdown with Double = js.native
-  /* 0 */ val Split: typingsSlinky.ejDotWebDotAll.ej.ButtonMode.Split with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ButtonMode with Double] = js.native
+  /* 1 */ @js.native
+  object Dropdown extends TopLevel[Dropdown with Double]
+  
+  /* 0 */ @js.native
+  object Split extends TopLevel[Split with Double]
+  
 }
 

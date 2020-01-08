@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object PipelineProcessTypes extends js.Object {
   @js.native
   sealed trait Yaml extends PipelineProcessTypes
   
-  /* 1 */ val Designer: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.PipelineProcessTypes.Designer with Double = js.native
-  /* 2 */ val Yaml: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.PipelineProcessTypes.Yaml with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PipelineProcessTypes with Double] = js.native
+  /* 1 */ @js.native
+  object Designer extends TopLevel[Designer with Double]
+  
+  /* 2 */ @js.native
+  object Yaml extends TopLevel[Yaml with Double]
+  
 }
 

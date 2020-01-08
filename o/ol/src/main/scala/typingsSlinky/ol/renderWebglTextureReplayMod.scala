@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.renderWebglTextureReplayMod.WebGLTextureReplay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

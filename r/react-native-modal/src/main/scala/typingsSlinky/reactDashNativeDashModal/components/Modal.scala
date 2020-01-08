@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal extends SharedApply_ModalProps47141349[default] {
+object Modal extends SharedApply_ModalProps433930811[default] {
   @JSImport("react-native-modal/dist/modal", JSImport.Default)
   @js.native
   object componentImport extends js.Object

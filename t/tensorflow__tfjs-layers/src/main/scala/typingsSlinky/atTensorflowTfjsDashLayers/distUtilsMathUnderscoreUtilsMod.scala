@@ -1,6 +1,5 @@
 package typingsSlinky.atTensorflowTfjsDashLayers
 
-import typingsSlinky.atTensorflowTfjsDashLayers.distUtilsMathUnderscoreUtilsMod.ArrayTypes
 import typingsSlinky.std.Float32Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

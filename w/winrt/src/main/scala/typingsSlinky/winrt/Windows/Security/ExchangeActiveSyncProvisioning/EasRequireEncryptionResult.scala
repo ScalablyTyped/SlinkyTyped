@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,19 +47,43 @@ object EasRequireEncryptionResult extends js.Object {
   @js.native
   sealed trait osNotProtected extends EasRequireEncryptionResult
   
-  /* 2 */ val canBeCompliant: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.canBeCompliant with Double = js.native
-  /* 1 */ val compliant: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.compliant with Double = js.native
-  /* 4 */ val deFixedDataNotSupported: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deFixedDataNotSupported with Double = js.native
-  /* 5 */ val deHardwareNotCompliant: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deHardwareNotCompliant with Double = js.native
-  /* 8 */ val deOsVolumeNotProtected: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deOsVolumeNotProtected with Double = js.native
-  /* 9 */ val deProtectionNotYetEnabled: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deProtectionNotYetEnabled with Double = js.native
-  /* 7 */ val deProtectionSuspended: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deProtectionSuspended with Double = js.native
-  /* 6 */ val deWinReNotConfigured: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.deWinReNotConfigured with Double = js.native
-  /* 10 */ val noFeatureLicense: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.noFeatureLicense with Double = js.native
-  /* 0 */ val notEvaluated: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.notEvaluated with Double = js.native
-  /* 3 */ val notProvisionedOnAllVolumes: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.notProvisionedOnAllVolumes with Double = js.native
-  /* 11 */ val osNotProtected: typingsSlinky.winrt.Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.osNotProtected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EasRequireEncryptionResult with Double] = js.native
+  /* 2 */ @js.native
+  object canBeCompliant extends TopLevel[canBeCompliant with Double]
+  
+  /* 1 */ @js.native
+  object compliant extends TopLevel[compliant with Double]
+  
+  /* 4 */ @js.native
+  object deFixedDataNotSupported extends TopLevel[deFixedDataNotSupported with Double]
+  
+  /* 5 */ @js.native
+  object deHardwareNotCompliant extends TopLevel[deHardwareNotCompliant with Double]
+  
+  /* 8 */ @js.native
+  object deOsVolumeNotProtected extends TopLevel[deOsVolumeNotProtected with Double]
+  
+  /* 9 */ @js.native
+  object deProtectionNotYetEnabled extends TopLevel[deProtectionNotYetEnabled with Double]
+  
+  /* 7 */ @js.native
+  object deProtectionSuspended extends TopLevel[deProtectionSuspended with Double]
+  
+  /* 6 */ @js.native
+  object deWinReNotConfigured extends TopLevel[deWinReNotConfigured with Double]
+  
+  /* 10 */ @js.native
+  object noFeatureLicense extends TopLevel[noFeatureLicense with Double]
+  
+  /* 0 */ @js.native
+  object notEvaluated extends TopLevel[notEvaluated with Double]
+  
+  /* 3 */ @js.native
+  object notProvisionedOnAllVolumes extends TopLevel[notProvisionedOnAllVolumes with Double]
+  
+  /* 11 */ @js.native
+  object osNotProtected extends TopLevel[osNotProtected with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,32 +86,82 @@ object ClassificationType extends js.Object {
   @js.native
   sealed trait whiteSpace extends ClassificationType
   
-  /* 25 */ val bigintLiteral: typingsSlinky.typescript.typescriptMod.ClassificationType.bigintLiteral with Double = js.native
-  /* 11 */ val className: typingsSlinky.typescript.typescriptMod.ClassificationType.className with Double = js.native
-  /* 1 */ val comment: typingsSlinky.typescript.typescriptMod.ClassificationType.comment with Double = js.native
-  /* 18 */ val docCommentTagName: typingsSlinky.typescript.typescriptMod.ClassificationType.docCommentTagName with Double = js.native
-  /* 12 */ val enumName: typingsSlinky.typescript.typescriptMod.ClassificationType.enumName with Double = js.native
-  /* 2 */ val identifier: typingsSlinky.typescript.typescriptMod.ClassificationType.identifier with Double = js.native
-  /* 13 */ val interfaceName: typingsSlinky.typescript.typescriptMod.ClassificationType.interfaceName with Double = js.native
-  /* 22 */ val jsxAttribute: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxAttribute with Double = js.native
-  /* 24 */ val jsxAttributeStringLiteralValue: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxAttributeStringLiteralValue with Double = js.native
-  /* 20 */ val jsxCloseTagName: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxCloseTagName with Double = js.native
-  /* 19 */ val jsxOpenTagName: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxOpenTagName with Double = js.native
-  /* 21 */ val jsxSelfClosingTagName: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxSelfClosingTagName with Double = js.native
-  /* 23 */ val jsxText: typingsSlinky.typescript.typescriptMod.ClassificationType.jsxText with Double = js.native
-  /* 3 */ val keyword: typingsSlinky.typescript.typescriptMod.ClassificationType.keyword with Double = js.native
-  /* 14 */ val moduleName: typingsSlinky.typescript.typescriptMod.ClassificationType.moduleName with Double = js.native
-  /* 4 */ val numericLiteral: typingsSlinky.typescript.typescriptMod.ClassificationType.numericLiteral with Double = js.native
-  /* 5 */ val operator: typingsSlinky.typescript.typescriptMod.ClassificationType.operator with Double = js.native
-  /* 17 */ val parameterName: typingsSlinky.typescript.typescriptMod.ClassificationType.parameterName with Double = js.native
-  /* 10 */ val punctuation: typingsSlinky.typescript.typescriptMod.ClassificationType.punctuation with Double = js.native
-  /* 7 */ val regularExpressionLiteral: typingsSlinky.typescript.typescriptMod.ClassificationType.regularExpressionLiteral with Double = js.native
-  /* 6 */ val stringLiteral: typingsSlinky.typescript.typescriptMod.ClassificationType.stringLiteral with Double = js.native
-  /* 9 */ val text: typingsSlinky.typescript.typescriptMod.ClassificationType.text with Double = js.native
-  /* 16 */ val typeAliasName: typingsSlinky.typescript.typescriptMod.ClassificationType.typeAliasName with Double = js.native
-  /* 15 */ val typeParameterName: typingsSlinky.typescript.typescriptMod.ClassificationType.typeParameterName with Double = js.native
-  /* 8 */ val whiteSpace: typingsSlinky.typescript.typescriptMod.ClassificationType.whiteSpace with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ClassificationType with Double] = js.native
+  /* 25 */ @js.native
+  object bigintLiteral extends TopLevel[bigintLiteral with Double]
+  
+  /* 11 */ @js.native
+  object className extends TopLevel[className with Double]
+  
+  /* 1 */ @js.native
+  object comment extends TopLevel[comment with Double]
+  
+  /* 18 */ @js.native
+  object docCommentTagName extends TopLevel[docCommentTagName with Double]
+  
+  /* 12 */ @js.native
+  object enumName extends TopLevel[enumName with Double]
+  
+  /* 2 */ @js.native
+  object identifier extends TopLevel[identifier with Double]
+  
+  /* 13 */ @js.native
+  object interfaceName extends TopLevel[interfaceName with Double]
+  
+  /* 22 */ @js.native
+  object jsxAttribute extends TopLevel[jsxAttribute with Double]
+  
+  /* 24 */ @js.native
+  object jsxAttributeStringLiteralValue extends TopLevel[jsxAttributeStringLiteralValue with Double]
+  
+  /* 20 */ @js.native
+  object jsxCloseTagName extends TopLevel[jsxCloseTagName with Double]
+  
+  /* 19 */ @js.native
+  object jsxOpenTagName extends TopLevel[jsxOpenTagName with Double]
+  
+  /* 21 */ @js.native
+  object jsxSelfClosingTagName extends TopLevel[jsxSelfClosingTagName with Double]
+  
+  /* 23 */ @js.native
+  object jsxText extends TopLevel[jsxText with Double]
+  
+  /* 3 */ @js.native
+  object keyword extends TopLevel[keyword with Double]
+  
+  /* 14 */ @js.native
+  object moduleName extends TopLevel[moduleName with Double]
+  
+  /* 4 */ @js.native
+  object numericLiteral extends TopLevel[numericLiteral with Double]
+  
+  /* 5 */ @js.native
+  object operator extends TopLevel[operator with Double]
+  
+  /* 17 */ @js.native
+  object parameterName extends TopLevel[parameterName with Double]
+  
+  /* 10 */ @js.native
+  object punctuation extends TopLevel[punctuation with Double]
+  
+  /* 7 */ @js.native
+  object regularExpressionLiteral extends TopLevel[regularExpressionLiteral with Double]
+  
+  /* 6 */ @js.native
+  object stringLiteral extends TopLevel[stringLiteral with Double]
+  
+  /* 9 */ @js.native
+  object text extends TopLevel[text with Double]
+  
+  /* 16 */ @js.native
+  object typeAliasName extends TopLevel[typeAliasName with Double]
+  
+  /* 15 */ @js.native
+  object typeParameterName extends TopLevel[typeParameterName with Double]
+  
+  /* 8 */ @js.native
+  object whiteSpace extends TopLevel[whiteSpace with Double]
+  
 }
 

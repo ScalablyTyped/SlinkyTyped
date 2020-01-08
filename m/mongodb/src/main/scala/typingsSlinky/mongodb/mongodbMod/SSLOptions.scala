@@ -1,7 +1,6 @@
 package typingsSlinky.mongodb.mongodbMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.tlsMod.PeerCertificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +11,7 @@ trait SSLOptions extends js.Object {
     * Default: true; Server identity checking during SSL
     */
   var checkServerIdentity: js.UndefOr[
-    Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]])
+    Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]])
   ] = js.undefined
   /**
     * Passed directly through to tls.createSecureContext. See https://nodejs.org/dist/latest-v9.x/docs/api/tls.html#tls_tls_createsecurecontext_options for more info.
@@ -67,7 +66,7 @@ trait SSLOptions extends js.Object {
 object SSLOptions {
   @scala.inline
   def apply(
-    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]]) = null,
+    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]) = null,
     ciphers: String = null,
     ecdhCurve: String = null,
     minSize: Int | scala.Double = null,

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "properties-reader"
-version := "0.0-dt-20180214Z-31a39a"
+version := "0.0-dt-20180214Z-215478"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

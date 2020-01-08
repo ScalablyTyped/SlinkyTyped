@@ -1,7 +1,7 @@
 package typingsSlinky.activexDashExcel.Excel
 
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`true`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`2`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`true`
 import typingsSlinky.activexDashExcel.activexDashExcelStrings.Everyone
 import typingsSlinky.activexDashExcel.activexDashExcelStrings.`Everyone but me`
 import typingsSlinky.activexDashOffice.Office.ByteArray
@@ -89,12 +89,13 @@ class Workbook protected () extends js.Object {
   var EnableAutoRecover: Boolean = js.native
   var EncryptionProvider: String = js.native
   var EnvelopeVisible: Boolean = js.native
-  var `Excel.Workbook_typekey`: Workbook = js.native
   @JSName("Excel4IntlMacroSheets")
   val Excel4IntlMacroSheets_Original: Sheets[Sheet] = js.native
   @JSName("Excel4MacroSheets")
   val Excel4MacroSheets_Original: Sheets[Sheet] = js.native
   val Excel8CompatibilityMode: Boolean = js.native
+  @JSName("Excel.Workbook_typekey")
+  var ExcelDotWorkbook_typekey: Workbook = js.native
   val FileFormat: XlFileFormat = js.native
   var Final: Boolean = js.native
   var ForceFullCalculation: Boolean = js.native

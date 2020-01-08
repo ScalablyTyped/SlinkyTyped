@@ -4,9 +4,6 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.baseui.popoverMod.PopoverProps
 import typingsSlinky.baseui.popoverMod.StatefulPopoverContainerProps
 import typingsSlinky.baseui.popoverMod.StatefulPopoverProps
-import typingsSlinky.baseui.tooltipMod.StatefulTooltipContainerProps
-import typingsSlinky.baseui.tooltipMod.StatefulTooltipProps
-import typingsSlinky.baseui.tooltipMod.TooltipProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.styletronDashReact.styletronDashReactMod.StyletronComponent
 import scala.scalajs.js

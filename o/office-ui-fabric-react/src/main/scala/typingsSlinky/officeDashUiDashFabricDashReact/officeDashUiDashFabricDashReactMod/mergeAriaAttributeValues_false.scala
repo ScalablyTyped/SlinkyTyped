@@ -1,6 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactMod
 
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`false`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

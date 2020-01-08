@@ -2,7 +2,7 @@ package typingsSlinky.globule.globuleMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.glob.Anon_IsDirectory
-import typingsSlinky.glob.globNumbers.`false`
+import typingsSlinky.glob.globBooleans.`false`
 import typingsSlinky.glob.globStrings.DIR
 import typingsSlinky.glob.globStrings.FILE
 import typingsSlinky.globule.globuleStrings.first

@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__auth
 
-Typings are for version 0.13.1
+Typings are for version 0.13.3
 
 ## Library description:
 Javascript library for Firebase Auth SDK
@@ -10,9 +10,9 @@ Javascript library for Firebase Auth SDK
 | ------------------ | :-------------: |
 | Full name          | @firebase/auth |
 | Keywords           | - |
-| # releases         | 566 |
-| # dependents       | 14 |
-| # downloads        | 20005993 |
+| # releases         | 952 |
+| # dependents       | 18 |
+| # downloads        | 17162813 |
 | # stars            | 1 |
 
 ## Links

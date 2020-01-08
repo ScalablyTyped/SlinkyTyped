@@ -1,6 +1,6 @@
 package typingsSlinky.request.requestMod
 
-import typingsSlinky.request.requestNumbers.`true`
+import typingsSlinky.request.requestBooleans.`true`
 import typingsSlinky.request.requestStrings.body
 import typingsSlinky.request.requestStrings.header
 import typingsSlinky.request.requestStrings.query

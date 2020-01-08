@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcUtilErrorMod.Code
 import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.FirestoreErrorCode
 import typingsSlinky.std.Error
 import scala.scalajs.js

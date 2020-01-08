@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-changed-files"
-version := "24.9.0-cb24c2"
+version := "24.9.0-b974e0"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20190425Z-10f02e",
-  "org.scalablytyped.slinky" %%% "jest__types" % "24.9.0-d63b3a",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "yargs" % "13.0-dt-20191126Z-86e58c",
-  "org.scalablytyped.slinky" %%% "yargs-parser" % "13.1-dt-20190905Z-3625ad")
+  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20190425Z-87edce",
+  "org.scalablytyped.slinky" %%% "jest__types" % "24.9.0-6cab66",
+  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "yargs" % "13.0-dt-20191223Z-026ba5",
+  "org.scalablytyped.slinky" %%% "yargs-parser" % "13.1-dt-20190905Z-51ca0c")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

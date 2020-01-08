@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Notifications
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object NotificationSetting extends js.Object {
   @js.native
   sealed trait enabled extends NotificationSetting
   
-  /* 3 */ val disabledByGroupPolicy: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.NotificationSetting.disabledByGroupPolicy with Double = js.native
-  /* 4 */ val disabledByManifest: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.NotificationSetting.disabledByManifest with Double = js.native
-  /* 1 */ val disabledForApplication: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.NotificationSetting.disabledForApplication with Double = js.native
-  /* 2 */ val disabledForUser: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.NotificationSetting.disabledForUser with Double = js.native
-  /* 0 */ val enabled: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.NotificationSetting.enabled with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationSetting with Double] = js.native
+  /* 3 */ @js.native
+  object disabledByGroupPolicy extends TopLevel[disabledByGroupPolicy with Double]
+  
+  /* 4 */ @js.native
+  object disabledByManifest extends TopLevel[disabledByManifest with Double]
+  
+  /* 1 */ @js.native
+  object disabledForApplication extends TopLevel[disabledForApplication with Double]
+  
+  /* 2 */ @js.native
+  object disabledForUser extends TopLevel[disabledForUser with Double]
+  
+  /* 0 */ @js.native
+  object enabled extends TopLevel[enabled with Double]
+  
 }
 

@@ -2,6 +2,7 @@ package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.dojoStrings.date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,12 @@ class SpinWheelTimePicker () extends SpinWheel {
     */
   var date: js.Date = js.native
   @JSName("get")
-  def get_date(property: typingsSlinky.dojo.dojoStrings.date): js.Date = js.native
+  def get_date(property: date): js.Date = js.native
   @JSName("set")
-  def set_date(property: typingsSlinky.dojo.dojoStrings.date, value: js.Date): Unit = js.native
+  def set_date(property: date, value: js.Date): Unit = js.native
   @JSName("watch")
   def watch_date(
-    property: typingsSlinky.dojo.dojoStrings.date,
+    property: date,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Date], 

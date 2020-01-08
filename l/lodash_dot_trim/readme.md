@@ -11,14 +11,13 @@ The lodash method `_.trim` exported as a module.
 | Full name          | lodash.trim |
 | Keywords           | lodash-modularized, trim |
 | # releases         | 0 |
-| # dependents       | 91 |
-| # downloads        | 1484339 |
+| # dependents       | 101 |
+| # downloads        | 2109573 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://lodash.com/)
 - [Bugs](https://github.com/lodash/lodash/issues)
-- [Repository](https://github.com/lodash/lodash)
 - [Npm](https://www.npmjs.com/package/lodash.trim)
     
 

@@ -5,13 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Schema extends js.Object {
+  @JSName("package")
+  var _package: Null | String
   var enums: js.Array[Enum]
   var `extends`: js.Array[Extend]
   var imports: js.Array[String]
   var messages: js.Array[Message]
   var options: Options
-  var `package`: Null | String
-  var service: js.UndefOr[js.Array[Service]] = js.undefined
+  var services: js.UndefOr[js.Array[Service]] = js.undefined
   var syntax: Double
 }
 
@@ -24,13 +25,13 @@ object Schema {
     messages: js.Array[Message],
     options: Options,
     syntax: Double,
-    `package`: String = null,
-    service: js.Array[Service] = null
+    _package: String = null,
+    services: js.Array[Service] = null
   ): Schema = {
     val __obj = js.Dynamic.literal(enums = enums.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], syntax = syntax.asInstanceOf[js.Any])
     __obj.updateDynamic("extends")(`extends`.asInstanceOf[js.Any])
-    if (`package` != null) __obj.updateDynamic("package")(`package`.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (_package != null) __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
+    if (services != null) __obj.updateDynamic("services")(services.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schema]
   }
 }

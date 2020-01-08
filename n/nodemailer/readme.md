@@ -1,7 +1,7 @@
 
 # Scala.js typings for nodemailer
 
-Typings are for version 6.2
+Typings are for version 6.4
 
 ## Library description:
 Easy as cake e-mail sending from your Node.js applications
@@ -10,10 +10,10 @@ Easy as cake e-mail sending from your Node.js applications
 | ------------------ | :-------------: |
 | Full name          | nodemailer |
 | Keywords           | Nodemailer |
-| # releases         | 28 |
-| # dependents       | 2059 |
-| # downloads        | 35834311 |
-| # stars            | 506 |
+| # releases         | 26 |
+| # dependents       | 2416 |
+| # downloads        | 41147326 |
+| # stars            | 509 |
 
 ## Links
 - [Homepage](https://nodemailer.com/)

@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.spine
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object RotateMode extends js.Object {
   @js.native
   sealed trait Tangent extends RotateMode
   
-  /* 1 */ val Chain: typingsSlinky.phaser.spine.RotateMode.Chain with Double = js.native
-  /* 2 */ val ChainScale: typingsSlinky.phaser.spine.RotateMode.ChainScale with Double = js.native
-  /* 0 */ val Tangent: typingsSlinky.phaser.spine.RotateMode.Tangent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RotateMode with Double] = js.native
+  /* 1 */ @js.native
+  object Chain extends TopLevel[Chain with Double]
+  
+  /* 2 */ @js.native
+  object ChainScale extends TopLevel[ChainScale with Double]
+  
+  /* 0 */ @js.native
+  object Tangent extends TopLevel[Tangent with Double]
+  
 }
 

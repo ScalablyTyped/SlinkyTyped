@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OptGroup extends SharedApply_OptGroupProps146253203 {
+object OptGroup extends SharedApply_OptGroupProps_331999980 {
   @JSImport("antd/lib/select", "default.OptGroup")
   @js.native
   object componentImport extends js.Object

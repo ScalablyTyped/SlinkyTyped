@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,14 +42,28 @@ object MessageBarType extends js.Object {
   @js.native
   sealed trait warning extends MessageBarType
   
-  /* 2 */ val blocked: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.blocked with Double = js.native
-  /* 1 */ val error: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.error with Double = js.native
-  /* 0 */ val info: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.info with Double = js.native
-  /* 90000 */ val remove: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.remove with Double = js.native
-  /* 3 */ val severeWarning: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.severeWarning with Double = js.native
-  /* 4 */ val success: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.success with Double = js.native
-  /* 5 */ val warning: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMessageBarMessageBarDotTypesMod.MessageBarType.warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MessageBarType with Double] = js.native
+  /* 2 */ @js.native
+  object blocked extends TopLevel[blocked with Double]
+  
+  /* 1 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 0 */ @js.native
+  object info extends TopLevel[info with Double]
+  
+  /* 90000 */ @js.native
+  object remove extends TopLevel[remove with Double]
+  
+  /* 3 */ @js.native
+  object severeWarning extends TopLevel[severeWarning with Double]
+  
+  /* 4 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 5 */ @js.native
+  object warning extends TopLevel[warning with Double]
+  
 }
 

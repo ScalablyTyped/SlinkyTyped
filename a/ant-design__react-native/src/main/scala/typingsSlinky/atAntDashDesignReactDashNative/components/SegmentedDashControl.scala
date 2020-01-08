@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SegmentedDashControl extends SharedApply_SegmentedControlProps1258040277[default] {
+object SegmentedDashControl extends SharedApply_SegmentedControlProps_371438881[default] {
   @JSImport("@ant-design/react-native/lib/segmented-control", JSImport.Default)
   @js.native
   object componentImport extends js.Object

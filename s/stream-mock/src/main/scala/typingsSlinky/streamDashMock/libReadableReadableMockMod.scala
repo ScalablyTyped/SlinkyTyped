@@ -4,7 +4,6 @@ import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.streamDashMock.libReadableIReadableMockMod.IReadableMock
-import typingsSlinky.streamDashMock.libReadableReadableMockMod.ReadableMock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

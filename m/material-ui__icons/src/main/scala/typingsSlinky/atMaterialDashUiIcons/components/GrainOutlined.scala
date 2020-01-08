@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GrainOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object GrainOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/GrainOutlined", "default")
   @js.native
   object componentImport extends js.Object

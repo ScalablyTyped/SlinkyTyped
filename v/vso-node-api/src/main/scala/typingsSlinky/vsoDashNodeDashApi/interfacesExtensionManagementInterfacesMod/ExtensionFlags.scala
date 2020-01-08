@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ExtensionFlags extends js.Object {
   @js.native
   sealed trait Trusted extends ExtensionFlags
   
-  /* 1 */ val BuiltIn: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionFlags.BuiltIn with Double = js.native
-  /* 2 */ val Trusted: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionFlags.Trusted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionFlags with Double] = js.native
+  /* 1 */ @js.native
+  object BuiltIn extends TopLevel[BuiltIn with Double]
+  
+  /* 2 */ @js.native
+  object Trusted extends TopLevel[Trusted with Double]
+  
 }
 

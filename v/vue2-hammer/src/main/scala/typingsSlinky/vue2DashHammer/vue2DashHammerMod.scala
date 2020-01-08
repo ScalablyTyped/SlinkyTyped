@@ -1,5 +1,6 @@
 package typingsSlinky.vue2DashHammer
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.vue.typesPluginMod.PluginObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +15,8 @@ object vue2DashHammerMod extends js.Object {
     var config: js.Any = js.native
   }
   
-  val VueHammer: typingsSlinky.vue2DashHammer.vue2DashHammerMod.VueHammer = js.native
+  @js.native
+  object VueHammer extends TopLevel[VueHammer]
+  
 }
 

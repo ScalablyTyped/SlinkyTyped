@@ -19,6 +19,7 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.atMaterialDashUiCore.Anon_Placement
 import typingsSlinky.popperDotJs.popperDotJsMod.ReferenceObject
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -40,6 +41,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -72,20 +74,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PopperProps extends HTMLAttributes[HTMLDivElement] {
   var anchorEl: js.UndefOr[
     Null | HTMLElement | ReferenceObject | (js.Function1[/* element */ HTMLElement, HTMLElement])
-  ] = js.undefined
+  ] = js.native
   @JSName("children")
-  var children_PopperProps: TagMod[Any] | (js.Function1[/* props */ Anon_Placement, TagMod[Any]])
-  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.undefined
-  var disablePortal: js.UndefOr[Boolean] = js.undefined
-  var keepMounted: js.UndefOr[Boolean] = js.undefined
-  var modifiers: js.UndefOr[js.Object] = js.undefined
-  var open: Boolean
-  var placement: js.UndefOr[PopperPlacementType] = js.undefined
-  var popperOptions: js.UndefOr[js.Object] = js.undefined
-  var transition: js.UndefOr[Boolean] = js.undefined
+  var children_PopperProps: TagMod[Any] | (js.Function1[/* props */ Anon_Placement, TagMod[Any]]) = js.native
+  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.native
+  var disablePortal: js.UndefOr[Boolean] = js.native
+  var keepMounted: js.UndefOr[Boolean] = js.native
+  var modifiers: js.UndefOr[js.Object] = js.native
+  var open: Boolean = js.native
+  var placement: js.UndefOr[PopperPlacementType] = js.native
+  var popperOptions: js.UndefOr[js.Object] = js.native
+  var transition: js.UndefOr[Boolean] = js.native
 }
 
 object PopperProps {
@@ -150,7 +153,7 @@ object PopperProps {
     className: String = null,
     color: String = null,
     container: ReactInstance | js.Function0[ReactInstance] = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -332,7 +335,7 @@ object PopperProps {
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

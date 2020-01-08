@@ -1,6 +1,5 @@
 package typingsSlinky.amcharts
 
-import typingsSlinky.amcharts.amAngularGaugeMod.AmAngularGauge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.highchartsMod
 
-import typingsSlinky.highcharts.highchartsNumbers.`false`
+import typingsSlinky.highcharts.highchartsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

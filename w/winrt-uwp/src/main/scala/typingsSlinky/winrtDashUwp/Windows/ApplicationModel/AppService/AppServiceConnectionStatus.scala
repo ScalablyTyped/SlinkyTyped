@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object AppServiceConnectionStatus extends js.Object {
   @js.native
   sealed trait unknown extends AppServiceConnectionStatus
   
-  /* 1 */ val appNotInstalled: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService.AppServiceConnectionStatus.appNotInstalled with Double = js.native
-  /* 3 */ val appServiceUnavailable: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService.AppServiceConnectionStatus.appServiceUnavailable with Double = js.native
-  /* 2 */ val appUnavailable: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService.AppServiceConnectionStatus.appUnavailable with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService.AppServiceConnectionStatus.success with Double = js.native
-  /* 4 */ val unknown: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.AppService.AppServiceConnectionStatus.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppServiceConnectionStatus with Double] = js.native
+  /* 1 */ @js.native
+  object appNotInstalled extends TopLevel[appNotInstalled with Double]
+  
+  /* 3 */ @js.native
+  object appServiceUnavailable extends TopLevel[appServiceUnavailable with Double]
+  
+  /* 2 */ @js.native
+  object appUnavailable extends TopLevel[appUnavailable with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 4 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,19 +47,43 @@ object BlockType extends js.Object {
   @js.native
   sealed trait Viewport extends BlockType
   
-  /* 1 */ val Charset: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Charset with Double = js.native
-  /* 9 */ val Document: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Document with Double = js.native
-  /* 7 */ val FontFace: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.FontFace with Double = js.native
-  /* 0 */ val Import: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Import with Double = js.native
-  /* 4 */ val Keyframes: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Keyframes with Double = js.native
-  /* 5 */ val MediaQuery: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.MediaQuery with Double = js.native
-  /* 2 */ val Namespace: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Namespace with Double = js.native
-  /* 8 */ val Page: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Page with Double = js.native
-  /* 6 */ val Selector: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Selector with Double = js.native
-  /* 3 */ val Supports: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Supports with Double = js.native
-  /* 11 */ val Unsupported: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Unsupported with Double = js.native
-  /* 10 */ val Viewport: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreAstMod.BlockType.Viewport with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BlockType with Double] = js.native
+  /* 1 */ @js.native
+  object Charset extends TopLevel[Charset with Double]
+  
+  /* 9 */ @js.native
+  object Document extends TopLevel[Document with Double]
+  
+  /* 7 */ @js.native
+  object FontFace extends TopLevel[FontFace with Double]
+  
+  /* 0 */ @js.native
+  object Import extends TopLevel[Import with Double]
+  
+  /* 4 */ @js.native
+  object Keyframes extends TopLevel[Keyframes with Double]
+  
+  /* 5 */ @js.native
+  object MediaQuery extends TopLevel[MediaQuery with Double]
+  
+  /* 2 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
+  
+  /* 8 */ @js.native
+  object Page extends TopLevel[Page with Double]
+  
+  /* 6 */ @js.native
+  object Selector extends TopLevel[Selector with Double]
+  
+  /* 3 */ @js.native
+  object Supports extends TopLevel[Supports with Double]
+  
+  /* 11 */ @js.native
+  object Unsupported extends TopLevel[Unsupported with Double]
+  
+  /* 10 */ @js.native
+  object Viewport extends TopLevel[Viewport with Double]
+  
 }
 

@@ -7,7 +7,6 @@ import typingsSlinky.d3DashDrag.d3DashDragMod.DraggedElementBaseType
 import typingsSlinky.d3DashDrag.d3DashDragMod.SubjectPosition
 import typingsSlinky.d3DashTimer.d3DashTimerMod.Timer
 import typingsSlinky.webcola.distSrcD3adaptorMod.ID3StyleLayoutAdaptor
-import typingsSlinky.webcola.distSrcD3v4adaptorMod.D3Context
 import typingsSlinky.webcola.distSrcLayoutMod.Event
 import typingsSlinky.webcola.distSrcLayoutMod.Layout
 import scala.scalajs.js

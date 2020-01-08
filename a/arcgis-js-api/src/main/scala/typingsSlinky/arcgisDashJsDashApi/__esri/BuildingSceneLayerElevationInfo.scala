@@ -1,5 +1,12 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`absolute-height`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-feet`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -17,7 +24,7 @@ trait BuildingSceneLayerElevationInfo extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
     */
-  var mode: String
+  var mode: `absolute-height`
   /**
     * An elevation offset, which is added to the vertical position of each feature.
     *
@@ -27,13 +34,13 @@ trait BuildingSceneLayerElevationInfo extends Object {
     */
   var offset: js.UndefOr[Double] = js.undefined
   /**
-    * The unit for `offset` values.  **Possible Values:** feet | meters | kilometers | miles | us-feet | yards
+    * The unit for `offset` values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
     *
     * @default meters
     */
-  var unit: js.UndefOr[String] = js.undefined
+  var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.undefined
 }
 
 object BuildingSceneLayerElevationInfo {
@@ -41,10 +48,10 @@ object BuildingSceneLayerElevationInfo {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    mode: String,
+    mode: `absolute-height`,
     propertyIsEnumerable: PropertyKey => Boolean,
     offset: Int | Double = null,
-    unit: String = null
+    unit: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards = null
   ): BuildingSceneLayerElevationInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), mode = mode.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])

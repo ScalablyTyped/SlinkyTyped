@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object TemplateFileType extends js.Object {
   @js.native
   sealed trait wikiPage extends TemplateFileType
   
-  /* 2 */ val formPage: typingsSlinky.sharepoint.SP.TemplateFileType.formPage with Double = js.native
-  /* 0 */ val standardPage: typingsSlinky.sharepoint.SP.TemplateFileType.standardPage with Double = js.native
-  /* 1 */ val wikiPage: typingsSlinky.sharepoint.SP.TemplateFileType.wikiPage with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TemplateFileType with Double] = js.native
+  /* 2 */ @js.native
+  object formPage extends TopLevel[formPage with Double]
+  
+  /* 0 */ @js.native
+  object standardPage extends TopLevel[standardPage with Double]
+  
+  /* 1 */ @js.native
+  object wikiPage extends TopLevel[wikiPage with Double]
+  
 }
 

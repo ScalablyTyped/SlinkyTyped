@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps.Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Encoding extends js.Object {
   @js.native
   sealed trait UTF_8 extends Encoding
   
-  /* 1 */ val EUC_KR: typingsSlinky.navermaps.naver.maps.Service.Encoding.EUC_KR with Double = js.native
-  /* 0 */ val UTF_8: typingsSlinky.navermaps.naver.maps.Service.Encoding.UTF_8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Encoding with Double] = js.native
+  /* 1 */ @js.native
+  object EUC_KR extends TopLevel[EUC_KR with Double]
+  
+  /* 0 */ @js.native
+  object UTF_8 extends TopLevel[UTF_8 with Double]
+  
 }
 

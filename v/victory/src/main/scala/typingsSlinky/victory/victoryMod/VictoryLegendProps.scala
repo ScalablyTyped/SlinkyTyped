@@ -3,8 +3,8 @@ package typingsSlinky.victory.victoryMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.victory.Anon_Left
 import typingsSlinky.victory.Anon_Name
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.horizontal
 import typingsSlinky.victory.victoryStrings.labels
@@ -178,8 +178,8 @@ object VictoryLegendProps {
     itemsPerRow: Int | Double = null,
     label: String | (js.Function1[/* data */ js.Any, String]) = null,
     labelComponent: ReactElement = null,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     name: String = null,
     orientation: horizontal | vertical = null,
     padding: PaddingProps = null,

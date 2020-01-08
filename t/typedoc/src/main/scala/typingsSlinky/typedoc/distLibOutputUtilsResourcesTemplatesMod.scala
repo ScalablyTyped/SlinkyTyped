@@ -3,8 +3,6 @@ package typingsSlinky.typedoc
 import typingsSlinky.handlebars.Handlebars.TemplateDelegate
 import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.Resource
 import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceStack
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesTemplatesMod.Template
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesTemplatesMod.TemplateStack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

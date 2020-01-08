@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object BrowserFileHandling extends js.Object {
   @js.native
   sealed trait strict extends BrowserFileHandling
   
-  /* 0 */ val permissive: typingsSlinky.sharepoint.SP.BrowserFileHandling.permissive with Double = js.native
-  /* 1 */ val strict: typingsSlinky.sharepoint.SP.BrowserFileHandling.strict with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BrowserFileHandling with Double] = js.native
+  /* 0 */ @js.native
+  object permissive extends TopLevel[permissive with Double]
+  
+  /* 1 */ @js.native
+  object strict extends TopLevel[strict with Double]
+  
 }
 

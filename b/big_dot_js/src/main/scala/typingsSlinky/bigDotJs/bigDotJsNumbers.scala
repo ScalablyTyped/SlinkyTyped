@@ -1,7 +1,7 @@
 package typingsSlinky.bigDotJs
 
-import typingsSlinky.bigDotJs.bigDotJsMod.Comparison
 import typingsSlinky.bigDotJs.bigDotJsMod.RoundingMode
+import typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.Comparison
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,19 +10,19 @@ object bigDotJsNumbers {
   @js.native
   sealed trait `-1`
     extends Comparison
-       with typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.Comparison
+       with typingsSlinky.bigDotJs.bigDotJsMod.Comparison
   
   @js.native
   sealed trait `0`
     extends Comparison
-       with typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.Comparison
+       with typingsSlinky.bigDotJs.bigDotJsMod.Comparison
        with RoundingMode
        with typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.RoundingMode
   
   @js.native
   sealed trait `1`
     extends Comparison
-       with typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.Comparison
+       with typingsSlinky.bigDotJs.bigDotJsMod.Comparison
        with RoundingMode
        with typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.RoundingMode
   

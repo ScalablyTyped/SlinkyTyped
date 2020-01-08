@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object floatingButtonEdge extends js.Object {
   @js.native
   sealed trait right extends floatingButtonEdge
   
-  /* 0 */ val left: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.floatingButtonEdge.left with Double = js.native
-  /* 1 */ val right: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.floatingButtonEdge.right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[floatingButtonEdge with Double] = js.native
+  /* 0 */ @js.native
+  object left extends TopLevel[left with Double]
+  
+  /* 1 */ @js.native
+  object right extends TopLevel[right with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.timeDashSpan
 
-import typingsSlinky.timeDashSpan.timeDashSpanMod.TimeEndFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

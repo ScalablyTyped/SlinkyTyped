@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialMenu
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialMenu.adapterMod.MDCMenuAdapter
-import typingsSlinky.atMaterialMenu.atMaterialMenuMod.MDCMenu
 import typingsSlinky.atMaterialMenu.foundationMod.AnchorMargin
 import typingsSlinky.atMaterialMenu.foundationMod.default
 import scala.scalajs.js

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconOcticons extends SharedApply_IconProps_1525323211[Octicons] {
+object IconOcticons extends SharedApply_IconProps_207471041[Octicons] {
   @JSImport("expo/build/globals.web", "Icon.Octicons")
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,6 @@
 package typingsSlinky.textDashClipper.textDashClipperMod
 
-import typingsSlinky.textDashClipper.textDashClipperNumbers.`true`
+import typingsSlinky.textDashClipper.textDashClipperBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

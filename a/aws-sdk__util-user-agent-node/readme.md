@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.2
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-user-agent-node |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 9 |
-| # downloads        | 4914 |
+| # releases         | 10 |
+| # dependents       | 184 |
+| # downloads        | 28824 |
 | # stars            | 0 |
 
 ## Links

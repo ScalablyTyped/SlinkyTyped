@@ -2,13 +2,11 @@ package typingsSlinky.paper.paperMod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import typingsSlinky.paper.paper.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** 
-  * The Raster item represents an image in a Paper.js project.
-  */
 @JSImport("paper", "Raster")
 @js.native
 /** 
@@ -24,21 +22,11 @@ import scala.scalajs.js.annotation._
   */
 class Raster ()
   extends typingsSlinky.paper.paper.Raster {
-  /** 
-    * Creates a new empty raster of the given size, and places it in the
-    * active layer.
-    * 
-    * @param size - the size of the raster
-    * @param position - the center position at which the raster item is
-    *     placed
-    */
-  def this(size: typingsSlinky.paper.paper.Size) = this()
   def this(source: String) = this()
   def this(source: HTMLCanvasElement) = this()
   def this(source: HTMLImageElement) = this()
-  def this(size: typingsSlinky.paper.paper.Size, position: typingsSlinky.paper.paper.Point) = this()
-  def this(source: String, position: typingsSlinky.paper.paper.Point) = this()
-  def this(source: HTMLCanvasElement, position: typingsSlinky.paper.paper.Point) = this()
-  def this(source: HTMLImageElement, position: typingsSlinky.paper.paper.Point) = this()
+  def this(source: String, position: Point) = this()
+  def this(source: HTMLCanvasElement, position: Point) = this()
+  def this(source: HTMLImageElement, position: Point) = this()
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HtmlDashMessage extends SharedApply_Props128002619[default] {
+object HtmlDashMessage extends SharedApply_Props763130045[default] {
   @JSImport("react-intl/lib/components/html-message", JSImport.Default)
   @js.native
   object componentImport extends js.Object

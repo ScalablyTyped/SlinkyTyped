@@ -11,7 +11,7 @@ import typingsSlinky.reactDashRnd.Anon_HeightWidth
 import typingsSlinky.reactDashRnd.Anon_HeightWidthNumber
 import typingsSlinky.reactDashRnd.Anon_Left
 import typingsSlinky.reactDashRnd.Anon_X
-import typingsSlinky.reactDashRnd.reactDashRndNumbers.`false`
+import typingsSlinky.reactDashRnd.reactDashRndBooleans.`false`
 import typingsSlinky.std.MouseEvent
 import typingsSlinky.std.TouchEvent
 import scala.scalajs.js

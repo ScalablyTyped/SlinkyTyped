@@ -12,7 +12,7 @@ Provides a function for detecting if the host environment is Node.JS
 | Keywords           | - |
 | # releases         | 4 |
 | # dependents       | 3 |
-| # downloads        | 474 |
+| # downloads        | 795 |
 | # stars            | 0 |
 
 ## Links

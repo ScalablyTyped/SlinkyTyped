@@ -1,7 +1,6 @@
 package typingsSlinky.clovelcedDashPluginDashAudiomanagement
 
-import typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.AudioMode
-import typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.VolumeType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,11 +46,17 @@ object clovelcedDashPluginDashAudiomanagementMod extends js.Object {
     @js.native
     sealed trait VIBRATE extends AudioMode
     
-    /* 1 */ val NORMAL: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.AudioMode.NORMAL with Double = js.native
-    /* 0 */ val SILENT: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.AudioMode.SILENT with Double = js.native
-    /* 0 */ val VIBRATE: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.AudioMode.VIBRATE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[AudioMode with Double] = js.native
+    /* 1 */ @js.native
+    object NORMAL extends TopLevel[NORMAL with Double]
+    
+    /* 0 */ @js.native
+    object SILENT extends TopLevel[SILENT with Double]
+    
+    /* 0 */ @js.native
+    object VIBRATE extends TopLevel[VIBRATE with Double]
+    
   }
   
   @js.native
@@ -68,12 +73,20 @@ object clovelcedDashPluginDashAudiomanagementMod extends js.Object {
     @js.native
     sealed trait SYSTEM extends VolumeType
     
-    /* 0 */ val MUSIC: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.VolumeType.MUSIC with Double = js.native
-    /* 1 */ val NOTIFICATION: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.VolumeType.NOTIFICATION with Double = js.native
-    /* 0 */ val RING: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.VolumeType.RING with Double = js.native
-    /* 2 */ val SYSTEM: typingsSlinky.clovelcedDashPluginDashAudiomanagement.clovelcedDashPluginDashAudiomanagementMod.VolumeType.SYSTEM with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[VolumeType with Double] = js.native
+    /* 0 */ @js.native
+    object MUSIC extends TopLevel[MUSIC with Double]
+    
+    /* 1 */ @js.native
+    object NOTIFICATION extends TopLevel[NOTIFICATION with Double]
+    
+    /* 0 */ @js.native
+    object RING extends TopLevel[RING with Double]
+    
+    /* 2 */ @js.native
+    object SYSTEM extends TopLevel[SYSTEM with Double]
+    
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ServiceHostStatus extends js.Object {
   @js.native
   sealed trait Online extends ServiceHostStatus
   
-  /* 2 */ val Offline: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.ServiceHostStatus.Offline with Double = js.native
-  /* 1 */ val Online: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.ServiceHostStatus.Online with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ServiceHostStatus with Double] = js.native
+  /* 2 */ @js.native
+  object Offline extends TopLevel[Offline with Double]
+  
+  /* 1 */ @js.native
+  object Online extends TopLevel[Online with Double]
+  
 }
 

@@ -6,6 +6,7 @@ import typingsSlinky.officeDashJs.officeDashJsStrings.ColorScale
 import typingsSlinky.officeDashJs.officeDashJsStrings.ContainsText
 import typingsSlinky.officeDashJs.officeDashJsStrings.Custom
 import typingsSlinky.officeDashJs.officeDashJsStrings.DataBar
+import typingsSlinky.officeDashJs.officeDashJsStrings.IconSet
 import typingsSlinky.officeDashJs.officeDashJsStrings.PresetCriteria
 import typingsSlinky.officeDashJs.officeDashJsStrings.TopBottom
 import scala.scalajs.js
@@ -165,7 +166,7 @@ trait ConditionalFormatData extends js.Object {
     * [Api set: ExcelApi 1.6]
     */
   var `type`: js.UndefOr[
-    ConditionalFormatType | Custom | DataBar | ColorScale | typingsSlinky.officeDashJs.officeDashJsStrings.IconSet | TopBottom | PresetCriteria | ContainsText | CellValue
+    ConditionalFormatType | Custom | DataBar | ColorScale | IconSet | TopBottom | PresetCriteria | ContainsText | CellValue
   ] = js.undefined
 }
 
@@ -191,7 +192,7 @@ object ConditionalFormatData {
     textComparisonOrNullObject: TextConditionalFormatData = null,
     topBottom: TopBottomConditionalFormatData = null,
     topBottomOrNullObject: TopBottomConditionalFormatData = null,
-    `type`: ConditionalFormatType | Custom | DataBar | ColorScale | typingsSlinky.officeDashJs.officeDashJsStrings.IconSet | TopBottom | PresetCriteria | ContainsText | CellValue = null
+    `type`: ConditionalFormatType | Custom | DataBar | ColorScale | IconSet | TopBottom | PresetCriteria | ContainsText | CellValue = null
   ): ConditionalFormatData = {
     val __obj = js.Dynamic.literal()
     if (cellValue != null) __obj.updateDynamic("cellValue")(cellValue.asInstanceOf[js.Any])

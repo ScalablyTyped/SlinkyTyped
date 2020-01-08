@@ -1,6 +1,5 @@
 package typingsSlinky.tar.tarMod
 
-import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +22,9 @@ object extract extends js.Object {
   ): Unit = js.native
   def apply(options: ExtractOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
   def apply(
-    options: ExtractOptions,
+    options: ExtractOptions with FileOptions,
     fileList: js.Array[String],
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
-  ): Writable = js.native
+  ): Unit = js.native
 }
 

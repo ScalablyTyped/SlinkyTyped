@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015MathVector3Mod.Vector3
-import typingsSlinky.wonderDotJs.distEs2015StructureFace3Mod.Face3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

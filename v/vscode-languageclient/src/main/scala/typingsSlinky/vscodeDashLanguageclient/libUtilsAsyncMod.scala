@@ -1,6 +1,5 @@
 package typingsSlinky.vscodeDashLanguageclient
 
-import typingsSlinky.vscodeDashLanguageclient.libUtilsAsyncMod.ITask
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

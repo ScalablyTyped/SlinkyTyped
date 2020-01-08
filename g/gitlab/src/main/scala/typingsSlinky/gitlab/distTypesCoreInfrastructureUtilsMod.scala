@@ -3,9 +3,6 @@ package typingsSlinky.gitlab
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gitlab.distTypesCoreInfrastructureUtilsMod.Bundle
-import typingsSlinky.gitlab.distTypesCoreInfrastructureUtilsMod.Constructor
-import typingsSlinky.gitlab.distTypesCoreInfrastructureUtilsMod.Mapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

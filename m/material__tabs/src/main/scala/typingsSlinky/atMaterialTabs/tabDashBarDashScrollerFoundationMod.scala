@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialTabs
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialTabs.tabDashBarDashScrollerAdapterMod.MDCTabBarScrollerAdapter
-import typingsSlinky.atMaterialTabs.tabDashBarDashScrollerFoundationMod.MDCTabBarScrollerFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiDotClientDotPrediction.gapi.client
 
-import typingsSlinky.gapiDotClientDotPrediction.gapiDotClientDotPredictionStrings.v1DOT6
+import typingsSlinky.gapiDotClientDotPrediction.gapiDotClientDotPredictionStrings.v1Dot6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ object load extends js.Object {
   /** Load Prediction API v1.6 */
   def apply(
     name: typingsSlinky.gapiDotClientDotPrediction.gapiDotClientDotPredictionStrings.prediction,
-    version: v1DOT6
+    version: v1Dot6
   ): js.Thenable[Unit] = js.native
   def apply(
     name: typingsSlinky.gapiDotClientDotPrediction.gapiDotClientDotPredictionStrings.prediction,
-    version: v1DOT6,
+    version: v1Dot6,
     callback: js.Function0[_]
   ): Unit = js.native
 }

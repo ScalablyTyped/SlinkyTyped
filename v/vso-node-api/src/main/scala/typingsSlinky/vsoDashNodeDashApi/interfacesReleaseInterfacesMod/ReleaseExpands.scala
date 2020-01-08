@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object ReleaseExpands extends js.Object {
   @js.native
   sealed trait Variables extends ReleaseExpands
   
-  /* 8 */ val Approvals: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.Approvals with Double = js.native
-  /* 4 */ val Artifacts: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.Artifacts with Double = js.native
-  /* 2 */ val Environments: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.Environments with Double = js.native
-  /* 16 */ val ManualInterventions: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.ManualInterventions with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.None with Double = js.native
-  /* 64 */ val Tags: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.Tags with Double = js.native
-  /* 32 */ val Variables: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseExpands.Variables with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReleaseExpands with Double] = js.native
+  /* 8 */ @js.native
+  object Approvals extends TopLevel[Approvals with Double]
+  
+  /* 4 */ @js.native
+  object Artifacts extends TopLevel[Artifacts with Double]
+  
+  /* 2 */ @js.native
+  object Environments extends TopLevel[Environments with Double]
+  
+  /* 16 */ @js.native
+  object ManualInterventions extends TopLevel[ManualInterventions with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 64 */ @js.native
+  object Tags extends TopLevel[Tags with Double]
+  
+  /* 32 */ @js.native
+  object Variables extends TopLevel[Variables with Double]
+  
 }
 

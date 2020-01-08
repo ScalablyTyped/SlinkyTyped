@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object ChatMessageTransportKind extends js.Object {
   @js.native
   sealed trait untriaged extends ChatMessageTransportKind
   
-  /* 2 */ val blocked: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatMessageTransportKind.blocked with Double = js.native
-  /* 3 */ val custom: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatMessageTransportKind.custom with Double = js.native
-  /* 0 */ val text: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatMessageTransportKind.text with Double = js.native
-  /* 1 */ val untriaged: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Chat.ChatMessageTransportKind.untriaged with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ChatMessageTransportKind with Double] = js.native
+  /* 2 */ @js.native
+  object blocked extends TopLevel[blocked with Double]
+  
+  /* 3 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 0 */ @js.native
+  object text extends TopLevel[text with Double]
+  
+  /* 1 */ @js.native
+  object untriaged extends TopLevel[untriaged with Double]
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.std.Partial
-import typingsSlinky.tstl.baseDisposableIListAlgorithmMod._IListAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

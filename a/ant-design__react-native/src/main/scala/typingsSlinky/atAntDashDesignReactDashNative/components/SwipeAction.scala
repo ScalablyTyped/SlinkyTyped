@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SwipeAction
-  extends SharedApply_SwipeActionProps_832297173[
+  extends SharedApply_SwipeActionProps_652232391[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.SwipeAction
     ] {
   @JSImport("@ant-design/react-native", "SwipeAction")

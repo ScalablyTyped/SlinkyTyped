@@ -1,6 +1,7 @@
 package typingsSlinky.emberDashData.emberDashDataMod.DS
 
 import typingsSlinky.atEmberArray.dashPrivateEnumerableMod.Enumerable
+import typingsSlinky.atEmberObject.atEmberObjectMod.default
 import typingsSlinky.atEmberObject.eventedMod.Evented
 import typingsSlinky.ember.emberMod.default.ComputedProperty
 import scala.scalajs.js
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ember-data", "DS.Errors")
 @js.native
 class Errors ()
-  extends typingsSlinky.atEmberObject.atEmberObjectMod.default
+  extends default
      with Enumerable[js.Any]
      with Evented {
   var isEmpty: ComputedProperty[Boolean, Boolean] = js.native

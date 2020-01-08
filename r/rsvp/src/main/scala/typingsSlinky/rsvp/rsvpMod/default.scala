@@ -12,13 +12,13 @@ import typingsSlinky.rsvp.Anon_7
 import typingsSlinky.rsvp.Anon_8
 import typingsSlinky.rsvp.Anon_9
 import typingsSlinky.rsvp.Fn_Value
+import typingsSlinky.rsvp.rsvpBooleans.`false`
+import typingsSlinky.rsvp.rsvpBooleans.`true`
 import typingsSlinky.rsvp.rsvpMod.RSVP.Arg
 import typingsSlinky.rsvp.rsvpMod.RSVP.Deferred
 import typingsSlinky.rsvp.rsvpMod.RSVP.InstrumentEvent
 import typingsSlinky.rsvp.rsvpMod.RSVP.ObjectWithEventMixins
 import typingsSlinky.rsvp.rsvpMod.RSVP.PromiseState
-import typingsSlinky.rsvp.rsvpNumbers.`false`
-import typingsSlinky.rsvp.rsvpNumbers.`true`
 import typingsSlinky.rsvp.rsvpStrings.chained
 import typingsSlinky.rsvp.rsvpStrings.created
 import typingsSlinky.rsvp.rsvpStrings.error

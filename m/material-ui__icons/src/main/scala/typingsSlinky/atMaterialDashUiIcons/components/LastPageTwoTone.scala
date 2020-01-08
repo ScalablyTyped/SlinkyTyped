@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LastPageTwoTone extends SharedApply_SvgIconProps1025744599[default] {
+object LastPageTwoTone extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/LastPageTwoTone", "default")
   @js.native
   object componentImport extends js.Object

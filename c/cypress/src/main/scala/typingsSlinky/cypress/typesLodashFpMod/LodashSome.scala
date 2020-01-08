@@ -18,7 +18,7 @@ trait LodashSome extends js.Object {
     collection: T
   ): Boolean = js.native
   def apply[T](predicate: ValueIterateeCustom[T, Boolean], collection: List[T]): Boolean = js.native
-  def apply[T /* <: js.Object */](predicate: __): LodashSome2x2[T] = js.native
+  def apply[T](predicate: __): LodashSome1x2[T] = js.native
   def apply[T /* <: js.Object */](predicate: __, collection: T): LodashSome2x2[T] = js.native
   def apply[T](predicate: __, collection: List[T]): LodashSome1x2[T] = js.native
 }

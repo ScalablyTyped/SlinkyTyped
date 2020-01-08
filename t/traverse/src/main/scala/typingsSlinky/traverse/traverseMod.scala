@@ -1,7 +1,5 @@
 package typingsSlinky.traverse
 
-import typingsSlinky.traverse.traverseMod.Traverse
-import typingsSlinky.traverse.traverseMod.TraverseContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

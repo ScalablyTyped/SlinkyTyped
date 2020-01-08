@@ -3,13 +3,6 @@ package typingsSlinky.openui5.sap.ui.unified
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.openui5.sap.ui.core.CalendarType
 import typingsSlinky.openui5.sap.ui.core.Control
-import typingsSlinky.openui5.sap.ui.unified.calendar.DatesRow
-import typingsSlinky.openui5.sap.ui.unified.calendar.Header
-import typingsSlinky.openui5.sap.ui.unified.calendar.Month
-import typingsSlinky.openui5.sap.ui.unified.calendar.MonthPicker
-import typingsSlinky.openui5.sap.ui.unified.calendar.MonthsRow
-import typingsSlinky.openui5.sap.ui.unified.calendar.TimesRow
-import typingsSlinky.openui5.sap.ui.unified.calendar.YearPicker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

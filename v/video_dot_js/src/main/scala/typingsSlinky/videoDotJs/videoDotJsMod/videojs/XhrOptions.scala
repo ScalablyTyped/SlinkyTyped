@@ -2,12 +2,12 @@ package typingsSlinky.videoDotJs.videoDotJsMod.videojs
 
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.videoDotJs.videoDotJsStrings.DELETE
-import typingsSlinky.videoDotJs.videoDotJsStrings.Empty
 import typingsSlinky.videoDotJs.videoDotJsStrings.GET
 import typingsSlinky.videoDotJs.videoDotJsStrings.HEAD
 import typingsSlinky.videoDotJs.videoDotJsStrings.OPTIONS
 import typingsSlinky.videoDotJs.videoDotJsStrings.POST
 import typingsSlinky.videoDotJs.videoDotJsStrings.PUT
+import typingsSlinky.videoDotJs.videoDotJsStrings._empty
 import typingsSlinky.videoDotJs.videoDotJsStrings.arraybuffer
 import typingsSlinky.videoDotJs.videoDotJsStrings.blob
 import typingsSlinky.videoDotJs.videoDotJsStrings.document
@@ -24,7 +24,7 @@ trait XhrOptions extends js.Object {
   var json: js.UndefOr[Boolean] = js.undefined
   var method: js.UndefOr[DELETE | GET | HEAD | OPTIONS | POST | PUT] = js.undefined
   var password: js.UndefOr[String] = js.undefined
-  var responseType: js.UndefOr[Empty | arraybuffer | blob | document | json | text] = js.undefined
+  var responseType: js.UndefOr[_empty | arraybuffer | blob | document | json | text] = js.undefined
   var sync: js.UndefOr[Boolean] = js.undefined
   var timeout: js.UndefOr[Double] = js.undefined
   var uri: js.UndefOr[String] = js.undefined
@@ -44,7 +44,7 @@ object XhrOptions {
     json: js.UndefOr[Boolean] = js.undefined,
     method: DELETE | GET | HEAD | OPTIONS | POST | PUT = null,
     password: String = null,
-    responseType: Empty | arraybuffer | blob | document | json | text = null,
+    responseType: _empty | arraybuffer | blob | document | json | text = null,
     sync: js.UndefOr[Boolean] = js.undefined,
     timeout: Int | Double = null,
     uri: String = null,

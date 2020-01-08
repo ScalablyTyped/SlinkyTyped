@@ -1,8 +1,9 @@
 package typingsSlinky.reactDashSelect
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.reactDashSelect.srcAnimatedInputMod.AnimatedInputProps
 import typingsSlinky.reactDashSelect.srcAnimatedMultiValueMod.AnimatedMultiValueProps
 import typingsSlinky.reactDashSelect.srcAnimatedPlaceholderMod.AnimatedPlaceholderProps
@@ -53,14 +54,28 @@ object srcAnimatedMod extends js.Object {
     def this(props: AnimatedValueContainerProps[_], context: js.Any) = this()
   }
   
-  val Input: ReactComponentClass[AnimatedInputProps] = js.native
-  val MultiValue: ReactComponentClass[AnimatedMultiValueProps[js.Any]] = js.native
-  val Placeholder: ReactComponentClass[AnimatedPlaceholderProps[js.Any]] = js.native
-  val SingleValue: ReactComponentClass[AnimatedSingleValueProps[js.Any]] = js.native
-  val ValueContainer: ReactComponentClass[AnimatedValueContainerProps[js.Any]] = js.native
   def default[OptionType /* <: OptionTypeBase */](): SelectComponents[OptionType] = js.native
   def default[OptionType /* <: OptionTypeBase */](externalComponents: SelectComponentsConfig[OptionType]): SelectComponents[OptionType] = js.native
   def makeAnimated[OptionType /* <: OptionTypeBase */](): SelectComponents[OptionType] = js.native
   def makeAnimated[OptionType /* <: OptionTypeBase */](externalComponents: SelectComponentsConfig[OptionType]): SelectComponents[OptionType] = js.native
+  @js.native
+  object Input extends TopLevel[ComponentType[AnimatedInputProps]]
+  
+  @js.native
+  object MultiValue
+    extends TopLevel[ComponentType[AnimatedMultiValueProps[js.Any]]]
+  
+  @js.native
+  object Placeholder
+    extends TopLevel[ComponentType[AnimatedPlaceholderProps[js.Any]]]
+  
+  @js.native
+  object SingleValue
+    extends TopLevel[ComponentType[AnimatedSingleValueProps[js.Any]]]
+  
+  @js.native
+  object ValueContainer
+    extends TopLevel[ComponentType[AnimatedValueContainerProps[js.Any]]]
+  
 }
 

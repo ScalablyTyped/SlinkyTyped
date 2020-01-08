@@ -2,7 +2,6 @@ package typingsSlinky.jestDashHasteDashMap
 
 import typingsSlinky.atJestTypes.buildConfigMod.Glob
 import typingsSlinky.atJestTypes.buildConfigMod.Path
-import typingsSlinky.jestDashHasteDashMap.buildHasteFSMod.HasteFS
 import typingsSlinky.std.RegExp
 import typingsSlinky.std.Set
 import scala.scalajs.js

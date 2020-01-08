@@ -90,6 +90,15 @@ trait ChannelWrapper extends EventEmitter {
   ): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Anon_Name, Unit]): this.type = js.native
+  def publish(exchange: String, routingKey: String, content: js.Object): js.Promise[Unit] = js.native
+  def publish(exchange: String, routingKey: String, content: js.Object, options: Publish): js.Promise[Unit] = js.native
+  def publish(
+    exchange: String,
+    routingKey: String,
+    content: js.Object,
+    options: Publish,
+    callback: js.Function2[/* err */ js.Any, /* ok */ Empty, Unit]
+  ): js.Promise[Unit] = js.native
   /**
   	 * @see amqplib
   	 * @param exchange
@@ -120,6 +129,14 @@ trait ChannelWrapper extends EventEmitter {
     */
   def removeSetup(func: SetupFunc): js.Promise[Unit] = js.native
   def removeSetup(func: SetupFunc, tearDown: SetupFunc): js.Promise[Unit] = js.native
+  def sendToQueue(queue: String, content: js.Object): js.Promise[Unit] = js.native
+  def sendToQueue(queue: String, content: js.Object, options: Publish): js.Promise[Unit] = js.native
+  def sendToQueue(
+    queue: String,
+    content: js.Object,
+    options: Publish,
+    callback: js.Function2[/* err */ js.Any, /* ok */ Empty, Unit]
+  ): js.Promise[Unit] = js.native
   /**
   	 * @see amqplib
   	 * @param queue

@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +22,17 @@ object distEs2015RendererBufferEBufferUsageMod extends js.Object {
     @js.native
     sealed trait STREAM_DRAW extends EBufferUsage
     
-    /* 2 */ val DYNAMIC_DRAW: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage.DYNAMIC_DRAW with Double = js.native
-    /* 1 */ val STATIC_DRAW: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage.STATIC_DRAW with Double = js.native
-    /* 0 */ val STREAM_DRAW: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage.STREAM_DRAW with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EBufferUsage with Double] = js.native
+    /* 2 */ @js.native
+    object DYNAMIC_DRAW extends TopLevel[DYNAMIC_DRAW with Double]
+    
+    /* 1 */ @js.native
+    object STATIC_DRAW extends TopLevel[STATIC_DRAW with Double]
+    
+    /* 0 */ @js.native
+    object STREAM_DRAW extends TopLevel[STREAM_DRAW with Double]
+    
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Services
 
-import typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,19 +62,41 @@ object Maps extends js.Object {
       @js.native
       sealed trait uturnRight extends GuidanceLaneMarkers
       
-      /* 6 */ val hardLeft: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.hardLeft with Double = js.native
-      /* 3 */ val hardRight: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.hardRight with Double = js.native
-      /* 7 */ val left: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.left with Double = js.native
-      /* 8 */ val lightLeft: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.lightLeft with Double = js.native
-      /* 1 */ val lightRight: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.lightRight with Double = js.native
-      /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.none with Double = js.native
-      /* 2 */ val right: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.right with Double = js.native
-      /* 4 */ val straight: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.straight with Double = js.native
-      /* 10 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.unknown with Double = js.native
-      /* 5 */ val uturnLeft: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.uturnLeft with Double = js.native
-      /* 9 */ val uturnRight: typingsSlinky.winrtDashUwp.Windows.Services.Maps.Guidance.GuidanceLaneMarkers.uturnRight with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[GuidanceLaneMarkers with Double] = js.native
+      /* 6 */ @js.native
+      object hardLeft extends TopLevel[hardLeft with Double]
+      
+      /* 3 */ @js.native
+      object hardRight extends TopLevel[hardRight with Double]
+      
+      /* 7 */ @js.native
+      object left extends TopLevel[left with Double]
+      
+      /* 8 */ @js.native
+      object lightLeft extends TopLevel[lightLeft with Double]
+      
+      /* 1 */ @js.native
+      object lightRight extends TopLevel[lightRight with Double]
+      
+      /* 0 */ @js.native
+      object none extends TopLevel[none with Double]
+      
+      /* 2 */ @js.native
+      object right extends TopLevel[right with Double]
+      
+      /* 4 */ @js.native
+      object straight extends TopLevel[straight with Double]
+      
+      /* 10 */ @js.native
+      object unknown extends TopLevel[unknown with Double]
+      
+      /* 5 */ @js.native
+      object uturnLeft extends TopLevel[uturnLeft with Double]
+      
+      /* 9 */ @js.native
+      object uturnRight extends TopLevel[uturnRight with Double]
+      
     }
     
   }

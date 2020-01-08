@@ -1,7 +1,6 @@
 package typingsSlinky.agDashGrid
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.agDashGrid.distLibRenderingCellRenderersGroupCellRendererMod.GroupCellRendererParams
 import typingsSlinky.agDashGrid.distLibRenderingCellRenderersICellRendererMod.ICellRenderer
 import typingsSlinky.agDashGrid.distLibRenderingCellRenderersICellRendererMod.ICellRendererParams
 import typingsSlinky.agDashGrid.distLibWidgetsComponentMod.Component

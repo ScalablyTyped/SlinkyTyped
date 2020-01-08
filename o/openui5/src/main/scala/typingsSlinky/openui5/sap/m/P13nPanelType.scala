@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object P13nPanelType extends js.Object {
   @js.native
   sealed trait sort extends P13nPanelType
   
-  /* 0 */ val columns: typingsSlinky.openui5.sap.m.P13nPanelType.columns with Double = js.native
-  /* 1 */ val dimeasure: typingsSlinky.openui5.sap.m.P13nPanelType.dimeasure with Double = js.native
-  /* 2 */ val filter: typingsSlinky.openui5.sap.m.P13nPanelType.filter with Double = js.native
-  /* 3 */ val group: typingsSlinky.openui5.sap.m.P13nPanelType.group with Double = js.native
-  /* 4 */ val sort: typingsSlinky.openui5.sap.m.P13nPanelType.sort with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[P13nPanelType with Double] = js.native
+  /* 0 */ @js.native
+  object columns extends TopLevel[columns with Double]
+  
+  /* 1 */ @js.native
+  object dimeasure extends TopLevel[dimeasure with Double]
+  
+  /* 2 */ @js.native
+  object filter extends TopLevel[filter with Double]
+  
+  /* 3 */ @js.native
+  object group extends TopLevel[group with Double]
+  
+  /* 4 */ @js.native
+  object sort extends TopLevel[sort with Double]
+  
 }
 

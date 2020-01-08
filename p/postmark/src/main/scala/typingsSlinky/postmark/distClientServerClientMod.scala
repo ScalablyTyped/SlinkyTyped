@@ -55,7 +55,6 @@ import typingsSlinky.postmark.distClientModelsTriggersInboundRuleMod.InboundRule
 import typingsSlinky.postmark.distClientModelsTriggersInboundRuleMod.InboundRules
 import typingsSlinky.postmark.distClientModelsWebhooksWebhookMod.Webhook
 import typingsSlinky.postmark.distClientModelsWebhooksWebhooksMod.Webhooks
-import typingsSlinky.postmark.distClientServerClientMod.ServerClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

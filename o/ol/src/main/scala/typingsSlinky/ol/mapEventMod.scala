@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.mapEventMod.MapEvent
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import scala.scalajs.js
 import scala.scalajs.js.`|`

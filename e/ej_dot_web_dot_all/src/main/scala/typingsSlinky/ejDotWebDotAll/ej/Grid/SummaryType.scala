@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,15 +43,31 @@ object SummaryType extends js.Object {
   @js.native
   sealed trait TrueCount extends SummaryType
   
-  /* 0 */ val Average: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Average with Double = js.native
-  /* 3 */ val Count: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Count with Double = js.native
-  /* 5 */ val Custom: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Custom with Double = js.native
-  /* 7 */ val FalseCount: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.FalseCount with Double = js.native
-  /* 2 */ val Maximum: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Maximum with Double = js.native
-  /* 1 */ val Minimum: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Minimum with Double = js.native
-  /* 4 */ val Sum: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.Sum with Double = js.native
-  /* 6 */ val TrueCount: typingsSlinky.ejDotWebDotAll.ej.Grid.SummaryType.TrueCount with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SummaryType with Double] = js.native
+  /* 0 */ @js.native
+  object Average extends TopLevel[Average with Double]
+  
+  /* 3 */ @js.native
+  object Count extends TopLevel[Count with Double]
+  
+  /* 5 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 7 */ @js.native
+  object FalseCount extends TopLevel[FalseCount with Double]
+  
+  /* 2 */ @js.native
+  object Maximum extends TopLevel[Maximum with Double]
+  
+  /* 1 */ @js.native
+  object Minimum extends TopLevel[Minimum with Double]
+  
+  /* 4 */ @js.native
+  object Sum extends TopLevel[Sum with Double]
+  
+  /* 6 */ @js.native
+  object TrueCount extends TopLevel[TrueCount with Double]
+  
 }
 

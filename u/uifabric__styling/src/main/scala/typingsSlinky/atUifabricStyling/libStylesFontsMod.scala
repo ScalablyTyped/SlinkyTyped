@@ -1,23 +1,23 @@
 package typingsSlinky.atUifabricStyling
 
 import typingsSlinky.atUifabricMergeDashStyles.libIRawStyleBaseMod.IFontWeight
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheLeelawadee UI WebApostropheComma ApostropheKmer UIApostrophe`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheMalgun GothicApostropheComma Gulim`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheMicrosoft Jhenghei UIApostropheComma Pmingliu`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheMicrosoft Yahei UIApostropheComma VerdanaComma Simsun`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheNirmala UIApostrophe`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`ApostropheYu Gothic UIApostropheComma ApostropheMeiryo UIApostropheComma MeiryoComma ApostropheMS PgothicApostropheComma Osaka`
 import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Leelawadee UI Web`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Arabic)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Armenian)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Cyrillic)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (East European)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Georgian)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Greek)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Hebrew)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (Vietnamese)`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web (West European)`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisArabicRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisArmenianRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisCyrillicRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisEast EuropeanRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisGeorgianRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisGreekRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisHebrewRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisVietnameseRightparenthesis`
+import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Segoe UI Web LeftparenthesisWest EuropeanRightparenthesis`
 import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`Selawik Web`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteLeelawadee UI Web_quote, _quoteKmer UI_quote`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteMalgun Gothic_quote, Gulim`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteMicrosoft Jhenghei UI_quote, Pmingliu`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteMicrosoft Yahei UI_quote, Verdana, Simsun`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteNirmala UI_quote`
-import typingsSlinky.atUifabricStyling.atUifabricStylingStrings.`_quoteYu Gothic UI_quote, _quoteMeiryo UI_quote, Meiryo, _quoteMS Pgothic_quote, Osaka`
 import typingsSlinky.atUifabricStyling.libInterfacesIFontStylesMod.IFontStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,35 +67,35 @@ object libStylesFontsMod extends js.Object {
   object LocalizedFontFamilies extends js.Object {
     val Arabic: String = js.native
     val Armenian: String = js.native
-    val ChineseSimplified: `_quoteMicrosoft Yahei UI_quote, Verdana, Simsun` = js.native
-    val ChineseTraditional: `_quoteMicrosoft Jhenghei UI_quote, Pmingliu` = js.native
+    val ChineseSimplified: `ApostropheMicrosoft Yahei UIApostropheComma VerdanaComma Simsun` = js.native
+    val ChineseTraditional: `ApostropheMicrosoft Jhenghei UIApostropheComma Pmingliu` = js.native
     val Cyrillic: String = js.native
     val EastEuropean: String = js.native
     val Georgian: String = js.native
     val Greek: String = js.native
     val Hebrew: String = js.native
-    val Hindi: `_quoteNirmala UI_quote` = js.native
-    val Japanese: `_quoteYu Gothic UI_quote, _quoteMeiryo UI_quote, Meiryo, _quoteMS Pgothic_quote, Osaka` = js.native
-    val Korean: `_quoteMalgun Gothic_quote, Gulim` = js.native
+    val Hindi: `ApostropheNirmala UIApostrophe` = js.native
+    val Japanese: `ApostropheYu Gothic UIApostropheComma ApostropheMeiryo UIApostropheComma MeiryoComma ApostropheMS PgothicApostropheComma Osaka` = js.native
+    val Korean: `ApostropheMalgun GothicApostropheComma Gulim` = js.native
     val Selawik: String = js.native
-    val Thai: `_quoteLeelawadee UI Web_quote, _quoteKmer UI_quote` = js.native
+    val Thai: `ApostropheLeelawadee UI WebApostropheComma ApostropheKmer UIApostrophe` = js.native
     val Vietnamese: String = js.native
     val WestEuropean: String = js.native
   }
   
   @js.native
   object LocalizedFontNames extends js.Object {
-    val Arabic: `Segoe UI Web (Arabic)` = js.native
-    val Armenian: `Segoe UI Web (Armenian)` = js.native
-    val Cyrillic: `Segoe UI Web (Cyrillic)` = js.native
-    val EastEuropean: `Segoe UI Web (East European)` = js.native
-    val Georgian: `Segoe UI Web (Georgian)` = js.native
-    val Greek: `Segoe UI Web (Greek)` = js.native
-    val Hebrew: `Segoe UI Web (Hebrew)` = js.native
+    val Arabic: `Segoe UI Web LeftparenthesisArabicRightparenthesis` = js.native
+    val Armenian: `Segoe UI Web LeftparenthesisArmenianRightparenthesis` = js.native
+    val Cyrillic: `Segoe UI Web LeftparenthesisCyrillicRightparenthesis` = js.native
+    val EastEuropean: `Segoe UI Web LeftparenthesisEast EuropeanRightparenthesis` = js.native
+    val Georgian: `Segoe UI Web LeftparenthesisGeorgianRightparenthesis` = js.native
+    val Greek: `Segoe UI Web LeftparenthesisGreekRightparenthesis` = js.native
+    val Hebrew: `Segoe UI Web LeftparenthesisHebrewRightparenthesis` = js.native
     val Selawik: `Selawik Web` = js.native
     val Thai: `Leelawadee UI Web` = js.native
-    val Vietnamese: `Segoe UI Web (Vietnamese)` = js.native
-    val WestEuropean: `Segoe UI Web (West European)` = js.native
+    val Vietnamese: `Segoe UI Web LeftparenthesisVietnameseRightparenthesis` = js.native
+    val WestEuropean: `Segoe UI Web LeftparenthesisWest EuropeanRightparenthesis` = js.native
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.pgDashPromise.pgDashPromiseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,11 +25,19 @@ object isolationLevel extends js.Object {
   @js.native
   sealed trait serializable extends isolationLevel
   
-  /* 0 */ val none: typingsSlinky.pgDashPromise.pgDashPromiseMod.isolationLevel.none with Double = js.native
-  /* 3 */ val readCommitted: typingsSlinky.pgDashPromise.pgDashPromiseMod.isolationLevel.readCommitted with Double = js.native
-  /* 2 */ val repeatableRead: typingsSlinky.pgDashPromise.pgDashPromiseMod.isolationLevel.repeatableRead with Double = js.native
-  /* 1 */ val serializable: typingsSlinky.pgDashPromise.pgDashPromiseMod.isolationLevel.serializable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[isolationLevel with Double] = js.native
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object readCommitted extends TopLevel[readCommitted with Double]
+  
+  /* 2 */ @js.native
+  object repeatableRead extends TopLevel[repeatableRead with Double]
+  
+  /* 1 */ @js.native
+  object serializable extends TopLevel[serializable with Double]
+  
 }
 

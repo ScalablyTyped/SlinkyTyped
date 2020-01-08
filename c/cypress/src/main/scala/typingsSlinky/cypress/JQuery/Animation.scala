@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.JQuery
 
-import typingsSlinky.cypress.cypressNumbers.`false`
-import typingsSlinky.cypress.cypressNumbers.`true`
+import typingsSlinky.cypress.cypressBooleans.`false`
+import typingsSlinky.cypress.cypressBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

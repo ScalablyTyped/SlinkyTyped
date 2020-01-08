@@ -1,14 +1,14 @@
 package typingsSlinky.reactDashCopyDashToDashClipboard.reactDashCopyDashToDashClipboardMod
 
-import typingsSlinky.reactDashCopyDashToDashClipboard.reactDashCopyDashToDashClipboardStrings.`text/html`
-import typingsSlinky.reactDashCopyDashToDashClipboard.reactDashCopyDashToDashClipboardStrings.`text/plain`
+import typingsSlinky.reactDashCopyDashToDashClipboard.reactDashCopyDashToDashClipboardStrings.textSlashhtml
+import typingsSlinky.reactDashCopyDashToDashClipboard.reactDashCopyDashToDashClipboardStrings.textSlashplain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Options extends js.Object {
   var debug: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[`text/html` | `text/plain`] = js.undefined
+  var format: js.UndefOr[textSlashhtml | textSlashplain] = js.undefined
   var message: js.UndefOr[String] = js.undefined
 }
 
@@ -16,7 +16,7 @@ object Options {
   @scala.inline
   def apply(
     debug: js.UndefOr[Boolean] = js.undefined,
-    format: `text/html` | `text/plain` = null,
+    format: textSlashhtml | textSlashplain = null,
     message: String = null
   ): Options = {
     val __obj = js.Dynamic.literal()

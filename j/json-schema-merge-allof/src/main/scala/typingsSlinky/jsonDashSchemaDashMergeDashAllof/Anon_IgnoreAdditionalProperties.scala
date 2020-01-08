@@ -1,6 +1,6 @@
 package typingsSlinky.jsonDashSchemaDashMergeDashAllof
 
-import typingsSlinky.jsonDashSchemaDashMergeDashAllof.jsonDashSchemaDashMergeDashAllofNumbers.`true`
+import typingsSlinky.jsonDashSchemaDashMergeDashAllof.jsonDashSchemaDashMergeDashAllofBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

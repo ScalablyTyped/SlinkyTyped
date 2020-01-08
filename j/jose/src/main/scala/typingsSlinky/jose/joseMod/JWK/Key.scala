@@ -1,5 +1,6 @@
 package typingsSlinky.jose.joseMod.JWK
 
+import typingsSlinky.jose.joseMod._ProduceKeyInput
 import typingsSlinky.jose.joseMod.keyObjectTypes
 import typingsSlinky.jose.joseMod.keyOperation
 import typingsSlinky.jose.joseMod.keyType
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jose", "JWK.Key")
 @js.native
-class Key () extends js.Object {
+class Key () extends _ProduceKeyInput {
   var alg: js.UndefOr[String] = js.native
   var keyObject: KeyObject = js.native
   var key_ops: js.UndefOr[js.Array[keyOperation]] = js.native
@@ -25,7 +26,8 @@ class Key () extends js.Object {
   var use: js.UndefOr[typingsSlinky.jose.joseMod.use] = js.native
   var x5c: js.UndefOr[js.Array[String]] = js.native
   var x5t: js.UndefOr[String] = js.native
-  var `x5t#S256`: js.UndefOr[String] = js.native
+  @JSName("x5t#S256")
+  var x5tNumbersignS256: js.UndefOr[String] = js.native
   def algorithms(): Set[String] = js.native
   def algorithms(operation: keyOperation): Set[String] = js.native
   def toPEM(): String = js.native

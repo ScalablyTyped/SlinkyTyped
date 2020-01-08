@@ -9,10 +9,10 @@ Write data to a file, replacing the file if it already exists and creating any i
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | write |
-| Keywords           | file, filepath, files, filesystem, folder, fs, fs.writeFile, fs.writeFileSync, path, write |
-| # releases         | 5 |
-| # dependents       | 150 |
-| # downloads        | 175861815 |
+| Keywords           | async, file path, file system, file, filepath, files, filesystem, folder, fs, fs.writeFile, fs.writeFileSync, path, promise, streams, write file, write-file, writefile, write |
+| # releases         | 2 |
+| # dependents       | 185 |
+| # downloads        | 317955251 |
 | # stars            | 7 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashAzureDashAd.bearerDashStrategyMod
 
-import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdNumbers.`true`
+import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdBooleans.`true`
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.error
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.info
 import typingsSlinky.passportDashAzureDashAd.passportDashAzureDashAdStrings.warn

@@ -1,6 +1,5 @@
 package typingsSlinky.json2csv
 
-import typingsSlinky.json2csv.jSON2CSVParserMod.JSON2CSVParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

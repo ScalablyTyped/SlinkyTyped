@@ -44,7 +44,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskHub
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskResult
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.VariableGroup
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.VariableGroupActionFilter
-import typingsSlinky.vsoDashNodeDashApi.taskAgentApiBaseMod.ITaskAgentApiBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

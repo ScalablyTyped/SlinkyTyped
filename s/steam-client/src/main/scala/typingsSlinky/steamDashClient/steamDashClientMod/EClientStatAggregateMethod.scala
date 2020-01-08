@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object EClientStatAggregateMethod extends js.Object {
   @js.native
   sealed trait Sum extends EClientStatAggregateMethod
   
-  /* 2 */ val Event: typingsSlinky.steamDashClient.steamDashClientMod.EClientStatAggregateMethod.Event with Double = js.native
-  /* 0 */ val LatestOnly: typingsSlinky.steamDashClient.steamDashClientMod.EClientStatAggregateMethod.LatestOnly with Double = js.native
-  /* 3 */ val Scalar: typingsSlinky.steamDashClient.steamDashClientMod.EClientStatAggregateMethod.Scalar with Double = js.native
-  /* 1 */ val Sum: typingsSlinky.steamDashClient.steamDashClientMod.EClientStatAggregateMethod.Sum with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EClientStatAggregateMethod with Double] = js.native
+  /* 2 */ @js.native
+  object Event extends TopLevel[Event with Double]
+  
+  /* 0 */ @js.native
+  object LatestOnly extends TopLevel[LatestOnly with Double]
+  
+  /* 3 */ @js.native
+  object Scalar extends TopLevel[Scalar with Double]
+  
+  /* 1 */ @js.native
+  object Sum extends TopLevel[Sum with Double]
+  
 }
 

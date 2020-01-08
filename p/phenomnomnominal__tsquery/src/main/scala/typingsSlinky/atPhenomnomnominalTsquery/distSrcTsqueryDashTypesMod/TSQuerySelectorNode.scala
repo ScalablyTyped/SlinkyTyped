@@ -1,12 +1,12 @@
 package typingsSlinky.atPhenomnomnominalTsquery.distSrcTsqueryDashTypesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`!=`
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`<=`
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`<`
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`=`
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`>=`
-import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.`>`
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.Equalssign
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.ExclamationmarkEqualssign
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.Greaterthansign
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.GreaterthansignEqualssign
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.Lessthansign
+import typingsSlinky.atPhenomnomnominalTsquery.atPhenomnomnominalTsqueryStrings.LessthansignEqualssign
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait TSQuerySelectorNode
   var index: TSQuerySelectorNode
   var left: TSQuerySelectorNode
   var name: String
-  var operator: `=` | `!=` | `<=` | `<` | `>=` | `>`
+  var operator: Equalssign | ExclamationmarkEqualssign | LessthansignEqualssign | Lessthansign | GreaterthansignEqualssign | Greaterthansign
   var right: TSQuerySelectorNode
   var selectors: js.Array[TSQuerySelectorNode]
   var subject: Boolean
@@ -33,7 +33,7 @@ object TSQuerySelectorNode {
     index: TSQuerySelectorNode,
     left: TSQuerySelectorNode,
     name: String,
-    operator: `=` | `!=` | `<=` | `<` | `>=` | `>`,
+    operator: Equalssign | ExclamationmarkEqualssign | LessthansignEqualssign | Lessthansign | GreaterthansignEqualssign | Greaterthansign,
     right: TSQuerySelectorNode,
     selectors: js.Array[TSQuerySelectorNode],
     subject: Boolean,

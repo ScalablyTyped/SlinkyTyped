@@ -1,7 +1,5 @@
 package typingsSlinky.atProtobufjsPool
 
-import typingsSlinky.atProtobufjsPool.atProtobufjsPoolMod.PoolAllocator
-import typingsSlinky.atProtobufjsPool.atProtobufjsPoolMod.PoolSlicer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

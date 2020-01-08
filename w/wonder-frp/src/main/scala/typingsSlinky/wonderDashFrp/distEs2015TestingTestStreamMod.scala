@@ -3,7 +3,6 @@ package typingsSlinky.wonderDashFrp
 import typingsSlinky.wonderDashFrp.distEs2015StreamBaseStreamMod.BaseStream
 import typingsSlinky.wonderDashFrp.distEs2015TestingRecordMod.Record
 import typingsSlinky.wonderDashFrp.distEs2015TestingTestSchedulerMod.TestScheduler
-import typingsSlinky.wonderDashFrp.distEs2015TestingTestStreamMod.TestStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.classDashValidator
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.classDashValidator.validationValidationErrorMod.ValidationError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

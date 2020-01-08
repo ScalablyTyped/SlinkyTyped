@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseStorage
 
-import typingsSlinky.atFirebaseStorage.distSrcImplementationRequestMod.Request
 import typingsSlinky.atFirebaseStorage.distSrcImplementationRequestinfoMod.RequestInfo
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.Headers
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.XhrIo

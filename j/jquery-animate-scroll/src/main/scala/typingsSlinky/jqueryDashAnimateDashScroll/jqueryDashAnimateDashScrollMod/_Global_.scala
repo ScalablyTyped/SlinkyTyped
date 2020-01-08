@@ -1,6 +1,5 @@
 package typingsSlinky.jqueryDashAnimateDashScroll.jqueryDashAnimateDashScrollMod
 
-import typingsSlinky.jqueryDashAnimateDashScroll.jqueryDashAnimateDashScrollMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

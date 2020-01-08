@@ -1,11 +1,11 @@
 package typingsSlinky.atBabelCore.atBabelCoreMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.atBabelCore.atBabelCoreStrings.DOTes
-import typingsSlinky.atBabelCore.atBabelCoreStrings.DOTes6
-import typingsSlinky.atBabelCore.atBabelCoreStrings.DOTjs
-import typingsSlinky.atBabelCore.atBabelCoreStrings.DOTjsx
-import typingsSlinky.atBabelCore.atBabelCoreStrings.DOTmjs
+import typingsSlinky.atBabelCore.atBabelCoreStrings.Dotes
+import typingsSlinky.atBabelCore.atBabelCoreStrings.Dotes6
+import typingsSlinky.atBabelCore.atBabelCoreStrings.Dotjs
+import typingsSlinky.atBabelCore.atBabelCoreStrings.Dotjsx
+import typingsSlinky.atBabelCore.atBabelCoreStrings.Dotmjs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSImport("@babel/core", "DEFAULT_EXTENSIONS")
 @js.native
 object DEFAULT_EXTENSIONS
-  extends TopLevel[js.Tuple5[DOTjs, DOTjsx, DOTes6, DOTes, DOTmjs]]
+  extends TopLevel[js.Tuple5[Dotjs, Dotjsx, Dotes6, Dotes, Dotmjs]]
 

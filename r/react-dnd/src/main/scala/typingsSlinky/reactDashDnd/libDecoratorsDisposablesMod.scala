@@ -1,6 +1,5 @@
 package typingsSlinky.reactDashDnd
 
-import typingsSlinky.reactDashDnd.libDecoratorsDisposablesMod.Disposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

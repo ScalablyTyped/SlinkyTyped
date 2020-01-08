@@ -10,9 +10,9 @@ checkbox ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-checkbox |
 | Keywords           | react, react-component, react-checkbox, checkbox |
-| # releases         | 11 |
-| # dependents       | 182 |
-| # downloads        | 5745837 |
+| # releases         | 8 |
+| # dependents       | 243 |
+| # downloads        | 10540382 |
 | # stars            | 0 |
 
 ## Links

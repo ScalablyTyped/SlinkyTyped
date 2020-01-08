@@ -11,7 +11,7 @@ import typingsSlinky.asynciterator.asynciteratorStrings.CLOSING
 import typingsSlinky.asynciterator.asynciteratorStrings.ENDED
 import typingsSlinky.asynciterator.asynciteratorStrings.INIT
 import typingsSlinky.asynciterator.asynciteratorStrings.OPEN
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularHttp.srcEnumsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ResponseContentType extends js.Object {
   @js.native
   sealed trait Text extends ResponseContentType
   
-  /* 2 */ val ArrayBuffer: typingsSlinky.atAngularHttp.srcEnumsMod.ResponseContentType.ArrayBuffer with Double = js.native
-  /* 3 */ val Blob: typingsSlinky.atAngularHttp.srcEnumsMod.ResponseContentType.Blob with Double = js.native
-  /* 1 */ val Json: typingsSlinky.atAngularHttp.srcEnumsMod.ResponseContentType.Json with Double = js.native
-  /* 0 */ val Text: typingsSlinky.atAngularHttp.srcEnumsMod.ResponseContentType.Text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResponseContentType with Double] = js.native
+  /* 2 */ @js.native
+  object ArrayBuffer extends TopLevel[ArrayBuffer with Double]
+  
+  /* 3 */ @js.native
+  object Blob extends TopLevel[Blob with Double]
+  
+  /* 1 */ @js.native
+  object Json extends TopLevel[Json with Double]
+  
+  /* 0 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
 }
 

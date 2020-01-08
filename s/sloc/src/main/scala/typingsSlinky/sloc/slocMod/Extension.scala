@@ -1,6 +1,5 @@
 package typingsSlinky.sloc.slocMod
 
-import typingsSlinky.sloc.slocStrings.java
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,9 +45,9 @@ import scala.scalajs.js.annotation._
   - typings.sloc.slocStrings.ily
   - typings.sloc.slocStrings.ino
   - typings.sloc.slocStrings.jade
-  - typings.sloc.slocStrings.java
+  - typings.sloc.slocStrings.java_
   - typings.sloc.slocStrings.jl
-  - typings.sloc.slocStrings.JS
+  - typings.sloc.slocStrings.js_
   - typings.sloc.slocStrings.jsx
   - typings.sloc.slocStrings.mjs
   - typings.sloc.slocStrings.kt
@@ -75,7 +74,7 @@ import scala.scalajs.js.annotation._
   - typings.sloc.slocStrings.rkt
   - typings.sloc.slocStrings.rs
   - typings.sloc.slocStrings.sass
-  - typings.sloc.slocStrings.SCALA
+  - typings.sloc.slocStrings.scala_
   - typings.sloc.slocStrings.scss
   - typings.sloc.slocStrings.sty
   - typings.sloc.slocStrings.styl
@@ -96,10 +95,6 @@ import scala.scalajs.js.annotation._
 trait Extension extends js.Object
 
 object Extension {
-  @scala.inline
-  def JS: typingsSlinky.sloc.slocStrings.JS = this.cast("js")
-  @scala.inline
-  def SCALA: typingsSlinky.sloc.slocStrings.SCALA = this.cast("scala")
   @scala.inline
   def asm: typingsSlinky.sloc.slocStrings.asm = this.cast("asm")
   @scala.inline
@@ -186,9 +181,12 @@ object Extension {
   def jade: typingsSlinky.sloc.slocStrings.jade = this.cast("jade")
   @JSName("java")
   @scala.inline
-  def java_ : java = this.cast("java")
+  def java_ : typingsSlinky.sloc.slocStrings.java_ = this.cast("java")
   @scala.inline
   def jl: typingsSlinky.sloc.slocStrings.jl = this.cast("jl")
+  @JSName("js")
+  @scala.inline
+  def js_ : typingsSlinky.sloc.slocStrings.js_ = this.cast("js")
   @scala.inline
   def jsx: typingsSlinky.sloc.slocStrings.jsx = this.cast("jsx")
   @scala.inline
@@ -245,6 +243,9 @@ object Extension {
   def rs: typingsSlinky.sloc.slocStrings.rs = this.cast("rs")
   @scala.inline
   def sass: typingsSlinky.sloc.slocStrings.sass = this.cast("sass")
+  @JSName("scala")
+  @scala.inline
+  def scala_ : typingsSlinky.sloc.slocStrings.scala_ = this.cast("scala")
   @scala.inline
   def scss: typingsSlinky.sloc.slocStrings.scss = this.cast("scss")
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +27,13 @@ object ReminderEmailConfig extends js.Object {
   @js.native
   sealed trait SEND_DAILY_EMAIL extends ReminderEmailConfig
   
-  /* 1 */ val DO_NOT_SEND: typingsSlinky.evernote.evernoteMod.Evernote.ReminderEmailConfig.DO_NOT_SEND with Double = js.native
-  /* 2 */ val SEND_DAILY_EMAIL: typingsSlinky.evernote.evernoteMod.Evernote.ReminderEmailConfig.SEND_DAILY_EMAIL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReminderEmailConfig with Double] = js.native
+  /* 1 */ @js.native
+  object DO_NOT_SEND extends TopLevel[DO_NOT_SEND with Double]
+  
+  /* 2 */ @js.native
+  object SEND_DAILY_EMAIL extends TopLevel[SEND_DAILY_EMAIL with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object AltitudeReferenceSystem extends js.Object {
   @js.native
   sealed trait unspecified extends AltitudeReferenceSystem
   
-  /* 2 */ val ellipsoid: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem.ellipsoid with Double = js.native
-  /* 3 */ val geoid: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem.geoid with Double = js.native
-  /* 4 */ val surface: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem.surface with Double = js.native
-  /* 1 */ val terrain: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem.terrain with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AltitudeReferenceSystem with Double] = js.native
+  /* 2 */ @js.native
+  object ellipsoid extends TopLevel[ellipsoid with Double]
+  
+  /* 3 */ @js.native
+  object geoid extends TopLevel[geoid with Double]
+  
+  /* 4 */ @js.native
+  object surface extends TopLevel[surface with Double]
+  
+  /* 1 */ @js.native
+  object terrain extends TopLevel[terrain with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

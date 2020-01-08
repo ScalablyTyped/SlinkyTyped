@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,39 +107,103 @@ object EAccountFlags extends js.Object {
   @js.native
   sealed trait VacBeta extends EAccountFlags
   
-  /* 16 */ val Admin: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Admin with Double = js.native
-  /* 64 */ val AppEditor: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.AppEditor with Double = js.native
-  /* 33554432 */ val BannedFromWebAPI: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.BannedFromWebAPI with Double = js.native
-  /* 67108864 */ val ClansOnlyFromFriends: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.ClansOnlyFromFriends with Double = js.native
-  /* 1024 */ val Debug: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Debug with Double = js.native
-  /* 2048 */ val Disabled: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Disabled with Double = js.native
-  /* 16384 */ val EmailValidated: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.EmailValidated with Double = js.native
-  /* 262144 */ val ForceEmailVerification: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.ForceEmailVerification with Double = js.native
-  /* 131072 */ val ForcePasswordChange: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.ForcePasswordChange with Double = js.native
-  /* 134217728 */ val GlobalModerator: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.GlobalModerator with Double = js.native
-  /* 128 */ val HWIDSet: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.HWIDSet with Double = js.native
-  /* 4096 */ val LimitedUser: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.LimitedUser with Double = js.native
-  /* 8192 */ val LimitedUserForce: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.LimitedUserForce with Double = js.native
-  /* 8388608 */ val Lockdown: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Lockdown with Double = js.native
-  /* 524288 */ val LogonExtraSecurity: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.LogonExtraSecurity with Double = js.native
-  /* 1048576 */ val LogonExtraSecurityDisabled: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.LogonExtraSecurityDisabled with Double = js.native
-  /* 32768 */ val MarketingTreatment: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.MarketingTreatment with Double = js.native
-  /* 16777216 */ val MasterAppEditor: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.MasterAppEditor with Double = js.native
-  /* 4194304 */ val NeedLogs: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.NeedLogs with Double = js.native
-  /* 1073741824 */ val NeedsSSANextSteamLogon: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.NeedsSSANextSteamLogon with Double = js.native
-  /* 0 */ val NormalUser: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.NormalUser with Double = js.native
-  /* 65536 */ val OGGInviteOptOut: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.OGGInviteOptOut with Double = js.native
-  /* 268435456 */ val ParentalSettings: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.ParentalSettings with Double = js.native
-  /* 4 */ val PasswordSet: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.PasswordSet with Double = js.native
-  /* 1 */ val PersonaNameSet: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.PersonaNameSet with Double = js.native
-  /* 256 */ val PersonalQASet: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.PersonalQASet with Double = js.native
-  /* 2097152 */ val Steam2MigrationComplete: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Steam2MigrationComplete with Double = js.native
-  /* 32 */ val Supervisor: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Supervisor with Double = js.native
-  /* 8 */ val Support: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Support with Double = js.native
-  /* 536870912 */ val ThirdPartySupport: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.ThirdPartySupport with Double = js.native
-  /* 2 */ val Unbannable: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.Unbannable with Double = js.native
-  /* 512 */ val VacBeta: typingsSlinky.steamDashClient.steamDashClientMod.EAccountFlags.VacBeta with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EAccountFlags with Double] = js.native
+  /* 16 */ @js.native
+  object Admin extends TopLevel[Admin with Double]
+  
+  /* 64 */ @js.native
+  object AppEditor extends TopLevel[AppEditor with Double]
+  
+  /* 33554432 */ @js.native
+  object BannedFromWebAPI extends TopLevel[BannedFromWebAPI with Double]
+  
+  /* 67108864 */ @js.native
+  object ClansOnlyFromFriends extends TopLevel[ClansOnlyFromFriends with Double]
+  
+  /* 1024 */ @js.native
+  object Debug extends TopLevel[Debug with Double]
+  
+  /* 2048 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 16384 */ @js.native
+  object EmailValidated extends TopLevel[EmailValidated with Double]
+  
+  /* 262144 */ @js.native
+  object ForceEmailVerification extends TopLevel[ForceEmailVerification with Double]
+  
+  /* 131072 */ @js.native
+  object ForcePasswordChange extends TopLevel[ForcePasswordChange with Double]
+  
+  /* 134217728 */ @js.native
+  object GlobalModerator extends TopLevel[GlobalModerator with Double]
+  
+  /* 128 */ @js.native
+  object HWIDSet extends TopLevel[HWIDSet with Double]
+  
+  /* 4096 */ @js.native
+  object LimitedUser extends TopLevel[LimitedUser with Double]
+  
+  /* 8192 */ @js.native
+  object LimitedUserForce extends TopLevel[LimitedUserForce with Double]
+  
+  /* 8388608 */ @js.native
+  object Lockdown extends TopLevel[Lockdown with Double]
+  
+  /* 524288 */ @js.native
+  object LogonExtraSecurity extends TopLevel[LogonExtraSecurity with Double]
+  
+  /* 1048576 */ @js.native
+  object LogonExtraSecurityDisabled extends TopLevel[LogonExtraSecurityDisabled with Double]
+  
+  /* 32768 */ @js.native
+  object MarketingTreatment extends TopLevel[MarketingTreatment with Double]
+  
+  /* 16777216 */ @js.native
+  object MasterAppEditor extends TopLevel[MasterAppEditor with Double]
+  
+  /* 4194304 */ @js.native
+  object NeedLogs extends TopLevel[NeedLogs with Double]
+  
+  /* 1073741824 */ @js.native
+  object NeedsSSANextSteamLogon extends TopLevel[NeedsSSANextSteamLogon with Double]
+  
+  /* 0 */ @js.native
+  object NormalUser extends TopLevel[NormalUser with Double]
+  
+  /* 65536 */ @js.native
+  object OGGInviteOptOut extends TopLevel[OGGInviteOptOut with Double]
+  
+  /* 268435456 */ @js.native
+  object ParentalSettings extends TopLevel[ParentalSettings with Double]
+  
+  /* 4 */ @js.native
+  object PasswordSet extends TopLevel[PasswordSet with Double]
+  
+  /* 1 */ @js.native
+  object PersonaNameSet extends TopLevel[PersonaNameSet with Double]
+  
+  /* 256 */ @js.native
+  object PersonalQASet extends TopLevel[PersonalQASet with Double]
+  
+  /* 2097152 */ @js.native
+  object Steam2MigrationComplete extends TopLevel[Steam2MigrationComplete with Double]
+  
+  /* 32 */ @js.native
+  object Supervisor extends TopLevel[Supervisor with Double]
+  
+  /* 8 */ @js.native
+  object Support extends TopLevel[Support with Double]
+  
+  /* 536870912 */ @js.native
+  object ThirdPartySupport extends TopLevel[ThirdPartySupport with Double]
+  
+  /* 2 */ @js.native
+  object Unbannable extends TopLevel[Unbannable with Double]
+  
+  /* 512 */ @js.native
+  object VacBeta extends TopLevel[VacBeta with Double]
+  
 }
 

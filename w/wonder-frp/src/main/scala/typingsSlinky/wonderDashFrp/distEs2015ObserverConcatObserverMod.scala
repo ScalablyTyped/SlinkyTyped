@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distEs2015CoreObserverMod.Observer
-import typingsSlinky.wonderDashFrp.distEs2015ObserverConcatObserverMod.ConcatObserver
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`

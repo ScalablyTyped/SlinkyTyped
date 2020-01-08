@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,22 +134,52 @@ object SpecialCellValueType extends js.Object {
   @js.native
   sealed trait text extends SpecialCellValueType
   
-  /* "All" */ val all: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.all with String = js.native
-  /* "Errors" */ val errors: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errors with String = js.native
-  /* "ErrorsLogical" */ val errorsLogical: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsLogical with String = js.native
-  /* "ErrorsLogicalNumber" */ val errorsLogicalNumber: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsLogicalNumber with String = js.native
-  /* "ErrorsLogicalText" */ val errorsLogicalText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsLogicalText with String = js.native
-  /* "ErrorsNumberText" */ val errorsNumberText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsNumberText with String = js.native
-  /* "ErrorsNumbers" */ val errorsNumbers: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsNumbers with String = js.native
-  /* "ErrorsText" */ val errorsText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.errorsText with String = js.native
-  /* "Logical" */ val logical: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.logical with String = js.native
-  /* "LogicalNumbers" */ val logicalNumbers: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.logicalNumbers with String = js.native
-  /* "LogicalNumbersText" */ val logicalNumbersText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.logicalNumbersText with String = js.native
-  /* "LogicalText" */ val logicalText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.logicalText with String = js.native
-  /* "Numbers" */ val numbers: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.numbers with String = js.native
-  /* "NumbersText" */ val numbersText: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.numbersText with String = js.native
-  /* "Text" */ val text: typingsSlinky.officeDashJs.Excel.SpecialCellValueType.text with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SpecialCellValueType with String] = js.native
+  /* "All" */ @js.native
+  object all extends TopLevel[all with String]
+  
+  /* "Errors" */ @js.native
+  object errors extends TopLevel[errors with String]
+  
+  /* "ErrorsLogical" */ @js.native
+  object errorsLogical extends TopLevel[errorsLogical with String]
+  
+  /* "ErrorsLogicalNumber" */ @js.native
+  object errorsLogicalNumber extends TopLevel[errorsLogicalNumber with String]
+  
+  /* "ErrorsLogicalText" */ @js.native
+  object errorsLogicalText extends TopLevel[errorsLogicalText with String]
+  
+  /* "ErrorsNumberText" */ @js.native
+  object errorsNumberText extends TopLevel[errorsNumberText with String]
+  
+  /* "ErrorsNumbers" */ @js.native
+  object errorsNumbers extends TopLevel[errorsNumbers with String]
+  
+  /* "ErrorsText" */ @js.native
+  object errorsText extends TopLevel[errorsText with String]
+  
+  /* "Logical" */ @js.native
+  object logical extends TopLevel[logical with String]
+  
+  /* "LogicalNumbers" */ @js.native
+  object logicalNumbers extends TopLevel[logicalNumbers with String]
+  
+  /* "LogicalNumbersText" */ @js.native
+  object logicalNumbersText extends TopLevel[logicalNumbersText with String]
+  
+  /* "LogicalText" */ @js.native
+  object logicalText extends TopLevel[logicalText with String]
+  
+  /* "Numbers" */ @js.native
+  object numbers extends TopLevel[numbers with String]
+  
+  /* "NumbersText" */ @js.native
+  object numbersText extends TopLevel[numbersText with String]
+  
+  /* "Text" */ @js.native
+  object text extends TopLevel[text with String]
+  
 }
 

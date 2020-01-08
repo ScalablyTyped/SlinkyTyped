@@ -1,8 +1,6 @@
 package typingsSlinky.simplecrawler
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.simplecrawler.cookiesMod.Cookie
-import typingsSlinky.simplecrawler.cookiesMod.CookieJar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Anon_ extends js.Object {
-  var `!..`: js.Tuple2[Double | String, Double | String] = js.native
   @JSName("$between")
   var $between: js.Tuple2[js.Date | Double, js.Date | Double] = js.native
   @JSName("$contained")
@@ -33,7 +32,7 @@ trait Anon_ extends js.Object {
   @JSName("$lte")
   var $lte: Double | String | js.Date = js.native
   @JSName("$ne")
-  var $ne: String | Double | (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias sequelize.sequelize.WhereLogic */ js.Object) = js.native
+  var $ne: String | Double | (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias sequelize.sequelize.WhereLogic */ js.Object) = js.native
   @JSName("$not")
   var $not: Boolean | String | Double | AnyWhereOptions = js.native
   @JSName("$notBetween")
@@ -46,9 +45,15 @@ trait Anon_ extends js.Object {
   var $notLike: String | WherePGStatement = js.native
   @JSName("$overlap")
   var $overlap: js.Tuple2[Double | String, Double | String] = js.native
-  var `&&`: js.Tuple2[Double, Double] = js.native
-  var `..`: js.Tuple2[Double | String, Double | String] = js.native
-  var `<@`: js.Any = js.native
-  var `@>`: js.Any = js.native
+  @JSName("@>")
+  var `@Greaterthansign`: js.Any = js.native
+  @JSName("&&")
+  var AmpersandAmpersand: js.Tuple2[Double, Double] = js.native
+  @JSName("..")
+  var DotDot: js.Tuple2[Double | String, Double | String] = js.native
+  @JSName("!..")
+  var ExclamationmarkDotDot: js.Tuple2[Double | String, Double | String] = js.native
+  @JSName("<@")
+  var `Lessthansign@`: js.Any = js.native
 }
 

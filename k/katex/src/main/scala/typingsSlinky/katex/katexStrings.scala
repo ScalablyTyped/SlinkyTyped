@@ -6,16 +6,16 @@ import scala.scalajs.js.annotation._
 
 object katexStrings {
   @js.native
-  sealed trait `(` extends js.Object
+  sealed trait $ extends js.Object
   
   @js.native
-  sealed trait `)` extends js.Object
+  sealed trait DollarDollar extends js.Object
   
   @js.native
-  sealed trait DOLLAR extends js.Object
+  sealed trait Leftparenthesis extends js.Object
   
   @js.native
-  sealed trait DOLLARDOLLAR extends js.Object
+  sealed trait Rightparenthesis extends js.Object
   
   @js.native
   sealed trait `[` extends js.Object
@@ -189,6 +189,9 @@ object katexStrings {
   sealed trait html extends js.Object
   
   @js.native
+  sealed trait htmlAndMathml extends js.Object
+  
+  @js.native
   sealed trait i extends js.Object
   
   @js.native
@@ -229,6 +232,9 @@ object katexStrings {
   
   @js.native
   sealed trait marquee extends js.Object
+  
+  @js.native
+  sealed trait mathml extends js.Object
   
   @js.native
   sealed trait menu extends js.Object
@@ -381,13 +387,13 @@ object katexStrings {
   sealed trait wbr extends js.Object
   
   @scala.inline
-  def `(`: `(` = "(".asInstanceOf[`(`]
+  def $: $ = "$".asInstanceOf[$]
   @scala.inline
-  def `)`: `)` = ")".asInstanceOf[`)`]
+  def DollarDollar: DollarDollar = "$$".asInstanceOf[DollarDollar]
   @scala.inline
-  def DOLLAR: DOLLAR = "$".asInstanceOf[DOLLAR]
+  def Leftparenthesis: Leftparenthesis = "(".asInstanceOf[Leftparenthesis]
   @scala.inline
-  def DOLLARDOLLAR: DOLLARDOLLAR = "$$".asInstanceOf[DOLLARDOLLAR]
+  def Rightparenthesis: Rightparenthesis = ")".asInstanceOf[Rightparenthesis]
   @scala.inline
   def `[`: `[` = "[".asInstanceOf[`[`]
   @scala.inline
@@ -503,6 +509,8 @@ object katexStrings {
   @scala.inline
   def html: html = "html".asInstanceOf[html]
   @scala.inline
+  def htmlAndMathml: htmlAndMathml = "htmlAndMathml".asInstanceOf[htmlAndMathml]
+  @scala.inline
   def i: i = "i".asInstanceOf[i]
   @scala.inline
   def iframe: iframe = "iframe".asInstanceOf[iframe]
@@ -530,6 +538,8 @@ object katexStrings {
   def mark: mark = "mark".asInstanceOf[mark]
   @scala.inline
   def marquee: marquee = "marquee".asInstanceOf[marquee]
+  @scala.inline
+  def mathml: mathml = "mathml".asInstanceOf[mathml]
   @scala.inline
   def menu: menu = "menu".asInstanceOf[menu]
   @scala.inline

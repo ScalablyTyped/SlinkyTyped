@@ -42,15 +42,13 @@ import scala.scalajs.js.annotation._
 @JSImport("@jupyterlab/services", "KernelMessage")
 @js.native
 object KernelMessage extends js.Object {
-  def createMessage[T /* <: IErrorMsg */](options: IOptions[T]): T = js.native
+  def createMessage[T /* <: ICommInfoReplyMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IClearOutputMsg[T /* <: IClearOutputMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_ICommCloseMsgiopub[T /* <: ICommCloseMsg[iopub] */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_ICommCloseMsgshell[T /* <: ICommCloseMsg[shell] */](options: IOptions[T]): T = js.native
-  @JSName("createMessage")
-  def createMessage_T_ICommInfoReplyMsg[T /* <: ICommInfoReplyMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_ICommInfoRequestMsg[T /* <: ICommInfoRequestMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
@@ -94,6 +92,8 @@ object KernelMessage extends js.Object {
   def createMessage_T_IDebugRequestMsg[T /* <: IDebugRequestMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IDisplayDataMsg[T /* <: IDisplayDataMsg */](options: IOptions[T]): T = js.native
+  @JSName("createMessage")
+  def createMessage_T_IErrorMsg[T /* <: IErrorMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IExecuteInputMsg[T /* <: IExecuteInputMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")

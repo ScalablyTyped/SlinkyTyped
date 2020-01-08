@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Midi
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,26 +88,64 @@ object MidiMessageType extends js.Object {
   @js.native
   sealed trait tuneRequest extends MidiMessageType
   
-  /* 17 */ val activeSensing: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.activeSensing with Double = js.native
-  /* 6 */ val channelPressure: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.channelPressure with Double = js.native
-  /* 15 */ val continue: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.continue with Double = js.native
-  /* 4 */ val controlChange: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.controlChange with Double = js.native
-  /* 9 */ val midiTimeCode: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.midiTimeCode with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.none with Double = js.native
-  /* 1 */ val noteOff: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.noteOff with Double = js.native
-  /* 2 */ val noteOn: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.noteOn with Double = js.native
-  /* 7 */ val pitchBendChange: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.pitchBendChange with Double = js.native
-  /* 3 */ val polyphonicKeyPressure: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.polyphonicKeyPressure with Double = js.native
-  /* 5 */ val programChange: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.programChange with Double = js.native
-  /* 10 */ val songPositionPointer: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.songPositionPointer with Double = js.native
-  /* 11 */ val songSelect: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.songSelect with Double = js.native
-  /* 14 */ val start: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.start with Double = js.native
-  /* 16 */ val stop: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.stop with Double = js.native
-  /* 8 */ val systemExclusive: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.systemExclusive with Double = js.native
-  /* 18 */ val systemReset: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.systemReset with Double = js.native
-  /* 13 */ val timingClock: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.timingClock with Double = js.native
-  /* 12 */ val tuneRequest: typingsSlinky.winrtDashUwp.Windows.Devices.Midi.MidiMessageType.tuneRequest with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MidiMessageType with Double] = js.native
+  /* 17 */ @js.native
+  object activeSensing extends TopLevel[activeSensing with Double]
+  
+  /* 6 */ @js.native
+  object channelPressure extends TopLevel[channelPressure with Double]
+  
+  /* 15 */ @js.native
+  object continue extends TopLevel[continue with Double]
+  
+  /* 4 */ @js.native
+  object controlChange extends TopLevel[controlChange with Double]
+  
+  /* 9 */ @js.native
+  object midiTimeCode extends TopLevel[midiTimeCode with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object noteOff extends TopLevel[noteOff with Double]
+  
+  /* 2 */ @js.native
+  object noteOn extends TopLevel[noteOn with Double]
+  
+  /* 7 */ @js.native
+  object pitchBendChange extends TopLevel[pitchBendChange with Double]
+  
+  /* 3 */ @js.native
+  object polyphonicKeyPressure extends TopLevel[polyphonicKeyPressure with Double]
+  
+  /* 5 */ @js.native
+  object programChange extends TopLevel[programChange with Double]
+  
+  /* 10 */ @js.native
+  object songPositionPointer extends TopLevel[songPositionPointer with Double]
+  
+  /* 11 */ @js.native
+  object songSelect extends TopLevel[songSelect with Double]
+  
+  /* 14 */ @js.native
+  object start extends TopLevel[start with Double]
+  
+  /* 16 */ @js.native
+  object stop extends TopLevel[stop with Double]
+  
+  /* 8 */ @js.native
+  object systemExclusive extends TopLevel[systemExclusive with Double]
+  
+  /* 18 */ @js.native
+  object systemReset extends TopLevel[systemReset with Double]
+  
+  /* 13 */ @js.native
+  object timingClock extends TopLevel[timingClock with Double]
+  
+  /* 12 */ @js.native
+  object tuneRequest extends TopLevel[tuneRequest with Double]
+  
 }
 

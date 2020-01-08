@@ -1,8 +1,6 @@
 package typingsSlinky.twilsock
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.twilsock.libClientMod.Context
-import typingsSlinky.twilsock.libClientMod.TwilsockClient
 import typingsSlinky.twilsock.libOfflinestorageMod.OfflineProductStorage
 import typingsSlinky.twilsock.libServicesUpstreamMod.Result
 import scala.scalajs.js

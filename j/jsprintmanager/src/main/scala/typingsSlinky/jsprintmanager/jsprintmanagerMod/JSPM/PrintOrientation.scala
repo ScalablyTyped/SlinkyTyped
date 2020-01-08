@@ -1,5 +1,6 @@
 package typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object PrintOrientation extends js.Object {
   @js.native
   sealed trait Portrait extends PrintOrientation
   
-  /* 1 */ val Landscape: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.PrintOrientation.Landscape with Double = js.native
-  /* 0 */ val Portrait: typingsSlinky.jsprintmanager.jsprintmanagerMod.JSPM.PrintOrientation.Portrait with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrintOrientation with Double] = js.native
+  /* 1 */ @js.native
+  object Landscape extends TopLevel[Landscape with Double]
+  
+  /* 0 */ @js.native
+  object Portrait extends TopLevel[Portrait with Double]
+  
 }
 

@@ -1,11 +1,5 @@
 package typingsSlinky.fsDashFinder.fsDashFinderMod
 
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.AsyncFunction
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.Base
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.Directory
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.Finder
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.Mask
-import typingsSlinky.fsDashFinder.fsDashFinderMod.FsFinder.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

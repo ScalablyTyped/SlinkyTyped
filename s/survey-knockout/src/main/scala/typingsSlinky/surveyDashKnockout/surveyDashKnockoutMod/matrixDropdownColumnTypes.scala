@@ -1,6 +1,7 @@
 package typingsSlinky.surveyDashKnockout.surveyDashKnockoutMod
 
 import typingsSlinky.surveyDashKnockout.Anon_CellQuestion
+import typingsSlinky.surveyDashKnockout.Anon_Properties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +15,7 @@ object matrixDropdownColumnTypes extends js.Object {
   var dropdown: Anon_CellQuestion = js.native
   var expression: Anon_CellQuestion = js.native
   var radiogroup: Anon_CellQuestion = js.native
+  var rating: Anon_Properties = js.native
   var text: Anon_CellQuestion = js.native
 }
 

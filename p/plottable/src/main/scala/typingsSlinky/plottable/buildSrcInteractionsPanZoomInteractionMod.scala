@@ -4,10 +4,6 @@ import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
 import typingsSlinky.plottable.buildSrcInteractionsInteractionMod.Interaction
 import typingsSlinky.plottable.buildSrcInteractionsMod.Drag
-import typingsSlinky.plottable.buildSrcInteractionsPanZoomInteractionMod.PanCallback
-import typingsSlinky.plottable.buildSrcInteractionsPanZoomInteractionMod.PanZoomUpdateCallback
-import typingsSlinky.plottable.buildSrcInteractionsPanZoomInteractionMod.WheelFilter
-import typingsSlinky.plottable.buildSrcInteractionsPanZoomInteractionMod.ZoomCallback
 import typingsSlinky.plottable.buildSrcScalesScaleMod.TransformableScale
 import scala.scalajs.js
 import scala.scalajs.js.`|`

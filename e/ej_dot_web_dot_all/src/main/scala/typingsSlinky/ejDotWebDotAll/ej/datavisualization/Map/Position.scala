@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,17 +51,37 @@ object Position extends js.Object {
   @js.native
   sealed trait Topright extends Position
   
-  /* 8 */ val Bottomcenter: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Bottomcenter with Double = js.native
-  /* 7 */ val Bottomleft: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Bottomleft with Double = js.native
-  /* 9 */ val Bottomright: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Bottomright with Double = js.native
-  /* 5 */ val Center: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Center with Double = js.native
-  /* 4 */ val Centerleft: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Centerleft with Double = js.native
-  /* 6 */ val Centerright: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Centerright with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.None with Double = js.native
-  /* 2 */ val Topcenter: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Topcenter with Double = js.native
-  /* 1 */ val Topleft: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Topleft with Double = js.native
-  /* 3 */ val Topright: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.Position.Topright with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Position with Double] = js.native
+  /* 8 */ @js.native
+  object Bottomcenter extends TopLevel[Bottomcenter with Double]
+  
+  /* 7 */ @js.native
+  object Bottomleft extends TopLevel[Bottomleft with Double]
+  
+  /* 9 */ @js.native
+  object Bottomright extends TopLevel[Bottomright with Double]
+  
+  /* 5 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 4 */ @js.native
+  object Centerleft extends TopLevel[Centerleft with Double]
+  
+  /* 6 */ @js.native
+  object Centerright extends TopLevel[Centerright with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Topcenter extends TopLevel[Topcenter with Double]
+  
+  /* 1 */ @js.native
+  object Topleft extends TopLevel[Topleft with Double]
+  
+  /* 3 */ @js.native
+  object Topright extends TopLevel[Topright with Double]
+  
 }
 

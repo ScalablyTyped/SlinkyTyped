@@ -2,8 +2,6 @@ package typingsSlinky.nodegit
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodegit.bufMod.Buf
-import typingsSlinky.nodegit.commitMod.Commit
-import typingsSlinky.nodegit.commitMod.HistoryEventEmitter
 import typingsSlinky.nodegit.diffMod.Diff
 import typingsSlinky.nodegit.objectMod.Object
 import typingsSlinky.nodegit.oidMod.Oid

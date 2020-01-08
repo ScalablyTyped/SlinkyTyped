@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcDashDateDashPicker extends SharedApply_IDatePickerProps464444122[default] {
+object RmcDashDateDashPicker extends SharedApply_IDatePickerProps_1872088810[default] {
   @JSImport("rmc-date-picker", JSImport.Default)
   @js.native
   object componentImport extends js.Object

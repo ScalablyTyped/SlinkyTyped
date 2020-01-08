@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.notifications
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import typingsSlinky.chromeDashApps.chrome.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object onButtonClicked
   extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[js.Function2[/* notificationId */ String, /* buttonIndex */ integer, Unit]]
+      Event[js.Function2[/* notificationId */ String, /* buttonIndex */ integer, Unit]]
     ]
 

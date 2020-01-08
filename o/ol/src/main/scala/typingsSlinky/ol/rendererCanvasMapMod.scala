@@ -1,7 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererCanvasMapMod.CanvasMapRenderer
 import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

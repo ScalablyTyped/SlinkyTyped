@@ -1,7 +1,7 @@
 
 # Scala.js typings for levelup
 
-Typings are for version 3.1
+Typings are for version 4.3
 
 ## Library description:
 Fast & simple storage - a Node.js-style LevelDB wrapper
@@ -10,9 +10,9 @@ Fast & simple storage - a Node.js-style LevelDB wrapper
 | ------------------ | :-------------: |
 | Full name          | levelup |
 | Keywords           | level, leveldb, stream, database, db, store, storage, json |
-| # releases         | 16 |
-| # dependents       | 524 |
-| # downloads        | 6532469 |
+| # releases         | 14 |
+| # dependents       | 574 |
+| # downloads        | 9089758 |
 | # stars            | 61 |
 
 ## Links

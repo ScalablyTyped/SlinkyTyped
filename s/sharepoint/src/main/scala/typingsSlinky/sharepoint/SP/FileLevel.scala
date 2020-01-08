@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FileLevel extends js.Object {
   @js.native
   sealed trait published extends FileLevel
   
-  /* 2 */ val checkout: typingsSlinky.sharepoint.SP.FileLevel.checkout with Double = js.native
-  /* 1 */ val draft: typingsSlinky.sharepoint.SP.FileLevel.draft with Double = js.native
-  /* 0 */ val published: typingsSlinky.sharepoint.SP.FileLevel.published with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileLevel with Double] = js.native
+  /* 2 */ @js.native
+  object checkout extends TopLevel[checkout with Double]
+  
+  /* 1 */ @js.native
+  object draft extends TopLevel[draft with Double]
+  
+  /* 0 */ @js.native
+  object published extends TopLevel[published with Double]
+  
 }
 

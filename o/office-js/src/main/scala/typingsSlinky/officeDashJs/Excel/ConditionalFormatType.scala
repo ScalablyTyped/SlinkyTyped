@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,15 +38,31 @@ object ConditionalFormatType extends js.Object {
   @js.native
   sealed trait topBottom extends ConditionalFormatType
   
-  /* "CellValue" */ val cellValue: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.cellValue with String = js.native
-  /* "ColorScale" */ val colorScale: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.colorScale with String = js.native
-  /* "ContainsText" */ val containsText: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.containsText with String = js.native
-  /* "Custom" */ val custom: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.custom with String = js.native
-  /* "DataBar" */ val dataBar: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.dataBar with String = js.native
-  /* "IconSet" */ val iconSet: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.iconSet with String = js.native
-  /* "PresetCriteria" */ val presetCriteria: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.presetCriteria with String = js.native
-  /* "TopBottom" */ val topBottom: typingsSlinky.officeDashJs.Excel.ConditionalFormatType.topBottom with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ConditionalFormatType with String] = js.native
+  /* "CellValue" */ @js.native
+  object cellValue extends TopLevel[cellValue with String]
+  
+  /* "ColorScale" */ @js.native
+  object colorScale extends TopLevel[colorScale with String]
+  
+  /* "ContainsText" */ @js.native
+  object containsText extends TopLevel[containsText with String]
+  
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "DataBar" */ @js.native
+  object dataBar extends TopLevel[dataBar with String]
+  
+  /* "IconSet" */ @js.native
+  object iconSet extends TopLevel[iconSet with String]
+  
+  /* "PresetCriteria" */ @js.native
+  object presetCriteria extends TopLevel[presetCriteria with String]
+  
+  /* "TopBottom" */ @js.native
+  object topBottom extends TopLevel[topBottom with String]
+  
 }
 

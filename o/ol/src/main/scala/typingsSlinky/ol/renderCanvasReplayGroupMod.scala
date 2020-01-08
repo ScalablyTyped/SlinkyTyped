@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.renderCanvasMod.DeclutterGroup
-import typingsSlinky.ol.renderCanvasReplayGroupMod.CanvasReplayGroup
 import typingsSlinky.ol.renderReplayTypeMod.ReplayType
 import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js

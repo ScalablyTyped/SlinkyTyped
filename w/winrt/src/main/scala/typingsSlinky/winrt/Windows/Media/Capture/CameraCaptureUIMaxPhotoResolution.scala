@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Media.Capture
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object CameraCaptureUIMaxPhotoResolution extends js.Object {
   @js.native
   sealed trait verySmallQvga extends CameraCaptureUIMaxPhotoResolution
   
-  /* 0 */ val highestAvailable: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.highestAvailable with Double = js.native
-  /* 4 */ val large3M: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.large3M with Double = js.native
-  /* 3 */ val mediumXga: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.mediumXga with Double = js.native
-  /* 2 */ val smallVga: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.smallVga with Double = js.native
-  /* 5 */ val veryLarge5M: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.veryLarge5M with Double = js.native
-  /* 1 */ val verySmallQvga: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution.verySmallQvga with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CameraCaptureUIMaxPhotoResolution with Double] = js.native
+  /* 0 */ @js.native
+  object highestAvailable extends TopLevel[highestAvailable with Double]
+  
+  /* 4 */ @js.native
+  object large3M extends TopLevel[large3M with Double]
+  
+  /* 3 */ @js.native
+  object mediumXga extends TopLevel[mediumXga with Double]
+  
+  /* 2 */ @js.native
+  object smallVga extends TopLevel[smallVga with Double]
+  
+  /* 5 */ @js.native
+  object veryLarge5M extends TopLevel[veryLarge5M with Double]
+  
+  /* 1 */ @js.native
+  object verySmallQvga extends TopLevel[verySmallQvga with Double]
+  
 }
 

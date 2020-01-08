@@ -1,5 +1,6 @@
 package typingsSlinky.activexDashExcel.Excel
 
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`false`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`-4104`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`-4122`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`-4123`
@@ -51,7 +52,6 @@ import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`6`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`7`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`8`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`9`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`false`
 import typingsSlinky.activexDashOffice.Office.MsoChartElementType
 import typingsSlinky.activexDashOffice.Office.MsoEnvelope
 import typingsSlinky.activexDashOffice.Office.MsoLanguageID
@@ -86,7 +86,8 @@ class Chart protected () extends Sheet {
   var Dummy24: Boolean = js.native
   var Dummy25: Boolean = js.native
   var Elevation: Double = js.native
-  var `Excel.Chart_typekey`: Chart = js.native
+  @JSName("Excel.Chart_typekey")
+  var ExcelDotChart_typekey: Chart = js.native
   val Floor: typingsSlinky.activexDashExcel.Excel.Floor = js.native
   var GapDepth: Double = js.native
   var HasDataTable: Boolean = js.native

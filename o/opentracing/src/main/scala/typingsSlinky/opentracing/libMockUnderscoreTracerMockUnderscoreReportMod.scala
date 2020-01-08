@@ -1,6 +1,5 @@
 package typingsSlinky.opentracing
 
-import typingsSlinky.opentracing.libMockUnderscoreTracerMockUnderscoreReportMod.MockReport
 import typingsSlinky.opentracing.libMockUnderscoreTracerMockUnderscoreSpanMod.MockSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -15,12 +15,6 @@ object getInfo extends js.Object {
     * @param socketId The socket identifier.
     * @param callback Called when the socket state is available.
     */
-  def apply(
-    socketId: integer,
-    callback: js.Function1[
-      /* socketInfo */ typingsSlinky.chromeDashApps.chrome.sockets.tcpServer.SocketInfo, 
-      Unit
-    ]
-  ): Unit = js.native
+  def apply(socketId: integer, callback: js.Function1[/* socketInfo */ SocketInfo, Unit]): Unit = js.native
 }
 

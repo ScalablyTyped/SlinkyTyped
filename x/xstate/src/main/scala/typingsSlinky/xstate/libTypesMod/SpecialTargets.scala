@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.libTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object SpecialTargets extends js.Object {
   @js.native
   sealed trait Parent extends SpecialTargets
   
-  /* "#_internal" */ val Internal: typingsSlinky.xstate.libTypesMod.SpecialTargets.Internal with String = js.native
-  /* "#_parent" */ val Parent: typingsSlinky.xstate.libTypesMod.SpecialTargets.Parent with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SpecialTargets with String] = js.native
+  /* "#_internal" */ @js.native
+  object Internal extends TopLevel[Internal with String]
+  
+  /* "#_parent" */ @js.native
+  object Parent extends TopLevel[Parent with String]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,22 +56,52 @@ object DataClasses extends js.Object {
   @js.native
   sealed trait umts extends DataClasses
   
-  /* 8 */ val cdma1xEvdo: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma1xEvdo with Double = js.native
-  /* 9 */ val cdma1xEvdoRevA: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma1xEvdoRevA with Double = js.native
-  /* 12 */ val cdma1xEvdoRevB: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma1xEvdoRevB with Double = js.native
-  /* 10 */ val cdma1xEvdv: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma1xEvdv with Double = js.native
-  /* 7 */ val cdma1xRtt: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma1xRtt with Double = js.native
-  /* 11 */ val cdma3xRtt: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdma3xRtt with Double = js.native
-  /* 13 */ val cdmaUmb: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.cdmaUmb with Double = js.native
-  /* 14 */ val custom: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.custom with Double = js.native
-  /* 2 */ val edge: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.edge with Double = js.native
-  /* 1 */ val gprs: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.gprs with Double = js.native
-  /* 4 */ val hsdpa: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.hsdpa with Double = js.native
-  /* 5 */ val hsupa: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.hsupa with Double = js.native
-  /* 6 */ val lteAdvanced: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.lteAdvanced with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.none with Double = js.native
-  /* 3 */ val umts: typingsSlinky.winrt.Windows.Networking.NetworkOperators.DataClasses.umts with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DataClasses with Double] = js.native
+  /* 8 */ @js.native
+  object cdma1xEvdo extends TopLevel[cdma1xEvdo with Double]
+  
+  /* 9 */ @js.native
+  object cdma1xEvdoRevA extends TopLevel[cdma1xEvdoRevA with Double]
+  
+  /* 12 */ @js.native
+  object cdma1xEvdoRevB extends TopLevel[cdma1xEvdoRevB with Double]
+  
+  /* 10 */ @js.native
+  object cdma1xEvdv extends TopLevel[cdma1xEvdv with Double]
+  
+  /* 7 */ @js.native
+  object cdma1xRtt extends TopLevel[cdma1xRtt with Double]
+  
+  /* 11 */ @js.native
+  object cdma3xRtt extends TopLevel[cdma3xRtt with Double]
+  
+  /* 13 */ @js.native
+  object cdmaUmb extends TopLevel[cdmaUmb with Double]
+  
+  /* 14 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 2 */ @js.native
+  object edge extends TopLevel[edge with Double]
+  
+  /* 1 */ @js.native
+  object gprs extends TopLevel[gprs with Double]
+  
+  /* 4 */ @js.native
+  object hsdpa extends TopLevel[hsdpa with Double]
+  
+  /* 5 */ @js.native
+  object hsupa extends TopLevel[hsupa with Double]
+  
+  /* 6 */ @js.native
+  object lteAdvanced extends TopLevel[lteAdvanced with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object umts extends TopLevel[umts with Double]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.rotDashJs
 
 import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.rotDashJs.libSchedulerSpeedMod.SpeedActor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,9 +24,18 @@ object libSchedulerMod extends js.Object {
     class Speed[T /* <: SpeedActor */] ()
       extends typingsSlinky.rotDashJs.libSchedulerSpeedMod.default[T]
     
-    var Action: Instantiable0[typingsSlinky.rotDashJs.libSchedulerActionMod.default[js.Object]] = js.native
-    var Simple: Instantiable0[typingsSlinky.rotDashJs.libSchedulerSimpleMod.default[js.Object]] = js.native
-    var Speed: Instantiable0[typingsSlinky.rotDashJs.libSchedulerSpeedMod.default[SpeedActor]] = js.native
+    @js.native
+    object Action
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libSchedulerActionMod.default[js.Object]]]
+    
+    @js.native
+    object Simple
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libSchedulerSimpleMod.default[js.Object]]]
+    
+    @js.native
+    object Speed
+      extends TopLevel[Instantiable0[typingsSlinky.rotDashJs.libSchedulerSpeedMod.default[SpeedActor]]]
+    
   }
   
 }

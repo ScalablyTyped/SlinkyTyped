@@ -1,6 +1,11 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,10 +49,13 @@ object ColorSliderProperties {
     handlesSyncedToPrimary: js.UndefOr[Boolean] = js.undefined,
     histogramConfig: HistogramConfig = null,
     id: String = null,
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
     label: String = null,
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | value], /* index */ js.UndefOr[Double]) => String = null,
     max: Int | Double = null,
     min: Int | Double = null,
+    precision: Int | Double = null,
     primaryHandleEnabled: js.UndefOr[Boolean] = js.undefined,
     stops: js.Array[ColorStopProperties] = null,
     viewModel: ColorSliderViewModelProperties = null,
@@ -59,10 +67,13 @@ object ColorSliderProperties {
     if (!js.isUndefined(handlesSyncedToPrimary)) __obj.updateDynamic("handlesSyncedToPrimary")(handlesSyncedToPrimary.asInstanceOf[js.Any])
     if (histogramConfig != null) __obj.updateDynamic("histogramConfig")(histogramConfig.asInstanceOf[js.Any])
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inputFormatFunction != null) __obj.updateDynamic("inputFormatFunction")(js.Any.fromFunction3(inputFormatFunction))
+    if (inputParseFunction != null) __obj.updateDynamic("inputParseFunction")(js.Any.fromFunction3(inputParseFunction))
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     if (labelFormatFunction != null) __obj.updateDynamic("labelFormatFunction")(js.Any.fromFunction3(labelFormatFunction))
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
     if (!js.isUndefined(primaryHandleEnabled)) __obj.updateDynamic("primaryHandleEnabled")(primaryHandleEnabled.asInstanceOf[js.Any])
     if (stops != null) __obj.updateDynamic("stops")(stops.asInstanceOf[js.Any])
     if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])

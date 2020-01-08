@@ -1,5 +1,6 @@
 package typingsSlinky.applicationinsightsDashJs.AI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DependencySourceType extends js.Object {
   @js.native
   sealed trait Undefined extends DependencySourceType
   
-  /* 1 */ val Aic: typingsSlinky.applicationinsightsDashJs.AI.DependencySourceType.Aic with Double = js.native
-  /* 2 */ val Apmc: typingsSlinky.applicationinsightsDashJs.AI.DependencySourceType.Apmc with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.applicationinsightsDashJs.AI.DependencySourceType.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DependencySourceType with Double] = js.native
+  /* 1 */ @js.native
+  object Aic extends TopLevel[Aic with Double]
+  
+  /* 2 */ @js.native
+  object Apmc extends TopLevel[Apmc with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

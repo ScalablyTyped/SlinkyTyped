@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,22 +56,52 @@ object ScriptElementKindModifier extends js.Object {
   @js.native
   sealed trait tsxModifier extends ScriptElementKindModifier
   
-  /* "abstract" */ val abstractModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.abstractModifier with String = js.native
-  /* "declare" */ val ambientModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.ambientModifier with String = js.native
-  /* ".d.ts" */ val dtsModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.dtsModifier with String = js.native
-  /* "export" */ val exportedModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.exportedModifier with String = js.native
-  /* ".js" */ val jsModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.jsModifier with String = js.native
-  /* ".json" */ val jsonModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.jsonModifier with String = js.native
-  /* ".jsx" */ val jsxModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.jsxModifier with String = js.native
-  /* "" */ val none: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.none with String = js.native
-  /* "optional" */ val optionalModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.optionalModifier with String = js.native
-  /* "private" */ val privateMemberModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.privateMemberModifier with String = js.native
-  /* "protected" */ val protectedMemberModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.protectedMemberModifier with String = js.native
-  /* "public" */ val publicMemberModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.publicMemberModifier with String = js.native
-  /* "static" */ val staticModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.staticModifier with String = js.native
-  /* ".ts" */ val tsModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.tsModifier with String = js.native
-  /* ".tsx" */ val tsxModifier: typingsSlinky.typescript.typescriptMod.ScriptElementKindModifier.tsxModifier with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ScriptElementKindModifier with String] = js.native
+  /* "abstract" */ @js.native
+  object abstractModifier extends TopLevel[abstractModifier with String]
+  
+  /* "declare" */ @js.native
+  object ambientModifier extends TopLevel[ambientModifier with String]
+  
+  /* ".d.ts" */ @js.native
+  object dtsModifier extends TopLevel[dtsModifier with String]
+  
+  /* "export" */ @js.native
+  object exportedModifier extends TopLevel[exportedModifier with String]
+  
+  /* ".js" */ @js.native
+  object jsModifier extends TopLevel[jsModifier with String]
+  
+  /* ".json" */ @js.native
+  object jsonModifier extends TopLevel[jsonModifier with String]
+  
+  /* ".jsx" */ @js.native
+  object jsxModifier extends TopLevel[jsxModifier with String]
+  
+  /* "" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "optional" */ @js.native
+  object optionalModifier extends TopLevel[optionalModifier with String]
+  
+  /* "private" */ @js.native
+  object privateMemberModifier extends TopLevel[privateMemberModifier with String]
+  
+  /* "protected" */ @js.native
+  object protectedMemberModifier extends TopLevel[protectedMemberModifier with String]
+  
+  /* "public" */ @js.native
+  object publicMemberModifier extends TopLevel[publicMemberModifier with String]
+  
+  /* "static" */ @js.native
+  object staticModifier extends TopLevel[staticModifier with String]
+  
+  /* ".ts" */ @js.native
+  object tsModifier extends TopLevel[tsModifier with String]
+  
+  /* ".tsx" */ @js.native
+  object tsxModifier extends TopLevel[tsxModifier with String]
+  
 }
 

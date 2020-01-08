@@ -8,8 +8,6 @@ import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.sourceSourceMod.AttributionLike
 import typingsSlinky.ol.sourceStateMod.State
 import typingsSlinky.ol.sourceTileMod.TileSourceEvent
-import typingsSlinky.ol.sourceUrlTileMod.Options
-import typingsSlinky.ol.sourceUrlTileMod.UrlTile
 import typingsSlinky.ol.tileMod.LoadFunction
 import typingsSlinky.ol.tileMod.Tile
 import typingsSlinky.ol.tileMod.UrlFunction

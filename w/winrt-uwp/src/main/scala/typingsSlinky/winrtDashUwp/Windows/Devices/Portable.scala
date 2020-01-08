@@ -1,6 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices
 
-import typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Storage.StorageFolder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,15 +69,29 @@ object Portable extends js.Object {
     @js.native
     sealed trait tasksService extends ServiceDeviceType
     
-    /* 0 */ val calendarService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.calendarService with Double = js.native
-    /* 1 */ val contactsService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.contactsService with Double = js.native
-    /* 2 */ val deviceStatusService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.deviceStatusService with Double = js.native
-    /* 3 */ val notesService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.notesService with Double = js.native
-    /* 4 */ val ringtonesService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.ringtonesService with Double = js.native
-    /* 5 */ val smsService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.smsService with Double = js.native
-    /* 6 */ val tasksService: typingsSlinky.winrtDashUwp.Windows.Devices.Portable.ServiceDeviceType.tasksService with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ServiceDeviceType with Double] = js.native
+    /* 0 */ @js.native
+    object calendarService extends TopLevel[calendarService with Double]
+    
+    /* 1 */ @js.native
+    object contactsService extends TopLevel[contactsService with Double]
+    
+    /* 2 */ @js.native
+    object deviceStatusService extends TopLevel[deviceStatusService with Double]
+    
+    /* 3 */ @js.native
+    object notesService extends TopLevel[notesService with Double]
+    
+    /* 4 */ @js.native
+    object ringtonesService extends TopLevel[ringtonesService with Double]
+    
+    /* 5 */ @js.native
+    object smsService extends TopLevel[smsService with Double]
+    
+    /* 6 */ @js.native
+    object tasksService extends TopLevel[tasksService with Double]
+    
   }
   
   /* static members */

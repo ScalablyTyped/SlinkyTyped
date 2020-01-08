@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IndexLinkContainer extends SharedApply_NavLinkProps_838224771 {
+object IndexLinkContainer extends SharedApply_NavLinkProps_1248577867 {
   @JSImport("react-router-bootstrap/lib/IndexLinkContainer", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -2,8 +2,6 @@ package typingsSlinky.atMaterialSnackbar
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialSnackbar.adapterMod.MDCSnackbarAdapter
-import typingsSlinky.atMaterialSnackbar.foundationMod.MDCSnackbarData
-import typingsSlinky.atMaterialSnackbar.foundationMod.MDCSnackbarFoundation
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`settingsDOTk8sDOTio/v1alpha1`
-import typingsSlinky.atPulumiKubernetes.settingsV1alpha1PodPresetMod.PodPreset
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.settingsDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.settings.v1alpha1.PodPresetSpec
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object settingsV1alpha1PodPresetMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`settingsDOTk8sDOTio/v1alpha1`] = js.native
+    val apiVersion: Output[settingsDotk8sDotioSlashv1alpha1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

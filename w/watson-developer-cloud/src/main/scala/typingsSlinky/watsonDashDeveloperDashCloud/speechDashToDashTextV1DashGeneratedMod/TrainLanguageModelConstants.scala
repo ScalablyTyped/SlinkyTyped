@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.TrainLanguageModelConstants.WordTypeToAdd
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,14 @@ object TrainLanguageModelConstants extends js.Object {
     @js.native
     sealed trait USER extends WordTypeToAdd
     
-    /* "all" */ val ALL: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.TrainLanguageModelConstants.WordTypeToAdd.ALL with String = js.native
-    /* "user" */ val USER: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.TrainLanguageModelConstants.WordTypeToAdd.USER with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[WordTypeToAdd with String] = js.native
+    /* "all" */ @js.native
+    object ALL extends TopLevel[ALL with String]
+    
+    /* "user" */ @js.native
+    object USER extends TopLevel[USER with String]
+    
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object MediaProcessingTriggerResult extends js.Object {
   @js.native
   sealed trait unknownError extends MediaProcessingTriggerResult
   
-  /* 0 */ val allowed: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.MediaProcessingTriggerResult.allowed with Double = js.native
-  /* 1 */ val currentlyRunning: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.MediaProcessingTriggerResult.currentlyRunning with Double = js.native
-  /* 2 */ val disabledByPolicy: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.MediaProcessingTriggerResult.disabledByPolicy with Double = js.native
-  /* 3 */ val unknownError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.MediaProcessingTriggerResult.unknownError with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaProcessingTriggerResult with Double] = js.native
+  /* 0 */ @js.native
+  object allowed extends TopLevel[allowed with Double]
+  
+  /* 1 */ @js.native
+  object currentlyRunning extends TopLevel[currentlyRunning with Double]
+  
+  /* 2 */ @js.native
+  object disabledByPolicy extends TopLevel[disabledByPolicy with Double]
+  
+  /* 3 */ @js.native
+  object unknownError extends TopLevel[unknownError with Double]
+  
 }
 

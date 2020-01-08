@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object LinkType extends js.Object {
   @js.native
   sealed trait URL extends LinkType
   
-  /* 3 */ val SLIDE_ID: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LinkType.SLIDE_ID with Double = js.native
-  /* 4 */ val SLIDE_INDEX: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LinkType.SLIDE_INDEX with Double = js.native
-  /* 2 */ val SLIDE_POSITION: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LinkType.SLIDE_POSITION with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LinkType.UNSUPPORTED with Double = js.native
-  /* 1 */ val URL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.LinkType.URL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LinkType with Double] = js.native
+  /* 3 */ @js.native
+  object SLIDE_ID extends TopLevel[SLIDE_ID with Double]
+  
+  /* 4 */ @js.native
+  object SLIDE_INDEX extends TopLevel[SLIDE_INDEX with Double]
+  
+  /* 2 */ @js.native
+  object SLIDE_POSITION extends TopLevel[SLIDE_POSITION with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
+  /* 1 */ @js.native
+  object URL extends TopLevel[URL with Double]
+  
 }
 

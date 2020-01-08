@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +35,16 @@ object MatchType extends js.Object {
   @js.native
   sealed trait PREFIX extends MatchType
   
-  /* 2 */ val ANY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.MatchType.ANY with Double = js.native
-  /* 0 */ val EXACT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.MatchType.EXACT with Double = js.native
-  /* 1 */ val PREFIX: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.MatchType.PREFIX with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MatchType with Double] = js.native
+  /* 2 */ @js.native
+  object ANY extends TopLevel[ANY with Double]
+  
+  /* 0 */ @js.native
+  object EXACT extends TopLevel[EXACT with Double]
+  
+  /* 1 */ @js.native
+  object PREFIX extends TopLevel[PREFIX with Double]
+  
 }
 

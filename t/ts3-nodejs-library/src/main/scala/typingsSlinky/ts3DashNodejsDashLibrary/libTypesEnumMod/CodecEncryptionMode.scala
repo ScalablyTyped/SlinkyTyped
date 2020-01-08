@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CodecEncryptionMode extends js.Object {
   @js.native
   sealed trait INDIVIDUAL extends CodecEncryptionMode
   
-  /* 1 */ val DISABLED: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.CodecEncryptionMode.DISABLED with Double = js.native
-  /* 2 */ val ENABLED: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.CodecEncryptionMode.ENABLED with Double = js.native
-  /* 0 */ val INDIVIDUAL: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.CodecEncryptionMode.INDIVIDUAL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CodecEncryptionMode with Double] = js.native
+  /* 1 */ @js.native
+  object DISABLED extends TopLevel[DISABLED with Double]
+  
+  /* 2 */ @js.native
+  object ENABLED extends TopLevel[ENABLED with Double]
+  
+  /* 0 */ @js.native
+  object INDIVIDUAL extends TopLevel[INDIVIDUAL with Double]
+  
 }
 

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.tstl.exceptionErrorCategoryMod.ErrorCategory
 import typingsSlinky.tstl.exceptionErrorCodeMod.ErrorCode
 import typingsSlinky.tstl.exceptionRuntimeErrorMod.RuntimeError
-import typingsSlinky.tstl.exceptionSystemErrorMod.SystemError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

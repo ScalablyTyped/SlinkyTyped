@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialToolbar.adapterMod.MDCToolbarAdapter
-import typingsSlinky.atMaterialToolbar.atMaterialToolbarMod.MDCToolbar
 import typingsSlinky.atMaterialToolbar.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

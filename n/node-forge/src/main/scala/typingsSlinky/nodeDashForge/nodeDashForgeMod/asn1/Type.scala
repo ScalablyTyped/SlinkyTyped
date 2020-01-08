@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,28 +74,70 @@ object Type extends js.Object {
   @js.native
   sealed trait UTF8 extends Type
   
-  /* 3 */ val BITSTRING: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.BITSTRING with Double = js.native
-  /* 30 */ val BMPSTRING: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.BMPSTRING with Double = js.native
-  /* 1 */ val BOOLEAN: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.BOOLEAN with Double = js.native
-  /* 11 */ val EMBEDDED: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.EMBEDDED with Double = js.native
-  /* 10 */ val ENUMERATED: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.ENUMERATED with Double = js.native
-  /* 8 */ val EXTERNAL: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.EXTERNAL with Double = js.native
-  /* 24 */ val GENERALIZEDTIME: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.GENERALIZEDTIME with Double = js.native
-  /* 22 */ val IA5STRING: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.IA5STRING with Double = js.native
-  /* 2 */ val INTEGER: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.INTEGER with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.NONE with Double = js.native
-  /* 5 */ val NULL: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.NULL with Double = js.native
-  /* 4 */ val OCTETSTRING: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.OCTETSTRING with Double = js.native
-  /* 7 */ val ODESC: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.ODESC with Double = js.native
-  /* 6 */ val OID: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.OID with Double = js.native
-  /* 19 */ val PRINTABLESTRING: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.PRINTABLESTRING with Double = js.native
-  /* 9 */ val REAL: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.REAL with Double = js.native
-  /* 13 */ val ROID: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.ROID with Double = js.native
-  /* 16 */ val SEQUENCE: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.SEQUENCE with Double = js.native
-  /* 17 */ val SET: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.SET with Double = js.native
-  /* 23 */ val UTCTIME: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.UTCTIME with Double = js.native
-  /* 12 */ val UTF8: typingsSlinky.nodeDashForge.nodeDashForgeMod.asn1.Type.UTF8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Type with Double] = js.native
+  /* 3 */ @js.native
+  object BITSTRING extends TopLevel[BITSTRING with Double]
+  
+  /* 30 */ @js.native
+  object BMPSTRING extends TopLevel[BMPSTRING with Double]
+  
+  /* 1 */ @js.native
+  object BOOLEAN extends TopLevel[BOOLEAN with Double]
+  
+  /* 11 */ @js.native
+  object EMBEDDED extends TopLevel[EMBEDDED with Double]
+  
+  /* 10 */ @js.native
+  object ENUMERATED extends TopLevel[ENUMERATED with Double]
+  
+  /* 8 */ @js.native
+  object EXTERNAL extends TopLevel[EXTERNAL with Double]
+  
+  /* 24 */ @js.native
+  object GENERALIZEDTIME extends TopLevel[GENERALIZEDTIME with Double]
+  
+  /* 22 */ @js.native
+  object IA5STRING extends TopLevel[IA5STRING with Double]
+  
+  /* 2 */ @js.native
+  object INTEGER extends TopLevel[INTEGER with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 5 */ @js.native
+  object NULL extends TopLevel[NULL with Double]
+  
+  /* 4 */ @js.native
+  object OCTETSTRING extends TopLevel[OCTETSTRING with Double]
+  
+  /* 7 */ @js.native
+  object ODESC extends TopLevel[ODESC with Double]
+  
+  /* 6 */ @js.native
+  object OID extends TopLevel[OID with Double]
+  
+  /* 19 */ @js.native
+  object PRINTABLESTRING extends TopLevel[PRINTABLESTRING with Double]
+  
+  /* 9 */ @js.native
+  object REAL extends TopLevel[REAL with Double]
+  
+  /* 13 */ @js.native
+  object ROID extends TopLevel[ROID with Double]
+  
+  /* 16 */ @js.native
+  object SEQUENCE extends TopLevel[SEQUENCE with Double]
+  
+  /* 17 */ @js.native
+  object SET extends TopLevel[SET with Double]
+  
+  /* 23 */ @js.native
+  object UTCTIME extends TopLevel[UTCTIME with Double]
+  
+  /* 12 */ @js.native
+  object UTF8 extends TopLevel[UTF8 with Double]
+  
 }
 

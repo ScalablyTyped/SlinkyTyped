@@ -1,6 +1,5 @@
 package typingsSlinky.azureDashArmDashResource
 
-import typingsSlinky.azureDashArmDashResource.libLockManagementLockClientMod.ManagementLockClient
 import typingsSlinky.azureDashArmDashResource.libLockOperationsMod.AuthorizationOperations
 import typingsSlinky.azureDashArmDashResource.libLockOperationsMod.ManagementLocks
 import typingsSlinky.msDashRest.msDashRestMod.ServiceClientCredentials

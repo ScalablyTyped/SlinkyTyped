@@ -1,11 +1,6 @@
 package typingsSlinky.metalsmith
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.metalsmith.metalsmithMod.Callback
-import typingsSlinky.metalsmith.metalsmithMod.Files
-import typingsSlinky.metalsmith.metalsmithMod.Ignore
-import typingsSlinky.metalsmith.metalsmithMod.Metalsmith
-import typingsSlinky.metalsmith.metalsmithMod.Plugin
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`

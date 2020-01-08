@@ -1,7 +1,6 @@
 package typingsSlinky.atEmberApplication
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.atEmberApplication.atEmberApplicationMod.Application
 import typingsSlinky.atEmberApplication.typesMod.EventDispatcherEvents
 import scala.scalajs.js
 import scala.scalajs.js.`|`

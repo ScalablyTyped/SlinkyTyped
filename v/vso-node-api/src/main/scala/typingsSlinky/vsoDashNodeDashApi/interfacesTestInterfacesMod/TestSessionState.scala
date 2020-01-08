@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object TestSessionState extends js.Object {
   @js.native
   sealed trait Unspecified extends TestSessionState
   
-  /* 4 */ val Completed: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.Completed with Double = js.native
-  /* 5 */ val Declined: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.Declined with Double = js.native
-  /* 2 */ val InProgress: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.InProgress with Double = js.native
-  /* 1 */ val NotStarted: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.NotStarted with Double = js.native
-  /* 3 */ val Paused: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.Paused with Double = js.native
-  /* 0 */ val Unspecified: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionState.Unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TestSessionState with Double] = js.native
+  /* 4 */ @js.native
+  object Completed extends TopLevel[Completed with Double]
+  
+  /* 5 */ @js.native
+  object Declined extends TopLevel[Declined with Double]
+  
+  /* 2 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
+  /* 1 */ @js.native
+  object NotStarted extends TopLevel[NotStarted with Double]
+  
+  /* 3 */ @js.native
+  object Paused extends TopLevel[Paused with Double]
+  
+  /* 0 */ @js.native
+  object Unspecified extends TopLevel[Unspecified with Double]
+  
 }
 

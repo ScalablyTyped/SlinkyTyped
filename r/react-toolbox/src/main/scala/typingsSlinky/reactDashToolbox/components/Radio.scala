@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Radio extends SharedApply_RadioButtonProps686211484[default] {
+object Radio extends SharedApply_RadioButtonProps975462088[default] {
   @JSImport("react-toolbox/lib/radio", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object popupPosition extends js.Object {
   @js.native
   sealed trait Top extends popupPosition
   
-  /* 0 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.popupPosition.Bottom with Double = js.native
-  /* 1 */ val Top: typingsSlinky.ejDotWebDotAll.ej.popupPosition.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[popupPosition with Double] = js.native
+  /* 0 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 1 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

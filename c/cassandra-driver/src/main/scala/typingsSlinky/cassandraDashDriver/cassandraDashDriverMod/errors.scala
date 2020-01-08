@@ -1,6 +1,5 @@
 package typingsSlinky.cassandraDashDriver.cassandraDashDriverMod
 
-import typingsSlinky.cassandraDashDriver.cassandraDashDriverMod.errors.DriverError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

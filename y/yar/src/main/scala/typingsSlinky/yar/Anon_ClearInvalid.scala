@@ -1,7 +1,7 @@
 package typingsSlinky.yar
 
 import typingsSlinky.hapi.hapiMod.Request
-import typingsSlinky.yar.yarNumbers.`false`
+import typingsSlinky.yar.yarBooleans.`false`
 import typingsSlinky.yar.yarStrings.Lax
 import typingsSlinky.yar.yarStrings.Strict
 import scala.scalajs.js

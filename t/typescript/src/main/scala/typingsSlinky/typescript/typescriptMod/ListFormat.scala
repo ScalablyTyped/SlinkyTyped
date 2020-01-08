@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -205,72 +206,205 @@ object ListFormat extends js.Object {
   @js.native
   sealed trait VariableDeclarationList extends ListFormat
   
-  /* 64 */ val AllowTrailingComma: typingsSlinky.typescript.typescriptMod.ListFormat.AllowTrailingComma with Double = js.native
-  /* 8 */ val AmpersandDelimited: typingsSlinky.typescript.typescriptMod.ListFormat.AmpersandDelimited with Double = js.native
-  /* 4096 */ val AngleBrackets: typingsSlinky.typescript.typescriptMod.ListFormat.AngleBrackets with Double = js.native
-  /* 524880 */ val ArrayBindingPatternElements: typingsSlinky.typescript.typescriptMod.ListFormat.ArrayBindingPatternElements with Double = js.native
-  /* 8914 */ val ArrayLiteralExpressionElements: typingsSlinky.typescript.typescriptMod.ListFormat.ArrayLiteralExpressionElements with Double = js.native
-  /* 32 */ val AsteriskDelimited: typingsSlinky.typescript.typescriptMod.ListFormat.AsteriskDelimited with Double = js.native
-  /* 4 */ val BarDelimited: typingsSlinky.typescript.typescriptMod.ListFormat.BarDelimited with Double = js.native
-  /* 1024 */ val Braces: typingsSlinky.typescript.typescriptMod.ListFormat.Braces with Double = js.native
-  /* 15360 */ val BracketsMask: typingsSlinky.typescript.typescriptMod.ListFormat.BracketsMask with Double = js.native
-  /* 2576 */ val CallExpressionArguments: typingsSlinky.typescript.typescriptMod.ListFormat.CallExpressionArguments with Double = js.native
-  /* 129 */ val CaseBlockClauses: typingsSlinky.typescript.typescriptMod.ListFormat.CaseBlockClauses with Double = js.native
-  /* 163969 */ val CaseOrDefaultClauseStatements: typingsSlinky.typescript.typescriptMod.ListFormat.CaseOrDefaultClauseStatements with Double = js.native
-  /* 0 */ val ClassHeritageClauses: typingsSlinky.typescript.typescriptMod.ListFormat.ClassHeritageClauses with Double = js.native
-  /* 129 */ val ClassMembers: typingsSlinky.typescript.typescriptMod.ListFormat.ClassMembers with Double = js.native
-  /* 16 */ val CommaDelimited: typingsSlinky.typescript.typescriptMod.ListFormat.CommaDelimited with Double = js.native
-  /* 528 */ val CommaListElements: typingsSlinky.typescript.typescriptMod.ListFormat.CommaListElements with Double = js.native
-  /* 49153 */ val Decorators: typingsSlinky.typescript.typescriptMod.ListFormat.Decorators with Double = js.native
-  /* 60 */ val DelimitersMask: typingsSlinky.typescript.typescriptMod.ListFormat.DelimitersMask with Double = js.native
-  /* 145 */ val EnumMembers: typingsSlinky.typescript.typescriptMod.ListFormat.EnumMembers with Double = js.native
-  /* 528 */ val HeritageClauseTypes: typingsSlinky.typescript.typescriptMod.ListFormat.HeritageClauseTypes with Double = js.native
-  /* 512 */ val HeritageClauses: typingsSlinky.typescript.typescriptMod.ListFormat.HeritageClauses with Double = js.native
-  /* 128 */ val Indented: typingsSlinky.typescript.typescriptMod.ListFormat.Indented with Double = js.native
-  /* 8848 */ val IndexSignatureParameters: typingsSlinky.typescript.typescriptMod.ListFormat.IndexSignatureParameters with Double = js.native
-  /* 129 */ val InterfaceMembers: typingsSlinky.typescript.typescriptMod.ListFormat.InterfaceMembers with Double = js.native
-  /* 520 */ val IntersectionTypeConstituents: typingsSlinky.typescript.typescriptMod.ListFormat.IntersectionTypeConstituents with Double = js.native
-  /* 33 */ val JSDocComment: typingsSlinky.typescript.typescriptMod.ListFormat.JSDocComment with Double = js.native
-  /* 262656 */ val JsxElementAttributes: typingsSlinky.typescript.typescriptMod.ListFormat.JsxElementAttributes with Double = js.native
-  /* 262144 */ val JsxElementOrFragmentChildren: typingsSlinky.typescript.typescriptMod.ListFormat.JsxElementOrFragmentChildren with Double = js.native
-  /* 3 */ val LinesMask: typingsSlinky.typescript.typescriptMod.ListFormat.LinesMask with Double = js.native
-  /* 262656 */ val Modifiers: typingsSlinky.typescript.typescriptMod.ListFormat.Modifiers with Double = js.native
-  /* 1 */ val MultiLine: typingsSlinky.typescript.typescriptMod.ListFormat.MultiLine with Double = js.native
-  /* 129 */ val MultiLineBlockStatements: typingsSlinky.typescript.typescriptMod.ListFormat.MultiLineBlockStatements with Double = js.native
-  /* 1 */ val MultiLineFunctionBodyStatements: typingsSlinky.typescript.typescriptMod.ListFormat.MultiLineFunctionBodyStatements with Double = js.native
-  /* 32897 */ val MultiLineTypeLiteralMembers: typingsSlinky.typescript.typescriptMod.ListFormat.MultiLineTypeLiteralMembers with Double = js.native
-  /* 525136 */ val NamedImportsOrExportsElements: typingsSlinky.typescript.typescriptMod.ListFormat.NamedImportsOrExportsElements with Double = js.native
-  /* 18960 */ val NewExpressionArguments: typingsSlinky.typescript.typescriptMod.ListFormat.NewExpressionArguments with Double = js.native
-  /* 262144 */ val NoInterveningComments: typingsSlinky.typescript.typescriptMod.ListFormat.NoInterveningComments with Double = js.native
-  /* 524288 */ val NoSpaceIfEmpty: typingsSlinky.typescript.typescriptMod.ListFormat.NoSpaceIfEmpty with Double = js.native
-  /* 131072 */ val NoTrailingNewLine: typingsSlinky.typescript.typescriptMod.ListFormat.NoTrailingNewLine with Double = js.native
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.ListFormat.None with Double = js.native
-  /* 0 */ val NotDelimited: typingsSlinky.typescript.typescriptMod.ListFormat.NotDelimited with Double = js.native
-  /* 525136 */ val ObjectBindingPatternElements: typingsSlinky.typescript.typescriptMod.ListFormat.ObjectBindingPatternElements with Double = js.native
-  /* 526226 */ val ObjectLiteralExpressionProperties: typingsSlinky.typescript.typescriptMod.ListFormat.ObjectLiteralExpressionProperties with Double = js.native
-  /* 49152 */ val Optional: typingsSlinky.typescript.typescriptMod.ListFormat.Optional with Double = js.native
-  /* 32768 */ val OptionalIfEmpty: typingsSlinky.typescript.typescriptMod.ListFormat.OptionalIfEmpty with Double = js.native
-  /* 16384 */ val OptionalIfUndefined: typingsSlinky.typescript.typescriptMod.ListFormat.OptionalIfUndefined with Double = js.native
-  /* 2576 */ val Parameters: typingsSlinky.typescript.typescriptMod.ListFormat.Parameters with Double = js.native
-  /* 2048 */ val Parenthesis: typingsSlinky.typescript.typescriptMod.ListFormat.Parenthesis with Double = js.native
-  /* 65536 */ val PreferNewLine: typingsSlinky.typescript.typescriptMod.ListFormat.PreferNewLine with Double = js.native
-  /* 2 */ val PreserveLines: typingsSlinky.typescript.typescriptMod.ListFormat.PreserveLines with Double = js.native
-  /* 1048576 */ val SingleElement: typingsSlinky.typescript.typescriptMod.ListFormat.SingleElement with Double = js.native
-  /* 0 */ val SingleLine: typingsSlinky.typescript.typescriptMod.ListFormat.SingleLine with Double = js.native
-  /* 768 */ val SingleLineBlockStatements: typingsSlinky.typescript.typescriptMod.ListFormat.SingleLineBlockStatements with Double = js.native
-  /* 768 */ val SingleLineFunctionBodyStatements: typingsSlinky.typescript.typescriptMod.ListFormat.SingleLineFunctionBodyStatements with Double = js.native
-  /* 768 */ val SingleLineTypeLiteralMembers: typingsSlinky.typescript.typescriptMod.ListFormat.SingleLineTypeLiteralMembers with Double = js.native
-  /* 131073 */ val SourceFileStatements: typingsSlinky.typescript.typescriptMod.ListFormat.SourceFileStatements with Double = js.native
-  /* 256 */ val SpaceBetweenBraces: typingsSlinky.typescript.typescriptMod.ListFormat.SpaceBetweenBraces with Double = js.native
-  /* 512 */ val SpaceBetweenSiblings: typingsSlinky.typescript.typescriptMod.ListFormat.SpaceBetweenSiblings with Double = js.native
-  /* 8192 */ val SquareBrackets: typingsSlinky.typescript.typescriptMod.ListFormat.SquareBrackets with Double = js.native
-  /* 262144 */ val TemplateExpressionSpans: typingsSlinky.typescript.typescriptMod.ListFormat.TemplateExpressionSpans with Double = js.native
-  /* 528 */ val TupleTypeElements: typingsSlinky.typescript.typescriptMod.ListFormat.TupleTypeElements with Double = js.native
-  /* 53776 */ val TypeArguments: typingsSlinky.typescript.typescriptMod.ListFormat.TypeArguments with Double = js.native
-  /* 53776 */ val TypeParameters: typingsSlinky.typescript.typescriptMod.ListFormat.TypeParameters with Double = js.native
-  /* 516 */ val UnionTypeConstituents: typingsSlinky.typescript.typescriptMod.ListFormat.UnionTypeConstituents with Double = js.native
-  /* 528 */ val VariableDeclarationList: typingsSlinky.typescript.typescriptMod.ListFormat.VariableDeclarationList with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ListFormat with Double] = js.native
+  /* 64 */ @js.native
+  object AllowTrailingComma extends TopLevel[AllowTrailingComma with Double]
+  
+  /* 8 */ @js.native
+  object AmpersandDelimited extends TopLevel[AmpersandDelimited with Double]
+  
+  /* 4096 */ @js.native
+  object AngleBrackets extends TopLevel[AngleBrackets with Double]
+  
+  /* 524880 */ @js.native
+  object ArrayBindingPatternElements extends TopLevel[ArrayBindingPatternElements with Double]
+  
+  /* 8914 */ @js.native
+  object ArrayLiteralExpressionElements extends TopLevel[ArrayLiteralExpressionElements with Double]
+  
+  /* 32 */ @js.native
+  object AsteriskDelimited extends TopLevel[AsteriskDelimited with Double]
+  
+  /* 4 */ @js.native
+  object BarDelimited extends TopLevel[BarDelimited with Double]
+  
+  /* 1024 */ @js.native
+  object Braces extends TopLevel[Braces with Double]
+  
+  /* 15360 */ @js.native
+  object BracketsMask extends TopLevel[BracketsMask with Double]
+  
+  /* 2576 */ @js.native
+  object CallExpressionArguments extends TopLevel[CallExpressionArguments with Double]
+  
+  /* 129 */ @js.native
+  object CaseBlockClauses extends TopLevel[CaseBlockClauses with Double]
+  
+  /* 163969 */ @js.native
+  object CaseOrDefaultClauseStatements extends TopLevel[CaseOrDefaultClauseStatements with Double]
+  
+  /* 0 */ @js.native
+  object ClassHeritageClauses extends TopLevel[ClassHeritageClauses with Double]
+  
+  /* 129 */ @js.native
+  object ClassMembers extends TopLevel[ClassMembers with Double]
+  
+  /* 16 */ @js.native
+  object CommaDelimited extends TopLevel[CommaDelimited with Double]
+  
+  /* 528 */ @js.native
+  object CommaListElements extends TopLevel[CommaListElements with Double]
+  
+  /* 49153 */ @js.native
+  object Decorators extends TopLevel[Decorators with Double]
+  
+  /* 60 */ @js.native
+  object DelimitersMask extends TopLevel[DelimitersMask with Double]
+  
+  /* 145 */ @js.native
+  object EnumMembers extends TopLevel[EnumMembers with Double]
+  
+  /* 528 */ @js.native
+  object HeritageClauseTypes extends TopLevel[HeritageClauseTypes with Double]
+  
+  /* 512 */ @js.native
+  object HeritageClauses extends TopLevel[HeritageClauses with Double]
+  
+  /* 128 */ @js.native
+  object Indented extends TopLevel[Indented with Double]
+  
+  /* 8848 */ @js.native
+  object IndexSignatureParameters extends TopLevel[IndexSignatureParameters with Double]
+  
+  /* 129 */ @js.native
+  object InterfaceMembers extends TopLevel[InterfaceMembers with Double]
+  
+  /* 520 */ @js.native
+  object IntersectionTypeConstituents extends TopLevel[IntersectionTypeConstituents with Double]
+  
+  /* 33 */ @js.native
+  object JSDocComment extends TopLevel[JSDocComment with Double]
+  
+  /* 262656 */ @js.native
+  object JsxElementAttributes extends TopLevel[JsxElementAttributes with Double]
+  
+  /* 262144 */ @js.native
+  object JsxElementOrFragmentChildren extends TopLevel[JsxElementOrFragmentChildren with Double]
+  
+  /* 3 */ @js.native
+  object LinesMask extends TopLevel[LinesMask with Double]
+  
+  /* 262656 */ @js.native
+  object Modifiers extends TopLevel[Modifiers with Double]
+  
+  /* 1 */ @js.native
+  object MultiLine extends TopLevel[MultiLine with Double]
+  
+  /* 129 */ @js.native
+  object MultiLineBlockStatements extends TopLevel[MultiLineBlockStatements with Double]
+  
+  /* 1 */ @js.native
+  object MultiLineFunctionBodyStatements extends TopLevel[MultiLineFunctionBodyStatements with Double]
+  
+  /* 32897 */ @js.native
+  object MultiLineTypeLiteralMembers extends TopLevel[MultiLineTypeLiteralMembers with Double]
+  
+  /* 525136 */ @js.native
+  object NamedImportsOrExportsElements extends TopLevel[NamedImportsOrExportsElements with Double]
+  
+  /* 18960 */ @js.native
+  object NewExpressionArguments extends TopLevel[NewExpressionArguments with Double]
+  
+  /* 262144 */ @js.native
+  object NoInterveningComments extends TopLevel[NoInterveningComments with Double]
+  
+  /* 524288 */ @js.native
+  object NoSpaceIfEmpty extends TopLevel[NoSpaceIfEmpty with Double]
+  
+  /* 131072 */ @js.native
+  object NoTrailingNewLine extends TopLevel[NoTrailingNewLine with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 0 */ @js.native
+  object NotDelimited extends TopLevel[NotDelimited with Double]
+  
+  /* 525136 */ @js.native
+  object ObjectBindingPatternElements extends TopLevel[ObjectBindingPatternElements with Double]
+  
+  /* 526226 */ @js.native
+  object ObjectLiteralExpressionProperties extends TopLevel[ObjectLiteralExpressionProperties with Double]
+  
+  /* 49152 */ @js.native
+  object Optional extends TopLevel[Optional with Double]
+  
+  /* 32768 */ @js.native
+  object OptionalIfEmpty extends TopLevel[OptionalIfEmpty with Double]
+  
+  /* 16384 */ @js.native
+  object OptionalIfUndefined extends TopLevel[OptionalIfUndefined with Double]
+  
+  /* 2576 */ @js.native
+  object Parameters extends TopLevel[Parameters with Double]
+  
+  /* 2048 */ @js.native
+  object Parenthesis extends TopLevel[Parenthesis with Double]
+  
+  /* 65536 */ @js.native
+  object PreferNewLine extends TopLevel[PreferNewLine with Double]
+  
+  /* 2 */ @js.native
+  object PreserveLines extends TopLevel[PreserveLines with Double]
+  
+  /* 1048576 */ @js.native
+  object SingleElement extends TopLevel[SingleElement with Double]
+  
+  /* 0 */ @js.native
+  object SingleLine extends TopLevel[SingleLine with Double]
+  
+  /* 768 */ @js.native
+  object SingleLineBlockStatements extends TopLevel[SingleLineBlockStatements with Double]
+  
+  /* 768 */ @js.native
+  object SingleLineFunctionBodyStatements extends TopLevel[SingleLineFunctionBodyStatements with Double]
+  
+  /* 768 */ @js.native
+  object SingleLineTypeLiteralMembers extends TopLevel[SingleLineTypeLiteralMembers with Double]
+  
+  /* 131073 */ @js.native
+  object SourceFileStatements extends TopLevel[SourceFileStatements with Double]
+  
+  /* 256 */ @js.native
+  object SpaceBetweenBraces extends TopLevel[SpaceBetweenBraces with Double]
+  
+  /* 512 */ @js.native
+  object SpaceBetweenSiblings extends TopLevel[SpaceBetweenSiblings with Double]
+  
+  /* 8192 */ @js.native
+  object SquareBrackets extends TopLevel[SquareBrackets with Double]
+  
+  /* 262144 */ @js.native
+  object TemplateExpressionSpans extends TopLevel[TemplateExpressionSpans with Double]
+  
+  /* 528 */ @js.native
+  object TupleTypeElements extends TopLevel[TupleTypeElements with Double]
+  
+  /* 53776 */ @js.native
+  object TypeArguments extends TopLevel[TypeArguments with Double]
+  
+  /* 53776 */ @js.native
+  object TypeParameters extends TopLevel[TypeParameters with Double]
+  
+  /* 516 */ @js.native
+  object UnionTypeConstituents extends TopLevel[UnionTypeConstituents with Double]
+  
+  /* 528 */ @js.native
+  object VariableDeclarationList
+    extends TopLevel[
+          typingsSlinky.typescript.typescriptMod.ListFormat.VariableDeclarationList with Double
+        ]
+  
 }
 

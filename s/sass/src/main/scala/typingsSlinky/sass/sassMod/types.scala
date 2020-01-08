@@ -1,9 +1,8 @@
 package typingsSlinky.sass.sassMod
 
-import typingsSlinky.sass.sassMod.types.Boolean
-import typingsSlinky.sass.sassMod.types.SassType
-import typingsSlinky.sass.sassNumbers.`false`
-import typingsSlinky.sass.sassNumbers.`true`
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.sass.sassBooleans.`false`
+import typingsSlinky.sass.sassBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +53,7 @@ object types extends js.Object {
   
   @js.native
   trait Null extends SassType {
-    var NULL: typingsSlinky.sass.sassMod.types.Null = js.native
+    var NULL: Null = js.native
   }
   
   @js.native
@@ -77,13 +76,15 @@ object types extends js.Object {
     def setValue(value: java.lang.String): Unit = js.native
   }
   
-  val Null: typingsSlinky.sass.sassMod.types.Null = js.native
   /* static members */
   @js.native
   object Boolean extends js.Object {
     val FALSE: Boolean[`false`] = js.native
     val TRUE: Boolean[`true`] = js.native
   }
+  
+  @js.native
+  object Null extends TopLevel[Null]
   
 }
 

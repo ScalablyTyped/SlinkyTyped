@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TwitterIcon extends SharedApply_IconComponentProps_1374303328 {
+object TwitterIcon extends SharedApply_IconComponentProps_826686476 {
   @JSImport("react-share", "TwitterIcon")
   @js.native
   object componentImport extends js.Object

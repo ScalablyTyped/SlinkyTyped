@@ -1,10 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search
 
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestion
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionKind
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionManager
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IObservableVector
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.TypedEventHandler
@@ -152,11 +148,17 @@ object Core extends js.Object {
     @js.native
     sealed trait separator extends SearchSuggestionKind
     
-    /* 0 */ val query: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionKind.query with Double = js.native
-    /* 1 */ val result: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionKind.result with Double = js.native
-    /* 2 */ val separator: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Search.Core.SearchSuggestionKind.separator with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[SearchSuggestionKind with Double] = js.native
+    /* 0 */ @js.native
+    object query extends TopLevel[query with Double]
+    
+    /* 1 */ @js.native
+    object result extends TopLevel[result with Double]
+    
+    /* 2 */ @js.native
+    object separator extends TopLevel[separator with Double]
+    
   }
   
 }

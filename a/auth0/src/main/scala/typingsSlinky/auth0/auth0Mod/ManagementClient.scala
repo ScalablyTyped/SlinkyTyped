@@ -183,6 +183,14 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getTenantSettings_Unit(): Unit = js.native
   def getUser(params: ObjectWithId): js.Promise[User[A, U]] = js.native
   def getUser(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* user */ User[A, U], Unit]): Unit = js.native
+  // User Blocks
+  def getUserBlocks(params: ObjectWithId): js.Promise[UserBlocks] = js.native
+  def getUserBlocks(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* response */ UserBlocks, Unit]): Unit = js.native
+  def getUserBlocksByIdentifier(params: ObjectWithIdentifier): js.Promise[UserBlocks] = js.native
+  def getUserBlocksByIdentifier(
+    params: ObjectWithIdentifier,
+    cb: js.Function2[/* err */ js.Error, /* response */ UserBlocks, Unit]
+  ): Unit = js.native
   def getUserPermissions(params: GetUserPermissionsData): js.Promise[js.Array[Permission]] = js.native
   def getUserPermissions(params: GetUserPermissionsDataPaged): js.Promise[PermissionPage] = js.native
   def getUserPermissions(
@@ -255,6 +263,10 @@ class ManagementClient[A, U] protected () extends js.Object {
   def sendEmailVerification(data: UserIdParams, cb: js.Function2[/* err */ js.Error, /* data */ VerificationEmailJob, Unit]): Unit = js.native
   @JSName("sendEmailVerification")
   def sendEmailVerification_Unit(data: UserIdParams): Unit = js.native
+  def unblockUser(params: ObjectWithId): js.Promise[String] = js.native
+  def unblockUser(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* response */ String, Unit]): Unit = js.native
+  def unblockUserByIdentifier(params: ObjectWithIdentifier): js.Promise[String] = js.native
+  def unblockUserByIdentifier(params: ObjectWithIdentifier, cb: js.Function2[/* err */ js.Error, /* response */ String, Unit]): Unit = js.native
   def unlinkUsers(params: UnlinkAccountsParams): js.Promise[UnlinkAccountsResponse] = js.native
   def unlinkUsers(
     params: UnlinkAccountsParams,

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ColumnType extends js.Object {
   @js.native
   sealed trait STRING extends ColumnType
   
-  /* 0 */ val DATE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.ColumnType.DATE with Double = js.native
-  /* 1 */ val NUMBER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.ColumnType.NUMBER with Double = js.native
-  /* 2 */ val STRING: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Charts.ColumnType.STRING with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ColumnType with Double] = js.native
+  /* 0 */ @js.native
+  object DATE extends TopLevel[DATE with Double]
+  
+  /* 1 */ @js.native
+  object NUMBER extends TopLevel[NUMBER with Double]
+  
+  /* 2 */ @js.native
+  object STRING extends TopLevel[STRING with Double]
+  
 }
 

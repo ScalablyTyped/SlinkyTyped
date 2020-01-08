@@ -11,8 +11,8 @@ text diff library ported from Python's difflib module
 | Full name          | difflib |
 | Keywords           | diff |
 | # releases         | 1 |
-| # dependents       | 22 |
-| # downloads        | 1181378 |
+| # dependents       | 28 |
+| # downloads        | 2451480 |
 | # stars            | 1 |
 
 ## Links

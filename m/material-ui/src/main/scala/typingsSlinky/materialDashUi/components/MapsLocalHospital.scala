@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MapsLocalHospital
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.MapsLocalHospital] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.MapsLocalHospital] {
   @JSImport("material-ui/svg-icons", "MapsLocalHospital")
   @js.native
   object componentImport extends js.Object

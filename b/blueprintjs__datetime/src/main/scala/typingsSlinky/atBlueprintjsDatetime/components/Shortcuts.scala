@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeNumbers.`true`
+import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeBooleans.`true`
 import typingsSlinky.atBlueprintjsDatetime.libEsmShortcutsMod.IDateRangeShortcut
 import typingsSlinky.atBlueprintjsDatetime.libEsmShortcutsMod.IShortcutsProps
 import typingsSlinky.atBlueprintjsDatetime.libEsmTimePickerMod.TimePrecision

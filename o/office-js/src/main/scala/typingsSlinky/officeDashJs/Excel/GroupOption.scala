@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +30,13 @@ object GroupOption extends js.Object {
   @js.native
   sealed trait byRows extends GroupOption
   
-  /* "ByColumns" */ val byColumns: typingsSlinky.officeDashJs.Excel.GroupOption.byColumns with String = js.native
-  /* "ByRows" */ val byRows: typingsSlinky.officeDashJs.Excel.GroupOption.byRows with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[GroupOption with String] = js.native
+  /* "ByColumns" */ @js.native
+  object byColumns extends TopLevel[byColumns with String]
+  
+  /* "ByRows" */ @js.native
+  object byRows extends TopLevel[byRows with String]
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.dagre.dagreMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.dagre.Anon_Compound
-import typingsSlinky.dagre.dagreMod.graphlib.Graph
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

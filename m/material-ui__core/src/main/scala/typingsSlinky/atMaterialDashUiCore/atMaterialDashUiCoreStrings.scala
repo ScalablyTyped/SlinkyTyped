@@ -88,12 +88,12 @@ import typingsSlinky.atMaterialDashUiCore.stylesCreateTypographyMod.ThemeStyle
 import typingsSlinky.atMaterialDashUiCore.svgIconSvgIconMod.SvgIconClassKey
 import typingsSlinky.atMaterialDashUiCore.switchSwitchMod.SwitchClassKey
 import typingsSlinky.atMaterialDashUiCore.tabTabMod.TabClassKey
-import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.TableCellClassKey
 import typingsSlinky.atMaterialDashUiCore.tablePaginationTablePaginationMod.TablePaginationClassKey
 import typingsSlinky.atMaterialDashUiCore.tableRowTableRowMod.TableRowClassKey
 import typingsSlinky.atMaterialDashUiCore.tableSortLabelTableSortLabelMod.TableSortLabelClassKey
+import typingsSlinky.atMaterialDashUiCore.tableTableMod.Padding
 import typingsSlinky.atMaterialDashUiCore.tabsTabIndicatorMod.TabIndicatorClassKey
 import typingsSlinky.atMaterialDashUiCore.tabsTabsMod.TabsClassKey
 import typingsSlinky.atMaterialDashUiCore.toolbarToolbarMod.ToolbarClassKey
@@ -114,7 +114,7 @@ object atMaterialDashUiCoreStrings {
   sealed trait ConsistentWith extends js.Object
   
   @js.native
-  sealed trait JS extends js.Object
+  sealed trait _empty extends js.Object
   
   @js.native
   sealed trait absolute extends DividerClassKey
@@ -254,6 +254,9 @@ object atMaterialDashUiCoreStrings {
   sealed trait animated extends InputLabelClassKey
   
   @js.native
+  sealed trait anonymous extends js.Object
+  
+  @js.native
   sealed trait asc extends SortDirection
   
   @js.native
@@ -387,7 +390,7 @@ object atMaterialDashUiCoreStrings {
   @js.native
   sealed trait checkbox
     extends Padding
-       with typingsSlinky.atMaterialDashUiCore.tableTableMod.Padding
+       with typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
   
   @js.native
   sealed trait checked
@@ -564,7 +567,7 @@ object atMaterialDashUiCoreStrings {
     extends Color
        with ListItemClassKey
        with Padding
-       with typingsSlinky.atMaterialDashUiCore.tableTableMod.Padding
+       with typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
   
   @js.native
   sealed trait deletable extends ChipClassKey
@@ -597,7 +600,7 @@ object atMaterialDashUiCoreStrings {
        with ListItemTextClassKey
        with Margin
        with Padding
-       with typingsSlinky.atMaterialDashUiCore.tableTableMod.Padding
+       with typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
        with ToolbarClassKey
   
   @js.native
@@ -1174,6 +1177,9 @@ object atMaterialDashUiCoreStrings {
        with StrippedProps
   
   @js.native
+  sealed trait js_ extends js.Object
+  
+  @js.native
   sealed trait justify
     extends Alignment
        with StrippedProps
@@ -1348,7 +1354,7 @@ object atMaterialDashUiCoreStrings {
   sealed trait none
     extends Margin
        with Padding
-       with typingsSlinky.atMaterialDashUiCore.tableTableMod.Padding
+       with typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.Padding
        with PopoverReference
   
   @js.native
@@ -2055,6 +2061,9 @@ object atMaterialDashUiCoreStrings {
   sealed trait url extends js.Object
   
   @js.native
+  sealed trait `use-credentials` extends js.Object
+  
+  @js.native
   sealed trait variant extends ContextFromPropsKey
   
   @js.native
@@ -2107,7 +2116,7 @@ object atMaterialDashUiCoreStrings {
   @scala.inline
   def ConsistentWith: ConsistentWith = "ConsistentWith".asInstanceOf[ConsistentWith]
   @scala.inline
-  def JS: JS = "js".asInstanceOf[JS]
+  def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def absolute: absolute = "absolute".asInstanceOf[absolute]
   @scala.inline
@@ -2188,6 +2197,8 @@ object atMaterialDashUiCoreStrings {
   def anchorPosition: anchorPosition = "anchorPosition".asInstanceOf[anchorPosition]
   @scala.inline
   def animated: animated = "animated".asInstanceOf[animated]
+  @scala.inline
+  def anonymous: anonymous = "anonymous".asInstanceOf[anonymous]
   @scala.inline
   def asc: asc = "asc".asInstanceOf[asc]
   @scala.inline
@@ -2626,6 +2637,8 @@ object atMaterialDashUiCoreStrings {
   def isolated: isolated = "isolated".asInstanceOf[isolated]
   @scala.inline
   def item: item = "item".asInstanceOf[item]
+  @scala.inline
+  def js_ : js_ = "js".asInstanceOf[js_]
   @scala.inline
   def justify: justify = "justify".asInstanceOf[justify]
   @scala.inline
@@ -3086,6 +3099,8 @@ object atMaterialDashUiCoreStrings {
   def up: up = "up".asInstanceOf[up]
   @scala.inline
   def url: url = "url".asInstanceOf[url]
+  @scala.inline
+  def `use-credentials`: `use-credentials` = "use-credentials".asInstanceOf[`use-credentials`]
   @scala.inline
   def variant: variant = "variant".asInstanceOf[variant]
   @scala.inline

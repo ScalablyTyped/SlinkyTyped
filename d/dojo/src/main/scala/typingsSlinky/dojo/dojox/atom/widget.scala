@@ -30,7 +30,6 @@ import typingsSlinky.dojo.dojoStrings.titleNode
 import typingsSlinky.dojo.dojoStrings.url
 import typingsSlinky.dojo.dojoStrings.widgetsInTemplate
 import typingsSlinky.dojo.dojoStrings.xmethod
-import typingsSlinky.dojo.dojox.atom.widget.FeedEntryViewer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

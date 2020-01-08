@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,20 +64,46 @@ object NetworkOperatorEventMessageType extends js.Object {
   @js.native
   sealed trait ussd extends NetworkOperatorEventMessageType
   
-  /* 1 */ val cdma: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.cdma with Double = js.native
-  /* 5 */ val dataPlanDeleted: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.dataPlanDeleted with Double = js.native
-  /* 4 */ val dataPlanReset: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.dataPlanReset with Double = js.native
-  /* 3 */ val dataPlanThresholdReached: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.dataPlanThresholdReached with Double = js.native
-  /* 0 */ val gsm: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.gsm with Double = js.native
-  /* 6 */ val profileConnected: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.profileConnected with Double = js.native
-  /* 7 */ val profileDisconnected: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.profileDisconnected with Double = js.native
-  /* 9 */ val registeredHome: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.registeredHome with Double = js.native
-  /* 8 */ val registeredRoaming: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.registeredRoaming with Double = js.native
-  /* 10 */ val tetheringEntitlementCheck: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.tetheringEntitlementCheck with Double = js.native
-  /* 12 */ val tetheringNumberOfClientsChanged: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.tetheringNumberOfClientsChanged with Double = js.native
-  /* 11 */ val tetheringOperationalStateChanged: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.tetheringOperationalStateChanged with Double = js.native
-  /* 2 */ val ussd: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType.ussd with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NetworkOperatorEventMessageType with Double] = js.native
+  /* 1 */ @js.native
+  object cdma extends TopLevel[cdma with Double]
+  
+  /* 5 */ @js.native
+  object dataPlanDeleted extends TopLevel[dataPlanDeleted with Double]
+  
+  /* 4 */ @js.native
+  object dataPlanReset extends TopLevel[dataPlanReset with Double]
+  
+  /* 3 */ @js.native
+  object dataPlanThresholdReached extends TopLevel[dataPlanThresholdReached with Double]
+  
+  /* 0 */ @js.native
+  object gsm extends TopLevel[gsm with Double]
+  
+  /* 6 */ @js.native
+  object profileConnected extends TopLevel[profileConnected with Double]
+  
+  /* 7 */ @js.native
+  object profileDisconnected extends TopLevel[profileDisconnected with Double]
+  
+  /* 9 */ @js.native
+  object registeredHome extends TopLevel[registeredHome with Double]
+  
+  /* 8 */ @js.native
+  object registeredRoaming extends TopLevel[registeredRoaming with Double]
+  
+  /* 10 */ @js.native
+  object tetheringEntitlementCheck extends TopLevel[tetheringEntitlementCheck with Double]
+  
+  /* 12 */ @js.native
+  object tetheringNumberOfClientsChanged extends TopLevel[tetheringNumberOfClientsChanged with Double]
+  
+  /* 11 */ @js.native
+  object tetheringOperationalStateChanged extends TopLevel[tetheringOperationalStateChanged with Double]
+  
+  /* 2 */ @js.native
+  object ussd extends TopLevel[ussd with Double]
+  
 }
 

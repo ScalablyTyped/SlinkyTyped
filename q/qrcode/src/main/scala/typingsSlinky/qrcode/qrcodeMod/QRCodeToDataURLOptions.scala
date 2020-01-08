@@ -2,9 +2,9 @@ package typingsSlinky.qrcode.qrcodeMod
 
 import typingsSlinky.qrcode.Anon_Dark
 import typingsSlinky.qrcode.Anon_Quality
-import typingsSlinky.qrcode.qrcodeStrings.`image/jpeg`
-import typingsSlinky.qrcode.qrcodeStrings.`image/png`
-import typingsSlinky.qrcode.qrcodeStrings.`image/webp`
+import typingsSlinky.qrcode.qrcodeStrings.imageSlashjpeg
+import typingsSlinky.qrcode.qrcodeStrings.imageSlashpng
+import typingsSlinky.qrcode.qrcodeStrings.imageSlashwebp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait QRCodeToDataURLOptions extends QRCodeRenderersOptions {
     * Data URI format.
     * Default: image/png
     */
-  var `type`: js.UndefOr[`image/png` | `image/jpeg` | `image/webp`] = js.undefined
+  var `type`: js.UndefOr[imageSlashpng | imageSlashjpeg | imageSlashwebp] = js.undefined
 }
 
 object QRCodeToDataURLOptions {
@@ -27,7 +27,7 @@ object QRCodeToDataURLOptions {
     rendererOpts: Anon_Quality = null,
     scale: Int | Double = null,
     toSJISFunc: /* codePoint */ String => Double = null,
-    `type`: `image/png` | `image/jpeg` | `image/webp` = null,
+    `type`: imageSlashpng | imageSlashjpeg | imageSlashwebp = null,
     version: Int | Double = null,
     width: Int | Double = null
   ): QRCodeToDataURLOptions = {

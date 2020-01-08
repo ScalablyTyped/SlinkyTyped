@@ -2,7 +2,6 @@ package typingsSlinky.ecmarkup
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
-import typingsSlinky.ecmarkup.libAutolinkerMod.AutoLinkMap
 import typingsSlinky.ecmarkup.libBiblioMod.BiblioEntry
 import typingsSlinky.ecmarkup.libSpecMod.Spec
 import typingsSlinky.std.Set

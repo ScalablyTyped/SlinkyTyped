@@ -2,8 +2,8 @@ package typingsSlinky.jqueryDashDrawer
 
 import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.close
 import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.destroy
-import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.drawerDOTclosed
-import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.drawerDOTopened
+import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.drawerDotclosed
+import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.drawerDotopened
 import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.open
 import typingsSlinky.jqueryDashDrawer.jqueryDashDrawerStrings.toggle
 import scala.scalajs.js
@@ -23,8 +23,8 @@ trait JQuery extends js.Object {
   @JSName("drawer")
   def drawer_toggle(method: toggle): JQuery = js.native
   @JSName("on")
-  def on_drawerclosed(event: drawerDOTclosed, handler: js.Function0[Unit]): JQuery = js.native
+  def on_drawerclosed(event: drawerDotclosed, handler: js.Function0[Unit]): JQuery = js.native
   @JSName("on")
-  def on_draweropened(event: drawerDOTopened, handler: js.Function0[Unit]): JQuery = js.native
+  def on_draweropened(event: drawerDotopened, handler: js.Function0[Unit]): JQuery = js.native
 }
 

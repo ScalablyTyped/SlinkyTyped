@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollographql__apollo-tools
 
-Typings are for version 0.4.1
+Typings are for version 0.4.2
 
 
 
@@ -9,9 +9,9 @@ Typings are for version 0.4.1
 | ------------------ | :-------------: |
 | Full name          | @apollographql/apollo-tools |
 | Keywords           | - |
-| # releases         | 19 |
-| # dependents       | 7 |
-| # downloads        | 4958944 |
+| # releases         | 30 |
+| # dependents       | 10 |
+| # downloads        | 20383263 |
 | # stars            | 0 |
 
 ## Links

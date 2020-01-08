@@ -1,6 +1,6 @@
 package typingsSlinky.readDashPkg.readDashPkgMod
 
-import typingsSlinky.readDashPkg.readDashPkgNumbers.`true`
+import typingsSlinky.readDashPkg.readDashPkgBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

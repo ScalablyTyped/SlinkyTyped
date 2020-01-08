@@ -1,8 +1,8 @@
 package typingsSlinky.rmfr
 
 import typingsSlinky.glob.globMod.IOptions
-import typingsSlinky.rmfr.rmfrNumbers.`false`
-import typingsSlinky.rmfr.rmfrNumbers.`true`
+import typingsSlinky.rmfr.rmfrBooleans.`false`
+import typingsSlinky.rmfr.rmfrBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

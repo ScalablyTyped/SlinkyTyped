@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object NetworkState extends js.Object {
   @js.native
   sealed trait noSource extends NetworkState
   
-  /* 0 */ val empty: typingsSlinky.playerframework.PlayerFramework.NetworkState.empty with Double = js.native
-  /* 1 */ val idle: typingsSlinky.playerframework.PlayerFramework.NetworkState.idle with Double = js.native
-  /* 2 */ val loading: typingsSlinky.playerframework.PlayerFramework.NetworkState.loading with Double = js.native
-  /* 3 */ val noSource: typingsSlinky.playerframework.PlayerFramework.NetworkState.noSource with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NetworkState with Double] = js.native
+  /* 0 */ @js.native
+  object empty extends TopLevel[empty with Double]
+  
+  /* 1 */ @js.native
+  object idle extends TopLevel[idle with Double]
+  
+  /* 2 */ @js.native
+  object loading extends TopLevel[loading with Double]
+  
+  /* 3 */ @js.native
+  object noSource extends TopLevel[noSource with Double]
+  
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.rcDashCheckbox.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.input.tag
 import typingsSlinky.rcDashCheckbox.rcDashCheckboxMod.default
 import typingsSlinky.react.reactMod.CSSProperties
@@ -37,6 +38,9 @@ object RcDashCheckbox
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.input.tag.type, 
+  typingsSlinky.rcDashCheckbox.rcDashCheckboxMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = typingsSlinky.rcDashCheckbox.rcDashCheckboxMod.Props
 }
 

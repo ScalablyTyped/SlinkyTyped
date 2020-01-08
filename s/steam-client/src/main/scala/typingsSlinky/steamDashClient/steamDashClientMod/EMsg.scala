@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -5829,1839 +5830,5503 @@ object EMsg extends js.Object {
   @js.native
   sealed trait ZipResponse extends EMsg
   
-  /* 423 */ val AIGetAppGCFlags: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppGCFlags with Double = js.native
-  /* 424 */ val AIGetAppGCFlagsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppGCFlagsResponse with Double = js.native
-  /* 427 */ val AIGetAppInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppInfo with Double = js.native
-  /* 428 */ val AIGetAppInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppInfoResponse with Double = js.native
-  /* 425 */ val AIGetAppList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppList with Double = js.native
-  /* 426 */ val AIGetAppListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AIGetAppListResponse with Double = js.native
-  /* 407 */ val AISAppInfoTableChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISAppInfoTableChanged with Double = js.native
-  /* 409 */ val AISCreateMarketingMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISCreateMarketingMessage with Double = js.native
-  /* 410 */ val AISCreateMarketingMessageResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISCreateMarketingMessageResponse with Double = js.native
-  /* 416 */ val AISDeleteMarketingMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISDeleteMarketingMessage with Double = js.native
-  /* 429 */ val AISGetCouponDefinition: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetCouponDefinition with Double = js.native
-  /* 430 */ val AISGetCouponDefinitionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetCouponDefinitionResponse with Double = js.native
-  /* 411 */ val AISGetMarketingMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetMarketingMessage with Double = js.native
-  /* 412 */ val AISGetMarketingMessageResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetMarketingMessageResponse with Double = js.native
-  /* 419 */ val AISGetMarketingTreatments: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetMarketingTreatments with Double = js.native
-  /* 420 */ val AISGetMarketingTreatmentsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetMarketingTreatmentsResponse with Double = js.native
-  /* 405 */ val AISGetPackageChangeNumber: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetPackageChangeNumber with Double = js.native
-  /* 406 */ val AISGetPackageChangeNumberResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISGetPackageChangeNumberResponse with Double = js.native
-  /* 401 */ val AISRefreshContentDescription: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISRefreshContentDescription with Double = js.native
-  /* 402 */ val AISRequestContentDescription: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISRequestContentDescription with Double = js.native
-  /* 415 */ val AISRequestMarketingMessageUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISRequestMarketingMessageUpdate with Double = js.native
-  /* 421 */ val AISRequestMarketingTreatmentUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISRequestMarketingTreatmentUpdate with Double = js.native
-  /* 422 */ val AISTestAddPackage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISTestAddPackage with Double = js.native
-  /* 433 */ val AISTestEnableGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISTestEnableGC with Double = js.native
-  /* 403 */ val AISUpdateAppInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdateAppInfo with Double = js.native
-  /* 413 */ val AISUpdateMarketingMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdateMarketingMessage with Double = js.native
-  /* 414 */ val AISUpdateMarketingMessageResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdateMarketingMessageResponse with Double = js.native
-  /* 404 */ val AISUpdatePackageCosts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdatePackageCosts with Double = js.native
-  /* 408 */ val AISUpdatePackageCostsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdatePackageCostsResponse with Double = js.native
-  /* 404 */ val AISUpdatePackageInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdatePackageInfo with Double = js.native
-  /* 431 */ val AISUpdateSlaveContentDescription: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdateSlaveContentDescription with Double = js.native
-  /* 432 */ val AISUpdateSlaveContentDescriptionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AISUpdateSlaveContentDescriptionResponse with Double = js.native
-  /* 4310 */ val AMAccountPS3Unlink: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAccountPS3Unlink with Double = js.native
-  /* 4311 */ val AMAccountPS3UnlinkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAccountPS3UnlinkResponse with Double = js.native
-  /* 4346 */ val AMAcctAllowedToPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAcctAllowedToPurchase with Double = js.native
-  /* 4347 */ val AMAcctAllowedToPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAcctAllowedToPurchaseResponse with Double = js.native
-  /* 565 */ val AMAcknowledgeClanInvite: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAcknowledgeClanInvite with Double = js.native
-  /* 4141 */ val AMAddClanNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddClanNews with Double = js.native
-  /* 4202 */ val AMAddComment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddComment with Double = js.native
-  /* 4203 */ val AMAddCommentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddCommentResponse with Double = js.native
-  /* 4061 */ val AMAddFounderToClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddFounderToClan with Double = js.native
-  /* 4224 */ val AMAddFreeLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddFreeLicense with Double = js.native
-  /* 4285 */ val AMAddFreeLicenseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddFreeLicenseResponse with Double = js.native
-  /* 4081 */ val AMAddFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddFriend with Double = js.native
-  /* 4082 */ val AMAddFriendResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddFriendResponse with Double = js.native
-  /* 505 */ val AMAddLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddLicense with Double = js.native
-  /* 510 */ val AMAddMinutesToLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddMinutesToLicense with Double = js.native
-  /* 4280 */ val AMAddPublisherUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddPublisherUser with Double = js.native
-  /* 4234 */ val AMAddUsersToMarketingTreatment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAddUsersToMarketingTreatment with Double = js.native
-  /* 558 */ val AMAllowUserContentQuery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAllowUserContentQuery with Double = js.native
-  /* 559 */ val AMAllowUserContentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAllowUserContentResponse with Double = js.native
-  /* 4156 */ val AMAllowUserFilesRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAllowUserFilesRequest with Double = js.native
-  /* 4157 */ val AMAllowUserFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAllowUserFilesResponse with Double = js.native
-  /* 592 */ val AMAuthenticateUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAuthenticateUser with Double = js.native
-  /* 593 */ val AMAuthenticateUserResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAuthenticateUserResponse with Double = js.native
-  /* 4315 */ val AMAuthenticatedPlayerList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMAuthenticatedPlayerList with Double = js.native
-  /* 4145 */ val AMBanFromChat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBanFromChat with Double = js.native
-  /* 507 */ val AMBeginProcessingLicenses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBeginProcessingLicenses with Double = js.native
-  /* 4410 */ val AMBitPayPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBitPayPayment with Double = js.native
-  /* 4411 */ val AMBitPayPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBitPayPaymentResponse with Double = js.native
-  /* 4380 */ val AMBoaCompraPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBoaCompraPayment with Double = js.native
-  /* 4381 */ val AMBoaCompraPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMBoaCompraPaymentResponse with Double = js.native
-  /* 4086 */ val AMCancelEasyCollect: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCancelEasyCollect with Double = js.native
-  /* 4087 */ val AMCancelEasyCollectResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCancelEasyCollectResponse with Double = js.native
-  /* 511 */ val AMCancelLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCancelLicense with Double = js.native
-  /* 522 */ val AMCancelPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCancelPurchase with Double = js.native
-  /* 4105 */ val AMChallengeNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChallengeNotification with Double = js.native
-  /* 4104 */ val AMChallengeVerdict: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChallengeVerdict with Double = js.native
-  /* 4085 */ val AMChangeClanOwner: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChangeClanOwner with Double = js.native
-  /* 579 */ val AMChatActionResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChatActionResult with Double = js.native
-  /* 533 */ val AMChatCleanup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChatCleanup with Double = js.native
-  /* 577 */ val AMChatEnter: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChatEnter with Double = js.native
-  /* 572 */ val AMChatInvite: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChatInvite with Double = js.native
-  /* 570 */ val AMChatMulti: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMChatMulti with Double = js.native
-  /* 4118 */ val AMCheckClanInviteRateLimiting: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCheckClanInviteRateLimiting with Double = js.native
-  /* 4075 */ val AMCheckClanMembership: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCheckClanMembership with Double = js.native
-  /* 4161 */ val AMCheckClanMembershipResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCheckClanMembershipResponse with Double = js.native
-  /* 4352 */ val AMClaimUnownedUserGift: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClaimUnownedUserGift with Double = js.native
-  /* 4353 */ val AMClaimUnownedUserGiftResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClaimUnownedUserGiftResponse with Double = js.native
-  /* 534 */ val AMClanCleanup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClanCleanup with Double = js.native
-  /* 538 */ val AMClanCleanupList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClanCleanupList with Double = js.native
-  /* 567 */ val AMClanDataUpdated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClanDataUpdated with Double = js.native
-  /* 4011 */ val AMClanPermissions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClanPermissions with Double = js.native
-  /* 4012 */ val AMClanPermissionsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClanPermissionsResponse with Double = js.native
-  /* 4090 */ val AMClansInCommon: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClansInCommon with Double = js.native
-  /* 4103 */ val AMClansInCommonCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClansInCommonCount with Double = js.native
-  /* 4097 */ val AMClansInCommonCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClansInCommonCountResponse with Double = js.native
-  /* 4091 */ val AMClansInCommonResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClansInCommonResponse with Double = js.native
-  /* 4264 */ val AMClearDispute: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClearDispute with Double = js.native
-  /* 4265 */ val AMClearDisputeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClearDisputeResponse with Double = js.native
-  /* 4306 */ val AMClearPersonaMetadataBlob: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClearPersonaMetadataBlob with Double = js.native
-  /* 576 */ val AMClientAcceptFriendInvite: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientAcceptFriendInvite with Double = js.native
-  /* 5566 */ val AMClientAddFriendToGroup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientAddFriendToGroup with Double = js.native
-  /* 5567 */ val AMClientAddFriendToGroupResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientAddFriendToGroupResponse with Double = js.native
-  /* 598 */ val AMClientChatActionRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientChatActionRelay with Double = js.native
-  /* 571 */ val AMClientChatInviteRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientChatInviteRelay with Double = js.native
-  /* 574 */ val AMClientChatMemberInfoRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientChatMemberInfoRelay with Double = js.native
-  /* 569 */ val AMClientChatMsgRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientChatMsgRelay with Double = js.native
-  /* 5560 */ val AMClientCreateFriendsGroup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientCreateFriendsGroup with Double = js.native
-  /* 5561 */ val AMClientCreateFriendsGroupResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientCreateFriendsGroupResponse with Double = js.native
-  /* 5562 */ val AMClientDeleteFriendsGroup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientDeleteFriendsGroup with Double = js.native
-  /* 5563 */ val AMClientDeleteFriendsGroupResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientDeleteFriendsGroupResponse with Double = js.native
-  /* 573 */ val AMClientJoinChatRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientJoinChatRelay with Double = js.native
-  /* 553 */ val AMClientNotPlaying: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientNotPlaying with Double = js.native
-  /* 578 */ val AMClientPublishRemovalFromSource: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientPublishRemovalFromSource with Double = js.native
-  /* 5568 */ val AMClientRemoveFriendFromGroup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientRemoveFriendFromGroup with Double = js.native
-  /* 5569 */ val AMClientRemoveFriendFromGroupResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientRemoveFriendFromGroupResponse with Double = js.native
-  /* 5564 */ val AMClientRenameFriendsGroup: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientRenameFriendsGroup with Double = js.native
-  /* 5565 */ val AMClientRenameFriendsGroupResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientRenameFriendsGroupResponse with Double = js.native
-  /* 5588 */ val AMClientSetPlayerNickname: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientSetPlayerNickname with Double = js.native
-  /* 5589 */ val AMClientSetPlayerNicknameResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMClientSetPlayerNicknameResponse with Double = js.native
-  /* 4383 */ val AMCompleteExternalPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCompleteExternalPurchase with Double = js.native
-  /* 4384 */ val AMCompleteExternalPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCompleteExternalPurchaseResponse with Double = js.native
-  /* 521 */ val AMCompletePurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCompletePurchase with Double = js.native
-  /* 4093 */ val AMConvertClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMConvertClan with Double = js.native
-  /* 4251 */ val AMConvertWallet: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMConvertWallet with Double = js.native
-  /* 4252 */ val AMConvertWalletResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMConvertWalletResponse with Double = js.native
-  /* 4109 */ val AMCreateAccountRecord: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateAccountRecord with Double = js.native
-  /* 4183 */ val AMCreateAccountRecordInSteam3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateAccountRecordInSteam3 with Double = js.native
-  /* 129 */ val AMCreateAccountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateAccountResponse with Double = js.native
-  /* 4260 */ val AMCreateChargeback: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateChargeback with Double = js.native
-  /* 4261 */ val AMCreateChargebackResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateChargebackResponse with Double = js.native
-  /* 4001 */ val AMCreateChat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateChat with Double = js.native
-  /* 4002 */ val AMCreateChatResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateChatResponse with Double = js.native
-  /* 586 */ val AMCreateClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClan with Double = js.native
-  /* 4027 */ val AMCreateClanAnnouncement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClanAnnouncement with Double = js.native
-  /* 4028 */ val AMCreateClanAnnouncementResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClanAnnouncementResponse with Double = js.native
-  /* 4013 */ val AMCreateClanEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClanEvent with Double = js.native
-  /* 4014 */ val AMCreateClanEventResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClanEventResponse with Double = js.native
-  /* 587 */ val AMCreateClanResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateClanResponse with Double = js.native
-  /* 4262 */ val AMCreateDispute: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateDispute with Double = js.native
-  /* 4263 */ val AMCreateDisputeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateDisputeResponse with Double = js.native
-  /* 4258 */ val AMCreateRefund: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateRefund with Double = js.native
-  /* 4259 */ val AMCreateRefundResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMCreateRefundResponse with Double = js.native
-  /* 4396 */ val AMDegicaPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDegicaPayment with Double = js.native
-  /* 4397 */ val AMDegicaPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDegicaPaymentResponse with Double = js.native
-  /* 4035 */ val AMDeleteClanAnnouncement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteClanAnnouncement with Double = js.native
-  /* 4036 */ val AMDeleteClanAnnouncementResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteClanAnnouncementResponse with Double = js.native
-  /* 4019 */ val AMDeleteClanEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteClanEvent with Double = js.native
-  /* 4020 */ val AMDeleteClanEventResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteClanEventResponse with Double = js.native
-  /* 4204 */ val AMDeleteComment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteComment with Double = js.native
-  /* 4205 */ val AMDeleteCommentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteCommentResponse with Double = js.native
-  /* 4241 */ val AMDeleteStoredCard: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteStoredCard with Double = js.native
-  /* 4246 */ val AMDeleteStoredPaymentInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteStoredPaymentInfo with Double = js.native
-  /* 4330 */ val AMDeleteStoredPaypalAgreement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDeleteStoredPaypalAgreement with Double = js.native
-  /* 4084 */ val AMDumpClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDumpClan with Double = js.native
-  /* 4059 */ val AMDumpUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMDumpUser with Double = js.native
-  /* 4398 */ val AMEClubPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMEClubPayment with Double = js.native
-  /* 4399 */ val AMEClubPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMEClubPaymentResponse with Double = js.native
-  /* 4160 */ val AMEditBanReason: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMEditBanReason with Double = js.native
-  /* 4382 */ val AMExpireCaptchaByGID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMExpireCaptchaByGID with Double = js.native
-  /* 509 */ val AMExtendLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMExtendLicense with Double = js.native
-  /* 4367 */ val AMFinalizePurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFinalizePurchase with Double = js.native
-  /* 4368 */ val AMFinalizePurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFinalizePurchaseResponse with Double = js.native
-  /* 580 */ val AMFindAccounts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindAccounts with Double = js.native
-  /* 581 */ val AMFindAccountsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindAccountsResponse with Double = js.native
-  /* 4143 */ val AMFindClanUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindClanUser with Double = js.native
-  /* 4144 */ val AMFindClanUserResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindClanUserResponse with Double = js.native
-  /* 4106 */ val AMFindGSByIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindGSByIP with Double = js.native
-  /* 518 */ val AMFindHungTransactions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFindHungTransactions with Double = js.native
-  /* 525 */ val AMFixPendingPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFixPendingPurchase with Double = js.native
-  /* 526 */ val AMFixPendingPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFixPendingPurchaseResponse with Double = js.native
-  /* 535 */ val AMFixPendingRefund: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFixPendingRefund with Double = js.native
-  /* 4107 */ val AMFoundGSByIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFoundGSByIP with Double = js.native
-  /* 4100 */ val AMFriendsInCommon: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFriendsInCommon with Double = js.native
-  /* 4102 */ val AMFriendsInCommonCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFriendsInCommonCountResponse with Double = js.native
-  /* 4101 */ val AMFriendsInCommonResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFriendsInCommonResponse with Double = js.native
-  /* 4098 */ val AMFriendsList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFriendsList with Double = js.native
-  /* 4099 */ val AMFriendsListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMFriendsListResponse with Double = js.native
-  /* 6406 */ val AMGMSGameServerRemove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGMSGameServerRemove with Double = js.native
-  /* 6405 */ val AMGMSGameServerUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGMSGameServerUpdate with Double = js.native
-  /* 4213 */ val AMGSSearch: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGSSearch with Double = js.native
-  /* 4340 */ val AMGameServerAccountChangePassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerAccountChangePassword with Double = js.native
-  /* 4341 */ val AMGameServerAccountDeleteAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerAccountDeleteAccount with Double = js.native
-  /* 4335 */ val AMGameServerPlayerCompatibilityCheck: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerPlayerCompatibilityCheck with Double = js.native
-  /* 4336 */ val AMGameServerPlayerCompatibilityCheckResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerPlayerCompatibilityCheckResponse with Double = js.native
-  /* 4332 */ val AMGameServerRemove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerRemove with Double = js.native
-  /* 4331 */ val AMGameServerUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGameServerUpdate with Double = js.native
-  /* 4323 */ val AMGetAccountBanInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountBanInfo with Double = js.native
-  /* 4324 */ val AMGetAccountBanInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountBanInfoResponse with Double = js.native
-  /* 4338 */ val AMGetAccountCommunityBanInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountCommunityBanInfo with Double = js.native
-  /* 4339 */ val AMGetAccountCommunityBanInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountCommunityBanInfoResponse with Double = js.native
-  /* 4287 */ val AMGetAccountDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountDetails with Double = js.native
-  /* 4112 */ val AMGetAccountDetails2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountDetails2 with Double = js.native
-  /* 4288 */ val AMGetAccountDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountDetailsResponse with Double = js.native
-  /* 4113 */ val AMGetAccountDetailsResponse2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountDetailsResponse2 with Double = js.native
-  /* 4006 */ val AMGetAccountEmailAddress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountEmailAddress with Double = js.native
-  /* 4007 */ val AMGetAccountEmailAddressResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountEmailAddressResponse with Double = js.native
-  /* 4294 */ val AMGetAccountFlagsForWGSpoofing: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountFlagsForWGSpoofing with Double = js.native
-  /* 4295 */ val AMGetAccountFlagsForWGSpoofingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountFlagsForWGSpoofingResponse with Double = js.native
-  /* 594 */ val AMGetAccountFriendsCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountFriendsCount with Double = js.native
-  /* 595 */ val AMGetAccountFriendsCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountFriendsCountResponse with Double = js.native
-  /* 4069 */ val AMGetAccountLinks: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountLinks with Double = js.native
-  /* 4070 */ val AMGetAccountLinksResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountLinksResponse with Double = js.native
-  /* 4313 */ val AMGetAccountPSNInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountPSNInfo with Double = js.native
-  /* 4314 */ val AMGetAccountPSNInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountPSNInfoResponse with Double = js.native
-  /* 4408 */ val AMGetAccountResetDetailsRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountResetDetailsRequest with Double = js.native
-  /* 4409 */ val AMGetAccountResetDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountResetDetailsResponse with Double = js.native
-  /* 4158 */ val AMGetAccountStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountStatus with Double = js.native
-  /* 4159 */ val AMGetAccountStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetAccountStatusResponse with Double = js.native
-  /* 4188 */ val AMGetBillingAddress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetBillingAddress with Double = js.native
-  /* 4189 */ val AMGetBillingAddressResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetBillingAddressResponse with Double = js.native
-  /* 4134 */ val AMGetCaptchaDataByGID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCaptchaDataByGID with Double = js.native
-  /* 4135 */ val AMGetCaptchaDataByGIDResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCaptchaDataByGIDResponse with Double = js.native
-  /* 4129 */ val AMGetCaptchaDataForIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCaptchaDataForIP with Double = js.native
-  /* 4130 */ val AMGetCaptchaDataForIPResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCaptchaDataForIPResponse with Double = js.native
-  /* 4239 */ val AMGetCardList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCardList with Double = js.native
-  /* 4240 */ val AMGetCardListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCardListResponse with Double = js.native
-  /* 4065 */ val AMGetChatBanList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetChatBanList with Double = js.native
-  /* 4066 */ val AMGetChatBanListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetChatBanListResponse with Double = js.native
-  /* 4033 */ val AMGetClanAnnouncements: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanAnnouncements with Double = js.native
-  /* 4031 */ val AMGetClanAnnouncementsCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanAnnouncementsCount with Double = js.native
-  /* 4032 */ val AMGetClanAnnouncementsCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanAnnouncementsCountResponse with Double = js.native
-  /* 4034 */ val AMGetClanAnnouncementsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanAnnouncementsResponse with Double = js.native
-  /* 588 */ val AMGetClanDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanDetails with Double = js.native
-  /* 4373 */ val AMGetClanDetailsForForumCreation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanDetailsForForumCreation with Double = js.native
-  /* 4374 */ val AMGetClanDetailsForForumCreationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanDetailsForForumCreationResponse with Double = js.native
-  /* 589 */ val AMGetClanDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanDetailsResponse with Double = js.native
-  /* 4017 */ val AMGetClanEvents: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanEvents with Double = js.native
-  /* 4018 */ val AMGetClanEventsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanEventsResponse with Double = js.native
-  /* 4039 */ val AMGetClanHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanHistory with Double = js.native
-  /* 4040 */ val AMGetClanHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanHistoryResponse with Double = js.native
-  /* 4076 */ val AMGetClanMembers: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanMembers with Double = js.native
-  /* 4077 */ val AMGetClanMembersResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanMembersResponse with Double = js.native
-  /* 4088 */ val AMGetClanMembershipList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanMembershipList with Double = js.native
-  /* 4089 */ val AMGetClanMembershipListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanMembershipListResponse with Double = js.native
-  /* 4298 */ val AMGetClanOfficers: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanOfficers with Double = js.native
-  /* 4299 */ val AMGetClanOfficersResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanOfficersResponse with Double = js.native
-  /* 4054 */ val AMGetClanPOTW: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPOTW with Double = js.native
-  /* 4055 */ val AMGetClanPOTWResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPOTWResponse with Double = js.native
-  /* 4041 */ val AMGetClanPermissionBits: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPermissionBits with Double = js.native
-  /* 4042 */ val AMGetClanPermissionBitsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPermissionBitsResponse with Double = js.native
-  /* 4023 */ val AMGetClanPermissionSettings: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPermissionSettings with Double = js.native
-  /* 4024 */ val AMGetClanPermissionSettingsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanPermissionSettingsResponse with Double = js.native
-  /* 4050 */ val AMGetClanRank: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanRank with Double = js.native
-  /* 4051 */ val AMGetClanRankResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetClanRankResponse with Double = js.native
-  /* 4200 */ val AMGetComments: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetComments with Double = js.native
-  /* 4201 */ val AMGetCommentsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCommentsResponse with Double = js.native
-  /* 4116 */ val AMGetCommunityPrivacyState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCommunityPrivacyState with Double = js.native
-  /* 4117 */ val AMGetCommunityPrivacyStateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetCommunityPrivacyStateResponse with Double = js.native
-  /* 514 */ val AMGetFinalPrice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFinalPrice with Double = js.native
-  /* 515 */ val AMGetFinalPriceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFinalPriceResponse with Double = js.native
-  /* 4124 */ val AMGetFriendRelationship: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendRelationship with Double = js.native
-  /* 4125 */ val AMGetFriendRelationshipResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendRelationshipResponse with Double = js.native
-  /* 4165 */ val AMGetFriendsLobbies: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendsLobbies with Double = js.native
-  /* 4166 */ val AMGetFriendsLobbiesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendsLobbiesResponse with Double = js.native
-  /* 4296 */ val AMGetFriendsWishlistInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendsWishlistInfo with Double = js.native
-  /* 4297 */ val AMGetFriendsWishlistInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetFriendsWishlistInfoResponse with Double = js.native
-  /* 4271 */ val AMGetGSPlayerList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetGSPlayerList with Double = js.native
-  /* 4272 */ val AMGetGSPlayerListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetGSPlayerListResponse with Double = js.native
-  /* 4276 */ val AMGetGameMembers: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetGameMembers with Double = js.native
-  /* 4277 */ val AMGetGameMembersResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetGameMembersResponse with Double = js.native
-  /* 4094 */ val AMGetGiftTargetListRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetGiftTargetListRelay with Double = js.native
-  /* 4120 */ val AMGetIgnored: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetIgnored with Double = js.native
-  /* 4121 */ val AMGetIgnoredResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetIgnoredResponse with Double = js.native
-  /* 516 */ val AMGetLegacyGameKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLegacyGameKey with Double = js.native
-  /* 517 */ val AMGetLegacyGameKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLegacyGameKeyResponse with Double = js.native
-  /* 539 */ val AMGetLicenses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLicenses with Double = js.native
-  /* 540 */ val AMGetLicensesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLicensesResponse with Double = js.native
-  /* 4136 */ val AMGetLobbyList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLobbyList with Double = js.native
-  /* 4137 */ val AMGetLobbyListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLobbyListResponse with Double = js.native
-  /* 4138 */ val AMGetLobbyMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLobbyMetadata with Double = js.native
-  /* 4139 */ val AMGetLobbyMetadataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetLobbyMetadataResponse with Double = js.native
-  /* 4301 */ val AMGetNameHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetNameHistory with Double = js.native
-  /* 4302 */ val AMGetNameHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetNameHistoryResponse with Double = js.native
-  /* 4333 */ val AMGetPaypalAgreements: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPaypalAgreements with Double = js.native
-  /* 4334 */ val AMGetPaypalAgreementsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPaypalAgreementsResponse with Double = js.native
-  /* 4375 */ val AMGetPendingNotificationCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPendingNotificationCount with Double = js.native
-  /* 4376 */ val AMGetPendingNotificationCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPendingNotificationCountResponse with Double = js.native
-  /* 4365 */ val AMGetPlayerBanDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPlayerBanDetails with Double = js.native
-  /* 4366 */ val AMGetPlayerBanDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPlayerBanDetailsResponse with Double = js.native
-  /* 4289 */ val AMGetPlayerLinkDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPlayerLinkDetails with Double = js.native
-  /* 4290 */ val AMGetPlayerLinkDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPlayerLinkDetailsResponse with Double = js.native
-  /* 4184 */ val AMGetPreviousCBAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPreviousCBAccount with Double = js.native
-  /* 4185 */ val AMGetPreviousCBAccountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPreviousCBAccountResponse with Double = js.native
-  /* 4206 */ val AMGetPurchaseStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetPurchaseStatus with Double = js.native
-  /* 4037 */ val AMGetSingleClanAnnouncement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSingleClanAnnouncement with Double = js.native
-  /* 4038 */ val AMGetSingleClanAnnouncementResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSingleClanAnnouncementResponse with Double = js.native
-  /* 4048 */ val AMGetSingleClanEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSingleClanEvent with Double = js.native
-  /* 4049 */ val AMGetSingleClanEventResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSingleClanEventResponse with Double = js.native
-  /* 4278 */ val AMGetSteamIDForMicroTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSteamIDForMicroTxn with Double = js.native
-  /* 4279 */ val AMGetSteamIDForMicroTxnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetSteamIDForMicroTxnResponse with Double = js.native
-  /* 4247 */ val AMGetStoredPaymentSummary: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetStoredPaymentSummary with Double = js.native
-  /* 4248 */ val AMGetStoredPaymentSummaryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetStoredPaymentSummaryResponse with Double = js.native
-  /* 4119 */ val AMGetUserAchievementStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserAchievementStatus with Double = js.native
-  /* 4175 */ val AMGetUserClansNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserClansNews with Double = js.native
-  /* 4174 */ val AMGetUserClansNewsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserClansNewsResponse with Double = js.native
-  /* 4269 */ val AMGetUserCurrentGameInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserCurrentGameInfo with Double = js.native
-  /* 4270 */ val AMGetUserCurrentGameInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserCurrentGameInfoResponse with Double = js.native
-  /* 4172 */ val AMGetUserFriendNewsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserFriendNewsResponse with Double = js.native
-  /* 4225 */ val AMGetUserFriendsMinutesPlayed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserFriendsMinutesPlayed with Double = js.native
-  /* 4226 */ val AMGetUserFriendsMinutesPlayedResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserFriendsMinutesPlayedResponse with Double = js.native
-  /* 4073 */ val AMGetUserGameStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGameStats with Double = js.native
-  /* 4074 */ val AMGetUserGameStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGameStatsResponse with Double = js.native
-  /* 4237 */ val AMGetUserGameplayInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGameplayInfo with Double = js.native
-  /* 4238 */ val AMGetUserGameplayInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGameplayInfoResponse with Double = js.native
-  /* 4316 */ val AMGetUserGifts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGifts with Double = js.native
-  /* 4317 */ val AMGetUserGiftsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGiftsResponse with Double = js.native
-  /* 921 */ val AMGetUserGroupStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGroupStatus with Double = js.native
-  /* 922 */ val AMGetUserGroupStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserGroupStatusResponse with Double = js.native
-  /* 4154 */ val AMGetUserHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserHistory with Double = js.native
-  /* 4146 */ val AMGetUserHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserHistoryResponse with Double = js.native
-  /* 4190 */ val AMGetUserLicenseHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserLicenseHistory with Double = js.native
-  /* 4191 */ val AMGetUserLicenseHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserLicenseHistoryResponse with Double = js.native
-  /* 4282 */ val AMGetUserLicenseList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserLicenseList with Double = js.native
-  /* 4283 */ val AMGetUserLicenseListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserLicenseListResponse with Double = js.native
-  /* 4227 */ val AMGetUserMinutesPlayed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserMinutesPlayed with Double = js.native
-  /* 4228 */ val AMGetUserMinutesPlayedResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserMinutesPlayedResponse with Double = js.native
-  /* 4150 */ val AMGetUserNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserNews with Double = js.native
-  /* 4151 */ val AMGetUserNewsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserNewsResponse with Double = js.native
-  /* 4147 */ val AMGetUserNewsSubscriptions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserNewsSubscriptions with Double = js.native
-  /* 4148 */ val AMGetUserNewsSubscriptionsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserNewsSubscriptionsResponse with Double = js.native
-  /* 4211 */ val AMGetUserStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserStats with Double = js.native
-  /* 4292 */ val AMGetUserVacBanList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserVacBanList with Double = js.native
-  /* 4293 */ val AMGetUserVacBanListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetUserVacBanListResponse with Double = js.native
-  /* 4249 */ val AMGetWalletConversionRate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetWalletConversionRate with Double = js.native
-  /* 4250 */ val AMGetWalletConversionRateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetWalletConversionRateResponse with Double = js.native
-  /* 4244 */ val AMGetWalletDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetWalletDetails with Double = js.native
-  /* 4245 */ val AMGetWalletDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGetWalletDetailsResponse with Double = js.native
-  /* 4108 */ val AMGiftRevoked: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGiftRevoked with Double = js.native
-  /* 4356 */ val AMGrantCoupon: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGrantCoupon with Double = js.native
-  /* 4357 */ val AMGrantCouponResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGrantCouponResponse with Double = js.native
-  /* 566 */ val AMGrantGuestPasses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGrantGuestPasses with Double = js.native
-  /* 4361 */ val AMGrantGuestPasses2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGrantGuestPasses2 with Double = js.native
-  /* 4362 */ val AMGrantGuestPasses2Response: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMGrantGuestPasses2Response with Double = js.native
-  /* 4328 */ val AMHandlePendingTransaction: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMHandlePendingTransaction with Double = js.native
-  /* 4360 */ val AMHandlePendingTransactionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMHandlePendingTransactionResponse with Double = js.native
-  /* 512 */ val AMInitPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMInitPurchase with Double = js.native
-  /* 560 */ val AMInitPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMInitPurchaseResponse with Double = js.native
-  /* 564 */ val AMInviteUserToClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMInviteUserToClan with Double = js.native
-  /* 4308 */ val AMIsAccountInCaptchaGracePeriod: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsAccountInCaptchaGracePeriod with Double = js.native
-  /* 4309 */ val AMIsAccountInCaptchaGracePeriodResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsAccountInCaptchaGracePeriodResponse with Double = js.native
-  /* 4358 */ val AMIsPackageRestrictedInUserCountry: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsPackageRestrictedInUserCountry with Double = js.native
-  /* 4359 */ val AMIsPackageRestrictedInUserCountryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsPackageRestrictedInUserCountryResponse with Double = js.native
-  /* 527 */ val AMIsUserBanned: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsUserBanned with Double = js.native
-  /* 4092 */ val AMIsValidAccountID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMIsValidAccountID with Double = js.native
-  /* 4078 */ val AMJoinPublicClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMJoinPublicClan with Double = js.native
-  /* 4060 */ val AMKickUserFromClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMKickUserFromClan with Double = js.native
-  /* 4010 */ val AMLeaveClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLeaveClan with Double = js.native
-  /* 529 */ val AMLoadActivationCodes: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLoadActivationCodes with Double = js.native
-  /* 530 */ val AMLoadActivationCodesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLoadActivationCodesResponse with Double = js.native
-  /* 524 */ val AMLoadOEMTickets: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLoadOEMTickets with Double = js.native
-  /* 562 */ val AMLockProfile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLockProfile with Double = js.native
-  /* 532 */ val AMLookupKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLookupKey with Double = js.native
-  /* 531 */ val AMLookupKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMLookupKeyResponse with Double = js.native
-  /* 4391 */ val AMMOLPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMMOLPayment with Double = js.native
-  /* 4392 */ val AMMOLPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMMOLPaymentResponse with Double = js.native
-  /* 4257 */ val AMMarketingTreatmentUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMMarketingTreatmentUpdate with Double = js.native
-  /* 4378 */ val AMMoPayPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMMoPayPayment with Double = js.native
-  /* 4379 */ val AMMoPayPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMMoPayPaymentResponse with Double = js.native
-  /* 4300 */ val AMNameChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMNameChange with Double = js.native
-  /* 523 */ val AMNewChallenge: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMNewChallenge with Double = js.native
-  /* 4079 */ val AMNotifyChatOfClanChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMNotifyChatOfClanChange with Double = js.native
-  /* 6508 */ val AMNotifySessionDeviceAuthorized: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMNotifySessionDeviceAuthorized with Double = js.native
-  /* 596 */ val AMP2PIntroducerMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMP2PIntroducerMessage with Double = js.native
-  /* 4377 */ val AMPasswordHashUpgrade: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPasswordHashUpgrade with Double = js.native
-  /* 4400 */ val AMPayPalPaymentsHubPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPayPalPaymentsHubPayment with Double = js.native
-  /* 4401 */ val AMPayPalPaymentsHubPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPayPalPaymentsHubPaymentResponse with Double = js.native
-  /* 4387 */ val AMPayelpPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPayelpPayment with Double = js.native
-  /* 4388 */ val AMPayelpPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPayelpPaymentResponse with Double = js.native
-  /* 4372 */ val AMPersonaChangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPersonaChangeResponse with Double = js.native
-  /* 4389 */ val AMPlayerGetClanBasicDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPlayerGetClanBasicDetails with Double = js.native
-  /* 4390 */ val AMPlayerGetClanBasicDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPlayerGetClanBasicDetailsResponse with Double = js.native
-  /* 4322 */ val AMPlayerHostedOnGameServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPlayerHostedOnGameServer with Double = js.native
-  /* 4266 */ val AMPlayerNicknameList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPlayerNicknameList with Double = js.native
-  /* 4267 */ val AMPlayerNicknameListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPlayerNicknameListResponse with Double = js.native
-  /* 557 */ val AMPrimePersonaStateCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPrimePersonaStateCache with Double = js.native
-  /* 4162 */ val AMProbeClanMembershipList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMProbeClanMembershipList with Double = js.native
-  /* 4163 */ val AMProbeClanMembershipListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMProbeClanMembershipListResponse with Double = js.native
-  /* 575 */ val AMPublishChatMemberInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPublishChatMemberInfo with Double = js.native
-  /* 4004 */ val AMPublishChatMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPublishChatMetadata with Double = js.native
-  /* 4025 */ val AMPublishChatRoomInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPublishChatRoomInfo with Double = js.native
-  /* 513 */ val AMPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMPurchaseResponse with Double = js.native
-  /* 4325 */ val AMRecordBanEnforcement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRecordBanEnforcement with Double = js.native
-  /* 563 */ val AMRefreshGuestPasses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRefreshGuestPasses with Double = js.native
-  /* 2210 */ val AMRefreshSessions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRefreshSessions with Double = js.native
-  /* 528 */ val AMRegisterKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRegisterKey with Double = js.native
-  /* 4253 */ val AMRelayGetFriendsWhoPlayGame: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRelayGetFriendsWhoPlayGame with Double = js.native
-  /* 4254 */ val AMRelayGetFriendsWhoPlayGameResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRelayGetFriendsWhoPlayGameResponse with Double = js.native
-  /* 555 */ val AMRelayPublishStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRelayPublishStatus with Double = js.native
-  /* 2201 */ val AMRelayToGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRelayToGC with Double = js.native
-  /* 568 */ val AMReloadAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMReloadAccount with Double = js.native
-  /* 4284 */ val AMReloadGameGroupPolicy: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMReloadGameGroupPolicy with Double = js.native
-  /* 4083 */ val AMRemoveFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRemoveFriend with Double = js.native
-  /* 4281 */ val AMRemovePublisherUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRemovePublisherUser with Double = js.native
-  /* 4342 */ val AMRenewAgreement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRenewAgreement with Double = js.native
-  /* 4337 */ val AMRenewLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRenewLicense with Double = js.native
-  /* 582 */ val AMRequestAccountData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestAccountData with Double = js.native
-  /* 583 */ val AMRequestAccountDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestAccountDataResponse with Double = js.native
-  /* 4058 */ val AMRequestChatMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestChatMetadata with Double = js.native
-  /* 4008 */ val AMRequestClanData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestClanData with Double = js.native
-  /* 4329 */ val AMRequestClanDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestClanDetails with Double = js.native
-  /* 4008 */ val AMRequestFriendData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRequestFriendData with Double = js.native
-  /* 556 */ val AMResetCommunityContent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMResetCommunityContent with Double = js.native
-  /* 4197 */ val AMResetUserVerificationGSByIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMResetUserVerificationGSByIP with Double = js.native
-  /* 4385 */ val AMResolveNegativeWalletCredits: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMResolveNegativeWalletCredits with Double = js.native
-  /* 4386 */ val AMResolveNegativeWalletCreditsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMResolveNegativeWalletCreditsResponse with Double = js.native
-  /* 4080 */ val AMResubmitPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMResubmitPurchase with Double = js.native
-  /* 536 */ val AMReverseChargeback: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMReverseChargeback with Double = js.native
-  /* 537 */ val AMReverseChargebackResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMReverseChargebackResponse with Double = js.native
-  /* 4242 */ val AMRevokeLegacyGameKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRevokeLegacyGameKeys with Double = js.native
-  /* 561 */ val AMRevokePurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRevokePurchaseResponse with Double = js.native
-  /* 4326 */ val AMRollbackGiftTransfer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRollbackGiftTransfer with Double = js.native
-  /* 4327 */ val AMRollbackGiftTransferResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRollbackGiftTransferResponse with Double = js.native
-  /* 4219 */ val AMRouteFriendMsg: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRouteFriendMsg with Double = js.native
-  /* 4009 */ val AMRouteToClients: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMRouteToClients with Double = js.native
-  /* 4412 */ val AMSendAccountInfoUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSendAccountInfoUpdate with Double = js.native
-  /* 4343 */ val AMSendEmail: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSendEmail with Double = js.native
-  /* 4152 */ val AMSendQueuedEmails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSendQueuedEmails with Double = js.native
-  /* 508 */ val AMSendSystemIMToUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSendSystemIMToUser with Double = js.native
-  /* 4126 */ val AMServiceModulesCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMServiceModulesCache with Double = js.native
-  /* 4127 */ val AMServiceModulesCall: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMServiceModulesCall with Double = js.native
-  /* 4128 */ val AMServiceModulesCallResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMServiceModulesCallResponse with Double = js.native
-  /* 4045 */ val AMSessionInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSessionInfoRequest with Double = js.native
-  /* 4046 */ val AMSessionInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSessionInfoResponse with Double = js.native
-  /* 4363 */ val AMSessionQuery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSessionQuery with Double = js.native
-  /* 4364 */ val AMSessionQueryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSessionQueryResponse with Double = js.native
-  /* 4064 */ val AMSetAccountDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAccountDetails with Double = js.native
-  /* 584 */ val AMSetAccountFlags: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAccountFlags with Double = js.native
-  /* 4071 */ val AMSetAccountLinks: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAccountLinks with Double = js.native
-  /* 4072 */ val AMSetAccountLinksResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAccountLinksResponse with Double = js.native
-  /* 519 */ val AMSetAccountTrustedRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAccountTrustedRequest with Double = js.native
-  /* 591 */ val AMSetAvatar: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetAvatar with Double = js.native
-  /* 4068 */ val AMSetClanDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanDetails with Double = js.native
-  /* 4354 */ val AMSetClanName: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanName with Double = js.native
-  /* 4355 */ val AMSetClanNameResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanNameResponse with Double = js.native
-  /* 4056 */ val AMSetClanPOTW: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPOTW with Double = js.native
-  /* 4057 */ val AMSetClanPOTWResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPOTWResponse with Double = js.native
-  /* 4043 */ val AMSetClanPermissionBits: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPermissionBits with Double = js.native
-  /* 4044 */ val AMSetClanPermissionBitsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPermissionBitsResponse with Double = js.native
-  /* 4021 */ val AMSetClanPermissionSettings: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPermissionSettings with Double = js.native
-  /* 4022 */ val AMSetClanPermissionSettingsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanPermissionSettingsResponse with Double = js.native
-  /* 4052 */ val AMSetClanRank: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanRank with Double = js.native
-  /* 4053 */ val AMSetClanRankResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetClanRankResponse with Double = js.native
-  /* 4114 */ val AMSetCommunityProfileSettings: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetCommunityProfileSettings with Double = js.native
-  /* 4115 */ val AMSetCommunityProfileSettingsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetCommunityProfileSettingsResponse with Double = js.native
-  /* 4063 */ val AMSetCommunityState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetCommunityState with Double = js.native
-  /* 4268 */ val AMSetDRMTestConfig: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetDRMTestConfig with Double = js.native
-  /* 4123 */ val AMSetFriendRelationshipNone: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetFriendRelationshipNone with Double = js.native
-  /* 4096 */ val AMSetIgnored: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetIgnored with Double = js.native
-  /* 4122 */ val AMSetIgnoredResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetIgnoredResponse with Double = js.native
-  /* 4153 */ val AMSetLicenseFlags: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetLicenseFlags with Double = js.native
-  /* 590 */ val AMSetPersonaName: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetPersonaName with Double = js.native
-  /* 4255 */ val AMSetPreApproval: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetPreApproval with Double = js.native
-  /* 4256 */ val AMSetPreApprovalResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetPreApprovalResponse with Double = js.native
-  /* 4005 */ val AMSetProfileURL: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetProfileURL with Double = js.native
-  /* 4350 */ val AMSetUserGiftUnowned: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetUserGiftUnowned with Double = js.native
-  /* 4351 */ val AMSetUserGiftUnownedResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetUserGiftUnownedResponse with Double = js.native
-  /* 4149 */ val AMSetUserNewsSubscriptions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSetUserNewsSubscriptions with Double = js.native
-  /* 4404 */ val AMSmart2PayPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSmart2PayPayment with Double = js.native
-  /* 4405 */ val AMSmart2PayPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSmart2PayPaymentResponse with Double = js.native
-  /* 4181 */ val AMStoreCancelPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreCancelPurchase with Double = js.native
-  /* 4180 */ val AMStoreCompletePurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreCompletePurchase with Double = js.native
-  /* 4178 */ val AMStoreGetFinalPrice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreGetFinalPrice with Double = js.native
-  /* 4179 */ val AMStoreGetFinalPriceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreGetFinalPriceResponse with Double = js.native
-  /* 4176 */ val AMStoreInitPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreInitPurchase with Double = js.native
-  /* 4177 */ val AMStoreInitPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreInitPurchaseResponse with Double = js.native
-  /* 4182 */ val AMStorePurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStorePurchaseResponse with Double = js.native
-  /* 4236 */ val AMStoreUserStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreUserStats with Double = js.native
-  /* 4312 */ val AMStoreUserStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMStoreUserStatsResponse with Double = js.native
-  /* 4291 */ val AMSubscribeToPersonaFeed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSubscribeToPersonaFeed with Double = js.native
-  /* 4195 */ val AMSupportChangeEmail: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportChangeEmail with Double = js.native
-  /* 4194 */ val AMSupportChangePassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportChangePassword with Double = js.native
-  /* 4196 */ val AMSupportChangeSecretQA: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportChangeSecretQA with Double = js.native
-  /* 4199 */ val AMSupportEnableOrDisable: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportEnableOrDisable with Double = js.native
-  /* 4209 */ val AMSupportIsAccountEnabled: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportIsAccountEnabled with Double = js.native
-  /* 4210 */ val AMSupportIsAccountEnabledResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportIsAccountEnabledResponse with Double = js.native
-  /* 4212 */ val AMSupportKickSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportKickSession with Double = js.native
-  /* 4307 */ val AMSupportRemoveAccountSecurity: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSupportRemoveAccountSecurity with Double = js.native
-  /* 4348 */ val AMSwapKioskDeposit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSwapKioskDeposit with Double = js.native
-  /* 4349 */ val AMSwapKioskDepositResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMSwapKioskDepositResponse with Double = js.native
-  /* 4220 */ val AMTicketAuthRequestOrResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTicketAuthRequestOrResponse with Double = js.native
-  /* 5812 */ val AMToMDSGetDepotDecryptionKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMToMDSGetDepotDecryptionKey with Double = js.native
-  /* 4133 */ val AMTrackFailedAuthByIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTrackFailedAuthByIP with Double = js.native
-  /* 4320 */ val AMTransferLockedGifts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTransferLockedGifts with Double = js.native
-  /* 4321 */ val AMTransferLockedGiftsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTransferLockedGiftsResponse with Double = js.native
-  /* 4402 */ val AMTwoFactorRecoverAuthenticatorRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTwoFactorRecoverAuthenticatorRequest with Double = js.native
-  /* 4403 */ val AMTwoFactorRecoverAuthenticatorResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMTwoFactorRecoverAuthenticatorResponse with Double = js.native
-  /* 4067 */ val AMUnBanFromChat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUnBanFromChat with Double = js.native
-  /* 4186 */ val AMUpdateBillingAddress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateBillingAddress with Double = js.native
-  /* 4187 */ val AMUpdateBillingAddressResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateBillingAddressResponse with Double = js.native
-  /* 4003 */ val AMUpdateChatMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateChatMetadata with Double = js.native
-  /* 4029 */ val AMUpdateClanAnnouncement: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateClanAnnouncement with Double = js.native
-  /* 4030 */ val AMUpdateClanAnnouncementResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateClanAnnouncementResponse with Double = js.native
-  /* 4015 */ val AMUpdateClanEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateClanEvent with Double = js.native
-  /* 4016 */ val AMUpdateClanEventResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateClanEventResponse with Double = js.native
-  /* 4198 */ val AMUpdateGSPlayStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateGSPlayStats with Double = js.native
-  /* 4275 */ val AMUpdatePersonaStateCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdatePersonaStateCache with Double = js.native
-  /* 4305 */ val AMUpdateProviderStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateProviderStatus with Double = js.native
-  /* 504 */ val AMUpdateUserBanRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUpdateUserBanRequest with Double = js.native
-  /* 4110 */ val AMUserClanList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUserClanList with Double = js.native
-  /* 4111 */ val AMUserClanListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMUserClanListResponse with Double = js.native
-  /* 4286 */ val AMVACStatusUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMVACStatusUpdate with Double = js.native
-  /* 4131 */ val AMValidateCaptchaDataForIP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateCaptchaDataForIP with Double = js.native
-  /* 4132 */ val AMValidateCaptchaDataForIPResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateCaptchaDataForIPResponse with Double = js.native
-  /* 4231 */ val AMValidateEmailLink: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateEmailLink with Double = js.native
-  /* 4232 */ val AMValidateEmailLinkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateEmailLinkResponse with Double = js.native
-  /* 4406 */ val AMValidatePasswordResetCodeAndSendSmsRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidatePasswordResetCodeAndSendSmsRequest with Double = js.native
-  /* 4407 */ val AMValidatePasswordResetCodeAndSendSmsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidatePasswordResetCodeAndSendSmsResponse with Double = js.native
-  /* 4047 */ val AMValidateWGToken: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateWGToken with Double = js.native
-  /* 4062 */ val AMValidateWGTokenResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMValidateWGTokenResponse with Double = js.native
-  /* 552 */ val AMVerfiyUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMVerfiyUser with Double = js.native
-  /* 4222 */ val AMVerifyDepotManagementRights: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMVerifyDepotManagementRights with Double = js.native
-  /* 4223 */ val AMVerifyDepotManagementRightsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMVerifyDepotManagementRightsResponse with Double = js.native
-  /* 4095 */ val AMWipeFriendsList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMWipeFriendsList with Double = js.native
-  /* 4142 */ val AMWriteNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMWriteNews with Double = js.native
-  /* 4344 */ val AMXsollaPayment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMXsollaPayment with Double = js.native
-  /* 4345 */ val AMXsollaPaymentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AMXsollaPaymentResponse with Double = js.native
-  /* 1519 */ val ATSCSPerfTestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSCSPerfTestResponse with Double = js.native
-  /* 1518 */ val ATSCSPerfTestTask: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSCSPerfTestTask with Double = js.native
-  /* 1508 */ val ATSCallTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSCallTest with Double = js.native
-  /* 1509 */ val ATSCallTestReply: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSCallTestReply with Double = js.native
-  /* 1506 */ val ATSCycleTCM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSCycleTCM with Double = js.native
-  /* 1516 */ val ATSExternalStressActionResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressActionResult with Double = js.native
-  /* 1512 */ val ATSExternalStressJobQueued: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressJobQueued with Double = js.native
-  /* 1513 */ val ATSExternalStressJobRunning: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressJobRunning with Double = js.native
-  /* 1511 */ val ATSExternalStressJobStart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressJobStart with Double = js.native
-  /* 1515 */ val ATSExternalStressJobStopAll: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressJobStopAll with Double = js.native
-  /* 1514 */ val ATSExternalStressJobStopped: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSExternalStressJobStopped with Double = js.native
-  /* 1507 */ val ATSInitDRMSStressTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSInitDRMSStressTest with Double = js.native
-  /* 1503 */ val ATSRunFailServerTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSRunFailServerTest with Double = js.native
-  /* 1510 */ val ATSStartExternalStress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSStartExternalStress with Double = js.native
-  /* 1501 */ val ATSStartStressTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSStartStressTest with Double = js.native
-  /* 1517 */ val ATSStarted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSStarted with Double = js.native
-  /* 1502 */ val ATSStopStressTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSStopStressTest with Double = js.native
-  /* 1505 */ val ATSUFSPerfTestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSUFSPerfTestResponse with Double = js.native
-  /* 1504 */ val ATSUFSPerfTestTask: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ATSUFSPerfTestTask with Double = js.native
-  /* 1000 */ val AdminCmd: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminCmd with Double = js.native
-  /* 1004 */ val AdminCmdResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminCmdResponse with Double = js.native
-  /* 1020 */ val AdminConsoleTitle: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminConsoleTitle with Double = js.native
-  /* 1024 */ val AdminGCCommand: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminGCCommand with Double = js.native
-  /* 1025 */ val AdminGCGetCommandList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminGCGetCommandList with Double = js.native
-  /* 1026 */ val AdminGCGetCommandListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminGCGetCommandListResponse with Double = js.native
-  /* 1023 */ val AdminGCSpew: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminGCSpew with Double = js.native
-  /* 1006 */ val AdminLogEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminLogEvent with Double = js.native
-  /* 1005 */ val AdminLogListenRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminLogListenRequest with Double = js.native
-  /* 1028 */ val AdminMsgSpew: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminMsgSpew with Double = js.native
-  /* 1017 */ val AdminPwLogon: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminPwLogon with Double = js.native
-  /* 1018 */ val AdminPwLogonResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminPwLogonResponse with Double = js.native
-  /* 1019 */ val AdminSpew: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AdminSpew with Double = js.native
-  /* 115 */ val Alert: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Alert with Double = js.native
-  /* 550 */ val AllowUserToPlayQuery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AllowUserToPlayQuery with Double = js.native
-  /* 551 */ val AllowUserToPlayResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AllowUserToPlayResponse with Double = js.native
-  /* 200 */ val AssignSysID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.AssignSysID with Double = js.native
-  /* 3619 */ val BRPCheckActivationCodes: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCheckActivationCodes with Double = js.native
-  /* 3620 */ val BRPCheckActivationCodesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCheckActivationCodesResponse with Double = js.native
-  /* 3610 */ val BRPCheckFinanceCloseOutDate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCheckFinanceCloseOutDate with Double = js.native
-  /* 3626 */ val BRPCheckSettlementReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCheckSettlementReports with Double = js.native
-  /* 3607 */ val BRPCommitGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCommitGC with Double = js.native
-  /* 3608 */ val BRPCommitGCResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCommitGCResponse with Double = js.native
-  /* 3621 */ val BRPCommitWP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCommitWP with Double = js.native
-  /* 3622 */ val BRPCommitWPResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPCommitWPResponse with Double = js.native
-  /* 3615 */ val BRPConvertToCurrentKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPConvertToCurrentKeys with Double = js.native
-  /* 3616 */ val BRPConvertToCurrentKeysResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPConvertToCurrentKeysResponse with Double = js.native
-  /* 3609 */ val BRPFindHungTransactions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPFindHungTransactions with Double = js.native
-  /* 3628 */ val BRPPostTaxToAvalara: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPPostTaxToAvalara with Double = js.native
-  /* 3629 */ val BRPPostTransactionTax: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPPostTransactionTax with Double = js.native
-  /* 3630 */ val BRPPostTransactionTaxResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPPostTransactionTaxResponse with Double = js.native
-  /* 3603 */ val BRPProcessGCReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessGCReports with Double = js.native
-  /* 3631 */ val BRPProcessIMReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessIMReports with Double = js.native
-  /* 3611 */ val BRPProcessLicenses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessLicenses with Double = js.native
-  /* 3612 */ val BRPProcessLicensesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessLicensesResponse with Double = js.native
-  /* 3604 */ val BRPProcessPPReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessPPReports with Double = js.native
-  /* 3625 */ val BRPProcessPartnerPayments: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessPartnerPayments with Double = js.native
-  /* 3624 */ val BRPProcessPaymentRules: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessPaymentRules with Double = js.native
-  /* 3602 */ val BRPProcessUSBankReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessUSBankReports with Double = js.native
-  /* 3623 */ val BRPProcessWPReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPProcessWPReports with Double = js.native
-  /* 3617 */ val BRPPruneCardUsageStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPPruneCardUsageStats with Double = js.native
-  /* 3618 */ val BRPPruneCardUsageStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPPruneCardUsageStatsResponse with Double = js.native
-  /* 3613 */ val BRPRemoveExpiredPaymentData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPRemoveExpiredPaymentData with Double = js.native
-  /* 3614 */ val BRPRemoveExpiredPaymentDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPRemoveExpiredPaymentDataResponse with Double = js.native
-  /* 3606 */ val BRPSettleCB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPSettleCB with Double = js.native
-  /* 3605 */ val BRPSettleNOVA: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPSettleNOVA with Double = js.native
-  /* 3601 */ val BRPStartShippingJobs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BRPStartShippingJobs with Double = js.native
-  /* 1407 */ val BSBannedRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSBannedRequest with Double = js.native
-  /* 1494 */ val BSBoaCompraConfirmProductDelivery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSBoaCompraConfirmProductDelivery with Double = js.native
-  /* 1495 */ val BSBoaCompraConfirmProductDeliveryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSBoaCompraConfirmProductDeliveryResponse with Double = js.native
-  /* 1416 */ val BSChaseRFRRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSChaseRFRRequest with Double = js.native
-  /* 1456 */ val BSCheckJobRunning: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCheckJobRunning with Double = js.native
-  /* 1457 */ val BSCheckJobRunningResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCheckJobRunningResponse with Double = js.native
-  /* 1425 */ val BSCommitGCTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCommitGCTxn with Double = js.native
-  /* 1498 */ val BSCommitWPTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCommitWPTxn with Double = js.native
-  /* 1474 */ val BSCompletePurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCompletePurchase with Double = js.native
-  /* 1475 */ val BSCompletePurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSCompletePurchaseResponse with Double = js.native
-  /* 1470 */ val BSConvertToCurrentKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSConvertToCurrentKeys with Double = js.native
-  /* 1471 */ val BSConvertToCurrentKeysResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSConvertToCurrentKeysResponse with Double = js.native
-  /* 1496 */ val BSGenerateBoaCompraMD5: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGenerateBoaCompraMD5 with Double = js.native
-  /* 1497 */ val BSGenerateBoaCompraMD5Response: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGenerateBoaCompraMD5Response with Double = js.native
-  /* 1492 */ val BSGenerateMoPayMD5: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGenerateMoPayMD5 with Double = js.native
-  /* 1493 */ val BSGenerateMoPayMD5Response: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGenerateMoPayMD5Response with Double = js.native
-  /* 1462 */ val BSGetBillingAddress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetBillingAddress with Double = js.native
-  /* 1463 */ val BSGetBillingAddressResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetBillingAddressResponse with Double = js.native
-  /* 1464 */ val BSGetCreditCardInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetCreditCardInfo with Double = js.native
-  /* 1465 */ val BSGetCreditCardInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetCreditCardInfoResponse with Double = js.native
-  /* 1415 */ val BSGetEvents: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetEvents with Double = js.native
-  /* 1410 */ val BSGetPayPalUserInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetPayPalUserInfo with Double = js.native
-  /* 1411 */ val BSGetPayPalUserInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetPayPalUserInfoResponse with Double = js.native
-  /* 1454 */ val BSGetProPackOrderStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetProPackOrderStatus with Double = js.native
-  /* 1455 */ val BSGetProPackOrderStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSGetProPackOrderStatusResponse with Double = js.native
-  /* 1421 */ val BSInitGCBankXferTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitGCBankXferTxn with Double = js.native
-  /* 1422 */ val BSInitGCBankXferTxnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitGCBankXferTxnResponse with Double = js.native
-  /* 1408 */ val BSInitPayPalTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitPayPalTxn with Double = js.native
-  /* 1409 */ val BSInitPayPalTxnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitPayPalTxnResponse with Double = js.native
-  /* 1472 */ val BSInitPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitPurchase with Double = js.native
-  /* 1473 */ val BSInitPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSInitPurchaseResponse with Double = js.native
-  /* 1490 */ val BSMoPayConfirmProductDelivery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSMoPayConfirmProductDelivery with Double = js.native
-  /* 1491 */ val BSMoPayConfirmProductDeliveryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSMoPayConfirmProductDeliveryResponse with Double = js.native
-  /* 1417 */ val BSPaymentInstrBan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPaymentInstrBan with Double = js.native
-  /* 1418 */ val BSPaymentInstrBanResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPaymentInstrBanResponse with Double = js.native
-  /* 1419 */ val BSProcessGCReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSProcessGCReports with Double = js.native
-  /* 1420 */ val BSProcessPPReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSProcessPPReports with Double = js.native
-  /* 1436 */ val BSProcessUSBankReports: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSProcessUSBankReports with Double = js.native
-  /* 1476 */ val BSPruneCardUsageStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPruneCardUsageStats with Double = js.native
-  /* 1477 */ val BSPruneCardUsageStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPruneCardUsageStatsResponse with Double = js.native
-  /* 1402 */ val BSPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPurchaseResponse with Double = js.native
-  /* 1437 */ val BSPurchaseRunFraudChecks: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPurchaseRunFraudChecks with Double = js.native
-  /* 1438 */ val BSPurchaseRunFraudChecksResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPurchaseRunFraudChecksResponse with Double = js.native
-  /* 1401 */ val BSPurchaseStart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSPurchaseStart with Double = js.native
-  /* 1448 */ val BSQiwiWalletInvoice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQiwiWalletInvoice with Double = js.native
-  /* 1449 */ val BSQiwiWalletInvoiceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQiwiWalletInvoiceResponse with Double = js.native
-  /* 1440 */ val BSQueryBankInformation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryBankInformation with Double = js.native
-  /* 1441 */ val BSQueryBankInformationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryBankInformationResponse with Double = js.native
-  /* 1428 */ val BSQueryCBOrderStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryCBOrderStatus with Double = js.native
-  /* 1429 */ val BSQueryCBOrderStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryCBOrderStatusResponse with Double = js.native
-  /* 1484 */ val BSQueryFindCreditCard: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryFindCreditCard with Double = js.native
-  /* 1485 */ val BSQueryFindCreditCardResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryFindCreditCardResponse with Double = js.native
-  /* 1423 */ val BSQueryGCBankXferTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryGCBankXferTxn with Double = js.native
-  /* 1424 */ val BSQueryGCBankXferTxnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryGCBankXferTxnResponse with Double = js.native
-  /* 1432 */ val BSQueryPaymentInstResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryPaymentInstResponse with Double = js.native
-  /* 1431 */ val BSQueryPaymentInstUsage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryPaymentInstUsage with Double = js.native
-  /* 1426 */ val BSQueryTransactionStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryTransactionStatus with Double = js.native
-  /* 1427 */ val BSQueryTransactionStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryTransactionStatusResponse with Double = js.native
-  /* 1433 */ val BSQueryTxnExtendedInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryTxnExtendedInfo with Double = js.native
-  /* 1434 */ val BSQueryTxnExtendedInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSQueryTxnExtendedInfoResponse with Double = js.native
-  /* 1413 */ val BSRefundTxn: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSRefundTxn with Double = js.native
-  /* 1414 */ val BSRefundTxnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSRefundTxnResponse with Double = js.native
-  /* 1468 */ val BSRemoveExpiredPaymentData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSRemoveExpiredPaymentData with Double = js.native
-  /* 1469 */ val BSRemoveExpiredPaymentDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSRemoveExpiredPaymentDataResponse with Double = js.native
-  /* 1458 */ val BSResetPackagePurchaseRateLimit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSResetPackagePurchaseRateLimit with Double = js.native
-  /* 1459 */ val BSResetPackagePurchaseRateLimitResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSResetPackagePurchaseRateLimitResponse with Double = js.native
-  /* 1482 */ val BSReverseRedeemPOSAKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSReverseRedeemPOSAKey with Double = js.native
-  /* 1483 */ val BSReverseRedeemPOSAKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSReverseRedeemPOSAKeyResponse with Double = js.native
-  /* 1430 */ val BSRunRedFlagReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSRunRedFlagReport with Double = js.native
-  /* 1452 */ val BSSendShippingRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSSendShippingRequest with Double = js.native
-  /* 1453 */ val BSSendShippingRequestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSSendShippingRequestResponse with Double = js.native
-  /* 1406 */ val BSSettleComplete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSSettleComplete with Double = js.native
-  /* 1404 */ val BSSettleNOVA: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSSettleNOVA with Double = js.native
-  /* 1439 */ val BSStartShippingJobs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSStartShippingJobs with Double = js.native
-  /* 1486 */ val BSStatusInquiryPOSAKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSStatusInquiryPOSAKey with Double = js.native
-  /* 1487 */ val BSStatusInquiryPOSAKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSStatusInquiryPOSAKeyResponse with Double = js.native
-  /* 1478 */ val BSStoreBankInformation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSStoreBankInformation with Double = js.native
-  /* 1479 */ val BSStoreBankInformationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSStoreBankInformationResponse with Double = js.native
-  /* 1435 */ val BSUpdateConversionRates: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSUpdateConversionRates with Double = js.native
-  /* 1450 */ val BSUpdateInventoryFromProPack: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSUpdateInventoryFromProPack with Double = js.native
-  /* 1451 */ val BSUpdateInventoryFromProPackResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSUpdateInventoryFromProPackResponse with Double = js.native
-  /* 1460 */ val BSUpdatePaymentData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSUpdatePaymentData with Double = js.native
-  /* 1461 */ val BSUpdatePaymentDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSUpdatePaymentDataResponse with Double = js.native
-  /* 1488 */ val BSValidateMoPaySignature: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSValidateMoPaySignature with Double = js.native
-  /* 1489 */ val BSValidateMoPaySignatureResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSValidateMoPaySignatureResponse with Double = js.native
-  /* 1445 */ val BSValidateXsollaSignature: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSValidateXsollaSignature with Double = js.native
-  /* 1446 */ val BSValidateXsollaSignatureResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSValidateXsollaSignatureResponse with Double = js.native
-  /* 1480 */ val BSVerifyPOSAKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSVerifyPOSAKey with Double = js.native
-  /* 1481 */ val BSVerifyPOSAKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BSVerifyPOSAKeyResponse with Double = js.native
-  /* 8401 */ val BackpackAddToCurrency: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BackpackAddToCurrency with Double = js.native
-  /* 8402 */ val BackpackAddToCurrencyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BackpackAddToCurrencyResponse with Double = js.native
-  /* 8400 */ val BackpackBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BackpackBase with Double = js.native
-  /* 7805 */ val BadLoginIPList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BadLoginIPList with Double = js.native
-  /* 400 */ val BaseAIS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseAIS with Double = js.native
-  /* 500 */ val BaseAM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseAM with Double = js.native
-  /* 4000 */ val BaseAMRange2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseAMRange2 with Double = js.native
-  /* 1500 */ val BaseATS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseATS with Double = js.native
-  /* 1000 */ val BaseAdmin: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseAdmin with Double = js.native
-  /* 3600 */ val BaseBRP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseBRP with Double = js.native
-  /* 1400 */ val BaseBS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseBS with Double = js.native
-  /* 3150 */ val BaseCCSRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseCCSRange with Double = js.native
-  /* 1700 */ val BaseCM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseCM with Double = js.native
-  /* 650 */ val BaseCS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseCS with Double = js.native
-  /* 1300 */ val BaseChannelAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseChannelAuth with Double = js.native
-  /* 700 */ val BaseClient: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseClient with Double = js.native
-  /* 5400 */ val BaseClient2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseClient2 with Double = js.native
-  /* 9800 */ val BaseClient3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseClient3 with Double = js.native
-  /* 5600 */ val BaseDFS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseDFS with Double = js.native
-  /* 1600 */ val BaseDP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseDP with Double = js.native
-  /* 625 */ val BaseDRMS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseDRMS with Double = js.native
-  /* 1800 */ val BaseDSS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseDSS with Double = js.native
-  /* 1900 */ val BaseEPM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseEPM with Double = js.native
-  /* 1100 */ val BaseFBS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseFBS with Double = js.native
-  /* 3100 */ val BaseFTSRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseFTSRange with Double = js.native
-  /* 1200 */ val BaseFileXfer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseFileXfer with Double = js.native
-  /* 2200 */ val BaseGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseGC with Double = js.native
-  /* 300 */ val BaseGM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseGM with Double = js.native
-  /* 900 */ val BaseGameServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseGameServer with Double = js.native
-  /* 100 */ val BaseGeneral: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseGeneral with Double = js.native
-  /* 3200 */ val BaseLBSRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseLBSRange with Double = js.native
-  /* 5800 */ val BaseMDS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseMDS with Double = js.native
-  /* 3400 */ val BaseOGS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseOGS with Double = js.native
-  /* 2500 */ val BaseP2P: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseP2P with Double = js.native
-  /* 5000 */ val BasePSRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BasePSRange with Double = js.native
-  /* 2900 */ val BaseSM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseSM with Double = js.native
-  /* 200 */ val BaseShell: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseShell with Double = js.native
-  /* 3000 */ val BaseTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseTest with Double = js.native
-  /* 5200 */ val BaseUFSRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseUFSRange with Double = js.native
-  /* 600 */ val BaseVS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BaseVS with Double = js.native
-  /* 8700 */ val BoxMonitorBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BoxMonitorBase with Double = js.native
-  /* 8700 */ val BoxMonitorReportRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BoxMonitorReportRequest with Double = js.native
-  /* 8701 */ val BoxMonitorReportResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.BoxMonitorReportResponse with Double = js.native
-  /* 3153 */ val CCSAddComment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSAddComment with Double = js.native
-  /* 3154 */ val CCSAddCommentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSAddCommentResponse with Double = js.native
-  /* 3161 */ val CCSDeleteAllCommentsByAuthor: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSDeleteAllCommentsByAuthor with Double = js.native
-  /* 3162 */ val CCSDeleteAllCommentsByAuthorResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSDeleteAllCommentsByAuthorResponse with Double = js.native
-  /* 3155 */ val CCSDeleteComment: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSDeleteComment with Double = js.native
-  /* 3156 */ val CCSDeleteCommentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSDeleteCommentResponse with Double = js.native
-  /* 3151 */ val CCSGetComments: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSGetComments with Double = js.native
-  /* 3159 */ val CCSGetCommentsForNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSGetCommentsForNews with Double = js.native
-  /* 3160 */ val CCSGetCommentsForNewsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSGetCommentsForNewsResponse with Double = js.native
-  /* 3152 */ val CCSGetCommentsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSGetCommentsResponse with Double = js.native
-  /* 3158 */ val CCSNotifyCommentCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSNotifyCommentCount with Double = js.native
-  /* 3157 */ val CCSPreloadComments: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CCSPreloadComments with Double = js.native
-  /* 7602 */ val CEGPropStatusDRMSRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGPropStatusDRMSRequest with Double = js.native
-  /* 7603 */ val CEGPropStatusDRMSResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGPropStatusDRMSResponse with Double = js.native
-  /* 7600 */ val CEGVersionSetEnableDisableRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGVersionSetEnableDisableRequest with Double = js.native
-  /* 7601 */ val CEGVersionSetEnableDisableResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGVersionSetEnableDisableResponse with Double = js.native
-  /* 7604 */ val CEGWhackFailureReportRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGWhackFailureReportRequest with Double = js.native
-  /* 7605 */ val CEGWhackFailureReportResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CEGWhackFailureReportResponse with Double = js.native
-  /* 1703 */ val CMAppInfoResponseDeprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CMAppInfoResponseDeprecated with Double = js.native
-  /* 1701 */ val CMSetAllowState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CMSetAllowState with Double = js.native
-  /* 1702 */ val CMSpewAllowState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CMSpewAllowState with Double = js.native
-  /* 8500 */ val CREBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREBase with Double = js.native
-  /* 8511 */ val CREEnumeratePublishedFiles: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREEnumeratePublishedFiles with Double = js.native
-  /* 8512 */ val CREEnumeratePublishedFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREEnumeratePublishedFilesResponse with Double = js.native
-  /* 8509 */ val CREGetUserPublishedItemVoteDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREGetUserPublishedItemVoteDetails with Double = js.native
-  /* 8510 */ val CREGetUserPublishedItemVoteDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREGetUserPublishedItemVoteDetailsResponse with Double = js.native
-  /* 8503 */ val CREItemVoteSummary: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREItemVoteSummary with Double = js.native
-  /* 8504 */ val CREItemVoteSummaryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREItemVoteSummaryResponse with Double = js.native
-  /* 8513 */ val CREPublishedFileVoteAdded: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREPublishedFileVoteAdded with Double = js.native
-  /* 8501 */ val CRERankByTrend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CRERankByTrend with Double = js.native
-  /* 8502 */ val CRERankByTrendResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CRERankByTrendResponse with Double = js.native
-  /* 8505 */ val CRERankByVote: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CRERankByVote with Double = js.native
-  /* 8506 */ val CRERankByVoteResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CRERankByVoteResponse with Double = js.native
-  /* 8507 */ val CREUpdateUserPublishedItemVote: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREUpdateUserPublishedItemVote with Double = js.native
-  /* 8508 */ val CREUpdateUserPublishedItemVoteResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CREUpdateUserPublishedItemVoteResponse with Double = js.native
-  /* 6200 */ val CSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSBase with Double = js.native
-  /* 6201 */ val CSPing: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSPing with Double = js.native
-  /* 6202 */ val CSPingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSPingResponse with Double = js.native
-  /* 787 */ val CSUserContentApprove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSUserContentApprove with Double = js.native
-  /* 788 */ val CSUserContentDeny: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSUserContentDeny with Double = js.native
-  /* 652 */ val CSUserContentRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CSUserContentRequest with Double = js.native
-  /* 1300 */ val ChannelAuthChallenge: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelAuthChallenge with Double = js.native
-  /* 1301 */ val ChannelAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelAuthResponse with Double = js.native
-  /* 1302 */ val ChannelAuthResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelAuthResult with Double = js.native
-  /* 1303 */ val ChannelEncryptRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelEncryptRequest with Double = js.native
-  /* 1304 */ val ChannelEncryptResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelEncryptResponse with Double = js.native
-  /* 1305 */ val ChannelEncryptResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ChannelEncryptResult with Double = js.native
-  /* 5531 */ val ClientAMGetClanOfficers: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAMGetClanOfficers with Double = js.native
-  /* 5532 */ val ClientAMGetClanOfficersResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAMGetClanOfficersResponse with Double = js.native
-  /* 5570 */ val ClientAMGetPersonaNameHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAMGetPersonaNameHistory with Double = js.native
-  /* 5571 */ val ClientAMGetPersonaNameHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAMGetPersonaNameHistoryResponse with Double = js.native
-  /* 768 */ val ClientAccountInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAccountInfo with Double = js.native
-  /* 740 */ val ClientAckGuestPass: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckGuestPass with Double = js.native
-  /* 796 */ val ClientAckGuestPassResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckGuestPassResponse with Double = js.native
-  /* 735 */ val ClientAckMessageByGID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckMessageByGID with Double = js.native
-  /* 737 */ val ClientAckPurchaseReceipt: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckPurchaseReceipt with Double = js.native
-  /* 709 */ val ClientAckVACBan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckVACBan with Double = js.native
-  /* 732 */ val ClientAckVACBan2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAckVACBan2 with Double = js.native
-  /* 745 */ val ClientAcknowledgeClanInvite: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAcknowledgeClanInvite with Double = js.native
-  /* 5468 */ val ClientActivateOEMLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientActivateOEMLicense with Double = js.native
-  /* 791 */ val ClientAddFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAddFriend with Double = js.native
-  /* 792 */ val ClientAddFriendResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAddFriendResponse with Double = js.native
-  /* 702 */ val ClientAnonLogOn_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAnonLogOn_Deprecated with Double = js.native
-  /* 5409 */ val ClientAnonUserLogOn_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAnonUserLogOn_Deprecated with Double = js.native
-  /* 867 */ val ClientAppInfoChanges: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppInfoChanges with Double = js.native
-  /* 840 */ val ClientAppInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppInfoRequest with Double = js.native
-  /* 841 */ val ClientAppInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppInfoResponse with Double = js.native
-  /* 866 */ val ClientAppInfoUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppInfoUpdate with Double = js.native
-  /* 5507 */ val ClientAppMinutesPlayedData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppMinutesPlayedData with Double = js.native
-  /* 747 */ val ClientAppUsageEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAppUsageEvent with Double = js.native
-  /* 5432 */ val ClientAuthList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthList with Double = js.native
-  /* 5575 */ val ClientAuthListAck: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthListAck with Double = js.native
-  /* 5428 */ val ClientAuthList_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthList_Deprecated with Double = js.native
-  /* 6502 */ val ClientAuthorizeLocalDevice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthorizeLocalDevice with Double = js.native
-  /* 6509 */ val ClientAuthorizeLocalDeviceNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthorizeLocalDeviceNotification with Double = js.native
-  /* 6501 */ val ClientAuthorizeLocalDeviceRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthorizeLocalDeviceRequest with Double = js.native
-  /* 6502 */ val ClientAuthorizeLocalDeviceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientAuthorizeLocalDeviceResponse with Double = js.native
-  /* 9700 */ val ClientBroadcastBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastBase with Double = js.native
-  /* 9702 */ val ClientBroadcastDisconnect: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastDisconnect with Double = js.native
-  /* 9701 */ val ClientBroadcastFrames: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastFrames with Double = js.native
-  /* 9700 */ val ClientBroadcastInit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastInit with Double = js.native
-  /* 9703 */ val ClientBroadcastScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastScreenshot with Double = js.native
-  /* 9704 */ val ClientBroadcastUploadConfig: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientBroadcastUploadConfig with Double = js.native
-  /* 783 */ val ClientCMList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCMList with Double = js.native
-  /* 729 */ val ClientCancelLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCancelLicense with Double = js.native
-  /* 781 */ val ClientCancelLicenseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCancelLicenseResponse with Double = js.native
-  /* 716 */ val ClientChangeStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChangeStatus with Double = js.native
-  /* 5579 */ val ClientChangeSteamGuardOptions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChangeSteamGuardOptions with Double = js.native
-  /* 5580 */ val ClientChangeSteamGuardOptionsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChangeSteamGuardOptionsResponse with Double = js.native
-  /* 597 */ val ClientChatAction: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatAction with Double = js.native
-  /* 814 */ val ClientChatActionResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatActionResult with Double = js.native
-  /* 5426 */ val ClientChatDeclined: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatDeclined with Double = js.native
-  /* 807 */ val ClientChatEnter: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatEnter with Double = js.native
-  /* 800 */ val ClientChatInvite: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatInvite with Double = js.native
-  /* 802 */ val ClientChatMemberInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatMemberInfo with Double = js.native
-  /* 799 */ val ClientChatMsg: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatMsg with Double = js.native
-  /* 4026 */ val ClientChatRoomInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientChatRoomInfo with Double = js.native
-  /* 5450 */ val ClientCheckAppBetaPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckAppBetaPassword with Double = js.native
-  /* 5451 */ val ClientCheckAppBetaPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckAppBetaPasswordResponse with Double = js.native
-  /* 5533 */ val ClientCheckFileSignature: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckFileSignature with Double = js.native
-  /* 5534 */ val ClientCheckFileSignatureResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckFileSignatureResponse with Double = js.native
-  /* 845 */ val ClientCheckPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckPassword with Double = js.native
-  /* 848 */ val ClientCheckPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCheckPasswordResponse with Double = js.native
-  /* 822 */ val ClientClanState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientClanState with Double = js.native
-  /* 5582 */ val ClientCommentNotifications: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCommentNotifications with Double = js.native
-  /* 9600 */ val ClientConcurrentSessionsBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientConcurrentSessionsBase with Double = js.native
-  /* 710 */ val ClientConnectionStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientConnectionStats with Double = js.native
-  /* 731 */ val ClientContentServerLogOn_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientContentServerLogOn_Deprecated with Double = js.native
-  /* 5406 */ val ClientCreateAccount2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAccount2 with Double = js.native
-  /* 5462 */ val ClientCreateAccount3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAccount3 with Double = js.native
-  /* 5590 */ val ClientCreateAccountProto: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAccountProto with Double = js.native
-  /* 5591 */ val ClientCreateAccountProtoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAccountProtoResponse with Double = js.native
-  /* 5403 */ val ClientCreateAccountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAccountResponse with Double = js.native
-  /* 761 */ val ClientCreateAcctResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateAcctResponse with Double = js.native
-  /* 809 */ val ClientCreateChat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateChat with Double = js.native
-  /* 810 */ val ClientCreateChatResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCreateChatResponse with Double = js.native
-  /* 5597 */ val ClientCurrentUIMode: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientCurrentUIMode with Double = js.native
-  /* 5605 */ val ClientDFSAuthenticateRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDFSAuthenticateRequest with Double = js.native
-  /* 5606 */ val ClientDFSAuthenticateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDFSAuthenticateResponse with Double = js.native
-  /* 5617 */ val ClientDFSDownloadStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDFSDownloadStatus with Double = js.native
-  /* 5607 */ val ClientDFSEndSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDFSEndSession with Double = js.native
-  /* 1620 */ val ClientDPCheckSpecialSurvey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPCheckSpecialSurvey with Double = js.native
-  /* 1621 */ val ClientDPCheckSpecialSurveyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPCheckSpecialSurveyResponse with Double = js.native
-  /* 1630 */ val ClientDPContentStatsReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPContentStatsReport with Double = js.native
-  /* 1622 */ val ClientDPSendSpecialSurveyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPSendSpecialSurveyResponse with Double = js.native
-  /* 1623 */ val ClientDPSendSpecialSurveyResponseReply: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPSendSpecialSurveyResponseReply with Double = js.native
-  /* 1627 */ val ClientDPSteam2AppStarted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPSteam2AppStarted with Double = js.native
-  /* 1625 */ val ClientDPUpdateAppJobReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDPUpdateAppJobReport with Double = js.native
-  /* 896 */ val ClientDRMBlobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMBlobRequest with Double = js.native
-  /* 897 */ val ClientDRMBlobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMBlobResponse with Double = js.native
-  /* 5485 */ val ClientDRMDownloadRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMDownloadRequest with Double = js.native
-  /* 5574 */ val ClientDRMDownloadRequestWithCrashData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMDownloadRequestWithCrashData with Double = js.native
-  /* 5486 */ val ClientDRMDownloadResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMDownloadResponse with Double = js.native
-  /* 5487 */ val ClientDRMFinalResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMFinalResult with Double = js.native
-  /* 851 */ val ClientDRMProblemReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMProblemReport with Double = js.native
-  /* 5495 */ val ClientDRMTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMTest with Double = js.native
-  /* 5496 */ val ClientDRMTestResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDRMTestResult with Double = js.native
-  /* 6504 */ val ClientDeauthorizeDevice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDeauthorizeDevice with Double = js.native
-  /* 6503 */ val ClientDeauthorizeDeviceRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDeauthorizeDeviceRequest with Double = js.native
-  /* 5511 */ val ClientDeregisterWithServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDeregisterWithServer with Double = js.native
-  /* 5445 */ val ClientDisableTestLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDisableTestLicense with Double = js.native
-  /* 5446 */ val ClientDisableTestLicenseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDisableTestLicenseResponse with Double = js.native
-  /* 5548 */ val ClientDownloadRateStatistics: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientDownloadRateStatistics with Double = js.native
-  /* 5456 */ val ClientEmailAddrInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmailAddrInfo with Double = js.native
-  /* 5458 */ val ClientEmailChange3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmailChange3 with Double = js.native
-  /* 5544 */ val ClientEmailChange4: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmailChange4 with Double = js.native
-  /* 891 */ val ClientEmailChangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmailChangeResponse with Double = js.native
-  /* 5545 */ val ClientEmailChangeResponse4: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmailChangeResponse4 with Double = js.native
-  /* 9331 */ val ClientEmoticonList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEmoticonList with Double = js.native
-  /* 5443 */ val ClientEnableTestLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEnableTestLicense with Double = js.native
-  /* 5444 */ val ClientEnableTestLicenseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEnableTestLicenseResponse with Double = js.native
-  /* 784 */ val ClientEncryptPct: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientEncryptPct with Double = js.native
-  /* 7519 */ val ClientFSEnumerateFollowingList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSEnumerateFollowingList with Double = js.native
-  /* 7520 */ val ClientFSEnumerateFollowingListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSEnumerateFollowingListResponse with Double = js.native
-  /* 7515 */ val ClientFSGetFollowerCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFollowerCount with Double = js.native
-  /* 7516 */ val ClientFSGetFollowerCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFollowerCountResponse with Double = js.native
-  /* 7525 */ val ClientFSGetFriendMessageHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFriendMessageHistory with Double = js.native
-  /* 7527 */ val ClientFSGetFriendMessageHistoryForOfflineMessages: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFriendMessageHistoryForOfflineMessages with Double = js.native
-  /* 7526 */ val ClientFSGetFriendMessageHistoryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFriendMessageHistoryResponse with Double = js.native
-  /* 7528 */ val ClientFSGetFriendsSteamLevels: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFriendsSteamLevels with Double = js.native
-  /* 7529 */ val ClientFSGetFriendsSteamLevelsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetFriendsSteamLevelsResponse with Double = js.native
-  /* 7517 */ val ClientFSGetIsFollowing: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetIsFollowing with Double = js.native
-  /* 7518 */ val ClientFSGetIsFollowingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSGetIsFollowingResponse with Double = js.native
-  /* 7523 */ val ClientFSOfflineMessageNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSOfflineMessageNotification with Double = js.native
-  /* 7524 */ val ClientFSRequestOfflineMessageCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFSRequestOfflineMessageCount with Double = js.native
-  /* 786 */ val ClientFavoritesList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFavoritesList with Double = js.native
-  /* 5412 */ val ClientFileToDownload: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFileToDownload with Double = js.native
-  /* 5413 */ val ClientFileToDownloadResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFileToDownloadResponse with Double = js.native
-  /* 718 */ val ClientFriendMsg: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendMsg with Double = js.native
-  /* 5578 */ val ClientFriendMsgEchoToSender: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendMsgEchoToSender with Double = js.native
-  /* 5427 */ val ClientFriendMsgIncoming: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendMsgIncoming with Double = js.native
-  /* 5535 */ val ClientFriendProfileInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendProfileInfo with Double = js.native
-  /* 5536 */ val ClientFriendProfileInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendProfileInfoResponse with Double = js.native
-  /* 808 */ val ClientFriendRemovedFromSource: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendRemovedFromSource with Double = js.native
-  /* 5596 */ val ClientFriendUserStatusPublished: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendUserStatusPublished with Double = js.native
-  /* 5553 */ val ClientFriendsGroupsList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendsGroupsList with Double = js.native
-  /* 767 */ val ClientFriendsList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFriendsList with Double = js.native
-  /* 5453 */ val ClientFromGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientFromGC with Double = js.native
-  /* 5503 */ val ClientGCMsgFailed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGCMsgFailed with Double = js.native
-  /* 6403 */ val ClientGMSServerQuery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGMSServerQuery with Double = js.native
-  /* 773 */ val ClientGameConnectDeny: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGameConnectDeny with Double = js.native
-  /* 779 */ val ClientGameConnectTokens: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGameConnectTokens with Double = js.native
-  /* 719 */ val ClientGameConnect_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGameConnect_obsolete with Double = js.native
-  /* 721 */ val ClientGameEnded_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGameEnded_obsolete with Double = js.native
-  /* 742 */ val ClientGamesPlayed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayed with Double = js.native
-  /* 720 */ val ClientGamesPlayed2_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayed2_obsolete with Double = js.native
-  /* 738 */ val ClientGamesPlayed3_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayed3_obsolete with Double = js.native
-  /* 715 */ val ClientGamesPlayedNoDataBlob: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayedNoDataBlob with Double = js.native
-  /* 5410 */ val ClientGamesPlayedWithDataBlob: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayedWithDataBlob with Double = js.native
-  /* 705 */ val ClientGamesPlayed_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGamesPlayed_obsolete with Double = js.native
-  /* 5441 */ val ClientGetAppBetaPasswords: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAppBetaPasswords with Double = js.native
-  /* 5442 */ val ClientGetAppBetaPasswordsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAppBetaPasswordsResponse with Double = js.native
-  /* 857 */ val ClientGetAppOwnershipTicket: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAppOwnershipTicket with Double = js.native
-  /* 858 */ val ClientGetAppOwnershipTicketResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAppOwnershipTicketResponse with Double = js.native
-  /* 6506 */ val ClientGetAuthorizedDevices: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAuthorizedDevices with Double = js.native
-  /* 6507 */ val ClientGetAuthorizedDevicesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetAuthorizedDevicesResponse with Double = js.native
-  /* 5546 */ val ClientGetCDNAuthToken: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetCDNAuthToken with Double = js.native
-  /* 5547 */ val ClientGetCDNAuthTokenResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetCDNAuthTokenResponse with Double = js.native
-  /* 5554 */ val ClientGetClanActivityCounts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClanActivityCounts with Double = js.native
-  /* 5555 */ val ClientGetClanActivityCountsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClanActivityCountsResponse with Double = js.native
-  /* 5518 */ val ClientGetClientAppList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClientAppList with Double = js.native
-  /* 5519 */ val ClientGetClientAppListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClientAppListResponse with Double = js.native
-  /* 5515 */ val ClientGetClientDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClientDetails with Double = js.native
-  /* 5516 */ val ClientGetClientDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetClientDetailsResponse with Double = js.native
-  /* 5438 */ val ClientGetDepotDecryptionKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetDepotDecryptionKey with Double = js.native
-  /* 5439 */ val ClientGetDepotDecryptionKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetDepotDecryptionKeyResponse with Double = js.native
-  /* 9330 */ val ClientGetEmoticonList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetEmoticonList with Double = js.native
-  /* 722 */ val ClientGetFinalPrice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetFinalPrice with Double = js.native
-  /* 775 */ val ClientGetFinalPriceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetFinalPriceResponse with Double = js.native
-  /* 5488 */ val ClientGetFriendsWhoPlayGame: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetFriendsWhoPlayGame with Double = js.native
-  /* 5489 */ val ClientGetFriendsWhoPlayGameResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetFriendsWhoPlayGameResponse with Double = js.native
-  /* 748 */ val ClientGetGiftTargetList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetGiftTargetList with Double = js.native
-  /* 749 */ val ClientGetGiftTargetListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetGiftTargetListResponse with Double = js.native
-  /* 730 */ val ClientGetLegacyGameKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLegacyGameKey with Double = js.native
-  /* 785 */ val ClientGetLegacyGameKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLegacyGameKeyResponse with Double = js.native
-  /* 728 */ val ClientGetLicenses: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLicenses with Double = js.native
-  /* 860 */ val ClientGetLobbyListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLobbyListResponse with Double = js.native
-  /* 861 */ val ClientGetLobbyMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLobbyMetadata with Double = js.native
-  /* 862 */ val ClientGetLobbyMetadataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetLobbyMetadataResponse with Double = js.native
-  /* 5508 */ val ClientGetMicroTxnInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetMicroTxnInfo with Double = js.native
-  /* 5509 */ val ClientGetMicroTxnInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetMicroTxnInfoResponse with Double = js.native
-  /* 5436 */ val ClientGetNumberOfCurrentPlayers: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetNumberOfCurrentPlayers with Double = js.native
-  /* 5592 */ val ClientGetNumberOfCurrentPlayersDP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetNumberOfCurrentPlayersDP with Double = js.native
-  /* 5593 */ val ClientGetNumberOfCurrentPlayersDPResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetNumberOfCurrentPlayersDPResponse with Double = js.native
-  /* 5437 */ val ClientGetNumberOfCurrentPlayersResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetNumberOfCurrentPlayersResponse with Double = js.native
-  /* 736 */ val ClientGetPurchaseReceipts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetPurchaseReceipts with Double = js.native
-  /* 818 */ val ClientGetUserStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetUserStats with Double = js.native
-  /* 819 */ val ClientGetUserStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientGetUserStatsResponse with Double = js.native
-  /* 703 */ val ClientHeartBeat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientHeartBeat with Double = js.native
-  /* 5552 */ val ClientHideFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientHideFriend with Double = js.native
-  /* 708 */ val ClientInformOfCreateAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInformOfCreateAccount with Double = js.native
-  /* 5407 */ val ClientInformOfResetForgottenPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInformOfResetForgottenPassword with Double = js.native
-  /* 5408 */ val ClientInformOfResetForgottenPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInformOfResetForgottenPasswordResponse with Double = js.native
-  /* 711 */ val ClientInitPurchase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInitPurchase with Double = js.native
-  /* 789 */ val ClientInitPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInitPurchaseResponse with Double = js.native
-  /* 5520 */ val ClientInstallClientApp: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInstallClientApp with Double = js.native
-  /* 5521 */ val ClientInstallClientAppResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInstallClientAppResponse with Double = js.native
-  /* 793 */ val ClientInviteFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInviteFriend with Double = js.native
-  /* 794 */ val ClientInviteFriendResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInviteFriendResponse with Double = js.native
-  /* 744 */ val ClientInviteUserToClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientInviteUserToClan with Double = js.native
-  /* 5430 */ val ClientIsLimitedAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientIsLimitedAccount with Double = js.native
-  /* 5576 */ val ClientItemAnnouncements: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientItemAnnouncements with Double = js.native
-  /* 801 */ val ClientJoinChat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientJoinChat with Double = js.native
-  /* 9601 */ val ClientKickPlayingSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientKickPlayingSession with Double = js.native
-  /* 5416 */ val ClientLBSFindOrCreateLB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSFindOrCreateLB with Double = js.native
-  /* 5417 */ val ClientLBSFindOrCreateLBResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSFindOrCreateLBResponse with Double = js.native
-  /* 5418 */ val ClientLBSGetLBEntries: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSGetLBEntries with Double = js.native
-  /* 5419 */ val ClientLBSGetLBEntriesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSGetLBEntriesResponse with Double = js.native
-  /* 5414 */ val ClientLBSSetScore: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSSetScore with Double = js.native
-  /* 5415 */ val ClientLBSSetScoreResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSSetScoreResponse with Double = js.native
-  /* 5529 */ val ClientLBSSetUGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSSetUGC with Double = js.native
-  /* 5530 */ val ClientLBSSetUGCResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLBSSetUGCResponse with Double = js.native
-  /* 780 */ val ClientLicenseList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLicenseList with Double = js.native
-  /* 706 */ val ClientLogOff: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogOff with Double = js.native
-  /* 751 */ val ClientLogOnResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogOnResponse with Double = js.native
-  /* 803 */ val ClientLogOnWithCredentials_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogOnWithCredentials_Deprecated with Double = js.native
-  /* 5465 */ val ClientLogOnWithHash_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogOnWithHash_Deprecated with Double = js.native
-  /* 701 */ val ClientLogOn_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogOn_Deprecated with Double = js.native
-  /* 757 */ val ClientLoggedOff: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLoggedOff with Double = js.native
-  /* 5514 */ val ClientLogon: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogon with Double = js.native
-  /* 5559 */ val ClientLogonGameServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLogonGameServer with Double = js.native
-  /* 898 */ val ClientLookupKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLookupKey with Double = js.native
-  /* 899 */ val ClientLookupKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientLookupKeyResponse with Double = js.native
-  /* 5818 */ val ClientMDSGetDepotManifest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSGetDepotManifest with Double = js.native
-  /* 5820 */ val ClientMDSGetDepotManifestChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSGetDepotManifestChunk with Double = js.native
-  /* 5819 */ val ClientMDSGetDepotManifestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSGetDepotManifestResponse with Double = js.native
-  /* 5842 */ val ClientMDSGetPrevDepotBuild: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSGetPrevDepotBuild with Double = js.native
-  /* 5843 */ val ClientMDSGetPrevDepotBuildResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSGetPrevDepotBuildResponse with Double = js.native
-  /* 5806 */ val ClientMDSHeartbeat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSHeartbeat with Double = js.native
-  /* 5809 */ val ClientMDSInitDepotBuildRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSInitDepotBuildRequest with Double = js.native
-  /* 5810 */ val ClientMDSInitDepotBuildResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSInitDepotBuildResponse with Double = js.native
-  /* 5816 */ val ClientMDSInitWorkshopBuildRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSInitWorkshopBuildRequest with Double = js.native
-  /* 5817 */ val ClientMDSInitWorkshopBuildResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSInitWorkshopBuildResponse with Double = js.native
-  /* 5801 */ val ClientMDSLoginRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSLoginRequest with Double = js.native
-  /* 5802 */ val ClientMDSLoginResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSLoginResponse with Double = js.native
-  /* 5838 */ val ClientMDSRegisterAppBuild: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSRegisterAppBuild with Double = js.native
-  /* 5839 */ val ClientMDSRegisterAppBuildResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSRegisterAppBuildResponse with Double = js.native
-  /* 5840 */ val ClientMDSSetAppBuildLive: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSSetAppBuildLive with Double = js.native
-  /* 5841 */ val ClientMDSSetAppBuildLiveResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSSetAppBuildLiveResponse with Double = js.native
-  /* 5845 */ val ClientMDSSignInstallScript: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSSignInstallScript with Double = js.native
-  /* 5846 */ val ClientMDSSignInstallScriptResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSSignInstallScriptResponse with Double = js.native
-  /* 5805 */ val ClientMDSTransmitManifestDataChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSTransmitManifestDataChunk with Double = js.native
-  /* 5807 */ val ClientMDSUploadDepotChunks: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadDepotChunks with Double = js.native
-  /* 5808 */ val ClientMDSUploadDepotChunksResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadDepotChunksResponse with Double = js.native
-  /* 5803 */ val ClientMDSUploadManifestRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadManifestRequest with Double = js.native
-  /* 5804 */ val ClientMDSUploadManifestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadManifestResponse with Double = js.native
-  /* 5823 */ val ClientMDSUploadRateTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadRateTest with Double = js.native
-  /* 5824 */ val ClientMDSUploadRateTestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMDSUploadRateTestResponse with Double = js.native
-  /* 6601 */ val ClientMMSCreateLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSCreateLobby with Double = js.native
-  /* 6602 */ val ClientMMSCreateLobbyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSCreateLobbyResponse with Double = js.native
-  /* 6622 */ val ClientMMSFlushFrenemyListCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSFlushFrenemyListCache with Double = js.native
-  /* 6623 */ val ClientMMSFlushFrenemyListCacheResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSFlushFrenemyListCacheResponse with Double = js.native
-  /* 6611 */ val ClientMMSGetLobbyData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSGetLobbyData with Double = js.native
-  /* 6607 */ val ClientMMSGetLobbyList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSGetLobbyList with Double = js.native
-  /* 6608 */ val ClientMMSGetLobbyListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSGetLobbyListResponse with Double = js.native
-  /* 6621 */ val ClientMMSInviteToLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSInviteToLobby with Double = js.native
-  /* 6603 */ val ClientMMSJoinLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSJoinLobby with Double = js.native
-  /* 6604 */ val ClientMMSJoinLobbyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSJoinLobbyResponse with Double = js.native
-  /* 6605 */ val ClientMMSLeaveLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSLeaveLobby with Double = js.native
-  /* 6606 */ val ClientMMSLeaveLobbyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSLeaveLobbyResponse with Double = js.native
-  /* 6614 */ val ClientMMSLobbyChatMsg: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSLobbyChatMsg with Double = js.native
-  /* 6612 */ val ClientMMSLobbyData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSLobbyData with Double = js.native
-  /* 6618 */ val ClientMMSLobbyGameServerSet: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSLobbyGameServerSet with Double = js.native
-  /* 6613 */ val ClientMMSSendLobbyChatMsg: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSendLobbyChatMsg with Double = js.native
-  /* 6609 */ val ClientMMSSetLobbyData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyData with Double = js.native
-  /* 6610 */ val ClientMMSSetLobbyDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyDataResponse with Double = js.native
-  /* 6617 */ val ClientMMSSetLobbyGameServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyGameServer with Double = js.native
-  /* 6624 */ val ClientMMSSetLobbyLinked: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyLinked with Double = js.native
-  /* 6615 */ val ClientMMSSetLobbyOwner: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyOwner with Double = js.native
-  /* 6616 */ val ClientMMSSetLobbyOwnerResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSSetLobbyOwnerResponse with Double = js.native
-  /* 6619 */ val ClientMMSUserJoinedLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSUserJoinedLobby with Double = js.native
-  /* 6620 */ val ClientMMSUserLeftLobby: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMMSUserLeftLobby with Double = js.native
-  /* 5420 */ val ClientMarketingMessageUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMarketingMessageUpdate with Double = js.native
-  /* 5510 */ val ClientMarketingMessageUpdate2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMarketingMessageUpdate2 with Double = js.native
-  /* 5504 */ val ClientMicroTxnAuthRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMicroTxnAuthRequest with Double = js.native
-  /* 5505 */ val ClientMicroTxnAuthorize: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMicroTxnAuthorize with Double = js.native
-  /* 5506 */ val ClientMicroTxnAuthorizeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientMicroTxnAuthorizeResponse with Double = js.native
-  /* 765 */ val ClientNOP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNOP with Double = js.native
-  /* 839 */ val ClientNatTraversalStatEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNatTraversalStatEvent with Double = js.native
-  /* 5463 */ val ClientNewLoginKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNewLoginKey with Double = js.native
-  /* 5464 */ val ClientNewLoginKeyAccepted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNewLoginKeyAccepted with Double = js.native
-  /* 771 */ val ClientNewsUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNewsUpdate with Double = js.native
-  /* 707 */ val ClientNoUDPConnectivity: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNoUDPConnectivity with Double = js.native
-  /* 756 */ val ClientNotLoggedOnDeprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientNotLoggedOnDeprecated with Double = js.native
-  /* 5490 */ val ClientOGSBeginSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSBeginSession with Double = js.native
-  /* 5491 */ val ClientOGSBeginSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSBeginSessionResponse with Double = js.native
-  /* 5492 */ val ClientOGSEndSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSEndSession with Double = js.native
-  /* 5493 */ val ClientOGSEndSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSEndSessionResponse with Double = js.native
-  /* 5581 */ val ClientOGSGameServerPingSample: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSGameServerPingSample with Double = js.native
-  /* 5557 */ val ClientOGSReportBug: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSReportBug with Double = js.native
-  /* 5556 */ val ClientOGSReportString: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSReportString with Double = js.native
-  /* 5494 */ val ClientOGSWriteRow: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientOGSWriteRow with Double = js.native
-  /* 5435 */ val ClientP2PConnectionFailInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientP2PConnectionFailInfo with Double = js.native
-  /* 5434 */ val ClientP2PConnectionInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientP2PConnectionInfo with Double = js.native
-  /* 813 */ val ClientP2PIntroducerMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientP2PIntroducerMessage with Double = js.native
-  /* 8905 */ val ClientPICSAccessTokenRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSAccessTokenRequest with Double = js.native
-  /* 8906 */ val ClientPICSAccessTokenResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSAccessTokenResponse with Double = js.native
-  /* 8901 */ val ClientPICSChangesSinceRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSChangesSinceRequest with Double = js.native
-  /* 8902 */ val ClientPICSChangesSinceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSChangesSinceResponse with Double = js.native
-  /* 8903 */ val ClientPICSProductInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSProductInfoRequest with Double = js.native
-  /* 8904 */ val ClientPICSProductInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPICSProductInfoResponse with Double = js.native
-  /* 833 */ val ClientPackageInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPackageInfoRequest with Double = js.native
-  /* 834 */ val ClientPackageInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPackageInfoResponse with Double = js.native
-  /* 148 */ val ClientPackageVersions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPackageVersions with Double = js.native
-  /* 5457 */ val ClientPasswordChange3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPasswordChange3 with Double = js.native
-  /* 805 */ val ClientPasswordChangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPasswordChangeResponse with Double = js.native
-  /* 5584 */ val ClientPersonaChangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPersonaChangeResponse with Double = js.native
-  /* 766 */ val ClientPersonaState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPersonaState with Double = js.native
-  /* 5459 */ val ClientPersonalQAChange3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPersonalQAChange3 with Double = js.native
-  /* 764 */ val ClientPing: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPing with Double = js.native
-  /* 712 */ val ClientPingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPingResponse with Double = js.native
-  /* 5587 */ val ClientPlayerNicknameList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPlayerNicknameList with Double = js.native
-  /* 9600 */ val ClientPlayingSessionState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPlayingSessionState with Double = js.native
-  /* 763 */ val ClientPurchaseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPurchaseResponse with Double = js.native
-  /* 746 */ val ClientPurchaseWithMachineID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientPurchaseWithMachineID with Double = js.native
-  /* 5539 */ val ClientReadMachineAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientReadMachineAuth with Double = js.native
-  /* 5540 */ val ClientReadMachineAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientReadMachineAuthResponse with Double = js.native
-  /* 741 */ val ClientRedeemGuestPass: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRedeemGuestPass with Double = js.native
-  /* 797 */ val ClientRedeemGuestPassResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRedeemGuestPassResponse with Double = js.native
-  /* 5502 */ val ClientRegisterAuthTicketWithCM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRegisterAuthTicketWithCM with Double = js.native
-  /* 743 */ val ClientRegisterKey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRegisterKey with Double = js.native
-  /* 5469 */ val ClientRegisterOEMMachine: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRegisterOEMMachine with Double = js.native
-  /* 5470 */ val ClientRegisterOEMMachineResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRegisterOEMMachineResponse with Double = js.native
-  /* 714 */ val ClientRemoveFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRemoveFriend with Double = js.native
-  /* 5517 */ val ClientReportOverlayDetourFailure: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientReportOverlayDetourFailure with Double = js.native
-  /* 5549 */ val ClientRequestAccountData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestAccountData with Double = js.native
-  /* 5550 */ val ClientRequestAccountDataResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestAccountDataResponse with Double = js.native
-  /* 5431 */ val ClientRequestAuthList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestAuthList with Double = js.native
-  /* 5454 */ val ClientRequestChangeMail: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestChangeMail with Double = js.native
-  /* 5455 */ val ClientRequestChangeMailResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestChangeMailResponse with Double = js.native
-  /* 5583 */ val ClientRequestCommentNotifications: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestCommentNotifications with Double = js.native
-  /* 5526 */ val ClientRequestEncryptedAppTicket: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestEncryptedAppTicket with Double = js.native
-  /* 5527 */ val ClientRequestEncryptedAppTicketResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestEncryptedAppTicketResponse with Double = js.native
-  /* 5401 */ val ClientRequestForgottenPasswordEmail: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestForgottenPasswordEmail with Double = js.native
-  /* 5461 */ val ClientRequestForgottenPasswordEmail3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestForgottenPasswordEmail3 with Double = js.native
-  /* 5402 */ val ClientRequestForgottenPasswordEmailResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestForgottenPasswordEmailResponse with Double = js.native
-  /* 5572 */ val ClientRequestFreeLicense: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestFreeLicense with Double = js.native
-  /* 5573 */ val ClientRequestFreeLicenseResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestFreeLicenseResponse with Double = js.native
-  /* 815 */ val ClientRequestFriendData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestFriendData with Double = js.native
-  /* 554 */ val ClientRequestFriendship: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestFriendship with Double = js.native
-  /* 5577 */ val ClientRequestItemAnnouncements: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestItemAnnouncements with Double = js.native
-  /* 5541 */ val ClientRequestMachineAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestMachineAuth with Double = js.native
-  /* 5542 */ val ClientRequestMachineAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestMachineAuthResponse with Double = js.native
-  /* 5590 */ val ClientRequestOAuthTokenForApp: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestOAuthTokenForApp with Double = js.native
-  /* 5591 */ val ClientRequestOAuthTokenForAppResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestOAuthTokenForAppResponse with Double = js.native
-  /* 5448 */ val ClientRequestValidationMail: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestValidationMail with Double = js.native
-  /* 5449 */ val ClientRequestValidationMailResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestValidationMailResponse with Double = js.native
-  /* 5585 */ val ClientRequestWebAPIAuthenticateUserNonce: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestWebAPIAuthenticateUserNonce with Double = js.native
-  /* 5586 */ val ClientRequestWebAPIAuthenticateUserNonceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestWebAPIAuthenticateUserNonceResponse with Double = js.native
-  /* 5480 */ val ClientRequestedClientStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRequestedClientStats with Double = js.native
-  /* 5404 */ val ClientResetForgottenPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetForgottenPassword with Double = js.native
-  /* 5460 */ val ClientResetForgottenPassword3: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetForgottenPassword3 with Double = js.native
-  /* 5551 */ val ClientResetForgottenPassword4: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetForgottenPassword4 with Double = js.native
-  /* 5405 */ val ClientResetForgottenPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetForgottenPasswordResponse with Double = js.native
-  /* 846 */ val ClientResetPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetPassword with Double = js.native
-  /* 849 */ val ClientResetPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientResetPasswordResponse with Double = js.native
-  /* 7503 */ val ClientRichPresenceInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRichPresenceInfo with Double = js.native
-  /* 7502 */ val ClientRichPresenceRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRichPresenceRequest with Double = js.native
-  /* 7501 */ val ClientRichPresenceUpload: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientRichPresenceUpload with Double = js.native
-  /* 5543 */ val ClientScreenshotsChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientScreenshotsChanged with Double = js.native
-  /* 892 */ val ClientSecretQAChangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSecretQAChangeResponse with Double = js.native
-  /* 739 */ val ClientSendGuestPass: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSendGuestPass with Double = js.native
-  /* 795 */ val ClientSendGuestPassResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSendGuestPassResponse with Double = js.native
-  /* 5558 */ val ClientSentLogs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSentLogs with Double = js.native
-  /* 880 */ val ClientServerList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServerList with Double = js.native
-  /* 5500 */ val ClientServerUnavailable: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServerUnavailable with Double = js.native
-  /* 5501 */ val ClientServersAvailable: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServersAvailable with Double = js.native
-  /* 831 */ val ClientServiceCall: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServiceCall with Double = js.native
-  /* 832 */ val ClientServiceCallResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServiceCallResponse with Double = js.native
-  /* 5594 */ val ClientServiceMethod: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServiceMethod with Double = js.native
-  /* 5595 */ val ClientServiceMethodResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServiceMethodResponse with Double = js.native
-  /* 830 */ val ClientServiceModule: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientServiceModule with Double = js.native
-  /* 136 */ val ClientSessionEnd: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSessionEnd with Double = js.native
-  /* 135 */ val ClientSessionStart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSessionStart with Double = js.native
-  /* 850 */ val ClientSessionToken: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSessionToken with Double = js.native
-  /* 137 */ val ClientSessionUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSessionUpdate with Double = js.native
-  /* 137 */ val ClientSessionUpdateAuthTicket: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSessionUpdateAuthTicket with Double = js.native
-  /* 5524 */ val ClientSetClientAppUpdateState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSetClientAppUpdateState with Double = js.native
-  /* 5525 */ val ClientSetClientAppUpdateStateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSetClientAppUpdateStateResponse with Double = js.native
-  /* 755 */ val ClientSetHeartbeatRate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSetHeartbeatRate with Double = js.native
-  /* 855 */ val ClientSetIgnoreFriend: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSetIgnoreFriend with Double = js.native
-  /* 856 */ val ClientSetIgnoreFriendResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSetIgnoreFriendResponse with Double = js.native
-  /* 9400 */ val ClientSharedLibraryBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSharedLibraryBase with Double = js.native
-  /* 9405 */ val ClientSharedLibraryLockStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSharedLibraryLockStatus with Double = js.native
-  /* 9406 */ val ClientSharedLibraryStopPlaying: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSharedLibraryStopPlaying with Double = js.native
-  /* 9403 */ val ClientSharedLicensesLockStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSharedLicensesLockStatus with Double = js.native
-  /* 9404 */ val ClientSharedLicensesStopPlaying: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSharedLicensesStopPlaying with Double = js.native
-  /* 5433 */ val ClientStat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStat with Double = js.native
-  /* 5482 */ val ClientStat2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStat2 with Double = js.native
-  /* 5481 */ val ClientStat2Int32: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStat2Int32 with Double = js.native
-  /* 5467 */ val ClientStatsUpdated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStatsUpdated with Double = js.native
-  /* 842 */ val ClientSteamUsageEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSteamUsageEvent with Double = js.native
-  /* 820 */ val ClientStoreUserStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStoreUserStats with Double = js.native
-  /* 5466 */ val ClientStoreUserStats2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStoreUserStats2 with Double = js.native
-  /* 821 */ val ClientStoreUserStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientStoreUserStatsResponse with Double = js.native
-  /* 5512 */ val ClientSubscribeToPersonaFeed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSubscribeToPersonaFeed with Double = js.native
-  /* 726 */ val ClientSystemIM: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSystemIM with Double = js.native
-  /* 727 */ val ClientSystemIMAck: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientSystemIMAck with Double = js.native
-  /* 5429 */ val ClientTicketAuthComplete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientTicketAuthComplete with Double = js.native
-  /* 5452 */ val ClientToGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientToGC with Double = js.native
-  /* 7301 */ val ClientUCMAddScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMAddScreenshot with Double = js.native
-  /* 7302 */ val ClientUCMAddScreenshotResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMAddScreenshotResponse with Double = js.native
-  /* 7315 */ val ClientUCMDeletePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMDeletePublishedFile with Double = js.native
-  /* 7316 */ val ClientUCMDeletePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMDeletePublishedFileResponse with Double = js.native
-  /* 7309 */ val ClientUCMDeleteScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMDeleteScreenshot with Double = js.native
-  /* 7310 */ val ClientUCMDeleteScreenshotResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMDeleteScreenshotResponse with Double = js.native
-  /* 7366 */ val ClientUCMEnumeratePublishedFilesByUserAction: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumeratePublishedFilesByUserAction with Double = js.native
-  /* 7367 */ val ClientUCMEnumeratePublishedFilesByUserActionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumeratePublishedFilesByUserActionResponse with Double = js.native
-  /* 7317 */ val ClientUCMEnumerateUserPublishedFiles: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserPublishedFiles with Double = js.native
-  /* 7318 */ val ClientUCMEnumerateUserPublishedFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserPublishedFilesResponse with Double = js.native
-  /* 7321 */ val ClientUCMEnumerateUserSubscribedFiles: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserSubscribedFiles with Double = js.native
-  /* 7322 */ val ClientUCMEnumerateUserSubscribedFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserSubscribedFilesResponse with Double = js.native
-  /* 7378 */ val ClientUCMEnumerateUserSubscribedFilesWithUpdates: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserSubscribedFilesWithUpdates with Double = js.native
-  /* 7379 */ val ClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse with Double = js.native
-  /* 7313 */ val ClientUCMGetPublishedFileDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMGetPublishedFileDetails with Double = js.native
-  /* 7314 */ val ClientUCMGetPublishedFileDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMGetPublishedFileDetailsResponse with Double = js.native
-  /* 7360 */ val ClientUCMGetPublishedFilesForUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMGetPublishedFilesForUser with Double = js.native
-  /* 7361 */ val ClientUCMGetPublishedFilesForUserResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMGetPublishedFilesForUserResponse with Double = js.native
-  /* 7311 */ val ClientUCMPublishFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMPublishFile with Double = js.native
-  /* 7312 */ val ClientUCMPublishFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMPublishFileResponse with Double = js.native
-  /* 7368 */ val ClientUCMPublishedFileDeleted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMPublishedFileDeleted with Double = js.native
-  /* 7347 */ val ClientUCMPublishedFileSubscribed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMPublishedFileSubscribed with Double = js.native
-  /* 7348 */ val ClientUCMPublishedFileUnsubscribed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMPublishedFileUnsubscribed with Double = js.native
-  /* 7364 */ val ClientUCMSetUserPublishedFileAction: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMSetUserPublishedFileAction with Double = js.native
-  /* 7365 */ val ClientUCMSetUserPublishedFileActionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMSetUserPublishedFileActionResponse with Double = js.native
-  /* 7319 */ val ClientUCMSubscribePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMSubscribePublishedFile with Double = js.native
-  /* 7320 */ val ClientUCMSubscribePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMSubscribePublishedFileResponse with Double = js.native
-  /* 7323 */ val ClientUCMUnsubscribePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMUnsubscribePublishedFile with Double = js.native
-  /* 7324 */ val ClientUCMUnsubscribePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMUnsubscribePublishedFileResponse with Double = js.native
-  /* 7325 */ val ClientUCMUpdatePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMUpdatePublishedFile with Double = js.native
-  /* 7326 */ val ClientUCMUpdatePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUCMUpdatePublishedFileResponse with Double = js.native
-  /* 7005 */ val ClientUDSInviteToGame: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUDSInviteToGame with Double = js.native
-  /* 7002 */ val ClientUDSP2PSessionEnded: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUDSP2PSessionEnded with Double = js.native
-  /* 7001 */ val ClientUDSP2PSessionStarted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUDSP2PSessionStarted with Double = js.native
-  /* 5219 */ val ClientUFSDeleteFileRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSDeleteFileRequest with Double = js.native
-  /* 5220 */ val ClientUFSDeleteFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSDeleteFileResponse with Double = js.native
-  /* 5212 */ val ClientUFSDownloadChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSDownloadChunk with Double = js.native
-  /* 5210 */ val ClientUFSDownloadRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSDownloadRequest with Double = js.native
-  /* 5211 */ val ClientUFSDownloadResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSDownloadResponse with Double = js.native
-  /* 5206 */ val ClientUFSGetFileListForApp: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetFileListForApp with Double = js.native
-  /* 5207 */ val ClientUFSGetFileListForAppResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetFileListForAppResponse with Double = js.native
-  /* 5230 */ val ClientUFSGetSingleFileInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetSingleFileInfo with Double = js.native
-  /* 5231 */ val ClientUFSGetSingleFileInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetSingleFileInfoResponse with Double = js.native
-  /* 5226 */ val ClientUFSGetUGCDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetUGCDetails with Double = js.native
-  /* 5227 */ val ClientUFSGetUGCDetailsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSGetUGCDetailsResponse with Double = js.native
-  /* 5213 */ val ClientUFSLoginRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSLoginRequest with Double = js.native
-  /* 5214 */ val ClientUFSLoginResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSLoginResponse with Double = js.native
-  /* 5232 */ val ClientUFSShareFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSShareFile with Double = js.native
-  /* 5233 */ val ClientUFSShareFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSShareFileResponse with Double = js.native
-  /* 5216 */ val ClientUFSTransferHeartbeat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSTransferHeartbeat with Double = js.native
-  /* 5204 */ val ClientUFSUploadFileChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSUploadFileChunk with Double = js.native
-  /* 5205 */ val ClientUFSUploadFileFinished: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSUploadFileFinished with Double = js.native
-  /* 5202 */ val ClientUFSUploadFileRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSUploadFileRequest with Double = js.native
-  /* 5203 */ val ClientUFSUploadFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUFSUploadFileResponse with Double = js.native
-  /* 7901 */ val ClientUGSGetGlobalStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUGSGetGlobalStats with Double = js.native
-  /* 7902 */ val ClientUGSGetGlobalStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUGSGetGlobalStatsResponse with Double = js.native
-  /* 5522 */ val ClientUninstallClientApp: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUninstallClientApp with Double = js.native
-  /* 5523 */ val ClientUninstallClientAppResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUninstallClientAppResponse with Double = js.native
-  /* 9507 */ val ClientUnlockStreaming: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUnlockStreaming with Double = js.native
-  /* 9508 */ val ClientUnlockStreamingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUnlockStreamingResponse with Double = js.native
-  /* 811 */ val ClientUpdateChatMetadata: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUpdateChatMetadata with Double = js.native
-  /* 798 */ val ClientUpdateGuestPassesList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUpdateGuestPassesList with Double = js.native
-  /* 5537 */ val ClientUpdateMachineAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUpdateMachineAuth with Double = js.native
-  /* 5538 */ val ClientUpdateMachineAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUpdateMachineAuthResponse with Double = js.native
-  /* 5411 */ val ClientUpdateUserGameInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUpdateUserGameInfo with Double = js.native
-  /* 6505 */ val ClientUseLocalDeviceAuthorizations: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUseLocalDeviceAuthorizations with Double = js.native
-  /* 5599 */ val ClientUserNotifications: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientUserNotifications with Double = js.native
-  /* 782 */ val ClientVACBanStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVACBanStatus with Double = js.native
-  /* 753 */ val ClientVACChallenge: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVACChallenge with Double = js.native
-  /* 704 */ val ClientVACResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVACResponse with Double = js.native
-  /* 863 */ val ClientVTTCert: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVTTCert with Double = js.native
-  /* 770 */ val ClientVacStatusQuery: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVacStatusQuery with Double = js.native
-  /* 717 */ val ClientVacStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVacStatusResponse with Double = js.native
-  /* 5598 */ val ClientVanityURLChangedNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVanityURLChangedNotification with Double = js.native
-  /* 5483 */ val ClientVerifyPassword: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVerifyPassword with Double = js.native
-  /* 5484 */ val ClientVerifyPasswordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVerifyPasswordResponse with Double = js.native
-  /* 9800 */ val ClientVoiceCallPreAuthorize: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVoiceCallPreAuthorize with Double = js.native
-  /* 9801 */ val ClientVoiceCallPreAuthorizeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientVoiceCallPreAuthorizeResponse with Double = js.native
-  /* 5528 */ val ClientWalletInfoUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientWalletInfoUpdate with Double = js.native
-  /* 7382 */ val ClientWorkshopItemChangesRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientWorkshopItemChangesRequest with Double = js.native
-  /* 7383 */ val ClientWorkshopItemChangesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientWorkshopItemChangesResponse with Double = js.native
-  /* 7384 */ val ClientWorkshopItemInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientWorkshopItemInfoRequest with Double = js.native
-  /* 7385 */ val ClientWorkshopItemInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ClientWorkshopItemInfoResponse with Double = js.native
-  /* 4140 */ val CommunityAddFriendNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CommunityAddFriendNews with Double = js.native
-  /* 4155 */ val CommunityDeleteUserNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CommunityDeleteUserNews with Double = js.native
-  /* 4173 */ val CommunityGetUserFriendNews: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.CommunityGetUserFriendNews with Double = js.native
-  /* 227 */ val ContentDescriptionUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ContentDescriptionUpdate with Double = js.native
-  /* 5611 */ val DFSAcceptedResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSAcceptedResponse with Double = js.native
-  /* 5603 */ val DFSConnection: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSConnection with Double = js.native
-  /* 5604 */ val DFSConnectionReply: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSConnectionReply with Double = js.native
-  /* 5601 */ val DFSGetFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSGetFile with Double = js.native
-  /* 5610 */ val DFSGetFileFromServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSGetFileFromServer with Double = js.native
-  /* 5602 */ val DFSInstallLocalFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSInstallLocalFile with Double = js.native
-  /* 5608 */ val DFSPurgeFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSPurgeFile with Double = js.native
-  /* 5613 */ val DFSRecvTransmitFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSRecvTransmitFile with Double = js.native
-  /* 5612 */ val DFSRequestPingback: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSRequestPingback with Double = js.native
-  /* 5615 */ val DFSRequestPingback2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSRequestPingback2 with Double = js.native
-  /* 5616 */ val DFSResponsePingback2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSResponsePingback2 with Double = js.native
-  /* 5609 */ val DFSRouteFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSRouteFile with Double = js.native
-  /* 5620 */ val DFSRouteFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSRouteFileResponse with Double = js.native
-  /* 5614 */ val DFSSendTransmitFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSSendTransmitFile with Double = js.native
-  /* 5618 */ val DFSStartTransfer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSStartTransfer with Double = js.native
-  /* 5619 */ val DFSTransferComplete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DFSTransferComplete with Double = js.native
-  /* 1614 */ val DPAccountCreationStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPAccountCreationStats with Double = js.native
-  /* 1613 */ val DPAchievementStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPAchievementStats with Double = js.native
-  /* 1607 */ val DPBlockingStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPBlockingStats with Double = js.native
-  /* 1612 */ val DPCloudStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPCloudStats with Double = js.native
-  /* 1618 */ val DPDownloadRateStatistics: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPDownloadRateStatistics with Double = js.native
-  /* 1619 */ val DPFacebookStatistics: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPFacebookStatistics with Double = js.native
-  /* 1602 */ val DPGamePlayedStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPGamePlayedStats with Double = js.native
-  /* 1617 */ val DPGameServersPlayersStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPGameServersPlayersStats with Double = js.native
-  /* 1615 */ val DPGetPlayerCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPGetPlayerCount with Double = js.native
-  /* 1616 */ val DPGetPlayerCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPGetPlayerCountResponse with Double = js.native
-  /* 1608 */ val DPNatTraversalStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPNatTraversalStats with Double = js.native
-  /* 1628 */ val DPPartnerMicroTxns: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPPartnerMicroTxns with Double = js.native
-  /* 1629 */ val DPPartnerMicroTxnsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPPartnerMicroTxnsResponse with Double = js.native
-  /* 1601 */ val DPSetPublishingState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPSetPublishingState with Double = js.native
-  /* 1609 */ val DPSteamUsageEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPSteamUsageEvent with Double = js.native
-  /* 1624 */ val DPStoreSaleStatistics: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPStoreSaleStatistics with Double = js.native
-  /* 1604 */ val DPStreamingUniquePlayersStat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPStreamingUniquePlayersStat with Double = js.native
-  /* 1603 */ val DPUniquePlayersStat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPUniquePlayersStat with Double = js.native
-  /* 1626 */ val DPUpdateContentEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPUpdateContentEvent with Double = js.native
-  /* 1631 */ val DPVRUniquePlayersStat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPVRUniquePlayersStat with Double = js.native
-  /* 1606 */ val DPVacBanStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPVacBanStats with Double = js.native
-  /* 1611 */ val DPVacCafeBanStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPVacCafeBanStats with Double = js.native
-  /* 1610 */ val DPVacCertBanStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPVacCertBanStats with Double = js.native
-  /* 1605 */ val DPVacInfractionStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DPVacInfractionStats with Double = js.native
-  /* 640 */ val DRMAdminUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMAdminUpdate with Double = js.native
-  /* 641 */ val DRMAdminUpdateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMAdminUpdateResponse with Double = js.native
-  /* 628 */ val DRMBuildBlobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMBuildBlobRequest with Double = js.native
-  /* 629 */ val DRMBuildBlobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMBuildBlobResponse with Double = js.native
-  /* 637 */ val DRMDetailsReportRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMDetailsReportRequest with Double = js.native
-  /* 638 */ val DRMDetailsReportResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMDetailsReportResponse with Double = js.native
-  /* 645 */ val DRMEmptyGuidCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMEmptyGuidCache with Double = js.native
-  /* 646 */ val DRMEmptyGuidCacheResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMEmptyGuidCacheResponse with Double = js.native
-  /* 639 */ val DRMProcessFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMProcessFile with Double = js.native
-  /* 644 */ val DRMProcessFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMProcessFileResponse with Double = js.native
-  /* 7600 */ val DRMRange2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMRange2 with Double = js.native
-  /* 630 */ val DRMResolveGuidRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMResolveGuidRequest with Double = js.native
-  /* 631 */ val DRMResolveGuidResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMResolveGuidResponse with Double = js.native
-  /* 7606 */ val DRMSFetchVersionSet: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMSFetchVersionSet with Double = js.native
-  /* 7607 */ val DRMSFetchVersionSetResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMSFetchVersionSetResponse with Double = js.native
-  /* 635 */ val DRMStabilityReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMStabilityReport with Double = js.native
-  /* 636 */ val DRMStabilityReportResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMStabilityReportResponse with Double = js.native
-  /* 642 */ val DRMSync: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMSync with Double = js.native
-  /* 643 */ val DRMSyncResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMSyncResponse with Double = js.native
-  /* 633 */ val DRMVariabilityReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMVariabilityReport with Double = js.native
-  /* 634 */ val DRMVariabilityReportResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMVariabilityReportResponse with Double = js.native
-  /* 9100 */ val DRMWorkerProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcess with Double = js.native
-  /* 9128 */ val DRMWorkerProcessAnalyzeFileRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessAnalyzeFileRequest with Double = js.native
-  /* 9129 */ val DRMWorkerProcessAnalyzeFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessAnalyzeFileResponse with Double = js.native
-  /* 9116 */ val DRMWorkerProcessBackfillOriginalRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessBackfillOriginalRequest with Double = js.native
-  /* 9117 */ val DRMWorkerProcessBackfillOriginalResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessBackfillOriginalResponse with Double = js.native
-  /* 9100 */ val DRMWorkerProcessDRMAndSign: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessDRMAndSign with Double = js.native
-  /* 9101 */ val DRMWorkerProcessDRMAndSignResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessDRMAndSignResponse with Double = js.native
-  /* 9114 */ val DRMWorkerProcessDescribeSecretRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessDescribeSecretRequest with Double = js.native
-  /* 9115 */ val DRMWorkerProcessDescribeSecretResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessDescribeSecretResponse with Double = js.native
-  /* 9126 */ val DRMWorkerProcessEvaluateCrashRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessEvaluateCrashRequest with Double = js.native
-  /* 9127 */ val DRMWorkerProcessEvaluateCrashResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessEvaluateCrashResponse with Double = js.native
-  /* 9112 */ val DRMWorkerProcessExamineBlobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessExamineBlobRequest with Double = js.native
-  /* 9113 */ val DRMWorkerProcessExamineBlobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessExamineBlobResponse with Double = js.native
-  /* 9124 */ val DRMWorkerProcessGetBlobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessGetBlobRequest with Double = js.native
-  /* 9125 */ val DRMWorkerProcessGetBlobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessGetBlobResponse with Double = js.native
-  /* 9108 */ val DRMWorkerProcessGetDRMGuidsFromFileRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessGetDRMGuidsFromFileRequest with Double = js.native
-  /* 9109 */ val DRMWorkerProcessGetDRMGuidsFromFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessGetDRMGuidsFromFileResponse with Double = js.native
-  /* 9132 */ val DRMWorkerProcessInstallAllRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallAllRequest with Double = js.native
-  /* 9133 */ val DRMWorkerProcessInstallAllResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallAllResponse with Double = js.native
-  /* 9104 */ val DRMWorkerProcessInstallDRMDLLRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallDRMDLLRequest with Double = js.native
-  /* 9105 */ val DRMWorkerProcessInstallDRMDLLResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallDRMDLLResponse with Double = js.native
-  /* 9110 */ val DRMWorkerProcessInstallProcessedFilesRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallProcessedFilesRequest with Double = js.native
-  /* 9111 */ val DRMWorkerProcessInstallProcessedFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessInstallProcessedFilesResponse with Double = js.native
-  /* 9106 */ val DRMWorkerProcessSecretIdStringRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSecretIdStringRequest with Double = js.native
-  /* 9107 */ val DRMWorkerProcessSecretIdStringResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSecretIdStringResponse with Double = js.native
-  /* 9122 */ val DRMWorkerProcessSplitAndInstallRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSplitAndInstallRequest with Double = js.native
-  /* 9123 */ val DRMWorkerProcessSplitAndInstallResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSplitAndInstallResponse with Double = js.native
-  /* 9102 */ val DRMWorkerProcessSteamworksInfoRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSteamworksInfoRequest with Double = js.native
-  /* 9103 */ val DRMWorkerProcessSteamworksInfoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessSteamworksInfoResponse with Double = js.native
-  /* 9130 */ val DRMWorkerProcessUnpackBlobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessUnpackBlobRequest with Double = js.native
-  /* 9131 */ val DRMWorkerProcessUnpackBlobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessUnpackBlobResponse with Double = js.native
-  /* 9118 */ val DRMWorkerProcessValidateDRMDLLRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessValidateDRMDLLRequest with Double = js.native
-  /* 9119 */ val DRMWorkerProcessValidateDRMDLLResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessValidateDRMDLLResponse with Double = js.native
-  /* 9120 */ val DRMWorkerProcessValidateFileRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessValidateFileRequest with Double = js.native
-  /* 9121 */ val DRMWorkerProcessValidateFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DRMWorkerProcessValidateFileResponse with Double = js.native
-  /* 1802 */ val DSSCurrentFileList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSCurrentFileList with Double = js.native
-  /* 1801 */ val DSSNewFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSNewFile with Double = js.native
-  /* 1803 */ val DSSSynchList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSSynchList with Double = js.native
-  /* 1804 */ val DSSSynchListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSSynchListResponse with Double = js.native
-  /* 1805 */ val DSSSynchSubscribe: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSSynchSubscribe with Double = js.native
-  /* 1806 */ val DSSSynchUnsubscribe: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DSSSynchUnsubscribe with Double = js.native
-  /* 113 */ val DestJobFailed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DestJobFailed with Double = js.native
-  /* 6500 */ val DeviceAuthorizationBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DeviceAuthorizationBase with Double = js.native
-  /* 202 */ val DirRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DirRequest with Double = js.native
-  /* 203 */ val DirResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.DirResponse with Double = js.native
-  /* 1903 */ val EPMRestartProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EPMRestartProcess with Double = js.native
-  /* 1901 */ val EPMStartProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EPMStartProcess with Double = js.native
-  /* 1902 */ val EPMStopProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EPMStopProcess with Double = js.native
-  /* 7700 */ val EconBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconBase with Double = js.native
-  /* 7711 */ val EconCDKeyProcessTransaction: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconCDKeyProcessTransaction with Double = js.native
-  /* 7712 */ val EconCDKeyProcessTransactionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconCDKeyProcessTransactionResponse with Double = js.native
-  /* 7707 */ val EconFlushInventoryCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconFlushInventoryCache with Double = js.native
-  /* 7708 */ val EconFlushInventoryCacheResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconFlushInventoryCacheResponse with Double = js.native
-  /* 7713 */ val EconGetErrorLogs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconGetErrorLogs with Double = js.native
-  /* 7714 */ val EconGetErrorLogsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconGetErrorLogsResponse with Double = js.native
-  /* 7706 */ val EconTrading_CancelTradeRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_CancelTradeRequest with Double = js.native
-  /* 7702 */ val EconTrading_InitiateTradeProposed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_InitiateTradeProposed with Double = js.native
-  /* 7701 */ val EconTrading_InitiateTradeRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_InitiateTradeRequest with Double = js.native
-  /* 7703 */ val EconTrading_InitiateTradeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_InitiateTradeResponse with Double = js.native
-  /* 7704 */ val EconTrading_InitiateTradeResult: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_InitiateTradeResult with Double = js.native
-  /* 7705 */ val EconTrading_StartSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.EconTrading_StartSession with Double = js.native
-  /* 201 */ val Exit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Exit with Double = js.native
-  /* 308 */ val ExitShell: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ExitShell with Double = js.native
-  /* 307 */ val ExitShells: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ExitShells with Double = js.native
-  /* 1119 */ val FBSApplyAccountCred: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSApplyAccountCred with Double = js.native
-  /* 1120 */ val FBSApplyAccountCredResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSApplyAccountCredResponse with Double = js.native
-  /* 1108 */ val FBSApplyOSUpdates: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSApplyOSUpdates with Double = js.native
-  /* 1130 */ val FBSBootstrapperGetPackageChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSBootstrapperGetPackageChunk with Double = js.native
-  /* 1131 */ val FBSBootstrapperGetPackageChunkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSBootstrapperGetPackageChunkResponse with Double = js.native
-  /* 1128 */ val FBSBootstrapperPackageRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSBootstrapperPackageRequest with Double = js.native
-  /* 1129 */ val FBSBootstrapperPackageResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSBootstrapperPackageResponse with Double = js.native
-  /* 1132 */ val FBSBootstrapperPackageTransferProgress: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSBootstrapperPackageTransferProgress with Double = js.native
-  /* 1027 */ val FBSConnectionData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSConnectionData with Double = js.native
-  /* 1114 */ val FBSDeployHotFixPackage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDeployHotFixPackage with Double = js.native
-  /* 1115 */ val FBSDeployHotFixResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDeployHotFixResponse with Double = js.native
-  /* 1104 */ val FBSDeployPackage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDeployPackage with Double = js.native
-  /* 1105 */ val FBSDeployResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDeployResponse with Double = js.native
-  /* 1116 */ val FBSDownloadHotFix: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDownloadHotFix with Double = js.native
-  /* 1117 */ val FBSDownloadHotFixResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSDownloadHotFixResponse with Double = js.native
-  /* 1103 */ val FBSForceBounce: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSForceBounce with Double = js.native
-  /* 1102 */ val FBSForceRefresh: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSForceRefresh with Double = js.native
-  /* 1126 */ val FBSInfoFromBootstrapper: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSInfoFromBootstrapper with Double = js.native
-  /* 1112 */ val FBSMinidumpServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSMinidumpServer with Double = js.native
-  /* 1123 */ val FBSQueryGMForRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSQueryGMForRequest with Double = js.native
-  /* 1124 */ val FBSQueryGMResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSQueryGMResponse with Double = js.native
-  /* 1110 */ val FBSRebootBox: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSRebootBox with Double = js.native
-  /* 1127 */ val FBSRebootBoxResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSRebootBoxResponse with Double = js.native
-  /* 1100 */ val FBSReqVersion: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSReqVersion with Double = js.native
-  /* 1133 */ val FBSRestartBootstrapper: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSRestartBootstrapper with Double = js.native
-  /* 1109 */ val FBSRunCMDScript: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSRunCMDScript with Double = js.native
-  /* 1111 */ val FBSSetBigBrotherMode: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSSetBigBrotherMode with Double = js.native
-  /* 1121 */ val FBSSetShellCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSSetShellCount with Double = js.native
-  /* 1113 */ val FBSSetShellCount_obsolete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSSetShellCount_obsolete with Double = js.native
-  /* 1107 */ val FBSSetState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSSetState with Double = js.native
-  /* 1122 */ val FBSTerminateShell: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSTerminateShell with Double = js.native
-  /* 1125 */ val FBSTerminateZombies: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSTerminateZombies with Double = js.native
-  /* 1106 */ val FBSUpdateBootstrapper: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSUpdateBootstrapper with Double = js.native
-  /* 1118 */ val FBSUpdateTargetConfigFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSUpdateTargetConfigFile with Double = js.native
-  /* 1101 */ val FBSVersionInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FBSVersionInfo with Double = js.native
-  /* 7510 */ val FSAddOrRemoveFollower: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSAddOrRemoveFollower with Double = js.native
-  /* 7511 */ val FSAddOrRemoveFollowerResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSAddOrRemoveFollowerResponse with Double = js.native
-  /* 7500 */ val FSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSBase with Double = js.native
-  /* 7513 */ val FSCommentNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSCommentNotification with Double = js.native
-  /* 7514 */ val FSCommentNotificationViewed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSCommentNotificationViewed with Double = js.native
-  /* 7506 */ val FSComputeFrenematrix: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSComputeFrenematrix with Double = js.native
-  /* 7507 */ val FSComputeFrenematrixResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSComputeFrenematrixResponse with Double = js.native
-  /* 7521 */ val FSGetPendingNotificationCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSGetPendingNotificationCount with Double = js.native
-  /* 7522 */ val FSGetPendingNotificationCountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSGetPendingNotificationCountResponse with Double = js.native
-  /* 7508 */ val FSPlayStatusNotification: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSPlayStatusNotification with Double = js.native
-  /* 7509 */ val FSPublishPersonaStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSPublishPersonaStatus with Double = js.native
-  /* 7530 */ val FSRequestFriendData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSRequestFriendData with Double = js.native
-  /* 7504 */ val FSRichPresenceRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSRichPresenceRequest with Double = js.native
-  /* 7505 */ val FSRichPresenceResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSRichPresenceResponse with Double = js.native
-  /* 7512 */ val FSUpdateFollowingList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FSUpdateFollowingList with Double = js.native
-  /* 3103 */ val FTSBrowseClans: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSBrowseClans with Double = js.native
-  /* 3104 */ val FTSBrowseClansResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSBrowseClansResponse with Double = js.native
-  /* 3109 */ val FTSClanDeleted: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSClanDeleted with Double = js.native
-  /* 3101 */ val FTSGetBrowseCounts: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetBrowseCounts with Double = js.native
-  /* 3102 */ val FTSGetBrowseCountsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetBrowseCountsResponse with Double = js.native
-  /* 3114 */ val FTSGetGSPlayStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetGSPlayStats with Double = js.native
-  /* 3116 */ val FTSGetGSPlayStatsForServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetGSPlayStatsForServer with Double = js.native
-  /* 3117 */ val FTSGetGSPlayStatsForServerResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetGSPlayStatsForServerResponse with Double = js.native
-  /* 3115 */ val FTSGetGSPlayStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSGetGSPlayStatsResponse with Double = js.native
-  /* 3118 */ val FTSReportIPUpdates: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSReportIPUpdates with Double = js.native
-  /* 3110 */ val FTSSearch: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearch with Double = js.native
-  /* 3105 */ val FTSSearchClansByLocation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchClansByLocation with Double = js.native
-  /* 3106 */ val FTSSearchClansByLocationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchClansByLocationResponse with Double = js.native
-  /* 3107 */ val FTSSearchPlayersByLocation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchPlayersByLocation with Double = js.native
-  /* 3108 */ val FTSSearchPlayersByLocationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchPlayersByLocationResponse with Double = js.native
-  /* 3111 */ val FTSSearchResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchResponse with Double = js.native
-  /* 3112 */ val FTSSearchStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchStatus with Double = js.native
-  /* 3113 */ val FTSSearchStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FTSSearchStatusResponse with Double = js.native
-  /* 3000 */ val FailServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FailServer with Double = js.native
-  /* 1202 */ val FileXferData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FileXferData with Double = js.native
-  /* 1204 */ val FileXferDataAck: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FileXferDataAck with Double = js.native
-  /* 1203 */ val FileXferEnd: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FileXferEnd with Double = js.native
-  /* 1200 */ val FileXferRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FileXferRequest with Double = js.native
-  /* 1201 */ val FileXferResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.FileXferResponse with Double = js.native
-  /* 2212 */ val GCAchievementAwarded: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCAchievementAwarded with Double = js.native
-  /* 2204 */ val GCCmdBounce: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdBounce with Double = js.native
-  /* 2207 */ val GCCmdDeploy: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdDeploy with Double = js.native
-  /* 2208 */ val GCCmdDeployResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdDeployResponse with Double = js.native
-  /* 2206 */ val GCCmdDown: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdDown with Double = js.native
-  /* 2205 */ val GCCmdForceBounce: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdForceBounce with Double = js.native
-  /* 2203 */ val GCCmdRevive: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdRevive with Double = js.native
-  /* 2216 */ val GCCmdStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdStatus with Double = js.native
-  /* 2209 */ val GCCmdSwitch: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCCmdSwitch with Double = js.native
-  /* 2218 */ val GCGetAccountDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCGetAccountDetails with Double = js.native
-  /* 2218 */ val GCGetAccountDetails_DEPRECATED: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCGetAccountDetails_DEPRECATED with Double = js.native
-  /* 2220 */ val GCGetEmailTemplate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCGetEmailTemplate with Double = js.native
-  /* 2221 */ val GCGetEmailTemplateResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCGetEmailTemplateResponse with Double = js.native
-  /* 2234 */ val GCHAccountLockStatusChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHAccountLockStatusChange with Double = js.native
-  /* 2236 */ val GCHAccountPhoneNumberChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHAccountPhoneNumberChange with Double = js.native
-  /* 2233 */ val GCHAccountTradeBanStatusChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHAccountTradeBanStatusChange with Double = js.native
-  /* 2237 */ val GCHAccountTwoFactorChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHAccountTwoFactorChange with Double = js.native
-  /* 2228 */ val GCHAccountVacStatusChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHAccountVacStatusChange with Double = js.native
-  /* 2231 */ val GCHKillGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHKillGC with Double = js.native
-  /* 2232 */ val GCHKillGCResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHKillGCResponse with Double = js.native
-  /* 2222 */ val GCHRelay: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRelay with Double = js.native
-  /* 2223 */ val GCHRelayClientToIS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRelayClientToIS with Double = js.native
-  /* 2223 */ val GCHRelayToClient: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRelayToClient with Double = js.native
-  /* 2226 */ val GCHRequestStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRequestStatus with Double = js.native
-  /* 2227 */ val GCHRequestStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRequestStatusResponse with Double = js.native
-  /* 2225 */ val GCHRequestUpdateSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHRequestUpdateSession with Double = js.native
-  /* 2229 */ val GCHSpawnGC: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHSpawnGC with Double = js.native
-  /* 2230 */ val GCHSpawnGCResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHSpawnGCResponse with Double = js.native
-  /* 2224 */ val GCHUpdateSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHUpdateSession with Double = js.native
-  /* 2235 */ val GCHVacVerificationChange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCHVacVerificationChange with Double = js.native
-  /* 2219 */ val GCInterAppMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCInterAppMessage with Double = js.native
-  /* 2217 */ val GCRegisterWebInterfaces: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCRegisterWebInterfaces with Double = js.native
-  /* 2217 */ val GCRegisterWebInterfaces_Deprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCRegisterWebInterfaces_Deprecated with Double = js.native
-  /* 2200 */ val GCSendClient: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCSendClient with Double = js.native
-  /* 2213 */ val GCSystemMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCSystemMessage with Double = js.native
-  /* 2211 */ val GCUpdateGSState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCUpdateGSState with Double = js.native
-  /* 2202 */ val GCUpdatePlayedState: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCUpdatePlayedState with Double = js.native
-  /* 2214 */ val GCValidateSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCValidateSession with Double = js.native
-  /* 2215 */ val GCValidateSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GCValidateSessionResponse with Double = js.native
-  /* 333 */ val GMConvertUserWallets: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMConvertUserWallets with Double = js.native
-  /* 320 */ val GMDRMSync: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMDRMSync with Double = js.native
-  /* 331 */ val GMGetServiceMethodRouting: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMGetServiceMethodRouting with Double = js.native
-  /* 332 */ val GMGetServiceMethodRoutingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMGetServiceMethodRoutingResponse with Double = js.native
-  /* 325 */ val GMLoadActivationCodes: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMLoadActivationCodes with Double = js.native
-  /* 326 */ val GMQueueForFBS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMQueueForFBS with Double = js.native
-  /* 319 */ val GMReportPHPError: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMReportPHPError with Double = js.native
-  /* 6400 */ val GMSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMSBase with Double = js.native
-  /* 6404 */ val GMSClientServerQueryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMSClientServerQueryResponse with Double = js.native
-  /* 6401 */ val GMSGameServerReplicate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMSGameServerReplicate with Double = js.native
-  /* 327 */ val GMSchemaConversionResults: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMSchemaConversionResults with Double = js.native
-  /* 328 */ val GMSchemaConversionResultsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMSchemaConversionResultsResponse with Double = js.native
-  /* 324 */ val GMWriteConfigToSQL: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMWriteConfigToSQL with Double = js.native
-  /* 329 */ val GMWriteShellFailureToSQL: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMWriteShellFailureToSQL with Double = js.native
-  /* 330 */ val GMWriteStatsToSOS: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GMWriteStatsToSOS with Double = js.native
-  /* 758 */ val GSApprove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSApprove with Double = js.native
-  /* 938 */ val GSAssociateWithClan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSAssociateWithClan with Double = js.native
-  /* 939 */ val GSAssociateWithClanResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSAssociateWithClanResponse with Double = js.native
-  /* 940 */ val GSComputeNewPlayerCompatibility: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSComputeNewPlayerCompatibility with Double = js.native
-  /* 941 */ val GSComputeNewPlayerCompatibilityResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSComputeNewPlayerCompatibilityResponse with Double = js.native
-  /* 759 */ val GSDeny: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSDeny with Double = js.native
-  /* 901 */ val GSDisconnectNotice: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSDisconnectNotice with Double = js.native
-  /* 918 */ val GSGetPlayStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetPlayStats with Double = js.native
-  /* 919 */ val GSGetPlayStatsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetPlayStatsResponse with Double = js.native
-  /* 936 */ val GSGetReputation: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetReputation with Double = js.native
-  /* 937 */ val GSGetReputationResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetReputationResponse with Double = js.native
-  /* 910 */ val GSGetUserAchievementStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetUserAchievementStatus with Double = js.native
-  /* 911 */ val GSGetUserAchievementStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetUserAchievementStatusResponse with Double = js.native
-  /* 920 */ val GSGetUserGroupStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetUserGroupStatus with Double = js.native
-  /* 923 */ val GSGetUserGroupStatusResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSGetUserGroupStatusResponse with Double = js.native
-  /* 760 */ val GSKick: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSKick with Double = js.native
-  /* 5440 */ val GSPerformHardwareSurvey: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSPerformHardwareSurvey with Double = js.native
-  /* 909 */ val GSPlayerList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSPlayerList with Double = js.native
-  /* 908 */ val GSServerType: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSServerType with Double = js.native
-  /* 903 */ val GSStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSStatus with Double = js.native
-  /* 906 */ val GSStatus2: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSStatus2 with Double = js.native
-  /* 774 */ val GSStatusReply: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSStatusReply with Double = js.native
-  /* 907 */ val GSStatusUpdate_Unused: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSStatusUpdate_Unused with Double = js.native
-  /* 905 */ val GSUserPlaying: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GSUserPlaying with Double = js.native
-  /* 6407 */ val GameServerOutOfDate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GameServerOutOfDate with Double = js.native
-  /* 100 */ val GenericReply: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GenericReply with Double = js.native
-  /* 4393 */ val GetUserIPCountry: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GetUserIPCountry with Double = js.native
-  /* 4394 */ val GetUserIPCountryResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GetUserIPCountryResponse with Double = js.native
-  /* 309 */ val GracefulExitShell: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.GracefulExitShell with Double = js.native
-  /* 300 */ val Heartbeat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Heartbeat with Double = js.native
-  /* 124 */ val HubConnect: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.HubConnect with Double = js.native
-  /* 2222 */ val ISRelayToGCH: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ISRelayToGCH with Double = js.native
-  /* 0 */ val Invalid: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Invalid with Double = js.native
-  /* 145 */ val InvalidateDBOCacheItems: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.InvalidateDBOCacheItems with Double = js.native
-  /* 123 */ val JobHeartbeat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.JobHeartbeat with Double = js.native
-  /* 3001 */ val JobHeartbeatTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.JobHeartbeatTest with Double = js.native
-  /* 3002 */ val JobHeartbeatTestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.JobHeartbeatTestResponse with Double = js.native
-  /* 7201 */ val KGSAllocateKeyRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSAllocateKeyRange with Double = js.native
-  /* 7202 */ val KGSAllocateKeyRangeResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSAllocateKeyRangeResponse with Double = js.native
-  /* 7200 */ val KGSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSBase with Double = js.native
-  /* 7207 */ val KGSGenerateGameStopWCKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSGenerateGameStopWCKeys with Double = js.native
-  /* 7208 */ val KGSGenerateGameStopWCKeysResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSGenerateGameStopWCKeysResponse with Double = js.native
-  /* 7203 */ val KGSGenerateKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSGenerateKeys with Double = js.native
-  /* 7204 */ val KGSGenerateKeysResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSGenerateKeysResponse with Double = js.native
-  /* 7205 */ val KGSRemapKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSRemapKeys with Double = js.native
-  /* 7206 */ val KGSRemapKeysResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KGSRemapKeysResponse with Double = js.native
-  /* 132 */ val KeepAlive: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.KeepAlive with Double = js.native
-  /* 3210 */ val LBSDeleteLB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSDeleteLB with Double = js.native
-  /* 3211 */ val LBSDeleteLBEntry: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSDeleteLBEntry with Double = js.native
-  /* 3214 */ val LBSDeleteLBResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSDeleteLBResponse with Double = js.native
-  /* 3203 */ val LBSFindOrCreateLB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSFindOrCreateLB with Double = js.native
-  /* 3204 */ val LBSFindOrCreateLBResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSFindOrCreateLBResponse with Double = js.native
-  /* 3205 */ val LBSGetLBEntries: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSGetLBEntries with Double = js.native
-  /* 3206 */ val LBSGetLBEntriesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSGetLBEntriesResponse with Double = js.native
-  /* 3207 */ val LBSGetLBList: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSGetLBList with Double = js.native
-  /* 3208 */ val LBSGetLBListResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSGetLBListResponse with Double = js.native
-  /* 3212 */ val LBSResetLB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSResetLB with Double = js.native
-  /* 3213 */ val LBSResetLBResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSResetLBResponse with Double = js.native
-  /* 3209 */ val LBSSetLBDetails: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSSetLBDetails with Double = js.native
-  /* 3201 */ val LBSSetScore: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSSetScore with Double = js.native
-  /* 3202 */ val LBSSetScoreResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LBSSetScoreResponse with Double = js.native
-  /* 316 */ val LicenseProcessingComplete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LicenseProcessingComplete with Double = js.native
-  /* 143 */ val LoadDBOCacheItem: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LoadDBOCacheItem with Double = js.native
-  /* 144 */ val LoadDBOCacheItemResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LoadDBOCacheItemResponse with Double = js.native
-  /* 1009 */ val LogSearchCancel: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LogSearchCancel with Double = js.native
-  /* 1007 */ val LogSearchRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LogSearchRequest with Double = js.native
-  /* 1008 */ val LogSearchResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LogSearchResponse with Double = js.native
-  /* 8800 */ val LogsinkBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LogsinkBase with Double = js.native
-  /* 8800 */ val LogsinkWriteReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.LogsinkWriteReport with Double = js.native
-  /* 5828 */ val MDSContentServerConfig: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSContentServerConfig with Double = js.native
-  /* 5827 */ val MDSContentServerConfigRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSContentServerConfigRequest with Double = js.native
-  /* 5826 */ val MDSContentServerStatsBroadcast: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSContentServerStatsBroadcast with Double = js.native
-  /* 5825 */ val MDSDownloadDepotChunksAck: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSDownloadDepotChunksAck with Double = js.native
-  /* 5832 */ val MDSGetDepotChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotChunk with Double = js.native
-  /* 5834 */ val MDSGetDepotChunkChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotChunkChunk with Double = js.native
-  /* 5833 */ val MDSGetDepotChunkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotChunkResponse with Double = js.native
-  /* 5829 */ val MDSGetDepotManifest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotManifest with Double = js.native
-  /* 5831 */ val MDSGetDepotManifestChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotManifestChunk with Double = js.native
-  /* 5830 */ val MDSGetDepotManifestResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetDepotManifestResponse with Double = js.native
-  /* 5836 */ val MDSGetServerListForUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetServerListForUser with Double = js.native
-  /* 5837 */ val MDSGetServerListForUserResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetServerListForUserResponse with Double = js.native
-  /* 5814 */ val MDSGetVersionsForDepot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetVersionsForDepot with Double = js.native
-  /* 5815 */ val MDSGetVersionsForDepotResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSGetVersionsForDepotResponse with Double = js.native
-  /* 5847 */ val MDSMigrateChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSMigrateChunk with Double = js.native
-  /* 5848 */ val MDSMigrateChunkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSMigrateChunkResponse with Double = js.native
-  /* 5816 */ val MDSSetPublicVersionForDepot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSSetPublicVersionForDepot with Double = js.native
-  /* 5817 */ val MDSSetPublicVersionForDepotResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSSetPublicVersionForDepotResponse with Double = js.native
-  /* 5813 */ val MDSToAMGetDepotDecryptionKeyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSToAMGetDepotDecryptionKeyResponse with Double = js.native
-  /* 5844 */ val MDSToCSFlushChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSToCSFlushChunk with Double = js.native
-  /* 5835 */ val MDSUpdateContentServerConfig: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MDSUpdateContentServerConfig with Double = js.native
-  /* 6600 */ val MMSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MMSBase with Double = js.native
-  /* 7100 */ val MPASBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MPASBase with Double = js.native
-  /* 7101 */ val MPASVacBanReset: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MPASVacBanReset with Double = js.native
-  /* 4216 */ val MarketingMessageUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.MarketingMessageUpdate with Double = js.native
-  /* 1 */ val Multi: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Multi with Double = js.native
-  /* 6800 */ val NonStdMsgBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgBase with Double = js.native
-  /* 6806 */ val NonStdMsgChase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgChase with Double = js.native
-  /* 6807 */ val NonStdMsgDFSTransfer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgDFSTransfer with Double = js.native
-  /* 6803 */ val NonStdMsgHTTPClient: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgHTTPClient with Double = js.native
-  /* 6802 */ val NonStdMsgHTTPServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgHTTPServer with Double = js.native
-  /* 6811 */ val NonStdMsgLogsink: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgLogsink with Double = js.native
-  /* 6801 */ val NonStdMsgMemcached: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgMemcached with Double = js.native
-  /* 6805 */ val NonStdMsgPHPSimulator: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgPHPSimulator with Double = js.native
-  /* 6813 */ val NonStdMsgRTMPServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgRTMPServer with Double = js.native
-  /* 6812 */ val NonStdMsgSteam2Emulator: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgSteam2Emulator with Double = js.native
-  /* 6810 */ val NonStdMsgSyslog: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgSyslog with Double = js.native
-  /* 6808 */ val NonStdMsgTests: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgTests with Double = js.native
-  /* 6809 */ val NonStdMsgUMQpipeAAPL: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgUMQpipeAAPL with Double = js.native
-  /* 6804 */ val NonStdMsgWGResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NonStdMsgWGResponse with Double = js.native
-  /* 4395 */ val NotificationOfSuspiciousActivity: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NotificationOfSuspiciousActivity with Double = js.native
-  /* 314 */ val NotifyWatchdog: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.NotifyWatchdog with Double = js.native
-  /* 3401 */ val OGSBeginSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.OGSBeginSession with Double = js.native
-  /* 3402 */ val OGSBeginSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.OGSBeginSessionResponse with Double = js.native
-  /* 3403 */ val OGSEndSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.OGSEndSession with Double = js.native
-  /* 3404 */ val OGSEndSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.OGSEndSessionResponse with Double = js.native
-  /* 3406 */ val OGSWriteAppSessionRow: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.OGSWriteAppSessionRow with Double = js.native
-  /* 2502 */ val P2PIntroducerMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.P2PIntroducerMessage with Double = js.native
-  /* 8900 */ val PICSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PICSBase with Double = js.native
-  /* 5005 */ val PSAddPackageToShoppingCart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSAddPackageToShoppingCart with Double = js.native
-  /* 5006 */ val PSAddPackageToShoppingCartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSAddPackageToShoppingCartResponse with Double = js.native
-  /* 5011 */ val PSAddWalletCreditToShoppingCart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSAddWalletCreditToShoppingCart with Double = js.native
-  /* 5012 */ val PSAddWalletCreditToShoppingCartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSAddWalletCreditToShoppingCartResponse with Double = js.native
-  /* 5001 */ val PSCreateShoppingCart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSCreateShoppingCart with Double = js.native
-  /* 5002 */ val PSCreateShoppingCartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSCreateShoppingCartResponse with Double = js.native
-  /* 5009 */ val PSGetShoppingCartContents: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSGetShoppingCartContents with Double = js.native
-  /* 5010 */ val PSGetShoppingCartContentsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSGetShoppingCartContentsResponse with Double = js.native
-  /* 5003 */ val PSIsValidShoppingCart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSIsValidShoppingCart with Double = js.native
-  /* 5004 */ val PSIsValidShoppingCartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSIsValidShoppingCartResponse with Double = js.native
-  /* 5007 */ val PSRemoveLineItemFromShoppingCart: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSRemoveLineItemFromShoppingCart with Double = js.native
-  /* 5008 */ val PSRemoveLineItemFromShoppingCartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PSRemoveLineItemFromShoppingCartResponse with Double = js.native
-  /* 321 */ val PhysicalBoxInventory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PhysicalBoxInventory with Double = js.native
-  /* 139 */ val Ping: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Ping with Double = js.native
-  /* 140 */ val PingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PingResponse with Double = js.native
-  /* 226 */ val PrepareToExit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.PrepareToExit with Double = js.native
-  /* 2 */ val ProtobufWrapped: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ProtobufWrapped with Double = js.native
-  /* 234 */ val ProvideWindowsEventLogEntries: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ProvideWindowsEventLogEntries with Double = js.native
-  /* 9300 */ val QuestServerBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.QuestServerBase with Double = js.native
-  /* 318 */ val QueuedEmailsComplete: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.QueuedEmailsComplete with Double = js.native
-  /* 7803 */ val RMDeleteMemcachedKeys: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMDeleteMemcachedKeys with Double = js.native
-  /* 7806 */ val RMMsgTraceAddTrigger: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMMsgTraceAddTrigger with Double = js.native
-  /* 7808 */ val RMMsgTraceEvent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMMsgTraceEvent with Double = js.native
-  /* 7807 */ val RMMsgTraceRemoveTrigger: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMMsgTraceRemoveTrigger with Double = js.native
-  /* 7800 */ val RMRange: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMRange with Double = js.native
-  /* 7804 */ val RMRemoteInvoke: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMRemoteInvoke with Double = js.native
-  /* 7800 */ val RMTestVerisignOTP: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMTestVerisignOTP with Double = js.native
-  /* 7801 */ val RMTestVerisignOTPResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RMTestVerisignOTPResponse with Double = js.native
-  /* 9509 */ val RemoteClientAcceptEULA: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientAcceptEULA with Double = js.native
-  /* 9502 */ val RemoteClientAppStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientAppStatus with Double = js.native
-  /* 9500 */ val RemoteClientAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientAuth with Double = js.native
-  /* 9501 */ val RemoteClientAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientAuthResponse with Double = js.native
-  /* 9500 */ val RemoteClientBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientBase with Double = js.native
-  /* 9510 */ val RemoteClientGetControllerConfig: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientGetControllerConfig with Double = js.native
-  /* 9511 */ val RemoteClientGetControllerConfigResposne: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientGetControllerConfigResposne with Double = js.native
-  /* 9505 */ val RemoteClientPing: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientPing with Double = js.native
-  /* 9506 */ val RemoteClientPingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientPingResponse with Double = js.native
-  /* 9503 */ val RemoteClientStartStream: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientStartStream with Double = js.native
-  /* 9504 */ val RemoteClientStartStreamResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientStartStreamResponse with Double = js.native
-  /* 9512 */ val RemoteClientStreamingEnabled: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteClientStreamingEnabled with Double = js.native
-  /* 128 */ val RemoteSysID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RemoteSysID with Double = js.native
-  /* 600 */ val ReqChallenge: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ReqChallenge with Double = js.native
-  /* 602 */ val ReqChallengeTest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ReqChallengeTest with Double = js.native
-  /* 142 */ val RequestFullStatsBlock: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RequestFullStatsBlock with Double = js.native
-  /* 1014 */ val RequestStatHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RequestStatHistory with Double = js.native
-  /* 233 */ val RequestWindowsEventLogEntries: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RequestWindowsEventLogEntries with Double = js.native
-  /* 127 */ val RouteMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.RouteMessage with Double = js.native
-  /* 120 */ val SCIDRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SCIDRequest with Double = js.native
-  /* 121 */ val SCIDResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SCIDResponse with Double = js.native
-  /* 9400 */ val SLCBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCBase with Double = js.native
-  /* 9407 */ val SLCOwnerLibraryChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCOwnerLibraryChanged with Double = js.native
-  /* 9401 */ val SLCRequestUserSessionStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCRequestUserSessionStatus with Double = js.native
-  /* 9408 */ val SLCSharedLibraryChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCSharedLibraryChanged with Double = js.native
-  /* 9402 */ val SLCSharedLicensesLockStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCSharedLicensesLockStatus with Double = js.native
-  /* 9400 */ val SLCUserSessionStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SLCUserSessionStatus with Double = js.native
-  /* 2902 */ val SMExpensiveReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMExpensiveReport with Double = js.native
-  /* 2904 */ val SMFishingReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMFishingReport with Double = js.native
-  /* 2907 */ val SMGetSchemaConversionResults: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMGetSchemaConversionResults with Double = js.native
-  /* 2908 */ val SMGetSchemaConversionResultsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMGetSchemaConversionResultsResponse with Double = js.native
-  /* 2903 */ val SMHourlyReport: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMHourlyReport with Double = js.native
-  /* 2906 */ val SMMonitorSpace: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMMonitorSpace with Double = js.native
-  /* 2905 */ val SMPartitionRenames: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SMPartitionRenames with Double = js.native
-  /* 8600 */ val SecretsBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsBase with Double = js.native
-  /* 8601 */ val SecretsCredentialPairResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsCredentialPairResponse with Double = js.native
-  /* 8600 */ val SecretsRequestCredentialPair: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsRequestCredentialPair with Double = js.native
-  /* 8602 */ val SecretsRequestServerIdentity: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsRequestServerIdentity with Double = js.native
-  /* 8603 */ val SecretsServerIdentityResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsServerIdentityResponse with Double = js.native
-  /* 8604 */ val SecretsUpdateServerIdentities: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SecretsUpdateServerIdentities with Double = js.native
-  /* 146 */ val ServiceMethod: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ServiceMethod with Double = js.native
-  /* 147 */ val ServiceMethodResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ServiceMethodResponse with Double = js.native
-  /* 317 */ val SetTestFlag: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.SetTestFlag with Double = js.native
-  /* 237 */ val ShellCheckWindowsUpdates: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellCheckWindowsUpdates with Double = js.native
-  /* 238 */ val ShellCheckWindowsUpdatesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellCheckWindowsUpdatesResponse with Double = js.native
-  /* 230 */ val ShellConfigInfoUpdate: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellConfigInfoUpdate with Double = js.native
-  /* 301 */ val ShellFailed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellFailed with Double = js.native
-  /* 239 */ val ShellFlushUserLicenseCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellFlushUserLicenseCache with Double = js.native
-  /* 235 */ val ShellSearchLogs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellSearchLogs with Double = js.native
-  /* 236 */ val ShellSearchLogsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ShellSearchLogsResponse with Double = js.native
-  /* 1015 */ val StatHistory: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.StatHistory with Double = js.native
-  /* 141 */ val Stats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Stats with Double = js.native
-  /* 138 */ val StatsDeprecated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.StatsDeprecated with Double = js.native
-  /* 8000 */ val StoreBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.StoreBase with Double = js.native
-  /* 8000 */ val StoreUpdateRecommendationCount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.StoreUpdateRecommendationCount with Double = js.native
-  /* 126 */ val Subscribe: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.Subscribe with Double = js.native
-  /* 323 */ val TestInitDB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestInitDB with Double = js.native
-  /* 228 */ val TestResetServer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestResetServer with Double = js.native
-  /* 9200 */ val TestWorkerProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestWorkerProcess with Double = js.native
-  /* 9200 */ val TestWorkerProcessLoadUnloadModuleRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestWorkerProcessLoadUnloadModuleRequest with Double = js.native
-  /* 9201 */ val TestWorkerProcessLoadUnloadModuleResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestWorkerProcessLoadUnloadModuleResponse with Double = js.native
-  /* 9202 */ val TestWorkerProcessServiceModuleCallRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestWorkerProcessServiceModuleCallRequest with Double = js.native
-  /* 9203 */ val TestWorkerProcessServiceModuleCallResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TestWorkerProcessServiceModuleCallResponse with Double = js.native
-  /* 149 */ val TimestampRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TimestampRequest with Double = js.native
-  /* 150 */ val TimestampResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.TimestampResponse with Double = js.native
-  /* 7335 */ val UCMAddTaggedScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMAddTaggedScreenshot with Double = js.native
-  /* 7300 */ val UCMBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMBase with Double = js.native
-  /* 7372 */ val UCMDeleteOldScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeleteOldScreenshot with Double = js.native
-  /* 7373 */ val UCMDeleteOldScreenshotResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeleteOldScreenshotResponse with Double = js.native
-  /* 7374 */ val UCMDeleteOldVideo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeleteOldVideo with Double = js.native
-  /* 7375 */ val UCMDeleteOldVideoResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeleteOldVideoResponse with Double = js.native
-  /* 7329 */ val UCMDeletePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeletePublishedFile with Double = js.native
-  /* 7330 */ val UCMDeletePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMDeletePublishedFileResponse with Double = js.native
-  /* 7371 */ val UCMFixStatsPublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMFixStatsPublishedFile with Double = js.native
-  /* 7362 */ val UCMGetPublishedFilesForUser: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMGetPublishedFilesForUser with Double = js.native
-  /* 7363 */ val UCMGetPublishedFilesForUserResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMGetPublishedFilesForUserResponse with Double = js.native
-  /* 7369 */ val UCMGetUserSubscribedFiles: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMGetUserSubscribedFiles with Double = js.native
-  /* 7370 */ val UCMGetUserSubscribedFilesResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMGetUserSubscribedFilesResponse with Double = js.native
-  /* 7351 */ val UCMPublishFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishFile with Double = js.native
-  /* 7352 */ val UCMPublishFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishFileResponse with Double = js.native
-  /* 7353 */ val UCMPublishedFileChildAdd: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildAdd with Double = js.native
-  /* 7354 */ val UCMPublishedFileChildAddResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildAddResponse with Double = js.native
-  /* 7357 */ val UCMPublishedFileChildChangeSortOrder: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildChangeSortOrder with Double = js.native
-  /* 7358 */ val UCMPublishedFileChildChangeSortOrderResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildChangeSortOrderResponse with Double = js.native
-  /* 7355 */ val UCMPublishedFileChildRemove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildRemove with Double = js.native
-  /* 7356 */ val UCMPublishedFileChildRemoveResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileChildRemoveResponse with Double = js.native
-  /* 7380 */ val UCMPublishedFileContentUpdated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileContentUpdated with Double = js.native
-  /* 7359 */ val UCMPublishedFileParentChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileParentChanged with Double = js.native
-  /* 7341 */ val UCMPublishedFilePreviewAdd: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewAdd with Double = js.native
-  /* 7342 */ val UCMPublishedFilePreviewAddResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewAddResponse with Double = js.native
-  /* 7345 */ val UCMPublishedFilePreviewChangeSortOrder: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewChangeSortOrder with Double = js.native
-  /* 7346 */ val UCMPublishedFilePreviewChangeSortOrderResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewChangeSortOrderResponse with Double = js.native
-  /* 7343 */ val UCMPublishedFilePreviewRemove: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewRemove with Double = js.native
-  /* 7344 */ val UCMPublishedFilePreviewRemoveResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFilePreviewRemoveResponse with Double = js.native
-  /* 7339 */ val UCMPublishedFileReported: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileReported with Double = js.native
-  /* 7349 */ val UCMPublishedFileSubscribed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileSubscribed with Double = js.native
-  /* 7350 */ val UCMPublishedFileUnsubscribed: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileUnsubscribed with Double = js.native
-  /* 7381 */ val UCMPublishedFileUpdated: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMPublishedFileUpdated with Double = js.native
-  /* 7337 */ val UCMReloadPublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMReloadPublishedFile with Double = js.native
-  /* 7338 */ val UCMReloadUserFileListCaches: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMReloadUserFileListCaches with Double = js.native
-  /* 7336 */ val UCMRemoveTaggedScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMRemoveTaggedScreenshot with Double = js.native
-  /* 7307 */ val UCMResetCommunityContent: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMResetCommunityContent with Double = js.native
-  /* 7308 */ val UCMResetCommunityContentResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMResetCommunityContentResponse with Double = js.native
-  /* 7376 */ val UCMUpdateOldScreenshotPrivacy: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdateOldScreenshotPrivacy with Double = js.native
-  /* 7377 */ val UCMUpdateOldScreenshotPrivacyResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdateOldScreenshotPrivacyResponse with Double = js.native
-  /* 7327 */ val UCMUpdatePublishedFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFile with Double = js.native
-  /* 7332 */ val UCMUpdatePublishedFileBan: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFileBan with Double = js.native
-  /* 7333 */ val UCMUpdatePublishedFileBanResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFileBanResponse with Double = js.native
-  /* 7340 */ val UCMUpdatePublishedFileIncompatibleStatus: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFileIncompatibleStatus with Double = js.native
-  /* 7328 */ val UCMUpdatePublishedFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFileResponse with Double = js.native
-  /* 7331 */ val UCMUpdatePublishedFileStat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdatePublishedFileStat with Double = js.native
-  /* 7334 */ val UCMUpdateTaggedScreenshot: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMUpdateTaggedScreenshot with Double = js.native
-  /* 7303 */ val UCMValidateObjectExists: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMValidateObjectExists with Double = js.native
-  /* 7304 */ val UCMValidateObjectExistsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UCMValidateObjectExistsResponse with Double = js.native
-  /* 7000 */ val UDSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSBase with Double = js.native
-  /* 7006 */ val UDSFindSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSFindSession with Double = js.native
-  /* 7007 */ val UDSFindSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSFindSessionResponse with Double = js.native
-  /* 7006 */ val UDSHasSession: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSHasSession with Double = js.native
-  /* 7007 */ val UDSHasSessionResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSHasSessionResponse with Double = js.native
-  /* 7003 */ val UDSRenderUserAuth: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSRenderUserAuth with Double = js.native
-  /* 7004 */ val UDSRenderUserAuthResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UDSRenderUserAuthResponse with Double = js.native
-  /* 5223 */ val UFSDownloadChunk: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadChunk with Double = js.native
-  /* 5246 */ val UFSDownloadChunkRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadChunkRequest with Double = js.native
-  /* 5247 */ val UFSDownloadChunkResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadChunkResponse with Double = js.native
-  /* 5248 */ val UFSDownloadFinishRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadFinishRequest with Double = js.native
-  /* 5249 */ val UFSDownloadFinishResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadFinishResponse with Double = js.native
-  /* 5221 */ val UFSDownloadRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadRequest with Double = js.native
-  /* 5222 */ val UFSDownloadResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadResponse with Double = js.native
-  /* 5244 */ val UFSDownloadStartRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadStartRequest with Double = js.native
-  /* 5245 */ val UFSDownloadStartResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSDownloadStartResponse with Double = js.native
-  /* 5250 */ val UFSFlushURLCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSFlushURLCache with Double = js.native
-  /* 5240 */ val UFSGetUGCURLs: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSGetUGCURLs with Double = js.native
-  /* 5241 */ val UFSGetUGCURLsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSGetUGCURLsResponse with Double = js.native
-  /* 5242 */ val UFSHttpUploadFileFinishRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSHttpUploadFileFinishRequest with Double = js.native
-  /* 5243 */ val UFSHttpUploadFileFinishResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSHttpUploadFileFinishResponse with Double = js.native
-  /* 5238 */ val UFSMigrateFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSMigrateFile with Double = js.native
-  /* 5253 */ val UFSMigrateFileAppID: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSMigrateFileAppID with Double = js.native
-  /* 5254 */ val UFSMigrateFileAppIDResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSMigrateFileAppIDResponse with Double = js.native
-  /* 5239 */ val UFSMigrateFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSMigrateFileResponse with Double = js.native
-  /* 5234 */ val UFSReloadAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSReloadAccount with Double = js.native
-  /* 5235 */ val UFSReloadAccountResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSReloadAccountResponse with Double = js.native
-  /* 5215 */ val UFSReloadPartitionInfo: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSReloadPartitionInfo with Double = js.native
-  /* 5217 */ val UFSSynchronizeFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSSynchronizeFile with Double = js.native
-  /* 5218 */ val UFSSynchronizeFileResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSSynchronizeFileResponse with Double = js.native
-  /* 5228 */ val UFSUpdateFileFlags: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUpdateFileFlags with Double = js.native
-  /* 5229 */ val UFSUpdateFileFlagsResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUpdateFileFlagsResponse with Double = js.native
-  /* 5236 */ val UFSUpdateRecordBatched: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUpdateRecordBatched with Double = js.native
-  /* 5237 */ val UFSUpdateRecordBatchedResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUpdateRecordBatchedResponse with Double = js.native
-  /* 5251 */ val UFSUploadCommit: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUploadCommit with Double = js.native
-  /* 5252 */ val UFSUploadCommitResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UFSUploadCommitResponse with Double = js.native
-  /* 7900 */ val UGSBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UGSBase with Double = js.native
-  /* 7900 */ val UGSUpdateGlobalStats: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UGSUpdateGlobalStats with Double = js.native
-  /* 8108 */ val UMQ2AM_ClientMsgBatch: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQ2AM_ClientMsgBatch with Double = js.native
-  /* 8100 */ val UMQBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQBase with Double = js.native
-  /* 8110 */ val UMQEnqueueMobileAnnouncements: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQEnqueueMobileAnnouncements with Double = js.native
-  /* 8109 */ val UMQEnqueueMobileSalePromotions: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQEnqueueMobileSalePromotions with Double = js.native
-  /* 8105 */ val UMQIncomingChatMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQIncomingChatMessage with Double = js.native
-  /* 8102 */ val UMQLogoffRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQLogoffRequest with Double = js.native
-  /* 8103 */ val UMQLogoffResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQLogoffResponse with Double = js.native
-  /* 8100 */ val UMQLogonRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQLogonRequest with Double = js.native
-  /* 8101 */ val UMQLogonResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQLogonResponse with Double = js.native
-  /* 8106 */ val UMQPoll: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQPoll with Double = js.native
-  /* 8107 */ val UMQPollResults: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQPollResults with Double = js.native
-  /* 8104 */ val UMQSendChatMessage: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UMQSendChatMessage with Double = js.native
-  /* 229 */ val UniverseChanged: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UniverseChanged with Double = js.native
-  /* 1010 */ val UniverseData: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UniverseData with Double = js.native
-  /* 322 */ val UpdateConfigFile: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UpdateConfigFile with Double = js.native
-  /* 221 */ val UpdateCreditCardRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UpdateCreditCardRequest with Double = js.native
-  /* 215 */ val UpdateRecordResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UpdateRecordResponse with Double = js.native
-  /* 225 */ val UpdateUserBanResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.UpdateUserBanResponse with Double = js.native
-  /* 601 */ val VACResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VACResponse with Double = js.native
-  /* 605 */ val VSAddCheat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSAddCheat with Double = js.native
-  /* 608 */ val VSChallengeResultText: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSChallengeResultText with Double = js.native
-  /* 607 */ val VSGetChallengeResults: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSGetChallengeResults with Double = js.native
-  /* 611 */ val VSLoadDBFinished: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSLoadDBFinished with Double = js.native
-  /* 604 */ val VSMarkCheat: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSMarkCheat with Double = js.native
-  /* 606 */ val VSPurgeCodeModDB: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSPurgeCodeModDB with Double = js.native
-  /* 609 */ val VSReportLingerer: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSReportLingerer with Double = js.native
-  /* 610 */ val VSRequestManagedChallenge: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.VSRequestManagedChallenge with Double = js.native
-  /* 130 */ val WGRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WGRequest with Double = js.native
-  /* 131 */ val WGResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WGResponse with Double = js.native
-  /* 8300 */ val WebAPIBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIBase with Double = js.native
-  /* 8304 */ val WebAPIInvalidateOAuthClientCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIInvalidateOAuthClientCache with Double = js.native
-  /* 8305 */ val WebAPIInvalidateOAuthTokenCache: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIInvalidateOAuthTokenCache with Double = js.native
-  /* 8302 */ val WebAPIInvalidateTokensForAccount: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIInvalidateTokensForAccount with Double = js.native
-  /* 133 */ val WebAPIJobRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIJobRequest with Double = js.native
-  /* 134 */ val WebAPIJobResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIJobResponse with Double = js.native
-  /* 8303 */ val WebAPIRegisterGCInterfaces: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIRegisterGCInterfaces with Double = js.native
-  /* 8306 */ val WebAPISetSecrets: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPISetSecrets with Double = js.native
-  /* 8300 */ val WebAPIValidateOAuth2Token: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIValidateOAuth2Token with Double = js.native
-  /* 8301 */ val WebAPIValidateOAuth2TokenResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WebAPIValidateOAuth2TokenResponse with Double = js.native
-  /* 9000 */ val WorkerProcess: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkerProcess with Double = js.native
-  /* 9000 */ val WorkerProcessPingRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkerProcessPingRequest with Double = js.native
-  /* 9001 */ val WorkerProcessPingResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkerProcessPingResponse with Double = js.native
-  /* 9002 */ val WorkerProcessShutdown: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkerProcessShutdown with Double = js.native
-  /* 8200 */ val WorkshopAcceptTOSRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkshopAcceptTOSRequest with Double = js.native
-  /* 8201 */ val WorkshopAcceptTOSResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkshopAcceptTOSResponse with Double = js.native
-  /* 8200 */ val WorkshopBase: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.WorkshopBase with Double = js.native
-  /* 204 */ val ZipRequest: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ZipRequest with Double = js.native
-  /* 205 */ val ZipResponse: typingsSlinky.steamDashClient.steamDashClientMod.EMsg.ZipResponse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EMsg with Double] = js.native
+  /* 423 */ @js.native
+  object AIGetAppGCFlags extends TopLevel[AIGetAppGCFlags with Double]
+  
+  /* 424 */ @js.native
+  object AIGetAppGCFlagsResponse extends TopLevel[AIGetAppGCFlagsResponse with Double]
+  
+  /* 427 */ @js.native
+  object AIGetAppInfo extends TopLevel[AIGetAppInfo with Double]
+  
+  /* 428 */ @js.native
+  object AIGetAppInfoResponse extends TopLevel[AIGetAppInfoResponse with Double]
+  
+  /* 425 */ @js.native
+  object AIGetAppList extends TopLevel[AIGetAppList with Double]
+  
+  /* 426 */ @js.native
+  object AIGetAppListResponse extends TopLevel[AIGetAppListResponse with Double]
+  
+  /* 407 */ @js.native
+  object AISAppInfoTableChanged extends TopLevel[AISAppInfoTableChanged with Double]
+  
+  /* 409 */ @js.native
+  object AISCreateMarketingMessage extends TopLevel[AISCreateMarketingMessage with Double]
+  
+  /* 410 */ @js.native
+  object AISCreateMarketingMessageResponse extends TopLevel[AISCreateMarketingMessageResponse with Double]
+  
+  /* 416 */ @js.native
+  object AISDeleteMarketingMessage extends TopLevel[AISDeleteMarketingMessage with Double]
+  
+  /* 429 */ @js.native
+  object AISGetCouponDefinition extends TopLevel[AISGetCouponDefinition with Double]
+  
+  /* 430 */ @js.native
+  object AISGetCouponDefinitionResponse extends TopLevel[AISGetCouponDefinitionResponse with Double]
+  
+  /* 411 */ @js.native
+  object AISGetMarketingMessage extends TopLevel[AISGetMarketingMessage with Double]
+  
+  /* 412 */ @js.native
+  object AISGetMarketingMessageResponse extends TopLevel[AISGetMarketingMessageResponse with Double]
+  
+  /* 419 */ @js.native
+  object AISGetMarketingTreatments extends TopLevel[AISGetMarketingTreatments with Double]
+  
+  /* 420 */ @js.native
+  object AISGetMarketingTreatmentsResponse extends TopLevel[AISGetMarketingTreatmentsResponse with Double]
+  
+  /* 405 */ @js.native
+  object AISGetPackageChangeNumber extends TopLevel[AISGetPackageChangeNumber with Double]
+  
+  /* 406 */ @js.native
+  object AISGetPackageChangeNumberResponse extends TopLevel[AISGetPackageChangeNumberResponse with Double]
+  
+  /* 401 */ @js.native
+  object AISRefreshContentDescription extends TopLevel[AISRefreshContentDescription with Double]
+  
+  /* 402 */ @js.native
+  object AISRequestContentDescription extends TopLevel[AISRequestContentDescription with Double]
+  
+  /* 415 */ @js.native
+  object AISRequestMarketingMessageUpdate extends TopLevel[AISRequestMarketingMessageUpdate with Double]
+  
+  /* 421 */ @js.native
+  object AISRequestMarketingTreatmentUpdate extends TopLevel[AISRequestMarketingTreatmentUpdate with Double]
+  
+  /* 422 */ @js.native
+  object AISTestAddPackage extends TopLevel[AISTestAddPackage with Double]
+  
+  /* 433 */ @js.native
+  object AISTestEnableGC extends TopLevel[AISTestEnableGC with Double]
+  
+  /* 403 */ @js.native
+  object AISUpdateAppInfo extends TopLevel[AISUpdateAppInfo with Double]
+  
+  /* 413 */ @js.native
+  object AISUpdateMarketingMessage extends TopLevel[AISUpdateMarketingMessage with Double]
+  
+  /* 414 */ @js.native
+  object AISUpdateMarketingMessageResponse extends TopLevel[AISUpdateMarketingMessageResponse with Double]
+  
+  /* 404 */ @js.native
+  object AISUpdatePackageCosts extends TopLevel[AISUpdatePackageCosts with Double]
+  
+  /* 408 */ @js.native
+  object AISUpdatePackageCostsResponse extends TopLevel[AISUpdatePackageCostsResponse with Double]
+  
+  /* 404 */ @js.native
+  object AISUpdatePackageInfo extends TopLevel[AISUpdatePackageInfo with Double]
+  
+  /* 431 */ @js.native
+  object AISUpdateSlaveContentDescription extends TopLevel[AISUpdateSlaveContentDescription with Double]
+  
+  /* 432 */ @js.native
+  object AISUpdateSlaveContentDescriptionResponse extends TopLevel[AISUpdateSlaveContentDescriptionResponse with Double]
+  
+  /* 4310 */ @js.native
+  object AMAccountPS3Unlink extends TopLevel[AMAccountPS3Unlink with Double]
+  
+  /* 4311 */ @js.native
+  object AMAccountPS3UnlinkResponse extends TopLevel[AMAccountPS3UnlinkResponse with Double]
+  
+  /* 4346 */ @js.native
+  object AMAcctAllowedToPurchase extends TopLevel[AMAcctAllowedToPurchase with Double]
+  
+  /* 4347 */ @js.native
+  object AMAcctAllowedToPurchaseResponse extends TopLevel[AMAcctAllowedToPurchaseResponse with Double]
+  
+  /* 565 */ @js.native
+  object AMAcknowledgeClanInvite extends TopLevel[AMAcknowledgeClanInvite with Double]
+  
+  /* 4141 */ @js.native
+  object AMAddClanNews extends TopLevel[AMAddClanNews with Double]
+  
+  /* 4202 */ @js.native
+  object AMAddComment extends TopLevel[AMAddComment with Double]
+  
+  /* 4203 */ @js.native
+  object AMAddCommentResponse extends TopLevel[AMAddCommentResponse with Double]
+  
+  /* 4061 */ @js.native
+  object AMAddFounderToClan extends TopLevel[AMAddFounderToClan with Double]
+  
+  /* 4224 */ @js.native
+  object AMAddFreeLicense extends TopLevel[AMAddFreeLicense with Double]
+  
+  /* 4285 */ @js.native
+  object AMAddFreeLicenseResponse extends TopLevel[AMAddFreeLicenseResponse with Double]
+  
+  /* 4081 */ @js.native
+  object AMAddFriend extends TopLevel[AMAddFriend with Double]
+  
+  /* 4082 */ @js.native
+  object AMAddFriendResponse extends TopLevel[AMAddFriendResponse with Double]
+  
+  /* 505 */ @js.native
+  object AMAddLicense extends TopLevel[AMAddLicense with Double]
+  
+  /* 510 */ @js.native
+  object AMAddMinutesToLicense extends TopLevel[AMAddMinutesToLicense with Double]
+  
+  /* 4280 */ @js.native
+  object AMAddPublisherUser extends TopLevel[AMAddPublisherUser with Double]
+  
+  /* 4234 */ @js.native
+  object AMAddUsersToMarketingTreatment extends TopLevel[AMAddUsersToMarketingTreatment with Double]
+  
+  /* 558 */ @js.native
+  object AMAllowUserContentQuery extends TopLevel[AMAllowUserContentQuery with Double]
+  
+  /* 559 */ @js.native
+  object AMAllowUserContentResponse extends TopLevel[AMAllowUserContentResponse with Double]
+  
+  /* 4156 */ @js.native
+  object AMAllowUserFilesRequest extends TopLevel[AMAllowUserFilesRequest with Double]
+  
+  /* 4157 */ @js.native
+  object AMAllowUserFilesResponse extends TopLevel[AMAllowUserFilesResponse with Double]
+  
+  /* 592 */ @js.native
+  object AMAuthenticateUser extends TopLevel[AMAuthenticateUser with Double]
+  
+  /* 593 */ @js.native
+  object AMAuthenticateUserResponse extends TopLevel[AMAuthenticateUserResponse with Double]
+  
+  /* 4315 */ @js.native
+  object AMAuthenticatedPlayerList extends TopLevel[AMAuthenticatedPlayerList with Double]
+  
+  /* 4145 */ @js.native
+  object AMBanFromChat extends TopLevel[AMBanFromChat with Double]
+  
+  /* 507 */ @js.native
+  object AMBeginProcessingLicenses extends TopLevel[AMBeginProcessingLicenses with Double]
+  
+  /* 4410 */ @js.native
+  object AMBitPayPayment extends TopLevel[AMBitPayPayment with Double]
+  
+  /* 4411 */ @js.native
+  object AMBitPayPaymentResponse extends TopLevel[AMBitPayPaymentResponse with Double]
+  
+  /* 4380 */ @js.native
+  object AMBoaCompraPayment extends TopLevel[AMBoaCompraPayment with Double]
+  
+  /* 4381 */ @js.native
+  object AMBoaCompraPaymentResponse extends TopLevel[AMBoaCompraPaymentResponse with Double]
+  
+  /* 4086 */ @js.native
+  object AMCancelEasyCollect extends TopLevel[AMCancelEasyCollect with Double]
+  
+  /* 4087 */ @js.native
+  object AMCancelEasyCollectResponse extends TopLevel[AMCancelEasyCollectResponse with Double]
+  
+  /* 511 */ @js.native
+  object AMCancelLicense extends TopLevel[AMCancelLicense with Double]
+  
+  /* 522 */ @js.native
+  object AMCancelPurchase extends TopLevel[AMCancelPurchase with Double]
+  
+  /* 4105 */ @js.native
+  object AMChallengeNotification extends TopLevel[AMChallengeNotification with Double]
+  
+  /* 4104 */ @js.native
+  object AMChallengeVerdict extends TopLevel[AMChallengeVerdict with Double]
+  
+  /* 4085 */ @js.native
+  object AMChangeClanOwner extends TopLevel[AMChangeClanOwner with Double]
+  
+  /* 579 */ @js.native
+  object AMChatActionResult extends TopLevel[AMChatActionResult with Double]
+  
+  /* 533 */ @js.native
+  object AMChatCleanup extends TopLevel[AMChatCleanup with Double]
+  
+  /* 577 */ @js.native
+  object AMChatEnter extends TopLevel[AMChatEnter with Double]
+  
+  /* 572 */ @js.native
+  object AMChatInvite extends TopLevel[AMChatInvite with Double]
+  
+  /* 570 */ @js.native
+  object AMChatMulti extends TopLevel[AMChatMulti with Double]
+  
+  /* 4118 */ @js.native
+  object AMCheckClanInviteRateLimiting extends TopLevel[AMCheckClanInviteRateLimiting with Double]
+  
+  /* 4075 */ @js.native
+  object AMCheckClanMembership extends TopLevel[AMCheckClanMembership with Double]
+  
+  /* 4161 */ @js.native
+  object AMCheckClanMembershipResponse extends TopLevel[AMCheckClanMembershipResponse with Double]
+  
+  /* 4352 */ @js.native
+  object AMClaimUnownedUserGift extends TopLevel[AMClaimUnownedUserGift with Double]
+  
+  /* 4353 */ @js.native
+  object AMClaimUnownedUserGiftResponse extends TopLevel[AMClaimUnownedUserGiftResponse with Double]
+  
+  /* 534 */ @js.native
+  object AMClanCleanup extends TopLevel[AMClanCleanup with Double]
+  
+  /* 538 */ @js.native
+  object AMClanCleanupList extends TopLevel[AMClanCleanupList with Double]
+  
+  /* 567 */ @js.native
+  object AMClanDataUpdated extends TopLevel[AMClanDataUpdated with Double]
+  
+  /* 4011 */ @js.native
+  object AMClanPermissions extends TopLevel[AMClanPermissions with Double]
+  
+  /* 4012 */ @js.native
+  object AMClanPermissionsResponse extends TopLevel[AMClanPermissionsResponse with Double]
+  
+  /* 4090 */ @js.native
+  object AMClansInCommon extends TopLevel[AMClansInCommon with Double]
+  
+  /* 4103 */ @js.native
+  object AMClansInCommonCount extends TopLevel[AMClansInCommonCount with Double]
+  
+  /* 4097 */ @js.native
+  object AMClansInCommonCountResponse extends TopLevel[AMClansInCommonCountResponse with Double]
+  
+  /* 4091 */ @js.native
+  object AMClansInCommonResponse extends TopLevel[AMClansInCommonResponse with Double]
+  
+  /* 4264 */ @js.native
+  object AMClearDispute extends TopLevel[AMClearDispute with Double]
+  
+  /* 4265 */ @js.native
+  object AMClearDisputeResponse extends TopLevel[AMClearDisputeResponse with Double]
+  
+  /* 4306 */ @js.native
+  object AMClearPersonaMetadataBlob extends TopLevel[AMClearPersonaMetadataBlob with Double]
+  
+  /* 576 */ @js.native
+  object AMClientAcceptFriendInvite extends TopLevel[AMClientAcceptFriendInvite with Double]
+  
+  /* 5566 */ @js.native
+  object AMClientAddFriendToGroup extends TopLevel[AMClientAddFriendToGroup with Double]
+  
+  /* 5567 */ @js.native
+  object AMClientAddFriendToGroupResponse extends TopLevel[AMClientAddFriendToGroupResponse with Double]
+  
+  /* 598 */ @js.native
+  object AMClientChatActionRelay extends TopLevel[AMClientChatActionRelay with Double]
+  
+  /* 571 */ @js.native
+  object AMClientChatInviteRelay extends TopLevel[AMClientChatInviteRelay with Double]
+  
+  /* 574 */ @js.native
+  object AMClientChatMemberInfoRelay extends TopLevel[AMClientChatMemberInfoRelay with Double]
+  
+  /* 569 */ @js.native
+  object AMClientChatMsgRelay extends TopLevel[AMClientChatMsgRelay with Double]
+  
+  /* 5560 */ @js.native
+  object AMClientCreateFriendsGroup extends TopLevel[AMClientCreateFriendsGroup with Double]
+  
+  /* 5561 */ @js.native
+  object AMClientCreateFriendsGroupResponse extends TopLevel[AMClientCreateFriendsGroupResponse with Double]
+  
+  /* 5562 */ @js.native
+  object AMClientDeleteFriendsGroup extends TopLevel[AMClientDeleteFriendsGroup with Double]
+  
+  /* 5563 */ @js.native
+  object AMClientDeleteFriendsGroupResponse extends TopLevel[AMClientDeleteFriendsGroupResponse with Double]
+  
+  /* 573 */ @js.native
+  object AMClientJoinChatRelay extends TopLevel[AMClientJoinChatRelay with Double]
+  
+  /* 553 */ @js.native
+  object AMClientNotPlaying extends TopLevel[AMClientNotPlaying with Double]
+  
+  /* 578 */ @js.native
+  object AMClientPublishRemovalFromSource extends TopLevel[AMClientPublishRemovalFromSource with Double]
+  
+  /* 5568 */ @js.native
+  object AMClientRemoveFriendFromGroup extends TopLevel[AMClientRemoveFriendFromGroup with Double]
+  
+  /* 5569 */ @js.native
+  object AMClientRemoveFriendFromGroupResponse extends TopLevel[AMClientRemoveFriendFromGroupResponse with Double]
+  
+  /* 5564 */ @js.native
+  object AMClientRenameFriendsGroup extends TopLevel[AMClientRenameFriendsGroup with Double]
+  
+  /* 5565 */ @js.native
+  object AMClientRenameFriendsGroupResponse extends TopLevel[AMClientRenameFriendsGroupResponse with Double]
+  
+  /* 5588 */ @js.native
+  object AMClientSetPlayerNickname extends TopLevel[AMClientSetPlayerNickname with Double]
+  
+  /* 5589 */ @js.native
+  object AMClientSetPlayerNicknameResponse extends TopLevel[AMClientSetPlayerNicknameResponse with Double]
+  
+  /* 4383 */ @js.native
+  object AMCompleteExternalPurchase extends TopLevel[AMCompleteExternalPurchase with Double]
+  
+  /* 4384 */ @js.native
+  object AMCompleteExternalPurchaseResponse extends TopLevel[AMCompleteExternalPurchaseResponse with Double]
+  
+  /* 521 */ @js.native
+  object AMCompletePurchase extends TopLevel[AMCompletePurchase with Double]
+  
+  /* 4093 */ @js.native
+  object AMConvertClan extends TopLevel[AMConvertClan with Double]
+  
+  /* 4251 */ @js.native
+  object AMConvertWallet extends TopLevel[AMConvertWallet with Double]
+  
+  /* 4252 */ @js.native
+  object AMConvertWalletResponse extends TopLevel[AMConvertWalletResponse with Double]
+  
+  /* 4109 */ @js.native
+  object AMCreateAccountRecord extends TopLevel[AMCreateAccountRecord with Double]
+  
+  /* 4183 */ @js.native
+  object AMCreateAccountRecordInSteam3 extends TopLevel[AMCreateAccountRecordInSteam3 with Double]
+  
+  /* 129 */ @js.native
+  object AMCreateAccountResponse extends TopLevel[AMCreateAccountResponse with Double]
+  
+  /* 4260 */ @js.native
+  object AMCreateChargeback extends TopLevel[AMCreateChargeback with Double]
+  
+  /* 4261 */ @js.native
+  object AMCreateChargebackResponse extends TopLevel[AMCreateChargebackResponse with Double]
+  
+  /* 4001 */ @js.native
+  object AMCreateChat extends TopLevel[AMCreateChat with Double]
+  
+  /* 4002 */ @js.native
+  object AMCreateChatResponse extends TopLevel[AMCreateChatResponse with Double]
+  
+  /* 586 */ @js.native
+  object AMCreateClan extends TopLevel[AMCreateClan with Double]
+  
+  /* 4027 */ @js.native
+  object AMCreateClanAnnouncement extends TopLevel[AMCreateClanAnnouncement with Double]
+  
+  /* 4028 */ @js.native
+  object AMCreateClanAnnouncementResponse extends TopLevel[AMCreateClanAnnouncementResponse with Double]
+  
+  /* 4013 */ @js.native
+  object AMCreateClanEvent extends TopLevel[AMCreateClanEvent with Double]
+  
+  /* 4014 */ @js.native
+  object AMCreateClanEventResponse extends TopLevel[AMCreateClanEventResponse with Double]
+  
+  /* 587 */ @js.native
+  object AMCreateClanResponse extends TopLevel[AMCreateClanResponse with Double]
+  
+  /* 4262 */ @js.native
+  object AMCreateDispute extends TopLevel[AMCreateDispute with Double]
+  
+  /* 4263 */ @js.native
+  object AMCreateDisputeResponse extends TopLevel[AMCreateDisputeResponse with Double]
+  
+  /* 4258 */ @js.native
+  object AMCreateRefund extends TopLevel[AMCreateRefund with Double]
+  
+  /* 4259 */ @js.native
+  object AMCreateRefundResponse extends TopLevel[AMCreateRefundResponse with Double]
+  
+  /* 4396 */ @js.native
+  object AMDegicaPayment extends TopLevel[AMDegicaPayment with Double]
+  
+  /* 4397 */ @js.native
+  object AMDegicaPaymentResponse extends TopLevel[AMDegicaPaymentResponse with Double]
+  
+  /* 4035 */ @js.native
+  object AMDeleteClanAnnouncement extends TopLevel[AMDeleteClanAnnouncement with Double]
+  
+  /* 4036 */ @js.native
+  object AMDeleteClanAnnouncementResponse extends TopLevel[AMDeleteClanAnnouncementResponse with Double]
+  
+  /* 4019 */ @js.native
+  object AMDeleteClanEvent extends TopLevel[AMDeleteClanEvent with Double]
+  
+  /* 4020 */ @js.native
+  object AMDeleteClanEventResponse extends TopLevel[AMDeleteClanEventResponse with Double]
+  
+  /* 4204 */ @js.native
+  object AMDeleteComment extends TopLevel[AMDeleteComment with Double]
+  
+  /* 4205 */ @js.native
+  object AMDeleteCommentResponse extends TopLevel[AMDeleteCommentResponse with Double]
+  
+  /* 4241 */ @js.native
+  object AMDeleteStoredCard extends TopLevel[AMDeleteStoredCard with Double]
+  
+  /* 4246 */ @js.native
+  object AMDeleteStoredPaymentInfo extends TopLevel[AMDeleteStoredPaymentInfo with Double]
+  
+  /* 4330 */ @js.native
+  object AMDeleteStoredPaypalAgreement extends TopLevel[AMDeleteStoredPaypalAgreement with Double]
+  
+  /* 4084 */ @js.native
+  object AMDumpClan extends TopLevel[AMDumpClan with Double]
+  
+  /* 4059 */ @js.native
+  object AMDumpUser extends TopLevel[AMDumpUser with Double]
+  
+  /* 4398 */ @js.native
+  object AMEClubPayment extends TopLevel[AMEClubPayment with Double]
+  
+  /* 4399 */ @js.native
+  object AMEClubPaymentResponse extends TopLevel[AMEClubPaymentResponse with Double]
+  
+  /* 4160 */ @js.native
+  object AMEditBanReason extends TopLevel[AMEditBanReason with Double]
+  
+  /* 4382 */ @js.native
+  object AMExpireCaptchaByGID extends TopLevel[AMExpireCaptchaByGID with Double]
+  
+  /* 509 */ @js.native
+  object AMExtendLicense extends TopLevel[AMExtendLicense with Double]
+  
+  /* 4367 */ @js.native
+  object AMFinalizePurchase extends TopLevel[AMFinalizePurchase with Double]
+  
+  /* 4368 */ @js.native
+  object AMFinalizePurchaseResponse extends TopLevel[AMFinalizePurchaseResponse with Double]
+  
+  /* 580 */ @js.native
+  object AMFindAccounts extends TopLevel[AMFindAccounts with Double]
+  
+  /* 581 */ @js.native
+  object AMFindAccountsResponse extends TopLevel[AMFindAccountsResponse with Double]
+  
+  /* 4143 */ @js.native
+  object AMFindClanUser extends TopLevel[AMFindClanUser with Double]
+  
+  /* 4144 */ @js.native
+  object AMFindClanUserResponse extends TopLevel[AMFindClanUserResponse with Double]
+  
+  /* 4106 */ @js.native
+  object AMFindGSByIP extends TopLevel[AMFindGSByIP with Double]
+  
+  /* 518 */ @js.native
+  object AMFindHungTransactions extends TopLevel[AMFindHungTransactions with Double]
+  
+  /* 525 */ @js.native
+  object AMFixPendingPurchase extends TopLevel[AMFixPendingPurchase with Double]
+  
+  /* 526 */ @js.native
+  object AMFixPendingPurchaseResponse extends TopLevel[AMFixPendingPurchaseResponse with Double]
+  
+  /* 535 */ @js.native
+  object AMFixPendingRefund extends TopLevel[AMFixPendingRefund with Double]
+  
+  /* 4107 */ @js.native
+  object AMFoundGSByIP extends TopLevel[AMFoundGSByIP with Double]
+  
+  /* 4100 */ @js.native
+  object AMFriendsInCommon extends TopLevel[AMFriendsInCommon with Double]
+  
+  /* 4102 */ @js.native
+  object AMFriendsInCommonCountResponse extends TopLevel[AMFriendsInCommonCountResponse with Double]
+  
+  /* 4101 */ @js.native
+  object AMFriendsInCommonResponse extends TopLevel[AMFriendsInCommonResponse with Double]
+  
+  /* 4098 */ @js.native
+  object AMFriendsList extends TopLevel[AMFriendsList with Double]
+  
+  /* 4099 */ @js.native
+  object AMFriendsListResponse extends TopLevel[AMFriendsListResponse with Double]
+  
+  /* 6406 */ @js.native
+  object AMGMSGameServerRemove extends TopLevel[AMGMSGameServerRemove with Double]
+  
+  /* 6405 */ @js.native
+  object AMGMSGameServerUpdate extends TopLevel[AMGMSGameServerUpdate with Double]
+  
+  /* 4213 */ @js.native
+  object AMGSSearch extends TopLevel[AMGSSearch with Double]
+  
+  /* 4340 */ @js.native
+  object AMGameServerAccountChangePassword extends TopLevel[AMGameServerAccountChangePassword with Double]
+  
+  /* 4341 */ @js.native
+  object AMGameServerAccountDeleteAccount extends TopLevel[AMGameServerAccountDeleteAccount with Double]
+  
+  /* 4335 */ @js.native
+  object AMGameServerPlayerCompatibilityCheck extends TopLevel[AMGameServerPlayerCompatibilityCheck with Double]
+  
+  /* 4336 */ @js.native
+  object AMGameServerPlayerCompatibilityCheckResponse extends TopLevel[AMGameServerPlayerCompatibilityCheckResponse with Double]
+  
+  /* 4332 */ @js.native
+  object AMGameServerRemove extends TopLevel[AMGameServerRemove with Double]
+  
+  /* 4331 */ @js.native
+  object AMGameServerUpdate extends TopLevel[AMGameServerUpdate with Double]
+  
+  /* 4323 */ @js.native
+  object AMGetAccountBanInfo extends TopLevel[AMGetAccountBanInfo with Double]
+  
+  /* 4324 */ @js.native
+  object AMGetAccountBanInfoResponse extends TopLevel[AMGetAccountBanInfoResponse with Double]
+  
+  /* 4338 */ @js.native
+  object AMGetAccountCommunityBanInfo extends TopLevel[AMGetAccountCommunityBanInfo with Double]
+  
+  /* 4339 */ @js.native
+  object AMGetAccountCommunityBanInfoResponse extends TopLevel[AMGetAccountCommunityBanInfoResponse with Double]
+  
+  /* 4287 */ @js.native
+  object AMGetAccountDetails extends TopLevel[AMGetAccountDetails with Double]
+  
+  /* 4112 */ @js.native
+  object AMGetAccountDetails2 extends TopLevel[AMGetAccountDetails2 with Double]
+  
+  /* 4288 */ @js.native
+  object AMGetAccountDetailsResponse extends TopLevel[AMGetAccountDetailsResponse with Double]
+  
+  /* 4113 */ @js.native
+  object AMGetAccountDetailsResponse2 extends TopLevel[AMGetAccountDetailsResponse2 with Double]
+  
+  /* 4006 */ @js.native
+  object AMGetAccountEmailAddress extends TopLevel[AMGetAccountEmailAddress with Double]
+  
+  /* 4007 */ @js.native
+  object AMGetAccountEmailAddressResponse extends TopLevel[AMGetAccountEmailAddressResponse with Double]
+  
+  /* 4294 */ @js.native
+  object AMGetAccountFlagsForWGSpoofing extends TopLevel[AMGetAccountFlagsForWGSpoofing with Double]
+  
+  /* 4295 */ @js.native
+  object AMGetAccountFlagsForWGSpoofingResponse extends TopLevel[AMGetAccountFlagsForWGSpoofingResponse with Double]
+  
+  /* 594 */ @js.native
+  object AMGetAccountFriendsCount extends TopLevel[AMGetAccountFriendsCount with Double]
+  
+  /* 595 */ @js.native
+  object AMGetAccountFriendsCountResponse extends TopLevel[AMGetAccountFriendsCountResponse with Double]
+  
+  /* 4069 */ @js.native
+  object AMGetAccountLinks extends TopLevel[AMGetAccountLinks with Double]
+  
+  /* 4070 */ @js.native
+  object AMGetAccountLinksResponse extends TopLevel[AMGetAccountLinksResponse with Double]
+  
+  /* 4313 */ @js.native
+  object AMGetAccountPSNInfo extends TopLevel[AMGetAccountPSNInfo with Double]
+  
+  /* 4314 */ @js.native
+  object AMGetAccountPSNInfoResponse extends TopLevel[AMGetAccountPSNInfoResponse with Double]
+  
+  /* 4408 */ @js.native
+  object AMGetAccountResetDetailsRequest extends TopLevel[AMGetAccountResetDetailsRequest with Double]
+  
+  /* 4409 */ @js.native
+  object AMGetAccountResetDetailsResponse extends TopLevel[AMGetAccountResetDetailsResponse with Double]
+  
+  /* 4158 */ @js.native
+  object AMGetAccountStatus extends TopLevel[AMGetAccountStatus with Double]
+  
+  /* 4159 */ @js.native
+  object AMGetAccountStatusResponse extends TopLevel[AMGetAccountStatusResponse with Double]
+  
+  /* 4188 */ @js.native
+  object AMGetBillingAddress extends TopLevel[AMGetBillingAddress with Double]
+  
+  /* 4189 */ @js.native
+  object AMGetBillingAddressResponse extends TopLevel[AMGetBillingAddressResponse with Double]
+  
+  /* 4134 */ @js.native
+  object AMGetCaptchaDataByGID extends TopLevel[AMGetCaptchaDataByGID with Double]
+  
+  /* 4135 */ @js.native
+  object AMGetCaptchaDataByGIDResponse extends TopLevel[AMGetCaptchaDataByGIDResponse with Double]
+  
+  /* 4129 */ @js.native
+  object AMGetCaptchaDataForIP extends TopLevel[AMGetCaptchaDataForIP with Double]
+  
+  /* 4130 */ @js.native
+  object AMGetCaptchaDataForIPResponse extends TopLevel[AMGetCaptchaDataForIPResponse with Double]
+  
+  /* 4239 */ @js.native
+  object AMGetCardList extends TopLevel[AMGetCardList with Double]
+  
+  /* 4240 */ @js.native
+  object AMGetCardListResponse extends TopLevel[AMGetCardListResponse with Double]
+  
+  /* 4065 */ @js.native
+  object AMGetChatBanList extends TopLevel[AMGetChatBanList with Double]
+  
+  /* 4066 */ @js.native
+  object AMGetChatBanListResponse extends TopLevel[AMGetChatBanListResponse with Double]
+  
+  /* 4033 */ @js.native
+  object AMGetClanAnnouncements extends TopLevel[AMGetClanAnnouncements with Double]
+  
+  /* 4031 */ @js.native
+  object AMGetClanAnnouncementsCount extends TopLevel[AMGetClanAnnouncementsCount with Double]
+  
+  /* 4032 */ @js.native
+  object AMGetClanAnnouncementsCountResponse extends TopLevel[AMGetClanAnnouncementsCountResponse with Double]
+  
+  /* 4034 */ @js.native
+  object AMGetClanAnnouncementsResponse extends TopLevel[AMGetClanAnnouncementsResponse with Double]
+  
+  /* 588 */ @js.native
+  object AMGetClanDetails extends TopLevel[AMGetClanDetails with Double]
+  
+  /* 4373 */ @js.native
+  object AMGetClanDetailsForForumCreation extends TopLevel[AMGetClanDetailsForForumCreation with Double]
+  
+  /* 4374 */ @js.native
+  object AMGetClanDetailsForForumCreationResponse extends TopLevel[AMGetClanDetailsForForumCreationResponse with Double]
+  
+  /* 589 */ @js.native
+  object AMGetClanDetailsResponse extends TopLevel[AMGetClanDetailsResponse with Double]
+  
+  /* 4017 */ @js.native
+  object AMGetClanEvents extends TopLevel[AMGetClanEvents with Double]
+  
+  /* 4018 */ @js.native
+  object AMGetClanEventsResponse extends TopLevel[AMGetClanEventsResponse with Double]
+  
+  /* 4039 */ @js.native
+  object AMGetClanHistory extends TopLevel[AMGetClanHistory with Double]
+  
+  /* 4040 */ @js.native
+  object AMGetClanHistoryResponse extends TopLevel[AMGetClanHistoryResponse with Double]
+  
+  /* 4076 */ @js.native
+  object AMGetClanMembers extends TopLevel[AMGetClanMembers with Double]
+  
+  /* 4077 */ @js.native
+  object AMGetClanMembersResponse extends TopLevel[AMGetClanMembersResponse with Double]
+  
+  /* 4088 */ @js.native
+  object AMGetClanMembershipList extends TopLevel[AMGetClanMembershipList with Double]
+  
+  /* 4089 */ @js.native
+  object AMGetClanMembershipListResponse extends TopLevel[AMGetClanMembershipListResponse with Double]
+  
+  /* 4298 */ @js.native
+  object AMGetClanOfficers extends TopLevel[AMGetClanOfficers with Double]
+  
+  /* 4299 */ @js.native
+  object AMGetClanOfficersResponse extends TopLevel[AMGetClanOfficersResponse with Double]
+  
+  /* 4054 */ @js.native
+  object AMGetClanPOTW extends TopLevel[AMGetClanPOTW with Double]
+  
+  /* 4055 */ @js.native
+  object AMGetClanPOTWResponse extends TopLevel[AMGetClanPOTWResponse with Double]
+  
+  /* 4041 */ @js.native
+  object AMGetClanPermissionBits extends TopLevel[AMGetClanPermissionBits with Double]
+  
+  /* 4042 */ @js.native
+  object AMGetClanPermissionBitsResponse extends TopLevel[AMGetClanPermissionBitsResponse with Double]
+  
+  /* 4023 */ @js.native
+  object AMGetClanPermissionSettings extends TopLevel[AMGetClanPermissionSettings with Double]
+  
+  /* 4024 */ @js.native
+  object AMGetClanPermissionSettingsResponse extends TopLevel[AMGetClanPermissionSettingsResponse with Double]
+  
+  /* 4050 */ @js.native
+  object AMGetClanRank extends TopLevel[AMGetClanRank with Double]
+  
+  /* 4051 */ @js.native
+  object AMGetClanRankResponse extends TopLevel[AMGetClanRankResponse with Double]
+  
+  /* 4200 */ @js.native
+  object AMGetComments extends TopLevel[AMGetComments with Double]
+  
+  /* 4201 */ @js.native
+  object AMGetCommentsResponse extends TopLevel[AMGetCommentsResponse with Double]
+  
+  /* 4116 */ @js.native
+  object AMGetCommunityPrivacyState extends TopLevel[AMGetCommunityPrivacyState with Double]
+  
+  /* 4117 */ @js.native
+  object AMGetCommunityPrivacyStateResponse extends TopLevel[AMGetCommunityPrivacyStateResponse with Double]
+  
+  /* 514 */ @js.native
+  object AMGetFinalPrice extends TopLevel[AMGetFinalPrice with Double]
+  
+  /* 515 */ @js.native
+  object AMGetFinalPriceResponse extends TopLevel[AMGetFinalPriceResponse with Double]
+  
+  /* 4124 */ @js.native
+  object AMGetFriendRelationship extends TopLevel[AMGetFriendRelationship with Double]
+  
+  /* 4125 */ @js.native
+  object AMGetFriendRelationshipResponse extends TopLevel[AMGetFriendRelationshipResponse with Double]
+  
+  /* 4165 */ @js.native
+  object AMGetFriendsLobbies extends TopLevel[AMGetFriendsLobbies with Double]
+  
+  /* 4166 */ @js.native
+  object AMGetFriendsLobbiesResponse extends TopLevel[AMGetFriendsLobbiesResponse with Double]
+  
+  /* 4296 */ @js.native
+  object AMGetFriendsWishlistInfo extends TopLevel[AMGetFriendsWishlistInfo with Double]
+  
+  /* 4297 */ @js.native
+  object AMGetFriendsWishlistInfoResponse extends TopLevel[AMGetFriendsWishlistInfoResponse with Double]
+  
+  /* 4271 */ @js.native
+  object AMGetGSPlayerList extends TopLevel[AMGetGSPlayerList with Double]
+  
+  /* 4272 */ @js.native
+  object AMGetGSPlayerListResponse extends TopLevel[AMGetGSPlayerListResponse with Double]
+  
+  /* 4276 */ @js.native
+  object AMGetGameMembers extends TopLevel[AMGetGameMembers with Double]
+  
+  /* 4277 */ @js.native
+  object AMGetGameMembersResponse extends TopLevel[AMGetGameMembersResponse with Double]
+  
+  /* 4094 */ @js.native
+  object AMGetGiftTargetListRelay extends TopLevel[AMGetGiftTargetListRelay with Double]
+  
+  /* 4120 */ @js.native
+  object AMGetIgnored extends TopLevel[AMGetIgnored with Double]
+  
+  /* 4121 */ @js.native
+  object AMGetIgnoredResponse extends TopLevel[AMGetIgnoredResponse with Double]
+  
+  /* 516 */ @js.native
+  object AMGetLegacyGameKey extends TopLevel[AMGetLegacyGameKey with Double]
+  
+  /* 517 */ @js.native
+  object AMGetLegacyGameKeyResponse extends TopLevel[AMGetLegacyGameKeyResponse with Double]
+  
+  /* 539 */ @js.native
+  object AMGetLicenses extends TopLevel[AMGetLicenses with Double]
+  
+  /* 540 */ @js.native
+  object AMGetLicensesResponse extends TopLevel[AMGetLicensesResponse with Double]
+  
+  /* 4136 */ @js.native
+  object AMGetLobbyList extends TopLevel[AMGetLobbyList with Double]
+  
+  /* 4137 */ @js.native
+  object AMGetLobbyListResponse extends TopLevel[AMGetLobbyListResponse with Double]
+  
+  /* 4138 */ @js.native
+  object AMGetLobbyMetadata extends TopLevel[AMGetLobbyMetadata with Double]
+  
+  /* 4139 */ @js.native
+  object AMGetLobbyMetadataResponse extends TopLevel[AMGetLobbyMetadataResponse with Double]
+  
+  /* 4301 */ @js.native
+  object AMGetNameHistory extends TopLevel[AMGetNameHistory with Double]
+  
+  /* 4302 */ @js.native
+  object AMGetNameHistoryResponse extends TopLevel[AMGetNameHistoryResponse with Double]
+  
+  /* 4333 */ @js.native
+  object AMGetPaypalAgreements extends TopLevel[AMGetPaypalAgreements with Double]
+  
+  /* 4334 */ @js.native
+  object AMGetPaypalAgreementsResponse extends TopLevel[AMGetPaypalAgreementsResponse with Double]
+  
+  /* 4375 */ @js.native
+  object AMGetPendingNotificationCount extends TopLevel[AMGetPendingNotificationCount with Double]
+  
+  /* 4376 */ @js.native
+  object AMGetPendingNotificationCountResponse extends TopLevel[AMGetPendingNotificationCountResponse with Double]
+  
+  /* 4365 */ @js.native
+  object AMGetPlayerBanDetails extends TopLevel[AMGetPlayerBanDetails with Double]
+  
+  /* 4366 */ @js.native
+  object AMGetPlayerBanDetailsResponse extends TopLevel[AMGetPlayerBanDetailsResponse with Double]
+  
+  /* 4289 */ @js.native
+  object AMGetPlayerLinkDetails extends TopLevel[AMGetPlayerLinkDetails with Double]
+  
+  /* 4290 */ @js.native
+  object AMGetPlayerLinkDetailsResponse extends TopLevel[AMGetPlayerLinkDetailsResponse with Double]
+  
+  /* 4184 */ @js.native
+  object AMGetPreviousCBAccount extends TopLevel[AMGetPreviousCBAccount with Double]
+  
+  /* 4185 */ @js.native
+  object AMGetPreviousCBAccountResponse extends TopLevel[AMGetPreviousCBAccountResponse with Double]
+  
+  /* 4206 */ @js.native
+  object AMGetPurchaseStatus extends TopLevel[AMGetPurchaseStatus with Double]
+  
+  /* 4037 */ @js.native
+  object AMGetSingleClanAnnouncement extends TopLevel[AMGetSingleClanAnnouncement with Double]
+  
+  /* 4038 */ @js.native
+  object AMGetSingleClanAnnouncementResponse extends TopLevel[AMGetSingleClanAnnouncementResponse with Double]
+  
+  /* 4048 */ @js.native
+  object AMGetSingleClanEvent extends TopLevel[AMGetSingleClanEvent with Double]
+  
+  /* 4049 */ @js.native
+  object AMGetSingleClanEventResponse extends TopLevel[AMGetSingleClanEventResponse with Double]
+  
+  /* 4278 */ @js.native
+  object AMGetSteamIDForMicroTxn extends TopLevel[AMGetSteamIDForMicroTxn with Double]
+  
+  /* 4279 */ @js.native
+  object AMGetSteamIDForMicroTxnResponse extends TopLevel[AMGetSteamIDForMicroTxnResponse with Double]
+  
+  /* 4247 */ @js.native
+  object AMGetStoredPaymentSummary extends TopLevel[AMGetStoredPaymentSummary with Double]
+  
+  /* 4248 */ @js.native
+  object AMGetStoredPaymentSummaryResponse extends TopLevel[AMGetStoredPaymentSummaryResponse with Double]
+  
+  /* 4119 */ @js.native
+  object AMGetUserAchievementStatus extends TopLevel[AMGetUserAchievementStatus with Double]
+  
+  /* 4175 */ @js.native
+  object AMGetUserClansNews extends TopLevel[AMGetUserClansNews with Double]
+  
+  /* 4174 */ @js.native
+  object AMGetUserClansNewsResponse extends TopLevel[AMGetUserClansNewsResponse with Double]
+  
+  /* 4269 */ @js.native
+  object AMGetUserCurrentGameInfo extends TopLevel[AMGetUserCurrentGameInfo with Double]
+  
+  /* 4270 */ @js.native
+  object AMGetUserCurrentGameInfoResponse extends TopLevel[AMGetUserCurrentGameInfoResponse with Double]
+  
+  /* 4172 */ @js.native
+  object AMGetUserFriendNewsResponse extends TopLevel[AMGetUserFriendNewsResponse with Double]
+  
+  /* 4225 */ @js.native
+  object AMGetUserFriendsMinutesPlayed extends TopLevel[AMGetUserFriendsMinutesPlayed with Double]
+  
+  /* 4226 */ @js.native
+  object AMGetUserFriendsMinutesPlayedResponse extends TopLevel[AMGetUserFriendsMinutesPlayedResponse with Double]
+  
+  /* 4073 */ @js.native
+  object AMGetUserGameStats extends TopLevel[AMGetUserGameStats with Double]
+  
+  /* 4074 */ @js.native
+  object AMGetUserGameStatsResponse extends TopLevel[AMGetUserGameStatsResponse with Double]
+  
+  /* 4237 */ @js.native
+  object AMGetUserGameplayInfo extends TopLevel[AMGetUserGameplayInfo with Double]
+  
+  /* 4238 */ @js.native
+  object AMGetUserGameplayInfoResponse extends TopLevel[AMGetUserGameplayInfoResponse with Double]
+  
+  /* 4316 */ @js.native
+  object AMGetUserGifts extends TopLevel[AMGetUserGifts with Double]
+  
+  /* 4317 */ @js.native
+  object AMGetUserGiftsResponse extends TopLevel[AMGetUserGiftsResponse with Double]
+  
+  /* 921 */ @js.native
+  object AMGetUserGroupStatus extends TopLevel[AMGetUserGroupStatus with Double]
+  
+  /* 922 */ @js.native
+  object AMGetUserGroupStatusResponse extends TopLevel[AMGetUserGroupStatusResponse with Double]
+  
+  /* 4154 */ @js.native
+  object AMGetUserHistory extends TopLevel[AMGetUserHistory with Double]
+  
+  /* 4146 */ @js.native
+  object AMGetUserHistoryResponse extends TopLevel[AMGetUserHistoryResponse with Double]
+  
+  /* 4190 */ @js.native
+  object AMGetUserLicenseHistory extends TopLevel[AMGetUserLicenseHistory with Double]
+  
+  /* 4191 */ @js.native
+  object AMGetUserLicenseHistoryResponse extends TopLevel[AMGetUserLicenseHistoryResponse with Double]
+  
+  /* 4282 */ @js.native
+  object AMGetUserLicenseList extends TopLevel[AMGetUserLicenseList with Double]
+  
+  /* 4283 */ @js.native
+  object AMGetUserLicenseListResponse extends TopLevel[AMGetUserLicenseListResponse with Double]
+  
+  /* 4227 */ @js.native
+  object AMGetUserMinutesPlayed extends TopLevel[AMGetUserMinutesPlayed with Double]
+  
+  /* 4228 */ @js.native
+  object AMGetUserMinutesPlayedResponse extends TopLevel[AMGetUserMinutesPlayedResponse with Double]
+  
+  /* 4150 */ @js.native
+  object AMGetUserNews extends TopLevel[AMGetUserNews with Double]
+  
+  /* 4151 */ @js.native
+  object AMGetUserNewsResponse extends TopLevel[AMGetUserNewsResponse with Double]
+  
+  /* 4147 */ @js.native
+  object AMGetUserNewsSubscriptions extends TopLevel[AMGetUserNewsSubscriptions with Double]
+  
+  /* 4148 */ @js.native
+  object AMGetUserNewsSubscriptionsResponse extends TopLevel[AMGetUserNewsSubscriptionsResponse with Double]
+  
+  /* 4211 */ @js.native
+  object AMGetUserStats extends TopLevel[AMGetUserStats with Double]
+  
+  /* 4292 */ @js.native
+  object AMGetUserVacBanList extends TopLevel[AMGetUserVacBanList with Double]
+  
+  /* 4293 */ @js.native
+  object AMGetUserVacBanListResponse extends TopLevel[AMGetUserVacBanListResponse with Double]
+  
+  /* 4249 */ @js.native
+  object AMGetWalletConversionRate extends TopLevel[AMGetWalletConversionRate with Double]
+  
+  /* 4250 */ @js.native
+  object AMGetWalletConversionRateResponse extends TopLevel[AMGetWalletConversionRateResponse with Double]
+  
+  /* 4244 */ @js.native
+  object AMGetWalletDetails extends TopLevel[AMGetWalletDetails with Double]
+  
+  /* 4245 */ @js.native
+  object AMGetWalletDetailsResponse extends TopLevel[AMGetWalletDetailsResponse with Double]
+  
+  /* 4108 */ @js.native
+  object AMGiftRevoked extends TopLevel[AMGiftRevoked with Double]
+  
+  /* 4356 */ @js.native
+  object AMGrantCoupon extends TopLevel[AMGrantCoupon with Double]
+  
+  /* 4357 */ @js.native
+  object AMGrantCouponResponse extends TopLevel[AMGrantCouponResponse with Double]
+  
+  /* 566 */ @js.native
+  object AMGrantGuestPasses extends TopLevel[AMGrantGuestPasses with Double]
+  
+  /* 4361 */ @js.native
+  object AMGrantGuestPasses2 extends TopLevel[AMGrantGuestPasses2 with Double]
+  
+  /* 4362 */ @js.native
+  object AMGrantGuestPasses2Response extends TopLevel[AMGrantGuestPasses2Response with Double]
+  
+  /* 4328 */ @js.native
+  object AMHandlePendingTransaction extends TopLevel[AMHandlePendingTransaction with Double]
+  
+  /* 4360 */ @js.native
+  object AMHandlePendingTransactionResponse extends TopLevel[AMHandlePendingTransactionResponse with Double]
+  
+  /* 512 */ @js.native
+  object AMInitPurchase extends TopLevel[AMInitPurchase with Double]
+  
+  /* 560 */ @js.native
+  object AMInitPurchaseResponse extends TopLevel[AMInitPurchaseResponse with Double]
+  
+  /* 564 */ @js.native
+  object AMInviteUserToClan extends TopLevel[AMInviteUserToClan with Double]
+  
+  /* 4308 */ @js.native
+  object AMIsAccountInCaptchaGracePeriod extends TopLevel[AMIsAccountInCaptchaGracePeriod with Double]
+  
+  /* 4309 */ @js.native
+  object AMIsAccountInCaptchaGracePeriodResponse extends TopLevel[AMIsAccountInCaptchaGracePeriodResponse with Double]
+  
+  /* 4358 */ @js.native
+  object AMIsPackageRestrictedInUserCountry extends TopLevel[AMIsPackageRestrictedInUserCountry with Double]
+  
+  /* 4359 */ @js.native
+  object AMIsPackageRestrictedInUserCountryResponse extends TopLevel[AMIsPackageRestrictedInUserCountryResponse with Double]
+  
+  /* 527 */ @js.native
+  object AMIsUserBanned extends TopLevel[AMIsUserBanned with Double]
+  
+  /* 4092 */ @js.native
+  object AMIsValidAccountID extends TopLevel[AMIsValidAccountID with Double]
+  
+  /* 4078 */ @js.native
+  object AMJoinPublicClan extends TopLevel[AMJoinPublicClan with Double]
+  
+  /* 4060 */ @js.native
+  object AMKickUserFromClan extends TopLevel[AMKickUserFromClan with Double]
+  
+  /* 4010 */ @js.native
+  object AMLeaveClan extends TopLevel[AMLeaveClan with Double]
+  
+  /* 529 */ @js.native
+  object AMLoadActivationCodes extends TopLevel[AMLoadActivationCodes with Double]
+  
+  /* 530 */ @js.native
+  object AMLoadActivationCodesResponse extends TopLevel[AMLoadActivationCodesResponse with Double]
+  
+  /* 524 */ @js.native
+  object AMLoadOEMTickets extends TopLevel[AMLoadOEMTickets with Double]
+  
+  /* 562 */ @js.native
+  object AMLockProfile extends TopLevel[AMLockProfile with Double]
+  
+  /* 532 */ @js.native
+  object AMLookupKey extends TopLevel[AMLookupKey with Double]
+  
+  /* 531 */ @js.native
+  object AMLookupKeyResponse extends TopLevel[AMLookupKeyResponse with Double]
+  
+  /* 4391 */ @js.native
+  object AMMOLPayment extends TopLevel[AMMOLPayment with Double]
+  
+  /* 4392 */ @js.native
+  object AMMOLPaymentResponse extends TopLevel[AMMOLPaymentResponse with Double]
+  
+  /* 4257 */ @js.native
+  object AMMarketingTreatmentUpdate extends TopLevel[AMMarketingTreatmentUpdate with Double]
+  
+  /* 4378 */ @js.native
+  object AMMoPayPayment extends TopLevel[AMMoPayPayment with Double]
+  
+  /* 4379 */ @js.native
+  object AMMoPayPaymentResponse extends TopLevel[AMMoPayPaymentResponse with Double]
+  
+  /* 4300 */ @js.native
+  object AMNameChange extends TopLevel[AMNameChange with Double]
+  
+  /* 523 */ @js.native
+  object AMNewChallenge extends TopLevel[AMNewChallenge with Double]
+  
+  /* 4079 */ @js.native
+  object AMNotifyChatOfClanChange extends TopLevel[AMNotifyChatOfClanChange with Double]
+  
+  /* 6508 */ @js.native
+  object AMNotifySessionDeviceAuthorized extends TopLevel[AMNotifySessionDeviceAuthorized with Double]
+  
+  /* 596 */ @js.native
+  object AMP2PIntroducerMessage extends TopLevel[AMP2PIntroducerMessage with Double]
+  
+  /* 4377 */ @js.native
+  object AMPasswordHashUpgrade extends TopLevel[AMPasswordHashUpgrade with Double]
+  
+  /* 4400 */ @js.native
+  object AMPayPalPaymentsHubPayment extends TopLevel[AMPayPalPaymentsHubPayment with Double]
+  
+  /* 4401 */ @js.native
+  object AMPayPalPaymentsHubPaymentResponse extends TopLevel[AMPayPalPaymentsHubPaymentResponse with Double]
+  
+  /* 4387 */ @js.native
+  object AMPayelpPayment extends TopLevel[AMPayelpPayment with Double]
+  
+  /* 4388 */ @js.native
+  object AMPayelpPaymentResponse extends TopLevel[AMPayelpPaymentResponse with Double]
+  
+  /* 4372 */ @js.native
+  object AMPersonaChangeResponse extends TopLevel[AMPersonaChangeResponse with Double]
+  
+  /* 4389 */ @js.native
+  object AMPlayerGetClanBasicDetails extends TopLevel[AMPlayerGetClanBasicDetails with Double]
+  
+  /* 4390 */ @js.native
+  object AMPlayerGetClanBasicDetailsResponse extends TopLevel[AMPlayerGetClanBasicDetailsResponse with Double]
+  
+  /* 4322 */ @js.native
+  object AMPlayerHostedOnGameServer extends TopLevel[AMPlayerHostedOnGameServer with Double]
+  
+  /* 4266 */ @js.native
+  object AMPlayerNicknameList extends TopLevel[AMPlayerNicknameList with Double]
+  
+  /* 4267 */ @js.native
+  object AMPlayerNicknameListResponse extends TopLevel[AMPlayerNicknameListResponse with Double]
+  
+  /* 557 */ @js.native
+  object AMPrimePersonaStateCache extends TopLevel[AMPrimePersonaStateCache with Double]
+  
+  /* 4162 */ @js.native
+  object AMProbeClanMembershipList extends TopLevel[AMProbeClanMembershipList with Double]
+  
+  /* 4163 */ @js.native
+  object AMProbeClanMembershipListResponse extends TopLevel[AMProbeClanMembershipListResponse with Double]
+  
+  /* 575 */ @js.native
+  object AMPublishChatMemberInfo extends TopLevel[AMPublishChatMemberInfo with Double]
+  
+  /* 4004 */ @js.native
+  object AMPublishChatMetadata extends TopLevel[AMPublishChatMetadata with Double]
+  
+  /* 4025 */ @js.native
+  object AMPublishChatRoomInfo extends TopLevel[AMPublishChatRoomInfo with Double]
+  
+  /* 513 */ @js.native
+  object AMPurchaseResponse extends TopLevel[AMPurchaseResponse with Double]
+  
+  /* 4325 */ @js.native
+  object AMRecordBanEnforcement extends TopLevel[AMRecordBanEnforcement with Double]
+  
+  /* 563 */ @js.native
+  object AMRefreshGuestPasses extends TopLevel[AMRefreshGuestPasses with Double]
+  
+  /* 2210 */ @js.native
+  object AMRefreshSessions extends TopLevel[AMRefreshSessions with Double]
+  
+  /* 528 */ @js.native
+  object AMRegisterKey extends TopLevel[AMRegisterKey with Double]
+  
+  /* 4253 */ @js.native
+  object AMRelayGetFriendsWhoPlayGame extends TopLevel[AMRelayGetFriendsWhoPlayGame with Double]
+  
+  /* 4254 */ @js.native
+  object AMRelayGetFriendsWhoPlayGameResponse extends TopLevel[AMRelayGetFriendsWhoPlayGameResponse with Double]
+  
+  /* 555 */ @js.native
+  object AMRelayPublishStatus extends TopLevel[AMRelayPublishStatus with Double]
+  
+  /* 2201 */ @js.native
+  object AMRelayToGC extends TopLevel[AMRelayToGC with Double]
+  
+  /* 568 */ @js.native
+  object AMReloadAccount extends TopLevel[AMReloadAccount with Double]
+  
+  /* 4284 */ @js.native
+  object AMReloadGameGroupPolicy extends TopLevel[AMReloadGameGroupPolicy with Double]
+  
+  /* 4083 */ @js.native
+  object AMRemoveFriend extends TopLevel[AMRemoveFriend with Double]
+  
+  /* 4281 */ @js.native
+  object AMRemovePublisherUser extends TopLevel[AMRemovePublisherUser with Double]
+  
+  /* 4342 */ @js.native
+  object AMRenewAgreement extends TopLevel[AMRenewAgreement with Double]
+  
+  /* 4337 */ @js.native
+  object AMRenewLicense extends TopLevel[AMRenewLicense with Double]
+  
+  /* 582 */ @js.native
+  object AMRequestAccountData extends TopLevel[AMRequestAccountData with Double]
+  
+  /* 583 */ @js.native
+  object AMRequestAccountDataResponse extends TopLevel[AMRequestAccountDataResponse with Double]
+  
+  /* 4058 */ @js.native
+  object AMRequestChatMetadata extends TopLevel[AMRequestChatMetadata with Double]
+  
+  /* 4008 */ @js.native
+  object AMRequestClanData extends TopLevel[AMRequestClanData with Double]
+  
+  /* 4329 */ @js.native
+  object AMRequestClanDetails extends TopLevel[AMRequestClanDetails with Double]
+  
+  /* 4008 */ @js.native
+  object AMRequestFriendData extends TopLevel[AMRequestFriendData with Double]
+  
+  /* 556 */ @js.native
+  object AMResetCommunityContent extends TopLevel[AMResetCommunityContent with Double]
+  
+  /* 4197 */ @js.native
+  object AMResetUserVerificationGSByIP extends TopLevel[AMResetUserVerificationGSByIP with Double]
+  
+  /* 4385 */ @js.native
+  object AMResolveNegativeWalletCredits extends TopLevel[AMResolveNegativeWalletCredits with Double]
+  
+  /* 4386 */ @js.native
+  object AMResolveNegativeWalletCreditsResponse extends TopLevel[AMResolveNegativeWalletCreditsResponse with Double]
+  
+  /* 4080 */ @js.native
+  object AMResubmitPurchase extends TopLevel[AMResubmitPurchase with Double]
+  
+  /* 536 */ @js.native
+  object AMReverseChargeback extends TopLevel[AMReverseChargeback with Double]
+  
+  /* 537 */ @js.native
+  object AMReverseChargebackResponse extends TopLevel[AMReverseChargebackResponse with Double]
+  
+  /* 4242 */ @js.native
+  object AMRevokeLegacyGameKeys extends TopLevel[AMRevokeLegacyGameKeys with Double]
+  
+  /* 561 */ @js.native
+  object AMRevokePurchaseResponse extends TopLevel[AMRevokePurchaseResponse with Double]
+  
+  /* 4326 */ @js.native
+  object AMRollbackGiftTransfer extends TopLevel[AMRollbackGiftTransfer with Double]
+  
+  /* 4327 */ @js.native
+  object AMRollbackGiftTransferResponse extends TopLevel[AMRollbackGiftTransferResponse with Double]
+  
+  /* 4219 */ @js.native
+  object AMRouteFriendMsg extends TopLevel[AMRouteFriendMsg with Double]
+  
+  /* 4009 */ @js.native
+  object AMRouteToClients extends TopLevel[AMRouteToClients with Double]
+  
+  /* 4412 */ @js.native
+  object AMSendAccountInfoUpdate extends TopLevel[AMSendAccountInfoUpdate with Double]
+  
+  /* 4343 */ @js.native
+  object AMSendEmail extends TopLevel[AMSendEmail with Double]
+  
+  /* 4152 */ @js.native
+  object AMSendQueuedEmails extends TopLevel[AMSendQueuedEmails with Double]
+  
+  /* 508 */ @js.native
+  object AMSendSystemIMToUser extends TopLevel[AMSendSystemIMToUser with Double]
+  
+  /* 4126 */ @js.native
+  object AMServiceModulesCache extends TopLevel[AMServiceModulesCache with Double]
+  
+  /* 4127 */ @js.native
+  object AMServiceModulesCall extends TopLevel[AMServiceModulesCall with Double]
+  
+  /* 4128 */ @js.native
+  object AMServiceModulesCallResponse extends TopLevel[AMServiceModulesCallResponse with Double]
+  
+  /* 4045 */ @js.native
+  object AMSessionInfoRequest extends TopLevel[AMSessionInfoRequest with Double]
+  
+  /* 4046 */ @js.native
+  object AMSessionInfoResponse extends TopLevel[AMSessionInfoResponse with Double]
+  
+  /* 4363 */ @js.native
+  object AMSessionQuery extends TopLevel[AMSessionQuery with Double]
+  
+  /* 4364 */ @js.native
+  object AMSessionQueryResponse extends TopLevel[AMSessionQueryResponse with Double]
+  
+  /* 4064 */ @js.native
+  object AMSetAccountDetails extends TopLevel[AMSetAccountDetails with Double]
+  
+  /* 584 */ @js.native
+  object AMSetAccountFlags extends TopLevel[AMSetAccountFlags with Double]
+  
+  /* 4071 */ @js.native
+  object AMSetAccountLinks extends TopLevel[AMSetAccountLinks with Double]
+  
+  /* 4072 */ @js.native
+  object AMSetAccountLinksResponse extends TopLevel[AMSetAccountLinksResponse with Double]
+  
+  /* 519 */ @js.native
+  object AMSetAccountTrustedRequest extends TopLevel[AMSetAccountTrustedRequest with Double]
+  
+  /* 591 */ @js.native
+  object AMSetAvatar extends TopLevel[AMSetAvatar with Double]
+  
+  /* 4068 */ @js.native
+  object AMSetClanDetails extends TopLevel[AMSetClanDetails with Double]
+  
+  /* 4354 */ @js.native
+  object AMSetClanName extends TopLevel[AMSetClanName with Double]
+  
+  /* 4355 */ @js.native
+  object AMSetClanNameResponse extends TopLevel[AMSetClanNameResponse with Double]
+  
+  /* 4056 */ @js.native
+  object AMSetClanPOTW extends TopLevel[AMSetClanPOTW with Double]
+  
+  /* 4057 */ @js.native
+  object AMSetClanPOTWResponse extends TopLevel[AMSetClanPOTWResponse with Double]
+  
+  /* 4043 */ @js.native
+  object AMSetClanPermissionBits extends TopLevel[AMSetClanPermissionBits with Double]
+  
+  /* 4044 */ @js.native
+  object AMSetClanPermissionBitsResponse extends TopLevel[AMSetClanPermissionBitsResponse with Double]
+  
+  /* 4021 */ @js.native
+  object AMSetClanPermissionSettings extends TopLevel[AMSetClanPermissionSettings with Double]
+  
+  /* 4022 */ @js.native
+  object AMSetClanPermissionSettingsResponse extends TopLevel[AMSetClanPermissionSettingsResponse with Double]
+  
+  /* 4052 */ @js.native
+  object AMSetClanRank extends TopLevel[AMSetClanRank with Double]
+  
+  /* 4053 */ @js.native
+  object AMSetClanRankResponse extends TopLevel[AMSetClanRankResponse with Double]
+  
+  /* 4114 */ @js.native
+  object AMSetCommunityProfileSettings extends TopLevel[AMSetCommunityProfileSettings with Double]
+  
+  /* 4115 */ @js.native
+  object AMSetCommunityProfileSettingsResponse extends TopLevel[AMSetCommunityProfileSettingsResponse with Double]
+  
+  /* 4063 */ @js.native
+  object AMSetCommunityState extends TopLevel[AMSetCommunityState with Double]
+  
+  /* 4268 */ @js.native
+  object AMSetDRMTestConfig extends TopLevel[AMSetDRMTestConfig with Double]
+  
+  /* 4123 */ @js.native
+  object AMSetFriendRelationshipNone extends TopLevel[AMSetFriendRelationshipNone with Double]
+  
+  /* 4096 */ @js.native
+  object AMSetIgnored extends TopLevel[AMSetIgnored with Double]
+  
+  /* 4122 */ @js.native
+  object AMSetIgnoredResponse extends TopLevel[AMSetIgnoredResponse with Double]
+  
+  /* 4153 */ @js.native
+  object AMSetLicenseFlags extends TopLevel[AMSetLicenseFlags with Double]
+  
+  /* 590 */ @js.native
+  object AMSetPersonaName extends TopLevel[AMSetPersonaName with Double]
+  
+  /* 4255 */ @js.native
+  object AMSetPreApproval extends TopLevel[AMSetPreApproval with Double]
+  
+  /* 4256 */ @js.native
+  object AMSetPreApprovalResponse extends TopLevel[AMSetPreApprovalResponse with Double]
+  
+  /* 4005 */ @js.native
+  object AMSetProfileURL extends TopLevel[AMSetProfileURL with Double]
+  
+  /* 4350 */ @js.native
+  object AMSetUserGiftUnowned extends TopLevel[AMSetUserGiftUnowned with Double]
+  
+  /* 4351 */ @js.native
+  object AMSetUserGiftUnownedResponse extends TopLevel[AMSetUserGiftUnownedResponse with Double]
+  
+  /* 4149 */ @js.native
+  object AMSetUserNewsSubscriptions extends TopLevel[AMSetUserNewsSubscriptions with Double]
+  
+  /* 4404 */ @js.native
+  object AMSmart2PayPayment extends TopLevel[AMSmart2PayPayment with Double]
+  
+  /* 4405 */ @js.native
+  object AMSmart2PayPaymentResponse extends TopLevel[AMSmart2PayPaymentResponse with Double]
+  
+  /* 4181 */ @js.native
+  object AMStoreCancelPurchase extends TopLevel[AMStoreCancelPurchase with Double]
+  
+  /* 4180 */ @js.native
+  object AMStoreCompletePurchase extends TopLevel[AMStoreCompletePurchase with Double]
+  
+  /* 4178 */ @js.native
+  object AMStoreGetFinalPrice extends TopLevel[AMStoreGetFinalPrice with Double]
+  
+  /* 4179 */ @js.native
+  object AMStoreGetFinalPriceResponse extends TopLevel[AMStoreGetFinalPriceResponse with Double]
+  
+  /* 4176 */ @js.native
+  object AMStoreInitPurchase extends TopLevel[AMStoreInitPurchase with Double]
+  
+  /* 4177 */ @js.native
+  object AMStoreInitPurchaseResponse extends TopLevel[AMStoreInitPurchaseResponse with Double]
+  
+  /* 4182 */ @js.native
+  object AMStorePurchaseResponse extends TopLevel[AMStorePurchaseResponse with Double]
+  
+  /* 4236 */ @js.native
+  object AMStoreUserStats extends TopLevel[AMStoreUserStats with Double]
+  
+  /* 4312 */ @js.native
+  object AMStoreUserStatsResponse extends TopLevel[AMStoreUserStatsResponse with Double]
+  
+  /* 4291 */ @js.native
+  object AMSubscribeToPersonaFeed extends TopLevel[AMSubscribeToPersonaFeed with Double]
+  
+  /* 4195 */ @js.native
+  object AMSupportChangeEmail extends TopLevel[AMSupportChangeEmail with Double]
+  
+  /* 4194 */ @js.native
+  object AMSupportChangePassword extends TopLevel[AMSupportChangePassword with Double]
+  
+  /* 4196 */ @js.native
+  object AMSupportChangeSecretQA extends TopLevel[AMSupportChangeSecretQA with Double]
+  
+  /* 4199 */ @js.native
+  object AMSupportEnableOrDisable extends TopLevel[AMSupportEnableOrDisable with Double]
+  
+  /* 4209 */ @js.native
+  object AMSupportIsAccountEnabled extends TopLevel[AMSupportIsAccountEnabled with Double]
+  
+  /* 4210 */ @js.native
+  object AMSupportIsAccountEnabledResponse extends TopLevel[AMSupportIsAccountEnabledResponse with Double]
+  
+  /* 4212 */ @js.native
+  object AMSupportKickSession extends TopLevel[AMSupportKickSession with Double]
+  
+  /* 4307 */ @js.native
+  object AMSupportRemoveAccountSecurity extends TopLevel[AMSupportRemoveAccountSecurity with Double]
+  
+  /* 4348 */ @js.native
+  object AMSwapKioskDeposit extends TopLevel[AMSwapKioskDeposit with Double]
+  
+  /* 4349 */ @js.native
+  object AMSwapKioskDepositResponse extends TopLevel[AMSwapKioskDepositResponse with Double]
+  
+  /* 4220 */ @js.native
+  object AMTicketAuthRequestOrResponse extends TopLevel[AMTicketAuthRequestOrResponse with Double]
+  
+  /* 5812 */ @js.native
+  object AMToMDSGetDepotDecryptionKey extends TopLevel[AMToMDSGetDepotDecryptionKey with Double]
+  
+  /* 4133 */ @js.native
+  object AMTrackFailedAuthByIP extends TopLevel[AMTrackFailedAuthByIP with Double]
+  
+  /* 4320 */ @js.native
+  object AMTransferLockedGifts extends TopLevel[AMTransferLockedGifts with Double]
+  
+  /* 4321 */ @js.native
+  object AMTransferLockedGiftsResponse extends TopLevel[AMTransferLockedGiftsResponse with Double]
+  
+  /* 4402 */ @js.native
+  object AMTwoFactorRecoverAuthenticatorRequest extends TopLevel[AMTwoFactorRecoverAuthenticatorRequest with Double]
+  
+  /* 4403 */ @js.native
+  object AMTwoFactorRecoverAuthenticatorResponse extends TopLevel[AMTwoFactorRecoverAuthenticatorResponse with Double]
+  
+  /* 4067 */ @js.native
+  object AMUnBanFromChat extends TopLevel[AMUnBanFromChat with Double]
+  
+  /* 4186 */ @js.native
+  object AMUpdateBillingAddress extends TopLevel[AMUpdateBillingAddress with Double]
+  
+  /* 4187 */ @js.native
+  object AMUpdateBillingAddressResponse extends TopLevel[AMUpdateBillingAddressResponse with Double]
+  
+  /* 4003 */ @js.native
+  object AMUpdateChatMetadata extends TopLevel[AMUpdateChatMetadata with Double]
+  
+  /* 4029 */ @js.native
+  object AMUpdateClanAnnouncement extends TopLevel[AMUpdateClanAnnouncement with Double]
+  
+  /* 4030 */ @js.native
+  object AMUpdateClanAnnouncementResponse extends TopLevel[AMUpdateClanAnnouncementResponse with Double]
+  
+  /* 4015 */ @js.native
+  object AMUpdateClanEvent extends TopLevel[AMUpdateClanEvent with Double]
+  
+  /* 4016 */ @js.native
+  object AMUpdateClanEventResponse extends TopLevel[AMUpdateClanEventResponse with Double]
+  
+  /* 4198 */ @js.native
+  object AMUpdateGSPlayStats extends TopLevel[AMUpdateGSPlayStats with Double]
+  
+  /* 4275 */ @js.native
+  object AMUpdatePersonaStateCache extends TopLevel[AMUpdatePersonaStateCache with Double]
+  
+  /* 4305 */ @js.native
+  object AMUpdateProviderStatus extends TopLevel[AMUpdateProviderStatus with Double]
+  
+  /* 504 */ @js.native
+  object AMUpdateUserBanRequest extends TopLevel[AMUpdateUserBanRequest with Double]
+  
+  /* 4110 */ @js.native
+  object AMUserClanList extends TopLevel[AMUserClanList with Double]
+  
+  /* 4111 */ @js.native
+  object AMUserClanListResponse extends TopLevel[AMUserClanListResponse with Double]
+  
+  /* 4286 */ @js.native
+  object AMVACStatusUpdate extends TopLevel[AMVACStatusUpdate with Double]
+  
+  /* 4131 */ @js.native
+  object AMValidateCaptchaDataForIP extends TopLevel[AMValidateCaptchaDataForIP with Double]
+  
+  /* 4132 */ @js.native
+  object AMValidateCaptchaDataForIPResponse extends TopLevel[AMValidateCaptchaDataForIPResponse with Double]
+  
+  /* 4231 */ @js.native
+  object AMValidateEmailLink extends TopLevel[AMValidateEmailLink with Double]
+  
+  /* 4232 */ @js.native
+  object AMValidateEmailLinkResponse extends TopLevel[AMValidateEmailLinkResponse with Double]
+  
+  /* 4406 */ @js.native
+  object AMValidatePasswordResetCodeAndSendSmsRequest extends TopLevel[AMValidatePasswordResetCodeAndSendSmsRequest with Double]
+  
+  /* 4407 */ @js.native
+  object AMValidatePasswordResetCodeAndSendSmsResponse extends TopLevel[AMValidatePasswordResetCodeAndSendSmsResponse with Double]
+  
+  /* 4047 */ @js.native
+  object AMValidateWGToken extends TopLevel[AMValidateWGToken with Double]
+  
+  /* 4062 */ @js.native
+  object AMValidateWGTokenResponse extends TopLevel[AMValidateWGTokenResponse with Double]
+  
+  /* 552 */ @js.native
+  object AMVerfiyUser extends TopLevel[AMVerfiyUser with Double]
+  
+  /* 4222 */ @js.native
+  object AMVerifyDepotManagementRights extends TopLevel[AMVerifyDepotManagementRights with Double]
+  
+  /* 4223 */ @js.native
+  object AMVerifyDepotManagementRightsResponse extends TopLevel[AMVerifyDepotManagementRightsResponse with Double]
+  
+  /* 4095 */ @js.native
+  object AMWipeFriendsList extends TopLevel[AMWipeFriendsList with Double]
+  
+  /* 4142 */ @js.native
+  object AMWriteNews extends TopLevel[AMWriteNews with Double]
+  
+  /* 4344 */ @js.native
+  object AMXsollaPayment extends TopLevel[AMXsollaPayment with Double]
+  
+  /* 4345 */ @js.native
+  object AMXsollaPaymentResponse extends TopLevel[AMXsollaPaymentResponse with Double]
+  
+  /* 1519 */ @js.native
+  object ATSCSPerfTestResponse extends TopLevel[ATSCSPerfTestResponse with Double]
+  
+  /* 1518 */ @js.native
+  object ATSCSPerfTestTask extends TopLevel[ATSCSPerfTestTask with Double]
+  
+  /* 1508 */ @js.native
+  object ATSCallTest extends TopLevel[ATSCallTest with Double]
+  
+  /* 1509 */ @js.native
+  object ATSCallTestReply extends TopLevel[ATSCallTestReply with Double]
+  
+  /* 1506 */ @js.native
+  object ATSCycleTCM extends TopLevel[ATSCycleTCM with Double]
+  
+  /* 1516 */ @js.native
+  object ATSExternalStressActionResult extends TopLevel[ATSExternalStressActionResult with Double]
+  
+  /* 1512 */ @js.native
+  object ATSExternalStressJobQueued extends TopLevel[ATSExternalStressJobQueued with Double]
+  
+  /* 1513 */ @js.native
+  object ATSExternalStressJobRunning extends TopLevel[ATSExternalStressJobRunning with Double]
+  
+  /* 1511 */ @js.native
+  object ATSExternalStressJobStart extends TopLevel[ATSExternalStressJobStart with Double]
+  
+  /* 1515 */ @js.native
+  object ATSExternalStressJobStopAll extends TopLevel[ATSExternalStressJobStopAll with Double]
+  
+  /* 1514 */ @js.native
+  object ATSExternalStressJobStopped extends TopLevel[ATSExternalStressJobStopped with Double]
+  
+  /* 1507 */ @js.native
+  object ATSInitDRMSStressTest extends TopLevel[ATSInitDRMSStressTest with Double]
+  
+  /* 1503 */ @js.native
+  object ATSRunFailServerTest extends TopLevel[ATSRunFailServerTest with Double]
+  
+  /* 1510 */ @js.native
+  object ATSStartExternalStress extends TopLevel[ATSStartExternalStress with Double]
+  
+  /* 1501 */ @js.native
+  object ATSStartStressTest extends TopLevel[ATSStartStressTest with Double]
+  
+  /* 1517 */ @js.native
+  object ATSStarted extends TopLevel[ATSStarted with Double]
+  
+  /* 1502 */ @js.native
+  object ATSStopStressTest extends TopLevel[ATSStopStressTest with Double]
+  
+  /* 1505 */ @js.native
+  object ATSUFSPerfTestResponse extends TopLevel[ATSUFSPerfTestResponse with Double]
+  
+  /* 1504 */ @js.native
+  object ATSUFSPerfTestTask extends TopLevel[ATSUFSPerfTestTask with Double]
+  
+  /* 1000 */ @js.native
+  object AdminCmd extends TopLevel[AdminCmd with Double]
+  
+  /* 1004 */ @js.native
+  object AdminCmdResponse extends TopLevel[AdminCmdResponse with Double]
+  
+  /* 1020 */ @js.native
+  object AdminConsoleTitle extends TopLevel[AdminConsoleTitle with Double]
+  
+  /* 1024 */ @js.native
+  object AdminGCCommand extends TopLevel[AdminGCCommand with Double]
+  
+  /* 1025 */ @js.native
+  object AdminGCGetCommandList extends TopLevel[AdminGCGetCommandList with Double]
+  
+  /* 1026 */ @js.native
+  object AdminGCGetCommandListResponse extends TopLevel[AdminGCGetCommandListResponse with Double]
+  
+  /* 1023 */ @js.native
+  object AdminGCSpew extends TopLevel[AdminGCSpew with Double]
+  
+  /* 1006 */ @js.native
+  object AdminLogEvent extends TopLevel[AdminLogEvent with Double]
+  
+  /* 1005 */ @js.native
+  object AdminLogListenRequest extends TopLevel[AdminLogListenRequest with Double]
+  
+  /* 1028 */ @js.native
+  object AdminMsgSpew extends TopLevel[AdminMsgSpew with Double]
+  
+  /* 1017 */ @js.native
+  object AdminPwLogon extends TopLevel[AdminPwLogon with Double]
+  
+  /* 1018 */ @js.native
+  object AdminPwLogonResponse extends TopLevel[AdminPwLogonResponse with Double]
+  
+  /* 1019 */ @js.native
+  object AdminSpew extends TopLevel[AdminSpew with Double]
+  
+  /* 115 */ @js.native
+  object Alert extends TopLevel[Alert with Double]
+  
+  /* 550 */ @js.native
+  object AllowUserToPlayQuery extends TopLevel[AllowUserToPlayQuery with Double]
+  
+  /* 551 */ @js.native
+  object AllowUserToPlayResponse extends TopLevel[AllowUserToPlayResponse with Double]
+  
+  /* 200 */ @js.native
+  object AssignSysID extends TopLevel[AssignSysID with Double]
+  
+  /* 3619 */ @js.native
+  object BRPCheckActivationCodes extends TopLevel[BRPCheckActivationCodes with Double]
+  
+  /* 3620 */ @js.native
+  object BRPCheckActivationCodesResponse extends TopLevel[BRPCheckActivationCodesResponse with Double]
+  
+  /* 3610 */ @js.native
+  object BRPCheckFinanceCloseOutDate extends TopLevel[BRPCheckFinanceCloseOutDate with Double]
+  
+  /* 3626 */ @js.native
+  object BRPCheckSettlementReports extends TopLevel[BRPCheckSettlementReports with Double]
+  
+  /* 3607 */ @js.native
+  object BRPCommitGC extends TopLevel[BRPCommitGC with Double]
+  
+  /* 3608 */ @js.native
+  object BRPCommitGCResponse extends TopLevel[BRPCommitGCResponse with Double]
+  
+  /* 3621 */ @js.native
+  object BRPCommitWP extends TopLevel[BRPCommitWP with Double]
+  
+  /* 3622 */ @js.native
+  object BRPCommitWPResponse extends TopLevel[BRPCommitWPResponse with Double]
+  
+  /* 3615 */ @js.native
+  object BRPConvertToCurrentKeys extends TopLevel[BRPConvertToCurrentKeys with Double]
+  
+  /* 3616 */ @js.native
+  object BRPConvertToCurrentKeysResponse extends TopLevel[BRPConvertToCurrentKeysResponse with Double]
+  
+  /* 3609 */ @js.native
+  object BRPFindHungTransactions extends TopLevel[BRPFindHungTransactions with Double]
+  
+  /* 3628 */ @js.native
+  object BRPPostTaxToAvalara extends TopLevel[BRPPostTaxToAvalara with Double]
+  
+  /* 3629 */ @js.native
+  object BRPPostTransactionTax extends TopLevel[BRPPostTransactionTax with Double]
+  
+  /* 3630 */ @js.native
+  object BRPPostTransactionTaxResponse extends TopLevel[BRPPostTransactionTaxResponse with Double]
+  
+  /* 3603 */ @js.native
+  object BRPProcessGCReports extends TopLevel[BRPProcessGCReports with Double]
+  
+  /* 3631 */ @js.native
+  object BRPProcessIMReports extends TopLevel[BRPProcessIMReports with Double]
+  
+  /* 3611 */ @js.native
+  object BRPProcessLicenses extends TopLevel[BRPProcessLicenses with Double]
+  
+  /* 3612 */ @js.native
+  object BRPProcessLicensesResponse extends TopLevel[BRPProcessLicensesResponse with Double]
+  
+  /* 3604 */ @js.native
+  object BRPProcessPPReports extends TopLevel[BRPProcessPPReports with Double]
+  
+  /* 3625 */ @js.native
+  object BRPProcessPartnerPayments extends TopLevel[BRPProcessPartnerPayments with Double]
+  
+  /* 3624 */ @js.native
+  object BRPProcessPaymentRules extends TopLevel[BRPProcessPaymentRules with Double]
+  
+  /* 3602 */ @js.native
+  object BRPProcessUSBankReports extends TopLevel[BRPProcessUSBankReports with Double]
+  
+  /* 3623 */ @js.native
+  object BRPProcessWPReports extends TopLevel[BRPProcessWPReports with Double]
+  
+  /* 3617 */ @js.native
+  object BRPPruneCardUsageStats extends TopLevel[BRPPruneCardUsageStats with Double]
+  
+  /* 3618 */ @js.native
+  object BRPPruneCardUsageStatsResponse extends TopLevel[BRPPruneCardUsageStatsResponse with Double]
+  
+  /* 3613 */ @js.native
+  object BRPRemoveExpiredPaymentData extends TopLevel[BRPRemoveExpiredPaymentData with Double]
+  
+  /* 3614 */ @js.native
+  object BRPRemoveExpiredPaymentDataResponse extends TopLevel[BRPRemoveExpiredPaymentDataResponse with Double]
+  
+  /* 3606 */ @js.native
+  object BRPSettleCB extends TopLevel[BRPSettleCB with Double]
+  
+  /* 3605 */ @js.native
+  object BRPSettleNOVA extends TopLevel[BRPSettleNOVA with Double]
+  
+  /* 3601 */ @js.native
+  object BRPStartShippingJobs extends TopLevel[BRPStartShippingJobs with Double]
+  
+  /* 1407 */ @js.native
+  object BSBannedRequest extends TopLevel[BSBannedRequest with Double]
+  
+  /* 1494 */ @js.native
+  object BSBoaCompraConfirmProductDelivery extends TopLevel[BSBoaCompraConfirmProductDelivery with Double]
+  
+  /* 1495 */ @js.native
+  object BSBoaCompraConfirmProductDeliveryResponse extends TopLevel[BSBoaCompraConfirmProductDeliveryResponse with Double]
+  
+  /* 1416 */ @js.native
+  object BSChaseRFRRequest extends TopLevel[BSChaseRFRRequest with Double]
+  
+  /* 1456 */ @js.native
+  object BSCheckJobRunning extends TopLevel[BSCheckJobRunning with Double]
+  
+  /* 1457 */ @js.native
+  object BSCheckJobRunningResponse extends TopLevel[BSCheckJobRunningResponse with Double]
+  
+  /* 1425 */ @js.native
+  object BSCommitGCTxn extends TopLevel[BSCommitGCTxn with Double]
+  
+  /* 1498 */ @js.native
+  object BSCommitWPTxn extends TopLevel[BSCommitWPTxn with Double]
+  
+  /* 1474 */ @js.native
+  object BSCompletePurchase extends TopLevel[BSCompletePurchase with Double]
+  
+  /* 1475 */ @js.native
+  object BSCompletePurchaseResponse extends TopLevel[BSCompletePurchaseResponse with Double]
+  
+  /* 1470 */ @js.native
+  object BSConvertToCurrentKeys extends TopLevel[BSConvertToCurrentKeys with Double]
+  
+  /* 1471 */ @js.native
+  object BSConvertToCurrentKeysResponse extends TopLevel[BSConvertToCurrentKeysResponse with Double]
+  
+  /* 1496 */ @js.native
+  object BSGenerateBoaCompraMD5 extends TopLevel[BSGenerateBoaCompraMD5 with Double]
+  
+  /* 1497 */ @js.native
+  object BSGenerateBoaCompraMD5Response extends TopLevel[BSGenerateBoaCompraMD5Response with Double]
+  
+  /* 1492 */ @js.native
+  object BSGenerateMoPayMD5 extends TopLevel[BSGenerateMoPayMD5 with Double]
+  
+  /* 1493 */ @js.native
+  object BSGenerateMoPayMD5Response extends TopLevel[BSGenerateMoPayMD5Response with Double]
+  
+  /* 1462 */ @js.native
+  object BSGetBillingAddress extends TopLevel[BSGetBillingAddress with Double]
+  
+  /* 1463 */ @js.native
+  object BSGetBillingAddressResponse extends TopLevel[BSGetBillingAddressResponse with Double]
+  
+  /* 1464 */ @js.native
+  object BSGetCreditCardInfo extends TopLevel[BSGetCreditCardInfo with Double]
+  
+  /* 1465 */ @js.native
+  object BSGetCreditCardInfoResponse extends TopLevel[BSGetCreditCardInfoResponse with Double]
+  
+  /* 1415 */ @js.native
+  object BSGetEvents extends TopLevel[BSGetEvents with Double]
+  
+  /* 1410 */ @js.native
+  object BSGetPayPalUserInfo extends TopLevel[BSGetPayPalUserInfo with Double]
+  
+  /* 1411 */ @js.native
+  object BSGetPayPalUserInfoResponse extends TopLevel[BSGetPayPalUserInfoResponse with Double]
+  
+  /* 1454 */ @js.native
+  object BSGetProPackOrderStatus extends TopLevel[BSGetProPackOrderStatus with Double]
+  
+  /* 1455 */ @js.native
+  object BSGetProPackOrderStatusResponse extends TopLevel[BSGetProPackOrderStatusResponse with Double]
+  
+  /* 1421 */ @js.native
+  object BSInitGCBankXferTxn extends TopLevel[BSInitGCBankXferTxn with Double]
+  
+  /* 1422 */ @js.native
+  object BSInitGCBankXferTxnResponse extends TopLevel[BSInitGCBankXferTxnResponse with Double]
+  
+  /* 1408 */ @js.native
+  object BSInitPayPalTxn extends TopLevel[BSInitPayPalTxn with Double]
+  
+  /* 1409 */ @js.native
+  object BSInitPayPalTxnResponse extends TopLevel[BSInitPayPalTxnResponse with Double]
+  
+  /* 1472 */ @js.native
+  object BSInitPurchase extends TopLevel[BSInitPurchase with Double]
+  
+  /* 1473 */ @js.native
+  object BSInitPurchaseResponse extends TopLevel[BSInitPurchaseResponse with Double]
+  
+  /* 1490 */ @js.native
+  object BSMoPayConfirmProductDelivery extends TopLevel[BSMoPayConfirmProductDelivery with Double]
+  
+  /* 1491 */ @js.native
+  object BSMoPayConfirmProductDeliveryResponse extends TopLevel[BSMoPayConfirmProductDeliveryResponse with Double]
+  
+  /* 1417 */ @js.native
+  object BSPaymentInstrBan extends TopLevel[BSPaymentInstrBan with Double]
+  
+  /* 1418 */ @js.native
+  object BSPaymentInstrBanResponse extends TopLevel[BSPaymentInstrBanResponse with Double]
+  
+  /* 1419 */ @js.native
+  object BSProcessGCReports extends TopLevel[BSProcessGCReports with Double]
+  
+  /* 1420 */ @js.native
+  object BSProcessPPReports extends TopLevel[BSProcessPPReports with Double]
+  
+  /* 1436 */ @js.native
+  object BSProcessUSBankReports extends TopLevel[BSProcessUSBankReports with Double]
+  
+  /* 1476 */ @js.native
+  object BSPruneCardUsageStats extends TopLevel[BSPruneCardUsageStats with Double]
+  
+  /* 1477 */ @js.native
+  object BSPruneCardUsageStatsResponse extends TopLevel[BSPruneCardUsageStatsResponse with Double]
+  
+  /* 1402 */ @js.native
+  object BSPurchaseResponse extends TopLevel[BSPurchaseResponse with Double]
+  
+  /* 1437 */ @js.native
+  object BSPurchaseRunFraudChecks extends TopLevel[BSPurchaseRunFraudChecks with Double]
+  
+  /* 1438 */ @js.native
+  object BSPurchaseRunFraudChecksResponse extends TopLevel[BSPurchaseRunFraudChecksResponse with Double]
+  
+  /* 1401 */ @js.native
+  object BSPurchaseStart extends TopLevel[BSPurchaseStart with Double]
+  
+  /* 1448 */ @js.native
+  object BSQiwiWalletInvoice extends TopLevel[BSQiwiWalletInvoice with Double]
+  
+  /* 1449 */ @js.native
+  object BSQiwiWalletInvoiceResponse extends TopLevel[BSQiwiWalletInvoiceResponse with Double]
+  
+  /* 1440 */ @js.native
+  object BSQueryBankInformation extends TopLevel[BSQueryBankInformation with Double]
+  
+  /* 1441 */ @js.native
+  object BSQueryBankInformationResponse extends TopLevel[BSQueryBankInformationResponse with Double]
+  
+  /* 1428 */ @js.native
+  object BSQueryCBOrderStatus extends TopLevel[BSQueryCBOrderStatus with Double]
+  
+  /* 1429 */ @js.native
+  object BSQueryCBOrderStatusResponse extends TopLevel[BSQueryCBOrderStatusResponse with Double]
+  
+  /* 1484 */ @js.native
+  object BSQueryFindCreditCard extends TopLevel[BSQueryFindCreditCard with Double]
+  
+  /* 1485 */ @js.native
+  object BSQueryFindCreditCardResponse extends TopLevel[BSQueryFindCreditCardResponse with Double]
+  
+  /* 1423 */ @js.native
+  object BSQueryGCBankXferTxn extends TopLevel[BSQueryGCBankXferTxn with Double]
+  
+  /* 1424 */ @js.native
+  object BSQueryGCBankXferTxnResponse extends TopLevel[BSQueryGCBankXferTxnResponse with Double]
+  
+  /* 1432 */ @js.native
+  object BSQueryPaymentInstResponse extends TopLevel[BSQueryPaymentInstResponse with Double]
+  
+  /* 1431 */ @js.native
+  object BSQueryPaymentInstUsage extends TopLevel[BSQueryPaymentInstUsage with Double]
+  
+  /* 1426 */ @js.native
+  object BSQueryTransactionStatus extends TopLevel[BSQueryTransactionStatus with Double]
+  
+  /* 1427 */ @js.native
+  object BSQueryTransactionStatusResponse extends TopLevel[BSQueryTransactionStatusResponse with Double]
+  
+  /* 1433 */ @js.native
+  object BSQueryTxnExtendedInfo extends TopLevel[BSQueryTxnExtendedInfo with Double]
+  
+  /* 1434 */ @js.native
+  object BSQueryTxnExtendedInfoResponse extends TopLevel[BSQueryTxnExtendedInfoResponse with Double]
+  
+  /* 1413 */ @js.native
+  object BSRefundTxn extends TopLevel[BSRefundTxn with Double]
+  
+  /* 1414 */ @js.native
+  object BSRefundTxnResponse extends TopLevel[BSRefundTxnResponse with Double]
+  
+  /* 1468 */ @js.native
+  object BSRemoveExpiredPaymentData extends TopLevel[BSRemoveExpiredPaymentData with Double]
+  
+  /* 1469 */ @js.native
+  object BSRemoveExpiredPaymentDataResponse extends TopLevel[BSRemoveExpiredPaymentDataResponse with Double]
+  
+  /* 1458 */ @js.native
+  object BSResetPackagePurchaseRateLimit extends TopLevel[BSResetPackagePurchaseRateLimit with Double]
+  
+  /* 1459 */ @js.native
+  object BSResetPackagePurchaseRateLimitResponse extends TopLevel[BSResetPackagePurchaseRateLimitResponse with Double]
+  
+  /* 1482 */ @js.native
+  object BSReverseRedeemPOSAKey extends TopLevel[BSReverseRedeemPOSAKey with Double]
+  
+  /* 1483 */ @js.native
+  object BSReverseRedeemPOSAKeyResponse extends TopLevel[BSReverseRedeemPOSAKeyResponse with Double]
+  
+  /* 1430 */ @js.native
+  object BSRunRedFlagReport extends TopLevel[BSRunRedFlagReport with Double]
+  
+  /* 1452 */ @js.native
+  object BSSendShippingRequest extends TopLevel[BSSendShippingRequest with Double]
+  
+  /* 1453 */ @js.native
+  object BSSendShippingRequestResponse extends TopLevel[BSSendShippingRequestResponse with Double]
+  
+  /* 1406 */ @js.native
+  object BSSettleComplete extends TopLevel[BSSettleComplete with Double]
+  
+  /* 1404 */ @js.native
+  object BSSettleNOVA extends TopLevel[BSSettleNOVA with Double]
+  
+  /* 1439 */ @js.native
+  object BSStartShippingJobs extends TopLevel[BSStartShippingJobs with Double]
+  
+  /* 1486 */ @js.native
+  object BSStatusInquiryPOSAKey extends TopLevel[BSStatusInquiryPOSAKey with Double]
+  
+  /* 1487 */ @js.native
+  object BSStatusInquiryPOSAKeyResponse extends TopLevel[BSStatusInquiryPOSAKeyResponse with Double]
+  
+  /* 1478 */ @js.native
+  object BSStoreBankInformation extends TopLevel[BSStoreBankInformation with Double]
+  
+  /* 1479 */ @js.native
+  object BSStoreBankInformationResponse extends TopLevel[BSStoreBankInformationResponse with Double]
+  
+  /* 1435 */ @js.native
+  object BSUpdateConversionRates extends TopLevel[BSUpdateConversionRates with Double]
+  
+  /* 1450 */ @js.native
+  object BSUpdateInventoryFromProPack extends TopLevel[BSUpdateInventoryFromProPack with Double]
+  
+  /* 1451 */ @js.native
+  object BSUpdateInventoryFromProPackResponse extends TopLevel[BSUpdateInventoryFromProPackResponse with Double]
+  
+  /* 1460 */ @js.native
+  object BSUpdatePaymentData extends TopLevel[BSUpdatePaymentData with Double]
+  
+  /* 1461 */ @js.native
+  object BSUpdatePaymentDataResponse extends TopLevel[BSUpdatePaymentDataResponse with Double]
+  
+  /* 1488 */ @js.native
+  object BSValidateMoPaySignature extends TopLevel[BSValidateMoPaySignature with Double]
+  
+  /* 1489 */ @js.native
+  object BSValidateMoPaySignatureResponse extends TopLevel[BSValidateMoPaySignatureResponse with Double]
+  
+  /* 1445 */ @js.native
+  object BSValidateXsollaSignature extends TopLevel[BSValidateXsollaSignature with Double]
+  
+  /* 1446 */ @js.native
+  object BSValidateXsollaSignatureResponse extends TopLevel[BSValidateXsollaSignatureResponse with Double]
+  
+  /* 1480 */ @js.native
+  object BSVerifyPOSAKey extends TopLevel[BSVerifyPOSAKey with Double]
+  
+  /* 1481 */ @js.native
+  object BSVerifyPOSAKeyResponse extends TopLevel[BSVerifyPOSAKeyResponse with Double]
+  
+  /* 8401 */ @js.native
+  object BackpackAddToCurrency extends TopLevel[BackpackAddToCurrency with Double]
+  
+  /* 8402 */ @js.native
+  object BackpackAddToCurrencyResponse extends TopLevel[BackpackAddToCurrencyResponse with Double]
+  
+  /* 8400 */ @js.native
+  object BackpackBase extends TopLevel[BackpackBase with Double]
+  
+  /* 7805 */ @js.native
+  object BadLoginIPList extends TopLevel[BadLoginIPList with Double]
+  
+  /* 400 */ @js.native
+  object BaseAIS extends TopLevel[BaseAIS with Double]
+  
+  /* 500 */ @js.native
+  object BaseAM extends TopLevel[BaseAM with Double]
+  
+  /* 4000 */ @js.native
+  object BaseAMRange2 extends TopLevel[BaseAMRange2 with Double]
+  
+  /* 1500 */ @js.native
+  object BaseATS extends TopLevel[BaseATS with Double]
+  
+  /* 1000 */ @js.native
+  object BaseAdmin extends TopLevel[BaseAdmin with Double]
+  
+  /* 3600 */ @js.native
+  object BaseBRP extends TopLevel[BaseBRP with Double]
+  
+  /* 1400 */ @js.native
+  object BaseBS extends TopLevel[BaseBS with Double]
+  
+  /* 3150 */ @js.native
+  object BaseCCSRange extends TopLevel[BaseCCSRange with Double]
+  
+  /* 1700 */ @js.native
+  object BaseCM extends TopLevel[BaseCM with Double]
+  
+  /* 650 */ @js.native
+  object BaseCS extends TopLevel[BaseCS with Double]
+  
+  /* 1300 */ @js.native
+  object BaseChannelAuth extends TopLevel[BaseChannelAuth with Double]
+  
+  /* 700 */ @js.native
+  object BaseClient extends TopLevel[BaseClient with Double]
+  
+  /* 5400 */ @js.native
+  object BaseClient2 extends TopLevel[BaseClient2 with Double]
+  
+  /* 9800 */ @js.native
+  object BaseClient3 extends TopLevel[BaseClient3 with Double]
+  
+  /* 5600 */ @js.native
+  object BaseDFS extends TopLevel[BaseDFS with Double]
+  
+  /* 1600 */ @js.native
+  object BaseDP extends TopLevel[BaseDP with Double]
+  
+  /* 625 */ @js.native
+  object BaseDRMS extends TopLevel[BaseDRMS with Double]
+  
+  /* 1800 */ @js.native
+  object BaseDSS extends TopLevel[BaseDSS with Double]
+  
+  /* 1900 */ @js.native
+  object BaseEPM extends TopLevel[BaseEPM with Double]
+  
+  /* 1100 */ @js.native
+  object BaseFBS extends TopLevel[BaseFBS with Double]
+  
+  /* 3100 */ @js.native
+  object BaseFTSRange extends TopLevel[BaseFTSRange with Double]
+  
+  /* 1200 */ @js.native
+  object BaseFileXfer extends TopLevel[BaseFileXfer with Double]
+  
+  /* 2200 */ @js.native
+  object BaseGC extends TopLevel[BaseGC with Double]
+  
+  /* 300 */ @js.native
+  object BaseGM extends TopLevel[BaseGM with Double]
+  
+  /* 900 */ @js.native
+  object BaseGameServer extends TopLevel[BaseGameServer with Double]
+  
+  /* 100 */ @js.native
+  object BaseGeneral extends TopLevel[BaseGeneral with Double]
+  
+  /* 3200 */ @js.native
+  object BaseLBSRange extends TopLevel[BaseLBSRange with Double]
+  
+  /* 5800 */ @js.native
+  object BaseMDS extends TopLevel[BaseMDS with Double]
+  
+  /* 3400 */ @js.native
+  object BaseOGS extends TopLevel[BaseOGS with Double]
+  
+  /* 2500 */ @js.native
+  object BaseP2P extends TopLevel[BaseP2P with Double]
+  
+  /* 5000 */ @js.native
+  object BasePSRange extends TopLevel[BasePSRange with Double]
+  
+  /* 2900 */ @js.native
+  object BaseSM extends TopLevel[BaseSM with Double]
+  
+  /* 200 */ @js.native
+  object BaseShell extends TopLevel[BaseShell with Double]
+  
+  /* 3000 */ @js.native
+  object BaseTest extends TopLevel[BaseTest with Double]
+  
+  /* 5200 */ @js.native
+  object BaseUFSRange extends TopLevel[BaseUFSRange with Double]
+  
+  /* 600 */ @js.native
+  object BaseVS extends TopLevel[BaseVS with Double]
+  
+  /* 8700 */ @js.native
+  object BoxMonitorBase extends TopLevel[BoxMonitorBase with Double]
+  
+  /* 8700 */ @js.native
+  object BoxMonitorReportRequest extends TopLevel[BoxMonitorReportRequest with Double]
+  
+  /* 8701 */ @js.native
+  object BoxMonitorReportResponse extends TopLevel[BoxMonitorReportResponse with Double]
+  
+  /* 3153 */ @js.native
+  object CCSAddComment extends TopLevel[CCSAddComment with Double]
+  
+  /* 3154 */ @js.native
+  object CCSAddCommentResponse extends TopLevel[CCSAddCommentResponse with Double]
+  
+  /* 3161 */ @js.native
+  object CCSDeleteAllCommentsByAuthor extends TopLevel[CCSDeleteAllCommentsByAuthor with Double]
+  
+  /* 3162 */ @js.native
+  object CCSDeleteAllCommentsByAuthorResponse extends TopLevel[CCSDeleteAllCommentsByAuthorResponse with Double]
+  
+  /* 3155 */ @js.native
+  object CCSDeleteComment extends TopLevel[CCSDeleteComment with Double]
+  
+  /* 3156 */ @js.native
+  object CCSDeleteCommentResponse extends TopLevel[CCSDeleteCommentResponse with Double]
+  
+  /* 3151 */ @js.native
+  object CCSGetComments extends TopLevel[CCSGetComments with Double]
+  
+  /* 3159 */ @js.native
+  object CCSGetCommentsForNews extends TopLevel[CCSGetCommentsForNews with Double]
+  
+  /* 3160 */ @js.native
+  object CCSGetCommentsForNewsResponse extends TopLevel[CCSGetCommentsForNewsResponse with Double]
+  
+  /* 3152 */ @js.native
+  object CCSGetCommentsResponse extends TopLevel[CCSGetCommentsResponse with Double]
+  
+  /* 3158 */ @js.native
+  object CCSNotifyCommentCount extends TopLevel[CCSNotifyCommentCount with Double]
+  
+  /* 3157 */ @js.native
+  object CCSPreloadComments extends TopLevel[CCSPreloadComments with Double]
+  
+  /* 7602 */ @js.native
+  object CEGPropStatusDRMSRequest extends TopLevel[CEGPropStatusDRMSRequest with Double]
+  
+  /* 7603 */ @js.native
+  object CEGPropStatusDRMSResponse extends TopLevel[CEGPropStatusDRMSResponse with Double]
+  
+  /* 7600 */ @js.native
+  object CEGVersionSetEnableDisableRequest extends TopLevel[CEGVersionSetEnableDisableRequest with Double]
+  
+  /* 7601 */ @js.native
+  object CEGVersionSetEnableDisableResponse extends TopLevel[CEGVersionSetEnableDisableResponse with Double]
+  
+  /* 7604 */ @js.native
+  object CEGWhackFailureReportRequest extends TopLevel[CEGWhackFailureReportRequest with Double]
+  
+  /* 7605 */ @js.native
+  object CEGWhackFailureReportResponse extends TopLevel[CEGWhackFailureReportResponse with Double]
+  
+  /* 1703 */ @js.native
+  object CMAppInfoResponseDeprecated extends TopLevel[CMAppInfoResponseDeprecated with Double]
+  
+  /* 1701 */ @js.native
+  object CMSetAllowState extends TopLevel[CMSetAllowState with Double]
+  
+  /* 1702 */ @js.native
+  object CMSpewAllowState extends TopLevel[CMSpewAllowState with Double]
+  
+  /* 8500 */ @js.native
+  object CREBase extends TopLevel[CREBase with Double]
+  
+  /* 8511 */ @js.native
+  object CREEnumeratePublishedFiles extends TopLevel[CREEnumeratePublishedFiles with Double]
+  
+  /* 8512 */ @js.native
+  object CREEnumeratePublishedFilesResponse extends TopLevel[CREEnumeratePublishedFilesResponse with Double]
+  
+  /* 8509 */ @js.native
+  object CREGetUserPublishedItemVoteDetails extends TopLevel[CREGetUserPublishedItemVoteDetails with Double]
+  
+  /* 8510 */ @js.native
+  object CREGetUserPublishedItemVoteDetailsResponse extends TopLevel[CREGetUserPublishedItemVoteDetailsResponse with Double]
+  
+  /* 8503 */ @js.native
+  object CREItemVoteSummary extends TopLevel[CREItemVoteSummary with Double]
+  
+  /* 8504 */ @js.native
+  object CREItemVoteSummaryResponse extends TopLevel[CREItemVoteSummaryResponse with Double]
+  
+  /* 8513 */ @js.native
+  object CREPublishedFileVoteAdded extends TopLevel[CREPublishedFileVoteAdded with Double]
+  
+  /* 8501 */ @js.native
+  object CRERankByTrend extends TopLevel[CRERankByTrend with Double]
+  
+  /* 8502 */ @js.native
+  object CRERankByTrendResponse extends TopLevel[CRERankByTrendResponse with Double]
+  
+  /* 8505 */ @js.native
+  object CRERankByVote extends TopLevel[CRERankByVote with Double]
+  
+  /* 8506 */ @js.native
+  object CRERankByVoteResponse extends TopLevel[CRERankByVoteResponse with Double]
+  
+  /* 8507 */ @js.native
+  object CREUpdateUserPublishedItemVote extends TopLevel[CREUpdateUserPublishedItemVote with Double]
+  
+  /* 8508 */ @js.native
+  object CREUpdateUserPublishedItemVoteResponse extends TopLevel[CREUpdateUserPublishedItemVoteResponse with Double]
+  
+  /* 6200 */ @js.native
+  object CSBase extends TopLevel[CSBase with Double]
+  
+  /* 6201 */ @js.native
+  object CSPing extends TopLevel[CSPing with Double]
+  
+  /* 6202 */ @js.native
+  object CSPingResponse extends TopLevel[CSPingResponse with Double]
+  
+  /* 787 */ @js.native
+  object CSUserContentApprove extends TopLevel[CSUserContentApprove with Double]
+  
+  /* 788 */ @js.native
+  object CSUserContentDeny extends TopLevel[CSUserContentDeny with Double]
+  
+  /* 652 */ @js.native
+  object CSUserContentRequest extends TopLevel[CSUserContentRequest with Double]
+  
+  /* 1300 */ @js.native
+  object ChannelAuthChallenge extends TopLevel[ChannelAuthChallenge with Double]
+  
+  /* 1301 */ @js.native
+  object ChannelAuthResponse extends TopLevel[ChannelAuthResponse with Double]
+  
+  /* 1302 */ @js.native
+  object ChannelAuthResult extends TopLevel[ChannelAuthResult with Double]
+  
+  /* 1303 */ @js.native
+  object ChannelEncryptRequest extends TopLevel[ChannelEncryptRequest with Double]
+  
+  /* 1304 */ @js.native
+  object ChannelEncryptResponse extends TopLevel[ChannelEncryptResponse with Double]
+  
+  /* 1305 */ @js.native
+  object ChannelEncryptResult extends TopLevel[ChannelEncryptResult with Double]
+  
+  /* 5531 */ @js.native
+  object ClientAMGetClanOfficers extends TopLevel[ClientAMGetClanOfficers with Double]
+  
+  /* 5532 */ @js.native
+  object ClientAMGetClanOfficersResponse extends TopLevel[ClientAMGetClanOfficersResponse with Double]
+  
+  /* 5570 */ @js.native
+  object ClientAMGetPersonaNameHistory extends TopLevel[ClientAMGetPersonaNameHistory with Double]
+  
+  /* 5571 */ @js.native
+  object ClientAMGetPersonaNameHistoryResponse extends TopLevel[ClientAMGetPersonaNameHistoryResponse with Double]
+  
+  /* 768 */ @js.native
+  object ClientAccountInfo extends TopLevel[ClientAccountInfo with Double]
+  
+  /* 740 */ @js.native
+  object ClientAckGuestPass extends TopLevel[ClientAckGuestPass with Double]
+  
+  /* 796 */ @js.native
+  object ClientAckGuestPassResponse extends TopLevel[ClientAckGuestPassResponse with Double]
+  
+  /* 735 */ @js.native
+  object ClientAckMessageByGID extends TopLevel[ClientAckMessageByGID with Double]
+  
+  /* 737 */ @js.native
+  object ClientAckPurchaseReceipt extends TopLevel[ClientAckPurchaseReceipt with Double]
+  
+  /* 709 */ @js.native
+  object ClientAckVACBan extends TopLevel[ClientAckVACBan with Double]
+  
+  /* 732 */ @js.native
+  object ClientAckVACBan2 extends TopLevel[ClientAckVACBan2 with Double]
+  
+  /* 745 */ @js.native
+  object ClientAcknowledgeClanInvite extends TopLevel[ClientAcknowledgeClanInvite with Double]
+  
+  /* 5468 */ @js.native
+  object ClientActivateOEMLicense extends TopLevel[ClientActivateOEMLicense with Double]
+  
+  /* 791 */ @js.native
+  object ClientAddFriend extends TopLevel[ClientAddFriend with Double]
+  
+  /* 792 */ @js.native
+  object ClientAddFriendResponse extends TopLevel[ClientAddFriendResponse with Double]
+  
+  /* 702 */ @js.native
+  object ClientAnonLogOn_Deprecated extends TopLevel[ClientAnonLogOn_Deprecated with Double]
+  
+  /* 5409 */ @js.native
+  object ClientAnonUserLogOn_Deprecated extends TopLevel[ClientAnonUserLogOn_Deprecated with Double]
+  
+  /* 867 */ @js.native
+  object ClientAppInfoChanges extends TopLevel[ClientAppInfoChanges with Double]
+  
+  /* 840 */ @js.native
+  object ClientAppInfoRequest extends TopLevel[ClientAppInfoRequest with Double]
+  
+  /* 841 */ @js.native
+  object ClientAppInfoResponse extends TopLevel[ClientAppInfoResponse with Double]
+  
+  /* 866 */ @js.native
+  object ClientAppInfoUpdate extends TopLevel[ClientAppInfoUpdate with Double]
+  
+  /* 5507 */ @js.native
+  object ClientAppMinutesPlayedData extends TopLevel[ClientAppMinutesPlayedData with Double]
+  
+  /* 747 */ @js.native
+  object ClientAppUsageEvent extends TopLevel[ClientAppUsageEvent with Double]
+  
+  /* 5432 */ @js.native
+  object ClientAuthList extends TopLevel[ClientAuthList with Double]
+  
+  /* 5575 */ @js.native
+  object ClientAuthListAck extends TopLevel[ClientAuthListAck with Double]
+  
+  /* 5428 */ @js.native
+  object ClientAuthList_Deprecated extends TopLevel[ClientAuthList_Deprecated with Double]
+  
+  /* 6502 */ @js.native
+  object ClientAuthorizeLocalDevice extends TopLevel[ClientAuthorizeLocalDevice with Double]
+  
+  /* 6509 */ @js.native
+  object ClientAuthorizeLocalDeviceNotification extends TopLevel[ClientAuthorizeLocalDeviceNotification with Double]
+  
+  /* 6501 */ @js.native
+  object ClientAuthorizeLocalDeviceRequest extends TopLevel[ClientAuthorizeLocalDeviceRequest with Double]
+  
+  /* 6502 */ @js.native
+  object ClientAuthorizeLocalDeviceResponse extends TopLevel[ClientAuthorizeLocalDeviceResponse with Double]
+  
+  /* 9700 */ @js.native
+  object ClientBroadcastBase extends TopLevel[ClientBroadcastBase with Double]
+  
+  /* 9702 */ @js.native
+  object ClientBroadcastDisconnect extends TopLevel[ClientBroadcastDisconnect with Double]
+  
+  /* 9701 */ @js.native
+  object ClientBroadcastFrames extends TopLevel[ClientBroadcastFrames with Double]
+  
+  /* 9700 */ @js.native
+  object ClientBroadcastInit extends TopLevel[ClientBroadcastInit with Double]
+  
+  /* 9703 */ @js.native
+  object ClientBroadcastScreenshot extends TopLevel[ClientBroadcastScreenshot with Double]
+  
+  /* 9704 */ @js.native
+  object ClientBroadcastUploadConfig extends TopLevel[ClientBroadcastUploadConfig with Double]
+  
+  /* 783 */ @js.native
+  object ClientCMList extends TopLevel[ClientCMList with Double]
+  
+  /* 729 */ @js.native
+  object ClientCancelLicense extends TopLevel[ClientCancelLicense with Double]
+  
+  /* 781 */ @js.native
+  object ClientCancelLicenseResponse extends TopLevel[ClientCancelLicenseResponse with Double]
+  
+  /* 716 */ @js.native
+  object ClientChangeStatus extends TopLevel[ClientChangeStatus with Double]
+  
+  /* 5579 */ @js.native
+  object ClientChangeSteamGuardOptions extends TopLevel[ClientChangeSteamGuardOptions with Double]
+  
+  /* 5580 */ @js.native
+  object ClientChangeSteamGuardOptionsResponse extends TopLevel[ClientChangeSteamGuardOptionsResponse with Double]
+  
+  /* 597 */ @js.native
+  object ClientChatAction extends TopLevel[ClientChatAction with Double]
+  
+  /* 814 */ @js.native
+  object ClientChatActionResult extends TopLevel[ClientChatActionResult with Double]
+  
+  /* 5426 */ @js.native
+  object ClientChatDeclined extends TopLevel[ClientChatDeclined with Double]
+  
+  /* 807 */ @js.native
+  object ClientChatEnter extends TopLevel[ClientChatEnter with Double]
+  
+  /* 800 */ @js.native
+  object ClientChatInvite extends TopLevel[ClientChatInvite with Double]
+  
+  /* 802 */ @js.native
+  object ClientChatMemberInfo extends TopLevel[ClientChatMemberInfo with Double]
+  
+  /* 799 */ @js.native
+  object ClientChatMsg extends TopLevel[ClientChatMsg with Double]
+  
+  /* 4026 */ @js.native
+  object ClientChatRoomInfo extends TopLevel[ClientChatRoomInfo with Double]
+  
+  /* 5450 */ @js.native
+  object ClientCheckAppBetaPassword extends TopLevel[ClientCheckAppBetaPassword with Double]
+  
+  /* 5451 */ @js.native
+  object ClientCheckAppBetaPasswordResponse extends TopLevel[ClientCheckAppBetaPasswordResponse with Double]
+  
+  /* 5533 */ @js.native
+  object ClientCheckFileSignature extends TopLevel[ClientCheckFileSignature with Double]
+  
+  /* 5534 */ @js.native
+  object ClientCheckFileSignatureResponse extends TopLevel[ClientCheckFileSignatureResponse with Double]
+  
+  /* 845 */ @js.native
+  object ClientCheckPassword extends TopLevel[ClientCheckPassword with Double]
+  
+  /* 848 */ @js.native
+  object ClientCheckPasswordResponse extends TopLevel[ClientCheckPasswordResponse with Double]
+  
+  /* 822 */ @js.native
+  object ClientClanState extends TopLevel[ClientClanState with Double]
+  
+  /* 5582 */ @js.native
+  object ClientCommentNotifications extends TopLevel[ClientCommentNotifications with Double]
+  
+  /* 9600 */ @js.native
+  object ClientConcurrentSessionsBase extends TopLevel[ClientConcurrentSessionsBase with Double]
+  
+  /* 710 */ @js.native
+  object ClientConnectionStats extends TopLevel[ClientConnectionStats with Double]
+  
+  /* 731 */ @js.native
+  object ClientContentServerLogOn_Deprecated extends TopLevel[ClientContentServerLogOn_Deprecated with Double]
+  
+  /* 5406 */ @js.native
+  object ClientCreateAccount2 extends TopLevel[ClientCreateAccount2 with Double]
+  
+  /* 5462 */ @js.native
+  object ClientCreateAccount3 extends TopLevel[ClientCreateAccount3 with Double]
+  
+  /* 5590 */ @js.native
+  object ClientCreateAccountProto extends TopLevel[ClientCreateAccountProto with Double]
+  
+  /* 5591 */ @js.native
+  object ClientCreateAccountProtoResponse extends TopLevel[ClientCreateAccountProtoResponse with Double]
+  
+  /* 5403 */ @js.native
+  object ClientCreateAccountResponse extends TopLevel[ClientCreateAccountResponse with Double]
+  
+  /* 761 */ @js.native
+  object ClientCreateAcctResponse extends TopLevel[ClientCreateAcctResponse with Double]
+  
+  /* 809 */ @js.native
+  object ClientCreateChat extends TopLevel[ClientCreateChat with Double]
+  
+  /* 810 */ @js.native
+  object ClientCreateChatResponse extends TopLevel[ClientCreateChatResponse with Double]
+  
+  /* 5597 */ @js.native
+  object ClientCurrentUIMode extends TopLevel[ClientCurrentUIMode with Double]
+  
+  /* 5605 */ @js.native
+  object ClientDFSAuthenticateRequest extends TopLevel[ClientDFSAuthenticateRequest with Double]
+  
+  /* 5606 */ @js.native
+  object ClientDFSAuthenticateResponse extends TopLevel[ClientDFSAuthenticateResponse with Double]
+  
+  /* 5617 */ @js.native
+  object ClientDFSDownloadStatus extends TopLevel[ClientDFSDownloadStatus with Double]
+  
+  /* 5607 */ @js.native
+  object ClientDFSEndSession extends TopLevel[ClientDFSEndSession with Double]
+  
+  /* 1620 */ @js.native
+  object ClientDPCheckSpecialSurvey extends TopLevel[ClientDPCheckSpecialSurvey with Double]
+  
+  /* 1621 */ @js.native
+  object ClientDPCheckSpecialSurveyResponse extends TopLevel[ClientDPCheckSpecialSurveyResponse with Double]
+  
+  /* 1630 */ @js.native
+  object ClientDPContentStatsReport extends TopLevel[ClientDPContentStatsReport with Double]
+  
+  /* 1622 */ @js.native
+  object ClientDPSendSpecialSurveyResponse extends TopLevel[ClientDPSendSpecialSurveyResponse with Double]
+  
+  /* 1623 */ @js.native
+  object ClientDPSendSpecialSurveyResponseReply extends TopLevel[ClientDPSendSpecialSurveyResponseReply with Double]
+  
+  /* 1627 */ @js.native
+  object ClientDPSteam2AppStarted extends TopLevel[ClientDPSteam2AppStarted with Double]
+  
+  /* 1625 */ @js.native
+  object ClientDPUpdateAppJobReport extends TopLevel[ClientDPUpdateAppJobReport with Double]
+  
+  /* 896 */ @js.native
+  object ClientDRMBlobRequest extends TopLevel[ClientDRMBlobRequest with Double]
+  
+  /* 897 */ @js.native
+  object ClientDRMBlobResponse extends TopLevel[ClientDRMBlobResponse with Double]
+  
+  /* 5485 */ @js.native
+  object ClientDRMDownloadRequest extends TopLevel[ClientDRMDownloadRequest with Double]
+  
+  /* 5574 */ @js.native
+  object ClientDRMDownloadRequestWithCrashData extends TopLevel[ClientDRMDownloadRequestWithCrashData with Double]
+  
+  /* 5486 */ @js.native
+  object ClientDRMDownloadResponse extends TopLevel[ClientDRMDownloadResponse with Double]
+  
+  /* 5487 */ @js.native
+  object ClientDRMFinalResult extends TopLevel[ClientDRMFinalResult with Double]
+  
+  /* 851 */ @js.native
+  object ClientDRMProblemReport extends TopLevel[ClientDRMProblemReport with Double]
+  
+  /* 5495 */ @js.native
+  object ClientDRMTest extends TopLevel[ClientDRMTest with Double]
+  
+  /* 5496 */ @js.native
+  object ClientDRMTestResult extends TopLevel[ClientDRMTestResult with Double]
+  
+  /* 6504 */ @js.native
+  object ClientDeauthorizeDevice extends TopLevel[ClientDeauthorizeDevice with Double]
+  
+  /* 6503 */ @js.native
+  object ClientDeauthorizeDeviceRequest extends TopLevel[ClientDeauthorizeDeviceRequest with Double]
+  
+  /* 5511 */ @js.native
+  object ClientDeregisterWithServer extends TopLevel[ClientDeregisterWithServer with Double]
+  
+  /* 5445 */ @js.native
+  object ClientDisableTestLicense extends TopLevel[ClientDisableTestLicense with Double]
+  
+  /* 5446 */ @js.native
+  object ClientDisableTestLicenseResponse extends TopLevel[ClientDisableTestLicenseResponse with Double]
+  
+  /* 5548 */ @js.native
+  object ClientDownloadRateStatistics extends TopLevel[ClientDownloadRateStatistics with Double]
+  
+  /* 5456 */ @js.native
+  object ClientEmailAddrInfo extends TopLevel[ClientEmailAddrInfo with Double]
+  
+  /* 5458 */ @js.native
+  object ClientEmailChange3 extends TopLevel[ClientEmailChange3 with Double]
+  
+  /* 5544 */ @js.native
+  object ClientEmailChange4 extends TopLevel[ClientEmailChange4 with Double]
+  
+  /* 891 */ @js.native
+  object ClientEmailChangeResponse extends TopLevel[ClientEmailChangeResponse with Double]
+  
+  /* 5545 */ @js.native
+  object ClientEmailChangeResponse4 extends TopLevel[ClientEmailChangeResponse4 with Double]
+  
+  /* 9331 */ @js.native
+  object ClientEmoticonList extends TopLevel[ClientEmoticonList with Double]
+  
+  /* 5443 */ @js.native
+  object ClientEnableTestLicense extends TopLevel[ClientEnableTestLicense with Double]
+  
+  /* 5444 */ @js.native
+  object ClientEnableTestLicenseResponse extends TopLevel[ClientEnableTestLicenseResponse with Double]
+  
+  /* 784 */ @js.native
+  object ClientEncryptPct extends TopLevel[ClientEncryptPct with Double]
+  
+  /* 7519 */ @js.native
+  object ClientFSEnumerateFollowingList extends TopLevel[ClientFSEnumerateFollowingList with Double]
+  
+  /* 7520 */ @js.native
+  object ClientFSEnumerateFollowingListResponse extends TopLevel[ClientFSEnumerateFollowingListResponse with Double]
+  
+  /* 7515 */ @js.native
+  object ClientFSGetFollowerCount extends TopLevel[ClientFSGetFollowerCount with Double]
+  
+  /* 7516 */ @js.native
+  object ClientFSGetFollowerCountResponse extends TopLevel[ClientFSGetFollowerCountResponse with Double]
+  
+  /* 7525 */ @js.native
+  object ClientFSGetFriendMessageHistory extends TopLevel[ClientFSGetFriendMessageHistory with Double]
+  
+  /* 7527 */ @js.native
+  object ClientFSGetFriendMessageHistoryForOfflineMessages extends TopLevel[ClientFSGetFriendMessageHistoryForOfflineMessages with Double]
+  
+  /* 7526 */ @js.native
+  object ClientFSGetFriendMessageHistoryResponse extends TopLevel[ClientFSGetFriendMessageHistoryResponse with Double]
+  
+  /* 7528 */ @js.native
+  object ClientFSGetFriendsSteamLevels extends TopLevel[ClientFSGetFriendsSteamLevels with Double]
+  
+  /* 7529 */ @js.native
+  object ClientFSGetFriendsSteamLevelsResponse extends TopLevel[ClientFSGetFriendsSteamLevelsResponse with Double]
+  
+  /* 7517 */ @js.native
+  object ClientFSGetIsFollowing extends TopLevel[ClientFSGetIsFollowing with Double]
+  
+  /* 7518 */ @js.native
+  object ClientFSGetIsFollowingResponse extends TopLevel[ClientFSGetIsFollowingResponse with Double]
+  
+  /* 7523 */ @js.native
+  object ClientFSOfflineMessageNotification extends TopLevel[ClientFSOfflineMessageNotification with Double]
+  
+  /* 7524 */ @js.native
+  object ClientFSRequestOfflineMessageCount extends TopLevel[ClientFSRequestOfflineMessageCount with Double]
+  
+  /* 786 */ @js.native
+  object ClientFavoritesList extends TopLevel[ClientFavoritesList with Double]
+  
+  /* 5412 */ @js.native
+  object ClientFileToDownload extends TopLevel[ClientFileToDownload with Double]
+  
+  /* 5413 */ @js.native
+  object ClientFileToDownloadResponse extends TopLevel[ClientFileToDownloadResponse with Double]
+  
+  /* 718 */ @js.native
+  object ClientFriendMsg extends TopLevel[ClientFriendMsg with Double]
+  
+  /* 5578 */ @js.native
+  object ClientFriendMsgEchoToSender extends TopLevel[ClientFriendMsgEchoToSender with Double]
+  
+  /* 5427 */ @js.native
+  object ClientFriendMsgIncoming extends TopLevel[ClientFriendMsgIncoming with Double]
+  
+  /* 5535 */ @js.native
+  object ClientFriendProfileInfo extends TopLevel[ClientFriendProfileInfo with Double]
+  
+  /* 5536 */ @js.native
+  object ClientFriendProfileInfoResponse extends TopLevel[ClientFriendProfileInfoResponse with Double]
+  
+  /* 808 */ @js.native
+  object ClientFriendRemovedFromSource extends TopLevel[ClientFriendRemovedFromSource with Double]
+  
+  /* 5596 */ @js.native
+  object ClientFriendUserStatusPublished extends TopLevel[ClientFriendUserStatusPublished with Double]
+  
+  /* 5553 */ @js.native
+  object ClientFriendsGroupsList extends TopLevel[ClientFriendsGroupsList with Double]
+  
+  /* 767 */ @js.native
+  object ClientFriendsList extends TopLevel[ClientFriendsList with Double]
+  
+  /* 5453 */ @js.native
+  object ClientFromGC extends TopLevel[ClientFromGC with Double]
+  
+  /* 5503 */ @js.native
+  object ClientGCMsgFailed extends TopLevel[ClientGCMsgFailed with Double]
+  
+  /* 6403 */ @js.native
+  object ClientGMSServerQuery extends TopLevel[ClientGMSServerQuery with Double]
+  
+  /* 773 */ @js.native
+  object ClientGameConnectDeny extends TopLevel[ClientGameConnectDeny with Double]
+  
+  /* 779 */ @js.native
+  object ClientGameConnectTokens extends TopLevel[ClientGameConnectTokens with Double]
+  
+  /* 719 */ @js.native
+  object ClientGameConnect_obsolete extends TopLevel[ClientGameConnect_obsolete with Double]
+  
+  /* 721 */ @js.native
+  object ClientGameEnded_obsolete extends TopLevel[ClientGameEnded_obsolete with Double]
+  
+  /* 742 */ @js.native
+  object ClientGamesPlayed extends TopLevel[ClientGamesPlayed with Double]
+  
+  /* 720 */ @js.native
+  object ClientGamesPlayed2_obsolete extends TopLevel[ClientGamesPlayed2_obsolete with Double]
+  
+  /* 738 */ @js.native
+  object ClientGamesPlayed3_obsolete extends TopLevel[ClientGamesPlayed3_obsolete with Double]
+  
+  /* 715 */ @js.native
+  object ClientGamesPlayedNoDataBlob extends TopLevel[ClientGamesPlayedNoDataBlob with Double]
+  
+  /* 5410 */ @js.native
+  object ClientGamesPlayedWithDataBlob extends TopLevel[ClientGamesPlayedWithDataBlob with Double]
+  
+  /* 705 */ @js.native
+  object ClientGamesPlayed_obsolete extends TopLevel[ClientGamesPlayed_obsolete with Double]
+  
+  /* 5441 */ @js.native
+  object ClientGetAppBetaPasswords extends TopLevel[ClientGetAppBetaPasswords with Double]
+  
+  /* 5442 */ @js.native
+  object ClientGetAppBetaPasswordsResponse extends TopLevel[ClientGetAppBetaPasswordsResponse with Double]
+  
+  /* 857 */ @js.native
+  object ClientGetAppOwnershipTicket extends TopLevel[ClientGetAppOwnershipTicket with Double]
+  
+  /* 858 */ @js.native
+  object ClientGetAppOwnershipTicketResponse extends TopLevel[ClientGetAppOwnershipTicketResponse with Double]
+  
+  /* 6506 */ @js.native
+  object ClientGetAuthorizedDevices extends TopLevel[ClientGetAuthorizedDevices with Double]
+  
+  /* 6507 */ @js.native
+  object ClientGetAuthorizedDevicesResponse extends TopLevel[ClientGetAuthorizedDevicesResponse with Double]
+  
+  /* 5546 */ @js.native
+  object ClientGetCDNAuthToken extends TopLevel[ClientGetCDNAuthToken with Double]
+  
+  /* 5547 */ @js.native
+  object ClientGetCDNAuthTokenResponse extends TopLevel[ClientGetCDNAuthTokenResponse with Double]
+  
+  /* 5554 */ @js.native
+  object ClientGetClanActivityCounts extends TopLevel[ClientGetClanActivityCounts with Double]
+  
+  /* 5555 */ @js.native
+  object ClientGetClanActivityCountsResponse extends TopLevel[ClientGetClanActivityCountsResponse with Double]
+  
+  /* 5518 */ @js.native
+  object ClientGetClientAppList extends TopLevel[ClientGetClientAppList with Double]
+  
+  /* 5519 */ @js.native
+  object ClientGetClientAppListResponse extends TopLevel[ClientGetClientAppListResponse with Double]
+  
+  /* 5515 */ @js.native
+  object ClientGetClientDetails extends TopLevel[ClientGetClientDetails with Double]
+  
+  /* 5516 */ @js.native
+  object ClientGetClientDetailsResponse extends TopLevel[ClientGetClientDetailsResponse with Double]
+  
+  /* 5438 */ @js.native
+  object ClientGetDepotDecryptionKey extends TopLevel[ClientGetDepotDecryptionKey with Double]
+  
+  /* 5439 */ @js.native
+  object ClientGetDepotDecryptionKeyResponse extends TopLevel[ClientGetDepotDecryptionKeyResponse with Double]
+  
+  /* 9330 */ @js.native
+  object ClientGetEmoticonList extends TopLevel[ClientGetEmoticonList with Double]
+  
+  /* 722 */ @js.native
+  object ClientGetFinalPrice extends TopLevel[ClientGetFinalPrice with Double]
+  
+  /* 775 */ @js.native
+  object ClientGetFinalPriceResponse extends TopLevel[ClientGetFinalPriceResponse with Double]
+  
+  /* 5488 */ @js.native
+  object ClientGetFriendsWhoPlayGame extends TopLevel[ClientGetFriendsWhoPlayGame with Double]
+  
+  /* 5489 */ @js.native
+  object ClientGetFriendsWhoPlayGameResponse extends TopLevel[ClientGetFriendsWhoPlayGameResponse with Double]
+  
+  /* 748 */ @js.native
+  object ClientGetGiftTargetList extends TopLevel[ClientGetGiftTargetList with Double]
+  
+  /* 749 */ @js.native
+  object ClientGetGiftTargetListResponse extends TopLevel[ClientGetGiftTargetListResponse with Double]
+  
+  /* 730 */ @js.native
+  object ClientGetLegacyGameKey extends TopLevel[ClientGetLegacyGameKey with Double]
+  
+  /* 785 */ @js.native
+  object ClientGetLegacyGameKeyResponse extends TopLevel[ClientGetLegacyGameKeyResponse with Double]
+  
+  /* 728 */ @js.native
+  object ClientGetLicenses extends TopLevel[ClientGetLicenses with Double]
+  
+  /* 860 */ @js.native
+  object ClientGetLobbyListResponse extends TopLevel[ClientGetLobbyListResponse with Double]
+  
+  /* 861 */ @js.native
+  object ClientGetLobbyMetadata extends TopLevel[ClientGetLobbyMetadata with Double]
+  
+  /* 862 */ @js.native
+  object ClientGetLobbyMetadataResponse extends TopLevel[ClientGetLobbyMetadataResponse with Double]
+  
+  /* 5508 */ @js.native
+  object ClientGetMicroTxnInfo extends TopLevel[ClientGetMicroTxnInfo with Double]
+  
+  /* 5509 */ @js.native
+  object ClientGetMicroTxnInfoResponse extends TopLevel[ClientGetMicroTxnInfoResponse with Double]
+  
+  /* 5436 */ @js.native
+  object ClientGetNumberOfCurrentPlayers extends TopLevel[ClientGetNumberOfCurrentPlayers with Double]
+  
+  /* 5592 */ @js.native
+  object ClientGetNumberOfCurrentPlayersDP extends TopLevel[ClientGetNumberOfCurrentPlayersDP with Double]
+  
+  /* 5593 */ @js.native
+  object ClientGetNumberOfCurrentPlayersDPResponse extends TopLevel[ClientGetNumberOfCurrentPlayersDPResponse with Double]
+  
+  /* 5437 */ @js.native
+  object ClientGetNumberOfCurrentPlayersResponse extends TopLevel[ClientGetNumberOfCurrentPlayersResponse with Double]
+  
+  /* 736 */ @js.native
+  object ClientGetPurchaseReceipts extends TopLevel[ClientGetPurchaseReceipts with Double]
+  
+  /* 818 */ @js.native
+  object ClientGetUserStats extends TopLevel[ClientGetUserStats with Double]
+  
+  /* 819 */ @js.native
+  object ClientGetUserStatsResponse extends TopLevel[ClientGetUserStatsResponse with Double]
+  
+  /* 703 */ @js.native
+  object ClientHeartBeat extends TopLevel[ClientHeartBeat with Double]
+  
+  /* 5552 */ @js.native
+  object ClientHideFriend extends TopLevel[ClientHideFriend with Double]
+  
+  /* 708 */ @js.native
+  object ClientInformOfCreateAccount extends TopLevel[ClientInformOfCreateAccount with Double]
+  
+  /* 5407 */ @js.native
+  object ClientInformOfResetForgottenPassword extends TopLevel[ClientInformOfResetForgottenPassword with Double]
+  
+  /* 5408 */ @js.native
+  object ClientInformOfResetForgottenPasswordResponse extends TopLevel[ClientInformOfResetForgottenPasswordResponse with Double]
+  
+  /* 711 */ @js.native
+  object ClientInitPurchase extends TopLevel[ClientInitPurchase with Double]
+  
+  /* 789 */ @js.native
+  object ClientInitPurchaseResponse extends TopLevel[ClientInitPurchaseResponse with Double]
+  
+  /* 5520 */ @js.native
+  object ClientInstallClientApp extends TopLevel[ClientInstallClientApp with Double]
+  
+  /* 5521 */ @js.native
+  object ClientInstallClientAppResponse extends TopLevel[ClientInstallClientAppResponse with Double]
+  
+  /* 793 */ @js.native
+  object ClientInviteFriend extends TopLevel[ClientInviteFriend with Double]
+  
+  /* 794 */ @js.native
+  object ClientInviteFriendResponse extends TopLevel[ClientInviteFriendResponse with Double]
+  
+  /* 744 */ @js.native
+  object ClientInviteUserToClan extends TopLevel[ClientInviteUserToClan with Double]
+  
+  /* 5430 */ @js.native
+  object ClientIsLimitedAccount extends TopLevel[ClientIsLimitedAccount with Double]
+  
+  /* 5576 */ @js.native
+  object ClientItemAnnouncements extends TopLevel[ClientItemAnnouncements with Double]
+  
+  /* 801 */ @js.native
+  object ClientJoinChat extends TopLevel[ClientJoinChat with Double]
+  
+  /* 9601 */ @js.native
+  object ClientKickPlayingSession extends TopLevel[ClientKickPlayingSession with Double]
+  
+  /* 5416 */ @js.native
+  object ClientLBSFindOrCreateLB extends TopLevel[ClientLBSFindOrCreateLB with Double]
+  
+  /* 5417 */ @js.native
+  object ClientLBSFindOrCreateLBResponse extends TopLevel[ClientLBSFindOrCreateLBResponse with Double]
+  
+  /* 5418 */ @js.native
+  object ClientLBSGetLBEntries extends TopLevel[ClientLBSGetLBEntries with Double]
+  
+  /* 5419 */ @js.native
+  object ClientLBSGetLBEntriesResponse extends TopLevel[ClientLBSGetLBEntriesResponse with Double]
+  
+  /* 5414 */ @js.native
+  object ClientLBSSetScore extends TopLevel[ClientLBSSetScore with Double]
+  
+  /* 5415 */ @js.native
+  object ClientLBSSetScoreResponse extends TopLevel[ClientLBSSetScoreResponse with Double]
+  
+  /* 5529 */ @js.native
+  object ClientLBSSetUGC extends TopLevel[ClientLBSSetUGC with Double]
+  
+  /* 5530 */ @js.native
+  object ClientLBSSetUGCResponse extends TopLevel[ClientLBSSetUGCResponse with Double]
+  
+  /* 780 */ @js.native
+  object ClientLicenseList extends TopLevel[ClientLicenseList with Double]
+  
+  /* 706 */ @js.native
+  object ClientLogOff extends TopLevel[ClientLogOff with Double]
+  
+  /* 751 */ @js.native
+  object ClientLogOnResponse extends TopLevel[ClientLogOnResponse with Double]
+  
+  /* 803 */ @js.native
+  object ClientLogOnWithCredentials_Deprecated extends TopLevel[ClientLogOnWithCredentials_Deprecated with Double]
+  
+  /* 5465 */ @js.native
+  object ClientLogOnWithHash_Deprecated extends TopLevel[ClientLogOnWithHash_Deprecated with Double]
+  
+  /* 701 */ @js.native
+  object ClientLogOn_Deprecated extends TopLevel[ClientLogOn_Deprecated with Double]
+  
+  /* 757 */ @js.native
+  object ClientLoggedOff extends TopLevel[ClientLoggedOff with Double]
+  
+  /* 5514 */ @js.native
+  object ClientLogon extends TopLevel[ClientLogon with Double]
+  
+  /* 5559 */ @js.native
+  object ClientLogonGameServer extends TopLevel[ClientLogonGameServer with Double]
+  
+  /* 898 */ @js.native
+  object ClientLookupKey extends TopLevel[ClientLookupKey with Double]
+  
+  /* 899 */ @js.native
+  object ClientLookupKeyResponse extends TopLevel[ClientLookupKeyResponse with Double]
+  
+  /* 5818 */ @js.native
+  object ClientMDSGetDepotManifest extends TopLevel[ClientMDSGetDepotManifest with Double]
+  
+  /* 5820 */ @js.native
+  object ClientMDSGetDepotManifestChunk extends TopLevel[ClientMDSGetDepotManifestChunk with Double]
+  
+  /* 5819 */ @js.native
+  object ClientMDSGetDepotManifestResponse extends TopLevel[ClientMDSGetDepotManifestResponse with Double]
+  
+  /* 5842 */ @js.native
+  object ClientMDSGetPrevDepotBuild extends TopLevel[ClientMDSGetPrevDepotBuild with Double]
+  
+  /* 5843 */ @js.native
+  object ClientMDSGetPrevDepotBuildResponse extends TopLevel[ClientMDSGetPrevDepotBuildResponse with Double]
+  
+  /* 5806 */ @js.native
+  object ClientMDSHeartbeat extends TopLevel[ClientMDSHeartbeat with Double]
+  
+  /* 5809 */ @js.native
+  object ClientMDSInitDepotBuildRequest extends TopLevel[ClientMDSInitDepotBuildRequest with Double]
+  
+  /* 5810 */ @js.native
+  object ClientMDSInitDepotBuildResponse extends TopLevel[ClientMDSInitDepotBuildResponse with Double]
+  
+  /* 5816 */ @js.native
+  object ClientMDSInitWorkshopBuildRequest extends TopLevel[ClientMDSInitWorkshopBuildRequest with Double]
+  
+  /* 5817 */ @js.native
+  object ClientMDSInitWorkshopBuildResponse extends TopLevel[ClientMDSInitWorkshopBuildResponse with Double]
+  
+  /* 5801 */ @js.native
+  object ClientMDSLoginRequest extends TopLevel[ClientMDSLoginRequest with Double]
+  
+  /* 5802 */ @js.native
+  object ClientMDSLoginResponse extends TopLevel[ClientMDSLoginResponse with Double]
+  
+  /* 5838 */ @js.native
+  object ClientMDSRegisterAppBuild extends TopLevel[ClientMDSRegisterAppBuild with Double]
+  
+  /* 5839 */ @js.native
+  object ClientMDSRegisterAppBuildResponse extends TopLevel[ClientMDSRegisterAppBuildResponse with Double]
+  
+  /* 5840 */ @js.native
+  object ClientMDSSetAppBuildLive extends TopLevel[ClientMDSSetAppBuildLive with Double]
+  
+  /* 5841 */ @js.native
+  object ClientMDSSetAppBuildLiveResponse extends TopLevel[ClientMDSSetAppBuildLiveResponse with Double]
+  
+  /* 5845 */ @js.native
+  object ClientMDSSignInstallScript extends TopLevel[ClientMDSSignInstallScript with Double]
+  
+  /* 5846 */ @js.native
+  object ClientMDSSignInstallScriptResponse extends TopLevel[ClientMDSSignInstallScriptResponse with Double]
+  
+  /* 5805 */ @js.native
+  object ClientMDSTransmitManifestDataChunk extends TopLevel[ClientMDSTransmitManifestDataChunk with Double]
+  
+  /* 5807 */ @js.native
+  object ClientMDSUploadDepotChunks extends TopLevel[ClientMDSUploadDepotChunks with Double]
+  
+  /* 5808 */ @js.native
+  object ClientMDSUploadDepotChunksResponse extends TopLevel[ClientMDSUploadDepotChunksResponse with Double]
+  
+  /* 5803 */ @js.native
+  object ClientMDSUploadManifestRequest extends TopLevel[ClientMDSUploadManifestRequest with Double]
+  
+  /* 5804 */ @js.native
+  object ClientMDSUploadManifestResponse extends TopLevel[ClientMDSUploadManifestResponse with Double]
+  
+  /* 5823 */ @js.native
+  object ClientMDSUploadRateTest extends TopLevel[ClientMDSUploadRateTest with Double]
+  
+  /* 5824 */ @js.native
+  object ClientMDSUploadRateTestResponse extends TopLevel[ClientMDSUploadRateTestResponse with Double]
+  
+  /* 6601 */ @js.native
+  object ClientMMSCreateLobby extends TopLevel[ClientMMSCreateLobby with Double]
+  
+  /* 6602 */ @js.native
+  object ClientMMSCreateLobbyResponse extends TopLevel[ClientMMSCreateLobbyResponse with Double]
+  
+  /* 6622 */ @js.native
+  object ClientMMSFlushFrenemyListCache extends TopLevel[ClientMMSFlushFrenemyListCache with Double]
+  
+  /* 6623 */ @js.native
+  object ClientMMSFlushFrenemyListCacheResponse extends TopLevel[ClientMMSFlushFrenemyListCacheResponse with Double]
+  
+  /* 6611 */ @js.native
+  object ClientMMSGetLobbyData extends TopLevel[ClientMMSGetLobbyData with Double]
+  
+  /* 6607 */ @js.native
+  object ClientMMSGetLobbyList extends TopLevel[ClientMMSGetLobbyList with Double]
+  
+  /* 6608 */ @js.native
+  object ClientMMSGetLobbyListResponse extends TopLevel[ClientMMSGetLobbyListResponse with Double]
+  
+  /* 6621 */ @js.native
+  object ClientMMSInviteToLobby extends TopLevel[ClientMMSInviteToLobby with Double]
+  
+  /* 6603 */ @js.native
+  object ClientMMSJoinLobby extends TopLevel[ClientMMSJoinLobby with Double]
+  
+  /* 6604 */ @js.native
+  object ClientMMSJoinLobbyResponse extends TopLevel[ClientMMSJoinLobbyResponse with Double]
+  
+  /* 6605 */ @js.native
+  object ClientMMSLeaveLobby extends TopLevel[ClientMMSLeaveLobby with Double]
+  
+  /* 6606 */ @js.native
+  object ClientMMSLeaveLobbyResponse extends TopLevel[ClientMMSLeaveLobbyResponse with Double]
+  
+  /* 6614 */ @js.native
+  object ClientMMSLobbyChatMsg extends TopLevel[ClientMMSLobbyChatMsg with Double]
+  
+  /* 6612 */ @js.native
+  object ClientMMSLobbyData extends TopLevel[ClientMMSLobbyData with Double]
+  
+  /* 6618 */ @js.native
+  object ClientMMSLobbyGameServerSet extends TopLevel[ClientMMSLobbyGameServerSet with Double]
+  
+  /* 6613 */ @js.native
+  object ClientMMSSendLobbyChatMsg extends TopLevel[ClientMMSSendLobbyChatMsg with Double]
+  
+  /* 6609 */ @js.native
+  object ClientMMSSetLobbyData extends TopLevel[ClientMMSSetLobbyData with Double]
+  
+  /* 6610 */ @js.native
+  object ClientMMSSetLobbyDataResponse extends TopLevel[ClientMMSSetLobbyDataResponse with Double]
+  
+  /* 6617 */ @js.native
+  object ClientMMSSetLobbyGameServer extends TopLevel[ClientMMSSetLobbyGameServer with Double]
+  
+  /* 6624 */ @js.native
+  object ClientMMSSetLobbyLinked extends TopLevel[ClientMMSSetLobbyLinked with Double]
+  
+  /* 6615 */ @js.native
+  object ClientMMSSetLobbyOwner extends TopLevel[ClientMMSSetLobbyOwner with Double]
+  
+  /* 6616 */ @js.native
+  object ClientMMSSetLobbyOwnerResponse extends TopLevel[ClientMMSSetLobbyOwnerResponse with Double]
+  
+  /* 6619 */ @js.native
+  object ClientMMSUserJoinedLobby extends TopLevel[ClientMMSUserJoinedLobby with Double]
+  
+  /* 6620 */ @js.native
+  object ClientMMSUserLeftLobby extends TopLevel[ClientMMSUserLeftLobby with Double]
+  
+  /* 5420 */ @js.native
+  object ClientMarketingMessageUpdate extends TopLevel[ClientMarketingMessageUpdate with Double]
+  
+  /* 5510 */ @js.native
+  object ClientMarketingMessageUpdate2 extends TopLevel[ClientMarketingMessageUpdate2 with Double]
+  
+  /* 5504 */ @js.native
+  object ClientMicroTxnAuthRequest extends TopLevel[ClientMicroTxnAuthRequest with Double]
+  
+  /* 5505 */ @js.native
+  object ClientMicroTxnAuthorize extends TopLevel[ClientMicroTxnAuthorize with Double]
+  
+  /* 5506 */ @js.native
+  object ClientMicroTxnAuthorizeResponse extends TopLevel[ClientMicroTxnAuthorizeResponse with Double]
+  
+  /* 765 */ @js.native
+  object ClientNOP extends TopLevel[ClientNOP with Double]
+  
+  /* 839 */ @js.native
+  object ClientNatTraversalStatEvent extends TopLevel[ClientNatTraversalStatEvent with Double]
+  
+  /* 5463 */ @js.native
+  object ClientNewLoginKey extends TopLevel[ClientNewLoginKey with Double]
+  
+  /* 5464 */ @js.native
+  object ClientNewLoginKeyAccepted extends TopLevel[ClientNewLoginKeyAccepted with Double]
+  
+  /* 771 */ @js.native
+  object ClientNewsUpdate extends TopLevel[ClientNewsUpdate with Double]
+  
+  /* 707 */ @js.native
+  object ClientNoUDPConnectivity extends TopLevel[ClientNoUDPConnectivity with Double]
+  
+  /* 756 */ @js.native
+  object ClientNotLoggedOnDeprecated extends TopLevel[ClientNotLoggedOnDeprecated with Double]
+  
+  /* 5490 */ @js.native
+  object ClientOGSBeginSession extends TopLevel[ClientOGSBeginSession with Double]
+  
+  /* 5491 */ @js.native
+  object ClientOGSBeginSessionResponse extends TopLevel[ClientOGSBeginSessionResponse with Double]
+  
+  /* 5492 */ @js.native
+  object ClientOGSEndSession extends TopLevel[ClientOGSEndSession with Double]
+  
+  /* 5493 */ @js.native
+  object ClientOGSEndSessionResponse extends TopLevel[ClientOGSEndSessionResponse with Double]
+  
+  /* 5581 */ @js.native
+  object ClientOGSGameServerPingSample extends TopLevel[ClientOGSGameServerPingSample with Double]
+  
+  /* 5557 */ @js.native
+  object ClientOGSReportBug extends TopLevel[ClientOGSReportBug with Double]
+  
+  /* 5556 */ @js.native
+  object ClientOGSReportString extends TopLevel[ClientOGSReportString with Double]
+  
+  /* 5494 */ @js.native
+  object ClientOGSWriteRow extends TopLevel[ClientOGSWriteRow with Double]
+  
+  /* 5435 */ @js.native
+  object ClientP2PConnectionFailInfo extends TopLevel[ClientP2PConnectionFailInfo with Double]
+  
+  /* 5434 */ @js.native
+  object ClientP2PConnectionInfo extends TopLevel[ClientP2PConnectionInfo with Double]
+  
+  /* 813 */ @js.native
+  object ClientP2PIntroducerMessage extends TopLevel[ClientP2PIntroducerMessage with Double]
+  
+  /* 8905 */ @js.native
+  object ClientPICSAccessTokenRequest extends TopLevel[ClientPICSAccessTokenRequest with Double]
+  
+  /* 8906 */ @js.native
+  object ClientPICSAccessTokenResponse extends TopLevel[ClientPICSAccessTokenResponse with Double]
+  
+  /* 8901 */ @js.native
+  object ClientPICSChangesSinceRequest extends TopLevel[ClientPICSChangesSinceRequest with Double]
+  
+  /* 8902 */ @js.native
+  object ClientPICSChangesSinceResponse extends TopLevel[ClientPICSChangesSinceResponse with Double]
+  
+  /* 8903 */ @js.native
+  object ClientPICSProductInfoRequest extends TopLevel[ClientPICSProductInfoRequest with Double]
+  
+  /* 8904 */ @js.native
+  object ClientPICSProductInfoResponse extends TopLevel[ClientPICSProductInfoResponse with Double]
+  
+  /* 833 */ @js.native
+  object ClientPackageInfoRequest extends TopLevel[ClientPackageInfoRequest with Double]
+  
+  /* 834 */ @js.native
+  object ClientPackageInfoResponse extends TopLevel[ClientPackageInfoResponse with Double]
+  
+  /* 148 */ @js.native
+  object ClientPackageVersions extends TopLevel[ClientPackageVersions with Double]
+  
+  /* 5457 */ @js.native
+  object ClientPasswordChange3 extends TopLevel[ClientPasswordChange3 with Double]
+  
+  /* 805 */ @js.native
+  object ClientPasswordChangeResponse extends TopLevel[ClientPasswordChangeResponse with Double]
+  
+  /* 5584 */ @js.native
+  object ClientPersonaChangeResponse extends TopLevel[ClientPersonaChangeResponse with Double]
+  
+  /* 766 */ @js.native
+  object ClientPersonaState extends TopLevel[ClientPersonaState with Double]
+  
+  /* 5459 */ @js.native
+  object ClientPersonalQAChange3 extends TopLevel[ClientPersonalQAChange3 with Double]
+  
+  /* 764 */ @js.native
+  object ClientPing extends TopLevel[ClientPing with Double]
+  
+  /* 712 */ @js.native
+  object ClientPingResponse extends TopLevel[ClientPingResponse with Double]
+  
+  /* 5587 */ @js.native
+  object ClientPlayerNicknameList extends TopLevel[ClientPlayerNicknameList with Double]
+  
+  /* 9600 */ @js.native
+  object ClientPlayingSessionState extends TopLevel[ClientPlayingSessionState with Double]
+  
+  /* 763 */ @js.native
+  object ClientPurchaseResponse extends TopLevel[ClientPurchaseResponse with Double]
+  
+  /* 746 */ @js.native
+  object ClientPurchaseWithMachineID extends TopLevel[ClientPurchaseWithMachineID with Double]
+  
+  /* 5539 */ @js.native
+  object ClientReadMachineAuth extends TopLevel[ClientReadMachineAuth with Double]
+  
+  /* 5540 */ @js.native
+  object ClientReadMachineAuthResponse extends TopLevel[ClientReadMachineAuthResponse with Double]
+  
+  /* 741 */ @js.native
+  object ClientRedeemGuestPass extends TopLevel[ClientRedeemGuestPass with Double]
+  
+  /* 797 */ @js.native
+  object ClientRedeemGuestPassResponse extends TopLevel[ClientRedeemGuestPassResponse with Double]
+  
+  /* 5502 */ @js.native
+  object ClientRegisterAuthTicketWithCM extends TopLevel[ClientRegisterAuthTicketWithCM with Double]
+  
+  /* 743 */ @js.native
+  object ClientRegisterKey extends TopLevel[ClientRegisterKey with Double]
+  
+  /* 5469 */ @js.native
+  object ClientRegisterOEMMachine extends TopLevel[ClientRegisterOEMMachine with Double]
+  
+  /* 5470 */ @js.native
+  object ClientRegisterOEMMachineResponse extends TopLevel[ClientRegisterOEMMachineResponse with Double]
+  
+  /* 714 */ @js.native
+  object ClientRemoveFriend extends TopLevel[ClientRemoveFriend with Double]
+  
+  /* 5517 */ @js.native
+  object ClientReportOverlayDetourFailure extends TopLevel[ClientReportOverlayDetourFailure with Double]
+  
+  /* 5549 */ @js.native
+  object ClientRequestAccountData extends TopLevel[ClientRequestAccountData with Double]
+  
+  /* 5550 */ @js.native
+  object ClientRequestAccountDataResponse extends TopLevel[ClientRequestAccountDataResponse with Double]
+  
+  /* 5431 */ @js.native
+  object ClientRequestAuthList extends TopLevel[ClientRequestAuthList with Double]
+  
+  /* 5454 */ @js.native
+  object ClientRequestChangeMail extends TopLevel[ClientRequestChangeMail with Double]
+  
+  /* 5455 */ @js.native
+  object ClientRequestChangeMailResponse extends TopLevel[ClientRequestChangeMailResponse with Double]
+  
+  /* 5583 */ @js.native
+  object ClientRequestCommentNotifications extends TopLevel[ClientRequestCommentNotifications with Double]
+  
+  /* 5526 */ @js.native
+  object ClientRequestEncryptedAppTicket extends TopLevel[ClientRequestEncryptedAppTicket with Double]
+  
+  /* 5527 */ @js.native
+  object ClientRequestEncryptedAppTicketResponse extends TopLevel[ClientRequestEncryptedAppTicketResponse with Double]
+  
+  /* 5401 */ @js.native
+  object ClientRequestForgottenPasswordEmail extends TopLevel[ClientRequestForgottenPasswordEmail with Double]
+  
+  /* 5461 */ @js.native
+  object ClientRequestForgottenPasswordEmail3 extends TopLevel[ClientRequestForgottenPasswordEmail3 with Double]
+  
+  /* 5402 */ @js.native
+  object ClientRequestForgottenPasswordEmailResponse extends TopLevel[ClientRequestForgottenPasswordEmailResponse with Double]
+  
+  /* 5572 */ @js.native
+  object ClientRequestFreeLicense extends TopLevel[ClientRequestFreeLicense with Double]
+  
+  /* 5573 */ @js.native
+  object ClientRequestFreeLicenseResponse extends TopLevel[ClientRequestFreeLicenseResponse with Double]
+  
+  /* 815 */ @js.native
+  object ClientRequestFriendData extends TopLevel[ClientRequestFriendData with Double]
+  
+  /* 554 */ @js.native
+  object ClientRequestFriendship extends TopLevel[ClientRequestFriendship with Double]
+  
+  /* 5577 */ @js.native
+  object ClientRequestItemAnnouncements extends TopLevel[ClientRequestItemAnnouncements with Double]
+  
+  /* 5541 */ @js.native
+  object ClientRequestMachineAuth extends TopLevel[ClientRequestMachineAuth with Double]
+  
+  /* 5542 */ @js.native
+  object ClientRequestMachineAuthResponse extends TopLevel[ClientRequestMachineAuthResponse with Double]
+  
+  /* 5590 */ @js.native
+  object ClientRequestOAuthTokenForApp extends TopLevel[ClientRequestOAuthTokenForApp with Double]
+  
+  /* 5591 */ @js.native
+  object ClientRequestOAuthTokenForAppResponse extends TopLevel[ClientRequestOAuthTokenForAppResponse with Double]
+  
+  /* 5448 */ @js.native
+  object ClientRequestValidationMail extends TopLevel[ClientRequestValidationMail with Double]
+  
+  /* 5449 */ @js.native
+  object ClientRequestValidationMailResponse extends TopLevel[ClientRequestValidationMailResponse with Double]
+  
+  /* 5585 */ @js.native
+  object ClientRequestWebAPIAuthenticateUserNonce extends TopLevel[ClientRequestWebAPIAuthenticateUserNonce with Double]
+  
+  /* 5586 */ @js.native
+  object ClientRequestWebAPIAuthenticateUserNonceResponse extends TopLevel[ClientRequestWebAPIAuthenticateUserNonceResponse with Double]
+  
+  /* 5480 */ @js.native
+  object ClientRequestedClientStats extends TopLevel[ClientRequestedClientStats with Double]
+  
+  /* 5404 */ @js.native
+  object ClientResetForgottenPassword extends TopLevel[ClientResetForgottenPassword with Double]
+  
+  /* 5460 */ @js.native
+  object ClientResetForgottenPassword3 extends TopLevel[ClientResetForgottenPassword3 with Double]
+  
+  /* 5551 */ @js.native
+  object ClientResetForgottenPassword4 extends TopLevel[ClientResetForgottenPassword4 with Double]
+  
+  /* 5405 */ @js.native
+  object ClientResetForgottenPasswordResponse extends TopLevel[ClientResetForgottenPasswordResponse with Double]
+  
+  /* 846 */ @js.native
+  object ClientResetPassword extends TopLevel[ClientResetPassword with Double]
+  
+  /* 849 */ @js.native
+  object ClientResetPasswordResponse extends TopLevel[ClientResetPasswordResponse with Double]
+  
+  /* 7503 */ @js.native
+  object ClientRichPresenceInfo extends TopLevel[ClientRichPresenceInfo with Double]
+  
+  /* 7502 */ @js.native
+  object ClientRichPresenceRequest extends TopLevel[ClientRichPresenceRequest with Double]
+  
+  /* 7501 */ @js.native
+  object ClientRichPresenceUpload extends TopLevel[ClientRichPresenceUpload with Double]
+  
+  /* 5543 */ @js.native
+  object ClientScreenshotsChanged extends TopLevel[ClientScreenshotsChanged with Double]
+  
+  /* 892 */ @js.native
+  object ClientSecretQAChangeResponse extends TopLevel[ClientSecretQAChangeResponse with Double]
+  
+  /* 739 */ @js.native
+  object ClientSendGuestPass extends TopLevel[ClientSendGuestPass with Double]
+  
+  /* 795 */ @js.native
+  object ClientSendGuestPassResponse extends TopLevel[ClientSendGuestPassResponse with Double]
+  
+  /* 5558 */ @js.native
+  object ClientSentLogs extends TopLevel[ClientSentLogs with Double]
+  
+  /* 880 */ @js.native
+  object ClientServerList extends TopLevel[ClientServerList with Double]
+  
+  /* 5500 */ @js.native
+  object ClientServerUnavailable extends TopLevel[ClientServerUnavailable with Double]
+  
+  /* 5501 */ @js.native
+  object ClientServersAvailable extends TopLevel[ClientServersAvailable with Double]
+  
+  /* 831 */ @js.native
+  object ClientServiceCall extends TopLevel[ClientServiceCall with Double]
+  
+  /* 832 */ @js.native
+  object ClientServiceCallResponse extends TopLevel[ClientServiceCallResponse with Double]
+  
+  /* 5594 */ @js.native
+  object ClientServiceMethod extends TopLevel[ClientServiceMethod with Double]
+  
+  /* 5595 */ @js.native
+  object ClientServiceMethodResponse extends TopLevel[ClientServiceMethodResponse with Double]
+  
+  /* 830 */ @js.native
+  object ClientServiceModule extends TopLevel[ClientServiceModule with Double]
+  
+  /* 136 */ @js.native
+  object ClientSessionEnd extends TopLevel[ClientSessionEnd with Double]
+  
+  /* 135 */ @js.native
+  object ClientSessionStart extends TopLevel[ClientSessionStart with Double]
+  
+  /* 850 */ @js.native
+  object ClientSessionToken extends TopLevel[ClientSessionToken with Double]
+  
+  /* 137 */ @js.native
+  object ClientSessionUpdate extends TopLevel[ClientSessionUpdate with Double]
+  
+  /* 137 */ @js.native
+  object ClientSessionUpdateAuthTicket extends TopLevel[ClientSessionUpdateAuthTicket with Double]
+  
+  /* 5524 */ @js.native
+  object ClientSetClientAppUpdateState extends TopLevel[ClientSetClientAppUpdateState with Double]
+  
+  /* 5525 */ @js.native
+  object ClientSetClientAppUpdateStateResponse extends TopLevel[ClientSetClientAppUpdateStateResponse with Double]
+  
+  /* 755 */ @js.native
+  object ClientSetHeartbeatRate extends TopLevel[ClientSetHeartbeatRate with Double]
+  
+  /* 855 */ @js.native
+  object ClientSetIgnoreFriend extends TopLevel[ClientSetIgnoreFriend with Double]
+  
+  /* 856 */ @js.native
+  object ClientSetIgnoreFriendResponse extends TopLevel[ClientSetIgnoreFriendResponse with Double]
+  
+  /* 9400 */ @js.native
+  object ClientSharedLibraryBase extends TopLevel[ClientSharedLibraryBase with Double]
+  
+  /* 9405 */ @js.native
+  object ClientSharedLibraryLockStatus extends TopLevel[ClientSharedLibraryLockStatus with Double]
+  
+  /* 9406 */ @js.native
+  object ClientSharedLibraryStopPlaying extends TopLevel[ClientSharedLibraryStopPlaying with Double]
+  
+  /* 9403 */ @js.native
+  object ClientSharedLicensesLockStatus extends TopLevel[ClientSharedLicensesLockStatus with Double]
+  
+  /* 9404 */ @js.native
+  object ClientSharedLicensesStopPlaying extends TopLevel[ClientSharedLicensesStopPlaying with Double]
+  
+  /* 5433 */ @js.native
+  object ClientStat extends TopLevel[ClientStat with Double]
+  
+  /* 5482 */ @js.native
+  object ClientStat2 extends TopLevel[ClientStat2 with Double]
+  
+  /* 5481 */ @js.native
+  object ClientStat2Int32 extends TopLevel[ClientStat2Int32 with Double]
+  
+  /* 5467 */ @js.native
+  object ClientStatsUpdated extends TopLevel[ClientStatsUpdated with Double]
+  
+  /* 842 */ @js.native
+  object ClientSteamUsageEvent extends TopLevel[ClientSteamUsageEvent with Double]
+  
+  /* 820 */ @js.native
+  object ClientStoreUserStats extends TopLevel[ClientStoreUserStats with Double]
+  
+  /* 5466 */ @js.native
+  object ClientStoreUserStats2 extends TopLevel[ClientStoreUserStats2 with Double]
+  
+  /* 821 */ @js.native
+  object ClientStoreUserStatsResponse extends TopLevel[ClientStoreUserStatsResponse with Double]
+  
+  /* 5512 */ @js.native
+  object ClientSubscribeToPersonaFeed extends TopLevel[ClientSubscribeToPersonaFeed with Double]
+  
+  /* 726 */ @js.native
+  object ClientSystemIM extends TopLevel[ClientSystemIM with Double]
+  
+  /* 727 */ @js.native
+  object ClientSystemIMAck extends TopLevel[ClientSystemIMAck with Double]
+  
+  /* 5429 */ @js.native
+  object ClientTicketAuthComplete extends TopLevel[ClientTicketAuthComplete with Double]
+  
+  /* 5452 */ @js.native
+  object ClientToGC extends TopLevel[ClientToGC with Double]
+  
+  /* 7301 */ @js.native
+  object ClientUCMAddScreenshot extends TopLevel[ClientUCMAddScreenshot with Double]
+  
+  /* 7302 */ @js.native
+  object ClientUCMAddScreenshotResponse extends TopLevel[ClientUCMAddScreenshotResponse with Double]
+  
+  /* 7315 */ @js.native
+  object ClientUCMDeletePublishedFile extends TopLevel[ClientUCMDeletePublishedFile with Double]
+  
+  /* 7316 */ @js.native
+  object ClientUCMDeletePublishedFileResponse extends TopLevel[ClientUCMDeletePublishedFileResponse with Double]
+  
+  /* 7309 */ @js.native
+  object ClientUCMDeleteScreenshot extends TopLevel[ClientUCMDeleteScreenshot with Double]
+  
+  /* 7310 */ @js.native
+  object ClientUCMDeleteScreenshotResponse extends TopLevel[ClientUCMDeleteScreenshotResponse with Double]
+  
+  /* 7366 */ @js.native
+  object ClientUCMEnumeratePublishedFilesByUserAction extends TopLevel[ClientUCMEnumeratePublishedFilesByUserAction with Double]
+  
+  /* 7367 */ @js.native
+  object ClientUCMEnumeratePublishedFilesByUserActionResponse extends TopLevel[ClientUCMEnumeratePublishedFilesByUserActionResponse with Double]
+  
+  /* 7317 */ @js.native
+  object ClientUCMEnumerateUserPublishedFiles extends TopLevel[ClientUCMEnumerateUserPublishedFiles with Double]
+  
+  /* 7318 */ @js.native
+  object ClientUCMEnumerateUserPublishedFilesResponse extends TopLevel[ClientUCMEnumerateUserPublishedFilesResponse with Double]
+  
+  /* 7321 */ @js.native
+  object ClientUCMEnumerateUserSubscribedFiles extends TopLevel[ClientUCMEnumerateUserSubscribedFiles with Double]
+  
+  /* 7322 */ @js.native
+  object ClientUCMEnumerateUserSubscribedFilesResponse extends TopLevel[ClientUCMEnumerateUserSubscribedFilesResponse with Double]
+  
+  /* 7378 */ @js.native
+  object ClientUCMEnumerateUserSubscribedFilesWithUpdates extends TopLevel[ClientUCMEnumerateUserSubscribedFilesWithUpdates with Double]
+  
+  /* 7379 */ @js.native
+  object ClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse extends TopLevel[ClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse with Double]
+  
+  /* 7313 */ @js.native
+  object ClientUCMGetPublishedFileDetails extends TopLevel[ClientUCMGetPublishedFileDetails with Double]
+  
+  /* 7314 */ @js.native
+  object ClientUCMGetPublishedFileDetailsResponse extends TopLevel[ClientUCMGetPublishedFileDetailsResponse with Double]
+  
+  /* 7360 */ @js.native
+  object ClientUCMGetPublishedFilesForUser extends TopLevel[ClientUCMGetPublishedFilesForUser with Double]
+  
+  /* 7361 */ @js.native
+  object ClientUCMGetPublishedFilesForUserResponse extends TopLevel[ClientUCMGetPublishedFilesForUserResponse with Double]
+  
+  /* 7311 */ @js.native
+  object ClientUCMPublishFile extends TopLevel[ClientUCMPublishFile with Double]
+  
+  /* 7312 */ @js.native
+  object ClientUCMPublishFileResponse extends TopLevel[ClientUCMPublishFileResponse with Double]
+  
+  /* 7368 */ @js.native
+  object ClientUCMPublishedFileDeleted extends TopLevel[ClientUCMPublishedFileDeleted with Double]
+  
+  /* 7347 */ @js.native
+  object ClientUCMPublishedFileSubscribed extends TopLevel[ClientUCMPublishedFileSubscribed with Double]
+  
+  /* 7348 */ @js.native
+  object ClientUCMPublishedFileUnsubscribed extends TopLevel[ClientUCMPublishedFileUnsubscribed with Double]
+  
+  /* 7364 */ @js.native
+  object ClientUCMSetUserPublishedFileAction extends TopLevel[ClientUCMSetUserPublishedFileAction with Double]
+  
+  /* 7365 */ @js.native
+  object ClientUCMSetUserPublishedFileActionResponse extends TopLevel[ClientUCMSetUserPublishedFileActionResponse with Double]
+  
+  /* 7319 */ @js.native
+  object ClientUCMSubscribePublishedFile extends TopLevel[ClientUCMSubscribePublishedFile with Double]
+  
+  /* 7320 */ @js.native
+  object ClientUCMSubscribePublishedFileResponse extends TopLevel[ClientUCMSubscribePublishedFileResponse with Double]
+  
+  /* 7323 */ @js.native
+  object ClientUCMUnsubscribePublishedFile extends TopLevel[ClientUCMUnsubscribePublishedFile with Double]
+  
+  /* 7324 */ @js.native
+  object ClientUCMUnsubscribePublishedFileResponse extends TopLevel[ClientUCMUnsubscribePublishedFileResponse with Double]
+  
+  /* 7325 */ @js.native
+  object ClientUCMUpdatePublishedFile extends TopLevel[ClientUCMUpdatePublishedFile with Double]
+  
+  /* 7326 */ @js.native
+  object ClientUCMUpdatePublishedFileResponse extends TopLevel[ClientUCMUpdatePublishedFileResponse with Double]
+  
+  /* 7005 */ @js.native
+  object ClientUDSInviteToGame extends TopLevel[ClientUDSInviteToGame with Double]
+  
+  /* 7002 */ @js.native
+  object ClientUDSP2PSessionEnded extends TopLevel[ClientUDSP2PSessionEnded with Double]
+  
+  /* 7001 */ @js.native
+  object ClientUDSP2PSessionStarted extends TopLevel[ClientUDSP2PSessionStarted with Double]
+  
+  /* 5219 */ @js.native
+  object ClientUFSDeleteFileRequest extends TopLevel[ClientUFSDeleteFileRequest with Double]
+  
+  /* 5220 */ @js.native
+  object ClientUFSDeleteFileResponse extends TopLevel[ClientUFSDeleteFileResponse with Double]
+  
+  /* 5212 */ @js.native
+  object ClientUFSDownloadChunk extends TopLevel[ClientUFSDownloadChunk with Double]
+  
+  /* 5210 */ @js.native
+  object ClientUFSDownloadRequest extends TopLevel[ClientUFSDownloadRequest with Double]
+  
+  /* 5211 */ @js.native
+  object ClientUFSDownloadResponse extends TopLevel[ClientUFSDownloadResponse with Double]
+  
+  /* 5206 */ @js.native
+  object ClientUFSGetFileListForApp extends TopLevel[ClientUFSGetFileListForApp with Double]
+  
+  /* 5207 */ @js.native
+  object ClientUFSGetFileListForAppResponse extends TopLevel[ClientUFSGetFileListForAppResponse with Double]
+  
+  /* 5230 */ @js.native
+  object ClientUFSGetSingleFileInfo extends TopLevel[ClientUFSGetSingleFileInfo with Double]
+  
+  /* 5231 */ @js.native
+  object ClientUFSGetSingleFileInfoResponse extends TopLevel[ClientUFSGetSingleFileInfoResponse with Double]
+  
+  /* 5226 */ @js.native
+  object ClientUFSGetUGCDetails extends TopLevel[ClientUFSGetUGCDetails with Double]
+  
+  /* 5227 */ @js.native
+  object ClientUFSGetUGCDetailsResponse extends TopLevel[ClientUFSGetUGCDetailsResponse with Double]
+  
+  /* 5213 */ @js.native
+  object ClientUFSLoginRequest extends TopLevel[ClientUFSLoginRequest with Double]
+  
+  /* 5214 */ @js.native
+  object ClientUFSLoginResponse extends TopLevel[ClientUFSLoginResponse with Double]
+  
+  /* 5232 */ @js.native
+  object ClientUFSShareFile extends TopLevel[ClientUFSShareFile with Double]
+  
+  /* 5233 */ @js.native
+  object ClientUFSShareFileResponse extends TopLevel[ClientUFSShareFileResponse with Double]
+  
+  /* 5216 */ @js.native
+  object ClientUFSTransferHeartbeat extends TopLevel[ClientUFSTransferHeartbeat with Double]
+  
+  /* 5204 */ @js.native
+  object ClientUFSUploadFileChunk extends TopLevel[ClientUFSUploadFileChunk with Double]
+  
+  /* 5205 */ @js.native
+  object ClientUFSUploadFileFinished extends TopLevel[ClientUFSUploadFileFinished with Double]
+  
+  /* 5202 */ @js.native
+  object ClientUFSUploadFileRequest extends TopLevel[ClientUFSUploadFileRequest with Double]
+  
+  /* 5203 */ @js.native
+  object ClientUFSUploadFileResponse extends TopLevel[ClientUFSUploadFileResponse with Double]
+  
+  /* 7901 */ @js.native
+  object ClientUGSGetGlobalStats extends TopLevel[ClientUGSGetGlobalStats with Double]
+  
+  /* 7902 */ @js.native
+  object ClientUGSGetGlobalStatsResponse extends TopLevel[ClientUGSGetGlobalStatsResponse with Double]
+  
+  /* 5522 */ @js.native
+  object ClientUninstallClientApp extends TopLevel[ClientUninstallClientApp with Double]
+  
+  /* 5523 */ @js.native
+  object ClientUninstallClientAppResponse extends TopLevel[ClientUninstallClientAppResponse with Double]
+  
+  /* 9507 */ @js.native
+  object ClientUnlockStreaming extends TopLevel[ClientUnlockStreaming with Double]
+  
+  /* 9508 */ @js.native
+  object ClientUnlockStreamingResponse extends TopLevel[ClientUnlockStreamingResponse with Double]
+  
+  /* 811 */ @js.native
+  object ClientUpdateChatMetadata extends TopLevel[ClientUpdateChatMetadata with Double]
+  
+  /* 798 */ @js.native
+  object ClientUpdateGuestPassesList extends TopLevel[ClientUpdateGuestPassesList with Double]
+  
+  /* 5537 */ @js.native
+  object ClientUpdateMachineAuth extends TopLevel[ClientUpdateMachineAuth with Double]
+  
+  /* 5538 */ @js.native
+  object ClientUpdateMachineAuthResponse extends TopLevel[ClientUpdateMachineAuthResponse with Double]
+  
+  /* 5411 */ @js.native
+  object ClientUpdateUserGameInfo extends TopLevel[ClientUpdateUserGameInfo with Double]
+  
+  /* 6505 */ @js.native
+  object ClientUseLocalDeviceAuthorizations extends TopLevel[ClientUseLocalDeviceAuthorizations with Double]
+  
+  /* 5599 */ @js.native
+  object ClientUserNotifications extends TopLevel[ClientUserNotifications with Double]
+  
+  /* 782 */ @js.native
+  object ClientVACBanStatus extends TopLevel[ClientVACBanStatus with Double]
+  
+  /* 753 */ @js.native
+  object ClientVACChallenge extends TopLevel[ClientVACChallenge with Double]
+  
+  /* 704 */ @js.native
+  object ClientVACResponse extends TopLevel[ClientVACResponse with Double]
+  
+  /* 863 */ @js.native
+  object ClientVTTCert extends TopLevel[ClientVTTCert with Double]
+  
+  /* 770 */ @js.native
+  object ClientVacStatusQuery extends TopLevel[ClientVacStatusQuery with Double]
+  
+  /* 717 */ @js.native
+  object ClientVacStatusResponse extends TopLevel[ClientVacStatusResponse with Double]
+  
+  /* 5598 */ @js.native
+  object ClientVanityURLChangedNotification extends TopLevel[ClientVanityURLChangedNotification with Double]
+  
+  /* 5483 */ @js.native
+  object ClientVerifyPassword extends TopLevel[ClientVerifyPassword with Double]
+  
+  /* 5484 */ @js.native
+  object ClientVerifyPasswordResponse extends TopLevel[ClientVerifyPasswordResponse with Double]
+  
+  /* 9800 */ @js.native
+  object ClientVoiceCallPreAuthorize extends TopLevel[ClientVoiceCallPreAuthorize with Double]
+  
+  /* 9801 */ @js.native
+  object ClientVoiceCallPreAuthorizeResponse extends TopLevel[ClientVoiceCallPreAuthorizeResponse with Double]
+  
+  /* 5528 */ @js.native
+  object ClientWalletInfoUpdate extends TopLevel[ClientWalletInfoUpdate with Double]
+  
+  /* 7382 */ @js.native
+  object ClientWorkshopItemChangesRequest extends TopLevel[ClientWorkshopItemChangesRequest with Double]
+  
+  /* 7383 */ @js.native
+  object ClientWorkshopItemChangesResponse extends TopLevel[ClientWorkshopItemChangesResponse with Double]
+  
+  /* 7384 */ @js.native
+  object ClientWorkshopItemInfoRequest extends TopLevel[ClientWorkshopItemInfoRequest with Double]
+  
+  /* 7385 */ @js.native
+  object ClientWorkshopItemInfoResponse extends TopLevel[ClientWorkshopItemInfoResponse with Double]
+  
+  /* 4140 */ @js.native
+  object CommunityAddFriendNews extends TopLevel[CommunityAddFriendNews with Double]
+  
+  /* 4155 */ @js.native
+  object CommunityDeleteUserNews extends TopLevel[CommunityDeleteUserNews with Double]
+  
+  /* 4173 */ @js.native
+  object CommunityGetUserFriendNews extends TopLevel[CommunityGetUserFriendNews with Double]
+  
+  /* 227 */ @js.native
+  object ContentDescriptionUpdate extends TopLevel[ContentDescriptionUpdate with Double]
+  
+  /* 5611 */ @js.native
+  object DFSAcceptedResponse extends TopLevel[DFSAcceptedResponse with Double]
+  
+  /* 5603 */ @js.native
+  object DFSConnection extends TopLevel[DFSConnection with Double]
+  
+  /* 5604 */ @js.native
+  object DFSConnectionReply extends TopLevel[DFSConnectionReply with Double]
+  
+  /* 5601 */ @js.native
+  object DFSGetFile extends TopLevel[DFSGetFile with Double]
+  
+  /* 5610 */ @js.native
+  object DFSGetFileFromServer extends TopLevel[DFSGetFileFromServer with Double]
+  
+  /* 5602 */ @js.native
+  object DFSInstallLocalFile extends TopLevel[DFSInstallLocalFile with Double]
+  
+  /* 5608 */ @js.native
+  object DFSPurgeFile extends TopLevel[DFSPurgeFile with Double]
+  
+  /* 5613 */ @js.native
+  object DFSRecvTransmitFile extends TopLevel[DFSRecvTransmitFile with Double]
+  
+  /* 5612 */ @js.native
+  object DFSRequestPingback extends TopLevel[DFSRequestPingback with Double]
+  
+  /* 5615 */ @js.native
+  object DFSRequestPingback2 extends TopLevel[DFSRequestPingback2 with Double]
+  
+  /* 5616 */ @js.native
+  object DFSResponsePingback2 extends TopLevel[DFSResponsePingback2 with Double]
+  
+  /* 5609 */ @js.native
+  object DFSRouteFile extends TopLevel[DFSRouteFile with Double]
+  
+  /* 5620 */ @js.native
+  object DFSRouteFileResponse extends TopLevel[DFSRouteFileResponse with Double]
+  
+  /* 5614 */ @js.native
+  object DFSSendTransmitFile extends TopLevel[DFSSendTransmitFile with Double]
+  
+  /* 5618 */ @js.native
+  object DFSStartTransfer extends TopLevel[DFSStartTransfer with Double]
+  
+  /* 5619 */ @js.native
+  object DFSTransferComplete extends TopLevel[DFSTransferComplete with Double]
+  
+  /* 1614 */ @js.native
+  object DPAccountCreationStats extends TopLevel[DPAccountCreationStats with Double]
+  
+  /* 1613 */ @js.native
+  object DPAchievementStats extends TopLevel[DPAchievementStats with Double]
+  
+  /* 1607 */ @js.native
+  object DPBlockingStats extends TopLevel[DPBlockingStats with Double]
+  
+  /* 1612 */ @js.native
+  object DPCloudStats extends TopLevel[DPCloudStats with Double]
+  
+  /* 1618 */ @js.native
+  object DPDownloadRateStatistics extends TopLevel[DPDownloadRateStatistics with Double]
+  
+  /* 1619 */ @js.native
+  object DPFacebookStatistics extends TopLevel[DPFacebookStatistics with Double]
+  
+  /* 1602 */ @js.native
+  object DPGamePlayedStats extends TopLevel[DPGamePlayedStats with Double]
+  
+  /* 1617 */ @js.native
+  object DPGameServersPlayersStats extends TopLevel[DPGameServersPlayersStats with Double]
+  
+  /* 1615 */ @js.native
+  object DPGetPlayerCount extends TopLevel[DPGetPlayerCount with Double]
+  
+  /* 1616 */ @js.native
+  object DPGetPlayerCountResponse extends TopLevel[DPGetPlayerCountResponse with Double]
+  
+  /* 1608 */ @js.native
+  object DPNatTraversalStats extends TopLevel[DPNatTraversalStats with Double]
+  
+  /* 1628 */ @js.native
+  object DPPartnerMicroTxns extends TopLevel[DPPartnerMicroTxns with Double]
+  
+  /* 1629 */ @js.native
+  object DPPartnerMicroTxnsResponse extends TopLevel[DPPartnerMicroTxnsResponse with Double]
+  
+  /* 1601 */ @js.native
+  object DPSetPublishingState extends TopLevel[DPSetPublishingState with Double]
+  
+  /* 1609 */ @js.native
+  object DPSteamUsageEvent extends TopLevel[DPSteamUsageEvent with Double]
+  
+  /* 1624 */ @js.native
+  object DPStoreSaleStatistics extends TopLevel[DPStoreSaleStatistics with Double]
+  
+  /* 1604 */ @js.native
+  object DPStreamingUniquePlayersStat extends TopLevel[DPStreamingUniquePlayersStat with Double]
+  
+  /* 1603 */ @js.native
+  object DPUniquePlayersStat extends TopLevel[DPUniquePlayersStat with Double]
+  
+  /* 1626 */ @js.native
+  object DPUpdateContentEvent extends TopLevel[DPUpdateContentEvent with Double]
+  
+  /* 1631 */ @js.native
+  object DPVRUniquePlayersStat extends TopLevel[DPVRUniquePlayersStat with Double]
+  
+  /* 1606 */ @js.native
+  object DPVacBanStats extends TopLevel[DPVacBanStats with Double]
+  
+  /* 1611 */ @js.native
+  object DPVacCafeBanStats extends TopLevel[DPVacCafeBanStats with Double]
+  
+  /* 1610 */ @js.native
+  object DPVacCertBanStats extends TopLevel[DPVacCertBanStats with Double]
+  
+  /* 1605 */ @js.native
+  object DPVacInfractionStats extends TopLevel[DPVacInfractionStats with Double]
+  
+  /* 640 */ @js.native
+  object DRMAdminUpdate extends TopLevel[DRMAdminUpdate with Double]
+  
+  /* 641 */ @js.native
+  object DRMAdminUpdateResponse extends TopLevel[DRMAdminUpdateResponse with Double]
+  
+  /* 628 */ @js.native
+  object DRMBuildBlobRequest extends TopLevel[DRMBuildBlobRequest with Double]
+  
+  /* 629 */ @js.native
+  object DRMBuildBlobResponse extends TopLevel[DRMBuildBlobResponse with Double]
+  
+  /* 637 */ @js.native
+  object DRMDetailsReportRequest extends TopLevel[DRMDetailsReportRequest with Double]
+  
+  /* 638 */ @js.native
+  object DRMDetailsReportResponse extends TopLevel[DRMDetailsReportResponse with Double]
+  
+  /* 645 */ @js.native
+  object DRMEmptyGuidCache extends TopLevel[DRMEmptyGuidCache with Double]
+  
+  /* 646 */ @js.native
+  object DRMEmptyGuidCacheResponse extends TopLevel[DRMEmptyGuidCacheResponse with Double]
+  
+  /* 639 */ @js.native
+  object DRMProcessFile extends TopLevel[DRMProcessFile with Double]
+  
+  /* 644 */ @js.native
+  object DRMProcessFileResponse extends TopLevel[DRMProcessFileResponse with Double]
+  
+  /* 7600 */ @js.native
+  object DRMRange2 extends TopLevel[DRMRange2 with Double]
+  
+  /* 630 */ @js.native
+  object DRMResolveGuidRequest extends TopLevel[DRMResolveGuidRequest with Double]
+  
+  /* 631 */ @js.native
+  object DRMResolveGuidResponse extends TopLevel[DRMResolveGuidResponse with Double]
+  
+  /* 7606 */ @js.native
+  object DRMSFetchVersionSet extends TopLevel[DRMSFetchVersionSet with Double]
+  
+  /* 7607 */ @js.native
+  object DRMSFetchVersionSetResponse extends TopLevel[DRMSFetchVersionSetResponse with Double]
+  
+  /* 635 */ @js.native
+  object DRMStabilityReport extends TopLevel[DRMStabilityReport with Double]
+  
+  /* 636 */ @js.native
+  object DRMStabilityReportResponse extends TopLevel[DRMStabilityReportResponse with Double]
+  
+  /* 642 */ @js.native
+  object DRMSync extends TopLevel[DRMSync with Double]
+  
+  /* 643 */ @js.native
+  object DRMSyncResponse extends TopLevel[DRMSyncResponse with Double]
+  
+  /* 633 */ @js.native
+  object DRMVariabilityReport extends TopLevel[DRMVariabilityReport with Double]
+  
+  /* 634 */ @js.native
+  object DRMVariabilityReportResponse extends TopLevel[DRMVariabilityReportResponse with Double]
+  
+  /* 9100 */ @js.native
+  object DRMWorkerProcess extends TopLevel[DRMWorkerProcess with Double]
+  
+  /* 9128 */ @js.native
+  object DRMWorkerProcessAnalyzeFileRequest extends TopLevel[DRMWorkerProcessAnalyzeFileRequest with Double]
+  
+  /* 9129 */ @js.native
+  object DRMWorkerProcessAnalyzeFileResponse extends TopLevel[DRMWorkerProcessAnalyzeFileResponse with Double]
+  
+  /* 9116 */ @js.native
+  object DRMWorkerProcessBackfillOriginalRequest extends TopLevel[DRMWorkerProcessBackfillOriginalRequest with Double]
+  
+  /* 9117 */ @js.native
+  object DRMWorkerProcessBackfillOriginalResponse extends TopLevel[DRMWorkerProcessBackfillOriginalResponse with Double]
+  
+  /* 9100 */ @js.native
+  object DRMWorkerProcessDRMAndSign extends TopLevel[DRMWorkerProcessDRMAndSign with Double]
+  
+  /* 9101 */ @js.native
+  object DRMWorkerProcessDRMAndSignResponse extends TopLevel[DRMWorkerProcessDRMAndSignResponse with Double]
+  
+  /* 9114 */ @js.native
+  object DRMWorkerProcessDescribeSecretRequest extends TopLevel[DRMWorkerProcessDescribeSecretRequest with Double]
+  
+  /* 9115 */ @js.native
+  object DRMWorkerProcessDescribeSecretResponse extends TopLevel[DRMWorkerProcessDescribeSecretResponse with Double]
+  
+  /* 9126 */ @js.native
+  object DRMWorkerProcessEvaluateCrashRequest extends TopLevel[DRMWorkerProcessEvaluateCrashRequest with Double]
+  
+  /* 9127 */ @js.native
+  object DRMWorkerProcessEvaluateCrashResponse extends TopLevel[DRMWorkerProcessEvaluateCrashResponse with Double]
+  
+  /* 9112 */ @js.native
+  object DRMWorkerProcessExamineBlobRequest extends TopLevel[DRMWorkerProcessExamineBlobRequest with Double]
+  
+  /* 9113 */ @js.native
+  object DRMWorkerProcessExamineBlobResponse extends TopLevel[DRMWorkerProcessExamineBlobResponse with Double]
+  
+  /* 9124 */ @js.native
+  object DRMWorkerProcessGetBlobRequest extends TopLevel[DRMWorkerProcessGetBlobRequest with Double]
+  
+  /* 9125 */ @js.native
+  object DRMWorkerProcessGetBlobResponse extends TopLevel[DRMWorkerProcessGetBlobResponse with Double]
+  
+  /* 9108 */ @js.native
+  object DRMWorkerProcessGetDRMGuidsFromFileRequest extends TopLevel[DRMWorkerProcessGetDRMGuidsFromFileRequest with Double]
+  
+  /* 9109 */ @js.native
+  object DRMWorkerProcessGetDRMGuidsFromFileResponse extends TopLevel[DRMWorkerProcessGetDRMGuidsFromFileResponse with Double]
+  
+  /* 9132 */ @js.native
+  object DRMWorkerProcessInstallAllRequest extends TopLevel[DRMWorkerProcessInstallAllRequest with Double]
+  
+  /* 9133 */ @js.native
+  object DRMWorkerProcessInstallAllResponse extends TopLevel[DRMWorkerProcessInstallAllResponse with Double]
+  
+  /* 9104 */ @js.native
+  object DRMWorkerProcessInstallDRMDLLRequest extends TopLevel[DRMWorkerProcessInstallDRMDLLRequest with Double]
+  
+  /* 9105 */ @js.native
+  object DRMWorkerProcessInstallDRMDLLResponse extends TopLevel[DRMWorkerProcessInstallDRMDLLResponse with Double]
+  
+  /* 9110 */ @js.native
+  object DRMWorkerProcessInstallProcessedFilesRequest extends TopLevel[DRMWorkerProcessInstallProcessedFilesRequest with Double]
+  
+  /* 9111 */ @js.native
+  object DRMWorkerProcessInstallProcessedFilesResponse extends TopLevel[DRMWorkerProcessInstallProcessedFilesResponse with Double]
+  
+  /* 9106 */ @js.native
+  object DRMWorkerProcessSecretIdStringRequest extends TopLevel[DRMWorkerProcessSecretIdStringRequest with Double]
+  
+  /* 9107 */ @js.native
+  object DRMWorkerProcessSecretIdStringResponse extends TopLevel[DRMWorkerProcessSecretIdStringResponse with Double]
+  
+  /* 9122 */ @js.native
+  object DRMWorkerProcessSplitAndInstallRequest extends TopLevel[DRMWorkerProcessSplitAndInstallRequest with Double]
+  
+  /* 9123 */ @js.native
+  object DRMWorkerProcessSplitAndInstallResponse extends TopLevel[DRMWorkerProcessSplitAndInstallResponse with Double]
+  
+  /* 9102 */ @js.native
+  object DRMWorkerProcessSteamworksInfoRequest extends TopLevel[DRMWorkerProcessSteamworksInfoRequest with Double]
+  
+  /* 9103 */ @js.native
+  object DRMWorkerProcessSteamworksInfoResponse extends TopLevel[DRMWorkerProcessSteamworksInfoResponse with Double]
+  
+  /* 9130 */ @js.native
+  object DRMWorkerProcessUnpackBlobRequest extends TopLevel[DRMWorkerProcessUnpackBlobRequest with Double]
+  
+  /* 9131 */ @js.native
+  object DRMWorkerProcessUnpackBlobResponse extends TopLevel[DRMWorkerProcessUnpackBlobResponse with Double]
+  
+  /* 9118 */ @js.native
+  object DRMWorkerProcessValidateDRMDLLRequest extends TopLevel[DRMWorkerProcessValidateDRMDLLRequest with Double]
+  
+  /* 9119 */ @js.native
+  object DRMWorkerProcessValidateDRMDLLResponse extends TopLevel[DRMWorkerProcessValidateDRMDLLResponse with Double]
+  
+  /* 9120 */ @js.native
+  object DRMWorkerProcessValidateFileRequest extends TopLevel[DRMWorkerProcessValidateFileRequest with Double]
+  
+  /* 9121 */ @js.native
+  object DRMWorkerProcessValidateFileResponse extends TopLevel[DRMWorkerProcessValidateFileResponse with Double]
+  
+  /* 1802 */ @js.native
+  object DSSCurrentFileList extends TopLevel[DSSCurrentFileList with Double]
+  
+  /* 1801 */ @js.native
+  object DSSNewFile extends TopLevel[DSSNewFile with Double]
+  
+  /* 1803 */ @js.native
+  object DSSSynchList extends TopLevel[DSSSynchList with Double]
+  
+  /* 1804 */ @js.native
+  object DSSSynchListResponse extends TopLevel[DSSSynchListResponse with Double]
+  
+  /* 1805 */ @js.native
+  object DSSSynchSubscribe extends TopLevel[DSSSynchSubscribe with Double]
+  
+  /* 1806 */ @js.native
+  object DSSSynchUnsubscribe extends TopLevel[DSSSynchUnsubscribe with Double]
+  
+  /* 113 */ @js.native
+  object DestJobFailed extends TopLevel[DestJobFailed with Double]
+  
+  /* 6500 */ @js.native
+  object DeviceAuthorizationBase extends TopLevel[DeviceAuthorizationBase with Double]
+  
+  /* 202 */ @js.native
+  object DirRequest extends TopLevel[DirRequest with Double]
+  
+  /* 203 */ @js.native
+  object DirResponse extends TopLevel[DirResponse with Double]
+  
+  /* 1903 */ @js.native
+  object EPMRestartProcess extends TopLevel[EPMRestartProcess with Double]
+  
+  /* 1901 */ @js.native
+  object EPMStartProcess extends TopLevel[EPMStartProcess with Double]
+  
+  /* 1902 */ @js.native
+  object EPMStopProcess extends TopLevel[EPMStopProcess with Double]
+  
+  /* 7700 */ @js.native
+  object EconBase extends TopLevel[EconBase with Double]
+  
+  /* 7711 */ @js.native
+  object EconCDKeyProcessTransaction extends TopLevel[EconCDKeyProcessTransaction with Double]
+  
+  /* 7712 */ @js.native
+  object EconCDKeyProcessTransactionResponse extends TopLevel[EconCDKeyProcessTransactionResponse with Double]
+  
+  /* 7707 */ @js.native
+  object EconFlushInventoryCache extends TopLevel[EconFlushInventoryCache with Double]
+  
+  /* 7708 */ @js.native
+  object EconFlushInventoryCacheResponse extends TopLevel[EconFlushInventoryCacheResponse with Double]
+  
+  /* 7713 */ @js.native
+  object EconGetErrorLogs extends TopLevel[EconGetErrorLogs with Double]
+  
+  /* 7714 */ @js.native
+  object EconGetErrorLogsResponse extends TopLevel[EconGetErrorLogsResponse with Double]
+  
+  /* 7706 */ @js.native
+  object EconTrading_CancelTradeRequest extends TopLevel[EconTrading_CancelTradeRequest with Double]
+  
+  /* 7702 */ @js.native
+  object EconTrading_InitiateTradeProposed extends TopLevel[EconTrading_InitiateTradeProposed with Double]
+  
+  /* 7701 */ @js.native
+  object EconTrading_InitiateTradeRequest extends TopLevel[EconTrading_InitiateTradeRequest with Double]
+  
+  /* 7703 */ @js.native
+  object EconTrading_InitiateTradeResponse extends TopLevel[EconTrading_InitiateTradeResponse with Double]
+  
+  /* 7704 */ @js.native
+  object EconTrading_InitiateTradeResult extends TopLevel[EconTrading_InitiateTradeResult with Double]
+  
+  /* 7705 */ @js.native
+  object EconTrading_StartSession extends TopLevel[EconTrading_StartSession with Double]
+  
+  /* 201 */ @js.native
+  object Exit extends TopLevel[Exit with Double]
+  
+  /* 308 */ @js.native
+  object ExitShell extends TopLevel[ExitShell with Double]
+  
+  /* 307 */ @js.native
+  object ExitShells extends TopLevel[ExitShells with Double]
+  
+  /* 1119 */ @js.native
+  object FBSApplyAccountCred extends TopLevel[FBSApplyAccountCred with Double]
+  
+  /* 1120 */ @js.native
+  object FBSApplyAccountCredResponse extends TopLevel[FBSApplyAccountCredResponse with Double]
+  
+  /* 1108 */ @js.native
+  object FBSApplyOSUpdates extends TopLevel[FBSApplyOSUpdates with Double]
+  
+  /* 1130 */ @js.native
+  object FBSBootstrapperGetPackageChunk extends TopLevel[FBSBootstrapperGetPackageChunk with Double]
+  
+  /* 1131 */ @js.native
+  object FBSBootstrapperGetPackageChunkResponse extends TopLevel[FBSBootstrapperGetPackageChunkResponse with Double]
+  
+  /* 1128 */ @js.native
+  object FBSBootstrapperPackageRequest extends TopLevel[FBSBootstrapperPackageRequest with Double]
+  
+  /* 1129 */ @js.native
+  object FBSBootstrapperPackageResponse extends TopLevel[FBSBootstrapperPackageResponse with Double]
+  
+  /* 1132 */ @js.native
+  object FBSBootstrapperPackageTransferProgress extends TopLevel[FBSBootstrapperPackageTransferProgress with Double]
+  
+  /* 1027 */ @js.native
+  object FBSConnectionData extends TopLevel[FBSConnectionData with Double]
+  
+  /* 1114 */ @js.native
+  object FBSDeployHotFixPackage extends TopLevel[FBSDeployHotFixPackage with Double]
+  
+  /* 1115 */ @js.native
+  object FBSDeployHotFixResponse extends TopLevel[FBSDeployHotFixResponse with Double]
+  
+  /* 1104 */ @js.native
+  object FBSDeployPackage extends TopLevel[FBSDeployPackage with Double]
+  
+  /* 1105 */ @js.native
+  object FBSDeployResponse extends TopLevel[FBSDeployResponse with Double]
+  
+  /* 1116 */ @js.native
+  object FBSDownloadHotFix extends TopLevel[FBSDownloadHotFix with Double]
+  
+  /* 1117 */ @js.native
+  object FBSDownloadHotFixResponse extends TopLevel[FBSDownloadHotFixResponse with Double]
+  
+  /* 1103 */ @js.native
+  object FBSForceBounce extends TopLevel[FBSForceBounce with Double]
+  
+  /* 1102 */ @js.native
+  object FBSForceRefresh extends TopLevel[FBSForceRefresh with Double]
+  
+  /* 1126 */ @js.native
+  object FBSInfoFromBootstrapper extends TopLevel[FBSInfoFromBootstrapper with Double]
+  
+  /* 1112 */ @js.native
+  object FBSMinidumpServer extends TopLevel[FBSMinidumpServer with Double]
+  
+  /* 1123 */ @js.native
+  object FBSQueryGMForRequest extends TopLevel[FBSQueryGMForRequest with Double]
+  
+  /* 1124 */ @js.native
+  object FBSQueryGMResponse extends TopLevel[FBSQueryGMResponse with Double]
+  
+  /* 1110 */ @js.native
+  object FBSRebootBox extends TopLevel[FBSRebootBox with Double]
+  
+  /* 1127 */ @js.native
+  object FBSRebootBoxResponse extends TopLevel[FBSRebootBoxResponse with Double]
+  
+  /* 1100 */ @js.native
+  object FBSReqVersion extends TopLevel[FBSReqVersion with Double]
+  
+  /* 1133 */ @js.native
+  object FBSRestartBootstrapper extends TopLevel[FBSRestartBootstrapper with Double]
+  
+  /* 1109 */ @js.native
+  object FBSRunCMDScript extends TopLevel[FBSRunCMDScript with Double]
+  
+  /* 1111 */ @js.native
+  object FBSSetBigBrotherMode extends TopLevel[FBSSetBigBrotherMode with Double]
+  
+  /* 1121 */ @js.native
+  object FBSSetShellCount extends TopLevel[FBSSetShellCount with Double]
+  
+  /* 1113 */ @js.native
+  object FBSSetShellCount_obsolete extends TopLevel[FBSSetShellCount_obsolete with Double]
+  
+  /* 1107 */ @js.native
+  object FBSSetState extends TopLevel[FBSSetState with Double]
+  
+  /* 1122 */ @js.native
+  object FBSTerminateShell extends TopLevel[FBSTerminateShell with Double]
+  
+  /* 1125 */ @js.native
+  object FBSTerminateZombies extends TopLevel[FBSTerminateZombies with Double]
+  
+  /* 1106 */ @js.native
+  object FBSUpdateBootstrapper extends TopLevel[FBSUpdateBootstrapper with Double]
+  
+  /* 1118 */ @js.native
+  object FBSUpdateTargetConfigFile extends TopLevel[FBSUpdateTargetConfigFile with Double]
+  
+  /* 1101 */ @js.native
+  object FBSVersionInfo extends TopLevel[FBSVersionInfo with Double]
+  
+  /* 7510 */ @js.native
+  object FSAddOrRemoveFollower extends TopLevel[FSAddOrRemoveFollower with Double]
+  
+  /* 7511 */ @js.native
+  object FSAddOrRemoveFollowerResponse extends TopLevel[FSAddOrRemoveFollowerResponse with Double]
+  
+  /* 7500 */ @js.native
+  object FSBase extends TopLevel[FSBase with Double]
+  
+  /* 7513 */ @js.native
+  object FSCommentNotification extends TopLevel[FSCommentNotification with Double]
+  
+  /* 7514 */ @js.native
+  object FSCommentNotificationViewed extends TopLevel[FSCommentNotificationViewed with Double]
+  
+  /* 7506 */ @js.native
+  object FSComputeFrenematrix extends TopLevel[FSComputeFrenematrix with Double]
+  
+  /* 7507 */ @js.native
+  object FSComputeFrenematrixResponse extends TopLevel[FSComputeFrenematrixResponse with Double]
+  
+  /* 7521 */ @js.native
+  object FSGetPendingNotificationCount extends TopLevel[FSGetPendingNotificationCount with Double]
+  
+  /* 7522 */ @js.native
+  object FSGetPendingNotificationCountResponse extends TopLevel[FSGetPendingNotificationCountResponse with Double]
+  
+  /* 7508 */ @js.native
+  object FSPlayStatusNotification extends TopLevel[FSPlayStatusNotification with Double]
+  
+  /* 7509 */ @js.native
+  object FSPublishPersonaStatus extends TopLevel[FSPublishPersonaStatus with Double]
+  
+  /* 7530 */ @js.native
+  object FSRequestFriendData extends TopLevel[FSRequestFriendData with Double]
+  
+  /* 7504 */ @js.native
+  object FSRichPresenceRequest extends TopLevel[FSRichPresenceRequest with Double]
+  
+  /* 7505 */ @js.native
+  object FSRichPresenceResponse extends TopLevel[FSRichPresenceResponse with Double]
+  
+  /* 7512 */ @js.native
+  object FSUpdateFollowingList extends TopLevel[FSUpdateFollowingList with Double]
+  
+  /* 3103 */ @js.native
+  object FTSBrowseClans extends TopLevel[FTSBrowseClans with Double]
+  
+  /* 3104 */ @js.native
+  object FTSBrowseClansResponse extends TopLevel[FTSBrowseClansResponse with Double]
+  
+  /* 3109 */ @js.native
+  object FTSClanDeleted extends TopLevel[FTSClanDeleted with Double]
+  
+  /* 3101 */ @js.native
+  object FTSGetBrowseCounts extends TopLevel[FTSGetBrowseCounts with Double]
+  
+  /* 3102 */ @js.native
+  object FTSGetBrowseCountsResponse extends TopLevel[FTSGetBrowseCountsResponse with Double]
+  
+  /* 3114 */ @js.native
+  object FTSGetGSPlayStats extends TopLevel[FTSGetGSPlayStats with Double]
+  
+  /* 3116 */ @js.native
+  object FTSGetGSPlayStatsForServer extends TopLevel[FTSGetGSPlayStatsForServer with Double]
+  
+  /* 3117 */ @js.native
+  object FTSGetGSPlayStatsForServerResponse extends TopLevel[FTSGetGSPlayStatsForServerResponse with Double]
+  
+  /* 3115 */ @js.native
+  object FTSGetGSPlayStatsResponse extends TopLevel[FTSGetGSPlayStatsResponse with Double]
+  
+  /* 3118 */ @js.native
+  object FTSReportIPUpdates extends TopLevel[FTSReportIPUpdates with Double]
+  
+  /* 3110 */ @js.native
+  object FTSSearch extends TopLevel[FTSSearch with Double]
+  
+  /* 3105 */ @js.native
+  object FTSSearchClansByLocation extends TopLevel[FTSSearchClansByLocation with Double]
+  
+  /* 3106 */ @js.native
+  object FTSSearchClansByLocationResponse extends TopLevel[FTSSearchClansByLocationResponse with Double]
+  
+  /* 3107 */ @js.native
+  object FTSSearchPlayersByLocation extends TopLevel[FTSSearchPlayersByLocation with Double]
+  
+  /* 3108 */ @js.native
+  object FTSSearchPlayersByLocationResponse extends TopLevel[FTSSearchPlayersByLocationResponse with Double]
+  
+  /* 3111 */ @js.native
+  object FTSSearchResponse extends TopLevel[FTSSearchResponse with Double]
+  
+  /* 3112 */ @js.native
+  object FTSSearchStatus extends TopLevel[FTSSearchStatus with Double]
+  
+  /* 3113 */ @js.native
+  object FTSSearchStatusResponse extends TopLevel[FTSSearchStatusResponse with Double]
+  
+  /* 3000 */ @js.native
+  object FailServer extends TopLevel[FailServer with Double]
+  
+  /* 1202 */ @js.native
+  object FileXferData extends TopLevel[FileXferData with Double]
+  
+  /* 1204 */ @js.native
+  object FileXferDataAck extends TopLevel[FileXferDataAck with Double]
+  
+  /* 1203 */ @js.native
+  object FileXferEnd extends TopLevel[FileXferEnd with Double]
+  
+  /* 1200 */ @js.native
+  object FileXferRequest extends TopLevel[FileXferRequest with Double]
+  
+  /* 1201 */ @js.native
+  object FileXferResponse extends TopLevel[FileXferResponse with Double]
+  
+  /* 2212 */ @js.native
+  object GCAchievementAwarded extends TopLevel[GCAchievementAwarded with Double]
+  
+  /* 2204 */ @js.native
+  object GCCmdBounce extends TopLevel[GCCmdBounce with Double]
+  
+  /* 2207 */ @js.native
+  object GCCmdDeploy extends TopLevel[GCCmdDeploy with Double]
+  
+  /* 2208 */ @js.native
+  object GCCmdDeployResponse extends TopLevel[GCCmdDeployResponse with Double]
+  
+  /* 2206 */ @js.native
+  object GCCmdDown extends TopLevel[GCCmdDown with Double]
+  
+  /* 2205 */ @js.native
+  object GCCmdForceBounce extends TopLevel[GCCmdForceBounce with Double]
+  
+  /* 2203 */ @js.native
+  object GCCmdRevive extends TopLevel[GCCmdRevive with Double]
+  
+  /* 2216 */ @js.native
+  object GCCmdStatus extends TopLevel[GCCmdStatus with Double]
+  
+  /* 2209 */ @js.native
+  object GCCmdSwitch extends TopLevel[GCCmdSwitch with Double]
+  
+  /* 2218 */ @js.native
+  object GCGetAccountDetails extends TopLevel[GCGetAccountDetails with Double]
+  
+  /* 2218 */ @js.native
+  object GCGetAccountDetails_DEPRECATED extends TopLevel[GCGetAccountDetails_DEPRECATED with Double]
+  
+  /* 2220 */ @js.native
+  object GCGetEmailTemplate extends TopLevel[GCGetEmailTemplate with Double]
+  
+  /* 2221 */ @js.native
+  object GCGetEmailTemplateResponse extends TopLevel[GCGetEmailTemplateResponse with Double]
+  
+  /* 2234 */ @js.native
+  object GCHAccountLockStatusChange extends TopLevel[GCHAccountLockStatusChange with Double]
+  
+  /* 2236 */ @js.native
+  object GCHAccountPhoneNumberChange extends TopLevel[GCHAccountPhoneNumberChange with Double]
+  
+  /* 2233 */ @js.native
+  object GCHAccountTradeBanStatusChange extends TopLevel[GCHAccountTradeBanStatusChange with Double]
+  
+  /* 2237 */ @js.native
+  object GCHAccountTwoFactorChange extends TopLevel[GCHAccountTwoFactorChange with Double]
+  
+  /* 2228 */ @js.native
+  object GCHAccountVacStatusChange extends TopLevel[GCHAccountVacStatusChange with Double]
+  
+  /* 2231 */ @js.native
+  object GCHKillGC extends TopLevel[GCHKillGC with Double]
+  
+  /* 2232 */ @js.native
+  object GCHKillGCResponse extends TopLevel[GCHKillGCResponse with Double]
+  
+  /* 2222 */ @js.native
+  object GCHRelay extends TopLevel[GCHRelay with Double]
+  
+  /* 2223 */ @js.native
+  object GCHRelayClientToIS extends TopLevel[GCHRelayClientToIS with Double]
+  
+  /* 2223 */ @js.native
+  object GCHRelayToClient extends TopLevel[GCHRelayToClient with Double]
+  
+  /* 2226 */ @js.native
+  object GCHRequestStatus extends TopLevel[GCHRequestStatus with Double]
+  
+  /* 2227 */ @js.native
+  object GCHRequestStatusResponse extends TopLevel[GCHRequestStatusResponse with Double]
+  
+  /* 2225 */ @js.native
+  object GCHRequestUpdateSession extends TopLevel[GCHRequestUpdateSession with Double]
+  
+  /* 2229 */ @js.native
+  object GCHSpawnGC extends TopLevel[GCHSpawnGC with Double]
+  
+  /* 2230 */ @js.native
+  object GCHSpawnGCResponse extends TopLevel[GCHSpawnGCResponse with Double]
+  
+  /* 2224 */ @js.native
+  object GCHUpdateSession extends TopLevel[GCHUpdateSession with Double]
+  
+  /* 2235 */ @js.native
+  object GCHVacVerificationChange extends TopLevel[GCHVacVerificationChange with Double]
+  
+  /* 2219 */ @js.native
+  object GCInterAppMessage extends TopLevel[GCInterAppMessage with Double]
+  
+  /* 2217 */ @js.native
+  object GCRegisterWebInterfaces extends TopLevel[GCRegisterWebInterfaces with Double]
+  
+  /* 2217 */ @js.native
+  object GCRegisterWebInterfaces_Deprecated extends TopLevel[GCRegisterWebInterfaces_Deprecated with Double]
+  
+  /* 2200 */ @js.native
+  object GCSendClient extends TopLevel[GCSendClient with Double]
+  
+  /* 2213 */ @js.native
+  object GCSystemMessage extends TopLevel[GCSystemMessage with Double]
+  
+  /* 2211 */ @js.native
+  object GCUpdateGSState extends TopLevel[GCUpdateGSState with Double]
+  
+  /* 2202 */ @js.native
+  object GCUpdatePlayedState extends TopLevel[GCUpdatePlayedState with Double]
+  
+  /* 2214 */ @js.native
+  object GCValidateSession extends TopLevel[GCValidateSession with Double]
+  
+  /* 2215 */ @js.native
+  object GCValidateSessionResponse extends TopLevel[GCValidateSessionResponse with Double]
+  
+  /* 333 */ @js.native
+  object GMConvertUserWallets extends TopLevel[GMConvertUserWallets with Double]
+  
+  /* 320 */ @js.native
+  object GMDRMSync extends TopLevel[GMDRMSync with Double]
+  
+  /* 331 */ @js.native
+  object GMGetServiceMethodRouting extends TopLevel[GMGetServiceMethodRouting with Double]
+  
+  /* 332 */ @js.native
+  object GMGetServiceMethodRoutingResponse extends TopLevel[GMGetServiceMethodRoutingResponse with Double]
+  
+  /* 325 */ @js.native
+  object GMLoadActivationCodes extends TopLevel[GMLoadActivationCodes with Double]
+  
+  /* 326 */ @js.native
+  object GMQueueForFBS extends TopLevel[GMQueueForFBS with Double]
+  
+  /* 319 */ @js.native
+  object GMReportPHPError extends TopLevel[GMReportPHPError with Double]
+  
+  /* 6400 */ @js.native
+  object GMSBase extends TopLevel[GMSBase with Double]
+  
+  /* 6404 */ @js.native
+  object GMSClientServerQueryResponse extends TopLevel[GMSClientServerQueryResponse with Double]
+  
+  /* 6401 */ @js.native
+  object GMSGameServerReplicate extends TopLevel[GMSGameServerReplicate with Double]
+  
+  /* 327 */ @js.native
+  object GMSchemaConversionResults extends TopLevel[GMSchemaConversionResults with Double]
+  
+  /* 328 */ @js.native
+  object GMSchemaConversionResultsResponse extends TopLevel[GMSchemaConversionResultsResponse with Double]
+  
+  /* 324 */ @js.native
+  object GMWriteConfigToSQL extends TopLevel[GMWriteConfigToSQL with Double]
+  
+  /* 329 */ @js.native
+  object GMWriteShellFailureToSQL extends TopLevel[GMWriteShellFailureToSQL with Double]
+  
+  /* 330 */ @js.native
+  object GMWriteStatsToSOS extends TopLevel[GMWriteStatsToSOS with Double]
+  
+  /* 758 */ @js.native
+  object GSApprove extends TopLevel[GSApprove with Double]
+  
+  /* 938 */ @js.native
+  object GSAssociateWithClan extends TopLevel[GSAssociateWithClan with Double]
+  
+  /* 939 */ @js.native
+  object GSAssociateWithClanResponse extends TopLevel[GSAssociateWithClanResponse with Double]
+  
+  /* 940 */ @js.native
+  object GSComputeNewPlayerCompatibility extends TopLevel[GSComputeNewPlayerCompatibility with Double]
+  
+  /* 941 */ @js.native
+  object GSComputeNewPlayerCompatibilityResponse extends TopLevel[GSComputeNewPlayerCompatibilityResponse with Double]
+  
+  /* 759 */ @js.native
+  object GSDeny extends TopLevel[GSDeny with Double]
+  
+  /* 901 */ @js.native
+  object GSDisconnectNotice extends TopLevel[GSDisconnectNotice with Double]
+  
+  /* 918 */ @js.native
+  object GSGetPlayStats extends TopLevel[GSGetPlayStats with Double]
+  
+  /* 919 */ @js.native
+  object GSGetPlayStatsResponse extends TopLevel[GSGetPlayStatsResponse with Double]
+  
+  /* 936 */ @js.native
+  object GSGetReputation extends TopLevel[GSGetReputation with Double]
+  
+  /* 937 */ @js.native
+  object GSGetReputationResponse extends TopLevel[GSGetReputationResponse with Double]
+  
+  /* 910 */ @js.native
+  object GSGetUserAchievementStatus extends TopLevel[GSGetUserAchievementStatus with Double]
+  
+  /* 911 */ @js.native
+  object GSGetUserAchievementStatusResponse extends TopLevel[GSGetUserAchievementStatusResponse with Double]
+  
+  /* 920 */ @js.native
+  object GSGetUserGroupStatus extends TopLevel[GSGetUserGroupStatus with Double]
+  
+  /* 923 */ @js.native
+  object GSGetUserGroupStatusResponse extends TopLevel[GSGetUserGroupStatusResponse with Double]
+  
+  /* 760 */ @js.native
+  object GSKick extends TopLevel[GSKick with Double]
+  
+  /* 5440 */ @js.native
+  object GSPerformHardwareSurvey extends TopLevel[GSPerformHardwareSurvey with Double]
+  
+  /* 909 */ @js.native
+  object GSPlayerList extends TopLevel[GSPlayerList with Double]
+  
+  /* 908 */ @js.native
+  object GSServerType extends TopLevel[GSServerType with Double]
+  
+  /* 903 */ @js.native
+  object GSStatus extends TopLevel[GSStatus with Double]
+  
+  /* 906 */ @js.native
+  object GSStatus2 extends TopLevel[GSStatus2 with Double]
+  
+  /* 774 */ @js.native
+  object GSStatusReply extends TopLevel[GSStatusReply with Double]
+  
+  /* 907 */ @js.native
+  object GSStatusUpdate_Unused extends TopLevel[GSStatusUpdate_Unused with Double]
+  
+  /* 905 */ @js.native
+  object GSUserPlaying extends TopLevel[GSUserPlaying with Double]
+  
+  /* 6407 */ @js.native
+  object GameServerOutOfDate extends TopLevel[GameServerOutOfDate with Double]
+  
+  /* 100 */ @js.native
+  object GenericReply extends TopLevel[GenericReply with Double]
+  
+  /* 4393 */ @js.native
+  object GetUserIPCountry extends TopLevel[GetUserIPCountry with Double]
+  
+  /* 4394 */ @js.native
+  object GetUserIPCountryResponse extends TopLevel[GetUserIPCountryResponse with Double]
+  
+  /* 309 */ @js.native
+  object GracefulExitShell extends TopLevel[GracefulExitShell with Double]
+  
+  /* 300 */ @js.native
+  object Heartbeat extends TopLevel[Heartbeat with Double]
+  
+  /* 124 */ @js.native
+  object HubConnect extends TopLevel[HubConnect with Double]
+  
+  /* 2222 */ @js.native
+  object ISRelayToGCH extends TopLevel[ISRelayToGCH with Double]
+  
+  /* 0 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 145 */ @js.native
+  object InvalidateDBOCacheItems extends TopLevel[InvalidateDBOCacheItems with Double]
+  
+  /* 123 */ @js.native
+  object JobHeartbeat extends TopLevel[JobHeartbeat with Double]
+  
+  /* 3001 */ @js.native
+  object JobHeartbeatTest extends TopLevel[JobHeartbeatTest with Double]
+  
+  /* 3002 */ @js.native
+  object JobHeartbeatTestResponse extends TopLevel[JobHeartbeatTestResponse with Double]
+  
+  /* 7201 */ @js.native
+  object KGSAllocateKeyRange extends TopLevel[KGSAllocateKeyRange with Double]
+  
+  /* 7202 */ @js.native
+  object KGSAllocateKeyRangeResponse extends TopLevel[KGSAllocateKeyRangeResponse with Double]
+  
+  /* 7200 */ @js.native
+  object KGSBase extends TopLevel[KGSBase with Double]
+  
+  /* 7207 */ @js.native
+  object KGSGenerateGameStopWCKeys extends TopLevel[KGSGenerateGameStopWCKeys with Double]
+  
+  /* 7208 */ @js.native
+  object KGSGenerateGameStopWCKeysResponse extends TopLevel[KGSGenerateGameStopWCKeysResponse with Double]
+  
+  /* 7203 */ @js.native
+  object KGSGenerateKeys extends TopLevel[KGSGenerateKeys with Double]
+  
+  /* 7204 */ @js.native
+  object KGSGenerateKeysResponse extends TopLevel[KGSGenerateKeysResponse with Double]
+  
+  /* 7205 */ @js.native
+  object KGSRemapKeys extends TopLevel[KGSRemapKeys with Double]
+  
+  /* 7206 */ @js.native
+  object KGSRemapKeysResponse extends TopLevel[KGSRemapKeysResponse with Double]
+  
+  /* 132 */ @js.native
+  object KeepAlive extends TopLevel[KeepAlive with Double]
+  
+  /* 3210 */ @js.native
+  object LBSDeleteLB extends TopLevel[LBSDeleteLB with Double]
+  
+  /* 3211 */ @js.native
+  object LBSDeleteLBEntry extends TopLevel[LBSDeleteLBEntry with Double]
+  
+  /* 3214 */ @js.native
+  object LBSDeleteLBResponse extends TopLevel[LBSDeleteLBResponse with Double]
+  
+  /* 3203 */ @js.native
+  object LBSFindOrCreateLB extends TopLevel[LBSFindOrCreateLB with Double]
+  
+  /* 3204 */ @js.native
+  object LBSFindOrCreateLBResponse extends TopLevel[LBSFindOrCreateLBResponse with Double]
+  
+  /* 3205 */ @js.native
+  object LBSGetLBEntries extends TopLevel[LBSGetLBEntries with Double]
+  
+  /* 3206 */ @js.native
+  object LBSGetLBEntriesResponse extends TopLevel[LBSGetLBEntriesResponse with Double]
+  
+  /* 3207 */ @js.native
+  object LBSGetLBList extends TopLevel[LBSGetLBList with Double]
+  
+  /* 3208 */ @js.native
+  object LBSGetLBListResponse extends TopLevel[LBSGetLBListResponse with Double]
+  
+  /* 3212 */ @js.native
+  object LBSResetLB extends TopLevel[LBSResetLB with Double]
+  
+  /* 3213 */ @js.native
+  object LBSResetLBResponse extends TopLevel[LBSResetLBResponse with Double]
+  
+  /* 3209 */ @js.native
+  object LBSSetLBDetails extends TopLevel[LBSSetLBDetails with Double]
+  
+  /* 3201 */ @js.native
+  object LBSSetScore extends TopLevel[LBSSetScore with Double]
+  
+  /* 3202 */ @js.native
+  object LBSSetScoreResponse extends TopLevel[LBSSetScoreResponse with Double]
+  
+  /* 316 */ @js.native
+  object LicenseProcessingComplete extends TopLevel[LicenseProcessingComplete with Double]
+  
+  /* 143 */ @js.native
+  object LoadDBOCacheItem extends TopLevel[LoadDBOCacheItem with Double]
+  
+  /* 144 */ @js.native
+  object LoadDBOCacheItemResponse extends TopLevel[LoadDBOCacheItemResponse with Double]
+  
+  /* 1009 */ @js.native
+  object LogSearchCancel extends TopLevel[LogSearchCancel with Double]
+  
+  /* 1007 */ @js.native
+  object LogSearchRequest extends TopLevel[LogSearchRequest with Double]
+  
+  /* 1008 */ @js.native
+  object LogSearchResponse extends TopLevel[LogSearchResponse with Double]
+  
+  /* 8800 */ @js.native
+  object LogsinkBase extends TopLevel[LogsinkBase with Double]
+  
+  /* 8800 */ @js.native
+  object LogsinkWriteReport extends TopLevel[LogsinkWriteReport with Double]
+  
+  /* 5828 */ @js.native
+  object MDSContentServerConfig extends TopLevel[MDSContentServerConfig with Double]
+  
+  /* 5827 */ @js.native
+  object MDSContentServerConfigRequest extends TopLevel[MDSContentServerConfigRequest with Double]
+  
+  /* 5826 */ @js.native
+  object MDSContentServerStatsBroadcast extends TopLevel[MDSContentServerStatsBroadcast with Double]
+  
+  /* 5825 */ @js.native
+  object MDSDownloadDepotChunksAck extends TopLevel[MDSDownloadDepotChunksAck with Double]
+  
+  /* 5832 */ @js.native
+  object MDSGetDepotChunk extends TopLevel[MDSGetDepotChunk with Double]
+  
+  /* 5834 */ @js.native
+  object MDSGetDepotChunkChunk extends TopLevel[MDSGetDepotChunkChunk with Double]
+  
+  /* 5833 */ @js.native
+  object MDSGetDepotChunkResponse extends TopLevel[MDSGetDepotChunkResponse with Double]
+  
+  /* 5829 */ @js.native
+  object MDSGetDepotManifest extends TopLevel[MDSGetDepotManifest with Double]
+  
+  /* 5831 */ @js.native
+  object MDSGetDepotManifestChunk extends TopLevel[MDSGetDepotManifestChunk with Double]
+  
+  /* 5830 */ @js.native
+  object MDSGetDepotManifestResponse extends TopLevel[MDSGetDepotManifestResponse with Double]
+  
+  /* 5836 */ @js.native
+  object MDSGetServerListForUser extends TopLevel[MDSGetServerListForUser with Double]
+  
+  /* 5837 */ @js.native
+  object MDSGetServerListForUserResponse extends TopLevel[MDSGetServerListForUserResponse with Double]
+  
+  /* 5814 */ @js.native
+  object MDSGetVersionsForDepot extends TopLevel[MDSGetVersionsForDepot with Double]
+  
+  /* 5815 */ @js.native
+  object MDSGetVersionsForDepotResponse extends TopLevel[MDSGetVersionsForDepotResponse with Double]
+  
+  /* 5847 */ @js.native
+  object MDSMigrateChunk extends TopLevel[MDSMigrateChunk with Double]
+  
+  /* 5848 */ @js.native
+  object MDSMigrateChunkResponse extends TopLevel[MDSMigrateChunkResponse with Double]
+  
+  /* 5816 */ @js.native
+  object MDSSetPublicVersionForDepot extends TopLevel[MDSSetPublicVersionForDepot with Double]
+  
+  /* 5817 */ @js.native
+  object MDSSetPublicVersionForDepotResponse extends TopLevel[MDSSetPublicVersionForDepotResponse with Double]
+  
+  /* 5813 */ @js.native
+  object MDSToAMGetDepotDecryptionKeyResponse extends TopLevel[MDSToAMGetDepotDecryptionKeyResponse with Double]
+  
+  /* 5844 */ @js.native
+  object MDSToCSFlushChunk extends TopLevel[MDSToCSFlushChunk with Double]
+  
+  /* 5835 */ @js.native
+  object MDSUpdateContentServerConfig extends TopLevel[MDSUpdateContentServerConfig with Double]
+  
+  /* 6600 */ @js.native
+  object MMSBase extends TopLevel[MMSBase with Double]
+  
+  /* 7100 */ @js.native
+  object MPASBase extends TopLevel[MPASBase with Double]
+  
+  /* 7101 */ @js.native
+  object MPASVacBanReset extends TopLevel[MPASVacBanReset with Double]
+  
+  /* 4216 */ @js.native
+  object MarketingMessageUpdate extends TopLevel[MarketingMessageUpdate with Double]
+  
+  /* 1 */ @js.native
+  object Multi extends TopLevel[Multi with Double]
+  
+  /* 6800 */ @js.native
+  object NonStdMsgBase extends TopLevel[NonStdMsgBase with Double]
+  
+  /* 6806 */ @js.native
+  object NonStdMsgChase extends TopLevel[NonStdMsgChase with Double]
+  
+  /* 6807 */ @js.native
+  object NonStdMsgDFSTransfer extends TopLevel[NonStdMsgDFSTransfer with Double]
+  
+  /* 6803 */ @js.native
+  object NonStdMsgHTTPClient extends TopLevel[NonStdMsgHTTPClient with Double]
+  
+  /* 6802 */ @js.native
+  object NonStdMsgHTTPServer extends TopLevel[NonStdMsgHTTPServer with Double]
+  
+  /* 6811 */ @js.native
+  object NonStdMsgLogsink extends TopLevel[NonStdMsgLogsink with Double]
+  
+  /* 6801 */ @js.native
+  object NonStdMsgMemcached extends TopLevel[NonStdMsgMemcached with Double]
+  
+  /* 6805 */ @js.native
+  object NonStdMsgPHPSimulator extends TopLevel[NonStdMsgPHPSimulator with Double]
+  
+  /* 6813 */ @js.native
+  object NonStdMsgRTMPServer extends TopLevel[NonStdMsgRTMPServer with Double]
+  
+  /* 6812 */ @js.native
+  object NonStdMsgSteam2Emulator extends TopLevel[NonStdMsgSteam2Emulator with Double]
+  
+  /* 6810 */ @js.native
+  object NonStdMsgSyslog extends TopLevel[NonStdMsgSyslog with Double]
+  
+  /* 6808 */ @js.native
+  object NonStdMsgTests extends TopLevel[NonStdMsgTests with Double]
+  
+  /* 6809 */ @js.native
+  object NonStdMsgUMQpipeAAPL extends TopLevel[NonStdMsgUMQpipeAAPL with Double]
+  
+  /* 6804 */ @js.native
+  object NonStdMsgWGResponse extends TopLevel[NonStdMsgWGResponse with Double]
+  
+  /* 4395 */ @js.native
+  object NotificationOfSuspiciousActivity extends TopLevel[NotificationOfSuspiciousActivity with Double]
+  
+  /* 314 */ @js.native
+  object NotifyWatchdog extends TopLevel[NotifyWatchdog with Double]
+  
+  /* 3401 */ @js.native
+  object OGSBeginSession extends TopLevel[OGSBeginSession with Double]
+  
+  /* 3402 */ @js.native
+  object OGSBeginSessionResponse extends TopLevel[OGSBeginSessionResponse with Double]
+  
+  /* 3403 */ @js.native
+  object OGSEndSession extends TopLevel[OGSEndSession with Double]
+  
+  /* 3404 */ @js.native
+  object OGSEndSessionResponse extends TopLevel[OGSEndSessionResponse with Double]
+  
+  /* 3406 */ @js.native
+  object OGSWriteAppSessionRow extends TopLevel[OGSWriteAppSessionRow with Double]
+  
+  /* 2502 */ @js.native
+  object P2PIntroducerMessage extends TopLevel[P2PIntroducerMessage with Double]
+  
+  /* 8900 */ @js.native
+  object PICSBase extends TopLevel[PICSBase with Double]
+  
+  /* 5005 */ @js.native
+  object PSAddPackageToShoppingCart extends TopLevel[PSAddPackageToShoppingCart with Double]
+  
+  /* 5006 */ @js.native
+  object PSAddPackageToShoppingCartResponse extends TopLevel[PSAddPackageToShoppingCartResponse with Double]
+  
+  /* 5011 */ @js.native
+  object PSAddWalletCreditToShoppingCart extends TopLevel[PSAddWalletCreditToShoppingCart with Double]
+  
+  /* 5012 */ @js.native
+  object PSAddWalletCreditToShoppingCartResponse extends TopLevel[PSAddWalletCreditToShoppingCartResponse with Double]
+  
+  /* 5001 */ @js.native
+  object PSCreateShoppingCart extends TopLevel[PSCreateShoppingCart with Double]
+  
+  /* 5002 */ @js.native
+  object PSCreateShoppingCartResponse extends TopLevel[PSCreateShoppingCartResponse with Double]
+  
+  /* 5009 */ @js.native
+  object PSGetShoppingCartContents extends TopLevel[PSGetShoppingCartContents with Double]
+  
+  /* 5010 */ @js.native
+  object PSGetShoppingCartContentsResponse extends TopLevel[PSGetShoppingCartContentsResponse with Double]
+  
+  /* 5003 */ @js.native
+  object PSIsValidShoppingCart extends TopLevel[PSIsValidShoppingCart with Double]
+  
+  /* 5004 */ @js.native
+  object PSIsValidShoppingCartResponse extends TopLevel[PSIsValidShoppingCartResponse with Double]
+  
+  /* 5007 */ @js.native
+  object PSRemoveLineItemFromShoppingCart extends TopLevel[PSRemoveLineItemFromShoppingCart with Double]
+  
+  /* 5008 */ @js.native
+  object PSRemoveLineItemFromShoppingCartResponse extends TopLevel[PSRemoveLineItemFromShoppingCartResponse with Double]
+  
+  /* 321 */ @js.native
+  object PhysicalBoxInventory extends TopLevel[PhysicalBoxInventory with Double]
+  
+  /* 139 */ @js.native
+  object Ping extends TopLevel[Ping with Double]
+  
+  /* 140 */ @js.native
+  object PingResponse extends TopLevel[PingResponse with Double]
+  
+  /* 226 */ @js.native
+  object PrepareToExit extends TopLevel[PrepareToExit with Double]
+  
+  /* 2 */ @js.native
+  object ProtobufWrapped extends TopLevel[ProtobufWrapped with Double]
+  
+  /* 234 */ @js.native
+  object ProvideWindowsEventLogEntries extends TopLevel[ProvideWindowsEventLogEntries with Double]
+  
+  /* 9300 */ @js.native
+  object QuestServerBase extends TopLevel[QuestServerBase with Double]
+  
+  /* 318 */ @js.native
+  object QueuedEmailsComplete extends TopLevel[QueuedEmailsComplete with Double]
+  
+  /* 7803 */ @js.native
+  object RMDeleteMemcachedKeys extends TopLevel[RMDeleteMemcachedKeys with Double]
+  
+  /* 7806 */ @js.native
+  object RMMsgTraceAddTrigger extends TopLevel[RMMsgTraceAddTrigger with Double]
+  
+  /* 7808 */ @js.native
+  object RMMsgTraceEvent extends TopLevel[RMMsgTraceEvent with Double]
+  
+  /* 7807 */ @js.native
+  object RMMsgTraceRemoveTrigger extends TopLevel[RMMsgTraceRemoveTrigger with Double]
+  
+  /* 7800 */ @js.native
+  object RMRange extends TopLevel[RMRange with Double]
+  
+  /* 7804 */ @js.native
+  object RMRemoteInvoke extends TopLevel[RMRemoteInvoke with Double]
+  
+  /* 7800 */ @js.native
+  object RMTestVerisignOTP extends TopLevel[RMTestVerisignOTP with Double]
+  
+  /* 7801 */ @js.native
+  object RMTestVerisignOTPResponse extends TopLevel[RMTestVerisignOTPResponse with Double]
+  
+  /* 9509 */ @js.native
+  object RemoteClientAcceptEULA extends TopLevel[RemoteClientAcceptEULA with Double]
+  
+  /* 9502 */ @js.native
+  object RemoteClientAppStatus extends TopLevel[RemoteClientAppStatus with Double]
+  
+  /* 9500 */ @js.native
+  object RemoteClientAuth extends TopLevel[RemoteClientAuth with Double]
+  
+  /* 9501 */ @js.native
+  object RemoteClientAuthResponse extends TopLevel[RemoteClientAuthResponse with Double]
+  
+  /* 9500 */ @js.native
+  object RemoteClientBase extends TopLevel[RemoteClientBase with Double]
+  
+  /* 9510 */ @js.native
+  object RemoteClientGetControllerConfig extends TopLevel[RemoteClientGetControllerConfig with Double]
+  
+  /* 9511 */ @js.native
+  object RemoteClientGetControllerConfigResposne extends TopLevel[RemoteClientGetControllerConfigResposne with Double]
+  
+  /* 9505 */ @js.native
+  object RemoteClientPing extends TopLevel[RemoteClientPing with Double]
+  
+  /* 9506 */ @js.native
+  object RemoteClientPingResponse extends TopLevel[RemoteClientPingResponse with Double]
+  
+  /* 9503 */ @js.native
+  object RemoteClientStartStream extends TopLevel[RemoteClientStartStream with Double]
+  
+  /* 9504 */ @js.native
+  object RemoteClientStartStreamResponse extends TopLevel[RemoteClientStartStreamResponse with Double]
+  
+  /* 9512 */ @js.native
+  object RemoteClientStreamingEnabled extends TopLevel[RemoteClientStreamingEnabled with Double]
+  
+  /* 128 */ @js.native
+  object RemoteSysID extends TopLevel[RemoteSysID with Double]
+  
+  /* 600 */ @js.native
+  object ReqChallenge extends TopLevel[ReqChallenge with Double]
+  
+  /* 602 */ @js.native
+  object ReqChallengeTest extends TopLevel[ReqChallengeTest with Double]
+  
+  /* 142 */ @js.native
+  object RequestFullStatsBlock extends TopLevel[RequestFullStatsBlock with Double]
+  
+  /* 1014 */ @js.native
+  object RequestStatHistory extends TopLevel[RequestStatHistory with Double]
+  
+  /* 233 */ @js.native
+  object RequestWindowsEventLogEntries extends TopLevel[RequestWindowsEventLogEntries with Double]
+  
+  /* 127 */ @js.native
+  object RouteMessage extends TopLevel[RouteMessage with Double]
+  
+  /* 120 */ @js.native
+  object SCIDRequest extends TopLevel[SCIDRequest with Double]
+  
+  /* 121 */ @js.native
+  object SCIDResponse extends TopLevel[SCIDResponse with Double]
+  
+  /* 9400 */ @js.native
+  object SLCBase extends TopLevel[SLCBase with Double]
+  
+  /* 9407 */ @js.native
+  object SLCOwnerLibraryChanged extends TopLevel[SLCOwnerLibraryChanged with Double]
+  
+  /* 9401 */ @js.native
+  object SLCRequestUserSessionStatus extends TopLevel[SLCRequestUserSessionStatus with Double]
+  
+  /* 9408 */ @js.native
+  object SLCSharedLibraryChanged extends TopLevel[SLCSharedLibraryChanged with Double]
+  
+  /* 9402 */ @js.native
+  object SLCSharedLicensesLockStatus extends TopLevel[SLCSharedLicensesLockStatus with Double]
+  
+  /* 9400 */ @js.native
+  object SLCUserSessionStatus extends TopLevel[SLCUserSessionStatus with Double]
+  
+  /* 2902 */ @js.native
+  object SMExpensiveReport extends TopLevel[SMExpensiveReport with Double]
+  
+  /* 2904 */ @js.native
+  object SMFishingReport extends TopLevel[SMFishingReport with Double]
+  
+  /* 2907 */ @js.native
+  object SMGetSchemaConversionResults extends TopLevel[SMGetSchemaConversionResults with Double]
+  
+  /* 2908 */ @js.native
+  object SMGetSchemaConversionResultsResponse extends TopLevel[SMGetSchemaConversionResultsResponse with Double]
+  
+  /* 2903 */ @js.native
+  object SMHourlyReport extends TopLevel[SMHourlyReport with Double]
+  
+  /* 2906 */ @js.native
+  object SMMonitorSpace extends TopLevel[SMMonitorSpace with Double]
+  
+  /* 2905 */ @js.native
+  object SMPartitionRenames extends TopLevel[SMPartitionRenames with Double]
+  
+  /* 8600 */ @js.native
+  object SecretsBase extends TopLevel[SecretsBase with Double]
+  
+  /* 8601 */ @js.native
+  object SecretsCredentialPairResponse extends TopLevel[SecretsCredentialPairResponse with Double]
+  
+  /* 8600 */ @js.native
+  object SecretsRequestCredentialPair extends TopLevel[SecretsRequestCredentialPair with Double]
+  
+  /* 8602 */ @js.native
+  object SecretsRequestServerIdentity extends TopLevel[SecretsRequestServerIdentity with Double]
+  
+  /* 8603 */ @js.native
+  object SecretsServerIdentityResponse extends TopLevel[SecretsServerIdentityResponse with Double]
+  
+  /* 8604 */ @js.native
+  object SecretsUpdateServerIdentities extends TopLevel[SecretsUpdateServerIdentities with Double]
+  
+  /* 146 */ @js.native
+  object ServiceMethod extends TopLevel[ServiceMethod with Double]
+  
+  /* 147 */ @js.native
+  object ServiceMethodResponse extends TopLevel[ServiceMethodResponse with Double]
+  
+  /* 317 */ @js.native
+  object SetTestFlag extends TopLevel[SetTestFlag with Double]
+  
+  /* 237 */ @js.native
+  object ShellCheckWindowsUpdates extends TopLevel[ShellCheckWindowsUpdates with Double]
+  
+  /* 238 */ @js.native
+  object ShellCheckWindowsUpdatesResponse extends TopLevel[ShellCheckWindowsUpdatesResponse with Double]
+  
+  /* 230 */ @js.native
+  object ShellConfigInfoUpdate extends TopLevel[ShellConfigInfoUpdate with Double]
+  
+  /* 301 */ @js.native
+  object ShellFailed extends TopLevel[ShellFailed with Double]
+  
+  /* 239 */ @js.native
+  object ShellFlushUserLicenseCache extends TopLevel[ShellFlushUserLicenseCache with Double]
+  
+  /* 235 */ @js.native
+  object ShellSearchLogs extends TopLevel[ShellSearchLogs with Double]
+  
+  /* 236 */ @js.native
+  object ShellSearchLogsResponse extends TopLevel[ShellSearchLogsResponse with Double]
+  
+  /* 1015 */ @js.native
+  object StatHistory extends TopLevel[StatHistory with Double]
+  
+  /* 141 */ @js.native
+  object Stats extends TopLevel[Stats with Double]
+  
+  /* 138 */ @js.native
+  object StatsDeprecated extends TopLevel[StatsDeprecated with Double]
+  
+  /* 8000 */ @js.native
+  object StoreBase extends TopLevel[StoreBase with Double]
+  
+  /* 8000 */ @js.native
+  object StoreUpdateRecommendationCount extends TopLevel[StoreUpdateRecommendationCount with Double]
+  
+  /* 126 */ @js.native
+  object Subscribe extends TopLevel[Subscribe with Double]
+  
+  /* 323 */ @js.native
+  object TestInitDB extends TopLevel[TestInitDB with Double]
+  
+  /* 228 */ @js.native
+  object TestResetServer extends TopLevel[TestResetServer with Double]
+  
+  /* 9200 */ @js.native
+  object TestWorkerProcess extends TopLevel[TestWorkerProcess with Double]
+  
+  /* 9200 */ @js.native
+  object TestWorkerProcessLoadUnloadModuleRequest extends TopLevel[TestWorkerProcessLoadUnloadModuleRequest with Double]
+  
+  /* 9201 */ @js.native
+  object TestWorkerProcessLoadUnloadModuleResponse extends TopLevel[TestWorkerProcessLoadUnloadModuleResponse with Double]
+  
+  /* 9202 */ @js.native
+  object TestWorkerProcessServiceModuleCallRequest extends TopLevel[TestWorkerProcessServiceModuleCallRequest with Double]
+  
+  /* 9203 */ @js.native
+  object TestWorkerProcessServiceModuleCallResponse extends TopLevel[TestWorkerProcessServiceModuleCallResponse with Double]
+  
+  /* 149 */ @js.native
+  object TimestampRequest extends TopLevel[TimestampRequest with Double]
+  
+  /* 150 */ @js.native
+  object TimestampResponse extends TopLevel[TimestampResponse with Double]
+  
+  /* 7335 */ @js.native
+  object UCMAddTaggedScreenshot extends TopLevel[UCMAddTaggedScreenshot with Double]
+  
+  /* 7300 */ @js.native
+  object UCMBase extends TopLevel[UCMBase with Double]
+  
+  /* 7372 */ @js.native
+  object UCMDeleteOldScreenshot extends TopLevel[UCMDeleteOldScreenshot with Double]
+  
+  /* 7373 */ @js.native
+  object UCMDeleteOldScreenshotResponse extends TopLevel[UCMDeleteOldScreenshotResponse with Double]
+  
+  /* 7374 */ @js.native
+  object UCMDeleteOldVideo extends TopLevel[UCMDeleteOldVideo with Double]
+  
+  /* 7375 */ @js.native
+  object UCMDeleteOldVideoResponse extends TopLevel[UCMDeleteOldVideoResponse with Double]
+  
+  /* 7329 */ @js.native
+  object UCMDeletePublishedFile extends TopLevel[UCMDeletePublishedFile with Double]
+  
+  /* 7330 */ @js.native
+  object UCMDeletePublishedFileResponse extends TopLevel[UCMDeletePublishedFileResponse with Double]
+  
+  /* 7371 */ @js.native
+  object UCMFixStatsPublishedFile extends TopLevel[UCMFixStatsPublishedFile with Double]
+  
+  /* 7362 */ @js.native
+  object UCMGetPublishedFilesForUser extends TopLevel[UCMGetPublishedFilesForUser with Double]
+  
+  /* 7363 */ @js.native
+  object UCMGetPublishedFilesForUserResponse extends TopLevel[UCMGetPublishedFilesForUserResponse with Double]
+  
+  /* 7369 */ @js.native
+  object UCMGetUserSubscribedFiles extends TopLevel[UCMGetUserSubscribedFiles with Double]
+  
+  /* 7370 */ @js.native
+  object UCMGetUserSubscribedFilesResponse extends TopLevel[UCMGetUserSubscribedFilesResponse with Double]
+  
+  /* 7351 */ @js.native
+  object UCMPublishFile extends TopLevel[UCMPublishFile with Double]
+  
+  /* 7352 */ @js.native
+  object UCMPublishFileResponse extends TopLevel[UCMPublishFileResponse with Double]
+  
+  /* 7353 */ @js.native
+  object UCMPublishedFileChildAdd extends TopLevel[UCMPublishedFileChildAdd with Double]
+  
+  /* 7354 */ @js.native
+  object UCMPublishedFileChildAddResponse extends TopLevel[UCMPublishedFileChildAddResponse with Double]
+  
+  /* 7357 */ @js.native
+  object UCMPublishedFileChildChangeSortOrder extends TopLevel[UCMPublishedFileChildChangeSortOrder with Double]
+  
+  /* 7358 */ @js.native
+  object UCMPublishedFileChildChangeSortOrderResponse extends TopLevel[UCMPublishedFileChildChangeSortOrderResponse with Double]
+  
+  /* 7355 */ @js.native
+  object UCMPublishedFileChildRemove extends TopLevel[UCMPublishedFileChildRemove with Double]
+  
+  /* 7356 */ @js.native
+  object UCMPublishedFileChildRemoveResponse extends TopLevel[UCMPublishedFileChildRemoveResponse with Double]
+  
+  /* 7380 */ @js.native
+  object UCMPublishedFileContentUpdated extends TopLevel[UCMPublishedFileContentUpdated with Double]
+  
+  /* 7359 */ @js.native
+  object UCMPublishedFileParentChanged extends TopLevel[UCMPublishedFileParentChanged with Double]
+  
+  /* 7341 */ @js.native
+  object UCMPublishedFilePreviewAdd extends TopLevel[UCMPublishedFilePreviewAdd with Double]
+  
+  /* 7342 */ @js.native
+  object UCMPublishedFilePreviewAddResponse extends TopLevel[UCMPublishedFilePreviewAddResponse with Double]
+  
+  /* 7345 */ @js.native
+  object UCMPublishedFilePreviewChangeSortOrder extends TopLevel[UCMPublishedFilePreviewChangeSortOrder with Double]
+  
+  /* 7346 */ @js.native
+  object UCMPublishedFilePreviewChangeSortOrderResponse extends TopLevel[UCMPublishedFilePreviewChangeSortOrderResponse with Double]
+  
+  /* 7343 */ @js.native
+  object UCMPublishedFilePreviewRemove extends TopLevel[UCMPublishedFilePreviewRemove with Double]
+  
+  /* 7344 */ @js.native
+  object UCMPublishedFilePreviewRemoveResponse extends TopLevel[UCMPublishedFilePreviewRemoveResponse with Double]
+  
+  /* 7339 */ @js.native
+  object UCMPublishedFileReported extends TopLevel[UCMPublishedFileReported with Double]
+  
+  /* 7349 */ @js.native
+  object UCMPublishedFileSubscribed extends TopLevel[UCMPublishedFileSubscribed with Double]
+  
+  /* 7350 */ @js.native
+  object UCMPublishedFileUnsubscribed extends TopLevel[UCMPublishedFileUnsubscribed with Double]
+  
+  /* 7381 */ @js.native
+  object UCMPublishedFileUpdated extends TopLevel[UCMPublishedFileUpdated with Double]
+  
+  /* 7337 */ @js.native
+  object UCMReloadPublishedFile extends TopLevel[UCMReloadPublishedFile with Double]
+  
+  /* 7338 */ @js.native
+  object UCMReloadUserFileListCaches extends TopLevel[UCMReloadUserFileListCaches with Double]
+  
+  /* 7336 */ @js.native
+  object UCMRemoveTaggedScreenshot extends TopLevel[UCMRemoveTaggedScreenshot with Double]
+  
+  /* 7307 */ @js.native
+  object UCMResetCommunityContent extends TopLevel[UCMResetCommunityContent with Double]
+  
+  /* 7308 */ @js.native
+  object UCMResetCommunityContentResponse extends TopLevel[UCMResetCommunityContentResponse with Double]
+  
+  /* 7376 */ @js.native
+  object UCMUpdateOldScreenshotPrivacy extends TopLevel[UCMUpdateOldScreenshotPrivacy with Double]
+  
+  /* 7377 */ @js.native
+  object UCMUpdateOldScreenshotPrivacyResponse extends TopLevel[UCMUpdateOldScreenshotPrivacyResponse with Double]
+  
+  /* 7327 */ @js.native
+  object UCMUpdatePublishedFile extends TopLevel[UCMUpdatePublishedFile with Double]
+  
+  /* 7332 */ @js.native
+  object UCMUpdatePublishedFileBan extends TopLevel[UCMUpdatePublishedFileBan with Double]
+  
+  /* 7333 */ @js.native
+  object UCMUpdatePublishedFileBanResponse extends TopLevel[UCMUpdatePublishedFileBanResponse with Double]
+  
+  /* 7340 */ @js.native
+  object UCMUpdatePublishedFileIncompatibleStatus extends TopLevel[UCMUpdatePublishedFileIncompatibleStatus with Double]
+  
+  /* 7328 */ @js.native
+  object UCMUpdatePublishedFileResponse extends TopLevel[UCMUpdatePublishedFileResponse with Double]
+  
+  /* 7331 */ @js.native
+  object UCMUpdatePublishedFileStat extends TopLevel[UCMUpdatePublishedFileStat with Double]
+  
+  /* 7334 */ @js.native
+  object UCMUpdateTaggedScreenshot extends TopLevel[UCMUpdateTaggedScreenshot with Double]
+  
+  /* 7303 */ @js.native
+  object UCMValidateObjectExists extends TopLevel[UCMValidateObjectExists with Double]
+  
+  /* 7304 */ @js.native
+  object UCMValidateObjectExistsResponse extends TopLevel[UCMValidateObjectExistsResponse with Double]
+  
+  /* 7000 */ @js.native
+  object UDSBase extends TopLevel[UDSBase with Double]
+  
+  /* 7006 */ @js.native
+  object UDSFindSession extends TopLevel[UDSFindSession with Double]
+  
+  /* 7007 */ @js.native
+  object UDSFindSessionResponse extends TopLevel[UDSFindSessionResponse with Double]
+  
+  /* 7006 */ @js.native
+  object UDSHasSession extends TopLevel[UDSHasSession with Double]
+  
+  /* 7007 */ @js.native
+  object UDSHasSessionResponse extends TopLevel[UDSHasSessionResponse with Double]
+  
+  /* 7003 */ @js.native
+  object UDSRenderUserAuth extends TopLevel[UDSRenderUserAuth with Double]
+  
+  /* 7004 */ @js.native
+  object UDSRenderUserAuthResponse extends TopLevel[UDSRenderUserAuthResponse with Double]
+  
+  /* 5223 */ @js.native
+  object UFSDownloadChunk extends TopLevel[UFSDownloadChunk with Double]
+  
+  /* 5246 */ @js.native
+  object UFSDownloadChunkRequest extends TopLevel[UFSDownloadChunkRequest with Double]
+  
+  /* 5247 */ @js.native
+  object UFSDownloadChunkResponse extends TopLevel[UFSDownloadChunkResponse with Double]
+  
+  /* 5248 */ @js.native
+  object UFSDownloadFinishRequest extends TopLevel[UFSDownloadFinishRequest with Double]
+  
+  /* 5249 */ @js.native
+  object UFSDownloadFinishResponse extends TopLevel[UFSDownloadFinishResponse with Double]
+  
+  /* 5221 */ @js.native
+  object UFSDownloadRequest extends TopLevel[UFSDownloadRequest with Double]
+  
+  /* 5222 */ @js.native
+  object UFSDownloadResponse extends TopLevel[UFSDownloadResponse with Double]
+  
+  /* 5244 */ @js.native
+  object UFSDownloadStartRequest extends TopLevel[UFSDownloadStartRequest with Double]
+  
+  /* 5245 */ @js.native
+  object UFSDownloadStartResponse extends TopLevel[UFSDownloadStartResponse with Double]
+  
+  /* 5250 */ @js.native
+  object UFSFlushURLCache extends TopLevel[UFSFlushURLCache with Double]
+  
+  /* 5240 */ @js.native
+  object UFSGetUGCURLs extends TopLevel[UFSGetUGCURLs with Double]
+  
+  /* 5241 */ @js.native
+  object UFSGetUGCURLsResponse extends TopLevel[UFSGetUGCURLsResponse with Double]
+  
+  /* 5242 */ @js.native
+  object UFSHttpUploadFileFinishRequest extends TopLevel[UFSHttpUploadFileFinishRequest with Double]
+  
+  /* 5243 */ @js.native
+  object UFSHttpUploadFileFinishResponse extends TopLevel[UFSHttpUploadFileFinishResponse with Double]
+  
+  /* 5238 */ @js.native
+  object UFSMigrateFile extends TopLevel[UFSMigrateFile with Double]
+  
+  /* 5253 */ @js.native
+  object UFSMigrateFileAppID extends TopLevel[UFSMigrateFileAppID with Double]
+  
+  /* 5254 */ @js.native
+  object UFSMigrateFileAppIDResponse extends TopLevel[UFSMigrateFileAppIDResponse with Double]
+  
+  /* 5239 */ @js.native
+  object UFSMigrateFileResponse extends TopLevel[UFSMigrateFileResponse with Double]
+  
+  /* 5234 */ @js.native
+  object UFSReloadAccount extends TopLevel[UFSReloadAccount with Double]
+  
+  /* 5235 */ @js.native
+  object UFSReloadAccountResponse extends TopLevel[UFSReloadAccountResponse with Double]
+  
+  /* 5215 */ @js.native
+  object UFSReloadPartitionInfo extends TopLevel[UFSReloadPartitionInfo with Double]
+  
+  /* 5217 */ @js.native
+  object UFSSynchronizeFile extends TopLevel[UFSSynchronizeFile with Double]
+  
+  /* 5218 */ @js.native
+  object UFSSynchronizeFileResponse extends TopLevel[UFSSynchronizeFileResponse with Double]
+  
+  /* 5228 */ @js.native
+  object UFSUpdateFileFlags extends TopLevel[UFSUpdateFileFlags with Double]
+  
+  /* 5229 */ @js.native
+  object UFSUpdateFileFlagsResponse extends TopLevel[UFSUpdateFileFlagsResponse with Double]
+  
+  /* 5236 */ @js.native
+  object UFSUpdateRecordBatched extends TopLevel[UFSUpdateRecordBatched with Double]
+  
+  /* 5237 */ @js.native
+  object UFSUpdateRecordBatchedResponse extends TopLevel[UFSUpdateRecordBatchedResponse with Double]
+  
+  /* 5251 */ @js.native
+  object UFSUploadCommit extends TopLevel[UFSUploadCommit with Double]
+  
+  /* 5252 */ @js.native
+  object UFSUploadCommitResponse extends TopLevel[UFSUploadCommitResponse with Double]
+  
+  /* 7900 */ @js.native
+  object UGSBase extends TopLevel[UGSBase with Double]
+  
+  /* 7900 */ @js.native
+  object UGSUpdateGlobalStats extends TopLevel[UGSUpdateGlobalStats with Double]
+  
+  /* 8108 */ @js.native
+  object UMQ2AM_ClientMsgBatch extends TopLevel[UMQ2AM_ClientMsgBatch with Double]
+  
+  /* 8100 */ @js.native
+  object UMQBase extends TopLevel[UMQBase with Double]
+  
+  /* 8110 */ @js.native
+  object UMQEnqueueMobileAnnouncements extends TopLevel[UMQEnqueueMobileAnnouncements with Double]
+  
+  /* 8109 */ @js.native
+  object UMQEnqueueMobileSalePromotions extends TopLevel[UMQEnqueueMobileSalePromotions with Double]
+  
+  /* 8105 */ @js.native
+  object UMQIncomingChatMessage extends TopLevel[UMQIncomingChatMessage with Double]
+  
+  /* 8102 */ @js.native
+  object UMQLogoffRequest extends TopLevel[UMQLogoffRequest with Double]
+  
+  /* 8103 */ @js.native
+  object UMQLogoffResponse extends TopLevel[UMQLogoffResponse with Double]
+  
+  /* 8100 */ @js.native
+  object UMQLogonRequest extends TopLevel[UMQLogonRequest with Double]
+  
+  /* 8101 */ @js.native
+  object UMQLogonResponse extends TopLevel[UMQLogonResponse with Double]
+  
+  /* 8106 */ @js.native
+  object UMQPoll extends TopLevel[UMQPoll with Double]
+  
+  /* 8107 */ @js.native
+  object UMQPollResults extends TopLevel[UMQPollResults with Double]
+  
+  /* 8104 */ @js.native
+  object UMQSendChatMessage extends TopLevel[UMQSendChatMessage with Double]
+  
+  /* 229 */ @js.native
+  object UniverseChanged extends TopLevel[UniverseChanged with Double]
+  
+  /* 1010 */ @js.native
+  object UniverseData extends TopLevel[UniverseData with Double]
+  
+  /* 322 */ @js.native
+  object UpdateConfigFile extends TopLevel[UpdateConfigFile with Double]
+  
+  /* 221 */ @js.native
+  object UpdateCreditCardRequest extends TopLevel[UpdateCreditCardRequest with Double]
+  
+  /* 215 */ @js.native
+  object UpdateRecordResponse extends TopLevel[UpdateRecordResponse with Double]
+  
+  /* 225 */ @js.native
+  object UpdateUserBanResponse extends TopLevel[UpdateUserBanResponse with Double]
+  
+  /* 601 */ @js.native
+  object VACResponse extends TopLevel[VACResponse with Double]
+  
+  /* 605 */ @js.native
+  object VSAddCheat extends TopLevel[VSAddCheat with Double]
+  
+  /* 608 */ @js.native
+  object VSChallengeResultText extends TopLevel[VSChallengeResultText with Double]
+  
+  /* 607 */ @js.native
+  object VSGetChallengeResults extends TopLevel[VSGetChallengeResults with Double]
+  
+  /* 611 */ @js.native
+  object VSLoadDBFinished extends TopLevel[VSLoadDBFinished with Double]
+  
+  /* 604 */ @js.native
+  object VSMarkCheat extends TopLevel[VSMarkCheat with Double]
+  
+  /* 606 */ @js.native
+  object VSPurgeCodeModDB extends TopLevel[VSPurgeCodeModDB with Double]
+  
+  /* 609 */ @js.native
+  object VSReportLingerer extends TopLevel[VSReportLingerer with Double]
+  
+  /* 610 */ @js.native
+  object VSRequestManagedChallenge extends TopLevel[VSRequestManagedChallenge with Double]
+  
+  /* 130 */ @js.native
+  object WGRequest extends TopLevel[WGRequest with Double]
+  
+  /* 131 */ @js.native
+  object WGResponse extends TopLevel[WGResponse with Double]
+  
+  /* 8300 */ @js.native
+  object WebAPIBase extends TopLevel[WebAPIBase with Double]
+  
+  /* 8304 */ @js.native
+  object WebAPIInvalidateOAuthClientCache extends TopLevel[WebAPIInvalidateOAuthClientCache with Double]
+  
+  /* 8305 */ @js.native
+  object WebAPIInvalidateOAuthTokenCache extends TopLevel[WebAPIInvalidateOAuthTokenCache with Double]
+  
+  /* 8302 */ @js.native
+  object WebAPIInvalidateTokensForAccount extends TopLevel[WebAPIInvalidateTokensForAccount with Double]
+  
+  /* 133 */ @js.native
+  object WebAPIJobRequest extends TopLevel[WebAPIJobRequest with Double]
+  
+  /* 134 */ @js.native
+  object WebAPIJobResponse extends TopLevel[WebAPIJobResponse with Double]
+  
+  /* 8303 */ @js.native
+  object WebAPIRegisterGCInterfaces extends TopLevel[WebAPIRegisterGCInterfaces with Double]
+  
+  /* 8306 */ @js.native
+  object WebAPISetSecrets extends TopLevel[WebAPISetSecrets with Double]
+  
+  /* 8300 */ @js.native
+  object WebAPIValidateOAuth2Token extends TopLevel[WebAPIValidateOAuth2Token with Double]
+  
+  /* 8301 */ @js.native
+  object WebAPIValidateOAuth2TokenResponse extends TopLevel[WebAPIValidateOAuth2TokenResponse with Double]
+  
+  /* 9000 */ @js.native
+  object WorkerProcess extends TopLevel[WorkerProcess with Double]
+  
+  /* 9000 */ @js.native
+  object WorkerProcessPingRequest extends TopLevel[WorkerProcessPingRequest with Double]
+  
+  /* 9001 */ @js.native
+  object WorkerProcessPingResponse extends TopLevel[WorkerProcessPingResponse with Double]
+  
+  /* 9002 */ @js.native
+  object WorkerProcessShutdown extends TopLevel[WorkerProcessShutdown with Double]
+  
+  /* 8200 */ @js.native
+  object WorkshopAcceptTOSRequest extends TopLevel[WorkshopAcceptTOSRequest with Double]
+  
+  /* 8201 */ @js.native
+  object WorkshopAcceptTOSResponse extends TopLevel[WorkshopAcceptTOSResponse with Double]
+  
+  /* 8200 */ @js.native
+  object WorkshopBase extends TopLevel[WorkshopBase with Double]
+  
+  /* 204 */ @js.native
+  object ZipRequest extends TopLevel[ZipRequest with Double]
+  
+  /* 205 */ @js.native
+  object ZipResponse extends TopLevel[ZipResponse with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.browserfs.distNodeCoreNodeUnderscoreFsUnderscoreStatsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FileType extends js.Object {
   @js.native
   sealed trait SYMLINK extends FileType
   
-  /* 16384 */ val DIRECTORY: typingsSlinky.browserfs.distNodeCoreNodeUnderscoreFsUnderscoreStatsMod.FileType.DIRECTORY with Double = js.native
-  /* 32768 */ val FILE: typingsSlinky.browserfs.distNodeCoreNodeUnderscoreFsUnderscoreStatsMod.FileType.FILE with Double = js.native
-  /* 40960 */ val SYMLINK: typingsSlinky.browserfs.distNodeCoreNodeUnderscoreFsUnderscoreStatsMod.FileType.SYMLINK with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileType with Double] = js.native
+  /* 16384 */ @js.native
+  object DIRECTORY extends TopLevel[DIRECTORY with Double]
+  
+  /* 32768 */ @js.native
+  object FILE extends TopLevel[FILE with Double]
+  
+  /* 40960 */ @js.native
+  object SYMLINK extends TopLevel[SYMLINK with Double]
+  
 }
 

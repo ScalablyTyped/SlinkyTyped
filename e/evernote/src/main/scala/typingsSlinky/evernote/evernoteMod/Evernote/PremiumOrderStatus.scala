@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,13 +50,25 @@ object PremiumOrderStatus extends js.Object {
   @js.native
   sealed trait PENDING extends PremiumOrderStatus
   
-  /* 2 */ val ACTIVE: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.ACTIVE with Double = js.native
-  /* 5 */ val CANCELED: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.CANCELED with Double = js.native
-  /* 4 */ val CANCELLATION_PENDING: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.CANCELLATION_PENDING with Double = js.native
-  /* 3 */ val FAILED: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.FAILED with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.NONE with Double = js.native
-  /* 1 */ val PENDING: typingsSlinky.evernote.evernoteMod.Evernote.PremiumOrderStatus.PENDING with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PremiumOrderStatus with Double] = js.native
+  /* 2 */ @js.native
+  object ACTIVE extends TopLevel[ACTIVE with Double]
+  
+  /* 5 */ @js.native
+  object CANCELED extends TopLevel[CANCELED with Double]
+  
+  /* 4 */ @js.native
+  object CANCELLATION_PENDING extends TopLevel[CANCELLATION_PENDING with Double]
+  
+  /* 3 */ @js.native
+  object FAILED extends TopLevel[FAILED with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 1 */ @js.native
+  object PENDING extends TopLevel[PENDING with Double]
+  
 }
 

@@ -5,22 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait RunQueryRequest extends js.Object {
-  var newTransaction: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.TransactionOptions
-  ] = js.undefined
+  var newTransaction: js.UndefOr[TransactionOptions] = js.undefined
   var readTime: js.UndefOr[String] = js.undefined
-  var structuredQuery: js.UndefOr[
-    typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.StructuredQuery
-  ] = js.undefined
+  var structuredQuery: js.UndefOr[StructuredQuery] = js.undefined
   var transaction: js.UndefOr[String] = js.undefined
 }
 
 object RunQueryRequest {
   @scala.inline
   def apply(
-    newTransaction: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.TransactionOptions = null,
+    newTransaction: TransactionOptions = null,
     readTime: String = null,
-    structuredQuery: typingsSlinky.atFirebaseFirestore.distSrcProtosFirestoreUnderscoreProtoUnderscoreApiMod.firestoreV1ApiClientInterfaces.StructuredQuery = null,
+    structuredQuery: StructuredQuery = null,
     transaction: String = null
   ): RunQueryRequest = {
     val __obj = js.Dynamic.literal()

@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererBufferArrayBufferMod.ArrayBuffer
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferCommonBufferMod.CommonBuffer
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferUsageMod.EBufferUsage

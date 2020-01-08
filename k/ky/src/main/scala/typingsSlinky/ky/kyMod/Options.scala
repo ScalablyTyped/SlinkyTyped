@@ -8,7 +8,7 @@ import org.scalajs.dom.experimental.RequestCredentials
 import org.scalajs.dom.experimental.RequestMode
 import org.scalajs.dom.experimental.RequestRedirect
 import org.scalajs.dom.experimental.URL
-import typingsSlinky.ky.kyNumbers.`false`
+import typingsSlinky.ky.kyBooleans.`false`
 import typingsSlinky.ky.kyStrings.delete
 import typingsSlinky.ky.kyStrings.get
 import typingsSlinky.ky.kyStrings.head

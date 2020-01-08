@@ -8,12 +8,12 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CSSProperties
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselCellAlignProp
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselHeightModeProp
-import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselProps
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselSlideRenderControlProps
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselSlideWidthProp
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselSlidesToScrollProp
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselTransitionModeProp
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.default
+import typingsSlinky.nukaDashCarousel.nukaDashCarouselStrings.CarouselProps
 import typingsSlinky.nukaDashCarousel.nukaDashCarouselStrings.zoom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,9 +49,13 @@ object NukaDashCarousel
     heightMode: CarouselHeightModeProp = null,
     initialSlideHeight: Int | Double = null,
     initialSlideWidth: Int | Double = null,
+    keyCodeConfig: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ slideAction in nuka-carousel.nuka-carousel.CarouselSlideActions ]:? std.Array<number>}
+    */ CarouselProps with js.Any = null,
     onDragStart: () => Unit = null,
     onResize: () => Unit = null,
     pauseOnHover: js.UndefOr[Boolean] = js.undefined,
+    renderAnnounceSlideMessage: /* hasCurrentSlideSlideCount */ js.Any => String = null,
     renderBottomCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
     renderBottomLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
     renderBottomRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
@@ -97,9 +101,11 @@ object NukaDashCarousel
     if (heightMode != null) __obj.updateDynamic("heightMode")(heightMode.asInstanceOf[js.Any])
     if (initialSlideHeight != null) __obj.updateDynamic("initialSlideHeight")(initialSlideHeight.asInstanceOf[js.Any])
     if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
+    if (keyCodeConfig != null) __obj.updateDynamic("keyCodeConfig")(keyCodeConfig.asInstanceOf[js.Any])
     if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction0(onDragStart))
     if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction0(onResize))
     if (!js.isUndefined(pauseOnHover)) __obj.updateDynamic("pauseOnHover")(pauseOnHover.asInstanceOf[js.Any])
+    if (renderAnnounceSlideMessage != null) __obj.updateDynamic("renderAnnounceSlideMessage")(js.Any.fromFunction1(renderAnnounceSlideMessage))
     if (renderBottomCenterControls != null) __obj.updateDynamic("renderBottomCenterControls")(js.Any.fromFunction1(renderBottomCenterControls))
     if (renderBottomLeftControls != null) __obj.updateDynamic("renderBottomLeftControls")(js.Any.fromFunction1(renderBottomLeftControls))
     if (renderBottomRightControls != null) __obj.updateDynamic("renderBottomRightControls")(js.Any.fromFunction1(renderBottomRightControls))
@@ -124,6 +130,9 @@ object NukaDashCarousel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = CarouselProps
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = typingsSlinky.nukaDashCarousel.nukaDashCarouselMod.CarouselProps
 }
 

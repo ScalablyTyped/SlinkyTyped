@@ -14,6 +14,7 @@ class SmartTagType protected () extends js.Object {
   val Parent: js.Any = js.native
   val SmartTagActions: typingsSlinky.activexDashWord.Word.SmartTagActions = js.native
   val SmartTagRecognizers: typingsSlinky.activexDashWord.Word.SmartTagRecognizers = js.native
-  var `Word.SmartTagType_typekey`: SmartTagType = js.native
+  @JSName("Word.SmartTagType_typekey")
+  var WordDotSmartTagType_typekey: SmartTagType = js.native
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.cypress.Mocha.reporters
 import typingsSlinky.cypress.Mocha.IRunner
 import typingsSlinky.cypress.Mocha.Runner
 import typingsSlinky.cypress.Mocha.Test
+import typingsSlinky.cypress.Mocha.reporters.XUnit.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +19,8 @@ class XUnit_ protected () extends Base {
   /** @deprecated Use the overload that accepts `Mocha.Runner` instead. */
   def this(runner: IRunner) = this()
   def this(runner: Runner) = this()
-  def this(runner: IRunner, options: typingsSlinky.cypress.Mocha.reporters.XUnit.MochaOptions) = this()
-  def this(runner: Runner, options: typingsSlinky.cypress.Mocha.reporters.XUnit.MochaOptions) = this()
+  def this(runner: IRunner, options: MochaOptions) = this()
+  def this(runner: Runner, options: MochaOptions) = this()
   /**
     * Override done to close the stream (if it's a file).
     *

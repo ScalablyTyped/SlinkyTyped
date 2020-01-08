@@ -8,9 +8,7 @@ trait UpdateParagraphStyleRequest extends js.Object {
   var cellLocation: js.UndefOr[TableCellLocation] = js.undefined
   var fields: js.UndefOr[String] = js.undefined
   var objectId: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[
-    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.ParagraphStyle
-  ] = js.undefined
+  var style: js.UndefOr[ParagraphStyle] = js.undefined
   var textRange: js.UndefOr[Range] = js.undefined
 }
 
@@ -20,7 +18,7 @@ object UpdateParagraphStyleRequest {
     cellLocation: TableCellLocation = null,
     fields: String = null,
     objectId: String = null,
-    style: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.ParagraphStyle = null,
+    style: ParagraphStyle = null,
     textRange: Range = null
   ): UpdateParagraphStyleRequest = {
     val __obj = js.Dynamic.literal()

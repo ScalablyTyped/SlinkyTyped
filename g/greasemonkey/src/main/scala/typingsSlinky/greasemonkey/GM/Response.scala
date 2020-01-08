@@ -1,11 +1,11 @@
 package typingsSlinky.greasemonkey.GM
 
 import org.scalajs.dom.raw.Document
+import typingsSlinky.greasemonkey.greasemonkeyBooleans.`false`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`1`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`2`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`3`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`4`
-import typingsSlinky.greasemonkey.greasemonkeyNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

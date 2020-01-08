@@ -1,9 +1,6 @@
 package typingsSlinky.rrule
 
 import typingsSlinky.rrule.distEsmSrcNlpI18nMod.Language
-import typingsSlinky.rrule.distEsmSrcNlpTotextMod.DateFormatter
-import typingsSlinky.rrule.distEsmSrcNlpTotextMod.GetText
-import typingsSlinky.rrule.distEsmSrcNlpTotextMod.ToText
 import typingsSlinky.rrule.distEsmSrcTypesMod.ByWeekday
 import typingsSlinky.rrule.distEsmSrcWeekdayMod.Weekday
 import scala.scalajs.js

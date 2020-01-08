@@ -1,7 +1,5 @@
 package typingsSlinky.protractorDashHelpers.protractorDashHelpersMod._Global_
 
-import typingsSlinky.protractorDashHelpers.protractorDashHelpersMod._Global_.protractor.ElementArrayFinder
-import typingsSlinky.protractorDashHelpers.protractorDashHelpersMod._Global_.protractor.ElementFinder
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Locator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +15,7 @@ object protractor extends js.Object {
   @js.native
   trait ElementArrayFinder extends js.Object {
     @JSName("$$data")
-    def $$data(hook: String): ElementArrayFinder = js.native
+    def DollarDollardata(hook: String): ElementArrayFinder = js.native
     def getByText(text: String): ElementFinder = js.native
   }
   

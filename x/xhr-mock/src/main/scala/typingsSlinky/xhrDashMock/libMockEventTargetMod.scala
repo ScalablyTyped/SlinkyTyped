@@ -1,7 +1,6 @@
 package typingsSlinky.xhrDashMock
 
 import typingsSlinky.std.EventTarget
-import typingsSlinky.xhrDashMock.libMockEventTargetMod.MockEventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

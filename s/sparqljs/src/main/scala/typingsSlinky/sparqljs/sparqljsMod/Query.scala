@@ -3,6 +3,7 @@ package typingsSlinky.sparqljs.sparqljsMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.sparqljs.Anon_Default
 import typingsSlinky.sparqljs.sparqljsStrings.ASK
+import typingsSlinky.sparqljs.sparqljsStrings.Asterisk
 import typingsSlinky.sparqljs.sparqljsStrings.CONSTRUCT
 import typingsSlinky.sparqljs.sparqljsStrings.DESCRIBE
 import typingsSlinky.sparqljs.sparqljsStrings.SELECT
@@ -25,7 +26,7 @@ object Query {
     prefixes: StringDictionary[String],
     queryType: SELECT,
     `type`: query,
-    variables: js.Array[typingsSlinky.sparqljs.sparqljsStrings.`*` | Variable],
+    variables: js.Array[Asterisk | Variable],
     base: String = null,
     distinct: js.UndefOr[Boolean] = js.undefined,
     from: Anon_Default = null,
@@ -92,7 +93,7 @@ object Query {
     prefixes: StringDictionary[String],
     queryType: DESCRIBE,
     `type`: query,
-    variables: js.Array[typingsSlinky.sparqljs.sparqljsStrings.`*` | Variable],
+    variables: js.Array[Asterisk | Variable],
     base: String = null,
     values: js.Array[ValuePatternRow] = null,
     where: js.Array[Pattern] = null

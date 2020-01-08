@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
-import typingsSlinky.tstl.baseContainerIContainerMod.IContainer
 import typingsSlinky.tstl.baseDisposableIBidirectionalContainerMod.IBidirectionalContainer
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IEmpty
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IPush

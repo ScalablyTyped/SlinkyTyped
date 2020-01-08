@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,18 +55,40 @@ object ToolbarItems extends js.Object {
   @js.native
   sealed trait Update extends ToolbarItems
   
-  /* 0 */ val Add: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Add with Double = js.native
-  /* 4 */ val Cancel: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Cancel with Double = js.native
-  /* 6 */ val CollapseAll: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.CollapseAll with Double = js.native
-  /* 2 */ val Delete: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Delete with Double = js.native
-  /* 1 */ val Edit: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Edit with Double = js.native
-  /* 8 */ val ExcelExport: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.ExcelExport with Double = js.native
-  /* 5 */ val ExpandAll: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.ExpandAll with Double = js.native
-  /* 7 */ val PdfExport: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.PdfExport with Double = js.native
-  /* 9 */ val Print: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Print with Double = js.native
-  /* 10 */ val Search: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Search with Double = js.native
-  /* 3 */ val Update: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ToolbarItems.Update with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToolbarItems with Double] = js.native
+  /* 0 */ @js.native
+  object Add extends TopLevel[Add with Double]
+  
+  /* 4 */ @js.native
+  object Cancel extends TopLevel[Cancel with Double]
+  
+  /* 6 */ @js.native
+  object CollapseAll extends TopLevel[CollapseAll with Double]
+  
+  /* 2 */ @js.native
+  object Delete extends TopLevel[Delete with Double]
+  
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 8 */ @js.native
+  object ExcelExport extends TopLevel[ExcelExport with Double]
+  
+  /* 5 */ @js.native
+  object ExpandAll extends TopLevel[ExpandAll with Double]
+  
+  /* 7 */ @js.native
+  object PdfExport extends TopLevel[PdfExport with Double]
+  
+  /* 9 */ @js.native
+  object Print extends TopLevel[Print with Double]
+  
+  /* 10 */ @js.native
+  object Search extends TopLevel[Search with Double]
+  
+  /* 3 */ @js.native
+  object Update extends TopLevel[Update with Double]
+  
 }
 

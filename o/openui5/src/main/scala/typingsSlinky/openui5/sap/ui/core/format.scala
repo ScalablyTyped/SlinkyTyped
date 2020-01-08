@@ -1,10 +1,7 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.openui5.sap.ui.base.Object
-import typingsSlinky.openui5.sap.ui.core.format.DateFormat
-import typingsSlinky.openui5.sap.ui.core.format.FileSizeFormat
-import typingsSlinky.openui5.sap.ui.core.format.NumberFormat
-import typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -199,16 +196,32 @@ object format extends js.Object {
       @js.native
       sealed trait TOWARDS_ZERO extends RoundingMode
       
-      /* 0 */ val AWAY_FROM_ZERO: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.AWAY_FROM_ZERO with Double = js.native
-      /* 1 */ val CEILING: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.CEILING with Double = js.native
-      /* 2 */ val FLOOR: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.FLOOR with Double = js.native
-      /* 3 */ val HALF_AWAY_FROM_ZERO: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.HALF_AWAY_FROM_ZERO with Double = js.native
-      /* 4 */ val HALF_CEILING: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.HALF_CEILING with Double = js.native
-      /* 5 */ val HALF_FLOOR: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.HALF_FLOOR with Double = js.native
-      /* 6 */ val HALF_TOWARDS_ZERO: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.HALF_TOWARDS_ZERO with Double = js.native
-      /* 7 */ val TOWARDS_ZERO: typingsSlinky.openui5.sap.ui.core.format.NumberFormat.RoundingMode.TOWARDS_ZERO with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[RoundingMode with Double] = js.native
+      /* 0 */ @js.native
+      object AWAY_FROM_ZERO extends TopLevel[AWAY_FROM_ZERO with Double]
+      
+      /* 1 */ @js.native
+      object CEILING extends TopLevel[CEILING with Double]
+      
+      /* 2 */ @js.native
+      object FLOOR extends TopLevel[FLOOR with Double]
+      
+      /* 3 */ @js.native
+      object HALF_AWAY_FROM_ZERO extends TopLevel[HALF_AWAY_FROM_ZERO with Double]
+      
+      /* 4 */ @js.native
+      object HALF_CEILING extends TopLevel[HALF_CEILING with Double]
+      
+      /* 5 */ @js.native
+      object HALF_FLOOR extends TopLevel[HALF_FLOOR with Double]
+      
+      /* 6 */ @js.native
+      object HALF_TOWARDS_ZERO extends TopLevel[HALF_TOWARDS_ZERO with Double]
+      
+      /* 7 */ @js.native
+      object TOWARDS_ZERO extends TopLevel[TOWARDS_ZERO with Double]
+      
     }
     
   }

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object AssociationFlows extends js.Object {
   @js.native
   sealed trait Directional extends AssociationFlows
   
-  /* 2 */ val BiDirectional: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.AssociationFlows.BiDirectional with Double = js.native
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.AssociationFlows.Default with Double = js.native
-  /* 1 */ val Directional: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.AssociationFlows.Directional with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AssociationFlows with Double] = js.native
+  /* 2 */ @js.native
+  object BiDirectional extends TopLevel[BiDirectional with Double]
+  
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object Directional extends TopLevel[Directional with Double]
+  
 }
 

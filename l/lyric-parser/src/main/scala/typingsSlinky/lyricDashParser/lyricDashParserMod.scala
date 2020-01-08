@@ -1,6 +1,5 @@
 package typingsSlinky.lyricDashParser
 
-import typingsSlinky.lyricDashParser.lyricDashParserMod.Lyric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.UserProfiles
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object FollowResultType extends js.Object {
   @js.native
   sealed trait unknown extends FollowResultType
   
-  /* 4 */ val failed: typingsSlinky.sharepoint.SP.UserProfiles.FollowResultType.failed with Double = js.native
-  /* 1 */ val followed: typingsSlinky.sharepoint.SP.UserProfiles.FollowResultType.followed with Double = js.native
-  /* 3 */ val hitFollowLimit: typingsSlinky.sharepoint.SP.UserProfiles.FollowResultType.hitFollowLimit with Double = js.native
-  /* 2 */ val refollowed: typingsSlinky.sharepoint.SP.UserProfiles.FollowResultType.refollowed with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.sharepoint.SP.UserProfiles.FollowResultType.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FollowResultType with Double] = js.native
+  /* 4 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 1 */ @js.native
+  object followed extends TopLevel[followed with Double]
+  
+  /* 3 */ @js.native
+  object hitFollowLimit extends TopLevel[hitFollowLimit with Double]
+  
+  /* 2 */ @js.native
+  object refollowed extends TopLevel[refollowed with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

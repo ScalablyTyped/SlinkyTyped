@@ -3,7 +3,6 @@ package typingsSlinky.restDashIo
 import typingsSlinky.express.expressMod.Request
 import typingsSlinky.express.expressMod.Response
 import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod.ParamsDictionary
-import typingsSlinky.restDashIo.libSrcUserResourceMod.UserResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "react-places-autocomplete"
-version := "7.2-dt-20190219Z-34ddab"
+version := "7.2-dt-20200102Z-07f523"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
-  "org.scalablytyped.slinky" %%% "googlemaps" % "3.38-dt-20191126Z-ab2d4c",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-243f84",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-6c3558",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-f22bc8",
+  "org.scalablytyped.slinky" %%% "googlemaps" % "3.39-dt-20191223Z-942ce2",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-1d231d",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191220Z-f02704",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

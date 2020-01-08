@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.winjsMod.UI
 
+import typingsSlinky.winjs.WinJS.Promise
 import typingsSlinky.winjs.WinJS.UI.IItem
 import typingsSlinky.winjs.WinJS.UI.IListDataSource
 import typingsSlinky.winjs.WinJS.UI.ISelectionRange
@@ -16,6 +17,6 @@ object getItemsFromRanges extends js.Object {
     * @param ranges An array of ISelectionRange objects that have firstIndex and lastIndex values.
     * @returns A Promise that contains an array of the requested IItem objects.
     **/
-  def apply[U](dataSource: IListDataSource[U], ranges: js.Array[ISelectionRange]): typingsSlinky.winjs.WinJS.Promise[IItem[U]] = js.native
+  def apply[U](dataSource: IListDataSource[U], ranges: js.Array[ISelectionRange]): Promise[IItem[U]] = js.native
 }
 

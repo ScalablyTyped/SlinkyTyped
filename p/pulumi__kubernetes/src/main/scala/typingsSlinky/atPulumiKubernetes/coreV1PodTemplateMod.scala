@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1PodTemplateMod.PodTemplate
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.PodTemplateSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource

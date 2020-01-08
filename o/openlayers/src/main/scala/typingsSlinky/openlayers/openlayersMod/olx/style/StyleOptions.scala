@@ -3,6 +3,7 @@ package typingsSlinky.openlayers.openlayersMod.olx.style
 import typingsSlinky.openlayers.openlayersMod.StyleGeometryFunction
 import typingsSlinky.openlayers.openlayersMod.geom.Geometry
 import typingsSlinky.openlayers.openlayersMod.style.Fill
+import typingsSlinky.openlayers.openlayersMod.style.Image
 import typingsSlinky.openlayers.openlayersMod.style.Stroke
 import typingsSlinky.openlayers.openlayersMod.style.Text
 import scala.scalajs.js
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait StyleOptions extends js.Object {
   var fill: js.UndefOr[Fill] = js.undefined
   var geometry: js.UndefOr[String | Geometry | StyleGeometryFunction] = js.undefined
-  var image: js.UndefOr[typingsSlinky.openlayers.openlayersMod.style.Image] = js.undefined
+  var image: js.UndefOr[Image] = js.undefined
   var stroke: js.UndefOr[Stroke] = js.undefined
   var text: js.UndefOr[Text] = js.undefined
   var zIndex: js.UndefOr[Double] = js.undefined
@@ -23,7 +24,7 @@ object StyleOptions {
   def apply(
     fill: Fill = null,
     geometry: String | Geometry | StyleGeometryFunction = null,
-    image: typingsSlinky.openlayers.openlayersMod.style.Image = null,
+    image: Image = null,
     stroke: Stroke = null,
     text: Text = null,
     zIndex: Int | Double = null

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,19 @@ object ReviewResourceType extends js.Object {
   @js.native
   sealed trait Review extends ReviewResourceType
   
-  /* 3 */ val AdminReply: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewResourceType.AdminReply with Double = js.native
-  /* 2 */ val PublisherReply: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewResourceType.PublisherReply with Double = js.native
-  /* 1 */ val Review: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewResourceType.Review with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReviewResourceType with Double] = js.native
+  /* 3 */ @js.native
+  object AdminReply extends TopLevel[AdminReply with Double]
+  
+  /* 2 */ @js.native
+  object PublisherReply extends TopLevel[PublisherReply with Double]
+  
+  /* 1 */ @js.native
+  object Review
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewResourceType.Review with Double
+        ]
+  
 }
 

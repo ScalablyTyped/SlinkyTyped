@@ -1,6 +1,5 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.typesDiffMod.Differ
 import typingsSlinky.baconjs.typesObservableMod.Property
 import typingsSlinky.baconjs.typesObservableMod.default
 import typingsSlinky.baconjs.typesTypesMod.Function2

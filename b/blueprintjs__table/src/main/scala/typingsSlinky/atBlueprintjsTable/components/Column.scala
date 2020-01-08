@@ -3,10 +3,11 @@ package typingsSlinky.atBlueprintjsTable.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.facade.ReactElement
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.atBlueprintjsTable.libEsmColumnMod.IColumnProps
 import typingsSlinky.atBlueprintjsTable.libEsmRegionsMod.ColumnLoadingOption
+import typingsSlinky.react.reactMod.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +22,10 @@ object Column
   /* The following DOM/SVG props were specified: className, name */
   def apply(
     cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement = null,
-    columnHeaderCellRenderer: /* columnIndex */ Double => ReactElement = null,
+    columnHeaderCellRenderer: /* columnIndex */ Double => slinky.core.facade.ReactElement = null,
     id: String | Double = null,
     loadingOptions: js.Array[ColumnLoadingOption] = null,
-    nameRenderer: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement = null,
+    nameRenderer: (/* name */ String, /* index */ js.UndefOr[Double]) => slinky.core.facade.ReactElement = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.atBlueprintjsTable.libEsmColumnMod.Column] = {
     val __obj = js.Dynamic.literal()
@@ -36,6 +37,9 @@ object Column
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.atBlueprintjsTable.libEsmColumnMod.Column] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atBlueprintjsTable.libEsmColumnMod.Column](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IColumnProps
 }
 

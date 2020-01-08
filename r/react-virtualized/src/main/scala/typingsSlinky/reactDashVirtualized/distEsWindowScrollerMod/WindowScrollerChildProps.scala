@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashVirtualized.distEsWindowScrollerMod
 
-import slinky.core.facade.ReactElement
+import slinky.core.TagMod
 import typingsSlinky.reactDashVirtualized.Anon_ScrollTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +15,6 @@ trait WindowScrollerChildProps extends js.Object {
   var width: Double = js.native
   def onChildScroll(params: Anon_ScrollTop): Unit = js.native
   def registerChild(): Unit = js.native
-  def registerChild(element: ReactElement): Unit = js.native
+  def registerChild(element: TagMod[Any]): Unit = js.native
 }
 

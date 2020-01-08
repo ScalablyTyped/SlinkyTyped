@@ -9,20 +9,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TextDecoderStatic
-  extends Instantiable0[
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder
-    ]
-     with Instantiable1[
-      /* label */ String, 
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder
-    ]
-     with Instantiable2[
-      /* label */ String, 
-      /* options */ TextDecoderOptions, 
-      typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder
-    ] {
-  def apply(): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder = js.native
-  def apply(label: String): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder = js.native
-  def apply(label: String, options: TextDecoderOptions): typingsSlinky.textDashEncodingDashUtfDash8.textDashEncodingDashUtfDash8Mod.TextEncoding.TextDecoder = js.native
+  extends Instantiable0[TextDecoder]
+     with Instantiable1[/* label */ String, TextDecoder]
+     with Instantiable2[/* label */ String, /* options */ TextDecoderOptions, TextDecoder] {
+  def apply(): TextDecoder = js.native
+  def apply(label: String): TextDecoder = js.native
+  def apply(label: String, options: TextDecoderOptions): TextDecoder = js.native
 }
 

@@ -14,6 +14,6 @@ trait Anon_Action extends js.Object {
   var name: String = js.native
   var pattern: js.RegExp = js.native
   var state: String = js.native
-  def action(`this`: ActionContext, ctx: ActionContext, found: RegExpExecArray): Unit = js.native
+  def action(ctx: ActionContext, found: RegExpExecArray): Unit = js.native
 }
 

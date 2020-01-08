@@ -1,6 +1,5 @@
 package typingsSlinky.azureDashArmDashResource
 
-import typingsSlinky.azureDashArmDashResource.libFeatureFeatureClientMod.FeatureClient
 import typingsSlinky.azureDashArmDashResource.libFeatureModelsMod.OperationListResult
 import typingsSlinky.azureDashArmDashResource.libFeatureOperationsMod.Features
 import typingsSlinky.msDashRest.msDashRestMod.HttpOperationResponse

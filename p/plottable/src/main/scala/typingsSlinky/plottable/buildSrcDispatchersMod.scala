@@ -1,9 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
-import typingsSlinky.plottable.buildSrcDispatchersMod.Key
-import typingsSlinky.plottable.buildSrcDispatchersMod.Mouse
-import typingsSlinky.plottable.buildSrcDispatchersMod.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

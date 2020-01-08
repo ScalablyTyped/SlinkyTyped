@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("kefir", "combine")
 @js.native
 object combine extends js.Object {
-  def apply[T /* <: js.Tuple6[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
-  ] */](obss: T): Stream[
-    js.Tuple6[
+  def apply[T /* <: js.Tuple5[Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream[
+    js.Tuple5[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
       ], 
@@ -30,9 +23,6 @@ object combine extends js.Object {
       ], 
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[4] */ js.Any
-      ], 
-      ValueOfAnObservable[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[5] */ js.Any
       ]
     ], 
     _

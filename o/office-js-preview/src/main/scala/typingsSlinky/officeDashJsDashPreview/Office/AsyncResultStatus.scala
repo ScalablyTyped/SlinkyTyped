@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,9 +31,13 @@ object AsyncResultStatus extends js.Object {
   @js.native
   sealed trait Succeeded extends AsyncResultStatus
   
-  /* 1 */ val Failed: typingsSlinky.officeDashJsDashPreview.Office.AsyncResultStatus.Failed with Double = js.native
-  /* 0 */ val Succeeded: typingsSlinky.officeDashJsDashPreview.Office.AsyncResultStatus.Succeeded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AsyncResultStatus with Double] = js.native
+  /* 1 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 0 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
 }
 

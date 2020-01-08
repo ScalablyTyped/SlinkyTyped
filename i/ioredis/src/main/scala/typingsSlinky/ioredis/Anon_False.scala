@@ -1,6 +1,6 @@
 package typingsSlinky.ioredis
 
-import typingsSlinky.ioredis.ioredisNumbers.`false`
+import typingsSlinky.ioredis.ioredisBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

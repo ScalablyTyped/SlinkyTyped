@@ -1,6 +1,5 @@
 package typingsSlinky.relaxedDashJson
 
-import typingsSlinky.relaxedDashJson.relaxedDashJsonMod.Reviver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

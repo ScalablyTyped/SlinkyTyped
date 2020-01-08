@@ -1,5 +1,6 @@
 package typingsSlinky.jqueryDashCropbox.jQueryCropBox
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ShowControls extends js.Object {
   @js.native
   sealed trait never extends ShowControls
   
-  /* 1 */ val always: typingsSlinky.jqueryDashCropbox.jQueryCropBox.ShowControls.always with Double = js.native
-  /* 3 */ val auto: typingsSlinky.jqueryDashCropbox.jQueryCropBox.ShowControls.auto with Double = js.native
-  /* 2 */ val hover: typingsSlinky.jqueryDashCropbox.jQueryCropBox.ShowControls.hover with Double = js.native
-  /* 0 */ val never: typingsSlinky.jqueryDashCropbox.jQueryCropBox.ShowControls.never with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ShowControls with Double] = js.native
+  /* 1 */ @js.native
+  object always extends TopLevel[always with Double]
+  
+  /* 3 */ @js.native
+  object auto extends TopLevel[auto with Double]
+  
+  /* 2 */ @js.native
+  object hover extends TopLevel[hover with Double]
+  
+  /* 0 */ @js.native
+  object never extends TopLevel[never with Double]
+  
 }
 

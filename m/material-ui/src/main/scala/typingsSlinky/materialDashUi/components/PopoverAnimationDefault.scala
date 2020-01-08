@@ -19,14 +19,15 @@ object PopoverAnimationDefault
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, open */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    open: Boolean,
     style: CSSProperties = null,
     targetOrigin: origin = null,
     zDepth: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (targetOrigin != null) __obj.updateDynamic("targetOrigin")(targetOrigin.asInstanceOf[js.Any])
     if (zDepth != null) __obj.updateDynamic("zDepth")(zDepth.asInstanceOf[js.Any])

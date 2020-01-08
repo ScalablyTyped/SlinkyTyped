@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,20 +64,46 @@ object NDCertificateType extends js.Object {
   @js.native
   sealed trait unknown extends NDCertificateType
   
-  /* 8 */ val application: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.application with Double = js.native
-  /* 5 */ val crlSigner: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.crlSigner with Double = js.native
-  /* 2 */ val device: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.device with Double = js.native
-  /* 3 */ val domain: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.domain with Double = js.native
-  /* 4 */ val issuer: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.issuer with Double = js.native
-  /* 10 */ val keyFileSigner: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.keyFileSigner with Double = js.native
-  /* 12 */ val licenseSigner: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.licenseSigner with Double = js.native
-  /* 9 */ val metering: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.metering with Double = js.native
-  /* 1 */ val pc: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.pc with Double = js.native
-  /* 11 */ val server: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.server with Double = js.native
-  /* 6 */ val service: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.service with Double = js.native
-  /* 7 */ val silverlight: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.silverlight with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.NDCertificateType.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NDCertificateType with Double] = js.native
+  /* 8 */ @js.native
+  object application extends TopLevel[application with Double]
+  
+  /* 5 */ @js.native
+  object crlSigner extends TopLevel[crlSigner with Double]
+  
+  /* 2 */ @js.native
+  object device extends TopLevel[device with Double]
+  
+  /* 3 */ @js.native
+  object domain extends TopLevel[domain with Double]
+  
+  /* 4 */ @js.native
+  object issuer extends TopLevel[issuer with Double]
+  
+  /* 10 */ @js.native
+  object keyFileSigner extends TopLevel[keyFileSigner with Double]
+  
+  /* 12 */ @js.native
+  object licenseSigner extends TopLevel[licenseSigner with Double]
+  
+  /* 9 */ @js.native
+  object metering extends TopLevel[metering with Double]
+  
+  /* 1 */ @js.native
+  object pc extends TopLevel[pc with Double]
+  
+  /* 11 */ @js.native
+  object server extends TopLevel[server with Double]
+  
+  /* 6 */ @js.native
+  object service extends TopLevel[service with Double]
+  
+  /* 7 */ @js.native
+  object silverlight extends TopLevel[silverlight with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

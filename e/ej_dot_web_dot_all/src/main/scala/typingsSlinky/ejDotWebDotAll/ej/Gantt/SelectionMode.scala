@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Gantt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object SelectionMode extends js.Object {
   @js.native
   sealed trait Row extends SelectionMode
   
-  /* 1 */ val Cell: typingsSlinky.ejDotWebDotAll.ej.Gantt.SelectionMode.Cell with Double = js.native
-  /* 0 */ val Row: typingsSlinky.ejDotWebDotAll.ej.Gantt.SelectionMode.Row with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SelectionMode with Double] = js.native
+  /* 1 */ @js.native
+  object Cell extends TopLevel[Cell with Double]
+  
+  /* 0 */ @js.native
+  object Row extends TopLevel[Row with Double]
+  
 }
 

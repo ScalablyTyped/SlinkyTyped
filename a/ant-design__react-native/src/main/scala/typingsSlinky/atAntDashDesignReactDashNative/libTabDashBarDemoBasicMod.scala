@@ -1,6 +1,5 @@
 package typingsSlinky.atAntDashDesignReactDashNative
 
-import typingsSlinky.atAntDashDesignReactDashNative.libTabDashBarDemoBasicMod.BasicTabBarExample
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

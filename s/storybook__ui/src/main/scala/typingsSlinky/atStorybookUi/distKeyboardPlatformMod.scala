@@ -1,8 +1,7 @@
 package typingsSlinky.atStorybookUi
 
-import typingsSlinky.atStorybookUi.atStorybookUiNumbers.`false`
-import typingsSlinky.atStorybookUi.distKeyboardPlatformMod.OperatingSystem
-import typingsSlinky.atStorybookUi.distKeyboardPlatformMod.Platform
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.atStorybookUi.atStorybookUiBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,11 +30,17 @@ object distKeyboardPlatformMod extends js.Object {
     @js.native
     sealed trait Windows extends OperatingSystem
     
-    /* 3 */ val Linux: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.OperatingSystem.Linux with Double = js.native
-    /* 2 */ val Macintosh: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.OperatingSystem.Macintosh with Double = js.native
-    /* 1 */ val Windows: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.OperatingSystem.Windows with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[OperatingSystem with Double] = js.native
+    /* 3 */ @js.native
+    object Linux extends TopLevel[Linux with Double]
+    
+    /* 2 */ @js.native
+    object Macintosh extends TopLevel[Macintosh with Double]
+    
+    /* 1 */ @js.native
+    object Windows extends TopLevel[Windows with Double]
+    
   }
   
   @js.native
@@ -49,11 +54,17 @@ object distKeyboardPlatformMod extends js.Object {
     @js.native
     sealed trait Windows extends Platform
     
-    /* 1 */ val Linux: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.Platform.Linux with Double = js.native
-    /* 0 */ val Mac: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.Platform.Mac with Double = js.native
-    /* 2 */ val Windows: typingsSlinky.atStorybookUi.distKeyboardPlatformMod.Platform.Windows with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Platform with Double] = js.native
+    /* 1 */ @js.native
+    object Linux extends TopLevel[Linux with Double]
+    
+    /* 0 */ @js.native
+    object Mac extends TopLevel[Mac with Double]
+    
+    /* 2 */ @js.native
+    object Windows extends TopLevel[Windows with Double]
+    
   }
   
 }

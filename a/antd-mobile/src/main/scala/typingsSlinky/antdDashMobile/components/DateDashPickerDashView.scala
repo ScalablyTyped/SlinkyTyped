@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateDashPickerDashView extends SharedApply_DatePickerProps_50702073[default] {
+object DateDashPickerDashView extends SharedApply_DatePickerProps898807570[default] {
   @JSImport("antd-mobile/lib/date-picker-view", JSImport.Default)
   @js.native
   object componentImport extends js.Object

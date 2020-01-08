@@ -1,7 +1,5 @@
 package typingsSlinky.atExpoStatusDashBarDashHeight
 
-import typingsSlinky.atExpoStatusDashBarDashHeight.atExpoStatusDashBarDashHeightMod.StatusBarHeight
-import typingsSlinky.atExpoStatusDashBarDashHeight.atExpoStatusDashBarDashHeightMod.StatusBarHeightHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

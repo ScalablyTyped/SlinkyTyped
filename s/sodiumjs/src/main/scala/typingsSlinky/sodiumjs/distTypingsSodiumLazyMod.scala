@@ -1,6 +1,5 @@
 package typingsSlinky.sodiumjs
 
-import typingsSlinky.sodiumjs.distTypingsSodiumLazyMod.Lazy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

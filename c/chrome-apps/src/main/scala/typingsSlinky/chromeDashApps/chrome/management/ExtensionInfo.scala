@@ -5,7 +5,7 @@ import typingsSlinky.chromeDashApps.Anon_OPENASPINNEDTAB
 import typingsSlinky.chromeDashApps.Anon_PERMISSIONSINCREASE
 import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
 import typingsSlinky.chromeDashApps.chrome.runtime.Permission
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`true`
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`true`
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.OPEN_AS_PINNED_TAB
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.OPEN_AS_REGULAR_TAB
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.OPEN_AS_WINDOW
@@ -86,7 +86,7 @@ trait ExtensionInfo extends js.Object {
   var installType: ToStringLiteral[
     Anon_ADMIN, 
     String, 
-    Exclude[String, other_ | admin | development | sideload | normal]
+    Exclude[String, other_ | normal | development | admin | sideload]
   ]
   /**
     * True if this is an app, which it will be till this is removed.
@@ -153,7 +153,7 @@ object ExtensionInfo {
     installType: ToStringLiteral[
       Anon_ADMIN, 
       String, 
-      Exclude[String, other_ | admin | development | sideload | normal]
+      Exclude[String, other_ | normal | development | admin | sideload]
     ],
     mayDisable: Boolean,
     name: String,

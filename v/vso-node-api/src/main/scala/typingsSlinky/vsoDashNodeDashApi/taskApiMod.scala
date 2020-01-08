@@ -12,7 +12,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskOrc
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskOrchestrationQueuedPlanGroup
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.Timeline
 import typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TimelineRecord
-import typingsSlinky.vsoDashNodeDashApi.taskApiMod.ITaskApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

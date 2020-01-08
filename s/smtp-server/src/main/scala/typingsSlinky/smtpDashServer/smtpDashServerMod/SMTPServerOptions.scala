@@ -2,12 +2,12 @@ package typingsSlinky.smtpDashServer.smtpDashServerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
+import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.tlsMod.TlsOptions
 import typingsSlinky.nodemailer.libSharedMod.Logger
-import typingsSlinky.smtpDashServer.Anon_Passphrase
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,12 +36,6 @@ trait SMTPServerOptions extends TlsOptions {
     * This message is appended to the default ESMTP response.
     */
   var banner: js.UndefOr[String] = js.undefined
-  /** optionally override the trusted CA certificates */
-  @JSName("ca")
-  var ca_SMTPServerOptions: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.undefined
-  /** optional cert chains in PEM format */
-  @JSName("cert")
-  var cert_SMTPServerOptions: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.undefined
   /**
     * How many millisceonds to wait before disconnecting pending
     * connections once `server.close()` has been called (defaults to 30 seconds)
@@ -78,9 +72,6 @@ trait SMTPServerOptions extends TlsOptions {
     * where you want to try STARTTLS even when it is not advertised
     */
   var hideSTARTTLS: js.UndefOr[Boolean] = js.undefined
-  /** optional private keys in PEM format */
-  @JSName("key")
-  var key_SMTPServerOptions: js.UndefOr[String | (js.Array[Anon_Passphrase | Buffer | String]) | Buffer] = js.undefined
   /**
     * boolean, if set to true use LMTP protocol instead of SMTP
     */
@@ -218,13 +209,13 @@ object SMTPServerOptions {
   @scala.inline
   def apply(
     ALPNProtocols: (js.Array[String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
     allowInsecureAuth: js.UndefOr[Boolean] = js.undefined,
     authMethods: js.Array[String] = null,
     authOptional: js.UndefOr[Boolean] = js.undefined,
     banner: String = null,
-    ca: String | (js.Array[Buffer | String]) | Buffer = null,
-    cert: String | (js.Array[Buffer | String]) | Buffer = null,
+    ca: String | Buffer | (js.Array[String | Buffer]) = null,
+    cert: String | Buffer | (js.Array[String | Buffer]) = null,
     ciphers: String = null,
     clientCertEngine: String = null,
     closeTimeout: Int | Double = null,
@@ -240,7 +231,7 @@ object SMTPServerOptions {
     hideSMTPUTF8: js.UndefOr[Boolean] = js.undefined,
     hideSTARTTLS: js.UndefOr[Boolean] = js.undefined,
     honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    key: String | (js.Array[Anon_Passphrase | Buffer | String]) | Buffer = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
     lmtp: js.UndefOr[Boolean] = js.undefined,
     logger: Logger | Boolean = null,
     maxClients: Int | Double = null,
@@ -259,7 +250,9 @@ object SMTPServerOptions {
     onMailFrom: (/* address */ SMTPServerAddress, /* session */ SMTPServerSession, /* callback */ js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit = null,
     onRcptTo: (/* address */ SMTPServerAddress, /* session */ SMTPServerSession, /* callback */ js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit = null,
     passphrase: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secure: js.UndefOr[Boolean] = js.undefined,
@@ -269,6 +262,7 @@ object SMTPServerOptions {
     secured: js.UndefOr[Boolean] = js.undefined,
     sessionIdContext: String = null,
     sessionTimeout: Int | Double = null,
+    sigalgs: String = null,
     size: Int | Double = null,
     sniOptions: StringDictionary[TlsOptions] | (Map[String, TlsOptions]) = null,
     socketTimeout: Int | Double = null,
@@ -317,6 +311,8 @@ object SMTPServerOptions {
     if (onRcptTo != null) __obj.updateDynamic("onRcptTo")(js.Any.fromFunction3(onRcptTo))
     if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
@@ -326,6 +322,7 @@ object SMTPServerOptions {
     if (!js.isUndefined(secured)) __obj.updateDynamic("secured")(secured.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
     if (sessionTimeout != null) __obj.updateDynamic("sessionTimeout")(sessionTimeout.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (sniOptions != null) __obj.updateDynamic("sniOptions")(sniOptions.asInstanceOf[js.Any])
     if (socketTimeout != null) __obj.updateDynamic("socketTimeout")(socketTimeout.asInstanceOf[js.Any])

@@ -1,12 +1,9 @@
 package typingsSlinky.plottable
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Bounds
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.IEntityBounds
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
-import typingsSlinky.plottable.buildSrcUtilsRTreeMod.IDistanceFunction
-import typingsSlinky.plottable.buildSrcUtilsRTreeMod.QueryPredicateResult
-import typingsSlinky.plottable.buildSrcUtilsRTreeMod.RTreeBounds
-import typingsSlinky.plottable.buildSrcUtilsRTreeMod.RTreeNode
 import typingsSlinky.plottable.buildSrcUtilsRTreeSplitStrategiesMod.IRTreeSplitStrategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -141,11 +138,17 @@ object buildSrcUtilsRTreeMod extends js.Object {
     @js.native
     sealed trait PASS_AND_OVERWRITE extends QueryPredicateResult
     
-    /* 1 */ val FAIL: typingsSlinky.plottable.buildSrcUtilsRTreeMod.QueryPredicateResult.FAIL with Double = js.native
-    /* 0 */ val PASS: typingsSlinky.plottable.buildSrcUtilsRTreeMod.QueryPredicateResult.PASS with Double = js.native
-    /* 2 */ val PASS_AND_OVERWRITE: typingsSlinky.plottable.buildSrcUtilsRTreeMod.QueryPredicateResult.PASS_AND_OVERWRITE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[QueryPredicateResult with Double] = js.native
+    /* 1 */ @js.native
+    object FAIL extends TopLevel[FAIL with Double]
+    
+    /* 0 */ @js.native
+    object PASS extends TopLevel[PASS with Double]
+    
+    /* 2 */ @js.native
+    object PASS_AND_OVERWRITE extends TopLevel[PASS_AND_OVERWRITE with Double]
+    
   }
   
   /* static members */

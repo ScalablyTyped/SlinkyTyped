@@ -1,6 +1,5 @@
 package typingsSlinky.node.tlsMod
 
-import typingsSlinky.node.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +14,6 @@ object checkServerIdentity extends js.Object {
     *
     * Returns Error object, populating it with the reason, host and cert on failure.  On success, returns undefined.
     */
-  def apply(host: java.lang.String, cert: PeerCertificate): js.UndefOr[Error] = js.native
+  def apply(host: String, cert: PeerCertificate): js.UndefOr[js.Error] = js.native
 }
 

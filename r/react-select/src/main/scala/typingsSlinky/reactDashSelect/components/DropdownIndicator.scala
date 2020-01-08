@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropdownIndicator
-  extends SharedApply_IndicatorProps_1534217435[typingsSlinky.reactDashSelect.srcComponentsIndicatorsMod.DropdownIndicator] {
+  extends SharedApply_IndicatorProps779950324[typingsSlinky.reactDashSelect.srcComponentsIndicatorsMod.DropdownIndicator] {
   @JSImport("react-select/src/components/indicators", "DropdownIndicator")
   @js.native
   object componentImport extends js.Object

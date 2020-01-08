@@ -11,10 +11,6 @@ import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandPathItem
 import typingsSlinky.atIonicCliDashFramework.definitionsMod.ICommand
 import typingsSlinky.atIonicCliDashFramework.definitionsMod.INamespace
 import typingsSlinky.atIonicCliDashFramework.definitionsMod.NamespaceMapGetter
-import typingsSlinky.atIonicCliDashFramework.libCommandMod.BaseCommand
-import typingsSlinky.atIonicCliDashFramework.libCommandMod.BaseNamespace
-import typingsSlinky.atIonicCliDashFramework.libCommandMod.Command
-import typingsSlinky.atIonicCliDashFramework.libCommandMod.Namespace
 import typingsSlinky.atIonicUtilsDashObject.atIonicUtilsDashObjectMod.AliasedMap
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -44,6 +40,8 @@ object libCommandMod extends js.Object {
   @js.native
   abstract class BaseNamespace[C /* <: ICommand[C, N, M, I, O] */, N /* <: INamespace[C, N, M, I, O] */, M /* <: CommandMetadata[I, O] */, I /* <: CommandMetadataInput */, O /* <: CommandMetadataOption */] () extends INamespace[C, N, M, I, O] {
     def this(parent: N) = this()
+    @JSName("root")
+    def root_MBaseNamespace(): N = js.native
   }
   
   @js.native

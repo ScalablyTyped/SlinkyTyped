@@ -9,8 +9,6 @@ import typingsSlinky.ol.tileMod.LoadFunction
 import typingsSlinky.ol.tileMod.UrlFunction
 import typingsSlinky.ol.tileStateMod.TileState
 import typingsSlinky.ol.tilecoordMod.TileCoord
-import typingsSlinky.ol.vectorImageTileMod.ReplayState
-import typingsSlinky.ol.vectorImageTileMod.VectorImageTile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

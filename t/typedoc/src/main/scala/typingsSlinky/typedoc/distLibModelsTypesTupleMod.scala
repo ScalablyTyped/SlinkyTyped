@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.distLibModelsTypesAbstractMod.Type
-import typingsSlinky.typedoc.distLibModelsTypesTupleMod.TupleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

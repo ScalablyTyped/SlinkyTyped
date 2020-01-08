@@ -1,5 +1,6 @@
 package typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object AtType extends js.Object {
   @js.native
   sealed trait Wall extends AtType
   
-  /* 0 */ val Standard: typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.AtType.Standard with Double = js.native
-  /* 2 */ val Utc: typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.AtType.Utc with Double = js.native
-  /* 1 */ val Wall: typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.AtType.Wall with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AtType with Double] = js.native
+  /* 0 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
+  /* 2 */ @js.native
+  object Utc extends TopLevel[Utc with Double]
+  
+  /* 1 */ @js.native
+  object Wall extends TopLevel[Wall with Double]
+  
 }
 

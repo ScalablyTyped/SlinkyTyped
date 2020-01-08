@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.div.tag
-import typingsSlinky.antdDashMobile.antdDashMobileStrings.Empty
+import typingsSlinky.antdDashMobile.antdDashMobileStrings._empty
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.android
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.bottom
 import typingsSlinky.antdDashMobile.antdDashMobileStrings.down
@@ -33,7 +33,7 @@ object ListItem
   def apply(
     activeStyle: CSSProperties = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     error: js.UndefOr[Boolean] = js.undefined,
     extra: TagMod[Any] = null,
     multipleLine: js.UndefOr[Boolean] = js.undefined,
@@ -61,6 +61,9 @@ object ListItem
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.antdDashMobile.libListListItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListItemProps
 }
 

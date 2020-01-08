@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -229,80 +230,226 @@ object ConditionOperator extends js.Object {
   @js.native
   sealed trait Yesterday extends ConditionOperator
   
-  /* 52 */ val BeginsWith: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.BeginsWith with scala.Double = js.native
-  /* 10 */ val Between: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Between with scala.Double = js.native
-  /* 47 */ val Contains: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Contains with scala.Double = js.native
-  /* 53 */ val DoesNotBeginWith: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.DoesNotBeginWith with scala.Double = js.native
-  /* 48 */ val DoesNotContain: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.DoesNotContain with scala.Double = js.native
-  /* 55 */ val DoesNotEndWith: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.DoesNotEndWith with scala.Double = js.native
-  /* 54 */ val EndsWith: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EndsWith with scala.Double = js.native
-  /* 0 */ val Equal: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Equal with scala.Double = js.native
-  /* 43 */ val EqualBusinessId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EqualBusinessId with scala.Double = js.native
-  /* 41 */ val EqualUserId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EqualUserId with scala.Double = js.native
-  /* 49 */ val EqualUserLanguage: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EqualUserLanguage with scala.Double = js.native
-  /* 71 */ val EqualUserOrUserTeams: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EqualUserOrUserTeams with scala.Double = js.native
-  /* 72 */ val EqualUserTeams: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.EqualUserTeams with scala.Double = js.native
-  /* 4 */ val GreaterEqual: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.GreaterEqual with scala.Double = js.native
-  /* 2 */ val GreaterThan: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.GreaterThan with scala.Double = js.native
-  /* 8 */ val In: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.In with scala.Double = js.native
-  /* 67 */ val InFiscalPeriod: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.InFiscalPeriod with scala.Double = js.native
-  /* 68 */ val InFiscalPeriodAndYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.InFiscalPeriodAndYear with scala.Double = js.native
-  /* 66 */ val InFiscalYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.InFiscalYear with scala.Double = js.native
-  /* 70 */ val InOrAfterFiscalPeriodAndYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.InOrAfterFiscalPeriodAndYear with scala.Double = js.native
-  /* 69 */ val InOrBeforeFiscalPeriodAndYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.InOrBeforeFiscalPeriodAndYear with scala.Double = js.native
-  /* 17 */ val Last7Days: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Last7Days with scala.Double = js.native
-  /* 61 */ val LastFiscalPeriod: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastFiscalPeriod with scala.Double = js.native
-  /* 60 */ val LastFiscalYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastFiscalYear with scala.Double = js.native
-  /* 22 */ val LastMonth: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastMonth with scala.Double = js.native
-  /* 19 */ val LastWeek: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastWeek with scala.Double = js.native
-  /* 33 */ val LastXDays: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXDays with scala.Double = js.native
-  /* 63 */ val LastXFiscalPeriods: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXFiscalPeriods with scala.Double = js.native
-  /* 62 */ val LastXFiscalYears: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXFiscalYears with scala.Double = js.native
-  /* 31 */ val LastXHours: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXHours with scala.Double = js.native
-  /* 37 */ val LastXMonths: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXMonths with scala.Double = js.native
-  /* 35 */ val LastXWeeks: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXWeeks with scala.Double = js.native
-  /* 39 */ val LastXYears: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastXYears with scala.Double = js.native
-  /* 28 */ val LastYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LastYear with scala.Double = js.native
-  /* 5 */ val LessEqual: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LessEqual with scala.Double = js.native
-  /* 3 */ val LessThan: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.LessThan with scala.Double = js.native
-  /* 6 */ val Like: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Like with scala.Double = js.native
-  /* 45 */ val Mask: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Mask with scala.Double = js.native
-  /* 18 */ val Next7Days: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Next7Days with scala.Double = js.native
-  /* 59 */ val NextFiscalPeriod: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextFiscalPeriod with scala.Double = js.native
-  /* 58 */ val NextFiscalYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextFiscalYear with scala.Double = js.native
-  /* 24 */ val NextMonth: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextMonth with scala.Double = js.native
-  /* 21 */ val NextWeek: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextWeek with scala.Double = js.native
-  /* 34 */ val NextXDays: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXDays with scala.Double = js.native
-  /* 65 */ val NextXFiscalPeriods: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXFiscalPeriods with scala.Double = js.native
-  /* 64 */ val NextXFiscalYears: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXFiscalYears with scala.Double = js.native
-  /* 32 */ val NextXHours: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXHours with scala.Double = js.native
-  /* 38 */ val NextXMonths: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXMonths with scala.Double = js.native
-  /* 36 */ val NextXWeeks: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXWeeks with scala.Double = js.native
-  /* 40 */ val NextXYears: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextXYears with scala.Double = js.native
-  /* 30 */ val NextYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NextYear with scala.Double = js.native
-  /* 11 */ val NotBetween: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotBetween with scala.Double = js.native
-  /* 1 */ val NotEqual: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotEqual with scala.Double = js.native
-  /* 44 */ val NotEqualBusinessId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotEqualBusinessId with scala.Double = js.native
-  /* 42 */ val NotEqualUserId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotEqualUserId with scala.Double = js.native
-  /* 9 */ val NotIn: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotIn with scala.Double = js.native
-  /* 7 */ val NotLike: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotLike with scala.Double = js.native
-  /* 46 */ val NotMask: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotMask with scala.Double = js.native
-  /* 13 */ val NotNull: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotNull with scala.Double = js.native
-  /* 50 */ val NotOn: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.NotOn with scala.Double = js.native
-  /* 12 */ val Null: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Null with scala.Double = js.native
-  /* 51 */ val OlderThanXMonths: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.OlderThanXMonths with scala.Double = js.native
-  /* 25 */ val On: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.On with scala.Double = js.native
-  /* 27 */ val OnOrAfter: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.OnOrAfter with scala.Double = js.native
-  /* 26 */ val OnOrBefore: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.OnOrBefore with scala.Double = js.native
-  /* 57 */ val ThisFiscalPeriod: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.ThisFiscalPeriod with scala.Double = js.native
-  /* 56 */ val ThisFiscalYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.ThisFiscalYear with scala.Double = js.native
-  /* 23 */ val ThisMonth: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.ThisMonth with scala.Double = js.native
-  /* 20 */ val ThisWeek: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.ThisWeek with scala.Double = js.native
-  /* 29 */ val ThisYear: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.ThisYear with scala.Double = js.native
-  /* 15 */ val Today: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Today with scala.Double = js.native
-  /* 16 */ val Tomorrow: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Tomorrow with scala.Double = js.native
-  /* 14 */ val Yesterday: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.ConditionOperator.Yesterday with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[ConditionOperator with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[ConditionOperator with Double] = js.native
+  /* 52 */ @js.native
+  object BeginsWith extends TopLevel[BeginsWith with Double]
+  
+  /* 10 */ @js.native
+  object Between extends TopLevel[Between with Double]
+  
+  /* 47 */ @js.native
+  object Contains extends TopLevel[Contains with Double]
+  
+  /* 53 */ @js.native
+  object DoesNotBeginWith extends TopLevel[DoesNotBeginWith with Double]
+  
+  /* 48 */ @js.native
+  object DoesNotContain extends TopLevel[DoesNotContain with Double]
+  
+  /* 55 */ @js.native
+  object DoesNotEndWith extends TopLevel[DoesNotEndWith with Double]
+  
+  /* 54 */ @js.native
+  object EndsWith extends TopLevel[EndsWith with Double]
+  
+  /* 0 */ @js.native
+  object Equal extends TopLevel[Equal with Double]
+  
+  /* 43 */ @js.native
+  object EqualBusinessId extends TopLevel[EqualBusinessId with Double]
+  
+  /* 41 */ @js.native
+  object EqualUserId extends TopLevel[EqualUserId with Double]
+  
+  /* 49 */ @js.native
+  object EqualUserLanguage extends TopLevel[EqualUserLanguage with Double]
+  
+  /* 71 */ @js.native
+  object EqualUserOrUserTeams extends TopLevel[EqualUserOrUserTeams with Double]
+  
+  /* 72 */ @js.native
+  object EqualUserTeams extends TopLevel[EqualUserTeams with Double]
+  
+  /* 4 */ @js.native
+  object GreaterEqual extends TopLevel[GreaterEqual with Double]
+  
+  /* 2 */ @js.native
+  object GreaterThan extends TopLevel[GreaterThan with Double]
+  
+  /* 8 */ @js.native
+  object In extends TopLevel[In with Double]
+  
+  /* 67 */ @js.native
+  object InFiscalPeriod extends TopLevel[InFiscalPeriod with Double]
+  
+  /* 68 */ @js.native
+  object InFiscalPeriodAndYear extends TopLevel[InFiscalPeriodAndYear with Double]
+  
+  /* 66 */ @js.native
+  object InFiscalYear extends TopLevel[InFiscalYear with Double]
+  
+  /* 70 */ @js.native
+  object InOrAfterFiscalPeriodAndYear extends TopLevel[InOrAfterFiscalPeriodAndYear with Double]
+  
+  /* 69 */ @js.native
+  object InOrBeforeFiscalPeriodAndYear extends TopLevel[InOrBeforeFiscalPeriodAndYear with Double]
+  
+  /* 17 */ @js.native
+  object Last7Days extends TopLevel[Last7Days with Double]
+  
+  /* 61 */ @js.native
+  object LastFiscalPeriod extends TopLevel[LastFiscalPeriod with Double]
+  
+  /* 60 */ @js.native
+  object LastFiscalYear extends TopLevel[LastFiscalYear with Double]
+  
+  /* 22 */ @js.native
+  object LastMonth extends TopLevel[LastMonth with Double]
+  
+  /* 19 */ @js.native
+  object LastWeek extends TopLevel[LastWeek with Double]
+  
+  /* 33 */ @js.native
+  object LastXDays extends TopLevel[LastXDays with Double]
+  
+  /* 63 */ @js.native
+  object LastXFiscalPeriods extends TopLevel[LastXFiscalPeriods with Double]
+  
+  /* 62 */ @js.native
+  object LastXFiscalYears extends TopLevel[LastXFiscalYears with Double]
+  
+  /* 31 */ @js.native
+  object LastXHours extends TopLevel[LastXHours with Double]
+  
+  /* 37 */ @js.native
+  object LastXMonths extends TopLevel[LastXMonths with Double]
+  
+  /* 35 */ @js.native
+  object LastXWeeks extends TopLevel[LastXWeeks with Double]
+  
+  /* 39 */ @js.native
+  object LastXYears extends TopLevel[LastXYears with Double]
+  
+  /* 28 */ @js.native
+  object LastYear extends TopLevel[LastYear with Double]
+  
+  /* 5 */ @js.native
+  object LessEqual extends TopLevel[LessEqual with Double]
+  
+  /* 3 */ @js.native
+  object LessThan extends TopLevel[LessThan with Double]
+  
+  /* 6 */ @js.native
+  object Like extends TopLevel[Like with Double]
+  
+  /* 45 */ @js.native
+  object Mask extends TopLevel[Mask with Double]
+  
+  /* 18 */ @js.native
+  object Next7Days extends TopLevel[Next7Days with Double]
+  
+  /* 59 */ @js.native
+  object NextFiscalPeriod extends TopLevel[NextFiscalPeriod with Double]
+  
+  /* 58 */ @js.native
+  object NextFiscalYear extends TopLevel[NextFiscalYear with Double]
+  
+  /* 24 */ @js.native
+  object NextMonth extends TopLevel[NextMonth with Double]
+  
+  /* 21 */ @js.native
+  object NextWeek extends TopLevel[NextWeek with Double]
+  
+  /* 34 */ @js.native
+  object NextXDays extends TopLevel[NextXDays with Double]
+  
+  /* 65 */ @js.native
+  object NextXFiscalPeriods extends TopLevel[NextXFiscalPeriods with Double]
+  
+  /* 64 */ @js.native
+  object NextXFiscalYears extends TopLevel[NextXFiscalYears with Double]
+  
+  /* 32 */ @js.native
+  object NextXHours extends TopLevel[NextXHours with Double]
+  
+  /* 38 */ @js.native
+  object NextXMonths extends TopLevel[NextXMonths with Double]
+  
+  /* 36 */ @js.native
+  object NextXWeeks extends TopLevel[NextXWeeks with Double]
+  
+  /* 40 */ @js.native
+  object NextXYears extends TopLevel[NextXYears with Double]
+  
+  /* 30 */ @js.native
+  object NextYear extends TopLevel[NextYear with Double]
+  
+  /* 11 */ @js.native
+  object NotBetween extends TopLevel[NotBetween with Double]
+  
+  /* 1 */ @js.native
+  object NotEqual extends TopLevel[NotEqual with Double]
+  
+  /* 44 */ @js.native
+  object NotEqualBusinessId extends TopLevel[NotEqualBusinessId with Double]
+  
+  /* 42 */ @js.native
+  object NotEqualUserId extends TopLevel[NotEqualUserId with Double]
+  
+  /* 9 */ @js.native
+  object NotIn extends TopLevel[NotIn with Double]
+  
+  /* 7 */ @js.native
+  object NotLike extends TopLevel[NotLike with Double]
+  
+  /* 46 */ @js.native
+  object NotMask extends TopLevel[NotMask with Double]
+  
+  /* 13 */ @js.native
+  object NotNull extends TopLevel[NotNull with Double]
+  
+  /* 50 */ @js.native
+  object NotOn extends TopLevel[NotOn with Double]
+  
+  /* 12 */ @js.native
+  object Null extends TopLevel[Null with Double]
+  
+  /* 51 */ @js.native
+  object OlderThanXMonths extends TopLevel[OlderThanXMonths with Double]
+  
+  /* 25 */ @js.native
+  object On extends TopLevel[On with Double]
+  
+  /* 27 */ @js.native
+  object OnOrAfter extends TopLevel[OnOrAfter with Double]
+  
+  /* 26 */ @js.native
+  object OnOrBefore extends TopLevel[OnOrBefore with Double]
+  
+  /* 57 */ @js.native
+  object ThisFiscalPeriod extends TopLevel[ThisFiscalPeriod with Double]
+  
+  /* 56 */ @js.native
+  object ThisFiscalYear extends TopLevel[ThisFiscalYear with Double]
+  
+  /* 23 */ @js.native
+  object ThisMonth extends TopLevel[ThisMonth with Double]
+  
+  /* 20 */ @js.native
+  object ThisWeek extends TopLevel[ThisWeek with Double]
+  
+  /* 29 */ @js.native
+  object ThisYear extends TopLevel[ThisYear with Double]
+  
+  /* 15 */ @js.native
+  object Today extends TopLevel[Today with Double]
+  
+  /* 16 */ @js.native
+  object Tomorrow extends TopLevel[Tomorrow with Double]
+  
+  /* 14 */ @js.native
+  object Yesterday extends TopLevel[Yesterday with Double]
+  
 }
 

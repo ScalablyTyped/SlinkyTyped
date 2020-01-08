@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object View
-  extends SharedApply_ViewProps2092493819[typingsSlinky.reactDashNative.reactDashNativeMod.View] {
+  extends SharedApply_ViewProps1773114458[typingsSlinky.reactDashNative.reactDashNativeMod.View] {
   @JSImport("react-native", "View")
   @js.native
   object componentImport extends js.Object

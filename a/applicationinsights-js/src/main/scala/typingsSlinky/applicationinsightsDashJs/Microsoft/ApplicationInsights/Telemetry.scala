@@ -14,8 +14,6 @@ import typingsSlinky.applicationinsightsDashJs.Anon_Exceptions
 import typingsSlinky.applicationinsightsDashJs.Anon_Measurements
 import typingsSlinky.applicationinsightsDashJs.Anon_MeasurementsMessage
 import typingsSlinky.applicationinsightsDashJs.Anon_Metrics
-import typingsSlinky.applicationinsightsDashJs.Microsoft.ApplicationInsights.Telemetry.Common.Base
-import typingsSlinky.applicationinsightsDashJs.Microsoft.ApplicationInsights.Telemetry.Exception
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

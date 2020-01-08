@@ -1,6 +1,6 @@
 package typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageMod
 
-import typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageNumbers.`false`
+import typingsSlinky.blueimpDashLoadDashImage.blueimpDashLoadDashImageBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.storage.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`storageDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.storageDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait StorageClassList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`storageDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[storageDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Items is the list of StorageClasses
     */
@@ -42,7 +42,7 @@ object StorageClassList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[StorageClass]]],
-    apiVersion: Input[`storageDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[storageDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.StorageClassList] = null,
     metadata: Input[ListMeta] = null
   ): StorageClassList = {

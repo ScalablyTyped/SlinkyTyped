@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Download extends SharedApply_DownloadPropTypes_1729363534[default] {
+object Download extends SharedApply_DownloadPropTypes475960787[default] {
   @JSImport("react-csv/components/Download", JSImport.Default)
   @js.native
   object componentImport extends js.Object

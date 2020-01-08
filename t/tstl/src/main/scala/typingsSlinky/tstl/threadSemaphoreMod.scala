@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.threadILockableMod.ILockable
-import typingsSlinky.tstl.threadSemaphoreMod.Semaphore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

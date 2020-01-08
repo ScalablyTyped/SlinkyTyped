@@ -1,6 +1,5 @@
 package typingsSlinky.atJestReporters
 
-import typingsSlinky.atJestReporters.buildVerboseUnderscoreReporterMod.VerboseReporter
 import typingsSlinky.atJestTestDashResult.buildTypesMod.AssertionResult
 import typingsSlinky.atJestTestDashResult.buildTypesMod.Suite
 import typingsSlinky.atJestTypes.buildConfigMod.GlobalConfig

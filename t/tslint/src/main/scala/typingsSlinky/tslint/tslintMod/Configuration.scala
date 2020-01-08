@@ -6,7 +6,7 @@ import typingsSlinky.tslint.libConfigurationMod.IConfigurationFile
 import typingsSlinky.tslint.libConfigurationMod.IConfigurationLoadResult
 import typingsSlinky.tslint.libConfigurationMod.RawConfigFile
 import typingsSlinky.tslint.libLanguageRuleRuleMod.IOptions
-import typingsSlinky.tslint.tslintStrings.tslintDOTjson
+import typingsSlinky.tslint.tslintStrings.tslintDotjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @JSImport("tslint", "Configuration")
 @js.native
 object Configuration extends js.Object {
-  val CONFIG_FILENAME: tslintDOTjson = js.native
+  val CONFIG_FILENAME: tslintDotjson = js.native
   val CONFIG_FILENAMES: js.Array[String] = js.native
   val DEFAULT_CONFIG: IConfigurationFile = js.native
   val EMPTY_CONFIG: IConfigurationFile = js.native
-  val JSON_CONFIG_FILENAME: tslintDOTjson = js.native
+  val JSON_CONFIG_FILENAME: tslintDotjson = js.native
   def convertRuleOptions(ruleConfiguration: Map[String, Partial[IOptions]]): js.Array[IOptions] = js.native
   def extendConfigurationFile(targetConfig: IConfigurationFile, nextConfigSource: IConfigurationFile): IConfigurationFile = js.native
   def findConfiguration(configFile: String): IConfigurationLoadResult = js.native

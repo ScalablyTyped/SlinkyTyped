@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcAnimationAnimationActionMod.AnimationAction
 import typingsSlinky.three.srcAnimationAnimationClipMod.AnimationClip
 import typingsSlinky.three.srcAnimationAnimationMixerMod.AnimationMixer
 import typingsSlinky.three.srcConstantsMod.AnimationActionLoopStyles

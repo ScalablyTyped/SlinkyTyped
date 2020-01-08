@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Calendar
-  extends SharedApply_ReactInfiniteCalendarProps_2061686793[
+  extends SharedApply_ReactInfiniteCalendarProps1909816996[
       typingsSlinky.reactDashInfiniteDashCalendar.reactDashInfiniteDashCalendarMod.Calendar
     ] {
   @JSImport("react-infinite-calendar", "Calendar")

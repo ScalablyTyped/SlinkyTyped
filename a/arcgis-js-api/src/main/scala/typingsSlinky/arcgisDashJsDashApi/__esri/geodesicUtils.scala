@@ -1,6 +1,30 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-centimeters`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-decimeters`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-feet`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-inches`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-kilometers`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-meters`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-miles`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-millimeters`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-us-feet`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-yards`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-feet`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.acres
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.ares
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.centimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.hectares
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +37,14 @@ trait geodesicUtils extends js.Object {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-geodesicUtils.html#geodesicAreas)
     *
     * @param polygons The polygons to compute the area for.
-    * @param unit Output area units.  **Possible Values:** square-millimeters | square-centimeters | square-decimeters | square-meters | square-kilometers | square-inches | square-feet | square-yards | square-miles | square-us-feet | acres | ares | hectares
+    * @param unit Output area units.
     *
     */
   def geodesicAreas(polygons: js.Array[Polygon]): js.Array[Double] = js.native
-  def geodesicAreas(polygons: js.Array[Polygon], unit: String): js.Array[Double] = js.native
+  def geodesicAreas(
+    polygons: js.Array[Polygon],
+    unit: `square-millimeters` | `square-centimeters` | `square-decimeters` | `square-meters` | `square-kilometers` | `square-inches` | `square-feet` | `square-yards` | `square-miles` | `square-us-feet` | acres | ares | hectares
+  ): js.Array[Double] = js.native
   def geodesicDensify(geometry: Polygon, maxSegmentLength: Double): Polyline | Polygon = js.native
   /**
     * Computes and returns a densified polyline or polygon.
@@ -36,22 +63,29 @@ trait geodesicUtils extends js.Object {
     *
     * @param from The origin location.
     * @param to The destination location.
-    * @param unit Output linear units.  **Possible Values:** millimeters | centimeters | decimeters | meters | kilometers | inches | feet | yards | miles | nautical-miles | us-feet
+    * @param unit Output linear units.
     *
     */
   def geodesicDistance(from: Point, to: Point): GeodesicDistanceResult = js.native
-  def geodesicDistance(from: Point, to: Point, unit: String): GeodesicDistanceResult = js.native
+  def geodesicDistance(
+    from: Point,
+    to: Point,
+    unit: millimeters | centimeters | decimeters | meters_ | kilometers_ | inches | feet_ | yards | miles_ | `nautical-miles` | `us-feet`
+  ): GeodesicDistanceResult = js.native
   /**
     * Geodetically computes polygon perimeter or polyline length for one or more geometries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-geodesicUtils.html#geodesicLengths)
     *
     * @param geometries The input polylines or polygons.
-    * @param unit Output linear units.  **Possible Values:** millimeters | centimeters | decimeters | meters | kilometers | inches | feet | yards | miles | nautical-miles | us-feet
+    * @param unit Output linear units.
     *
     */
   def geodesicLengths(geometries: js.Array[Polygon | Polyline]): js.Array[Double] = js.native
-  def geodesicLengths(geometries: js.Array[Polygon | Polyline], unit: String): js.Array[Double] = js.native
+  def geodesicLengths(
+    geometries: js.Array[Polygon | Polyline],
+    unit: centimeters | decimeters | feet_ | inches | kilometers_ | meters_ | miles_ | millimeters | `nautical-miles` | `us-feet` | yards
+  ): js.Array[Double] = js.native
   /**
     * Geodetically computes the location at a defined distance and direction from a known location.
     *

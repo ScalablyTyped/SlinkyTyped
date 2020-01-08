@@ -1,7 +1,7 @@
 
 # Scala.js typings for oracledb
 
-Typings are for version 4.0
+Typings are for version 4.1
 
 ## Library description:
 A Node.js module for Oracle Database access
@@ -10,9 +10,9 @@ A Node.js module for Oracle Database access
 | ------------------ | :-------------: |
 | Full name          | oracledb |
 | Keywords           | Oracle, Database, official, DB, SQL, JSON, PL/SQL, OCI, API, client, library, driver, add-on, extension, binding, interface, adapter, module |
-| # releases         | 13 |
-| # dependents       | 92 |
-| # downloads        | 724287 |
+| # releases         | 14 |
+| # dependents       | 130 |
+| # downloads        | 1027825 |
 | # stars            | 35 |
 
 ## Links

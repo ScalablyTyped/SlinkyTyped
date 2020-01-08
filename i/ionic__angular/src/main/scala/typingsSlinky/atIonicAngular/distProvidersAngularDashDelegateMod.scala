@@ -6,7 +6,6 @@ import typingsSlinky.atAngularCore.atAngularCoreMod.ComponentFactoryResolver
 import typingsSlinky.atAngularCore.atAngularCoreMod.Injector
 import typingsSlinky.atAngularCore.atAngularCoreMod.NgZone
 import typingsSlinky.atAngularCore.atAngularCoreMod.ViewContainerRef
-import typingsSlinky.atIonicAngular.distProvidersAngularDashDelegateMod.AngularFrameworkDelegate
 import typingsSlinky.atIonicCore.atIonicCoreMod.FrameworkDelegate
 import typingsSlinky.std.WeakMap
 import scala.scalajs.js

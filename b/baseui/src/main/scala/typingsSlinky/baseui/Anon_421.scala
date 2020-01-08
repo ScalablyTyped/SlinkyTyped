@@ -1,21 +1,21 @@
 package typingsSlinky.baseui
 
+import typingsSlinky.baseui.baseuiStrings.Plussign421
 import typingsSlinky.baseui.baseuiStrings.SK
-import typingsSlinky.baseui.baseuiStrings.`+421`
-import typingsSlinky.baseui.baseuiStrings.`Slovakia (Slovensko)`
+import typingsSlinky.baseui.baseuiStrings.`Slovakia LeftparenthesisSlovenskoRightparenthesis`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_421 extends js.Object {
-  var dialCode: `+421`
+  var dialCode: Plussign421
   var id: SK
-  var label: `Slovakia (Slovensko)`
+  var label: `Slovakia LeftparenthesisSlovenskoRightparenthesis`
 }
 
 object Anon_421 {
   @scala.inline
-  def apply(dialCode: `+421`, id: SK, label: `Slovakia (Slovensko)`): Anon_421 = {
+  def apply(dialCode: Plussign421, id: SK, label: `Slovakia LeftparenthesisSlovenskoRightparenthesis`): Anon_421 = {
     val __obj = js.Dynamic.literal(dialCode = dialCode.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[Anon_421]

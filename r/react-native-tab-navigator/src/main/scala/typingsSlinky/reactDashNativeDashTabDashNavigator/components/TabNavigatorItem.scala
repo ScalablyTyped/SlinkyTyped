@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabNavigatorItem extends SharedApply_TabNavigatorItemProps_890386895[Item] {
+object TabNavigatorItem extends SharedApply_TabNavigatorItemProps_368370321[Item] {
   @JSImport("react-native-tab-navigator", "TabNavigator.Item")
   @js.native
   object componentImport extends js.Object

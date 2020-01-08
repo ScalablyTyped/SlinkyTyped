@@ -1,10 +1,6 @@
 package typingsSlinky.xrm.Xrm
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.xrm.Xrm.Collection.Dictionary
-import typingsSlinky.xrm.Xrm.Collection.ItemCollection
-import typingsSlinky.xrm.Xrm.Collection.IterativeDelegate
-import typingsSlinky.xrm.Xrm.Collection.MatchingDelegate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

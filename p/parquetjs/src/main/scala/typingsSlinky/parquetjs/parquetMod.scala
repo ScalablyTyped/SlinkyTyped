@@ -7,6 +7,7 @@ import typingsSlinky.parquetjs.libMetadataDotInterfaceMod.MetadataInterface
 import typingsSlinky.parquetjs.libRowBufferDotInterfaceMod.RowBufferInterface
 import typingsSlinky.parquetjs.libRowDotInterfaceMod.RowInterface
 import typingsSlinky.parquetjs.libSchemaDotInterfaceMod.SchemaInterface
+import typingsSlinky.parquetjs.libWriterMod.ParquetWriterOpts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +51,7 @@ object parquetMod extends js.Object {
       writeFn: js.Function1[/* buf */ Buffer, js.Promise[Unit]],
       closeFn: js.Function0[js.Promise[Unit]],
       fileOffset: Double,
-      opts: Anon_AutoClose
+      opts: ParquetWriterOpts
     ) = this()
   }
   
@@ -74,7 +75,7 @@ object parquetMod extends js.Object {
     extends typingsSlinky.parquetjs.libWriterMod.ParquetTransformer {
     def this(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema) = this()
     def this(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, opts: String) = this()
-    def this(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, opts: Anon_AutoClose) = this()
+    def this(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, opts: ParquetWriterOpts) = this()
   }
   
   @js.native
@@ -92,7 +93,7 @@ object parquetMod extends js.Object {
     def this(
       schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema,
       envelopeWriter: typingsSlinky.parquetjs.libWriterMod.ParquetEnvelopeWriter,
-      opts: Anon_AutoClose
+      opts: ParquetWriterOpts
     ) = this()
   }
   
@@ -114,7 +115,7 @@ object parquetMod extends js.Object {
     def openStream(
       schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema,
       outputStream: WriteStream,
-      opts: Anon_AutoClose
+      opts: ParquetWriterOpts
     ): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetEnvelopeWriter] = js.native
   }
   
@@ -139,7 +140,11 @@ object parquetMod extends js.Object {
   object ParquetWriter extends js.Object {
     def openFile(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, path: PathLike): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
     def openFile(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, path: PathLike, opts: String): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
-    def openFile(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, path: PathLike, opts: Anon_AutoClose): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
+    def openFile(
+      schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema,
+      path: PathLike,
+      opts: ParquetWriterOpts
+    ): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
     def openStream(schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema, outputStream: WriteStream): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
     def openStream(
       schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema,
@@ -149,7 +154,7 @@ object parquetMod extends js.Object {
     def openStream(
       schema: typingsSlinky.parquetjs.libSchemaMod.ParquetSchema,
       outputStream: WriteStream,
-      opts: Anon_AutoClose
+      opts: ParquetWriterOpts
     ): js.Promise[typingsSlinky.parquetjs.libWriterMod.ParquetWriter] = js.native
   }
   

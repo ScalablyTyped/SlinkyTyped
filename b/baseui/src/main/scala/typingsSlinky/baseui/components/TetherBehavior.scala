@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
@@ -37,7 +38,7 @@ object TetherBehavior
     anchorRef: Ref[HTMLElement] = null,
     arrowRef: Ref[HTMLElement] = null,
     onPopperUpdate: (/* offsets */ NormalizedOffsets, /* popper */ PopperDataObject) => _ = null,
-    placement: rightTop | auto | leftBottom | bottomRight | leftTop | bottom | left | topRight | bottomLeft | rightBottom | topLeft | top | right = null,
+    placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
     popperOptions: js.Any = null,
     popperRef: Ref[HTMLElement] = null,
     _overrides: StringDictionary[js.Any] = null
@@ -52,6 +53,7 @@ object TetherBehavior
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.layerMod.TetherBehavior] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.layerMod.TetherBehavior](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TetherProps
 }
 

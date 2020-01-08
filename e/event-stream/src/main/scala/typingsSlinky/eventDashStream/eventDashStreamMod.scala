@@ -1,6 +1,5 @@
 package typingsSlinky.eventDashStream
 
-import typingsSlinky.eventDashStream.eventDashStreamMod.MapStream
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.streamMod.internal

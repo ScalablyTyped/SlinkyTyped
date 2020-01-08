@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,28 @@ object ExtensionLifecycleEventType extends js.Object {
   @js.native
   sealed trait Uninstall extends ExtensionLifecycleEventType
   
-  /* 4 */ val Acquisition: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Acquisition with Double = js.native
-  /* 2 */ val Install: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Install with Double = js.native
-  /* 999 */ val Other: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Other with Double = js.native
-  /* 3 */ val Review: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Review with Double = js.native
-  /* 5 */ val Sales: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Sales with Double = js.native
-  /* 1 */ val Uninstall: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Uninstall with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionLifecycleEventType with Double] = js.native
+  /* 4 */ @js.native
+  object Acquisition extends TopLevel[Acquisition with Double]
+  
+  /* 2 */ @js.native
+  object Install extends TopLevel[Install with Double]
+  
+  /* 999 */ @js.native
+  object Other extends TopLevel[Other with Double]
+  
+  /* 3 */ @js.native
+  object Review
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionLifecycleEventType.Review with Double
+        ]
+  
+  /* 5 */ @js.native
+  object Sales extends TopLevel[Sales with Double]
+  
+  /* 1 */ @js.native
+  object Uninstall extends TopLevel[Uninstall with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ol.interactionDrawMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DrawEventType extends js.Object {
   @js.native
   sealed trait DRAWSTART extends DrawEventType
   
-  /* "drawend" */ val DRAWEND: typingsSlinky.ol.interactionDrawMod.DrawEventType.DRAWEND with String = js.native
-  /* "drawstart" */ val DRAWSTART: typingsSlinky.ol.interactionDrawMod.DrawEventType.DRAWSTART with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DrawEventType with String] = js.native
+  /* "drawend" */ @js.native
+  object DRAWEND extends TopLevel[DRAWEND with String]
+  
+  /* "drawstart" */ @js.native
+  object DRAWSTART extends TopLevel[DRAWSTART with String]
+  
 }
 

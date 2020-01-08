@@ -8,21 +8,25 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.`*`.tag
 import typingsSlinky.atMaterialDashUiCore.PartialClassNameMapSvgIconClassKey
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreMod.PropTypes.Color
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings._empty
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`additions text`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`after-edge`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`before-edge`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`inline`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`text-after-edge`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`text-before-edge`
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.`use-credentials`
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.action
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.additions
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.all
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.alphabetic
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.anonymous
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.ascending
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.assertive
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.auto
@@ -85,6 +89,7 @@ import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.vertical
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.yes
 import typingsSlinky.atMaterialDashUiCore.svgIconMod.default
 import typingsSlinky.atMaterialDashUiCore.svgIconSvgIconMod.SvgIconProps
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Ref
 import scala.scalajs.js
@@ -159,7 +164,7 @@ object SvgIcon
     ascent: Double | String = null,
     attributeName: String = null,
     attributeType: String = null,
-    autoReverse: Double | String = null,
+    autoReverse: js.UndefOr[Boolean] = js.undefined,
     azimuth: Double | String = null,
     baseFrequency: Double | String = null,
     baseProfile: Double | String = null,
@@ -183,6 +188,7 @@ object SvgIcon
     component: ReactComponentClass[SvgIconProps] = null,
     contentScriptType: Double | String = null,
     contentStyleType: Double | String = null,
+    crossOrigin: anonymous | `use-credentials` | _empty = null,
     cursor: Double | String = null,
     cx: Double | String = null,
     cy: Double | String = null,
@@ -202,7 +208,7 @@ object SvgIcon
     enableBackground: Double | String = null,
     end: Double | String = null,
     exponent: Double | String = null,
-    externalResourcesRequired: Double | String = null,
+    externalResourcesRequired: js.UndefOr[Boolean] = js.undefined,
     fill: String = null,
     fillOpacity: Double | String = null,
     fillRule: nonzero | evenodd | inherit = null,
@@ -211,7 +217,7 @@ object SvgIcon
     filterUnits: Double | String = null,
     floodColor: Double | String = null,
     floodOpacity: Double | String = null,
-    focusable: Double | String = null,
+    focusable: Booleanish | auto = null,
     fontFamily: String = null,
     fontSize: inherit | typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.default | small | large = null,
     fontSizeAdjust: Double | String = null,
@@ -293,7 +299,7 @@ object SvgIcon
     pointsAtX: Double | String = null,
     pointsAtY: Double | String = null,
     pointsAtZ: Double | String = null,
-    preserveAlpha: Double | String = null,
+    preserveAlpha: js.UndefOr[Boolean] = js.undefined,
     preserveAspectRatio: String = null,
     primitiveUnits: Double | String = null,
     r: Double | String = null,
@@ -350,7 +356,6 @@ object SvgIcon
     textRendering: Double | String = null,
     titleAccess: String = null,
     to: Double | String = null,
-    transform: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -413,7 +418,7 @@ object SvgIcon
     if (ascent != null) __obj.updateDynamic("ascent")(ascent.asInstanceOf[js.Any])
     if (attributeName != null) __obj.updateDynamic("attributeName")(attributeName.asInstanceOf[js.Any])
     if (attributeType != null) __obj.updateDynamic("attributeType")(attributeType.asInstanceOf[js.Any])
-    if (autoReverse != null) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoReverse)) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
     if (azimuth != null) __obj.updateDynamic("azimuth")(azimuth.asInstanceOf[js.Any])
     if (baseFrequency != null) __obj.updateDynamic("baseFrequency")(baseFrequency.asInstanceOf[js.Any])
     if (baseProfile != null) __obj.updateDynamic("baseProfile")(baseProfile.asInstanceOf[js.Any])
@@ -437,6 +442,7 @@ object SvgIcon
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (contentScriptType != null) __obj.updateDynamic("contentScriptType")(contentScriptType.asInstanceOf[js.Any])
     if (contentStyleType != null) __obj.updateDynamic("contentStyleType")(contentStyleType.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
     if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
     if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
@@ -456,7 +462,7 @@ object SvgIcon
     if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
     if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
     if (exponent != null) __obj.updateDynamic("exponent")(exponent.asInstanceOf[js.Any])
-    if (externalResourcesRequired != null) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
+    if (!js.isUndefined(externalResourcesRequired)) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
     if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
     if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
@@ -547,7 +553,7 @@ object SvgIcon
     if (pointsAtX != null) __obj.updateDynamic("pointsAtX")(pointsAtX.asInstanceOf[js.Any])
     if (pointsAtY != null) __obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
     if (pointsAtZ != null) __obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
-    if (preserveAlpha != null) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveAlpha)) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
     if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
     if (primitiveUnits != null) __obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
     if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
@@ -604,10 +610,10 @@ object SvgIcon
     if (textRendering != null) __obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
     if (titleAccess != null) __obj.updateDynamic("titleAccess")(titleAccess.asInstanceOf[js.Any])
     if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.svg.`*`.tag.type, typingsSlinky.atMaterialDashUiCore.svgIconMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SvgIconProps
 }
 

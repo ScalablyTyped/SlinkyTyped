@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "rx-node"
-version := "0.0-unknown-dt-20190322Z-37e716"
+version := "0.0-unknown-dt-20190322Z-776a92"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
-  "org.scalablytyped.slinky" %%% "rx-core" % "4.0-dt-20190322Z-d1e9a9",
-  "org.scalablytyped.slinky" %%% "rx-lite" % "4.0-dt-20190322Z-9f7953",
-  "org.scalablytyped.slinky" %%% "rx-lite-aggregates" % "4.0-dt-20190322Z-caa49f",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
+  "org.scalablytyped.slinky" %%% "rx-core" % "4.0-dt-20190322Z-c54414",
+  "org.scalablytyped.slinky" %%% "rx-lite" % "4.0-dt-20190322Z-99bc0e",
+  "org.scalablytyped.slinky" %%% "rx-lite-aggregates" % "4.0-dt-20190322Z-9f4edf",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

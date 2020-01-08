@@ -1,7 +1,6 @@
 package typingsSlinky.nodegit
 
 import typingsSlinky.nodegit.repositoryMod.Repository
-import typingsSlinky.nodegit.signatureMod.Signature
 import typingsSlinky.nodegit.timeMod.Time
 import scala.scalajs.js
 import scala.scalajs.js.`|`

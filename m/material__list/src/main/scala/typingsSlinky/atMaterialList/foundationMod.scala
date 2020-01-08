@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialBase.foundationMod.default
 import typingsSlinky.atMaterialList.adapterMod.MDCListAdapter
 import typingsSlinky.atMaterialList.constantsMod.Index
-import typingsSlinky.atMaterialList.foundationMod.MDCListFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

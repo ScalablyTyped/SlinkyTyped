@@ -1,10 +1,13 @@
 package typingsSlinky.cswDashAasDashJs.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Logout extends SharedApply_Object857666606 {
+object Logout
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("csw-aas-js", "Logout")
   @js.native
   object componentImport extends js.Object

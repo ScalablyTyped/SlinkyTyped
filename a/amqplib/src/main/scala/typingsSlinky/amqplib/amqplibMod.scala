@@ -1,9 +1,6 @@
 package typingsSlinky.amqplib
 
-import typingsSlinky.amqplib.amqplibMod.Channel
-import typingsSlinky.amqplib.amqplibMod.ConfirmChannel
-import typingsSlinky.amqplib.amqplibMod.Connection
-import typingsSlinky.amqplib.amqplibNumbers.`false`
+import typingsSlinky.amqplib.amqplibBooleans.`false`
 import typingsSlinky.amqplib.propertiesMod.ConsumeMessage
 import typingsSlinky.amqplib.propertiesMod.GetMessage
 import typingsSlinky.amqplib.propertiesMod.Message

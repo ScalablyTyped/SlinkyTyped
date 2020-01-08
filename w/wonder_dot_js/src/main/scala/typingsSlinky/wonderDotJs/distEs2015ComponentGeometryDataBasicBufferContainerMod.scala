@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015ComponentGeometryDataBasicBufferContainerMod.BasicBufferContainer
 import typingsSlinky.wonderDotJs.distEs2015ComponentGeometryDataCommonBufferContainerMod.CommonBufferContainer
 import typingsSlinky.wonderDotJs.distEs2015CoreEntityObjectGameObjectGameObjectMod.GameObject
 import scala.scalajs.js

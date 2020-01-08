@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.Printing
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,24 +80,58 @@ object PrintBinding extends js.Object {
   @js.native
   sealed trait trim extends PrintBinding
   
-  /* 4 */ val bale: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.bale with Double = js.native
-  /* 5 */ val bindBottom: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.bindBottom with Double = js.native
-  /* 6 */ val bindLeft: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.bindLeft with Double = js.native
-  /* 7 */ val bindRight: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.bindRight with Double = js.native
-  /* 8 */ val bindTop: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.bindTop with Double = js.native
-  /* 9 */ val booklet: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.booklet with Double = js.native
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.default with Double = js.native
-  /* 10 */ val edgeStitchBottom: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.edgeStitchBottom with Double = js.native
-  /* 11 */ val edgeStitchLeft: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.edgeStitchLeft with Double = js.native
-  /* 12 */ val edgeStitchRight: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.edgeStitchRight with Double = js.native
-  /* 13 */ val edgeStitchTop: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.edgeStitchTop with Double = js.native
-  /* 14 */ val fold: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.fold with Double = js.native
-  /* 15 */ val jogOffset: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.jogOffset with Double = js.native
-  /* 3 */ val none: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.none with Double = js.native
-  /* 1 */ val notAvailable: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.notAvailable with Double = js.native
-  /* 2 */ val printerCustom: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.printerCustom with Double = js.native
-  /* 16 */ val trim: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintBinding.trim with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrintBinding with Double] = js.native
+  /* 4 */ @js.native
+  object bale extends TopLevel[bale with Double]
+  
+  /* 5 */ @js.native
+  object bindBottom extends TopLevel[bindBottom with Double]
+  
+  /* 6 */ @js.native
+  object bindLeft extends TopLevel[bindLeft with Double]
+  
+  /* 7 */ @js.native
+  object bindRight extends TopLevel[bindRight with Double]
+  
+  /* 8 */ @js.native
+  object bindTop extends TopLevel[bindTop with Double]
+  
+  /* 9 */ @js.native
+  object booklet extends TopLevel[booklet with Double]
+  
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 10 */ @js.native
+  object edgeStitchBottom extends TopLevel[edgeStitchBottom with Double]
+  
+  /* 11 */ @js.native
+  object edgeStitchLeft extends TopLevel[edgeStitchLeft with Double]
+  
+  /* 12 */ @js.native
+  object edgeStitchRight extends TopLevel[edgeStitchRight with Double]
+  
+  /* 13 */ @js.native
+  object edgeStitchTop extends TopLevel[edgeStitchTop with Double]
+  
+  /* 14 */ @js.native
+  object fold extends TopLevel[fold with Double]
+  
+  /* 15 */ @js.native
+  object jogOffset extends TopLevel[jogOffset with Double]
+  
+  /* 3 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object notAvailable extends TopLevel[notAvailable with Double]
+  
+  /* 2 */ @js.native
+  object printerCustom extends TopLevel[printerCustom with Double]
+  
+  /* 16 */ @js.native
+  object trim extends TopLevel[trim with Double]
+  
 }
 

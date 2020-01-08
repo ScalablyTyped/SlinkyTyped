@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "clone-deep"
-version := "4.0-dt-20190319Z-bb6417"
+version := "4.0-dt-20190319Z-e2fe1c"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

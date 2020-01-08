@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
 import typingsSlinky.plottable.buildSrcDispatchersDispatcherMod.Dispatcher
-import typingsSlinky.plottable.buildSrcDispatchersTouchDispatcherMod.TouchCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

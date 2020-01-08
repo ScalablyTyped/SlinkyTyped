@@ -1,5 +1,6 @@
 package typingsSlinky.msDashRest.msDashRestMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,23 +59,55 @@ object MapperType extends js.Object {
   @js.native
   sealed trait UnixTime extends MapperType
   
-  /* 0 */ val Base64Url: typingsSlinky.msDashRest.msDashRestMod.MapperType.Base64Url with Double = js.native
-  /* 1 */ val Boolean: typingsSlinky.msDashRest.msDashRestMod.MapperType.Boolean with Double = js.native
-  /* 2 */ val ByteArray: typingsSlinky.msDashRest.msDashRestMod.MapperType.ByteArray with Double = js.native
-  /* 3 */ val Composite: typingsSlinky.msDashRest.msDashRestMod.MapperType.Composite with Double = js.native
-  /* 4 */ val Date: typingsSlinky.msDashRest.msDashRestMod.MapperType.Date with Double = js.native
-  /* 5 */ val DateTime: typingsSlinky.msDashRest.msDashRestMod.MapperType.DateTime with Double = js.native
-  /* 6 */ val DateTimeRfc1123: typingsSlinky.msDashRest.msDashRestMod.MapperType.DateTimeRfc1123 with Double = js.native
-  /* 7 */ val Dictionary: typingsSlinky.msDashRest.msDashRestMod.MapperType.Dictionary with Double = js.native
-  /* 8 */ val Enum: typingsSlinky.msDashRest.msDashRestMod.MapperType.Enum with Double = js.native
-  /* 9 */ val Number: typingsSlinky.msDashRest.msDashRestMod.MapperType.Number with Double = js.native
-  /* 10 */ val Object: typingsSlinky.msDashRest.msDashRestMod.MapperType.Object with Double = js.native
-  /* 11 */ val Sequence: typingsSlinky.msDashRest.msDashRestMod.MapperType.Sequence with Double = js.native
-  /* 13 */ val Stream: typingsSlinky.msDashRest.msDashRestMod.MapperType.Stream with Double = js.native
-  /* 12 */ val String: typingsSlinky.msDashRest.msDashRestMod.MapperType.String with Double = js.native
-  /* 14 */ val TimeSpan: typingsSlinky.msDashRest.msDashRestMod.MapperType.TimeSpan with Double = js.native
-  /* 15 */ val UnixTime: typingsSlinky.msDashRest.msDashRestMod.MapperType.UnixTime with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MapperType with Double] = js.native
+  /* 0 */ @js.native
+  object Base64Url extends TopLevel[Base64Url with Double]
+  
+  /* 1 */ @js.native
+  object Boolean extends TopLevel[Boolean with Double]
+  
+  /* 2 */ @js.native
+  object ByteArray extends TopLevel[ByteArray with Double]
+  
+  /* 3 */ @js.native
+  object Composite extends TopLevel[Composite with Double]
+  
+  /* 4 */ @js.native
+  object Date extends TopLevel[Date with Double]
+  
+  /* 5 */ @js.native
+  object DateTime extends TopLevel[DateTime with Double]
+  
+  /* 6 */ @js.native
+  object DateTimeRfc1123 extends TopLevel[DateTimeRfc1123 with Double]
+  
+  /* 7 */ @js.native
+  object Dictionary extends TopLevel[Dictionary with Double]
+  
+  /* 8 */ @js.native
+  object Enum extends TopLevel[Enum with Double]
+  
+  /* 9 */ @js.native
+  object Number extends TopLevel[Number with Double]
+  
+  /* 10 */ @js.native
+  object Object extends TopLevel[Object with Double]
+  
+  /* 11 */ @js.native
+  object Sequence extends TopLevel[Sequence with Double]
+  
+  /* 13 */ @js.native
+  object Stream extends TopLevel[Stream with Double]
+  
+  /* 12 */ @js.native
+  object String extends TopLevel[String with Double]
+  
+  /* 14 */ @js.native
+  object TimeSpan extends TopLevel[TimeSpan with Double]
+  
+  /* 15 */ @js.native
+  object UnixTime extends TopLevel[UnixTime with Double]
+  
 }
 

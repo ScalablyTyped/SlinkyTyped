@@ -6,8 +6,6 @@ import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.ProtoByteString
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.TargetId
 import typingsSlinky.atFirebaseFirestore.distSrcModelCollectionsMod.DocumentKeySet
 import typingsSlinky.atFirebaseFirestore.distSrcModelCollectionsMod.MaybeDocumentMap
-import typingsSlinky.atFirebaseFirestore.distSrcRemoteRemoteUnderscoreEventMod.RemoteEvent
-import typingsSlinky.atFirebaseFirestore.distSrcRemoteRemoteUnderscoreEventMod.TargetChange
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreSetMod.SortedSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -144,10 +142,9 @@ object distSrcRemoteRemoteUnderscoreEventMod extends js.Object {
   @js.native
   object TargetChange extends js.Object {
     /**
-      * HACK: Views require TargetChanges in order to determine whether the view is
-      * CURRENT, but secondary tabs don't receive remote events. So this method is
-      * used to create a synthesized TargetChanges that can be used to apply a
-      * CURRENT status change to a View, for queries executed in a different tab.
+      * This method is used to create a synthesized TargetChanges that can be used to
+      * apply a CURRENT status change to a View (for queries executed in a different
+      * tab) or for new queries (to raise snapshots with correct CURRENT status).
       */
     def createSynthesizedTargetChangeForCurrentChange(targetId: TargetId, current: Boolean): TargetChange = js.native
   }

@@ -10,7 +10,7 @@ object createCoverFlowView extends js.Object {
   /**
   			 * Creates and returns an instance of <Titanium.UI.iOS.CoverFlowView>.
   			 */
-  def apply(): typingsSlinky.titanium.Titanium.UI.iOS.CoverFlowView = js.native
-  def apply(parameters: js.Any): typingsSlinky.titanium.Titanium.UI.iOS.CoverFlowView = js.native
+  def apply(): CoverFlowView = js.native
+  def apply(parameters: js.Any): CoverFlowView = js.native
 }
 

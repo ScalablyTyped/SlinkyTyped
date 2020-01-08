@@ -2,8 +2,6 @@ package typingsSlinky.jestDashDiff
 
 import typingsSlinky.chalk.chalkMod.Chalk
 import typingsSlinky.jestDashDiff.buildCleanupSemanticMod.Diff
-import typingsSlinky.jestDashDiff.buildPrintDiffsMod.StringDiffResult
-import typingsSlinky.jestDashDiff.buildPrintDiffsMod._StringDiffResult
 import typingsSlinky.jestDashDiff.buildTypesMod.DiffOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

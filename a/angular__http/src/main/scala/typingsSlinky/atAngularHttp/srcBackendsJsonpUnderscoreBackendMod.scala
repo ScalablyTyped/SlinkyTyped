@@ -1,6 +1,5 @@
 package typingsSlinky.atAngularHttp
 
-import typingsSlinky.atAngularHttp.srcBackendsJsonpUnderscoreBackendMod.JSONPConnection
 import typingsSlinky.atAngularHttp.srcInterfacesMod.Connection
 import typingsSlinky.atAngularHttp.srcInterfacesMod.ConnectionBackend
 import typingsSlinky.atAngularHttp.srcStaticUnderscoreRequestMod.Request

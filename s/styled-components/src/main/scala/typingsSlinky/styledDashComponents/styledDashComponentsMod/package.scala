@@ -8,6 +8,7 @@ package object styledDashComponentsMod {
   import org.scalablytyped.runtime.StringDictionary
   import slinky.core.ReactComponentClass
   import typingsSlinky.csstype.csstypeMod.Properties
+  import typingsSlinky.hoistDashNonDashReactDashStatics.hoistDashNonDashReactDashStaticsMod.NonReactStatics
   import typingsSlinky.react.reactMod.ComponentPropsWithRef
   import typingsSlinky.react.reactMod.ForwardRefExoticComponent
   import typingsSlinky.std.Exclude
@@ -19,7 +20,7 @@ package object styledDashComponentsMod {
   import typingsSlinky.styledDashComponents.Anon_SuppressMultiMountWarning
   import typingsSlinky.styledDashComponents.Anon_ThemeT
   import typingsSlinky.styledDashComponents.WithOptionalThemeComponentPropsWithRefCT
-  import typingsSlinky.styledDashComponents.styledDashComponentsNumbers.`false`
+  import typingsSlinky.styledDashComponents.styledDashComponentsBooleans.`false`
 
   type AnyIfEmpty[T /* <: js.Object */] = T
   type AnyStyledComponent = StyledComponent[js.Any, js.Any, js.Any, js.Any | scala.Nothing]
@@ -69,7 +70,7 @@ package object styledDashComponentsMod {
   type SimpleInterpolation = _SimpleInterpolation | String | Double | FalseyValue
   type StyledComponent[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: String */] = (// the "string" allows this to be used as an object key
   // I really want to avoid this if possible but it's the only way to use nesting with object styles...
-  String) with (StyledComponentBase[C, T, O, A])
+  String) with (StyledComponentBase[C, T, O, A]) with (NonReactStatics[C, js.Object])
   type StyledComponentInnerAttrs[C /* <: AnyStyledComponent */] = js.Any
   type StyledComponentInnerComponent[C /* <: ReactComponentClass[_] */] = C
   type StyledComponentInnerOtherProps[C /* <: AnyStyledComponent */] = js.Any

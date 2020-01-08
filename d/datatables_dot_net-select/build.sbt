@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "datatables_dot_net-select"
-version := "1.2-dt-20190718Z-f266fd"
+version := "1.2-dt-20190718Z-5cc0b2"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

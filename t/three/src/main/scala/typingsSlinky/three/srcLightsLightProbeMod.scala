@@ -2,7 +2,7 @@ package typingsSlinky.three
 
 import typingsSlinky.three.srcLightsLightMod.Light
 import typingsSlinky.three.srcMathSphericalHarmonics3Mod.SphericalHarmonics3
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

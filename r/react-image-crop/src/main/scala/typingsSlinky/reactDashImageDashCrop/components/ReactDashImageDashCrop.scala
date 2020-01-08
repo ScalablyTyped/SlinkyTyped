@@ -26,9 +26,10 @@ object ReactDashImageDashCrop
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, src */
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     onChange: (Crop, PercentCrop) => Unit,
+    src: String,
     circularCrop: js.UndefOr[Boolean] = js.undefined,
     crop: Crop = null,
     crossorigin: anonymous | `use-credentials` = null,
@@ -51,7 +52,7 @@ object ReactDashImageDashCrop
     style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
+    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), src = src.asInstanceOf[js.Any])
     if (!js.isUndefined(circularCrop)) __obj.updateDynamic("circularCrop")(circularCrop.asInstanceOf[js.Any])
     if (crop != null) __obj.updateDynamic("crop")(crop.asInstanceOf[js.Any])
     if (crossorigin != null) __obj.updateDynamic("crossorigin")(crossorigin.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.mimeDashTypes
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mimeDashTypes.mimeDashTypesNumbers.`false`
+import typingsSlinky.mimeDashTypes.mimeDashTypesBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,7 @@
 package typingsSlinky.cypress.Cypress
 
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.DOMStringList
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLAnchorElement
@@ -76,33 +77,16 @@ import typingsSlinky.cypress.JQuery.htmlString
 import typingsSlinky.cypress.JQueryStatic
 import typingsSlinky.cypress.Mocha.IRunnable
 import typingsSlinky.cypress.Mocha.ITest
-import typingsSlinky.cypress.cypressNumbers.`false`
-import typingsSlinky.cypress.cypressStrings.`command:end`
-import typingsSlinky.cypress.cypressStrings.`command:enqueued`
-import typingsSlinky.cypress.cypressStrings.`command:retry`
-import typingsSlinky.cypress.cypressStrings.`command:start`
-import typingsSlinky.cypress.cypressStrings.`log:added`
-import typingsSlinky.cypress.cypressStrings.`log:changed`
+import typingsSlinky.cypress.cypressBooleans.`false`
 import typingsSlinky.cypress.cypressStrings.`match`
-import typingsSlinky.cypress.cypressStrings.`object`
-import typingsSlinky.cypress.cypressStrings.`test:after:run`
-import typingsSlinky.cypress.cypressStrings.`test:before:run`
 import typingsSlinky.cypress.cypressStrings.`throw`
-import typingsSlinky.cypress.cypressStrings.`uncaught:exception`
-import typingsSlinky.cypress.cypressStrings.`url:changed`
 import typingsSlinky.cypress.cypressStrings.`var`
-import typingsSlinky.cypress.cypressStrings.`viewport:changed`
-import typingsSlinky.cypress.cypressStrings.`window:alert`
-import typingsSlinky.cypress.cypressStrings.`window:before:load`
-import typingsSlinky.cypress.cypressStrings.`window:before:unload`
-import typingsSlinky.cypress.cypressStrings.`window:confirm`
-import typingsSlinky.cypress.cypressStrings.`window:load`
-import typingsSlinky.cypress.cypressStrings.`window:unload`
 import typingsSlinky.cypress.cypressStrings.a
 import typingsSlinky.cypress.cypressStrings.abbr
 import typingsSlinky.cypress.cypressStrings.abort
 import typingsSlinky.cypress.cypressStrings.address
-import typingsSlinky.cypress.cypressStrings.alwaysDOTreturned
+import typingsSlinky.cypress.cypressStrings.alwaysDotreturned
+import typingsSlinky.cypress.cypressStrings.ancestorOrigins
 import typingsSlinky.cypress.cypressStrings.animationcancel
 import typingsSlinky.cypress.cypressStrings.animationend
 import typingsSlinky.cypress.cypressStrings.animationiteration
@@ -118,46 +102,46 @@ import typingsSlinky.cypress.cypressStrings.base_
 import typingsSlinky.cypress.cypressStrings.basefont
 import typingsSlinky.cypress.cypressStrings.bdi
 import typingsSlinky.cypress.cypressStrings.bdo
-import typingsSlinky.cypress.cypressStrings.beDOTa
-import typingsSlinky.cypress.cypressStrings.beDOTabove
-import typingsSlinky.cypress.cypressStrings.beDOTalwaysDOTcalledWithMatch
-import typingsSlinky.cypress.cypressStrings.beDOTalwaysDOTcalledWithNew
-import typingsSlinky.cypress.cypressStrings.beDOTan
-import typingsSlinky.cypress.cypressStrings.beDOTapproximately
-import typingsSlinky.cypress.cypressStrings.beDOTarguments
-import typingsSlinky.cypress.cypressStrings.beDOTatDOTleast
-import typingsSlinky.cypress.cypressStrings.beDOTbelow
-import typingsSlinky.cypress.cypressStrings.beDOTcalled
-import typingsSlinky.cypress.cypressStrings.beDOTcalledAfter
-import typingsSlinky.cypress.cypressStrings.beDOTcalledBefore
-import typingsSlinky.cypress.cypressStrings.beDOTcalledOn
-import typingsSlinky.cypress.cypressStrings.beDOTcalledOnce
-import typingsSlinky.cypress.cypressStrings.beDOTcalledThrice
-import typingsSlinky.cypress.cypressStrings.beDOTcalledTwice
-import typingsSlinky.cypress.cypressStrings.beDOTcalledWithExactly
-import typingsSlinky.cypress.cypressStrings.beDOTcalledWithMatch
-import typingsSlinky.cypress.cypressStrings.beDOTcalledWithNew
-import typingsSlinky.cypress.cypressStrings.beDOTchecked
-import typingsSlinky.cypress.cypressStrings.beDOTcloseTo
-import typingsSlinky.cypress.cypressStrings.beDOTdisabled
-import typingsSlinky.cypress.cypressStrings.beDOTempty
-import typingsSlinky.cypress.cypressStrings.beDOTenabled
-import typingsSlinky.cypress.cypressStrings.beDOTfalse
-import typingsSlinky.cypress.cypressStrings.beDOTfocused
-import typingsSlinky.cypress.cypressStrings.beDOTgreaterThan
-import typingsSlinky.cypress.cypressStrings.beDOTgt
-import typingsSlinky.cypress.cypressStrings.beDOTgte
-import typingsSlinky.cypress.cypressStrings.beDOThidden
-import typingsSlinky.cypress.cypressStrings.beDOTinstanceOf
-import typingsSlinky.cypress.cypressStrings.beDOTlessThan
-import typingsSlinky.cypress.cypressStrings.beDOTlt
-import typingsSlinky.cypress.cypressStrings.beDOTlte
-import typingsSlinky.cypress.cypressStrings.beDOTok
-import typingsSlinky.cypress.cypressStrings.beDOTselected
-import typingsSlinky.cypress.cypressStrings.beDOTtrue
-import typingsSlinky.cypress.cypressStrings.beDOTundefined
-import typingsSlinky.cypress.cypressStrings.beDOTvisible
-import typingsSlinky.cypress.cypressStrings.beDOTwithin
+import typingsSlinky.cypress.cypressStrings.beDota
+import typingsSlinky.cypress.cypressStrings.beDotabove
+import typingsSlinky.cypress.cypressStrings.beDotalwaysDotcalledWithMatch
+import typingsSlinky.cypress.cypressStrings.beDotalwaysDotcalledWithNew
+import typingsSlinky.cypress.cypressStrings.beDotan
+import typingsSlinky.cypress.cypressStrings.beDotapproximately
+import typingsSlinky.cypress.cypressStrings.beDotarguments
+import typingsSlinky.cypress.cypressStrings.beDotatDotleast
+import typingsSlinky.cypress.cypressStrings.beDotbelow
+import typingsSlinky.cypress.cypressStrings.beDotcalled
+import typingsSlinky.cypress.cypressStrings.beDotcalledAfter
+import typingsSlinky.cypress.cypressStrings.beDotcalledBefore
+import typingsSlinky.cypress.cypressStrings.beDotcalledOn
+import typingsSlinky.cypress.cypressStrings.beDotcalledOnce
+import typingsSlinky.cypress.cypressStrings.beDotcalledThrice
+import typingsSlinky.cypress.cypressStrings.beDotcalledTwice
+import typingsSlinky.cypress.cypressStrings.beDotcalledWithExactly
+import typingsSlinky.cypress.cypressStrings.beDotcalledWithMatch
+import typingsSlinky.cypress.cypressStrings.beDotcalledWithNew
+import typingsSlinky.cypress.cypressStrings.beDotchecked
+import typingsSlinky.cypress.cypressStrings.beDotcloseTo
+import typingsSlinky.cypress.cypressStrings.beDotdisabled
+import typingsSlinky.cypress.cypressStrings.beDotempty
+import typingsSlinky.cypress.cypressStrings.beDotenabled
+import typingsSlinky.cypress.cypressStrings.beDotfalse
+import typingsSlinky.cypress.cypressStrings.beDotfocused
+import typingsSlinky.cypress.cypressStrings.beDotgreaterThan
+import typingsSlinky.cypress.cypressStrings.beDotgt
+import typingsSlinky.cypress.cypressStrings.beDotgte
+import typingsSlinky.cypress.cypressStrings.beDothidden
+import typingsSlinky.cypress.cypressStrings.beDotinstanceOf
+import typingsSlinky.cypress.cypressStrings.beDotlessThan
+import typingsSlinky.cypress.cypressStrings.beDotlt
+import typingsSlinky.cypress.cypressStrings.beDotlte
+import typingsSlinky.cypress.cypressStrings.beDotok
+import typingsSlinky.cypress.cypressStrings.beDotselected
+import typingsSlinky.cypress.cypressStrings.beDottrue
+import typingsSlinky.cypress.cypressStrings.beDotundefined
+import typingsSlinky.cypress.cypressStrings.beDotvisible
+import typingsSlinky.cypress.cypressStrings.beDotwithin
 import typingsSlinky.cypress.cypressStrings.blockquote
 import typingsSlinky.cypress.cypressStrings.blur
 import typingsSlinky.cypress.cypressStrings.body
@@ -177,10 +161,14 @@ import typingsSlinky.cypress.cypressStrings.close
 import typingsSlinky.cypress.cypressStrings.code
 import typingsSlinky.cypress.cypressStrings.col
 import typingsSlinky.cypress.cypressStrings.colgroup
+import typingsSlinky.cypress.cypressStrings.commandColonend
+import typingsSlinky.cypress.cypressStrings.commandColonenqueued
+import typingsSlinky.cypress.cypressStrings.commandColonretry
+import typingsSlinky.cypress.cypressStrings.commandColonstart
 import typingsSlinky.cypress.cypressStrings.contain
-import typingsSlinky.cypress.cypressStrings.containDOThtml
-import typingsSlinky.cypress.cypressStrings.containDOTtext
-import typingsSlinky.cypress.cypressStrings.containDOTvalue
+import typingsSlinky.cypress.cypressStrings.containDothtml
+import typingsSlinky.cypress.cypressStrings.containDottext
+import typingsSlinky.cypress.cypressStrings.containDotvalue
 import typingsSlinky.cypress.cypressStrings.contextmenu
 import typingsSlinky.cypress.cypressStrings.copy
 import typingsSlinky.cypress.cypressStrings.cuechange
@@ -190,7 +178,7 @@ import typingsSlinky.cypress.cypressStrings.datalist
 import typingsSlinky.cypress.cypressStrings.dblclick
 import typingsSlinky.cypress.cypressStrings.dd
 import typingsSlinky.cypress.cypressStrings.decrease
-import typingsSlinky.cypress.cypressStrings.deepDOTequal
+import typingsSlinky.cypress.cypressStrings.deepDotequal
 import typingsSlinky.cypress.cypressStrings.del
 import typingsSlinky.cypress.cypressStrings.details
 import typingsSlinky.cypress.cypressStrings.dfn
@@ -238,48 +226,52 @@ import typingsSlinky.cypress.cypressStrings.h3
 import typingsSlinky.cypress.cypressStrings.h4
 import typingsSlinky.cypress.cypressStrings.h5
 import typingsSlinky.cypress.cypressStrings.h6
-import typingsSlinky.cypress.cypressStrings.haveDOTallDOTkeys
-import typingsSlinky.cypress.cypressStrings.haveDOTalwaysDOTthrown
-import typingsSlinky.cypress.cypressStrings.haveDOTanyDOTkeys
-import typingsSlinky.cypress.cypressStrings.haveDOTattr
-import typingsSlinky.cypress.cypressStrings.haveDOTcallCount
-import typingsSlinky.cypress.cypressStrings.haveDOTclass
-import typingsSlinky.cypress.cypressStrings.haveDOTcss
-import typingsSlinky.cypress.cypressStrings.haveDOTdata
-import typingsSlinky.cypress.cypressStrings.haveDOTdeepDOTproperty
-import typingsSlinky.cypress.cypressStrings.haveDOTdescendants
-import typingsSlinky.cypress.cypressStrings.haveDOTfocus
-import typingsSlinky.cypress.cypressStrings.haveDOThtml
-import typingsSlinky.cypress.cypressStrings.haveDOTid
-import typingsSlinky.cypress.cypressStrings.haveDOTlength
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTgreaterThan
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTgt
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTgte
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTlessThan
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTlt
-import typingsSlinky.cypress.cypressStrings.haveDOTlengthDOTlte
-import typingsSlinky.cypress.cypressStrings.haveDOTmembers
-import typingsSlinky.cypress.cypressStrings.haveDOTorderedDOTmembers
-import typingsSlinky.cypress.cypressStrings.haveDOTownProperty
-import typingsSlinky.cypress.cypressStrings.haveDOTprop
-import typingsSlinky.cypress.cypressStrings.haveDOTproperty
-import typingsSlinky.cypress.cypressStrings.haveDOTstring
-import typingsSlinky.cypress.cypressStrings.haveDOTtext
-import typingsSlinky.cypress.cypressStrings.haveDOTthrown
-import typingsSlinky.cypress.cypressStrings.haveDOTvalue
+import typingsSlinky.cypress.cypressStrings.hash
+import typingsSlinky.cypress.cypressStrings.haveDotallDotkeys
+import typingsSlinky.cypress.cypressStrings.haveDotalwaysDotthrown
+import typingsSlinky.cypress.cypressStrings.haveDotanyDotkeys
+import typingsSlinky.cypress.cypressStrings.haveDotattr
+import typingsSlinky.cypress.cypressStrings.haveDotcallCount
+import typingsSlinky.cypress.cypressStrings.haveDotclass
+import typingsSlinky.cypress.cypressStrings.haveDotcss
+import typingsSlinky.cypress.cypressStrings.haveDotdata
+import typingsSlinky.cypress.cypressStrings.haveDotdeepDotproperty
+import typingsSlinky.cypress.cypressStrings.haveDotdescendants
+import typingsSlinky.cypress.cypressStrings.haveDotfocus
+import typingsSlinky.cypress.cypressStrings.haveDothtml
+import typingsSlinky.cypress.cypressStrings.haveDotid
+import typingsSlinky.cypress.cypressStrings.haveDotlength
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotgreaterThan
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotgt
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotgte
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotlessThan
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotlt
+import typingsSlinky.cypress.cypressStrings.haveDotlengthDotlte
+import typingsSlinky.cypress.cypressStrings.haveDotmembers
+import typingsSlinky.cypress.cypressStrings.haveDotorderedDotmembers
+import typingsSlinky.cypress.cypressStrings.haveDotownProperty
+import typingsSlinky.cypress.cypressStrings.haveDotprop
+import typingsSlinky.cypress.cypressStrings.haveDotproperty
+import typingsSlinky.cypress.cypressStrings.haveDotstring
+import typingsSlinky.cypress.cypressStrings.haveDottext
+import typingsSlinky.cypress.cypressStrings.haveDotthrown
+import typingsSlinky.cypress.cypressStrings.haveDotvalue
 import typingsSlinky.cypress.cypressStrings.head
 import typingsSlinky.cypress.cypressStrings.header
 import typingsSlinky.cypress.cypressStrings.hgroup
+import typingsSlinky.cypress.cypressStrings.host
+import typingsSlinky.cypress.cypressStrings.hostname
 import typingsSlinky.cypress.cypressStrings.hr
+import typingsSlinky.cypress.cypressStrings.href
 import typingsSlinky.cypress.cypressStrings.html_
 import typingsSlinky.cypress.cypressStrings.i
 import typingsSlinky.cypress.cypressStrings.iframe
 import typingsSlinky.cypress.cypressStrings.img
 import typingsSlinky.cypress.cypressStrings.include
-import typingsSlinky.cypress.cypressStrings.includeDOThtml
-import typingsSlinky.cypress.cypressStrings.includeDOTmembers
-import typingsSlinky.cypress.cypressStrings.includeDOTtext
-import typingsSlinky.cypress.cypressStrings.includeDOTvalue
+import typingsSlinky.cypress.cypressStrings.includeDothtml
+import typingsSlinky.cypress.cypressStrings.includeDotmembers
+import typingsSlinky.cypress.cypressStrings.includeDottext
+import typingsSlinky.cypress.cypressStrings.includeDotvalue
 import typingsSlinky.cypress.cypressStrings.increase
 import typingsSlinky.cypress.cypressStrings.input
 import typingsSlinky.cypress.cypressStrings.ins
@@ -297,6 +289,8 @@ import typingsSlinky.cypress.cypressStrings.loadeddata
 import typingsSlinky.cypress.cypressStrings.loadedmetadata
 import typingsSlinky.cypress.cypressStrings.loadend
 import typingsSlinky.cypress.cypressStrings.loadstart
+import typingsSlinky.cypress.cypressStrings.logColonadded
+import typingsSlinky.cypress.cypressStrings.logColonchanged
 import typingsSlinky.cypress.cypressStrings.lostpointercapture
 import typingsSlinky.cypress.cypressStrings.main
 import typingsSlinky.cypress.cypressStrings.map
@@ -314,103 +308,106 @@ import typingsSlinky.cypress.cypressStrings.mouseover
 import typingsSlinky.cypress.cypressStrings.mouseup
 import typingsSlinky.cypress.cypressStrings.nav
 import typingsSlinky.cypress.cypressStrings.noscript
-import typingsSlinky.cypress.cypressStrings.notDOTalwaysDOTreturned
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTa
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTabove
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTalwaysDOTcalledWithMatch
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTalwaysDOTcalledWithNew
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTan
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTapproximately
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTarguments
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTatDOTleast
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTbelow
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalled
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledAfter
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledBefore
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledOn
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledOnce
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledThrice
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledTwice
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledWithExactly
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledWithMatch
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcalledWithNew
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTchecked
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTcloseTo
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTdisabled
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTempty
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTenabled
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTfalse
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTfocused
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTgreaterThan
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTgt
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTgte
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOThidden
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTinstanceOf
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTlessThan
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTlt
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTlte
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTok
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTselected
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTtrue
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTundefined
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTvisible
-import typingsSlinky.cypress.cypressStrings.notDOTbeDOTwithin
-import typingsSlinky.cypress.cypressStrings.notDOTchange
-import typingsSlinky.cypress.cypressStrings.notDOTcontain
-import typingsSlinky.cypress.cypressStrings.notDOTcontainDOThtml
-import typingsSlinky.cypress.cypressStrings.notDOTcontainDOTtext
-import typingsSlinky.cypress.cypressStrings.notDOTcontainDOTvalue
-import typingsSlinky.cypress.cypressStrings.notDOTdecrease
-import typingsSlinky.cypress.cypressStrings.notDOTdeepDOTequal
-import typingsSlinky.cypress.cypressStrings.notDOTeq
-import typingsSlinky.cypress.cypressStrings.notDOTeql
-import typingsSlinky.cypress.cypressStrings.notDOTequal
-import typingsSlinky.cypress.cypressStrings.notDOTexist
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTallDOTkeys
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTalwaysDOTthrown
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTanyDOTkeys
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTattr
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTcallCount
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTclass
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTcss
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTdata
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTdeepDOTproperty
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTdescendants
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTfocus
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOThtml
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTid
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlength
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlengthDOTgreaterThan
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlengthDOTgt
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlengthDOTlessThan
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlengthDOTlt
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTlengthDOTlte
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTmembers
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTorderedDOTmembers
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTownProperty
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTprop
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTproperty
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTstring
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTtext
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTthrown
-import typingsSlinky.cypress.cypressStrings.notDOThaveDOTvalue
-import typingsSlinky.cypress.cypressStrings.notDOTinclude
-import typingsSlinky.cypress.cypressStrings.notDOTincludeDOThtml
-import typingsSlinky.cypress.cypressStrings.notDOTincludeDOTmembers
-import typingsSlinky.cypress.cypressStrings.notDOTincludeDOTtext
-import typingsSlinky.cypress.cypressStrings.notDOTincludeDOTvalue
-import typingsSlinky.cypress.cypressStrings.notDOTincrease
-import typingsSlinky.cypress.cypressStrings.notDOTmatch
-import typingsSlinky.cypress.cypressStrings.notDOTrespondTo
-import typingsSlinky.cypress.cypressStrings.notDOTreturned
-import typingsSlinky.cypress.cypressStrings.notDOTsatisfy
+import typingsSlinky.cypress.cypressStrings.notDotalwaysDotreturned
+import typingsSlinky.cypress.cypressStrings.notDotbeDota
+import typingsSlinky.cypress.cypressStrings.notDotbeDotabove
+import typingsSlinky.cypress.cypressStrings.notDotbeDotalwaysDotcalledWithMatch
+import typingsSlinky.cypress.cypressStrings.notDotbeDotalwaysDotcalledWithNew
+import typingsSlinky.cypress.cypressStrings.notDotbeDotan
+import typingsSlinky.cypress.cypressStrings.notDotbeDotapproximately
+import typingsSlinky.cypress.cypressStrings.notDotbeDotarguments
+import typingsSlinky.cypress.cypressStrings.notDotbeDotatDotleast
+import typingsSlinky.cypress.cypressStrings.notDotbeDotbelow
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalled
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledAfter
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledBefore
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledOn
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledOnce
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledThrice
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledTwice
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledWithExactly
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledWithMatch
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcalledWithNew
+import typingsSlinky.cypress.cypressStrings.notDotbeDotchecked
+import typingsSlinky.cypress.cypressStrings.notDotbeDotcloseTo
+import typingsSlinky.cypress.cypressStrings.notDotbeDotdisabled
+import typingsSlinky.cypress.cypressStrings.notDotbeDotempty
+import typingsSlinky.cypress.cypressStrings.notDotbeDotenabled
+import typingsSlinky.cypress.cypressStrings.notDotbeDotfalse
+import typingsSlinky.cypress.cypressStrings.notDotbeDotfocused
+import typingsSlinky.cypress.cypressStrings.notDotbeDotgreaterThan
+import typingsSlinky.cypress.cypressStrings.notDotbeDotgt
+import typingsSlinky.cypress.cypressStrings.notDotbeDotgte
+import typingsSlinky.cypress.cypressStrings.notDotbeDothidden
+import typingsSlinky.cypress.cypressStrings.notDotbeDotinstanceOf
+import typingsSlinky.cypress.cypressStrings.notDotbeDotlessThan
+import typingsSlinky.cypress.cypressStrings.notDotbeDotlt
+import typingsSlinky.cypress.cypressStrings.notDotbeDotlte
+import typingsSlinky.cypress.cypressStrings.notDotbeDotok
+import typingsSlinky.cypress.cypressStrings.notDotbeDotselected
+import typingsSlinky.cypress.cypressStrings.notDotbeDottrue
+import typingsSlinky.cypress.cypressStrings.notDotbeDotundefined
+import typingsSlinky.cypress.cypressStrings.notDotbeDotvisible
+import typingsSlinky.cypress.cypressStrings.notDotbeDotwithin
+import typingsSlinky.cypress.cypressStrings.notDotchange
+import typingsSlinky.cypress.cypressStrings.notDotcontain
+import typingsSlinky.cypress.cypressStrings.notDotcontainDothtml
+import typingsSlinky.cypress.cypressStrings.notDotcontainDottext
+import typingsSlinky.cypress.cypressStrings.notDotcontainDotvalue
+import typingsSlinky.cypress.cypressStrings.notDotdecrease
+import typingsSlinky.cypress.cypressStrings.notDotdeepDotequal
+import typingsSlinky.cypress.cypressStrings.notDoteq
+import typingsSlinky.cypress.cypressStrings.notDoteql
+import typingsSlinky.cypress.cypressStrings.notDotequal
+import typingsSlinky.cypress.cypressStrings.notDotexist
+import typingsSlinky.cypress.cypressStrings.notDothaveDotallDotkeys
+import typingsSlinky.cypress.cypressStrings.notDothaveDotalwaysDotthrown
+import typingsSlinky.cypress.cypressStrings.notDothaveDotanyDotkeys
+import typingsSlinky.cypress.cypressStrings.notDothaveDotattr
+import typingsSlinky.cypress.cypressStrings.notDothaveDotcallCount
+import typingsSlinky.cypress.cypressStrings.notDothaveDotclass
+import typingsSlinky.cypress.cypressStrings.notDothaveDotcss
+import typingsSlinky.cypress.cypressStrings.notDothaveDotdata
+import typingsSlinky.cypress.cypressStrings.notDothaveDotdeepDotproperty
+import typingsSlinky.cypress.cypressStrings.notDothaveDotdescendants
+import typingsSlinky.cypress.cypressStrings.notDothaveDotfocus
+import typingsSlinky.cypress.cypressStrings.notDothaveDothtml
+import typingsSlinky.cypress.cypressStrings.notDothaveDotid
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlength
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlengthDotgreaterThan
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlengthDotgt
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlengthDotlessThan
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlengthDotlt
+import typingsSlinky.cypress.cypressStrings.notDothaveDotlengthDotlte
+import typingsSlinky.cypress.cypressStrings.notDothaveDotmembers
+import typingsSlinky.cypress.cypressStrings.notDothaveDotorderedDotmembers
+import typingsSlinky.cypress.cypressStrings.notDothaveDotownProperty
+import typingsSlinky.cypress.cypressStrings.notDothaveDotprop
+import typingsSlinky.cypress.cypressStrings.notDothaveDotproperty
+import typingsSlinky.cypress.cypressStrings.notDothaveDotstring
+import typingsSlinky.cypress.cypressStrings.notDothaveDottext
+import typingsSlinky.cypress.cypressStrings.notDothaveDotthrown
+import typingsSlinky.cypress.cypressStrings.notDothaveDotvalue
+import typingsSlinky.cypress.cypressStrings.notDotinclude
+import typingsSlinky.cypress.cypressStrings.notDotincludeDothtml
+import typingsSlinky.cypress.cypressStrings.notDotincludeDotmembers
+import typingsSlinky.cypress.cypressStrings.notDotincludeDottext
+import typingsSlinky.cypress.cypressStrings.notDotincludeDotvalue
+import typingsSlinky.cypress.cypressStrings.notDotincrease
+import typingsSlinky.cypress.cypressStrings.notDotmatch
+import typingsSlinky.cypress.cypressStrings.notDotrespondTo
+import typingsSlinky.cypress.cypressStrings.notDotreturned
+import typingsSlinky.cypress.cypressStrings.notDotsatisfy
+import typingsSlinky.cypress.cypressStrings.object_
 import typingsSlinky.cypress.cypressStrings.ol
 import typingsSlinky.cypress.cypressStrings.optgroup
 import typingsSlinky.cypress.cypressStrings.option
+import typingsSlinky.cypress.cypressStrings.origin
 import typingsSlinky.cypress.cypressStrings.output
 import typingsSlinky.cypress.cypressStrings.p
 import typingsSlinky.cypress.cypressStrings.param
 import typingsSlinky.cypress.cypressStrings.paste
+import typingsSlinky.cypress.cypressStrings.pathname
 import typingsSlinky.cypress.cypressStrings.pause
 import typingsSlinky.cypress.cypressStrings.picture
 import typingsSlinky.cypress.cypressStrings.play
@@ -425,8 +422,10 @@ import typingsSlinky.cypress.cypressStrings.pointermove
 import typingsSlinky.cypress.cypressStrings.pointerout
 import typingsSlinky.cypress.cypressStrings.pointerover
 import typingsSlinky.cypress.cypressStrings.pointerup
+import typingsSlinky.cypress.cypressStrings.port
 import typingsSlinky.cypress.cypressStrings.pre
 import typingsSlinky.cypress.cypressStrings.progress_
+import typingsSlinky.cypress.cypressStrings.protocol
 import typingsSlinky.cypress.cypressStrings.q
 import typingsSlinky.cypress.cypressStrings.ratechange
 import typingsSlinky.cypress.cypressStrings.readystatechange
@@ -443,6 +442,7 @@ import typingsSlinky.cypress.cypressStrings.satisfy
 import typingsSlinky.cypress.cypressStrings.script
 import typingsSlinky.cypress.cypressStrings.scroll
 import typingsSlinky.cypress.cypressStrings.scrolled
+import typingsSlinky.cypress.cypressStrings.search
 import typingsSlinky.cypress.cypressStrings.section
 import typingsSlinky.cypress.cypressStrings.securitypolicyviolation
 import typingsSlinky.cypress.cypressStrings.seeked
@@ -468,6 +468,8 @@ import typingsSlinky.cypress.cypressStrings.table
 import typingsSlinky.cypress.cypressStrings.tbody
 import typingsSlinky.cypress.cypressStrings.td
 import typingsSlinky.cypress.cypressStrings.template
+import typingsSlinky.cypress.cypressStrings.testColonafterColonrun
+import typingsSlinky.cypress.cypressStrings.testColonbeforeColonrun
 import typingsSlinky.cypress.cypressStrings.textarea
 import typingsSlinky.cypress.cypressStrings.tfoot
 import typingsSlinky.cypress.cypressStrings.th
@@ -488,12 +490,21 @@ import typingsSlinky.cypress.cypressStrings.transitionrun
 import typingsSlinky.cypress.cypressStrings.transitionstart
 import typingsSlinky.cypress.cypressStrings.u
 import typingsSlinky.cypress.cypressStrings.ul
+import typingsSlinky.cypress.cypressStrings.uncaughtColonexception
+import typingsSlinky.cypress.cypressStrings.urlColonchanged
 import typingsSlinky.cypress.cypressStrings.video
+import typingsSlinky.cypress.cypressStrings.viewportColonchanged
 import typingsSlinky.cypress.cypressStrings.visibilitychange
 import typingsSlinky.cypress.cypressStrings.volumechange
 import typingsSlinky.cypress.cypressStrings.waiting
 import typingsSlinky.cypress.cypressStrings.wbr
 import typingsSlinky.cypress.cypressStrings.wheel
+import typingsSlinky.cypress.cypressStrings.windowColonalert
+import typingsSlinky.cypress.cypressStrings.windowColonbeforeColonload
+import typingsSlinky.cypress.cypressStrings.windowColonbeforeColonunload
+import typingsSlinky.cypress.cypressStrings.windowColonconfirm
+import typingsSlinky.cypress.cypressStrings.windowColonload
+import typingsSlinky.cypress.cypressStrings.windowColonunload
 import typingsSlinky.cypress.typesSinonMod.SinonSpy
 import typingsSlinky.cypress.typesSinonMod.SinonStub
 import typingsSlinky.std.AnimationEvent
@@ -523,6 +534,7 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.PointerEvent
 import typingsSlinky.std.ProgressEvent
 import typingsSlinky.std.RegExp
+import typingsSlinky.std.ReturnType
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import typingsSlinky.std.TouchEvent
 import typingsSlinky.std.TransitionEvent
@@ -546,7 +558,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  var $$_Original: JQueryStatic = js.native
+  var DollarDollar_Original: JQueryStatic = js.native
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
     *
@@ -602,7 +614,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$(element: HTMLSelectElement): JQuery[org.scalajs.dom.raw.HTMLSelectElement] = js.native
+  def DollarDollar(element: HTMLSelectElement): JQuery[org.scalajs.dom.raw.HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
   /**
@@ -613,7 +625,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$(window: Window, discriminator: Boolean): JQueryStatic = js.native
+  def DollarDollar(window: Window, discriminator: Boolean): JQueryStatic = js.native
   /**
     * Returns an empty jQuery set.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
@@ -628,7 +640,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$[TElement](): JQuery[TElement] = js.native
+  def DollarDollar[TElement](): JQuery[TElement] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     * @param callback The function to execute when the DOM is ready.
@@ -656,23 +668,16 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
+  def DollarDollar[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param element_elementArray _&#x40;param_ `element_elementArray`
-    * <br>
-    * * `element` — A DOM element to wrap in a jQuery object. <br>
-    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * @param object A plain object to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
-    * @example ​ ````Set the background color of the page to black.
-  ```javascript
-  $( document.body ).css( "background", "black" );
-  ```
-    * @example ​ ````Hide all the input elements within a form.
-  ```javascript
-  $( myForm.elements ).hide();
-  ```
     */
   /**
     * jQuery library bound to the AUT
@@ -682,52 +687,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
-  @JSName("$$")
-  def $$[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
-  /**
-    * Creates DOM elements on the fly from the provided string of raw HTML.
-    * @param html _&#x40;param_ `html`
-    * <br>
-    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
-    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
-    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
-    * <br>
-    * * `ownerDocument` — A document in which the new elements will be created. <br>
-    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @since 1.4
-    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
-  ```javascript
-  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
-  ```
-    * @example ​ ````Create some DOM elements.
-  ```javascript
-  $( "<div/>", {
-    "class": "test",
-    text: "Click me!",
-    click: function() {
-    $( this ).toggleClass( "test" );
-    }
-  })
-    .appendTo( "body" );
-  ```
-    */
-  // tslint:disable-next-line:no-unnecessary-generics
-  /**
-    * jQuery library bound to the AUT
-    *
-    * @see https://on.cypress.io/$
-    * @example
-    *    cy.$$('p')
-    */
-  @JSName("$$")
-  def $$[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
-  @JSName("$$")
-  def $$[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
-  @JSName("$$")
-  def $$[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
+  def DollarDollar[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -742,11 +702,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$[T](selection: JQuery[T]): JQuery[T] = js.native
-  @JSName("$$")
-  def $$[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
-  @JSName("$$")
-  def $$[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
+  def DollarDollar[T](selection: JQuery[T]): JQuery[T] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -793,14 +749,70 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
+  def DollarDollar[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
   @JSName("$$")
-  def $$_TElement_Element[TElement /* <: Element */](selector: Selector, context: org.scalajs.dom.raw.Document): JQuery[TElement] = js.native
+  def DollarDollar[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
   /**
-    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
+    * <br>
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
+  ```javascript
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
+  ```
+    * @example ​ ````Create some DOM elements.
+  ```javascript
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
+  ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  /**
+    * jQuery library bound to the AUT
+    *
+    * @see https://on.cypress.io/$
+    * @example
+    *    cy.$$('p')
+    */
+  @JSName("$$")
+  def DollarDollar_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: org.scalajs.dom.raw.Document): JQuery[TElement] = js.native
+  /**
+    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
   /**
     * jQuery library bound to the AUT
@@ -810,7 +822,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def $$_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
+  def DollarDollar_T_Element[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
   // fallback
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
@@ -880,7 +892,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_alwaysreturned(chainer: alwaysDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def and_alwaysreturned(chainer: alwaysDotreturned, value: js.Any): Chainable[Subject] = js.native
   // chai
   /**
     * Asserts that the target’s `type` is equal to the given string type.
@@ -898,7 +910,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bea(chainer: beDOTa, `type`: String): Chainable[Subject] = js.native
+  def and_bea(chainer: beDota, `type`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -914,9 +926,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beabove(chainer: beDOTabove, value: Double): Chainable[Subject] = js.native
+  def and_beabove(chainer: beDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_beabove(chainer: beDOTabove, value: Date): Chainable[Subject] = js.native
+  def and_beabove(chainer: beDotabove, value: Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -929,7 +941,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bealwayscalledWithMatch(chainer: beDOTalwaysDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def and_bealwayscalledWithMatch(chainer: beDotalwaysDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   // sinon-chai
   /**
     * Assert spy/stub was called the `new` operator.
@@ -944,7 +956,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bealwayscalledWithNew(chainer: beDOTalwaysDOTcalledWithNew): Chainable[Subject] = js.native
+  def and_bealwayscalledWithNew(chainer: beDotalwaysDotcalledWithNew): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `type` is equal to the given string type.
     * Types are case insensitive. See the `type-detect` project page for info on the type detection algorithm:
@@ -962,7 +974,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bean(chainer: beDOTan, value: String): Chainable[Subject] = js.native
+  def and_bean(chainer: beDotan, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -978,7 +990,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beapproximately(chainer: beDOTapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
+  def and_beapproximately(chainer: beDotapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is an `arguments` object.
     * @example
@@ -993,7 +1005,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bearguments(chainer: beDOTarguments): Chainable[Subject] = js.native
+  def and_bearguments(chainer: beDotarguments): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1009,9 +1021,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beatleast(chainer: beDOTatDOTleast, value: Double): Chainable[Subject] = js.native
+  def and_beatleast(chainer: beDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_beatleast(chainer: beDOTatDOTleast, value: Date): Chainable[Subject] = js.native
+  def and_beatleast(chainer: beDotatDotleast, value: Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1027,7 +1039,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bebelow(chainer: beDOTbelow, value: Double): Chainable[Subject] = js.native
+  def and_bebelow(chainer: beDotbelow, value: Double): Chainable[Subject] = js.native
   /**
     * `true` if the spy was called at least once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalled
@@ -1040,7 +1052,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalled(chainer: beDOTcalled): Chainable[Subject] = js.native
+  def and_becalled(chainer: beDotcalled): Chainable[Subject] = js.native
   /**
     * Assert spy was called after `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledafteranotherspy
@@ -1053,7 +1065,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledAfter(chainer: beDOTcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
+  def and_becalledAfter(chainer: beDotcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was called before `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledbeforeanotherspy
@@ -1066,7 +1078,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledBefore(chainer: beDOTcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
+  def and_becalledBefore(chainer: beDotcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was called at least once with `obj` as `this`. `calledOn` also accepts a matcher (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers)).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonobj
@@ -1079,7 +1091,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledOn(chainer: beDOTcalledOn, context: js.Any): Chainable[Subject] = js.native
+  def and_becalledOn(chainer: beDotcalledOn, context: js.Any): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonce
@@ -1092,7 +1104,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledOnce(chainer: beDOTcalledOnce): Chainable[Subject] = js.native
+  def and_becalledOnce(chainer: beDotcalledOnce): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly three times
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledthrice
@@ -1105,7 +1117,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledThrice(chainer: beDOTcalledThrice): Chainable[Subject] = js.native
+  def and_becalledThrice(chainer: beDotcalledThrice): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly twice
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledtwice
@@ -1118,7 +1130,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledTwice(chainer: beDOTcalledTwice): Chainable[Subject] = js.native
+  def and_becalledTwice(chainer: beDotcalledTwice): Chainable[Subject] = js.native
   /**
     * Assert spy was called at least once with the provided arguments and no others.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithexactlyarg1-arg2-
@@ -1131,7 +1143,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledWithExactly(chainer: beDOTcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
+  def and_becalledWithExactly(chainer: beDotcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy was called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithmatcharg1-arg2-
@@ -1144,7 +1156,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledWithMatch(chainer: beDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def and_becalledWithMatch(chainer: beDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy/stub was called the `new` operator.
     * Beware that this is inferred based on the value of the this object and the spy function’s prototype, so it may give false positives if you actively return the right kind of object.
@@ -1158,7 +1170,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becalledWithNew(chainer: beDOTcalledWithNew): Chainable[Subject] = js.native
+  def and_becalledWithNew(chainer: beDotcalledWithNew): Chainable[Subject] = js.native
   // jquery-chai
   /**
     * Assert that at least one element of the selection is checked, using `.is(':checked')`.
@@ -1174,7 +1186,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bechecked(chainer: beDOTchecked): Chainable[Subject] = js.native
+  def and_bechecked(chainer: beDotchecked): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -1189,7 +1201,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_becloseTo(chainer: beDOTcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
+  def and_becloseTo(chainer: beDotcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is disabled, using `.is(':disabled')`.
     * @example
@@ -1204,7 +1216,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bedisabled(chainer: beDOTdisabled): Chainable[Subject] = js.native
+  def and_bedisabled(chainer: beDotdisabled): Chainable[Subject] = js.native
   /**
     * When the target is a string or array, .empty asserts that the target’s length property is strictly (===) equal to 0
     * @example
@@ -1220,7 +1232,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beempty(chainer: beDOTempty): Chainable[Subject] = js.native
+  def and_beempty(chainer: beDotempty): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is enabled, using `.is(':enabled')`.
     * @example
@@ -1235,7 +1247,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beenabled(chainer: beDOTenabled): Chainable[Subject] = js.native
+  def and_beenabled(chainer: beDotenabled): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to `false`.
     * @example
@@ -1250,7 +1262,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_befalse(chainer: beDOTfalse): Chainable[Subject] = js.native
+  def and_befalse(chainer: beDotfalse): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is focused.
     * @example
@@ -1265,7 +1277,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_befocused(chainer: beDOTfocused): Chainable[Subject] = js.native
+  def and_befocused(chainer: beDotfocused): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1282,7 +1294,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_begreaterThan(chainer: beDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def and_begreaterThan(chainer: beDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1299,7 +1311,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_begt(chainer: beDOTgt, value: Double): Chainable[Subject] = js.native
+  def and_begt(chainer: beDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1316,7 +1328,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_begte(chainer: beDOTgte, value: Double): Chainable[Subject] = js.native
+  def and_begte(chainer: beDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is hidden, using `.is(':hidden')`.
     * @example
@@ -1331,7 +1343,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_behidden(chainer: beDOThidden): Chainable[Subject] = js.native
+  def and_behidden(chainer: beDothidden): Chainable[Subject] = js.native
   /**
     * Asserts that the target is an instance of the given `constructor`.
     * @example
@@ -1346,7 +1358,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beinstanceOf(chainer: beDOTinstanceOf, value: js.Any): Chainable[Subject] = js.native
+  def and_beinstanceOf(chainer: beDotinstanceOf, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1363,7 +1375,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_belessThan(chainer: beDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def and_belessThan(chainer: beDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1380,7 +1392,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_belt(chainer: beDOTlt, value: Double): Chainable[Subject] = js.native
+  def and_belt(chainer: beDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1397,7 +1409,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_belte(chainer: beDOTlte, value: Double): Chainable[Subject] = js.native
+  def and_belte(chainer: beDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is loosely (`==`) equal to `true`. However, it’s often best to assert that the target is strictly (`===`) or deeply equal to its expected value.
     * @example
@@ -1412,7 +1424,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beok(chainer: beDOTok): Chainable[Subject] = js.native
+  def and_beok(chainer: beDotok): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is selected, using `.is(':selected')`.
     * @example
@@ -1427,7 +1439,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beselected(chainer: beDOTselected): Chainable[Subject] = js.native
+  def and_beselected(chainer: beDotselected): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to true.
     * @example
@@ -1442,7 +1454,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_betrue(chainer: beDOTtrue): Chainable[Subject] = js.native
+  def and_betrue(chainer: beDottrue): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to undefined.
     * @example
@@ -1457,7 +1469,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_beundefined(chainer: beDOTundefined): Chainable[Subject] = js.native
+  def and_beundefined(chainer: beDotundefined): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is visible, using `.is(':visible')`.
     * @example
@@ -1472,7 +1484,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bevisible(chainer: beDOTvisible): Chainable[Subject] = js.native
+  def and_bevisible(chainer: beDotvisible): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than or equal to the given number or date `start`, and less than or equal to the given number or date `finish` respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1488,7 +1500,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bewithin(chainer: beDOTwithin, start: Double, end: Double): Chainable[Subject] = js.native
+  def and_bewithin(chainer: beDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
     *
@@ -1496,7 +1508,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bewithin(chainer: beDOTwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def and_bewithin(chainer: beDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -1578,7 +1590,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_containhtml(chainer: containDOThtml, value: String): Chainable[Subject] = js.native
+  def and_containhtml(chainer: containDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection partially contains the given text, using `.text()`.
     * @example
@@ -1593,7 +1605,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_containtext(chainer: containDOTtext, value: String): Chainable[Subject] = js.native
+  def and_containtext(chainer: containDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection partially contains the given value, using `.val()`.
     * @example
@@ -1608,7 +1620,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_containvalue(chainer: containDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_containvalue(chainer: containDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.decrease` asserts that the given function `subject` returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand.
     * `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
@@ -1660,7 +1672,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_deepequal(chainer: deepDOTequal, value: Subject): Chainable[Subject] = js.native
+  def and_deepequal(chainer: deepDotequal, value: Subject): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to the given `val`.
     * @example
@@ -1736,7 +1748,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveallkeys(chainer: haveDOTallDOTkeys, value: String*): Chainable[Subject] = js.native
+  def and_haveallkeys(chainer: haveDotallDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert spy always threw an exception.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysthrew
@@ -1749,13 +1761,13 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havealwaysthrown(chainer: haveDOTalwaysDOTthrown): Chainable[Subject] = js.native
+  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: String): Chainable[Subject] = js.native
+  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: Error): Chainable[Subject] = js.native
+  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -1770,7 +1782,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveanykeys(chainer: haveDOTanyDOTkeys, value: String*): Chainable[Subject] = js.native
+  def and_haveanykeys(chainer: haveDotanyDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -1786,9 +1798,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveattr(chainer: haveDOTattr, value: String): Chainable[Subject] = js.native
+  def and_haveattr(chainer: haveDotattr, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_haveattr(chainer: haveDOTattr, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_haveattr(chainer: haveDotattr, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert the number of calls.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycallcount
@@ -1801,7 +1813,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havecallCount(chainer: haveDOTcallCount, value: Double): Chainable[Subject] = js.native
+  def and_havecallCount(chainer: haveDotcallCount, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -1816,7 +1828,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveclass(chainer: haveDOTclass, value: String): Chainable[Subject] = js.native
+  def and_haveclass(chainer: haveDotclass, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given CSS property, using `.css()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -1831,9 +1843,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havecss(chainer: haveDOTcss, value: String): Chainable[Subject] = js.native
+  def and_havecss(chainer: haveDotcss, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havecss(chainer: haveDOTcss, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_havecss(chainer: haveDotcss, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given data value, using `.data()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -1848,9 +1860,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havedata(chainer: haveDOTdata, value: String): Chainable[Subject] = js.native
+  def and_havedata(chainer: haveDotdata, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havedata(chainer: haveDOTdata, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_havedata(chainer: haveDotdata, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -1865,7 +1877,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havedeepproperty(chainer: haveDOTdeepDOTproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
+  def and_havedeepproperty(chainer: haveDotdeepDotproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
   /**
     * Assert that the selection contains at least one element which has a descendant matching the given selector, using `.has()`.
     * @example
@@ -1880,7 +1892,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havedescendants(chainer: haveDOTdescendants, selector: String): Chainable[Subject] = js.native
+  def and_havedescendants(chainer: haveDotdescendants, selector: String): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is focused.
     * @example
@@ -1895,7 +1907,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havefocus(chainer: haveDOTfocus): Chainable[Subject] = js.native
+  def and_havefocus(chainer: haveDotfocus): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection is equal to the given html, using `.html()`.
     * @example
@@ -1910,7 +1922,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havehtml(chainer: haveDOThtml, value: String): Chainable[Subject] = js.native
+  def and_havehtml(chainer: haveDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given id, using `.attr('id')`.
     * @example
@@ -1925,9 +1937,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveid(chainer: haveDOTid, value: String): Chainable[Subject] = js.native
+  def and_haveid(chainer: haveDotid, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_haveid(chainer: haveDOTid, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_haveid(chainer: haveDotid, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is equal to the given number `n`.
     * @example
@@ -1944,7 +1956,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelength(chainer: haveDOTlength, value: Double): Chainable[Subject] = js.native
+  def and_havelength(chainer: haveDotlength, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than to the given number `n`.
     * @example
@@ -1960,7 +1972,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthgreaterThan(chainer: haveDOTlengthDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def and_havelengthgreaterThan(chainer: haveDotlengthDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than to the given number `n`.
     * @example
@@ -1976,7 +1988,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthgt(chainer: haveDOTlengthDOTgt, value: Double): Chainable[Subject] = js.native
+  def and_havelengthgt(chainer: haveDotlengthDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than or equal to the given number `n`.
     * @example
@@ -1992,7 +2004,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthgte(chainer: haveDOTlengthDOTgte, value: Double): Chainable[Subject] = js.native
+  def and_havelengthgte(chainer: haveDotlengthDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -2008,7 +2020,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthlessThan(chainer: haveDOTlengthDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def and_havelengthlessThan(chainer: haveDotlengthDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -2024,7 +2036,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthlt(chainer: haveDOTlengthDOTlt, value: Double): Chainable[Subject] = js.native
+  def and_havelengthlt(chainer: haveDotlengthDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than or equal to the given number `n`.
     * @example
@@ -2040,7 +2052,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havelengthlte(chainer: haveDOTlengthDOTlte, value: Double): Chainable[Subject] = js.native
+  def and_havelengthlte(chainer: haveDotlengthDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target array has the same members as the given array `set`.
     * @example
@@ -2055,7 +2067,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havemembers(chainer: haveDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def and_havemembers(chainer: haveDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Asserts that the target array has the same members as the given array where order matters.
     * @example
@@ -2070,7 +2082,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveorderedmembers(chainer: haveDOTorderedDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def and_haveorderedmembers(chainer: haveDotorderedDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Causes all `.property` and `.include` assertions that follow in the chain to ignore inherited properties.
     * @example
@@ -2086,7 +2098,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveownProperty(chainer: haveDOTownProperty, property: String): Chainable[Subject] = js.native
+  def and_haveownProperty(chainer: haveDotownProperty, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given property, using `.prop()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -2102,9 +2114,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveprop(chainer: haveDOTprop, value: String): Chainable[Subject] = js.native
+  def and_haveprop(chainer: haveDotprop, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_haveprop(chainer: haveDOTprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
+  def and_haveprop(chainer: haveDotprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`.
     * @example
@@ -2120,9 +2132,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_haveproperty(chainer: haveDOTproperty, property: String): Chainable[Subject] = js.native
+  def and_haveproperty(chainer: haveDotproperty, property: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_haveproperty(chainer: haveDOTproperty, property: String, value: js.Any): Chainable[Subject] = js.native
+  def and_haveproperty(chainer: haveDotproperty, property: String, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target string contains the given substring `str`.
     * @example
@@ -2137,9 +2149,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havestring(chainer: haveDOTstring, `match`: String): Chainable[Subject] = js.native
+  def and_havestring(chainer: haveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havestring(chainer: haveDOTstring, `match`: RegExp): Chainable[Subject] = js.native
+  def and_havestring(chainer: haveDotstring, `match`: RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is equal to the given text, using `.text()`.
     * @example
@@ -2154,7 +2166,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havetext(chainer: haveDOTtext, value: String): Chainable[Subject] = js.native
+  def and_havetext(chainer: haveDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy threw an exception at least once.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spythrew
@@ -2167,13 +2179,13 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havethrown(chainer: haveDOTthrown): Chainable[Subject] = js.native
+  def and_havethrown(chainer: haveDotthrown): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havethrown(chainer: haveDOTthrown, value: String): Chainable[Subject] = js.native
+  def and_havethrown(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havethrown(chainer: haveDOTthrown, value: Error): Chainable[Subject] = js.native
+  def and_havethrown(chainer: haveDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havethrown(chainer: haveDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def and_havethrown(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given value, using `.val()`.
     * @example
@@ -2188,7 +2200,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_havevalue(chainer: haveDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_havevalue(chainer: haveDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is a substring of the target.
     * @example
@@ -2218,7 +2230,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_includehtml(chainer: includeDOThtml, value: String): Chainable[Subject] = js.native
+  def and_includehtml(chainer: includeDothtml, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is a substring of the target.
     * @example
@@ -2233,7 +2245,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_includemembers(chainer: includeDOTmembers, value: js.Array[_]): Chainable[Subject] = js.native
+  def and_includemembers(chainer: includeDotmembers, value: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection partially contains the given text, using `.text()`.
     * @example
@@ -2248,7 +2260,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_includetext(chainer: includeDOTtext, value: String): Chainable[Subject] = js.native
+  def and_includetext(chainer: includeDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection partially contains the given value, using `.val()`.
     * @example
@@ -2263,7 +2275,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_includevalue(chainer: includeDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_includevalue(chainer: includeDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s
     * invoked after invoking the target function compared to when it’s invoked beforehand.
@@ -2327,7 +2339,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notalwaysreturned(chainer: notDOTalwaysDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def and_notalwaysreturned(chainer: notDotalwaysDotreturned, value: js.Any): Chainable[Subject] = js.native
   // chai.not
   /**
     * Asserts that the target’s `type` is not equal to the given string type.
@@ -2345,7 +2357,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbea(chainer: notDOTbeDOTa, `type`: String): Chainable[Subject] = js.native
+  def and_notbea(chainer: notDotbeDota, `type`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or not a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2361,9 +2373,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeabove(chainer: notDOTbeDOTabove, value: Double): Chainable[Subject] = js.native
+  def and_notbeabove(chainer: notDotbeDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_notbeabove(chainer: notDOTbeDOTabove, value: Date): Chainable[Subject] = js.native
+  def and_notbeabove(chainer: notDotbeDotabove, value: Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was not always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -2376,7 +2388,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbealwayscalledWithMatch(chainer: notDOTbeDOTalwaysDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def and_notbealwayscalledWithMatch(chainer: notDotbeDotalwaysDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   // sinon-chai.not
   /**
     * Assert spy/stub was not called the `new` operator.
@@ -2391,7 +2403,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbealwayscalledWithNew(chainer: notDOTbeDOTalwaysDOTcalledWithNew): Chainable[Subject] = js.native
+  def and_notbealwayscalledWithNew(chainer: notDotbeDotalwaysDotcalledWithNew): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `type` is not equal to the given string type.
     * Types are case insensitive. See the `type-detect` project page for info on the type detection algorithm:
@@ -2409,7 +2421,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbean(chainer: notDOTbeDOTan, value: String): Chainable[Subject] = js.native
+  def and_notbean(chainer: notDotbeDotan, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -2425,7 +2437,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeapproximately(chainer: notDOTbeDOTapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
+  def and_notbeapproximately(chainer: notDotbeDotapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not an `arguments` object.
     * @example
@@ -2440,7 +2452,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbearguments(chainer: notDOTbeDOTarguments): Chainable[Subject] = js.native
+  def and_notbearguments(chainer: notDotbeDotarguments): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2456,9 +2468,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeatleast(chainer: notDOTbeDOTatDOTleast, value: Double): Chainable[Subject] = js.native
+  def and_notbeatleast(chainer: notDotbeDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_notbeatleast(chainer: notDOTbeDOTatDOTleast, value: Date): Chainable[Subject] = js.native
+  def and_notbeatleast(chainer: notDotbeDotatDotleast, value: Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2474,7 +2486,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbebelow(chainer: notDOTbeDOTbelow, value: Double): Chainable[Subject] = js.native
+  def and_notbebelow(chainer: notDotbeDotbelow, value: Double): Chainable[Subject] = js.native
   /**
     * `true` if the spy was not called at least once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalled
@@ -2487,7 +2499,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalled(chainer: notDOTbeDOTcalled): Chainable[Subject] = js.native
+  def and_notbecalled(chainer: notDotbeDotcalled): Chainable[Subject] = js.native
   /**
     * Assert spy was not.called after `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledafteranotherspy
@@ -2500,7 +2512,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledAfter(chainer: notDOTbeDOTcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
+  def and_notbecalledAfter(chainer: notDotbeDotcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was not called before `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledbeforeanotherspy
@@ -2513,7 +2525,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledBefore(chainer: notDOTbeDOTcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
+  def and_notbecalledBefore(chainer: notDotbeDotcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was not called at least once with `obj` as `this`. `calledOn` also accepts a matcher (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers)).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonobj
@@ -2526,7 +2538,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledOn(chainer: notDOTbeDOTcalledOn, context: js.Any): Chainable[Subject] = js.native
+  def and_notbecalledOn(chainer: notDotbeDotcalledOn, context: js.Any): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonce
@@ -2539,7 +2551,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledOnce(chainer: notDOTbeDOTcalledOnce): Chainable[Subject] = js.native
+  def and_notbecalledOnce(chainer: notDotbeDotcalledOnce): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly three times
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledthrice
@@ -2552,7 +2564,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledThrice(chainer: notDOTbeDOTcalledThrice): Chainable[Subject] = js.native
+  def and_notbecalledThrice(chainer: notDotbeDotcalledThrice): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly twice
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledtwice
@@ -2565,7 +2577,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledTwice(chainer: notDOTbeDOTcalledTwice): Chainable[Subject] = js.native
+  def and_notbecalledTwice(chainer: notDotbeDotcalledTwice): Chainable[Subject] = js.native
   /**
     * Assert spy was not called at least once with the provided arguments and no others.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithexactlyarg1-arg2-
@@ -2578,7 +2590,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledWithExactly(chainer: notDOTbeDOTcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
+  def and_notbecalledWithExactly(chainer: notDotbeDotcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy was not called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithmatcharg1-arg2-
@@ -2591,7 +2603,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledWithMatch(chainer: notDOTbeDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def and_notbecalledWithMatch(chainer: notDotbeDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy/stub was not called the `new` operator.
     * Beware that this is inferred based on the value of the this object and the spy function’s prototype, so it may give false positives if you actively return the right kind of object.
@@ -2605,7 +2617,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecalledWithNew(chainer: notDOTbeDOTcalledWithNew): Chainable[Subject] = js.native
+  def and_notbecalledWithNew(chainer: notDotbeDotcalledWithNew): Chainable[Subject] = js.native
   // jquery-chai.not
   /**
     * Assert that at least one element of the selection is not checked, using `.is(':checked')`.
@@ -2621,7 +2633,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbechecked(chainer: notDOTbeDOTchecked): Chainable[Subject] = js.native
+  def and_notbechecked(chainer: notDotbeDotchecked): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -2636,7 +2648,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbecloseTo(chainer: notDOTbeDOTcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
+  def and_notbecloseTo(chainer: notDotbeDotcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not disabled, using `.is(':disabled')`.
     * @example
@@ -2651,7 +2663,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbedisabled(chainer: notDOTbeDOTdisabled): Chainable[Subject] = js.native
+  def and_notbedisabled(chainer: notDotbeDotdisabled): Chainable[Subject] = js.native
   /**
     * When the target is a not string or array, .empty asserts that the target’s length property is strictly (===) equal to 0
     * @example
@@ -2667,7 +2679,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeempty(chainer: notDOTbeDOTempty): Chainable[Subject] = js.native
+  def and_notbeempty(chainer: notDotbeDotempty): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not enabled, using `.is(':enabled')`.
     * @example
@@ -2682,7 +2694,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeenabled(chainer: notDOTbeDOTenabled): Chainable[Subject] = js.native
+  def and_notbeenabled(chainer: notDotbeDotenabled): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to `false`.
     * @example
@@ -2697,7 +2709,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbefalse(chainer: notDOTbeDOTfalse): Chainable[Subject] = js.native
+  def and_notbefalse(chainer: notDotbeDotfalse): Chainable[Subject] = js.native
   /**
     * Assert that no element of the selection is focused.
     * @example
@@ -2712,7 +2724,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbefocused(chainer: notDOTbeDOTfocused): Chainable[Subject] = js.native
+  def and_notbefocused(chainer: notDotbeDotfocused): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2729,7 +2741,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbegreaterThan(chainer: notDOTbeDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def and_notbegreaterThan(chainer: notDotbeDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2746,7 +2758,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbegt(chainer: notDOTbeDOTgt, value: Double): Chainable[Subject] = js.native
+  def and_notbegt(chainer: notDotbeDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2763,7 +2775,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbegte(chainer: notDOTbeDOTgte, value: Double): Chainable[Subject] = js.native
+  def and_notbegte(chainer: notDotbeDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not hidden, using `.is(':hidden')`.
     * @example
@@ -2778,7 +2790,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbehidden(chainer: notDOTbeDOThidden): Chainable[Subject] = js.native
+  def and_notbehidden(chainer: notDotbeDothidden): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not an instance of the given `constructor`.
     * @example
@@ -2793,7 +2805,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeinstanceOf(chainer: notDOTbeDOTinstanceOf, value: js.Any): Chainable[Subject] = js.native
+  def and_notbeinstanceOf(chainer: notDotbeDotinstanceOf, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2810,7 +2822,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbelessThan(chainer: notDOTbeDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def and_notbelessThan(chainer: notDotbeDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2827,7 +2839,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbelt(chainer: notDOTbeDOTlt, value: Double): Chainable[Subject] = js.native
+  def and_notbelt(chainer: notDotbeDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2844,7 +2856,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbelte(chainer: notDOTbeDOTlte, value: Double): Chainable[Subject] = js.native
+  def and_notbelte(chainer: notDotbeDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not loosely (`==`) equal to `true`. However, it’s often best to assert that the target is strictly (`===`) or deeply equal to its expected value.
     * @example
@@ -2859,7 +2871,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeok(chainer: notDOTbeDOTok): Chainable[Subject] = js.native
+  def and_notbeok(chainer: notDotbeDotok): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not selected, using `.is(':selected')`.
     * @example
@@ -2874,7 +2886,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeselected(chainer: notDOTbeDOTselected): Chainable[Subject] = js.native
+  def and_notbeselected(chainer: notDotbeDotselected): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to true.
     * @example
@@ -2889,7 +2901,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbetrue(chainer: notDOTbeDOTtrue): Chainable[Subject] = js.native
+  def and_notbetrue(chainer: notDotbeDottrue): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to undefined.
     * @example
@@ -2904,7 +2916,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbeundefined(chainer: notDOTbeDOTundefined): Chainable[Subject] = js.native
+  def and_notbeundefined(chainer: notDotbeDotundefined): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not visible, using `.is(':visible')`.
     * @example
@@ -2919,7 +2931,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbevisible(chainer: notDOTbeDOTvisible): Chainable[Subject] = js.native
+  def and_notbevisible(chainer: notDotbeDotvisible): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a date greater than or equal to the given number or date `start`, and less than or equal to the given number or date `finish` respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2935,7 +2947,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbewithin(chainer: notDOTbeDOTwithin, start: Double, end: Double): Chainable[Subject] = js.native
+  def and_notbewithin(chainer: notDotbeDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
     *
@@ -2943,7 +2955,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbewithin(chainer: notDOTbeDOTwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def and_notbewithin(chainer: notDotbeDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -2962,7 +2974,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notchange(chainer: notDOTchange, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
+  def and_notchange(chainer: notDotchange, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
   /**
     * When two arguments are provided, `.change` asserts that the value of the given object `subject`'s `prop` property is different before invoking the target function compared to afterward.
     * @example
@@ -2979,7 +2991,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notchange(chainer: notDOTchange, obj: js.Object, prop: String): Chainable[Subject] = js.native
+  def and_notchange(chainer: notDotchange, obj: js.Object, prop: String): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not contain the given text, using `:contains()`. If the object asserted against is not a jQuery object, or if `contain` is not called as a function, the original implementation will be called.
     * @example
@@ -2994,7 +3006,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notcontain(chainer: notDOTcontain, value: String): Chainable[Subject] = js.native
+  def and_notcontain(chainer: notDotcontain, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string val is a substring of the target.
     * @example
@@ -3010,7 +3022,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notcontain(chainer: notDOTcontain, value: js.Any): Chainable[Subject] = js.native
+  def and_notcontain(chainer: notDotcontain, value: js.Any): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection does not contain the given html, using `.html()`.
     * @example
@@ -3025,7 +3037,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notcontainhtml(chainer: notDOTcontainDOThtml, value: String): Chainable[Subject] = js.native
+  def and_notcontainhtml(chainer: notDotcontainDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection does not contain the given text, using `.text()`.
     * @example
@@ -3040,7 +3052,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notcontaintext(chainer: notDOTcontainDOTtext, value: String): Chainable[Subject] = js.native
+  def and_notcontaintext(chainer: notDotcontainDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not contain the given value, using `.val()`.
     * @example
@@ -3055,7 +3067,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notcontainvalue(chainer: notDOTcontainDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_notcontainvalue(chainer: notDotcontainDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.decrease` asserts that the given function `subject` does not returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand.
     * `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
@@ -3074,7 +3086,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notdecrease(chainer: notDOTdecrease, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
+  def and_notdecrease(chainer: notDotdecrease, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
   /**
     * When two arguments are provided, `.decrease` asserts that the value of the given object `subject`'s `prop` property is not lesser after invoking the target function compared to beforehand.
     * @example
@@ -3091,7 +3103,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notdecrease(chainer: notDOTdecrease, obj: js.Object, prop: String): Chainable[Subject] = js.native
+  def and_notdecrease(chainer: notDotdecrease, obj: js.Object, prop: String): Chainable[Subject] = js.native
   /**
     * Causes all `.equal`, `.include`, `.members`, `.keys`, and `.property` assertions that follow in the chain to not use deep equality instead of strict (`===`) equality. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -3106,7 +3118,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notdeepequal(chainer: notDOTdeepDOTequal, value: Subject): Chainable[Subject] = js.native
+  def and_notdeepequal(chainer: notDotdeepDotequal, value: Subject): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to the given `val`.
     * @example
@@ -3122,7 +3134,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_noteq(chainer: notDOTeq, value: js.Any): Chainable[Subject] = js.native
+  def and_noteq(chainer: notDoteq, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not deeply equal to the given `obj`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -3137,7 +3149,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_noteql(chainer: notDOTeql, value: js.Any): Chainable[Subject] = js.native
+  def and_noteql(chainer: notDoteql, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to the given `val`.
     * @example
@@ -3152,7 +3164,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notequal(chainer: notDOTequal, value: js.Any): Chainable[Subject] = js.native
+  def and_notequal(chainer: notDotequal, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to either `null` or `undefined`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -3167,7 +3179,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notexist(chainer: notDOTexist): Chainable[Subject] = js.native
+  def and_notexist(chainer: notDotexist): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to not require that the target have all of the given keys. This is the opposite of `.any`, which only requires that the target have at least one of the given keys.
     * @example
@@ -3182,7 +3194,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveallkeys(chainer: notDOThaveDOTallDOTkeys, value: String*): Chainable[Subject] = js.native
+  def and_nothaveallkeys(chainer: notDothaveDotallDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert spy did not always throw an exception.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysthrew
@@ -3195,13 +3207,13 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown): Chainable[Subject] = js.native
+  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: String): Chainable[Subject] = js.native
+  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: Error): Chainable[Subject] = js.native
+  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target not have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -3216,7 +3228,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveanykeys(chainer: notDOThaveDOTanyDOTkeys, value: String*): Chainable[Subject] = js.native
+  def and_nothaveanykeys(chainer: notDothaveDotanyDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -3232,9 +3244,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveattr(chainer: notDOThaveDOTattr, value: String): Chainable[Subject] = js.native
+  def and_nothaveattr(chainer: notDothaveDotattr, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothaveattr(chainer: notDOThaveDOTattr, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_nothaveattr(chainer: notDothaveDotattr, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert not the number of calls.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycallcount
@@ -3247,7 +3259,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavecallCount(chainer: notDOThaveDOTcallCount, value: Double): Chainable[Subject] = js.native
+  def and_nothavecallCount(chainer: notDothaveDotcallCount, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -3262,7 +3274,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveclass(chainer: notDOThaveDOTclass, value: String): Chainable[Subject] = js.native
+  def and_nothaveclass(chainer: notDothaveDotclass, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given CSS property, using `.css()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -3277,9 +3289,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavecss(chainer: notDOThaveDOTcss, value: String): Chainable[Subject] = js.native
+  def and_nothavecss(chainer: notDothaveDotcss, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavecss(chainer: notDOThaveDOTcss, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_nothavecss(chainer: notDothaveDotcss, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given data value, using `.data()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -3294,9 +3306,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavedata(chainer: notDOThaveDOTdata, value: String): Chainable[Subject] = js.native
+  def and_nothavedata(chainer: notDothaveDotdata, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavedata(chainer: notDOThaveDOTdata, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_nothavedata(chainer: notDothaveDotdata, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target does not have a property with the given key `name`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -3311,7 +3323,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavedeepproperty(chainer: notDOThaveDOTdeepDOTproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
+  def and_nothavedeepproperty(chainer: notDothaveDotdeepDotproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not contain at least one element which has a descendant matching the given selector, using `.has()`.
     * @example
@@ -3326,7 +3338,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavedescendants(chainer: notDOThaveDOTdescendants, selector: String): Chainable[Subject] = js.native
+  def and_nothavedescendants(chainer: notDothaveDotdescendants, selector: String): Chainable[Subject] = js.native
   /**
     * Assert that no element of the selection is focused.
     * @example
@@ -3341,7 +3353,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavefocus(chainer: notDOThaveDOTfocus): Chainable[Subject] = js.native
+  def and_nothavefocus(chainer: notDothaveDotfocus): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection is not equal to the given html, using `.html()`.
     * @example
@@ -3356,7 +3368,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavehtml(chainer: notDOThaveDOThtml, value: String): Chainable[Subject] = js.native
+  def and_nothavehtml(chainer: notDothaveDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given id, using `.attr('id')`.
     * @example
@@ -3371,9 +3383,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveid(chainer: notDOThaveDOTid, value: String): Chainable[Subject] = js.native
+  def and_nothaveid(chainer: notDothaveDotid, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothaveid(chainer: notDOThaveDOTid, value: String, `match`: String): Chainable[Subject] = js.native
+  def and_nothaveid(chainer: notDothaveDotid, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not equal to the given number `n`.
     * @example
@@ -3390,7 +3402,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelength(chainer: notDOThaveDOTlength, value: Double): Chainable[Subject] = js.native
+  def and_nothavelength(chainer: notDothaveDotlength, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not greater than to the given number `n`.
     * @example
@@ -3406,7 +3418,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelengthgreaterThan(chainer: notDOThaveDOTlengthDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def and_nothavelengthgreaterThan(chainer: notDothaveDotlengthDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not greater than to the given number `n`.
     * @example
@@ -3422,7 +3434,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelengthgt(chainer: notDOThaveDOTlengthDOTgt, value: Double): Chainable[Subject] = js.native
+  def and_nothavelengthgt(chainer: notDothaveDotlengthDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -3438,7 +3450,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelengthlessThan(chainer: notDOThaveDOTlengthDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def and_nothavelengthlessThan(chainer: notDothaveDotlengthDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not less than to the given number `n`.
     * @example
@@ -3454,7 +3466,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelengthlt(chainer: notDOThaveDOTlengthDOTlt, value: Double): Chainable[Subject] = js.native
+  def and_nothavelengthlt(chainer: notDothaveDotlengthDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not less than or equal to the given number `n`.
     * @example
@@ -3470,7 +3482,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavelengthlte(chainer: notDOThaveDOTlengthDOTlte, value: Double): Chainable[Subject] = js.native
+  def and_nothavelengthlte(chainer: notDothaveDotlengthDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target array does not have the same members as the given array `set`.
     * @example
@@ -3485,7 +3497,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavemembers(chainer: notDOThaveDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def and_nothavemembers(chainer: notDothaveDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Asserts that the target array does not have the same members as the given array where order matters.
     * @example
@@ -3500,7 +3512,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveorderedmembers(chainer: notDOThaveDOTorderedDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def and_nothaveorderedmembers(chainer: notDothaveDotorderedDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Causes all `.property` and `.include` assertions that follow in the chain to ignore inherited properties.
     * @example
@@ -3516,7 +3528,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveownProperty(chainer: notDOThaveDOTownProperty, property: String): Chainable[Subject] = js.native
+  def and_nothaveownProperty(chainer: notDothaveDotownProperty, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given property, using `.prop()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -3532,9 +3544,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveprop(chainer: notDOThaveDOTprop, value: String): Chainable[Subject] = js.native
+  def and_nothaveprop(chainer: notDothaveDotprop, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothaveprop(chainer: notDOThaveDOTprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
+  def and_nothaveprop(chainer: notDothaveDotprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`.
     * @example
@@ -3550,9 +3562,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothaveproperty(chainer: notDOThaveDOTproperty, property: String): Chainable[Subject] = js.native
+  def and_nothaveproperty(chainer: notDothaveDotproperty, property: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothaveproperty(chainer: notDOThaveDOTproperty, property: String, value: js.Any): Chainable[Subject] = js.native
+  def and_nothaveproperty(chainer: notDothaveDotproperty, property: String, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target string does not contains the given substring `str`.
     * @example
@@ -3567,9 +3579,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavestring(chainer: notDOThaveDOTstring, `match`: String): Chainable[Subject] = js.native
+  def and_nothavestring(chainer: notDothaveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavestring(chainer: notDOThaveDOTstring, `match`: RegExp): Chainable[Subject] = js.native
+  def and_nothavestring(chainer: notDothaveDotstring, `match`: RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is not equal to the given text, using `.text()`.
     * @example
@@ -3584,7 +3596,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavetext(chainer: notDOThaveDOTtext, value: String): Chainable[Subject] = js.native
+  def and_nothavetext(chainer: notDothaveDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy did not throw an exception at least once.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spythrew
@@ -3597,13 +3609,13 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavethrown(chainer: notDOThaveDOTthrown): Chainable[Subject] = js.native
+  def and_nothavethrown(chainer: notDothaveDotthrown): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavethrown(chainer: notDOThaveDOTthrown, value: String): Chainable[Subject] = js.native
+  def and_nothavethrown(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavethrown(chainer: notDOThaveDOTthrown, value: Error): Chainable[Subject] = js.native
+  def and_nothavethrown(chainer: notDothaveDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavethrown(chainer: notDOThaveDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def and_nothavethrown(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given value, using `.val()`.
     * @example
@@ -3618,7 +3630,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_nothavevalue(chainer: notDOThaveDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_nothavevalue(chainer: notDothaveDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is not a substring of the target.
     * @example
@@ -3633,7 +3645,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notinclude(chainer: notDOTinclude, value: js.Any): Chainable[Subject] = js.native
+  def and_notinclude(chainer: notDotinclude, value: js.Any): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection does not contain the given html, using `.html()`.
     * @example
@@ -3648,7 +3660,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notincludehtml(chainer: notDOTincludeDOThtml, value: String): Chainable[Subject] = js.native
+  def and_notincludehtml(chainer: notDotincludeDothtml, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is not a substring of the target.
     * @example
@@ -3663,7 +3675,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notincludemembers(chainer: notDOTincludeDOTmembers, value: js.Array[_]): Chainable[Subject] = js.native
+  def and_notincludemembers(chainer: notDotincludeDotmembers, value: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection does not contain the given text, using `.text()`.
     * @example
@@ -3678,7 +3690,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notincludetext(chainer: notDOTincludeDOTtext, value: String): Chainable[Subject] = js.native
+  def and_notincludetext(chainer: notDotincludeDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not contain the given value, using `.val()`.
     * @example
@@ -3693,7 +3705,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notincludevalue(chainer: notDOTincludeDOTvalue, value: String): Chainable[Subject] = js.native
+  def and_notincludevalue(chainer: notDotincludeDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s
     * invoked after invoking the target function compared to when it’s invoked beforehand.
@@ -3714,7 +3726,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notincrease(chainer: notDOTincrease, value: js.Object, property: String): Chainable[Subject] = js.native
+  def and_notincrease(chainer: notDotincrease, value: js.Object, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not match a given selector, using `.is()`. Note that this overrides the built-in chai assertion. If the object asserted against is not a jQuery object, the original implementation will be called.
     * @example
@@ -3729,7 +3741,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notmatch(chainer: notDOTmatch, value: String): Chainable[Subject] = js.native
+  def and_notmatch(chainer: notDotmatch, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target does not match the given regular expression `re`.
     * @example
@@ -3744,7 +3756,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notmatch(chainer: notDOTmatch, value: RegExp): Chainable[Subject] = js.native
+  def and_notmatch(chainer: notDotmatch, value: RegExp): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target does not have a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -3762,7 +3774,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notrespondTo(chainer: notDOTrespondTo, value: String): Chainable[Subject] = js.native
+  def and_notrespondTo(chainer: notDotrespondTo, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy did not return the provided value at least once. (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers))
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyreturnedobj
@@ -3775,7 +3787,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notreturned(chainer: notDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def and_notreturned(chainer: notDotreturned, value: js.Any): Chainable[Subject] = js.native
   /**
     * Invokes the given `matcher` function with the target being passed as the first argument, and asserts that the value returned is falsy.
     * @example
@@ -3790,7 +3802,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notsatisfy(chainer: notDOTsatisfy, fn: js.Function1[/* val */ js.Any, Boolean]): Chainable[Subject] = js.native
+  def and_notsatisfy(chainer: notDotsatisfy, fn: js.Function1[/* val */ js.Any, Boolean]): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target has a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -4250,9 +4262,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("children")
   def children_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("children")
-  def children_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def children_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("children")
-  def children_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def children_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("children")
   def children_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("children")
@@ -4882,9 +4894,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("closest")
   def closest_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("closest")
-  def closest_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def closest_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("closest")
-  def closest_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def closest_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("closest")
   def closest_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("closest")
@@ -6010,17 +6022,17 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_noscript(selector: noscript, text: RegExp, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: String): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: String): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: Double): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: Double): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: Double, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: Double, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: RegExp): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: RegExp): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: `object`, text: RegExp, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: RegExp, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("contains")
   def contains_ol(selector: ol, text: String): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("contains")
@@ -6953,9 +6965,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("filter")
   def filter_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("filter")
-  def filter_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def filter_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("filter")
-  def filter_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def filter_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("filter")
   def filter_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("filter")
@@ -7446,9 +7458,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("find")
   def find_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("find")
-  def find_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def find_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("find")
-  def find_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def find_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("find")
   def find_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("find")
@@ -7674,16 +7686,17 @@ trait Chainable[Subject] extends js.Object {
   def focused(): Chainable[JQuery[HTMLElement]] = js.native
   def focused(options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   /**
-    * Get one or more DOM elements by selector.
-    * The querying behavior of this command matches exactly how $(…) works in jQuery.
-    * @see https://on.cypress.io/get
+    * Get one or more DOM elements by alias.
+    * @see https://on.cypress.io/get#Alias
     * @example
-    *    cy.get('.list>li')    // Yield the <li>'s in <.list>
-    *    cy.get('ul li:first').should('have.class', 'active')
-    *    cy.get('.dropdown-menu').click()
+    *    // Get the aliased ‘todos’ elements
+    *    cy.get('ul#todos').as('todos')
+    *    //...hack hack hack...
+    *    //later retrieve the todos
+    *    cy.get('@todos')
     */
-  def get[E /* <: Node */](selector: String): Chainable[JQuery[E]] = js.native
-  def get[E /* <: Node */](selector: String, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[JQuery[E]] = js.native
+  def get[S](alias: String): Chainable[S] = js.native
+  def get[S](alias: String, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[S] = js.native
   /**
     * Get a browser cookie by its name.
     *
@@ -7699,19 +7712,18 @@ trait Chainable[Subject] extends js.Object {
   def getCookies(): Chainable[js.Array[Cookie]] = js.native
   def getCookies(options: Partial[Loggable with Timeoutable]): Chainable[js.Array[Cookie]] = js.native
   /**
-    * Get one or more DOM elements by alias.
-    * @see https://on.cypress.io/get#Alias
+    * Get one or more DOM elements by selector.
+    * The querying behavior of this command matches exactly how $(…) works in jQuery.
+    * @see https://on.cypress.io/get
     * @example
-    *    // Get the aliased ‘todos’ elements
-    *    cy.get('ul#todos').as('todos')
-    *    //...hack hack hack...
-    *    //later retrieve the todos
-    *    cy.get('@todos')
+    *    cy.get('.list>li')    // Yield the <li>'s in <.list>
+    *    cy.get('ul li:first').should('have.class', 'active')
+    *    cy.get('.dropdown-menu').click()
     */
   @JSName("get")
-  def get_S[S](alias: String): Chainable[S] = js.native
+  def get_E_Node[E /* <: Node */](selector: String): Chainable[JQuery[E]] = js.native
   @JSName("get")
-  def get_S[S](alias: String, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[S] = js.native
+  def get_E_Node[E /* <: Node */](selector: String, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[JQuery[E]] = js.native
   /**
     * Get one or more DOM elements by node name: input, button, etc.
     * @see https://on.cypress.io/get
@@ -8016,9 +8028,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("get")
   def get_noscript(selector: noscript, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("get")
-  def get_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def get_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("get")
-  def get_object(selector: `object`, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def get_object(selector: object_, options: Partial[Loggable with Timeoutable with Withinable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("get")
   def get_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("get")
@@ -8222,6 +8234,13 @@ trait Chainable[Subject] extends js.Object {
     */
   def invoke(functionName: String, args: js.Any*): Chainable[Subject] = js.native
   // don't have a way to express return types yet
+  def invoke(options: Loggable, functionName: String, args: js.Any*): Chainable[Subject] = js.native
+  /**
+    * Invoke a function in an array of functions.
+    * @see https://on.cypress.io/invoke
+    */
+  def invoke[T /* <: js.Function1[/* repeated */ js.Any, _] */, Subject /* <: js.Array[T] */](index: Double): Chainable[ReturnType[T]] = js.native
+  def invoke[T /* <: js.Function1[/* repeated */ js.Any, _] */, Subject /* <: js.Array[T] */](options: Loggable, index: Double): Chainable[ReturnType[T]] = js.native
   /**
     * Get a property’s value on the previously yielded subject.
     *
@@ -8235,6 +8254,17 @@ trait Chainable[Subject] extends js.Object {
   def its[K /* <: String */](propertyName: K): Chainable[
     /* import warning: importer.ImportType#apply Failed type conversion: Subject[K] */ js.Any
   ] = js.native
+  def its[K /* <: String */](propertyName: K, options: Loggable): Chainable[
+    /* import warning: importer.ImportType#apply Failed type conversion: Subject[K] */ js.Any
+  ] = js.native
+  /**
+    * Get a value by index from an array yielded from the previous command.
+    * @see https://on.cypress.io/its
+    * @example
+    *    cy.wrap(['a', 'b']).its(1).should('equal', 'b')
+    */
+  def its[T, Subject /* <: js.Array[T] */](index: Double): Chainable[T] = js.native
+  def its[T, Subject /* <: js.Array[T] */](index: Double, options: Loggable): Chainable[T] = js.native
   /**
     * Get the last DOM element within a set of DOM elements.
     *
@@ -8250,6 +8280,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.location() // Get location object
     */
   def location(): Chainable[Location] = js.native
+  def location(options: Partial[Loggable with Timeoutable]): Chainable[Location] = js.native
   /**
     * Get a part of the global `window.location` object of the page that is currently active.
     *
@@ -8260,9 +8291,46 @@ trait Chainable[Subject] extends js.Object {
     *    // Assert on the href of the location
     *    cy.location('href').should('contain', '/tag/tutorials')
     */
-  def location(key: String): Chainable[Location] = js.native
-  def location(key: String, options: Partial[Loggable with Timeoutable]): Chainable[Location] = js.native
-  def location(options: Partial[Loggable with Timeoutable]): Chainable[Location] = js.native
+  @JSName("location")
+  def location_ancestorOrigins(key: ancestorOrigins): Chainable[DOMStringList] = js.native
+  @JSName("location")
+  def location_ancestorOrigins(key: ancestorOrigins, options: Partial[Loggable with Timeoutable]): Chainable[DOMStringList] = js.native
+  @JSName("location")
+  def location_hash(key: hash): Chainable[String] = js.native
+  @JSName("location")
+  def location_hash(key: hash, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_host(key: host): Chainable[String] = js.native
+  @JSName("location")
+  def location_host(key: host, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_hostname(key: hostname): Chainable[String] = js.native
+  @JSName("location")
+  def location_hostname(key: hostname, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_href(key: href): Chainable[String] = js.native
+  @JSName("location")
+  def location_href(key: href, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_origin(key: origin): Chainable[String] = js.native
+  @JSName("location")
+  def location_origin(key: origin, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_pathname(key: pathname): Chainable[String] = js.native
+  @JSName("location")
+  def location_pathname(key: pathname, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_port(key: port): Chainable[String] = js.native
+  @JSName("location")
+  def location_port(key: port, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_protocol(key: protocol): Chainable[String] = js.native
+  @JSName("location")
+  def location_protocol(key: protocol, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
+  @JSName("location")
+  def location_search(key: search): Chainable[String] = js.native
+  @JSName("location")
+  def location_search(key: search, options: Partial[Loggable with Timeoutable]): Chainable[String] = js.native
   /**
     * Print a message to the Cypress Command Log.
     *
@@ -8603,9 +8671,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("nextAll")
   def nextAll_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("nextAll")
-  def nextAll_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def nextAll_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("nextAll")
-  def nextAll_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def nextAll_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("nextAll")
   def nextAll_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("nextAll")
@@ -9098,9 +9166,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("nextUntil")
   def nextUntil_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("nextUntil")
-  def nextUntil_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def nextUntil_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("nextUntil")
-  def nextUntil_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def nextUntil_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("nextUntil")
   def nextUntil_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("nextUntil")
@@ -9579,9 +9647,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("next")
   def next_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("next")
-  def next_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def next_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("next")
-  def next_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def next_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("next")
   def next_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("next")
@@ -9796,7 +9864,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def off(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -9815,7 +9883,7 @@ trait Chainable[Subject] extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def off(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def off(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9825,7 +9893,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9835,7 +9903,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def off_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9845,7 +9913,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9855,7 +9923,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9875,7 +9943,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def off_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9885,7 +9953,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def off_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9905,7 +9973,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def off_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9915,7 +9986,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def off_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9925,7 +9999,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def off_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9935,7 +10009,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def off_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -9957,9 +10031,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def off_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("off")
-  def off_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def off_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9969,7 +10043,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def off_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9979,9 +10053,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def off_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("off")
-  def off_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def off_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -9991,7 +10065,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def off_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10001,7 +10075,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def off_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -10033,7 +10107,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def on(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -10052,7 +10126,7 @@ trait Chainable[Subject] extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def on(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def on(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10062,7 +10136,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10072,7 +10146,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def on_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10082,7 +10156,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10092,7 +10166,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10112,7 +10186,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def on_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10122,7 +10196,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def on_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10142,7 +10216,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def on_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10152,7 +10229,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def on_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10162,7 +10242,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def on_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10172,7 +10252,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def on_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -10194,9 +10274,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def on_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("on")
-  def on_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def on_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10206,7 +10286,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def on_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10216,9 +10296,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def on_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("on")
-  def on_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def on_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10228,7 +10308,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def on_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10238,7 +10318,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def on_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -10270,7 +10350,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def once(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -10289,7 +10369,7 @@ trait Chainable[Subject] extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def once(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def once(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10299,7 +10379,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10309,7 +10389,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def once_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10319,7 +10399,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10329,7 +10409,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10349,7 +10429,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def once_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10359,7 +10439,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def once_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10379,7 +10459,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def once_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10389,7 +10472,10 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def once_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10399,7 +10485,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def once_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10409,7 +10495,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def once_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -10431,9 +10517,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def once_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("once")
-  def once_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def once_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10443,7 +10529,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def once_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10453,9 +10539,9 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def once_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("once")
-  def once_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def once_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10465,7 +10551,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def once_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -10475,7 +10561,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def once_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Get the parent DOM element of a set of DOM elements.
     *
@@ -10792,9 +10878,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parent")
   def parent_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("parent")
-  def parent_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parent_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parent")
-  def parent_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parent_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parent")
   def parent_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("parent")
@@ -11454,11 +11540,11 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parentsUntil")
   def parentsUntil_noscript(selector: noscript, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parentsUntil_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_object(selector: `object`, filter: String): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parentsUntil_object(selector: object_, filter: String): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_object(selector: `object`, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parentsUntil_object(selector: object_, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parentsUntil")
   def parentsUntil_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("parentsUntil")
@@ -12025,9 +12111,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parents")
   def parents_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("parents")
-  def parents_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parents_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parents")
-  def parents_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def parents_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("parents")
   def parents_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("parents")
@@ -12549,9 +12635,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prevAll")
   def prevAll_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("prevAll")
-  def prevAll_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prevAll_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prevAll")
-  def prevAll_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prevAll_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prevAll")
   def prevAll_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("prevAll")
@@ -13200,11 +13286,11 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prevUntil")
   def prevUntil_noscript(selector: noscript, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prevUntil_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_object(selector: `object`, filter: String): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prevUntil_object(selector: object_, filter: String): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_object(selector: `object`, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prevUntil_object(selector: object_, filter: String, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prevUntil")
   def prevUntil_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("prevUntil")
@@ -13773,9 +13859,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prev")
   def prev_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("prev")
-  def prev_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prev_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prev")
-  def prev_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def prev_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("prev")
   def prev_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("prev")
@@ -14279,7 +14365,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_alwaysreturned(chainer: alwaysDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def should_alwaysreturned(chainer: alwaysDotreturned, value: js.Any): Chainable[Subject] = js.native
   // chai
   /**
     * Asserts that the target’s `type` is equal to the given string type.
@@ -14299,7 +14385,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bea(chainer: beDOTa, `type`: String): Chainable[Subject] = js.native
+  def should_bea(chainer: beDota, `type`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14317,9 +14403,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beabove(chainer: beDOTabove, value: Double): Chainable[Subject] = js.native
+  def should_beabove(chainer: beDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_beabove(chainer: beDOTabove, value: Date): Chainable[Subject] = js.native
+  def should_beabove(chainer: beDotabove, value: Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -14334,7 +14420,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bealwayscalledWithMatch(chainer: beDOTalwaysDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def should_bealwayscalledWithMatch(chainer: beDotalwaysDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   // sinon-chai
   /**
     * Assert spy/stub was called the `new` operator.
@@ -14351,7 +14437,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bealwayscalledWithNew(chainer: beDOTalwaysDOTcalledWithNew): Chainable[Subject] = js.native
+  def should_bealwayscalledWithNew(chainer: beDotalwaysDotcalledWithNew): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `type` is equal to the given string type.
     * Types are case insensitive. See the `type-detect` project page for info on the type detection algorithm:
@@ -14371,7 +14457,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bean(chainer: beDOTan, value: String): Chainable[Subject] = js.native
+  def should_bean(chainer: beDotan, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -14389,7 +14475,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beapproximately(chainer: beDOTapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
+  def should_beapproximately(chainer: beDotapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is an `arguments` object.
     * @example
@@ -14406,7 +14492,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bearguments(chainer: beDOTarguments): Chainable[Subject] = js.native
+  def should_bearguments(chainer: beDotarguments): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14424,9 +14510,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beatleast(chainer: beDOTatDOTleast, value: Double): Chainable[Subject] = js.native
+  def should_beatleast(chainer: beDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_beatleast(chainer: beDOTatDOTleast, value: Date): Chainable[Subject] = js.native
+  def should_beatleast(chainer: beDotatDotleast, value: Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14444,7 +14530,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bebelow(chainer: beDOTbelow, value: Double): Chainable[Subject] = js.native
+  def should_bebelow(chainer: beDotbelow, value: Double): Chainable[Subject] = js.native
   /**
     * `true` if the spy was called at least once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalled
@@ -14459,7 +14545,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalled(chainer: beDOTcalled): Chainable[Subject] = js.native
+  def should_becalled(chainer: beDotcalled): Chainable[Subject] = js.native
   /**
     * Assert spy was called after `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledafteranotherspy
@@ -14474,7 +14560,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledAfter(chainer: beDOTcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
+  def should_becalledAfter(chainer: beDotcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was called before `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledbeforeanotherspy
@@ -14489,7 +14575,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledBefore(chainer: beDOTcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
+  def should_becalledBefore(chainer: beDotcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was called at least once with `obj` as `this`. `calledOn` also accepts a matcher (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers)).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonobj
@@ -14504,7 +14590,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledOn(chainer: beDOTcalledOn, context: js.Any): Chainable[Subject] = js.native
+  def should_becalledOn(chainer: beDotcalledOn, context: js.Any): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonce
@@ -14519,7 +14605,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledOnce(chainer: beDOTcalledOnce): Chainable[Subject] = js.native
+  def should_becalledOnce(chainer: beDotcalledOnce): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly three times
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledthrice
@@ -14534,7 +14620,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledThrice(chainer: beDOTcalledThrice): Chainable[Subject] = js.native
+  def should_becalledThrice(chainer: beDotcalledThrice): Chainable[Subject] = js.native
   /**
     * Assert spy was called exactly twice
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledtwice
@@ -14549,7 +14635,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledTwice(chainer: beDOTcalledTwice): Chainable[Subject] = js.native
+  def should_becalledTwice(chainer: beDotcalledTwice): Chainable[Subject] = js.native
   /**
     * Assert spy was called at least once with the provided arguments and no others.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithexactlyarg1-arg2-
@@ -14564,7 +14650,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledWithExactly(chainer: beDOTcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
+  def should_becalledWithExactly(chainer: beDotcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy was called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithmatcharg1-arg2-
@@ -14579,7 +14665,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledWithMatch(chainer: beDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def should_becalledWithMatch(chainer: beDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy/stub was called the `new` operator.
     * Beware that this is inferred based on the value of the this object and the spy function’s prototype, so it may give false positives if you actively return the right kind of object.
@@ -14595,7 +14681,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becalledWithNew(chainer: beDOTcalledWithNew): Chainable[Subject] = js.native
+  def should_becalledWithNew(chainer: beDotcalledWithNew): Chainable[Subject] = js.native
   // jquery-chai
   /**
     * Assert that at least one element of the selection is checked, using `.is(':checked')`.
@@ -14613,7 +14699,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bechecked(chainer: beDOTchecked): Chainable[Subject] = js.native
+  def should_bechecked(chainer: beDotchecked): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -14630,7 +14716,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_becloseTo(chainer: beDOTcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
+  def should_becloseTo(chainer: beDotcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is disabled, using `.is(':disabled')`.
     * @example
@@ -14647,7 +14733,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bedisabled(chainer: beDOTdisabled): Chainable[Subject] = js.native
+  def should_bedisabled(chainer: beDotdisabled): Chainable[Subject] = js.native
   /**
     * When the target is a string or array, .empty asserts that the target’s length property is strictly (===) equal to 0
     * @example
@@ -14665,7 +14751,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beempty(chainer: beDOTempty): Chainable[Subject] = js.native
+  def should_beempty(chainer: beDotempty): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is enabled, using `.is(':enabled')`.
     * @example
@@ -14682,7 +14768,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beenabled(chainer: beDOTenabled): Chainable[Subject] = js.native
+  def should_beenabled(chainer: beDotenabled): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to `false`.
     * @example
@@ -14699,7 +14785,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_befalse(chainer: beDOTfalse): Chainable[Subject] = js.native
+  def should_befalse(chainer: beDotfalse): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is focused.
     * @example
@@ -14716,7 +14802,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_befocused(chainer: beDOTfocused): Chainable[Subject] = js.native
+  def should_befocused(chainer: beDotfocused): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14735,7 +14821,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_begreaterThan(chainer: beDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def should_begreaterThan(chainer: beDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14754,7 +14840,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_begt(chainer: beDOTgt, value: Double): Chainable[Subject] = js.native
+  def should_begt(chainer: beDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14773,7 +14859,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_begte(chainer: beDOTgte, value: Double): Chainable[Subject] = js.native
+  def should_begte(chainer: beDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is hidden, using `.is(':hidden')`.
     * @example
@@ -14790,7 +14876,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_behidden(chainer: beDOThidden): Chainable[Subject] = js.native
+  def should_behidden(chainer: beDothidden): Chainable[Subject] = js.native
   /**
     * Asserts that the target is an instance of the given `constructor`.
     * @example
@@ -14807,7 +14893,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beinstanceOf(chainer: beDOTinstanceOf, value: js.Any): Chainable[Subject] = js.native
+  def should_beinstanceOf(chainer: beDotinstanceOf, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14826,7 +14912,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_belessThan(chainer: beDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def should_belessThan(chainer: beDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14845,7 +14931,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_belt(chainer: beDOTlt, value: Double): Chainable[Subject] = js.native
+  def should_belt(chainer: beDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14864,7 +14950,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_belte(chainer: beDOTlte, value: Double): Chainable[Subject] = js.native
+  def should_belte(chainer: beDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is loosely (`==`) equal to `true`. However, it’s often best to assert that the target is strictly (`===`) or deeply equal to its expected value.
     * @example
@@ -14881,7 +14967,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beok(chainer: beDOTok): Chainable[Subject] = js.native
+  def should_beok(chainer: beDotok): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is selected, using `.is(':selected')`.
     * @example
@@ -14898,7 +14984,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beselected(chainer: beDOTselected): Chainable[Subject] = js.native
+  def should_beselected(chainer: beDotselected): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to true.
     * @example
@@ -14915,7 +15001,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_betrue(chainer: beDOTtrue): Chainable[Subject] = js.native
+  def should_betrue(chainer: beDottrue): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to undefined.
     * @example
@@ -14932,7 +15018,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_beundefined(chainer: beDOTundefined): Chainable[Subject] = js.native
+  def should_beundefined(chainer: beDotundefined): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is visible, using `.is(':visible')`.
     * @example
@@ -14949,7 +15035,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bevisible(chainer: beDOTvisible): Chainable[Subject] = js.native
+  def should_bevisible(chainer: beDotvisible): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a date greater than or equal to the given number or date `start`, and less than or equal to the given number or date `finish` respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -14967,7 +15053,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bewithin(chainer: beDOTwithin, start: Double, end: Double): Chainable[Subject] = js.native
+  def should_bewithin(chainer: beDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
     *
@@ -14977,7 +15063,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bewithin(chainer: beDOTwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def should_bewithin(chainer: beDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -15069,7 +15155,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_containhtml(chainer: containDOThtml, value: String): Chainable[Subject] = js.native
+  def should_containhtml(chainer: containDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection partially contains the given text, using `.text()`.
     * @example
@@ -15086,7 +15172,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_containtext(chainer: containDOTtext, value: String): Chainable[Subject] = js.native
+  def should_containtext(chainer: containDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection partially contains the given value, using `.val()`.
     * @example
@@ -15103,7 +15189,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_containvalue(chainer: containDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_containvalue(chainer: containDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.decrease` asserts that the given function `subject` returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand.
     * `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
@@ -15161,7 +15247,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_deepequal(chainer: deepDOTequal, value: Subject): Chainable[Subject] = js.native
+  def should_deepequal(chainer: deepDotequal, value: Subject): Chainable[Subject] = js.native
   /**
     * Asserts that the target is strictly (`===`) equal to the given `val`.
     * @example
@@ -15247,7 +15333,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveallkeys(chainer: haveDOTallDOTkeys, value: String*): Chainable[Subject] = js.native
+  def should_haveallkeys(chainer: haveDotallDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert spy always threw an exception.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysthrew
@@ -15262,13 +15348,13 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havealwaysthrown(chainer: haveDOTalwaysDOTthrown): Chainable[Subject] = js.native
+  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: String): Chainable[Subject] = js.native
+  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: Error): Chainable[Subject] = js.native
+  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havealwaysthrown(chainer: haveDOTalwaysDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -15285,7 +15371,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveanykeys(chainer: haveDOTanyDOTkeys, value: String*): Chainable[Subject] = js.native
+  def should_haveanykeys(chainer: haveDotanyDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -15303,9 +15389,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveattr(chainer: haveDOTattr, value: String): Chainable[Subject] = js.native
+  def should_haveattr(chainer: haveDotattr, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_haveattr(chainer: haveDOTattr, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_haveattr(chainer: haveDotattr, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert the number of calls.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycallcount
@@ -15320,7 +15406,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havecallCount(chainer: haveDOTcallCount, value: Double): Chainable[Subject] = js.native
+  def should_havecallCount(chainer: haveDotcallCount, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -15337,7 +15423,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveclass(chainer: haveDOTclass, value: String): Chainable[Subject] = js.native
+  def should_haveclass(chainer: haveDotclass, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given CSS property, using `.css()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -15354,9 +15440,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havecss(chainer: haveDOTcss, value: String): Chainable[Subject] = js.native
+  def should_havecss(chainer: haveDotcss, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havecss(chainer: haveDOTcss, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_havecss(chainer: haveDotcss, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given data value, using `.data()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -15373,9 +15459,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havedata(chainer: haveDOTdata, value: String): Chainable[Subject] = js.native
+  def should_havedata(chainer: haveDotdata, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havedata(chainer: haveDOTdata, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_havedata(chainer: haveDotdata, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -15392,7 +15478,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havedeepproperty(chainer: haveDOTdeepDOTproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
+  def should_havedeepproperty(chainer: haveDotdeepDotproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
   /**
     * Assert that the selection contains at least one element which has a descendant matching the given selector, using `.has()`.
     * @example
@@ -15409,7 +15495,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havedescendants(chainer: haveDOTdescendants, selector: String): Chainable[Subject] = js.native
+  def should_havedescendants(chainer: haveDotdescendants, selector: String): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is focused.
     * @example
@@ -15426,7 +15512,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havefocus(chainer: haveDOTfocus): Chainable[Subject] = js.native
+  def should_havefocus(chainer: haveDotfocus): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection is equal to the given html, using `.html()`.
     * @example
@@ -15443,7 +15529,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havehtml(chainer: haveDOThtml, value: String): Chainable[Subject] = js.native
+  def should_havehtml(chainer: haveDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given id, using `.attr('id')`.
     * @example
@@ -15460,9 +15546,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveid(chainer: haveDOTid, value: String): Chainable[Subject] = js.native
+  def should_haveid(chainer: haveDotid, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_haveid(chainer: haveDOTid, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_haveid(chainer: haveDotid, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is equal to the given number `n`.
     * @example
@@ -15481,7 +15567,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelength(chainer: haveDOTlength, value: Double): Chainable[Subject] = js.native
+  def should_havelength(chainer: haveDotlength, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than to the given number `n`.
     * @example
@@ -15499,7 +15585,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthgreaterThan(chainer: haveDOTlengthDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def should_havelengthgreaterThan(chainer: haveDotlengthDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than to the given number `n`.
     * @example
@@ -15517,7 +15603,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthgt(chainer: haveDOTlengthDOTgt, value: Double): Chainable[Subject] = js.native
+  def should_havelengthgt(chainer: haveDotlengthDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is greater than or equal to the given number `n`.
     * @example
@@ -15535,7 +15621,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthgte(chainer: haveDOTlengthDOTgte, value: Double): Chainable[Subject] = js.native
+  def should_havelengthgte(chainer: haveDotlengthDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -15553,7 +15639,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthlessThan(chainer: haveDOTlengthDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def should_havelengthlessThan(chainer: haveDotlengthDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -15571,7 +15657,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthlt(chainer: haveDOTlengthDOTlt, value: Double): Chainable[Subject] = js.native
+  def should_havelengthlt(chainer: haveDotlengthDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than or equal to the given number `n`.
     * @example
@@ -15589,7 +15675,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havelengthlte(chainer: haveDOTlengthDOTlte, value: Double): Chainable[Subject] = js.native
+  def should_havelengthlte(chainer: haveDotlengthDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target array has the same members as the given array `set`.
     * @example
@@ -15606,7 +15692,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havemembers(chainer: haveDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def should_havemembers(chainer: haveDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Asserts that the target array has the same members as the given array where order matters.
     * @example
@@ -15623,7 +15709,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveorderedmembers(chainer: haveDOTorderedDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def should_haveorderedmembers(chainer: haveDotorderedDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Causes all `.property` and `.include` assertions that follow in the chain to ignore inherited properties.
     * @example
@@ -15641,7 +15727,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveownProperty(chainer: haveDOTownProperty, property: String): Chainable[Subject] = js.native
+  def should_haveownProperty(chainer: haveDotownProperty, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given property, using `.prop()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -15659,9 +15745,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveprop(chainer: haveDOTprop, value: String): Chainable[Subject] = js.native
+  def should_haveprop(chainer: haveDotprop, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_haveprop(chainer: haveDOTprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
+  def should_haveprop(chainer: haveDotprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`.
     * @example
@@ -15679,9 +15765,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_haveproperty(chainer: haveDOTproperty, property: String): Chainable[Subject] = js.native
+  def should_haveproperty(chainer: haveDotproperty, property: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_haveproperty(chainer: haveDOTproperty, property: String, value: js.Any): Chainable[Subject] = js.native
+  def should_haveproperty(chainer: haveDotproperty, property: String, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target string contains the given substring `str`.
     * @example
@@ -15698,9 +15784,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havestring(chainer: haveDOTstring, `match`: String): Chainable[Subject] = js.native
+  def should_havestring(chainer: haveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havestring(chainer: haveDOTstring, `match`: RegExp): Chainable[Subject] = js.native
+  def should_havestring(chainer: haveDotstring, `match`: RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is equal to the given text, using `.text()`.
     * @example
@@ -15717,7 +15803,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havetext(chainer: haveDOTtext, value: String): Chainable[Subject] = js.native
+  def should_havetext(chainer: haveDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy threw an exception at least once.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spythrew
@@ -15732,13 +15818,13 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havethrown(chainer: haveDOTthrown): Chainable[Subject] = js.native
+  def should_havethrown(chainer: haveDotthrown): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havethrown(chainer: haveDOTthrown, value: String): Chainable[Subject] = js.native
+  def should_havethrown(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havethrown(chainer: haveDOTthrown, value: Error): Chainable[Subject] = js.native
+  def should_havethrown(chainer: haveDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havethrown(chainer: haveDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def should_havethrown(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given value, using `.val()`.
     * @example
@@ -15755,7 +15841,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_havevalue(chainer: haveDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_havevalue(chainer: haveDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is a substring of the target.
     * @example
@@ -15789,7 +15875,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_includehtml(chainer: includeDOThtml, value: String): Chainable[Subject] = js.native
+  def should_includehtml(chainer: includeDothtml, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is a substring of the target.
     * @example
@@ -15806,7 +15892,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_includemembers(chainer: includeDOTmembers, value: js.Array[_]): Chainable[Subject] = js.native
+  def should_includemembers(chainer: includeDotmembers, value: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection partially contains the given text, using `.text()`.
     * @example
@@ -15823,7 +15909,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_includetext(chainer: includeDOTtext, value: String): Chainable[Subject] = js.native
+  def should_includetext(chainer: includeDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection partially contains the given value, using `.val()`.
     * @example
@@ -15840,7 +15926,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_includevalue(chainer: includeDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_includevalue(chainer: includeDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s
     * invoked after invoking the target function compared to when it’s invoked beforehand.
@@ -15912,7 +15998,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notalwaysreturned(chainer: notDOTalwaysDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def should_notalwaysreturned(chainer: notDotalwaysDotreturned, value: js.Any): Chainable[Subject] = js.native
   // chai.not
   /**
     * Asserts that the target’s `type` is not equal to the given string type.
@@ -15932,7 +16018,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbea(chainer: notDOTbeDOTa, `type`: String): Chainable[Subject] = js.native
+  def should_notbea(chainer: notDotbeDota, `type`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or not a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -15950,9 +16036,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeabove(chainer: notDOTbeDOTabove, value: Double): Chainable[Subject] = js.native
+  def should_notbeabove(chainer: notDotbeDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_notbeabove(chainer: notDOTbeDOTabove, value: Date): Chainable[Subject] = js.native
+  def should_notbeabove(chainer: notDotbeDotabove, value: Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was not always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -15967,7 +16053,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbealwayscalledWithMatch(chainer: notDOTbeDOTalwaysDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def should_notbealwayscalledWithMatch(chainer: notDotbeDotalwaysDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   // sinon-chai.not
   /**
     * Assert spy/stub was not called the `new` operator.
@@ -15984,7 +16070,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbealwayscalledWithNew(chainer: notDOTbeDOTalwaysDOTcalledWithNew): Chainable[Subject] = js.native
+  def should_notbealwayscalledWithNew(chainer: notDotbeDotalwaysDotcalledWithNew): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `type` is not equal to the given string type.
     * Types are case insensitive. See the `type-detect` project page for info on the type detection algorithm:
@@ -16004,7 +16090,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbean(chainer: notDOTbeDOTan, value: String): Chainable[Subject] = js.native
+  def should_notbean(chainer: notDotbeDotan, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -16022,7 +16108,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeapproximately(chainer: notDOTbeDOTapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
+  def should_notbeapproximately(chainer: notDotbeDotapproximately, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not an `arguments` object.
     * @example
@@ -16039,7 +16125,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbearguments(chainer: notDOTbeDOTarguments): Chainable[Subject] = js.native
+  def should_notbearguments(chainer: notDotbeDotarguments): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16057,9 +16143,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeatleast(chainer: notDOTbeDOTatDOTleast, value: Double): Chainable[Subject] = js.native
+  def should_notbeatleast(chainer: notDotbeDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_notbeatleast(chainer: notDOTbeDOTatDOTleast, value: Date): Chainable[Subject] = js.native
+  def should_notbeatleast(chainer: notDotbeDotatDotleast, value: Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16077,7 +16163,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbebelow(chainer: notDOTbeDOTbelow, value: Double): Chainable[Subject] = js.native
+  def should_notbebelow(chainer: notDotbeDotbelow, value: Double): Chainable[Subject] = js.native
   /**
     * `true` if the spy was not called at least once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalled
@@ -16092,7 +16178,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalled(chainer: notDOTbeDOTcalled): Chainable[Subject] = js.native
+  def should_notbecalled(chainer: notDotbeDotcalled): Chainable[Subject] = js.native
   /**
     * Assert spy was not.called after `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledafteranotherspy
@@ -16107,7 +16193,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledAfter(chainer: notDOTbeDOTcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
+  def should_notbecalledAfter(chainer: notDotbeDotcalledAfter, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was not called before `anotherSpy`
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledbeforeanotherspy
@@ -16122,7 +16208,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledBefore(chainer: notDOTbeDOTcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
+  def should_notbecalledBefore(chainer: notDotbeDotcalledBefore, spy: SinonSpy): Chainable[Subject] = js.native
   /**
     * Assert spy was not called at least once with `obj` as `this`. `calledOn` also accepts a matcher (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers)).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonobj
@@ -16137,7 +16223,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledOn(chainer: notDOTbeDOTcalledOn, context: js.Any): Chainable[Subject] = js.native
+  def should_notbecalledOn(chainer: notDotbeDotcalledOn, context: js.Any): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly once
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledonce
@@ -16152,7 +16238,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledOnce(chainer: notDOTbeDOTcalledOnce): Chainable[Subject] = js.native
+  def should_notbecalledOnce(chainer: notDotbeDotcalledOnce): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly three times
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledthrice
@@ -16167,7 +16253,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledThrice(chainer: notDOTbeDOTcalledThrice): Chainable[Subject] = js.native
+  def should_notbecalledThrice(chainer: notDotbeDotcalledThrice): Chainable[Subject] = js.native
   /**
     * Assert spy was not called exactly twice
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledtwice
@@ -16182,7 +16268,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledTwice(chainer: notDOTbeDOTcalledTwice): Chainable[Subject] = js.native
+  def should_notbecalledTwice(chainer: notDotbeDotcalledTwice): Chainable[Subject] = js.native
   /**
     * Assert spy was not called at least once with the provided arguments and no others.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithexactlyarg1-arg2-
@@ -16197,7 +16283,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledWithExactly(chainer: notDOTbeDOTcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
+  def should_notbecalledWithExactly(chainer: notDotbeDotcalledWithExactly, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy was not called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycalledwithmatcharg1-arg2-
@@ -16212,7 +16298,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledWithMatch(chainer: notDOTbeDOTcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
+  def should_notbecalledWithMatch(chainer: notDotbeDotcalledWithMatch, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Assert spy/stub was not called the `new` operator.
     * Beware that this is inferred based on the value of the this object and the spy function’s prototype, so it may give false positives if you actively return the right kind of object.
@@ -16228,7 +16314,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecalledWithNew(chainer: notDOTbeDOTcalledWithNew): Chainable[Subject] = js.native
+  def should_notbecalledWithNew(chainer: notDotbeDotcalledWithNew): Chainable[Subject] = js.native
   // jquery-chai.not
   /**
     * Assert that at least one element of the selection is not checked, using `.is(':checked')`.
@@ -16246,7 +16332,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbechecked(chainer: notDOTbeDOTchecked): Chainable[Subject] = js.native
+  def should_notbechecked(chainer: notDotbeDotchecked): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -16263,7 +16349,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbecloseTo(chainer: notDOTbeDOTcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
+  def should_notbecloseTo(chainer: notDotbeDotcloseTo, value: Double, delta: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not disabled, using `.is(':disabled')`.
     * @example
@@ -16280,7 +16366,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbedisabled(chainer: notDOTbeDOTdisabled): Chainable[Subject] = js.native
+  def should_notbedisabled(chainer: notDotbeDotdisabled): Chainable[Subject] = js.native
   /**
     * When the target is a not string or array, .empty asserts that the target’s length property is strictly (===) equal to 0
     * @example
@@ -16298,7 +16384,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeempty(chainer: notDOTbeDOTempty): Chainable[Subject] = js.native
+  def should_notbeempty(chainer: notDotbeDotempty): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not enabled, using `.is(':enabled')`.
     * @example
@@ -16315,7 +16401,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeenabled(chainer: notDOTbeDOTenabled): Chainable[Subject] = js.native
+  def should_notbeenabled(chainer: notDotbeDotenabled): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to `false`.
     * @example
@@ -16332,7 +16418,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbefalse(chainer: notDOTbeDOTfalse): Chainable[Subject] = js.native
+  def should_notbefalse(chainer: notDotbeDotfalse): Chainable[Subject] = js.native
   /**
     * Assert that no element of the selection is focused.
     * @example
@@ -16349,7 +16435,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbefocused(chainer: notDOTbeDOTfocused): Chainable[Subject] = js.native
+  def should_notbefocused(chainer: notDotbeDotfocused): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16368,7 +16454,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbegreaterThan(chainer: notDOTbeDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def should_notbegreaterThan(chainer: notDotbeDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a date greater than the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16387,7 +16473,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbegt(chainer: notDOTbeDOTgt, value: Double): Chainable[Subject] = js.native
+  def should_notbegt(chainer: notDotbeDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a not number or a `n` date greater than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16406,7 +16492,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbegte(chainer: notDOTbeDOTgte, value: Double): Chainable[Subject] = js.native
+  def should_notbegte(chainer: notDotbeDotgte, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not hidden, using `.is(':hidden')`.
     * @example
@@ -16423,7 +16509,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbehidden(chainer: notDOTbeDOThidden): Chainable[Subject] = js.native
+  def should_notbehidden(chainer: notDotbeDothidden): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not an instance of the given `constructor`.
     * @example
@@ -16440,7 +16526,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeinstanceOf(chainer: notDOTbeDOTinstanceOf, value: js.Any): Chainable[Subject] = js.native
+  def should_notbeinstanceOf(chainer: notDotbeDotinstanceOf, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16459,7 +16545,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbelessThan(chainer: notDOTbeDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def should_notbelessThan(chainer: notDotbeDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16478,7 +16564,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbelt(chainer: notDOTbeDOTlt, value: Double): Chainable[Subject] = js.native
+  def should_notbelt(chainer: notDotbeDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16497,7 +16583,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbelte(chainer: notDOTbeDOTlte, value: Double): Chainable[Subject] = js.native
+  def should_notbelte(chainer: notDotbeDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not loosely (`==`) equal to `true`. However, it’s often best to assert that the target is strictly (`===`) or deeply equal to its expected value.
     * @example
@@ -16514,7 +16600,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeok(chainer: notDOTbeDOTok): Chainable[Subject] = js.native
+  def should_notbeok(chainer: notDotbeDotok): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not selected, using `.is(':selected')`.
     * @example
@@ -16531,7 +16617,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeselected(chainer: notDOTbeDOTselected): Chainable[Subject] = js.native
+  def should_notbeselected(chainer: notDotbeDotselected): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to true.
     * @example
@@ -16548,7 +16634,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbetrue(chainer: notDOTbeDOTtrue): Chainable[Subject] = js.native
+  def should_notbetrue(chainer: notDotbeDottrue): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to undefined.
     * @example
@@ -16565,7 +16651,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbeundefined(chainer: notDOTbeDOTundefined): Chainable[Subject] = js.native
+  def should_notbeundefined(chainer: notDotbeDotundefined): Chainable[Subject] = js.native
   /**
     * Assert that at least one element of the selection is not visible, using `.is(':visible')`.
     * @example
@@ -16582,7 +16668,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbevisible(chainer: notDOTbeDOTvisible): Chainable[Subject] = js.native
+  def should_notbevisible(chainer: notDotbeDotvisible): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or a date greater than or equal to the given number or date `start`, and less than or equal to the given number or date `finish` respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16600,7 +16686,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbewithin(chainer: notDOTbeDOTwithin, start: Double, end: Double): Chainable[Subject] = js.native
+  def should_notbewithin(chainer: notDotbeDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
     *
@@ -16610,7 +16696,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbewithin(chainer: notDOTbeDOTwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def should_notbewithin(chainer: notDotbeDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -16631,7 +16717,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notchange(chainer: notDOTchange, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
+  def should_notchange(chainer: notDotchange, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
   /**
     * When two arguments are provided, `.change` asserts that the value of the given object `subject`'s `prop` property is different before invoking the target function compared to afterward.
     * @example
@@ -16650,7 +16736,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notchange(chainer: notDOTchange, obj: js.Object, prop: String): Chainable[Subject] = js.native
+  def should_notchange(chainer: notDotchange, obj: js.Object, prop: String): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not contain the given text, using `:contains()`. If the object asserted against is not a jQuery object, or if `contain` is not called as a function, the original implementation will be called.
     * @example
@@ -16667,7 +16753,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notcontain(chainer: notDOTcontain, value: String): Chainable[Subject] = js.native
+  def should_notcontain(chainer: notDotcontain, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string val is a substring of the target.
     * @example
@@ -16685,7 +16771,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notcontain(chainer: notDOTcontain, value: js.Any): Chainable[Subject] = js.native
+  def should_notcontain(chainer: notDotcontain, value: js.Any): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection does not contain the given html, using `.html()`.
     * @example
@@ -16702,7 +16788,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notcontainhtml(chainer: notDOTcontainDOThtml, value: String): Chainable[Subject] = js.native
+  def should_notcontainhtml(chainer: notDotcontainDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection does not contain the given text, using `.text()`.
     * @example
@@ -16719,7 +16805,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notcontaintext(chainer: notDOTcontainDOTtext, value: String): Chainable[Subject] = js.native
+  def should_notcontaintext(chainer: notDotcontainDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not contain the given value, using `.val()`.
     * @example
@@ -16736,7 +16822,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notcontainvalue(chainer: notDOTcontainDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_notcontainvalue(chainer: notDotcontainDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.decrease` asserts that the given function `subject` does not returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand.
     * `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
@@ -16757,7 +16843,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notdecrease(chainer: notDOTdecrease, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
+  def should_notdecrease(chainer: notDotdecrease, fn: js.Function1[/* repeated */ js.Any, _]): Chainable[Subject] = js.native
   /**
     * When two arguments are provided, `.decrease` asserts that the value of the given object `subject`'s `prop` property is not lesser after invoking the target function compared to beforehand.
     * @example
@@ -16776,7 +16862,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notdecrease(chainer: notDOTdecrease, obj: js.Object, prop: String): Chainable[Subject] = js.native
+  def should_notdecrease(chainer: notDotdecrease, obj: js.Object, prop: String): Chainable[Subject] = js.native
   /**
     * Causes all `.equal`, `.include`, `.members`, `.keys`, and `.property` assertions that follow in the chain to not use deep equality instead of strict (`===`) equality. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -16793,7 +16879,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notdeepequal(chainer: notDOTdeepDOTequal, value: Subject): Chainable[Subject] = js.native
+  def should_notdeepequal(chainer: notDotdeepDotequal, value: Subject): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to the given `val`.
     * @example
@@ -16811,7 +16897,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_noteq(chainer: notDOTeq, value: js.Any): Chainable[Subject] = js.native
+  def should_noteq(chainer: notDoteq, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not deeply equal to the given `obj`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -16828,7 +16914,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_noteql(chainer: notDOTeql, value: js.Any): Chainable[Subject] = js.native
+  def should_noteql(chainer: notDoteql, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to the given `val`.
     * @example
@@ -16845,7 +16931,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notequal(chainer: notDOTequal, value: js.Any): Chainable[Subject] = js.native
+  def should_notequal(chainer: notDotequal, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not strictly (`===`) equal to either `null` or `undefined`. However, it’s often best to assert that the target is equal to its expected value.
     * @example
@@ -16862,7 +16948,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notexist(chainer: notDOTexist): Chainable[Subject] = js.native
+  def should_notexist(chainer: notDotexist): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to not require that the target have all of the given keys. This is the opposite of `.any`, which only requires that the target have at least one of the given keys.
     * @example
@@ -16879,7 +16965,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveallkeys(chainer: notDOThaveDOTallDOTkeys, value: String*): Chainable[Subject] = js.native
+  def should_nothaveallkeys(chainer: notDothaveDotallDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert spy did not always throw an exception.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysthrew
@@ -16894,13 +16980,13 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown): Chainable[Subject] = js.native
+  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: String): Chainable[Subject] = js.native
+  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: Error): Chainable[Subject] = js.native
+  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavealwaysthrown(chainer: notDOThaveDOTalwaysDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target not have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -16917,7 +17003,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveanykeys(chainer: notDOThaveDOTanyDOTkeys, value: String*): Chainable[Subject] = js.native
+  def should_nothaveanykeys(chainer: notDothaveDotanyDotkeys, value: String*): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -16935,9 +17021,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveattr(chainer: notDOThaveDOTattr, value: String): Chainable[Subject] = js.native
+  def should_nothaveattr(chainer: notDothaveDotattr, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothaveattr(chainer: notDOThaveDOTattr, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_nothaveattr(chainer: notDothaveDotattr, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert not the number of calls.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spycallcount
@@ -16952,7 +17038,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavecallCount(chainer: notDOThaveDOTcallCount, value: Double): Chainable[Subject] = js.native
+  def should_nothavecallCount(chainer: notDothaveDotcallCount, value: Double): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given attribute, using `.attr()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -16969,7 +17055,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveclass(chainer: notDOThaveDOTclass, value: String): Chainable[Subject] = js.native
+  def should_nothaveclass(chainer: notDothaveDotclass, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given CSS property, using `.css()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -16986,9 +17072,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavecss(chainer: notDOThaveDOTcss, value: String): Chainable[Subject] = js.native
+  def should_nothavecss(chainer: notDothaveDotcss, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavecss(chainer: notDOThaveDOTcss, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_nothavecss(chainer: notDothaveDotcss, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given data value, using `.data()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -17005,9 +17091,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavedata(chainer: notDOThaveDOTdata, value: String): Chainable[Subject] = js.native
+  def should_nothavedata(chainer: notDothaveDotdata, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavedata(chainer: notDOThaveDOTdata, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_nothavedata(chainer: notDothaveDotdata, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target does not have a property with the given key `name`. See the `deep-eql` project page for info on the deep equality algorithm: https://github.com/chaijs/deep-eql.
     * @example
@@ -17024,7 +17110,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavedeepproperty(chainer: notDOThaveDOTdeepDOTproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
+  def should_nothavedeepproperty(chainer: notDothaveDotdeepDotproperty, value: String, obj: js.Object): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not contain at least one element which has a descendant matching the given selector, using `.has()`.
     * @example
@@ -17041,7 +17127,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavedescendants(chainer: notDOThaveDOTdescendants, selector: String): Chainable[Subject] = js.native
+  def should_nothavedescendants(chainer: notDothaveDotdescendants, selector: String): Chainable[Subject] = js.native
   /**
     * Assert that no element of the selection is focused.
     * @example
@@ -17058,7 +17144,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavefocus(chainer: notDOThaveDOTfocus): Chainable[Subject] = js.native
+  def should_nothavefocus(chainer: notDothaveDotfocus): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection is not equal to the given html, using `.html()`.
     * @example
@@ -17075,7 +17161,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavehtml(chainer: notDOThaveDOThtml, value: String): Chainable[Subject] = js.native
+  def should_nothavehtml(chainer: notDothaveDothtml, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given id, using `.attr('id')`.
     * @example
@@ -17092,9 +17178,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveid(chainer: notDOThaveDOTid, value: String): Chainable[Subject] = js.native
+  def should_nothaveid(chainer: notDothaveDotid, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothaveid(chainer: notDOThaveDOTid, value: String, `match`: String): Chainable[Subject] = js.native
+  def should_nothaveid(chainer: notDothaveDotid, value: String, `match`: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not equal to the given number `n`.
     * @example
@@ -17113,7 +17199,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelength(chainer: notDOThaveDOTlength, value: Double): Chainable[Subject] = js.native
+  def should_nothavelength(chainer: notDothaveDotlength, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not greater than to the given number `n`.
     * @example
@@ -17131,7 +17217,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelengthgreaterThan(chainer: notDOThaveDOTlengthDOTgreaterThan, value: Double): Chainable[Subject] = js.native
+  def should_nothavelengthgreaterThan(chainer: notDothaveDotlengthDotgreaterThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not greater than to the given number `n`.
     * @example
@@ -17149,7 +17235,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelengthgt(chainer: notDOThaveDOTlengthDOTgt, value: Double): Chainable[Subject] = js.native
+  def should_nothavelengthgt(chainer: notDothaveDotlengthDotgt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is less than to the given number `n`.
     * @example
@@ -17167,7 +17253,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelengthlessThan(chainer: notDOThaveDOTlengthDOTlessThan, value: Double): Chainable[Subject] = js.native
+  def should_nothavelengthlessThan(chainer: notDothaveDotlengthDotlessThan, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not less than to the given number `n`.
     * @example
@@ -17185,7 +17271,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelengthlt(chainer: notDOThaveDOTlengthDOTlt, value: Double): Chainable[Subject] = js.native
+  def should_nothavelengthlt(chainer: notDothaveDotlengthDotlt, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target’s `length` property is not less than or equal to the given number `n`.
     * @example
@@ -17203,7 +17289,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavelengthlte(chainer: notDOThaveDOTlengthDOTlte, value: Double): Chainable[Subject] = js.native
+  def should_nothavelengthlte(chainer: notDothaveDotlengthDotlte, value: Double): Chainable[Subject] = js.native
   /**
     * Asserts that the target array does not have the same members as the given array `set`.
     * @example
@@ -17220,7 +17306,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavemembers(chainer: notDOThaveDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def should_nothavemembers(chainer: notDothaveDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Asserts that the target array does not have the same members as the given array where order matters.
     * @example
@@ -17237,7 +17323,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveorderedmembers(chainer: notDOThaveDOTorderedDOTmembers, values: js.Array[_]): Chainable[Subject] = js.native
+  def should_nothaveorderedmembers(chainer: notDothaveDotorderedDotmembers, values: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Causes all `.property` and `.include` assertions that follow in the chain to ignore inherited properties.
     * @example
@@ -17255,7 +17341,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveownProperty(chainer: notDOThaveDOTownProperty, property: String): Chainable[Subject] = js.native
+  def should_nothaveownProperty(chainer: notDothaveDotownProperty, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given property, using `.prop()`. Optionally, assert a particular value as well. The return value is available for chaining.
     * @example
@@ -17273,9 +17359,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveprop(chainer: notDOThaveDOTprop, value: String): Chainable[Subject] = js.native
+  def should_nothaveprop(chainer: notDothaveDotprop, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothaveprop(chainer: notDOThaveDOTprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
+  def should_nothaveprop(chainer: notDothaveDotprop, value: String, `match`: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target has a property with the given key `name`.
     * @example
@@ -17293,9 +17379,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothaveproperty(chainer: notDOThaveDOTproperty, property: String): Chainable[Subject] = js.native
+  def should_nothaveproperty(chainer: notDothaveDotproperty, property: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothaveproperty(chainer: notDOThaveDOTproperty, property: String, value: js.Any): Chainable[Subject] = js.native
+  def should_nothaveproperty(chainer: notDothaveDotproperty, property: String, value: js.Any): Chainable[Subject] = js.native
   /**
     * Asserts that the target string does not contains the given substring `str`.
     * @example
@@ -17312,9 +17398,9 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavestring(chainer: notDOThaveDOTstring, `match`: String): Chainable[Subject] = js.native
+  def should_nothavestring(chainer: notDothaveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavestring(chainer: notDOThaveDOTstring, `match`: RegExp): Chainable[Subject] = js.native
+  def should_nothavestring(chainer: notDothaveDotstring, `match`: RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is not equal to the given text, using `.text()`.
     * @example
@@ -17331,7 +17417,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavetext(chainer: notDOThaveDOTtext, value: String): Chainable[Subject] = js.native
+  def should_nothavetext(chainer: notDothaveDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy did not throw an exception at least once.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spythrew
@@ -17346,13 +17432,13 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavethrown(chainer: notDOThaveDOTthrown): Chainable[Subject] = js.native
+  def should_nothavethrown(chainer: notDothaveDotthrown): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavethrown(chainer: notDOThaveDOTthrown, value: String): Chainable[Subject] = js.native
+  def should_nothavethrown(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavethrown(chainer: notDOThaveDOTthrown, value: Error): Chainable[Subject] = js.native
+  def should_nothavethrown(chainer: notDothaveDotthrown, value: Error): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavethrown(chainer: notDOThaveDOTthrown, value: ErrorConstructor): Chainable[Subject] = js.native
+  def should_nothavethrown(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given value, using `.val()`.
     * @example
@@ -17369,7 +17455,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_nothavevalue(chainer: notDOThaveDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_nothavevalue(chainer: notDothaveDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is not a substring of the target.
     * @example
@@ -17386,7 +17472,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notinclude(chainer: notDOTinclude, value: js.Any): Chainable[Subject] = js.native
+  def should_notinclude(chainer: notDotinclude, value: js.Any): Chainable[Subject] = js.native
   /**
     * Assert that the html of the first element of the selection does not contain the given html, using `.html()`.
     * @example
@@ -17403,7 +17489,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notincludehtml(chainer: notDOTincludeDOThtml, value: String): Chainable[Subject] = js.native
+  def should_notincludehtml(chainer: notDotincludeDothtml, value: String): Chainable[Subject] = js.native
   /**
     * When the target is a string, `.include` asserts that the given string `val` is not a substring of the target.
     * @example
@@ -17420,7 +17506,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notincludemembers(chainer: notDOTincludeDOTmembers, value: js.Array[_]): Chainable[Subject] = js.native
+  def should_notincludemembers(chainer: notDotincludeDotmembers, value: js.Array[_]): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection does not contain the given text, using `.text()`.
     * @example
@@ -17437,7 +17523,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notincludetext(chainer: notDOTincludeDOTtext, value: String): Chainable[Subject] = js.native
+  def should_notincludetext(chainer: notDotincludeDottext, value: String): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not contain the given value, using `.val()`.
     * @example
@@ -17454,7 +17540,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notincludevalue(chainer: notDOTincludeDOTvalue, value: String): Chainable[Subject] = js.native
+  def should_notincludevalue(chainer: notDotincludeDotvalue, value: String): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s
     * invoked after invoking the target function compared to when it’s invoked beforehand.
@@ -17477,7 +17563,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notincrease(chainer: notDOTincrease, value: js.Object, property: String): Chainable[Subject] = js.native
+  def should_notincrease(chainer: notDotincrease, value: js.Object, property: String): Chainable[Subject] = js.native
   /**
     * Assert that the selection does not match a given selector, using `.is()`. Note that this overrides the built-in chai assertion. If the object asserted against is not a jQuery object, the original implementation will be called.
     * @example
@@ -17494,7 +17580,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notmatch(chainer: notDOTmatch, value: String): Chainable[Subject] = js.native
+  def should_notmatch(chainer: notDotmatch, value: String): Chainable[Subject] = js.native
   /**
     * Asserts that the target does not match the given regular expression `re`.
     * @example
@@ -17511,7 +17597,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notmatch(chainer: notDOTmatch, value: RegExp): Chainable[Subject] = js.native
+  def should_notmatch(chainer: notDotmatch, value: RegExp): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target does not have a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -17531,7 +17617,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notrespondTo(chainer: notDOTrespondTo, value: String): Chainable[Subject] = js.native
+  def should_notrespondTo(chainer: notDotrespondTo, value: String): Chainable[Subject] = js.native
   /**
     * Assert spy did not return the provided value at least once. (see [matchers](http://sinonjs.org/releases/v4.1.3/spies/#matchers))
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyreturnedobj
@@ -17546,7 +17632,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notreturned(chainer: notDOTreturned, value: js.Any): Chainable[Subject] = js.native
+  def should_notreturned(chainer: notDotreturned, value: js.Any): Chainable[Subject] = js.native
   /**
     * Invokes the given `matcher` function with the target being passed as the first argument, and asserts that the value returned is falsy.
     * @example
@@ -17563,7 +17649,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notsatisfy(chainer: notDOTsatisfy, fn: js.Function1[/* val */ js.Any, Boolean]): Chainable[Subject] = js.native
+  def should_notsatisfy(chainer: notDotsatisfy, fn: js.Function1[/* val */ js.Any, Boolean]): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target has a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -17996,9 +18082,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("siblings")
   def siblings_noscript(selector: noscript, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLElement]] = js.native
   @JSName("siblings")
-  def siblings_object(selector: `object`): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def siblings_object(selector: object_): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("siblings")
-  def siblings_object(selector: `object`, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
+  def siblings_object(selector: object_, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[HTMLObjectElement]] = js.native
   @JSName("siblings")
   def siblings_ol(selector: ol): Chainable[JQuery[HTMLOListElement]] = js.native
   @JSName("siblings")
@@ -20684,6 +20770,22 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/within
     */
   def within(options: Partial[Loggable], fn: js.Function1[/* currentSubject */ Subject, Unit]): Chainable[Subject] = js.native
+  def wrap[E /* <: Node */](element: JQuery[E]): Chainable[JQuery[E]] = js.native
+  def wrap[E /* <: Node */](element: JQuery[E], options: Partial[Loggable with Timeoutable]): Chainable[JQuery[E]] = js.native
+  /**
+    * Yields whatever is passed into `.wrap()` to the next command in the Cypress chain.
+    *
+    * @see https://on.cypress.io/wrap
+    * @example
+    ```
+    // Make assertions about object
+    cy.wrap({ amount: 10 })
+    .should('have.property', 'amount')
+    .and('eq', 10)
+    ```
+    */
+  def wrap[S](`object`: S): Chainable[S] = js.native
+  def wrap[S](`object`: S, options: Partial[Loggable with Timeoutable]): Chainable[S] = js.native
   // inconsistent argument order
   /**
     * Yield the element passed into `.wrap()`.
@@ -20698,10 +20800,10 @@ trait Chainable[Subject] extends js.Object {
     })
     ```
     */
-  def wrap[E /* <: Node */](element: E): Chainable[JQuery[E]] = js.native
-  def wrap[E /* <: Node */](element: E, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[E]] = js.native
-  def wrap[E /* <: Node */](element: JQuery[E]): Chainable[JQuery[E]] = js.native
-  def wrap[E /* <: Node */](element: JQuery[E], options: Partial[Loggable with Timeoutable]): Chainable[JQuery[E]] = js.native
+  @JSName("wrap")
+  def wrap_E_Node[E /* <: Node */](element: E): Chainable[JQuery[E]] = js.native
+  @JSName("wrap")
+  def wrap_E_Node[E /* <: Node */](element: E, options: Partial[Loggable with Timeoutable]): Chainable[JQuery[E]] = js.native
   /**
     * Yield the element passed into `.wrap()` to the next command in the Cypress chain.
     *
@@ -20717,22 +20819,6 @@ trait Chainable[Subject] extends js.Object {
   def wrap_F_PromiseSS[F /* <: js.Promise[S] */, S](promise: F): Chainable[S] = js.native
   @JSName("wrap")
   def wrap_F_PromiseSS[F /* <: js.Promise[S] */, S](promise: F, options: Partial[Loggable with Timeoutable]): Chainable[S] = js.native
-  /**
-    * Yields whatever is passed into `.wrap()` to the next command in the Cypress chain.
-    *
-    * @see https://on.cypress.io/wrap
-    * @example
-    ```
-    // Make assertions about object
-    cy.wrap({ amount: 10 })
-    .should('have.property', 'amount')
-    .and('eq', 10)
-    ```
-    */
-  @JSName("wrap")
-  def wrap_S[S](`object`: S): Chainable[S] = js.native
-  @JSName("wrap")
-  def wrap_S[S](`object`: S, options: Partial[Loggable with Timeoutable]): Chainable[S] = js.native
   /**
     * Write to a file with the specified encoding and contents.
     *

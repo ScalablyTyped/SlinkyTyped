@@ -10,9 +10,9 @@ Generates a service worker to cache your local App Shell resources.
 | ------------------ | :-------------: |
 | Full name          | sw-precache |
 | Keywords           | caching, offline, precaching, service-worker, serviceworker, appshell, pwa |
-| # releases         | 3 |
+| # releases         | 2 |
 | # dependents       | 56 |
-| # downloads        | 34487759 |
+| # downloads        | 33795031 |
 | # stars            | 19 |
 
 ## Links

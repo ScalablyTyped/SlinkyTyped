@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object InferencePriority extends js.Object {
   @js.native
   sealed trait ReturnType extends InferencePriority
   
-  /* 128 */ val AlwaysStrict: typingsSlinky.typescript.typescriptMod.InferencePriority.AlwaysStrict with Double = js.native
-  /* -1 */ val Circularity: typingsSlinky.typescript.typescriptMod.InferencePriority.Circularity with Double = js.native
-  /* 2 */ val HomomorphicMappedType: typingsSlinky.typescript.typescriptMod.InferencePriority.HomomorphicMappedType with Double = js.native
-  /* 32 */ val LiteralKeyof: typingsSlinky.typescript.typescriptMod.InferencePriority.LiteralKeyof with Double = js.native
-  /* 8 */ val MappedTypeConstraint: typingsSlinky.typescript.typescriptMod.InferencePriority.MappedTypeConstraint with Double = js.native
-  /* 256 */ val MaxValue: typingsSlinky.typescript.typescriptMod.InferencePriority.MaxValue with Double = js.native
-  /* 1 */ val NakedTypeVariable: typingsSlinky.typescript.typescriptMod.InferencePriority.NakedTypeVariable with Double = js.native
-  /* 64 */ val NoConstraints: typingsSlinky.typescript.typescriptMod.InferencePriority.NoConstraints with Double = js.native
-  /* 4 */ val PartialHomomorphicMappedType: typingsSlinky.typescript.typescriptMod.InferencePriority.PartialHomomorphicMappedType with Double = js.native
-  /* 56 */ val PriorityImpliesCombination: typingsSlinky.typescript.typescriptMod.InferencePriority.PriorityImpliesCombination with Double = js.native
-  /* 16 */ val ReturnType: typingsSlinky.typescript.typescriptMod.InferencePriority.ReturnType with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InferencePriority with Double] = js.native
+  /* 128 */ @js.native
+  object AlwaysStrict extends TopLevel[AlwaysStrict with Double]
+  
+  /* -1 */ @js.native
+  object Circularity extends TopLevel[Circularity with Double]
+  
+  /* 2 */ @js.native
+  object HomomorphicMappedType extends TopLevel[HomomorphicMappedType with Double]
+  
+  /* 32 */ @js.native
+  object LiteralKeyof extends TopLevel[LiteralKeyof with Double]
+  
+  /* 8 */ @js.native
+  object MappedTypeConstraint extends TopLevel[MappedTypeConstraint with Double]
+  
+  /* 256 */ @js.native
+  object MaxValue extends TopLevel[MaxValue with Double]
+  
+  /* 1 */ @js.native
+  object NakedTypeVariable extends TopLevel[NakedTypeVariable with Double]
+  
+  /* 64 */ @js.native
+  object NoConstraints extends TopLevel[NoConstraints with Double]
+  
+  /* 4 */ @js.native
+  object PartialHomomorphicMappedType extends TopLevel[PartialHomomorphicMappedType with Double]
+  
+  /* 56 */ @js.native
+  object PriorityImpliesCombination extends TopLevel[PriorityImpliesCombination with Double]
+  
+  /* 16 */ @js.native
+  object ReturnType extends TopLevel[ReturnType with Double]
+  
 }
 

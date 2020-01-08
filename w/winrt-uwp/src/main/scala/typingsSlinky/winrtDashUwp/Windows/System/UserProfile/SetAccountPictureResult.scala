@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.UserProfile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object SetAccountPictureResult extends js.Object {
   @js.native
   sealed trait videoFrameSizeError extends SetAccountPictureResult
   
-  /* 1 */ val changeDisabled: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.changeDisabled with Double = js.native
-  /* 5 */ val failure: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.failure with Double = js.native
-  /* 4 */ val fileSizeError: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.fileSizeError with Double = js.native
-  /* 2 */ val largeOrDynamicError: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.largeOrDynamicError with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.success with Double = js.native
-  /* 3 */ val videoFrameSizeError: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.SetAccountPictureResult.videoFrameSizeError with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SetAccountPictureResult with Double] = js.native
+  /* 1 */ @js.native
+  object changeDisabled extends TopLevel[changeDisabled with Double]
+  
+  /* 5 */ @js.native
+  object failure extends TopLevel[failure with Double]
+  
+  /* 4 */ @js.native
+  object fileSizeError extends TopLevel[fileSizeError with Double]
+  
+  /* 2 */ @js.native
+  object largeOrDynamicError extends TopLevel[largeOrDynamicError with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 3 */ @js.native
+  object videoFrameSizeError extends TopLevel[videoFrameSizeError with Double]
+  
 }
 

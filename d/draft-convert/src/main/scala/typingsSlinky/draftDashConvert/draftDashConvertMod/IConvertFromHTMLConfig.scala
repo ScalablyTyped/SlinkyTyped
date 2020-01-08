@@ -3,7 +3,7 @@ package typingsSlinky.draftDashConvert.draftDashConvertMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.draftDashConvert.Anon_Data
 import typingsSlinky.draftDashConvert.Anon_Entity
-import typingsSlinky.draftDashConvert.draftDashConvertNumbers.`false`
+import typingsSlinky.draftDashConvert.draftDashConvertBooleans.`false`
 import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.Constants.DraftBlockType
 import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.Constants.DraftInlineStyleType
 import scala.scalajs.js

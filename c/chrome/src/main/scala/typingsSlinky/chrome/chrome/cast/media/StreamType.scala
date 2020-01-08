@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.chrome.cast.media
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object StreamType extends js.Object {
   @js.native
   sealed trait OTHER extends StreamType
   
-  /* "BUFFERED" */ val BUFFERED: typingsSlinky.chrome.chrome.cast.media.StreamType.BUFFERED with String = js.native
-  /* "LIVE" */ val LIVE: typingsSlinky.chrome.chrome.cast.media.StreamType.LIVE with String = js.native
-  /* "OTHER" */ val OTHER: typingsSlinky.chrome.chrome.cast.media.StreamType.OTHER with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[StreamType with String] = js.native
+  /* "BUFFERED" */ @js.native
+  object BUFFERED extends TopLevel[BUFFERED with String]
+  
+  /* "LIVE" */ @js.native
+  object LIVE extends TopLevel[LIVE with String]
+  
+  /* "OTHER" */ @js.native
+  object OTHER extends TopLevel[OTHER with String]
+  
 }
 

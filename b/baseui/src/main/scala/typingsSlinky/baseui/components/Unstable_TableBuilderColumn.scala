@@ -42,6 +42,12 @@ object Unstable_TableBuilderColumn
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.baseui.tableDashSemanticMod.Unstable_TableBuilderColumn[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.baseui.tableDashSemanticMod.Unstable_TableBuilderColumn[js.Any]
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.baseui.tableDashSemanticMod.Unstable_TableBuilderColumn[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TableBuilderColumnProps[js.Any]
 }
 

@@ -6,14 +6,14 @@ import typingsSlinky.reactDashVirtualized.distEsGridMod.GridCellRangeRenderer
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndices
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndicesGetter
 import typingsSlinky.reactDashVirtualized.distEsGridMod.OverscanIndicesGetterParams
+import typingsSlinky.reactDashVirtualized.reactDashVirtualizedBooleans.`false`
+import typingsSlinky.reactDashVirtualized.reactDashVirtualizedBooleans.`true`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`-1`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`0`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`100`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`10`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`150`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`30`
-import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`false`
-import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`true`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.auto
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.grid
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.rowgroup

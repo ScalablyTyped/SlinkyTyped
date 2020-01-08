@@ -1,6 +1,6 @@
 package typingsSlinky.jsforce.describeDashResultMod
 
-import typingsSlinky.jsforce.jsforceNumbers.`true`
+import typingsSlinky.jsforce.jsforceBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

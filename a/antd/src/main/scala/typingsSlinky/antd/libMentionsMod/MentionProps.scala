@@ -6,7 +6,7 @@ import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcDashMentions.libMentionsMod.MentionsProps
 import typingsSlinky.rcDashMentions.libMentionsMod.Placement
-import typingsSlinky.rcDashMentions.rcDashMentionsNumbers.`false`
+import typingsSlinky.rcDashMentions.rcDashMentionsBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

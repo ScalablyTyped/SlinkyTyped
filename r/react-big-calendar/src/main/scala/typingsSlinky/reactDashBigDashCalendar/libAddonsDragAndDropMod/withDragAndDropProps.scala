@@ -7,9 +7,9 @@ import typingsSlinky.react.reactMod.HTMLAttributes
 import typingsSlinky.reactDashBigDashCalendar.Anon_ActionDOWN
 import typingsSlinky.reactDashBigDashCalendar.Anon_AllDay
 import typingsSlinky.reactDashBigDashCalendar.Anon_AllDayEnd
+import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarBooleans.`false`
+import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarBooleans.`true`
 import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarMod.Components
-import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarNumbers.`false`
-import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarNumbers.`true`
 import typingsSlinky.reactDashBigDashCalendar.reactDashBigDashCalendarStrings.ignoreEvents
 import scala.scalajs.js
 import scala.scalajs.js.`|`

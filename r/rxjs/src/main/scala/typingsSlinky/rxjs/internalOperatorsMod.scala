@@ -17,7 +17,7 @@ import typingsSlinky.rxjs.internalTypesMod.PartialObserver
 import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
 import typingsSlinky.rxjs.internalTypesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.internalTypesMod.UnaryFunction
-import typingsSlinky.rxjs.rxjsNumbers.`false`
+import typingsSlinky.rxjs.rxjsBooleans.`false`
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -155,9 +155,9 @@ object internalOperatorsMod extends js.Object {
     v6: ObservableInput[T6],
     scheduler: SchedulerLike
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6] = js.native
-  def concatAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def concatAll[R](): OperatorFunction[_, R] = js.native
   @JSName("concatAll")
-  def concatAll_R[R](): OperatorFunction[_, R] = js.native
+  def concatAll_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
   def concatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def concatMap[T, R, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -227,7 +227,7 @@ object internalOperatorsMod extends js.Object {
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
     thisArg: js.Any
   ): OperatorFunction[T, Boolean] = js.native
-  def exhaust[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def exhaust[R](): OperatorFunction[_, R] = js.native
   def exhaustMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def exhaustMap[T, I, R](
     project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[I]],
@@ -240,7 +240,7 @@ object internalOperatorsMod extends js.Object {
     ]
   ): OperatorFunction[T, R] = js.native
   @JSName("exhaust")
-  def exhaust_R[R](): OperatorFunction[_, R] = js.native
+  def exhaust_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]]): MonoTypeOperatorFunction[T] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]], concurrent: Double): MonoTypeOperatorFunction[T] = js.native
   def expand[T](
@@ -285,21 +285,21 @@ object internalOperatorsMod extends js.Object {
     thisArg: js.Any
   ): OperatorFunction[T, js.UndefOr[S]] = js.native
   def first[T, D](): OperatorFunction[T, T | D] = js.native
-  def first[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  def first[T, D](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
-    defaultValue: D
-  ): OperatorFunction[T, T | D] = js.native
-  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TS_T[T, S /* <: T */](
+  def first[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
   ): OperatorFunction[T, S] = js.native
-  @JSName("first")
-  def first_TS_T[T, S /* <: T */](
+  def first[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
     defaultValue: S
   ): OperatorFunction[T, S] = js.native
+  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TD[T, D](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
+    defaultValue: D
+  ): OperatorFunction[T, T | D] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](
@@ -351,21 +351,21 @@ object internalOperatorsMod extends js.Object {
   def ignoreElements(): OperatorFunction[_, scala.Nothing] = js.native
   def isEmpty[T](): OperatorFunction[T, Boolean] = js.native
   def last[T, D](): OperatorFunction[T, T | D] = js.native
-  def last[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  def last[T, D](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
-    defaultValue: D
-  ): OperatorFunction[T, T | D] = js.native
-  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TS_T[T, S /* <: T */](
+  def last[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
   ): OperatorFunction[T, S] = js.native
-  @JSName("last")
-  def last_TS_T[T, S /* <: T */](
+  def last[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
     defaultValue: S
   ): OperatorFunction[T, S] = js.native
+  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TD[T, D](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
+    defaultValue: D
+  ): OperatorFunction[T, T | D] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R], thisArg: js.Any): OperatorFunction[T, R] = js.native
   def mapTo[T, R](value: R): OperatorFunction[T, R] = js.native
@@ -661,9 +661,9 @@ object internalOperatorsMod extends js.Object {
   def startWith[T, D, E, F, G, H, I](v1: D, v2: E, v3: F, v4: G, v5: H, v6: I, scheduler: SchedulerLike): OperatorFunction[T, T | D | E | F | G | H | I] = js.native
   def subscribeOn[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def subscribeOn[T](scheduler: SchedulerLike, delay: Double): MonoTypeOperatorFunction[T] = js.native
-  def switchAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def switchAll[R](): OperatorFunction[_, R] = js.native
   @JSName("switchAll")
-  def switchAll_R[R](): OperatorFunction[_, R] = js.native
+  def switchAll_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
   def switchMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def switchMap[T, R, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],

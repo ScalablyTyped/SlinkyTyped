@@ -93,49 +93,37 @@ object Deque extends js.Object {
     ArrayIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
-  /**
-    * @hidden
-    */
-  val MAGNIFIER: js.Any = js.native
-  /**
-    * @hidden
-    */
-  val MIN_CAPACITY: js.Any = js.native
-  /**
-    * @hidden
-    */
-  val ROW_SIZE: js.Any = js.native
   val ReverseIterator: Instantiable0[
     ArrayReverseIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
@@ -143,18 +131,18 @@ object Deque extends js.Object {
     ArrayIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
@@ -162,21 +150,33 @@ object Deque extends js.Object {
     ArrayReverseIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def MAGNIFIER(): js.Any = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def MIN_CAPACITY(): js.Any = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def ROW_SIZE(): js.Any = js.native
 }
 
 /* static members */
@@ -187,49 +187,37 @@ object deque extends js.Object {
     ArrayIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
-  /**
-    * @hidden
-    */
-  val MAGNIFIER: js.Any = js.native
-  /**
-    * @hidden
-    */
-  val MIN_CAPACITY: js.Any = js.native
-  /**
-    * @hidden
-    */
-  val ROW_SIZE: js.Any = js.native
   val ReverseIterator: Instantiable0[
     ArrayReverseIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
@@ -237,18 +225,18 @@ object deque extends js.Object {
     ArrayIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
@@ -256,20 +244,32 @@ object deque extends js.Object {
     ArrayReverseIterator[
       js.Object, 
       ArrayContainer[
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
         ArrayIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
         ArrayReverseIterator[
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any
+          /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+          /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any
         ], 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ]
     ]
   ] = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def MAGNIFIER(): js.Any = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def MIN_CAPACITY(): js.Any = js.native
+  /**
+    * @hidden
+    */
+  /* private */ def ROW_SIZE(): js.Any = js.native
 }
 

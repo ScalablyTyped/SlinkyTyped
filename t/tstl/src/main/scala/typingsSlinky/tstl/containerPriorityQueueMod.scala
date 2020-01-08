@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerAdaptorContainerMod.AdaptorContainer
-import typingsSlinky.tstl.containerPriorityQueueMod.PriorityQueue
 import typingsSlinky.tstl.containerVectorMod.Vector
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
 import scala.scalajs.js

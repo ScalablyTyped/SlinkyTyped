@@ -1,7 +1,6 @@
 package typingsSlinky.forgeDashDi
 
 import typingsSlinky.forgeDashDi.distFrameworkConstructorMod.Constructor
-import typingsSlinky.forgeDashDi.distResolversTypeResolverMod.TypeResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

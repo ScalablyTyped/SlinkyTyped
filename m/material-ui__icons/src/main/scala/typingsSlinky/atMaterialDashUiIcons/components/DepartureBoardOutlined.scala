@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DepartureBoardOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object DepartureBoardOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/DepartureBoardOutlined", "default")
   @js.native
   object componentImport extends js.Object

@@ -14,6 +14,7 @@ import typingsSlinky.request.requestMod.Headers
 import typingsSlinky.request.requestMod.HttpArchiveRequest
 import typingsSlinky.request.requestMod.Multipart
 import typingsSlinky.request.requestMod.OAuthOptions
+import typingsSlinky.request.requestMod.PoolOptions
 import typingsSlinky.request.requestMod.RequestPart
 import typingsSlinky.request.requestMod.Response
 import typingsSlinky.request.requestNumbers.`4`
@@ -73,7 +74,7 @@ object RequestPromiseOptions {
     multipart: js.Array[RequestPart] | Multipart = null,
     oauth: OAuthOptions = null,
     passphrase: String = null,
-    pool: js.Any = null,
+    pool: PoolOptions = null,
     port: Int | Double = null,
     postambleCRLF: js.UndefOr[Boolean] = js.undefined,
     preambleCRLF: js.UndefOr[Boolean] = js.undefined,

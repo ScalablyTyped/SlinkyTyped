@@ -3,8 +3,6 @@ package typingsSlinky.tstl
 import typingsSlinky.tstl.baseContainerArrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayIteratorBase
 import typingsSlinky.tstl.baseIteratorArrayIteratorBaseMod.ArrayReverseIteratorBase
-import typingsSlinky.tstl.baseIteratorArrayIteratorMod.ArrayIterator
-import typingsSlinky.tstl.baseIteratorArrayIteratorMod.ArrayReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.promiseDashFtpDashCommon
 
-import typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -63,15 +63,29 @@ object promiseDashFtpDashCommonMod extends js.Object {
     @js.native
     sealed trait RECONNECTING extends STATUSES
     
-    /* "connected" */ val CONNECTED: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.CONNECTED with String = js.native
-    /* "connecting" */ val CONNECTING: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.CONNECTING with String = js.native
-    /* "disconnected" */ val DISCONNECTED: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.DISCONNECTED with String = js.native
-    /* "disconnecting" */ val DISCONNECTING: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.DISCONNECTING with String = js.native
-    /* "logging out" */ val LOGGING_OUT: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.LOGGING_OUT with String = js.native
-    /* "not yet connected" */ val NOT_YET_CONNECTED: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.NOT_YET_CONNECTED with String = js.native
-    /* "reconnecting" */ val RECONNECTING: typingsSlinky.promiseDashFtpDashCommon.promiseDashFtpDashCommonMod.STATUSES.RECONNECTING with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[STATUSES with String] = js.native
+    /* "connected" */ @js.native
+    object CONNECTED extends TopLevel[CONNECTED with String]
+    
+    /* "connecting" */ @js.native
+    object CONNECTING extends TopLevel[CONNECTING with String]
+    
+    /* "disconnected" */ @js.native
+    object DISCONNECTED extends TopLevel[DISCONNECTED with String]
+    
+    /* "disconnecting" */ @js.native
+    object DISCONNECTING extends TopLevel[DISCONNECTING with String]
+    
+    /* "logging out" */ @js.native
+    object LOGGING_OUT extends TopLevel[LOGGING_OUT with String]
+    
+    /* "not yet connected" */ @js.native
+    object NOT_YET_CONNECTED extends TopLevel[NOT_YET_CONNECTED with String]
+    
+    /* "reconnecting" */ @js.native
+    object RECONNECTING extends TopLevel[RECONNECTING with String]
+    
   }
   
 }

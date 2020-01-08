@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object ExtensionPolicyFlags extends js.Object {
   @js.native
   sealed trait Released extends ExtensionPolicyFlags
   
-  /* 31 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.All with Double = js.native
-  /* 16 */ val FirstParty: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.FirstParty with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.None with Double = js.native
-  /* 4 */ val Preview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.Preview with Double = js.native
-  /* 1 */ val Private: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.Private with Double = js.native
-  /* 2 */ val Public: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.Public with Double = js.native
-  /* 8 */ val Released: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionPolicyFlags.Released with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionPolicyFlags with Double] = js.native
+  /* 31 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 16 */ @js.native
+  object FirstParty extends TopLevel[FirstParty with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object Preview extends TopLevel[Preview with Double]
+  
+  /* 1 */ @js.native
+  object Private extends TopLevel[Private with Double]
+  
+  /* 2 */ @js.native
+  object Public extends TopLevel[Public with Double]
+  
+  /* 8 */ @js.native
+  object Released extends TopLevel[Released with Double]
+  
 }
 

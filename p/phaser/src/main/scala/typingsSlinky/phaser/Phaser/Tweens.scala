@@ -2,9 +2,6 @@ package typingsSlinky.phaser.Phaser
 
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Scenes.Systems
-import typingsSlinky.phaser.Phaser.Tweens.Timeline
-import typingsSlinky.phaser.Phaser.Tweens.Tween
-import typingsSlinky.phaser.Phaser.Tweens.TweenManager
 import typingsSlinky.phaser.Phaser.Types.Tweens.Event
 import typingsSlinky.phaser.Phaser.Types.Tweens.NumberTweenBuilderConfig
 import typingsSlinky.phaser.Phaser.Types.Tweens.StaggerConfig

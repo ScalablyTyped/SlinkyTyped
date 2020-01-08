@@ -1,7 +1,5 @@
 package typingsSlinky.atKeystonejsEmail
 
-import typingsSlinky.atKeystonejsEmail.atKeystonejsEmailMod.MailSenderBuilder
-import typingsSlinky.atKeystonejsEmail.atKeystonejsEmailMod.Sender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

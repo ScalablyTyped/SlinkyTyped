@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HotDashTub extends SharedApply_SvgIconProps657215518[default] {
+object HotDashTub extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/places/hot-tub", JSImport.Default)
   @js.native
   object componentImport extends js.Object

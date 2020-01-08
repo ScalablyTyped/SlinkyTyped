@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.util
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.util.Request.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,13 +67,23 @@ object Request extends js.Object {
     @js.native
     sealed trait PROCESSING extends State
     
-    /* 3 */ val CANCELLED: typingsSlinky.heremaps.H.util.Request.State.CANCELLED with Double = js.native
-    /* 2 */ val COMPLETE: typingsSlinky.heremaps.H.util.Request.State.COMPLETE with Double = js.native
-    /* 4 */ val ERROR: typingsSlinky.heremaps.H.util.Request.State.ERROR with Double = js.native
-    /* 0 */ val PENDING: typingsSlinky.heremaps.H.util.Request.State.PENDING with Double = js.native
-    /* 1 */ val PROCESSING: typingsSlinky.heremaps.H.util.Request.State.PROCESSING with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[State with Double] = js.native
+    /* 3 */ @js.native
+    object CANCELLED extends TopLevel[CANCELLED with Double]
+    
+    /* 2 */ @js.native
+    object COMPLETE extends TopLevel[COMPLETE with Double]
+    
+    /* 4 */ @js.native
+    object ERROR extends TopLevel[ERROR with Double]
+    
+    /* 0 */ @js.native
+    object PENDING extends TopLevel[PENDING with Double]
+    
+    /* 1 */ @js.native
+    object PROCESSING extends TopLevel[PROCESSING with Double]
+    
   }
   
 }

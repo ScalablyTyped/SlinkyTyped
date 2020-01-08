@@ -1,7 +1,5 @@
 package typingsSlinky.keyboardjs
 
-import typingsSlinky.keyboardjs.keyboardjsMod.Callback
-import typingsSlinky.keyboardjs.keyboardjsMod.KeyEvent
 import typingsSlinky.std.Document
 import typingsSlinky.std.HTMLFormElement
 import typingsSlinky.std.KeyboardEvent

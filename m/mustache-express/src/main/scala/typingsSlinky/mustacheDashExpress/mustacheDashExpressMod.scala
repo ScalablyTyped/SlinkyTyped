@@ -1,7 +1,6 @@
 package typingsSlinky.mustacheDashExpress
 
 import org.scalajs.dom.experimental.serviceworkers.Cache
-import typingsSlinky.mustacheDashExpress.mustacheDashExpressMod.ExpessEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,13 +1,13 @@
 package typingsSlinky.webpack.webpackMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.webpack.webpackStrings.`javascript/auto`
-import typingsSlinky.webpack.webpackStrings.`javascript/dynamic`
-import typingsSlinky.webpack.webpackStrings.`javascript/esm`
-import typingsSlinky.webpack.webpackStrings.`webassembly/experimental`
+import typingsSlinky.webpack.webpackStrings.javascriptSlashauto
+import typingsSlinky.webpack.webpackStrings.javascriptSlashdynamic
+import typingsSlinky.webpack.webpackStrings.javascriptSlashesm
 import typingsSlinky.webpack.webpackStrings.json
 import typingsSlinky.webpack.webpackStrings.post
 import typingsSlinky.webpack.webpackStrings.pre
+import typingsSlinky.webpack.webpackStrings.webassemblySlashexperimental
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,7 +85,7 @@ trait RuleSetRule extends js.Object {
     * Module type to use for the module
     */
   var `type`: js.UndefOr[
-    `javascript/auto` | `javascript/dynamic` | `javascript/esm` | json | `webassembly/experimental`
+    javascriptSlashauto | javascriptSlashdynamic | javascriptSlashesm | json | webassemblySlashexperimental
   ] = js.undefined
   /**
     * Modifiers applied to the module when rule is matched
@@ -113,7 +113,7 @@ object RuleSetRule {
     rules: js.Array[RuleSetRule] = null,
     sideEffects: js.UndefOr[Boolean] = js.undefined,
     test: RuleSetCondition = null,
-    `type`: `javascript/auto` | `javascript/dynamic` | `javascript/esm` | json | `webassembly/experimental` = null,
+    `type`: javascriptSlashauto | javascriptSlashdynamic | javascriptSlashesm | json | webassemblySlashexperimental = null,
     use: RuleSetUse = null
   ): RuleSetRule = {
     val __obj = js.Dynamic.literal()

@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.certificateProvider
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object onSignDigestRequested
   extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[
+      Event[
         js.Function2[
           /* signRequest */ SignRequest, 
           /* signCallback */ js.Function1[/* signature */ js.UndefOr[ArrayBuffer], Unit], 

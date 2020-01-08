@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,11 +29,19 @@ object ChartBinType extends js.Object {
   @js.native
   sealed trait category extends ChartBinType
   
-  /* "Auto" */ val auto: typingsSlinky.officeDashJs.Excel.ChartBinType.auto with String = js.native
-  /* "BinCount" */ val binCount: typingsSlinky.officeDashJs.Excel.ChartBinType.binCount with String = js.native
-  /* "BinWidth" */ val binWidth: typingsSlinky.officeDashJs.Excel.ChartBinType.binWidth with String = js.native
-  /* "Category" */ val category: typingsSlinky.officeDashJs.Excel.ChartBinType.category with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartBinType with String] = js.native
+  /* "Auto" */ @js.native
+  object auto extends TopLevel[auto with String]
+  
+  /* "BinCount" */ @js.native
+  object binCount extends TopLevel[binCount with String]
+  
+  /* "BinWidth" */ @js.native
+  object binWidth extends TopLevel[binWidth with String]
+  
+  /* "Category" */ @js.native
+  object category extends TopLevel[category with String]
+  
 }
 

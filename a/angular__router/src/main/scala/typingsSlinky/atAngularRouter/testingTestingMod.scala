@@ -13,7 +13,6 @@ import typingsSlinky.atAngularRouter.atAngularRouterMod.Router
 import typingsSlinky.atAngularRouter.atAngularRouterMod.Routes
 import typingsSlinky.atAngularRouter.atAngularRouterMod.UrlHandlingStrategy
 import typingsSlinky.atAngularRouter.atAngularRouterMod.UrlSerializer
-import typingsSlinky.atAngularRouter.testingTestingMod.RouterTestingModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

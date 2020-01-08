@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PdfViewer
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object InteractionMode extends js.Object {
   @js.native
   sealed trait TextSelection extends InteractionMode
   
-  /* 1 */ val Pan: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.InteractionMode.Pan with Double = js.native
-  /* 0 */ val TextSelection: typingsSlinky.ejDotWebDotAll.ej.PdfViewer.InteractionMode.TextSelection with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InteractionMode with Double] = js.native
+  /* 1 */ @js.native
+  object Pan extends TopLevel[Pan with Double]
+  
+  /* 0 */ @js.native
+  object TextSelection extends TopLevel[TextSelection with Double]
+  
 }
 

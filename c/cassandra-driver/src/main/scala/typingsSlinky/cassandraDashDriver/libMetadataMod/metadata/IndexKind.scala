@@ -1,5 +1,6 @@
 package typingsSlinky.cassandraDashDriver.libMetadataMod.metadata
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object IndexKind extends js.Object {
   @js.native
   sealed trait keys extends IndexKind
   
-  /* 1 */ val composites: typingsSlinky.cassandraDashDriver.libMetadataMod.metadata.IndexKind.composites with Double = js.native
-  /* 0 */ val custom: typingsSlinky.cassandraDashDriver.libMetadataMod.metadata.IndexKind.custom with Double = js.native
-  /* 0 */ val keys: typingsSlinky.cassandraDashDriver.libMetadataMod.metadata.IndexKind.keys with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndexKind with Double] = js.native
+  /* 1 */ @js.native
+  object composites extends TopLevel[composites with Double]
+  
+  /* 0 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 0 */ @js.native
+  object keys extends TopLevel[keys with Double]
+  
 }
 

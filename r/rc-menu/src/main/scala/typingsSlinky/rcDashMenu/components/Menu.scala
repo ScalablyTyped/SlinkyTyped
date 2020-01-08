@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Menu extends SharedApply_MenuProps_2081559627[default] {
+object Menu extends SharedApply_MenuProps1173436678[default] {
   @JSImport("rc-menu/lib/Menu", JSImport.Default)
   @js.native
   object componentImport extends js.Object

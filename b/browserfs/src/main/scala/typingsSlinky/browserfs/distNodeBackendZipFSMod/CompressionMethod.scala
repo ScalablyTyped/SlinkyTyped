@@ -1,5 +1,6 @@
 package typingsSlinky.browserfs.distNodeBackendZipFSMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,23 +59,55 @@ object CompressionMethod extends js.Object {
   @js.native
   sealed trait WAVPACK extends CompressionMethod
   
-  /* 12 */ val BZIP2: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.BZIP2 with Double = js.native
-  /* 8 */ val DEFLATE: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.DEFLATE with Double = js.native
-  /* 9 */ val DEFLATE64: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.DEFLATE64 with Double = js.native
-  /* 6 */ val IMPLODE: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.IMPLODE with Double = js.native
-  /* 19 */ val LZ77: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.LZ77 with Double = js.native
-  /* 14 */ val LZMA: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.LZMA with Double = js.native
-  /* 98 */ val PPMD: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.PPMD with Double = js.native
-  /* 2 */ val REDUCED_1: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.REDUCED_1 with Double = js.native
-  /* 3 */ val REDUCED_2: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.REDUCED_2 with Double = js.native
-  /* 4 */ val REDUCED_3: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.REDUCED_3 with Double = js.native
-  /* 5 */ val REDUCED_4: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.REDUCED_4 with Double = js.native
-  /* 1 */ val SHRUNK: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.SHRUNK with Double = js.native
-  /* 0 */ val STORED: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.STORED with Double = js.native
-  /* 18 */ val TERSE_NEW: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.TERSE_NEW with Double = js.native
-  /* 10 */ val TERSE_OLD: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.TERSE_OLD with Double = js.native
-  /* 97 */ val WAVPACK: typingsSlinky.browserfs.distNodeBackendZipFSMod.CompressionMethod.WAVPACK with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CompressionMethod with Double] = js.native
+  /* 12 */ @js.native
+  object BZIP2 extends TopLevel[BZIP2 with Double]
+  
+  /* 8 */ @js.native
+  object DEFLATE extends TopLevel[DEFLATE with Double]
+  
+  /* 9 */ @js.native
+  object DEFLATE64 extends TopLevel[DEFLATE64 with Double]
+  
+  /* 6 */ @js.native
+  object IMPLODE extends TopLevel[IMPLODE with Double]
+  
+  /* 19 */ @js.native
+  object LZ77 extends TopLevel[LZ77 with Double]
+  
+  /* 14 */ @js.native
+  object LZMA extends TopLevel[LZMA with Double]
+  
+  /* 98 */ @js.native
+  object PPMD extends TopLevel[PPMD with Double]
+  
+  /* 2 */ @js.native
+  object REDUCED_1 extends TopLevel[REDUCED_1 with Double]
+  
+  /* 3 */ @js.native
+  object REDUCED_2 extends TopLevel[REDUCED_2 with Double]
+  
+  /* 4 */ @js.native
+  object REDUCED_3 extends TopLevel[REDUCED_3 with Double]
+  
+  /* 5 */ @js.native
+  object REDUCED_4 extends TopLevel[REDUCED_4 with Double]
+  
+  /* 1 */ @js.native
+  object SHRUNK extends TopLevel[SHRUNK with Double]
+  
+  /* 0 */ @js.native
+  object STORED extends TopLevel[STORED with Double]
+  
+  /* 18 */ @js.native
+  object TERSE_NEW extends TopLevel[TERSE_NEW with Double]
+  
+  /* 10 */ @js.native
+  object TERSE_OLD extends TopLevel[TERSE_OLD with Double]
+  
+  /* 97 */ @js.native
+  object WAVPACK extends TopLevel[WAVPACK with Double]
+  
 }
 

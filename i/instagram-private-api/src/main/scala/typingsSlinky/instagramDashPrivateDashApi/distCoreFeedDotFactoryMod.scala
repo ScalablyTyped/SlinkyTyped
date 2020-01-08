@@ -3,6 +3,7 @@ package typingsSlinky.instagramDashPrivateDashApi
 import typingsSlinky.instagramDashPrivateDashApi.distCoreClientMod.IgApiClient
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsListDashReelDashMediaDashViewerDotFeedMod.ListReelMediaViewerFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMediaDotInlineDashChildDashCommentsDotFeedMod.MediaInlineChildCommentsFeed
+import typingsSlinky.instagramDashPrivateDashApi.distFeedsMediaDotStickerDashResponsesDotFeedMod.MediaStickerResponsesFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.AccountFollowersFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.AccountFollowingFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.BlockedUsersFeed
@@ -10,6 +11,9 @@ import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.DirectInboxFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.DirectPendingInboxFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.DirectThreadFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.DiscoverFeed
+import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.IgtvBrowseFeed
+import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.IgtvChannelFeed
+import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.LikedFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.LocationFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.MediaCommentsFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.MusicGenreFeed
@@ -29,6 +33,14 @@ import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.TimelineFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.UserFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsMod.UsertagsFeed
 import typingsSlinky.instagramDashPrivateDashApi.distFeedsUserDashStoryDotFeedMod.UserStoryFeed
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashPollDashVotersDotFeedDotResponseMod.StoryPollVotersFeedResponseRootObject
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashPollDashVotersDotFeedDotResponseMod.StoryPollVotersFeedResponseVotersItem
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashQuestionDashResponsesDotFeedDotResponseMod.StoryQuestionResponsesFeedResponseRespondersItem
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashQuestionDashResponsesDotFeedDotResponseMod.StoryQuestionResponsesFeedResponseRootObject
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashQuizDashParticipantsDotFeedDotResponseMod.StoryQuizParticipantsFeedResponseParticipantsItem
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashQuizDashParticipantsDotFeedDotResponseMod.StoryQuizParticipantsFeedResponseRootObject
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashSliderDashVotersDotFeedDotResponseDotResponseMod.StorySliderVotersFeedResponseResponseRootObject
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesStoryDashSliderDashVotersDotFeedDotResponseDotResponseMod.StorySliderVotersFeedResponseResponseVotersItem
 import typingsSlinky.instagramDashPrivateDashApi.distTypesCommonDotTypesMod.IgAppModule
 import typingsSlinky.instagramDashPrivateDashApi.distTypesInsightsDotOptionsMod.PostsInsightsFeedOptions
 import typingsSlinky.instagramDashPrivateDashApi.distTypesTimelineDashFeedDotTypesMod.TimelineFeedReason
@@ -64,6 +76,13 @@ object distCoreFeedDotFactoryMod extends js.Object {
     def directThread(options: PickDirectInboxFeedResponseThreadsItemthreadidolde): DirectThreadFeed = js.native
     def directThread(options: PickDirectInboxFeedResponseThreadsItemthreadidolde, seqId: Double): DirectThreadFeed = js.native
     def discover(): DiscoverFeed = js.native
+    def igtvBrowse(): IgtvBrowseFeed = js.native
+    def igtvBrowse(isPrefetch: Boolean): IgtvBrowseFeed = js.native
+    def igtvChaining(id: String): IgtvChannelFeed = js.native
+    def igtvChaining(id: Double): IgtvChannelFeed = js.native
+    def igtvChannel(id: String): IgtvChannelFeed = js.native
+    def igtvChannel(id: Double): IgtvChannelFeed = js.native
+    def liked(): LikedFeed = js.native
     def listReelMediaViewers(mediaId: String): ListReelMediaViewerFeed = js.native
     def location(id: String): LocationFeed = js.native
     def location(id: Double): LocationFeed = js.native
@@ -106,6 +125,32 @@ object distCoreFeedDotFactoryMod extends js.Object {
     def storiesInsights_ONEWEEK(timeframe: ONE_WEEK): StoriesInsightsFeed = js.native
     @JSName("storiesInsights")
     def storiesInsights_TWOWEEKS(timeframe: TWO_WEEKS): StoriesInsightsFeed = js.native
+    def storyPollVoters(mediaId: String, stickerId: String): MediaStickerResponsesFeed[StoryPollVotersFeedResponseRootObject, StoryPollVotersFeedResponseVotersItem] = js.native
+    def storyPollVoters(mediaId: String, stickerId: Double): MediaStickerResponsesFeed[StoryPollVotersFeedResponseRootObject, StoryPollVotersFeedResponseVotersItem] = js.native
+    def storyQuestionResponses(mediaId: String, stickerId: String): MediaStickerResponsesFeed[
+        StoryQuestionResponsesFeedResponseRootObject, 
+        StoryQuestionResponsesFeedResponseRespondersItem
+      ] = js.native
+    def storyQuestionResponses(mediaId: String, stickerId: Double): MediaStickerResponsesFeed[
+        StoryQuestionResponsesFeedResponseRootObject, 
+        StoryQuestionResponsesFeedResponseRespondersItem
+      ] = js.native
+    def storyQuizParticipants(mediaId: String, stickerId: String): MediaStickerResponsesFeed[
+        StoryQuizParticipantsFeedResponseRootObject, 
+        StoryQuizParticipantsFeedResponseParticipantsItem
+      ] = js.native
+    def storyQuizParticipants(mediaId: String, stickerId: Double): MediaStickerResponsesFeed[
+        StoryQuizParticipantsFeedResponseRootObject, 
+        StoryQuizParticipantsFeedResponseParticipantsItem
+      ] = js.native
+    def storySliderVoters(mediaId: String, stickerId: String): MediaStickerResponsesFeed[
+        StorySliderVotersFeedResponseResponseRootObject, 
+        StorySliderVotersFeedResponseResponseVotersItem
+      ] = js.native
+    def storySliderVoters(mediaId: String, stickerId: Double): MediaStickerResponsesFeed[
+        StorySliderVotersFeedResponseResponseRootObject, 
+        StorySliderVotersFeedResponseResponseVotersItem
+      ] = js.native
     def tag(tag: String): TagFeed = js.native
     def tags(tag: String): TagsFeed = js.native
     @JSName("tags")

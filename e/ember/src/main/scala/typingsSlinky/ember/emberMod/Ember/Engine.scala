@@ -1,11 +1,11 @@
 package typingsSlinky.ember.emberMod.Ember
 
+import typingsSlinky.atEmberEngine.atEmberEngineMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("ember", "Ember.Engine")
 @js.native
-class Engine ()
-  extends typingsSlinky.atEmberEngine.atEmberEngineMod.default
+class Engine () extends default
 

@@ -10,7 +10,7 @@ package object convictMod {
   // Taken from https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-307871458
   type Overwrite[T, U] = typingsSlinky.convict.convictStrings.Overwrite with T with U
   /* Rewritten from type alias, can be one of: 
-    - typings.convict.convictStrings.`*`
+    - typings.convict.convictStrings.Asterisk
     - typings.convict.convictStrings.int
     - typings.convict.convictStrings.port
     - typings.convict.convictStrings.windows_named_pipe
@@ -29,6 +29,6 @@ package object convictMod {
   */
   type PredefinedFormat = _PredefinedFormat | String | js.Object | Number | js.RegExp | Boolean
   type Schema[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]: / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias convict.convict.Schema<T[P]> * / object | convict.convict.SchemaObj<T[P]>}
+  {[ P in keyof T ]: / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias convict.convict.Schema<T[P]> * / object | convict.convict.SchemaObj<T[P]>}
     */ typingsSlinky.convict.convictStrings.Schema with T
 }

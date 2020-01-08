@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object QueryDeletedOption extends js.Object {
   @js.native
   sealed trait OnlyDeleted extends QueryDeletedOption
   
-  /* 0 */ val ExcludeDeleted: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueryDeletedOption.ExcludeDeleted with Double = js.native
-  /* 1 */ val IncludeDeleted: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueryDeletedOption.IncludeDeleted with Double = js.native
-  /* 2 */ val OnlyDeleted: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueryDeletedOption.OnlyDeleted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryDeletedOption with Double] = js.native
+  /* 0 */ @js.native
+  object ExcludeDeleted extends TopLevel[ExcludeDeleted with Double]
+  
+  /* 1 */ @js.native
+  object IncludeDeleted extends TopLevel[IncludeDeleted with Double]
+  
+  /* 2 */ @js.native
+  object OnlyDeleted extends TopLevel[OnlyDeleted with Double]
+  
 }
 

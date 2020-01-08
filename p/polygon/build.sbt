@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "polygon"
-version := "1.0-dt-20190320Z-987449"
+version := "1.0-dt-20190320Z-27f086"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "vec2" % "1.6-dt-20191014Z-bf5d45")
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "vec2" % "1.6-dt-20191014Z-0ac5b1")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

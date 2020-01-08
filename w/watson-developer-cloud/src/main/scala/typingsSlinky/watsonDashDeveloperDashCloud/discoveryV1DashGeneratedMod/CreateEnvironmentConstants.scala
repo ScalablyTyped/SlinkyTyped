@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,18 +45,38 @@ object CreateEnvironmentConstants extends js.Object {
     @js.native
     sealed trait XXXL extends Size
     
-    /* "L" */ val L: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.L with String = js.native
-    /* "LT" */ val LT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.LT with String = js.native
-    /* "M" */ val M: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.M with String = js.native
-    /* "ML" */ val ML: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.ML with String = js.native
-    /* "MS" */ val MS: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.MS with String = js.native
-    /* "S" */ val S: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.S with String = js.native
-    /* "XL" */ val XL: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.XL with String = js.native
-    /* "XS" */ val XS: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.XS with String = js.native
-    /* "XXL" */ val XXL: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.XXL with String = js.native
-    /* "XXXL" */ val XXXL: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.CreateEnvironmentConstants.Size.XXXL with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Size with String] = js.native
+    /* "L" */ @js.native
+    object L extends TopLevel[L with String]
+    
+    /* "LT" */ @js.native
+    object LT extends TopLevel[LT with String]
+    
+    /* "M" */ @js.native
+    object M extends TopLevel[M with String]
+    
+    /* "ML" */ @js.native
+    object ML extends TopLevel[ML with String]
+    
+    /* "MS" */ @js.native
+    object MS extends TopLevel[MS with String]
+    
+    /* "S" */ @js.native
+    object S extends TopLevel[S with String]
+    
+    /* "XL" */ @js.native
+    object XL extends TopLevel[XL with String]
+    
+    /* "XS" */ @js.native
+    object XS extends TopLevel[XS with String]
+    
+    /* "XXL" */ @js.native
+    object XXL extends TopLevel[XXL with String]
+    
+    /* "XXXL" */ @js.native
+    object XXXL extends TopLevel[XXXL with String]
+    
   }
   
 }

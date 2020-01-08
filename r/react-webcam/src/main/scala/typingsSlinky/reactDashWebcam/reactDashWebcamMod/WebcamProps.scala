@@ -1,9 +1,9 @@
 package typingsSlinky.reactDashWebcam.reactDashWebcamMod
 
 import org.scalajs.dom.experimental.mediastream.MediaTrackConstraints
-import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.`image/jpeg`
-import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.`image/png`
-import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.`image/webp`
+import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.imageSlashjpeg
+import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.imageSlashpng
+import typingsSlinky.reactDashWebcam.reactDashWebcamStrings.imageSlashwebp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait WebcamProps extends js.Object {
   var minScreenshotHeight: js.UndefOr[Double] = js.undefined
   var minScreenshotWidth: js.UndefOr[Double] = js.undefined
   var mirrored: js.UndefOr[Boolean] = js.undefined
-  var screenshotFormat: `image/webp` | `image/png` | `image/jpeg`
+  var screenshotFormat: imageSlashwebp | imageSlashpng | imageSlashjpeg
   var screenshotQuality: Double
   var videoConstraints: js.UndefOr[Boolean | MediaTrackConstraints] = js.undefined
   def onUserMedia(): Unit
@@ -29,7 +29,7 @@ object WebcamProps {
     imageSmoothing: Boolean,
     onUserMedia: () => Unit,
     onUserMediaError: String => Unit,
-    screenshotFormat: `image/webp` | `image/png` | `image/jpeg`,
+    screenshotFormat: imageSlashwebp | imageSlashpng | imageSlashjpeg,
     screenshotQuality: Double,
     audioConstraints: Boolean | MediaTrackConstraints = null,
     minScreenshotHeight: Int | Double = null,

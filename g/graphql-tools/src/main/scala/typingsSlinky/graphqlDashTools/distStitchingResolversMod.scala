@@ -6,7 +6,6 @@ import typingsSlinky.graphql.graphqlMod.GraphQLSchema
 import typingsSlinky.graphqlDashTools.distInterfacesMod.IResolvers
 import typingsSlinky.graphqlDashTools.distInterfacesMod.Operation
 import typingsSlinky.graphqlDashTools.distInterfacesMod.Transform
-import typingsSlinky.graphqlDashTools.distStitchingResolversMod.Mapping
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

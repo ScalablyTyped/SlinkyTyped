@@ -21,6 +21,10 @@ class DOMMatrix ()
 @js.native
 object DOMMatrix
   extends Instantiable0[typingsSlinky.geometryDashDom.GeometryDom.DOMMatrix]
+     with Instantiable1[
+      (/* array */ js.Array[Double]) | (/* other */ typingsSlinky.geometryDashDom.GeometryDom.DOMMatrixReadOnly) | (/* transformList */ String), 
+      typingsSlinky.geometryDashDom.GeometryDom.DOMMatrix
+    ]
      with Instantiable6[
       /* a */ Double, 
       /* b */ Double, 
@@ -28,10 +32,6 @@ object DOMMatrix
       /* d */ Double, 
       /* e */ Double, 
       /* f */ Double, 
-      typingsSlinky.geometryDashDom.GeometryDom.DOMMatrix
-    ]
-     with Instantiable1[
-      (/* array */ js.Array[Double]) | (/* other */ typingsSlinky.geometryDashDom.GeometryDom.DOMMatrixReadOnly) | (/* transformList */ String), 
       typingsSlinky.geometryDashDom.GeometryDom.DOMMatrix
     ]
 

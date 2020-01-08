@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PlacesChildFriendly
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.PlacesChildFriendly] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.PlacesChildFriendly] {
   @JSImport("material-ui/svg-icons", "PlacesChildFriendly")
   @js.native
   object componentImport extends js.Object

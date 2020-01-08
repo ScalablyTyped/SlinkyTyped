@@ -2,9 +2,9 @@ package typingsSlinky.atOracleOraclejet.ojgaugeMod
 
 import org.scalajs.dom.raw.CustomEvent
 import typingsSlinky.atOracleOraclejet.Anon_BorderColorCircle
-import typingsSlinky.atOracleOraclejet.Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965
+import typingsSlinky.atOracleOraclejet.Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetMod.JetElementCustomEvent
-import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`0DOT5`
+import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`0.5`
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`1`
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.auto
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.changed
@@ -76,9 +76,9 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   var preserveAspectRatio: none | meet = js.native
   var readonly: Boolean = js.native
   var selectedState: Anon_BorderColorCircle = js.native
-  var step: `0DOT5` | `1` = js.native
+  var step: `0.5` | `1` = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965 = js.native
+  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666 = js.native
   val transientValue: Double | Null = js.native
   var unselectedState: Anon_BorderColorCircle = js.native
   var value: Double | Null = js.native
@@ -103,11 +103,11 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   ): Unit = js.native
   def addEventListener(
     `type`: stepChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[`0DOT5` | `1`], _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[`0.5` | `1`], _]
   ): Unit = js.native
   def addEventListener(
     `type`: stepChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[`0DOT5` | `1`], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[`0.5` | `1`], _],
     useCapture: Boolean
   ): Unit = js.native
   def addEventListener(
@@ -270,11 +270,11 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_selectedState(property: selectedState): Anon_BorderColorCircle = js.native
   @JSName("getProperty")
-  def getProperty_step(property: step): `0DOT5` | `1` = js.native
+  def getProperty_step(property: step): `0.5` | `1` = js.native
   @JSName("getProperty")
   def getProperty_thresholds(property: thresholds): js.Array[Threshold] = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965 = js.native
+  def getProperty_tooltip(property: tooltip): Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666 = js.native
   @JSName("getProperty")
   def getProperty_transientValue(property: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.transientValue): Double | Null = js.native
   @JSName("getProperty")
@@ -288,7 +288,7 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   def setProperty(property: orientation, value: vertical): Unit = js.native
   def setProperty(property: preserveAspectRatio, value: meet): Unit = js.native
   def setProperty(property: preserveAspectRatio, value: none): Unit = js.native
-  def setProperty(property: step, value: `0DOT5`): Unit = js.native
+  def setProperty(property: step, value: `0.5`): Unit = js.native
   def setProperty(property: step, value: `1`): Unit = js.native
   def setProperty(property: visualEffects, value: auto): Unit = js.native
   def setProperty(property: visualEffects, value: none): Unit = js.native
@@ -309,7 +309,10 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_thresholds(property: thresholds, value: js.Array[Threshold]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965): Unit = js.native
+  def setProperty_tooltip(
+    property: tooltip,
+    value: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666
+  ): Unit = js.native
   @JSName("setProperty")
   def setProperty_transientValue(property: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.transientValue): Unit = js.native
   @JSName("setProperty")

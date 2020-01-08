@@ -1,7 +1,6 @@
 package typingsSlinky.mobservable
 
-import typingsSlinky.mobservable.libCoreMod.ValueMode
-import typingsSlinky.mobservable.libCoreMod.ValueType
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mobservable.libInterfacesMod.IArrayChange
 import typingsSlinky.mobservable.libInterfacesMod.IArraySplice
 import typingsSlinky.mobservable.libInterfacesMod.IContextInfoStruct
@@ -133,12 +132,20 @@ object libCoreMod extends js.Object {
     @js.native
     sealed trait Structure extends ValueMode
     
-    /* 3 */ val Flat: typingsSlinky.mobservable.libCoreMod.ValueMode.Flat with Double = js.native
-    /* 0 */ val Recursive: typingsSlinky.mobservable.libCoreMod.ValueMode.Recursive with Double = js.native
-    /* 1 */ val Reference: typingsSlinky.mobservable.libCoreMod.ValueMode.Reference with Double = js.native
-    /* 2 */ val Structure: typingsSlinky.mobservable.libCoreMod.ValueMode.Structure with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ValueMode with Double] = js.native
+    /* 3 */ @js.native
+    object Flat extends TopLevel[Flat with Double]
+    
+    /* 0 */ @js.native
+    object Recursive extends TopLevel[Recursive with Double]
+    
+    /* 1 */ @js.native
+    object Reference extends TopLevel[Reference with Double]
+    
+    /* 2 */ @js.native
+    object Structure extends TopLevel[Structure with Double]
+    
   }
   
   @js.native
@@ -161,14 +168,26 @@ object libCoreMod extends js.Object {
     @js.native
     sealed trait ViewFunction extends ValueType
     
-    /* 3 */ val Array: typingsSlinky.mobservable.libCoreMod.ValueType.Array with Double = js.native
-    /* 5 */ val ComplexFunction: typingsSlinky.mobservable.libCoreMod.ValueType.ComplexFunction with Double = js.native
-    /* 2 */ val ComplexObject: typingsSlinky.mobservable.libCoreMod.ValueType.ComplexObject with Double = js.native
-    /* 1 */ val PlainObject: typingsSlinky.mobservable.libCoreMod.ValueType.PlainObject with Double = js.native
-    /* 0 */ val Reference: typingsSlinky.mobservable.libCoreMod.ValueType.Reference with Double = js.native
-    /* 4 */ val ViewFunction: typingsSlinky.mobservable.libCoreMod.ValueType.ViewFunction with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ValueType with Double] = js.native
+    /* 3 */ @js.native
+    object Array extends TopLevel[Array with Double]
+    
+    /* 5 */ @js.native
+    object ComplexFunction extends TopLevel[ComplexFunction with Double]
+    
+    /* 2 */ @js.native
+    object ComplexObject extends TopLevel[ComplexObject with Double]
+    
+    /* 1 */ @js.native
+    object PlainObject extends TopLevel[PlainObject with Double]
+    
+    /* 0 */ @js.native
+    object Reference extends TopLevel[Reference with Double]
+    
+    /* 4 */ @js.native
+    object ViewFunction extends TopLevel[ViewFunction with Double]
+    
   }
   
 }

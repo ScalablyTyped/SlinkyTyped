@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,19 +60,43 @@ object SmsModemErrorCode extends js.Object {
   @js.native
   sealed trait smsServiceNotSupportedByNetwork extends SmsModemErrorCode
   
-  /* 4 */ val deviceFailure: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.deviceFailure with Double = js.native
-  /* 7 */ val deviceNotReady: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.deviceNotReady with Double = js.native
-  /* 11 */ val fixedDialingNumberRestricted: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.fixedDialingNumberRestricted with Double = js.native
-  /* 9 */ val invalidSmscAddress: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.invalidSmscAddress with Double = js.native
-  /* 5 */ val messageNotEncodedProperly: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.messageNotEncodedProperly with Double = js.native
-  /* 6 */ val messageTooLarge: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.messageTooLarge with Double = js.native
-  /* 1 */ val messagingNetworkError: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.messagingNetworkError with Double = js.native
-  /* 10 */ val networkFailure: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.networkFailure with Double = js.native
-  /* 8 */ val networkNotReady: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.networkNotReady with Double = js.native
-  /* 0 */ val other: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.other with Double = js.native
-  /* 2 */ val smsOperationNotSupportedByDevice: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.smsOperationNotSupportedByDevice with Double = js.native
-  /* 3 */ val smsServiceNotSupportedByNetwork: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsModemErrorCode.smsServiceNotSupportedByNetwork with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmsModemErrorCode with Double] = js.native
+  /* 4 */ @js.native
+  object deviceFailure extends TopLevel[deviceFailure with Double]
+  
+  /* 7 */ @js.native
+  object deviceNotReady extends TopLevel[deviceNotReady with Double]
+  
+  /* 11 */ @js.native
+  object fixedDialingNumberRestricted extends TopLevel[fixedDialingNumberRestricted with Double]
+  
+  /* 9 */ @js.native
+  object invalidSmscAddress extends TopLevel[invalidSmscAddress with Double]
+  
+  /* 5 */ @js.native
+  object messageNotEncodedProperly extends TopLevel[messageNotEncodedProperly with Double]
+  
+  /* 6 */ @js.native
+  object messageTooLarge extends TopLevel[messageTooLarge with Double]
+  
+  /* 1 */ @js.native
+  object messagingNetworkError extends TopLevel[messagingNetworkError with Double]
+  
+  /* 10 */ @js.native
+  object networkFailure extends TopLevel[networkFailure with Double]
+  
+  /* 8 */ @js.native
+  object networkNotReady extends TopLevel[networkNotReady with Double]
+  
+  /* 0 */ @js.native
+  object other extends TopLevel[other with Double]
+  
+  /* 2 */ @js.native
+  object smsOperationNotSupportedByDevice extends TopLevel[smsOperationNotSupportedByDevice with Double]
+  
+  /* 3 */ @js.native
+  object smsServiceNotSupportedByNetwork extends TopLevel[smsServiceNotSupportedByNetwork with Double]
+  
 }
 

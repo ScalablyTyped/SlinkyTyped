@@ -1,7 +1,7 @@
 package typingsSlinky.fullcalendar.srcMainMod
 
 import typingsSlinky.fullcalendar.eventDateProfileMod.Default
-import typingsSlinky.fullcalendar.fullcalendarNumbers.`false`
+import typingsSlinky.fullcalendar.fullcalendarBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

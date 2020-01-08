@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object GetWorkItemTypeExpand extends js.Object {
   @js.native
   sealed trait States extends GetWorkItemTypeExpand
   
-  /* 2 */ val Behaviors: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetWorkItemTypeExpand.Behaviors with Double = js.native
-  /* 4 */ val Layout: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetWorkItemTypeExpand.Layout with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetWorkItemTypeExpand.None with Double = js.native
-  /* 1 */ val States: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetWorkItemTypeExpand.States with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GetWorkItemTypeExpand with Double] = js.native
+  /* 2 */ @js.native
+  object Behaviors extends TopLevel[Behaviors with Double]
+  
+  /* 4 */ @js.native
+  object Layout extends TopLevel[Layout with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object States extends TopLevel[States with Double]
+  
 }
 

@@ -10,9 +10,9 @@ Smallest/simplest possible means of using atob with both Node and browserify
 | ------------------ | :-------------: |
 | Full name          | atob-lite |
 | Keywords           | atob, base64, isomorphic, browser, node, shared |
-| # releases         | 2 |
-| # dependents       | 4 |
-| # downloads        | 1267720 |
+| # releases         | 0 |
+| # dependents       | 8 |
+| # downloads        | 27028066 |
 | # stars            | 0 |
 
 ## Links

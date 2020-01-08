@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.stripe.stripeMod.paymentIntents.IPaymentIntent
 import typingsSlinky.stripe.stripeMod.paymentMethods.IPaymentMethod
 import typingsSlinky.stripe.stripeMod.setupIntents.ISetupIntent
+import typingsSlinky.stripe.stripeMod.sources.ISource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +30,7 @@ abstract class StripeError () extends _Error {
   val rawType: RawType = js.native
   val requestId: String = js.native
   val setup_intent: js.UndefOr[ISetupIntent] = js.native
-  val source: js.UndefOr[typingsSlinky.stripe.stripeMod.sources.ISource] = js.native
+  val source: js.UndefOr[ISource] = js.native
   val statusCode: js.UndefOr[Double] = js.native
   val `type`: String = js.native
 }

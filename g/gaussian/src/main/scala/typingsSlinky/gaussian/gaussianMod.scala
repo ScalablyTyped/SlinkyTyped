@@ -1,6 +1,5 @@
 package typingsSlinky.gaussian
 
-import typingsSlinky.gaussian.gaussianMod.Gaussian
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

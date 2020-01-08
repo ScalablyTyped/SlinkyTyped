@@ -1,7 +1,7 @@
 
 # Scala.js typings for pg
 
-Typings are for version 7.11
+Typings are for version 7.14
 
 ## Library description:
 PostgreSQL client - pure javascript & libpq with the same API
@@ -10,10 +10,10 @@ PostgreSQL client - pure javascript & libpq with the same API
 | ------------------ | :-------------: |
 | Full name          | pg |
 | Keywords           | database, libpq, pg, postgre, postgres, postgresql, rdbms |
-| # releases         | 38 |
-| # dependents       | 2070 |
-| # downloads        | 27815948 |
-| # stars            | 178 |
+| # releases         | 25 |
+| # dependents       | 2557 |
+| # downloads        | 41606632 |
+| # stars            | 179 |
 
 ## Links
 - [Homepage](http://github.com/brianc/node-postgres)

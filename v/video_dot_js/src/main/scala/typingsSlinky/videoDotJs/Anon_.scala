@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.videoDotJs.videoDotJsMod.videojs.Component.ReadyCallback
 import typingsSlinky.videoDotJs.videoDotJsMod.videojs.Tech
-import typingsSlinky.videoDotJs.videoDotJsStrings.Empty
+import typingsSlinky.videoDotJs.videoDotJsStrings._empty
 import typingsSlinky.videoDotJs.videoDotJsStrings.maybe
 import typingsSlinky.videoDotJs.videoDotJsStrings.problably
 import scala.scalajs.js
@@ -34,7 +34,7 @@ Instantiable0[Tech]
     *        The options passed to the tech
     * @return 'probably', 'maybe', or '' (empty string)
     */
-  def canPlaySource(srcObj: js.Any, options: js.Any): problably | maybe | Empty = js.native
+  def canPlaySource(srcObj: js.Any, options: js.Any): problably | maybe | _empty = js.native
   /**
     * Check if the type is supported by this tech.
     *

@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,23 +59,55 @@ object BinaryOperator extends js.Object {
   @js.native
   sealed trait Plus extends BinaryOperator
   
-  /* 9 */ val And: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.And with Double = js.native
-  /* 14 */ val Bigger: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Bigger with Double = js.native
-  /* 15 */ val BiggerEquals: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.BiggerEquals with Double = js.native
-  /* 11 */ val BitwiseAnd: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.BitwiseAnd with Double = js.native
-  /* 6 */ val Divide: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Divide with Double = js.native
-  /* 0 */ val Equals: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Equals with Double = js.native
-  /* 2 */ val Identical: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Identical with Double = js.native
-  /* 12 */ val Lower: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Lower with Double = js.native
-  /* 13 */ val LowerEquals: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.LowerEquals with Double = js.native
-  /* 4 */ val Minus: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Minus with Double = js.native
-  /* 8 */ val Modulo: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Modulo with Double = js.native
-  /* 7 */ val Multiply: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Multiply with Double = js.native
-  /* 1 */ val NotEquals: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.NotEquals with Double = js.native
-  /* 3 */ val NotIdentical: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.NotIdentical with Double = js.native
-  /* 10 */ val Or: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Or with Double = js.native
-  /* 5 */ val Plus: typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.BinaryOperator.Plus with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BinaryOperator with Double] = js.native
+  /* 9 */ @js.native
+  object And extends TopLevel[And with Double]
+  
+  /* 14 */ @js.native
+  object Bigger extends TopLevel[Bigger with Double]
+  
+  /* 15 */ @js.native
+  object BiggerEquals extends TopLevel[BiggerEquals with Double]
+  
+  /* 11 */ @js.native
+  object BitwiseAnd extends TopLevel[BitwiseAnd with Double]
+  
+  /* 6 */ @js.native
+  object Divide extends TopLevel[Divide with Double]
+  
+  /* 0 */ @js.native
+  object Equals extends TopLevel[Equals with Double]
+  
+  /* 2 */ @js.native
+  object Identical extends TopLevel[Identical with Double]
+  
+  /* 12 */ @js.native
+  object Lower extends TopLevel[Lower with Double]
+  
+  /* 13 */ @js.native
+  object LowerEquals extends TopLevel[LowerEquals with Double]
+  
+  /* 4 */ @js.native
+  object Minus extends TopLevel[Minus with Double]
+  
+  /* 8 */ @js.native
+  object Modulo extends TopLevel[Modulo with Double]
+  
+  /* 7 */ @js.native
+  object Multiply extends TopLevel[Multiply with Double]
+  
+  /* 1 */ @js.native
+  object NotEquals extends TopLevel[NotEquals with Double]
+  
+  /* 3 */ @js.native
+  object NotIdentical extends TopLevel[NotIdentical with Double]
+  
+  /* 10 */ @js.native
+  object Or extends TopLevel[Or with Double]
+  
+  /* 5 */ @js.native
+  object Plus extends TopLevel[Plus with Double]
+  
 }
 

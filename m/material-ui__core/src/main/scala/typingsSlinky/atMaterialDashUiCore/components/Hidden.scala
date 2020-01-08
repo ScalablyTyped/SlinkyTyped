@@ -3,10 +3,11 @@ package typingsSlinky.atMaterialDashUiCore.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
-import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.JS
 import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.css
+import typingsSlinky.atMaterialDashUiCore.atMaterialDashUiCoreStrings.js_
 import typingsSlinky.atMaterialDashUiCore.hiddenHiddenMod.HiddenProps
 import typingsSlinky.atMaterialDashUiCore.hiddenMod.default
 import typingsSlinky.atMaterialDashUiCore.stylesCreateBreakpointsMod.Breakpoint
@@ -28,7 +29,7 @@ object Hidden
   /* The following DOM/SVG props were specified: className */
   def apply(
     classes: Partial[ClassNameMap[scala.Nothing]] = null,
-    implementation: JS | css = null,
+    implementation: js_ | css = null,
     initialWidth: Breakpoint = null,
     innerRef: Ref[_] | ReactRef[_] = null,
     lgDown: js.UndefOr[Boolean] = js.undefined,
@@ -65,6 +66,7 @@ object Hidden
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.atMaterialDashUiCore.hiddenMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = HiddenProps
 }
 

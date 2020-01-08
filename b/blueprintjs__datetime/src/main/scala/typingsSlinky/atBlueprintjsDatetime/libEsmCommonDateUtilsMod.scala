@@ -1,7 +1,6 @@
 package typingsSlinky.atBlueprintjsDatetime
 
-import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeNumbers.`false`
-import typingsSlinky.atBlueprintjsDatetime.libEsmCommonDateUtilsMod.DateRange
+import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeBooleans.`false`
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`

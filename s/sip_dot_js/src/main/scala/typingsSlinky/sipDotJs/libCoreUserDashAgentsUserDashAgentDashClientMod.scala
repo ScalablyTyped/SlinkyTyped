@@ -12,7 +12,6 @@ import typingsSlinky.sipDotJs.libCoreTransactionsMod.ClientTransaction
 import typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashUserMod.ClientTransactionUser
 import typingsSlinky.sipDotJs.libCoreTransportMod.Transport
 import typingsSlinky.sipDotJs.libCoreUserDashAgentDashCoreMod.UserAgentCore
-import typingsSlinky.sipDotJs.libCoreUserDashAgentsUserDashAgentDashClientMod.ClientTransactionConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,8 +36,6 @@ object libCoreUserDashAgentsUserDashAgentDashClientMod extends js.Object {
     var challenged: js.Any = js.native
     var core: UserAgentCore = js.native
     var credentials: js.Any = js.native
-    @JSName("delegate")
-    var delegate_UserAgentClient: js.UndefOr[OutgoingRequestDelegate] = js.native
     var init: js.Any = js.native
     var logger: Logger = js.native
     val loggerFactory: LoggerFactory = js.native

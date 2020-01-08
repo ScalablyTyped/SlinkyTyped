@@ -1,7 +1,7 @@
 
 # Scala.js typings for favicons
 
-Typings are for version 5.3
+Typings are for version 5.5
 
 ## Library description:
 Favicon generator for Node.js
@@ -10,9 +10,9 @@ Favicon generator for Node.js
 | ------------------ | :-------------: |
 | Full name          | favicons |
 | Keywords           | favicon, ico, generator, node, realfavicongenerator, gulpfriendly |
-| # releases         | 8 |
-| # dependents       | 50 |
-| # downloads        | 2464599 |
+| # releases         | 9 |
+| # dependents       | 57 |
+| # downloads        | 3985278 |
 | # stars            | 26 |
 
 ## Links

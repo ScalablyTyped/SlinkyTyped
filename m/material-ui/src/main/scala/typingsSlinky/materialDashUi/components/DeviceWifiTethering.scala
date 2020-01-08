@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeviceWifiTethering
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceWifiTethering] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceWifiTethering] {
   @JSImport("material-ui/svg-icons", "DeviceWifiTethering")
   @js.native
   object componentImport extends js.Object

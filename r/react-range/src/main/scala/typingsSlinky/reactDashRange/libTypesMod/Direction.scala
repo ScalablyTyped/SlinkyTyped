@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashRange.libTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object Direction extends js.Object {
   @js.native
   sealed trait Up extends Direction
   
-  /* "to bottom" */ val Down: typingsSlinky.reactDashRange.libTypesMod.Direction.Down with String = js.native
-  /* "to left" */ val Left: typingsSlinky.reactDashRange.libTypesMod.Direction.Left with String = js.native
-  /* "to right" */ val Right: typingsSlinky.reactDashRange.libTypesMod.Direction.Right with String = js.native
-  /* "to top" */ val Up: typingsSlinky.reactDashRange.libTypesMod.Direction.Up with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Direction with String] = js.native
+  /* "to bottom" */ @js.native
+  object Down extends TopLevel[Down with String]
+  
+  /* "to left" */ @js.native
+  object Left extends TopLevel[Left with String]
+  
+  /* "to right" */ @js.native
+  object Right extends TopLevel[Right with String]
+  
+  /* "to top" */ @js.native
+  object Up extends TopLevel[Up with String]
+  
 }
 

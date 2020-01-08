@@ -1,11 +1,14 @@
 package typingsSlinky.nextDashServer.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Head extends SharedApply_Anon_Children_646664514 {
-  @JSImport("next-server/dist/lib/head", JSImport.Default)
+object Head
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
+  @JSImport("next-server/head", JSImport.Default)
   @js.native
   object componentImport extends js.Object
   

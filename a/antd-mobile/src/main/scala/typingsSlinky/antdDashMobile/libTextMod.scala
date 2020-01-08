@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobile
 
-import typingsSlinky.antdDashMobile.libTextMod.Text
 import typingsSlinky.antdDashMobile.libViewMod.ViewProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.std.HTMLSpanElement

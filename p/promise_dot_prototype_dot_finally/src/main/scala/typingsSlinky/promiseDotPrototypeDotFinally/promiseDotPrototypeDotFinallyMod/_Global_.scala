@@ -1,6 +1,5 @@
 package typingsSlinky.promiseDotPrototypeDotFinally.promiseDotPrototypeDotFinallyMod
 
-import typingsSlinky.promiseDotPrototypeDotFinally.promiseDotPrototypeDotFinallyMod._Global_.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

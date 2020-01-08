@@ -1,7 +1,6 @@
 package typingsSlinky.xhrDashMock
 
 import typingsSlinky.xhrDashMock.libMockHeadersMod.MockHeaders
-import typingsSlinky.xhrDashMock.libMockRequestMod.MockRequest
 import typingsSlinky.xhrDashMock.libMockURLMod.MockURL
 import scala.scalajs.js
 import scala.scalajs.js.`|`

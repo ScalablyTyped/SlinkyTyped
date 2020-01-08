@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
@@ -56,7 +55,7 @@ trait PopupOpenOptions extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#open)
     */
-  var promises: js.UndefOr[js.Array[IPromise[_]]] = js.undefined
+  var promises: js.UndefOr[js.Array[js.Promise[_]]] = js.undefined
   /**
     * Sets the [title](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#title) of the popup.
     *
@@ -85,7 +84,7 @@ object PopupOpenOptions {
     features: js.Array[Graphic] = null,
     fetchFeatures: js.UndefOr[Boolean] = js.undefined,
     location: Geometry = null,
-    promises: js.Array[IPromise[_]] = null,
+    promises: js.Array[js.Promise[_]] = null,
     title: String = null,
     updateLocationEnabled: js.UndefOr[Boolean] = js.undefined
   ): PopupOpenOptions = {

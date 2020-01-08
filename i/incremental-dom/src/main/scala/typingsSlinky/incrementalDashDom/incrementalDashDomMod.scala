@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.incrementalDashDom.incrementalDashDomMod.NameOrCtorDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.pgDashEars
 
 import typingsSlinky.pg.pgMod.ClientConfig
-import typingsSlinky.pgDashEars.pgDashEarsMod.PgEars
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

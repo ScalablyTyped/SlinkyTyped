@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object BluetoothConnectionStatus extends js.Object {
   @js.native
   sealed trait disconnected extends BluetoothConnectionStatus
   
-  /* 1 */ val connected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.BluetoothConnectionStatus.connected with Double = js.native
-  /* 0 */ val disconnected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.BluetoothConnectionStatus.disconnected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BluetoothConnectionStatus with Double] = js.native
+  /* 1 */ @js.native
+  object connected extends TopLevel[connected with Double]
+  
+  /* 0 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
 }
 

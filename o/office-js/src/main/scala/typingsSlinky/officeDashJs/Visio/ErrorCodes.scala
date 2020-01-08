@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Visio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object ErrorCodes extends js.Object {
   @js.native
   sealed trait unsupportedOperation extends ErrorCodes
   
-  /* "AccessDenied" */ val accessDenied: typingsSlinky.officeDashJs.Visio.ErrorCodes.accessDenied with String = js.native
-  /* "GeneralException" */ val generalException: typingsSlinky.officeDashJs.Visio.ErrorCodes.generalException with String = js.native
-  /* "InvalidArgument" */ val invalidArgument: typingsSlinky.officeDashJs.Visio.ErrorCodes.invalidArgument with String = js.native
-  /* "ItemNotFound" */ val itemNotFound: typingsSlinky.officeDashJs.Visio.ErrorCodes.itemNotFound with String = js.native
-  /* "NotImplemented" */ val notImplemented: typingsSlinky.officeDashJs.Visio.ErrorCodes.notImplemented with String = js.native
-  /* "UnsupportedOperation" */ val unsupportedOperation: typingsSlinky.officeDashJs.Visio.ErrorCodes.unsupportedOperation with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ErrorCodes with String] = js.native
+  /* "AccessDenied" */ @js.native
+  object accessDenied extends TopLevel[accessDenied with String]
+  
+  /* "GeneralException" */ @js.native
+  object generalException extends TopLevel[generalException with String]
+  
+  /* "InvalidArgument" */ @js.native
+  object invalidArgument extends TopLevel[invalidArgument with String]
+  
+  /* "ItemNotFound" */ @js.native
+  object itemNotFound extends TopLevel[itemNotFound with String]
+  
+  /* "NotImplemented" */ @js.native
+  object notImplemented extends TopLevel[notImplemented with String]
+  
+  /* "UnsupportedOperation" */ @js.native
+  object unsupportedOperation extends TopLevel[unsupportedOperation with String]
+  
 }
 

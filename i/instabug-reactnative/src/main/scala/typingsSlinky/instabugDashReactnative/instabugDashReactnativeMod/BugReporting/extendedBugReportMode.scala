@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,23 +12,24 @@ sealed trait extendedBugReportMode extends js.Object
 @js.native
 object extendedBugReportMode extends js.Object {
   @js.native
-  sealed trait disabled
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode
+  sealed trait disabled extends extendedBugReportMode
   
   @js.native
-  sealed trait enabledWithOptionalFields
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode
+  sealed trait enabledWithOptionalFields extends extendedBugReportMode
   
   @js.native
-  sealed trait enabledWithRequiredFields
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode
+  sealed trait enabledWithRequiredFields extends extendedBugReportMode
   
-  /* 2 */ val disabled: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode.disabled with Double = js.native
-  /* 1 */ val enabledWithOptionalFields: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode.enabledWithOptionalFields with Double = js.native
-  /* 0 */ val enabledWithRequiredFields: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode.enabledWithRequiredFields with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.extendedBugReportMode with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[extendedBugReportMode with Double] = js.native
+  /* 2 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 1 */ @js.native
+  object enabledWithOptionalFields extends TopLevel[enabledWithOptionalFields with Double]
+  
+  /* 0 */ @js.native
+  object enabledWithRequiredFields extends TopLevel[enabledWithRequiredFields with Double]
+  
 }
 

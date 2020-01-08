@@ -5,28 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.highcharts.highchartsStrings.`==`
-  - typings.highcharts.highchartsStrings.`===`
-  - typings.highcharts.highchartsStrings.`>`
-  - typings.highcharts.highchartsStrings.`>=`
-  - typings.highcharts.highchartsStrings.`<`
-  - typings.highcharts.highchartsStrings.`<=`
+  - typings.highcharts.highchartsStrings.EqualssignEqualssign
+  - typings.highcharts.highchartsStrings.EqualssignEqualssignEqualssign
+  - typings.highcharts.highchartsStrings.Greaterthansign
+  - typings.highcharts.highchartsStrings.GreaterthansignEqualssign
+  - typings.highcharts.highchartsStrings.Lessthansign
+  - typings.highcharts.highchartsStrings.LessthansignEqualssign
 */
 trait DataLabelsFilterOperatorValue extends js.Object
 
 object DataLabelsFilterOperatorValue {
   @scala.inline
-  def `<`: typingsSlinky.highcharts.highchartsStrings.`<` = this.cast("<")
+  def EqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssign = this.cast("==")
   @scala.inline
-  def `<=`: typingsSlinky.highcharts.highchartsStrings.`<=` = this.cast("<=")
+  def EqualssignEqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssignEqualssign = this.cast("===")
   @scala.inline
-  def `==`: typingsSlinky.highcharts.highchartsStrings.`==` = this.cast("==")
+  def Greaterthansign: typingsSlinky.highcharts.highchartsStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `===`: typingsSlinky.highcharts.highchartsStrings.`===` = this.cast("===")
+  def GreaterthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.highcharts.highchartsStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.highcharts.highchartsStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.highcharts.highchartsStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
 }

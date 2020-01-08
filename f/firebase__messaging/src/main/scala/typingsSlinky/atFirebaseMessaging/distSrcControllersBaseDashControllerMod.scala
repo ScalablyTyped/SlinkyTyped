@@ -3,13 +3,14 @@ package typingsSlinky.atFirebaseMessaging
 import org.scalajs.dom.experimental.push.PushSubscription
 import org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration
 import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
+import typingsSlinky.atFirebaseAppDashTypes.privateMod.FirebaseService
 import typingsSlinky.atFirebaseAppDashTypes.privateMod.FirebaseServiceInternals
+import typingsSlinky.atFirebaseMessaging.distSrcInterfacesInternalDashServicesMod.FirebaseInternalServices
 import typingsSlinky.atFirebaseMessaging.distSrcInterfacesMessageDashPayloadMod.MessagePayload
 import typingsSlinky.atFirebaseMessaging.distSrcModelsSubscriptionDashManagerMod.SubscriptionManager
 import typingsSlinky.atFirebaseMessaging.distSrcModelsTokenDashDetailsDashModelMod.TokenDetailsModel
 import typingsSlinky.atFirebaseMessaging.distSrcModelsVapidDashDetailsDashModelMod.VapidDetailsModel
 import typingsSlinky.atFirebaseMessagingDashTypes.atFirebaseMessagingDashTypesMod.FirebaseMessaging
-import typingsSlinky.std.NotificationPermission
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +19,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object distSrcControllersBaseDashControllerMod extends js.Object {
   @js.native
-  abstract class BaseController protected () extends FirebaseMessaging {
-    def this(app: FirebaseApp) = this()
-    var INTERNAL: FirebaseServiceInternals = js.native
-    val app: FirebaseApp = js.native
+  abstract class BaseController protected ()
+    extends FirebaseMessaging
+       with FirebaseService {
+    def this(services: FirebaseInternalServices) = this()
+    @JSName("INTERNAL")
+    var INTERNAL_BaseController: FirebaseServiceInternals = js.native
+    /* CompleteClass */
+    override var app: FirebaseApp = js.native
     /**
       * This method will delete the token from the client database, and make a
       * call to FCM to remove it from the server DB. Does not temper with the
@@ -29,6 +34,10 @@ object distSrcControllersBaseDashControllerMod extends js.Object {
       */
     var deleteTokenFromDB: js.Any = js.native
     var getNewToken: js.Any = js.native
+    /**
+      * Returns the current Notification Permission state.
+      */
+    var getNotificationPermission: js.Any = js.native
     /**
       * manageExistingToken is triggered if there's an existing FCM token in the
       * database and it can take 3 different actions:
@@ -39,6 +48,11 @@ object distSrcControllersBaseDashControllerMod extends js.Object {
       * the token, and to check if the token is still valid on FCM-side.
       */
     var manageExistingToken: js.Any = js.native
+    /**
+      * Requests notification permission from the user.
+      */
+    var requestNotificationPermission: js.Any = js.native
+    val services: FirebaseInternalServices = js.native
     val subscriptionManager: js.Any = js.native
     val tokenDetailsModel: js.Any = js.native
     var updateToken: js.Any = js.native
@@ -48,10 +62,6 @@ object distSrcControllersBaseDashControllerMod extends js.Object {
       * It closes any currently open indexdb database connections.
       */
     def delete(): js.Promise[Unit] = js.native
-    /**
-      * Returns the current Notification Permission state.
-      */
-    def getNotificationPermission_(): NotificationPermission = js.native
     def getPublicVapidKey_(): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
     /**
       * Gets a PushSubscription for the current user.

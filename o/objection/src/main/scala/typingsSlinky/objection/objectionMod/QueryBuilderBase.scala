@@ -130,7 +130,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* builder */ QueryBuilder[
         QM2, 
         js.Array[QM2], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       Unit
     ]
@@ -143,12 +143,12 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* this */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       /* queryBuilder */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       Unit
     ]
@@ -160,12 +160,12 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* this */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       /* queryBuilder */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       Unit
     ]
@@ -176,7 +176,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilderYieldingOneOrNone[QM] = js.native
   def findOne(column: ColumnRef, operator: String, value: Reference): QueryBuilderYieldingOneOrNone[QM] = js.native
@@ -187,7 +187,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilderYieldingOneOrNone[QM] = js.native
   def findOne(column: ColumnRef, value: Reference): QueryBuilderYieldingOneOrNone[QM] = js.native
@@ -207,12 +207,12 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def fullOuterJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def fullOuterJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def hasEager(): Boolean = js.native
   def hasSelects(): Boolean = js.native
@@ -220,92 +220,92 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def innerJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def innerJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insert(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insert(modelOrObject: Partial[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insert(modelsOrObjects: js.Array[Partial[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertAndFetch(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertAndFetch(modelOrObject: Partial[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertAndFetch(modelsOrObjects: js.Array[Partial[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraph(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraph(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraph(modelOrObject: DeepPartialGraph[QM], options: InsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraph(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraph(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: InsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraphAndFetch(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraphAndFetch(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraphAndFetch(modelOrObject: DeepPartialGraph[QM], options: InsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraphAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertGraphAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: InsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("insertGraph")
   def insertGraph_This(): this.type = js.native
@@ -315,52 +315,52 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def insertWithRelated(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelated(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelated(modelOrObject: DeepPartialGraph[QM], options: InsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelated(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelated(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: InsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelatedAndFetch(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelatedAndFetch(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelatedAndFetch(modelOrObject: DeepPartialGraph[QM], options: InsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelatedAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def insertWithRelatedAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: InsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   /**
     * insertWithRelated is an alias for insertGraph.
@@ -381,32 +381,32 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def joinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def joinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def leftJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def leftJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def leftOuterJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def leftOuterJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   // We get `then` and `catch` by extending Promise
   def map[V, Result](mapper: BluebirdMapper[V, Result]): js.Promise[js.Array[Result]] = js.native
@@ -428,7 +428,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* builder */ QueryBuilder[
         QM2, 
         js.Array[QM2], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       Unit
     ]
@@ -462,17 +462,17 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def outerJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def outerJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def page(page: Double, pageSize: Double): QueryBuilder[
     QM, 
     Page[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   /**
     * @return a Promise of the number of patched rows
@@ -481,24 +481,24 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def patchAndFetch(modelOrObject: PartialUpdate[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def patchAndFetchById(idOrIds: IdOrIds, modelOrObject: PartialUpdate[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def pick(modelClass: TypeofClassModel, properties: js.Array[String]): this.type = js.native
   def pick(properties: js.Array[String]): this.type = js.native
   def range(): QueryBuilder[
     QM, 
     Page[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def range(start: Double, end: Double): QueryBuilder[
     QM, 
     Page[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def reflect(): js.Promise[QM] = js.native
   def reject(reason: js.Any): this.type = js.native
@@ -511,32 +511,32 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def returning(columns: String): QueryBuilder[
     QM, 
     RM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def returning(columns: js.Array[String]): QueryBuilder[
     QM, 
     RM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def rightJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def rightJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def rightOuterJoinRelation[QM /* <: Model */](expr: RelationExpression): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def rightOuterJoinRelation[QM /* <: Model */](expr: RelationExpression, opt: RelationOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def runAfter(
     fn: js.Function2[
@@ -544,7 +544,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* builder */ QueryBuilder[
         QM, 
         _, 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       _
     ]
@@ -555,7 +555,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
       /* builder */ QueryBuilder[
         QM, 
         _, 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
       ], 
       _
     ]
@@ -575,62 +575,62 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
   def updateAndFetch(modelOrObject: PartialUpdate[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def updateAndFetchById(id: Id, modelOrObject: PartialUpdate[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraph(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraph(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraph(modelOrObject: DeepPartialGraph[QM], options: UpsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraph(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraph(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: UpsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraphAndFetch(): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraphAndFetch(modelOrObject: DeepPartialGraph[QM]): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraphAndFetch(modelOrObject: DeepPartialGraph[QM], options: UpsertGraphOptions): QueryBuilder[
     QM, 
     QM, 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraphAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]]): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def upsertGraphAndFetch(modelsOrObjects: js.Array[DeepPartialGraph[QM]], options: UpsertGraphOptions): QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   def whereComposite(column: js.Array[ColumnRef], operator: String, value: js.Array[Value]): this.type = js.native
   def whereComposite(
@@ -639,7 +639,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereComposite(column: js.Array[ColumnRef], value: js.Array[Value]): this.type = js.native
@@ -648,7 +648,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereComposite(
@@ -657,7 +657,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereComposite(column: ColumnRef, operator: String, value: Value): this.type = js.native
@@ -666,7 +666,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     value: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereComposite(column: ColumnRef, value: Value): this.type = js.native
@@ -676,7 +676,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     values: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereInComposite(column: ColumnRef, values: js.Array[Value]): this.type = js.native
@@ -685,7 +685,7 @@ trait QueryBuilderBase[QM /* <: Model */, RM, RV] extends QueryInterface[QM, RM,
     values: QueryBuilder[
       _, 
       js.Array[_], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): this.type = js.native
   def whereJsonHasAll(fieldExpression: FieldExpression, keys: String): QueryBuilder[QM, RM, RV] = js.native

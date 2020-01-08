@@ -12,8 +12,8 @@ import typingsSlinky.tstl.baseIteratorIteratorMod.Iterator
 import typingsSlinky.tstl.baseIteratorListIteratorMod.ListIterator
 import typingsSlinky.tstl.baseIteratorReverseIteratorMod.IReverseIterator
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
-import typingsSlinky.tstl.tstlNumbers.`false`
-import typingsSlinky.tstl.tstlNumbers.`true`
+import typingsSlinky.tstl.tstlBooleans.`false`
+import typingsSlinky.tstl.tstlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,10 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcLocalPersistenceUnderscorePromiseMod.FulfilledHandler
-import typingsSlinky.atFirebaseFirestore.distSrcLocalPersistenceUnderscorePromiseMod.PersistencePromise
-import typingsSlinky.atFirebaseFirestore.distSrcLocalPersistenceUnderscorePromiseMod.RejectedHandler
-import typingsSlinky.atFirebaseFirestore.distSrcLocalPersistenceUnderscorePromiseMod.Rejector
-import typingsSlinky.atFirebaseFirestore.distSrcLocalPersistenceUnderscorePromiseMod.Resolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

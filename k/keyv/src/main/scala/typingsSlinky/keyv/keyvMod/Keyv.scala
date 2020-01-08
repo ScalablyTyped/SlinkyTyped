@@ -1,7 +1,7 @@
 package typingsSlinky.keyv.keyvMod
 
-import typingsSlinky.keyv.keyvNumbers.`true`
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.keyv.keyvBooleans.`true`
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -8,7 +8,7 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.Anon_ScrollToFirstRowOnChange
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.libSpinMod.SpinProps
 import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
@@ -25,6 +25,7 @@ import typingsSlinky.antd.libTableInterfaceMod.TableSize
 import typingsSlinky.antd.libTableMod.default
 import typingsSlinky.csstype.csstypeMod.TableLayoutProperty
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -59,7 +60,7 @@ object Table
     indentSize: Int | Double = null,
     loading: Boolean | SpinProps = null,
     locale: TableLocale = null,
-    onChange: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[String]], /* sorter */ SorterResult[T], /* extra */ TableCurrentDataSource[T]) => Unit = null,
+    onChange: (/* pagination */ PaginationConfig, /* filters */ Partial[Record[String, js.Array[String]]], /* sorter */ SorterResult[T], /* extra */ TableCurrentDataSource[T]) => Unit = null,
     onExpand: (/* expanded */ Boolean, T) => Unit = null,
     onExpandedRowsChange: /* expandedRowKeys */ js.Array[Double | String] => Unit = null,
     onHeaderRow: /* columns */ js.Array[ColumnProps[T]] => TableEventListeners = null,
@@ -123,6 +124,7 @@ object Table
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TableProps[js.Any]
 }
 

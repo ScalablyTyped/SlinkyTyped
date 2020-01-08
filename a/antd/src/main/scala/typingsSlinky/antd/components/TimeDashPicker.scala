@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimeDashPicker extends SharedApply_TimePickerProps_721348724[default] {
+object TimeDashPicker extends SharedApply_TimePickerProps_1593011459[default] {
   @JSImport("antd/lib/time-picker", JSImport.Default)
   @js.native
   object componentImport extends js.Object

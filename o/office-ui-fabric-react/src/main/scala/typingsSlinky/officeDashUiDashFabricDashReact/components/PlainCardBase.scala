@@ -8,12 +8,14 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
 import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
 import typingsSlinky.atUifabricUtilities.libCreateRefMod.IRefObject
 import typingsSlinky.officeDashUiDashFabricDashReact.libCommonDirectionalHintMod.DirectionalHint
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsCalloutCalloutDotTypesMod.ICalloutProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardPlainCardPlainCardDotTypesMod.IPlainCard
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardPlainCardPlainCardDotTypesMod.IPlainCardProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsHoverCardPlainCardPlainCardDotTypesMod.IPlainCardStyleProps
@@ -132,6 +134,7 @@ object PlainCardBase
     autoCapitalize: String = null,
     autoCorrect: String = null,
     autoSave: String = null,
+    calloutProps: ICalloutProps = null,
     color: String = null,
     componentRef: IRefObject[IPlainCard] = null,
     contextMenu: String = null,
@@ -243,6 +246,7 @@ object PlainCardBase
     if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
     if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+    if (calloutProps != null) __obj.updateDynamic("calloutProps")(calloutProps.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
@@ -288,6 +292,12 @@ object PlainCardBase
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.officeDashUiDashFabricDashReact.libHoverCardMod.PlainCardBase
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libHoverCardMod.PlainCardBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IPlainCardProps
 }
 

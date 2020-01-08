@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,17 +71,37 @@ object GitAsyncRefOperationFailureStatus extends js.Object {
   @js.native
   sealed trait WritePermissionRequired extends GitAsyncRefOperationFailureStatus
   
-  /* 8 */ val AsyncOperationNotFound: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.AsyncOperationNotFound with Double = js.native
-  /* 3 */ val CreateBranchPermissionRequired: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.CreateBranchPermissionRequired with Double = js.native
-  /* 6 */ val GitObjectTooLarge: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.GitObjectTooLarge with Double = js.native
-  /* 1 */ val InvalidRefName: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.InvalidRefName with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.None with Double = js.native
-  /* 7 */ val OperationIndentityNotFound: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.OperationIndentityNotFound with Double = js.native
-  /* 9 */ val Other: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.Other with Double = js.native
-  /* 2 */ val RefNameConflict: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.RefNameConflict with Double = js.native
-  /* 5 */ val TargetBranchDeleted: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.TargetBranchDeleted with Double = js.native
-  /* 4 */ val WritePermissionRequired: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitAsyncRefOperationFailureStatus.WritePermissionRequired with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitAsyncRefOperationFailureStatus with Double] = js.native
+  /* 8 */ @js.native
+  object AsyncOperationNotFound extends TopLevel[AsyncOperationNotFound with Double]
+  
+  /* 3 */ @js.native
+  object CreateBranchPermissionRequired extends TopLevel[CreateBranchPermissionRequired with Double]
+  
+  /* 6 */ @js.native
+  object GitObjectTooLarge extends TopLevel[GitObjectTooLarge with Double]
+  
+  /* 1 */ @js.native
+  object InvalidRefName extends TopLevel[InvalidRefName with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 7 */ @js.native
+  object OperationIndentityNotFound extends TopLevel[OperationIndentityNotFound with Double]
+  
+  /* 9 */ @js.native
+  object Other extends TopLevel[Other with Double]
+  
+  /* 2 */ @js.native
+  object RefNameConflict extends TopLevel[RefNameConflict with Double]
+  
+  /* 5 */ @js.native
+  object TargetBranchDeleted extends TopLevel[TargetBranchDeleted with Double]
+  
+  /* 4 */ @js.native
+  object WritePermissionRequired extends TopLevel[WritePermissionRequired with Double]
+  
 }
 

@@ -1,7 +1,7 @@
 
 # Scala.js typings for victory
 
-Typings are for version 33.0
+Typings are for version 33.1
 
 ## Library description:
 Data viz for React
@@ -10,9 +10,9 @@ Data viz for React
 | ------------------ | :-------------: |
 | Full name          | victory |
 | Keywords           | data visualization, React, d3, charting |
-| # releases         | 53 |
-| # dependents       | 59 |
-| # downloads        | 1604638 |
+| # releases         | 62 |
+| # dependents       | 61 |
+| # downloads        | 2777517 |
 | # stars            | 10 |
 
 ## Links

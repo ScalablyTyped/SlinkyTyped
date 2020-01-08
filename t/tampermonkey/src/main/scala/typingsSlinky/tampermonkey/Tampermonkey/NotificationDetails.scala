@@ -1,6 +1,6 @@
 package typingsSlinky.tampermonkey.Tampermonkey
 
-import typingsSlinky.tampermonkey.tampermonkeyNumbers.`true`
+import typingsSlinky.tampermonkey.tampermonkeyBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

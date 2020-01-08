@@ -4,7 +4,7 @@ import typingsSlinky.amapDashJsDashApi.AMap.Layer
 import typingsSlinky.amapDashJsDashApiDashIndoorDashMap.AMap.IndoorMap.Building
 import typingsSlinky.amapDashJsDashApiDashIndoorDashMap.AMap.IndoorMap.Options
 import typingsSlinky.amapDashJsDashApiDashIndoorDashMap.AMap.IndoorMap.SearchResult
-import typingsSlinky.amapDashJsDashApiDashIndoorDashMap.amapDashJsDashApiDashIndoorDashMapNumbers.`false`
+import typingsSlinky.amapDashJsDashApiDashIndoorDashMap.amapDashJsDashApiDashIndoorDashMapBooleans.`false`
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Resources.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ResourceQualifierPersistence extends js.Object {
   @js.native
   sealed trait none extends ResourceQualifierPersistence
   
-  /* 1 */ val localMachine: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence.localMachine with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResourceQualifierPersistence with Double] = js.native
+  /* 1 */ @js.native
+  object localMachine extends TopLevel[localMachine with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

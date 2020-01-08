@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object WalletActionKind extends js.Object {
   @js.native
   sealed trait verb extends WalletActionKind
   
-  /* 3 */ val message: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletActionKind.message with Double = js.native
-  /* 2 */ val moreTransactions: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletActionKind.moreTransactions with Double = js.native
-  /* 0 */ val openItem: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletActionKind.openItem with Double = js.native
-  /* 1 */ val transaction: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletActionKind.transaction with Double = js.native
-  /* 4 */ val verb: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletActionKind.verb with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WalletActionKind with Double] = js.native
+  /* 3 */ @js.native
+  object message extends TopLevel[message with Double]
+  
+  /* 2 */ @js.native
+  object moreTransactions extends TopLevel[moreTransactions with Double]
+  
+  /* 0 */ @js.native
+  object openItem extends TopLevel[openItem with Double]
+  
+  /* 1 */ @js.native
+  object transaction extends TopLevel[transaction with Double]
+  
+  /* 4 */ @js.native
+  object verb extends TopLevel[verb with Double]
+  
 }
 

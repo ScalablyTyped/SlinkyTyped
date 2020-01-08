@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic__cli-framework-prompts
 
-Typings are for version 1.0.2
+Typings are for version 1.0.4
 
 ## Library description:
 The interactive prompts portion of Ionic CLI Framework
@@ -10,9 +10,9 @@ The interactive prompts portion of Ionic CLI Framework
 | ------------------ | :-------------: |
 | Full name          | @ionic/cli-framework-prompts |
 | Keywords           | - |
-| # releases         | 2 |
+| # releases         | 6 |
 | # dependents       | 1 |
-| # downloads        | 177274 |
+| # downloads        | 375572 |
 | # stars            | 0 |
 
 ## Links

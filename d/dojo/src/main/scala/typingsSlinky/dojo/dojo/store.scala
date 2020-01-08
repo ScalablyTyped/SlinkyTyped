@@ -1,8 +1,6 @@
 package typingsSlinky.dojo.dojo
 
 import typingsSlinky.dojo.dojo.promise.Promise
-import typingsSlinky.dojo.dojo.store.JsonRest
-import typingsSlinky.dojo.dojo.store.Memory
 import typingsSlinky.dojo.dojo.store.api.Store
 import typingsSlinky.dojo.dojo.store.api.Store.PutDirectives
 import typingsSlinky.dojo.dojo.store.api.Store.QueryOptions

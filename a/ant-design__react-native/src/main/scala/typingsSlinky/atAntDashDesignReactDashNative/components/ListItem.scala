@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.Empty
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings._empty
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.android
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.bottom
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.down
@@ -37,7 +37,7 @@ object ListItem
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     delayLongPress: Int | Double = null,
     error: js.UndefOr[Boolean] = js.undefined,
     extra: TagMod[Any] = null,
@@ -73,6 +73,9 @@ object ListItem
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atAntDashDesignReactDashNative.libListListItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListItemProps
 }
 

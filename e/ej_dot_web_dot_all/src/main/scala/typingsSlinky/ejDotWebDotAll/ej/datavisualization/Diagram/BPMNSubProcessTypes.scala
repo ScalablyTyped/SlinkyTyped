@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BPMNSubProcessTypes extends js.Object {
   @js.native
   sealed trait Transaction extends BPMNSubProcessTypes
   
-  /* 2 */ val Event: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSubProcessTypes.Event with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSubProcessTypes.None with Double = js.native
-  /* 1 */ val Transaction: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSubProcessTypes.Transaction with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNSubProcessTypes with Double] = js.native
+  /* 2 */ @js.native
+  object Event extends TopLevel[Event with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Transaction extends TopLevel[Transaction with Double]
+  
 }
 

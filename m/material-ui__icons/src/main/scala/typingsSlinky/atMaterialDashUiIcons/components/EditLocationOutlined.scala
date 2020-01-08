@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EditLocationOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object EditLocationOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/EditLocationOutlined", "default")
   @js.native
   object componentImport extends js.Object

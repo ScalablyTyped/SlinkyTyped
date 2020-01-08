@@ -23,8 +23,9 @@ object KeytipContent
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: content, disabled */
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
+    content: String,
     keySequences: js.Array[String],
     calloutProps: ICalloutProps = null,
     hasDynamicChildren: js.UndefOr[Boolean] = js.undefined,
@@ -38,7 +39,7 @@ object KeytipContent
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(keySequences = keySequences.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], keySequences = keySequences.asInstanceOf[js.Any])
     if (calloutProps != null) __obj.updateDynamic("calloutProps")(calloutProps.asInstanceOf[js.Any])
     if (!js.isUndefined(hasDynamicChildren)) __obj.updateDynamic("hasDynamicChildren")(hasDynamicChildren.asInstanceOf[js.Any])
     if (!js.isUndefined(hasMenu)) __obj.updateDynamic("hasMenu")(hasMenu.asInstanceOf[js.Any])

@@ -7,9 +7,7 @@ import typingsSlinky.androiduix.android.util.SparseMap
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.ViewGroup
 import typingsSlinky.androiduix.android.view.ViewGroup.MarginLayoutParams
-import typingsSlinky.androiduix.android.widget.RelativeLayout.DependencyGraph
 import typingsSlinky.androiduix.android.widget.RelativeLayout.DependencyGraph.Node
-import typingsSlinky.androiduix.android.widget.RelativeLayout.LayoutParams
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

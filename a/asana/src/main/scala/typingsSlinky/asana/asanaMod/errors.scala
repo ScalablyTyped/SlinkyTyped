@@ -1,6 +1,5 @@
 package typingsSlinky.asana.asanaMod
 
-import typingsSlinky.asana.asanaMod.errors.AsanaError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

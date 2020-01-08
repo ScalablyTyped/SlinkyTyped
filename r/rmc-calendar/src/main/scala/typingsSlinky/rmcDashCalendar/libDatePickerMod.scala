@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.rmcDashCalendar.libDateDataTypesMod.Models.MonthData
-import typingsSlinky.rmcDashCalendar.libDatePickerMod.DatePicker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

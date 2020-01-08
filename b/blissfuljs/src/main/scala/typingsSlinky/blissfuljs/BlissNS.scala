@@ -132,14 +132,6 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.blissfuljs.BlissNS.AriaRequestEvent
-import typingsSlinky.blissfuljs.BlissNS.BlissCollectionArray
-import typingsSlinky.blissfuljs.BlissNS.BlissDecoratedArrayElement
-import typingsSlinky.blissfuljs.BlissNS.BlissDecoratedElement
-import typingsSlinky.blissfuljs.BlissNS.BlissNativeExtentions
-import typingsSlinky.blissfuljs.BlissNS.BlissStatic
-import typingsSlinky.blissfuljs.BlissNS.BlissStaticCollection
-import typingsSlinky.blissfuljs.BlissNS.CommandEvent
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSContentZoom
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSGestureChange
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSGestureDoubleTap
@@ -1424,13 +1416,13 @@ object BlissNS extends js.Object {
     @JSName("$")
     def $[T](expr: js.Object, context: Element): Array[T] = js.native
     @JSName("$")
-    def $[T](selector: String): BlissDecoratedArrayElement[T] = js.native
+    def $[T](selector: String): BlissDecoratedElement[T] = js.native
     @JSName("$")
-    def $[T](selector: String, context: Element): BlissDecoratedArrayElement[T] = js.native
+    def $[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
     @JSName("$")
-    def $_T_BlissDecoratedElement[T](selector: String): BlissDecoratedElement[T] = js.native
+    def $_T_BlissDecoratedArrayElement[T](selector: String): BlissDecoratedArrayElement[T] = js.native
     @JSName("$")
-    def $_T_BlissDecoratedElement[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
+    def $_T_BlissDecoratedArrayElement[T](selector: String, context: Element): BlissDecoratedArrayElement[T] = js.native
     def apply[T](selector: String): BlissDecoratedElement[T] = js.native
     def apply[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
     def Class(options: Anon_Abstract): js.Object = js.native

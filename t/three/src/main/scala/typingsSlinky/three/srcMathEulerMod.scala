@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcMathEulerMod.Euler
 import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
 import typingsSlinky.three.srcMathQuaternionMod.Quaternion
 import typingsSlinky.three.srcMathVector3Mod.Vector3

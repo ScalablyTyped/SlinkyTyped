@@ -1,6 +1,6 @@
 package typingsSlinky.ajv.ajvMod
 
-import typingsSlinky.ajv.ajvNumbers.`true`
+import typingsSlinky.ajv.ajvBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

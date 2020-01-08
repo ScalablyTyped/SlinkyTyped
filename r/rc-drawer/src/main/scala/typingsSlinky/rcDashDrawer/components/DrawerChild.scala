@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -13,7 +14,7 @@ import typingsSlinky.rcDashDrawer.libDrawerChildMod.default
 import typingsSlinky.rcDashDrawer.libIDrawerPropTypesMod.IDrawerChildProps
 import typingsSlinky.rcDashDrawer.libIDrawerPropTypesMod.ILevelMove
 import typingsSlinky.rcDashDrawer.libIDrawerPropTypesMod.IPlacement
-import typingsSlinky.rcDashDrawer.rcDashDrawerNumbers.`false`
+import typingsSlinky.rcDashDrawer.rcDashDrawerBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,6 +46,7 @@ object DrawerChild
     placement: IPlacement = null,
     prefixCls: String = null,
     showMask: js.UndefOr[Boolean] = js.undefined,
+    switchScrollingEffect: /* close */ js.UndefOr[Boolean] => Unit = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -65,9 +67,11 @@ object DrawerChild
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(showMask)) __obj.updateDynamic("showMask")(showMask.asInstanceOf[js.Any])
+    if (switchScrollingEffect != null) __obj.updateDynamic("switchScrollingEffect")(js.Any.fromFunction1(switchScrollingEffect))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcDashDrawer.libDrawerChildMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IDrawerChildProps
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ScopeBoundary extends js.Object {
   @js.native
   sealed trait Type extends ScopeBoundary
   
-  /* 2 */ val Block: typingsSlinky.tsutils.utilUtilMod.ScopeBoundary.Block with Double = js.native
-  /* 8 */ val ConditionalType: typingsSlinky.tsutils.utilUtilMod.ScopeBoundary.ConditionalType with Double = js.native
-  /* 1 */ val Function: typingsSlinky.tsutils.utilUtilMod.ScopeBoundary.Function with Double = js.native
-  /* 0 */ val None: typingsSlinky.tsutils.utilUtilMod.ScopeBoundary.None with Double = js.native
-  /* 4 */ val Type: typingsSlinky.tsutils.utilUtilMod.ScopeBoundary.Type with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScopeBoundary with Double] = js.native
+  /* 2 */ @js.native
+  object Block extends TopLevel[Block with Double]
+  
+  /* 8 */ @js.native
+  object ConditionalType extends TopLevel[ConditionalType with Double]
+  
+  /* 1 */ @js.native
+  object Function extends TopLevel[Function with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object Type extends TopLevel[Type with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object DocumentPropertyType extends js.Object {
   @js.native
   sealed trait string extends DocumentPropertyType
   
-  /* "Boolean" */ val boolean: typingsSlinky.officeDashJsDashPreview.Excel.DocumentPropertyType.boolean with String = js.native
-  /* "Date" */ val date: typingsSlinky.officeDashJsDashPreview.Excel.DocumentPropertyType.date with String = js.native
-  /* "Float" */ val float: typingsSlinky.officeDashJsDashPreview.Excel.DocumentPropertyType.float with String = js.native
-  /* "Number" */ val number: typingsSlinky.officeDashJsDashPreview.Excel.DocumentPropertyType.number with String = js.native
-  /* "String" */ val string: typingsSlinky.officeDashJsDashPreview.Excel.DocumentPropertyType.string with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DocumentPropertyType with String] = js.native
+  /* "Boolean" */ @js.native
+  object boolean extends TopLevel[boolean with String]
+  
+  /* "Date" */ @js.native
+  object date extends TopLevel[date with String]
+  
+  /* "Float" */ @js.native
+  object float extends TopLevel[float with String]
+  
+  /* "Number" */ @js.native
+  object number extends TopLevel[number with String]
+  
+  /* "String" */ @js.native
+  object string extends TopLevel[string with String]
+  
 }
 

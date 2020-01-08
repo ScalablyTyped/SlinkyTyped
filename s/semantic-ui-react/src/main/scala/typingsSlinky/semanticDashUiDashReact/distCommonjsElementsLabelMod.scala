@@ -1,5 +1,6 @@
 package typingsSlinky.semanticDashUiDashReact
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsLabelLabelMod.LabelComponent
@@ -18,6 +19,8 @@ object distCommonjsElementsLabelMod extends js.Object {
     def this(props: LabelProps, context: js.Any) = this()
   }
   
-  val default: LabelComponent = js.native
+  @js.native
+  object default extends TopLevel[LabelComponent]
+  
 }
 

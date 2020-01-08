@@ -1,8 +1,6 @@
 package typingsSlinky.ranjs.ranjsMod
 
 import typingsSlinky.ranjs.Anon_D
-import typingsSlinky.ranjs.ranjsMod.la.Matrix
-import typingsSlinky.ranjs.ranjsMod.la.Vector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

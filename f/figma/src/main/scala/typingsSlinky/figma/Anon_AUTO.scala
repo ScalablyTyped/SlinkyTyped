@@ -1,5 +1,6 @@
 package typingsSlinky.figma
 
+import typingsSlinky.figma.figmaMod._Global_.LineHeight
 import typingsSlinky.figma.figmaStrings.AUTO
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.materialDashUi
 
-import typingsSlinky.materialDashUi.stylesSpacingMod.Spacing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

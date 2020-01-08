@@ -1,6 +1,5 @@
 package typingsSlinky.expoDashKeepDashAwake
 
-import typingsSlinky.expoDashKeepDashAwake.expoDashKeepDashAwakeMod.KeepAwake
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

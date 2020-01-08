@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -137,28 +138,70 @@ object UnderlineType extends js.Object {
   @js.native
   sealed trait word extends UnderlineType
   
-  /* "DashLine" */ val dashLine: typingsSlinky.officeDashJs.Word.UnderlineType.dashLine with String = js.native
-  /* "DashLineHeavy" */ val dashLineHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.dashLineHeavy with String = js.native
-  /* "DashLineLong" */ val dashLineLong: typingsSlinky.officeDashJs.Word.UnderlineType.dashLineLong with String = js.native
-  /* "DashLineLongHeavy" */ val dashLineLongHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.dashLineLongHeavy with String = js.native
-  /* "DotDashLine" */ val dotDashLine: typingsSlinky.officeDashJs.Word.UnderlineType.dotDashLine with String = js.native
-  /* "DotDashLineHeavy" */ val dotDashLineHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.dotDashLineHeavy with String = js.native
-  /* "DotLine" */ val dotLine: typingsSlinky.officeDashJs.Word.UnderlineType.dotLine with String = js.native
-  /* "Dotted" */ val dotted: typingsSlinky.officeDashJs.Word.UnderlineType.dotted with String = js.native
-  /* "DottedHeavy" */ val dottedHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.dottedHeavy with String = js.native
-  /* "Double" */ val double: typingsSlinky.officeDashJs.Word.UnderlineType.double with String = js.native
-  /* "Hidden" */ val hidden: typingsSlinky.officeDashJs.Word.UnderlineType.hidden with String = js.native
-  /* "Mixed" */ val mixed: typingsSlinky.officeDashJs.Word.UnderlineType.mixed with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJs.Word.UnderlineType.none with String = js.native
-  /* "Single" */ val single: typingsSlinky.officeDashJs.Word.UnderlineType.single with String = js.native
-  /* "Thick" */ val thick: typingsSlinky.officeDashJs.Word.UnderlineType.thick with String = js.native
-  /* "TwoDotDashLine" */ val twoDotDashLine: typingsSlinky.officeDashJs.Word.UnderlineType.twoDotDashLine with String = js.native
-  /* "TwoDotDashLineHeavy" */ val twoDotDashLineHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.twoDotDashLineHeavy with String = js.native
-  /* "Wave" */ val wave: typingsSlinky.officeDashJs.Word.UnderlineType.wave with String = js.native
-  /* "WaveDouble" */ val waveDouble: typingsSlinky.officeDashJs.Word.UnderlineType.waveDouble with String = js.native
-  /* "WaveHeavy" */ val waveHeavy: typingsSlinky.officeDashJs.Word.UnderlineType.waveHeavy with String = js.native
-  /* "Word" */ val word: typingsSlinky.officeDashJs.Word.UnderlineType.word with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[UnderlineType with String] = js.native
+  /* "DashLine" */ @js.native
+  object dashLine extends TopLevel[dashLine with String]
+  
+  /* "DashLineHeavy" */ @js.native
+  object dashLineHeavy extends TopLevel[dashLineHeavy with String]
+  
+  /* "DashLineLong" */ @js.native
+  object dashLineLong extends TopLevel[dashLineLong with String]
+  
+  /* "DashLineLongHeavy" */ @js.native
+  object dashLineLongHeavy extends TopLevel[dashLineLongHeavy with String]
+  
+  /* "DotDashLine" */ @js.native
+  object dotDashLine extends TopLevel[dotDashLine with String]
+  
+  /* "DotDashLineHeavy" */ @js.native
+  object dotDashLineHeavy extends TopLevel[dotDashLineHeavy with String]
+  
+  /* "DotLine" */ @js.native
+  object dotLine extends TopLevel[dotLine with String]
+  
+  /* "Dotted" */ @js.native
+  object dotted extends TopLevel[dotted with String]
+  
+  /* "DottedHeavy" */ @js.native
+  object dottedHeavy extends TopLevel[dottedHeavy with String]
+  
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "Hidden" */ @js.native
+  object hidden extends TopLevel[hidden with String]
+  
+  /* "Mixed" */ @js.native
+  object mixed extends TopLevel[mixed with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Single" */ @js.native
+  object single extends TopLevel[single with String]
+  
+  /* "Thick" */ @js.native
+  object thick extends TopLevel[thick with String]
+  
+  /* "TwoDotDashLine" */ @js.native
+  object twoDotDashLine extends TopLevel[twoDotDashLine with String]
+  
+  /* "TwoDotDashLineHeavy" */ @js.native
+  object twoDotDashLineHeavy extends TopLevel[twoDotDashLineHeavy with String]
+  
+  /* "Wave" */ @js.native
+  object wave extends TopLevel[wave with String]
+  
+  /* "WaveDouble" */ @js.native
+  object waveDouble extends TopLevel[waveDouble with String]
+  
+  /* "WaveHeavy" */ @js.native
+  object waveHeavy extends TopLevel[waveHeavy with String]
+  
+  /* "Word" */ @js.native
+  object word extends TopLevel[word with String]
+  
 }
 

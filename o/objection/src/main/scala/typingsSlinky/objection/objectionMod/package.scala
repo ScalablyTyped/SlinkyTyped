@@ -18,7 +18,7 @@ package object objectionMod {
   type ColumnRef = String | Raw | Reference | (QueryBuilder[
     js.Any, 
     js.Array[js.Any], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
   ])
   type DeepPartialGraph[T] = T | DeepPartialGraphModel[T] | (DeepPartialGraphArray[
     /* import warning: importer.ImportType#apply Failed type conversion: T[number] */ js.Any
@@ -39,12 +39,12 @@ package object objectionMod {
     /* this */ QueryBuilder[
       QM, 
       js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ], 
     /* queryBuilder */ QueryBuilder[
       QM, 
       js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ], 
     Unit
   ]
@@ -53,12 +53,12 @@ package object objectionMod {
       /* this */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
       ], 
       /* queryBuilder */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
       ], 
       Unit
     ]
@@ -74,7 +74,7 @@ package object objectionMod {
     QueryBuilder[
       Model, 
       js.Array[Model], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ]
   ]
   type JsonObjectOrFieldExpression = js.Object | js.Array[js.Object] | FieldExpression
@@ -85,8 +85,8 @@ package object objectionMod {
     js.Function1[
       /* builder */ QueryBuilder[
         js.Any, 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RM */ js.Any, 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RM */ js.Any, 
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
       ], 
       Unit
     ]
@@ -94,7 +94,7 @@ package object objectionMod {
   type NodeStyleCallback = js.Function2[/* err */ js.Any, /* result */ js.UndefOr[js.Any], Unit]
   type NonFunctionPropertyNames[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends std.Function? never : K}[keyof T] */ js.Any
   type PartialUpdate[QM /* <: Model */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof QM ]:? QM[P] | objection.objection.Raw | objection.objection.Reference | objection.objection.QueryBuilder<any, std.Array<any>, / * import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV * / any>}
+  {[ P in keyof QM ]:? QM[P] | objection.objection.Raw | objection.objection.Reference | objection.objection.QueryBuilder<any, std.Array<any>, / * import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV * / any>}
     */ typingsSlinky.objection.objectionStrings.PartialUpdate with QM
   type Plugin = js.Function1[/* modelClass */ TypeofClassModel, TypeofClassModel]
   type Pojo = StringDictionary[js.Any]
@@ -102,17 +102,17 @@ package object objectionMod {
   type QBOrCallback[QM /* <: Model */] = (QueryBuilder[
     QM, 
     js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
   ]) | (js.ThisFunction1[
     /* this */ QueryBuilder[
       QM, 
       js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ], 
     /* queryBuilder */ QueryBuilder[
       QM, 
       js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ], 
     Unit
   ])
@@ -131,7 +131,7 @@ package object objectionMod {
   type TableName = String | Raw | Reference | (QueryBuilder[
     js.Any, 
     js.Array[js.Any], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
   ])
   type TraverserFunction = js.Function3[/* model */ Model, /* parentModel */ Model, /* relationName */ String, Unit]
   type ValidatorContext = StringDictionary[js.Any]
@@ -169,7 +169,7 @@ package object objectionMod {
       /* queryBuilder */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
       ], 
       Unit
     ], 
@@ -181,7 +181,7 @@ package object objectionMod {
       /* queryBuilder */ QueryBuilder[
         QM, 
         js.Array[QM], 
-        /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for RV */ js.Any
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
       ], 
       js.Any
     ], 

@@ -4,7 +4,6 @@ import org.scalajs.dom.experimental.mediastream.MediaStream
 import org.scalajs.dom.experimental.webrtc.RTCIceCandidate
 import org.scalajs.dom.experimental.webrtc.RTCPeerConnection
 import org.scalajs.dom.experimental.webrtc.RTCSessionDescription
-import typingsSlinky.kurentoDashUtils.kurentoDashUtilsMod.WebRtcPeer
 import typingsSlinky.kurentoDashUtils.kurentoDashUtilsStrings.recv
 import typingsSlinky.kurentoDashUtils.kurentoDashUtilsStrings.send
 import typingsSlinky.kurentoDashUtils.kurentoDashUtilsStrings.sendRecv

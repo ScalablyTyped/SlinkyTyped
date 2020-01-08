@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage.Pickers.Provider
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object FileSelectionMode extends js.Object {
   @js.native
   sealed trait single extends FileSelectionMode
   
-  /* 1 */ val multiple: typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSelectionMode.multiple with Double = js.native
-  /* 0 */ val single: typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSelectionMode.single with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileSelectionMode with Double] = js.native
+  /* 1 */ @js.native
+  object multiple extends TopLevel[multiple with Double]
+  
+  /* 0 */ @js.native
+  object single extends TopLevel[single with Double]
+  
 }
 

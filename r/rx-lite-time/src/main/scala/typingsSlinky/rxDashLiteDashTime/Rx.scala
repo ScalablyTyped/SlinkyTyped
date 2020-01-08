@@ -1,7 +1,6 @@
 package typingsSlinky.rxDashLiteDashTime
 
 import typingsSlinky.rxDashCore.Rx.IScheduler
-import typingsSlinky.rxDashLiteDashTime.Rx.Observable
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`

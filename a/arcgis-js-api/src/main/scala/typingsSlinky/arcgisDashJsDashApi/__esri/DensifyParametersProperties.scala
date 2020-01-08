@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ trait DensifyParametersProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DensifyParameters.html#lengthUnit)
     */
-  var lengthUnit: js.UndefOr[feet | kilometers | meters | miles | `nautical-miles` | yards] = js.undefined
+  var lengthUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
   /**
     * All segments longer than `maxSegmentLength` are replaced with sequences of lines no longer than `maxSegmentLength.`
     *
@@ -42,7 +42,7 @@ object DensifyParametersProperties {
   def apply(
     geodesic: js.UndefOr[Boolean] = js.undefined,
     geometries: js.Array[GeometryProperties] = null,
-    lengthUnit: feet | kilometers | meters | miles | `nautical-miles` | yards = null,
+    lengthUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null,
     maxSegmentLength: Int | Double = null
   ): DensifyParametersProperties = {
     val __obj = js.Dynamic.literal()

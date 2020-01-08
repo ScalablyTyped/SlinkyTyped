@@ -8,6 +8,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
 import typingsSlinky.react.reactMod.CSSProperties
@@ -56,10 +57,10 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactDashTextDashMask.Anon_IndexesOfPipedChars
+import typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskBooleans.`false`
 import typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskMod.MaskedInputProps
 import typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskMod.default
 import typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskMod.maskArray
-import typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -275,6 +276,9 @@ object ReactDashTextDashMask
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.input.tag.type, 
+  typingsSlinky.reactDashTextDashMask.reactDashTextDashMaskMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MaskedInputProps
 }
 

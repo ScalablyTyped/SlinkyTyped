@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.tstl.baseThreadUnderscoreITimedLockableMod._ITimedLockable
-import typingsSlinky.tstl.threadTimedMutexMod.TimedMutex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.parchment.distSrcAttributorStyleMod.StyleAttributor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

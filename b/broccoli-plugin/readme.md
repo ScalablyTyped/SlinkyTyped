@@ -1,7 +1,7 @@
 
 # Scala.js typings for broccoli-plugin
 
-Typings are for version 3.0.0
+Typings are for version 3.1.0
 
 ## Library description:
 Base class for all Broccoli plugins
@@ -10,9 +10,9 @@ Base class for all Broccoli plugins
 | ------------------ | :-------------: |
 | Full name          | broccoli-plugin |
 | Keywords           | broccoli-plugin |
-| # releases         | 1 |
-| # dependents       | 148 |
-| # downloads        | 9791327 |
+| # releases         | 8 |
+| # dependents       | 165 |
+| # downloads        | 13274644 |
 | # stars            | 2 |
 
 ## Links

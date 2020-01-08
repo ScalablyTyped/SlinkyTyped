@@ -1,7 +1,6 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineOptions
-import typingsSlinky.ionic.commandsDeployCoreMod.DeployCoreCommand
 import typingsSlinky.ionic.libCommandMod.Command
 import scala.scalajs.js
 import scala.scalajs.js.`|`

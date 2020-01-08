@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object InteractionType extends js.Object {
   @js.native
   sealed trait soft extends InteractionType
   
-  /* 3 */ val all: typingsSlinky.playerframework.PlayerFramework.InteractionType.all with Double = js.native
-  /* 2 */ val hard: typingsSlinky.playerframework.PlayerFramework.InteractionType.hard with Double = js.native
-  /* 0 */ val none: typingsSlinky.playerframework.PlayerFramework.InteractionType.none with Double = js.native
-  /* 1 */ val soft: typingsSlinky.playerframework.PlayerFramework.InteractionType.soft with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InteractionType with Double] = js.native
+  /* 3 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 2 */ @js.native
+  object hard extends TopLevel[hard with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object soft extends TopLevel[soft with Double]
+  
 }
 

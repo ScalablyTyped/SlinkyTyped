@@ -2,7 +2,6 @@ package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015CoreEntityMod.Entity
 import typingsSlinky.wonderDotJs.distEs2015RendererBufferArrayBufferMod.ArrayBuffer
-import typingsSlinky.wonderDotJs.distEs2015RendererProgramProgramMod.Program
 import typingsSlinky.wonderDotJs.distEs2015RendererShaderShaderShaderMod.Shader
 import typingsSlinky.wonderDotJs.distEs2015RendererShaderVariableEVariableTypeMod.EVariableType
 import scala.scalajs.js

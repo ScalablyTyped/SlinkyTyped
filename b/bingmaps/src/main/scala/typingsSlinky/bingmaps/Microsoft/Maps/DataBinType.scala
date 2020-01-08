@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object DataBinType extends js.Object {
   @js.native
   sealed trait square extends DataBinType
   
-  /* 0 */ val circle: typingsSlinky.bingmaps.Microsoft.Maps.DataBinType.circle with Double = js.native
-  /* 2 */ val hexCircle: typingsSlinky.bingmaps.Microsoft.Maps.DataBinType.hexCircle with Double = js.native
-  /* 1 */ val hexagon: typingsSlinky.bingmaps.Microsoft.Maps.DataBinType.hexagon with Double = js.native
-  /* 3 */ val pointyHexagon: typingsSlinky.bingmaps.Microsoft.Maps.DataBinType.pointyHexagon with Double = js.native
-  /* 4 */ val square: typingsSlinky.bingmaps.Microsoft.Maps.DataBinType.square with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DataBinType with Double] = js.native
+  /* 0 */ @js.native
+  object circle extends TopLevel[circle with Double]
+  
+  /* 2 */ @js.native
+  object hexCircle extends TopLevel[hexCircle with Double]
+  
+  /* 1 */ @js.native
+  object hexagon extends TopLevel[hexagon with Double]
+  
+  /* 3 */ @js.native
+  object pointyHexagon extends TopLevel[pointyHexagon with Double]
+  
+  /* 4 */ @js.native
+  object square extends TopLevel[square with Double]
+  
 }
 

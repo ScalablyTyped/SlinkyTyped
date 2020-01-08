@@ -55,8 +55,9 @@ object Icon
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, name, onBlur, onFocus, size */
+  /* The following DOM/SVG props were specified: disabled, onBlur, onFocus, size */
   def apply(
+    name: String,
     Component: ReactComponentClass[js.Object] = null,
     accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
@@ -122,7 +123,7 @@ object Icon
     tag.type, 
     typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.Icon
   ] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
     if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
     if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])

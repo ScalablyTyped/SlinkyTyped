@@ -1,7 +1,5 @@
 package typingsSlinky.seleniumDashWebdriver
 
-import typingsSlinky.seleniumDashWebdriver.edgeMod.Driver
-import typingsSlinky.seleniumDashWebdriver.edgeMod.Options
 import typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService
 import typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService.Builder
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Capabilities
@@ -25,16 +23,7 @@ object edgeMod extends js.Object {
   }
   
   @js.native
-  class Options () extends Capabilities {
-    /**
-      * Sets the page load strategy for Edge.
-      * Supported values are 'normal', 'eager', and 'none';
-      *
-      * @param {string} pageLoadStrategy The page load strategy to use.
-      * @return {!Options} A self reference.
-      */
-    def setPageLoadStrategy(pageLoadStrategy: String): Options = js.native
-  }
+  class Options () extends Capabilities
   
   @js.native
   /**

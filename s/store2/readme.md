@@ -10,9 +10,9 @@ Better localStorage
 | ------------------ | :-------------: |
 | Full name          | store2 |
 | Keywords           | localStorage, sessionStorage, json, namespace, store |
-| # releases         | 14 |
-| # dependents       | 44 |
-| # downloads        | 817325 |
+| # releases         | 9 |
+| # dependents       | 65 |
+| # downloads        | 17483708 |
 | # stars            | 10 |
 
 ## Links

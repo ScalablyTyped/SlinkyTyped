@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImmutablePersistentQueryLink
-  extends SharedApply_LinkProps_1843782738[
+  extends SharedApply_LinkProps951347256[
       typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.ImmutablePersistentQueryLink
     ] {
   @JSImport("redux-little-router", "ImmutablePersistentQueryLink")

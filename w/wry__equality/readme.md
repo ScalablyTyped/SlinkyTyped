@@ -10,9 +10,9 @@ Structural equality checking for JavaScript values
 | ------------------ | :-------------: |
 | Full name          | @wry/equality |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 1 |
-| # downloads        | 21984 |
+| # releases         | 12 |
+| # dependents       | 9 |
+| # downloads        | 17994213 |
 | # stars            | 0 |
 
 ## Links

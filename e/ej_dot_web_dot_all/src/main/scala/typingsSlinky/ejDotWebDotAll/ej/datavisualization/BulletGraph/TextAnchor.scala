@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object TextAnchor extends js.Object {
   @js.native
   sealed trait Start extends TextAnchor
   
-  /* 2 */ val End: typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.TextAnchor.End with Double = js.native
-  /* 1 */ val Middle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.TextAnchor.Middle with Double = js.native
-  /* 0 */ val Start: typingsSlinky.ejDotWebDotAll.ej.datavisualization.BulletGraph.TextAnchor.Start with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextAnchor with Double] = js.native
+  /* 2 */ @js.native
+  object End extends TopLevel[End with Double]
+  
+  /* 1 */ @js.native
+  object Middle extends TopLevel[Middle with Double]
+  
+  /* 0 */ @js.native
+  object Start extends TopLevel[Start with Double]
+  
 }
 

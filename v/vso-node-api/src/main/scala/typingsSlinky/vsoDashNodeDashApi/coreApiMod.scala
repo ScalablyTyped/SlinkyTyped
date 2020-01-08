@@ -1,7 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi
 
 import typingsSlinky.vsoDashNodeDashApi.clientApiBasesMod.ClientApiBase
-import typingsSlinky.vsoDashNodeDashApi.coreApiMod.ICoreApi
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonOperationsInterfacesMod.OperationReference
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.IdentityRef
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.JsonPatchDocument

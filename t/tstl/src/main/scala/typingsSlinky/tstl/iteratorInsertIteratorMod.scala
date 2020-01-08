@@ -4,7 +4,6 @@ import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IInsert
 import typingsSlinky.tstl.baseIteratorUnderscoreInsertIteratorMod._InsertIterator
 import typingsSlinky.tstl.functionalIPointerMod.IPointer.ValueType
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
-import typingsSlinky.tstl.iteratorInsertIteratorMod.InsertIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,6 +28,11 @@ object iteratorInsertIteratorMod extends js.Object {
       * @hidden
       */
     var it_ : js.Any = js.native
+    /**
+      * @inheritDoc
+      */
+    @JSName("value")
+    def value_MInsertIterator(`val`: ValueType[Iterator]): js.Any = js.native
   }
   
 }

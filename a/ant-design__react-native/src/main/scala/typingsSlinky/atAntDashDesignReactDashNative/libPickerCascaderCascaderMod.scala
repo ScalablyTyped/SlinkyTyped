@@ -1,6 +1,5 @@
 package typingsSlinky.atAntDashDesignReactDashNative
 
-import typingsSlinky.atAntDashDesignReactDashNative.libPickerCascaderCascaderMod.Cascader
 import typingsSlinky.atAntDashDesignReactDashNative.libPickerCascaderCascaderTypesMod.CascaderProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element

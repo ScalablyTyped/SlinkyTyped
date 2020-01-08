@@ -1,10 +1,6 @@
 package typingsSlinky.atHapiHapi.atHapiHapiMod
 
 import typingsSlinky.atHapiBoom.atHapiBoomMod.^
-import typingsSlinky.atHapiHapi.atHapiHapiMod.Lifecycle.Method
-import typingsSlinky.atHapiHapi.atHapiHapiMod.Lifecycle.ReturnValue
-import typingsSlinky.atHapiHapi.atHapiHapiMod.Lifecycle.ReturnValueTypes
-import typingsSlinky.atHapiHapi.atHapiHapiMod.Lifecycle._FailAction
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js

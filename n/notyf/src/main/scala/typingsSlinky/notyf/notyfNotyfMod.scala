@@ -5,7 +5,6 @@ import typingsSlinky.notyf.notyfDotModelsMod.NotyfNotification
 import typingsSlinky.notyf.notyfDotOptionsMod.DeepPartial
 import typingsSlinky.notyf.notyfDotOptionsMod.INotyfNotificationOptions
 import typingsSlinky.notyf.notyfDotOptionsMod.INotyfOptions
-import typingsSlinky.notyf.notyfNotyfMod.Notyf
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,9 +37,13 @@ object ProtectionType extends js.Object {
   @js.native
   sealed trait SHEET extends ProtectionType
   
-  /* 0 */ val RANGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.ProtectionType.RANGE with Double = js.native
-  /* 1 */ val SHEET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.ProtectionType.SHEET with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProtectionType with Double] = js.native
+  /* 0 */ @js.native
+  object RANGE extends TopLevel[RANGE with Double]
+  
+  /* 1 */ @js.native
+  object SHEET extends TopLevel[SHEET with Double]
+  
 }
 

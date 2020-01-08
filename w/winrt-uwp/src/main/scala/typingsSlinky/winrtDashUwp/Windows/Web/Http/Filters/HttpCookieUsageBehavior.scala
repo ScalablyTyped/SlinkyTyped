@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Web.Http.Filters
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object HttpCookieUsageBehavior extends js.Object {
   @js.native
   sealed trait noCookies extends HttpCookieUsageBehavior
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Web.Http.Filters.HttpCookieUsageBehavior.default with Double = js.native
-  /* 1 */ val noCookies: typingsSlinky.winrtDashUwp.Windows.Web.Http.Filters.HttpCookieUsageBehavior.noCookies with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HttpCookieUsageBehavior with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object noCookies extends TopLevel[noCookies with Double]
+  
 }
 

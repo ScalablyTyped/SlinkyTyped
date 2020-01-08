@@ -5,16 +5,17 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libSelectListMod.SelectListMessages
 import typingsSlinky.reactDashWidgets.libSelectListMod.SelectListProps
+import typingsSlinky.reactDashWidgets.libSelectListMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SelectList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/SelectList", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -38,7 +39,7 @@ object SelectList
     textField: String | (js.Function1[/* dataItem */ js.Any, String]) = null,
     valueField: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
@@ -58,6 +59,7 @@ object SelectList
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashWidgets.libSelectListMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SelectListProps
 }
 

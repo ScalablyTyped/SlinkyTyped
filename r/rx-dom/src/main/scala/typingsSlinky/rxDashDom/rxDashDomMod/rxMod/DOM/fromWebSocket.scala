@@ -3,6 +3,8 @@ package typingsSlinky.rxDashDom.rxDashDomMod.rxMod.DOM
 import org.scalajs.dom.raw.CloseEvent
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MessageEvent
+import typingsSlinky.rxDashCore.Rx.Observer
+import typingsSlinky.rxDashCoreDashBinding.Rx.Subject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +13,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object fromWebSocket extends js.Object {
   // Web Sockets
-  def apply(url: String, protocol: String): typingsSlinky.rxDashCoreDashBinding.Rx.Subject[MessageEvent] = js.native
-  def apply(url: String, protocol: String, openObserver: typingsSlinky.rxDashCore.Rx.Observer[Event]): typingsSlinky.rxDashCoreDashBinding.Rx.Subject[MessageEvent] = js.native
+  def apply(url: String, protocol: String): Subject[MessageEvent] = js.native
+  def apply(url: String, protocol: String, openObserver: Observer[Event]): Subject[MessageEvent] = js.native
   def apply(
     url: String,
     protocol: String,
-    openObserver: typingsSlinky.rxDashCore.Rx.Observer[Event],
-    closingObserver: typingsSlinky.rxDashCore.Rx.Observer[CloseEvent]
-  ): typingsSlinky.rxDashCoreDashBinding.Rx.Subject[MessageEvent] = js.native
+    openObserver: Observer[Event],
+    closingObserver: Observer[CloseEvent]
+  ): Subject[MessageEvent] = js.native
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialIconDashButton
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialIconDashButton.componentMod.MDCIconButtonToggle
 import typingsSlinky.atMaterialIconDashButton.foundationMod.MDCIconButtonToggleFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

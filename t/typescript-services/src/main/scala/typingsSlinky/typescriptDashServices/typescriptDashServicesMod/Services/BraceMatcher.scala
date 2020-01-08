@@ -1,5 +1,7 @@
 package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services
 
+import typingsSlinky.typescriptDashServices.TypeScript.SyntaxTree
+import typingsSlinky.typescriptDashServices.TypeScript.TextSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,7 @@ class BraceMatcher ()
 @JSImport("typescript-services", "Services.BraceMatcher")
 @js.native
 object BraceMatcher extends js.Object {
-  def getMatchSpans(syntaxTree: typingsSlinky.typescriptDashServices.TypeScript.SyntaxTree, position: Double): js.Array[typingsSlinky.typescriptDashServices.TypeScript.TextSpan] = js.native
+  def getMatchSpans(syntaxTree: SyntaxTree, position: Double): js.Array[TextSpan] = js.native
   /* private */ def getMatchingCloseBrace(currentToken: js.Any, position: js.Any, result: js.Any): js.Any = js.native
   /* private */ def getMatchingCloseBraceTokenKind(positionedElement: js.Any): js.Any = js.native
   /* private */ def getMatchingOpenBrace(currentToken: js.Any, position: js.Any, result: js.Any): js.Any = js.native

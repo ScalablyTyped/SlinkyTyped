@@ -1,6 +1,5 @@
 package typingsSlinky.fsDashCapacitor
 
-import typingsSlinky.fsDashCapacitor.fsDashCapacitorMod.ReadStream
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

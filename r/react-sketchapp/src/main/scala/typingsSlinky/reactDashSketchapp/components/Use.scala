@@ -26,8 +26,9 @@ object Use
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, href, name, width */
+  /* The following DOM/SVG props were specified: height, name, width */
   def apply(
+    href: String,
     clipPath: String = null,
     clipRule: evenodd | nonzero = null,
     fill: String = null,
@@ -60,7 +61,7 @@ object Use
     y: NumberProp = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
     if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
     if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object MobileBroadbandPinLockState extends js.Object {
   @js.native
   sealed trait unlocked extends MobileBroadbandPinLockState
   
-  /* 2 */ val pinRequired: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinLockState.pinRequired with Double = js.native
-  /* 3 */ val pinUnblockKeyRequired: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinLockState.pinUnblockKeyRequired with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinLockState.unknown with Double = js.native
-  /* 1 */ val unlocked: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinLockState.unlocked with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MobileBroadbandPinLockState with Double] = js.native
+  /* 2 */ @js.native
+  object pinRequired extends TopLevel[pinRequired with Double]
+  
+  /* 3 */ @js.native
+  object pinUnblockKeyRequired extends TopLevel[pinUnblockKeyRequired with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 1 */ @js.native
+  object unlocked extends TopLevel[unlocked with Double]
+  
 }
 

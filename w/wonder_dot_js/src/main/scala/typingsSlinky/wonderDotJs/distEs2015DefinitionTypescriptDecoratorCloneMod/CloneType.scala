@@ -1,5 +1,6 @@
 package typingsSlinky.wonderDotJs.distEs2015DefinitionTypescriptDecoratorCloneMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CloneType extends js.Object {
   @js.native
   sealed trait CUSTOM extends CloneType
   
-  /* 1 */ val BASIC: typingsSlinky.wonderDotJs.distEs2015DefinitionTypescriptDecoratorCloneMod.CloneType.BASIC with Double = js.native
-  /* 0 */ val CLONEABLE: typingsSlinky.wonderDotJs.distEs2015DefinitionTypescriptDecoratorCloneMod.CloneType.CLONEABLE with Double = js.native
-  /* 2 */ val CUSTOM: typingsSlinky.wonderDotJs.distEs2015DefinitionTypescriptDecoratorCloneMod.CloneType.CUSTOM with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CloneType with Double] = js.native
+  /* 1 */ @js.native
+  object BASIC extends TopLevel[BASIC with Double]
+  
+  /* 0 */ @js.native
+  object CLONEABLE extends TopLevel[CLONEABLE with Double]
+  
+  /* 2 */ @js.native
+  object CUSTOM extends TopLevel[CUSTOM with Double]
+  
 }
 

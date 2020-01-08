@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Blot
 import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Parent
-import typingsSlinky.parchment.distSrcBlotAbstractParentMod.ParentBlot
 import typingsSlinky.parchment.distSrcRegistryMod.BlotConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`

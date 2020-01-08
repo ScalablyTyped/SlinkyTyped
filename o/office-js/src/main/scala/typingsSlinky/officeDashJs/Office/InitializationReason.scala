@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,13 @@ object InitializationReason extends js.Object {
   @js.native
   sealed trait Inserted extends InitializationReason
   
-  /* 1 */ val DocumentOpened: typingsSlinky.officeDashJs.Office.InitializationReason.DocumentOpened with Double = js.native
-  /* 0 */ val Inserted: typingsSlinky.officeDashJs.Office.InitializationReason.Inserted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InitializationReason with Double] = js.native
+  /* 1 */ @js.native
+  object DocumentOpened extends TopLevel[DocumentOpened with Double]
+  
+  /* 0 */ @js.native
+  object Inserted extends TopLevel[Inserted with Double]
+  
 }
 

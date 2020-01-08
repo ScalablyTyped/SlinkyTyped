@@ -1,6 +1,5 @@
 package typingsSlinky.shopifyDashPrime
 
-import typingsSlinky.shopifyDashPrime.distEnumsOrderUnderscoreCancelUnderscoreReasonMod._OrderCancelReason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

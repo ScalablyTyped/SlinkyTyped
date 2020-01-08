@@ -1,8 +1,6 @@
 package typingsSlinky.d3DashBrush
 
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.d3DashBrush.d3DashBrushMod.BrushBehavior
-import typingsSlinky.d3DashBrush.d3DashBrushMod.BrushSelection
 import typingsSlinky.d3DashBrush.d3DashBrushStrings.brush
 import typingsSlinky.d3DashBrush.d3DashBrushStrings.end
 import typingsSlinky.d3DashBrush.d3DashBrushStrings.start

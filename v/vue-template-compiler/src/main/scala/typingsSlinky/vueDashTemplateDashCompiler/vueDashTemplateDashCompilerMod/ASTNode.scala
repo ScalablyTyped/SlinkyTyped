@@ -4,10 +4,10 @@ import typingsSlinky.std.Record
 import typingsSlinky.vueDashTemplateDashCompiler.Anon_Callback
 import typingsSlinky.vueDashTemplateDashCompiler.Anon_Name
 import typingsSlinky.vueDashTemplateDashCompiler.Anon_NameValue
+import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerBooleans.`true`
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`1`
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`2`
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`3`
-import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

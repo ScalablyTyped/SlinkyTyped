@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object MatrixDefaults extends js.Object {
   @js.native
   sealed trait `type` extends MatrixDefaults
   
-  /* 0 */ val m11: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.m11 with Double = js.native
-  /* 1 */ val m12: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.m12 with Double = js.native
-  /* 2 */ val m21: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.m21 with Double = js.native
-  /* 3 */ val m22: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.m22 with Double = js.native
-  /* 4 */ val offsetX: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.offsetX with Double = js.native
-  /* 5 */ val offsetY: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.offsetY with Double = js.native
-  /* 6 */ val `type`: typingsSlinky.ejDotWebDotAll.ej.MatrixDefaults.`type` with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MatrixDefaults with Double] = js.native
+  /* 0 */ @js.native
+  object m11 extends TopLevel[m11 with Double]
+  
+  /* 1 */ @js.native
+  object m12 extends TopLevel[m12 with Double]
+  
+  /* 2 */ @js.native
+  object m21 extends TopLevel[m21 with Double]
+  
+  /* 3 */ @js.native
+  object m22 extends TopLevel[m22 with Double]
+  
+  /* 4 */ @js.native
+  object offsetX extends TopLevel[offsetX with Double]
+  
+  /* 5 */ @js.native
+  object offsetY extends TopLevel[offsetY with Double]
+  
+  /* 6 */ @js.native
+  object `type` extends TopLevel[`type` with Double]
+  
 }
 

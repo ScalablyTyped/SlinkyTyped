@@ -1,9 +1,6 @@
 package typingsSlinky.phaser.Phaser.Input
 
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
-import typingsSlinky.phaser.Phaser.Input.Gamepad.Axis
-import typingsSlinky.phaser.Phaser.Input.Gamepad.Button
-import typingsSlinky.phaser.Phaser.Input.Gamepad.GamepadPlugin
 import typingsSlinky.phaser.Phaser.Math.Vector2
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.Input.Gamepad.Pad

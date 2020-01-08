@@ -4,6 +4,7 @@ import typingsSlinky.geojson.geojsonMod.LineString
 import typingsSlinky.geojson.geojsonMod.MultiLineString
 import typingsSlinky.leaflet.leafletMod.LayerGroup
 import typingsSlinky.leaflet.leafletMod.LeafletEvent
+import typingsSlinky.leaflet.leafletMod.Polygon
 import typingsSlinky.leaflet.leafletMod.Polyline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ trait EditVertex extends LeafletEvent {
     * List of all layers just being edited from the map.
     */
   var layers: LayerGroup[_]
-  var poly: (Polyline[LineString | MultiLineString, _]) | typingsSlinky.leaflet.leafletMod.Polygon[_]
+  var poly: (Polyline[LineString | MultiLineString, _]) | Polygon[_]
 }
 
 object EditVertex {
@@ -22,7 +23,7 @@ object EditVertex {
   def apply(
     layer: js.Any,
     layers: LayerGroup[_],
-    poly: (Polyline[LineString | MultiLineString, _]) | typingsSlinky.leaflet.leafletMod.Polygon[_],
+    poly: (Polyline[LineString | MultiLineString, _]) | Polygon[_],
     propagatedFrom: js.Any,
     sourceTarget: js.Any,
     target: js.Any,

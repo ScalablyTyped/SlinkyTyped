@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Ribbon
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object AlignType extends js.Object {
   @js.native
   sealed trait Rows extends AlignType
   
-  /* 1 */ val Columns: typingsSlinky.ejDotWebDotAll.ej.Ribbon.AlignType.Columns with Double = js.native
-  /* 0 */ val Rows: typingsSlinky.ejDotWebDotAll.ej.Ribbon.AlignType.Rows with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AlignType with Double] = js.native
+  /* 1 */ @js.native
+  object Columns extends TopLevel[Columns with Double]
+  
+  /* 0 */ @js.native
+  object Rows extends TopLevel[Rows with Double]
+  
 }
 

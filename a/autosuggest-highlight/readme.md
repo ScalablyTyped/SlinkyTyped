@@ -10,9 +10,9 @@ Utilities for highlighting text in autosuggest and autocomplete components
 | ------------------ | :-------------: |
 | Full name          | autosuggest-highlight |
 | Keywords           | autosuggest, autocomplete, auto suggest, auto complete, highlight autosuggest, highlight autocomplete, highlight auto suggest, highlight auto complete, autosuggest highlight, autocomplete highlight, auto suggest highlight, auto complete highlight |
-| # releases         | 2 |
-| # dependents       | 42 |
-| # downloads        | 1244098 |
+| # releases         | 0 |
+| # dependents       | 64 |
+| # downloads        | 3098006 |
 | # stars            | 0 |
 
 ## Links

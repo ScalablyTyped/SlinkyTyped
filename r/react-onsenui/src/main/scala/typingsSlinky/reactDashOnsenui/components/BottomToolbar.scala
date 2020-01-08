@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BottomToolbar
-  extends SharedApply_HTMLAttributesidclassNamestylemodifierstring1359639792[typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.BottomToolbar] {
+  extends SharedApply_HTMLAttributesidclassNamestylemodifierstring_686115526[typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.BottomToolbar] {
   @JSImport("react-onsenui", "BottomToolbar")
   @js.native
   object componentImport extends js.Object

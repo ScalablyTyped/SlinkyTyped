@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.div.tag
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.reactDashNumericDashInput.reactDashNumericDashInputMod.NumericInputProps
@@ -57,6 +58,9 @@ object ReactDashNumericDashInput
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[
+  slinky.web.html.div.tag.type, 
+  typingsSlinky.reactDashNumericDashInput.reactDashNumericDashInputMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = NumericInputProps
 }
 

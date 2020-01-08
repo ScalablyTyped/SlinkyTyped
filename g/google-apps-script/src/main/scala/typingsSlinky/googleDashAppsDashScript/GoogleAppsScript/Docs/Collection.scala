@@ -2,6 +2,7 @@ package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs
 
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.BatchUpdateDocumentRequest
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.BatchUpdateDocumentResponse
+import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,11 +33,11 @@ object Collection extends js.Object {
     // Creates a blank document using the title given in the request. Other fields
     // in the request, including any provided content, are ignored.
     // Returns the created document.
-    def create(resource: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.Document): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.Document = js.native
+    def create(resource: Document): Document = js.native
     // Gets the latest version of the specified document.
-    def get(documentId: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.Document = js.native
+    def get(documentId: String): Document = js.native
     // Gets the latest version of the specified document.
-    def get(documentId: String, optionalArgs: js.Object): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Docs.Schema.Document = js.native
+    def get(documentId: String, optionalArgs: js.Object): Document = js.native
   }
   
 }

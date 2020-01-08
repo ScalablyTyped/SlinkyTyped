@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HeadsetMicOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object HeadsetMicOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/HeadsetMicOutlined", "default")
   @js.native
   object componentImport extends js.Object

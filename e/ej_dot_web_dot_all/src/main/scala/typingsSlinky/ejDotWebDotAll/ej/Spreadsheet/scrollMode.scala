@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object scrollMode extends js.Object {
   @js.native
   sealed trait Normal extends scrollMode
   
-  /* 0 */ val Infinite: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.scrollMode.Infinite with Double = js.native
-  /* 1 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.scrollMode.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[scrollMode with Double] = js.native
+  /* 0 */ @js.native
+  object Infinite extends TopLevel[Infinite with Double]
+  
+  /* 1 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

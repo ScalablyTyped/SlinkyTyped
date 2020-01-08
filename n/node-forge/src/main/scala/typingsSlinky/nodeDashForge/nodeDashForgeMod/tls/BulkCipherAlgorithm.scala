@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod.tls
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object BulkCipherAlgorithm extends js.Object {
   @js.native
   sealed trait rc4 extends BulkCipherAlgorithm
   
-  /* 2 */ val aes: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.BulkCipherAlgorithm.aes with Double = js.native
-  /* 1 */ val des3: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.BulkCipherAlgorithm.des3 with Double = js.native
-  /* 0 */ val rc4: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.BulkCipherAlgorithm.rc4 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BulkCipherAlgorithm with Double] = js.native
+  /* 2 */ @js.native
+  object aes extends TopLevel[aes with Double]
+  
+  /* 1 */ @js.native
+  object des3 extends TopLevel[des3 with Double]
+  
+  /* 0 */ @js.native
+  object rc4 extends TopLevel[rc4 with Double]
+  
 }
 

@@ -8,12 +8,12 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-mete
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-miles`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`square-yards`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.acres
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.geodesic
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.hectares
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.planar
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
@@ -47,7 +47,7 @@ trait AreasAndLengthsParametersProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-AreasAndLengthsParameters.html#lengthUnit)
     */
-  var lengthUnit: js.UndefOr[feet | kilometers | meters | miles | `nautical-miles` | yards] = js.undefined
+  var lengthUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
   /**
     * Polygon geometries for which to compute areas and lengths.
     *
@@ -61,7 +61,7 @@ object AreasAndLengthsParametersProperties {
   def apply(
     areaUnit: acres | hectares | `square-miles` | `square-kilometers` | `square-meters` | `square-feet` | `square-yards` = null,
     calculationType: planar | geodesic | `preserve-shape` = null,
-    lengthUnit: feet | kilometers | meters | miles | `nautical-miles` | yards = null,
+    lengthUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null,
     polygons: js.Array[PolygonProperties] = null
   ): AreasAndLengthsParametersProperties = {
     val __obj = js.Dynamic.literal()

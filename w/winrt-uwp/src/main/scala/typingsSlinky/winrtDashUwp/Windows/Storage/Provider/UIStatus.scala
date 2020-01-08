@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Storage.Provider
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object UIStatus extends js.Object {
   @js.native
   sealed trait visible extends UIStatus
   
-  /* 3 */ val complete: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.UIStatus.complete with Double = js.native
-  /* 1 */ val hidden: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.UIStatus.hidden with Double = js.native
-  /* 0 */ val unavailable: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.UIStatus.unavailable with Double = js.native
-  /* 2 */ val visible: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.UIStatus.visible with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UIStatus with Double] = js.native
+  /* 3 */ @js.native
+  object complete extends TopLevel[complete with Double]
+  
+  /* 1 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 0 */ @js.native
+  object unavailable extends TopLevel[unavailable with Double]
+  
+  /* 2 */ @js.native
+  object visible extends TopLevel[visible with Double]
+  
 }
 

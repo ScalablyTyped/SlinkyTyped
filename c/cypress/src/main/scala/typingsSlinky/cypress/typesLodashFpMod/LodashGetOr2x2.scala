@@ -1,16 +1,22 @@
 package typingsSlinky.cypress.typesLodashFpMod
 
-import typingsSlinky.cypress.typesLodashMod.NumericDictionary
 import typingsSlinky.cypress.typesLodashMod.__
+import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LodashGetOr2x2 extends js.Object {
-  def apply[TDefault](defaultValue: TDefault): LodashGetOr2x3[TDefault] = js.native
-  def apply[T](defaultValue: __): LodashGetOr2x6[T] = js.native
-  def apply[T](defaultValue: __, `object`: NumericDictionary[T]): LodashGetOr2x6[T] = js.native
-  def apply[T, TDefault](defaultValue: TDefault, `object`: NumericDictionary[T]): T | TDefault = js.native
+trait LodashGetOr2x2[TObject, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] extends js.Object {
+  def apply(defaultValue: __): LodashGetOr2x6[TObject, TKey1, TKey2] = js.native
+  def apply(defaultValue: __, `object`: TObject): LodashGetOr2x6[TObject, TKey1, TKey2] = js.native
+  def apply[TDefault](defaultValue: TDefault): (Exclude[
+    /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any, 
+    js.UndefOr[scala.Nothing]
+  ]) | TDefault = js.native
+  def apply[TDefault](defaultValue: TDefault, `object`: TObject): (Exclude[
+    /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any, 
+    js.UndefOr[scala.Nothing]
+  ]) | TDefault = js.native
 }
 

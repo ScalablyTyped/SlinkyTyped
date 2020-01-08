@@ -9,8 +9,8 @@ package object wouterMod {
   import org.scalajs.dom.raw.HTMLAnchorElement
   import typingsSlinky.react.reactMod.AnchorHTMLAttributes
   import typingsSlinky.std.Omit
-  import typingsSlinky.wouter.wouterNumbers.`false`
-  import typingsSlinky.wouter.wouterNumbers.`true`
+  import typingsSlinky.wouter.wouterBooleans.`false`
+  import typingsSlinky.wouter.wouterBooleans.`true`
   import typingsSlinky.wouter.wouterStrings.href
 
   type DefaultParams = StringDictionary[String]

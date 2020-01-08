@@ -9,6 +9,7 @@ import typingsSlinky.webgme.GmeCommon.MetadataHash
 import typingsSlinky.webgme.GmeCommon.Name
 import typingsSlinky.webgme.GmeCommon.Path
 import typingsSlinky.webgme.GmeCommon.ResultCallback
+import typingsSlinky.webgme.GmeConfig.GmeConfig
 import typingsSlinky.webgme.GmeStorage.CommitHash
 import typingsSlinky.webgme.GmeStorage.CommitObject
 import typingsSlinky.webgme.GmeStorage.CommitResult

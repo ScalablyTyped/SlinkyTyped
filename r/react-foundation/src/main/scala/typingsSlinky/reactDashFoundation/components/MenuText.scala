@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MenuText extends SharedApply_MenuItemProps_284456837 {
+object MenuText extends SharedApply_MenuItemProps1512487738 {
   @JSImport("react-foundation/components/menu", "MenuText")
   @js.native
   object componentImport extends js.Object

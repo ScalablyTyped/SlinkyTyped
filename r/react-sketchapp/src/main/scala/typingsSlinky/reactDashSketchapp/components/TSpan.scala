@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TSpan extends SharedApply_TextProps1543959589[default] {
+object TSpan extends SharedApply_TextProps446689590[default] {
   @JSImport("react-sketchapp/lib/components/Svg/TSpan", JSImport.Default)
   @js.native
   object componentImport extends js.Object

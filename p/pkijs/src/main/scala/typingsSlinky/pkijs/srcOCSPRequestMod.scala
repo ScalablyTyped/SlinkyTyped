@@ -1,6 +1,5 @@
 package typingsSlinky.pkijs
 
-import typingsSlinky.pkijs.srcOCSPRequestMod.OCSPRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.streamDashToDashString
 
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.streamDashToDashString.streamDashToDashStringMod.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

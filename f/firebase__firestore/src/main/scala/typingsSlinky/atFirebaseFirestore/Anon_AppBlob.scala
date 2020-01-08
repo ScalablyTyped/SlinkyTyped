@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation._
 trait Anon_AppBlob extends js.Object {
   var Blob: TypeofClassBlob = js.native
   var CollectionReference: Instantiable0[
-    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.CollectionReference
+    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.CollectionReference[js.Object]
   ] = js.native
   var DocumentReference: Instantiable0[
-    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentReference
+    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentReference[js.Object]
   ] = js.native
   var DocumentSnapshot: Instantiable0[
-    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentSnapshot
+    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentSnapshot[js.Object]
   ] = js.native
   var FieldPath: TypeofClassFieldPath = js.native
   var FieldValue: TypeofClassFieldValue = js.native
@@ -29,9 +29,11 @@ trait Anon_AppBlob extends js.Object {
     /* longitude */ Double, 
     typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.GeoPoint
   ] = js.native
-  var Query: Instantiable0[typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.Query] = js.native
+  var Query: Instantiable0[
+    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.Query[js.Object]
+  ] = js.native
   var QuerySnapshot: Instantiable0[
-    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.QuerySnapshot
+    typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.QuerySnapshot[js.Object]
   ] = js.native
   var Timestamp: TypeofClassTimestamp = js.native
   var Transaction: Instantiable0[

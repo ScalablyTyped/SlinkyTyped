@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`autoscaling/v1`
-import typingsSlinky.atPulumiKubernetes.autoscalingV1HorizontalPodAutoscalerMod.HorizontalPodAutoscaler
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.autoscalingSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.autoscaling.v1.HorizontalPodAutoscalerSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.autoscaling.v1.HorizontalPodAutoscalerStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
@@ -42,7 +41,7 @@ object autoscalingV1HorizontalPodAutoscalerMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`autoscaling/v1`] = js.native
+    val apiVersion: Output[autoscalingSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

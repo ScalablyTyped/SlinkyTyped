@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Networking.Connectivity
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object NetworkTypes extends js.Object {
   @js.native
   sealed trait privateNetwork extends NetworkTypes
   
-  /* 1 */ val internet: typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkTypes.internet with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkTypes.none with Double = js.native
-  /* 2 */ val privateNetwork: typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkTypes.privateNetwork with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NetworkTypes with Double] = js.native
+  /* 1 */ @js.native
+  object internet extends TopLevel[internet with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object privateNetwork extends TopLevel[privateNetwork with Double]
+  
 }
 

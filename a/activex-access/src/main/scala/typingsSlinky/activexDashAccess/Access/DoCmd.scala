@@ -1,5 +1,6 @@
 package typingsSlinky.activexDashAccess.Access
 
+import typingsSlinky.activexDashAccess.activexDashAccessBooleans.`true`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`0`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`11`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`1`
@@ -13,8 +14,7 @@ import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`70`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`7`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`8`
 import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`9`
-import typingsSlinky.activexDashAccess.activexDashAccessNumbers.`true`
-import typingsSlinky.activexDashAccess.activexDashAccessStrings.`MS-DOS Text (*DOTtxt)`
+import typingsSlinky.activexDashAccess.activexDashAccessStrings.`MS-DOS Text LeftparenthesisAsteriskDottxtRightparenthesis`
 import typingsSlinky.std.VarDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Access.DoCmd")
 @js.native
 class DoCmd protected () extends js.Object {
-  var `Access.DoCmd_typekey`: DoCmd = js.native
+  @JSName("Access.DoCmd_typekey")
+  var AccessDotDoCmd_typekey: DoCmd = js.native
   def AddMenu(MenuName: String, MenuMacroName: String): Unit = js.native
   def AddMenu(MenuName: String, MenuMacroName: String, StatusBarText: String): Unit = js.native
   def ApplyFilter(): Unit = js.native
@@ -275,7 +276,7 @@ class DoCmd protected () extends js.Object {
   def OutputTo(
     ObjectType: `5`,
     ObjectName: String,
-    OutputFormat: `MS-DOS Text (*DOTtxt)`,
+    OutputFormat: `MS-DOS Text LeftparenthesisAsteriskDottxtRightparenthesis`,
     OutputFile: String,
     AutoStart: Boolean,
     TemplateFile: String,
@@ -284,7 +285,7 @@ class DoCmd protected () extends js.Object {
   def OutputTo(
     ObjectType: `5`,
     ObjectName: String,
-    OutputFormat: `MS-DOS Text (*DOTtxt)`,
+    OutputFormat: `MS-DOS Text LeftparenthesisAsteriskDottxtRightparenthesis`,
     OutputFile: String,
     AutoStart: Boolean,
     TemplateFile: String,

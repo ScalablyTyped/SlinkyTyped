@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ClimbingBoxLoader extends SharedApply_LoaderSizeProps_1901975965[default] {
+object ClimbingBoxLoader extends SharedApply_LoaderSizeProps_2081143133[default] {
   @JSImport("react-spinners/ClimbingBoxLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

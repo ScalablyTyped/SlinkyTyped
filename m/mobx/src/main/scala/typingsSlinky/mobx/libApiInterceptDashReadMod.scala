@@ -1,6 +1,5 @@
 package typingsSlinky.mobx
 
-import typingsSlinky.mobx.libApiInterceptDashReadMod.ReadInterceptor
 import typingsSlinky.mobx.libInternalMod.ObservableMap
 import typingsSlinky.mobx.libInternalMod.ObservableSet
 import typingsSlinky.mobx.libTypesObservablearrayMod.IObservableArray

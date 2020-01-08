@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object GanttBarDateType extends js.Object {
   @js.native
   sealed trait Start extends GanttBarDateType
   
-  /* 1 */ val End: typingsSlinky.sharepoint.SP.JsGrid.GanttBarDateType.End with Double = js.native
-  /* 0 */ val Start: typingsSlinky.sharepoint.SP.JsGrid.GanttBarDateType.Start with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GanttBarDateType with Double] = js.native
+  /* 1 */ @js.native
+  object End extends TopLevel[End with Double]
+  
+  /* 0 */ @js.native
+  object Start extends TopLevel[Start with Double]
+  
 }
 

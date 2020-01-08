@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.PlayTo
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PlayToConnectionState extends js.Object {
   @js.native
   sealed trait rendering extends PlayToConnectionState
   
-  /* 1 */ val connected: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionState.connected with Double = js.native
-  /* 0 */ val disconnected: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionState.disconnected with Double = js.native
-  /* 2 */ val rendering: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionState.rendering with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlayToConnectionState with Double] = js.native
+  /* 1 */ @js.native
+  object connected extends TopLevel[connected with Double]
+  
+  /* 0 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
+  /* 2 */ @js.native
+  object rendering extends TopLevel[rendering with Double]
+  
 }
 

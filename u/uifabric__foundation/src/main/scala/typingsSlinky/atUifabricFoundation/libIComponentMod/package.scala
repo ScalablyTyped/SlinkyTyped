@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object libIComponentMod {
   import slinky.core.ReactComponentClass
-  import typingsSlinky.atUifabricFoundation.atUifabricFoundationNumbers.`false`
+  import typingsSlinky.atUifabricFoundation.atUifabricFoundationBooleans.`false`
   import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
   import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
   import typingsSlinky.react.reactMod.PropsWithChildren

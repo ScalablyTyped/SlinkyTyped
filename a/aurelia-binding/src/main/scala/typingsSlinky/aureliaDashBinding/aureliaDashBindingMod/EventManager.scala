@@ -2,7 +2,7 @@ package typingsSlinky.aureliaDashBinding.aureliaDashBindingMod
 
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.aureliaDashBinding.Anon_Properties
-import typingsSlinky.aureliaDashBinding.aureliaDashBindingNumbers.`true`
+import typingsSlinky.aureliaDashBinding.aureliaDashBindingBooleans.`true`
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesOutputMod.rbac.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
 
 /**
   * ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a
-  * unit by a RoleBinding or ClusterRoleBinding.
+  * unit by a RoleBinding or ClusterRoleBinding. Deprecated in v1.17 in favor of
+  * rbac.authorization.k8s.io/v1 ClusterRole, and will no longer be served in v1.20.
   */
 trait ClusterRole extends js.Object {
   /**
@@ -23,7 +24,7 @@ trait ClusterRole extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: `rbacDOTauthorizationDOTk8sDOTio/v1beta1`
+  val apiVersion: rbacDotauthorizationDotk8sDotioSlashv1beta1
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -45,7 +46,7 @@ object ClusterRole {
   @scala.inline
   def apply(
     aggregationRule: AggregationRule,
-    apiVersion: `rbacDOTauthorizationDOTk8sDOTio/v1beta1`,
+    apiVersion: rbacDotauthorizationDotk8sDotioSlashv1beta1,
     kind: typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.ClusterRole,
     metadata: ObjectMeta,
     rules: js.Array[PolicyRule]

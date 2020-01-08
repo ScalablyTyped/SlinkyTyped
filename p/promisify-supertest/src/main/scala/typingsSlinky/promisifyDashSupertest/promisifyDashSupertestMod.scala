@@ -1,10 +1,6 @@
 package typingsSlinky.promisifyDashSupertest
 
 import typingsSlinky.express.expressMod.Express
-import typingsSlinky.promisifyDashSupertest.promisifyDashSupertestMod.CallbackHandler
-import typingsSlinky.promisifyDashSupertest.promisifyDashSupertestMod.Response
-import typingsSlinky.promisifyDashSupertest.promisifyDashSupertestMod.SuperTest
-import typingsSlinky.promisifyDashSupertest.promisifyDashSupertestMod.Test
 import typingsSlinky.std.RegExp
 import typingsSlinky.superagent.superagentMod.SuperAgent
 import typingsSlinky.superagent.superagentMod.SuperAgentRequest

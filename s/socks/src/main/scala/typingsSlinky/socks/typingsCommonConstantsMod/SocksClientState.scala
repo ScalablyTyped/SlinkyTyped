@@ -1,5 +1,6 @@
 package typingsSlinky.socks.typingsCommonConstantsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,20 +50,46 @@ object SocksClientState extends js.Object {
   @js.native
   sealed trait SentInitialHandshake extends SocksClientState
   
-  /* 9 */ val BoundWaitingForConnection: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.BoundWaitingForConnection with Double = js.native
-  /* 2 */ val Connected: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Connected with Double = js.native
-  /* 1 */ val Connecting: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Connecting with Double = js.native
-  /* 0 */ val Created: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Created with Double = js.native
-  /* 11 */ val Disconnected: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Disconnected with Double = js.native
-  /* 99 */ val Error: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Error with Double = js.native
-  /* 10 */ val Established: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.Established with Double = js.native
-  /* 6 */ val ReceivedAuthenticationResponse: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.ReceivedAuthenticationResponse with Double = js.native
-  /* 8 */ val ReceivedFinalResponse: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.ReceivedFinalResponse with Double = js.native
-  /* 4 */ val ReceivedInitialHandshakeResponse: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.ReceivedInitialHandshakeResponse with Double = js.native
-  /* 5 */ val SentAuthentication: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.SentAuthentication with Double = js.native
-  /* 7 */ val SentFinalHandshake: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.SentFinalHandshake with Double = js.native
-  /* 3 */ val SentInitialHandshake: typingsSlinky.socks.typingsCommonConstantsMod.SocksClientState.SentInitialHandshake with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocksClientState with Double] = js.native
+  /* 9 */ @js.native
+  object BoundWaitingForConnection extends TopLevel[BoundWaitingForConnection with Double]
+  
+  /* 2 */ @js.native
+  object Connected extends TopLevel[Connected with Double]
+  
+  /* 1 */ @js.native
+  object Connecting extends TopLevel[Connecting with Double]
+  
+  /* 0 */ @js.native
+  object Created extends TopLevel[Created with Double]
+  
+  /* 11 */ @js.native
+  object Disconnected extends TopLevel[Disconnected with Double]
+  
+  /* 99 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 10 */ @js.native
+  object Established extends TopLevel[Established with Double]
+  
+  /* 6 */ @js.native
+  object ReceivedAuthenticationResponse extends TopLevel[ReceivedAuthenticationResponse with Double]
+  
+  /* 8 */ @js.native
+  object ReceivedFinalResponse extends TopLevel[ReceivedFinalResponse with Double]
+  
+  /* 4 */ @js.native
+  object ReceivedInitialHandshakeResponse extends TopLevel[ReceivedInitialHandshakeResponse with Double]
+  
+  /* 5 */ @js.native
+  object SentAuthentication extends TopLevel[SentAuthentication with Double]
+  
+  /* 7 */ @js.native
+  object SentFinalHandshake extends TopLevel[SentFinalHandshake with Double]
+  
+  /* 3 */ @js.native
+  object SentInitialHandshake extends TopLevel[SentInitialHandshake with Double]
+  
 }
 

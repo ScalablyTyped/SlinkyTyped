@@ -18,14 +18,16 @@ object Image
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, href, width */
   def apply(
+    height: NumberProp,
+    href: String,
+    width: NumberProp,
     preserveAspectRatio: String = null,
     x: NumberProp = null,
     y: NumberProp = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
     if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
     if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])

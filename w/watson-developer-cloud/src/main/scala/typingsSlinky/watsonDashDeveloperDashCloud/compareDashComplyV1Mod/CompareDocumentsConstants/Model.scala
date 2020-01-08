@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object Model extends js.Object {
   @js.native
   sealed trait TABLES extends Model
   
-  /* "contracts" */ val CONTRACTS: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.Model.CONTRACTS with String = js.native
-  /* "tables" */ val TABLES: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.CompareDocumentsConstants.Model.TABLES with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Model with String] = js.native
+  /* "contracts" */ @js.native
+  object CONTRACTS extends TopLevel[CONTRACTS with String]
+  
+  /* "tables" */ @js.native
+  object TABLES extends TopLevel[TABLES with String]
+  
 }
 

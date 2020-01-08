@@ -2,7 +2,7 @@ package typingsSlinky.next
 
 import typingsSlinky.next.distNextDashServerServerRouterMod.Params
 import typingsSlinky.next.distNextDashServerServerRouterMod.RouteMatch
-import typingsSlinky.next.nextNumbers.`false`
+import typingsSlinky.next.nextBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

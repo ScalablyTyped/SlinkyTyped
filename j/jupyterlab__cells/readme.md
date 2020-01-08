@@ -10,9 +10,9 @@ JupyterLab - Notebook Cells
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/cells |
 | Keywords           | - |
-| # releases         | 45 |
-| # dependents       | 27 |
-| # downloads        | 666500 |
+| # releases         | 65 |
+| # dependents       | 44 |
+| # downloads        | 929759 |
 | # stars            | 0 |
 
 ## Links

@@ -2,7 +2,6 @@ package typingsSlinky.agDashGrid
 
 import typingsSlinky.agDashGrid.distLibEntitiesColumnMod.Column
 import typingsSlinky.agDashGrid.distLibEntitiesGridCellMod.GridCell
-import typingsSlinky.agDashGrid.distLibEntitiesGridRowMod.GridRow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,5 @@
 package typingsSlinky.typescriptDashCollections
 
-import typingsSlinky.typescriptDashCollections.distLibUtilMod.ICompareFunction
-import typingsSlinky.typescriptDashCollections.distLibUtilMod.IEqualsFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

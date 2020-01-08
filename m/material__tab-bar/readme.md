@@ -10,12 +10,13 @@ The Material Components for the web tab bar component
 | ------------------ | :-------------: |
 | Full name          | @material/tab-bar |
 | Keywords           | material components, material design, tab, bar |
-| # releases         | 62 |
-| # dependents       | 30 |
-| # downloads        | 788062 |
+| # releases         | 114 |
+| # dependents       | 33 |
+| # downloads        | 904601 |
 | # stars            | 0 |
 
 ## Links
+- [Bugs](https://github.com/material-components/material-components-web/issues)
 - [Npm](https://www.npmjs.com/package/%40material%2Ftab-bar)
     
 

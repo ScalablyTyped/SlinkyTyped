@@ -4,8 +4,6 @@ import typingsSlinky.googleDashGax.buildSrcApitypesMod.APICallback
 import typingsSlinky.googleDashGax.buildSrcApitypesMod.RequestType
 import typingsSlinky.googleDashGax.buildSrcApitypesMod.ResultTuple
 import typingsSlinky.googleDashGax.buildSrcApitypesMod.SimpleCallbackFunction
-import typingsSlinky.googleDashGax.buildSrcCallMod.CancellablePromise
-import typingsSlinky.googleDashGax.buildSrcCallMod.OngoingCall
 import typingsSlinky.std.Promise
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js

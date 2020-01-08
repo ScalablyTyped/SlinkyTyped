@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object DirectXAlphaMode extends js.Object {
   @js.native
   sealed trait unspecified extends DirectXAlphaMode
   
-  /* 3 */ val ignore: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.DirectXAlphaMode.ignore with Double = js.native
-  /* 1 */ val premultiplied: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.DirectXAlphaMode.premultiplied with Double = js.native
-  /* 2 */ val straight: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.DirectXAlphaMode.straight with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.DirectXAlphaMode.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DirectXAlphaMode with Double] = js.native
+  /* 3 */ @js.native
+  object ignore extends TopLevel[ignore with Double]
+  
+  /* 1 */ @js.native
+  object premultiplied extends TopLevel[premultiplied with Double]
+  
+  /* 2 */ @js.native
+  object straight extends TopLevel[straight with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

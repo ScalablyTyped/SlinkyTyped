@@ -1,7 +1,7 @@
 package typingsSlinky.pDashReflect.pDashReflectMod
 
-import typingsSlinky.pDashReflect.pDashReflectNumbers.`false`
-import typingsSlinky.pDashReflect.pDashReflectNumbers.`true`
+import typingsSlinky.pDashReflect.pDashReflectBooleans.`false`
+import typingsSlinky.pDashReflect.pDashReflectBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

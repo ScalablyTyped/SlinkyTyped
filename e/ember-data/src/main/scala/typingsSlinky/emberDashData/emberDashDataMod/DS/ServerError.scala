@@ -1,5 +1,6 @@
 package typingsSlinky.emberDashData.emberDashDataMod.DS
 
+import typingsSlinky.atEmberObject.atEmberObjectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("ember-data", "DS.ServerError")
 @js.native
-class ServerError ()
-  extends typingsSlinky.atEmberObject.atEmberObjectMod.default
+class ServerError () extends default
 

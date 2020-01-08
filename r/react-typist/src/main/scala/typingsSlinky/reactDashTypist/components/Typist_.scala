@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Typist_
-  extends SharedApply_TypistProps_464048975[typingsSlinky.reactDashTypist.reactDashTypistMod.Typist_] {
+  extends SharedApply_TypistProps1434819223[typingsSlinky.reactDashTypist.reactDashTypistMod.Typist_] {
   @JSImport("react-typist", "Typist")
   @js.native
   object componentImport extends js.Object

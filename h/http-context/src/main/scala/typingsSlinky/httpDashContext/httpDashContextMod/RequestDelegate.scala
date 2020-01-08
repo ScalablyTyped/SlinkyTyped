@@ -1,7 +1,7 @@
 package typingsSlinky.httpDashContext.httpDashContextMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.httpDashContext.httpDashContextNumbers.`false`
+import typingsSlinky.httpDashContext.httpDashContextBooleans.`false`
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
 import scala.scalajs.js
 import scala.scalajs.js.`|`

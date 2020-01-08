@@ -1,9 +1,7 @@
 package typingsSlinky.postmark
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.postmark.distClientModelsClientFilteringParametersMod.FilteringParameters
-import typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus
-import typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.OutboundMessageStatus
-import typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.OutboundMessageTrackingFilteringParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -125,14 +123,26 @@ object distClientModelsMessagesMessageFilteringParametersMod extends js.Object {
     @js.native
     sealed trait Sent extends InboundMessageStatus
     
-    /* "blocked" */ val Blocked: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Blocked with String = js.native
-    /* "failed" */ val Failed: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Failed with String = js.native
-    /* "processed" */ val Processed: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Processed with String = js.native
-    /* "queued" */ val Queued: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Queued with String = js.native
-    /* "scheduled" */ val Scheduled: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Scheduled with String = js.native
-    /* "sent" */ val Sent: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.InboundMessageStatus.Sent with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[InboundMessageStatus with String] = js.native
+    /* "blocked" */ @js.native
+    object Blocked extends TopLevel[Blocked with String]
+    
+    /* "failed" */ @js.native
+    object Failed extends TopLevel[Failed with String]
+    
+    /* "processed" */ @js.native
+    object Processed extends TopLevel[Processed with String]
+    
+    /* "queued" */ @js.native
+    object Queued extends TopLevel[Queued with String]
+    
+    /* "scheduled" */ @js.native
+    object Scheduled extends TopLevel[Scheduled with String]
+    
+    /* "sent" */ @js.native
+    object Sent extends TopLevel[Sent with String]
+    
   }
   
   @js.native
@@ -146,11 +156,17 @@ object distClientModelsMessagesMessageFilteringParametersMod extends js.Object {
     @js.native
     sealed trait Sent extends OutboundMessageStatus
     
-    /* "processed" */ val Processed: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.OutboundMessageStatus.Processed with String = js.native
-    /* "queued" */ val Queued: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.OutboundMessageStatus.Queued with String = js.native
-    /* "sent" */ val Sent: typingsSlinky.postmark.distClientModelsMessagesMessageFilteringParametersMod.OutboundMessageStatus.Sent with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[OutboundMessageStatus with String] = js.native
+    /* "processed" */ @js.native
+    object Processed extends TopLevel[Processed with String]
+    
+    /* "queued" */ @js.native
+    object Queued extends TopLevel[Queued with String]
+    
+    /* "sent" */ @js.native
+    object Sent extends TopLevel[Sent with String]
+    
   }
   
 }

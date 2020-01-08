@@ -1,6 +1,6 @@
 package typingsSlinky.vegaDashUtil.vegaDashUtilMod
 
-import typingsSlinky.vegaDashUtil.vegaDashUtilNumbers.`true`
+import typingsSlinky.vegaDashUtil.vegaDashUtilBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

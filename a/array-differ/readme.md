@@ -10,9 +10,9 @@ Create an array with values that are present in the first input array but not ad
 | ------------------ | :-------------: |
 | Full name          | array-differ |
 | Keywords           | array, difference, diff, differ, filter, exclude |
-| # releases         | 1 |
-| # dependents       | 41 |
-| # downloads        | 100095168 |
+| # releases         | 3 |
+| # dependents       | 44 |
+| # downloads        | 124286975 |
 | # stars            | 4 |
 
 ## Links

@@ -1,7 +1,7 @@
 package typingsSlinky.leafletDashFullscreen.leafletMod
 
 import typingsSlinky.leafletDashFullscreen.Anon_PseudoFullscreen
-import typingsSlinky.leafletDashFullscreen.leafletDashFullscreenNumbers.`true`
+import typingsSlinky.leafletDashFullscreen.leafletDashFullscreenBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

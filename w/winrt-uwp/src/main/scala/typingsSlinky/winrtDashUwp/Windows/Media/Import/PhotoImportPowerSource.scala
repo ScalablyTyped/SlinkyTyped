@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Import
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PhotoImportPowerSource extends js.Object {
   @js.native
   sealed trait unknown extends PhotoImportPowerSource
   
-  /* 1 */ val battery: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportPowerSource.battery with Double = js.native
-  /* 2 */ val external: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportPowerSource.external with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Media.Import.PhotoImportPowerSource.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PhotoImportPowerSource with Double] = js.native
+  /* 1 */ @js.native
+  object battery extends TopLevel[battery with Double]
+  
+  /* 2 */ @js.native
+  object external extends TopLevel[external with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

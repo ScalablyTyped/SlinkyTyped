@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.WiFi
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,16 +48,34 @@ object WiFiPhyKind extends js.Object {
   @js.native
   sealed trait vht extends WiFiPhyKind
   
-  /* 2 */ val dsss: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.dsss with Double = js.native
-  /* 6 */ val erp: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.erp with Double = js.native
-  /* 1 */ val fhss: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.fhss with Double = js.native
-  /* 5 */ val hrdsss: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.hrdsss with Double = js.native
-  /* 7 */ val ht: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.ht with Double = js.native
-  /* 3 */ val irBaseband: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.irBaseband with Double = js.native
-  /* 4 */ val ofdm: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.ofdm with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.unknown with Double = js.native
-  /* 8 */ val vht: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiPhyKind.vht with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WiFiPhyKind with Double] = js.native
+  /* 2 */ @js.native
+  object dsss extends TopLevel[dsss with Double]
+  
+  /* 6 */ @js.native
+  object erp extends TopLevel[erp with Double]
+  
+  /* 1 */ @js.native
+  object fhss extends TopLevel[fhss with Double]
+  
+  /* 5 */ @js.native
+  object hrdsss extends TopLevel[hrdsss with Double]
+  
+  /* 7 */ @js.native
+  object ht extends TopLevel[ht with Double]
+  
+  /* 3 */ @js.native
+  object irBaseband extends TopLevel[irBaseband with Double]
+  
+  /* 4 */ @js.native
+  object ofdm extends TopLevel[ofdm with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 8 */ @js.native
+  object vht extends TopLevel[vht with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object TicksType extends js.Object {
   @js.native
   sealed trait Minorinterval extends TicksType
   
-  /* 0 */ val Majorinterval: typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge.TicksType.Majorinterval with Double = js.native
-  /* 1 */ val Minorinterval: typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge.TicksType.Minorinterval with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TicksType with Double] = js.native
+  /* 0 */ @js.native
+  object Majorinterval extends TopLevel[Majorinterval with Double]
+  
+  /* 1 */ @js.native
+  object Minorinterval extends TopLevel[Minorinterval with Double]
+  
 }
 

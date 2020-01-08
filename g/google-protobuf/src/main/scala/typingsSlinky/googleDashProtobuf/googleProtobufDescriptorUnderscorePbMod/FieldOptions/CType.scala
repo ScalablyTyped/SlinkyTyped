@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FieldOptions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CType extends js.Object {
   @js.native
   sealed trait STRING_PIECE extends CType
   
-  /* 1 */ val CORD: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FieldOptions.CType.CORD with Double = js.native
-  /* 0 */ val STRING: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FieldOptions.CType.STRING with Double = js.native
-  /* 2 */ val STRING_PIECE: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FieldOptions.CType.STRING_PIECE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CType with Double] = js.native
+  /* 1 */ @js.native
+  object CORD extends TopLevel[CORD with Double]
+  
+  /* 0 */ @js.native
+  object STRING extends TopLevel[STRING with Double]
+  
+  /* 2 */ @js.native
+  object STRING_PIECE extends TopLevel[STRING_PIECE with Double]
+  
 }
 

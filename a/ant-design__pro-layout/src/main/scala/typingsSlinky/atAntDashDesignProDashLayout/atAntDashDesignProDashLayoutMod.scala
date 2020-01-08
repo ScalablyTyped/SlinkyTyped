@@ -9,7 +9,7 @@ import typingsSlinky.atAntDashDesignProDashLayout.libHeaderMod.HeaderView
 import typingsSlinky.atAntDashDesignProDashLayout.libPageHeaderWrapperMod.PageHeaderWrapperProps
 import typingsSlinky.atAntDashDesignProDashLayout.libRouteContextMod.RouteContextType
 import typingsSlinky.atAntDashDesignProDashLayout.libSettingDrawerMod.SettingDrawerProps
-import typingsSlinky.atAntDashDesignProDashLayout.libSettingDrawerMod.SettingDrawerState
+import typingsSlinky.atAntDashDesignProDashLayout.libTopNavHeaderMod.TopNavHeaderProps
 import typingsSlinky.atAntDashDesignProDashLayout.libTypingsMod.MenuDataItem
 import typingsSlinky.atAntDashDesignProDashLayout.libTypingsMod.MessageDescriptor
 import typingsSlinky.atAntDashDesignProDashLayout.libTypingsMod.Route
@@ -23,14 +23,6 @@ import scala.scalajs.js.annotation._
 object atAntDashDesignProDashLayoutMod extends js.Object {
   @js.native
   class DefaultHeader () extends HeaderView
-  
-  @js.native
-  class SettingDrawer ()
-    extends typingsSlinky.atAntDashDesignProDashLayout.libSettingDrawerMod.default
-  
-  @js.native
-  class TopNavHeader ()
-    extends typingsSlinky.atAntDashDesignProDashLayout.libTopNavHeaderMod.TopNavHeader
   
   /**
     * 🌃 Powerful and easy to use beautiful layout
@@ -46,7 +38,10 @@ object atAntDashDesignProDashLayoutMod extends js.Object {
     */
   val GridContent: ReactComponentClass[GridContentProps] = js.native
   val PageHeaderWrapper: ReactComponentClass[PageHeaderWrapperProps] = js.native
+  val PageLoading: ReactComponentClass[Anon_Tip] = js.native
   val RouteContext: Context[RouteContextType] = js.native
+  val SettingDrawer: ReactComponentClass[SettingDrawerProps] = js.native
+  val TopNavHeader: ReactComponentClass[TopNavHeaderProps] = js.native
   /**
     * 🌃 Powerful and easy to use beautiful layout
     * 🏄‍ Support multiple topics and layout types
@@ -91,11 +86,5 @@ object atAntDashDesignProDashLayoutMod extends js.Object {
   ): Anon_Breadcrumb = js.native
   def getPageTitle(props: GetPageTitleProps): String = js.native
   def getPageTitle(props: GetPageTitleProps, ignoreTile: Boolean): String = js.native
-  /* static members */
-  @js.native
-  object SettingDrawer extends js.Object {
-    def getDerivedStateFromProps(props: SettingDrawerProps): SettingDrawerState | Null = js.native
-  }
-  
 }
 

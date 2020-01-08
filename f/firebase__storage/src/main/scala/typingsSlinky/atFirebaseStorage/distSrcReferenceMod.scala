@@ -7,7 +7,6 @@ import typingsSlinky.atFirebaseStorage.distSrcImplementationStringMod.StringForm
 import typingsSlinky.atFirebaseStorage.distSrcListMod.ListOptions
 import typingsSlinky.atFirebaseStorage.distSrcListMod.ListResult
 import typingsSlinky.atFirebaseStorage.distSrcMetadataMod.Metadata
-import typingsSlinky.atFirebaseStorage.distSrcReferenceMod.Reference
 import typingsSlinky.atFirebaseStorage.distSrcServiceMod.Service
 import typingsSlinky.atFirebaseStorage.distSrcTaskMod.UploadTask
 import typingsSlinky.std.ArrayBuffer

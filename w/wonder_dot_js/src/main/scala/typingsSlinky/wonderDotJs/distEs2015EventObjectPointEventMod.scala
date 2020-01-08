@@ -3,7 +3,6 @@ package typingsSlinky.wonderDotJs
 import typingsSlinky.wonderDotJs.distEs2015EventInterfaceIEventDataMod.IPointEventData
 import typingsSlinky.wonderDotJs.distEs2015EventObjectDomEventMod.DomEvent
 import typingsSlinky.wonderDotJs.distEs2015EventObjectMouseEventMod.MouseEvent
-import typingsSlinky.wonderDotJs.distEs2015EventObjectPointEventMod.PointEvent
 import typingsSlinky.wonderDotJs.distEs2015EventObjectTouchEventMod.TouchEvent
 import typingsSlinky.wonderDotJs.distEs2015StructurePointMod.Point
 import scala.scalajs.js

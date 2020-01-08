@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,31 +86,79 @@ object BorderType extends js.Object {
   @js.native
   sealed trait wave extends BorderType
   
-  /* "DashDotStroked" */ val dashDotStroked: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dashDotStroked with String = js.native
-  /* "Dashed" */ val dashed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dashed with String = js.native
-  /* "DashedSmall" */ val dashedSmall: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dashedSmall with String = js.native
-  /* "Dot2Dashed" */ val dot2Dashed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dot2Dashed with String = js.native
-  /* "DotDashed" */ val dotDashed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dotDashed with String = js.native
-  /* "Dotted" */ val dotted: typingsSlinky.officeDashJsDashPreview.Word.BorderType.dotted with String = js.native
-  /* "Double" */ val double: typingsSlinky.officeDashJsDashPreview.Word.BorderType.double with String = js.native
-  /* "DoubleWave" */ val doubleWave: typingsSlinky.officeDashJsDashPreview.Word.BorderType.doubleWave with String = js.native
-  /* "Mixed" */ val mixed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.mixed with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Word.BorderType.none with String = js.native
-  /* "Single" */ val single: typingsSlinky.officeDashJsDashPreview.Word.BorderType.single with String = js.native
-  /* "ThickThinLarge" */ val thickThinLarge: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thickThinLarge with String = js.native
-  /* "ThickThinMed" */ val thickThinMed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thickThinMed with String = js.native
-  /* "ThickThinSmall" */ val thickThinSmall: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thickThinSmall with String = js.native
-  /* "ThinThickLarge" */ val thinThickLarge: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickLarge with String = js.native
-  /* "ThinThickMed" */ val thinThickMed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickMed with String = js.native
-  /* "ThinThickSmall" */ val thinThickSmall: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickSmall with String = js.native
-  /* "ThinThickThinLarge" */ val thinThickThinLarge: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickThinLarge with String = js.native
-  /* "ThinThickThinMed" */ val thinThickThinMed: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickThinMed with String = js.native
-  /* "ThinThickThinSmall" */ val thinThickThinSmall: typingsSlinky.officeDashJsDashPreview.Word.BorderType.thinThickThinSmall with String = js.native
-  /* "ThreeDEmboss" */ val threeDEmboss: typingsSlinky.officeDashJsDashPreview.Word.BorderType.threeDEmboss with String = js.native
-  /* "ThreeDEngrave" */ val threeDEngrave: typingsSlinky.officeDashJsDashPreview.Word.BorderType.threeDEngrave with String = js.native
-  /* "Triple" */ val triple: typingsSlinky.officeDashJsDashPreview.Word.BorderType.triple with String = js.native
-  /* "Wave" */ val wave: typingsSlinky.officeDashJsDashPreview.Word.BorderType.wave with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BorderType with String] = js.native
+  /* "DashDotStroked" */ @js.native
+  object dashDotStroked extends TopLevel[dashDotStroked with String]
+  
+  /* "Dashed" */ @js.native
+  object dashed extends TopLevel[dashed with String]
+  
+  /* "DashedSmall" */ @js.native
+  object dashedSmall extends TopLevel[dashedSmall with String]
+  
+  /* "Dot2Dashed" */ @js.native
+  object dot2Dashed extends TopLevel[dot2Dashed with String]
+  
+  /* "DotDashed" */ @js.native
+  object dotDashed extends TopLevel[dotDashed with String]
+  
+  /* "Dotted" */ @js.native
+  object dotted extends TopLevel[dotted with String]
+  
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "DoubleWave" */ @js.native
+  object doubleWave extends TopLevel[doubleWave with String]
+  
+  /* "Mixed" */ @js.native
+  object mixed extends TopLevel[mixed with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Single" */ @js.native
+  object single extends TopLevel[single with String]
+  
+  /* "ThickThinLarge" */ @js.native
+  object thickThinLarge extends TopLevel[thickThinLarge with String]
+  
+  /* "ThickThinMed" */ @js.native
+  object thickThinMed extends TopLevel[thickThinMed with String]
+  
+  /* "ThickThinSmall" */ @js.native
+  object thickThinSmall extends TopLevel[thickThinSmall with String]
+  
+  /* "ThinThickLarge" */ @js.native
+  object thinThickLarge extends TopLevel[thinThickLarge with String]
+  
+  /* "ThinThickMed" */ @js.native
+  object thinThickMed extends TopLevel[thinThickMed with String]
+  
+  /* "ThinThickSmall" */ @js.native
+  object thinThickSmall extends TopLevel[thinThickSmall with String]
+  
+  /* "ThinThickThinLarge" */ @js.native
+  object thinThickThinLarge extends TopLevel[thinThickThinLarge with String]
+  
+  /* "ThinThickThinMed" */ @js.native
+  object thinThickThinMed extends TopLevel[thinThickThinMed with String]
+  
+  /* "ThinThickThinSmall" */ @js.native
+  object thinThickThinSmall extends TopLevel[thinThickThinSmall with String]
+  
+  /* "ThreeDEmboss" */ @js.native
+  object threeDEmboss extends TopLevel[threeDEmboss with String]
+  
+  /* "ThreeDEngrave" */ @js.native
+  object threeDEngrave extends TopLevel[threeDEngrave with String]
+  
+  /* "Triple" */ @js.native
+  object triple extends TopLevel[triple with String]
+  
+  /* "Wave" */ @js.native
+  object wave extends TopLevel[wave with String]
+  
 }
 

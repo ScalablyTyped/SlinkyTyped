@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,13 +50,25 @@ object FloatingObjectRelativeWidthType extends js.Object {
   @js.native
   sealed trait RightMargin extends FloatingObjectRelativeWidthType
   
-  /* 4 */ val InsideMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.InsideMargin with Double = js.native
-  /* 2 */ val LeftMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.LeftMargin with Double = js.native
-  /* 0 */ val Margin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.Margin with Double = js.native
-  /* 5 */ val OutsideMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.OutsideMargin with Double = js.native
-  /* 1 */ val Page: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.Page with Double = js.native
-  /* 3 */ val RightMargin: typingsSlinky.devexpressDashWeb.FloatingObjectRelativeWidthType.RightMargin with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FloatingObjectRelativeWidthType with Double] = js.native
+  /* 4 */ @js.native
+  object InsideMargin extends TopLevel[InsideMargin with Double]
+  
+  /* 2 */ @js.native
+  object LeftMargin extends TopLevel[LeftMargin with Double]
+  
+  /* 0 */ @js.native
+  object Margin extends TopLevel[Margin with Double]
+  
+  /* 5 */ @js.native
+  object OutsideMargin extends TopLevel[OutsideMargin with Double]
+  
+  /* 1 */ @js.native
+  object Page extends TopLevel[Page with Double]
+  
+  /* 3 */ @js.native
+  object RightMargin extends TopLevel[RightMargin with Double]
+  
 }
 

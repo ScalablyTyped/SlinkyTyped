@@ -3,7 +3,6 @@ package typingsSlinky.semanticDashUiDashReact
 import slinky.core.ReactComponentClass
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsImageImageMod.ImageProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsImageImageMod.StrictImageProps
-import typingsSlinky.semanticDashUiDashReact.distCommonjsViewsItemItemImageMod.ItemImageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

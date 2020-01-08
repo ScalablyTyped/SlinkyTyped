@@ -27,8 +27,9 @@ object CheckBox
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, size */
+  /* The following DOM/SVG props were specified: size */
   def apply(
+    checked: Boolean,
     Component: ReactComponentClass[js.Object] = null,
     center: js.UndefOr[Boolean] = js.undefined,
     checkedColor: String = null,
@@ -54,7 +55,7 @@ object CheckBox
     tag.type, 
     typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.CheckBox
   ] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
     if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
     if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
     if (checkedColor != null) __obj.updateDynamic("checkedColor")(checkedColor.asInstanceOf[js.Any])

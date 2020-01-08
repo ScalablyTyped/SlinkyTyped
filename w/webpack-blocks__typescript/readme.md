@@ -12,7 +12,7 @@ Webpack block for Typescript.
 | Keywords           | webpack, webpack-blocks |
 | # releases         | 6 |
 | # dependents       | 3 |
-| # downloads        | 131289 |
+| # downloads        | 121969 |
 | # stars            | 0 |
 
 ## Links

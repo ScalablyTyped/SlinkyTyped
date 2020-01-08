@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object TrackingStateReason extends js.Object {
   @js.native
   sealed trait Relocalizing extends TrackingStateReason
   
-  /* "ARTrackingStateReasonExcessiveMotion" */ val ExcessiveMotion: typingsSlinky.expo.buildARMod.TrackingStateReason.ExcessiveMotion with String = js.native
-  /* "ARTrackingStateReasonInitializing" */ val Initializing: typingsSlinky.expo.buildARMod.TrackingStateReason.Initializing with String = js.native
-  /* "ARTrackingStateReasonInsufficientFeatures" */ val InsufficientFeatures: typingsSlinky.expo.buildARMod.TrackingStateReason.InsufficientFeatures with String = js.native
-  /* "ARTrackingStateReasonNone" */ val None: typingsSlinky.expo.buildARMod.TrackingStateReason.None with String = js.native
-  /* "ARTrackingStateReasonRelocalizing" */ val Relocalizing: typingsSlinky.expo.buildARMod.TrackingStateReason.Relocalizing with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TrackingStateReason with String] = js.native
+  /* "ARTrackingStateReasonExcessiveMotion" */ @js.native
+  object ExcessiveMotion extends TopLevel[ExcessiveMotion with String]
+  
+  /* "ARTrackingStateReasonInitializing" */ @js.native
+  object Initializing extends TopLevel[Initializing with String]
+  
+  /* "ARTrackingStateReasonInsufficientFeatures" */ @js.native
+  object InsufficientFeatures extends TopLevel[InsufficientFeatures with String]
+  
+  /* "ARTrackingStateReasonNone" */ @js.native
+  object None extends TopLevel[None with String]
+  
+  /* "ARTrackingStateReasonRelocalizing" */ @js.native
+  object Relocalizing extends TopLevel[Relocalizing with String]
+  
 }
 

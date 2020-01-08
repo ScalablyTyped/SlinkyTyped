@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object MediaQuality extends js.Object {
   @js.native
   sealed trait standardDefinition extends MediaQuality
   
-  /* 1 */ val highDefinition: typingsSlinky.playerframework.PlayerFramework.MediaQuality.highDefinition with Double = js.native
-  /* 0 */ val standardDefinition: typingsSlinky.playerframework.PlayerFramework.MediaQuality.standardDefinition with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaQuality with Double] = js.native
+  /* 1 */ @js.native
+  object highDefinition extends TopLevel[highDefinition with Double]
+  
+  /* 0 */ @js.native
+  object standardDefinition extends TopLevel[standardDefinition with Double]
+  
 }
 

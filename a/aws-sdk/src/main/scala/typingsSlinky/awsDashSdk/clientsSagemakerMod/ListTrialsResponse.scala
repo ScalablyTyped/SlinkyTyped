@@ -1,0 +1,28 @@
+package typingsSlinky.awsDashSdk.clientsSagemakerMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ListTrialsResponse extends js.Object {
+  /**
+    * A token for getting the next set of trials, if there are any.
+    */
+  var NextToken: js.UndefOr[typingsSlinky.awsDashSdk.clientsSagemakerMod.NextToken] = js.native
+  /**
+    * A list of the summaries of your trials.
+    */
+  var TrialSummaries: js.UndefOr[typingsSlinky.awsDashSdk.clientsSagemakerMod.TrialSummaries] = js.native
+}
+
+object ListTrialsResponse {
+  @scala.inline
+  def apply(NextToken: NextToken = null, TrialSummaries: TrialSummaries = null): ListTrialsResponse = {
+    val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TrialSummaries != null) __obj.updateDynamic("TrialSummaries")(TrialSummaries.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ListTrialsResponse]
+  }
+}
+

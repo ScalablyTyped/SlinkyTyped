@@ -1,6 +1,5 @@
 package typingsSlinky.androiduix
 
-import typingsSlinky.androiduix.goog.math.Long
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

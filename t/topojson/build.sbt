@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "topojson"
-version := "3.2-dt-20190717Z-ef479e"
+version := "3.2-dt-20190717Z-d90188"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-494d92",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "topojson-client" % "3.0-dt-20180414Z-68e1c6",
-  "org.scalablytyped.slinky" %%% "topojson-simplify" % "3.0-dt-20180414Z-2214fd",
-  "org.scalablytyped.slinky" %%% "topojson-specification" % "1.0-dt-20190213Z-3bb006")
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-bf6259",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "topojson-client" % "3.0-dt-20180414Z-cac65a",
+  "org.scalablytyped.slinky" %%% "topojson-simplify" % "3.0-dt-20180414Z-f29351",
+  "org.scalablytyped.slinky" %%% "topojson-specification" % "1.0-dt-20190213Z-4d8dfa")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

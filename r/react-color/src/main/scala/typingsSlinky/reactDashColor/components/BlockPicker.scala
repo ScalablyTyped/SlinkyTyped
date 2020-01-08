@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BlockPicker
-  extends SharedApply_BlockPickerProps1224104986[typingsSlinky.reactDashColor.reactDashColorMod.BlockPicker] {
+  extends SharedApply_BlockPickerProps_1161768570[typingsSlinky.reactDashColor.reactDashColorMod.BlockPicker] {
   @JSImport("react-color", "BlockPicker")
   @js.native
   object componentImport extends js.Object

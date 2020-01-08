@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendarProps
 import scala.scalajs.js
@@ -57,6 +58,12 @@ object ReactInputCalendar
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ReactInputCalendarProps
 }
 

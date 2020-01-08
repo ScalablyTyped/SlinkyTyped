@@ -1,11 +1,5 @@
 package typingsSlinky.cheapDashRuler
 
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.BBox
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.CheapRuler
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.Line
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.Point
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.Points
-import typingsSlinky.cheapDashRuler.cheapDashRulerMod.Polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

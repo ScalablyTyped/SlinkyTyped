@@ -1,17 +1,15 @@
 package typingsSlinky.xhrDashMock
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Event
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.EventListenerOptions
-import typingsSlinky.std.XMLHttpRequest
 import typingsSlinky.std.XMLHttpRequestResponseType
 import typingsSlinky.std.XMLHttpRequestUpload
 import typingsSlinky.std.stdStrings.readystatechange
 import typingsSlinky.xhrDashMock.libMockXMLHttpRequestEventTargetMod.MockXMLHttpRequestEventTarget
-import typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.MockXMLHttpRequest
-import typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState
 import typingsSlinky.xhrDashMock.libTypesMod.ErrorCallbackEvent
 import typingsSlinky.xhrDashMock.libTypesMod.MockFunction
 import scala.scalajs.js
@@ -77,7 +75,7 @@ object libMockXMLHttpRequestMod extends js.Object {
     /* private */ def handleError(error: js.Any): js.Any = js.native
     /* private */ def handleResponseBody(res: js.Any): js.Any = js.native
     def msCachingEnabled(): Boolean = js.native
-    def onreadystatechange(`this`: XMLHttpRequest, ev: typingsSlinky.std.Event): js.Any = js.native
+    def onreadystatechange(ev: typingsSlinky.std.Event): js.Any = js.native
     /**
       * Sets the request method, request URL, and synchronous flag.
       * 
@@ -159,13 +157,23 @@ object libMockXMLHttpRequestMod extends js.Object {
     @js.native
     sealed trait UNSENT extends ReadyState
     
-    /* 4 */ val DONE: typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState.DONE with Double = js.native
-    /* 2 */ val HEADERS_RECEIVED: typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState.HEADERS_RECEIVED with Double = js.native
-    /* 3 */ val LOADING: typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState.LOADING with Double = js.native
-    /* 1 */ val OPENED: typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState.OPENED with Double = js.native
-    /* 0 */ val UNSENT: typingsSlinky.xhrDashMock.libMockXMLHttpRequestMod.ReadyState.UNSENT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ReadyState with Double] = js.native
+    /* 4 */ @js.native
+    object DONE extends TopLevel[DONE with Double]
+    
+    /* 2 */ @js.native
+    object HEADERS_RECEIVED extends TopLevel[HEADERS_RECEIVED with Double]
+    
+    /* 3 */ @js.native
+    object LOADING extends TopLevel[LOADING with Double]
+    
+    /* 1 */ @js.native
+    object OPENED extends TopLevel[OPENED with Double]
+    
+    /* 0 */ @js.native
+    object UNSENT extends TopLevel[UNSENT with Double]
+    
   }
   
   /* static members */

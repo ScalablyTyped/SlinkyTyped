@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.Utilities.Scheduler
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,14 +57,28 @@ object Priority extends js.Object {
   @js.native
   sealed trait normal extends Priority
   
-  /* 0 */ val aboveNormal: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.aboveNormal with Double = js.native
-  /* 1 */ val belowNormal: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.belowNormal with Double = js.native
-  /* 2 */ val high: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.high with Double = js.native
-  /* 3 */ val idle: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.idle with Double = js.native
-  /* 4 */ val max: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.max with Double = js.native
-  /* 5 */ val min: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.min with Double = js.native
-  /* 6 */ val normal: typingsSlinky.winjs.WinJS.Utilities.Scheduler.Priority.normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Priority with Double] = js.native
+  /* 0 */ @js.native
+  object aboveNormal extends TopLevel[aboveNormal with Double]
+  
+  /* 1 */ @js.native
+  object belowNormal extends TopLevel[belowNormal with Double]
+  
+  /* 2 */ @js.native
+  object high extends TopLevel[high with Double]
+  
+  /* 3 */ @js.native
+  object idle extends TopLevel[idle with Double]
+  
+  /* 4 */ @js.native
+  object max extends TopLevel[max with Double]
+  
+  /* 5 */ @js.native
+  object min extends TopLevel[min with Double]
+  
+  /* 6 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
 }
 

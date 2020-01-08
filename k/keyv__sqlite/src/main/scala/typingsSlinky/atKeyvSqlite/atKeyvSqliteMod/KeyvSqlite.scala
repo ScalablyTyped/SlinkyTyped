@@ -1,6 +1,6 @@
 package typingsSlinky.atKeyvSqlite.atKeyvSqliteMod
 
-import typingsSlinky.atKeyvSqlite.atKeyvSqliteNumbers.`false`
+import typingsSlinky.atKeyvSqlite.atKeyvSqliteBooleans.`false`
 import typingsSlinky.keyv.keyvMod.Store
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js

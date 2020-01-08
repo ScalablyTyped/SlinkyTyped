@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,22 +56,52 @@ object ReflectionFlag extends js.Object {
   @js.native
   sealed trait Static extends ReflectionFlag
   
-  /* 2048 */ val Abstract: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Abstract with Double = js.native
-  /* 4096 */ val Const: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Const with Double = js.native
-  /* 1024 */ val ConstructorProperty: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.ConstructorProperty with Double = js.native
-  /* 256 */ val DefaultValue: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.DefaultValue with Double = js.native
-  /* 32 */ val ExportAssignment: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.ExportAssignment with Double = js.native
-  /* 16 */ val Exported: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Exported with Double = js.native
-  /* 64 */ val External: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.External with Double = js.native
-  /* 8192 */ val Let: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Let with Double = js.native
-  /* 0 */ val None: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.None with Double = js.native
-  /* 128 */ val Optional: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Optional with Double = js.native
-  /* 1 */ val Private: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Private with Double = js.native
-  /* 2 */ val Protected: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Protected with Double = js.native
-  /* 4 */ val Public: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Public with Double = js.native
-  /* 512 */ val Rest: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Rest with Double = js.native
-  /* 8 */ val Static: typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.ReflectionFlag.Static with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReflectionFlag with Double] = js.native
+  /* 2048 */ @js.native
+  object Abstract extends TopLevel[Abstract with Double]
+  
+  /* 4096 */ @js.native
+  object Const extends TopLevel[Const with Double]
+  
+  /* 1024 */ @js.native
+  object ConstructorProperty extends TopLevel[ConstructorProperty with Double]
+  
+  /* 256 */ @js.native
+  object DefaultValue extends TopLevel[DefaultValue with Double]
+  
+  /* 32 */ @js.native
+  object ExportAssignment extends TopLevel[ExportAssignment with Double]
+  
+  /* 16 */ @js.native
+  object Exported extends TopLevel[Exported with Double]
+  
+  /* 64 */ @js.native
+  object External extends TopLevel[External with Double]
+  
+  /* 8192 */ @js.native
+  object Let extends TopLevel[Let with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 128 */ @js.native
+  object Optional extends TopLevel[Optional with Double]
+  
+  /* 1 */ @js.native
+  object Private extends TopLevel[Private with Double]
+  
+  /* 2 */ @js.native
+  object Protected extends TopLevel[Protected with Double]
+  
+  /* 4 */ @js.native
+  object Public extends TopLevel[Public with Double]
+  
+  /* 512 */ @js.native
+  object Rest extends TopLevel[Rest with Double]
+  
+  /* 8 */ @js.native
+  object Static extends TopLevel[Static with Double]
+  
 }
 

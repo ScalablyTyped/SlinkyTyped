@@ -1,5 +1,6 @@
 package typingsSlinky.braintreeDashWeb.braintreeDashWebMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,15 +43,31 @@ object ApplePayStatusCodes extends js.Object {
   @js.native
   sealed trait STATUS_SUCCESS extends ApplePayStatusCodes
   
-  /* 0 */ val STATUS_FAILURE: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_FAILURE with Double = js.native
-  /* 1 */ val STATUS_INVALID_BILLING_POSTAL_ADDRESS: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_INVALID_BILLING_POSTAL_ADDRESS with Double = js.native
-  /* 3 */ val STATUS_INVALID_SHIPPING_CONTACT: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_INVALID_SHIPPING_CONTACT with Double = js.native
-  /* 2 */ val STATUS_INVALID_SHIPPING_POSTAL_ADDRESS: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_INVALID_SHIPPING_POSTAL_ADDRESS with Double = js.native
-  /* 5 */ val STATUS_PIN_INCORRECT: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_PIN_INCORRECT with Double = js.native
-  /* 6 */ val STATUS_PIN_LOCKOUT: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_PIN_LOCKOUT with Double = js.native
-  /* 4 */ val STATUS_PIN_REQUIRED: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_PIN_REQUIRED with Double = js.native
-  /* 1 */ val STATUS_SUCCESS: typingsSlinky.braintreeDashWeb.braintreeDashWebMod.ApplePayStatusCodes.STATUS_SUCCESS with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApplePayStatusCodes with Double] = js.native
+  /* 0 */ @js.native
+  object STATUS_FAILURE extends TopLevel[STATUS_FAILURE with Double]
+  
+  /* 1 */ @js.native
+  object STATUS_INVALID_BILLING_POSTAL_ADDRESS extends TopLevel[STATUS_INVALID_BILLING_POSTAL_ADDRESS with Double]
+  
+  /* 3 */ @js.native
+  object STATUS_INVALID_SHIPPING_CONTACT extends TopLevel[STATUS_INVALID_SHIPPING_CONTACT with Double]
+  
+  /* 2 */ @js.native
+  object STATUS_INVALID_SHIPPING_POSTAL_ADDRESS extends TopLevel[STATUS_INVALID_SHIPPING_POSTAL_ADDRESS with Double]
+  
+  /* 5 */ @js.native
+  object STATUS_PIN_INCORRECT extends TopLevel[STATUS_PIN_INCORRECT with Double]
+  
+  /* 6 */ @js.native
+  object STATUS_PIN_LOCKOUT extends TopLevel[STATUS_PIN_LOCKOUT with Double]
+  
+  /* 4 */ @js.native
+  object STATUS_PIN_REQUIRED extends TopLevel[STATUS_PIN_REQUIRED with Double]
+  
+  /* 1 */ @js.native
+  object STATUS_SUCCESS extends TopLevel[STATUS_SUCCESS with Double]
+  
 }
 

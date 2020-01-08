@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-mentions
 
-Typings are for version 3.0
+Typings are for version 3.3
 
 ## Library description:
 React mentions input
@@ -10,9 +10,9 @@ React mentions input
 | ------------------ | :-------------: |
 | Full name          | react-mentions |
 | Keywords           | react, mentions, react-component |
-| # releases         | 16 |
-| # dependents       | 8 |
-| # downloads        | 733362 |
+| # releases         | 20 |
+| # dependents       | 14 |
+| # downloads        | 1320683 |
 | # stars            | 1 |
 
 ## Links

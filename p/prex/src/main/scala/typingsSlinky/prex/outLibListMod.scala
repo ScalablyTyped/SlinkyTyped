@@ -1,7 +1,5 @@
 package typingsSlinky.prex
 
-import typingsSlinky.prex.outLibListMod.LinkedList
-import typingsSlinky.prex.outLibListMod.LinkedListNode
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.antd.libDateDashPickerInterfaceMod.DatePickerDecorator
 import typingsSlinky.antd.libDateDashPickerInterfaceMod.DatePickerProps
 import typingsSlinky.react.reactMod.ClassicComponent
@@ -17,6 +18,8 @@ object libDateDashPickerMod extends js.Object {
     def this(props: DatePickerProps, context: js.Any) = this()
   }
   
-  val default: DatePickerDecorator = js.native
+  @js.native
+  object default extends TopLevel[DatePickerDecorator]
+  
 }
 

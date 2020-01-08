@@ -1,7 +1,7 @@
 package typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerMod
 
 import typingsSlinky.std.Record
-import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerNumbers.`true`
+import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerBooleans.`true`
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerStrings.condense
 import typingsSlinky.vueDashTemplateDashCompiler.vueDashTemplateDashCompilerStrings.preserve
 import scala.scalajs.js

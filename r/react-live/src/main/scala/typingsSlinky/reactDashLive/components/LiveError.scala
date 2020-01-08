@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LiveError
-  extends SharedApply_DivProps_747639047[typingsSlinky.reactDashLive.reactDashLiveMod.LiveError] {
+  extends SharedApply_DivProps941854182[typingsSlinky.reactDashLive.reactDashLiveMod.LiveError] {
   @JSImport("react-live", "LiveError")
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,6 @@
 package typingsSlinky.fancybox
 
-import typingsSlinky.fancybox.fancyboxNumbers.`false`
+import typingsSlinky.fancybox.fancyboxBooleans.`false`
 import typingsSlinky.fancybox.fancyboxStrings.`inline`
 import typingsSlinky.fancybox.fancyboxStrings.`zoom-in-out`
 import typingsSlinky.fancybox.fancyboxStrings.ajax

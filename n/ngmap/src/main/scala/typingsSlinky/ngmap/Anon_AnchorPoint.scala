@@ -1,5 +1,6 @@
 package typingsSlinky.ngmap
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.Animation
 import typingsSlinky.googlemaps.google.maps.Icon
 import typingsSlinky.googlemaps.google.maps.Map
@@ -48,7 +49,7 @@ trait Anon_AnchorPoint extends js.Object {
     * @type {(Map|StreetViewPanorama)}
     *
     */
-  var map: js.UndefOr[Map | StreetViewPanorama] = js.undefined
+  var map: js.UndefOr[Map[Element] | StreetViewPanorama] = js.undefined
   /** The marker's opacity between 0.0 and 1.0. */
   var opacity: js.UndefOr[Double] = js.undefined
   /**
@@ -84,7 +85,7 @@ object Anon_AnchorPoint {
     draggable: js.UndefOr[Boolean] = js.undefined,
     icon: String | Icon | Symbol = null,
     label: String = null,
-    map: Map | StreetViewPanorama = null,
+    map: Map[Element] | StreetViewPanorama = null,
     opacity: Int | Double = null,
     optimized: js.UndefOr[Boolean] = js.undefined,
     shape: MarkerShape = null,

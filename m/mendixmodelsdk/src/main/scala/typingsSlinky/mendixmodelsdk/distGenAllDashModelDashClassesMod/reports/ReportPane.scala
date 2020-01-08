@@ -18,6 +18,7 @@ import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TabPage
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.VerticalFlow
+import typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -49,7 +50,7 @@ class ReportPane protected ()
 @js.native
 object ReportPane extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

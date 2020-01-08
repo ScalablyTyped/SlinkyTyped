@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,21 +53,49 @@ object SupportedIdeType extends js.Object {
   @js.native
   sealed trait WebStorm extends SupportedIdeType
   
-  /* 1 */ val AndroidStudio: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.AndroidStudio with Double = js.native
-  /* 2 */ val AppCode: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.AppCode with Double = js.native
-  /* 3 */ val CLion: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.CLion with Double = js.native
-  /* 4 */ val DataGrip: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.DataGrip with Double = js.native
-  /* 13 */ val Eclipse: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.Eclipse with Double = js.native
-  /* 5 */ val IntelliJ: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.IntelliJ with Double = js.native
-  /* 6 */ val MPS: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.MPS with Double = js.native
-  /* 7 */ val PhpStorm: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.PhpStorm with Double = js.native
-  /* 8 */ val PyCharm: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.PyCharm with Double = js.native
-  /* 9 */ val RubyMine: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.RubyMine with Double = js.native
-  /* 10 */ val Tower: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.Tower with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.Unknown with Double = js.native
-  /* 11 */ val VisualStudio: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.VisualStudio with Double = js.native
-  /* 12 */ val WebStorm: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.SupportedIdeType.WebStorm with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SupportedIdeType with Double] = js.native
+  /* 1 */ @js.native
+  object AndroidStudio extends TopLevel[AndroidStudio with Double]
+  
+  /* 2 */ @js.native
+  object AppCode extends TopLevel[AppCode with Double]
+  
+  /* 3 */ @js.native
+  object CLion extends TopLevel[CLion with Double]
+  
+  /* 4 */ @js.native
+  object DataGrip extends TopLevel[DataGrip with Double]
+  
+  /* 13 */ @js.native
+  object Eclipse extends TopLevel[Eclipse with Double]
+  
+  /* 5 */ @js.native
+  object IntelliJ extends TopLevel[IntelliJ with Double]
+  
+  /* 6 */ @js.native
+  object MPS extends TopLevel[MPS with Double]
+  
+  /* 7 */ @js.native
+  object PhpStorm extends TopLevel[PhpStorm with Double]
+  
+  /* 8 */ @js.native
+  object PyCharm extends TopLevel[PyCharm with Double]
+  
+  /* 9 */ @js.native
+  object RubyMine extends TopLevel[RubyMine with Double]
+  
+  /* 10 */ @js.native
+  object Tower extends TopLevel[Tower with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
+  /* 11 */ @js.native
+  object VisualStudio extends TopLevel[VisualStudio with Double]
+  
+  /* 12 */ @js.native
+  object WebStorm extends TopLevel[WebStorm with Double]
+  
 }
 

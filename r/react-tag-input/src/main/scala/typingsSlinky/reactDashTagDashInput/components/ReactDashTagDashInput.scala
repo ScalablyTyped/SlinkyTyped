@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashTagDashInput extends SharedApply_ReactTagsProps1407547527[default] {
+object ReactDashTagDashInput extends SharedApply_ReactTagsProps1362711866[default] {
   @JSImport("react-tag-input", JSImport.Default)
   @js.native
   object componentImport extends js.Object

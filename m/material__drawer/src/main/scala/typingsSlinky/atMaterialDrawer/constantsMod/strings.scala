@@ -2,28 +2,28 @@ package typingsSlinky.atMaterialDrawer.constantsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atMaterialBase.foundationMod.MDCStrings
-import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`DOTmdc-drawer-app-content`
-import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`DOTmdc-drawer-scrim`
-import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`MDCDrawer:closed`
-import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`MDCDrawer:opened`
+import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.MDCDrawerColonclosed
+import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.MDCDrawerColonopened
+import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`Dotmdc-drawer-app-content`
+import typingsSlinky.atMaterialDrawer.atMaterialDrawerStrings.`Dotmdc-drawer-scrim`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait strings extends MDCStrings {
-  var APP_CONTENT_SELECTOR: `DOTmdc-drawer-app-content`
-  var CLOSE_EVENT: `MDCDrawer:closed`
-  var OPEN_EVENT: `MDCDrawer:opened`
-  var SCRIM_SELECTOR: `DOTmdc-drawer-scrim`
+  var APP_CONTENT_SELECTOR: `Dotmdc-drawer-app-content`
+  var CLOSE_EVENT: MDCDrawerColonclosed
+  var OPEN_EVENT: MDCDrawerColonopened
+  var SCRIM_SELECTOR: `Dotmdc-drawer-scrim`
 }
 
 object strings {
   @scala.inline
   def apply(
-    APP_CONTENT_SELECTOR: `DOTmdc-drawer-app-content`,
-    CLOSE_EVENT: `MDCDrawer:closed`,
-    OPEN_EVENT: `MDCDrawer:opened`,
-    SCRIM_SELECTOR: `DOTmdc-drawer-scrim`,
+    APP_CONTENT_SELECTOR: `Dotmdc-drawer-app-content`,
+    CLOSE_EVENT: MDCDrawerColonclosed,
+    OPEN_EVENT: MDCDrawerColonopened,
+    SCRIM_SELECTOR: `Dotmdc-drawer-scrim`,
     StringDictionary: StringDictionary[String] = null
   ): strings = {
     val __obj = js.Dynamic.literal(APP_CONTENT_SELECTOR = APP_CONTENT_SELECTOR.asInstanceOf[js.Any], CLOSE_EVENT = CLOSE_EVENT.asInstanceOf[js.Any], OPEN_EVENT = OPEN_EVENT.asInstanceOf[js.Any], SCRIM_SELECTOR = SCRIM_SELECTOR.asInstanceOf[js.Any])

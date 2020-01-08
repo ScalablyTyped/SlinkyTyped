@@ -10,9 +10,9 @@ Collection of utility functions used in web3.js.
 | ------------------ | :-------------: |
 | Full name          | web3-utils |
 | Keywords           | - |
-| # releases         | 37 |
-| # dependents       | 339 |
-| # downloads        | 4640068 |
+| # releases         | 38 |
+| # dependents       | 384 |
+| # downloads        | 5326423 |
 | # stars            | 0 |
 
 ## Links

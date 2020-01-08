@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialFloatingDashLabel
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialFloatingDashLabel.adapterMod.MDCFloatingLabelAdapter
-import typingsSlinky.atMaterialFloatingDashLabel.atMaterialFloatingDashLabelMod.MDCFloatingLabel
 import typingsSlinky.atMaterialFloatingDashLabel.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

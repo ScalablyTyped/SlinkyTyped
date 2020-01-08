@@ -2,7 +2,6 @@ package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.distLibModelsReflectionsAbstractMod.Reflection
 import typingsSlinky.typedoc.distLibModelsTypesAbstractMod.Type
-import typingsSlinky.typedoc.distLibModelsTypesReferenceMod.ReferenceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

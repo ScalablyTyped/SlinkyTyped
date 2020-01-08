@@ -10,9 +10,9 @@ convert textual words to numbers with optional fuzzy text matching
 | ------------------ | :-------------: |
 | Full name          | words-to-numbers |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 12 |
-| # downloads        | 31352 |
+| # releases         | 6 |
+| # dependents       | 16 |
+| # downloads        | 179631 |
 | # stars            | 0 |
 
 ## Links

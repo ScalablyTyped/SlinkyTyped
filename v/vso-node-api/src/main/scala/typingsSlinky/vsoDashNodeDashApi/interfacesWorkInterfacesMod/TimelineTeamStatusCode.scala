@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object TimelineTeamStatusCode extends js.Object {
   @js.native
   sealed trait OK extends TimelineTeamStatusCode
   
-  /* 4 */ val BacklogInError: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.BacklogInError with Double = js.native
-  /* 1 */ val DoesntExistOrAccessDenied: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.DoesntExistOrAccessDenied with Double = js.native
-  /* 3 */ val MaxTeamFieldsExceeded: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.MaxTeamFieldsExceeded with Double = js.native
-  /* 2 */ val MaxTeamsExceeded: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.MaxTeamsExceeded with Double = js.native
-  /* 5 */ val MissingTeamFieldValue: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.MissingTeamFieldValue with Double = js.native
-  /* 6 */ val NoIterationsExist: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.NoIterationsExist with Double = js.native
-  /* 0 */ val OK: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimelineTeamStatusCode.OK with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimelineTeamStatusCode with Double] = js.native
+  /* 4 */ @js.native
+  object BacklogInError extends TopLevel[BacklogInError with Double]
+  
+  /* 1 */ @js.native
+  object DoesntExistOrAccessDenied extends TopLevel[DoesntExistOrAccessDenied with Double]
+  
+  /* 3 */ @js.native
+  object MaxTeamFieldsExceeded extends TopLevel[MaxTeamFieldsExceeded with Double]
+  
+  /* 2 */ @js.native
+  object MaxTeamsExceeded extends TopLevel[MaxTeamsExceeded with Double]
+  
+  /* 5 */ @js.native
+  object MissingTeamFieldValue extends TopLevel[MissingTeamFieldValue with Double]
+  
+  /* 6 */ @js.native
+  object NoIterationsExist extends TopLevel[NoIterationsExist with Double]
+  
+  /* 0 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
 }
 

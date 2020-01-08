@@ -6,5 +6,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.RefsOnlyTimeStamp")
 @js.native
-class RefsOnlyTimeStamp () extends XAdESTimeStamp
+class RefsOnlyTimeStamp ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.RefsOnlyTimeStamp
 

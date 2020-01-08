@@ -2,7 +2,6 @@ package typingsSlinky.atEmberRouting
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atEmberRouting.dashPrivateTransitionMod.Transition
-import typingsSlinky.atEmberRouting.routeMod.Route
 import typingsSlinky.atEmberRouting.typesMod.RenderOptions
 import typingsSlinky.atEmberRouting.typesMod.RouteQueryParam
 import scala.scalajs.js
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object routeMod extends js.Object {
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
-  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall $anonfun class extends from : EmberObject.extend(ActionHandler, Evented) * / any */ @js.native
+  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : EmberObject.extend(ActionHandler, Evented) * / any */ @js.native
   trait Route extends js.Object {
     // properties
     /**

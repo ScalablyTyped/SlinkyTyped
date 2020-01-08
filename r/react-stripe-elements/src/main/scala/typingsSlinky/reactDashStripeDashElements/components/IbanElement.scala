@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IbanElement
-  extends SharedApply_ElementProps_159982304[
+  extends SharedApply_ElementProps710343637[
       typingsSlinky.reactDashStripeDashElements.reactDashStripeDashElementsMod.IbanElement
     ] {
   @JSImport("react-stripe-elements", "IbanElement")

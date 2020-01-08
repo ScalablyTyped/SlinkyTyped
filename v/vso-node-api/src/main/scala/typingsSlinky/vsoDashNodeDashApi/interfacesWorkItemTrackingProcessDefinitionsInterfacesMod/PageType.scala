@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessDefinitionsInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object PageType extends js.Object {
   @js.native
   sealed trait Links extends PageType
   
-  /* 4 */ val Attachments: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessDefinitionsInterfacesMod.PageType.Attachments with Double = js.native
-  /* 1 */ val Custom: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessDefinitionsInterfacesMod.PageType.Custom with Double = js.native
-  /* 2 */ val History: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessDefinitionsInterfacesMod.PageType.History with Double = js.native
-  /* 3 */ val Links: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessDefinitionsInterfacesMod.PageType.Links with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PageType with Double] = js.native
+  /* 4 */ @js.native
+  object Attachments extends TopLevel[Attachments with Double]
+  
+  /* 1 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 2 */ @js.native
+  object History extends TopLevel[History with Double]
+  
+  /* 3 */ @js.native
+  object Links extends TopLevel[Links with Double]
+  
 }
 

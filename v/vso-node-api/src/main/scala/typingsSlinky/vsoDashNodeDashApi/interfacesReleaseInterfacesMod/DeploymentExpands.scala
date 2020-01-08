@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object DeploymentExpands extends js.Object {
   @js.native
   sealed trait DeploymentOnly extends DeploymentExpands
   
-  /* 0 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentExpands.All with Double = js.native
-  /* 2 */ val Approvals: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentExpands.Approvals with Double = js.native
-  /* 4 */ val Artifacts: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentExpands.Artifacts with Double = js.native
-  /* 1 */ val DeploymentOnly: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeploymentExpands.DeploymentOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeploymentExpands with Double] = js.native
+  /* 0 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Approvals extends TopLevel[Approvals with Double]
+  
+  /* 4 */ @js.native
+  object Artifacts extends TopLevel[Artifacts with Double]
+  
+  /* 1 */ @js.native
+  object DeploymentOnly extends TopLevel[DeploymentOnly with Double]
+  
 }
 

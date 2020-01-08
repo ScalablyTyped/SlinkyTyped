@@ -1,5 +1,6 @@
 package typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object base64_variants extends js.Object {
   @js.native
   sealed trait URLSAFE_NO_PADDING extends base64_variants
   
-  /* 0 */ val ORIGINAL: typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.base64_variants.ORIGINAL with Double = js.native
-  /* 1 */ val ORIGINAL_NO_PADDING: typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.base64_variants.ORIGINAL_NO_PADDING with Double = js.native
-  /* 2 */ val URLSAFE: typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.base64_variants.URLSAFE with Double = js.native
-  /* 3 */ val URLSAFE_NO_PADDING: typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod.base64_variants.URLSAFE_NO_PADDING with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[base64_variants with Double] = js.native
+  /* 0 */ @js.native
+  object ORIGINAL extends TopLevel[ORIGINAL with Double]
+  
+  /* 1 */ @js.native
+  object ORIGINAL_NO_PADDING extends TopLevel[ORIGINAL_NO_PADDING with Double]
+  
+  /* 2 */ @js.native
+  object URLSAFE extends TopLevel[URLSAFE with Double]
+  
+  /* 3 */ @js.native
+  object URLSAFE_NO_PADDING extends TopLevel[URLSAFE_NO_PADDING with Double]
+  
 }
 

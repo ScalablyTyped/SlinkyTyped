@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ExportingMode extends js.Object {
   @js.native
   sealed trait ServerSide extends ExportingMode
   
-  /* 1 */ val ClientSide: typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge.ExportingMode.ClientSide with Double = js.native
-  /* 0 */ val ServerSide: typingsSlinky.ejDotWebDotAll.ej.datavisualization.LinearGauge.ExportingMode.ServerSide with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExportingMode with Double] = js.native
+  /* 1 */ @js.native
+  object ClientSide extends TopLevel[ClientSide with Double]
+  
+  /* 0 */ @js.native
+  object ServerSide extends TopLevel[ServerSide with Double]
+  
 }
 

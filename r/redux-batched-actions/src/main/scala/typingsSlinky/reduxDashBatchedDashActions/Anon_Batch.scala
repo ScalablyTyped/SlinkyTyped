@@ -1,6 +1,6 @@
 package typingsSlinky.reduxDashBatchedDashActions
 
-import typingsSlinky.reduxDashBatchedDashActions.reduxDashBatchedDashActionsNumbers.`true`
+import typingsSlinky.reduxDashBatchedDashActions.reduxDashBatchedDashActionsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

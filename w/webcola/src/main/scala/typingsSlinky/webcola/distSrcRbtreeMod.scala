@@ -1,7 +1,5 @@
 package typingsSlinky.webcola
 
-import typingsSlinky.webcola.distSrcRbtreeMod.Iterator
-import typingsSlinky.webcola.distSrcRbtreeMod.TreeBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

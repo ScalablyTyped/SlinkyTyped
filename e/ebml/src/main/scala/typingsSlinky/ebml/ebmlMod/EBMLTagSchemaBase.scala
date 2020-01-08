@@ -1,7 +1,7 @@
 package typingsSlinky.ebml.ebmlMod
 
 import typingsSlinky.ebml.ebmlStrings.Informational
-import typingsSlinky.ebml.ebmlStrings.`1 - bzlib,`
+import typingsSlinky.ebml.ebmlStrings.`1 - bzlibComma`
 import typingsSlinky.ebml.ebmlStrings.`2 - lzo1x`
 import typingsSlinky.ebml.ebmlStrings.informational_
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 trait EBMLTagSchemaBase extends EBMLTagSchema {
   var cppname: js.UndefOr[String] = js.undefined
-  var del: js.UndefOr[(js.Tuple2[`1 - bzlib,`, `2 - lzo1x`]) | (`1 - bzlib,`) | (`2 - lzo1x`)] = js.undefined
+  var del: js.UndefOr[(js.Tuple2[`1 - bzlibComma`, `2 - lzo1x`]) | (`1 - bzlibComma`) | (`2 - lzo1x`)] = js.undefined
   var description: String
   var divx: js.UndefOr[Boolean] = js.undefined
   var i: js.UndefOr[String] = js.undefined
@@ -34,7 +34,7 @@ object EBMLTagSchemaBase {
     name: String,
     `type`: TagType,
     cppname: String = null,
-    del: (js.Tuple2[`1 - bzlib,`, `2 - lzo1x`]) | (`1 - bzlib,`) | (`2 - lzo1x`) = null,
+    del: (js.Tuple2[`1 - bzlibComma`, `2 - lzo1x`]) | (`1 - bzlibComma`) | (`2 - lzo1x`) = null,
     divx: js.UndefOr[Boolean] = js.undefined,
     i: String = null,
     mandatory: js.UndefOr[Boolean] = js.undefined,

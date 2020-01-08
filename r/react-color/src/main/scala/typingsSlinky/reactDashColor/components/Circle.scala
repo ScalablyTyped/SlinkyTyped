@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Circle extends SharedApply_CirclePickerProps_475771627[default] {
+object Circle extends SharedApply_CirclePickerProps_1189394465[default] {
   @JSImport("react-color/lib/components/circle/Circle", JSImport.Default)
   @js.native
   object componentImport extends js.Object

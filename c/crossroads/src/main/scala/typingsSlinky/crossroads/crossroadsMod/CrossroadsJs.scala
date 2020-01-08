@@ -1,7 +1,5 @@
 package typingsSlinky.crossroads.crossroadsMod
 
-import typingsSlinky.crossroads.crossroadsMod.CrossroadsJs.CrossRoadsStatic
-import typingsSlinky.crossroads.crossroadsMod.CrossroadsJs.Route
 import typingsSlinky.signals.signalsMod.Signal
 import typingsSlinky.signals.signalsMod.SignalBinding
 import typingsSlinky.std.Number

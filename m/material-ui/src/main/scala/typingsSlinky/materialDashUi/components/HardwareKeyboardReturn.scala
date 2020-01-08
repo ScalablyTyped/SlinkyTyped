@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HardwareKeyboardReturn
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardReturn] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.HardwareKeyboardReturn] {
   @JSImport("material-ui/svg-icons", "HardwareKeyboardReturn")
   @js.native
   object componentImport extends js.Object

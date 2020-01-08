@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Collapse
-  extends SharedApply_CollapseProps1647023530[typingsSlinky.reactDashCollapse.reactDashCollapseMod.Collapse] {
+  extends SharedApply_CollapseProps1214669447[typingsSlinky.reactDashCollapse.reactDashCollapseMod.Collapse] {
   @JSImport("react-collapse", "Collapse")
   @js.native
   object componentImport extends js.Object

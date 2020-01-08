@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object EUCMFilePrivacyState extends js.Object {
   @js.native
   sealed trait Public extends EUCMFilePrivacyState
   
-  /* 8 | 4 | 2 */ val All: typingsSlinky.steamDashClient.steamDashClientMod.EUCMFilePrivacyState.All with Double = js.native
-  /* 4 */ val FriendsOnly: typingsSlinky.steamDashClient.steamDashClientMod.EUCMFilePrivacyState.FriendsOnly with Double = js.native
-  /* -1 */ val Invalid: typingsSlinky.steamDashClient.steamDashClientMod.EUCMFilePrivacyState.Invalid with Double = js.native
-  /* 2 */ val Private: typingsSlinky.steamDashClient.steamDashClientMod.EUCMFilePrivacyState.Private with Double = js.native
-  /* 8 */ val Public: typingsSlinky.steamDashClient.steamDashClientMod.EUCMFilePrivacyState.Public with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EUCMFilePrivacyState with Double] = js.native
+  /* 8 | 4 | 2 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 4 */ @js.native
+  object FriendsOnly extends TopLevel[FriendsOnly with Double]
+  
+  /* -1 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 2 */ @js.native
+  object Private extends TopLevel[Private with Double]
+  
+  /* 8 */ @js.native
+  object Public extends TopLevel[Public with Double]
+  
 }
 

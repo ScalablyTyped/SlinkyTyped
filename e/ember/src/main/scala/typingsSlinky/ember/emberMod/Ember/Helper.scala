@@ -1,11 +1,11 @@
 package typingsSlinky.ember.emberMod.Ember
 
+import typingsSlinky.atEmberComponent.helperMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("ember", "Ember.Helper")
 @js.native
-class Helper ()
-  extends typingsSlinky.atEmberComponent.helperMod.default
+class Helper () extends default
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,19 +60,43 @@ object PosPrinterColorCapabilities extends js.Object {
   @js.native
   sealed trait yellow extends PosPrinterColorCapabilities
   
-  /* 2 */ val custom1: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom1 with Double = js.native
-  /* 3 */ val custom2: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom2 with Double = js.native
-  /* 4 */ val custom3: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom3 with Double = js.native
-  /* 5 */ val custom4: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom4 with Double = js.native
-  /* 6 */ val custom5: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom5 with Double = js.native
-  /* 7 */ val custom6: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.custom6 with Double = js.native
-  /* 8 */ val cyan: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.cyan with Double = js.native
-  /* 11 */ val full: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.full with Double = js.native
-  /* 9 */ val magenta: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.magenta with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.none with Double = js.native
-  /* 1 */ val primary: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.primary with Double = js.native
-  /* 10 */ val yellow: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterColorCapabilities.yellow with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PosPrinterColorCapabilities with Double] = js.native
+  /* 2 */ @js.native
+  object custom1 extends TopLevel[custom1 with Double]
+  
+  /* 3 */ @js.native
+  object custom2 extends TopLevel[custom2 with Double]
+  
+  /* 4 */ @js.native
+  object custom3 extends TopLevel[custom3 with Double]
+  
+  /* 5 */ @js.native
+  object custom4 extends TopLevel[custom4 with Double]
+  
+  /* 6 */ @js.native
+  object custom5 extends TopLevel[custom5 with Double]
+  
+  /* 7 */ @js.native
+  object custom6 extends TopLevel[custom6 with Double]
+  
+  /* 8 */ @js.native
+  object cyan extends TopLevel[cyan with Double]
+  
+  /* 11 */ @js.native
+  object full extends TopLevel[full with Double]
+  
+  /* 9 */ @js.native
+  object magenta extends TopLevel[magenta with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object primary extends TopLevel[primary with Double]
+  
+  /* 10 */ @js.native
+  object yellow extends TopLevel[yellow with Double]
+  
 }
 

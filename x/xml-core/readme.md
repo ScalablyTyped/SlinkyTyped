@@ -1,7 +1,7 @@
 
 # Scala.js typings for xml-core
 
-Typings are for version 1.0.15
+Typings are for version 1.0.20
 
 ## Library description:
 `xml-core` is a set of classes that make it easier to work with XML within the browser and node.
@@ -10,9 +10,9 @@ Typings are for version 1.0.15
 | ------------------ | :-------------: |
 | Full name          | xml-core |
 | Keywords           | xml |
-| # releases         | 6 |
-| # dependents       | 4 |
-| # downloads        | 12598 |
+| # releases         | 7 |
+| # dependents       | 7 |
+| # downloads        | 20331 |
 | # stars            | 0 |
 
 ## Links

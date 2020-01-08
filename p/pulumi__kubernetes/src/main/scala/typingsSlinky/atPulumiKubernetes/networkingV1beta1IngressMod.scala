@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`networkingDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.networkingV1beta1IngressMod.Ingress
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.networking.v1beta1.IngressSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.networking.v1beta1.IngressStatus
@@ -39,7 +38,7 @@ object networkingV1beta1IngressMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`networkingDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[networkingDotk8sDotioSlashv1beta1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

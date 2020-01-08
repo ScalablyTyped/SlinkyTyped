@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VerticalStackShrinkExample extends SharedApply_Object857666606 {
+object VerticalStackShrinkExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Stack/examples/Stack.Vertical.Shrink.Example", "VerticalStackShrinkExample")
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Notifications
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object ToastHistoryChangedType extends js.Object {
   @js.native
   sealed trait removed extends ToastHistoryChangedType
   
-  /* 3 */ val added: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.ToastHistoryChangedType.added with Double = js.native
-  /* 0 */ val cleared: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.ToastHistoryChangedType.cleared with Double = js.native
-  /* 2 */ val expired: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.ToastHistoryChangedType.expired with Double = js.native
-  /* 1 */ val removed: typingsSlinky.winrtDashUwp.Windows.UI.Notifications.ToastHistoryChangedType.removed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToastHistoryChangedType with Double] = js.native
+  /* 3 */ @js.native
+  object added extends TopLevel[added with Double]
+  
+  /* 0 */ @js.native
+  object cleared extends TopLevel[cleared with Double]
+  
+  /* 2 */ @js.native
+  object expired extends TopLevel[expired with Double]
+  
+  /* 1 */ @js.native
+  object removed extends TopLevel[removed with Double]
+  
 }
 

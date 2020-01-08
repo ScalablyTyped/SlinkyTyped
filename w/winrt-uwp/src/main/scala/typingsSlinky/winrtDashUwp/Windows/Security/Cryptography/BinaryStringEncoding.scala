@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Cryptography
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object BinaryStringEncoding extends js.Object {
   @js.native
   sealed trait utf8 extends BinaryStringEncoding
   
-  /* 2 */ val utf16BE: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.BinaryStringEncoding.utf16BE with Double = js.native
-  /* 1 */ val utf16LE: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.BinaryStringEncoding.utf16LE with Double = js.native
-  /* 0 */ val utf8: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.BinaryStringEncoding.utf8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BinaryStringEncoding with Double] = js.native
+  /* 2 */ @js.native
+  object utf16BE extends TopLevel[utf16BE with Double]
+  
+  /* 1 */ @js.native
+  object utf16LE extends TopLevel[utf16LE with Double]
+  
+  /* 0 */ @js.native
+  object utf8 extends TopLevel[utf8 with Double]
+  
 }
 

@@ -7,8 +7,8 @@ import typingsSlinky.jquery.JQuery.Ajax.ErrorCallback
 import typingsSlinky.jquery.JQuery.Ajax.StatusCodeCallbacks
 import typingsSlinky.jquery.JQuery.Ajax.SuccessCallback
 import typingsSlinky.jquery.JQuery.Ajax.XHRFields
-import typingsSlinky.jquery.jqueryNumbers.`false`
-import typingsSlinky.jquery.jqueryNumbers.`true`
+import typingsSlinky.jquery.jqueryBooleans.`false`
+import typingsSlinky.jquery.jqueryBooleans.`true`
 import typingsSlinky.jquery.jqueryStrings.html
 import typingsSlinky.jquery.jqueryStrings.json
 import typingsSlinky.jquery.jqueryStrings.jsonp

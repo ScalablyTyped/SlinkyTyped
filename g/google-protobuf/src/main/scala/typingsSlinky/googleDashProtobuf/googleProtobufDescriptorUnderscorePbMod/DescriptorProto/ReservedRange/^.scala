@@ -27,6 +27,6 @@ object ^ extends js.Object {
   def toObject(
     includeInstance: Boolean,
     msg: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.DescriptorProto.ReservedRange
-  ): typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.DescriptorProto.ReservedRange.AsObject = js.native
+  ): AsObject = js.native
 }
 

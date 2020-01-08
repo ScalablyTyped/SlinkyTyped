@@ -1,6 +1,6 @@
 package typingsSlinky.node
 
-import typingsSlinky.node.nodeNumbers.`false`
+import typingsSlinky.node.nodeBooleans.`false`
 import typingsSlinky.node.nodeStrings.buffer_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

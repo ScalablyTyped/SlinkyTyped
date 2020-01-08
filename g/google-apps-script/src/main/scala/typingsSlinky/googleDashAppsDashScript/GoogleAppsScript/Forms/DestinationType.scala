@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,8 +26,10 @@ object DestinationType extends js.Object {
   @js.native
   sealed trait SPREADSHEET extends DestinationType
   
-  /* 0 */ val SPREADSHEET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms.DestinationType.SPREADSHEET with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DestinationType with Double] = js.native
+  /* 0 */ @js.native
+  object SPREADSHEET extends TopLevel[SPREADSHEET with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Sunburst
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object SunburstHighlightMode extends js.Object {
   @js.native
   sealed trait Point extends SunburstHighlightMode
   
-  /* 3 */ val All: typingsSlinky.ejDotWebDotAll.ej.Sunburst.SunburstHighlightMode.All with Double = js.native
-  /* 2 */ val Child: typingsSlinky.ejDotWebDotAll.ej.Sunburst.SunburstHighlightMode.Child with Double = js.native
-  /* 1 */ val Parent: typingsSlinky.ejDotWebDotAll.ej.Sunburst.SunburstHighlightMode.Parent with Double = js.native
-  /* 0 */ val Point: typingsSlinky.ejDotWebDotAll.ej.Sunburst.SunburstHighlightMode.Point with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SunburstHighlightMode with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Child extends TopLevel[Child with Double]
+  
+  /* 1 */ @js.native
+  object Parent extends TopLevel[Parent with Double]
+  
+  /* 0 */ @js.native
+  object Point extends TopLevel[Point with Double]
+  
 }
 

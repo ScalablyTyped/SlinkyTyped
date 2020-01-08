@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atMaterialBase.componentMod.MDCComponent
 import typingsSlinky.atMaterialBase.foundationMod.default
-import typingsSlinky.atMaterialSwitch.componentMod.MDCSwitch
 import typingsSlinky.atMaterialSwitch.foundationMod.MDCSwitchFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

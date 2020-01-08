@@ -1,7 +1,7 @@
 package typingsSlinky.circularDashDependencyDashPlugin.circularDashDependencyDashPluginMod
 
 import typingsSlinky.circularDashDependencyDashPlugin.Anon_Compilation
-import typingsSlinky.circularDashDependencyDashPlugin.Anon_Compilation_1566266350
+import typingsSlinky.circularDashDependencyDashPlugin.Anon_Compilation_1483079022
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait Options extends js.Object {
   var exclude: js.UndefOr[js.RegExp] = js.undefined
   var failOnError: js.UndefOr[Boolean] = js.undefined
   var onDetected: js.UndefOr[js.Function1[/* x */ Anon_Compilation, Unit]] = js.undefined
-  var onEnd: js.UndefOr[js.Function1[/* x */ Anon_Compilation_1566266350, Unit]] = js.undefined
-  var onStart: js.UndefOr[js.Function1[/* x */ Anon_Compilation_1566266350, Unit]] = js.undefined
+  var onEnd: js.UndefOr[js.Function1[/* x */ Anon_Compilation_1483079022, Unit]] = js.undefined
+  var onStart: js.UndefOr[js.Function1[/* x */ Anon_Compilation_1483079022, Unit]] = js.undefined
 }
 
 object Options {
@@ -24,8 +24,8 @@ object Options {
     exclude: js.RegExp = null,
     failOnError: js.UndefOr[Boolean] = js.undefined,
     onDetected: /* x */ Anon_Compilation => Unit = null,
-    onEnd: /* x */ Anon_Compilation_1566266350 => Unit = null,
-    onStart: /* x */ Anon_Compilation_1566266350 => Unit = null
+    onEnd: /* x */ Anon_Compilation_1483079022 => Unit = null,
+    onStart: /* x */ Anon_Compilation_1483079022 => Unit = null
   ): Options = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowAsyncCycles)) __obj.updateDynamic("allowAsyncCycles")(allowAsyncCycles.asInstanceOf[js.Any])

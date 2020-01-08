@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object DeviceUnpairingResultStatus extends js.Object {
   @js.native
   sealed trait unpaired extends DeviceUnpairingResultStatus
   
-  /* 3 */ val accessDenied: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceUnpairingResultStatus.accessDenied with Double = js.native
-  /* 1 */ val alreadyUnpaired: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceUnpairingResultStatus.alreadyUnpaired with Double = js.native
-  /* 4 */ val failed: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceUnpairingResultStatus.failed with Double = js.native
-  /* 2 */ val operationAlreadyInProgress: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceUnpairingResultStatus.operationAlreadyInProgress with Double = js.native
-  /* 0 */ val unpaired: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceUnpairingResultStatus.unpaired with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeviceUnpairingResultStatus with Double] = js.native
+  /* 3 */ @js.native
+  object accessDenied extends TopLevel[accessDenied with Double]
+  
+  /* 1 */ @js.native
+  object alreadyUnpaired extends TopLevel[alreadyUnpaired with Double]
+  
+  /* 4 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 2 */ @js.native
+  object operationAlreadyInProgress extends TopLevel[operationAlreadyInProgress with Double]
+  
+  /* 0 */ @js.native
+  object unpaired extends TopLevel[unpaired with Double]
+  
 }
 

@@ -1,8 +1,6 @@
 package typingsSlinky.phaser.Phaser
 
 import typingsSlinky.phaser.Phaser.Scenes.Systems
-import typingsSlinky.phaser.Phaser.Time.Clock
-import typingsSlinky.phaser.Phaser.Time.TimerEvent
 import typingsSlinky.phaser.Phaser.Types.Time.TimerEventConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobile
 
-import typingsSlinky.antdDashMobile.libPullDashToDashRefreshMod.PullToRefresh
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.rmcDashPullDashToDashRefresh.libPropsTypeMod.PropsType
 import scala.scalajs.js

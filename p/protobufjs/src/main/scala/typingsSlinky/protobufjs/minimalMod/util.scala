@@ -1,6 +1,7 @@
 package typingsSlinky.protobufjs.minimalMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.protobufjs.protobufjsMod.Codegen
 import typingsSlinky.protobufjs.protobufjsMod.Constructor
 import typingsSlinky.protobufjs.protobufjsMod.FetchCallback
@@ -75,12 +76,6 @@ object util extends js.Object {
     def this(message: String, properties: StringDictionary[js.Any]) = this()
   }
   
-  /** Array implementation used in the browser. `Uint8Array` if supported, otherwise `Array`. */
-  var Array: Constructor[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  /** Node's Buffer class if available. */
-  var Buffer: Constructor[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  /** Long.js's Long class if available. */
-  var Long: Constructor[typingsSlinky.protobufjs.protobufjsMod.Long] = js.native
   /** Decorator root (TypeScript). */
   var decorateRoot: typingsSlinky.protobufjs.protobufjsMod.Root = js.native
   /** An immuable empty array. */
@@ -301,6 +296,20 @@ object util extends js.Object {
     * @returns Converted string
     */
   def ucFirst(str: String): String = js.native
+  /** Array implementation used in the browser. `Uint8Array` if supported, otherwise `Array`. */
+  @js.native
+  object Array extends TopLevel[Constructor[Uint8Array]]
+  
+  /** Node's Buffer class if available. */
+  @js.native
+  object Buffer
+    extends TopLevel[Constructor[typingsSlinky.protobufjs.protobufjsMod.Buffer]]
+  
+  /** Long.js's Long class if available. */
+  @js.native
+  object Long
+    extends TopLevel[Constructor[typingsSlinky.protobufjs.protobufjsMod.Long]]
+  
   /* static members */
   @js.native
   object LongBits extends js.Object {

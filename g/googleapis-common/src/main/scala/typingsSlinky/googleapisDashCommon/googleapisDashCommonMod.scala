@@ -8,7 +8,7 @@ import typingsSlinky.googleapisDashCommon.buildSrcApiMod.BodyResponseCallback
 import typingsSlinky.googleapisDashCommon.buildSrcApiMod.GoogleConfigurable
 import typingsSlinky.googleapisDashCommon.buildSrcApiMod.ServiceOptions
 import typingsSlinky.googleapisDashCommon.buildSrcDiscoveryMod.DiscoveryOptions
-import typingsSlinky.googleapisDashCommon.googleapisDashCommonStrings.`https://oauth2DOTgoogleapisDOTcom/tokeninfo`
+import typingsSlinky.googleapisDashCommon.googleapisDashCommonStrings.httpsColonSlashSlashoauth2DotgoogleapisDotcomSlashtokeninfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,7 +94,7 @@ object googleapisDashCommonMod extends js.Object {
       * The base endpoint for token retrieval.
       */
     val GOOGLE_OAUTH2_TOKEN_URL_ : js.Any = js.native
-    val GOOGLE_TOKEN_INFO_URL: `https://oauth2DOTgoogleapisDOTcom/tokeninfo` = js.native
+    val GOOGLE_TOKEN_INFO_URL: httpsColonSlashSlashoauth2DotgoogleapisDotcomSlashtokeninfo = js.native
     /**
       * The allowed oauth token issuers.
       */

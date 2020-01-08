@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 trait JWKRSAKey
   extends KeyParameters
-     with JSONWebKey {
+     with JSONWebKey
+     with _ProduceKeyInput {
   var d: js.UndefOr[String] = js.undefined
   var dp: js.UndefOr[String] = js.undefined
   var dq: js.UndefOr[String] = js.undefined
@@ -37,7 +38,7 @@ object JWKRSAKey {
     use: use = null,
     x5c: js.Array[String] = null,
     x5t: String = null,
-    `x5t#S256`: String = null
+    x5tNumbersignS256: String = null
   ): JWKRSAKey = {
     val __obj = js.Dynamic.literal(e = e.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any], n = n.asInstanceOf[js.Any])
     if (alg != null) __obj.updateDynamic("alg")(alg.asInstanceOf[js.Any])
@@ -52,7 +53,7 @@ object JWKRSAKey {
     if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
     if (x5c != null) __obj.updateDynamic("x5c")(x5c.asInstanceOf[js.Any])
     if (x5t != null) __obj.updateDynamic("x5t")(x5t.asInstanceOf[js.Any])
-    if (`x5t#S256` != null) __obj.updateDynamic("x5t#S256")(`x5t#S256`.asInstanceOf[js.Any])
+    if (x5tNumbersignS256 != null) __obj.updateDynamic("x5t#S256")(x5tNumbersignS256.asInstanceOf[js.Any])
     __obj.asInstanceOf[JWKRSAKey]
   }
 }

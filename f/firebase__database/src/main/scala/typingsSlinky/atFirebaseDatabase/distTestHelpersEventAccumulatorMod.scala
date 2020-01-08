@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseDatabase
 
-import typingsSlinky.atFirebaseDatabase.distTestHelpersEventAccumulatorMod.EventAccumulator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

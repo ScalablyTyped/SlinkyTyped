@@ -3,10 +3,11 @@ package typingsSlinky.reactDashBetterDashPassword.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod.PasswordProps
 import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod.default
-import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordStrings.BACKSLASHu2022
+import typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordStrings.Bullet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +21,7 @@ object ReactDashBetterDashPassword
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, onChange, placeholder */
   def apply(
-    mask: BACKSLASHu2022 | String = null,
+    mask: Bullet | String = null,
     show: js.UndefOr[Boolean] = js.undefined,
     timeout: Int | Double = null,
     value: String = null,
@@ -34,6 +35,9 @@ object ReactDashBetterDashPassword
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashBetterDashPassword.reactDashBetterDashPasswordMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PasswordProps
 }
 

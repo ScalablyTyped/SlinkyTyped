@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WbDashAuto extends SharedApply_SvgIconProps657215518[default] {
+object WbDashAuto extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/image/wb-auto", JSImport.Default)
   @js.native
   object componentImport extends js.Object

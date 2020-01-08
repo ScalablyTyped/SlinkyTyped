@@ -3,8 +3,8 @@ package typingsSlinky.tinymce.tinymceMod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
+import typingsSlinky.tinymce.tinymceBooleans.`false`
 import typingsSlinky.tinymce.tinymceMod.settings.Menu
-import typingsSlinky.tinymce.tinymceNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

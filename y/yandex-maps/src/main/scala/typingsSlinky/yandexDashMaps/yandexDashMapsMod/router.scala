@@ -1,7 +1,6 @@
 package typingsSlinky.yandexDashMaps.yandexDashMapsMod
 
 import typingsSlinky.yandexDashMaps.Anon_AddViaPoints
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.router.Editor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

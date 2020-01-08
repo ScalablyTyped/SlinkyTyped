@@ -1,7 +1,6 @@
 package typingsSlinky.mongodb.mongodbMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.tlsMod.PeerCertificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,7 +51,7 @@ trait ServerOptions extends SSLOptions {
 object ServerOptions {
   @scala.inline
   def apply(
-    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]]) = null,
+    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]) = null,
     ciphers: String = null,
     domainsEnabled: js.UndefOr[Boolean] = js.undefined,
     ecdhCurve: String = null,

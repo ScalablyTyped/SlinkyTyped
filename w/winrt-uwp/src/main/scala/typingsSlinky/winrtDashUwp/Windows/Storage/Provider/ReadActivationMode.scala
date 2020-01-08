@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Storage.Provider
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ReadActivationMode extends js.Object {
   @js.native
   sealed trait notNeeded extends ReadActivationMode
   
-  /* 1 */ val beforeAccess: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.ReadActivationMode.beforeAccess with Double = js.native
-  /* 0 */ val notNeeded: typingsSlinky.winrtDashUwp.Windows.Storage.Provider.ReadActivationMode.notNeeded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadActivationMode with Double] = js.native
+  /* 1 */ @js.native
+  object beforeAccess extends TopLevel[beforeAccess with Double]
+  
+  /* 0 */ @js.native
+  object notNeeded extends TopLevel[notNeeded with Double]
+  
 }
 

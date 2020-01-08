@@ -1,5 +1,6 @@
 package typingsSlinky.pako.pakoMod
 
+import typingsSlinky.pako.Anon_String
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object inflateRaw extends js.Object {
   def apply(data: Data): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(data: Data, options: InflateFunctionOptions): scala.scalajs.js.typedarray.Uint8Array = js.native
+  /**
+    * The same as inflate, but creates raw data, without wrapper (header and adler32 crc).
+    */
+  def apply(data: Data, options: InflateFunctionOptions with Anon_String): String = js.native
 }
 

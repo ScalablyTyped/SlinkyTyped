@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod
 
-import typingsSlinky.atFirebaseDatabase.atFirebaseDatabaseMod.DataSnapshot
+import typingsSlinky.atFirebaseDatabase.distSrcApiDataSnapshotMod.DataSnapshot
 import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilPathMod.Path
 import typingsSlinky.std.Error
 import scala.scalajs.js

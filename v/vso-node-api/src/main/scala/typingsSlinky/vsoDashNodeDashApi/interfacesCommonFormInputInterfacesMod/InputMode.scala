@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object InputMode extends js.Object {
   @js.native
   sealed trait TextBox extends InputMode
   
-  /* 50 */ val CheckBox: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.CheckBox with Double = js.native
-  /* 30 */ val Combo: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.Combo with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.None with Double = js.native
-  /* 20 */ val PasswordBox: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.PasswordBox with Double = js.native
-  /* 40 */ val RadioButtons: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.RadioButtons with Double = js.native
-  /* 60 */ val TextArea: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.TextArea with Double = js.native
-  /* 10 */ val TextBox: typingsSlinky.vsoDashNodeDashApi.interfacesCommonFormInputInterfacesMod.InputMode.TextBox with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InputMode with Double] = js.native
+  /* 50 */ @js.native
+  object CheckBox extends TopLevel[CheckBox with Double]
+  
+  /* 30 */ @js.native
+  object Combo extends TopLevel[Combo with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 20 */ @js.native
+  object PasswordBox extends TopLevel[PasswordBox with Double]
+  
+  /* 40 */ @js.native
+  object RadioButtons extends TopLevel[RadioButtons with Double]
+  
+  /* 60 */ @js.native
+  object TextArea extends TopLevel[TextArea with Double]
+  
+  /* 10 */ @js.native
+  object TextBox extends TopLevel[TextBox with Double]
+  
 }
 

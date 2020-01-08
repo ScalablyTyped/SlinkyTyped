@@ -1,5 +1,6 @@
 package typingsSlinky.amapDashJsDashSdk.AMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object DrivingPolicy extends js.Object {
   @js.native
   sealed trait REAL_TRAFFIC extends DrivingPolicy
   
-  /* 2 */ val LEAST_DISTANCE: typingsSlinky.amapDashJsDashSdk.AMap.DrivingPolicy.LEAST_DISTANCE with Double = js.native
-  /* 1 */ val LEAST_FEE: typingsSlinky.amapDashJsDashSdk.AMap.DrivingPolicy.LEAST_FEE with Double = js.native
-  /* 0 */ val LEAST_TIME: typingsSlinky.amapDashJsDashSdk.AMap.DrivingPolicy.LEAST_TIME with Double = js.native
-  /* 3 */ val REAL_TRAFFIC: typingsSlinky.amapDashJsDashSdk.AMap.DrivingPolicy.REAL_TRAFFIC with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DrivingPolicy with Double] = js.native
+  /* 2 */ @js.native
+  object LEAST_DISTANCE extends TopLevel[LEAST_DISTANCE with Double]
+  
+  /* 1 */ @js.native
+  object LEAST_FEE extends TopLevel[LEAST_FEE with Double]
+  
+  /* 0 */ @js.native
+  object LEAST_TIME extends TopLevel[LEAST_TIME with Double]
+  
+  /* 3 */ @js.native
+  object REAL_TRAFFIC extends TopLevel[REAL_TRAFFIC with Double]
+  
 }
 

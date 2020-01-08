@@ -1,7 +1,5 @@
 package typingsSlinky.sodiumjs
 
-import typingsSlinky.sodiumjs.distTypingsSodiumTransactionMod.Entry
-import typingsSlinky.sodiumjs.distTypingsSodiumTransactionMod.Transaction
 import typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Vertex
 import typingsSlinky.typescriptDashCollections.typescriptDashCollectionsMod.PriorityQueue
 import scala.scalajs.js

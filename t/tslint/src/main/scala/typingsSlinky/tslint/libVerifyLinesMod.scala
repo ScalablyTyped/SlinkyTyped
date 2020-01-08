@@ -1,8 +1,6 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.libVerifyLinesMod.ErrorLine
-import typingsSlinky.tslint.libVerifyLinesMod.Line
-import typingsSlinky.tslint.tslintStrings.`~nil`
+import typingsSlinky.tslint.tslintStrings.Tildenil
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +42,7 @@ object libVerifyLinesMod extends js.Object {
     def this(startCol: Double) = this()
   }
   
-  val ZERO_LENGTH_ERROR: `~nil` = js.native
+  val ZERO_LENGTH_ERROR: Tildenil = js.native
   def parseLine(text: String): Line = js.native
   def printLine(fileName: String, line: Line): js.UndefOr[String] = js.native
   def printLine(fileName: String, line: Line, code: String): js.UndefOr[String] = js.native

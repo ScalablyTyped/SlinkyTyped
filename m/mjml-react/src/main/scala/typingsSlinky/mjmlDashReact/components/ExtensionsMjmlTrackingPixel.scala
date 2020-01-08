@@ -17,9 +17,8 @@ object ExtensionsMjmlTrackingPixel
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: src */
-  def apply(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, MjmlTrackingPixel] = {
-    val __obj = js.Dynamic.literal()
+  def apply(src: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, MjmlTrackingPixel] = {
+    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

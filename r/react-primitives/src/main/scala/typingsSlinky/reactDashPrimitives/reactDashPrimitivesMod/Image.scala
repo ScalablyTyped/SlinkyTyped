@@ -3,8 +3,8 @@ package typingsSlinky.reactDashPrimitives.reactDashPrimitivesMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactDashNative.reactDashNativeMod.ImageResolvedAssetSource
 import typingsSlinky.reactDashNative.reactDashNativeMod.ImageSourcePropType
-import typingsSlinky.reactDashPrimitives.reactDashPrimitivesStrings.`disk/memory`
 import typingsSlinky.reactDashPrimitives.reactDashPrimitivesStrings.disk
+import typingsSlinky.reactDashPrimitives.reactDashPrimitivesStrings.diskSlashmemory
 import typingsSlinky.reactDashPrimitives.reactDashPrimitivesStrings.memory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object Image extends js.Object {
   var queryCache: js.UndefOr[
     js.Function1[
       /* urls */ js.Array[String], 
-      js.Promise[StringDictionary[memory | disk | `disk/memory`]]
+      js.Promise[StringDictionary[memory | disk | diskSlashmemory]]
     ]
   ] = js.native
   def getSize(

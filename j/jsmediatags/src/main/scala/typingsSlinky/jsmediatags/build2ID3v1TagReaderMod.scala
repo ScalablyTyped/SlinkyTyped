@@ -1,6 +1,5 @@
 package typingsSlinky.jsmediatags
 
-import typingsSlinky.jsmediatags.build2ID3v1TagReaderMod.ID3v1TagReader
 import typingsSlinky.jsmediatags.typesMod.ByteRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`

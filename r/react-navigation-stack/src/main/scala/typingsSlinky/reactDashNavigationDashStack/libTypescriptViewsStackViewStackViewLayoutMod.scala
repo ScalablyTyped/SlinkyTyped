@@ -1,8 +1,9 @@
 package typingsSlinky.reactDashNavigationDashStack
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
 import typingsSlinky.reactDashNavigationDashStack.libTypescriptTypesMod.HeaderBackgroundTransitionPreset
@@ -60,6 +61,8 @@ object libTypescriptViewsStackViewStackViewLayoutMod extends js.Object {
     def this(props: PickPropsmodeheaderModeheaderLayoutPresetheaderTra, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[PickPropsmodeheaderModeheaderLayoutPresetheaderTra] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[PickPropsmodeheaderModeheaderLayoutPresetheaderTra]]
+  
 }
 

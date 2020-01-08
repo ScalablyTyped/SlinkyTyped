@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.ol.rendererCanvasIntermediateCanvasMod.IntermediateCanvasRenderer
 import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.appsV1ReplicaSetMod.ReplicaSet
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`apps/v1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.appsSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.apps.v1.ReplicaSetSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.apps.v1.ReplicaSetStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
@@ -39,7 +38,7 @@ object appsV1ReplicaSetMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`apps/v1`] = js.native
+    val apiVersion: Output[appsSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

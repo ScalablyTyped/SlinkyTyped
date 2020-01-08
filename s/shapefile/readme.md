@@ -10,9 +10,9 @@ An implementation of the shapefile (.shp) spatial data format.
 | ------------------ | :-------------: |
 | Full name          | shapefile |
 | Keywords           | geojson, shapefile |
-| # releases         | 5 |
-| # dependents       | 31 |
-| # downloads        | 1539105 |
+| # releases         | 0 |
+| # dependents       | 43 |
+| # downloads        | 2189077 |
 | # stars            | 4 |
 
 ## Links

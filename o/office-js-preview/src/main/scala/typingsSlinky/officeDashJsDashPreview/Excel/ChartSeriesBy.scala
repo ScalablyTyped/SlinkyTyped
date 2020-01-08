@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,10 +31,16 @@ object ChartSeriesBy extends js.Object {
   @js.native
   sealed trait rows extends ChartSeriesBy
   
-  /* "Auto" */ val auto: typingsSlinky.officeDashJsDashPreview.Excel.ChartSeriesBy.auto with String = js.native
-  /* "Columns" */ val columns: typingsSlinky.officeDashJsDashPreview.Excel.ChartSeriesBy.columns with String = js.native
-  /* "Rows" */ val rows: typingsSlinky.officeDashJsDashPreview.Excel.ChartSeriesBy.rows with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartSeriesBy with String] = js.native
+  /* "Auto" */ @js.native
+  object auto extends TopLevel[auto with String]
+  
+  /* "Columns" */ @js.native
+  object columns extends TopLevel[columns with String]
+  
+  /* "Rows" */ @js.native
+  object rows extends TopLevel[rows with String]
+  
 }
 

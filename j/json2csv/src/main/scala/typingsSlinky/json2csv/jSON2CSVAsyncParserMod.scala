@@ -1,6 +1,5 @@
 package typingsSlinky.json2csv
 
-import typingsSlinky.json2csv.jSON2CSVAsyncParserMod.JSON2CSVAsyncParser
 import typingsSlinky.json2csv.jSON2CSVBaseMod.json2csv.Options
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Transform

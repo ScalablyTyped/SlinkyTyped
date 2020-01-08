@@ -1,6 +1,5 @@
 package typingsSlinky.atPhosphorMessaging.atPhosphorMessagingMod
 
-import typingsSlinky.atPhosphorMessaging.atPhosphorMessagingMod.MessageLoop.ExceptionHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

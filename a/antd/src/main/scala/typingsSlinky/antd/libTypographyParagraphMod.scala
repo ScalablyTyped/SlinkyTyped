@@ -2,7 +2,6 @@ package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.antd.libTypographyBaseMod.BlockProps
-import typingsSlinky.antd.libTypographyParagraphMod.ParagraphProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

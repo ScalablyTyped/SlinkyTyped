@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 object esmIsWithinIntervalMod extends js.Object {
   @js.native
   object default extends js.Object {
-    def apply(date: Double, interval: typingsSlinky.dateDashFns.dateDashFnsMod.Interval | Interval): Boolean = js.native
-    def apply(date: Date, interval: typingsSlinky.dateDashFns.dateDashFnsMod.Interval | Interval): Boolean = js.native
+    def apply(date: Double, interval: Interval | typingsSlinky.dateDashFns.dateDashFnsMod.Interval): Boolean = js.native
+    def apply(date: Date, interval: Interval | typingsSlinky.dateDashFns.dateDashFnsMod.Interval): Boolean = js.native
   }
   
 }

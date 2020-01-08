@@ -1,6 +1,5 @@
 package typingsSlinky.twilioDashSync
 
-import typingsSlinky.twilioDashSync.libRouterMod.Router
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

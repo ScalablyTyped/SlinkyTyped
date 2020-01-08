@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.map.provider
 
+import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.ICopyright
 import typingsSlinky.heremaps.H.map.provider.Provider.Options
 import typingsSlinky.heremaps.H.util.EventTarget
@@ -34,6 +35,6 @@ class Provider_ () extends EventTarget {
     * @param level {number} - The zoom level for which to retrieve the copyright information
     * @returns {?Array<H.map.ICopyright>} - a list of copyright information objects for the provided area and zoom level
     */
-  def getCopyrights(bounds: typingsSlinky.heremaps.H.geo.Rect, level: Double): js.Array[ICopyright] = js.native
+  def getCopyrights(bounds: Rect, level: Double): js.Array[ICopyright] = js.native
 }
 

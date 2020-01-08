@@ -5,7 +5,6 @@ import typingsSlinky.atFirebaseDatabase.distSrcCoreSnapNodeMod.Node
 import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilPathMod.Path
 import typingsSlinky.atFirebaseDatabase.distSrcCoreViewChildChangeAccumulatorMod.ChildChangeAccumulator
 import typingsSlinky.atFirebaseDatabase.distSrcCoreViewCompleteChildSourceMod.CompleteChildSource
-import typingsSlinky.atFirebaseDatabase.distSrcCoreViewFilterNodeFilterMod.NodeFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,28 @@ object TYPE extends js.Object {
   @js.native
   sealed trait XML extends TYPE
   
-  /* 4 */ val AUDIO: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.AUDIO with Double = js.native
-  /* 3 */ val IMAGE: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.IMAGE with Double = js.native
-  /* 1 */ val JSON: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.JSON with Double = js.native
-  /* 6 */ val TEXT: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.TEXT with Double = js.native
-  /* 0 */ val UNKNOWN: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.UNKNOWN with Double = js.native
-  /* 5 */ val VIDEO: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.VIDEO with Double = js.native
-  /* 2 */ val XML: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.TYPE.XML with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TYPE with Double] = js.native
+  /* 4 */ @js.native
+  object AUDIO extends TopLevel[AUDIO with Double]
+  
+  /* 3 */ @js.native
+  object IMAGE extends TopLevel[IMAGE with Double]
+  
+  /* 1 */ @js.native
+  object JSON extends TopLevel[JSON with Double]
+  
+  /* 6 */ @js.native
+  object TEXT extends TopLevel[TEXT with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with Double]
+  
+  /* 5 */ @js.native
+  object VIDEO extends TopLevel[VIDEO with Double]
+  
+  /* 2 */ @js.native
+  object XML extends TopLevel[XML with Double]
+  
 }
 

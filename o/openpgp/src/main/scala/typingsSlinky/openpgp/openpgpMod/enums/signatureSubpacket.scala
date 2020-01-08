@@ -1,5 +1,6 @@
 package typingsSlinky.openpgp.openpgpMod.enums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,33 +92,86 @@ object signatureSubpacket extends js.Object {
   @js.native
   sealed trait trust_signature extends signatureSubpacket
   
-  /* 32 */ val embedded_signature: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.embedded_signature with Double = js.native
-  /* 4 */ val exportable_certification: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.exportable_certification with Double = js.native
-  /* 30 */ val features: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.features with Double = js.native
-  /* 16 */ val issuer: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.issuer with Double = js.native
-  /* 33 */ val issuer_fingerprint: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.issuer_fingerprint with Double = js.native
-  /* 9 */ val key_expiration_time: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.key_expiration_time with Double = js.native
-  /* 27 */ val key_flags: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.key_flags with Double = js.native
-  /* 23 */ val key_server_preferences: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.key_server_preferences with Double = js.native
-  /* 20 */ val notation_data: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.notation_data with Double = js.native
-  /* 10 */ val placeholder_backwards_compatibility: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.placeholder_backwards_compatibility with Double = js.native
-  /* 26 */ val policy_uri: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.policy_uri with Double = js.native
-  /* 34 */ val preferred_aead_algorithms: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.preferred_aead_algorithms with Double = js.native
-  /* 22 */ val preferred_compression_algorithms: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.preferred_compression_algorithms with Double = js.native
-  /* 21 */ val preferred_hash_algorithms: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.preferred_hash_algorithms with Double = js.native
-  /* 24 */ val preferred_key_server: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.preferred_key_server with Double = js.native
-  /* 11 */ val preferred_symmetric_algorithms: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.preferred_symmetric_algorithms with Double = js.native
-  /* 25 */ val primary_user_id: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.primary_user_id with Double = js.native
-  /* 29 */ val reason_for_revocation: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.reason_for_revocation with Double = js.native
-  /* 6 */ val regular_expression: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.regular_expression with Double = js.native
-  /* 7 */ val revocable: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.revocable with Double = js.native
-  /* 12 */ val revocation_key: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.revocation_key with Double = js.native
-  /* 2 */ val signature_creation_time: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.signature_creation_time with Double = js.native
-  /* 3 */ val signature_expiration_time: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.signature_expiration_time with Double = js.native
-  /* 31 */ val signature_target: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.signature_target with Double = js.native
-  /* 28 */ val signers_user_id: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.signers_user_id with Double = js.native
-  /* 5 */ val trust_signature: typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.trust_signature with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[signatureSubpacket with Double] = js.native
+  /* 32 */ @js.native
+  object embedded_signature extends TopLevel[embedded_signature with Double]
+  
+  /* 4 */ @js.native
+  object exportable_certification extends TopLevel[exportable_certification with Double]
+  
+  /* 30 */ @js.native
+  object features
+    extends TopLevel[typingsSlinky.openpgp.openpgpMod.enums.signatureSubpacket.features with Double]
+  
+  /* 16 */ @js.native
+  object issuer extends TopLevel[issuer with Double]
+  
+  /* 33 */ @js.native
+  object issuer_fingerprint extends TopLevel[issuer_fingerprint with Double]
+  
+  /* 9 */ @js.native
+  object key_expiration_time extends TopLevel[key_expiration_time with Double]
+  
+  /* 27 */ @js.native
+  object key_flags extends TopLevel[key_flags with Double]
+  
+  /* 23 */ @js.native
+  object key_server_preferences extends TopLevel[key_server_preferences with Double]
+  
+  /* 20 */ @js.native
+  object notation_data extends TopLevel[notation_data with Double]
+  
+  /* 10 */ @js.native
+  object placeholder_backwards_compatibility extends TopLevel[placeholder_backwards_compatibility with Double]
+  
+  /* 26 */ @js.native
+  object policy_uri extends TopLevel[policy_uri with Double]
+  
+  /* 34 */ @js.native
+  object preferred_aead_algorithms extends TopLevel[preferred_aead_algorithms with Double]
+  
+  /* 22 */ @js.native
+  object preferred_compression_algorithms extends TopLevel[preferred_compression_algorithms with Double]
+  
+  /* 21 */ @js.native
+  object preferred_hash_algorithms extends TopLevel[preferred_hash_algorithms with Double]
+  
+  /* 24 */ @js.native
+  object preferred_key_server extends TopLevel[preferred_key_server with Double]
+  
+  /* 11 */ @js.native
+  object preferred_symmetric_algorithms extends TopLevel[preferred_symmetric_algorithms with Double]
+  
+  /* 25 */ @js.native
+  object primary_user_id extends TopLevel[primary_user_id with Double]
+  
+  /* 29 */ @js.native
+  object reason_for_revocation extends TopLevel[reason_for_revocation with Double]
+  
+  /* 6 */ @js.native
+  object regular_expression extends TopLevel[regular_expression with Double]
+  
+  /* 7 */ @js.native
+  object revocable extends TopLevel[revocable with Double]
+  
+  /* 12 */ @js.native
+  object revocation_key extends TopLevel[revocation_key with Double]
+  
+  /* 2 */ @js.native
+  object signature_creation_time extends TopLevel[signature_creation_time with Double]
+  
+  /* 3 */ @js.native
+  object signature_expiration_time extends TopLevel[signature_expiration_time with Double]
+  
+  /* 31 */ @js.native
+  object signature_target extends TopLevel[signature_target with Double]
+  
+  /* 28 */ @js.native
+  object signers_user_id extends TopLevel[signers_user_id with Double]
+  
+  /* 5 */ @js.native
+  object trust_signature extends TopLevel[trust_signature with Double]
+  
 }
 

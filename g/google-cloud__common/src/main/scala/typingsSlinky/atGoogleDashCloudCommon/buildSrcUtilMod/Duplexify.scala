@@ -1,6 +1,6 @@
 package typingsSlinky.atGoogleDashCloudCommon.buildSrcUtilMod
 
-import typingsSlinky.atGoogleDashCloudCommon.atGoogleDashCloudCommonNumbers.`false`
+import typingsSlinky.atGoogleDashCloudCommon.atGoogleDashCloudCommonBooleans.`false`
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable

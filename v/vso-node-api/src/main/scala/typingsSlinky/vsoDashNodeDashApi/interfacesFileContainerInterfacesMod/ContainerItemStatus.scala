@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesFileContainerInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ContainerItemStatus extends js.Object {
   @js.native
   sealed trait PendingUpload extends ContainerItemStatus
   
-  /* 1 */ val Created: typingsSlinky.vsoDashNodeDashApi.interfacesFileContainerInterfacesMod.ContainerItemStatus.Created with Double = js.native
-  /* 2 */ val PendingUpload: typingsSlinky.vsoDashNodeDashApi.interfacesFileContainerInterfacesMod.ContainerItemStatus.PendingUpload with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContainerItemStatus with Double] = js.native
+  /* 1 */ @js.native
+  object Created extends TopLevel[Created with Double]
+  
+  /* 2 */ @js.native
+  object PendingUpload extends TopLevel[PendingUpload with Double]
+  
 }
 

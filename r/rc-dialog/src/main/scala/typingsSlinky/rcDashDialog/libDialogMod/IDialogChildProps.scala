@@ -7,13 +7,14 @@ import slinky.core.TagMod
 import typingsSlinky.rcDashDialog.Anon_X
 import typingsSlinky.rcDashDialog.libIDialogPropTypesMod.IDialogPropTypes
 import typingsSlinky.rcDashDialog.libIDialogPropTypesMod.IStringOrHtmlElement
-import typingsSlinky.rcDashDialog.rcDashDialogNumbers.`false`
+import typingsSlinky.rcDashDialog.rcDashDialogBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IDialogChildProps extends IDialogPropTypes {
+  var switchScrollingEffect: js.UndefOr[js.Function0[Unit]] = js.undefined
   def getOpenCount(): Double
 }
 
@@ -30,6 +31,7 @@ object IDialogChildProps {
     closable: js.UndefOr[Boolean] = js.undefined,
     closeIcon: TagMod[Any] = null,
     destroyOnClose: js.UndefOr[Boolean] = js.undefined,
+    focusTriggerAfterClose: js.UndefOr[Boolean] = js.undefined,
     footer: TagMod[Any] = null,
     forceRender: js.UndefOr[Boolean] = js.undefined,
     getContainer: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false` = null,
@@ -45,6 +47,7 @@ object IDialogChildProps {
     onClose: /* e */ SyntheticEvent[Event, HTMLDivElement] => _ = null,
     prefixCls: String = null,
     style: CSSProperties = null,
+    switchScrollingEffect: () => Unit = null,
     title: TagMod[Any] = null,
     transitionName: String = null,
     visible: js.UndefOr[Boolean] = js.undefined,
@@ -64,6 +67,7 @@ object IDialogChildProps {
     if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
     if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(destroyOnClose)) __obj.updateDynamic("destroyOnClose")(destroyOnClose.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusTriggerAfterClose)) __obj.updateDynamic("focusTriggerAfterClose")(focusTriggerAfterClose.asInstanceOf[js.Any])
     if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
     if (!js.isUndefined(forceRender)) __obj.updateDynamic("forceRender")(forceRender.asInstanceOf[js.Any])
     if (getContainer != null) __obj.updateDynamic("getContainer")(getContainer.asInstanceOf[js.Any])
@@ -79,6 +83,7 @@ object IDialogChildProps {
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (switchScrollingEffect != null) __obj.updateDynamic("switchScrollingEffect")(js.Any.fromFunction0(switchScrollingEffect))
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])

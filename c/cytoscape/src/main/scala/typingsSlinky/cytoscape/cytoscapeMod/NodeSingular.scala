@@ -11,6 +11,18 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NodeSingular
   extends CollectionIteration[NodeSingular, NodeSingular]
+     with CollectionGraphManipulation
+     with CollectionEvents
+     with CollectionData
+     with CollectionPosition
+     with CollectionTraversing
+     with CollectionLayout
+     with CollectionSelection
+     with CollectionStyle
+     with CollectionAnimation
+     with CollectionComparision
+     with CollectionBuildingFiltering[NodeSingular, NodeSingular]
+     with CollectionAlgorithms
      with SingularGraphManipulation
      with SingularData
      with SingularPosition
@@ -24,17 +36,5 @@ trait NodeSingular
      with NodeSingularMetadata
      with NodeSingularPosition
      with NodeSingularCompound
-     with CollectionStyle
-     with CollectionComparision
-     with CollectionAnimation
-     with CollectionBuildingFiltering[NodeSingular, NodeSingular]
-     with CollectionTraversing
-     with CollectionEvents
-     with CollectionGraphManipulation
-     with CollectionAlgorithms
-     with CollectionData
-     with CollectionLayout
-     with CollectionSelection
-     with CollectionPosition
      with SingularElementArgument
 

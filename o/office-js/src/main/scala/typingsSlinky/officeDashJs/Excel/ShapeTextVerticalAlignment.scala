@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ShapeTextVerticalAlignment extends js.Object {
   @js.native
   sealed trait top extends ShapeTextVerticalAlignment
   
-  /* "Bottom" */ val bottom: typingsSlinky.officeDashJs.Excel.ShapeTextVerticalAlignment.bottom with String = js.native
-  /* "Distributed" */ val distributed: typingsSlinky.officeDashJs.Excel.ShapeTextVerticalAlignment.distributed with String = js.native
-  /* "Justified" */ val justified: typingsSlinky.officeDashJs.Excel.ShapeTextVerticalAlignment.justified with String = js.native
-  /* "Middle" */ val middle: typingsSlinky.officeDashJs.Excel.ShapeTextVerticalAlignment.middle with String = js.native
-  /* "Top" */ val top: typingsSlinky.officeDashJs.Excel.ShapeTextVerticalAlignment.top with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeTextVerticalAlignment with String] = js.native
+  /* "Bottom" */ @js.native
+  object bottom extends TopLevel[bottom with String]
+  
+  /* "Distributed" */ @js.native
+  object distributed extends TopLevel[distributed with String]
+  
+  /* "Justified" */ @js.native
+  object justified extends TopLevel[justified with String]
+  
+  /* "Middle" */ @js.native
+  object middle extends TopLevel[middle with String]
+  
+  /* "Top" */ @js.native
+  object top extends TopLevel[top with String]
+  
 }
 

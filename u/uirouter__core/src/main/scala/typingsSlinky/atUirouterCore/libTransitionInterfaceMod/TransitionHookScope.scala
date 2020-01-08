@@ -1,5 +1,6 @@
 package typingsSlinky.atUirouterCore.libTransitionInterfaceMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TransitionHookScope extends js.Object {
   @js.native
   sealed trait TRANSITION extends TransitionHookScope
   
-  /* 1 */ val STATE: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookScope.STATE with Double = js.native
-  /* 0 */ val TRANSITION: typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionHookScope.TRANSITION with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TransitionHookScope with Double] = js.native
+  /* 1 */ @js.native
+  object STATE extends TopLevel[STATE with Double]
+  
+  /* 0 */ @js.native
+  object TRANSITION extends TopLevel[TRANSITION with Double]
+  
 }
 

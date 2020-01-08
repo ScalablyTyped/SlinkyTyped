@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ConditionalTopBottomCriterionType extends js.Object {
   @js.native
   sealed trait topPercent extends ConditionalTopBottomCriterionType
   
-  /* "BottomItems" */ val bottomItems: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalTopBottomCriterionType.bottomItems with String = js.native
-  /* "BottomPercent" */ val bottomPercent: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalTopBottomCriterionType.bottomPercent with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalTopBottomCriterionType.invalid with String = js.native
-  /* "TopItems" */ val topItems: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalTopBottomCriterionType.topItems with String = js.native
-  /* "TopPercent" */ val topPercent: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalTopBottomCriterionType.topPercent with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ConditionalTopBottomCriterionType with String] = js.native
+  /* "BottomItems" */ @js.native
+  object bottomItems extends TopLevel[bottomItems with String]
+  
+  /* "BottomPercent" */ @js.native
+  object bottomPercent extends TopLevel[bottomPercent with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "TopItems" */ @js.native
+  object topItems extends TopLevel[topItems with String]
+  
+  /* "TopPercent" */ @js.native
+  object topPercent extends TopLevel[topPercent with String]
+  
 }
 

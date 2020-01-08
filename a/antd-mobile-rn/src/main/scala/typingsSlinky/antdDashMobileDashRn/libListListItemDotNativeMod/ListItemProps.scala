@@ -2,7 +2,7 @@ package typingsSlinky.antdDashMobileDashRn.libListListItemDotNativeMod
 
 import slinky.core.TagMod
 import typingsSlinky.antdDashMobileDashRn.Anon_Arrow
-import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.Empty
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings._empty
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.android
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.bottom
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.down
@@ -32,7 +32,7 @@ object ListItemProps {
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     children: TagMod[Any] = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,

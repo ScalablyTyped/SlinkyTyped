@@ -7,6 +7,9 @@ import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Bool
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Double
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Error
 import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Integer
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Range
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Workbook
+import typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Worksheet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,9 +50,7 @@ trait NamedItemData extends js.Object {
     *
     * [Api set: ExcelApi 1.4]
     */
-  var scope: js.UndefOr[
-    NamedItemScope | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Worksheet | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Workbook
-  ] = js.undefined
+  var scope: js.UndefOr[NamedItemScope | Worksheet | Workbook] = js.undefined
   /**
     *
     * Indicates the type of the value returned by the name's formula. See Excel.NamedItemType for details. Read-only.
@@ -57,7 +58,7 @@ trait NamedItemData extends js.Object {
     * [Api set: ExcelApi 1.1 for String,Integer,Double,Boolean,Range,Error; 1.7 for Array]
     */
   var `type`: js.UndefOr[
-    NamedItemType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.String | Integer | Double | Boolean | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Range | Error | Array
+    NamedItemType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.String | Integer | Double | Boolean | Range | Error | Array
   ] = js.undefined
   /**
     *
@@ -82,8 +83,8 @@ object NamedItemData {
     comment: String = null,
     formula: js.Any = null,
     name: String = null,
-    scope: NamedItemScope | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Worksheet | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Workbook = null,
-    `type`: NamedItemType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.String | Integer | Double | Boolean | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.Range | Error | Array = null,
+    scope: NamedItemScope | Worksheet | Workbook = null,
+    `type`: NamedItemType | typingsSlinky.officeDashJsDashPreview.officeDashJsDashPreviewStrings.String | Integer | Double | Boolean | Range | Error | Array = null,
     value: js.Any = null,
     visible: js.UndefOr[scala.Boolean] = js.undefined
   ): NamedItemData = {

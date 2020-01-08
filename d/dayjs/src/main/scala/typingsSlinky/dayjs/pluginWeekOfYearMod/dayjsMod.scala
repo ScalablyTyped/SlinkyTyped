@@ -1,6 +1,5 @@
 package typingsSlinky.dayjs.pluginWeekOfYearMod
 
-import typingsSlinky.dayjs.pluginWeekOfYearMod.dayjsMod.Dayjs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

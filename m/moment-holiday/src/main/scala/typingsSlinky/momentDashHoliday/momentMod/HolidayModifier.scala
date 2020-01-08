@@ -1,6 +1,6 @@
 package typingsSlinky.momentDashHoliday.momentMod
 
-import typingsSlinky.momentDashHoliday.momentDashHolidayNumbers.`false`
+import typingsSlinky.momentDashHoliday.momentDashHolidayBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

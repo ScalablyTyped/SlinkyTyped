@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object BarcodeScannerStatus extends js.Object {
   @js.native
   sealed trait online extends BarcodeScannerStatus
   
-  /* 4 */ val extended: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.BarcodeScannerStatus.extended with Double = js.native
-  /* 1 */ val off: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.BarcodeScannerStatus.off with Double = js.native
-  /* 3 */ val offOrOffline: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.BarcodeScannerStatus.offOrOffline with Double = js.native
-  /* 2 */ val offline: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.BarcodeScannerStatus.offline with Double = js.native
-  /* 0 */ val online: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.BarcodeScannerStatus.online with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BarcodeScannerStatus with Double] = js.native
+  /* 4 */ @js.native
+  object extended extends TopLevel[extended with Double]
+  
+  /* 1 */ @js.native
+  object off extends TopLevel[off with Double]
+  
+  /* 3 */ @js.native
+  object offOrOffline extends TopLevel[offOrOffline with Double]
+  
+  /* 2 */ @js.native
+  object offline extends TopLevel[offline with Double]
+  
+  /* 0 */ @js.native
+  object online extends TopLevel[online with Double]
+  
 }
 

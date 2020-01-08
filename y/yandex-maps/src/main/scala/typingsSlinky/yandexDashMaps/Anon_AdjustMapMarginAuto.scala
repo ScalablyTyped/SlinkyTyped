@@ -4,8 +4,6 @@ import typingsSlinky.yandexDashMaps.yandexDashMapsMod.IClassConstructor
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.IGeocodeProvider
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.ILayout
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.ISearchControlLayout
-import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.`yandex#map`
-import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.`yandex#search`
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.auto
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.district
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.house
@@ -20,6 +18,8 @@ import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.none
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.right
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.small
 import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.street
+import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.yandexNumbersignmap
+import typingsSlinky.yandexDashMaps.yandexDashMapsStrings.yandexNumbersignsearch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait Anon_AdjustMapMarginAuto extends js.Object {
   var popupItemLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
   var popupLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
   var position: js.UndefOr[Anon_Bottom] = js.undefined
-  var provider: js.UndefOr[IGeocodeProvider | `yandex#map` | `yandex#search`] = js.undefined
+  var provider: js.UndefOr[IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch] = js.undefined
   var searchCoordOrder: js.UndefOr[latlong | longlat] = js.undefined
   var size: js.UndefOr[auto | small | medium | large] = js.undefined
   var strictBounds: js.UndefOr[Boolean] = js.undefined
@@ -74,7 +74,7 @@ object Anon_AdjustMapMarginAuto {
     popupItemLayout: String | IClassConstructor[ILayout] = null,
     popupLayout: String | IClassConstructor[ILayout] = null,
     position: Anon_Bottom = null,
-    provider: IGeocodeProvider | `yandex#map` | `yandex#search` = null,
+    provider: IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch = null,
     searchCoordOrder: latlong | longlat = null,
     size: auto | small | medium | large = null,
     strictBounds: js.UndefOr[Boolean] = js.undefined,

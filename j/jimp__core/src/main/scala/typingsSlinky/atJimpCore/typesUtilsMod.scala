@@ -3,11 +3,6 @@ package typingsSlinky.atJimpCore
 import typingsSlinky.atJimpCore.typesEtcMod.Image
 import typingsSlinky.atJimpCore.typesPluginsMod.JimpPlugin
 import typingsSlinky.atJimpCore.typesPluginsMod.JimpType
-import typingsSlinky.atJimpCore.typesUtilsMod.FunctionRet
-import typingsSlinky.atJimpCore.typesUtilsMod.GetPluginFuncArrValues
-import typingsSlinky.atJimpCore.typesUtilsMod.GetPluginVal
-import typingsSlinky.atJimpCore.typesUtilsMod.UnionToIntersection
-import typingsSlinky.atJimpCore.typesUtilsMod.WellFormedValues
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import scala.scalajs.js

@@ -1,6 +1,5 @@
 package typingsSlinky.node.http2Mod
 
-import typingsSlinky.node.Error
 import typingsSlinky.node.nodeStrings.checkContinue
 import typingsSlinky.node.nodeStrings.request
 import typingsSlinky.node.nodeStrings.session
@@ -29,7 +28,7 @@ trait Http2SecureServer extends Server {
   @JSName("addListener")
   def addListener_session(event: session, listener: js.Function1[/* session */ ServerHttp2Session, Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_sessionError(event: sessionError, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def addListener_sessionError(event: sessionError, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_stream(
     event: stream,
@@ -51,7 +50,7 @@ trait Http2SecureServer extends Server {
   @JSName("emit")
   def emit_session(event: session, session: ServerHttp2Session): Boolean = js.native
   @JSName("emit")
-  def emit_sessionError(event: sessionError, err: Error): Boolean = js.native
+  def emit_sessionError(event: sessionError, err: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_stream(event: stream, stream: ServerHttp2Stream, headers: IncomingHttpHeaders, flags: Double): Boolean = js.native
   @JSName("emit")
@@ -71,7 +70,7 @@ trait Http2SecureServer extends Server {
   @JSName("on")
   def on_session(event: session, listener: js.Function1[/* session */ ServerHttp2Session, Unit]): this.type = js.native
   @JSName("on")
-  def on_sessionError(event: sessionError, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def on_sessionError(event: sessionError, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_stream(
     event: stream,
@@ -99,7 +98,7 @@ trait Http2SecureServer extends Server {
   @JSName("once")
   def once_session(event: session, listener: js.Function1[/* session */ ServerHttp2Session, Unit]): this.type = js.native
   @JSName("once")
-  def once_sessionError(event: sessionError, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def once_sessionError(event: sessionError, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_stream(
     event: stream,
@@ -127,7 +126,7 @@ trait Http2SecureServer extends Server {
   @JSName("prependListener")
   def prependListener_session(event: session, listener: js.Function1[/* session */ ServerHttp2Session, Unit]): this.type = js.native
   @JSName("prependListener")
-  def prependListener_sessionError(event: sessionError, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def prependListener_sessionError(event: sessionError, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_stream(
     event: stream,
@@ -155,7 +154,7 @@ trait Http2SecureServer extends Server {
   @JSName("prependOnceListener")
   def prependOnceListener_session(event: session, listener: js.Function1[/* session */ ServerHttp2Session, Unit]): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_sessionError(event: sessionError, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def prependOnceListener_sessionError(event: sessionError, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_stream(
     event: stream,

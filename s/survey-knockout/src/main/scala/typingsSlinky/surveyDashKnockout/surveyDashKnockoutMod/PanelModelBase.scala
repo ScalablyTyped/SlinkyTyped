@@ -14,6 +14,7 @@ class PanelModelBase ()
      with IConditionRunner
      with ISurveyErrorOwner {
   def this(name: String) = this()
+  val css: js.Any = js.native
   val cssClasses: js.Any = js.native
   val depth: Double = js.native
   /**
@@ -169,9 +170,9 @@ class PanelModelBase ()
   /* protected */ def dragDropAddTarget(dragDropInfo: DragDropInfo): Unit = js.native
   /* protected */ def dragDropFindRow(findElement: ISurveyElement): QuestionRowModel = js.native
   def dragDropMoveElement(src: IElement, target: IElement, targetIndex: Double): Unit = js.native
-  def elementWidthChanged(el: IElement): Unit = js.native
+  def elementWidthChanged(el: IElement): js.Any = js.native
   @JSName("elementWidthChanged")
-  def elementWidthChanged_Any(el: IElement): js.Any = js.native
+  def elementWidthChanged_Unit(el: IElement): Unit = js.native
   /**
     * Call it to focus the input of the first question that has an error.
     */

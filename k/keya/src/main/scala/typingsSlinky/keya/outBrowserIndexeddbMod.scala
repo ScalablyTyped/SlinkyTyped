@@ -1,7 +1,6 @@
 package typingsSlinky.keya
 
 import org.scalajs.dom.raw.IDBObjectStore
-import typingsSlinky.keya.outBrowserIndexeddbMod.IndexedDBStore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

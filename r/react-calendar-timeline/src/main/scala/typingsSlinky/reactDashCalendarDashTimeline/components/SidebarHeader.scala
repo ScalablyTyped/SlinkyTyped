@@ -3,6 +3,7 @@ package typingsSlinky.reactDashCalendarDashTimeline.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.SidebarHeaderProps
 import typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineStrings.left
@@ -33,6 +34,12 @@ object SidebarHeader
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.SidebarHeader[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.SidebarHeader[js.Any]
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.SidebarHeader[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SidebarHeaderProps[js.Any]
 }
 

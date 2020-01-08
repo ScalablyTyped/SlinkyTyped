@@ -1,7 +1,5 @@
 package typingsSlinky.antdDashMobile
 
-import typingsSlinky.antdDashMobile.libListDashViewMod.ListView
-import typingsSlinky.antdDashMobile.libListDashViewMod.ListViewProps
 import typingsSlinky.antdDashMobile.libListDashViewPropsTypeMod.ListViewPropsType
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Component

@@ -19,15 +19,16 @@ object ReactDashImageloader
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onError, onLoad, src */
+  /* The following DOM/SVG props were specified: className, onError, onLoad */
   def apply(
+    src: String,
     imgProps: js.Any = null,
     preloader: /* params */ js.Any => ReactElement = null,
     style: CSSProperties = null,
     wrapper: /* props */ js.Any => ReactElement = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     if (imgProps != null) __obj.updateDynamic("imgProps")(imgProps.asInstanceOf[js.Any])
     if (preloader != null) __obj.updateDynamic("preloader")(js.Any.fromFunction1(preloader))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])

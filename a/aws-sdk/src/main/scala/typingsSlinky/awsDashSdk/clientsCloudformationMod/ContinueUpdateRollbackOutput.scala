@@ -1,0 +1,9 @@
+package typingsSlinky.awsDashSdk.clientsCloudformationMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ContinueUpdateRollbackOutput extends js.Object
+

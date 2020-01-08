@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object AuthorizationStatus extends js.Object {
   @js.native
   sealed trait REQUIRED extends AuthorizationStatus
   
-  /* 1 */ val NOT_REQUIRED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.AuthorizationStatus.NOT_REQUIRED with Double = js.native
-  /* 0 */ val REQUIRED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Script.AuthorizationStatus.REQUIRED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AuthorizationStatus with Double] = js.native
+  /* 1 */ @js.native
+  object NOT_REQUIRED extends TopLevel[NOT_REQUIRED with Double]
+  
+  /* 0 */ @js.native
+  object REQUIRED extends TopLevel[REQUIRED with Double]
+  
 }
 

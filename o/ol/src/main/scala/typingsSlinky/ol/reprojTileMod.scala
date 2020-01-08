@@ -1,8 +1,6 @@
 package typingsSlinky.ol
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.ol.reprojTileMod.FunctionType
-import typingsSlinky.ol.reprojTileMod.ReprojTile
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import scala.scalajs.js
 import scala.scalajs.js.`|`

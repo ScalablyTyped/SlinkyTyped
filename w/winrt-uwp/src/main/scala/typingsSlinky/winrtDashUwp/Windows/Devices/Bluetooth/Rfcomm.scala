@@ -1,8 +1,5 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth
 
-import typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService
-import typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId
-import typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation

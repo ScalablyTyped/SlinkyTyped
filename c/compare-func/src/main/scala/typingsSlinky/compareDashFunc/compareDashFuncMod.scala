@@ -1,6 +1,5 @@
 package typingsSlinky.compareDashFunc
 
-import typingsSlinky.compareDashFunc.compareDashFuncMod.extractFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.stdDashMocks
 
-import typingsSlinky.stdDashMocks.stdDashMocksNumbers.`false`
+import typingsSlinky.stdDashMocks.stdDashMocksBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

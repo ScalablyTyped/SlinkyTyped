@@ -1,11 +1,14 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DatePickerDisabledExample
-  extends SharedApply_Object152536094[
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDatePickerExamplesDatePickerDotDisabledDotExampleMod.DatePickerDisabledExample
     ] {
   @JSImport("office-ui-fabric-react/lib/components/DatePicker/examples/DatePicker.Disabled.Example", "DatePickerDisabledExample")

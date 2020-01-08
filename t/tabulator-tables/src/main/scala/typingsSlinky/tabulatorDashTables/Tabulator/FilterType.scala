@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`=`
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`!=`
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.Equalssign
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.ExclamationmarkEqualssign
   - typings.tabulatorDashTables.tabulatorDashTablesStrings.like
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`<`
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`>`
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`<=`
-  - typings.tabulatorDashTables.tabulatorDashTablesStrings.`>=`
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.Lessthansign
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.Greaterthansign
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.LessthansignEqualssign
+  - typings.tabulatorDashTables.tabulatorDashTablesStrings.GreaterthansignEqualssign
   - typings.tabulatorDashTables.tabulatorDashTablesStrings.in
   - typings.tabulatorDashTables.tabulatorDashTablesStrings.regex
 */
@@ -19,17 +19,17 @@ trait FilterType extends js.Object
 
 object FilterType {
   @scala.inline
-  def `!=`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`!=` = this.cast("!=")
+  def Equalssign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.Equalssign = this.cast("=")
   @scala.inline
-  def `<`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`<` = this.cast("<")
+  def ExclamationmarkEqualssign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.ExclamationmarkEqualssign = this.cast("!=")
   @scala.inline
-  def `<=`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`<=` = this.cast("<=")
+  def Greaterthansign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.Greaterthansign = this.cast(">")
   @scala.inline
-  def `=`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`=` = this.cast("=")
+  def GreaterthansignEqualssign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.GreaterthansignEqualssign = this.cast(">=")
   @scala.inline
-  def `>`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`>` = this.cast(">")
+  def Lessthansign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.Lessthansign = this.cast("<")
   @scala.inline
-  def `>=`: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.`>=` = this.cast(">=")
+  def LessthansignEqualssign: typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.LessthansignEqualssign = this.cast("<=")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline

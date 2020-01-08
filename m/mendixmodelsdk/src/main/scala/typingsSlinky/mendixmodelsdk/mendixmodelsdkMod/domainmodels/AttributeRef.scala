@@ -5,6 +5,7 @@ import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.Widget
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.AttributeWidget
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.DataGridColumn
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.GridSortItem
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenExpressionsMod.expressions.VariableRefExpression
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.SortItem
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ClientTemplateParameter
@@ -14,6 +15,9 @@ import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.MemberWidget
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.RangeSearchField
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.SingleSearchField
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.StaticOrDynamicString
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +30,12 @@ import scala.scalajs.js.annotation._
 class AttributeRef protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.domainmodels.AttributeRef {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -40,7 +44,7 @@ class AttributeRef protected ()
 @js.native
 object AttributeRef extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new AttributeRef instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

@@ -1,6 +1,6 @@
 package typingsSlinky.atGoogleDashCloudCommon.buildSrcServiceMod
 
-import typingsSlinky.atGoogleDashCloudCommon.atGoogleDashCloudCommonNumbers.`true`
+import typingsSlinky.atGoogleDashCloudCommon.atGoogleDashCloudCommonBooleans.`true`
 import typingsSlinky.atGoogleDashCloudCommon.buildSrcServiceDashObjectMod.Interceptor
 import typingsSlinky.atGoogleDashCloudCommon.buildSrcUtilMod.DecorateRequestOptions
 import typingsSlinky.teenyDashRequest.teenyDashRequestMod.Headers

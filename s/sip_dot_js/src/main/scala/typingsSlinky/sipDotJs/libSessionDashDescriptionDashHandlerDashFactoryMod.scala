@@ -1,6 +1,5 @@
 package typingsSlinky.sipDotJs
 
-import typingsSlinky.sipDotJs.libSessionDashDescriptionDashHandlerDashFactoryMod.SessionDescriptionHandlerFactoryOptions
 import typingsSlinky.sipDotJs.libSessionDashDescriptionDashHandlerMod.SessionDescriptionHandler
 import typingsSlinky.sipDotJs.libSessionMod.InviteClientContext
 import typingsSlinky.sipDotJs.libSessionMod.InviteServerContext

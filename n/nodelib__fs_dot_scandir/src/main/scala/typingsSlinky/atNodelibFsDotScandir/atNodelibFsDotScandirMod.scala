@@ -1,6 +1,5 @@
 package typingsSlinky.atNodelibFsDotScandir
 
-import typingsSlinky.atNodelibFsDotScandir.atNodelibFsDotScandirMod.AsyncCallback
 import typingsSlinky.atNodelibFsDotScandir.outSettingsMod.Options
 import typingsSlinky.atNodelibFsDotScandir.outSettingsMod.default
 import typingsSlinky.atNodelibFsDotScandir.outTypesMod.Entry

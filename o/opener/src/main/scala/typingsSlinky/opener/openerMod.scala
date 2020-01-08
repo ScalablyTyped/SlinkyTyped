@@ -1,7 +1,6 @@
 package typingsSlinky.opener
 
 import typingsSlinky.node.childUnderscoreProcessMod.ChildProcess
-import typingsSlinky.opener.openerMod.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

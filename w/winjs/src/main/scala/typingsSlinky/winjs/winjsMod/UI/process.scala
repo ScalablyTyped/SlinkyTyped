@@ -1,6 +1,7 @@
 package typingsSlinky.winjs.winjsMod.UI
 
 import typingsSlinky.winjs.Element
+import typingsSlinky.winjs.WinJS.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,6 @@ object process extends js.Object {
     * @param element The element to bind.
     * @returns A promise that is fulfilled after the control is activated. The value of the promise is the control that is attached to element.
     **/
-  def apply(element: Element): typingsSlinky.winjs.WinJS.Promise[_] = js.native
+  def apply(element: Element): Promise[_] = js.native
 }
 

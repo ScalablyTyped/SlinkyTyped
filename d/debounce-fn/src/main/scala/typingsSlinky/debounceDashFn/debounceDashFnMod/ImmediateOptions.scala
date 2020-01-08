@@ -1,6 +1,6 @@
 package typingsSlinky.debounceDashFn.debounceDashFnMod
 
-import typingsSlinky.debounceDashFn.debounceDashFnNumbers.`true`
+import typingsSlinky.debounceDashFn.debounceDashFnBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

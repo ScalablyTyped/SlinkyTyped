@@ -1,6 +1,6 @@
 package typingsSlinky.atBlueprintjsTable
 
-import typingsSlinky.atBlueprintjsTable.libEsmCommonRenderModeMod.RenderMode
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,11 +39,17 @@ object libEsmCommonRenderModeMod extends js.Object {
     @js.native
     sealed trait NONE extends RenderMode
     
-    /* "batch" */ val BATCH: typingsSlinky.atBlueprintjsTable.libEsmCommonRenderModeMod.RenderMode.BATCH with String = js.native
-    /* "batch-on-update" */ val BATCH_ON_UPDATE: typingsSlinky.atBlueprintjsTable.libEsmCommonRenderModeMod.RenderMode.BATCH_ON_UPDATE with String = js.native
-    /* "none" */ val NONE: typingsSlinky.atBlueprintjsTable.libEsmCommonRenderModeMod.RenderMode.NONE with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[RenderMode with String] = js.native
+    /* "batch" */ @js.native
+    object BATCH extends TopLevel[BATCH with String]
+    
+    /* "batch-on-update" */ @js.native
+    object BATCH_ON_UPDATE extends TopLevel[BATCH_ON_UPDATE with String]
+    
+    /* "none" */ @js.native
+    object NONE extends TopLevel[NONE with String]
+    
   }
   
 }

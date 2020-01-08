@@ -1,6 +1,5 @@
 package typingsSlinky.nextDashServer
 
-import typingsSlinky.nextDashServer.distLibLoadableDashContextMod.CaptureFn
 import typingsSlinky.react.reactMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`

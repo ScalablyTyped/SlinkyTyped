@@ -1,7 +1,6 @@
 package typingsSlinky.kindDashOf
 
 import typingsSlinky.kindDashOf.kindDashOfStrings.`null`
-import typingsSlinky.kindDashOf.kindDashOfStrings.arguments
 import typingsSlinky.kindDashOf.kindDashOfStrings.array
 import typingsSlinky.kindDashOf.kindDashOfStrings.arrayiterator
 import typingsSlinky.kindDashOf.kindDashOfStrings.boolean
@@ -59,7 +58,7 @@ import scala.scalajs.js.annotation._
 object kindDashOfMod extends js.Object {
   def apply(): `null` = js.native
   def apply(thing: String): string = js.native
-  def apply(thing: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof arguments */ js.Any): arguments = js.native
+  def apply(thing: js.Any): String = js.native
   def apply(thing: js.Array[_]): array = js.native
   def apply(thing: js.Function1[/* repeated */ js.Any, _]): function | generatorfunction = js.native
   def apply(thing: js.Promise[_]): promise = js.native

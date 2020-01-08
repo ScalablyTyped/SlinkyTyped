@@ -7,7 +7,6 @@ import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelMod.Channel
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterMod.BaseFilter
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterMod.Filter
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterMod.FilterFactory
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcMetadataDashStatusDashFilterMod.MetadataStatusFilter
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMetadataMod.Metadata
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

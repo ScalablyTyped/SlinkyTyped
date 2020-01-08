@@ -2,7 +2,7 @@ package typingsSlinky.gapiDotCalendar.gapi.client.calendar
 
 import typingsSlinky.gapiDotCalendar.Anon_Method
 import typingsSlinky.gapiDotCalendar.Anon_Notifications
-import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.`calendar#calendarListEntry`
+import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.calendarNumbersigncalendarListEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait CalendarListEntry extends js.Object {
   var foregroundColor: js.UndefOr[String] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
   var id: String
-  var kind: `calendar#calendarListEntry`
+  var kind: calendarNumbersigncalendarListEntry
   var location: js.UndefOr[String] = js.undefined
   var notificationSettings: js.UndefOr[Anon_Notifications] = js.undefined
   var primary: js.UndefOr[Boolean] = js.undefined
@@ -36,7 +36,7 @@ object CalendarListEntry {
     defaultReminders: js.Array[Anon_Method],
     etag: etag,
     id: String,
-    kind: `calendar#calendarListEntry`,
+    kind: calendarNumbersigncalendarListEntry,
     summary: String,
     backgroundColor: String = null,
     colorId: String = null,

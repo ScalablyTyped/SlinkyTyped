@@ -1,7 +1,5 @@
 package typingsSlinky.pDashPipe
 
-import typingsSlinky.pDashPipe.pDashPipeMod.Pipeline
-import typingsSlinky.pDashPipe.pDashPipeMod.UnaryFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

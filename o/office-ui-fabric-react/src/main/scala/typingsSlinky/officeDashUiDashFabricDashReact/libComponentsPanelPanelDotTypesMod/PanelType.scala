@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -107,16 +108,34 @@ object PanelType extends js.Object {
   @js.native
   sealed trait smallFluid extends PanelType
   
-  /* 7 */ val custom: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.custom with Double = js.native
-  /* 8 */ val customNear: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.customNear with Double = js.native
-  /* 6 */ val extraLarge: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.extraLarge with Double = js.native
-  /* 4 */ val large: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.large with Double = js.native
-  /* 5 */ val largeFixed: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.largeFixed with Double = js.native
-  /* 3 */ val medium: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.medium with Double = js.native
-  /* 1 */ val smallFixedFar: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.smallFixedFar with Double = js.native
-  /* 2 */ val smallFixedNear: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.smallFixedNear with Double = js.native
-  /* 0 */ val smallFluid: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotTypesMod.PanelType.smallFluid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PanelType with Double] = js.native
+  /* 7 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 8 */ @js.native
+  object customNear extends TopLevel[customNear with Double]
+  
+  /* 6 */ @js.native
+  object extraLarge extends TopLevel[extraLarge with Double]
+  
+  /* 4 */ @js.native
+  object large extends TopLevel[large with Double]
+  
+  /* 5 */ @js.native
+  object largeFixed extends TopLevel[largeFixed with Double]
+  
+  /* 3 */ @js.native
+  object medium extends TopLevel[medium with Double]
+  
+  /* 1 */ @js.native
+  object smallFixedFar extends TopLevel[smallFixedFar with Double]
+  
+  /* 2 */ @js.native
+  object smallFixedNear extends TopLevel[smallFixedNear with Double]
+  
+  /* 0 */ @js.native
+  object smallFluid extends TopLevel[smallFluid with Double]
+  
 }
 

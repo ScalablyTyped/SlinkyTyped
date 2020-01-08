@@ -3,7 +3,7 @@ package typingsSlinky.antd.libModalModalMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.libButtonButtonMod.ButtonType
 import typingsSlinky.antd.libButtonButtonMod.NativeButtonProps
 import typingsSlinky.react.reactMod.CSSProperties

@@ -2,7 +2,6 @@ package typingsSlinky.reactDashTestDashRenderer
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.ReactInstance
-import typingsSlinky.reactDashTestDashRenderer.shallowMod.ShallowRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

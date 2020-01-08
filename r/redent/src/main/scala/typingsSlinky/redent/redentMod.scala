@@ -1,6 +1,5 @@
 package typingsSlinky.redent
 
-import typingsSlinky.redent.redentMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

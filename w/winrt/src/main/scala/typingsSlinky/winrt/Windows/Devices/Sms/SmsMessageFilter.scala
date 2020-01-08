@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SmsMessageFilter extends js.Object {
   @js.native
   sealed trait unread extends SmsMessageFilter
   
-  /* 0 */ val all: typingsSlinky.winrt.Windows.Devices.Sms.SmsMessageFilter.all with Double = js.native
-  /* 4 */ val draft: typingsSlinky.winrt.Windows.Devices.Sms.SmsMessageFilter.draft with Double = js.native
-  /* 2 */ val read: typingsSlinky.winrt.Windows.Devices.Sms.SmsMessageFilter.read with Double = js.native
-  /* 3 */ val sent: typingsSlinky.winrt.Windows.Devices.Sms.SmsMessageFilter.sent with Double = js.native
-  /* 1 */ val unread: typingsSlinky.winrt.Windows.Devices.Sms.SmsMessageFilter.unread with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmsMessageFilter with Double] = js.native
+  /* 0 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 4 */ @js.native
+  object draft extends TopLevel[draft with Double]
+  
+  /* 2 */ @js.native
+  object read extends TopLevel[read with Double]
+  
+  /* 3 */ @js.native
+  object sent extends TopLevel[sent with Double]
+  
+  /* 1 */ @js.native
+  object unread extends TopLevel[unread with Double]
+  
 }
 

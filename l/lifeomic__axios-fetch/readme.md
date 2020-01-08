@@ -10,9 +10,9 @@ A WebAPI Fetch implementation backed by an Axios client
 | ------------------ | :-------------: |
 | Full name          | @lifeomic/axios-fetch |
 | Keywords           | fetch, axios |
-| # releases         | 8 |
-| # dependents       | 0 |
-| # downloads        | 120966 |
+| # releases         | 9 |
+| # dependents       | 1 |
+| # downloads        | 148370 |
 | # stars            | 0 |
 
 ## Links

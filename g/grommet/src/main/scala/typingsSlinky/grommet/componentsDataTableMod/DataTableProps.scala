@@ -1,12 +1,15 @@
 package typingsSlinky.grommet.componentsDataTableMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.grommet.Anon_AggregateAlign
 import typingsSlinky.grommet.Anon_AllBody
 import typingsSlinky.grommet.Anon_ArgsExpand
 import typingsSlinky.grommet.Anon_Background
 import typingsSlinky.grommet.Anon_Body
 import typingsSlinky.grommet.Anon_BodyBottom
+import typingsSlinky.grommet.Anon_Datum
 import typingsSlinky.grommet.grommetStrings.all
 import typingsSlinky.grommet.grommetStrings.bottom
 import typingsSlinky.grommet.grommetStrings.horizontal
@@ -41,6 +44,9 @@ trait DataTableProps extends js.Object {
   var gridArea: js.UndefOr[GridAreaType] = js.undefined
   var groupBy: js.UndefOr[String | Anon_ArgsExpand] = js.undefined
   var margin: js.UndefOr[MarginType] = js.undefined
+  var onClickRow: js.UndefOr[
+    js.Function1[(/* event */ Anon_Datum) | (/* event */ SyntheticMouseEvent[Element]), Unit]
+  ] = js.undefined
   var onMore: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
   var onSearch: js.UndefOr[js.Function1[/* search */ String, Unit]] = js.undefined
   var pad: js.UndefOr[
@@ -67,6 +73,7 @@ object DataTableProps {
     gridArea: GridAreaType = null,
     groupBy: String | Anon_ArgsExpand = null,
     margin: MarginType = null,
+    onClickRow: (/* event */ Anon_Datum) | (/* event */ SyntheticMouseEvent[Element]) => Unit = null,
     onMore: /* repeated */ js.Any => _ = null,
     onSearch: /* search */ String => Unit = null,
     pad: none | xxsmall | xsmall | small | medium | large | xlarge | Anon_BodyBottom | String = null,
@@ -88,6 +95,7 @@ object DataTableProps {
     if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
     if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (onClickRow != null) __obj.updateDynamic("onClickRow")(js.Any.fromFunction1(onClickRow))
     if (onMore != null) __obj.updateDynamic("onMore")(js.Any.fromFunction1(onMore))
     if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
     if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])

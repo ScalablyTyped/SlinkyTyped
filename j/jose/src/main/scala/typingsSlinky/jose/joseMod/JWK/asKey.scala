@@ -5,6 +5,7 @@ import typingsSlinky.jose.joseMod.JWKECKey
 import typingsSlinky.jose.joseMod.JWKOKPKey
 import typingsSlinky.jose.joseMod.JWKOctKey
 import typingsSlinky.jose.joseMod.JWKRSAKey
+import typingsSlinky.jose.joseMod.KeyInput
 import typingsSlinky.jose.joseMod.KeyParameters
 import typingsSlinky.node.cryptoMod.KeyObject
 import scala.scalajs.js

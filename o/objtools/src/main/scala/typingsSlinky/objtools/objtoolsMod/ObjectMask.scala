@@ -1,7 +1,7 @@
 package typingsSlinky.objtools.objtoolsMod
 
-import typingsSlinky.objtools.objtoolsNumbers.`false`
-import typingsSlinky.objtools.objtoolsNumbers.`true`
+import typingsSlinky.objtools.objtoolsBooleans.`false`
+import typingsSlinky.objtools.objtoolsBooleans.`true`
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

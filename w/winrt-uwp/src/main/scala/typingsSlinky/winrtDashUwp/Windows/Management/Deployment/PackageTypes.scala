@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Management.Deployment
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object PackageTypes extends js.Object {
   @js.native
   sealed trait xap extends PackageTypes
   
-  /* 4 */ val bundle: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.bundle with Double = js.native
-  /* 2 */ val framework: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.framework with Double = js.native
-  /* 1 */ val main: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.main with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.none with Double = js.native
-  /* 3 */ val resource: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.resource with Double = js.native
-  /* 5 */ val xap: typingsSlinky.winrtDashUwp.Windows.Management.Deployment.PackageTypes.xap with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PackageTypes with Double] = js.native
+  /* 4 */ @js.native
+  object bundle extends TopLevel[bundle with Double]
+  
+  /* 2 */ @js.native
+  object framework extends TopLevel[framework with Double]
+  
+  /* 1 */ @js.native
+  object main extends TopLevel[main with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object resource extends TopLevel[resource with Double]
+  
+  /* 5 */ @js.native
+  object xap extends TopLevel[xap with Double]
+  
 }
 

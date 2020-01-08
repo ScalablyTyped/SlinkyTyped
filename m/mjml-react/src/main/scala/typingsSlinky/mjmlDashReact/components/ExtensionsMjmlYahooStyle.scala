@@ -1,11 +1,14 @@
 package typingsSlinky.mjmlDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import typingsSlinky.mjmlDashReact.mjmlDashReactMod.extensions.MjmlYahooStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ExtensionsMjmlYahooStyle extends SharedApply_Anon_Children_115411025[MjmlYahooStyle] {
+object ExtensionsMjmlYahooStyle
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, MjmlYahooStyle] {
   @JSImport("mjml-react", "extensions.MjmlYahooStyle")
   @js.native
   object componentImport extends js.Object

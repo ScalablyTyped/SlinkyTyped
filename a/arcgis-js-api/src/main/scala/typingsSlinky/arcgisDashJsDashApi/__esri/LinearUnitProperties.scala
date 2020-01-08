@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,14 +24,14 @@ trait LinearUnitProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LinearUnit.html#units)
     */
-  var units: js.UndefOr[feet | kilometers | meters | miles | `nautical-miles` | yards] = js.undefined
+  var units: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
 }
 
 object LinearUnitProperties {
   @scala.inline
   def apply(
     distance: Int | Double = null,
-    units: feet | kilometers | meters | miles | `nautical-miles` | yards = null
+    units: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null
   ): LinearUnitProperties = {
     val __obj = js.Dynamic.literal()
     if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])

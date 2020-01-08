@@ -1,6 +1,5 @@
 package typingsSlinky.klaw.klawMod
 
-import typingsSlinky.node.Error
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import scala.scalajs.js
@@ -24,8 +23,8 @@ object Options {
     depthLimit: Int | Double = null,
     destroy: js.ThisFunction2[
       /* this */ Readable, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     encoding: String = null,

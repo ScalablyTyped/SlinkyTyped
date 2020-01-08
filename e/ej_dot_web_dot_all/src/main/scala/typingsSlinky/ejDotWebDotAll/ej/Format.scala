@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +19,14 @@ object Format extends js.Object {
   @js.native
   sealed trait List extends Format
   
-  /* 0 */ val Cloud: typingsSlinky.ejDotWebDotAll.ej.Format.Cloud with Double = js.native
-  /* 1 */ val List: typingsSlinky.ejDotWebDotAll.ej.Format.List with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Format with Double] = js.native
+  /* 0 */ @js.native
+  object Cloud extends TopLevel[Cloud with Double]
+  
+  /* 1 */ @js.native
+  object List extends TopLevel[List with Double]
+  
 }
 
 @JSGlobal("ej.format")

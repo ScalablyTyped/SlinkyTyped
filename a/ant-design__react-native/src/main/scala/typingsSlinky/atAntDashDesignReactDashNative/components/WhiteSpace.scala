@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WhiteSpace
-  extends SharedApply_WhiteSpaceProps1456367875[
+  extends SharedApply_WhiteSpaceProps2128096257[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.WhiteSpace
     ] {
   @JSImport("@ant-design/react-native", "WhiteSpace")

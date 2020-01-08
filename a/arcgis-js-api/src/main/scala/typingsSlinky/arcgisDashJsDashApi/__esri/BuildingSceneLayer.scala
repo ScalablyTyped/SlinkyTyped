@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`building-scene`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,7 +51,7 @@ trait BuildingSceneLayer
     *
     *
     */
-  def loadAll(): IPromise[BuildingSceneLayer] = js.native
+  def loadAll(): js.Promise[BuildingSceneLayer] = js.native
 }
 
 @JSGlobal("__esri.BuildingSceneLayer")

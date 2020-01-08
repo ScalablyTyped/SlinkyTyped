@@ -3,7 +3,6 @@ package typingsSlinky.lasso
 import typingsSlinky.lasso.libDependenciesMod.Bundle
 import typingsSlinky.lasso.libLassoMod.LassoConfig
 import typingsSlinky.lasso.libLassoMod.default
-import typingsSlinky.lasso.libWritersWriterMod.Writer
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

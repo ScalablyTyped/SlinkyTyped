@@ -6,7 +6,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRe
 import typingsSlinky.vsoDashNodeDashApi.interfacesPolicyInterfacesMod.PolicyConfiguration
 import typingsSlinky.vsoDashNodeDashApi.interfacesPolicyInterfacesMod.PolicyEvaluationRecord
 import typingsSlinky.vsoDashNodeDashApi.interfacesPolicyInterfacesMod.PolicyType
-import typingsSlinky.vsoDashNodeDashApi.policyApiMod.IPolicyApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

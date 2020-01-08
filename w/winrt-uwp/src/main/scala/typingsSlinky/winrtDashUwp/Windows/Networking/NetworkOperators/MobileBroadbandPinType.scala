@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,18 +56,40 @@ object MobileBroadbandPinType extends js.Object {
   @js.native
   sealed trait subsidyLock extends MobileBroadbandPinType
   
-  /* 9 */ val corporatePin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.corporatePin with Double = js.native
-  /* 1 */ val custom: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.custom with Double = js.native
-  /* 5 */ val firstSimPin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.firstSimPin with Double = js.native
-  /* 6 */ val networkPin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.networkPin with Double = js.native
-  /* 7 */ val networkSubsetPin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.networkSubsetPin with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.none with Double = js.native
-  /* 2 */ val pin1: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.pin1 with Double = js.native
-  /* 3 */ val pin2: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.pin2 with Double = js.native
-  /* 8 */ val serviceProviderPin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.serviceProviderPin with Double = js.native
-  /* 4 */ val simPin: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.simPin with Double = js.native
-  /* 10 */ val subsidyLock: typingsSlinky.winrtDashUwp.Windows.Networking.NetworkOperators.MobileBroadbandPinType.subsidyLock with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MobileBroadbandPinType with Double] = js.native
+  /* 9 */ @js.native
+  object corporatePin extends TopLevel[corporatePin with Double]
+  
+  /* 1 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 5 */ @js.native
+  object firstSimPin extends TopLevel[firstSimPin with Double]
+  
+  /* 6 */ @js.native
+  object networkPin extends TopLevel[networkPin with Double]
+  
+  /* 7 */ @js.native
+  object networkSubsetPin extends TopLevel[networkSubsetPin with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object pin1 extends TopLevel[pin1 with Double]
+  
+  /* 3 */ @js.native
+  object pin2 extends TopLevel[pin2 with Double]
+  
+  /* 8 */ @js.native
+  object serviceProviderPin extends TopLevel[serviceProviderPin with Double]
+  
+  /* 4 */ @js.native
+  object simPin extends TopLevel[simPin with Double]
+  
+  /* 10 */ @js.native
+  object subsidyLock extends TopLevel[subsidyLock with Double]
+  
 }
 

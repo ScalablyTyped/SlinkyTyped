@@ -1,7 +1,7 @@
 package typingsSlinky.jsqubits.jsqubitsMod.jsqubits
 
+import typingsSlinky.jsqubits.jsqubitsBooleans.`false`
 import typingsSlinky.jsqubits.jsqubitsMod.SingleQubitOperatorTargetQubits
-import typingsSlinky.jsqubits.jsqubitsNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

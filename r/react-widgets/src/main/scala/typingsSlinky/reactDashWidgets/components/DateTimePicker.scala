@@ -4,24 +4,22 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libDateTimePickerMod.DateTimePickerMessages
 import typingsSlinky.reactDashWidgets.libDateTimePickerMod.DateTimePickerProps
-import typingsSlinky.reactDashWidgets.reactDashWidgetsNumbers.`false`
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.calendar
+import typingsSlinky.reactDashWidgets.libDateTimePickerMod.Open
+import typingsSlinky.reactDashWidgets.libDateTimePickerMod.^
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.century
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.date
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.decade
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.month
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.time
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.year
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DateTimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/DateTimePicker", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -36,7 +34,7 @@ object DateTimePicker
     date: js.UndefOr[Boolean] = js.undefined,
     dateIcon: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     defaultCurrentDate: js.Date = null,
-    defaultOpen: `false` | calendar | time = null,
+    defaultOpen: Open = null,
     defaultValue: js.Date = null,
     disabled: Boolean | js.Array[_] = null,
     dropUp: js.UndefOr[Boolean] = js.undefined,
@@ -54,8 +52,8 @@ object DateTimePicker
     onChange: (/* date */ js.UndefOr[js.Date], /* dateStr */ js.UndefOr[String]) => Unit = null,
     onCurrentDateChange: /* date */ js.UndefOr[js.Date] => Unit = null,
     onFocus: () => Unit = null,
-    onToggle: /* isOpen */ Boolean => Unit = null,
-    open: `false` | date | time = null,
+    onToggle: /* isOpen */ Open => Unit = null,
+    open: Open = null,
     parse: (js.Function1[/* str */ String, js.Date]) | js.Array[String] | String = null,
     popupTransition: ReactComponentClass[_] | String = null,
     readOnly: Boolean | js.Array[_] = null,
@@ -65,7 +63,7 @@ object DateTimePicker
     timeIcon: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
     value: js.Date = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(calendar)) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
     if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
@@ -105,6 +103,9 @@ object DateTimePicker
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashWidgets.libDateTimePickerMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DateTimePickerProps
 }
 

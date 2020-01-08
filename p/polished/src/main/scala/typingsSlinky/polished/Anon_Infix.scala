@@ -1,20 +1,20 @@
 package typingsSlinky.polished
 
-import typingsSlinky.polished.polishedStrings.`BACKSLASHBACKSLASH^`
-import typingsSlinky.polished.polishedStrings.`_backtick^_backtick`
+import typingsSlinky.polished.polishedStrings.^
+import typingsSlinky.polished.polishedStrings.`Backslash^`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_Infix extends js.Object {
   var infix: Anon_1
-  var regSymbol: `BACKSLASHBACKSLASH^`
-  var symbol: `_backtick^_backtick`
+  var regSymbol: `Backslash^`
+  var symbol: ^
 }
 
 object Anon_Infix {
   @scala.inline
-  def apply(infix: Anon_1, regSymbol: `BACKSLASHBACKSLASH^`, symbol: `_backtick^_backtick`): Anon_Infix = {
+  def apply(infix: Anon_1, regSymbol: `Backslash^`, symbol: ^): Anon_Infix = {
     val __obj = js.Dynamic.literal(infix = infix.asInstanceOf[js.Any], regSymbol = regSymbol.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[Anon_Infix]

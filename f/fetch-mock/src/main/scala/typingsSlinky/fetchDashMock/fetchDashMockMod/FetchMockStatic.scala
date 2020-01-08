@@ -1,8 +1,8 @@
 package typingsSlinky.fetchDashMock.fetchDashMockMod
 
 import typingsSlinky.fetchDashMock.Anon_Always
-import typingsSlinky.fetchDashMock.fetchDashMockNumbers.`false`
-import typingsSlinky.fetchDashMock.fetchDashMockNumbers.`true`
+import typingsSlinky.fetchDashMock.fetchDashMockBooleans.`false`
+import typingsSlinky.fetchDashMock.fetchDashMockBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

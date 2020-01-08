@@ -1,8 +1,8 @@
 package typingsSlinky.astDashTypes
 
-import typingsSlinky.astDashTypes.astDashTypesStrings.`&&`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`??`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`||`
+import typingsSlinky.astDashTypes.astDashTypesStrings.AmpersandAmpersand
+import typingsSlinky.astDashTypes.astDashTypesStrings.QuestionmarkQuestionmark
+import typingsSlinky.astDashTypes.astDashTypesStrings.VerticallineVerticalline
 import typingsSlinky.astDashTypes.genKindsMod.CommentKind
 import typingsSlinky.astDashTypes.genKindsMod.ExpressionKind
 import typingsSlinky.astDashTypes.genKindsMod.SourceLocationKind
@@ -14,7 +14,7 @@ trait Anon_CommentsLeftLoc extends js.Object {
   var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
   var left: ExpressionKind
   var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var operator: `||` | `&&` | `??`
+  var operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark
   var right: ExpressionKind
 }
 
@@ -22,7 +22,7 @@ object Anon_CommentsLeftLoc {
   @scala.inline
   def apply(
     left: ExpressionKind,
-    operator: `||` | `&&` | `??`,
+    operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark,
     right: ExpressionKind,
     comments: js.Array[CommentKind] = null,
     loc: SourceLocationKind = null

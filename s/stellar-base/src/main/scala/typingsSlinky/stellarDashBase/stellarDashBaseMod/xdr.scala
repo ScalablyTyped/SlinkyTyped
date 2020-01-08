@@ -2,11 +2,6 @@ package typingsSlinky.stellarDashBase.stellarDashBaseMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.stellarDashBase.Anon_Hint
-import typingsSlinky.stellarDashBase.stellarDashBaseMod.xdr.DecoratedSignature
-import typingsSlinky.stellarDashBase.stellarDashBaseMod.xdr.SignatureHint
-import typingsSlinky.stellarDashBase.stellarDashBaseMod.xdr.TransactionEnvelope
-import typingsSlinky.stellarDashBase.stellarDashBaseMod.xdr.TransactionResult
-import typingsSlinky.stellarDashBase.stellarDashBaseMod.xdr.XDRStruct
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,9 +35,9 @@ object xdr extends js.Object {
   @js.native
   class XDRStruct () extends js.Object {
     def toXDR(): Buffer = js.native
-    def toXDR(base: String): Buffer = js.native
+    def toXDR(encoding: String): String = js.native
     @JSName("toXDR")
-    def toXDR_String(encoding: String): String = js.native
+    def toXDR_Buffer(base: String): Buffer = js.native
   }
   
   /* static members */

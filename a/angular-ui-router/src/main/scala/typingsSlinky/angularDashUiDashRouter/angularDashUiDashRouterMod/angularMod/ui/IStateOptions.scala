@@ -21,15 +21,11 @@ trait IStateOptions extends js.Object {
   /**
     * {object=$state.$current}, When transitioning with relative path (e.g '^'), defines which state to be relative from.
     */
-  var relative: js.UndefOr[
-    typingsSlinky.angularDashUiDashRouter.angularDashUiDashRouterMod.angularMod.ui.IState
-  ] = js.undefined
+  var relative: js.UndefOr[IState] = js.undefined
   /**
     * {boolean=false|string|IState}, If true will force transition even if the state or params have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd use this when you want to force a reload when everything is the same, including search params.
     */
-  var reload: js.UndefOr[
-    Boolean | String | typingsSlinky.angularDashUiDashRouter.angularDashUiDashRouterMod.angularMod.ui.IState
-  ] = js.undefined
+  var reload: js.UndefOr[Boolean | String | IState] = js.undefined
 }
 
 object IStateOptions {
@@ -38,8 +34,8 @@ object IStateOptions {
     inherit: js.UndefOr[Boolean] = js.undefined,
     location: Boolean | String = null,
     notify: js.UndefOr[Boolean] = js.undefined,
-    relative: typingsSlinky.angularDashUiDashRouter.angularDashUiDashRouterMod.angularMod.ui.IState = null,
-    reload: Boolean | String | typingsSlinky.angularDashUiDashRouter.angularDashUiDashRouterMod.angularMod.ui.IState = null
+    relative: IState = null,
+    reload: Boolean | String | IState = null
   ): IStateOptions = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.asInstanceOf[js.Any])

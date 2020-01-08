@@ -1,7 +1,5 @@
 package typingsSlinky.tweenDotJs
 
-import typingsSlinky.tweenDotJs.TWEEN.Group
-import typingsSlinky.tweenDotJs.TWEEN.Tween
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

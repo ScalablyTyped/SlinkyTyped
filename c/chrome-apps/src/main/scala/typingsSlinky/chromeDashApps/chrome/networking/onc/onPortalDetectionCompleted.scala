@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.networking.onc
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object onPortalDetectionCompleted
   extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[js.Function2[/* networkGuid */ String, /* status */ CaptivePortalStatus, Unit]]
+      Event[js.Function2[/* networkGuid */ String, /* status */ CaptivePortalStatus, Unit]]
     ]
 

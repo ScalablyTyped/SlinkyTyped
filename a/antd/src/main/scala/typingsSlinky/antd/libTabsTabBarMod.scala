@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import typingsSlinky.antd.libTabsMod.TabsProps
-import typingsSlinky.antd.libTabsTabBarMod.TabBar
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

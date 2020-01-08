@@ -1,6 +1,6 @@
 package typingsSlinky.yargs
 
-import typingsSlinky.yargs.yargsNumbers.`true`
+import typingsSlinky.yargs.yargsBooleans.`true`
 import typingsSlinky.yargs.yargsStrings.number
 import scala.scalajs.js
 import scala.scalajs.js.`|`

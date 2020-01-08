@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/md5-js |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 9 |
 | # dependents       | 2 |
-| # downloads        | 219 |
+| # downloads        | 801 |
 | # stars            | 0 |
 
 ## Links

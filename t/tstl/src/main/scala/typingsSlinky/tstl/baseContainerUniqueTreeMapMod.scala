@@ -1,10 +1,9 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerUniqueMapMod.UniqueMap
-import typingsSlinky.tstl.baseContainerUniqueTreeMapMod.UniqueTreeMap
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapIterator
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapReverseIterator
-import typingsSlinky.tstl.tstlNumbers.`true`
+import typingsSlinky.tstl.tstlBooleans.`true`
 import typingsSlinky.tstl.utilityIPairMod.IPair
 import typingsSlinky.tstl.utilityPairMod.Pair
 import scala.scalajs.js

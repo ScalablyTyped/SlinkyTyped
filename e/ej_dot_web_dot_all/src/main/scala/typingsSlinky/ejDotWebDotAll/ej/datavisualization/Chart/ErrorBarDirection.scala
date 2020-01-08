@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ErrorBarDirection extends js.Object {
   @js.native
   sealed trait Plus extends ErrorBarDirection
   
-  /* 0 */ val Both: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ErrorBarDirection.Both with Double = js.native
-  /* 2 */ val Minus: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ErrorBarDirection.Minus with Double = js.native
-  /* 1 */ val Plus: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ErrorBarDirection.Plus with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ErrorBarDirection with Double] = js.native
+  /* 0 */ @js.native
+  object Both extends TopLevel[Both with Double]
+  
+  /* 2 */ @js.native
+  object Minus extends TopLevel[Minus with Double]
+  
+  /* 1 */ @js.native
+  object Plus extends TopLevel[Plus with Double]
+  
 }
 

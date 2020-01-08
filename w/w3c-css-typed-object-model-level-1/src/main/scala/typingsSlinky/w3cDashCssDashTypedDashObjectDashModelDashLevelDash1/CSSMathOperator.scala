@@ -1,5 +1,6 @@
 package typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object CSSMathOperator extends js.Object {
   @js.native
   sealed trait sum extends CSSMathOperator
   
-  /* 6 */ val clamp: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.clamp with Double = js.native
-  /* 3 */ val invert: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.invert with Double = js.native
-  /* 5 */ val max: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.max with Double = js.native
-  /* 4 */ val min: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.min with Double = js.native
-  /* 2 */ val negate: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.negate with Double = js.native
-  /* 1 */ val product: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.product with Double = js.native
-  /* 0 */ val sum: typingsSlinky.w3cDashCssDashTypedDashObjectDashModelDashLevelDash1.CSSMathOperator.sum with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CSSMathOperator with Double] = js.native
+  /* 6 */ @js.native
+  object clamp extends TopLevel[clamp with Double]
+  
+  /* 3 */ @js.native
+  object invert extends TopLevel[invert with Double]
+  
+  /* 5 */ @js.native
+  object max extends TopLevel[max with Double]
+  
+  /* 4 */ @js.native
+  object min extends TopLevel[min with Double]
+  
+  /* 2 */ @js.native
+  object negate extends TopLevel[negate with Double]
+  
+  /* 1 */ @js.native
+  object product extends TopLevel[product with Double]
+  
+  /* 0 */ @js.native
+  object sum extends TopLevel[sum with Double]
+  
 }
 

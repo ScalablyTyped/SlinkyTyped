@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.Scale
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,15 @@ object Orientation extends js.Object {
   @js.native
   sealed trait PORTRAIT extends Orientation
   
-  /* 0 */ val LANDSCAPE: typingsSlinky.phaser.Phaser.Scale.Orientation.LANDSCAPE with Double = js.native
-  /* 1 */ val PORTRAIT: typingsSlinky.phaser.Phaser.Scale.Orientation.PORTRAIT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Orientation with Double] = js.native
+  /* 0 */ @js.native
+  object LANDSCAPE
+    extends TopLevel[typingsSlinky.phaser.Phaser.Scale.Orientation.LANDSCAPE with Double]
+  
+  /* 1 */ @js.native
+  object PORTRAIT
+    extends TopLevel[typingsSlinky.phaser.Phaser.Scale.Orientation.PORTRAIT with Double]
+  
 }
 

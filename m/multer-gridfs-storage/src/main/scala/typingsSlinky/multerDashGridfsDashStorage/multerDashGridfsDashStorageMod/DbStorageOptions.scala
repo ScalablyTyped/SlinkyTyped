@@ -1,6 +1,6 @@
 package typingsSlinky.multerDashGridfsDashStorage.multerDashGridfsDashStorageMod
 
-import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod._Global_.Express.Request
+import org.scalajs.dom.experimental.Request
 import typingsSlinky.mongodb.mongodbMod.Db
 import typingsSlinky.mongodb.mongodbMod.MongoClient
 import typingsSlinky.mongoose.mongooseMod.Connection

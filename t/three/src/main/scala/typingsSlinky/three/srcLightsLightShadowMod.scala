@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.three.srcCamerasCameraMod.Camera
 import typingsSlinky.three.srcLightsLightMod.Light
-import typingsSlinky.three.srcLightsLightShadowMod.LightShadow
 import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
 import typingsSlinky.three.srcMathVector2Mod.Vector2
 import typingsSlinky.three.srcMathVector4Mod.Vector4

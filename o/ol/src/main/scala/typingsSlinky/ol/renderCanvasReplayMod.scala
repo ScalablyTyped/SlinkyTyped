@@ -6,7 +6,6 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.renderCanvasMod.DeclutterGroup
 import typingsSlinky.ol.renderCanvasMod.FillStrokeState
-import typingsSlinky.ol.renderCanvasReplayMod.CanvasReplay
 import typingsSlinky.ol.transformMod.Transform
 import typingsSlinky.std.HTMLCanvasElement
 import typingsSlinky.std.HTMLImageElement

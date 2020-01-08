@@ -19,9 +19,16 @@ object ReactDashFileDashInput
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, className, disabled, name, placeholder */
-  def apply(onChange: SyntheticEvent[Event, _] => Unit, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+  /* The following DOM/SVG props were specified: disabled */
+  def apply(
+    accept: String,
+    className: String,
+    name: String,
+    onChange: SyntheticEvent[Event, _] => Unit,
+    placeholder: String,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, ^] = {
+    val __obj = js.Dynamic.literal(accept = accept.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), placeholder = placeholder.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

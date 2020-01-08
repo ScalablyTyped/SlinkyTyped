@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object EDRMBlobDownloadType extends js.Object {
   @js.native
   sealed trait Parts extends EDRMBlobDownloadType
   
-  /* 32 */ val AddTimestamp: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.AddTimestamp with Double = js.native
-  /* 7 */ val AllMask: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.AllMask with Double = js.native
-  /* 4 */ val Compressed: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.Compressed with Double = js.native
-  /* 0 */ val Error: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.Error with Double = js.native
-  /* 1 */ val File: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.File with Double = js.native
-  /* 16 */ val HighPriority: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.HighPriority with Double = js.native
-  /* 8 */ val IsJob: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.IsJob with Double = js.native
-  /* 64 */ val LowPriority: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.LowPriority with Double = js.native
-  /* 2 */ val Parts: typingsSlinky.steamDashClient.steamDashClientMod.EDRMBlobDownloadType.Parts with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EDRMBlobDownloadType with Double] = js.native
+  /* 32 */ @js.native
+  object AddTimestamp extends TopLevel[AddTimestamp with Double]
+  
+  /* 7 */ @js.native
+  object AllMask extends TopLevel[AllMask with Double]
+  
+  /* 4 */ @js.native
+  object Compressed extends TopLevel[Compressed with Double]
+  
+  /* 0 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 1 */ @js.native
+  object File extends TopLevel[File with Double]
+  
+  /* 16 */ @js.native
+  object HighPriority extends TopLevel[HighPriority with Double]
+  
+  /* 8 */ @js.native
+  object IsJob extends TopLevel[IsJob with Double]
+  
+  /* 64 */ @js.native
+  object LowPriority extends TopLevel[LowPriority with Double]
+  
+  /* 2 */ @js.native
+  object Parts extends TopLevel[Parts with Double]
+  
 }
 

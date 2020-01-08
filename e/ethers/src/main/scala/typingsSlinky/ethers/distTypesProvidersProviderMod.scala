@@ -1,6 +1,5 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.distTypesProvidersProviderMod.Provider
 import typingsSlinky.ethers.distTypesUtilsTypesMod.EventType
 import typingsSlinky.ethers.distTypesUtilsTypesMod.Listener
 import typingsSlinky.ethers.distTypesUtilsTypesMod.MinimalProvider

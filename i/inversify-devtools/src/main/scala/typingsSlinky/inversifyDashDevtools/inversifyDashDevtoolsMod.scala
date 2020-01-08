@@ -1,6 +1,5 @@
 package typingsSlinky.inversifyDashDevtools
 
-import typingsSlinky.inversifyDashDevtools.inversifyDashDevtoolsMod.ConnectKernel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

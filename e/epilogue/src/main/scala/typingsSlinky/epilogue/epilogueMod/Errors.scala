@@ -1,6 +1,5 @@
 package typingsSlinky.epilogue.epilogueMod
 
-import typingsSlinky.epilogue.epilogueMod.Errors.EpilogueError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

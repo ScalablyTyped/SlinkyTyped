@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.batch.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`batch/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.batchSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait CronJob extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`batch/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[batchSlashv1beta1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -40,7 +40,7 @@ trait CronJob extends js.Object {
 object CronJob {
   @scala.inline
   def apply(
-    apiVersion: Input[`batch/v1beta1`] = null,
+    apiVersion: Input[batchSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.CronJob] = null,
     metadata: Input[ObjectMeta] = null,
     spec: Input[CronJobSpec] = null

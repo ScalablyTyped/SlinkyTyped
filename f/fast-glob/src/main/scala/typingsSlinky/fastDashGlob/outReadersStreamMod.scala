@@ -1,7 +1,6 @@
 package typingsSlinky.fastDashGlob
 
 import typingsSlinky.atNodelibFsDotWalk.outSettingsMod.Options
-import typingsSlinky.fastDashGlob.outReadersStreamMod.ReaderStream
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js

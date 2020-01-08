@@ -2,7 +2,6 @@ package typingsSlinky.typedoc
 
 import typingsSlinky.handlebars.Handlebars.TemplateDelegate
 import typingsSlinky.typedoc.distLibModelsReflectionsProjectMod.ProjectReflection
-import typingsSlinky.typedoc.distLibOutputEventsMod.PageEvent
 import typingsSlinky.typedoc.distLibOutputModelsNavigationItemMod.NavigationItem
 import typingsSlinky.typedoc.distLibOutputModelsUrlMappingMod.UrlMapping
 import typingsSlinky.typedoc.distLibUtilsEventsMod.Event

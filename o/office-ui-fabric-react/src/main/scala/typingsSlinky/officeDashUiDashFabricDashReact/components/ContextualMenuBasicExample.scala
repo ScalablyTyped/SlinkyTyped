@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ContextualMenuBasicExample extends SharedApply_Object857666606 {
+object ContextualMenuBasicExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/ContextualMenu/examples/ContextualMenu.Basic.Example", "ContextualMenuBasicExample")
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod.tls
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object CompressionMethod extends js.Object {
   @js.native
   sealed trait none extends CompressionMethod
   
-  /* 1 */ val deflate: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.CompressionMethod.deflate with Double = js.native
-  /* 0 */ val none: typingsSlinky.nodeDashForge.nodeDashForgeMod.tls.CompressionMethod.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CompressionMethod with Double] = js.native
+  /* 1 */ @js.native
+  object deflate extends TopLevel[deflate with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.ngDashTable
 
-import typingsSlinky.ngDashTable.srcCoreFilteringFilterComparatorMod.IFilterComparatorFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

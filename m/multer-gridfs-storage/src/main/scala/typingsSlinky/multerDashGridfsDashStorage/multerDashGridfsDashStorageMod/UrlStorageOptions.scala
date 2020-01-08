@@ -1,6 +1,6 @@
 package typingsSlinky.multerDashGridfsDashStorage.multerDashGridfsDashStorageMod
 
-import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod._Global_.Express.Request
+import org.scalajs.dom.experimental.Request
 import typingsSlinky.multerDashGridfsDashStorage.multerDashGridfsDashStorageMod._Global_.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`

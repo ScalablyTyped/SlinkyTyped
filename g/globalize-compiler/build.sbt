@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "globalize-compiler"
-version := "v0.2.0-dt-20190322Z-d4e033"
+version := "v0.2.0-dt-20190322Z-7a9ecb"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "cldrjs" % "0.4.4-dt-20191126Z-fcd2a4",
-  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20191119Z-98f4da",
-  "org.scalablytyped.slinky" %%% "globalize" % "0.0-unknown-dt-20191126Z-aee1af",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "cldrjs" % "0.4.4-dt-20191126Z-851be3",
+  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20191223Z-3dd043",
+  "org.scalablytyped.slinky" %%% "globalize" % "0.0-unknown-dt-20191207Z-7d1440",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

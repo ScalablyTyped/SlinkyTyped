@@ -1,7 +1,7 @@
 package typingsSlinky.ssh2.ssh2Mod
 
 import typingsSlinky.node.NodeJS.ProcessEnv
-import typingsSlinky.ssh2.ssh2Numbers.`true`
+import typingsSlinky.ssh2.ssh2Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

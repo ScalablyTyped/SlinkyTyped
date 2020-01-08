@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Capture
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object StreamingCaptureMode extends js.Object {
   @js.native
   sealed trait video extends StreamingCaptureMode
   
-  /* 1 */ val audio: typingsSlinky.winrtDashUwp.Windows.Media.Capture.StreamingCaptureMode.audio with Double = js.native
-  /* 0 */ val audioAndVideo: typingsSlinky.winrtDashUwp.Windows.Media.Capture.StreamingCaptureMode.audioAndVideo with Double = js.native
-  /* 2 */ val video: typingsSlinky.winrtDashUwp.Windows.Media.Capture.StreamingCaptureMode.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StreamingCaptureMode with Double] = js.native
+  /* 1 */ @js.native
+  object audio extends TopLevel[audio with Double]
+  
+  /* 0 */ @js.native
+  object audioAndVideo extends TopLevel[audioAndVideo with Double]
+  
+  /* 2 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

@@ -1,8 +1,6 @@
 package typingsSlinky.mobservable
 
-import typingsSlinky.mobservable.libDnodeMod.DataNode
-import typingsSlinky.mobservable.libDnodeMod.NodeState
-import typingsSlinky.mobservable.libDnodeMod.ViewNode
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mobservable.libInterfacesMod.IContextInfoStruct
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,11 +71,17 @@ object libDnodeMod extends js.Object {
     @js.native
     sealed trait STALE extends NodeState
     
-    /* 1 */ val PENDING: typingsSlinky.mobservable.libDnodeMod.NodeState.PENDING with Double = js.native
-    /* 2 */ val READY: typingsSlinky.mobservable.libDnodeMod.NodeState.READY with Double = js.native
-    /* 0 */ val STALE: typingsSlinky.mobservable.libDnodeMod.NodeState.STALE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[NodeState with Double] = js.native
+    /* 1 */ @js.native
+    object PENDING extends TopLevel[PENDING with Double]
+    
+    /* 2 */ @js.native
+    object READY extends TopLevel[READY with Double]
+    
+    /* 0 */ @js.native
+    object STALE extends TopLevel[STALE with Double]
+    
   }
   
 }

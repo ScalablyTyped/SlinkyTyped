@@ -2,7 +2,6 @@ package typingsSlinky.atFirebaseFirestore
 
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.TargetId
 import typingsSlinky.atFirebaseFirestore.distSrcCoreViewUnderscoreSnapshotMod.ViewSnapshot
-import typingsSlinky.atFirebaseFirestore.distSrcLocalLocalUnderscoreViewUnderscoreChangesMod.LocalViewChanges
 import typingsSlinky.atFirebaseFirestore.distSrcModelCollectionsMod.DocumentKeySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`

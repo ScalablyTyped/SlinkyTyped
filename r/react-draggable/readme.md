@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-draggable
 
-Typings are for version 4.0.3
+Typings are for version 4.2.0
 
 ## Library description:
 React draggable component
@@ -10,9 +10,9 @@ React draggable component
 | ------------------ | :-------------: |
 | Full name          | react-draggable |
 | Keywords           | react, draggable, react-component |
-| # releases         | 8 |
-| # dependents       | 358 |
-| # downloads        | 20679434 |
+| # releases         | 15 |
+| # dependents       | 440 |
+| # downloads        | 32957957 |
 | # stars            | 24 |
 
 ## Links

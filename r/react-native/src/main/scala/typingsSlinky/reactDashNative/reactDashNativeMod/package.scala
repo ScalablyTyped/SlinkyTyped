@@ -13,7 +13,7 @@ package object reactDashNativeMod {
   import typingsSlinky.reactDashNative.Anon_ActionName
   import typingsSlinky.reactDashNative.Anon_Label
   import typingsSlinky.reactDashNative.Anon_RegisteredStyleBrand
-  import typingsSlinky.reactDashNative.reactDashNativeNumbers.`false`
+  import typingsSlinky.reactDashNative.reactDashNativeBooleans.`false`
   import typingsSlinky.reactDashNative.reactDashNativeStrings.`visible-password`
   import typingsSlinky.reactDashNative.reactDashNativeStrings.hardwareBackPress
 
@@ -189,7 +189,6 @@ package object reactDashNativeMod {
   type ScrollViewProperties = ScrollViewProps
   type ScrollViewPropertiesAndroid = ScrollViewPropsAndroid
   type ScrollViewPropertiesIOS = ScrollViewPropsIOS
-  type SectionList[ItemT] = SectionListStatic[ItemT]
   type SectionListProperties[ItemT] = SectionListProps[ItemT]
   type SectionListRenderItem[ItemT] = js.Function1[/* info */ SectionListRenderItemInfo[ItemT], ReactElement | Null]
   /**
@@ -231,7 +230,7 @@ package object reactDashNativeMod {
   type StatusBarProperties = StatusBarProps
   type StatusBarPropertiesAndroid = StatusBarPropsAndroid
   type StatusBarPropertiesIOS = StatusBarPropsIOS
-  type StyleProp[T] = T | RegisteredStyle[T] | (RecursiveArray[T | RegisteredStyle[T] | Falsy]) | Falsy
+  type StyleProp[T] = T | RegisteredStyle[T] | js.Array[T] | (RecursiveArray[T | RegisteredStyle[T] | Falsy]) | Falsy
   /**
     * Renders a boolean input.
     *

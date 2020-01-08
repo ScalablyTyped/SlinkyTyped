@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashSimpleDashMaps.reactDashSimpleDashMapsMod
 
-import typingsSlinky.react.reactMod.Component
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.react.reactMod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-simple-maps", "Marker")
 @js.native
-class Marker ()
-  extends Component[MarkerProps, js.Object, js.Any]
+object Marker extends TopLevel[FunctionComponent[MarkerProps]]
 

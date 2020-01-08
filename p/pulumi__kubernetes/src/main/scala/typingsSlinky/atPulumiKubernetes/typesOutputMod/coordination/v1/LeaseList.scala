@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesOutputMod.coordination.v1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`coordinationDOTk8sDOTio/v1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.coordinationDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait LeaseList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: `coordinationDOTk8sDOTio/v1`
+  val apiVersion: coordinationDotk8sDotioSlashv1
   /**
     * Items is a list of schema objects.
     */
@@ -38,7 +38,7 @@ trait LeaseList extends js.Object {
 object LeaseList {
   @scala.inline
   def apply(
-    apiVersion: `coordinationDOTk8sDOTio/v1`,
+    apiVersion: coordinationDotk8sDotioSlashv1,
     items: js.Array[Lease],
     kind: typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.LeaseList,
     metadata: ListMeta

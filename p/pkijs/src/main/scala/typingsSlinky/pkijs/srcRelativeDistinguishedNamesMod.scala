@@ -1,6 +1,5 @@
 package typingsSlinky.pkijs
 
-import typingsSlinky.pkijs.srcRelativeDistinguishedNamesMod.RelativeDistinguishedNames
 import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

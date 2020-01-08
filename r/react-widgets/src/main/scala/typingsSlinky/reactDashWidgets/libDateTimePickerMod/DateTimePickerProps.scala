@@ -1,27 +1,20 @@
 package typingsSlinky.reactDashWidgets.libDateTimePickerMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.react.reactMod.Key
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashWidgets.libCommonPropsMod.AutoFocus
 import typingsSlinky.reactDashWidgets.libCommonPropsMod.ReactWidgetsCommonDropdownProps
-import typingsSlinky.reactDashWidgets.reactDashWidgetsNumbers.`false`
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.calendar
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.century
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.date
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.decade
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.month
-import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.time
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.year
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DateTimePickerProps
-  extends ReactWidgetsCommonDropdownProps[DateTimePickerClass]
+  extends ReactWidgetsCommonDropdownProps
      with AutoFocus {
   /**
     * Whether to show the date picker button.
@@ -59,7 +52,7 @@ trait DateTimePickerProps
     * The defaultOpen prop can be used to set an
     * initialization value for uncontrolled widgets.
     */
-  var defaultOpen: js.UndefOr[`false` | calendar | time] = js.undefined
+  var defaultOpen: js.UndefOr[Open] = js.undefined
   /**
     * Default value.
     */
@@ -152,13 +145,13 @@ trait DateTimePickerProps
     * Called when the DateTimePicker is about to open or close. onToggle should be used when
     * the open prop is set otherwise the widget will never open or close.
     */
-  var onToggle: js.UndefOr[js.Function1[/* isOpen */ Boolean, Unit]] = js.undefined
+  var onToggle: js.UndefOr[js.Function1[/* isOpen */ Open, Unit]] = js.undefined
   /**
     * Whether or not the DateTimePicker is open. When unset (undefined) the DateTimePicker will
     * handle the opening and closing internally.
     * @default false
     */
-  var open: js.UndefOr[`false` | date | time] = js.undefined
+  var open: js.UndefOr[Open] = js.undefined
   /**
     * Determines how the widget parses the typed date string into a Date object. You can
     * provide an array of formats to try, or provide a function that returns a date to handle
@@ -208,14 +201,13 @@ object DateTimePickerProps {
   def apply(
     autoFocus: js.UndefOr[Boolean] = js.undefined,
     calendar: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
     containerClassName: String = null,
     culture: String = null,
     currentDate: js.Date = null,
     date: js.UndefOr[Boolean] = js.undefined,
     dateIcon: Element = null,
     defaultCurrentDate: js.Date = null,
-    defaultOpen: `false` | calendar | time = null,
+    defaultOpen: Open = null,
     defaultValue: js.Date = null,
     disabled: Boolean | js.Array[_] = null,
     dropUp: js.UndefOr[Boolean] = js.undefined,
@@ -227,7 +219,6 @@ object DateTimePickerProps {
     initialView: month | year | decade | century = null,
     inputProps: js.Object = null,
     isRtl: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
     max: js.Date = null,
     messages: DateTimePickerMessages = null,
     min: js.Date = null,
@@ -239,13 +230,12 @@ object DateTimePickerProps {
     onKeyDown: /* event */ SyntheticKeyboardEvent[_] => Unit = null,
     onKeyPress: /* event */ SyntheticKeyboardEvent[_] => Unit = null,
     onSelect: /* date */ js.UndefOr[js.Date] => Unit = null,
-    onToggle: /* isOpen */ Boolean => Unit = null,
-    open: `false` | date | time = null,
+    onToggle: /* isOpen */ Open => Unit = null,
+    open: Open = null,
     parse: (js.Function1[/* str */ String, js.Date]) | js.Array[String] | String = null,
     placeholder: String = null,
     popupTransition: ReactComponentClass[_] | String = null,
     readOnly: Boolean | js.Array[_] = null,
-    ref: LegacyRef[DateTimePickerClass] = null,
     step: Double | Boolean = null,
     time: js.UndefOr[Boolean] = js.undefined,
     timeComponent: ReactComponentClass[_] | String = null,
@@ -256,7 +246,6 @@ object DateTimePickerProps {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
     if (!js.isUndefined(calendar)) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
     if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
     if (currentDate != null) __obj.updateDynamic("currentDate")(currentDate.asInstanceOf[js.Any])
@@ -275,7 +264,6 @@ object DateTimePickerProps {
     if (initialView != null) __obj.updateDynamic("initialView")(initialView.asInstanceOf[js.Any])
     if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
     if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
@@ -293,7 +281,6 @@ object DateTimePickerProps {
     if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (popupTransition != null) __obj.updateDynamic("popupTransition")(popupTransition.asInstanceOf[js.Any])
     if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     if (timeComponent != null) __obj.updateDynamic("timeComponent")(timeComponent.asInstanceOf[js.Any])

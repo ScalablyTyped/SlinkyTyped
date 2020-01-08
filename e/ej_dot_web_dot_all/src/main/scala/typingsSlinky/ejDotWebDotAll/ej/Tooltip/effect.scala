@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tooltip
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object effect extends js.Object {
   @js.native
   sealed trait Slide extends effect
   
-  /* 2 */ val Fade: typingsSlinky.ejDotWebDotAll.ej.Tooltip.effect.Fade with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.Tooltip.effect.None with Double = js.native
-  /* 1 */ val Slide: typingsSlinky.ejDotWebDotAll.ej.Tooltip.effect.Slide with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[effect with Double] = js.native
+  /* 2 */ @js.native
+  object Fade extends TopLevel[Fade with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Slide extends TopLevel[Slide with Double]
+  
 }
 

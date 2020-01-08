@@ -1,5 +1,6 @@
 package typingsSlinky.tampermonkey.Tampermonkey
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object ReadyState extends js.Object {
   @js.native
   sealed trait Unsent extends ReadyState
   
-  /* 4 */ val Done: typingsSlinky.tampermonkey.Tampermonkey.ReadyState.Done with Double = js.native
-  /* 2 */ val HeadersReceived: typingsSlinky.tampermonkey.Tampermonkey.ReadyState.HeadersReceived with Double = js.native
-  /* 3 */ val Loading: typingsSlinky.tampermonkey.Tampermonkey.ReadyState.Loading with Double = js.native
-  /* 1 */ val Opened: typingsSlinky.tampermonkey.Tampermonkey.ReadyState.Opened with Double = js.native
-  /* 0 */ val Unsent: typingsSlinky.tampermonkey.Tampermonkey.ReadyState.Unsent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadyState with Double] = js.native
+  /* 4 */ @js.native
+  object Done extends TopLevel[Done with Double]
+  
+  /* 2 */ @js.native
+  object HeadersReceived extends TopLevel[HeadersReceived with Double]
+  
+  /* 3 */ @js.native
+  object Loading extends TopLevel[Loading with Double]
+  
+  /* 1 */ @js.native
+  object Opened extends TopLevel[Opened with Double]
+  
+  /* 0 */ @js.native
+  object Unsent extends TopLevel[Unsent with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseContainerITreeMapMod.ITreeMap
 import typingsSlinky.tstl.baseContainerMapContainerMod.MapContainer
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapIterator
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapReverseIterator

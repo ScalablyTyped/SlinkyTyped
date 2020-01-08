@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Overlay
-  extends SharedApply_MapOverlayProps_1084265700[typingsSlinky.reactDashNativeDashMaps.reactDashNativeDashMapsMod.Overlay] {
+  extends SharedApply_MapOverlayProps1074261680[typingsSlinky.reactDashNativeDashMaps.reactDashNativeDashMapsMod.Overlay] {
   @JSImport("react-native-maps", "Overlay")
   @js.native
   object componentImport extends js.Object

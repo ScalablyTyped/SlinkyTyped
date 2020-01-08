@@ -63,10 +63,7 @@ trait ReactInputCalendarProps extends js.Object {
     */
   var onBlur: js.UndefOr[
     js.Function2[
-      /* event */ SyntheticEvent[
-        Event, 
-        typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar
-      ], 
+      /* event */ SyntheticEvent[Event, ReactInputCalendar], 
       /* computableDate */ String, 
       Unit
     ]
@@ -78,15 +75,7 @@ trait ReactInputCalendarProps extends js.Object {
   /**
     * Set a function that will be triggered when the input field is focused.
     */
-  var onFocus: js.UndefOr[
-    js.Function1[
-      /* event */ SyntheticEvent[
-        Event, 
-        typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar
-      ], 
-      Unit
-    ]
-  ] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, ReactInputCalendar], Unit]] = js.undefined
   /**
     * Setting this value to true makes the calendar widget open when the iput field is focused.
     */
@@ -110,15 +99,9 @@ object ReactInputCalendarProps {
     maxDate: String | js.Date = null,
     minDate: String | js.Date = null,
     minView: Int | Double = null,
-    onBlur: (/* event */ SyntheticEvent[
-      Event, 
-      typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar
-    ], /* computableDate */ String) => Unit = null,
+    onBlur: (/* event */ SyntheticEvent[Event, ReactInputCalendar], /* computableDate */ String) => Unit = null,
     onChange: /* computableDate */ String => Unit = null,
-    onFocus: /* event */ SyntheticEvent[
-      Event, 
-      typingsSlinky.reactDashInputDashCalendar.reactInputCalendar.ReactInputCalendar
-    ] => Unit = null,
+    onFocus: /* event */ SyntheticEvent[Event, ReactInputCalendar] => Unit = null,
     openOnInputFocus: js.UndefOr[Boolean] = js.undefined,
     placeholder: String = null
   ): ReactInputCalendarProps = {

@@ -12,7 +12,7 @@ Webpack block for the webpack 2.x base configuration.
 | Keywords           | webpack, webpack-blocks |
 | # releases         | 6 |
 | # dependents       | 6 |
-| # downloads        | 186604 |
+| # downloads        | 180853 |
 | # stars            | 1 |
 
 ## Links

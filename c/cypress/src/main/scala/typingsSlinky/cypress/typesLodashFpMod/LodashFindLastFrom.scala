@@ -47,8 +47,19 @@ trait LodashFindLastFrom extends js.Object {
   def apply[T](predicate: __, fromIndex: __): LodashFindLastFrom1x4[T] = js.native
   def apply[T /* <: js.Object */](predicate: __, fromIndex: __, collection: T): LodashFindLastFrom3x4[T] = js.native
   def apply[T](predicate: __, fromIndex: __, collection: List[T]): LodashFindLastFrom1x4[T] = js.native
-  def apply[T, S /* <: T */](predicate: ValueIteratorTypeGuard[T, S]): LodashFindLastFrom1x1[T, S] = js.native
-  def apply[T, S /* <: T */](predicate: ValueIteratorTypeGuard[T, S], fromIndex: Double): LodashFindLastFrom1x3[T, S] = js.native
+  def apply[T /* <: js.Object */, S /* <: /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any */](
+    predicate: ValueIteratorTypeGuard[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
+      S
+    ]
+  ): LodashFindLastFrom3x1[T, S] = js.native
+  def apply[T /* <: js.Object */, S /* <: /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any */](
+    predicate: ValueIteratorTypeGuard[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
+      S
+    ],
+    fromIndex: Double
+  ): js.UndefOr[S] = js.native
   def apply[T /* <: js.Object */, S /* <: /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any */](
     predicate: ValueIteratorTypeGuard[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

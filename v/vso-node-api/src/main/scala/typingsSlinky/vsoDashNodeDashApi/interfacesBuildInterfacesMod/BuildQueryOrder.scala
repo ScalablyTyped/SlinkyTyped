@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object BuildQueryOrder extends js.Object {
   @js.native
   sealed trait StartTimeDescending extends BuildQueryOrder
   
-  /* 2 */ val FinishTimeAscending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.FinishTimeAscending with Double = js.native
-  /* 3 */ val FinishTimeDescending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.FinishTimeDescending with Double = js.native
-  /* 5 */ val QueueTimeAscending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.QueueTimeAscending with Double = js.native
-  /* 4 */ val QueueTimeDescending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.QueueTimeDescending with Double = js.native
-  /* 7 */ val StartTimeAscending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.StartTimeAscending with Double = js.native
-  /* 6 */ val StartTimeDescending: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildQueryOrder.StartTimeDescending with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BuildQueryOrder with Double] = js.native
+  /* 2 */ @js.native
+  object FinishTimeAscending extends TopLevel[FinishTimeAscending with Double]
+  
+  /* 3 */ @js.native
+  object FinishTimeDescending extends TopLevel[FinishTimeDescending with Double]
+  
+  /* 5 */ @js.native
+  object QueueTimeAscending extends TopLevel[QueueTimeAscending with Double]
+  
+  /* 4 */ @js.native
+  object QueueTimeDescending extends TopLevel[QueueTimeDescending with Double]
+  
+  /* 7 */ @js.native
+  object StartTimeAscending extends TopLevel[StartTimeAscending with Double]
+  
+  /* 6 */ @js.native
+  object StartTimeDescending extends TopLevel[StartTimeDescending with Double]
+  
 }
 

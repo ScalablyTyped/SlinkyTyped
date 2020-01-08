@@ -1,6 +1,6 @@
 package typingsSlinky.hapi
 
-import typingsSlinky.hapi.hapiNumbers.`true`
+import typingsSlinky.hapi.hapiBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

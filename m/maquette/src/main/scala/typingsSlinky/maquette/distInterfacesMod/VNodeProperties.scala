@@ -11,7 +11,7 @@ import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.maquette.maquetteStrings.`Hint: do not use BACKTICKclassNameBACKTICK, use BACKTICKclassBACKTICK instead`
+import typingsSlinky.maquette.maquetteStrings.`HintColon do not use GraveaccentclassNameGraveaccentComma use GraveaccentclassGraveaccent instead`
 import typingsSlinky.std.MouseWheelEvent
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -84,7 +84,9 @@ trait VNodeProperties
   /**
     * Do not use className, use class instead
     */
-  val className: js.UndefOr[`Hint: do not use BACKTICKclassNameBACKTICK, use BACKTICKclassBACKTICK instead`] = js.undefined
+  val className: js.UndefOr[
+    `HintColon do not use GraveaccentclassNameGraveaccentComma use GraveaccentclassGraveaccent instead`
+  ] = js.undefined
   /**
     * An object literal like `{important:true}` which allows css classes, like `important` to be added and removed
     * dynamically.
@@ -216,7 +218,7 @@ object VNodeProperties {
     bind: js.Object = null,
     checked: js.UndefOr[Boolean] = js.undefined,
     `class`: String = null,
-    className: `Hint: do not use BACKTICKclassNameBACKTICK, use BACKTICKclassBACKTICK instead` = null,
+    className: scala.Nothing | (`HintColon do not use GraveaccentclassNameGraveaccentComma use GraveaccentclassGraveaccent instead`) = null,
     classes: StringDictionary[js.UndefOr[Boolean | Null]] = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     draggable: js.UndefOr[Boolean] = js.undefined,

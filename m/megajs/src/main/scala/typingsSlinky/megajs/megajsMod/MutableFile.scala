@@ -1,6 +1,6 @@
 package typingsSlinky.megajs.megajsMod
 
-import typingsSlinky.megajs.megajsNumbers.`true`
+import typingsSlinky.megajs.megajsBooleans.`true`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream

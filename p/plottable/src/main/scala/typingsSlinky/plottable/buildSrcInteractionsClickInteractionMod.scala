@@ -3,7 +3,6 @@ package typingsSlinky.plottable
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
-import typingsSlinky.plottable.buildSrcInteractionsClickInteractionMod.ClickCallback
 import typingsSlinky.plottable.buildSrcInteractionsInteractionMod.Interaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

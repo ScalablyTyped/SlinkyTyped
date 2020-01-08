@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object RowPosition extends js.Object {
   @js.native
   sealed trait Top extends RowPosition
   
-  /* 2 */ val Above: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.RowPosition.Above with Double = js.native
-  /* 3 */ val Below: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.RowPosition.Below with Double = js.native
-  /* 1 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.RowPosition.Bottom with Double = js.native
-  /* 4 */ val Child: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.RowPosition.Child with Double = js.native
-  /* 0 */ val Top: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.RowPosition.Top with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RowPosition with Double] = js.native
+  /* 2 */ @js.native
+  object Above extends TopLevel[Above with Double]
+  
+  /* 3 */ @js.native
+  object Below extends TopLevel[Below with Double]
+  
+  /* 1 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 4 */ @js.native
+  object Child extends TopLevel[Child with Double]
+  
+  /* 0 */ @js.native
+  object Top extends TopLevel[Top with Double]
+  
 }
 

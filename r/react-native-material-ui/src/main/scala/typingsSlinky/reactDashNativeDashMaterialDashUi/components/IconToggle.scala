@@ -20,8 +20,9 @@ object IconToggle
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, name, size */
+  /* The following DOM/SVG props were specified: disabled, size */
   def apply(
+    name: String,
     color: String = null,
     maxOpacity: Int | Double = null,
     onPress: () => Unit = null,
@@ -34,7 +35,7 @@ object IconToggle
     tag.type, 
     typingsSlinky.reactDashNativeDashMaterialDashUi.reactDashNativeDashMaterialDashUiMod.IconToggle
   ] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (maxOpacity != null) __obj.updateDynamic("maxOpacity")(maxOpacity.asInstanceOf[js.Any])
     if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))

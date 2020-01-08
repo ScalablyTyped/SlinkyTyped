@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.handsontableMod.Handsontable.plugins
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,7 @@ trait CopyPaste extends Base {
   var focusableElement: FocusableWrapper = js.native
   var pasteMode: PasteModeType = js.native
   var rowsLimit: Double = js.native
+  var uiContainer: HTMLElement = js.native
   def copy(): Unit = js.native
   def cut(): Unit = js.native
   def getRangedCopyableData(ranges: js.Array[RangeType]): String = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distEs2015CoreEntityMod.Entity
 import typingsSlinky.wonderDashFrp.distEs2015DisposableIDisposableMod.IDisposable
-import typingsSlinky.wonderDashFrp.distEs2015DisposableSingleDisposableMod.SingleDisposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

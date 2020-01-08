@@ -17,7 +17,13 @@ object ioredisStrings {
   sealed trait COUNT extends js.Object
   
   @js.native
+  sealed trait GET extends js.Object
+  
+  @js.native
   sealed trait GROUP extends js.Object
+  
+  @js.native
+  sealed trait LIMIT extends js.Object
   
   @js.native
   sealed trait MATCH extends js.Object
@@ -26,25 +32,37 @@ object ioredisStrings {
   sealed trait MAXLEN extends js.Object
   
   @js.native
+  sealed trait NOKEY extends js.Object
+  
+  @js.native
   sealed trait NOSAVE extends js.Object
   
   @js.native
   sealed trait OK extends js.Object
   
   @js.native
+  sealed trait REWRITE extends js.Object
+  
+  @js.native
   sealed trait SAVE extends js.Object
+  
+  @js.native
+  sealed trait SET extends js.Object
   
   @js.native
   sealed trait TLSv1 extends SecureVersion
   
   @js.native
-  sealed trait TLSv1DOT1 extends SecureVersion
+  sealed trait TLSv1Dot1 extends SecureVersion
   
   @js.native
-  sealed trait TLSv1DOT2 extends SecureVersion
+  sealed trait TLSv1Dot2 extends SecureVersion
   
   @js.native
-  sealed trait TLSv1DOT3 extends SecureVersion
+  sealed trait TLSv1Dot3 extends SecureVersion
+  
+  @js.native
+  sealed trait Tilde extends js.Object
   
   @js.native
   sealed trait WITHSCORES extends js.Object
@@ -70,9 +88,6 @@ object ioredisStrings {
   @js.native
   sealed trait slave extends NodeRole
   
-  @js.native
-  sealed trait `~` extends js.Object
-  
   @scala.inline
   def AFTER: AFTER = "AFTER".asInstanceOf[AFTER]
   @scala.inline
@@ -80,25 +95,37 @@ object ioredisStrings {
   @scala.inline
   def COUNT: COUNT = "COUNT".asInstanceOf[COUNT]
   @scala.inline
+  def GET: GET = "GET".asInstanceOf[GET]
+  @scala.inline
   def GROUP: GROUP = "GROUP".asInstanceOf[GROUP]
+  @scala.inline
+  def LIMIT: LIMIT = "LIMIT".asInstanceOf[LIMIT]
   @scala.inline
   def MATCH: MATCH = "MATCH".asInstanceOf[MATCH]
   @scala.inline
   def MAXLEN: MAXLEN = "MAXLEN".asInstanceOf[MAXLEN]
   @scala.inline
+  def NOKEY: NOKEY = "NOKEY".asInstanceOf[NOKEY]
+  @scala.inline
   def NOSAVE: NOSAVE = "NOSAVE".asInstanceOf[NOSAVE]
   @scala.inline
   def OK: OK = "OK".asInstanceOf[OK]
   @scala.inline
+  def REWRITE: REWRITE = "REWRITE".asInstanceOf[REWRITE]
+  @scala.inline
   def SAVE: SAVE = "SAVE".asInstanceOf[SAVE]
+  @scala.inline
+  def SET: SET = "SET".asInstanceOf[SET]
   @scala.inline
   def TLSv1: TLSv1 = "TLSv1".asInstanceOf[TLSv1]
   @scala.inline
-  def TLSv1DOT1: TLSv1DOT1 = "TLSv1.1".asInstanceOf[TLSv1DOT1]
+  def TLSv1Dot1: TLSv1Dot1 = "TLSv1.1".asInstanceOf[TLSv1Dot1]
   @scala.inline
-  def TLSv1DOT2: TLSv1DOT2 = "TLSv1.2".asInstanceOf[TLSv1DOT2]
+  def TLSv1Dot2: TLSv1Dot2 = "TLSv1.2".asInstanceOf[TLSv1Dot2]
   @scala.inline
-  def TLSv1DOT3: TLSv1DOT3 = "TLSv1.3".asInstanceOf[TLSv1DOT3]
+  def TLSv1Dot3: TLSv1Dot3 = "TLSv1.3".asInstanceOf[TLSv1Dot3]
+  @scala.inline
+  def Tilde: Tilde = "~".asInstanceOf[Tilde]
   @scala.inline
   def WITHSCORES: WITHSCORES = "WITHSCORES".asInstanceOf[WITHSCORES]
   @scala.inline
@@ -115,7 +142,5 @@ object ioredisStrings {
   def maxlen_ : maxlen_ = "maxlen".asInstanceOf[maxlen_]
   @scala.inline
   def slave: slave = "slave".asInstanceOf[slave]
-  @scala.inline
-  def `~`: `~` = "~".asInstanceOf[`~`]
 }
 

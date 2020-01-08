@@ -1,7 +1,6 @@
 package typingsSlinky.lasso
 
 import typingsSlinky.lasso.libLassoMod.LassoConfig
-import typingsSlinky.lasso.libWritersMod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

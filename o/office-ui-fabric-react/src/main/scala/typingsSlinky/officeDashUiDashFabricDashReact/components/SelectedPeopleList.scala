@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SelectedPeopleList
-  extends SharedApply_ISelectedPeopleProps1727468240[
+  extends SharedApply_ISelectedPeopleProps1820977930[
       typingsSlinky.officeDashUiDashFabricDashReact.libIndexDotBundleMod.SelectedPeopleList
     ] {
   @JSImport("office-ui-fabric-react/lib/index.bundle", "SelectedPeopleList")

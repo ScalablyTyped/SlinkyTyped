@@ -1,7 +1,7 @@
 
 # Scala.js typings for xstate
 
-Typings are for version 4.6.7
+Typings are for version 4.7.5
 
 ## Library description:
 Finite State Machines and Statecharts for the Modern Web.
@@ -10,13 +10,13 @@ Finite State Machines and Statecharts for the Modern Web.
 | ------------------ | :-------------: |
 | Full name          | xstate |
 | Keywords           | statechart, state machine, finite state machine, finite automata, scxml, state, interpreter |
-| # releases         | 52 |
-| # dependents       | 56 |
-| # downloads        | 3066582 |
+| # releases         | 65 |
+| # dependents       | 111 |
+| # downloads        | 13652291 |
 | # stars            | 5 |
 
 ## Links
-- [Homepage](https://github.com/davidkpiano/xstate#readme)
+- [Homepage](https://github.com/davidkpiano/xstate/tree/master/packages/core#readme)
 - [Bugs](https://github.com/davidkpiano/xstate/issues)
 - [Repository](https://github.com/davidkpiano/xstate)
 - [Npm](https://www.npmjs.com/package/xstate)

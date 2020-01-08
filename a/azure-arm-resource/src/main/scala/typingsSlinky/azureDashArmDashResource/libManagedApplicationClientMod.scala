@@ -1,6 +1,5 @@
 package typingsSlinky.azureDashArmDashResource
 
-import typingsSlinky.azureDashArmDashResource.libManagedApplicationClientMod.ManagedApplicationClient
 import typingsSlinky.azureDashArmDashResource.libModelsMod.OperationListResult
 import typingsSlinky.azureDashArmDashResource.libOperationsMod.ApplianceDefinitions
 import typingsSlinky.azureDashArmDashResource.libOperationsMod.Appliances

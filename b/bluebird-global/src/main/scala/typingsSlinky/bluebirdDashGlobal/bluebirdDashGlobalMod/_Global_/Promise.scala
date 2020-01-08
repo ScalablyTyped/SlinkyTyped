@@ -2,6 +2,7 @@ package typingsSlinky.bluebirdDashGlobal.bluebirdDashGlobalMod._Global_
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.bluebird.Fn_Error
 import typingsSlinky.bluebird.bluebirdMod.Bluebird
 import typingsSlinky.bluebird.bluebirdMod.CatchFilter
 import typingsSlinky.bluebird.bluebirdMod.ConcurrencyOption
@@ -9,10 +10,8 @@ import typingsSlinky.bluebird.bluebirdMod.Constructor
 import typingsSlinky.bluebird.bluebirdMod.Disposer
 import typingsSlinky.bluebird.bluebirdMod.Inspection
 import typingsSlinky.bluebird.bluebirdMod.Resolvable
-import typingsSlinky.bluebird.bluebirdMod.ResolvableProps
 import typingsSlinky.bluebird.bluebirdMod.SpreadOption
 import typingsSlinky.bluebirdDashGlobal.Fn_Callback
-import typingsSlinky.bluebirdDashGlobal.Fn_Error
 import typingsSlinky.bluebirdDashGlobal.Fn_ErrorFilter1
 import typingsSlinky.bluebirdDashGlobal.Fn_ErrorOnFulfilled
 import typingsSlinky.bluebirdDashGlobal.Fn_Filter1
@@ -55,7 +54,7 @@ trait Promise[T] extends js.Object {
   var catchThrow_Original: Fn_Filter1Filter2[T] = js.native
   // catch: Bluebird<T>["catch"]; // Provided by lib.es5.d.ts
   @JSName("caught")
-  var caught_Original: typingsSlinky.bluebird.Fn_Error[T] with Fn_Error[T] = js.native
+  var caught_Original: Fn_Error[T] with typingsSlinky.bluebirdDashGlobal.Fn_Error[T] = js.native
   @JSName("delay")
   var delay_Original: js.Function1[/* ms */ Double, Bluebird[T]] = js.native
   @JSName("disposer")
@@ -118,15 +117,15 @@ trait Promise[T] extends js.Object {
   var toString_Original: js.Function0[String] = js.native
   @JSName("value")
   var value_Original: js.Function0[T] = js.native
-  def all(): typingsSlinky.bluebird.bluebirdMod.^[scala.Nothing] = js.native
-  def all(`this`: Promise[js.Iterable[js.Object]]): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
+  def all(): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
   def any(): typingsSlinky.bluebird.bluebirdMod.^[scala.Nothing] = js.native
-  def any[Q](`this`: Promise[T with js.Iterable[Q]]): typingsSlinky.bluebird.bluebirdMod.^[Q] = js.native
+  @JSName("any")
+  def any_Q[Q](): typingsSlinky.bluebird.bluebirdMod.^[Q] = js.native
   def asCallback(callback: js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], Unit]): this.type = js.native
   def asCallback(callback: js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], Unit], options: SpreadOption): this.type = js.native
   def asCallback(sink: js.Any*): this.type = js.native
   def bind(thisArg: js.Any): Bluebird[T] = js.native
-  def call[U /* <: String */, Q](`this`: Bluebird[Q], propertyName: U, args: js.Any*): Bluebird[
+  def call[U /* <: String */, Q](propertyName: U, args: js.Any*): Bluebird[
     ReturnType[
       /* import warning: importer.ImportType#apply Failed type conversion: Q[U] */ js.Any
     ]
@@ -737,14 +736,10 @@ trait Promise[T] extends js.Object {
     onFulfilled: js.Function1[/* value */ T, Resolvable[U]],
     onRejected: js.Function1[/* error */ js.Any, Resolvable[U]]
   ): Unit = js.native
-  def each[Q](`this`: Promise[T with js.Iterable[Q]], iterator: IterateFunction[Q, _]): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
+  def each[Q](iterator: IterateFunction[Q, _]): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
   def error[U](onReject: js.Function1[/* reason */ js.Any, Resolvable[U]]): Bluebird[U] = js.native
-  def filter[Q](`this`: Promise[T with js.Iterable[Q]], filterer: IterateFunction[Q, Boolean]): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
-  def filter[Q](
-    `this`: Promise[T with js.Iterable[Q]],
-    filterer: IterateFunction[Q, Boolean],
-    options: ConcurrencyOption
-  ): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
+  def filter[Q](filterer: IterateFunction[Q, Boolean]): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
+  def filter[Q](filterer: IterateFunction[Q, Boolean], options: ConcurrencyOption): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
   /*
     * See comments above `then` for the reason why this is needed. Taken from es2018.promise.d.ts.
     *
@@ -764,20 +759,20 @@ trait Promise[T] extends js.Object {
   def isRejected(): Boolean = js.native
   def isResolved(): Boolean = js.native
   def lastly(handler: js.Function0[Resolvable[_]]): Bluebird[T] = js.native
-  def map[U, Q](`this`: Promise[T with js.Iterable[Q]], mapper: IterateFunction[Q, U]): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
-  def map[U, Q](`this`: Promise[T with js.Iterable[Q]], mapper: IterateFunction[Q, U], options: ConcurrencyOption): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
-  def mapSeries[U, Q](`this`: Promise[T with js.Iterable[Q]], iterator: IterateFunction[Q, U]): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
+  def map[U, Q](mapper: IterateFunction[Q, U]): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
+  def map[U, Q](mapper: IterateFunction[Q, U], options: ConcurrencyOption): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
+  def mapSeries[U, Q](iterator: IterateFunction[Q, U]): typingsSlinky.bluebird.bluebirdMod.^[js.Array[U]] = js.native
   def nodeify(callback: js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], Unit]): this.type = js.native
   def nodeify(callback: js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], Unit], options: SpreadOption): this.type = js.native
   def nodeify(sink: js.Any*): this.type = js.native
-  def props[T](`this`: js.Thenable[ResolvableProps[T]]): Bluebird[T] = js.native
+  def props[T](): Bluebird[T] = js.native
   @JSName("props")
-  def props_KV[K, V](`this`: js.Thenable[Map[K, Resolvable[V]]]): Bluebird[Map[K, V]] = js.native
+  def props_KV[K, V](): Bluebird[Map[K, V]] = js.native
   def race(): typingsSlinky.bluebird.bluebirdMod.^[scala.Nothing] = js.native
-  def race[Q](`this`: Promise[T with js.Iterable[Q]]): typingsSlinky.bluebird.bluebirdMod.^[Q] = js.native
+  @JSName("race")
+  def race_Q[Q](): typingsSlinky.bluebird.bluebirdMod.^[Q] = js.native
   def reason(): js.Any = js.native
   def reduce[U, Q](
-    `this`: Promise[T with js.Iterable[Q]],
     reducer: js.Function4[
       /* memo */ U, 
       /* item */ Q, 
@@ -787,7 +782,6 @@ trait Promise[T] extends js.Object {
     ]
   ): typingsSlinky.bluebird.bluebirdMod.^[U] = js.native
   def reduce[U, Q](
-    `this`: Promise[T with js.Iterable[Q]],
     reducer: js.Function4[
       /* memo */ U, 
       /* item */ Q, 
@@ -800,11 +794,8 @@ trait Promise[T] extends js.Object {
   def reflect(): Bluebird[Inspection[T]] = js.native
   def `return`(): Bluebird[Unit] = js.native
   def `return`[U](value: U): Bluebird[U] = js.native
-  def some(`this`: Promise[js.Iterable[js.Object]], count: Double): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
-  def spread[U, Q](
-    `this`: typingsSlinky.bluebird.bluebirdMod.^[T with js.Iterable[Q]],
-    fulfilledHandler: js.Function1[/* repeated */ Q, U | js.Thenable[U]]
-  ): typingsSlinky.bluebird.bluebirdMod.^[U] = js.native
+  def some(count: Double): typingsSlinky.bluebird.bluebirdMod.^[T] = js.native
+  def spread[U, Q](fulfilledHandler: js.Function1[/* repeated */ Q, U | js.Thenable[U]]): typingsSlinky.bluebird.bluebirdMod.^[U] = js.native
   def suppressUnhandledRejections(): Unit = js.native
   def tap(onFulFill: js.Function1[/* value */ T, Resolvable[_]]): Bluebird[T] = js.native
   def tapCatch(onReject: js.Function1[/* error */ js.UndefOr[js.Any], Resolvable[_]]): Bluebird[T] = js.native

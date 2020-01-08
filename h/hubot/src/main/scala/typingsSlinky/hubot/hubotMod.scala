@@ -1,12 +1,6 @@
 package typingsSlinky.hubot
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.hubot.hubotMod.Brain
-import typingsSlinky.hubot.hubotMod.ListenerCallback
-import typingsSlinky.hubot.hubotMod.Message
-import typingsSlinky.hubot.hubotMod.Response
-import typingsSlinky.hubot.hubotMod.Robot
-import typingsSlinky.hubot.hubotMod.User
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.RegExpMatchArray
 import scala.scalajs.js

@@ -3,7 +3,6 @@ package typingsSlinky.wonderDashFrp
 import typingsSlinky.wonderDashFrp.distEs2015CoreStreamMod.Stream
 import typingsSlinky.wonderDashFrp.distEs2015DisposableIDisposableMod.IDisposable
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
-import typingsSlinky.wonderDashFrp.distEs2015StreamAnonymousStreamMod.AnonymousStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

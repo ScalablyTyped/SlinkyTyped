@@ -3,7 +3,6 @@ package typingsSlinky.reactDashSelect
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactDashSelect.srcAnimatedPlaceholderMod.AnimatedPlaceholderProps
 import typingsSlinky.reactDashSelect.srcComponentsPlaceholderMod.PlaceholderProps
 import typingsSlinky.reactDashSelect.srcSelectMod.Props
 import typingsSlinky.reactDashSelect.srcTypesMod.ActionTypes

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SimpleLineIcons
-  extends SharedApply_IconProps_1525323211[typingsSlinky.atExpoVectorDashIcons.atExpoVectorDashIconsMod.SimpleLineIcons] {
+  extends SharedApply_IconProps_207471041[typingsSlinky.atExpoVectorDashIcons.atExpoVectorDashIconsMod.SimpleLineIcons] {
   @JSImport("@expo/vector-icons", "SimpleLineIcons")
   @js.native
   object componentImport extends js.Object

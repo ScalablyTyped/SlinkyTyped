@@ -1,7 +1,6 @@
 package typingsSlinky.postmark
 
-import typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkClickLocation
-import typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkTrackingOptions
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,10 +39,14 @@ object distClientModelsMessageSupportingTypesMod extends js.Object {
     @js.native
     sealed trait Text extends LinkClickLocation
     
-    /* "HTML" */ val HTML: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkClickLocation.HTML with String = js.native
-    /* "Text" */ val Text: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkClickLocation.Text with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[LinkClickLocation with String] = js.native
+    /* "HTML" */ @js.native
+    object HTML extends TopLevel[HTML with String]
+    
+    /* "Text" */ @js.native
+    object Text extends TopLevel[Text with String]
+    
   }
   
   @js.native
@@ -60,12 +63,20 @@ object distClientModelsMessageSupportingTypesMod extends js.Object {
     @js.native
     sealed trait TextOnly extends LinkTrackingOptions
     
-    /* "HtmlAndText" */ val HtmlAndText: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkTrackingOptions.HtmlAndText with String = js.native
-    /* "HtmlOnly" */ val HtmlOnly: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkTrackingOptions.HtmlOnly with String = js.native
-    /* "None" */ val None: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkTrackingOptions.None with String = js.native
-    /* "TextOnly" */ val TextOnly: typingsSlinky.postmark.distClientModelsMessageSupportingTypesMod.LinkTrackingOptions.TextOnly with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[LinkTrackingOptions with String] = js.native
+    /* "HtmlAndText" */ @js.native
+    object HtmlAndText extends TopLevel[HtmlAndText with String]
+    
+    /* "HtmlOnly" */ @js.native
+    object HtmlOnly extends TopLevel[HtmlOnly with String]
+    
+    /* "None" */ @js.native
+    object None extends TopLevel[None with String]
+    
+    /* "TextOnly" */ @js.native
+    object TextOnly extends TopLevel[TextOnly with String]
+    
   }
   
 }

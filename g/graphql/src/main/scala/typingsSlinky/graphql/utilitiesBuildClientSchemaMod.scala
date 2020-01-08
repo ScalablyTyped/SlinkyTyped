@@ -2,7 +2,6 @@ package typingsSlinky.graphql
 
 import typingsSlinky.graphql.typeSchemaMod.GraphQLSchema
 import typingsSlinky.graphql.typeSchemaMod.GraphQLSchemaValidationOptions
-import typingsSlinky.graphql.utilitiesBuildClientSchemaMod.Options
 import typingsSlinky.graphql.utilitiesIntrospectionQueryMod.IntrospectionQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

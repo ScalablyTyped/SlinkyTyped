@@ -1,6 +1,6 @@
 package typingsSlinky.screeps
 
-import typingsSlinky.screeps.screepsNumbers.`false`
+import typingsSlinky.screeps.screepsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

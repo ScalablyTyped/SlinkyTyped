@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object LabelAlignment extends js.Object {
   @js.native
   sealed trait Near extends LabelAlignment
   
-  /* 2 */ val Center: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LabelAlignment.Center with Double = js.native
-  /* 1 */ val Far: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LabelAlignment.Far with Double = js.native
-  /* 0 */ val Near: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LabelAlignment.Near with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelAlignment with Double] = js.native
+  /* 2 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 1 */ @js.native
+  object Far extends TopLevel[Far with Double]
+  
+  /* 0 */ @js.native
+  object Near extends TopLevel[Near with Double]
+  
 }
 

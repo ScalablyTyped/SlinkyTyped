@@ -10,12 +10,6 @@ import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.NodeRange
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.NodeType
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.Schema
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.Slice
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.MapResult
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.Mappable
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.Mapping
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.Step
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.StepMap
-import typingsSlinky.prosemirrorDashTransform.prosemirrorDashTransformMod.StepResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

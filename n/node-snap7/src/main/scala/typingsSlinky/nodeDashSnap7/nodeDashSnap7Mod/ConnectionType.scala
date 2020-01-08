@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ConnectionType extends js.Object {
   @js.native
   sealed trait CONNTYPE_PG extends ConnectionType
   
-  /* 0x03 */ val CONNTYPE_BASIC: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.ConnectionType.CONNTYPE_BASIC with Double = js.native
-  /* 0x02 */ val CONNTYPE_OP: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.ConnectionType.CONNTYPE_OP with Double = js.native
-  /* 0x01 */ val CONNTYPE_PG: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.ConnectionType.CONNTYPE_PG with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConnectionType with Double] = js.native
+  /* 0x03 */ @js.native
+  object CONNTYPE_BASIC extends TopLevel[CONNTYPE_BASIC with Double]
+  
+  /* 0x02 */ @js.native
+  object CONNTYPE_OP extends TopLevel[CONNTYPE_OP with Double]
+  
+  /* 0x01 */ @js.native
+  object CONNTYPE_PG extends TopLevel[CONNTYPE_PG with Double]
+  
 }
 

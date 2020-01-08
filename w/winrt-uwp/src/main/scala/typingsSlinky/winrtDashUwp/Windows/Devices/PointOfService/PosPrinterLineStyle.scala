@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object PosPrinterLineStyle extends js.Object {
   @js.native
   sealed trait singleSolid extends PosPrinterLineStyle
   
-  /* 2 */ val broken: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterLineStyle.broken with Double = js.native
-  /* 3 */ val chain: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterLineStyle.chain with Double = js.native
-  /* 1 */ val doubleSolid: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterLineStyle.doubleSolid with Double = js.native
-  /* 0 */ val singleSolid: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterLineStyle.singleSolid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PosPrinterLineStyle with Double] = js.native
+  /* 2 */ @js.native
+  object broken extends TopLevel[broken with Double]
+  
+  /* 3 */ @js.native
+  object chain extends TopLevel[chain with Double]
+  
+  /* 1 */ @js.native
+  object doubleSolid extends TopLevel[doubleSolid with Double]
+  
+  /* 0 */ @js.native
+  object singleSolid extends TopLevel[singleSolid with Double]
+  
 }
 

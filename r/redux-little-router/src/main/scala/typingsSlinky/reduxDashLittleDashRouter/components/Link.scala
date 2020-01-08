@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Link
-  extends SharedApply_LinkProps_1843782738[typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.Link] {
+  extends SharedApply_LinkProps951347256[typingsSlinky.reduxDashLittleDashRouter.reduxDashLittleDashRouterMod.Link] {
   @JSImport("redux-little-router", "Link")
   @js.native
   object componentImport extends js.Object

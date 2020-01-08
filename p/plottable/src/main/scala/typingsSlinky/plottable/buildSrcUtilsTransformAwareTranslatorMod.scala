@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
-import typingsSlinky.plottable.buildSrcUtilsTransformAwareTranslatorMod.Translator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

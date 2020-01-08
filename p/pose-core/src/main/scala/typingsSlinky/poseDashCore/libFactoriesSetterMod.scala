@@ -1,6 +1,5 @@
 package typingsSlinky.poseDashCore
 
-import typingsSlinky.poseDashCore.libFactoriesSetterMod.SetterFactoryProps
 import typingsSlinky.poseDashCore.libTypesMod.AddTransitionDelay
 import typingsSlinky.poseDashCore.libTypesMod.ConvertTransitionDefinition
 import typingsSlinky.poseDashCore.libTypesMod.GetInstantTransition

@@ -1,7 +1,6 @@
 package typingsSlinky.stoppable
 
 import typingsSlinky.node.httpMod.Server
-import typingsSlinky.stoppable.stoppableMod.StoppableServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

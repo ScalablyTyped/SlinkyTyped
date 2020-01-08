@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextareaDashItem extends SharedApply_TextareaItemProps727543102[default] {
+object TextareaDashItem extends SharedApply_TextareaItemProps643003652[default] {
   @JSImport("@ant-design/react-native/lib/textarea-item", JSImport.Default)
   @js.native
   object componentImport extends js.Object

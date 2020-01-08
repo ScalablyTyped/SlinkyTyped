@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object aphroditeMod {
-  import typingsSlinky.aphrodite.aphroditeNumbers.`false`
+  import typingsSlinky.aphrodite.aphroditeBooleans.`false`
   import typingsSlinky.std.Map
 
   type CSSInputTypes = StyleDeclarationValue | `false` | Null | Unit

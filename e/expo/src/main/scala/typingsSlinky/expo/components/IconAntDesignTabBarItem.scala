@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconAntDesignTabBarItem extends SharedApply_TabBarItemIOSProps929810654[TabBarItem] {
+object IconAntDesignTabBarItem extends SharedApply_TabBarItemIOSProps1445960788[TabBarItem] {
   @JSImport("expo/build/globals.web", "Icon.AntDesign.TabBarItem")
   @js.native
   object componentImport extends js.Object

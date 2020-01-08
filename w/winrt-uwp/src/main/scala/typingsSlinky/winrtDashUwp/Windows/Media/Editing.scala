@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVector
@@ -11,14 +12,6 @@ import typingsSlinky.winrtDashUwp.Windows.Foundation.Rect
 import typingsSlinky.winrtDashUwp.Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
 import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.ImageStream
 import typingsSlinky.winrtDashUwp.Windows.Media.Core.MediaStreamSource
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.BackgroundAudioTrack
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.EmbeddedAudioTrack
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaClip
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaComposition
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaOverlay
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaOverlayLayer
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaTrimmingPreference
-import typingsSlinky.winrtDashUwp.Windows.Media.Editing.VideoFramePrecision
 import typingsSlinky.winrtDashUwp.Windows.Media.Effects.IAudioEffectDefinition
 import typingsSlinky.winrtDashUwp.Windows.Media.Effects.IVideoCompositorDefinition
 import typingsSlinky.winrtDashUwp.Windows.Media.Effects.IVideoEffectDefinition
@@ -324,10 +317,14 @@ object Editing extends js.Object {
     @js.native
     sealed trait precise extends MediaTrimmingPreference
     
-    /* 0 */ val fast: typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaTrimmingPreference.fast with Double = js.native
-    /* 1 */ val precise: typingsSlinky.winrtDashUwp.Windows.Media.Editing.MediaTrimmingPreference.precise with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MediaTrimmingPreference with Double] = js.native
+    /* 0 */ @js.native
+    object fast extends TopLevel[fast with Double]
+    
+    /* 1 */ @js.native
+    object precise extends TopLevel[precise with Double]
+    
   }
   
   /** Used to specify the frame precision algorithm when retrieving a thumbnail. */
@@ -341,10 +338,14 @@ object Editing extends js.Object {
     @js.native
     sealed trait nearestKeyFrame extends VideoFramePrecision
     
-    /* 0 */ val nearestFrame: typingsSlinky.winrtDashUwp.Windows.Media.Editing.VideoFramePrecision.nearestFrame with Double = js.native
-    /* 1 */ val nearestKeyFrame: typingsSlinky.winrtDashUwp.Windows.Media.Editing.VideoFramePrecision.nearestKeyFrame with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[VideoFramePrecision with Double] = js.native
+    /* 0 */ @js.native
+    object nearestFrame extends TopLevel[nearestFrame with Double]
+    
+    /* 1 */ @js.native
+    object nearestKeyFrame extends TopLevel[nearestKeyFrame with Double]
+    
   }
   
 }

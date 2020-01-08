@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`coordinationDOTk8sDOTio/v1`
-import typingsSlinky.atPulumiKubernetes.coordinationV1LeaseMod.Lease
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.coordinationDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.coordination.v1.LeaseSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object coordinationV1LeaseMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`coordinationDOTk8sDOTio/v1`] = js.native
+    val apiVersion: Output[coordinationDotk8sDotioSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

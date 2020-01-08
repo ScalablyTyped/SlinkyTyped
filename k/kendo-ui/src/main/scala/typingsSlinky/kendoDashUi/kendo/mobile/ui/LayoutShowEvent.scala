@@ -15,7 +15,7 @@ object LayoutShowEvent {
   def apply(
     isDefaultPrevented: () => Boolean,
     preventDefault: js.Function,
-    sender: typingsSlinky.kendoDashUi.kendo.mobile.ui.Layout,
+    sender: Layout,
     layout: JQuery = null,
     view: JQuery = null
   ): LayoutShowEvent = {

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object RelativeMode extends js.Object {
   @js.native
   sealed trait Object extends RelativeMode
   
-  /* 1 */ val Mouse: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.RelativeMode.Mouse with Double = js.native
-  /* 0 */ val Object: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.RelativeMode.Object with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RelativeMode with Double] = js.native
+  /* 1 */ @js.native
+  object Mouse extends TopLevel[Mouse with Double]
+  
+  /* 0 */ @js.native
+  object Object extends TopLevel[Object with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/REPLACE`
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashREPLACE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait NavigationReplaceAction extends NavigationStackAction {
   var key: String
   var params: js.UndefOr[NavigationParams] = js.undefined
   var routeName: String
-  var `type`: `Navigation/REPLACE`
+  var `type`: NavigationSlashREPLACE
 }
 
 object NavigationReplaceAction {
@@ -18,7 +18,7 @@ object NavigationReplaceAction {
   def apply(
     key: String,
     routeName: String,
-    `type`: `Navigation/REPLACE`,
+    `type`: NavigationSlashREPLACE,
     action: NavigationNavigateAction = null,
     params: NavigationParams = null
   ): NavigationReplaceAction = {

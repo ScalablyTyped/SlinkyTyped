@@ -1,6 +1,5 @@
 package typingsSlinky.atIonicCore
 
-import typingsSlinky.atIonicCore.distTypesUtilsAnimationCubicDashBezierMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

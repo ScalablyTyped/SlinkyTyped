@@ -10,9 +10,9 @@ Node Stream bindings for PortAudio.
 | ------------------ | :-------------: |
 | Full name          | naudiodon |
 | Keywords           | portaudio, audio, play, record, wav, raspberry pi |
-| # releases         | 16 |
+| # releases         | 7 |
 | # dependents       | 1 |
-| # downloads        | 4702 |
+| # downloads        | 4922 |
 | # stars            | 1 |
 
 ## Links

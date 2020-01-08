@@ -3,6 +3,8 @@ package typingsSlinky.officeDashUiDashFabricDashReact
 import slinky.core.ReactComponentClass
 import typingsSlinky.atUifabricUtilities.libSelectionSelectionMod.ISelectionOptions
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsMarqueeSelectionMarqueeSelectionDotTypesMod.IMarqueeSelectionProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectionSelectionZoneMod.ISelectionZoneProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectionSelectionZoneMod.ISelectionZoneState
 import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.change
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +20,10 @@ object libMarqueeSelectionMod extends js.Object {
   }
   
   @js.native
-  class SelectionZone ()
-    extends typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectionMod.SelectionZone
+  class SelectionZone protected ()
+    extends typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesSelectionMod.SelectionZone {
+    def this(props: ISelectionZoneProps) = this()
+  }
   
   val MarqueeSelection: ReactComponentClass[IMarqueeSelectionProps] = js.native
   val SELECTION_CHANGE: change = js.native
@@ -48,6 +52,7 @@ object libMarqueeSelectionMod extends js.Object {
   @js.native
   object SelectionZone extends js.Object {
     var defaultProps: Anon_IsSelectedOnFocus = js.native
+    def getDerivedStateFromProps(nextProps: ISelectionZoneProps, prevState: ISelectionZoneState): ISelectionZoneState = js.native
   }
   
 }

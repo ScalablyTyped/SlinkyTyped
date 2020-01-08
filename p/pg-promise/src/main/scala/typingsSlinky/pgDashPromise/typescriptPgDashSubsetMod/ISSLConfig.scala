@@ -1,7 +1,6 @@
 package typingsSlinky.pgDashPromise.typescriptPgDashSubsetMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.tlsMod.PeerCertificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +15,9 @@ trait ISSLConfig extends js.Object {
   ] = js.undefined
   var ca: js.UndefOr[String | Buffer | (js.Array[String | Buffer])] = js.undefined
   var cert: js.UndefOr[String | Buffer | (js.Array[String | Buffer])] = js.undefined
-  var checkServerIdentity: js.UndefOr[js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]]] = js.undefined
+  var checkServerIdentity: js.UndefOr[
+    js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
+  ] = js.undefined
   var key: js.UndefOr[String | Buffer | (js.Array[Buffer | js.Object])] = js.undefined
   var passphrase: js.UndefOr[String] = js.undefined
   var pfx: js.UndefOr[String | Buffer | (js.Array[String | Buffer | js.Object])] = js.undefined
@@ -30,7 +31,7 @@ object ISSLConfig {
     NPNProtocols: (js.Array[Buffer | String | scala.scalajs.js.typedarray.Uint8Array]) | Buffer | scala.scalajs.js.typedarray.Uint8Array = null,
     ca: String | Buffer | (js.Array[String | Buffer]) = null,
     cert: String | Buffer | (js.Array[String | Buffer]) = null,
-    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[Error] = null,
+    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
     key: String | Buffer | (js.Array[Buffer | js.Object]) = null,
     passphrase: String = null,
     pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,

@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.mapMod.Map
 import typingsSlinky.ol.pluggableMapMod.MapOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

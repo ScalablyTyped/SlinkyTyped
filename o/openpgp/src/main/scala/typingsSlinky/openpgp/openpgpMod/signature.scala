@@ -1,7 +1,6 @@
 package typingsSlinky.openpgp.openpgpMod
 
 import typingsSlinky.openpgp.openpgpMod.packet.List
-import typingsSlinky.openpgp.openpgpMod.signature.Signature
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

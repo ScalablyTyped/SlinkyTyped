@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`vertex-add`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait MultipointDrawActionVertexAddEvent extends js.Object {
   var defaultPrevented: Boolean
   var preventDefault: js.Function
-  var `type`: String
+  var `type`: `vertex-add`
   var vertexIndex: Double
   var vertices: js.Array[js.Array[Double]]
 }
@@ -17,7 +18,7 @@ object MultipointDrawActionVertexAddEvent {
   def apply(
     defaultPrevented: Boolean,
     preventDefault: js.Function,
-    `type`: String,
+    `type`: `vertex-add`,
     vertexIndex: Double,
     vertices: js.Array[js.Array[Double]]
   ): MultipointDrawActionVertexAddEvent = {

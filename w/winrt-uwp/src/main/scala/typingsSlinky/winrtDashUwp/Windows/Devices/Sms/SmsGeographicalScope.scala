@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object SmsGeographicalScope extends js.Object {
   @js.native
   sealed trait plmn extends SmsGeographicalScope
   
-  /* 4 */ val cell: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsGeographicalScope.cell with Double = js.native
-  /* 1 */ val cellWithImmediateDisplay: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsGeographicalScope.cellWithImmediateDisplay with Double = js.native
-  /* 2 */ val locationArea: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsGeographicalScope.locationArea with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsGeographicalScope.none with Double = js.native
-  /* 3 */ val plmn: typingsSlinky.winrtDashUwp.Windows.Devices.Sms.SmsGeographicalScope.plmn with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmsGeographicalScope with Double] = js.native
+  /* 4 */ @js.native
+  object cell extends TopLevel[cell with Double]
+  
+  /* 1 */ @js.native
+  object cellWithImmediateDisplay extends TopLevel[cellWithImmediateDisplay with Double]
+  
+  /* 2 */ @js.native
+  object locationArea extends TopLevel[locationArea with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object plmn extends TopLevel[plmn with Double]
+  
 }
 

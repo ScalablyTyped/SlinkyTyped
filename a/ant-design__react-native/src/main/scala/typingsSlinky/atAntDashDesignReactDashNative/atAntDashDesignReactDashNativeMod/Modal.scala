@@ -25,14 +25,14 @@ object Modal extends js.Object {
     /* content */ TagMod[Any], 
     /* actions */ js.UndefOr[js.Array[Action[TextStyle]]], 
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
-    Unit
+    Double
   ] = js.native
   var contextTypes: Anon_AntLocale = js.native
   var defaultProps: Anon_AnimateAppear = js.native
   var operation: js.Function2[
     /* actions */ js.Array[_], 
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
-    Unit
+    Double
   ] = js.native
   var prompt: js.Function7[
     /* title */ TagMod[Any], 
@@ -42,7 +42,7 @@ object Modal extends js.Object {
     /* defaultValue */ js.UndefOr[String], 
     /* placeholders */ js.UndefOr[js.Array[String]], 
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
-    Unit
+    js.UndefOr[Double]
   ] = js.native
 }
 

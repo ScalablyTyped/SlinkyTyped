@@ -18,13 +18,14 @@ object ErrorMessage
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, name */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    name: String,
     component: String | ReactComponentClass[js.Object] = null,
     render: /* errorMessage */ String => TagMod[Any] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.formik.formikMod.ErrorMessage] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

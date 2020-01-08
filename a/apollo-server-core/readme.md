@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollo-server-core
 
-Typings are for version 2.9.12
+Typings are for version 2.9.15
 
 ## Library description:
 Core engine for Apollo GraphQL server
@@ -10,9 +10,9 @@ Core engine for Apollo GraphQL server
 | ------------------ | :-------------: |
 | Full name          | apollo-server-core |
 | Keywords           | GraphQL, Apollo, Server, Javascript |
-| # releases         | 106 |
-| # dependents       | 65 |
-| # downloads        | 10203007 |
+| # releases         | 160 |
+| # dependents       | 108 |
+| # downloads        | 22870431 |
 | # stars            | 3 |
 
 ## Links

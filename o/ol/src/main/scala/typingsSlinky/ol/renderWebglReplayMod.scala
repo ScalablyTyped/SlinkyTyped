@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.renderWebglReplayMod.WebGLReplay
 import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`

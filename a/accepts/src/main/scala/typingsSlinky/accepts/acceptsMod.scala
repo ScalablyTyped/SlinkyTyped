@@ -1,7 +1,6 @@
 package typingsSlinky.accepts
 
-import typingsSlinky.accepts.acceptsMod.Accepts
-import typingsSlinky.accepts.acceptsNumbers.`false`
+import typingsSlinky.accepts.acceptsBooleans.`false`
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`

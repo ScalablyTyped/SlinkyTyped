@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ValidationResult extends js.Object {
   @js.native
   sealed trait Warning extends ValidationResult
   
-  /* 2 */ val Error: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.ValidationResult.Error with Double = js.native
-  /* 0 */ val OK: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.ValidationResult.OK with Double = js.native
-  /* 1 */ val Warning: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.ValidationResult.Warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ValidationResult with Double] = js.native
+  /* 2 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 0 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
+  /* 1 */ @js.native
+  object Warning extends TopLevel[Warning with Double]
+  
 }
 

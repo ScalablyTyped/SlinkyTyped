@@ -2,7 +2,6 @@ package typingsSlinky.json2csv
 
 import typingsSlinky.json2csv.jSON2CSVBaseMod.json2csv.FieldInfo
 import typingsSlinky.json2csv.jSON2CSVBaseMod.json2csv.Options
-import typingsSlinky.json2csv.jSON2CSVTransformMod.JSON2CSVTransform
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.node.streamMod.TransformOptions
 import scala.scalajs.js

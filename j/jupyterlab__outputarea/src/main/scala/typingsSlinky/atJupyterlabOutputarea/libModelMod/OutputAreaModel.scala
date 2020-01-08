@@ -5,7 +5,6 @@ import typingsSlinky.atJupyterlabOutputarea.Anon_LastModel
 import typingsSlinky.atJupyterlabOutputarea.libModelMod.IOutputAreaModel.ChangedArgs
 import typingsSlinky.atJupyterlabOutputarea.libModelMod.IOutputAreaModel.IContentFactory
 import typingsSlinky.atJupyterlabOutputarea.libModelMod.IOutputAreaModel.IOptions
-import typingsSlinky.atJupyterlabOutputarea.libModelMod.OutputAreaModel.ContentFactory
 import typingsSlinky.atJupyterlabRendermime.libOutputmodelMod.IOutputModel
 import typingsSlinky.atPhosphorSignaling.atPhosphorSignalingMod.ISignal
 import scala.scalajs.js

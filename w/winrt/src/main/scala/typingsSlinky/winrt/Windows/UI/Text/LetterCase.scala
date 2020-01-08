@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object LetterCase extends js.Object {
   @js.native
   sealed trait upper extends LetterCase
   
-  /* 0 */ val lower: typingsSlinky.winrt.Windows.UI.Text.LetterCase.lower with Double = js.native
-  /* 1 */ val upper: typingsSlinky.winrt.Windows.UI.Text.LetterCase.upper with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LetterCase with Double] = js.native
+  /* 0 */ @js.native
+  object lower extends TopLevel[lower with Double]
+  
+  /* 1 */ @js.native
+  object upper extends TopLevel[upper with Double]
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashSpinners
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashSpinners.gridLoaderMod.Loader
 import typingsSlinky.reactDashSpinners.interfacesMod.LoaderSizeMarginProps
 import typingsSlinky.reactDashSpinners.interfacesMod.StyleFunction
 import typingsSlinky.reactDashSpinners.interfacesMod.StyleFunctionWithIndex

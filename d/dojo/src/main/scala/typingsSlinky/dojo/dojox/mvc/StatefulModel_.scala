@@ -3,6 +3,7 @@ package typingsSlinky.dojo.dojox.mvc
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dojo.Stateful
 import typingsSlinky.dojo.dojo.store.DataStore
+import typingsSlinky.dojo.dojoStrings.data
 import typingsSlinky.dojo.dojoStrings.getPlainValueOptions
 import typingsSlinky.dojo.dojoStrings.getStatefulOptions
 import typingsSlinky.dojo.dojoStrings.store
@@ -201,7 +202,7 @@ class StatefulModel_ protected () extends Stateful {
   def commit(): Unit = js.native
   def commit(store: DataStore): Unit = js.native
   @JSName("get")
-  def get_data(property: typingsSlinky.dojo.dojoStrings.data): js.Object = js.native
+  def get_data(property: data): js.Object = js.native
   @JSName("get")
   def get_getPlainValueOptions(property: getPlainValueOptions): js.Object = js.native
   @JSName("get")
@@ -229,7 +230,7 @@ class StatefulModel_ protected () extends Stateful {
     */
   def reset(): Unit = js.native
   @JSName("set")
-  def set_data(property: typingsSlinky.dojo.dojoStrings.data, value: js.Object): Unit = js.native
+  def set_data(property: data, value: js.Object): Unit = js.native
   @JSName("set")
   def set_getPlainValueOptions(property: getPlainValueOptions, value: js.Object): Unit = js.native
   @JSName("set")
@@ -256,7 +257,7 @@ class StatefulModel_ protected () extends Stateful {
   def toPlainObject(): js.Any = js.native
   @JSName("watch")
   def watch_data(
-    property: typingsSlinky.dojo.dojoStrings.data,
+    property: data,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Object], 

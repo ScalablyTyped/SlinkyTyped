@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialSlider
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialSlider.adapterMod.MDCSliderAdapter
-import typingsSlinky.atMaterialSlider.atMaterialSliderMod.MDCSlider
 import typingsSlinky.atMaterialSlider.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

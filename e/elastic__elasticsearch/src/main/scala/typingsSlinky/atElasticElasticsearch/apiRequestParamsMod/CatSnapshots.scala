@@ -1,5 +1,12 @@
 package typingsSlinky.atElasticElasticsearch.apiRequestParamsMod
 
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`d LeftparenthesisDaysRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`h LeftparenthesisHoursRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`m LeftparenthesisMinutesRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`micros LeftparenthesisMicrosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`ms LeftparenthesisMillisecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`nanos LeftparenthesisNanosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`s LeftparenthesisSecondsRightparenthesis`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +19,9 @@ trait CatSnapshots extends Generic {
   var master_timeout: js.UndefOr[String] = js.undefined
   var repository: js.UndefOr[String | js.Array[String]] = js.undefined
   var s: js.UndefOr[String | js.Array[String]] = js.undefined
+  var time: js.UndefOr[
+    (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`)
+  ] = js.undefined
   var v: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -32,6 +42,7 @@ object CatSnapshots {
     repository: String | js.Array[String] = null,
     s: String | js.Array[String] = null,
     source: String = null,
+    time: (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`) = null,
     v: js.UndefOr[Boolean] = js.undefined
   ): CatSnapshots = {
     val __obj = js.Dynamic.literal()
@@ -49,6 +60,7 @@ object CatSnapshots {
     if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
     if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatSnapshots]
   }

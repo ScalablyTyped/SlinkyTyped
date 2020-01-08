@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberArray
 
-import typingsSlinky.atEmberArray.dashPrivateEnumerableMod.Enumerable
 import typingsSlinky.atEmberArray.dashPrivateNativeDashArrayMod.NativeArray
 import typingsSlinky.atEmberObject.computedMod.ComputedProperty
 import scala.scalajs.js

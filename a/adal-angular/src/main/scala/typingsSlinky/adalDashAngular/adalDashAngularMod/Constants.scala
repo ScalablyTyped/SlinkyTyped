@@ -7,6 +7,7 @@ import typingsSlinky.adalDashAngular.adalDashAngularNumbers.`483`
 import typingsSlinky.adalDashAngular.adalDashAngularNumbers.`600`
 import typingsSlinky.adalDashAngular.adalDashAngularStrings.Canceled
 import typingsSlinky.adalDashAngular.adalDashAngularStrings.Completed
+import typingsSlinky.adalDashAngular.adalDashAngularStrings.Verticalline
 import typingsSlinky.adalDashAngular.adalDashAngularStrings.`6000`
 import typingsSlinky.adalDashAngular.adalDashAngularStrings.`In Progress`
 import typingsSlinky.adalDashAngular.adalDashAngularStrings.access_token
@@ -31,7 +32,7 @@ trait Constants extends js.Object {
   var LOGGING_LEVEL: Anon_0
   var POPUP_HEIGHT: `600`
   var POPUP_WIDTH: `483`
-  var RESOURCE_DELIMETER: typingsSlinky.adalDashAngular.adalDashAngularStrings.`|`
+  var RESOURCE_DELIMETER: Verticalline
   var SESSION_STATE: session_state
   var STORAGE: Anon_ACCESSTOKENKEY
   var TOKEN_RENEW_STATUS_CANCELED: Canceled
@@ -51,7 +52,7 @@ object Constants {
     LOGGING_LEVEL: Anon_0,
     POPUP_HEIGHT: `600`,
     POPUP_WIDTH: `483`,
-    RESOURCE_DELIMETER: typingsSlinky.adalDashAngular.adalDashAngularStrings.`|`,
+    RESOURCE_DELIMETER: Verticalline,
     SESSION_STATE: session_state,
     STORAGE: Anon_ACCESSTOKENKEY,
     TOKEN_RENEW_STATUS_CANCELED: Canceled,

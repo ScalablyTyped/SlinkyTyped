@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Kanban
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object Target extends js.Object {
   @js.native
   sealed trait Header extends Target
   
-  /* 3 */ val All: typingsSlinky.ejDotWebDotAll.ej.Kanban.Target.All with Double = js.native
-  /* 2 */ val Card: typingsSlinky.ejDotWebDotAll.ej.Kanban.Target.Card with Double = js.native
-  /* 1 */ val Content: typingsSlinky.ejDotWebDotAll.ej.Kanban.Target.Content with Double = js.native
-  /* 0 */ val Header: typingsSlinky.ejDotWebDotAll.ej.Kanban.Target.Header with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Target with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Card extends TopLevel[Card with Double]
+  
+  /* 1 */ @js.native
+  object Content extends TopLevel[Content with Double]
+  
+  /* 0 */ @js.native
+  object Header extends TopLevel[Header with Double]
+  
 }
 

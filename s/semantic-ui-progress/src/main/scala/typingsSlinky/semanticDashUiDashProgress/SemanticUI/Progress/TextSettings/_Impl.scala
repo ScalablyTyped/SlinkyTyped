@@ -1,6 +1,6 @@
 package typingsSlinky.semanticDashUiDashProgress.SemanticUI.Progress.TextSettings
 
-import typingsSlinky.semanticDashUiDashProgress.semanticDashUiDashProgressNumbers.`false`
+import typingsSlinky.semanticDashUiDashProgress.semanticDashUiDashProgressBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.GetMetricsQueryConstants.ResultType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,11 @@ object GetMetricsQueryConstants extends js.Object {
     @js.native
     sealed trait DOCUMENT extends ResultType
     
-    /* "document" */ val DOCUMENT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.GetMetricsQueryConstants.ResultType.DOCUMENT with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[ResultType with String] = js.native
+    /* "document" */ @js.native
+    object DOCUMENT extends TopLevel[DOCUMENT with String]
+    
   }
   
 }

@@ -11,25 +11,25 @@ object create extends js.Object {
     base: js.Any,
     options: typingsSlinky.node.httpsMod.ServerOptions,
     handler: js.Function2[
-      /* request */ typingsSlinky.spdy.spdyMod.server.IncomingMessage, 
-      /* response */ typingsSlinky.spdy.spdyMod.server.ServerResponse | typingsSlinky.node.httpMod.ServerResponse, 
+      /* request */ IncomingMessage, 
+      /* response */ ServerResponse | typingsSlinky.node.httpMod.ServerResponse, 
       Unit
     ]
-  ): typingsSlinky.spdy.spdyMod.server.Server = js.native
+  ): Server = js.native
   def apply(
     handler: js.Function2[
-      /* request */ typingsSlinky.spdy.spdyMod.server.IncomingMessage, 
-      /* response */ typingsSlinky.spdy.spdyMod.server.ServerResponse | typingsSlinky.node.httpMod.ServerResponse, 
+      /* request */ IncomingMessage, 
+      /* response */ ServerResponse | typingsSlinky.node.httpMod.ServerResponse, 
       Unit
     ]
-  ): typingsSlinky.spdy.spdyMod.server.Server = js.native
+  ): Server = js.native
   def apply(
     options: typingsSlinky.node.httpsMod.ServerOptions,
     handler: js.Function2[
-      /* request */ typingsSlinky.spdy.spdyMod.server.IncomingMessage, 
+      /* request */ IncomingMessage, 
       /* response */ typingsSlinky.node.httpMod.ServerResponse, 
       Unit
     ]
-  ): typingsSlinky.spdy.spdyMod.server.Server = js.native
+  ): Server = js.native
 }
 

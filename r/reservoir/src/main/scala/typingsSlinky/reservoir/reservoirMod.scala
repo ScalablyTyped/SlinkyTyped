@@ -1,6 +1,5 @@
 package typingsSlinky.reservoir
 
-import typingsSlinky.reservoir.reservoirMod.ReservoirArray
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

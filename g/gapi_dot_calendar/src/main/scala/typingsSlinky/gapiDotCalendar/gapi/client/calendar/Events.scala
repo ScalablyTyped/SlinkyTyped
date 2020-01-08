@@ -2,7 +2,7 @@ package typingsSlinky.gapiDotCalendar.gapi.client.calendar
 
 import typingsSlinky.gapi.gapi.client.HttpRequest
 import typingsSlinky.gapiDotCalendar.Anon_Method
-import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.`calendar#events`
+import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.calendarNumbersignevents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Events extends js.Object {
   var description: String
   var etag: typingsSlinky.gapiDotCalendar.gapi.client.calendar.etag
   var items: js.Array[Event]
-  var kind: `calendar#events`
+  var kind: calendarNumbersignevents
   var nextPageToken: js.UndefOr[String] = js.undefined
   var nextSyncToken: js.UndefOr[String] = js.undefined
   var summary: String
@@ -30,7 +30,7 @@ object Events {
     description: String,
     etag: etag,
     items: js.Array[Event],
-    kind: `calendar#events`,
+    kind: calendarNumbersignevents,
     summary: String,
     timeZone: String,
     updated: datetime,

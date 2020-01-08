@@ -3,6 +3,7 @@ package typingsSlinky.ejDotWebDotAll.ej.datavisualization
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejDotWebDotAll.JQuery
 import typingsSlinky.ejDotWebDotAll.ej.Widget
+import typingsSlinky.ejDotWebDotAll.ej.datavisualization.SymbolPalette.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +13,11 @@ import scala.scalajs.js.annotation._
 class SymbolPalette_ protected () extends Widget {
   def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejDotWebDotAll.ej.datavisualization.SymbolPalette.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejDotWebDotAll.ej.datavisualization.SymbolPalette.Model) = this()
-  var defaults: typingsSlinky.ejDotWebDotAll.ej.datavisualization.SymbolPalette.Model = js.native
+  def this(element: JQuery, options: Model) = this()
+  def this(element: Element, options: Model) = this()
+  var defaults: Model = js.native
   @JSName("model")
-  var model_SymbolPalette_ : typingsSlinky.ejDotWebDotAll.ej.datavisualization.SymbolPalette.Model = js.native
+  var model_SymbolPalette_ : Model = js.native
   /** Add items to Palettes at runtime
     * @param {string} name of the Palette
     * @param {any} JSON for the new items to added in Palette

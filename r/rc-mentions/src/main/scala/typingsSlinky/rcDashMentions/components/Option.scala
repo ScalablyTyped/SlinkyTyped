@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Option extends SharedApply_OptionProps_299131604 {
+object Option extends SharedApply_OptionProps_557765711 {
   @JSImport("rc-mentions/lib/Option", JSImport.Default)
   @js.native
   object componentImport extends js.Object

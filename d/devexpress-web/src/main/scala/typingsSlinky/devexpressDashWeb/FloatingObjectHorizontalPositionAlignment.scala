@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,13 +50,25 @@ object FloatingObjectHorizontalPositionAlignment extends js.Object {
   @js.native
   sealed trait Right extends FloatingObjectHorizontalPositionAlignment
   
-  /* 2 */ val Center: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.Center with Double = js.native
-  /* 4 */ val Inside: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.Inside with Double = js.native
-  /* 1 */ val Left: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.Left with Double = js.native
-  /* 0 */ val None: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.None with Double = js.native
-  /* 5 */ val Outside: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.Outside with Double = js.native
-  /* 3 */ val Right: typingsSlinky.devexpressDashWeb.FloatingObjectHorizontalPositionAlignment.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FloatingObjectHorizontalPositionAlignment with Double] = js.native
+  /* 2 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 4 */ @js.native
+  object Inside extends TopLevel[Inside with Double]
+  
+  /* 1 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 5 */ @js.native
+  object Outside extends TopLevel[Outside with Double]
+  
+  /* 3 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

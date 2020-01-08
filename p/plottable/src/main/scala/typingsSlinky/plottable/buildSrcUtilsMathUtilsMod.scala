@@ -3,8 +3,6 @@ package typingsSlinky.plottable
 import org.scalajs.dom.raw.Element
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Bounds
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
-import typingsSlinky.plottable.buildSrcUtilsMathUtilsMod.ICssTransformMatrix
-import typingsSlinky.plottable.buildSrcUtilsMathUtilsMod.ITranslateVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

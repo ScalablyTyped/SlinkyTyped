@@ -1,5 +1,6 @@
 package typingsSlinky.emberDashData.emberDashDataMod.DS
 
+import typingsSlinky.atEmberObject.atEmberObjectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("ember-data", "DS.ConflictError")
 @js.native
-class ConflictError ()
-  extends typingsSlinky.atEmberObject.atEmberObjectMod.default
+class ConflictError () extends default
 

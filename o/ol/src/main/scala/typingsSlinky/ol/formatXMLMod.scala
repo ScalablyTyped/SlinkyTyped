@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.formatXMLMod.XML
 import typingsSlinky.std.Document
 import typingsSlinky.std.Element
 import scala.scalajs.js

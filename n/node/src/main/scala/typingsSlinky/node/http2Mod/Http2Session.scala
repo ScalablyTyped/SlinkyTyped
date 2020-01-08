@@ -1,7 +1,6 @@
 package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.netMod.Socket
@@ -12,19 +11,20 @@ import typingsSlinky.node.nodeStrings.goaway
 import typingsSlinky.node.nodeStrings.ping
 import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.tlsMod.TLSSocket
+import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Http2Session extends EventEmitter {
-  val alpnProtocol: js.UndefOr[java.lang.String] = js.native
+  val alpnProtocol: js.UndefOr[String] = js.native
   val closed: Boolean = js.native
   val connecting: Boolean = js.native
   val destroyed: Boolean = js.native
   val encrypted: js.UndefOr[Boolean] = js.native
   val localSettings: Settings = js.native
-  val originSet: js.UndefOr[js.Array[java.lang.String]] = js.native
+  val originSet: js.UndefOr[js.Array[String]] = js.native
   val pendingSettingsAck: Boolean = js.native
   val remoteSettings: Settings = js.native
   val socket: Socket | TLSSocket = js.native
@@ -33,7 +33,7 @@ trait Http2Session extends EventEmitter {
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_frameError(
     event: frameError,
@@ -61,12 +61,12 @@ trait Http2Session extends EventEmitter {
   def close(): Unit = js.native
   def close(callback: js.Function0[Unit]): Unit = js.native
   def destroy(): Unit = js.native
-  def destroy(error: Error): Unit = js.native
-  def destroy(error: Error, code: Double): Unit = js.native
+  def destroy(error: js.Error): Unit = js.native
+  def destroy(error: js.Error, code: Double): Unit = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
-  def emit_error(event: error, err: Error): Boolean = js.native
+  def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_frameError(event: frameError, frameType: Double, errorCode: Double, streamID: Double): Boolean = js.native
   @JSName("emit")
@@ -86,7 +86,7 @@ trait Http2Session extends EventEmitter {
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
-  def on_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_frameError(
     event: frameError,
@@ -114,7 +114,7 @@ trait Http2Session extends EventEmitter {
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
-  def once_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_frameError(
     event: frameError,
@@ -142,12 +142,12 @@ trait Http2Session extends EventEmitter {
   def ping(callback: js.Function3[/* err */ Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]): Boolean = js.native
   def ping(
     payload: ArrayBufferView,
-    callback: js.Function3[/* err */ Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
+    callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
   ): Boolean = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
-  def prependListener_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_frameError(
     event: frameError,
@@ -175,7 +175,7 @@ trait Http2Session extends EventEmitter {
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_error(event: error, listener: js.Function1[/* err */ Error, Unit]): this.type = js.native
+  def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_frameError(
     event: frameError,

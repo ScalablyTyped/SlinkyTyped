@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object TaskEvent extends js.Object {
   @js.native
   sealed trait STATE_CHANGED extends TaskEvent
   
-  /* "state_changed" */ val STATE_CHANGED: typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.storage.TaskEvent.STATE_CHANGED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TaskEvent with String] = js.native
+  /* "state_changed" */ @js.native
+  object STATE_CHANGED extends TopLevel[STATE_CHANGED with String]
+  
 }
 

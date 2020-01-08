@@ -1,6 +1,5 @@
 package typingsSlinky.atAngularHttp
 
-import typingsSlinky.atAngularHttp.srcBaseUnderscoreRequestUnderscoreOptionsMod.RequestOptions
 import typingsSlinky.atAngularHttp.srcEnumsMod.RequestMethod
 import typingsSlinky.atAngularHttp.srcEnumsMod.ResponseContentType
 import typingsSlinky.atAngularHttp.srcHeadersMod.Headers

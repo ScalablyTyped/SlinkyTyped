@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashMysqlDashWrapper.nodeDashMysqlDashWrapperMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CollectionChangedAction extends js.Object {
   @js.native
   sealed trait RESET extends CollectionChangedAction
   
-  /* 1 */ val DELETE: typingsSlinky.nodeDashMysqlDashWrapper.nodeDashMysqlDashWrapperMod.CollectionChangedAction.DELETE with Double = js.native
-  /* 0 */ val INSERT: typingsSlinky.nodeDashMysqlDashWrapper.nodeDashMysqlDashWrapperMod.CollectionChangedAction.INSERT with Double = js.native
-  /* 2 */ val RESET: typingsSlinky.nodeDashMysqlDashWrapper.nodeDashMysqlDashWrapperMod.CollectionChangedAction.RESET with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CollectionChangedAction with Double] = js.native
+  /* 1 */ @js.native
+  object DELETE extends TopLevel[DELETE with Double]
+  
+  /* 0 */ @js.native
+  object INSERT extends TopLevel[INSERT with Double]
+  
+  /* 2 */ @js.native
+  object RESET extends TopLevel[RESET with Double]
+  
 }
 

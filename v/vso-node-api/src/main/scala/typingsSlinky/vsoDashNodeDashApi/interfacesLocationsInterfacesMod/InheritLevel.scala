@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object InheritLevel extends js.Object {
   @js.native
   sealed trait None extends InheritLevel
   
-  /* 2 */ val Account: typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.InheritLevel.Account with Double = js.native
-  /* 7 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.InheritLevel.All with Double = js.native
-  /* 4 */ val Collection: typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.InheritLevel.Collection with Double = js.native
-  /* 1 */ val Deployment: typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.InheritLevel.Deployment with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesLocationsInterfacesMod.InheritLevel.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InheritLevel with Double] = js.native
+  /* 2 */ @js.native
+  object Account extends TopLevel[Account with Double]
+  
+  /* 7 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 4 */ @js.native
+  object Collection extends TopLevel[Collection with Double]
+  
+  /* 1 */ @js.native
+  object Deployment extends TopLevel[Deployment with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

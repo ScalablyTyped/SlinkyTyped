@@ -1,7 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType
-import typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,14 +36,28 @@ object TestConfigurationInEnvironmentConstants extends js.Object {
     @js.native
     sealed trait TEXT_HTML extends FileContentType
     
-    /* "application/json" */ val APPLICATION_JSON: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.APPLICATION_JSON with String = js.native
-    /* "application/msword" */ val APPLICATION_MSWORD: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.APPLICATION_MSWORD with String = js.native
-    /* "application/pdf" */ val APPLICATION_PDF: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.APPLICATION_PDF with String = js.native
-    /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ val APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String = js.native
-    /* "application/xhtml+xml" */ val APPLICATION_XHTML_XML: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.APPLICATION_XHTML_XML with String = js.native
-    /* "text/html" */ val TEXT_HTML: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.FileContentType.TEXT_HTML with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[FileContentType with String] = js.native
+    /* "application/json" */ @js.native
+    object APPLICATION_JSON extends TopLevel[APPLICATION_JSON with String]
+    
+    /* "application/msword" */ @js.native
+    object APPLICATION_MSWORD extends TopLevel[APPLICATION_MSWORD with String]
+    
+    /* "application/pdf" */ @js.native
+    object APPLICATION_PDF extends TopLevel[APPLICATION_PDF with String]
+    
+    /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ @js.native
+    object APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT extends TopLevel[
+              APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String
+            ]
+    
+    /* "application/xhtml+xml" */ @js.native
+    object APPLICATION_XHTML_XML extends TopLevel[APPLICATION_XHTML_XML with String]
+    
+    /* "text/html" */ @js.native
+    object TEXT_HTML extends TopLevel[TEXT_HTML with String]
+    
   }
   
   /** Specify to only run the input document through the given step instead of running the input document through the entire ingestion workflow. Valid values are `convert`, `enrich`, and `normalize`. */
@@ -68,14 +81,26 @@ object TestConfigurationInEnvironmentConstants extends js.Object {
     @js.native
     sealed trait NORMALIZATIONS_OUTPUT extends Step
     
-    /* "enrichments_output" */ val ENRICHMENTS_OUTPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.ENRICHMENTS_OUTPUT with String = js.native
-    /* "html_input" */ val HTML_INPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.HTML_INPUT with String = js.native
-    /* "html_output" */ val HTML_OUTPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.HTML_OUTPUT with String = js.native
-    /* "json_normalizations_output" */ val JSON_NORMALIZATIONS_OUTPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.JSON_NORMALIZATIONS_OUTPUT with String = js.native
-    /* "json_output" */ val JSON_OUTPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.JSON_OUTPUT with String = js.native
-    /* "normalizations_output" */ val NORMALIZATIONS_OUTPUT: typingsSlinky.watsonDashDeveloperDashCloud.discoveryV1DashGeneratedMod.TestConfigurationInEnvironmentConstants.Step.NORMALIZATIONS_OUTPUT with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Step with String] = js.native
+    /* "enrichments_output" */ @js.native
+    object ENRICHMENTS_OUTPUT extends TopLevel[ENRICHMENTS_OUTPUT with String]
+    
+    /* "html_input" */ @js.native
+    object HTML_INPUT extends TopLevel[HTML_INPUT with String]
+    
+    /* "html_output" */ @js.native
+    object HTML_OUTPUT extends TopLevel[HTML_OUTPUT with String]
+    
+    /* "json_normalizations_output" */ @js.native
+    object JSON_NORMALIZATIONS_OUTPUT extends TopLevel[JSON_NORMALIZATIONS_OUTPUT with String]
+    
+    /* "json_output" */ @js.native
+    object JSON_OUTPUT extends TopLevel[JSON_OUTPUT with String]
+    
+    /* "normalizations_output" */ @js.native
+    object NORMALIZATIONS_OUTPUT extends TopLevel[NORMALIZATIONS_OUTPUT with String]
+    
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.fastDashGlob
 
 import typingsSlinky.fastDashGlob.outManagersTasksMod.Task
-import typingsSlinky.fastDashGlob.outProvidersStreamMod.ProviderStream
 import typingsSlinky.fastDashGlob.outTypesMod.ReaderOptions
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js

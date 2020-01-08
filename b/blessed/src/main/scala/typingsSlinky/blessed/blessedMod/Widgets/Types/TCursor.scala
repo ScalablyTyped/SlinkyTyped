@@ -1,6 +1,7 @@
 package typingsSlinky.blessed.blessedMod.Widgets.Types
 
 import typingsSlinky.blessed.blessedStrings.block
+import typingsSlinky.blessed.blessedStrings.line
 import typingsSlinky.blessed.blessedStrings.underline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,17 +23,12 @@ trait TCursor extends js.Object {
   /**
     * Shape of the cursor. Can be: block, underline, or line.
     */
-  var shape: block | underline | typingsSlinky.blessed.blessedStrings.line
+  var shape: block | underline | line
 }
 
 object TCursor {
   @scala.inline
-  def apply(
-    artificial: Boolean,
-    blink: Boolean,
-    color: String,
-    shape: block | underline | typingsSlinky.blessed.blessedStrings.line
-  ): TCursor = {
+  def apply(artificial: Boolean, blink: Boolean, color: String, shape: block | underline | line): TCursor = {
     val __obj = js.Dynamic.literal(artificial = artificial.asInstanceOf[js.Any], blink = blink.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], shape = shape.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[TCursor]

@@ -2,7 +2,7 @@ package typingsSlinky.marko
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
-import typingsSlinky.marko.markoNumbers.`false`
+import typingsSlinky.marko.markoBooleans.`false`
 import typingsSlinky.marko.srcComponentsComponentMod.Component
 import typingsSlinky.marko.srcRuntimeDomElementMod.DomElement
 import scala.scalajs.js

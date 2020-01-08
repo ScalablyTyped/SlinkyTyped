@@ -65,7 +65,8 @@ class Application protected () extends js.Object {
   val OperatingSystem: String = js.native
   val Options: typingsSlinky.activexDashPowerpoint.PowerPoint.Options = js.native
   val Path: String = js.native
-  var `PowerPoint.Application_typekey`: Application = js.native
+  @JSName("PowerPoint.Application_typekey")
+  var PowerPointDotApplication_typekey: Application = js.native
   val Presentations: typingsSlinky.activexDashPowerpoint.PowerPoint.Presentations = js.native
   val ProductCode: String = js.native
   val ProtectedViewWindows: typingsSlinky.activexDashPowerpoint.PowerPoint.ProtectedViewWindows = js.native

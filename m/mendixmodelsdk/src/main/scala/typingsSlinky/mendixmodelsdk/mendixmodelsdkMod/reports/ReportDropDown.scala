@@ -25,6 +25,10 @@ import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.WebLayoutContent
+import typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,12 +41,12 @@ import scala.scalajs.js.annotation._
 class ReportDropDown protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.reports.ReportDropDown {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -51,7 +55,7 @@ class ReportDropDown protected ()
 @js.native
 object ReportDropDown extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenReportsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new ReportDropDown instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -292,6 +296,15 @@ object ReportDropDown extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.distGenReportsMod.reports.ReportDropDown = js.native
+  /**
+    * Creates and returns a new ReportDropDown instance in the SDK and on the server.
+    * The new ReportDropDown will be automatically stored in the 'sidebarWidgets' property
+    * of the parent pages.NativeLayoutContent element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): typingsSlinky.mendixmodelsdk.distGenReportsMod.reports.ReportDropDown = js.native
   /**
     * Creates and returns a new ReportDropDown instance in the SDK and on the server.
     * The new ReportDropDown will be automatically stored in the 'widgets' property

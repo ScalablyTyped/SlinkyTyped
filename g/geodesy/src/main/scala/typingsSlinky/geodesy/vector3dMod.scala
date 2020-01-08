@@ -1,6 +1,5 @@
 package typingsSlinky.geodesy
 
-import typingsSlinky.geodesy.vector3dMod.Vector3d
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

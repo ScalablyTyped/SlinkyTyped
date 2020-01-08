@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object InstallOptions extends js.Object {
   @js.native
   sealed trait none extends InstallOptions
   
-  /* 1 */ val deleteExpired: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.InstallOptions.deleteExpired with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.InstallOptions.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InstallOptions with Double] = js.native
+  /* 1 */ @js.native
+  object deleteExpired extends TopLevel[deleteExpired with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

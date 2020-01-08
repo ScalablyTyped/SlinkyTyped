@@ -1,7 +1,7 @@
 package typingsSlinky.antdDashMobileDashRn.libListPropsTypeMod
 
 import slinky.core.TagMod
-import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.Empty
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings._empty
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.android
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.bottom
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.down
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ListItemPropsType extends js.Object {
   var activeStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var align: js.UndefOr[top | middle | bottom] = js.undefined
-  var arrow: js.UndefOr[horizontal | down | up | empty | Empty] = js.undefined
+  var arrow: js.UndefOr[horizontal | down | up | empty | _empty] = js.undefined
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var error: js.UndefOr[Boolean] = js.undefined
@@ -36,7 +36,7 @@ object ListItemPropsType {
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     children: TagMod[Any] = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,

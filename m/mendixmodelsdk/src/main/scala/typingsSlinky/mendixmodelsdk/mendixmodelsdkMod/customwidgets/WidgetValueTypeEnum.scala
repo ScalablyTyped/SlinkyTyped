@@ -22,6 +22,7 @@ object WidgetValueTypeEnum extends js.Object {
   var EntityConstraint: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
   var Enumeration: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
   var Expression: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
+  var File: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
   var Form: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
   var Icon: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native
   var Image: typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValueTypeEnum = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.distOptionsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object NewLineKind extends js.Object {
   @js.native
   sealed trait LineFeed extends NewLineKind
   
-  /* 1 */ val CarriageReturnLineFeed: typingsSlinky.grammarkdown.distOptionsMod.NewLineKind.CarriageReturnLineFeed with Double = js.native
-  /* 0 */ val LineFeed: typingsSlinky.grammarkdown.distOptionsMod.NewLineKind.LineFeed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NewLineKind with Double] = js.native
+  /* 1 */ @js.native
+  object CarriageReturnLineFeed extends TopLevel[CarriageReturnLineFeed with Double]
+  
+  /* 0 */ @js.native
+  object LineFeed extends TopLevel[LineFeed with Double]
+  
 }
 

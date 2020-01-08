@@ -1,6 +1,5 @@
 package typingsSlinky.jqueryDotPin.jqueryDotPinMod
 
-import typingsSlinky.jqueryDotPin.jqueryDotPinMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

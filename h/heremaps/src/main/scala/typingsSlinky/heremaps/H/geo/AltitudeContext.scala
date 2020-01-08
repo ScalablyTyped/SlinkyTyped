@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.geo
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,14 +42,28 @@ object AltitudeContext extends js.Object {
   @js.native
   sealed trait undefined extends AltitudeContext
   
-  /* 1 */ val GL: typingsSlinky.heremaps.H.geo.AltitudeContext.GL with Double = js.native
-  /* 2 */ val OL: typingsSlinky.heremaps.H.geo.AltitudeContext.OL with Double = js.native
-  /* 4 */ val SB: typingsSlinky.heremaps.H.geo.AltitudeContext.SB with Double = js.native
-  /* 3 */ val SL: typingsSlinky.heremaps.H.geo.AltitudeContext.SL with Double = js.native
-  /* 5 */ val WE: typingsSlinky.heremaps.H.geo.AltitudeContext.WE with Double = js.native
-  /* 6 */ val WG: typingsSlinky.heremaps.H.geo.AltitudeContext.WG with Double = js.native
-  /* 0 */ val undefined: typingsSlinky.heremaps.H.geo.AltitudeContext.undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AltitudeContext with Double] = js.native
+  /* 1 */ @js.native
+  object GL extends TopLevel[GL with Double]
+  
+  /* 2 */ @js.native
+  object OL extends TopLevel[OL with Double]
+  
+  /* 4 */ @js.native
+  object SB extends TopLevel[SB with Double]
+  
+  /* 3 */ @js.native
+  object SL extends TopLevel[SL with Double]
+  
+  /* 5 */ @js.native
+  object WE extends TopLevel[WE with Double]
+  
+  /* 6 */ @js.native
+  object WG extends TopLevel[WG with Double]
+  
+  /* 0 */ @js.native
+  object undefined extends TopLevel[undefined with Double]
+  
 }
 

@@ -1,13 +1,7 @@
 package typingsSlinky.jsts
 
-import typingsSlinky.jsts.jsts.geom.Coordinate
-import typingsSlinky.jsts.jsts.geom.Envelope
 import typingsSlinky.jsts.jsts.geom.Geometry
 import typingsSlinky.jsts.jsts.geom.GeometryFactory
-import typingsSlinky.jsts.jsts.geom.LineString
-import typingsSlinky.jsts.jsts.geom.LinearRing
-import typingsSlinky.jsts.jsts.geom.Point
-import typingsSlinky.jsts.jsts.geom.PrecisionModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1329,6 +1323,16 @@ object jsts extends js.Object {
         */
       def createLineString(coordinates: js.Array[Coordinate]): LineString = js.native
       /**
+        * Creates a LinearRing using the given Coordinates; a null or empty array
+        * will create an empty LinearRing. Consecutive points must not be equal.
+        *
+        * @param {Coordinate[]}
+        *          coordinates an array without null elements, or an empty array,
+        * or null.
+        * @return {LineString} A new LinearRing.
+        */
+      def createLinearRing(coordinates: js.Array[Coordinate]): LinearRing = js.native
+      /**
         * Creates a Point using the given Coordinate; a null Coordinate will create an
         * empty Geometry.
         *
@@ -1337,6 +1341,13 @@ object jsts extends js.Object {
         * @return {Point} A new Point.
         */
       def createPoint(coordinates: Coordinate): Point = js.native
+      /**
+        * Creates a Polygon using the given LinearRing.
+        *
+        * @param {LinearRing} A LinearRing constructed by coordinates.
+        * @return {Polygon} A new Polygon.
+        */
+      def createPolygon(shell: LinearRing, holes: js.Array[LinearRing]): Polygon = js.native
     }
     
     @js.native

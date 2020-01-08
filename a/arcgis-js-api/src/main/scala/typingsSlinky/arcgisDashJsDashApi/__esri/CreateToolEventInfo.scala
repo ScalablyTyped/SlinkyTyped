@@ -1,5 +1,7 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`cursor-update`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`vertex-add`
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +20,7 @@ object CreateToolEventInfo {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
-    `type`: String
+    `type`: `vertex-add`
   ): CreateToolEventInfo = {
     val __obj = js.Dynamic.literal(added = added.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -30,7 +32,7 @@ object CreateToolEventInfo {
     coordinates: js.Array[Double],
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
-    `type`: String
+    `type`: `cursor-update`
   ): CreateToolEventInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], coordinates = coordinates.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])

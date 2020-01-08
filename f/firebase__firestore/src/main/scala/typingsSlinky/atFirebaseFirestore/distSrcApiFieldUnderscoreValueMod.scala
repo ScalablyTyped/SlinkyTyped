@@ -1,9 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.atFirebaseFirestore.distSrcApiFieldUnderscoreValueMod.DeleteFieldValueImpl
-import typingsSlinky.atFirebaseFirestore.distSrcApiFieldUnderscoreValueMod.FieldValueImpl
-import typingsSlinky.atFirebaseFirestore.distSrcApiFieldUnderscoreValueMod.ServerTimestampFieldValueImpl
 import typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.FieldValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`

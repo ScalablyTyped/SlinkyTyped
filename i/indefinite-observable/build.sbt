@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "indefinite-observable"
-version := "2.0.1-cf6c36"
+version := "2.0.1-5a7f45"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

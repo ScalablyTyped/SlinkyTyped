@@ -1,7 +1,6 @@
 package typingsSlinky.imageminDashSvgo
 
 import typingsSlinky.imagemin.imageminMod.Plugin
-import typingsSlinky.imageminDashSvgo.imageminDashSvgoMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

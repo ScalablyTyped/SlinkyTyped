@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__preact
 
-Typings are for version 5.2.6
+Typings are for version 5.2.8
 
 ## Library description:
 Storybook for Preact: Develop Preact Component in isolation.
@@ -10,15 +10,15 @@ Storybook for Preact: Develop Preact Component in isolation.
 | ------------------ | :-------------: |
 | Full name          | @storybook/preact |
 | Keywords           | storybook |
-| # releases         | 88 |
+| # releases         | 303 |
 | # dependents       | 0 |
-| # downloads        | 9200 |
+| # downloads        | 63532 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/storybooks/storybook/tree/master/app/preact)
-- [Bugs](https://github.com/storybooks/storybook/issues)
-- [Repository](https://github.com/storybooks/storybook)
+- [Homepage](https://github.com/storybookjs/storybook/tree/master/app/preact)
+- [Bugs](https://github.com/storybookjs/storybook/issues)
+- [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Fpreact)
     
 

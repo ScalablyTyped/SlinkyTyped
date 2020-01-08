@@ -2,7 +2,7 @@ package typingsSlinky.awsDashLambda.awsDashLambdaMod
 
 import typingsSlinky.awsDashLambda.Anon_Executionid
 import typingsSlinky.awsDashLambda.awsDashLambdaStrings.`CodePipeline Pipeline Execution State Change`
-import typingsSlinky.awsDashLambda.awsDashLambdaStrings.awsDOTcodepipeline
+import typingsSlinky.awsDashLambda.awsDashLambdaStrings.awsDotcodepipeline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait CodePipelineCloudWatchPipelineEvent extends CodePipelineCloudWatchEvent {
   var id: String
   var region: String
   var resources: js.Array[String]
-  var source: awsDOTcodepipeline
+  var source: awsDotcodepipeline
   var time: String
   var version: String
 }
@@ -28,7 +28,7 @@ object CodePipelineCloudWatchPipelineEvent {
     id: String,
     region: String,
     resources: js.Array[String],
-    source: awsDOTcodepipeline,
+    source: awsDotcodepipeline,
     time: String,
     version: String
   ): CodePipelineCloudWatchPipelineEvent = {

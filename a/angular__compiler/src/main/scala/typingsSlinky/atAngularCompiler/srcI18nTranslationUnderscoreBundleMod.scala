@@ -6,7 +6,6 @@ import typingsSlinky.atAngularCompiler.srcI18nI18nUnderscoreAstMod.Message
 import typingsSlinky.atAngularCompiler.srcI18nI18nUnderscoreAstMod.Node
 import typingsSlinky.atAngularCompiler.srcI18nSerializersSerializerMod.PlaceholderMapper
 import typingsSlinky.atAngularCompiler.srcI18nSerializersSerializerMod.Serializer
-import typingsSlinky.atAngularCompiler.srcI18nTranslationUnderscoreBundleMod.TranslationBundle
 import typingsSlinky.atAngularCompiler.srcUtilMod.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,22 +56,52 @@ object EDenyReason extends js.Object {
   @js.native
   sealed trait UnknownText extends EDenyReason
   
-  /* 5 */ val Cheater: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.Cheater with Double = js.native
-  /* 2 */ val Generic: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.Generic with Double = js.native
-  /* 8 */ val IncompatibleAnticheat: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.IncompatibleAnticheat with Double = js.native
-  /* 10 */ val IncompatibleSoftware: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.IncompatibleSoftware with Double = js.native
-  /* 1 */ val InvalidVersion: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.InvalidVersion with Double = js.native
-  /* 6 */ val LoggedInElseWhere: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.LoggedInElseWhere with Double = js.native
-  /* 9 */ val MemoryCorruption: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.MemoryCorruption with Double = js.native
-  /* 4 */ val NoLicense: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.NoLicense with Double = js.native
-  /* 3 */ val NotLoggedOn: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.NotLoggedOn with Double = js.native
-  /* 12 */ val SteamConnectionError: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.SteamConnectionError with Double = js.native
-  /* 11 */ val SteamConnectionLost: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.SteamConnectionLost with Double = js.native
-  /* 15 */ val SteamOwnerLeftGuestUser: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.SteamOwnerLeftGuestUser with Double = js.native
-  /* 13 */ val SteamResponseTimedOut: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.SteamResponseTimedOut with Double = js.native
-  /* 14 */ val SteamValidationStalled: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.SteamValidationStalled with Double = js.native
-  /* 7 */ val UnknownText: typingsSlinky.steamDashClient.steamDashClientMod.EDenyReason.UnknownText with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EDenyReason with Double] = js.native
+  /* 5 */ @js.native
+  object Cheater extends TopLevel[Cheater with Double]
+  
+  /* 2 */ @js.native
+  object Generic extends TopLevel[Generic with Double]
+  
+  /* 8 */ @js.native
+  object IncompatibleAnticheat extends TopLevel[IncompatibleAnticheat with Double]
+  
+  /* 10 */ @js.native
+  object IncompatibleSoftware extends TopLevel[IncompatibleSoftware with Double]
+  
+  /* 1 */ @js.native
+  object InvalidVersion extends TopLevel[InvalidVersion with Double]
+  
+  /* 6 */ @js.native
+  object LoggedInElseWhere extends TopLevel[LoggedInElseWhere with Double]
+  
+  /* 9 */ @js.native
+  object MemoryCorruption extends TopLevel[MemoryCorruption with Double]
+  
+  /* 4 */ @js.native
+  object NoLicense extends TopLevel[NoLicense with Double]
+  
+  /* 3 */ @js.native
+  object NotLoggedOn extends TopLevel[NotLoggedOn with Double]
+  
+  /* 12 */ @js.native
+  object SteamConnectionError extends TopLevel[SteamConnectionError with Double]
+  
+  /* 11 */ @js.native
+  object SteamConnectionLost extends TopLevel[SteamConnectionLost with Double]
+  
+  /* 15 */ @js.native
+  object SteamOwnerLeftGuestUser extends TopLevel[SteamOwnerLeftGuestUser with Double]
+  
+  /* 13 */ @js.native
+  object SteamResponseTimedOut extends TopLevel[SteamResponseTimedOut with Double]
+  
+  /* 14 */ @js.native
+  object SteamValidationStalled extends TopLevel[SteamValidationStalled with Double]
+  
+  /* 7 */ @js.native
+  object UnknownText extends TopLevel[UnknownText with Double]
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialDialog
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.atMaterialDialog.utilMod.MDCFocusTrapFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

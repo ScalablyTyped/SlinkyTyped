@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ViewDashModule extends SharedApply_SvgIconProps657215518[default] {
+object ViewDashModule extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/action/view-module", JSImport.Default)
   @js.native
   object componentImport extends js.Object

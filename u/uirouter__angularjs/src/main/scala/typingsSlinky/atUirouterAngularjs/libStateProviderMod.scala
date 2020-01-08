@@ -1,7 +1,6 @@
 package typingsSlinky.atUirouterAngularjs
 
 import typingsSlinky.atUirouterAngularjs.libInterfaceMod.Ng1StateDeclaration
-import typingsSlinky.atUirouterAngularjs.libStateProviderMod.StateProvider
 import typingsSlinky.atUirouterCore.atUirouterCoreMod.StateRegistry
 import typingsSlinky.atUirouterCore.atUirouterCoreMod.StateService
 import typingsSlinky.atUirouterCore.libStateStateBuilderMod.BuilderFunction

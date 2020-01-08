@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashPopperDashTooltip
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashPopperDashTooltip.distTooltipTriggerMod.TooltipTrigger
 import typingsSlinky.reactDashPopperDashTooltip.distTypesMod.TooltipTriggerProps
 import typingsSlinky.reactDashPopperDashTooltip.distTypesMod.TooltipTriggerState
 import scala.scalajs.js

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FadeLoader extends SharedApply_LoaderHeightWidthRadiusProps_2080713858[default] {
+object FadeLoader extends SharedApply_LoaderHeightWidthRadiusProps_318945010[default] {
   @JSImport("react-spinners/FadeLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseContainerAdaptorContainerMod.AdaptorContainer
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IEmpty
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IPush
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._ISize

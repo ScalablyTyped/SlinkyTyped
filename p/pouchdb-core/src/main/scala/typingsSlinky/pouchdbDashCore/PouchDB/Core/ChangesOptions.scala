@@ -1,7 +1,7 @@
 package typingsSlinky.pouchdbDashCore.PouchDB.Core
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pouchdbDashCore.pouchdbDashCoreNumbers.`false`
+import typingsSlinky.pouchdbDashCore.pouchdbDashCoreBooleans.`false`
 import typingsSlinky.pouchdbDashCore.pouchdbDashCoreStrings.all_docs
 import typingsSlinky.pouchdbDashCore.pouchdbDashCoreStrings.main_only
 import typingsSlinky.pouchdbDashCore.pouchdbDashCoreStrings.now

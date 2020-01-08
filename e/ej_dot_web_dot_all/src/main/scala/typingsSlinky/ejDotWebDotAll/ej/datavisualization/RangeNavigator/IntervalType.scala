@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,28 @@ object IntervalType extends js.Object {
   @js.native
   sealed trait Years extends IntervalType
   
-  /* 4 */ val Days: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Days with Double = js.native
-  /* 5 */ val Hours: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Hours with Double = js.native
-  /* 6 */ val Minutes: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Minutes with Double = js.native
-  /* 2 */ val Months: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Months with Double = js.native
-  /* 1 */ val Quarters: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Quarters with Double = js.native
-  /* 3 */ val Weeks: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Weeks with Double = js.native
-  /* 0 */ val Years: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.IntervalType.Years with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IntervalType with Double] = js.native
+  /* 4 */ @js.native
+  object Days extends TopLevel[Days with Double]
+  
+  /* 5 */ @js.native
+  object Hours extends TopLevel[Hours with Double]
+  
+  /* 6 */ @js.native
+  object Minutes extends TopLevel[Minutes with Double]
+  
+  /* 2 */ @js.native
+  object Months extends TopLevel[Months with Double]
+  
+  /* 1 */ @js.native
+  object Quarters extends TopLevel[Quarters with Double]
+  
+  /* 3 */ @js.native
+  object Weeks extends TopLevel[Weeks with Double]
+  
+  /* 0 */ @js.native
+  object Years extends TopLevel[Years with Double]
+  
 }
 

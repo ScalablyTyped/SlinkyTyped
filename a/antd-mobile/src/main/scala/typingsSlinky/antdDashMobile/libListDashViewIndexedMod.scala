@@ -1,8 +1,6 @@
 package typingsSlinky.antdDashMobile
 
 import slinky.core.TagMod
-import typingsSlinky.antdDashMobile.libListDashViewIndexedMod.MIndexedList
-import typingsSlinky.antdDashMobile.libListDashViewIndexedMod.MIndexedListProps
 import typingsSlinky.antdDashMobile.libListDashViewPropsTypeMod.ListViewPropsType
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Component

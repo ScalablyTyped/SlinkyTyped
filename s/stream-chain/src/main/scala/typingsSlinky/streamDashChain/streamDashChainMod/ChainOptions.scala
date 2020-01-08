@@ -1,7 +1,6 @@
 package typingsSlinky.streamDashChain.streamDashChainMod
 
 import typingsSlinky.node.Anon_Chunk
-import typingsSlinky.node.Error
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.DuplexOptions
 import typingsSlinky.node.streamMod.Writable
@@ -22,34 +21,37 @@ object ChainOptions {
     defaultEncoding: String = null,
     destroy: js.ThisFunction2[
       /* this */ Duplex, 
-      /* error */ Error | Null, 
-      /* callback */ js.Function1[/* error */ Error | Null, Unit], 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ] = null,
     emitClose: js.UndefOr[Boolean] = js.undefined,
     encoding: String = null,
     `final`: js.ThisFunction1[
       (/* this */ Duplex) | (/* this */ Writable), 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     highWaterMark: Int | Double = null,
     objectMode: js.UndefOr[Boolean] = js.undefined,
     read: js.ThisFunction1[/* this */ Duplex, /* size */ Double, Unit] = null,
+    readableHighWaterMark: Int | Double = null,
     readableObjectMode: js.UndefOr[Boolean] = js.undefined,
     skipEvents: js.UndefOr[Boolean] = js.undefined,
+    writableCorked: Int | Double = null,
+    writableHighWaterMark: Int | Double = null,
     writableObjectMode: js.UndefOr[Boolean] = js.undefined,
     write: js.ThisFunction3[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunk */ js.Any, 
       /* encoding */ String, 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null,
     writev: js.ThisFunction2[
       (/* this */ Duplex) | (/* this */ Writable), 
       /* chunks */ js.Array[Anon_Chunk], 
-      /* callback */ js.Function1[js.UndefOr[Error | Null], Unit], 
+      /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null
   ): ChainOptions = {
@@ -65,8 +67,11 @@ object ChainOptions {
     if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
     if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
     if (!js.isUndefined(skipEvents)) __obj.updateDynamic("skipEvents")(skipEvents.asInstanceOf[js.Any])
+    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
+    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
     if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
     if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])

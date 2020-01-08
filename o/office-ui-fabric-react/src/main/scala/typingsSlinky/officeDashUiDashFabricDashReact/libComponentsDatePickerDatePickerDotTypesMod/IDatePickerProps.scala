@@ -15,7 +15,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunction
+import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
 import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
 import typingsSlinky.atUifabricUtilities.libBaseComponentDotTypesMod.IBaseProps
 import typingsSlinky.atUifabricUtilities.libCreateRefMod.IRefObject
@@ -27,6 +27,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTextFieldTextF
 import typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesDateValuesDateValuesMod.DayOfWeek
 import typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesDateValuesDateValuesMod.FirstWeekOfYear
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -47,6 +48,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -75,7 +77,6 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -223,7 +224,7 @@ trait IDatePickerProps
   /**
     * Call to provide customized styling that will layer on top of the variant rules.
     */
-  var styles: js.UndefOr[IStyleFunction[IDatePickerStyleProps, IDatePickerStyles]] = js.undefined
+  var styles: js.UndefOr[IStyleFunctionOrObject[IDatePickerStyleProps, IDatePickerStyles]] = js.undefined
   /**
     * Pass textField props to textField component.
     * Prop name is "textField" for compatiblity with upcoming slots work.
@@ -315,7 +316,7 @@ object IDatePickerProps {
     className: String = null,
     color: String = null,
     componentRef: IRefObject[IDatePicker] = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -447,7 +448,7 @@ object IDatePickerProps {
     spellCheck: js.UndefOr[Boolean] = js.undefined,
     strings: IDatePickerStrings = null,
     style: CSSProperties = null,
-    styles: IDatePickerStyleProps => Partial[IDatePickerStyles] = null,
+    styles: IStyleFunctionOrObject[IDatePickerStyleProps, IDatePickerStyles] = null,
     suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     tabIndex: Int | Double = null,
@@ -527,7 +528,7 @@ object IDatePickerProps {
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
@@ -659,7 +660,7 @@ object IDatePickerProps {
     if (!js.isUndefined(spellCheck)) __obj.updateDynamic("spellCheck")(spellCheck.asInstanceOf[js.Any])
     if (strings != null) __obj.updateDynamic("strings")(strings.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(js.Any.fromFunction1(styles))
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressContentEditableWarning)) __obj.updateDynamic("suppressContentEditableWarning")(suppressContentEditableWarning.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])

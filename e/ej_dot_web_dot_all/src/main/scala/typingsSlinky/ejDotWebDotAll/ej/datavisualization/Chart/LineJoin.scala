@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object LineJoin extends js.Object {
   @js.native
   sealed trait Round extends LineJoin
   
-  /* 1 */ val Bevel: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineJoin.Bevel with Double = js.native
-  /* 2 */ val Miter: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineJoin.Miter with Double = js.native
-  /* 0 */ val Round: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineJoin.Round with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LineJoin with Double] = js.native
+  /* 1 */ @js.native
+  object Bevel extends TopLevel[Bevel with Double]
+  
+  /* 2 */ @js.native
+  object Miter extends TopLevel[Miter with Double]
+  
+  /* 0 */ @js.native
+  object Round extends TopLevel[Round with Double]
+  
 }
 

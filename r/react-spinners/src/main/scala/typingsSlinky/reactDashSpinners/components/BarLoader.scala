@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BarLoader extends SharedApply_LoaderHeightWidthProps_1296458200[default] {
+object BarLoader extends SharedApply_LoaderHeightWidthProps1884589463[default] {
   @JSImport("react-spinners/BarLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

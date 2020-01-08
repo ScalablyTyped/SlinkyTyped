@@ -1,5 +1,6 @@
 package typingsSlinky.semanticDashUiDashReact
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesTabTabMod.TabComponent
@@ -18,6 +19,8 @@ object distCommonjsModulesTabMod extends js.Object {
     def this(props: TabProps, context: js.Any) = this()
   }
   
-  val default: TabComponent = js.native
+  @js.native
+  object default extends TopLevel[TabComponent]
+  
 }
 

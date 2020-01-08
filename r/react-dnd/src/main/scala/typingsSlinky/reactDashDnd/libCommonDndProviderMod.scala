@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashDnd
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactDashDnd.libCommonDndProviderMod.DndProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

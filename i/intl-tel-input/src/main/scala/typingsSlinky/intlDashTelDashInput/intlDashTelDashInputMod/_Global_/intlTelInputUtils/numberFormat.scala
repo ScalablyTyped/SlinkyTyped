@@ -1,5 +1,6 @@
 package typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object numberFormat extends js.Object {
   @js.native
   sealed trait RFC3966 extends numberFormat
   
-  /* 0 */ val E164: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.numberFormat.E164 with Double = js.native
-  /* 1 */ val INTERNATIONAL: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.numberFormat.INTERNATIONAL with Double = js.native
-  /* 2 */ val NATIONAL: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.numberFormat.NATIONAL with Double = js.native
-  /* 3 */ val RFC3966: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.numberFormat.RFC3966 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[numberFormat with Double] = js.native
+  /* 0 */ @js.native
+  object E164 extends TopLevel[E164 with Double]
+  
+  /* 1 */ @js.native
+  object INTERNATIONAL extends TopLevel[INTERNATIONAL with Double]
+  
+  /* 2 */ @js.native
+  object NATIONAL extends TopLevel[NATIONAL with Double]
+  
+  /* 3 */ @js.native
+  object RFC3966 extends TopLevel[RFC3966 with Double]
+  
 }
 

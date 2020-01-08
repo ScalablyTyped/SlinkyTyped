@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,24 +68,58 @@ object ShapeFontUnderlineStyle extends js.Object {
   @js.native
   sealed trait wavyHeavy extends ShapeFontUnderlineStyle
   
-  /* "Dash" */ val dash: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dash with String = js.native
-  /* "DashHeavy" */ val dashHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dashHeavy with String = js.native
-  /* "DashLong" */ val dashLong: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dashLong with String = js.native
-  /* "DashLongHeavy" */ val dashLongHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dashLongHeavy with String = js.native
-  /* "DotDash" */ val dotDash: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dotDash with String = js.native
-  /* "DotDashHeavy" */ val dotDashHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dotDashHeavy with String = js.native
-  /* "DotDotDash" */ val dotDotDash: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dotDotDash with String = js.native
-  /* "DotDotDashHeavy" */ val dotDotDashHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dotDotDashHeavy with String = js.native
-  /* "Dotted" */ val dotted: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dotted with String = js.native
-  /* "DottedHeavy" */ val dottedHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.dottedHeavy with String = js.native
-  /* "Double" */ val double: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.double with String = js.native
-  /* "Heavy" */ val heavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.heavy with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.none with String = js.native
-  /* "Single" */ val single: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.single with String = js.native
-  /* "Wavy" */ val wavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.wavy with String = js.native
-  /* "WavyDouble" */ val wavyDouble: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.wavyDouble with String = js.native
-  /* "WavyHeavy" */ val wavyHeavy: typingsSlinky.officeDashJs.Excel.ShapeFontUnderlineStyle.wavyHeavy with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeFontUnderlineStyle with String] = js.native
+  /* "Dash" */ @js.native
+  object dash extends TopLevel[dash with String]
+  
+  /* "DashHeavy" */ @js.native
+  object dashHeavy extends TopLevel[dashHeavy with String]
+  
+  /* "DashLong" */ @js.native
+  object dashLong extends TopLevel[dashLong with String]
+  
+  /* "DashLongHeavy" */ @js.native
+  object dashLongHeavy extends TopLevel[dashLongHeavy with String]
+  
+  /* "DotDash" */ @js.native
+  object dotDash extends TopLevel[dotDash with String]
+  
+  /* "DotDashHeavy" */ @js.native
+  object dotDashHeavy extends TopLevel[dotDashHeavy with String]
+  
+  /* "DotDotDash" */ @js.native
+  object dotDotDash extends TopLevel[dotDotDash with String]
+  
+  /* "DotDotDashHeavy" */ @js.native
+  object dotDotDashHeavy extends TopLevel[dotDotDashHeavy with String]
+  
+  /* "Dotted" */ @js.native
+  object dotted extends TopLevel[dotted with String]
+  
+  /* "DottedHeavy" */ @js.native
+  object dottedHeavy extends TopLevel[dottedHeavy with String]
+  
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "Heavy" */ @js.native
+  object heavy extends TopLevel[heavy with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Single" */ @js.native
+  object single extends TopLevel[single with String]
+  
+  /* "Wavy" */ @js.native
+  object wavy extends TopLevel[wavy with String]
+  
+  /* "WavyDouble" */ @js.native
+  object wavyDouble extends TopLevel[wavyDouble with String]
+  
+  /* "WavyHeavy" */ @js.native
+  object wavyHeavy extends TopLevel[wavyHeavy with String]
+  
 }
 

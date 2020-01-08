@@ -9,7 +9,6 @@ import typingsSlinky.samchon.protocolEntityEntityCollectionMod.EntityDequeCollec
 import typingsSlinky.samchon.protocolInvokeIProtocolMod.IProtocol
 import typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke
 import typingsSlinky.samchon.templatesExternalExternalSystemArrayMod.ExternalSystemArray
-import typingsSlinky.samchon.templatesExternalExternalSystemMod.ExternalSystem
 import typingsSlinky.samchon.templatesExternalExternalSystemRoleMod.ExternalSystemRole
 import typingsSlinky.tstl.containerDequeMod.Deque
 import typingsSlinky.tstl.containerDequeMod.Deque.Iterator
@@ -61,6 +60,7 @@ object templatesExternalExternalSystemMod extends js.Object {
       * @hidden
       */
     var system_array_ : js.Any = js.native
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def addEventListener(
       `type`: Type,
@@ -117,6 +117,7 @@ object templatesExternalExternalSystemMod extends js.Object {
       * ```
       */
     /* protected */ def destructor(): Unit = js.native
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def dispatchEvent(
       event: CollectionEvent[
@@ -129,7 +130,6 @@ object templatesExternalExternalSystemMod extends js.Object {
     /**
       * Test whether container is empty.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def empty(): Boolean = js.native
     /**
@@ -159,6 +159,7 @@ object templatesExternalExternalSystemMod extends js.Object {
       */
     @JSName("getSystemArray")
     def getSystemArray_SystemArray_ExternalSystemArrayExternalSystem_SystemArray[SystemArray /* <: ExternalSystemArray[ExternalSystem] */](): SystemArray = js.native
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def hasEventListener(`type`: Type): Boolean = js.native
     /**
@@ -186,6 +187,7 @@ object templatesExternalExternalSystemMod extends js.Object {
     /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[ExternalSystemRole] = js.native
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def removeEventListener(
       `type`: Type,
@@ -225,7 +227,6 @@ object templatesExternalExternalSystemMod extends js.Object {
     /**
       * Number of elements in the container.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def size(): Double = js.native
   }

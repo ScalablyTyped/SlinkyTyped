@@ -61,7 +61,7 @@ class Builder () extends js.Object {
     * to use.
     * @return {!Capabilities} The current capabilities for this builder.
     */
-  def getCapabilities(): Capabilities = js.native
+  def getCapabilities(): typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.Capabilities = js.native
   /**
     * @return {chrome.Options} the Chrome specific options currently configured
     *     for this builder.
@@ -236,6 +236,6 @@ class Builder () extends js.Object {
     * @return {!Builder} A self reference.
     */
   def withCapabilities(capabilities: js.Object): Builder = js.native
-  def withCapabilities(capabilities: Capabilities): Builder = js.native
+  def withCapabilities(capabilities: typingsSlinky.seleniumDashWebdriver.libCapabilitiesMod.Capabilities): Builder = js.native
 }
 

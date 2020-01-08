@@ -3,8 +3,6 @@ package typingsSlinky.protocDashPlugin
 import typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.SourceCodeInfo.Location.AsObject
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.protocDashPlugin.protocDashPluginMod.OutputFiles
-import typingsSlinky.protocDashPlugin.protocDashPluginMod.SimplePluginCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.atTestingDashLibraryDom
 
-import typingsSlinky.atTestingDashLibraryDom.atTestingDashLibraryDomNumbers.`false`
+import typingsSlinky.atTestingDashLibraryDom.atTestingDashLibraryDomBooleans.`false`
 import typingsSlinky.prettyDashFormat.prettyDashFormatMod.OptionsReceived
 import typingsSlinky.std.Element
 import typingsSlinky.std.HTMLDocument

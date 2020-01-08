@@ -3,7 +3,7 @@ package typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderMod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderNumbers.`false`
+import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderBooleans.`false`
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderStrings.environment
 import typingsSlinky.reactDashQrDashReader.reactDashQrDashReaderStrings.user
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.atEmberObject
 
-import typingsSlinky.atEmberObject.atEmberObjectNumbers.`true`
+import typingsSlinky.atEmberObject.atEmberObjectBooleans.`true`
 import typingsSlinky.atEmberObject.dashPrivateTypesMod.UnwrapComputedPropertyGetter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

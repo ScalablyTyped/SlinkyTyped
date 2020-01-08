@@ -1,6 +1,6 @@
 package typingsSlinky.atHapiInert.atHapiInertMod
 
-import typingsSlinky.atHapiInert.atHapiInertNumbers.`false`
+import typingsSlinky.atHapiInert.atHapiInertBooleans.`false`
 import typingsSlinky.atHapiInert.atHapiInertStrings.hash
 import typingsSlinky.atHapiInert.atHapiInertStrings.simple
 import scala.scalajs.js

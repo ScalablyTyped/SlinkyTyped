@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialIconDashButton
 
 import typingsSlinky.atMaterialBase.foundationMod.MDCFoundation
 import typingsSlinky.atMaterialIconDashButton.adapterMod.MDCIconButtonToggleAdapter
-import typingsSlinky.atMaterialIconDashButton.foundationMod.MDCIconButtonToggleFoundation
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

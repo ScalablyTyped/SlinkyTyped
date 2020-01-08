@@ -1,6 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.hid
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.chromeDashApps.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.hid.onDeviceAdded")
 @js.native
 object onDeviceAdded
-  extends TopLevel[
-      typingsSlinky.chromeDashApps.chrome.events.Event[js.Function1[/* device */ HidDeviceInfo, Unit]]
-    ]
+  extends TopLevel[Event[js.Function1[/* device */ HidDeviceInfo, Unit]]]
 

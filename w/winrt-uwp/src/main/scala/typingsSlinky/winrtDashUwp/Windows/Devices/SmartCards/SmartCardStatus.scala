@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object SmartCardStatus extends js.Object {
   @js.native
   sealed trait unresponsive extends SmartCardStatus
   
-  /* 0 */ val disconnected: typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards.SmartCardStatus.disconnected with Double = js.native
-  /* 3 */ val exclusive: typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards.SmartCardStatus.exclusive with Double = js.native
-  /* 1 */ val ready: typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards.SmartCardStatus.ready with Double = js.native
-  /* 2 */ val shared: typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards.SmartCardStatus.shared with Double = js.native
-  /* 4 */ val unresponsive: typingsSlinky.winrtDashUwp.Windows.Devices.SmartCards.SmartCardStatus.unresponsive with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SmartCardStatus with Double] = js.native
+  /* 0 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
+  /* 3 */ @js.native
+  object exclusive extends TopLevel[exclusive with Double]
+  
+  /* 1 */ @js.native
+  object ready extends TopLevel[ready with Double]
+  
+  /* 2 */ @js.native
+  object shared extends TopLevel[shared with Double]
+  
+  /* 4 */ @js.native
+  object unresponsive extends TopLevel[unresponsive with Double]
+  
 }
 

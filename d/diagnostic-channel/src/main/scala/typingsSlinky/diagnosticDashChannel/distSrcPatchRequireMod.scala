@@ -1,9 +1,6 @@
 package typingsSlinky.diagnosticDashChannel
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.diagnosticDashChannel.distSrcPatchRequireMod.IModulePatchMap
-import typingsSlinky.diagnosticDashChannel.distSrcPatchRequireMod.IModulePatcher
-import typingsSlinky.diagnosticDashChannel.distSrcPatchRequireMod.PatchFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

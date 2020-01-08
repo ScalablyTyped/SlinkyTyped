@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Text extends SharedApply_TextProps1543959589[default] {
+object Text extends SharedApply_TextProps446689590[default] {
   @JSImport("react-sketchapp/lib/components/Svg/Text", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,10 +41,16 @@ object ShapeTextVerticalOverflow extends js.Object {
   @js.native
   sealed trait overflow extends ShapeTextVerticalOverflow
   
-  /* "Clip" */ val clip: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextVerticalOverflow.clip with String = js.native
-  /* "Ellipsis" */ val ellipsis: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextVerticalOverflow.ellipsis with String = js.native
-  /* "Overflow" */ val overflow: typingsSlinky.officeDashJsDashPreview.Excel.ShapeTextVerticalOverflow.overflow with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeTextVerticalOverflow with String] = js.native
+  /* "Clip" */ @js.native
+  object clip extends TopLevel[clip with String]
+  
+  /* "Ellipsis" */ @js.native
+  object ellipsis extends TopLevel[ellipsis with String]
+  
+  /* "Overflow" */ @js.native
+  object overflow extends TopLevel[overflow with String]
+  
 }
 

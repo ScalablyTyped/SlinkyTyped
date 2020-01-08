@@ -14,7 +14,14 @@ trait GlobalHeaderProps extends js.Object {
   var isMobile: js.UndefOr[Boolean] = js.undefined
   var logo: js.UndefOr[TagMod[Any]] = js.undefined
   var menuHeaderRender: js.UndefOr[
-    WithFalse[js.Function2[/* logo */ TagMod[Any], /* title */ TagMod[Any], TagMod[Any]]]
+    WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[this.type], 
+        TagMod[Any]
+      ]
+    ]
   ] = js.undefined
   var menuRender: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any
@@ -32,7 +39,14 @@ object GlobalHeaderProps {
     collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
     isMobile: js.UndefOr[Boolean] = js.undefined,
     logo: TagMod[Any] = null,
-    menuHeaderRender: WithFalse[js.Function2[/* logo */ TagMod[Any], /* title */ TagMod[Any], TagMod[Any]]] = null,
+    menuHeaderRender: WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[GlobalHeaderProps], 
+        TagMod[Any]
+      ]
+    ] = null,
     menuRender: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any = null,
     onCollapse: /* collapsed */ Boolean => Unit = null,
     rightContentRender: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]] = null,

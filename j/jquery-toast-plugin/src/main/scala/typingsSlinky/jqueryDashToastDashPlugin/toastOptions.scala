@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryDashToastDashPlugin
 
-import typingsSlinky.jqueryDashToastDashPlugin.jqueryDashToastDashPluginNumbers.`false`
+import typingsSlinky.jqueryDashToastDashPlugin.jqueryDashToastDashPluginBooleans.`false`
 import typingsSlinky.jqueryDashToastDashPlugin.jqueryDashToastDashPluginStrings.`bottom-center`
 import typingsSlinky.jqueryDashToastDashPlugin.jqueryDashToastDashPluginStrings.`bottom-left`
 import typingsSlinky.jqueryDashToastDashPlugin.jqueryDashToastDashPluginStrings.`bottom-right`

@@ -1,7 +1,7 @@
 package typingsSlinky.rnDashFetchDashBlob.rnDashFetchDashBlobMod
 
 import org.scalajs.dom.raw.Event
-import typingsSlinky.rnDashFetchDashBlob.rnDashFetchDashBlobNumbers.`true`
+import typingsSlinky.rnDashFetchDashBlob.rnDashFetchDashBlobBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

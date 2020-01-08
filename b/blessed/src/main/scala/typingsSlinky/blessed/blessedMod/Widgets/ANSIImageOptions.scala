@@ -8,6 +8,7 @@ import typingsSlinky.blessed.blessedStrings.bottom
 import typingsSlinky.blessed.blessedStrings.center
 import typingsSlinky.blessed.blessedStrings.cpu
 import typingsSlinky.blessed.blessedStrings.left
+import typingsSlinky.blessed.blessedStrings.line
 import typingsSlinky.blessed.blessedStrings.mem
 import typingsSlinky.blessed.blessedStrings.middle
 import typingsSlinky.blessed.blessedStrings.right
@@ -78,7 +79,7 @@ object ANSIImageOptions {
     bg: String = null,
     bindings: js.Any = null,
     bold: String = null,
-    border: Border | typingsSlinky.blessed.blessedStrings.line | bg = null,
+    border: Border | line | bg = null,
     bottom: TPosition = null,
     ch: String = null,
     children: js.Array[Node] = null,

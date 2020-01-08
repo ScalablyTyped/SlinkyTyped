@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClearSearchButton
-  extends SharedApply_ButtonProps9298374[
+  extends SharedApply_ButtonProps_1635531571[
       typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.ClearSearchButton
     ] {
   @JSImport("react-bootstrap-table", "ClearSearchButton")

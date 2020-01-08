@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.datasets
 
+import typingsSlinky.mendixmodelsdk.distGenDatasetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
@@ -27,7 +28,7 @@ class DataSet protected ()
 @js.native
 object DataSet extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDatasetsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new DataSet unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.

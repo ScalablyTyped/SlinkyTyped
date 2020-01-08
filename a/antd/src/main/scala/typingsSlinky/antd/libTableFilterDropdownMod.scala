@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.libTableFilterDropdownMod.FilterMenu
 import typingsSlinky.antd.libTableInterfaceMod.ColumnFilterItem
 import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
 import typingsSlinky.antd.libTableInterfaceMod.FilterMenuProps

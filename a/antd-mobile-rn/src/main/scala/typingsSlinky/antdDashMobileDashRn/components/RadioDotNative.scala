@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadioDotNative extends SharedApply_RadioNativeProps_1979362302[default] {
+object RadioDotNative extends SharedApply_RadioNativeProps_307736242[default] {
   @JSImport("antd-mobile-rn/lib/radio/Radio.native", JSImport.Default)
   @js.native
   object componentImport extends js.Object

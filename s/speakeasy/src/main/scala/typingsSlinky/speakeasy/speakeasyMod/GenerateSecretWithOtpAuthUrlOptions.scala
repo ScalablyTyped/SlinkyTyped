@@ -1,6 +1,6 @@
 package typingsSlinky.speakeasy.speakeasyMod
 
-import typingsSlinky.speakeasy.speakeasyNumbers.`true`
+import typingsSlinky.speakeasy.speakeasyBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

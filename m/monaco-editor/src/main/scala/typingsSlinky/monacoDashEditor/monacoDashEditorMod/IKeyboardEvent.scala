@@ -2,7 +2,7 @@ package typingsSlinky.monacoDashEditor.monacoDashEditorMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
-import typingsSlinky.monacoDashEditor.monacoDashEditorNumbers.`true`
+import typingsSlinky.monacoDashEditor.monacoDashEditorBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

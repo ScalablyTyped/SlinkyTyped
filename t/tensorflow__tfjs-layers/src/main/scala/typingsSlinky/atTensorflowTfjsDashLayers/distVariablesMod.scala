@@ -7,7 +7,6 @@ import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.DataType
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank
 import typingsSlinky.atTensorflowTfjsDashLayers.distConstraintsMod.Constraint
 import typingsSlinky.atTensorflowTfjsDashLayers.distKerasUnderscoreFormatCommonMod.Shape
-import typingsSlinky.atTensorflowTfjsDashLayers.distVariablesMod.LayerVariable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

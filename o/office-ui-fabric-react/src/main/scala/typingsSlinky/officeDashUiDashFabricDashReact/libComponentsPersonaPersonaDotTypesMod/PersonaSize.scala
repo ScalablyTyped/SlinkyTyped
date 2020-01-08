@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -135,26 +136,64 @@ object PersonaSize extends js.Object {
   @js.native
   sealed trait tiny extends PersonaSize
   
-  /* 1 */ val extraExtraSmall: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.extraExtraSmall with Double = js.native
-  /* 6 */ val extraLarge: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.extraLarge with Double = js.native
-  /* 2 */ val extraSmall: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.extraSmall with Double = js.native
-  /* 5 */ val large: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.large with Double = js.native
-  /* 4 */ val regular: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.regular with Double = js.native
-  /* 9 */ val size10: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size10 with Double = js.native
-  /* 15 */ val size100: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size100 with Double = js.native
-  /* 18 */ val size120: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size120 with Double = js.native
-  /* 8 */ val size16: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size16 with Double = js.native
-  /* 10 */ val size24: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size24 with Double = js.native
-  /* 7 */ val size28: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size28 with Double = js.native
-  /* 11 */ val size32: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size32 with Double = js.native
-  /* 12 */ val size40: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size40 with Double = js.native
-  /* 13 */ val size48: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size48 with Double = js.native
-  /* 16 */ val size56: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size56 with Double = js.native
-  /* 14 */ val size72: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size72 with Double = js.native
-  /* 17 */ val size8: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.size8 with Double = js.native
-  /* 3 */ val small: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.small with Double = js.native
-  /* 0 */ val tiny: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPersonaPersonaDotTypesMod.PersonaSize.tiny with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PersonaSize with Double] = js.native
+  /* 1 */ @js.native
+  object extraExtraSmall extends TopLevel[extraExtraSmall with Double]
+  
+  /* 6 */ @js.native
+  object extraLarge extends TopLevel[extraLarge with Double]
+  
+  /* 2 */ @js.native
+  object extraSmall extends TopLevel[extraSmall with Double]
+  
+  /* 5 */ @js.native
+  object large extends TopLevel[large with Double]
+  
+  /* 4 */ @js.native
+  object regular extends TopLevel[regular with Double]
+  
+  /* 9 */ @js.native
+  object size10 extends TopLevel[size10 with Double]
+  
+  /* 15 */ @js.native
+  object size100 extends TopLevel[size100 with Double]
+  
+  /* 18 */ @js.native
+  object size120 extends TopLevel[size120 with Double]
+  
+  /* 8 */ @js.native
+  object size16 extends TopLevel[size16 with Double]
+  
+  /* 10 */ @js.native
+  object size24 extends TopLevel[size24 with Double]
+  
+  /* 7 */ @js.native
+  object size28 extends TopLevel[size28 with Double]
+  
+  /* 11 */ @js.native
+  object size32 extends TopLevel[size32 with Double]
+  
+  /* 12 */ @js.native
+  object size40 extends TopLevel[size40 with Double]
+  
+  /* 13 */ @js.native
+  object size48 extends TopLevel[size48 with Double]
+  
+  /* 16 */ @js.native
+  object size56 extends TopLevel[size56 with Double]
+  
+  /* 14 */ @js.native
+  object size72 extends TopLevel[size72 with Double]
+  
+  /* 17 */ @js.native
+  object size8 extends TopLevel[size8 with Double]
+  
+  /* 3 */ @js.native
+  object small extends TopLevel[small with Double]
+  
+  /* 0 */ @js.native
+  object tiny extends TopLevel[tiny with Double]
+  
 }
 

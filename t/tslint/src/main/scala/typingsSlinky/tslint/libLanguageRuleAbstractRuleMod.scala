@@ -1,6 +1,5 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.libLanguageRuleAbstractRuleMod.NoInfer
 import typingsSlinky.tslint.libLanguageRuleRuleMod.IOptions
 import typingsSlinky.tslint.libLanguageRuleRuleMod.IRule
 import typingsSlinky.tslint.libLanguageRuleRuleMod.IRuleMetadata

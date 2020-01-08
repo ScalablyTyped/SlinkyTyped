@@ -1,8 +1,8 @@
 package typingsSlinky.firebird.firebirdMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebird.firebirdNumbers.`false`
-import typingsSlinky.firebird.firebirdNumbers.`true`
+import typingsSlinky.firebird.firebirdBooleans.`false`
+import typingsSlinky.firebird.firebirdBooleans.`true`
 import typingsSlinky.firebird.firebirdStrings.all
 import scala.scalajs.js
 import scala.scalajs.js.`|`

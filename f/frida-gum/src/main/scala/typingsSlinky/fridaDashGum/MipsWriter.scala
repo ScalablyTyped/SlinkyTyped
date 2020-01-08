@@ -1,6 +1,5 @@
 package typingsSlinky.fridaDashGum
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

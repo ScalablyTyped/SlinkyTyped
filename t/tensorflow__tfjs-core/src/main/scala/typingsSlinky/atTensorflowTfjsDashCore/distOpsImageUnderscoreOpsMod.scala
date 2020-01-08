@@ -6,6 +6,7 @@ import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor1D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor2D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor3D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor4D
+import typingsSlinky.atTensorflowTfjsDashCore.distTensorUnderscoreTypesMod.NamedTensorMap
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TensorLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,6 +39,24 @@ object distOpsImageUnderscoreOpsMod extends js.Object {
     /* iouThreshold */ js.UndefOr[Double], 
     /* scoreThreshold */ js.UndefOr[Double], 
     js.Promise[Tensor1D]
+  ] = js.native
+  val nonMaxSuppressionWithScore: js.Function6[
+    /* boxes */ Tensor2D | TensorLike, 
+    /* scores */ Tensor1D | TensorLike, 
+    /* maxOutputSize */ Double, 
+    /* iouThreshold */ js.UndefOr[Double], 
+    /* scoreThreshold */ js.UndefOr[Double], 
+    /* softNmsSigma */ js.UndefOr[Double], 
+    NamedTensorMap
+  ] = js.native
+  val nonMaxSuppressionWithScoreAsync: js.Function6[
+    /* boxes */ Tensor2D | TensorLike, 
+    /* scores */ Tensor1D | TensorLike, 
+    /* maxOutputSize */ Double, 
+    /* iouThreshold */ js.UndefOr[Double], 
+    /* scoreThreshold */ js.UndefOr[Double], 
+    /* softNmsSigma */ js.UndefOr[Double], 
+    js.Promise[NamedTensorMap]
   ] = js.native
   @js.native
   object resizeBilinear extends js.Object {

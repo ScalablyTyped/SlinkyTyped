@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object TimeFrame extends js.Object {
   @js.native
   sealed trait Past extends TimeFrame
   
-  /* 1 */ val Current: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimeFrame.Current with Double = js.native
-  /* 2 */ val Future: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimeFrame.Future with Double = js.native
-  /* 0 */ val Past: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.TimeFrame.Past with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimeFrame with Double] = js.native
+  /* 1 */ @js.native
+  object Current extends TopLevel[Current with Double]
+  
+  /* 2 */ @js.native
+  object Future extends TopLevel[Future with Double]
+  
+  /* 0 */ @js.native
+  object Past extends TopLevel[Past with Double]
+  
 }
 

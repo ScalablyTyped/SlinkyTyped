@@ -1,6 +1,5 @@
 package typingsSlinky.applicationinsights
 
-import typingsSlinky.applicationinsights.outDeclarationsContractsGeneratedDataPointTypeMod.DataPointType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

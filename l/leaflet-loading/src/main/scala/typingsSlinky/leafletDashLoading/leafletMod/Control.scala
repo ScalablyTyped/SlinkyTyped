@@ -1,6 +1,5 @@
 package typingsSlinky.leafletDashLoading.leafletMod
 
-import typingsSlinky.leafletDashLoading.leafletMod.Control.Loading
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

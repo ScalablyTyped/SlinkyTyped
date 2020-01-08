@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ImageStyle extends js.Object {
   @js.native
   sealed trait SQUARE extends ImageStyle
   
-  /* 1 */ val CIRCLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.ImageStyle.CIRCLE with Double = js.native
-  /* 0 */ val SQUARE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.ImageStyle.SQUARE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ImageStyle with Double] = js.native
+  /* 1 */ @js.native
+  object CIRCLE extends TopLevel[CIRCLE with Double]
+  
+  /* 0 */ @js.native
+  object SQUARE extends TopLevel[SQUARE with Double]
+  
 }
 

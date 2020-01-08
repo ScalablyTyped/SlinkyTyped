@@ -1,7 +1,7 @@
 
 # Scala.js typings for xmldsigjs
 
-Typings are for version 2.0.26
+Typings are for version 2.0.27
 
 ## Library description:
 XMLDSIGjs provides an implementation of XMLDSIG in Typescript/Javascript based on WebCrypto
@@ -10,9 +10,9 @@ XMLDSIGjs provides an implementation of XMLDSIG in Typescript/Javascript based o
 | ------------------ | :-------------: |
 | Full name          | xmldsigjs |
 | Keywords           | xml, xmldsig, webcrypto, signature, rsa, ec |
-| # releases         | 15 |
-| # dependents       | 2 |
-| # downloads        | 3003 |
+| # releases         | 11 |
+| # dependents       | 3 |
+| # downloads        | 6816 |
 | # stars            | 0 |
 
 ## Links

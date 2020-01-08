@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeDashLanguageclient.libClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object State extends js.Object {
   @js.native
   sealed trait Stopped extends State
   
-  /* 2 */ val Running: typingsSlinky.vscodeDashLanguageclient.libClientMod.State.Running with Double = js.native
-  /* 3 */ val Starting: typingsSlinky.vscodeDashLanguageclient.libClientMod.State.Starting with Double = js.native
-  /* 1 */ val Stopped: typingsSlinky.vscodeDashLanguageclient.libClientMod.State.Stopped with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[State with Double] = js.native
+  /* 2 */ @js.native
+  object Running extends TopLevel[Running with Double]
+  
+  /* 3 */ @js.native
+  object Starting extends TopLevel[Starting with Double]
+  
+  /* 1 */ @js.native
+  object Stopped extends TopLevel[Stopped with Double]
+  
 }
 

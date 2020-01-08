@@ -1,7 +1,7 @@
 package typingsSlinky.connectDashHistoryDashApiDashFallback.connectDashHistoryDashApiDashFallbackMod
 
 import typingsSlinky.connectDashHistoryDashApiDashFallback.Fn_Message
-import typingsSlinky.connectDashHistoryDashApiDashFallback.connectDashHistoryDashApiDashFallbackNumbers.`true`
+import typingsSlinky.connectDashHistoryDashApiDashFallback.connectDashHistoryDashApiDashFallbackBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

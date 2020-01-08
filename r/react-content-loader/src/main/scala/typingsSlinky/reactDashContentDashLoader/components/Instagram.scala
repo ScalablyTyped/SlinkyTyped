@@ -4,8 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Instagram extends SharedApply_IContentLoaderProps_565519551 {
-  @JSImport("react-content-loader", "Instagram")
+object Instagram extends SharedApply_IContentLoaderProps1611409330 {
+  @JSImport("react-content-loader/dist/native", "Instagram")
   @js.native
   object componentImport extends js.Object
   

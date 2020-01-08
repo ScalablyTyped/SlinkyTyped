@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object DeleteOptions extends js.Object {
   @js.native
   sealed trait TestResults extends DeleteOptions
   
-  /* 31 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.All with Double = js.native
-  /* 8 */ val Details: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.Details with Double = js.native
-  /* 1 */ val DropLocation: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.DropLocation with Double = js.native
-  /* 4 */ val Label: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.Label with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.None with Double = js.native
-  /* 16 */ val Symbols: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.Symbols with Double = js.native
-  /* 2 */ val TestResults: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.DeleteOptions.TestResults with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeleteOptions with Double] = js.native
+  /* 31 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 8 */ @js.native
+  object Details extends TopLevel[Details with Double]
+  
+  /* 1 */ @js.native
+  object DropLocation extends TopLevel[DropLocation with Double]
+  
+  /* 4 */ @js.native
+  object Label extends TopLevel[Label with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 16 */ @js.native
+  object Symbols extends TopLevel[Symbols with Double]
+  
+  /* 2 */ @js.native
+  object TestResults extends TopLevel[TestResults with Double]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.googleDashGax.googleDashGaxMod.fallback.protobuf.util
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.protobufjs.protobufjsMod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 /** Error subclass indicating a protocol specifc error. */
 @JSImport("google-gax", "fallback.protobuf.util.ProtocolError")
 @js.native
-class ProtocolError[T /* <: typingsSlinky.protobufjs.protobufjsMod.Message[T] */] protected ()
+class ProtocolError[T /* <: Message[T] */] protected ()
   extends typingsSlinky.googleDashGax.buildSrcFallbackMod.protobuf.util.ProtocolError[T] {
   /**
     * Constructs a new protocol error.

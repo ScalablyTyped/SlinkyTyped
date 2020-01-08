@@ -5,11 +5,11 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.objectMod.ObjectEvent
-import typingsSlinky.ol.olStrings.`change:element`
-import typingsSlinky.ol.olStrings.`change:map`
-import typingsSlinky.ol.olStrings.`change:offset`
-import typingsSlinky.ol.olStrings.`change:position`
-import typingsSlinky.ol.olStrings.`change:positioning`
+import typingsSlinky.ol.olStrings.changeColonelement
+import typingsSlinky.ol.olStrings.changeColonmap
+import typingsSlinky.ol.olStrings.changeColonoffset
+import typingsSlinky.ol.olStrings.changeColonposition
+import typingsSlinky.ol.olStrings.changeColonpositioning
 import typingsSlinky.ol.overlayPositioningMod.OverlayPositioning
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.sizeMod.Size
@@ -47,25 +47,25 @@ trait Overlay
   /* protected */ def handlePositionChanged(): Unit = js.native
   /* protected */ def handlePositioningChanged(): Unit = js.native
   @JSName("on")
-  def on_changeelement(`type`: `change:element`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changeelement(`type`: changeColonelement, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changemap(`type`: `change:map`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changemap(`type`: changeColonmap, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changeoffset(`type`: `change:offset`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changeoffset(`type`: changeColonoffset, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changeposition(`type`: `change:position`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changeposition(`type`: changeColonposition, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changepositioning(`type`: `change:positioning`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changepositioning(`type`: changeColonpositioning, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changeelement(`type`: `change:element`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changeelement(`type`: changeColonelement, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changemap(`type`: `change:map`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changemap(`type`: changeColonmap, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changeoffset(`type`: `change:offset`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changeoffset(`type`: changeColonoffset, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changeposition(`type`: `change:position`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changeposition(`type`: changeColonposition, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changepositioning(`type`: `change:positioning`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changepositioning(`type`: changeColonpositioning, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   /* protected */ def panIntoView(): Unit = js.native
   /* protected */ def render(): Unit = js.native
   def setElement(): Unit = js.native
@@ -78,15 +78,15 @@ trait Overlay
   def setPositioning(positioning: OverlayPositioning): Unit = js.native
   /* protected */ def setVisible(visible: Boolean): Unit = js.native
   @JSName("un")
-  def un_changeelement(`type`: `change:element`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changeelement(`type`: changeColonelement, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changemap(`type`: `change:map`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changemap(`type`: changeColonmap, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changeoffset(`type`: `change:offset`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changeoffset(`type`: changeColonoffset, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changeposition(`type`: `change:position`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changeposition(`type`: changeColonposition, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changepositioning(`type`: `change:positioning`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changepositioning(`type`: changeColonpositioning, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   /* protected */ def updatePixelPosition(): Unit = js.native
   /* protected */ def updateRenderedPosition(pixel: Pixel): Unit = js.native
   /* protected */ def updateRenderedPosition(pixel: Pixel, mapSize: Size): Unit = js.native

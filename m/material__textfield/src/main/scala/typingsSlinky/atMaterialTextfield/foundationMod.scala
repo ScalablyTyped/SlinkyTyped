@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTextfield
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialTextfield.adapterMod.FoundationMapType
 import typingsSlinky.atMaterialTextfield.adapterMod.MDCTextFieldAdapter
-import typingsSlinky.atMaterialTextfield.foundationMod.MDCTextFieldFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

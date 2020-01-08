@@ -19,9 +19,5 @@ package object Handlebars {
     js.Any
   ]
   type Template[T] = TemplateDelegate[T] | String
-  type TemplateDelegate[T] = js.Function2[
-    /* context */ T, 
-    /* options */ js.UndefOr[typingsSlinky.handlebars.Handlebars.RuntimeOptions], 
-    String
-  ]
+  type TemplateDelegate[T] = js.Function2[/* context */ T, /* options */ js.UndefOr[RuntimeOptions], String]
 }

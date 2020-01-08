@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseMod.RNFirebase.perf
 
-import typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseNumbers.`false`
-import typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseNumbers.`true`
+import typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseBooleans.`false`
+import typingsSlinky.reactDashNativeDashFirebase.reactDashNativeDashFirebaseBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

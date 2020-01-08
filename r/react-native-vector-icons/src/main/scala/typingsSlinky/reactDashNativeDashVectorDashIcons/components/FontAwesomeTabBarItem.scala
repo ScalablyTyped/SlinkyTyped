@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FontAwesomeTabBarItem extends SharedApply_TabBarItemIOSProps929810654[TabBarItem] {
+object FontAwesomeTabBarItem extends SharedApply_TabBarItemIOSProps1445960788[TabBarItem] {
   @JSImport("react-native-vector-icons/FontAwesome", "default.TabBarItem")
   @js.native
   object componentImport extends js.Object

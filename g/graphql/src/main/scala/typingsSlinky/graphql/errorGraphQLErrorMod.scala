@@ -1,7 +1,6 @@
 package typingsSlinky.graphql
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.errorGraphQLErrorMod.GraphQLError
 import typingsSlinky.graphql.languageAstMod.ASTNode
 import typingsSlinky.graphql.languageLocationMod.SourceLocation
 import typingsSlinky.graphql.languageSourceMod.Source

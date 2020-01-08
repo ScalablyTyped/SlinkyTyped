@@ -2,7 +2,6 @@ package typingsSlinky.browserfs
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ApiError
-import typingsSlinky.browserfs.distNodeCoreFSMod.FS
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSCallback
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSOneArgCallback
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSThreeArgCallback

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object DeveloperMetadataLocationType extends js.Object {
   @js.native
   sealed trait SPREADSHEET extends DeveloperMetadataLocationType
   
-  /* 3 */ val COLUMN: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DeveloperMetadataLocationType.COLUMN with Double = js.native
-  /* 2 */ val ROW: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DeveloperMetadataLocationType.ROW with Double = js.native
-  /* 1 */ val SHEET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DeveloperMetadataLocationType.SHEET with Double = js.native
-  /* 0 */ val SPREADSHEET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.DeveloperMetadataLocationType.SPREADSHEET with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeveloperMetadataLocationType with Double] = js.native
+  /* 3 */ @js.native
+  object COLUMN extends TopLevel[COLUMN with Double]
+  
+  /* 2 */ @js.native
+  object ROW extends TopLevel[ROW with Double]
+  
+  /* 1 */ @js.native
+  object SHEET extends TopLevel[SHEET with Double]
+  
+  /* 0 */ @js.native
+  object SPREADSHEET extends TopLevel[SPREADSHEET with Double]
+  
 }
 

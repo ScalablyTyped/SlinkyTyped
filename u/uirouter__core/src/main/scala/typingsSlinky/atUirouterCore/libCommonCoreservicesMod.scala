@@ -3,10 +3,6 @@ package typingsSlinky.atUirouterCore
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atUirouterCore.libCommonCommonMod.IInjectable
 import typingsSlinky.atUirouterCore.libCommonCommonMod.Obj
-import typingsSlinky.atUirouterCore.libCommonCoreservicesMod.$InjectorLike
-import typingsSlinky.atUirouterCore.libCommonCoreservicesMod.$QLike
-import typingsSlinky.atUirouterCore.libCommonCoreservicesMod.$QLikeDeferred
-import typingsSlinky.atUirouterCore.libCommonCoreservicesMod.CoreServices
 import typingsSlinky.atUirouterCore.libInterfaceMod.Disposable
 import typingsSlinky.std.EventListener
 import scala.scalajs.js

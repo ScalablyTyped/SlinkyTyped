@@ -1,17 +1,12 @@
 package typingsSlinky.atFirebaseFirestore
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atFirebaseFirestore.distSrcApiTimestampMod.Timestamp
 import typingsSlinky.atFirebaseFirestore.distSrcCoreSnapshotUnderscoreVersionMod.SnapshotVersion
 import typingsSlinky.atFirebaseFirestore.distSrcModelDocumentMod.MaybeDocument
 import typingsSlinky.atFirebaseFirestore.distSrcModelDocumentUnderscoreKeyMod.DocumentKey
 import typingsSlinky.atFirebaseFirestore.distSrcModelFieldUnderscoreValueMod.FieldValue
 import typingsSlinky.atFirebaseFirestore.distSrcModelFieldUnderscoreValueMod.ObjectValue
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.FieldMask
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.FieldTransform
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.Mutation
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationResult
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationType
-import typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.Precondition
 import typingsSlinky.atFirebaseFirestore.distSrcModelPathMod.FieldPath
 import typingsSlinky.atFirebaseFirestore.distSrcModelTransformUnderscoreOperationMod.TransformOperation
 import typingsSlinky.atFirebaseFirestore.distSrcUtilSortedUnderscoreSetMod.SortedSet
@@ -275,12 +270,20 @@ object distSrcModelMutationMod extends js.Object {
     @js.native
     sealed trait Transform extends MutationType
     
-    /* 3 */ val Delete: typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationType.Delete with Double = js.native
-    /* 1 */ val Patch: typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationType.Patch with Double = js.native
-    /* 0 */ val Set: typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationType.Set with Double = js.native
-    /* 2 */ val Transform: typingsSlinky.atFirebaseFirestore.distSrcModelMutationMod.MutationType.Transform with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MutationType with Double] = js.native
+    /* 3 */ @js.native
+    object Delete extends TopLevel[Delete with Double]
+    
+    /* 1 */ @js.native
+    object Patch extends TopLevel[Patch with Double]
+    
+    /* 0 */ @js.native
+    object Set extends TopLevel[Set with Double]
+    
+    /* 2 */ @js.native
+    object Transform extends TopLevel[Transform with Double]
+    
   }
   
   /* static members */

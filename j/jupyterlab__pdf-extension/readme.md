@@ -10,15 +10,13 @@ JupyterLab - PDF Viewer
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/pdf-extension |
 | Keywords           | - |
-| # releases         | 33 |
+| # releases         | 55 |
 | # dependents       | 1 |
-| # downloads        | 568912 |
+| # downloads        | 737433 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fpdf-extension)
     
 

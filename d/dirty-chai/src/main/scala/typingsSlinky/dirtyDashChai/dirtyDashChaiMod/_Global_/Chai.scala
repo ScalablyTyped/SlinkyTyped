@@ -1,8 +1,6 @@
 package typingsSlinky.dirtyDashChai.dirtyDashChaiMod._Global_
 
 import typingsSlinky.chaiDashAsDashPromised.Chai.Eventually
-import typingsSlinky.dirtyDashChai.dirtyDashChaiMod._Global_.Chai.Assertion
-import typingsSlinky.dirtyDashChai.dirtyDashChaiMod._Global_.Chai.PromisedAssertion
 import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`

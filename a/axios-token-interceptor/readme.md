@@ -1,7 +1,7 @@
 
 # Scala.js typings for axios-token-interceptor
 
-Typings are for version 0.1
+Typings are for version 0.2
 
 ## Library description:
 An interceptor which makes it easier to work with tokens in [axios](https://github.com/mzabriskie/axios).
@@ -10,9 +10,9 @@ An interceptor which makes it easier to work with tokens in [axios](https://gith
 | ------------------ | :-------------: |
 | Full name          | axios-token-interceptor |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 2 |
-| # downloads        | 27210 |
+| # releases         | 2 |
+| # dependents       | 4 |
+| # downloads        | 65903 |
 | # stars            | 0 |
 
 ## Links

@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`nodeDOTk8sDOTio/v1alpha1`
-import typingsSlinky.atPulumiKubernetes.nodeV1alpha1RuntimeClassListMod.RuntimeClassList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.nodeDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.node.v1alpha1.RuntimeClass
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -38,7 +37,7 @@ object nodeV1alpha1RuntimeClassListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`nodeDOTk8sDOTio/v1alpha1`] = js.native
+    val apiVersion: Output[nodeDotk8sDotioSlashv1alpha1] = js.native
     /**
       * Items is a list of schema objects.
       */

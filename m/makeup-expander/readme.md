@@ -10,9 +10,9 @@ Creates the basic interactivity for an element that expands and collapses anothe
 | ------------------ | :-------------: |
 | Full name          | makeup-expander |
 | Keywords           | makeup, ebay, accessibility, a11y |
-| # releases         | 17 |
+| # releases         | 13 |
 | # dependents       | 1 |
-| # downloads        | 9341 |
+| # downloads        | 4007 |
 | # stars            | 0 |
 
 ## Links

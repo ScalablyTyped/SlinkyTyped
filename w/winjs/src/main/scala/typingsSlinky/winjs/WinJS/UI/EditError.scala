@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.UI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,11 +38,19 @@ object EditError extends js.Object {
   @js.native
   sealed trait notPermitted extends EditError
   
-  /* 1 */ val canceled: typingsSlinky.winjs.WinJS.UI.EditError.canceled with Double = js.native
-  /* 3 */ val noLongerMeaningful: typingsSlinky.winjs.WinJS.UI.EditError.noLongerMeaningful with Double = js.native
-  /* 0 */ val noResponse: typingsSlinky.winjs.WinJS.UI.EditError.noResponse with Double = js.native
-  /* 2 */ val notPermitted: typingsSlinky.winjs.WinJS.UI.EditError.notPermitted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EditError with Double] = js.native
+  /* 1 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 3 */ @js.native
+  object noLongerMeaningful extends TopLevel[noLongerMeaningful with Double]
+  
+  /* 0 */ @js.native
+  object noResponse extends TopLevel[noResponse with Double]
+  
+  /* 2 */ @js.native
+  object notPermitted extends TopLevel[notPermitted with Double]
+  
 }
 

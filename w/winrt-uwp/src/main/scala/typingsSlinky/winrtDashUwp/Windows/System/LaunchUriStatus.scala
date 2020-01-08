@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object LaunchUriStatus extends js.Object {
   @js.native
   sealed trait unknown extends LaunchUriStatus
   
-  /* 1 */ val appUnavailable: typingsSlinky.winrtDashUwp.Windows.System.LaunchUriStatus.appUnavailable with Double = js.native
-  /* 2 */ val protocolUnavailable: typingsSlinky.winrtDashUwp.Windows.System.LaunchUriStatus.protocolUnavailable with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.System.LaunchUriStatus.success with Double = js.native
-  /* 3 */ val unknown: typingsSlinky.winrtDashUwp.Windows.System.LaunchUriStatus.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LaunchUriStatus with Double] = js.native
+  /* 1 */ @js.native
+  object appUnavailable extends TopLevel[appUnavailable with Double]
+  
+  /* 2 */ @js.native
+  object protocolUnavailable extends TopLevel[protocolUnavailable with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 3 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

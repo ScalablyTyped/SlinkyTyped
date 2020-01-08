@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "frac"
-version := "1.1.2-67f0c7"
+version := "1.1.2-5f7db4"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

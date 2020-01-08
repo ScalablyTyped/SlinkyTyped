@@ -2,45 +2,47 @@ package typingsSlinky.astDashTypes.genBuildersMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.astDashTypes.Anon_Cooked
-import typingsSlinky.astDashTypes.astDashTypesStrings.`!==`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`!=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`!`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`%=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`%`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`&&`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`&=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`&`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`**`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`*=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`++`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`+=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`+`
+import typingsSlinky.astDashTypes.astDashTypesStrings.Ampersand
+import typingsSlinky.astDashTypes.astDashTypesStrings.AmpersandAmpersand
+import typingsSlinky.astDashTypes.astDashTypesStrings.AmpersandEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Asterisk
+import typingsSlinky.astDashTypes.astDashTypesStrings.AsteriskAsterisk
+import typingsSlinky.astDashTypes.astDashTypesStrings.AsteriskEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Equalssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.EqualssignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.EqualssignEqualssignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Exclamationmark
+import typingsSlinky.astDashTypes.astDashTypesStrings.ExclamationmarkEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.ExclamationmarkEqualssignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Greaterthansign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansignGreaterthansign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansignGreaterthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Lessthansign
+import typingsSlinky.astDashTypes.astDashTypesStrings.LessthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.LessthansignLessthansign
+import typingsSlinky.astDashTypes.astDashTypesStrings.LessthansignLessthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Percentsign
+import typingsSlinky.astDashTypes.astDashTypesStrings.PercentsignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Plussign
+import typingsSlinky.astDashTypes.astDashTypesStrings.PlussignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.PlussignPlussign
+import typingsSlinky.astDashTypes.astDashTypesStrings.QuestionmarkQuestionmark
+import typingsSlinky.astDashTypes.astDashTypesStrings.Slash
+import typingsSlinky.astDashTypes.astDashTypesStrings.SlashEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Tilde
+import typingsSlinky.astDashTypes.astDashTypesStrings.Verticalline
+import typingsSlinky.astDashTypes.astDashTypesStrings.VerticallineEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.VerticallineVerticalline
+import typingsSlinky.astDashTypes.astDashTypesStrings.^
 import typingsSlinky.astDashTypes.astDashTypesStrings.`--`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`-=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`-`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`/=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`/`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`<<=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`<<`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`<=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`<`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`===`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`==`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>>=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>>`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`??`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`^=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`_backtick^_backtick`
+import typingsSlinky.astDashTypes.astDashTypesStrings.`-Equalssign`
+import typingsSlinky.astDashTypes.astDashTypesStrings.`-_`
+import typingsSlinky.astDashTypes.astDashTypesStrings.`^Equalssign`
 import typingsSlinky.astDashTypes.astDashTypesStrings.`type`
 import typingsSlinky.astDashTypes.astDashTypesStrings.`var`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`|=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`||`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`~`
 import typingsSlinky.astDashTypes.astDashTypesStrings.const
 import typingsSlinky.astDashTypes.astDashTypesStrings.constructor
 import typingsSlinky.astDashTypes.astDashTypesStrings.delete
@@ -898,12 +900,12 @@ trait builders
   def arrowFunctionExpression(params: js.Array[PatternKind], body: ExpressionKind): ArrowFunctionExpression = js.native
   def arrowFunctionExpression(params: js.Array[PatternKind], body: ExpressionKind, expression: Boolean): ArrowFunctionExpression = js.native
   def assignmentExpression(
-    operator: `=` | `+=` | `-=` | `*=` | `/=` | `%=` | `<<=` | `>>=` | `>>>=` | `|=` | `^=` | `&=`,
+    operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign,
     left: MemberExpressionKind,
     right: ExpressionKind
   ): AssignmentExpression = js.native
   def assignmentExpression(
-    operator: `=` | `+=` | `-=` | `*=` | `/=` | `%=` | `<<=` | `>>=` | `>>>=` | `|=` | `^=` | `&=`,
+    operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign,
     left: PatternKind,
     right: ExpressionKind
   ): AssignmentExpression = js.native
@@ -915,7 +917,7 @@ trait builders
   def bigIntLiteral(value: String): BigIntLiteral = js.native
   def bigIntLiteral(value: Double): BigIntLiteral = js.native
   def binaryExpression(
-    operator: `==` | `!=` | `===` | `!==` | `<` | `<=` | `>` | `>=` | `<<` | `>>` | `>>>` | `+` | `-` | typingsSlinky.astDashTypes.astDashTypesStrings.`*` | `/` | `%` | `**` | `&` | typingsSlinky.astDashTypes.astDashTypesStrings.`|` | `_backtick^_backtick` | in | instanceof,
+    operator: EqualssignEqualssign | ExclamationmarkEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | Greaterthansign | GreaterthansignEqualssign | LessthansignLessthansign | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | Plussign | `-_` | Asterisk | Slash | Percentsign | AsteriskAsterisk | Ampersand | Verticalline | ^  | in | instanceof,
     left: ExpressionKind,
     right: ExpressionKind
   ): BinaryExpression = js.native
@@ -1465,9 +1467,9 @@ trait builders
   def literal(value: Boolean): Literal = js.native
   def literal(value: Double): Literal = js.native
   def literal(value: RegExp): Literal = js.native
-  def logicalExpression(operator: `&&`, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
-  def logicalExpression(operator: `??`, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
-  def logicalExpression(operator: `||`, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
+  def logicalExpression(operator: AmpersandAmpersand, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
+  def logicalExpression(operator: QuestionmarkQuestionmark, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
+  def logicalExpression(operator: VerticallineVerticalline, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def memberExpression(`object`: ExpressionKind, property: ExpressionKind): MemberExpression = js.native
   def memberExpression(`object`: ExpressionKind, property: ExpressionKind, computed: Boolean): MemberExpression = js.native
   def memberExpression(`object`: ExpressionKind, property: IdentifierKind): MemberExpression = js.native
@@ -1896,14 +1898,14 @@ trait builders
   @JSName("typeParameter")
   def typeParameter_plus(name: String, variance: plus, bound: TypeAnnotationKind): TypeParameter = js.native
   def typeofTypeAnnotation(argument: FlowTypeKind): TypeofTypeAnnotation = js.native
-  def unaryExpression(operator: `!`, argument: ExpressionKind): UnaryExpression = js.native
-  def unaryExpression(operator: `!`, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `+`, argument: ExpressionKind): UnaryExpression = js.native
-  def unaryExpression(operator: `+`, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `-`, argument: ExpressionKind): UnaryExpression = js.native
-  def unaryExpression(operator: `-`, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `~`, argument: ExpressionKind): UnaryExpression = js.native
-  def unaryExpression(operator: `~`, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Exclamationmark, argument: ExpressionKind): UnaryExpression = js.native
+  def unaryExpression(operator: Exclamationmark, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Plussign, argument: ExpressionKind): UnaryExpression = js.native
+  def unaryExpression(operator: Plussign, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Tilde, argument: ExpressionKind): UnaryExpression = js.native
+  def unaryExpression(operator: Tilde, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: `-_`, argument: ExpressionKind): UnaryExpression = js.native
+  def unaryExpression(operator: `-_`, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
   @JSName("unaryExpression")
   def unaryExpression_delete(operator: delete, argument: ExpressionKind): UnaryExpression = js.native
   @JSName("unaryExpression")
@@ -1917,7 +1919,7 @@ trait builders
   @JSName("unaryExpression")
   def unaryExpression_void(operator: void, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
   def unionTypeAnnotation(types: js.Array[FlowTypeKind]): UnionTypeAnnotation = js.native
-  def updateExpression(operator: `++`, argument: ExpressionKind, prefix: Boolean): UpdateExpression = js.native
+  def updateExpression(operator: PlussignPlussign, argument: ExpressionKind, prefix: Boolean): UpdateExpression = js.native
   def updateExpression(operator: `--`, argument: ExpressionKind, prefix: Boolean): UpdateExpression = js.native
   @JSName("variableDeclaration")
   def variableDeclaration_const(kind: const, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native

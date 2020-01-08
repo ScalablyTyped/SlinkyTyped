@@ -6,10 +6,6 @@ import typingsSlinky.titanium.Gradient
 import typingsSlinky.titanium.Point
 import typingsSlinky.titanium.Titanium.Blob
 import typingsSlinky.titanium.Titanium.Proxy
-import typingsSlinky.titanium.Titanium.UI.Android.CardView
-import typingsSlinky.titanium.Titanium.UI.Android.DrawerLayout
-import typingsSlinky.titanium.Titanium.UI.Android.ProgressIndicator
-import typingsSlinky.titanium.Titanium.UI.Android.SearchView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

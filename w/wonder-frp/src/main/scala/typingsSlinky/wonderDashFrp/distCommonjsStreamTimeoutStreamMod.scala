@@ -2,7 +2,6 @@ package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distCommonjsCoreSchedulerMod.Scheduler
 import typingsSlinky.wonderDashFrp.distCommonjsStreamBaseStreamMod.BaseStream
-import typingsSlinky.wonderDashFrp.distCommonjsStreamTimeoutStreamMod.TimeoutStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

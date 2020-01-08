@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object ParagraphAlignment extends js.Object {
   @js.native
   sealed trait UNSUPPORTED extends ParagraphAlignment
   
-  /* 2 */ val CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ParagraphAlignment.CENTER with Double = js.native
-  /* 3 */ val END: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ParagraphAlignment.END with Double = js.native
-  /* 4 */ val JUSTIFIED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ParagraphAlignment.JUSTIFIED with Double = js.native
-  /* 1 */ val START: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ParagraphAlignment.START with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ParagraphAlignment.UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ParagraphAlignment with Double] = js.native
+  /* 2 */ @js.native
+  object CENTER extends TopLevel[CENTER with Double]
+  
+  /* 3 */ @js.native
+  object END extends TopLevel[END with Double]
+  
+  /* 4 */ @js.native
+  object JUSTIFIED extends TopLevel[JUSTIFIED with Double]
+  
+  /* 1 */ @js.native
+  object START extends TopLevel[START with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
 }
 

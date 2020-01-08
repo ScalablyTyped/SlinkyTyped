@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InputItem
-  extends SharedApply_InputItemProps578299597[
+  extends SharedApply_InputItemProps1993893897[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.InputItem
     ] {
   @JSImport("@ant-design/react-native", "InputItem")

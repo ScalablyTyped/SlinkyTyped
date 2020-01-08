@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object DialAppLaunchResult extends js.Object {
   @js.native
   sealed trait notFound extends DialAppLaunchResult
   
-  /* 1 */ val failedToLaunch: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialAppLaunchResult.failedToLaunch with Double = js.native
-  /* 0 */ val launched: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialAppLaunchResult.launched with Double = js.native
-  /* 3 */ val networkFailure: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialAppLaunchResult.networkFailure with Double = js.native
-  /* 2 */ val notFound: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialAppLaunchResult.notFound with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DialAppLaunchResult with Double] = js.native
+  /* 1 */ @js.native
+  object failedToLaunch extends TopLevel[failedToLaunch with Double]
+  
+  /* 0 */ @js.native
+  object launched extends TopLevel[launched with Double]
+  
+  /* 3 */ @js.native
+  object networkFailure extends TopLevel[networkFailure with Double]
+  
+  /* 2 */ @js.native
+  object notFound extends TopLevel[notFound with Double]
+  
 }
 

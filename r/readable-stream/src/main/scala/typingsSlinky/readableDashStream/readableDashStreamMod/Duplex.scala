@@ -29,7 +29,6 @@ class Duplex ()
   val readableHighWaterMark: Double = js.native
   val readableLength: Double = js.native
   val readableObjectMode: Boolean = js.native
-  def _destroy(err: js.Error, callback: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
   def _read(): Unit = js.native
   def _read(size: Double): Unit = js.native
   @JSName("addListener")

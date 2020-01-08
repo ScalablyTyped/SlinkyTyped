@@ -1,7 +1,6 @@
 package typingsSlinky.k6
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.k6.metricsMod.Metric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

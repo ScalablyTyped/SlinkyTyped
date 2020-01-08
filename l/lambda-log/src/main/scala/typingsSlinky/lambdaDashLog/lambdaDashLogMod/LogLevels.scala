@@ -1,7 +1,7 @@
 package typingsSlinky.lambdaDashLog.lambdaDashLogMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.lambdaDashLog.lambdaDashLogNumbers.`false`
+import typingsSlinky.lambdaDashLog.lambdaDashLogBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

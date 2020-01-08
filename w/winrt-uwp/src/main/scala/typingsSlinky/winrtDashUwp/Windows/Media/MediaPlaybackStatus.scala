@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object MediaPlaybackStatus extends js.Object {
   @js.native
   sealed trait stopped extends MediaPlaybackStatus
   
-  /* 1 */ val changing: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackStatus.changing with Double = js.native
-  /* 0 */ val closed: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackStatus.closed with Double = js.native
-  /* 4 */ val paused: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackStatus.paused with Double = js.native
-  /* 3 */ val playing: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackStatus.playing with Double = js.native
-  /* 2 */ val stopped: typingsSlinky.winrtDashUwp.Windows.Media.MediaPlaybackStatus.stopped with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaPlaybackStatus with Double] = js.native
+  /* 1 */ @js.native
+  object changing extends TopLevel[changing with Double]
+  
+  /* 0 */ @js.native
+  object closed extends TopLevel[closed with Double]
+  
+  /* 4 */ @js.native
+  object paused extends TopLevel[paused with Double]
+  
+  /* 3 */ @js.native
+  object playing extends TopLevel[playing with Double]
+  
+  /* 2 */ @js.native
+  object stopped extends TopLevel[stopped with Double]
+  
 }
 

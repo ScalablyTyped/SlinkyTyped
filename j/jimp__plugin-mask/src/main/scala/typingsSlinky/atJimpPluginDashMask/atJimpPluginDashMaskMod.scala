@@ -2,7 +2,6 @@ package typingsSlinky.atJimpPluginDashMask
 
 import typingsSlinky.atJimpCore.typesEtcMod.ImageCallback
 import typingsSlinky.atJimpCore.typesJimpMod.Jimp
-import typingsSlinky.atJimpPluginDashMask.atJimpPluginDashMaskMod.Mask
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

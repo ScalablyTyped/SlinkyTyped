@@ -1,5 +1,6 @@
 package typingsSlinky.realm.Realm.Sync
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object NumericLogLevel extends js.Object {
   @js.native
   sealed trait Warn extends NumericLogLevel
   
-  /* 0 */ val All: typingsSlinky.realm.Realm.Sync.NumericLogLevel.All with Double = js.native
-  /* 2 */ val Debug: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Debug with Double = js.native
-  /* 3 */ val Detail: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Detail with Double = js.native
-  /* 6 */ val Error: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Error with Double = js.native
-  /* 7 */ val Fatal: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Fatal with Double = js.native
-  /* 4 */ val Info: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Info with Double = js.native
-  /* 8 */ val Off: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Off with Double = js.native
-  /* 1 */ val Trace: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Trace with Double = js.native
-  /* 5 */ val Warn: typingsSlinky.realm.Realm.Sync.NumericLogLevel.Warn with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NumericLogLevel with Double] = js.native
+  /* 0 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Debug extends TopLevel[Debug with Double]
+  
+  /* 3 */ @js.native
+  object Detail extends TopLevel[Detail with Double]
+  
+  /* 6 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 7 */ @js.native
+  object Fatal extends TopLevel[Fatal with Double]
+  
+  /* 4 */ @js.native
+  object Info extends TopLevel[Info with Double]
+  
+  /* 8 */ @js.native
+  object Off extends TopLevel[Off with Double]
+  
+  /* 1 */ @js.native
+  object Trace extends TopLevel[Trace with Double]
+  
+  /* 5 */ @js.native
+  object Warn extends TopLevel[Warn with Double]
+  
 }
 

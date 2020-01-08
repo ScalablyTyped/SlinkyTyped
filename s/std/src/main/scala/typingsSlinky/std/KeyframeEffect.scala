@@ -23,12 +23,12 @@ trait KeyframeEffect extends AnimationEffect {
 @js.native
 object KeyframeEffect
   extends Instantiable0[KeyframeEffect]
+     with Instantiable1[(/* target */ Element) | (/* source */ KeyframeEffect), KeyframeEffect]
      with Instantiable2[
       (/* target */ Element) | (/* target */ Null), 
       (/* keyframes */ js.Array[Keyframe]) | (/* keyframes */ PropertyIndexedKeyframes), 
       KeyframeEffect
     ]
-     with Instantiable1[(/* target */ Element) | (/* source */ KeyframeEffect), KeyframeEffect]
      with Instantiable3[
       (/* target */ Element) | (/* target */ Null), 
       (/* keyframes */ js.Array[Keyframe]) | (/* keyframes */ Null) | (/* keyframes */ PropertyIndexedKeyframes), 

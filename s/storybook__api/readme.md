@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__api
 
-Typings are for version 5.2.6
+Typings are for version 5.2.8
 
 ## Library description:
 Core Storybook API & Context
@@ -10,9 +10,9 @@ Core Storybook API & Context
 | ------------------ | :-------------: |
 | Full name          | @storybook/api |
 | Keywords           | storybook |
-| # releases         | 65 |
-| # dependents       | 14 |
-| # downloads        | 350964 |
+| # releases         | 245 |
+| # dependents       | 34 |
+| # downloads        | 20989929 |
 | # stars            | 0 |
 
 ## Links

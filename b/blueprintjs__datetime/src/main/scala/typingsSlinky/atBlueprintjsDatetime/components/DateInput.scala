@@ -7,7 +7,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.atBlueprintjsCore.libEsmCommonPropsMod.HTMLInputProps
 import typingsSlinky.atBlueprintjsCore.libEsmComponentsFormsInputGroupMod.IInputGroupProps
 import typingsSlinky.atBlueprintjsCore.libEsmComponentsPopoverPopoverMod.IPopoverProps
-import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeNumbers.`false`
+import typingsSlinky.atBlueprintjsDatetime.atBlueprintjsDatetimeBooleans.`false`
 import typingsSlinky.atBlueprintjsDatetime.libEsmDateInputMod.IDateInputProps
 import typingsSlinky.atBlueprintjsDatetime.libEsmDatePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.atBlueprintjsDatetime.libEsmShortcutsMod.IDatePickerShortcut

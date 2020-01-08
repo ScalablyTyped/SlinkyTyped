@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SmsDashFailed extends SharedApply_SvgIconProps657215518[default] {
+object SmsDashFailed extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/notification/sms-failed", JSImport.Default)
   @js.native
   object componentImport extends js.Object

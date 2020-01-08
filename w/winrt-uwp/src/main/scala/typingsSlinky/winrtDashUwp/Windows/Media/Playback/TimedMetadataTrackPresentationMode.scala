@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Playback
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object TimedMetadataTrackPresentationMode extends js.Object {
   @js.native
   sealed trait platformPresented extends TimedMetadataTrackPresentationMode
   
-  /* 2 */ val applicationPresented: typingsSlinky.winrtDashUwp.Windows.Media.Playback.TimedMetadataTrackPresentationMode.applicationPresented with Double = js.native
-  /* 0 */ val disabled: typingsSlinky.winrtDashUwp.Windows.Media.Playback.TimedMetadataTrackPresentationMode.disabled with Double = js.native
-  /* 1 */ val hidden: typingsSlinky.winrtDashUwp.Windows.Media.Playback.TimedMetadataTrackPresentationMode.hidden with Double = js.native
-  /* 3 */ val platformPresented: typingsSlinky.winrtDashUwp.Windows.Media.Playback.TimedMetadataTrackPresentationMode.platformPresented with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TimedMetadataTrackPresentationMode with Double] = js.native
+  /* 2 */ @js.native
+  object applicationPresented extends TopLevel[applicationPresented with Double]
+  
+  /* 0 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 1 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 3 */ @js.native
+  object platformPresented extends TopLevel[platformPresented with Double]
+  
 }
 

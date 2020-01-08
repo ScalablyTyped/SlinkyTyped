@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object BluetoothLEAdvertisementType extends js.Object {
   @js.native
   sealed trait scannableUndirected extends BluetoothLEAdvertisementType
   
-  /* 1 */ val connectableDirected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType.connectableDirected with Double = js.native
-  /* 0 */ val connectableUndirected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType.connectableUndirected with Double = js.native
-  /* 3 */ val nonConnectableUndirected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType.nonConnectableUndirected with Double = js.native
-  /* 4 */ val scanResponse: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType.scanResponse with Double = js.native
-  /* 2 */ val scannableUndirected: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType.scannableUndirected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BluetoothLEAdvertisementType with Double] = js.native
+  /* 1 */ @js.native
+  object connectableDirected extends TopLevel[connectableDirected with Double]
+  
+  /* 0 */ @js.native
+  object connectableUndirected extends TopLevel[connectableUndirected with Double]
+  
+  /* 3 */ @js.native
+  object nonConnectableUndirected extends TopLevel[nonConnectableUndirected with Double]
+  
+  /* 4 */ @js.native
+  object scanResponse extends TopLevel[scanResponse with Double]
+  
+  /* 2 */ @js.native
+  object scannableUndirected extends TopLevel[scannableUndirected with Double]
+  
 }
 

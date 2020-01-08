@@ -1,7 +1,7 @@
 package typingsSlinky.atPulumiPulumi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atPulumiPulumi.atPulumiPulumiNumbers.`true`
+import typingsSlinky.atPulumiPulumi.atPulumiPulumiBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

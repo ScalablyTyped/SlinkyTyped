@@ -1,8 +1,5 @@
 package typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin
 
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.libLinkedListMod.HeadNode
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.libLinkedListMod.LinkedListNode
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.libLinkedListMod.TailNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object reportType extends js.Object {
   @js.native
   sealed trait question extends reportType
   
-  /* 0 */ val bug: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.reportType.bug with Double = js.native
-  /* 1 */ val feedback: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.reportType.feedback with Double = js.native
-  /* 2 */ val question: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.reportType.question with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[reportType with Double] = js.native
+  /* 0 */ @js.native
+  object bug extends TopLevel[bug with Double]
+  
+  /* 1 */ @js.native
+  object feedback extends TopLevel[feedback with Double]
+  
+  /* 2 */ @js.native
+  object question extends TopLevel[question with Double]
+  
 }
 

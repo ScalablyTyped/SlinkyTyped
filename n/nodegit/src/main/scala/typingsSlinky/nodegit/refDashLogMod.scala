@@ -1,8 +1,6 @@
 package typingsSlinky.nodegit
 
 import typingsSlinky.nodegit.oidMod.Oid
-import typingsSlinky.nodegit.refDashLogMod.Reflog
-import typingsSlinky.nodegit.refDashLogMod.ReflogEntry
 import typingsSlinky.nodegit.repositoryMod.Repository
 import typingsSlinky.nodegit.signatureMod.Signature
 import scala.scalajs.js

@@ -1,6 +1,5 @@
 package typingsSlinky.pDashReduce
 
-import typingsSlinky.pDashReduce.pDashReduceMod.ReducerFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

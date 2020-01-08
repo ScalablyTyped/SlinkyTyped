@@ -1,8 +1,6 @@
 package typingsSlinky.atPulumiPulumi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atPulumiPulumi.assetArchiveMod.Archive
-import typingsSlinky.atPulumiPulumi.assetArchiveMod.AssetMap
 import typingsSlinky.atPulumiPulumi.assetAssetMod.Asset
 import scala.scalajs.js
 import scala.scalajs.js.`|`

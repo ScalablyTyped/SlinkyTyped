@@ -1,6 +1,6 @@
 package typingsSlinky.fluxDashStandardDashAction.fluxDashStandardDashActionMod
 
-import typingsSlinky.fluxDashStandardDashAction.fluxDashStandardDashActionNumbers.`true`
+import typingsSlinky.fluxDashStandardDashAction.fluxDashStandardDashActionBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +27,13 @@ object ActiveView extends js.Object {
   @js.native
   sealed trait Read extends ActiveView
   
-  /* 1 */ val Edit: typingsSlinky.officeDashJsDashPreview.Office.ActiveView.Edit with Double = js.native
-  /* 0 */ val Read: typingsSlinky.officeDashJsDashPreview.Office.ActiveView.Read with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ActiveView with Double] = js.native
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 0 */ @js.native
+  object Read extends TopLevel[Read with Double]
+  
 }
 

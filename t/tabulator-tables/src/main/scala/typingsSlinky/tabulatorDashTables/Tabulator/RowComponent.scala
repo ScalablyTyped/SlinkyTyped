@@ -1,7 +1,7 @@
 package typingsSlinky.tabulatorDashTables.Tabulator
 
 import typingsSlinky.std.HTMLElement
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`false`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

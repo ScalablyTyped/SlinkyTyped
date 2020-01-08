@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ChartTitlePosition extends js.Object {
   @js.native
   sealed trait top extends ChartTitlePosition
   
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJsDashPreview.Excel.ChartTitlePosition.automatic with String = js.native
-  /* "Bottom" */ val bottom: typingsSlinky.officeDashJsDashPreview.Excel.ChartTitlePosition.bottom with String = js.native
-  /* "Left" */ val left: typingsSlinky.officeDashJsDashPreview.Excel.ChartTitlePosition.left with String = js.native
-  /* "Right" */ val right: typingsSlinky.officeDashJsDashPreview.Excel.ChartTitlePosition.right with String = js.native
-  /* "Top" */ val top: typingsSlinky.officeDashJsDashPreview.Excel.ChartTitlePosition.top with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartTitlePosition with String] = js.native
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "Bottom" */ @js.native
+  object bottom extends TopLevel[bottom with String]
+  
+  /* "Left" */ @js.native
+  object left extends TopLevel[left with String]
+  
+  /* "Right" */ @js.native
+  object right extends TopLevel[right with String]
+  
+  /* "Top" */ @js.native
+  object top extends TopLevel[top with String]
+  
 }
 

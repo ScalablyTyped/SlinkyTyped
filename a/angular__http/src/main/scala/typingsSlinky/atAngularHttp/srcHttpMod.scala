@@ -1,7 +1,6 @@
 package typingsSlinky.atAngularHttp
 
 import typingsSlinky.atAngularHttp.srcBaseUnderscoreRequestUnderscoreOptionsMod.RequestOptions
-import typingsSlinky.atAngularHttp.srcHttpMod.Http
 import typingsSlinky.atAngularHttp.srcInterfacesMod.ConnectionBackend
 import typingsSlinky.atAngularHttp.srcInterfacesMod.RequestOptionsArgs
 import typingsSlinky.atAngularHttp.srcStaticUnderscoreRequestMod.Request

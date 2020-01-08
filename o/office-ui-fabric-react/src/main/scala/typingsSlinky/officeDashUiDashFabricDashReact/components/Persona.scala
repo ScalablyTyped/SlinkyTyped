@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Persona extends SharedApply_IPersonaProps910047924 {
+object Persona extends SharedApply_IPersonaProps1002921275 {
   @JSImport("office-ui-fabric-react/lib/Persona", "Persona")
   @js.native
   object componentImport extends js.Object

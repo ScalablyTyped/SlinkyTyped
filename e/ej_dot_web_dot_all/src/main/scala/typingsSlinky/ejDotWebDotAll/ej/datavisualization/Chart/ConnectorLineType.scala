@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ConnectorLineType extends js.Object {
   @js.native
   sealed trait Line extends ConnectorLineType
   
-  /* 1 */ val Bezier: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ConnectorLineType.Bezier with Double = js.native
-  /* 0 */ val Line: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ConnectorLineType.Line with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConnectorLineType with Double] = js.native
+  /* 1 */ @js.native
+  object Bezier extends TopLevel[Bezier with Double]
+  
+  /* 0 */ @js.native
+  object Line extends TopLevel[Line with Double]
+  
 }
 

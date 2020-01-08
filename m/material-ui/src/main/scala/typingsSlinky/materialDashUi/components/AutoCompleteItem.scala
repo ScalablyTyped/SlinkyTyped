@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoCompleteItem extends SharedApply_MenuItemProps_211521854 {
+object AutoCompleteItem extends SharedApply_MenuItemProps_1525047197 {
   @JSImport("material-ui/AutoComplete", "default.Item")
   @js.native
   object componentImport extends js.Object

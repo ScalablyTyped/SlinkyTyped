@@ -3,7 +3,6 @@ package typingsSlinky.googleapisDashCommon
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.googleapisDashCommon.buildSrcApiMod.APIRequestContext
 import typingsSlinky.googleapisDashCommon.buildSrcApiMod.GlobalOptions
-import typingsSlinky.googleapisDashCommon.buildSrcEndpointMod.Target
 import typingsSlinky.googleapisDashCommon.buildSrcSchemaMod.Schema
 import typingsSlinky.googleapisDashCommon.buildSrcSchemaMod.SchemaResource
 import scala.scalajs.js

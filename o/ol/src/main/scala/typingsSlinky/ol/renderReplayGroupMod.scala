@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.renderReplayGroupMod.ReplayGroup
 import typingsSlinky.ol.renderReplayTypeMod.ReplayType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

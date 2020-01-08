@@ -11,8 +11,8 @@ React bindings for Styletron
 | Full name          | styletron-react |
 | Keywords           | - |
 | # releases         | 55 |
-| # dependents       | 15 |
-| # downloads        | 1099090 |
+| # dependents       | 33 |
+| # downloads        | 1417018 |
 | # stars            | 2 |
 
 ## Links

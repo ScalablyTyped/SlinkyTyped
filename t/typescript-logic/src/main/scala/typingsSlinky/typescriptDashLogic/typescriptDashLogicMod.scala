@@ -1,8 +1,7 @@
 package typingsSlinky.typescriptDashLogic
 
-import typingsSlinky.typescriptDashLogic.typescriptDashLogicMod.LogicalTable
-import typingsSlinky.typescriptDashLogic.typescriptDashLogicNumbers.`false`
-import typingsSlinky.typescriptDashLogic.typescriptDashLogicNumbers.`true`
+import typingsSlinky.typescriptDashLogic.typescriptDashLogicBooleans.`false`
+import typingsSlinky.typescriptDashLogic.typescriptDashLogicBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object typescriptDashLogicMod extends js.Object {
   /* Rewritten from type alias, can be one of: 
-    - typings.typescriptDashLogic.typescriptDashLogicNumbers.`true`
-    - typings.typescriptDashLogic.typescriptDashLogicNumbers.`false`
+    - typings.typescriptDashLogic.typescriptDashLogicBooleans.`true`
+    - typings.typescriptDashLogic.typescriptDashLogicBooleans.`false`
   */
   trait Not[X /* <: Boolean */] extends js.Object
   

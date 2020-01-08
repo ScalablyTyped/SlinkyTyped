@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "route-parser"
-version := "0.1-dt-20190717Z-7342f2"
+version := "0.1-dt-20190717Z-bbdf2a"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

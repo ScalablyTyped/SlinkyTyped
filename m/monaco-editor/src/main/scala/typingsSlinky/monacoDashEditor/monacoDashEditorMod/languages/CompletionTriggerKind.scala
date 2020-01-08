@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object CompletionTriggerKind extends js.Object {
   @js.native
   sealed trait TriggerForIncompleteCompletions extends CompletionTriggerKind
   
-  /* 0 */ val Invoke: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.CompletionTriggerKind.Invoke with Double = js.native
-  /* 1 */ val TriggerCharacter: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.CompletionTriggerKind.TriggerCharacter with Double = js.native
-  /* 2 */ val TriggerForIncompleteCompletions: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.CompletionTriggerKind.TriggerForIncompleteCompletions with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CompletionTriggerKind with Double] = js.native
+  /* 0 */ @js.native
+  object Invoke extends TopLevel[Invoke with Double]
+  
+  /* 1 */ @js.native
+  object TriggerCharacter extends TopLevel[TriggerCharacter with Double]
+  
+  /* 2 */ @js.native
+  object TriggerForIncompleteCompletions extends TopLevel[TriggerForIncompleteCompletions with Double]
+  
 }
 

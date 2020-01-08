@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ShapeType extends js.Object {
   @js.native
   sealed trait unsupported extends ShapeType
   
-  /* "GeometricShape" */ val geometricShape: typingsSlinky.officeDashJs.Excel.ShapeType.geometricShape with String = js.native
-  /* "Group" */ val group: typingsSlinky.officeDashJs.Excel.ShapeType.group with String = js.native
-  /* "Image" */ val image: typingsSlinky.officeDashJs.Excel.ShapeType.image with String = js.native
-  /* "Line" */ val line: typingsSlinky.officeDashJs.Excel.ShapeType.line with String = js.native
-  /* "Unsupported" */ val unsupported: typingsSlinky.officeDashJs.Excel.ShapeType.unsupported with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ShapeType with String] = js.native
+  /* "GeometricShape" */ @js.native
+  object geometricShape extends TopLevel[geometricShape with String]
+  
+  /* "Group" */ @js.native
+  object group extends TopLevel[group with String]
+  
+  /* "Image" */ @js.native
+  object image extends TopLevel[image with String]
+  
+  /* "Line" */ @js.native
+  object line extends TopLevel[line with String]
+  
+  /* "Unsupported" */ @js.native
+  object unsupported extends TopLevel[unsupported with String]
+  
 }
 

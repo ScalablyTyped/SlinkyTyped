@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object ExtensionStatsAggregateType extends js.Object {
   @js.native
   sealed trait Daily extends ExtensionStatsAggregateType
   
-  /* 1 */ val Daily: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionStatsAggregateType.Daily with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionStatsAggregateType with Double] = js.native
+  /* 1 */ @js.native
+  object Daily extends TopLevel[Daily with Double]
+  
 }
 

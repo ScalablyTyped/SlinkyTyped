@@ -1,6 +1,5 @@
 package typingsSlinky.keya
 
-import typingsSlinky.keya.outBrowserLocalhostMod.LocalStoreStore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

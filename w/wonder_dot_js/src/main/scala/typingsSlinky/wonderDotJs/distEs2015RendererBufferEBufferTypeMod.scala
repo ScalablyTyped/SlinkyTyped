@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +34,29 @@ object distEs2015RendererBufferEBufferTypeMod extends js.Object {
     @js.native
     sealed trait UNSIGNED_SHORT extends EBufferType
     
-    /* 0 */ val BYTE: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.BYTE with Double = js.native
-    /* 6 */ val FLOAT: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.FLOAT with Double = js.native
-    /* 4 */ val INT: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.INT with Double = js.native
-    /* 2 */ val SHORT: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.SHORT with Double = js.native
-    /* 1 */ val UNSIGNED_BYTE: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.UNSIGNED_BYTE with Double = js.native
-    /* 5 */ val UNSIGNED_INT: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.UNSIGNED_INT with Double = js.native
-    /* 3 */ val UNSIGNED_SHORT: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferTypeMod.EBufferType.UNSIGNED_SHORT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EBufferType with Double] = js.native
+    /* 0 */ @js.native
+    object BYTE extends TopLevel[BYTE with Double]
+    
+    /* 6 */ @js.native
+    object FLOAT extends TopLevel[FLOAT with Double]
+    
+    /* 4 */ @js.native
+    object INT extends TopLevel[INT with Double]
+    
+    /* 2 */ @js.native
+    object SHORT extends TopLevel[SHORT with Double]
+    
+    /* 1 */ @js.native
+    object UNSIGNED_BYTE extends TopLevel[UNSIGNED_BYTE with Double]
+    
+    /* 5 */ @js.native
+    object UNSIGNED_INT extends TopLevel[UNSIGNED_INT with Double]
+    
+    /* 3 */ @js.native
+    object UNSIGNED_SHORT extends TopLevel[UNSIGNED_SHORT with Double]
+    
   }
   
 }

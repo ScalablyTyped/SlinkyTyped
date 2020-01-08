@@ -1,5 +1,6 @@
 package typingsSlinky.jsDashClipper.ClipperLib
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object Protects extends js.Object {
   @js.native
   sealed trait ipRight extends Protects
   
-  /* 3 */ val ipBoth: typingsSlinky.jsDashClipper.ClipperLib.Protects.ipBoth with Double = js.native
-  /* 1 */ val ipLeft: typingsSlinky.jsDashClipper.ClipperLib.Protects.ipLeft with Double = js.native
-  /* 0 */ val ipNone: typingsSlinky.jsDashClipper.ClipperLib.Protects.ipNone with Double = js.native
-  /* 2 */ val ipRight: typingsSlinky.jsDashClipper.ClipperLib.Protects.ipRight with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Protects with Double] = js.native
+  /* 3 */ @js.native
+  object ipBoth extends TopLevel[ipBoth with Double]
+  
+  /* 1 */ @js.native
+  object ipLeft extends TopLevel[ipLeft with Double]
+  
+  /* 0 */ @js.native
+  object ipNone extends TopLevel[ipNone with Double]
+  
+  /* 2 */ @js.native
+  object ipRight extends TopLevel[ipRight with Double]
+  
 }
 

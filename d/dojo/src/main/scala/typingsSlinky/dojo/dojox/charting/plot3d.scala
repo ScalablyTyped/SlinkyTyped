@@ -1,6 +1,5 @@
 package typingsSlinky.dojo.dojox.charting
 
-import typingsSlinky.dojo.dojox.charting.plot3d.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

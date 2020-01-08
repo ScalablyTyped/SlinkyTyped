@@ -3,6 +3,7 @@ package typingsSlinky.reactDashCalendarDashTimeline.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.CustomHeaderProps
 import typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.Unit
@@ -38,6 +39,12 @@ object CustomHeader
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.CustomHeader[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.CustomHeader[js.Any]
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.CustomHeader[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CustomHeaderProps[js.Any]
 }
 

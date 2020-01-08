@@ -15,9 +15,8 @@ object ToggleVisibility
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: hidden */
-  def apply(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
+  def apply(hidden: Boolean, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal(hidden = hidden.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

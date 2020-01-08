@@ -1,6 +1,5 @@
 package typingsSlinky.request.requestMod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.caseless.caselessMod.Httpified
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.Agent
@@ -11,12 +10,13 @@ import typingsSlinky.node.streamMod.internal
 import typingsSlinky.node.urlMod.Url
 import typingsSlinky.request.Anon_Connect
 import typingsSlinky.request.Anon_Href
-import typingsSlinky.request.requestNumbers.`false`
-import typingsSlinky.request.requestNumbers.`true`
+import typingsSlinky.request.requestBooleans.`false`
+import typingsSlinky.request.requestBooleans.`true`
 import typingsSlinky.request.requestStrings.complete
 import typingsSlinky.request.requestStrings.data
 import typingsSlinky.request.requestStrings.error
 import typingsSlinky.request.requestStrings.pipe
+import typingsSlinky.request.requestStrings.request
 import typingsSlinky.request.requestStrings.response
 import typingsSlinky.request.requestStrings.socket
 import typingsSlinky.std.Error
@@ -55,7 +55,7 @@ trait Request
   var method: String = js.native
   var passphrase: js.UndefOr[String] = js.native
   var path: String = js.native
-  var pool: `false` | (StringDictionary[Agent | typingsSlinky.node.httpsMod.Agent]) = js.native
+  var pool: PoolOptions = js.native
   var port: js.UndefOr[Double] = js.native
   var postambleCRLF: js.UndefOr[Boolean] = js.native
   var preambleCRLF: js.UndefOr[Boolean] = js.native
@@ -112,10 +112,7 @@ trait Request
   @JSName("on")
   def on_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("on")
-  def on_request(
-    event: typingsSlinky.request.requestStrings.request,
-    listener: js.Function1[/* req */ ClientRequest, Unit]
-  ): this.type = js.native
+  def on_request(event: request, listener: js.Function1[/* req */ ClientRequest, Unit]): this.type = js.native
   @JSName("on")
   def on_response(event: response, listener: js.Function1[/* resp */ Response, Unit]): this.type = js.native
   @JSName("on")

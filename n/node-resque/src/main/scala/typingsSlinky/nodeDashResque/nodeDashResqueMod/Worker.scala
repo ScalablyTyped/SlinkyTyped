@@ -1,6 +1,6 @@
 package typingsSlinky.nodeDashResque.nodeDashResqueMod
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodeDashResque.nodeDashResqueStrings.cleaning_worker
 import typingsSlinky.nodeDashResque.nodeDashResqueStrings.end
 import typingsSlinky.nodeDashResque.nodeDashResqueStrings.error

@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialChips
 
 import typingsSlinky.atMaterialChips.chipAdapterMod.MDCChipAdapter
-import typingsSlinky.atMaterialChips.chipFoundationMod.MDCChipFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

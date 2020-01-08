@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCommon.atAngularCommonMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -110,21 +111,49 @@ object NumberSymbol extends js.Object {
   @js.native
   sealed trait TimeSeparator extends NumberSymbol
   
-  /* 12 */ val CurrencyDecimal: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.CurrencyDecimal with Double = js.native
-  /* 13 */ val CurrencyGroup: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.CurrencyGroup with Double = js.native
-  /* 0 */ val Decimal: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.Decimal with Double = js.native
-  /* 6 */ val Exponential: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.Exponential with Double = js.native
-  /* 1 */ val Group: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.Group with Double = js.native
-  /* 9 */ val Infinity: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.Infinity with Double = js.native
-  /* 2 */ val List: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.List with Double = js.native
-  /* 5 */ val MinusSign: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.MinusSign with Double = js.native
-  /* 10 */ val NaN: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.NaN with Double = js.native
-  /* 8 */ val PerMille: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.PerMille with Double = js.native
-  /* 3 */ val PercentSign: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.PercentSign with Double = js.native
-  /* 4 */ val PlusSign: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.PlusSign with Double = js.native
-  /* 7 */ val SuperscriptingExponent: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.SuperscriptingExponent with Double = js.native
-  /* 11 */ val TimeSeparator: typingsSlinky.atAngularCommon.atAngularCommonMod.NumberSymbol.TimeSeparator with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NumberSymbol with Double] = js.native
+  /* 12 */ @js.native
+  object CurrencyDecimal extends TopLevel[CurrencyDecimal with Double]
+  
+  /* 13 */ @js.native
+  object CurrencyGroup extends TopLevel[CurrencyGroup with Double]
+  
+  /* 0 */ @js.native
+  object Decimal extends TopLevel[Decimal with Double]
+  
+  /* 6 */ @js.native
+  object Exponential extends TopLevel[Exponential with Double]
+  
+  /* 1 */ @js.native
+  object Group extends TopLevel[Group with Double]
+  
+  /* 9 */ @js.native
+  object Infinity extends TopLevel[Infinity with Double]
+  
+  /* 2 */ @js.native
+  object List extends TopLevel[List with Double]
+  
+  /* 5 */ @js.native
+  object MinusSign extends TopLevel[MinusSign with Double]
+  
+  /* 10 */ @js.native
+  object NaN extends TopLevel[NaN with Double]
+  
+  /* 8 */ @js.native
+  object PerMille extends TopLevel[PerMille with Double]
+  
+  /* 3 */ @js.native
+  object PercentSign extends TopLevel[PercentSign with Double]
+  
+  /* 4 */ @js.native
+  object PlusSign extends TopLevel[PlusSign with Double]
+  
+  /* 7 */ @js.native
+  object SuperscriptingExponent extends TopLevel[SuperscriptingExponent with Double]
+  
+  /* 11 */ @js.native
+  object TimeSeparator extends TopLevel[TimeSeparator with Double]
+  
 }
 

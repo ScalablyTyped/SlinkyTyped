@@ -1,6 +1,8 @@
 package typingsSlinky.sharedb.sharedbMod.middleware
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.sharedb.libAgentMod.^
+import typingsSlinky.sharedb.sharedbMod.sharedb
 import typingsSlinky.sharedb.sharedbStrings.afterSubmit
 import typingsSlinky.sharedb.sharedbStrings.apply
 import typingsSlinky.sharedb.sharedbStrings.commit
@@ -24,8 +26,8 @@ object ReceiveContext {
   @scala.inline
   def apply(
     action: afterSubmit | apply | commit | connect | doc | op | query | readSnapshots | receive | reply | submit,
-    agent: typingsSlinky.sharedb.libAgentMod.^,
-    backend: typingsSlinky.sharedb.sharedbMod.sharedb,
+    agent: ^,
+    backend: sharedb,
     data: StringDictionary[js.Any]
   ): ReceiveContext = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], agent = agent.asInstanceOf[js.Any], backend = backend.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any])

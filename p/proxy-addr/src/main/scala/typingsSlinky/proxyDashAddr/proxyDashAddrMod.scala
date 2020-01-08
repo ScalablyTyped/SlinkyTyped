@@ -1,8 +1,6 @@
 package typingsSlinky.proxyDashAddr
 
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.proxyDashAddr.proxyDashAddrMod.Address
-import typingsSlinky.proxyDashAddr.proxyDashAddrMod._Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

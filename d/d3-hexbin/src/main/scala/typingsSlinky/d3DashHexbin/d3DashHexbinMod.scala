@@ -1,7 +1,5 @@
 package typingsSlinky.d3DashHexbin
 
-import typingsSlinky.d3DashHexbin.d3DashHexbinMod.Hexbin
-import typingsSlinky.d3DashHexbin.d3DashHexbinMod.HexbinBin
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

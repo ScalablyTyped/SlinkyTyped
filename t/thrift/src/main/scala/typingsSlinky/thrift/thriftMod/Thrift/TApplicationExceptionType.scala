@@ -1,5 +1,6 @@
 package typingsSlinky.thrift.thriftMod.Thrift
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object TApplicationExceptionType extends js.Object {
   @js.native
   sealed trait WRONG_METHOD_NAME extends TApplicationExceptionType
   
-  /* 4 */ val BAD_SEQUENCE_ID: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.BAD_SEQUENCE_ID with Double = js.native
-  /* 6 */ val INTERNAL_ERROR: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.INTERNAL_ERROR with Double = js.native
-  /* 2 */ val INVALID_MESSAGE_TYPE: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.INVALID_MESSAGE_TYPE with Double = js.native
-  /* 9 */ val INVALID_PROTOCOL: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.INVALID_PROTOCOL with Double = js.native
-  /* 8 */ val INVALID_TRANSFORM: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.INVALID_TRANSFORM with Double = js.native
-  /* 5 */ val MISSING_RESULT: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.MISSING_RESULT with Double = js.native
-  /* 7 */ val PROTOCOL_ERROR: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.PROTOCOL_ERROR with Double = js.native
-  /* 0 */ val UNKNOWN: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.UNKNOWN with Double = js.native
-  /* 1 */ val UNKNOWN_METHOD: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.UNKNOWN_METHOD with Double = js.native
-  /* 10 */ val UNSUPPORTED_CLIENT_TYPE: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.UNSUPPORTED_CLIENT_TYPE with Double = js.native
-  /* 3 */ val WRONG_METHOD_NAME: typingsSlinky.thrift.thriftMod.Thrift.TApplicationExceptionType.WRONG_METHOD_NAME with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TApplicationExceptionType with Double] = js.native
+  /* 4 */ @js.native
+  object BAD_SEQUENCE_ID extends TopLevel[BAD_SEQUENCE_ID with Double]
+  
+  /* 6 */ @js.native
+  object INTERNAL_ERROR extends TopLevel[INTERNAL_ERROR with Double]
+  
+  /* 2 */ @js.native
+  object INVALID_MESSAGE_TYPE extends TopLevel[INVALID_MESSAGE_TYPE with Double]
+  
+  /* 9 */ @js.native
+  object INVALID_PROTOCOL extends TopLevel[INVALID_PROTOCOL with Double]
+  
+  /* 8 */ @js.native
+  object INVALID_TRANSFORM extends TopLevel[INVALID_TRANSFORM with Double]
+  
+  /* 5 */ @js.native
+  object MISSING_RESULT extends TopLevel[MISSING_RESULT with Double]
+  
+  /* 7 */ @js.native
+  object PROTOCOL_ERROR extends TopLevel[PROTOCOL_ERROR with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with Double]
+  
+  /* 1 */ @js.native
+  object UNKNOWN_METHOD extends TopLevel[UNKNOWN_METHOD with Double]
+  
+  /* 10 */ @js.native
+  object UNSUPPORTED_CLIENT_TYPE extends TopLevel[UNSUPPORTED_CLIENT_TYPE with Double]
+  
+  /* 3 */ @js.native
+  object WRONG_METHOD_NAME extends TopLevel[WRONG_METHOD_NAME with Double]
+  
 }
 

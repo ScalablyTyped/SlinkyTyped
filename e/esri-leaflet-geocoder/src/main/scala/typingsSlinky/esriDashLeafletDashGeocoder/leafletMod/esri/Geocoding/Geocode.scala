@@ -1,8 +1,5 @@
 package typingsSlinky.esriDashLeafletDashGeocoder.leafletMod.esri.Geocoding
 
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.Service
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.Task
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.TaskOptions
 import typingsSlinky.esriDashLeafletDashGeocoder.Anon_Results
 import typingsSlinky.leaflet.leafletMod.LatLngBoundsExpression
 import typingsSlinky.leaflet.leafletMod.LatLngExpression
@@ -10,11 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("leaflet", "esri.Geocoding.Geocode")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Task * / any */ @JSImport("leaflet", "esri.Geocoding.Geocode")
 @js.native
-class Geocode () extends Task {
-  def this(options: Service) = this()
-  def this(options: TaskOptions) = this()
+class Geocode () extends js.Object {
+  def this(options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TaskOptions */ js.Any) = this()
   def address(text: String): this.type = js.native
   def category(text: String): this.type = js.native
   def city(text: String): this.type = js.native
@@ -49,7 +46,8 @@ class Geocode () extends Task {
 @js.native
 object geocode extends js.Object {
   def apply(): Geocode = js.native
-  def apply(options: Service): Geocode = js.native
-  def apply(options: TaskOptions): Geocode = js.native
+  def apply(
+    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TaskOptions */ js.Any
+  ): Geocode = js.native
 }
 

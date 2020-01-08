@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object Effect extends js.Object {
   @js.native
   sealed trait Slide extends Effect
   
-  /* 1 */ val Fade: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Effect.Fade with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Effect.None with Double = js.native
-  /* 2 */ val Slide: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.Effect.Slide with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Effect with Double] = js.native
+  /* 1 */ @js.native
+  object Fade extends TopLevel[Fade with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Slide extends TopLevel[Slide with Double]
+  
 }
 

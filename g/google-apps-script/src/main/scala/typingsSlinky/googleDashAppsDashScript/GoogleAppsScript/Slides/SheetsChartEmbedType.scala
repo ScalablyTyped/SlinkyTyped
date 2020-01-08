@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object SheetsChartEmbedType extends js.Object {
   @js.native
   sealed trait UNSUPPORTED extends SheetsChartEmbedType
   
-  /* 1 */ val IMAGE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.SheetsChartEmbedType.IMAGE with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.SheetsChartEmbedType.UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SheetsChartEmbedType with Double] = js.native
+  /* 1 */ @js.native
+  object IMAGE extends TopLevel[IMAGE with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
 }
 

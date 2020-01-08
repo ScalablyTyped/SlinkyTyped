@@ -1,7 +1,7 @@
 package typingsSlinky.diff.diffMod
 
-import typingsSlinky.diff.diffStrings.` `
-import typingsSlinky.diff.diffStrings.`-`
+import typingsSlinky.diff.diffStrings.Space
+import typingsSlinky.diff.diffStrings.`-_`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ApplyPatchOptions extends js.Object {
     js.Function4[
       /* lineNumber */ Double, 
       /* line */ String, 
-      /* operation */ `-` | (` `), 
+      /* operation */ `-_` | Space, 
       /* patchContent */ String, 
       Boolean
     ]
@@ -32,7 +32,7 @@ trait ApplyPatchOptions extends js.Object {
 object ApplyPatchOptions {
   @scala.inline
   def apply(
-    compareLine: (/* lineNumber */ Double, /* line */ String, /* operation */ `-` | (` `), /* patchContent */ String) => Boolean = null,
+    compareLine: (/* lineNumber */ Double, /* line */ String, /* operation */ `-_` | Space, /* patchContent */ String) => Boolean = null,
     fuzzFactor: Int | Double = null
   ): ApplyPatchOptions = {
     val __obj = js.Dynamic.literal()

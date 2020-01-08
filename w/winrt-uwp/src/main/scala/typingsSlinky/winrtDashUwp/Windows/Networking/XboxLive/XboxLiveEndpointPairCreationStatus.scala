@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,16 +48,34 @@ object XboxLiveEndpointPairCreationStatus extends js.Object {
   @js.native
   sealed trait unexpectedInternalError extends XboxLiveEndpointPairCreationStatus
   
-  /* 4 */ val canceled: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.canceled with Double = js.native
-  /* 3 */ val localSystemNotAuthorized: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.localSystemNotAuthorized with Double = js.native
-  /* 2 */ val noCompatibleNetworkPaths: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.noCompatibleNetworkPaths with Double = js.native
-  /* 1 */ val noLocalNetworks: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.noLocalNetworks with Double = js.native
-  /* 7 */ val refusedDueToConfiguration: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.refusedDueToConfiguration with Double = js.native
-  /* 6 */ val remoteSystemNotAuthorized: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.remoteSystemNotAuthorized with Double = js.native
-  /* 0 */ val succeeded: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.succeeded with Double = js.native
-  /* 5 */ val timedOut: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.timedOut with Double = js.native
-  /* 8 */ val unexpectedInternalError: typingsSlinky.winrtDashUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus.unexpectedInternalError with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[XboxLiveEndpointPairCreationStatus with Double] = js.native
+  /* 4 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 3 */ @js.native
+  object localSystemNotAuthorized extends TopLevel[localSystemNotAuthorized with Double]
+  
+  /* 2 */ @js.native
+  object noCompatibleNetworkPaths extends TopLevel[noCompatibleNetworkPaths with Double]
+  
+  /* 1 */ @js.native
+  object noLocalNetworks extends TopLevel[noLocalNetworks with Double]
+  
+  /* 7 */ @js.native
+  object refusedDueToConfiguration extends TopLevel[refusedDueToConfiguration with Double]
+  
+  /* 6 */ @js.native
+  object remoteSystemNotAuthorized extends TopLevel[remoteSystemNotAuthorized with Double]
+  
+  /* 0 */ @js.native
+  object succeeded extends TopLevel[succeeded with Double]
+  
+  /* 5 */ @js.native
+  object timedOut extends TopLevel[timedOut with Double]
+  
+  /* 8 */ @js.native
+  object unexpectedInternalError extends TopLevel[unexpectedInternalError with Double]
+  
 }
 

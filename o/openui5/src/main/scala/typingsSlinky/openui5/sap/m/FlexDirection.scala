@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,23 @@ object FlexDirection extends js.Object {
   @js.native
   sealed trait RowReverse extends FlexDirection
   
-  /* 0 */ val Column: typingsSlinky.openui5.sap.m.FlexDirection.Column with Double = js.native
-  /* 1 */ val ColumnReverse: typingsSlinky.openui5.sap.m.FlexDirection.ColumnReverse with Double = js.native
-  /* 2 */ val Inherit: typingsSlinky.openui5.sap.m.FlexDirection.Inherit with Double = js.native
-  /* 3 */ val Row: typingsSlinky.openui5.sap.m.FlexDirection.Row with Double = js.native
-  /* 4 */ val RowReverse: typingsSlinky.openui5.sap.m.FlexDirection.RowReverse with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FlexDirection with Double] = js.native
+  /* 0 */ @js.native
+  object Column
+    extends TopLevel[typingsSlinky.openui5.sap.m.FlexDirection.Column with Double]
+  
+  /* 1 */ @js.native
+  object ColumnReverse extends TopLevel[ColumnReverse with Double]
+  
+  /* 2 */ @js.native
+  object Inherit extends TopLevel[Inherit with Double]
+  
+  /* 3 */ @js.native
+  object Row extends TopLevel[Row with Double]
+  
+  /* 4 */ @js.native
+  object RowReverse extends TopLevel[RowReverse with Double]
+  
 }
 

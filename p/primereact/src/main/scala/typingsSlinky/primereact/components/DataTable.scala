@@ -7,6 +7,7 @@ import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.primereact.Anon_Columns
 import typingsSlinky.primereact.Anon_Data
+import typingsSlinky.primereact.Anon_DataField
 import typingsSlinky.primereact.Anon_DataIndex
 import typingsSlinky.primereact.Anon_DataOriginalEvent
 import typingsSlinky.primereact.Anon_DataOriginalEventAny
@@ -42,6 +43,7 @@ object DataTable
     emptyMessage: String = null,
     expandedRows: js.Array[_] = null,
     exportFilename: String = null,
+    exportFunction: /* e */ Anon_DataField => _ = null,
     filters: js.Object = null,
     first: Int | Double = null,
     footer: js.Any = null,
@@ -129,6 +131,7 @@ object DataTable
     if (emptyMessage != null) __obj.updateDynamic("emptyMessage")(emptyMessage.asInstanceOf[js.Any])
     if (expandedRows != null) __obj.updateDynamic("expandedRows")(expandedRows.asInstanceOf[js.Any])
     if (exportFilename != null) __obj.updateDynamic("exportFilename")(exportFilename.asInstanceOf[js.Any])
+    if (exportFunction != null) __obj.updateDynamic("exportFunction")(js.Any.fromFunction1(exportFunction))
     if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
     if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
     if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
@@ -203,6 +206,7 @@ object DataTable
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.datatableMod.DataTable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.datatableMod.DataTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataTableProps
 }
 

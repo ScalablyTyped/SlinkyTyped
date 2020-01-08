@@ -1,7 +1,5 @@
 package typingsSlinky.easyDashSession
 
-import typingsSlinky.easyDashSession.Express.ErrorCallback
-import typingsSlinky.easyDashSession.Express.Session
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

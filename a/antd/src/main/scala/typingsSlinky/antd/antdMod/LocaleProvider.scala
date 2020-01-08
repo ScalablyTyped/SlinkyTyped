@@ -2,7 +2,7 @@ package typingsSlinky.antd.antdMod
 
 import typingsSlinky.antd.Anon_AntLocale
 import typingsSlinky.antd.Anon_Locale
-import typingsSlinky.antd.Anon_Locale_559166440
+import typingsSlinky.antd.Anon_Locale_1113206441
 import typingsSlinky.antd.libLocaleDashProviderMod.LocaleProviderProps
 import typingsSlinky.antd.libLocaleDashProviderMod.default
 import scala.scalajs.js
@@ -20,7 +20,7 @@ class LocaleProvider protected () extends default {
 @js.native
 object LocaleProvider extends js.Object {
   var childContextTypes: Anon_AntLocale = js.native
-  var defaultProps: Anon_Locale_559166440 = js.native
+  var defaultProps: Anon_Locale_1113206441 = js.native
   var propTypes: Anon_Locale = js.native
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.expoDashLinearDashGradient
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.expoDashLinearDashGradient.buildNativeLinearGradientDotWebMod.Props
 import typingsSlinky.react.reactMod.ComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,7 +1,6 @@
 package typingsSlinky.jsmediatags
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jsmediatags.build2ID3v2TagContentsMod.ID3v2TagContents
 import typingsSlinky.jsmediatags.typesMod.ByteArray
 import typingsSlinky.jsmediatags.typesMod.TagFrameFlags
 import typingsSlinky.jsmediatags.typesMod.TagHeaderFlags

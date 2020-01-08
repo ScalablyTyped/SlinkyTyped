@@ -24,7 +24,6 @@ package object nockMod {
     - java.lang.String
     - scala.Null
     - `js.undefined`
-    - scala.Nothing
     - typings.std.RegExp
     - typings.nock.nockMod.DataMatcherArray
     - typings.nock.nockMod.DataMatcherMap

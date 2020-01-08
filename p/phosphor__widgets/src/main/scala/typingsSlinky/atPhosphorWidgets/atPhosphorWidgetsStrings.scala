@@ -1,5 +1,6 @@
 package typingsSlinky.atPhosphorWidgets
 
+import typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Alignment
 import typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Direction
 import typingsSlinky.atPhosphorWidgets.libDocklayoutMod.DockLayout.InsertMode
 import typingsSlinky.atPhosphorWidgets.libDockpanelMod.DockPanel.Mode
@@ -7,7 +8,6 @@ import typingsSlinky.atPhosphorWidgets.libLayoutMod.Layout.FitPolicy
 import typingsSlinky.atPhosphorWidgets.libLayoutMod.Layout.HorizontalAlignment
 import typingsSlinky.atPhosphorWidgets.libLayoutMod.Layout.VerticalAlignment
 import typingsSlinky.atPhosphorWidgets.libMenuMod.Menu.ItemType
-import typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Alignment
 import typingsSlinky.atPhosphorWidgets.libTabbarMod.TabBar.InsertBehavior
 import typingsSlinky.atPhosphorWidgets.libTabbarMod.TabBar.Orientation
 import typingsSlinky.atPhosphorWidgets.libTabbarMod.TabBar.RemoveBehavior
@@ -28,7 +28,7 @@ object atPhosphorWidgetsStrings {
   @js.native
   sealed trait center
     extends Alignment
-       with typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Alignment
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Alignment
        with HorizontalAlignment
        with VerticalAlignment
   
@@ -41,13 +41,13 @@ object atPhosphorWidgetsStrings {
   @js.native
   sealed trait end
     extends Alignment
-       with typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Alignment
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Alignment
   
   @js.native
   sealed trait horizontal
     extends Orientation
-       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Orientation
        with typingsSlinky.atPhosphorWidgets.libScrollbarMod.ScrollBar.Orientation
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Orientation
   
   @js.native
   sealed trait increment extends js.Object
@@ -55,7 +55,7 @@ object atPhosphorWidgetsStrings {
   @js.native
   sealed trait justify
     extends Alignment
-       with typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Alignment
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Alignment
   
   @js.native
   sealed trait left
@@ -132,7 +132,7 @@ object atPhosphorWidgetsStrings {
   @js.native
   sealed trait start
     extends Alignment
-       with typingsSlinky.atPhosphorWidgets.libBoxlayoutMod.BoxLayout.Alignment
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Alignment
   
   @js.native
   sealed trait submenu extends ItemType
@@ -157,8 +157,8 @@ object atPhosphorWidgetsStrings {
   @js.native
   sealed trait vertical
     extends Orientation
-       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Orientation
        with typingsSlinky.atPhosphorWidgets.libScrollbarMod.ScrollBar.Orientation
+       with typingsSlinky.atPhosphorWidgets.libSplitlayoutMod.SplitLayout.Orientation
   
   @scala.inline
   def bottom: bottom = "bottom".asInstanceOf[bottom]

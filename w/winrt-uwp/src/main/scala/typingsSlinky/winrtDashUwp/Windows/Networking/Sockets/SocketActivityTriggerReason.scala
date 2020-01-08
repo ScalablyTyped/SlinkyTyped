@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Sockets
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object SocketActivityTriggerReason extends js.Object {
   @js.native
   sealed trait socketClosed extends SocketActivityTriggerReason
   
-  /* 2 */ val connectionAccepted: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityTriggerReason.connectionAccepted with Double = js.native
-  /* 3 */ val keepAliveTimerExpired: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityTriggerReason.keepAliveTimerExpired with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityTriggerReason.none with Double = js.native
-  /* 1 */ val socketActivity: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityTriggerReason.socketActivity with Double = js.native
-  /* 4 */ val socketClosed: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityTriggerReason.socketClosed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocketActivityTriggerReason with Double] = js.native
+  /* 2 */ @js.native
+  object connectionAccepted extends TopLevel[connectionAccepted with Double]
+  
+  /* 3 */ @js.native
+  object keepAliveTimerExpired extends TopLevel[keepAliveTimerExpired with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object socketActivity extends TopLevel[socketActivity with Double]
+  
+  /* 4 */ @js.native
+  object socketClosed extends TopLevel[socketClosed with Double]
+  
 }
 

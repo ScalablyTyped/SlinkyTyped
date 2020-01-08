@@ -5,10 +5,10 @@ import typingsSlinky.node.urlMod.Url
 import typingsSlinky.nodemailer.Anon_Connection
 import typingsSlinky.nodemailer.libSharedMod.Logger
 import typingsSlinky.nodemailer.libXoauth2Mod.Token
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerMod.SentMessageInfo
 import typingsSlinky.nodemailer.nodemailerMod.Transport
 import typingsSlinky.nodemailer.nodemailerMod.TransportOptions
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.end
 import typingsSlinky.nodemailer.nodemailerStrings.error
 import typingsSlinky.nodemailer.nodemailerStrings.idle

@@ -11,8 +11,8 @@ A browser UTF-8 string <-> UInt8Array converter
 | Full name          | @aws-sdk/util-utf8-browser |
 | Keywords           | - |
 | # releases         | 4 |
-| # dependents       | 17 |
-| # downloads        | 1617 |
+| # dependents       | 194 |
+| # downloads        | 6773 |
 | # stars            | 0 |
 
 ## Links

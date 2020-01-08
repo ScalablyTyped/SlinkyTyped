@@ -220,6 +220,7 @@ class Question protected ()
     * Question name should be unique in the survey and valueName could be not unique. It allows to share data between several questions with the same valueName.
     * The library set the value automatically if the question.name property is not valid. For example, if it contains the period '.' symbol.
     * In this case if you set the question.name property to 'x.y' then the valueName becomes 'x y'.
+    * @see name
     */
   var valueName: String = js.native
   /**
@@ -247,32 +248,33 @@ class Question protected ()
     * @param error
     */
   def addError(error: SurveyError): Unit = js.native
+  /* protected */ def addSupportedValidators(supportedValidators: js.Array[String]): Unit = js.native
   /**
     * Get is question ready to use
     */
   def choicesLoaded(): Unit = js.native
+  def clearErrors(): js.Any = js.native
   /**
     * Call this function to clear all errors in the question
     */
-  def clearErrors(): Unit = js.native
   @JSName("clearErrors")
-  def clearErrors_Any(): js.Any = js.native
+  def clearErrors_Unit(): Unit = js.native
+  def clearIncorrectValues(): js.Any = js.native
   /**
     * Call this function to remove values from the current question, that end-user will not be able to enter.
     * For example the value that doesn't exists in a radigroup/dropdown/checkbox choices or matrix rows/columns.
     */
-  def clearIncorrectValues(): Unit = js.native
   @JSName("clearIncorrectValues")
-  def clearIncorrectValues_Any(): js.Any = js.native
-  def clearUnusedValues(): Unit = js.native
+  def clearIncorrectValues_Unit(): Unit = js.native
+  def clearUnusedValues(): js.Any = js.native
   @JSName("clearUnusedValues")
-  def clearUnusedValues_Any(): js.Any = js.native
-  def clearValue(): Unit = js.native
-  def clearValueIfInvisible(): Unit = js.native
+  def clearUnusedValues_Unit(): Unit = js.native
+  def clearValue(): js.Any = js.native
+  def clearValueIfInvisible(): js.Any = js.native
   @JSName("clearValueIfInvisible")
-  def clearValueIfInvisible_Any(): js.Any = js.native
+  def clearValueIfInvisible_Unit(): Unit = js.native
   @JSName("clearValue")
-  def clearValue_Any(): js.Any = js.native
+  def clearValue_Unit(): Unit = js.native
   def commentChangedCallback(): Unit = js.native
   def createValueCopy(): js.Any = js.native
   /* protected */ def fireCallback(callback: js.Function0[Unit]): Unit = js.native
@@ -333,6 +335,7 @@ class Question protected ()
   def getQuestionTitleTemplate(): String = js.native
   /* protected */ def getQuizQuestionCount(): Double = js.native
   /* protected */ def getRootCss(classes: js.Any): js.Any = js.native
+  def getSupportedValidators(): js.Array[String] = js.native
   /**
     * Return the title location based on question titleLocation property and QuestionTitleLocation of it's parents
     * @see titleLocation
@@ -378,16 +381,16 @@ class Question protected ()
     */
   def moveTo(container: IPanel): Boolean = js.native
   def moveTo(container: IPanel, insertBefore: js.Any): Boolean = js.native
-  def onAnyValueChanged(name: String): Unit = js.native
+  def onAnyValueChanged(name: String): js.Any = js.native
   @JSName("onAnyValueChanged")
-  def onAnyValueChanged_Any(name: String): js.Any = js.native
+  def onAnyValueChanged_Unit(name: String): Unit = js.native
   /* protected */ def onCheckForErrors(errors: js.Array[SurveyError]): Unit = js.native
   def onCompletedAsyncValidators(hasErrors: Boolean): Unit = js.native
   /* protected */ def onCreating(): Unit = js.native
   /* protected */ def onParentChanged(): Unit = js.native
-  def onSurveyValueChanged(newValue: js.Any): Unit = js.native
+  def onSurveyValueChanged(newValue: js.Any): js.Any = js.native
   @JSName("onSurveyValueChanged")
-  def onSurveyValueChanged_Any(newValue: js.Any): js.Any = js.native
+  def onSurveyValueChanged_Unit(newValue: js.Any): Unit = js.native
   /* protected */ def onValueChanged(): Unit = js.native
   /* protected */ def onValueNameChanged(oldValue: String): Unit = js.native
   /* protected */ def onVisibleChanged(): Unit = js.native
@@ -415,16 +418,16 @@ class Question protected ()
   def supportOther(): Boolean = js.native
   def surveyLoadCallback(): Unit = js.native
   def updateCommentFromSurvey(newValue: js.Any): js.Any = js.native
-  /* protected */ def updateCssClasses(res: js.Any, surveyCss: js.Any): Unit = js.native
+  /* protected */ def updateCssClasses(res: js.Any, css: js.Any): Unit = js.native
   def updateCustomWidget(): Unit = js.native
   /* protected */ def updateDisplayValue(): js.Any = js.native
   /* protected */ def updateIsAnswered(): Unit = js.native
-  def updateValueFromSurvey(newValue: js.Any): Unit = js.native
+  def updateValueFromSurvey(newValue: js.Any): js.Any = js.native
   @JSName("updateValueFromSurvey")
-  def updateValueFromSurvey_Any(newValue: js.Any): js.Any = js.native
-  def updateValueWithDefaults(): Unit = js.native
+  def updateValueFromSurvey_Unit(newValue: js.Any): Unit = js.native
+  def updateValueWithDefaults(): js.Any = js.native
   @JSName("updateValueWithDefaults")
-  def updateValueWithDefaults_Any(): js.Any = js.native
+  def updateValueWithDefaults_Unit(): Unit = js.native
   def validateValueCallback(): SurveyError = js.native
   def valueChangedCallback(): Unit = js.native
   /* protected */ def valueFromData(`val`: js.Any): js.Any = js.native

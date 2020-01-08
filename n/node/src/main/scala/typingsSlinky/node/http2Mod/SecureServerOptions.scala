@@ -3,12 +3,13 @@ package typingsSlinky.node.http2Mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.ReadableOptions
+import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.tlsMod.TlsOptions
@@ -21,37 +22,37 @@ trait SecureServerOptions
   extends TlsOptions
      with ServerSessionOptions {
   var allowHTTP1: js.UndefOr[Boolean] = js.undefined
-  var origins: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+  var origins: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object SecureServerOptions {
   @scala.inline
   def apply(
-    ALPNProtocols: (js.Array[java.lang.String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
+    ALPNProtocols: (js.Array[String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
     Http1IncomingMessage: Instantiable1[/* socket */ Socket, IncomingMessage] = null,
     Http1ServerResponse: Instantiable1[/* req */ IncomingMessage, ServerResponse] = null,
     Http2ServerRequest: Instantiable4[
       /* stream */ ServerHttp2Stream, 
       /* headers */ IncomingHttpHeaders, 
       /* options */ ReadableOptions, 
-      /* rawHeaders */ js.Array[java.lang.String], 
+      /* rawHeaders */ js.Array[String], 
       Http2ServerRequest
     ] = null,
     Http2ServerResponse: Instantiable1[/* stream */ ServerHttp2Stream, Http2ServerResponse] = null,
-    SNICallback: (/* servername */ java.lang.String, /* cb */ js.Function2[/* err */ Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
     allowHTTP1: js.UndefOr[Boolean] = js.undefined,
-    ca: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    cert: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    ciphers: java.lang.String = null,
-    clientCertEngine: java.lang.String = null,
+    ca: String | Buffer | (js.Array[String | Buffer]) = null,
+    cert: String | Buffer | (js.Array[String | Buffer]) = null,
+    ciphers: String = null,
+    clientCertEngine: String = null,
     createConnection: (/* authority */ URL, SecureServerOptions) => Duplex = null,
-    crl: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer]) = null,
-    dhparam: java.lang.String | Buffer = null,
-    ecdhCurve: java.lang.String = null,
+    crl: String | Buffer | (js.Array[String | Buffer]) = null,
+    dhparam: String | Buffer = null,
+    ecdhCurve: String = null,
     enableTrace: js.UndefOr[Boolean] = js.undefined,
     handshakeTimeout: Int | Double = null,
     honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    key: java.lang.String | Buffer | (js.Array[Buffer | js.Object]) = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
     maxDeflateDynamicTableSize: Int | Double = null,
     maxHeaderListPairs: Int | Double = null,
     maxOutstandingPings: Int | Double = null,
@@ -59,20 +60,23 @@ object SecureServerOptions {
     maxSessionMemory: Int | Double = null,
     maxVersion: SecureVersion = null,
     minVersion: SecureVersion = null,
-    origins: js.Array[java.lang.String] = null,
+    origins: js.Array[String] = null,
     paddingStrategy: Int | Double = null,
-    passphrase: java.lang.String = null,
+    passphrase: String = null,
     peerMaxConcurrentStreams: Int | Double = null,
-    pfx: java.lang.String | Buffer | (js.Array[java.lang.String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
     secureOptions: Int | Double = null,
-    secureProtocol: java.lang.String = null,
+    secureProtocol: String = null,
     selectPadding: (/* frameLen */ Double, /* maxFrameLen */ Double) => Double = null,
-    sessionIdContext: java.lang.String = null,
+    sessionIdContext: String = null,
     sessionTimeout: Int | Double = null,
     settings: Settings = null,
+    sigalgs: String = null,
     ticketKeys: Buffer = null
   ): SecureServerOptions = {
     val __obj = js.Dynamic.literal()
@@ -107,6 +111,8 @@ object SecureServerOptions {
     if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
     if (peerMaxConcurrentStreams != null) __obj.updateDynamic("peerMaxConcurrentStreams")(peerMaxConcurrentStreams.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
@@ -116,6 +122,7 @@ object SecureServerOptions {
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
     if (sessionTimeout != null) __obj.updateDynamic("sessionTimeout")(sessionTimeout.asInstanceOf[js.Any])
     if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (ticketKeys != null) __obj.updateDynamic("ticketKeys")(ticketKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureServerOptions]
   }

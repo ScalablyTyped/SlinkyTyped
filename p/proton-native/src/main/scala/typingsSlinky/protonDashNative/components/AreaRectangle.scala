@@ -22,8 +22,9 @@ object AreaRectangle
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, width */
   def apply(
+    height: Double | String,
+    width: Double | String,
     x: Double | String,
     y: Double | String,
     align: Anon_H = null,
@@ -44,7 +45,7 @@ object AreaRectangle
     transform: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.protonDashNative.protonDashNativeMod.AreaRectangle] = {
-    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
     if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])

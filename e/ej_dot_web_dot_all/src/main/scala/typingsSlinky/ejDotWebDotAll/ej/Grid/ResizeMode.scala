@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ResizeMode extends js.Object {
   @js.native
   sealed trait Normal extends ResizeMode
   
-  /* 2 */ val Control: typingsSlinky.ejDotWebDotAll.ej.Grid.ResizeMode.Control with Double = js.native
-  /* 1 */ val NextColumn: typingsSlinky.ejDotWebDotAll.ej.Grid.ResizeMode.NextColumn with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.Grid.ResizeMode.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResizeMode with Double] = js.native
+  /* 2 */ @js.native
+  object Control extends TopLevel[Control with Double]
+  
+  /* 1 */ @js.native
+  object NextColumn extends TopLevel[NextColumn with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

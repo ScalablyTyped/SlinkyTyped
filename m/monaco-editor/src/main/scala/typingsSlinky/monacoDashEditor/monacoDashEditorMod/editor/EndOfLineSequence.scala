@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object EndOfLineSequence extends js.Object {
   @js.native
   sealed trait LF extends EndOfLineSequence
   
-  /* 1 */ val CRLF: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.EndOfLineSequence.CRLF with Double = js.native
-  /* 0 */ val LF: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.EndOfLineSequence.LF with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EndOfLineSequence with Double] = js.native
+  /* 1 */ @js.native
+  object CRLF extends TopLevel[CRLF with Double]
+  
+  /* 0 */ @js.native
+  object LF extends TopLevel[LF with Double]
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.firebaseDashAdmin.admin
 
 import typingsSlinky.atGoogleDashCloudStorage.atGoogleDashCloudStorageMod.Bucket
 import typingsSlinky.firebaseDashAdmin.admin.app.App
-import typingsSlinky.firebaseDashAdmin.admin.storage.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

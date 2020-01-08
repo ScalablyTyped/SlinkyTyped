@@ -1,0 +1,14 @@
+package typingsSlinky.atFormatjsIntlDashUtils.distPolyfillDashUtilsMod
+
+import typingsSlinky.atFormatjsIntlDashUtils.Anon_Type
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@formatjs/intl-utils/dist/polyfill-utils", "isLiteralPart")
+@js.native
+object isLiteralPart extends js.Object {
+  def apply(patternPart: Anon_Type): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/polyfill-utils.LiteralPart */ Boolean = js.native
+  def apply(patternPart: LiteralPart): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/polyfill-utils.LiteralPart */ Boolean = js.native
+}
+

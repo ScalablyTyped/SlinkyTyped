@@ -3,7 +3,7 @@ package typingsSlinky.fabric.fabricDashImplMod
 import typingsSlinky.fabric.Anon_Baseline
 import typingsSlinky.fabric.Anon_BlBrMbMl
 import typingsSlinky.fabric.Anon_BlBrTlTr
-import typingsSlinky.fabric.fabricStrings.Empty
+import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.circle
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
@@ -39,7 +39,7 @@ trait TextOptions extends IObjectOptions {
   	 * Font style . Possible values: "", "normal", "italic" or "oblique".
   	 * @type String
   	 */
-  var fontStyle: js.UndefOr[Empty | normal | italic | oblique] = js.undefined
+  var fontStyle: js.UndefOr[_empty | normal | italic | oblique] = js.undefined
   /**
   	 * Font weight (e.g. bold, normal, 400, 600, 800)
   	 * @type {(Number|String)}
@@ -123,13 +123,13 @@ object TextOptions {
     dirty: js.UndefOr[Boolean] = js.undefined,
     evented: js.UndefOr[Boolean] = js.undefined,
     excludeFromExport: js.UndefOr[Boolean] = js.undefined,
-    fill: String | Pattern = null,
+    fill: String | Pattern | Gradient = null,
     fillRule: String = null,
     flipX: js.UndefOr[Boolean] = js.undefined,
     flipY: js.UndefOr[Boolean] = js.undefined,
     fontFamily: String = null,
     fontSize: Int | Double = null,
-    fontStyle: Empty | normal | italic | oblique = null,
+    fontStyle: _empty | normal | italic | oblique = null,
     fontWeight: String | Double = null,
     globalCompositeOperation: String = null,
     group: Group = null,

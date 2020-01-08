@@ -2,7 +2,6 @@ package typingsSlinky.reactDashDnd
 
 import typingsSlinky.dndDashCore.libInterfacesMod.Backend
 import typingsSlinky.dndDashCore.libInterfacesMod.Identifier
-import typingsSlinky.reactDashDnd.libCommonSourceConnectorMod.Connector
 import typingsSlinky.reactDashDnd.libInterfacesOptionsMod.DragPreviewOptions
 import typingsSlinky.reactDashDnd.libInterfacesOptionsMod.DragSourceOptions
 import scala.scalajs.js

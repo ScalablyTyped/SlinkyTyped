@@ -1,5 +1,6 @@
 package typingsSlinky.agDashGrid.distLibDragAndDropDragAndDropServiceMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object VDirection extends js.Object {
   @js.native
   sealed trait Up extends VDirection
   
-  /* 1 */ val Down: typingsSlinky.agDashGrid.distLibDragAndDropDragAndDropServiceMod.VDirection.Down with Double = js.native
-  /* 0 */ val Up: typingsSlinky.agDashGrid.distLibDragAndDropDragAndDropServiceMod.VDirection.Up with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VDirection with Double] = js.native
+  /* 1 */ @js.native
+  object Down extends TopLevel[Down with Double]
+  
+  /* 0 */ @js.native
+  object Up extends TopLevel[Up with Double]
+  
 }
 

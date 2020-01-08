@@ -24,23 +24,23 @@ import scala.scalajs.js.annotation._
   - typings.webpack.webpackStrings.`harmony import specifier`
   - typings.webpack.webpackStrings.`harmony side effect evaluation`
   - typings.webpack.webpackStrings.`harmony init`
-  - typings.webpack.webpackStrings.`import() context development`
-  - typings.webpack.webpackStrings.`import() context production`
-  - typings.webpack.webpackStrings.`import() eager`
-  - typings.webpack.webpackStrings.`import() weak`
-  - typings.webpack.webpackStrings.`import()`
+  - typings.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context development`
+  - typings.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context production`
+  - typings.webpack.webpackStrings.`importLeftparenthesisRightparenthesis eager`
+  - typings.webpack.webpackStrings.`importLeftparenthesisRightparenthesis weak`
+  - typings.webpack.webpackStrings.importLeftparenthesisRightparenthesis
   - typings.webpack.webpackStrings.`json exports`
   - typings.webpack.webpackStrings.loader
-  - typings.webpack.webpackStrings.moduleDOThotDOTaccept
-  - typings.webpack.webpackStrings.moduleDOThotDOTdecline
+  - typings.webpack.webpackStrings.moduleDothotDotaccept
+  - typings.webpack.webpackStrings.moduleDothotDotdecline
   - typings.webpack.webpackStrings.`multi entry`
   - typings.webpack.webpackStrings.`null`
   - typings.webpack.webpackStrings.prefetch
-  - typings.webpack.webpackStrings.requireDOTcontext
-  - typings.webpack.webpackStrings.requireDOTensure
-  - typings.webpack.webpackStrings.`requireDOTensure item`
-  - typings.webpack.webpackStrings.requireDOTinclude
-  - typings.webpack.webpackStrings.requireDOTresolve
+  - typings.webpack.webpackStrings.requireDotcontext
+  - typings.webpack.webpackStrings.requireDotensure
+  - typings.webpack.webpackStrings.`requireDotensure item`
+  - typings.webpack.webpackStrings.requireDotinclude
+  - typings.webpack.webpackStrings.requireDotresolve
   - typings.webpack.webpackStrings.`single entry`
   - typings.webpack.webpackStrings.`wasm export import`
   - typings.webpack.webpackStrings.`wasm import`
@@ -89,23 +89,23 @@ object ReasonType {
   @scala.inline
   def `harmony side effect evaluation`: typingsSlinky.webpack.webpackStrings.`harmony side effect evaluation` = this.cast("harmony side effect evaluation")
   @scala.inline
-  def `import()`: typingsSlinky.webpack.webpackStrings.`import()` = this.cast("import()")
+  def importLeftparenthesisRightparenthesis: typingsSlinky.webpack.webpackStrings.importLeftparenthesisRightparenthesis = this.cast("import()")
   @scala.inline
-  def `import() context development`: typingsSlinky.webpack.webpackStrings.`import() context development` = this.cast("import() context development")
+  def `importLeftparenthesisRightparenthesis context development`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context development` = this.cast("import() context development")
   @scala.inline
-  def `import() context production`: typingsSlinky.webpack.webpackStrings.`import() context production` = this.cast("import() context production")
+  def `importLeftparenthesisRightparenthesis context production`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context production` = this.cast("import() context production")
   @scala.inline
-  def `import() eager`: typingsSlinky.webpack.webpackStrings.`import() eager` = this.cast("import() eager")
+  def `importLeftparenthesisRightparenthesis eager`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis eager` = this.cast("import() eager")
   @scala.inline
-  def `import() weak`: typingsSlinky.webpack.webpackStrings.`import() weak` = this.cast("import() weak")
+  def `importLeftparenthesisRightparenthesis weak`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis weak` = this.cast("import() weak")
   @scala.inline
   def `json exports`: typingsSlinky.webpack.webpackStrings.`json exports` = this.cast("json exports")
   @scala.inline
   def loader: typingsSlinky.webpack.webpackStrings.loader = this.cast("loader")
   @scala.inline
-  def moduleDOThotDOTaccept: typingsSlinky.webpack.webpackStrings.moduleDOThotDOTaccept = this.cast("module.hot.accept")
+  def moduleDothotDotaccept: typingsSlinky.webpack.webpackStrings.moduleDothotDotaccept = this.cast("module.hot.accept")
   @scala.inline
-  def moduleDOThotDOTdecline: typingsSlinky.webpack.webpackStrings.moduleDOThotDOTdecline = this.cast("module.hot.decline")
+  def moduleDothotDotdecline: typingsSlinky.webpack.webpackStrings.moduleDothotDotdecline = this.cast("module.hot.decline")
   @scala.inline
   def `multi entry`: typingsSlinky.webpack.webpackStrings.`multi entry` = this.cast("multi entry")
   @scala.inline
@@ -113,15 +113,15 @@ object ReasonType {
   @scala.inline
   def prefetch: typingsSlinky.webpack.webpackStrings.prefetch = this.cast("prefetch")
   @scala.inline
-  def requireDOTcontext: typingsSlinky.webpack.webpackStrings.requireDOTcontext = this.cast("require.context")
+  def requireDotcontext: typingsSlinky.webpack.webpackStrings.requireDotcontext = this.cast("require.context")
   @scala.inline
-  def requireDOTensure: typingsSlinky.webpack.webpackStrings.requireDOTensure = this.cast("require.ensure")
+  def requireDotensure: typingsSlinky.webpack.webpackStrings.requireDotensure = this.cast("require.ensure")
   @scala.inline
-  def `requireDOTensure item`: typingsSlinky.webpack.webpackStrings.`requireDOTensure item` = this.cast("require.ensure item")
+  def `requireDotensure item`: typingsSlinky.webpack.webpackStrings.`requireDotensure item` = this.cast("require.ensure item")
   @scala.inline
-  def requireDOTinclude: typingsSlinky.webpack.webpackStrings.requireDOTinclude = this.cast("require.include")
+  def requireDotinclude: typingsSlinky.webpack.webpackStrings.requireDotinclude = this.cast("require.include")
   @scala.inline
-  def requireDOTresolve: typingsSlinky.webpack.webpackStrings.requireDOTresolve = this.cast("require.resolve")
+  def requireDotresolve: typingsSlinky.webpack.webpackStrings.requireDotresolve = this.cast("require.resolve")
   @scala.inline
   def `single entry`: typingsSlinky.webpack.webpackStrings.`single entry` = this.cast("single entry")
   @scala.inline

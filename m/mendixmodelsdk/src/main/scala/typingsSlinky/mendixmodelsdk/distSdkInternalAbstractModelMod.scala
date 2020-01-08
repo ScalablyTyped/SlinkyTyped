@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mendixmodelsdk.distCommonMod.common.ICallback
 import typingsSlinky.mendixmodelsdk.distCommonMod.common.IErrorCallback
 import typingsSlinky.mendixmodelsdk.distCommonMod.common.IVoidCallback
-import typingsSlinky.mendixmodelsdk.distSdkInternalAbstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalIModelServerClientMod.IModelServerClient
 import typingsSlinky.mendixmodelsdk.distSdkInternalStructuresMod.IStructure
 import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.IAbstractUnitJson
@@ -26,10 +25,11 @@ object distSdkInternalAbstractModelMod extends js.Object {
   @js.native
   abstract class AbstractModel protected () extends IAbstractModel {
     def this(_client: IModelServerClient, _errorHandler: IErrorCallback) = this()
-    val root: IStructuralUnit = js.native
     def getFile(filePath: String, outFilePath: String, callback: IVoidCallback, errorCallback: IErrorCallback): Unit = js.native
     def handleError(message: String): Unit = js.native
     def handleError(message: String, errorCallback: IErrorCallback): Unit = js.native
+    @JSName("id")
+    def id_MAbstractModel(): String = js.native
     def loadUnitById[T /* <: IAbstractUnit */](id: String): js.Promise[T] = js.native
     def loadUnitById[T /* <: IAbstractUnit */](id: String, forceRefresh: js.UndefOr[scala.Nothing], callback: ICallback[T]): Unit = js.native
     def loadUnitById[T /* <: IAbstractUnit */](
@@ -38,6 +38,7 @@ object distSdkInternalAbstractModelMod extends js.Object {
       callback: ICallback[T],
       errorCallback: IErrorCallback
     ): Unit = js.native
+    def root(): IStructuralUnit = js.native
   }
   
   @js.native
@@ -95,17 +96,17 @@ object distSdkInternalAbstractModelMod extends js.Object {
     def exportModuleMpk(moduleId: String, outFilePath: String): js.Promise[Unit] = js.native
     /**
       * Exports the module as MPK.
-      * If outFilePath is empty, the raw request response will be provided in the callback
+      * If outFilePath is empty, the raw response body will be provided in the callback
       */
     def exportModuleMpk(moduleId: String, outFilePath: String, callback: IVoidCallback): Unit = js.native
     def exportModuleMpk(moduleId: String, outFilePath: String, callback: IVoidCallback, errorCallback: IErrorCallback): Unit = js.native
-    def exportMpk(outFilePath: String): js.Promise[Double] = js.native
+    def exportMpk(outFilePath: String): js.Promise[Unit] = js.native
     /**
       * Exports this model as MPK.
-      * If outFilePath is empty, the raw request response will be provided in the callback
+      * If outFilePath is empty, the raw response body will be provided in the callback
       */
-    def exportMpk(outFilePath: String, callback: ICallback[Double]): Unit = js.native
-    def exportMpk(outFilePath: String, callback: ICallback[Double], errorCallback: IErrorCallback): Unit = js.native
+    def exportMpk(outFilePath: String, callback: IVoidCallback): Unit = js.native
+    def exportMpk(outFilePath: String, callback: IVoidCallback, errorCallback: IErrorCallback): Unit = js.native
     def filterUnitsByCustomWidgetId(workingCopyId: String, widgetId: String): js.Promise[js.Array[String]] = js.native
     /**
       * Returns a list of unitIds that contains a specific custom widget
@@ -151,7 +152,7 @@ object distSdkInternalAbstractModelMod extends js.Object {
     def getFile(filePath: String, outFilePath: String): js.Promise[_] = js.native
     /**
       * Downloads the file specified by the supplied filepath.
-      * If filePath is empty, the raw request response will be provided in the callback
+      * If filePath is empty, the raw response body will be provided in the callback
       */
     def getFile(
       filePath: String,

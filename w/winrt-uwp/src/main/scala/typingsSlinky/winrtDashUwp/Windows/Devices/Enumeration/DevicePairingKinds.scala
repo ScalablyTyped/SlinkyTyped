@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object DevicePairingKinds extends js.Object {
   @js.native
   sealed trait providePin extends DevicePairingKinds
   
-  /* 1 */ val confirmOnly: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingKinds.confirmOnly with Double = js.native
-  /* 4 */ val confirmPinMatch: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingKinds.confirmPinMatch with Double = js.native
-  /* 2 */ val displayPin: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingKinds.displayPin with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingKinds.none with Double = js.native
-  /* 3 */ val providePin: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingKinds.providePin with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DevicePairingKinds with Double] = js.native
+  /* 1 */ @js.native
+  object confirmOnly extends TopLevel[confirmOnly with Double]
+  
+  /* 4 */ @js.native
+  object confirmPinMatch extends TopLevel[confirmPinMatch with Double]
+  
+  /* 2 */ @js.native
+  object displayPin extends TopLevel[displayPin with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object providePin extends TopLevel[providePin with Double]
+  
 }
 

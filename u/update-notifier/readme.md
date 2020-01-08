@@ -10,9 +10,9 @@ Update notifications for your CLI app
 | ------------------ | :-------------: |
 | Full name          | update-notifier |
 | Keywords           | npm, update, updater, notify, notifier, check, checker, cli, module, package, version |
-| # releases         | 4 |
-| # dependents       | 2459 |
-| # downloads        | 131174188 |
+| # releases         | 7 |
+| # dependents       | 2909 |
+| # downloads        | 190421921 |
 | # stars            | 97 |
 
 ## Links

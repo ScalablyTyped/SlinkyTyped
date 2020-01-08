@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ApprovalExecutionOrder extends js.Object {
   @js.native
   sealed trait BeforeGates extends ApprovalExecutionOrder
   
-  /* 4 */ val AfterGatesAlways: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalExecutionOrder.AfterGatesAlways with Double = js.native
-  /* 2 */ val AfterSuccessfulGates: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalExecutionOrder.AfterSuccessfulGates with Double = js.native
-  /* 1 */ val BeforeGates: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalExecutionOrder.BeforeGates with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApprovalExecutionOrder with Double] = js.native
+  /* 4 */ @js.native
+  object AfterGatesAlways extends TopLevel[AfterGatesAlways with Double]
+  
+  /* 2 */ @js.native
+  object AfterSuccessfulGates extends TopLevel[AfterSuccessfulGates with Double]
+  
+  /* 1 */ @js.native
+  object BeforeGates extends TopLevel[BeforeGates with Double]
+  
 }
 

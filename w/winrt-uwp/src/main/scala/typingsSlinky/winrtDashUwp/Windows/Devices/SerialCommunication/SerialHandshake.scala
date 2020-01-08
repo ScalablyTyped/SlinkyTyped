@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.SerialCommunication
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object SerialHandshake extends js.Object {
   @js.native
   sealed trait xonXOff extends SerialHandshake
   
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.SerialCommunication.SerialHandshake.none with Double = js.native
-  /* 1 */ val requestToSend: typingsSlinky.winrtDashUwp.Windows.Devices.SerialCommunication.SerialHandshake.requestToSend with Double = js.native
-  /* 3 */ val requestToSendXOnXOff: typingsSlinky.winrtDashUwp.Windows.Devices.SerialCommunication.SerialHandshake.requestToSendXOnXOff with Double = js.native
-  /* 2 */ val xonXOff: typingsSlinky.winrtDashUwp.Windows.Devices.SerialCommunication.SerialHandshake.xonXOff with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SerialHandshake with Double] = js.native
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object requestToSend extends TopLevel[requestToSend with Double]
+  
+  /* 3 */ @js.native
+  object requestToSendXOnXOff extends TopLevel[requestToSendXOnXOff with Double]
+  
+  /* 2 */ @js.native
+  object xonXOff extends TopLevel[xonXOff with Double]
+  
 }
 

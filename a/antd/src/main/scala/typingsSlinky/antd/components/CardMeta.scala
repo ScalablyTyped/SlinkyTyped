@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CardMeta extends SharedApply_CardMetaProps70002354 {
+object CardMeta extends SharedApply_CardMetaProps_1368795485 {
   @JSImport("antd", "Card.Meta")
   @js.native
   object componentImport extends js.Object

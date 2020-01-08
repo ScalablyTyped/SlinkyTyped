@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object EditingType extends js.Object {
   @js.native
   sealed trait String extends EditingType
   
-  /* 1 */ val Boolean: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.Boolean with Double = js.native
-  /* 4 */ val DatePicker: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.DatePicker with Double = js.native
-  /* 5 */ val DateTimePicker: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.DateTimePicker with Double = js.native
-  /* 3 */ val Dropdown: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.Dropdown with Double = js.native
-  /* 2 */ val Numeric: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.Numeric with Double = js.native
-  /* 0 */ val String: typingsSlinky.ejDotWebDotAll.ej.Grid.EditingType.String with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EditingType with Double] = js.native
+  /* 1 */ @js.native
+  object Boolean extends TopLevel[Boolean with Double]
+  
+  /* 4 */ @js.native
+  object DatePicker extends TopLevel[DatePicker with Double]
+  
+  /* 5 */ @js.native
+  object DateTimePicker extends TopLevel[DateTimePicker with Double]
+  
+  /* 3 */ @js.native
+  object Dropdown extends TopLevel[Dropdown with Double]
+  
+  /* 2 */ @js.native
+  object Numeric extends TopLevel[Numeric with Double]
+  
+  /* 0 */ @js.native
+  object String extends TopLevel[String with Double]
+  
 }
 

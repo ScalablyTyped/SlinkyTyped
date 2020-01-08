@@ -1,9 +1,10 @@
 package typingsSlinky.reactDashNavigationDashStack
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import slinky.core.TagMod
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.reactDashNative.reactDashNativeMod.Animated.AnimatedInterpolation
 import typingsSlinky.reactDashNative.reactDashNativeMod.Animated.Value
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
@@ -44,6 +45,8 @@ object libTypescriptViewsStackViewStackViewCardMod extends js.Object {
     def this(props: PickPropsstylechildrenscenenavigationrealPositiona, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[PickPropsstylechildrenscenenavigationrealPositiona] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[PickPropsstylechildrenscenenavigationrealPositiona]]
+  
 }
 

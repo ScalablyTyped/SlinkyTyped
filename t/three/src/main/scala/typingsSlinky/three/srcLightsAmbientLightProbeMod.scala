@@ -2,7 +2,7 @@ package typingsSlinky.three
 
 import typingsSlinky.three.srcLightsLightProbeMod.LightProbe
 import typingsSlinky.three.srcMathColorMod.Color
-import typingsSlinky.three.threeNumbers.`true`
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

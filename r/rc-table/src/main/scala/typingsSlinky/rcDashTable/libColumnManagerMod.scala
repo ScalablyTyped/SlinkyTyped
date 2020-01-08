@@ -1,7 +1,6 @@
 package typingsSlinky.rcDashTable
 
 import slinky.core.TagMod
-import typingsSlinky.rcDashTable.libColumnManagerMod.ColumnManager
 import typingsSlinky.rcDashTable.libInterfaceMod.ColumnType
 import typingsSlinky.rcDashTable.libInterfaceMod.DefaultValueType
 import scala.scalajs.js

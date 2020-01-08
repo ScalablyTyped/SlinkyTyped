@@ -1,0 +1,88 @@
+package typingsSlinky.atPulumiAws
+
+import typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystemArgs
+import typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystemState
+import typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystemArgs
+import typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystemState
+import typingsSlinky.atPulumiPulumi.outputMod.Input
+import typingsSlinky.atPulumiPulumi.resourceMod.CustomResourceOptions
+import typingsSlinky.atPulumiPulumi.resourceMod.ID
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@pulumi/aws/fsx", JSImport.Namespace)
+@js.native
+object fsxMod extends js.Object {
+  @js.native
+  class LustreFileSystem protected ()
+    extends typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystem {
+    /**
+      * Create a LustreFileSystem resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: LustreFileSystemArgs) = this()
+    def this(name: String, args: LustreFileSystemArgs, opts: CustomResourceOptions) = this()
+  }
+  
+  @js.native
+  class WindowsFileSystem protected ()
+    extends typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystem {
+    /**
+      * Create a WindowsFileSystem resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: WindowsFileSystemArgs) = this()
+    def this(name: String, args: WindowsFileSystemArgs, opts: CustomResourceOptions) = this()
+  }
+  
+  /* static members */
+  @js.native
+  object LustreFileSystem extends js.Object {
+    /**
+      * Get an existing LustreFileSystem resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystem = js.native
+    def get(name: String, id: Input[ID], state: LustreFileSystemState): typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystem = js.native
+    def get(name: String, id: Input[ID], state: LustreFileSystemState, opts: CustomResourceOptions): typingsSlinky.atPulumiAws.fsxLustreFileSystemMod.LustreFileSystem = js.native
+    /**
+      * Returns true if the given object is an instance of LustreFileSystem.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/fsx/lustreFileSystem.LustreFileSystem */ Boolean = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object WindowsFileSystem extends js.Object {
+    /**
+      * Get an existing WindowsFileSystem resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystem = js.native
+    def get(name: String, id: Input[ID], state: WindowsFileSystemState): typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystem = js.native
+    def get(name: String, id: Input[ID], state: WindowsFileSystemState, opts: CustomResourceOptions): typingsSlinky.atPulumiAws.fsxWindowsFileSystemMod.WindowsFileSystem = js.native
+    /**
+      * Returns true if the given object is an instance of WindowsFileSystem.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/fsx/windowsFileSystem.WindowsFileSystem */ Boolean = js.native
+  }
+  
+}
+

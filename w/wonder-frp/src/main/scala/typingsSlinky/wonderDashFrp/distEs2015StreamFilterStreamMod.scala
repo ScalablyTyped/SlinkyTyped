@@ -4,7 +4,6 @@ import typingsSlinky.wonderDashFrp.distEs2015CoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distEs2015CoreStreamMod.Stream
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
 import typingsSlinky.wonderDashFrp.distEs2015StreamBaseStreamMod.BaseStream
-import typingsSlinky.wonderDashFrp.distEs2015StreamFilterStreamMod.FilterStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

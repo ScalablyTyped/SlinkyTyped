@@ -1,6 +1,5 @@
 package typingsSlinky.twilsock
 
-import typingsSlinky.twilsock.libOfflinestorageMod.OfflineProductStorage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

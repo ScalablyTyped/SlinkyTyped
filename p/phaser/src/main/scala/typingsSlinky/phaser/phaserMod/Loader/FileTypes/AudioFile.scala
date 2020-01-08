@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
 import org.scalajs.dom.raw.AudioContext
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.AudioFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
@@ -26,31 +27,21 @@ class AudioFile protected ()
     * @param xhrSettings Extra XHR Settings specifically for this file.
     * @param audioContext The AudioContext this file will use to process itself.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: AudioFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, urlConfig: js.Any) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: AudioFileConfig, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig, urlConfig: js.Any) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: js.Any, xhrSettings: XHRSettingsObject) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig, urlConfig: js.Any, xhrSettings: XHRSettingsObject) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    urlConfig: js.Any,
-    xhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: AudioFileConfig,
-    urlConfig: js.Any,
-    xhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     urlConfig: js.Any,
     xhrSettings: XHRSettingsObject,
     audioContext: AudioContext
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: AudioFileConfig,
     urlConfig: js.Any,
     xhrSettings: XHRSettingsObject,

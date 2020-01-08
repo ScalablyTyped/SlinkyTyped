@@ -1,7 +1,7 @@
 package typingsSlinky.tslint.libTestMod
 
 import typingsSlinky.tslint.libVerifyLintErrorMod.LintError
-import typingsSlinky.tslint.tslintNumbers.`false`
+import typingsSlinky.tslint.tslintBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

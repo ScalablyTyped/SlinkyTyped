@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollo-cache
 
-Typings are for version 1.3.2
+Typings are for version 1.3.4
 
 ## Library description:
 Core abstract of Caching layer for Apollo Client
@@ -10,9 +10,9 @@ Core abstract of Caching layer for Apollo Client
 | ------------------ | :-------------: |
 | Full name          | apollo-cache |
 | Keywords           | - |
-| # releases         | 90 |
-| # dependents       | 35 |
-| # downloads        | 18932653 |
+| # releases         | 83 |
+| # dependents       | 50 |
+| # downloads        | 41188689 |
 | # stars            | 0 |
 
 ## Links

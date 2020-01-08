@@ -1,7 +1,7 @@
 package typingsSlinky.tinymce.tinymceMod.Events
 
 import org.scalajs.dom.raw.Node
-import typingsSlinky.tinymce.tinymceNumbers.`true`
+import typingsSlinky.tinymce.tinymceBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

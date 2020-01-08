@@ -11,8 +11,8 @@ Determine if an object is a Stream
 | Full name          | isstream |
 | Keywords           | stream, type, streams, readable-stream, hippo |
 | # releases         | 1 |
-| # dependents       | 143 |
-| # downloads        | 364428764 |
+| # dependents       | 164 |
+| # downloads        | 513927145 |
 | # stars            | 6 |
 
 ## Links

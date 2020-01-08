@@ -1,10 +1,6 @@
 package typingsSlinky.caseless
 
-import typingsSlinky.caseless.caselessMod.Caseless
-import typingsSlinky.caseless.caselessMod.KeyType
-import typingsSlinky.caseless.caselessMod.RawDict
-import typingsSlinky.caseless.caselessMod.ValueType
-import typingsSlinky.caseless.caselessNumbers.`false`
+import typingsSlinky.caseless.caselessBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

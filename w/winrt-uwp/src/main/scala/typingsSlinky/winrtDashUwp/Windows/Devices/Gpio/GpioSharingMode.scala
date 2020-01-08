@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Gpio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object GpioSharingMode extends js.Object {
   @js.native
   sealed trait sharedReadOnly extends GpioSharingMode
   
-  /* 0 */ val exclusive: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioSharingMode.exclusive with Double = js.native
-  /* 1 */ val sharedReadOnly: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioSharingMode.sharedReadOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GpioSharingMode with Double] = js.native
+  /* 0 */ @js.native
+  object exclusive extends TopLevel[exclusive with Double]
+  
+  /* 1 */ @js.native
+  object sharedReadOnly extends TopLevel[sharedReadOnly with Double]
+  
 }
 

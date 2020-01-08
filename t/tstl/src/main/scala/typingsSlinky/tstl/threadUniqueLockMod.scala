@@ -4,9 +4,6 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import typingsSlinky.tstl.baseThreadUnderscoreITimedLockableMod._ITimedLockable
 import typingsSlinky.tstl.threadILockableMod.ILockable
-import typingsSlinky.tstl.threadUniqueLockMod.Closure
-import typingsSlinky.tstl.threadUniqueLockMod.IMutex
-import typingsSlinky.tstl.threadUniqueLockMod.UniqueLock
 import typingsSlinky.tstl.tstlStrings.unlock
 import scala.scalajs.js
 import scala.scalajs.js.`|`

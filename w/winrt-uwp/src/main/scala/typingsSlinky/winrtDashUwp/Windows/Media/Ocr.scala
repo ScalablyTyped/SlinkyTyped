@@ -5,10 +5,6 @@ import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Rect
 import typingsSlinky.winrtDashUwp.Windows.Globalization.Language
 import typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.SoftwareBitmap
-import typingsSlinky.winrtDashUwp.Windows.Media.Ocr.OcrEngine
-import typingsSlinky.winrtDashUwp.Windows.Media.Ocr.OcrLine
-import typingsSlinky.winrtDashUwp.Windows.Media.Ocr.OcrResult
-import typingsSlinky.winrtDashUwp.Windows.Media.Ocr.OcrWord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

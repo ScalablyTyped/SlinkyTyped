@@ -1,5 +1,6 @@
 package typingsSlinky.syslogDashClient.syslogDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,20 +50,46 @@ object Facility extends js.Object {
   @js.native
   sealed trait User extends Facility
   
-  /* 14 */ val Alert: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Alert with Double = js.native
-  /* 13 */ val Audit: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Audit with Double = js.native
-  /* 0 */ val Kernel: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Kernel with Double = js.native
-  /* 16 */ val Local0: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local0 with Double = js.native
-  /* 17 */ val Local1: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local1 with Double = js.native
-  /* 18 */ val Local2: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local2 with Double = js.native
-  /* 19 */ val Local3: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local3 with Double = js.native
-  /* 20 */ val Local4: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local4 with Double = js.native
-  /* 21 */ val Local5: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local5 with Double = js.native
-  /* 22 */ val Local6: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local6 with Double = js.native
-  /* 23 */ val Local7: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.Local7 with Double = js.native
-  /* 3 */ val System: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.System with Double = js.native
-  /* 1 */ val User: typingsSlinky.syslogDashClient.syslogDashClientMod.Facility.User with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Facility with Double] = js.native
+  /* 14 */ @js.native
+  object Alert extends TopLevel[Alert with Double]
+  
+  /* 13 */ @js.native
+  object Audit extends TopLevel[Audit with Double]
+  
+  /* 0 */ @js.native
+  object Kernel extends TopLevel[Kernel with Double]
+  
+  /* 16 */ @js.native
+  object Local0 extends TopLevel[Local0 with Double]
+  
+  /* 17 */ @js.native
+  object Local1 extends TopLevel[Local1 with Double]
+  
+  /* 18 */ @js.native
+  object Local2 extends TopLevel[Local2 with Double]
+  
+  /* 19 */ @js.native
+  object Local3 extends TopLevel[Local3 with Double]
+  
+  /* 20 */ @js.native
+  object Local4 extends TopLevel[Local4 with Double]
+  
+  /* 21 */ @js.native
+  object Local5 extends TopLevel[Local5 with Double]
+  
+  /* 22 */ @js.native
+  object Local6 extends TopLevel[Local6 with Double]
+  
+  /* 23 */ @js.native
+  object Local7 extends TopLevel[Local7 with Double]
+  
+  /* 3 */ @js.native
+  object System extends TopLevel[System with Double]
+  
+  /* 1 */ @js.native
+  object User extends TopLevel[User with Double]
+  
 }
 

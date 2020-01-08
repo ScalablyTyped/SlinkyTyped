@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "microevent_dot_ts"
-version := "0.1.1-2197b0"
+version := "0.1.1-9bf8a3"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

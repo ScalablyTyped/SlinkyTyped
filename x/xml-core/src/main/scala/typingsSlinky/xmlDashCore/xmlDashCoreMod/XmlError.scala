@@ -1,6 +1,7 @@
 package typingsSlinky.xmlDashCore.xmlDashCoreMod
 
 import typingsSlinky.std.Error
+import typingsSlinky.xmlDashCore.xmlDashCoreStrings.XMLJS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +15,6 @@ class XmlError protected () extends Error {
   override var message: String = js.native
   /* CompleteClass */
   override var name: String = js.native
-  val prefix: String = js.native
+  val prefix: XMLJS = js.native
 }
 

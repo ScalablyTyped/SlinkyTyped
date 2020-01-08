@@ -10,9 +10,9 @@ Deep diffs two objects, including nested structures of arrays and objects, and r
 | ------------------ | :-------------: |
 | Full name          | deep-object-diff |
 | Keywords           | diff, object, deep, difference |
-| # releases         | 4 |
-| # dependents       | 60 |
-| # downloads        | 950172 |
+| # releases         | 2 |
+| # dependents       | 99 |
+| # downloads        | 24805002 |
 | # stars            | 3 |
 
 ## Links

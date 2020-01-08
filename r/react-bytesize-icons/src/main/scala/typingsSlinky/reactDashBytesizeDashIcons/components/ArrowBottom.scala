@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ArrowBottom
-  extends SharedApply_BytesizeIconsProps219891393[
+  extends SharedApply_BytesizeIconsProps1658782493[
       typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.ArrowBottom
     ] {
   @JSImport("react-bytesize-icons", "ArrowBottom")

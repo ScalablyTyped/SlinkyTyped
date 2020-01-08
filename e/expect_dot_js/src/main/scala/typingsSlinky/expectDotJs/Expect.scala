@@ -1,15 +1,6 @@
 package typingsSlinky.expectDotJs
 
-import typingsSlinky.expectDotJs.Expect.An
-import typingsSlinky.expectDotJs.Expect.Assertion
-import typingsSlinky.expectDotJs.Expect.Be
-import typingsSlinky.expectDotJs.Expect.Have
-import typingsSlinky.expectDotJs.Expect.Not
-import typingsSlinky.expectDotJs.Expect.NotBase
-import typingsSlinky.expectDotJs.Expect.Only
 import typingsSlinky.expectDotJs.Expect.Root
-import typingsSlinky.expectDotJs.Expect.To
-import typingsSlinky.expectDotJs.Expect.ToBase
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`

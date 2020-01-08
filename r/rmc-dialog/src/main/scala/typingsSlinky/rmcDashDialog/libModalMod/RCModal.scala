@@ -2,7 +2,7 @@ package typingsSlinky.rmcDashDialog.libModalMod
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.rmcDashDialog.rmcDashDialogNumbers.`0`
-import typingsSlinky.rmcDashDialog.rmcDashDialogNumbers.`1DOT05`
+import typingsSlinky.rmcDashDialog.rmcDashDialogNumbers.`1.05`
 import typingsSlinky.rmcDashDialog.rmcDashDialogNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ trait RCModal
   def componentWillReceiveProps_MRCModal(nextProps: js.Any): Unit = js.native
   def getOpacity(visible: js.Any): `0` | `1` = js.native
   def getPosition(visible: js.Any): Double = js.native
-  def getScale(visible: js.Any): `1` | `1DOT05` = js.native
+  def getScale(visible: js.Any): `1` | `1.05` = js.native
   def onMaskClose(): Unit = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MRCModal(nextProps: js.Any, nextState: js.Any): Boolean = js.native

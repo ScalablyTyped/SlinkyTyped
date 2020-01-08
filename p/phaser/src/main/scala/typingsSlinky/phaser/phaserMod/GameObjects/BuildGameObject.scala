@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.GameObjects.GameObjectConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +16,7 @@ object BuildGameObject extends js.Object {
     * @param config The config to build the GameObject with.
     */
   def apply(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     gameObject: typingsSlinky.phaser.Phaser.GameObjects.GameObject,
     config: GameObjectConfig
   ): typingsSlinky.phaser.Phaser.GameObjects.GameObject = js.native

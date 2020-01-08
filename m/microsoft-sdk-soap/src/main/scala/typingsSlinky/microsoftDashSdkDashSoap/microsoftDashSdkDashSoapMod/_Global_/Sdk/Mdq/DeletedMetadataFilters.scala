@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,31 @@ object DeletedMetadataFilters extends js.Object {
   @js.native
   sealed trait Relationship extends DeletedMetadataFilters
   
-  /* 0 */ val All: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.All with scala.Double = js.native
-  /* 1 */ val Attribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Attribute with scala.Double = js.native
-  /* 2 */ val Default: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Default with scala.Double = js.native
-  /* 3 */ val Entity: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Entity with scala.Double = js.native
-  /* 4 */ val Label: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Label with scala.Double = js.native
-  /* 5 */ val OptionSet: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.OptionSet with scala.Double = js.native
-  /* 6 */ val Relationship: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Relationship with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[DeletedMetadataFilters with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[DeletedMetadataFilters with Double] = js.native
+  /* 0 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 1 */ @js.native
+  object Attribute extends TopLevel[Attribute with Double]
+  
+  /* 2 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 3 */ @js.native
+  object Entity extends TopLevel[Entity with Double]
+  
+  /* 4 */ @js.native
+  object Label
+    extends TopLevel[
+          typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.DeletedMetadataFilters.Label with Double
+        ]
+  
+  /* 5 */ @js.native
+  object OptionSet extends TopLevel[OptionSet with Double]
+  
+  /* 6 */ @js.native
+  object Relationship extends TopLevel[Relationship with Double]
+  
 }
 

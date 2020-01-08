@@ -1,7 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi
 
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.vsoDashNodeDashApi.buildApiMod.IBuildApi
 import typingsSlinky.vsoDashNodeDashApi.clientApiBasesMod.ClientApiBase
 import typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.Build
 import typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildArtifact

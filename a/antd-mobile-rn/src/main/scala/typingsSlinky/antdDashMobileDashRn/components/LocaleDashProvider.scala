@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocaleDashProvider extends SharedApply_LocaleProviderProps_1856014647[default] {
+object LocaleDashProvider extends SharedApply_LocaleProviderProps_2001753448[default] {
   @JSImport("antd-mobile-rn/lib/locale-provider/locale-provider", JSImport.Default)
   @js.native
   object componentImport extends js.Object

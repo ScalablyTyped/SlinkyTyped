@@ -1,6 +1,6 @@
 package typingsSlinky.atTensorflowTfjsDashCore
 
-import typingsSlinky.atTensorflowTfjsDashCore.distOpsLossUnderscoreOpsMod.Reduction
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.TensorLike
@@ -28,12 +28,20 @@ object distOpsLossUnderscoreOpsMod extends js.Object {
     @js.native
     sealed trait SUM_BY_NONZERO_WEIGHTS extends Reduction
     
-    /* 1 */ val MEAN: typingsSlinky.atTensorflowTfjsDashCore.distOpsLossUnderscoreOpsMod.Reduction.MEAN with Double = js.native
-    /* 0 */ val NONE: typingsSlinky.atTensorflowTfjsDashCore.distOpsLossUnderscoreOpsMod.Reduction.NONE with Double = js.native
-    /* 2 */ val SUM: typingsSlinky.atTensorflowTfjsDashCore.distOpsLossUnderscoreOpsMod.Reduction.SUM with Double = js.native
-    /* 3 */ val SUM_BY_NONZERO_WEIGHTS: typingsSlinky.atTensorflowTfjsDashCore.distOpsLossUnderscoreOpsMod.Reduction.SUM_BY_NONZERO_WEIGHTS with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Reduction with Double] = js.native
+    /* 1 */ @js.native
+    object MEAN extends TopLevel[MEAN with Double]
+    
+    /* 0 */ @js.native
+    object NONE extends TopLevel[NONE with Double]
+    
+    /* 2 */ @js.native
+    object SUM extends TopLevel[SUM with Double]
+    
+    /* 3 */ @js.native
+    object SUM_BY_NONZERO_WEIGHTS extends TopLevel[SUM_BY_NONZERO_WEIGHTS with Double]
+    
   }
   
   @js.native

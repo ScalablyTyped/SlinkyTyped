@@ -1,8 +1,8 @@
 package typingsSlinky.trezorDashConnect.trezorDashConnectMod
 
 import typingsSlinky.trezorDashConnect.Anon_Error
-import typingsSlinky.trezorDashConnect.trezorDashConnectNumbers.`false`
-import typingsSlinky.trezorDashConnect.trezorDashConnectNumbers.`true`
+import typingsSlinky.trezorDashConnect.trezorDashConnectBooleans.`false`
+import typingsSlinky.trezorDashConnect.trezorDashConnectBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

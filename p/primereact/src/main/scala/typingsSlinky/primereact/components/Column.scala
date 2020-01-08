@@ -3,6 +3,7 @@ package typingsSlinky.primereact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.primereact.Anon_Field
 import typingsSlinky.primereact.componentsColumnColumnMod.ColumnProps
@@ -28,6 +29,7 @@ object Column
     editorValidatorEvent: String = null,
     excludeGlobalFilter: js.UndefOr[Boolean] = js.undefined,
     expander: js.UndefOr[Boolean] = js.undefined,
+    exportable: js.UndefOr[Boolean] = js.undefined,
     field: String = null,
     filter: js.UndefOr[Boolean] = js.undefined,
     filterElement: js.Object = null,
@@ -66,6 +68,7 @@ object Column
     if (editorValidatorEvent != null) __obj.updateDynamic("editorValidatorEvent")(editorValidatorEvent.asInstanceOf[js.Any])
     if (!js.isUndefined(excludeGlobalFilter)) __obj.updateDynamic("excludeGlobalFilter")(excludeGlobalFilter.asInstanceOf[js.Any])
     if (!js.isUndefined(expander)) __obj.updateDynamic("expander")(expander.asInstanceOf[js.Any])
+    if (!js.isUndefined(exportable)) __obj.updateDynamic("exportable")(exportable.asInstanceOf[js.Any])
     if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
     if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     if (filterElement != null) __obj.updateDynamic("filterElement")(filterElement.asInstanceOf[js.Any])
@@ -95,6 +98,7 @@ object Column
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.columnMod.Column] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.columnMod.Column](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ColumnProps
 }
 

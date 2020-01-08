@@ -10,9 +10,9 @@ Returns the next buffer/object in a stream's readable queue
 | ------------------ | :-------------: |
 | Full name          | stream-shift |
 | Keywords           | - |
-| # releases         | 0 |
-| # dependents       | 20 |
-| # downloads        | 168369217 |
+| # releases         | 2 |
+| # dependents       | 26 |
+| # downloads        | 326399350 |
 | # stars            | 0 |
 
 ## Links

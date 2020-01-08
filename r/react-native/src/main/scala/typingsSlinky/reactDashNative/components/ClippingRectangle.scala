@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClippingRectangle
-  extends SharedApply_ARTClippingRectangleProps_1632069124[typingsSlinky.reactDashNative.reactDashNativeMod.ClippingRectangle] {
+  extends SharedApply_ARTClippingRectangleProps_1115619913[typingsSlinky.reactDashNative.reactDashNativeMod.ClippingRectangle] {
   @JSImport("react-native", "ClippingRectangle")
   @js.native
   object componentImport extends js.Object

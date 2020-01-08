@@ -6,7 +6,6 @@ import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
 import typingsSlinky.wonderDashFrp.distEs2015TestingMockObserverMod.MockObserver
 import typingsSlinky.wonderDashFrp.distEs2015TestingMockPromiseMod.MockPromise
 import typingsSlinky.wonderDashFrp.distEs2015TestingRecordMod.Record
-import typingsSlinky.wonderDashFrp.distEs2015TestingTestSchedulerMod.TestScheduler
 import typingsSlinky.wonderDashFrp.distEs2015TestingTestStreamMod.TestStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object TreeNodeStructureType extends js.Object {
   @js.native
   sealed trait Iteration extends TreeNodeStructureType
   
-  /* 0 */ val Area: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.TreeNodeStructureType.Area with Double = js.native
-  /* 1 */ val Iteration: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.TreeNodeStructureType.Iteration with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TreeNodeStructureType with Double] = js.native
+  /* 0 */ @js.native
+  object Area extends TopLevel[Area with Double]
+  
+  /* 1 */ @js.native
+  object Iteration extends TopLevel[Iteration with Double]
+  
 }
 

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashReject extends js.Object {
-  def apply[T](predicate: ValueIterateeCustom[T, Boolean]): LodashReject1x1[T] = js.native
+  def apply[T](predicate: ValueIterateeCustom[T, Boolean]): js.Array[T] = js.native
   def apply[T /* <: js.Object */](
     predicate: ValueIterateeCustom[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

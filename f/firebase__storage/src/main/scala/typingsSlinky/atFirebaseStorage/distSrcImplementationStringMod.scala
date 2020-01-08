@@ -1,7 +1,5 @@
 package typingsSlinky.atFirebaseStorage
 
-import typingsSlinky.atFirebaseStorage.distSrcImplementationStringMod.StringData
-import typingsSlinky.atFirebaseStorage.distSrcImplementationStringMod.StringFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

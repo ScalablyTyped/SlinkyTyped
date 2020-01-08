@@ -1,5 +1,6 @@
 package typingsSlinky.pgDashPromise.pgDashPromiseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,11 +25,19 @@ object queryResult extends js.Object {
   @js.native
   sealed trait one extends queryResult
   
-  /* 6 */ val any: typingsSlinky.pgDashPromise.pgDashPromiseMod.queryResult.any with Double = js.native
-  /* 2 */ val many: typingsSlinky.pgDashPromise.pgDashPromiseMod.queryResult.many with Double = js.native
-  /* 4 */ val none: typingsSlinky.pgDashPromise.pgDashPromiseMod.queryResult.none with Double = js.native
-  /* 1 */ val one: typingsSlinky.pgDashPromise.pgDashPromiseMod.queryResult.one with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[queryResult with Double] = js.native
+  /* 6 */ @js.native
+  object any extends TopLevel[any with Double]
+  
+  /* 2 */ @js.native
+  object many extends TopLevel[many with Double]
+  
+  /* 4 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object one extends TopLevel[one with Double]
+  
 }
 

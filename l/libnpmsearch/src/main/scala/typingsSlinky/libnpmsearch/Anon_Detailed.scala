@@ -1,6 +1,6 @@
 package typingsSlinky.libnpmsearch
 
-import typingsSlinky.libnpmsearch.libnpmsearchNumbers.`true`
+import typingsSlinky.libnpmsearch.libnpmsearchBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

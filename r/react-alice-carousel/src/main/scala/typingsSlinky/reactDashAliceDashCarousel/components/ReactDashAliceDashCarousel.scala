@@ -3,9 +3,11 @@ package typingsSlinky.reactDashAliceDashCarousel.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselMod.EventObject
 import typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselMod.default
+import typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselStrings.responsive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +26,7 @@ object ReactDashAliceDashCarousel
     autoPlayDirection: String = null,
     autoPlayInterval: Int | Double = null,
     buttonsDisabled: js.UndefOr[Boolean] = js.undefined,
+    controlsStrategy: typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselStrings.default | responsive = null,
     disableAutoPlayOnAction: js.UndefOr[Boolean] = js.undefined,
     dotsDisabled: js.UndefOr[Boolean] = js.undefined,
     duration: Int | Double = null,
@@ -56,6 +59,7 @@ object ReactDashAliceDashCarousel
     if (autoPlayDirection != null) __obj.updateDynamic("autoPlayDirection")(autoPlayDirection.asInstanceOf[js.Any])
     if (autoPlayInterval != null) __obj.updateDynamic("autoPlayInterval")(autoPlayInterval.asInstanceOf[js.Any])
     if (!js.isUndefined(buttonsDisabled)) __obj.updateDynamic("buttonsDisabled")(buttonsDisabled.asInstanceOf[js.Any])
+    if (controlsStrategy != null) __obj.updateDynamic("controlsStrategy")(controlsStrategy.asInstanceOf[js.Any])
     if (!js.isUndefined(disableAutoPlayOnAction)) __obj.updateDynamic("disableAutoPlayOnAction")(disableAutoPlayOnAction.asInstanceOf[js.Any])
     if (!js.isUndefined(dotsDisabled)) __obj.updateDynamic("dotsDisabled")(dotsDisabled.asInstanceOf[js.Any])
     if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
@@ -82,6 +86,9 @@ object ReactDashAliceDashCarousel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = typingsSlinky.reactDashAliceDashCarousel.reactDashAliceDashCarouselMod.Props
 }
 

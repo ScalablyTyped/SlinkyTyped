@@ -1,7 +1,7 @@
 package typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactNumbers.`false`
+import typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactBooleans.`false`
 import typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactStrings.backward
 import typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactStrings.carousel
 import typingsSlinky.tinyDashSliderDashReact.tinyDashSliderDashReactStrings.forward

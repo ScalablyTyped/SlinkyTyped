@@ -3,7 +3,7 @@ package typingsSlinky.uikit.UIkit
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.jquery.JQuery
-import typingsSlinky.uikit.uikitNumbers.`false`
+import typingsSlinky.uikit.uikitBooleans.`false`
 import typingsSlinky.uikit.uikitStrings.click
 import typingsSlinky.uikit.uikitStrings.hover
 import typingsSlinky.uikit.uikitStrings.x

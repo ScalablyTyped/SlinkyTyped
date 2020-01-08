@@ -11,9 +11,9 @@ trait zenscroll extends js.Object {
   def center(elem: HTMLElement, duration: Double): Unit = js.native
   def center(elem: HTMLElement, duration: Double, offset: Double): Unit = js.native
   def center(elem: HTMLElement, duration: Double, offset: Double, onDone: js.Function0[Unit]): Unit = js.native
-  def createScroller(scrollContainer: HTMLElement): typingsSlinky.zenscroll.zenscrollMod.ZenScroll.zenscroll = js.native
-  def createScroller(scrollContainer: HTMLElement, defaultDuration: Double): typingsSlinky.zenscroll.zenscrollMod.ZenScroll.zenscroll = js.native
-  def createScroller(scrollContainer: HTMLElement, defaultDuration: Double, edgeOffset: Double): typingsSlinky.zenscroll.zenscrollMod.ZenScroll.zenscroll = js.native
+  def createScroller(scrollContainer: HTMLElement): zenscroll = js.native
+  def createScroller(scrollContainer: HTMLElement, defaultDuration: Double): zenscroll = js.native
+  def createScroller(scrollContainer: HTMLElement, defaultDuration: Double, edgeOffset: Double): zenscroll = js.native
   def getTopOf(elem: HTMLElement): Double = js.native
   def getY(): Double = js.native
   def intoView(elem: HTMLElement): Unit = js.native

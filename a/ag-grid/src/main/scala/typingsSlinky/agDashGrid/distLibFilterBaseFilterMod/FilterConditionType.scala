@@ -1,5 +1,6 @@
 package typingsSlinky.agDashGrid.distLibFilterBaseFilterMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object FilterConditionType extends js.Object {
   @js.native
   sealed trait MAIN extends FilterConditionType
   
-  /* 1 */ val CONDITION: typingsSlinky.agDashGrid.distLibFilterBaseFilterMod.FilterConditionType.CONDITION with Double = js.native
-  /* 0 */ val MAIN: typingsSlinky.agDashGrid.distLibFilterBaseFilterMod.FilterConditionType.MAIN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterConditionType with Double] = js.native
+  /* 1 */ @js.native
+  object CONDITION extends TopLevel[CONDITION with Double]
+  
+  /* 0 */ @js.native
+  object MAIN extends TopLevel[MAIN with Double]
+  
 }
 

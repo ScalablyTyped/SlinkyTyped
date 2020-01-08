@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DataTable
-  extends SharedApply_TableProps_1675285046[typingsSlinky.reactDashMdl.reactDashMdlMod.DataTable] {
+  extends SharedApply_TableProps1908364182[typingsSlinky.reactDashMdl.reactDashMdlMod.DataTable] {
   @JSImport("react-mdl", "DataTable")
   @js.native
   object componentImport extends js.Object

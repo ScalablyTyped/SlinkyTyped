@@ -3,7 +3,6 @@ package typingsSlinky.browserfs
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.FileFlag
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSOneArgCallback
 import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystem
-import typingsSlinky.browserfs.distNodeGenericLockedUnderscoreFsMod.LockedFS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

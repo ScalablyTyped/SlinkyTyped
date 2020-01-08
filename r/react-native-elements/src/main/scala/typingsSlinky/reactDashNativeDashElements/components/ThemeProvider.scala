@@ -3,6 +3,7 @@ package typingsSlinky.reactDashNativeDashElements.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.Theme
 import typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.ThemeProviderProps
@@ -31,6 +32,12 @@ object ThemeProvider
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.ThemeProvider[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.ThemeProvider[js.Any]
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashElements.reactDashNativeDashElementsMod.ThemeProvider[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ThemeProviderProps[js.Any]
 }
 

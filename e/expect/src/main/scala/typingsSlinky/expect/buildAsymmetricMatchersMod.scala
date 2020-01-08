@@ -1,12 +1,5 @@
 package typingsSlinky.expect
 
-import typingsSlinky.expect.buildAsymmetricMatchersMod.Any
-import typingsSlinky.expect.buildAsymmetricMatchersMod.Anything
-import typingsSlinky.expect.buildAsymmetricMatchersMod.ArrayContaining
-import typingsSlinky.expect.buildAsymmetricMatchersMod.AsymmetricMatcher
-import typingsSlinky.expect.buildAsymmetricMatchersMod.ObjectContaining
-import typingsSlinky.expect.buildAsymmetricMatchersMod.StringContaining
-import typingsSlinky.expect.buildAsymmetricMatchersMod.StringMatching
 import typingsSlinky.std.Record
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
@@ -41,7 +34,7 @@ object buildAsymmetricMatchersMod extends js.Object {
   class AsymmetricMatcher[T] protected () extends js.Object {
     def this(sample: T) = this()
     @JSName("$$typeof")
-    var $$typeof: js.Symbol = js.native
+    var DollarDollartypeof: js.Symbol = js.native
     var inverse: js.UndefOr[Boolean] = js.native
     var sample: T = js.native
   }

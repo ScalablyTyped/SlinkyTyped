@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SPClientTemplates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object RichTextMode extends js.Object {
   @js.native
   sealed trait ThemeHtml extends RichTextMode
   
-  /* 0 */ val Compatible: typingsSlinky.sharepoint.SPClientTemplates.RichTextMode.Compatible with Double = js.native
-  /* 1 */ val FullHtml: typingsSlinky.sharepoint.SPClientTemplates.RichTextMode.FullHtml with Double = js.native
-  /* 2 */ val HtmlAsXml: typingsSlinky.sharepoint.SPClientTemplates.RichTextMode.HtmlAsXml with Double = js.native
-  /* 3 */ val ThemeHtml: typingsSlinky.sharepoint.SPClientTemplates.RichTextMode.ThemeHtml with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RichTextMode with Double] = js.native
+  /* 0 */ @js.native
+  object Compatible extends TopLevel[Compatible with Double]
+  
+  /* 1 */ @js.native
+  object FullHtml extends TopLevel[FullHtml with Double]
+  
+  /* 2 */ @js.native
+  object HtmlAsXml extends TopLevel[HtmlAsXml with Double]
+  
+  /* 3 */ @js.native
+  object ThemeHtml extends TopLevel[ThemeHtml with Double]
+  
 }
 

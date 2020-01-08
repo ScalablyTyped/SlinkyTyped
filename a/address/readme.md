@@ -10,9 +10,9 @@ Get current machine IP, MAC and DNS servers.
 | ------------------ | :-------------: |
 | Full name          | address |
 | Keywords           | address, ip, ipv4, mac |
-| # releases         | 3 |
-| # dependents       | 237 |
-| # downloads        | 56751661 |
+| # releases         | 4 |
+| # dependents       | 387 |
+| # downloads        | 157699100 |
 | # stars            | 9 |
 
 ## Links

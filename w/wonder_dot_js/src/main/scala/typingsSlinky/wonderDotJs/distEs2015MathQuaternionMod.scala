@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015MathMatrix4Mod.Matrix4
-import typingsSlinky.wonderDotJs.distEs2015MathQuaternionMod.Quaternion
 import typingsSlinky.wonderDotJs.distEs2015MathVector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`

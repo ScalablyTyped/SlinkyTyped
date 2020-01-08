@@ -1,11 +1,11 @@
 package typingsSlinky.reactDashSelect
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.reactDashSelect.srcComponentsInputMod.InputProps
 import typingsSlinky.reactDashSelect.srcTypesMod.ClassNamesState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,9 +48,13 @@ object srcComponentsInputMod extends js.Object {
     def this(props: InputProps, context: js.Any) = this()
   }
   
-  val Input: ReactComponentClass[InputProps] = js.native
-  val default: ReactComponentClass[InputProps] = js.native
   def inputCSS(props: InputProps): CSSProperties = js.native
   def inputStyle(isHidden: Boolean): CSSProperties = js.native
+  @js.native
+  object Input extends TopLevel[ComponentType[InputProps]]
+  
+  @js.native
+  object default extends TopLevel[ComponentType[InputProps]]
+  
 }
 

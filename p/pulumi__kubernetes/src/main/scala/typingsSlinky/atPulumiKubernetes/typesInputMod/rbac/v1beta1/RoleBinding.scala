@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.rbac.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
   * RoleBinding references a role, but does not contain it.  It can reference a Role in the same
   * namespace or a ClusterRole in the global namespace. It adds who information via Subjects and
   * namespace information by which namespace it exists in.  RoleBindings in a given namespace
-  * only have effect in that namespace.
+  * only have effect in that namespace. Deprecated in v1.17 in favor of
+  * rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
   */
 trait RoleBinding extends js.Object {
   /**
@@ -20,7 +21,7 @@ trait RoleBinding extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -47,7 +48,7 @@ object RoleBinding {
   @scala.inline
   def apply(
     roleRef: Input[RoleRef],
-    apiVersion: Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[rbacDotauthorizationDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.RoleBinding] = null,
     metadata: Input[ObjectMeta] = null,
     subjects: Input[js.Array[Input[Subject]]] = null

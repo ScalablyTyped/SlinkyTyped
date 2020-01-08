@@ -1,5 +1,6 @@
 package typingsSlinky.timezonecomplete.distLibTokenMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,20 +53,46 @@ object TokenType extends js.Object {
   @js.native
   sealed trait ZONE extends TokenType
   
-  /* 6 */ val DAY: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.DAY with Double = js.native
-  /* 8 */ val DAYPERIOD: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.DAYPERIOD with Double = js.native
-  /* 1 */ val ERA: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.ERA with Double = js.native
-  /* 9 */ val HOUR: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.HOUR with Double = js.native
-  /* 0 */ val IDENTITY: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.IDENTITY with Double = js.native
-  /* 10 */ val MINUTE: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.MINUTE with Double = js.native
-  /* 4 */ val MONTH: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.MONTH with Double = js.native
-  /* 3 */ val QUARTER: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.QUARTER with Double = js.native
-  /* 11 */ val SECOND: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.SECOND with Double = js.native
-  /* 5 */ val WEEK: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.WEEK with Double = js.native
-  /* 7 */ val WEEKDAY: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.WEEKDAY with Double = js.native
-  /* 2 */ val YEAR: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.YEAR with Double = js.native
-  /* 12 */ val ZONE: typingsSlinky.timezonecomplete.distLibTokenMod.TokenType.ZONE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TokenType with Double] = js.native
+  /* 6 */ @js.native
+  object DAY extends TopLevel[DAY with Double]
+  
+  /* 8 */ @js.native
+  object DAYPERIOD extends TopLevel[DAYPERIOD with Double]
+  
+  /* 1 */ @js.native
+  object ERA extends TopLevel[ERA with Double]
+  
+  /* 9 */ @js.native
+  object HOUR extends TopLevel[HOUR with Double]
+  
+  /* 0 */ @js.native
+  object IDENTITY extends TopLevel[IDENTITY with Double]
+  
+  /* 10 */ @js.native
+  object MINUTE extends TopLevel[MINUTE with Double]
+  
+  /* 4 */ @js.native
+  object MONTH extends TopLevel[MONTH with Double]
+  
+  /* 3 */ @js.native
+  object QUARTER extends TopLevel[QUARTER with Double]
+  
+  /* 11 */ @js.native
+  object SECOND extends TopLevel[SECOND with Double]
+  
+  /* 5 */ @js.native
+  object WEEK extends TopLevel[WEEK with Double]
+  
+  /* 7 */ @js.native
+  object WEEKDAY extends TopLevel[WEEKDAY with Double]
+  
+  /* 2 */ @js.native
+  object YEAR extends TopLevel[YEAR with Double]
+  
+  /* 12 */ @js.native
+  object ZONE extends TopLevel[ZONE with Double]
+  
 }
 

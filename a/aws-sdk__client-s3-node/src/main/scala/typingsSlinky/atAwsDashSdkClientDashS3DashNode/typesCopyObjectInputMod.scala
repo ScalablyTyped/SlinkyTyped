@@ -10,12 +10,12 @@ import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3Da
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.STANDARD_IA
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`authenticated-read`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`aws-exec-read`
-import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`aws:kms`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`bucket-owner-full-control`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`bucket-owner-read`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`private`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`public-read-write`
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`public-read`
+import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.awsColonkms
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.requester_
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.typesInputTypesUnionMod._InputTypesUnion
 import typingsSlinky.atAwsDashSdkTypes.buildAbortMod.AbortSignal
@@ -187,7 +187,7 @@ object typesCopyObjectInputMod extends js.Object {
     /**
       * <p>The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms).</p>
       */
-    var ServerSideEncryption: js.UndefOr[AES256 | `aws:kms` | String] = js.native
+    var ServerSideEncryption: js.UndefOr[AES256 | awsColonkms | String] = js.native
     /**
       * <p>The type of storage to use for the object. Defaults to 'STANDARD'.</p>
       */

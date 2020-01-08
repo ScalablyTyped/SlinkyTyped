@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ExportingOrientation extends js.Object {
   @js.native
   sealed trait Portrait extends ExportingOrientation
   
-  /* 1 */ val Landscape: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ExportingOrientation.Landscape with Double = js.native
-  /* 0 */ val Portrait: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ExportingOrientation.Portrait with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExportingOrientation with Double] = js.native
+  /* 1 */ @js.native
+  object Landscape extends TopLevel[Landscape with Double]
+  
+  /* 0 */ @js.native
+  object Portrait extends TopLevel[Portrait with Double]
+  
 }
 

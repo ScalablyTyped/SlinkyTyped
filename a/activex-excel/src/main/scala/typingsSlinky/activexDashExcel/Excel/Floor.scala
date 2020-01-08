@@ -10,7 +10,8 @@ class Floor protected () extends js.Object {
   val Application: typingsSlinky.activexDashExcel.Excel.Application = js.native
   val Border: typingsSlinky.activexDashExcel.Excel.Border = js.native
   val Creator: XlCreator = js.native
-  var `Excel.Floor_typekey`: Floor = js.native
+  @JSName("Excel.Floor_typekey")
+  var ExcelDotFloor_typekey: Floor = js.native
   val Fill: ChartFillFormat = js.native
   val Format: ChartFormat = js.native
   val Interior: typingsSlinky.activexDashExcel.Excel.Interior = js.native

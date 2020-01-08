@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object FrameworkIdentityType extends js.Object {
   @js.native
   sealed trait ServiceIdentity extends FrameworkIdentityType
   
-  /* 2 */ val AggregateIdentity: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.FrameworkIdentityType.AggregateIdentity with Double = js.native
-  /* 3 */ val ImportedIdentity: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.FrameworkIdentityType.ImportedIdentity with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.FrameworkIdentityType.None with Double = js.native
-  /* 1 */ val ServiceIdentity: typingsSlinky.vsoDashNodeDashApi.interfacesIdentitiesInterfacesMod.FrameworkIdentityType.ServiceIdentity with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FrameworkIdentityType with Double] = js.native
+  /* 2 */ @js.native
+  object AggregateIdentity extends TopLevel[AggregateIdentity with Double]
+  
+  /* 3 */ @js.native
+  object ImportedIdentity extends TopLevel[ImportedIdentity with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object ServiceIdentity extends TopLevel[ServiceIdentity with Double]
+  
 }
 

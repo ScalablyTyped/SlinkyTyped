@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Rotator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +35,25 @@ object PagerPosition extends js.Object {
   @js.native
   sealed trait TopRight extends PagerPosition
   
-  /* 0 */ val BottomLeft: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.BottomLeft with Double = js.native
-  /* 1 */ val BottomRight: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.BottomRight with Double = js.native
-  /* 2 */ val Outside: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.Outside with Double = js.native
-  /* 3 */ val TopCenter: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.TopCenter with Double = js.native
-  /* 4 */ val TopLeft: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.TopLeft with Double = js.native
-  /* 5 */ val TopRight: typingsSlinky.ejDotWebDotAll.ej.Rotator.PagerPosition.TopRight with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PagerPosition with Double] = js.native
+  /* 0 */ @js.native
+  object BottomLeft extends TopLevel[BottomLeft with Double]
+  
+  /* 1 */ @js.native
+  object BottomRight extends TopLevel[BottomRight with Double]
+  
+  /* 2 */ @js.native
+  object Outside extends TopLevel[Outside with Double]
+  
+  /* 3 */ @js.native
+  object TopCenter extends TopLevel[TopCenter with Double]
+  
+  /* 4 */ @js.native
+  object TopLeft extends TopLevel[TopLeft with Double]
+  
+  /* 5 */ @js.native
+  object TopRight extends TopLevel[TopRight with Double]
+  
 }
 

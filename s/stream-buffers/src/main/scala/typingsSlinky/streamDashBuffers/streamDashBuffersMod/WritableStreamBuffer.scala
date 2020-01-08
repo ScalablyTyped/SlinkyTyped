@@ -2,7 +2,7 @@ package typingsSlinky.streamDashBuffers.streamDashBuffersMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.streamDashBuffers.streamDashBuffersNumbers.`false`
+import typingsSlinky.streamDashBuffers.streamDashBuffersBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.pgDashMinify.pgDashMinifyMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object parsingErrorCode extends js.Object {
   @js.native
   sealed trait unclosedText extends parsingErrorCode
   
-  /* 3 */ val multiLineQI: typingsSlinky.pgDashMinify.pgDashMinifyMod.parsingErrorCode.multiLineQI with Double = js.native
-  /* 0 */ val unclosedMLC: typingsSlinky.pgDashMinify.pgDashMinifyMod.parsingErrorCode.unclosedMLC with Double = js.native
-  /* 2 */ val unclosedQI: typingsSlinky.pgDashMinify.pgDashMinifyMod.parsingErrorCode.unclosedQI with Double = js.native
-  /* 1 */ val unclosedText: typingsSlinky.pgDashMinify.pgDashMinifyMod.parsingErrorCode.unclosedText with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[parsingErrorCode with Double] = js.native
+  /* 3 */ @js.native
+  object multiLineQI extends TopLevel[multiLineQI with Double]
+  
+  /* 0 */ @js.native
+  object unclosedMLC extends TopLevel[unclosedMLC with Double]
+  
+  /* 2 */ @js.native
+  object unclosedQI extends TopLevel[unclosedQI with Double]
+  
+  /* 1 */ @js.native
+  object unclosedText extends TopLevel[unclosedText with Double]
+  
 }
 

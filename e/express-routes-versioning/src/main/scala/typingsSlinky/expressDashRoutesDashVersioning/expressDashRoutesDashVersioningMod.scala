@@ -2,8 +2,6 @@ package typingsSlinky.expressDashRoutesDashVersioning
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.express.expressMod.Handler
-import typingsSlinky.expressDashRoutesDashVersioning.expressDashRoutesDashVersioningMod.RoutesVersioningMiddleware
-import typingsSlinky.expressDashRoutesDashVersioning.expressDashRoutesDashVersioningMod.VersionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.chromeDashApps.chrome.networking.onc
 
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`false`
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`false`
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.setter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

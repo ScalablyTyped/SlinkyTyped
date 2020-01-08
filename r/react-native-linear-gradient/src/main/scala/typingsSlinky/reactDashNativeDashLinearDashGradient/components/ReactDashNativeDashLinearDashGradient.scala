@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashNativeDashLinearDashGradient extends SharedApply_LinearGradientProps124945397[default] {
+object ReactDashNativeDashLinearDashGradient extends SharedApply_LinearGradientProps_1619161069[default] {
   @JSImport("react-native-linear-gradient", JSImport.Default)
   @js.native
   object componentImport extends js.Object

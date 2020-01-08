@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

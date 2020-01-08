@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.layerLayerMod.State
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererCanvasTileLayerMod.CanvasTileLayerRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

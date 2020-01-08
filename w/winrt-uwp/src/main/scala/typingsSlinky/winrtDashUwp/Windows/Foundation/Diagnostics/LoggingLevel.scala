@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object LoggingLevel extends js.Object {
   @js.native
   sealed trait warning extends LoggingLevel
   
-  /* 4 */ val critical: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingLevel.critical with Double = js.native
-  /* 3 */ val error: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingLevel.error with Double = js.native
-  /* 1 */ val information: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingLevel.information with Double = js.native
-  /* 0 */ val verbose: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingLevel.verbose with Double = js.native
-  /* 2 */ val warning: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingLevel.warning with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LoggingLevel with Double] = js.native
+  /* 4 */ @js.native
+  object critical extends TopLevel[critical with Double]
+  
+  /* 3 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 1 */ @js.native
+  object information extends TopLevel[information with Double]
+  
+  /* 0 */ @js.native
+  object verbose extends TopLevel[verbose with Double]
+  
+  /* 2 */ @js.native
+  object warning extends TopLevel[warning with Double]
+  
 }
 

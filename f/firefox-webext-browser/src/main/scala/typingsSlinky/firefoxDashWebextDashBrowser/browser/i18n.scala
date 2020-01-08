@@ -1,7 +1,6 @@
 package typingsSlinky.firefoxDashWebextDashBrowser.browser
 
 import typingsSlinky.firefoxDashWebextDashBrowser.Anon_IsReliable
-import typingsSlinky.firefoxDashWebextDashBrowser.browser.i18n.LanguageCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.gitDashAddDashRemote
 
-import typingsSlinky.gitDashAddDashRemote.gitDashAddDashRemoteMod.AddRemote
 import typingsSlinky.node.childUnderscoreProcessMod.ExecException
 import scala.scalajs.js
 import scala.scalajs.js.`|`

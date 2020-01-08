@@ -20,6 +20,7 @@ package object plotlyDotJsMod {
   type DataTransform = Partial[Transform]
   type Datum = String | Double | js.Date | Null
   type ErrorBar = Partial[ErrorOptions] with (Anon_Constant | Anon_Array)
+  type MarkerSymbol = String | Double | (js.Array[String | Double])
   type PlotRestyleEvent = js.Tuple2[js.Any, js.Array[Double]]
   type PlotSelectedData = Partial[PlotDatum]
   type Root = String | HTMLElement

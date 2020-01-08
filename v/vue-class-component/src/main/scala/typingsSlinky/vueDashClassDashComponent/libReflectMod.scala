@@ -3,7 +3,7 @@ package typingsSlinky.vueDashClassDashComponent
 import typingsSlinky.vue.typesVueMod.Vue
 import typingsSlinky.vue.typesVueMod.VueConstructor
 import typingsSlinky.vueDashClassDashComponent.libDeclarationsMod.VueClass
-import typingsSlinky.vueDashClassDashComponent.vueDashClassDashComponentNumbers.`false`
+import typingsSlinky.vueDashClassDashComponent.vueDashClassDashComponentBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

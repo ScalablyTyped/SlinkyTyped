@@ -5,8 +5,6 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.yauzl.yauzlMod.Options
 import typingsSlinky.yauzl.yauzlMod.ZipFileOptions
-import typingsSlinky.yauzlDashPromise.yauzlDashPromiseMod.Entry
-import typingsSlinky.yauzlDashPromise.yauzlDashPromiseMod.ZipFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

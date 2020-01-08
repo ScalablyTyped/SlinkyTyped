@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object CertificateChainPolicy extends js.Object {
   @js.native
   sealed trait ssl extends CertificateChainPolicy
   
-  /* 0 */ val base: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.CertificateChainPolicy.base with Double = js.native
-  /* 3 */ val microsoftRoot: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.CertificateChainPolicy.microsoftRoot with Double = js.native
-  /* 2 */ val ntAuthentication: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.CertificateChainPolicy.ntAuthentication with Double = js.native
-  /* 1 */ val ssl: typingsSlinky.winrtDashUwp.Windows.Security.Cryptography.Certificates.CertificateChainPolicy.ssl with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CertificateChainPolicy with Double] = js.native
+  /* 0 */ @js.native
+  object base extends TopLevel[base with Double]
+  
+  /* 3 */ @js.native
+  object microsoftRoot extends TopLevel[microsoftRoot with Double]
+  
+  /* 2 */ @js.native
+  object ntAuthentication extends TopLevel[ntAuthentication with Double]
+  
+  /* 1 */ @js.native
+  object ssl extends TopLevel[ssl with Double]
+  
 }
 

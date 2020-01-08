@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,7 +52,7 @@ trait BufferParametersProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-BufferParameters.html#unit)
     */
-  var unit: js.UndefOr[feet | kilometers | meters | miles | `nautical-miles` | yards] = js.undefined
+  var unit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
 }
 
 object BufferParametersProperties {
@@ -64,7 +64,7 @@ object BufferParametersProperties {
     geometries: js.Array[GeometryProperties] = null,
     outSpatialReference: SpatialReferenceProperties = null,
     unionResults: js.UndefOr[Boolean] = js.undefined,
-    unit: feet | kilometers | meters | miles | `nautical-miles` | yards = null
+    unit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null
   ): BufferParametersProperties = {
     val __obj = js.Dynamic.literal()
     if (bufferSpatialReference != null) __obj.updateDynamic("bufferSpatialReference")(bufferSpatialReference.asInstanceOf[js.Any])

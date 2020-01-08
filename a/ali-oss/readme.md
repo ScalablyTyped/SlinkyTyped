@@ -11,8 +11,8 @@ aliyun oss(object storage service) node client
 | Full name          | ali-oss |
 | Keywords           | oss, client, file, aliyun |
 | # releases         | 31 |
-| # dependents       | 245 |
-| # downloads        | 301635 |
+| # dependents       | 378 |
+| # downloads        | 522388 |
 | # stars            | 7 |
 
 ## Links

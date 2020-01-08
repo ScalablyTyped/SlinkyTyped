@@ -1,15 +1,12 @@
 package typingsSlinky.parse.nodeMod
 
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.parse.parseMod._Global_.Parse.InstallationConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * Every Parse application installed on a device registered for
-  * push notifications has an associated Installation object.
-  */
 @JSImport("parse/node", "Installation")
 @js.native
-class Installation[T /* <: js.Any */] ()
-  extends typingsSlinky.parse.Parse.Installation[T]
+object Installation extends TopLevel[InstallationConstructor]
 

@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,13 +33,25 @@ object QuickViewGroupElementType extends js.Object {
   @js.native
   sealed trait text extends QuickViewGroupElementType
   
-  /* 0 */ val email: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.email with Double = js.native
-  /* 1 */ val link: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.link with Double = js.native
-  /* 2 */ val mobile: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.mobile with Double = js.native
-  /* 3 */ val pageLink: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.pageLink with Double = js.native
-  /* 4 */ val phone: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.phone with Double = js.native
-  /* 5 */ val text: typingsSlinky.openui5.sap.m.QuickViewGroupElementType.text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QuickViewGroupElementType with Double] = js.native
+  /* 0 */ @js.native
+  object email extends TopLevel[email with Double]
+  
+  /* 1 */ @js.native
+  object link extends TopLevel[link with Double]
+  
+  /* 2 */ @js.native
+  object mobile extends TopLevel[mobile with Double]
+  
+  /* 3 */ @js.native
+  object pageLink extends TopLevel[pageLink with Double]
+  
+  /* 4 */ @js.native
+  object phone extends TopLevel[phone with Double]
+  
+  /* 5 */ @js.native
+  object text extends TopLevel[text with Double]
+  
 }
 

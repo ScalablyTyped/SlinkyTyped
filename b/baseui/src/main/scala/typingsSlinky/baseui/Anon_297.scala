@@ -2,20 +2,20 @@ package typingsSlinky.baseui
 
 import typingsSlinky.baseui.baseuiStrings.AW
 import typingsSlinky.baseui.baseuiStrings.Aruba
-import typingsSlinky.baseui.baseuiStrings.`+297`
+import typingsSlinky.baseui.baseuiStrings.Plussign297
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_297 extends js.Object {
-  var dialCode: `+297`
+  var dialCode: Plussign297
   var id: AW
   var label: Aruba
 }
 
 object Anon_297 {
   @scala.inline
-  def apply(dialCode: `+297`, id: AW, label: Aruba): Anon_297 = {
+  def apply(dialCode: Plussign297, id: AW, label: Aruba): Anon_297 = {
     val __obj = js.Dynamic.literal(dialCode = dialCode.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[Anon_297]

@@ -2,8 +2,6 @@ package typingsSlinky.splunkDashBunyanDashLogger
 
 import typingsSlinky.bunyan.bunyanMod.Stream
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.splunkDashBunyanDashLogger.splunkDashBunyanDashLoggerMod.SplunkBunyanStream
-import typingsSlinky.splunkDashBunyanDashLogger.splunkDashBunyanDashLoggerMod.SplunkStream
 import typingsSlinky.splunkDashLogging.splunkDashLoggingMod.Config
 import typingsSlinky.splunkDashLogging.splunkDashLoggingMod.EventFormatter
 import typingsSlinky.splunkDashLogging.splunkDashLoggingMod.Logger

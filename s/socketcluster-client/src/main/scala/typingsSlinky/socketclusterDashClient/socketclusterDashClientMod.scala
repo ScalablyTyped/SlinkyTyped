@@ -3,7 +3,6 @@ package typingsSlinky.socketclusterDashClient
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.socketclusterDashClient.libScclientsocketMod.ClientOptions
 import typingsSlinky.socketclusterDashClient.libScclientsocketMod.^
-import typingsSlinky.socketclusterDashClient.socketclusterDashClientMod.SCClientSocket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

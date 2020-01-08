@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImagePanoramaFishEye
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePanoramaFishEye] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ImagePanoramaFishEye] {
   @JSImport("material-ui/svg-icons", "ImagePanoramaFishEye")
   @js.native
   object componentImport extends js.Object

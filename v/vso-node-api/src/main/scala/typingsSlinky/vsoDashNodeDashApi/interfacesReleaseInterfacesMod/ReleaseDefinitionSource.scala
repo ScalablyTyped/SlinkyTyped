@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ReleaseDefinitionSource extends js.Object {
   @js.native
   sealed trait UserInterface extends ReleaseDefinitionSource
   
-  /* 4 */ val Ibiza: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseDefinitionSource.Ibiza with Double = js.native
-  /* 8 */ val PortalExtensionApi: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseDefinitionSource.PortalExtensionApi with Double = js.native
-  /* 1 */ val RestApi: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseDefinitionSource.RestApi with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseDefinitionSource.Undefined with Double = js.native
-  /* 2 */ val UserInterface: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseDefinitionSource.UserInterface with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReleaseDefinitionSource with Double] = js.native
+  /* 4 */ @js.native
+  object Ibiza extends TopLevel[Ibiza with Double]
+  
+  /* 8 */ @js.native
+  object PortalExtensionApi extends TopLevel[PortalExtensionApi with Double]
+  
+  /* 1 */ @js.native
+  object RestApi extends TopLevel[RestApi with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
+  /* 2 */ @js.native
+  object UserInterface extends TopLevel[UserInterface with Double]
+  
 }
 

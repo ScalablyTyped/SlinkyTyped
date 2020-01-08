@@ -1,6 +1,5 @@
 package typingsSlinky.ydnDashDb.ydn.db
 
-import typingsSlinky.ydnDashDb.ydn.db.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

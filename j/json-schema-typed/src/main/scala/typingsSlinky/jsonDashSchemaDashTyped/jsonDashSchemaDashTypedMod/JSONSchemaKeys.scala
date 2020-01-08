@@ -1,10 +1,10 @@
 package typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.DOLLARcomment
-import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.DOLLARid
-import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.DOLLARref
-import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.DOLLARschema
+import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.$comment
+import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.$id
+import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.$ref
+import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.$schema
 import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.`else`
 import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.`if`
 import typingsSlinky.jsonDashSchemaDashTyped.jsonDashSchemaDashTypedStrings.`then`
@@ -56,7 +56,7 @@ import scala.scalajs.js.annotation._
 object JSONSchemaKeys
   extends TopLevel[
       js.Array[
-        DOLLARcomment | DOLLARid | DOLLARref | DOLLARschema | additionalItems | additionalProperties | allOf | anyOf | const | contains | contentEncoding | contentMediaType | default | definitions | dependencies | description | `else` | enum | examples | exclusiveMaximum | exclusiveMinimum | format | `if` | items | maximum | maxItems | maxLength | maxProperties | minimum | minLength | minItems | minProperties | multipleOf | not | oneOf | pattern | patternProperties | properties | propertyNames | readOnly | required | `then` | title | `type` | uniqueItems | writeOnly
+        $comment | $id | $ref | $schema | additionalItems | additionalProperties | allOf | anyOf | const | contains | contentEncoding | contentMediaType | default | definitions | dependencies | description | `else` | enum | examples | exclusiveMaximum | exclusiveMinimum | format | `if` | items | maximum | maxItems | maxLength | maxProperties | minimum | minLength | minItems | minProperties | multipleOf | not | oneOf | pattern | patternProperties | properties | propertyNames | readOnly | required | `then` | title | `type` | uniqueItems | writeOnly
       ]
     ]
 

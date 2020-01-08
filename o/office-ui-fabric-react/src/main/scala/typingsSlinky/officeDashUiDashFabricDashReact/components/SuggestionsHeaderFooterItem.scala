@@ -20,8 +20,9 @@ object SuggestionsHeaderFooterItem
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    id: String,
     isSelected: Boolean,
     renderItem: () => typingsSlinky.react.reactMod._Global_.JSX.Element,
     componentRef: IRefObject[js.Object] = null,
@@ -31,7 +32,7 @@ object SuggestionsHeaderFooterItem
     tag.type, 
     typingsSlinky.officeDashUiDashFabricDashReact.libFloatingPickerMod.SuggestionsHeaderFooterItem
   ] = {
-    val __obj = js.Dynamic.literal(isSelected = isSelected.asInstanceOf[js.Any], renderItem = js.Any.fromFunction0(renderItem))
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], renderItem = js.Any.fromFunction0(renderItem))
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
     if (onExecute != null) __obj.updateDynamic("onExecute")(js.Any.fromFunction0(onExecute))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

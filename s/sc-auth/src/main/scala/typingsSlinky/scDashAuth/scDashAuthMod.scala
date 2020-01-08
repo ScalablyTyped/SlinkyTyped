@@ -6,7 +6,6 @@ import typingsSlinky.jsonwebtoken.jsonwebtokenMod.SignOptions
 import typingsSlinky.jsonwebtoken.jsonwebtokenMod.VerifyCallback
 import typingsSlinky.jsonwebtoken.jsonwebtokenMod.VerifyOptions
 import typingsSlinky.node.Buffer
-import typingsSlinky.scDashAuth.scDashAuthMod.SCAuthEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

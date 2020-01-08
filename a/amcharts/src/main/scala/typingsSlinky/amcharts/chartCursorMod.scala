@@ -1,6 +1,5 @@
 package typingsSlinky.amcharts
 
-import typingsSlinky.amcharts.chartCursorMod.ChartCursor
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`

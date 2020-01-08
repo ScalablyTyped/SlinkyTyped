@@ -740,552 +740,6 @@ object csstypeStrings {
   sealed trait `-webkit-sticky` extends PositionProperty
   
   @js.native
-  sealed trait `:-moz-any()`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:-moz-any-link`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-moz-dir`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:-moz-focusring`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-moz-full-screen`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-moz-placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-moz-read-only`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-moz-read-write`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-ms-fullscreen`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-ms-input-placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-webkit-any()`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:-webkit-any-link`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:-webkit-full-screen`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-progress-bar`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-range-progress`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-range-thumb`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-range-track`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-moz-selection`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-backdrop`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-browse`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-check`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-clear`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-fill`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-fill-lower`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-fill-upper`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-input-placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-reveal`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-thumb`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-ticks-after`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-ticks-before`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-tooltip`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-track`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-ms-value`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-backdrop`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-input-placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-progress-bar`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-progress-inner-value`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-progress-value`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-slider-runnable-track`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::-webkit-slider-thumb`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::after`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::backdrop`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::before`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::cue`
-    extends AdvancedPseudos
-       with Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::first-letter`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::first-line`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::grammar-error`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::marker`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::part`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `::placeholder`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::selection`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `::slotted`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `::spelling-error`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:active`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:after`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:any-link`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:before`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:blank`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:checked`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:default`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:defined`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:dir`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:disabled`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:empty`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:enabled`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:first`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:first-child`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:first-letter`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:first-line`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:first-of-type`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:focus`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:focus-visible`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:focus-within`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:fullscreen`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:has`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:host`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:host-context`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:hover`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:in-range`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:indeterminate`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:invalid`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:is`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:lang`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:last-child`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:last-of-type`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:left`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:link`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:matches()`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:not`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:nth-child`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:nth-last-child`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:nth-last-of-type`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:nth-of-type`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
-  sealed trait `:only-child`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:only-of-type`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:optional`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:out-of-range`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:placeholder-shown`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:read-only`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:read-write`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:required`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:right`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:root`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:scope`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:target`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:valid`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:visited`
-    extends Pseudos
-       with SimplePseudos
-  
-  @js.native
-  sealed trait `:where`
-    extends AdvancedPseudos
-       with Pseudos
-  
-  @js.native
   sealed trait `@charset` extends AtRules
   
   @js.native
@@ -1347,6 +801,552 @@ object csstypeStrings {
   
   @js.native
   sealed trait CaptionText extends DeprecatedSystemColor
+  
+  @js.native
+  sealed trait `Colon-moz-any-link`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-moz-anyLeftparenthesisRightparenthesis`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colon-moz-dir`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colon-moz-focusring`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-moz-full-screen`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-moz-placeholder`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-moz-read-only`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-moz-read-write`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-ms-fullscreen`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-ms-input-placeholder`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-webkit-any-link`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colon-webkit-anyLeftparenthesisRightparenthesis`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colon-webkit-full-screen`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-placeholder`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-progress-bar`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-range-progress`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-range-thumb`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-range-track`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-moz-selection`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-backdrop`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-browse`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-check`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-clear`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-fill`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-fill-lower`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-fill-upper`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-input-placeholder`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-reveal`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-thumb`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-ticks-after`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-ticks-before`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-tooltip`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-track`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-ms-value`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-backdrop`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-input-placeholder`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-progress-bar`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-progress-inner-value`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-progress-value`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-slider-runnable-track`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColon-webkit-slider-thumb`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonafter
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonbackdrop
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonbefore
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColoncue
+    extends AdvancedPseudos
+       with Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColonfirst-letter`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColonfirst-line`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `ColonColongrammar-error`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonmarker
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonpart
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait ColonColonplaceholder
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonselection
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonColonslotted
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `ColonColonspelling-error`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonactive
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonafter
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonany-link`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonbefore
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonblank
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonchecked
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colondefault
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colondefined
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colondir
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait Colondisabled
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonempty
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonenabled
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonfirst
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfirst-child`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfirst-letter`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfirst-line`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfirst-of-type`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonfocus
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfocus-visible`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonfocus-within`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonfullscreen
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonhas
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait Colonhost
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonhost-context`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait Colonhover
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonin-range`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonindeterminate
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Coloninvalid
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonis
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait Colonlang
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonlast-child`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonlast-of-type`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonleft
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonlink
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait ColonmatchesLeftparenthesisRightparenthesis
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait Colonnot
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonnth-child`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonnth-last-child`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonnth-last-of-type`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colonnth-of-type`
+    extends AdvancedPseudos
+       with Pseudos
+  
+  @js.native
+  sealed trait `Colononly-child`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colononly-of-type`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonoptional
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonout-of-range`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonplaceholder-shown`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonread-only`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait `Colonread-write`
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonrequired
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonright
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonroot
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonscope
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colontarget
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonvalid
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonvisited
+    extends Pseudos
+       with SimplePseudos
+  
+  @js.native
+  sealed trait Colonwhere
+    extends AdvancedPseudos
+       with Pseudos
   
   @js.native
   sealed trait GrayText extends DeprecatedSystemColor
@@ -6816,224 +6816,6 @@ object csstypeStrings {
   @scala.inline
   def `-webkit-sticky`: `-webkit-sticky` = "-webkit-sticky".asInstanceOf[`-webkit-sticky`]
   @scala.inline
-  def `:-moz-any()`: `:-moz-any()` = ":-moz-any()".asInstanceOf[`:-moz-any()`]
-  @scala.inline
-  def `:-moz-any-link`: `:-moz-any-link` = ":-moz-any-link".asInstanceOf[`:-moz-any-link`]
-  @scala.inline
-  def `:-moz-dir`: `:-moz-dir` = ":-moz-dir".asInstanceOf[`:-moz-dir`]
-  @scala.inline
-  def `:-moz-focusring`: `:-moz-focusring` = ":-moz-focusring".asInstanceOf[`:-moz-focusring`]
-  @scala.inline
-  def `:-moz-full-screen`: `:-moz-full-screen` = ":-moz-full-screen".asInstanceOf[`:-moz-full-screen`]
-  @scala.inline
-  def `:-moz-placeholder`: `:-moz-placeholder` = ":-moz-placeholder".asInstanceOf[`:-moz-placeholder`]
-  @scala.inline
-  def `:-moz-read-only`: `:-moz-read-only` = ":-moz-read-only".asInstanceOf[`:-moz-read-only`]
-  @scala.inline
-  def `:-moz-read-write`: `:-moz-read-write` = ":-moz-read-write".asInstanceOf[`:-moz-read-write`]
-  @scala.inline
-  def `:-ms-fullscreen`: `:-ms-fullscreen` = ":-ms-fullscreen".asInstanceOf[`:-ms-fullscreen`]
-  @scala.inline
-  def `:-ms-input-placeholder`: `:-ms-input-placeholder` = ":-ms-input-placeholder".asInstanceOf[`:-ms-input-placeholder`]
-  @scala.inline
-  def `:-webkit-any()`: `:-webkit-any()` = ":-webkit-any()".asInstanceOf[`:-webkit-any()`]
-  @scala.inline
-  def `:-webkit-any-link`: `:-webkit-any-link` = ":-webkit-any-link".asInstanceOf[`:-webkit-any-link`]
-  @scala.inline
-  def `:-webkit-full-screen`: `:-webkit-full-screen` = ":-webkit-full-screen".asInstanceOf[`:-webkit-full-screen`]
-  @scala.inline
-  def `::-moz-placeholder`: `::-moz-placeholder` = "::-moz-placeholder".asInstanceOf[`::-moz-placeholder`]
-  @scala.inline
-  def `::-moz-progress-bar`: `::-moz-progress-bar` = "::-moz-progress-bar".asInstanceOf[`::-moz-progress-bar`]
-  @scala.inline
-  def `::-moz-range-progress`: `::-moz-range-progress` = "::-moz-range-progress".asInstanceOf[`::-moz-range-progress`]
-  @scala.inline
-  def `::-moz-range-thumb`: `::-moz-range-thumb` = "::-moz-range-thumb".asInstanceOf[`::-moz-range-thumb`]
-  @scala.inline
-  def `::-moz-range-track`: `::-moz-range-track` = "::-moz-range-track".asInstanceOf[`::-moz-range-track`]
-  @scala.inline
-  def `::-moz-selection`: `::-moz-selection` = "::-moz-selection".asInstanceOf[`::-moz-selection`]
-  @scala.inline
-  def `::-ms-backdrop`: `::-ms-backdrop` = "::-ms-backdrop".asInstanceOf[`::-ms-backdrop`]
-  @scala.inline
-  def `::-ms-browse`: `::-ms-browse` = "::-ms-browse".asInstanceOf[`::-ms-browse`]
-  @scala.inline
-  def `::-ms-check`: `::-ms-check` = "::-ms-check".asInstanceOf[`::-ms-check`]
-  @scala.inline
-  def `::-ms-clear`: `::-ms-clear` = "::-ms-clear".asInstanceOf[`::-ms-clear`]
-  @scala.inline
-  def `::-ms-fill`: `::-ms-fill` = "::-ms-fill".asInstanceOf[`::-ms-fill`]
-  @scala.inline
-  def `::-ms-fill-lower`: `::-ms-fill-lower` = "::-ms-fill-lower".asInstanceOf[`::-ms-fill-lower`]
-  @scala.inline
-  def `::-ms-fill-upper`: `::-ms-fill-upper` = "::-ms-fill-upper".asInstanceOf[`::-ms-fill-upper`]
-  @scala.inline
-  def `::-ms-input-placeholder`: `::-ms-input-placeholder` = "::-ms-input-placeholder".asInstanceOf[`::-ms-input-placeholder`]
-  @scala.inline
-  def `::-ms-reveal`: `::-ms-reveal` = "::-ms-reveal".asInstanceOf[`::-ms-reveal`]
-  @scala.inline
-  def `::-ms-thumb`: `::-ms-thumb` = "::-ms-thumb".asInstanceOf[`::-ms-thumb`]
-  @scala.inline
-  def `::-ms-ticks-after`: `::-ms-ticks-after` = "::-ms-ticks-after".asInstanceOf[`::-ms-ticks-after`]
-  @scala.inline
-  def `::-ms-ticks-before`: `::-ms-ticks-before` = "::-ms-ticks-before".asInstanceOf[`::-ms-ticks-before`]
-  @scala.inline
-  def `::-ms-tooltip`: `::-ms-tooltip` = "::-ms-tooltip".asInstanceOf[`::-ms-tooltip`]
-  @scala.inline
-  def `::-ms-track`: `::-ms-track` = "::-ms-track".asInstanceOf[`::-ms-track`]
-  @scala.inline
-  def `::-ms-value`: `::-ms-value` = "::-ms-value".asInstanceOf[`::-ms-value`]
-  @scala.inline
-  def `::-webkit-backdrop`: `::-webkit-backdrop` = "::-webkit-backdrop".asInstanceOf[`::-webkit-backdrop`]
-  @scala.inline
-  def `::-webkit-input-placeholder`: `::-webkit-input-placeholder` = "::-webkit-input-placeholder".asInstanceOf[`::-webkit-input-placeholder`]
-  @scala.inline
-  def `::-webkit-progress-bar`: `::-webkit-progress-bar` = "::-webkit-progress-bar".asInstanceOf[`::-webkit-progress-bar`]
-  @scala.inline
-  def `::-webkit-progress-inner-value`: `::-webkit-progress-inner-value` = "::-webkit-progress-inner-value".asInstanceOf[`::-webkit-progress-inner-value`]
-  @scala.inline
-  def `::-webkit-progress-value`: `::-webkit-progress-value` = "::-webkit-progress-value".asInstanceOf[`::-webkit-progress-value`]
-  @scala.inline
-  def `::-webkit-slider-runnable-track`: `::-webkit-slider-runnable-track` = "::-webkit-slider-runnable-track".asInstanceOf[`::-webkit-slider-runnable-track`]
-  @scala.inline
-  def `::-webkit-slider-thumb`: `::-webkit-slider-thumb` = "::-webkit-slider-thumb".asInstanceOf[`::-webkit-slider-thumb`]
-  @scala.inline
-  def `::after`: `::after` = "::after".asInstanceOf[`::after`]
-  @scala.inline
-  def `::backdrop`: `::backdrop` = "::backdrop".asInstanceOf[`::backdrop`]
-  @scala.inline
-  def `::before`: `::before` = "::before".asInstanceOf[`::before`]
-  @scala.inline
-  def `::cue`: `::cue` = "::cue".asInstanceOf[`::cue`]
-  @scala.inline
-  def `::first-letter`: `::first-letter` = "::first-letter".asInstanceOf[`::first-letter`]
-  @scala.inline
-  def `::first-line`: `::first-line` = "::first-line".asInstanceOf[`::first-line`]
-  @scala.inline
-  def `::grammar-error`: `::grammar-error` = "::grammar-error".asInstanceOf[`::grammar-error`]
-  @scala.inline
-  def `::marker`: `::marker` = "::marker".asInstanceOf[`::marker`]
-  @scala.inline
-  def `::part`: `::part` = "::part".asInstanceOf[`::part`]
-  @scala.inline
-  def `::placeholder`: `::placeholder` = "::placeholder".asInstanceOf[`::placeholder`]
-  @scala.inline
-  def `::selection`: `::selection` = "::selection".asInstanceOf[`::selection`]
-  @scala.inline
-  def `::slotted`: `::slotted` = "::slotted".asInstanceOf[`::slotted`]
-  @scala.inline
-  def `::spelling-error`: `::spelling-error` = "::spelling-error".asInstanceOf[`::spelling-error`]
-  @scala.inline
-  def `:active`: `:active` = ":active".asInstanceOf[`:active`]
-  @scala.inline
-  def `:after`: `:after` = ":after".asInstanceOf[`:after`]
-  @scala.inline
-  def `:any-link`: `:any-link` = ":any-link".asInstanceOf[`:any-link`]
-  @scala.inline
-  def `:before`: `:before` = ":before".asInstanceOf[`:before`]
-  @scala.inline
-  def `:blank`: `:blank` = ":blank".asInstanceOf[`:blank`]
-  @scala.inline
-  def `:checked`: `:checked` = ":checked".asInstanceOf[`:checked`]
-  @scala.inline
-  def `:default`: `:default` = ":default".asInstanceOf[`:default`]
-  @scala.inline
-  def `:defined`: `:defined` = ":defined".asInstanceOf[`:defined`]
-  @scala.inline
-  def `:dir`: `:dir` = ":dir".asInstanceOf[`:dir`]
-  @scala.inline
-  def `:disabled`: `:disabled` = ":disabled".asInstanceOf[`:disabled`]
-  @scala.inline
-  def `:empty`: `:empty` = ":empty".asInstanceOf[`:empty`]
-  @scala.inline
-  def `:enabled`: `:enabled` = ":enabled".asInstanceOf[`:enabled`]
-  @scala.inline
-  def `:first`: `:first` = ":first".asInstanceOf[`:first`]
-  @scala.inline
-  def `:first-child`: `:first-child` = ":first-child".asInstanceOf[`:first-child`]
-  @scala.inline
-  def `:first-letter`: `:first-letter` = ":first-letter".asInstanceOf[`:first-letter`]
-  @scala.inline
-  def `:first-line`: `:first-line` = ":first-line".asInstanceOf[`:first-line`]
-  @scala.inline
-  def `:first-of-type`: `:first-of-type` = ":first-of-type".asInstanceOf[`:first-of-type`]
-  @scala.inline
-  def `:focus`: `:focus` = ":focus".asInstanceOf[`:focus`]
-  @scala.inline
-  def `:focus-visible`: `:focus-visible` = ":focus-visible".asInstanceOf[`:focus-visible`]
-  @scala.inline
-  def `:focus-within`: `:focus-within` = ":focus-within".asInstanceOf[`:focus-within`]
-  @scala.inline
-  def `:fullscreen`: `:fullscreen` = ":fullscreen".asInstanceOf[`:fullscreen`]
-  @scala.inline
-  def `:has`: `:has` = ":has".asInstanceOf[`:has`]
-  @scala.inline
-  def `:host`: `:host` = ":host".asInstanceOf[`:host`]
-  @scala.inline
-  def `:host-context`: `:host-context` = ":host-context".asInstanceOf[`:host-context`]
-  @scala.inline
-  def `:hover`: `:hover` = ":hover".asInstanceOf[`:hover`]
-  @scala.inline
-  def `:in-range`: `:in-range` = ":in-range".asInstanceOf[`:in-range`]
-  @scala.inline
-  def `:indeterminate`: `:indeterminate` = ":indeterminate".asInstanceOf[`:indeterminate`]
-  @scala.inline
-  def `:invalid`: `:invalid` = ":invalid".asInstanceOf[`:invalid`]
-  @scala.inline
-  def `:is`: `:is` = ":is".asInstanceOf[`:is`]
-  @scala.inline
-  def `:lang`: `:lang` = ":lang".asInstanceOf[`:lang`]
-  @scala.inline
-  def `:last-child`: `:last-child` = ":last-child".asInstanceOf[`:last-child`]
-  @scala.inline
-  def `:last-of-type`: `:last-of-type` = ":last-of-type".asInstanceOf[`:last-of-type`]
-  @scala.inline
-  def `:left`: `:left` = ":left".asInstanceOf[`:left`]
-  @scala.inline
-  def `:link`: `:link` = ":link".asInstanceOf[`:link`]
-  @scala.inline
-  def `:matches()`: `:matches()` = ":matches()".asInstanceOf[`:matches()`]
-  @scala.inline
-  def `:not`: `:not` = ":not".asInstanceOf[`:not`]
-  @scala.inline
-  def `:nth-child`: `:nth-child` = ":nth-child".asInstanceOf[`:nth-child`]
-  @scala.inline
-  def `:nth-last-child`: `:nth-last-child` = ":nth-last-child".asInstanceOf[`:nth-last-child`]
-  @scala.inline
-  def `:nth-last-of-type`: `:nth-last-of-type` = ":nth-last-of-type".asInstanceOf[`:nth-last-of-type`]
-  @scala.inline
-  def `:nth-of-type`: `:nth-of-type` = ":nth-of-type".asInstanceOf[`:nth-of-type`]
-  @scala.inline
-  def `:only-child`: `:only-child` = ":only-child".asInstanceOf[`:only-child`]
-  @scala.inline
-  def `:only-of-type`: `:only-of-type` = ":only-of-type".asInstanceOf[`:only-of-type`]
-  @scala.inline
-  def `:optional`: `:optional` = ":optional".asInstanceOf[`:optional`]
-  @scala.inline
-  def `:out-of-range`: `:out-of-range` = ":out-of-range".asInstanceOf[`:out-of-range`]
-  @scala.inline
-  def `:placeholder-shown`: `:placeholder-shown` = ":placeholder-shown".asInstanceOf[`:placeholder-shown`]
-  @scala.inline
-  def `:read-only`: `:read-only` = ":read-only".asInstanceOf[`:read-only`]
-  @scala.inline
-  def `:read-write`: `:read-write` = ":read-write".asInstanceOf[`:read-write`]
-  @scala.inline
-  def `:required`: `:required` = ":required".asInstanceOf[`:required`]
-  @scala.inline
-  def `:right`: `:right` = ":right".asInstanceOf[`:right`]
-  @scala.inline
-  def `:root`: `:root` = ":root".asInstanceOf[`:root`]
-  @scala.inline
-  def `:scope`: `:scope` = ":scope".asInstanceOf[`:scope`]
-  @scala.inline
-  def `:target`: `:target` = ":target".asInstanceOf[`:target`]
-  @scala.inline
-  def `:valid`: `:valid` = ":valid".asInstanceOf[`:valid`]
-  @scala.inline
-  def `:visited`: `:visited` = ":visited".asInstanceOf[`:visited`]
-  @scala.inline
-  def `:where`: `:where` = ":where".asInstanceOf[`:where`]
-  @scala.inline
   def `@charset`: `@charset` = "@charset".asInstanceOf[`@charset`]
   @scala.inline
   def `@counter-style`: `@counter-style` = "@counter-style".asInstanceOf[`@counter-style`]
@@ -7075,6 +6857,224 @@ object csstypeStrings {
   def ButtonText: ButtonText = "ButtonText".asInstanceOf[ButtonText]
   @scala.inline
   def CaptionText: CaptionText = "CaptionText".asInstanceOf[CaptionText]
+  @scala.inline
+  def `Colon-moz-any-link`: `Colon-moz-any-link` = ":-moz-any-link".asInstanceOf[`Colon-moz-any-link`]
+  @scala.inline
+  def `Colon-moz-anyLeftparenthesisRightparenthesis`: `Colon-moz-anyLeftparenthesisRightparenthesis` = ":-moz-any()".asInstanceOf[`Colon-moz-anyLeftparenthesisRightparenthesis`]
+  @scala.inline
+  def `Colon-moz-dir`: `Colon-moz-dir` = ":-moz-dir".asInstanceOf[`Colon-moz-dir`]
+  @scala.inline
+  def `Colon-moz-focusring`: `Colon-moz-focusring` = ":-moz-focusring".asInstanceOf[`Colon-moz-focusring`]
+  @scala.inline
+  def `Colon-moz-full-screen`: `Colon-moz-full-screen` = ":-moz-full-screen".asInstanceOf[`Colon-moz-full-screen`]
+  @scala.inline
+  def `Colon-moz-placeholder`: `Colon-moz-placeholder` = ":-moz-placeholder".asInstanceOf[`Colon-moz-placeholder`]
+  @scala.inline
+  def `Colon-moz-read-only`: `Colon-moz-read-only` = ":-moz-read-only".asInstanceOf[`Colon-moz-read-only`]
+  @scala.inline
+  def `Colon-moz-read-write`: `Colon-moz-read-write` = ":-moz-read-write".asInstanceOf[`Colon-moz-read-write`]
+  @scala.inline
+  def `Colon-ms-fullscreen`: `Colon-ms-fullscreen` = ":-ms-fullscreen".asInstanceOf[`Colon-ms-fullscreen`]
+  @scala.inline
+  def `Colon-ms-input-placeholder`: `Colon-ms-input-placeholder` = ":-ms-input-placeholder".asInstanceOf[`Colon-ms-input-placeholder`]
+  @scala.inline
+  def `Colon-webkit-any-link`: `Colon-webkit-any-link` = ":-webkit-any-link".asInstanceOf[`Colon-webkit-any-link`]
+  @scala.inline
+  def `Colon-webkit-anyLeftparenthesisRightparenthesis`: `Colon-webkit-anyLeftparenthesisRightparenthesis` = ":-webkit-any()".asInstanceOf[`Colon-webkit-anyLeftparenthesisRightparenthesis`]
+  @scala.inline
+  def `Colon-webkit-full-screen`: `Colon-webkit-full-screen` = ":-webkit-full-screen".asInstanceOf[`Colon-webkit-full-screen`]
+  @scala.inline
+  def `ColonColon-moz-placeholder`: `ColonColon-moz-placeholder` = "::-moz-placeholder".asInstanceOf[`ColonColon-moz-placeholder`]
+  @scala.inline
+  def `ColonColon-moz-progress-bar`: `ColonColon-moz-progress-bar` = "::-moz-progress-bar".asInstanceOf[`ColonColon-moz-progress-bar`]
+  @scala.inline
+  def `ColonColon-moz-range-progress`: `ColonColon-moz-range-progress` = "::-moz-range-progress".asInstanceOf[`ColonColon-moz-range-progress`]
+  @scala.inline
+  def `ColonColon-moz-range-thumb`: `ColonColon-moz-range-thumb` = "::-moz-range-thumb".asInstanceOf[`ColonColon-moz-range-thumb`]
+  @scala.inline
+  def `ColonColon-moz-range-track`: `ColonColon-moz-range-track` = "::-moz-range-track".asInstanceOf[`ColonColon-moz-range-track`]
+  @scala.inline
+  def `ColonColon-moz-selection`: `ColonColon-moz-selection` = "::-moz-selection".asInstanceOf[`ColonColon-moz-selection`]
+  @scala.inline
+  def `ColonColon-ms-backdrop`: `ColonColon-ms-backdrop` = "::-ms-backdrop".asInstanceOf[`ColonColon-ms-backdrop`]
+  @scala.inline
+  def `ColonColon-ms-browse`: `ColonColon-ms-browse` = "::-ms-browse".asInstanceOf[`ColonColon-ms-browse`]
+  @scala.inline
+  def `ColonColon-ms-check`: `ColonColon-ms-check` = "::-ms-check".asInstanceOf[`ColonColon-ms-check`]
+  @scala.inline
+  def `ColonColon-ms-clear`: `ColonColon-ms-clear` = "::-ms-clear".asInstanceOf[`ColonColon-ms-clear`]
+  @scala.inline
+  def `ColonColon-ms-fill`: `ColonColon-ms-fill` = "::-ms-fill".asInstanceOf[`ColonColon-ms-fill`]
+  @scala.inline
+  def `ColonColon-ms-fill-lower`: `ColonColon-ms-fill-lower` = "::-ms-fill-lower".asInstanceOf[`ColonColon-ms-fill-lower`]
+  @scala.inline
+  def `ColonColon-ms-fill-upper`: `ColonColon-ms-fill-upper` = "::-ms-fill-upper".asInstanceOf[`ColonColon-ms-fill-upper`]
+  @scala.inline
+  def `ColonColon-ms-input-placeholder`: `ColonColon-ms-input-placeholder` = "::-ms-input-placeholder".asInstanceOf[`ColonColon-ms-input-placeholder`]
+  @scala.inline
+  def `ColonColon-ms-reveal`: `ColonColon-ms-reveal` = "::-ms-reveal".asInstanceOf[`ColonColon-ms-reveal`]
+  @scala.inline
+  def `ColonColon-ms-thumb`: `ColonColon-ms-thumb` = "::-ms-thumb".asInstanceOf[`ColonColon-ms-thumb`]
+  @scala.inline
+  def `ColonColon-ms-ticks-after`: `ColonColon-ms-ticks-after` = "::-ms-ticks-after".asInstanceOf[`ColonColon-ms-ticks-after`]
+  @scala.inline
+  def `ColonColon-ms-ticks-before`: `ColonColon-ms-ticks-before` = "::-ms-ticks-before".asInstanceOf[`ColonColon-ms-ticks-before`]
+  @scala.inline
+  def `ColonColon-ms-tooltip`: `ColonColon-ms-tooltip` = "::-ms-tooltip".asInstanceOf[`ColonColon-ms-tooltip`]
+  @scala.inline
+  def `ColonColon-ms-track`: `ColonColon-ms-track` = "::-ms-track".asInstanceOf[`ColonColon-ms-track`]
+  @scala.inline
+  def `ColonColon-ms-value`: `ColonColon-ms-value` = "::-ms-value".asInstanceOf[`ColonColon-ms-value`]
+  @scala.inline
+  def `ColonColon-webkit-backdrop`: `ColonColon-webkit-backdrop` = "::-webkit-backdrop".asInstanceOf[`ColonColon-webkit-backdrop`]
+  @scala.inline
+  def `ColonColon-webkit-input-placeholder`: `ColonColon-webkit-input-placeholder` = "::-webkit-input-placeholder".asInstanceOf[`ColonColon-webkit-input-placeholder`]
+  @scala.inline
+  def `ColonColon-webkit-progress-bar`: `ColonColon-webkit-progress-bar` = "::-webkit-progress-bar".asInstanceOf[`ColonColon-webkit-progress-bar`]
+  @scala.inline
+  def `ColonColon-webkit-progress-inner-value`: `ColonColon-webkit-progress-inner-value` = "::-webkit-progress-inner-value".asInstanceOf[`ColonColon-webkit-progress-inner-value`]
+  @scala.inline
+  def `ColonColon-webkit-progress-value`: `ColonColon-webkit-progress-value` = "::-webkit-progress-value".asInstanceOf[`ColonColon-webkit-progress-value`]
+  @scala.inline
+  def `ColonColon-webkit-slider-runnable-track`: `ColonColon-webkit-slider-runnable-track` = "::-webkit-slider-runnable-track".asInstanceOf[`ColonColon-webkit-slider-runnable-track`]
+  @scala.inline
+  def `ColonColon-webkit-slider-thumb`: `ColonColon-webkit-slider-thumb` = "::-webkit-slider-thumb".asInstanceOf[`ColonColon-webkit-slider-thumb`]
+  @scala.inline
+  def ColonColonafter: ColonColonafter = "::after".asInstanceOf[ColonColonafter]
+  @scala.inline
+  def ColonColonbackdrop: ColonColonbackdrop = "::backdrop".asInstanceOf[ColonColonbackdrop]
+  @scala.inline
+  def ColonColonbefore: ColonColonbefore = "::before".asInstanceOf[ColonColonbefore]
+  @scala.inline
+  def ColonColoncue: ColonColoncue = "::cue".asInstanceOf[ColonColoncue]
+  @scala.inline
+  def `ColonColonfirst-letter`: `ColonColonfirst-letter` = "::first-letter".asInstanceOf[`ColonColonfirst-letter`]
+  @scala.inline
+  def `ColonColonfirst-line`: `ColonColonfirst-line` = "::first-line".asInstanceOf[`ColonColonfirst-line`]
+  @scala.inline
+  def `ColonColongrammar-error`: `ColonColongrammar-error` = "::grammar-error".asInstanceOf[`ColonColongrammar-error`]
+  @scala.inline
+  def ColonColonmarker: ColonColonmarker = "::marker".asInstanceOf[ColonColonmarker]
+  @scala.inline
+  def ColonColonpart: ColonColonpart = "::part".asInstanceOf[ColonColonpart]
+  @scala.inline
+  def ColonColonplaceholder: ColonColonplaceholder = "::placeholder".asInstanceOf[ColonColonplaceholder]
+  @scala.inline
+  def ColonColonselection: ColonColonselection = "::selection".asInstanceOf[ColonColonselection]
+  @scala.inline
+  def ColonColonslotted: ColonColonslotted = "::slotted".asInstanceOf[ColonColonslotted]
+  @scala.inline
+  def `ColonColonspelling-error`: `ColonColonspelling-error` = "::spelling-error".asInstanceOf[`ColonColonspelling-error`]
+  @scala.inline
+  def Colonactive: Colonactive = ":active".asInstanceOf[Colonactive]
+  @scala.inline
+  def Colonafter: Colonafter = ":after".asInstanceOf[Colonafter]
+  @scala.inline
+  def `Colonany-link`: `Colonany-link` = ":any-link".asInstanceOf[`Colonany-link`]
+  @scala.inline
+  def Colonbefore: Colonbefore = ":before".asInstanceOf[Colonbefore]
+  @scala.inline
+  def Colonblank: Colonblank = ":blank".asInstanceOf[Colonblank]
+  @scala.inline
+  def Colonchecked: Colonchecked = ":checked".asInstanceOf[Colonchecked]
+  @scala.inline
+  def Colondefault: Colondefault = ":default".asInstanceOf[Colondefault]
+  @scala.inline
+  def Colondefined: Colondefined = ":defined".asInstanceOf[Colondefined]
+  @scala.inline
+  def Colondir: Colondir = ":dir".asInstanceOf[Colondir]
+  @scala.inline
+  def Colondisabled: Colondisabled = ":disabled".asInstanceOf[Colondisabled]
+  @scala.inline
+  def Colonempty: Colonempty = ":empty".asInstanceOf[Colonempty]
+  @scala.inline
+  def Colonenabled: Colonenabled = ":enabled".asInstanceOf[Colonenabled]
+  @scala.inline
+  def Colonfirst: Colonfirst = ":first".asInstanceOf[Colonfirst]
+  @scala.inline
+  def `Colonfirst-child`: `Colonfirst-child` = ":first-child".asInstanceOf[`Colonfirst-child`]
+  @scala.inline
+  def `Colonfirst-letter`: `Colonfirst-letter` = ":first-letter".asInstanceOf[`Colonfirst-letter`]
+  @scala.inline
+  def `Colonfirst-line`: `Colonfirst-line` = ":first-line".asInstanceOf[`Colonfirst-line`]
+  @scala.inline
+  def `Colonfirst-of-type`: `Colonfirst-of-type` = ":first-of-type".asInstanceOf[`Colonfirst-of-type`]
+  @scala.inline
+  def Colonfocus: Colonfocus = ":focus".asInstanceOf[Colonfocus]
+  @scala.inline
+  def `Colonfocus-visible`: `Colonfocus-visible` = ":focus-visible".asInstanceOf[`Colonfocus-visible`]
+  @scala.inline
+  def `Colonfocus-within`: `Colonfocus-within` = ":focus-within".asInstanceOf[`Colonfocus-within`]
+  @scala.inline
+  def Colonfullscreen: Colonfullscreen = ":fullscreen".asInstanceOf[Colonfullscreen]
+  @scala.inline
+  def Colonhas: Colonhas = ":has".asInstanceOf[Colonhas]
+  @scala.inline
+  def Colonhost: Colonhost = ":host".asInstanceOf[Colonhost]
+  @scala.inline
+  def `Colonhost-context`: `Colonhost-context` = ":host-context".asInstanceOf[`Colonhost-context`]
+  @scala.inline
+  def Colonhover: Colonhover = ":hover".asInstanceOf[Colonhover]
+  @scala.inline
+  def `Colonin-range`: `Colonin-range` = ":in-range".asInstanceOf[`Colonin-range`]
+  @scala.inline
+  def Colonindeterminate: Colonindeterminate = ":indeterminate".asInstanceOf[Colonindeterminate]
+  @scala.inline
+  def Coloninvalid: Coloninvalid = ":invalid".asInstanceOf[Coloninvalid]
+  @scala.inline
+  def Colonis: Colonis = ":is".asInstanceOf[Colonis]
+  @scala.inline
+  def Colonlang: Colonlang = ":lang".asInstanceOf[Colonlang]
+  @scala.inline
+  def `Colonlast-child`: `Colonlast-child` = ":last-child".asInstanceOf[`Colonlast-child`]
+  @scala.inline
+  def `Colonlast-of-type`: `Colonlast-of-type` = ":last-of-type".asInstanceOf[`Colonlast-of-type`]
+  @scala.inline
+  def Colonleft: Colonleft = ":left".asInstanceOf[Colonleft]
+  @scala.inline
+  def Colonlink: Colonlink = ":link".asInstanceOf[Colonlink]
+  @scala.inline
+  def ColonmatchesLeftparenthesisRightparenthesis: ColonmatchesLeftparenthesisRightparenthesis = ":matches()".asInstanceOf[ColonmatchesLeftparenthesisRightparenthesis]
+  @scala.inline
+  def Colonnot: Colonnot = ":not".asInstanceOf[Colonnot]
+  @scala.inline
+  def `Colonnth-child`: `Colonnth-child` = ":nth-child".asInstanceOf[`Colonnth-child`]
+  @scala.inline
+  def `Colonnth-last-child`: `Colonnth-last-child` = ":nth-last-child".asInstanceOf[`Colonnth-last-child`]
+  @scala.inline
+  def `Colonnth-last-of-type`: `Colonnth-last-of-type` = ":nth-last-of-type".asInstanceOf[`Colonnth-last-of-type`]
+  @scala.inline
+  def `Colonnth-of-type`: `Colonnth-of-type` = ":nth-of-type".asInstanceOf[`Colonnth-of-type`]
+  @scala.inline
+  def `Colononly-child`: `Colononly-child` = ":only-child".asInstanceOf[`Colononly-child`]
+  @scala.inline
+  def `Colononly-of-type`: `Colononly-of-type` = ":only-of-type".asInstanceOf[`Colononly-of-type`]
+  @scala.inline
+  def Colonoptional: Colonoptional = ":optional".asInstanceOf[Colonoptional]
+  @scala.inline
+  def `Colonout-of-range`: `Colonout-of-range` = ":out-of-range".asInstanceOf[`Colonout-of-range`]
+  @scala.inline
+  def `Colonplaceholder-shown`: `Colonplaceholder-shown` = ":placeholder-shown".asInstanceOf[`Colonplaceholder-shown`]
+  @scala.inline
+  def `Colonread-only`: `Colonread-only` = ":read-only".asInstanceOf[`Colonread-only`]
+  @scala.inline
+  def `Colonread-write`: `Colonread-write` = ":read-write".asInstanceOf[`Colonread-write`]
+  @scala.inline
+  def Colonrequired: Colonrequired = ":required".asInstanceOf[Colonrequired]
+  @scala.inline
+  def Colonright: Colonright = ":right".asInstanceOf[Colonright]
+  @scala.inline
+  def Colonroot: Colonroot = ":root".asInstanceOf[Colonroot]
+  @scala.inline
+  def Colonscope: Colonscope = ":scope".asInstanceOf[Colonscope]
+  @scala.inline
+  def Colontarget: Colontarget = ":target".asInstanceOf[Colontarget]
+  @scala.inline
+  def Colonvalid: Colonvalid = ":valid".asInstanceOf[Colonvalid]
+  @scala.inline
+  def Colonvisited: Colonvisited = ":visited".asInstanceOf[Colonvisited]
+  @scala.inline
+  def Colonwhere: Colonwhere = ":where".asInstanceOf[Colonwhere]
   @scala.inline
   def GrayText: GrayText = "GrayText".asInstanceOf[GrayText]
   @scala.inline

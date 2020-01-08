@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`class-breaks`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`percent-of-total`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.field
@@ -122,7 +121,7 @@ trait ClassBreaksRenderer
     * @param graphic The graphic whose rendering information will be returned.
     *
     */
-  def getClassBreakInfo(graphic: Graphic): IPromise[ClassBreakInfo] = js.native
+  def getClassBreakInfo(graphic: Graphic): js.Promise[ClassBreakInfo] = js.native
   /**
     * Removes a break from the renderer.
     *

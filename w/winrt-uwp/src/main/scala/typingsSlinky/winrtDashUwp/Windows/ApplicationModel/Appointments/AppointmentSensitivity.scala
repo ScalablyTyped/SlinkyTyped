@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object AppointmentSensitivity extends js.Object {
   @js.native
   sealed trait public extends AppointmentSensitivity
   
-  /* 1 */ val `private`: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentSensitivity.`private` with Double = js.native
-  /* 0 */ val public: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentSensitivity.public with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentSensitivity with Double] = js.native
+  /* 1 */ @js.native
+  object `private` extends TopLevel[`private` with Double]
+  
+  /* 0 */ @js.native
+  object public extends TopLevel[public with Double]
+  
 }
 

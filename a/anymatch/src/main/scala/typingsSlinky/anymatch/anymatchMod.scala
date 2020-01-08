@@ -1,9 +1,6 @@
 package typingsSlinky.anymatch
 
-import typingsSlinky.anymatch.anymatchMod.CurrriedMatcher
-import typingsSlinky.anymatch.anymatchMod.Matcher
-import typingsSlinky.anymatch.anymatchMod.MatcherType
-import typingsSlinky.anymatch.anymatchNumbers.`true`
+import typingsSlinky.anymatch.anymatchBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

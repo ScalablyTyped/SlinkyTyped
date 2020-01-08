@@ -5,9 +5,6 @@ import typingsSlinky.plottable.buildSrcCoreFormattersMod.DatumFormatter
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.AttributeToProjector
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.IAccessor
 import typingsSlinky.plottable.buildSrcDrawersMod.ProxyDrawer
-import typingsSlinky.plottable.buildSrcPlotsBarPlotMod.BarAlignment
-import typingsSlinky.plottable.buildSrcPlotsBarPlotMod.BarOrientation
-import typingsSlinky.plottable.buildSrcPlotsBarPlotMod.LabelsPosition
 import typingsSlinky.plottable.buildSrcPlotsCommonsMod.ITransformableAccessorScaleBinding
 import typingsSlinky.plottable.buildSrcPlotsXyPlotMod.XYPlot
 import scala.scalajs.js

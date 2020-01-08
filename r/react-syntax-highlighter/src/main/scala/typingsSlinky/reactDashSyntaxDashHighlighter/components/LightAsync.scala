@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LightAsync
-  extends SharedApply_SyntaxHighlighterProps_1713497095[
+  extends SharedApply_SyntaxHighlighterProps_1507978106[
       typingsSlinky.reactDashSyntaxDashHighlighter.reactDashSyntaxDashHighlighterMod.LightAsync
     ] {
   @JSImport("react-syntax-highlighter", "LightAsync")

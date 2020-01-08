@@ -6,8 +6,8 @@ import typingsSlinky.pickadate.Pickadate.DatePicker
 import typingsSlinky.pickadate.Pickadate.Pickatime
 import typingsSlinky.pickadate.Pickadate.TimeOptions
 import typingsSlinky.pickadate.Pickadate.TimePicker
-import typingsSlinky.pickadate.pickadateStrings.DOLLARnode
-import typingsSlinky.pickadate.pickadateStrings.DOLLARroot
+import typingsSlinky.pickadate.pickadateStrings.$node
+import typingsSlinky.pickadate.pickadateStrings.$root
 import typingsSlinky.pickadate.pickadateStrings._hidden
 import typingsSlinky.pickadate.pickadateStrings.picker
 import scala.scalajs.js
@@ -32,14 +32,14 @@ trait JQuery extends js.Object {
   @JSName("pickadate")
   def pickadate_hidden(objectName: _hidden): HTMLInputElement = js.native
   @JSName("pickadate")
-  def pickadate_node(objectName: DOLLARnode): JQuery = js.native
+  def pickadate_node(objectName: $node): JQuery = js.native
   /**
     * Access the API object on an initialized date picker element.
     */
   @JSName("pickadate")
   def pickadate_picker(keyword: picker): DatePicker = js.native
   @JSName("pickadate")
-  def pickadate_root(objectName: DOLLARroot): JQuery = js.native
+  def pickadate_root(objectName: $root): JQuery = js.native
   /**
     * Initialize a time picker.
     */
@@ -52,13 +52,13 @@ trait JQuery extends js.Object {
   @JSName("pickatime")
   def pickatime_hidden(objectName: _hidden): HTMLInputElement = js.native
   @JSName("pickatime")
-  def pickatime_node(objectName: DOLLARnode): JQuery = js.native
+  def pickatime_node(objectName: $node): JQuery = js.native
   /**
     * Access the API object on an initialized time picker element.
     */
   @JSName("pickatime")
   def pickatime_picker(keyword: picker): TimePicker = js.native
   @JSName("pickatime")
-  def pickatime_root(objectName: DOLLARroot): JQuery = js.native
+  def pickatime_root(objectName: $root): JQuery = js.native
 }
 

@@ -6,6 +6,7 @@ import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Collection
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.BatchUpdateSpreadsheetRequest
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.BatchUpdateSpreadsheetResponse
 import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.GetSpreadsheetByDataFilterRequest
+import typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +34,7 @@ trait SpreadsheetsCollection extends js.Object {
   // should reflect your changes.
   def batchUpdate(resource: BatchUpdateSpreadsheetRequest, spreadsheetId: String): BatchUpdateSpreadsheetResponse = js.native
   // Creates a spreadsheet, returning the newly created spreadsheet.
-  def create(resource: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet = js.native
+  def create(resource: Spreadsheet): Spreadsheet = js.native
   // Returns the spreadsheet at the given ID.
   // The caller must specify the spreadsheet ID.
   // By default, data within grids will not be returned.
@@ -50,7 +51,7 @@ trait SpreadsheetsCollection extends js.Object {
   // Multiple ranges can be specified.  Limiting the range will
   // return only the portions of the spreadsheet that intersect the requested
   // ranges. Ranges are specified using A1 notation.
-  def get(spreadsheetId: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet = js.native
+  def get(spreadsheetId: String): Spreadsheet = js.native
   // Returns the spreadsheet at the given ID.
   // The caller must specify the spreadsheet ID.
   // By default, data within grids will not be returned.
@@ -67,7 +68,7 @@ trait SpreadsheetsCollection extends js.Object {
   // Multiple ranges can be specified.  Limiting the range will
   // return only the portions of the spreadsheet that intersect the requested
   // ranges. Ranges are specified using A1 notation.
-  def get(spreadsheetId: String, optionalArgs: js.Object): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet = js.native
+  def get(spreadsheetId: String, optionalArgs: js.Object): Spreadsheet = js.native
   // Returns the spreadsheet at the given ID.
   // The caller must specify the spreadsheet ID.
   // This method differs from GetSpreadsheet in that it allows selecting
@@ -85,6 +86,6 @@ trait SpreadsheetsCollection extends js.Object {
   // parameter is ignored
   // For large spreadsheets, it is recommended to retrieve only the specific
   // fields of the spreadsheet that you want.
-  def getByDataFilter(resource: GetSpreadsheetByDataFilterRequest, spreadsheetId: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Sheets.Schema.Spreadsheet = js.native
+  def getByDataFilter(resource: GetSpreadsheetByDataFilterRequest, spreadsheetId: String): Spreadsheet = js.native
 }
 

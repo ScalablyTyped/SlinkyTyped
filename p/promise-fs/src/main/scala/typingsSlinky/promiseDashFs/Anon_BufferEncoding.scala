@@ -1,6 +1,6 @@
 package typingsSlinky.promiseDashFs
 
-import typingsSlinky.promiseDashFs.promiseDashFsNumbers.`false`
+import typingsSlinky.promiseDashFs.promiseDashFsBooleans.`false`
 import typingsSlinky.promiseDashFs.promiseDashFsStrings.buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

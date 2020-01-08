@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object ShimmerElementType extends js.Object {
   @js.native
   sealed trait line extends ShimmerElementType
   
-  /* 2 */ val circle: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.circle with Double = js.native
-  /* 3 */ val gap: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.gap with Double = js.native
-  /* 1 */ val line: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsShimmerShimmerDotTypesMod.ShimmerElementType.line with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ShimmerElementType with Double] = js.native
+  /* 2 */ @js.native
+  object circle extends TopLevel[circle with Double]
+  
+  /* 3 */ @js.native
+  object gap extends TopLevel[gap with Double]
+  
+  /* 1 */ @js.native
+  object line extends TopLevel[line with Double]
+  
 }
 

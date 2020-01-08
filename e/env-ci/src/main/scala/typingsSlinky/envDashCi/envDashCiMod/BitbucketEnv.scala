@@ -1,6 +1,6 @@
 package typingsSlinky.envDashCi.envDashCiMod
 
-import typingsSlinky.envDashCi.envDashCiNumbers.`true`
+import typingsSlinky.envDashCi.envDashCiBooleans.`true`
 import typingsSlinky.envDashCi.envDashCiStrings.`Bitbucket Pipelines`
 import typingsSlinky.envDashCi.envDashCiStrings.bitbucket
 import scala.scalajs.js

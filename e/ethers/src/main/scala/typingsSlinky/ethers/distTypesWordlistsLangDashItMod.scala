@@ -1,6 +1,5 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.distTypesWordlistsLangDashItMod.LangIt
 import typingsSlinky.ethers.distTypesWordlistsWordlistMod.Wordlist
 import scala.scalajs.js
 import scala.scalajs.js.`|`

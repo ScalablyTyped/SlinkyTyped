@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,25 @@ object QueryExpand extends js.Object {
   @js.native
   sealed trait Wiql extends QueryExpand
   
-  /* 3 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.All with Double = js.native
-  /* 2 */ val Clauses: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.Clauses with Double = js.native
-  /* 4 */ val Minimal: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.Minimal with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.None with Double = js.native
-  /* 1 */ val Wiql: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.Wiql with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryExpand with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object Clauses extends TopLevel[Clauses with Double]
+  
+  /* 4 */ @js.native
+  object Minimal extends TopLevel[Minimal with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Wiql
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryExpand.Wiql with Double
+        ]
+  
 }
 

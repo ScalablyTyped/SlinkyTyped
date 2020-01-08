@@ -12,7 +12,7 @@ XML builder for the AWS SDK
 | Keywords           | - |
 | # releases         | 4 |
 | # dependents       | 1 |
-| # downloads        | 390 |
+| # downloads        | 4409 |
 | # stars            | 0 |
 
 ## Links

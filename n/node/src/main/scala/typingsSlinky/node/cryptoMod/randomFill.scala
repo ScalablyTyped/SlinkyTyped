@@ -1,7 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.Error
 import typingsSlinky.std.DataView
+import typingsSlinky.std.Error
 import typingsSlinky.std.Float32Array
 import typingsSlinky.std.Float64Array
 import typingsSlinky.std.Int16Array

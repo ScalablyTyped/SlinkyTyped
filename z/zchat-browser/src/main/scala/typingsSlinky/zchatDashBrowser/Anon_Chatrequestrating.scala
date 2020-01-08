@@ -1,17 +1,17 @@
 package typingsSlinky.zchatDashBrowser
 
-import typingsSlinky.zchatDashBrowser.zchatDashBrowserStrings.chatDOTrequestDOTrating
+import typingsSlinky.zchatDashBrowser.zchatDashBrowserStrings.chatDotrequestDotrating
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_Chatrequestrating extends js.Object {
-  var `type`: chatDOTrequestDOTrating
+  var `type`: chatDotrequestDotrating
 }
 
 object Anon_Chatrequestrating {
   @scala.inline
-  def apply(`type`: chatDOTrequestDOTrating): Anon_Chatrequestrating = {
+  def apply(`type`: chatDotrequestDotrating): Anon_Chatrequestrating = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon_Chatrequestrating]

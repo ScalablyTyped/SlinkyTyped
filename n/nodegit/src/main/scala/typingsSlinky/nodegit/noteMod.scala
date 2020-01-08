@@ -1,6 +1,5 @@
 package typingsSlinky.nodegit
 
-import typingsSlinky.nodegit.noteMod.Note
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
 import typingsSlinky.nodegit.signatureMod.Signature

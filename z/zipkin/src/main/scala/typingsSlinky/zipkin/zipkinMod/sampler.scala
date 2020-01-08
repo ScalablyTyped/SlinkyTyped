@@ -1,7 +1,6 @@
 package typingsSlinky.zipkin.zipkinMod
 
 import typingsSlinky.zipkin.zipkinMod.option.IOption
-import typingsSlinky.zipkin.zipkinMod.sampler.Sampler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,8 +4,8 @@ import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermime
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRenderer
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRendererFactory
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRendererOptions
-import typingsSlinky.atJupyterlabVega5DashExtension.atJupyterlabVega5DashExtensionStrings.`application/vndDOTvegaDOTv5+json`
-import typingsSlinky.atJupyterlabVega5DashExtension.atJupyterlabVega5DashExtensionStrings.`application/vndDOTvegaliteDOTv3+json`
+import typingsSlinky.atJupyterlabVega5DashExtension.atJupyterlabVega5DashExtensionStrings.applicationSlashvndDotvegaDotv5Plussignjson
+import typingsSlinky.atJupyterlabVega5DashExtension.atJupyterlabVega5DashExtensionStrings.applicationSlashvndDotvegaliteDotv3Plussignjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,8 +24,8 @@ object atJupyterlabVega5DashExtensionMod extends js.Object {
     var _result: js.Any = js.native
   }
   
-  val VEGALITE_MIME_TYPE: `application/vndDOTvegaliteDOTv3+json` = js.native
-  val VEGA_MIME_TYPE: `application/vndDOTvegaDOTv5+json` = js.native
+  val VEGALITE_MIME_TYPE: applicationSlashvndDotvegaliteDotv3Plussignjson = js.native
+  val VEGA_MIME_TYPE: applicationSlashvndDotvegaDotv5Plussignjson = js.native
   val default: IExtension = js.native
   val rendererFactory: IRendererFactory = js.native
 }

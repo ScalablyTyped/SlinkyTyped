@@ -21,7 +21,7 @@ object ApolloProvider
   override val component: String | js.Object = this.componentImport
   def apply(
     client: typingsSlinky.apolloDashClient.apolloDashClientMod.default[
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for TCacheShape */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for TCacheShape */ _
     ],
     immutable: js.UndefOr[Boolean] = js.undefined,
     store: Store[_, AnyAction] = null,

@@ -1,8 +1,6 @@
 package typingsSlinky.atPopmotionPopcorn
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atPopmotionPopcorn.libUtilsMixDashComplexMod.BlendableObject
-import typingsSlinky.atPopmotionPopcorn.libUtilsMixDashComplexMod.MixComplex
 import typingsSlinky.styleDashValueDashTypes.libTypesMod.HSLA
 import typingsSlinky.styleDashValueDashTypes.libTypesMod.RGBA
 import scala.scalajs.js

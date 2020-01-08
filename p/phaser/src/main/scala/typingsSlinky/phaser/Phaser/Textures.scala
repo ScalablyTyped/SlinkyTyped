@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLVideoElement
@@ -12,12 +13,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.GameObject
 import typingsSlinky.phaser.Phaser.GameObjects.RenderTexture
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
-import typingsSlinky.phaser.Phaser.Textures.CanvasTexture
-import typingsSlinky.phaser.Phaser.Textures.FilterMode
-import typingsSlinky.phaser.Phaser.Textures.Frame
-import typingsSlinky.phaser.Phaser.Textures.Texture
-import typingsSlinky.phaser.Phaser.Textures.TextureManager
-import typingsSlinky.phaser.Phaser.Textures.TextureSource
 import typingsSlinky.phaser.Phaser.Types.Textures.PixelConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetFromAtlasConfig
@@ -1365,10 +1360,16 @@ object Textures extends js.Object {
     @js.native
     sealed trait NEAREST extends FilterMode
     
-    /* 0 */ val LINEAR: typingsSlinky.phaser.Phaser.Textures.FilterMode.LINEAR with Double = js.native
-    /* 1 */ val NEAREST: typingsSlinky.phaser.Phaser.Textures.FilterMode.NEAREST with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[FilterMode with Double] = js.native
+    /* 0 */ @js.native
+    object LINEAR
+      extends TopLevel[typingsSlinky.phaser.Phaser.Textures.FilterMode.LINEAR with Double]
+    
+    /* 1 */ @js.native
+    object NEAREST
+      extends TopLevel[typingsSlinky.phaser.Phaser.Textures.FilterMode.NEAREST with Double]
+    
   }
   
 }

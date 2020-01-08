@@ -2,8 +2,6 @@ package typingsSlinky.androiduix.android
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.androiduix.android.content.Context
-import typingsSlinky.androiduix.android.webkit.WebView
-import typingsSlinky.androiduix.android.webkit.WebViewClient
 import typingsSlinky.androiduix.androidui.widget.HtmlBaseView
 import typingsSlinky.std.Map
 import scala.scalajs.js

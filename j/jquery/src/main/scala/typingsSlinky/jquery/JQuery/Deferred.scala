@@ -1,7 +1,6 @@
 package typingsSlinky.jquery.JQuery
 
 import typingsSlinky.jquery.JQuery.Deferred.Callback
-import typingsSlinky.jquery.JQuery.Deferred.CallbackBase
 import typingsSlinky.jquery.jqueryStrings.pending
 import typingsSlinky.jquery.jqueryStrings.rejected
 import typingsSlinky.jquery.jqueryStrings.resolved

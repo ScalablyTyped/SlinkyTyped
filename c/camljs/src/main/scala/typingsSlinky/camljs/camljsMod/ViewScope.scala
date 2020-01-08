@@ -1,5 +1,6 @@
 package typingsSlinky.camljs.camljsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ViewScope extends js.Object {
   @js.native
   sealed trait RecursiveAll extends ViewScope
   
-  /* 2 */ val FilesOnly: typingsSlinky.camljs.camljsMod.ViewScope.FilesOnly with Double = js.native
-  /* 0 */ val Recursive: typingsSlinky.camljs.camljsMod.ViewScope.Recursive with Double = js.native
-  /* 1 */ val RecursiveAll: typingsSlinky.camljs.camljsMod.ViewScope.RecursiveAll with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ViewScope with Double] = js.native
+  /* 2 */ @js.native
+  object FilesOnly extends TopLevel[FilesOnly with Double]
+  
+  /* 0 */ @js.native
+  object Recursive extends TopLevel[Recursive with Double]
+  
+  /* 1 */ @js.native
+  object RecursiveAll extends TopLevel[RecursiveAll with Double]
+  
 }
 

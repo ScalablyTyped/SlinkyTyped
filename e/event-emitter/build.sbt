@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "event-emitter"
-version := "0.3-dt-20191126Z-95bae2"
+version := "0.3-dt-20191126Z-ada806"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

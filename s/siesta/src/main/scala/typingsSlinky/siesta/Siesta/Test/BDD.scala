@@ -1,6 +1,5 @@
 package typingsSlinky.siesta.Siesta.Test
 
-import typingsSlinky.siesta.Siesta.Test.BDD.Expectation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

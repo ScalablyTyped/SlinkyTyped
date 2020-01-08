@@ -2,7 +2,7 @@ package typingsSlinky.antd.libDrawerMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

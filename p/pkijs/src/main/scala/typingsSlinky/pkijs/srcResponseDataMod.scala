@@ -1,6 +1,5 @@
 package typingsSlinky.pkijs
 
-import typingsSlinky.pkijs.srcResponseDataMod.ResponseData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

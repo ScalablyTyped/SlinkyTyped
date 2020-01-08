@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTabDashBar
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.atMaterialBase.foundationMod.MDCFoundation
 import typingsSlinky.atMaterialTabDashBar.adapterMod.MDCTabBarAdapter
-import typingsSlinky.atMaterialTabDashBar.foundationMod.MDCTabBarFoundation
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

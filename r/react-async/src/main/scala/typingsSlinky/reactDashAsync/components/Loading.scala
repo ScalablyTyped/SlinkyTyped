@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Loading extends SharedApply_Anon_ChildrenInitial_1490096798 {
+object Loading extends SharedApply_Anon_ChildrenInitial_901121063 {
   @JSImport("react-async", "default.Loading")
   @js.native
   object componentImport extends js.Object

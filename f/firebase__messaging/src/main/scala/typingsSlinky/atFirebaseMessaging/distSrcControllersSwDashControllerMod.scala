@@ -1,7 +1,7 @@
 package typingsSlinky.atFirebaseMessaging
 
-import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
 import typingsSlinky.atFirebaseMessaging.distSrcControllersBaseDashControllerMod.BaseController
+import typingsSlinky.atFirebaseMessaging.distSrcInterfacesInternalDashServicesMod.FirebaseInternalServices
 import typingsSlinky.atFirebaseMessaging.distSrcInterfacesMessageDashPayloadMod.MessagePayload
 import typingsSlinky.atFirebaseMessaging.distSrcInterfacesMessageDashPayloadMod.NotificationDetails
 import typingsSlinky.atFirebaseMessaging.distSrcModelsWorkerDashPageDashMessageMod.InternalMessage
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 object distSrcControllersSwDashControllerMod extends js.Object {
   @js.native
   class SwController protected () extends BaseController {
-    def this(app: FirebaseApp) = this()
+    def this(services: FirebaseInternalServices) = this()
     var bgMessageHandler: js.Any = js.native
     var onNotificationClick_ : js.Any = js.native
     /**

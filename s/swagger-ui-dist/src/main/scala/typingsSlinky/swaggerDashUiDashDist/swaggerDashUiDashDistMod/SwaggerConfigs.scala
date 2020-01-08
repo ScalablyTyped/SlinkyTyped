@@ -2,7 +2,6 @@ package typingsSlinky.swaggerDashUiDashDist.swaggerDashUiDashDistMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.swaggerDashUiDashDist.swaggerDashUiDashDistStrings.BaseLayout
 import typingsSlinky.swaggerDashUiDashDist.swaggerDashUiDashDistStrings.full
 import typingsSlinky.swaggerDashUiDashDist.swaggerDashUiDashDistStrings.list
 import typingsSlinky.swaggerDashUiDashDist.swaggerDashUiDashDistStrings.none
@@ -35,7 +34,7 @@ trait SwaggerConfigs
   /**
     * The name of a component available via the plugin system to use as the top-level layout for Swagger UI.
     */
-  var layout: js.UndefOr[BaseLayout] = js.undefined
+  var layout: js.UndefOr[String] = js.undefined
   /**
     * If set, limits the number of tagged operations displayed to at most this many. The default is to show all operations.
     */
@@ -59,6 +58,11 @@ trait SwaggerConfigs
     *  Accepts one argument requestInterceptor(request) and must return the modified request, or a Promise that resolves to the modified request.
     */
   var requestInterceptor: js.UndefOr[js.Function1[/* request */ SwaggerRequest, SwaggerRequest]] = js.undefined
+  /**
+    *  Function to intercept remote definition, "Try it out", and OAuth 2.0 responses.
+    *  Accepts one argument responseInterceptor(response) and must return the modified response, or a Promise that resolves to the modified response.
+    */
+  var responseInterceptor: js.UndefOr[js.Function1[/* response */ SwaggerResponse, SwaggerResponse]] = js.undefined
   /**
     * A JavaScript object describing the OpenAPI definition. When used, the url parameter will not be parsed. This is useful for testing manually-generated definitions without hosting them.
     */
@@ -84,12 +88,13 @@ object SwaggerConfigs {
     docExpansion: list | full | none = null,
     domNode: String | HTMLElement = null,
     dom_id: String = null,
-    layout: BaseLayout = null,
+    layout: String = null,
     maxDisplayedTags: Int | Double = null,
     operationsSorter: () => Unit = null,
     plugins: js.Any = null,
     presets: js.Array[_] = null,
     requestInterceptor: /* request */ SwaggerRequest => SwaggerRequest = null,
+    responseInterceptor: /* response */ SwaggerResponse => SwaggerResponse = null,
     spec: Spec = null,
     url: String = null,
     urls: js.Array[Url] = null
@@ -107,6 +112,7 @@ object SwaggerConfigs {
     if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
     if (presets != null) __obj.updateDynamic("presets")(presets.asInstanceOf[js.Any])
     if (requestInterceptor != null) __obj.updateDynamic("requestInterceptor")(js.Any.fromFunction1(requestInterceptor))
+    if (responseInterceptor != null) __obj.updateDynamic("responseInterceptor")(js.Any.fromFunction1(responseInterceptor))
     if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])

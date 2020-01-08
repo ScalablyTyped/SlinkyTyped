@@ -5,12 +5,6 @@ import typingsSlinky.atJimpGif.atJimpGifMod.Gif
 import typingsSlinky.atJimpJpeg.atJimpJpegMod.Jpeg
 import typingsSlinky.atJimpPng.atJimpPngMod.PNG
 import typingsSlinky.atJimpTiff.atJimpTiffMod.Tiff
-import typingsSlinky.atJimpTypes.atJimpTypesMod.BmpRet
-import typingsSlinky.atJimpTypes.atJimpTypesMod.GifRet
-import typingsSlinky.atJimpTypes.atJimpTypesMod.JpegRet
-import typingsSlinky.atJimpTypes.atJimpTypesMod.PngRet
-import typingsSlinky.atJimpTypes.atJimpTypesMod.TiffRet
-import typingsSlinky.atJimpTypes.atJimpTypesMod.Types
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

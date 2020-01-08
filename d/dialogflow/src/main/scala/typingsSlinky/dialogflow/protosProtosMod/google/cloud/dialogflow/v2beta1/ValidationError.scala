@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -124,13 +125,23 @@ object ValidationError extends js.Object {
     @js.native
     sealed trait WARNING extends Severity
     
-    /* 4 */ val CRITICAL: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity.CRITICAL with Double = js.native
-    /* 3 */ val ERROR: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity.ERROR with Double = js.native
-    /* 1 */ val INFO: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity.INFO with Double = js.native
-    /* 0 */ val SEVERITY_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity.SEVERITY_UNSPECIFIED with Double = js.native
-    /* 2 */ val WARNING: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.ValidationError.Severity.WARNING with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Severity with Double] = js.native
+    /* 4 */ @js.native
+    object CRITICAL extends TopLevel[CRITICAL with Double]
+    
+    /* 3 */ @js.native
+    object ERROR extends TopLevel[ERROR with Double]
+    
+    /* 1 */ @js.native
+    object INFO extends TopLevel[INFO with Double]
+    
+    /* 0 */ @js.native
+    object SEVERITY_UNSPECIFIED extends TopLevel[SEVERITY_UNSPECIFIED with Double]
+    
+    /* 2 */ @js.native
+    object WARNING extends TopLevel[WARNING with Double]
+    
   }
   
 }

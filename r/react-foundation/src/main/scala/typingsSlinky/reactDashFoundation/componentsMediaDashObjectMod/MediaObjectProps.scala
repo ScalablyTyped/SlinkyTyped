@@ -17,6 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AriaAttributes
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DOMAttributes
 import typingsSlinky.react.reactMod.DragEvent
@@ -37,6 +38,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -92,14 +94,14 @@ import scala.scalajs.js.annotation._
   var autoCorrect: js.UndefOr[String] = js.undefined
   var autoSave: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
-  var contentEditable: js.UndefOr[Boolean] = js.undefined
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
   var datatype: js.UndefOr[String] = js.undefined
   // React-specific Attributes
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
   var dir: js.UndefOr[String] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
+  var draggable: js.UndefOr[Booleanish] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var inlist: js.UndefOr[js.Any] = js.undefined
@@ -132,7 +134,7 @@ import scala.scalajs.js.annotation._
   var role: js.UndefOr[String] = js.undefined
   var security: js.UndefOr[String] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
-  var spellCheck: js.UndefOr[Boolean] = js.undefined
+  var spellCheck: js.UndefOr[Booleanish] = js.undefined
   var stackForSmall: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
@@ -207,7 +209,7 @@ object MediaObjectProps {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -411,7 +413,7 @@ object MediaObjectProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

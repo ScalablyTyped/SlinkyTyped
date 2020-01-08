@@ -1,10 +1,9 @@
 package typingsSlinky.unsplashDashJs.unsplashDashJsMod
 
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.unsplashDashJs.Anon_ApiUrl
+import typingsSlinky.unsplashDashJs.Anon_AccessKey
 import typingsSlinky.unsplashDashJs.Anon_Body
 import typingsSlinky.unsplashDashJs.unsplashDashJsMod.UnsplashApi.Auth
-import typingsSlinky.unsplashDashJs.unsplashDashJsMod.UnsplashApi.Categories
 import typingsSlinky.unsplashDashJs.unsplashDashJsMod.UnsplashApi.Collections
 import typingsSlinky.unsplashDashJs.unsplashDashJsMod.UnsplashApi.CurrentUser
 import typingsSlinky.unsplashDashJs.unsplashDashJsMod.UnsplashApi.Photo
@@ -18,11 +17,9 @@ import scala.scalajs.js.annotation._
 @JSImport("unsplash-js", JSImport.Default)
 @js.native
 class default protected () extends Unsplash {
-  def this(options: Anon_ApiUrl) = this()
+  def this(options: Anon_AccessKey) = this()
   /* CompleteClass */
   override var auth: Auth = js.native
-  /* CompleteClass */
-  override var categories: Categories = js.native
   /* CompleteClass */
   override var collections: Collections = js.native
   /* CompleteClass */

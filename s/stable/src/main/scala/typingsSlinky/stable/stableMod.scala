@@ -1,6 +1,5 @@
 package typingsSlinky.stable
 
-import typingsSlinky.stable.stableMod.Comparator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

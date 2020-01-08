@@ -2,7 +2,6 @@ package typingsSlinky.atFirebaseFirestore
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atFirebaseFirestore.distSrcUtilObjMod.Dict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

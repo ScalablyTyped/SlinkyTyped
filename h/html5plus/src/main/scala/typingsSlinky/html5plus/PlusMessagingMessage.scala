@@ -1,7 +1,7 @@
 package typingsSlinky.html5plus
 
-import typingsSlinky.html5plus.html5plusStrings.`text/html`
-import typingsSlinky.html5plus.html5plusStrings.`text/plain`
+import typingsSlinky.html5plus.html5plusStrings.textSlashhtml
+import typingsSlinky.html5plus.html5plusStrings.textSlashplain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait PlusMessagingMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/messaging.html](http://www.html5plus.org/doc/zh_cn/messaging.html)
     */
-  var bodyType: js.UndefOr[`text/plain` | `text/html`] = js.native
+  var bodyType: js.UndefOr[textSlashplain | textSlashhtml] = js.native
   /**
     * 抄送人信息
     * 字符串数组类型，仅发送邮件时有效，输入的地址收件人信息必须符合消息类型格式。

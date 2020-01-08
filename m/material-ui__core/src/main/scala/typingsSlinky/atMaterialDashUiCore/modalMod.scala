@@ -1,9 +1,10 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atMaterialDashUiCore.modalModalMod.ModalProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +25,8 @@ object modalMod extends js.Object {
     def this(props: ModalProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[ModalProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[ModalProps]]
+  
 }
 

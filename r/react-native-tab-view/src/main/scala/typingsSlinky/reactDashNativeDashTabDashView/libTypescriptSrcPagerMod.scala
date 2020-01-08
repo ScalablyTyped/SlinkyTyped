@@ -1,8 +1,6 @@
 package typingsSlinky.reactDashNativeDashTabDashView
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcPagerMod.Pager
-import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcPagerMod.Props
 import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTypesMod.PagerCommonProps
 import typingsSlinky.reactDashNativeDashTabDashView.libTypescriptSrcTypesMod.Route
 import scala.scalajs.js

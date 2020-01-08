@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,13 @@ object QueryFormat extends js.Object {
   @js.native
   sealed trait USER extends QueryFormat
   
-  /* 2 */ val SEXP: typingsSlinky.evernote.evernoteMod.Evernote.QueryFormat.SEXP with Double = js.native
-  /* 1 */ val USER: typingsSlinky.evernote.evernoteMod.Evernote.QueryFormat.USER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryFormat with Double] = js.native
+  /* 2 */ @js.native
+  object SEXP extends TopLevel[SEXP with Double]
+  
+  /* 1 */ @js.native
+  object USER extends TopLevel[USER with Double]
+  
 }
 

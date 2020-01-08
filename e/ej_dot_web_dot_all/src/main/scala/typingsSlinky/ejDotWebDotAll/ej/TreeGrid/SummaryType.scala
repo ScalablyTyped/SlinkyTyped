@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,17 +51,37 @@ object SummaryType extends js.Object {
   @js.native
   sealed trait TrueCount extends SummaryType
   
-  /* 1 */ val Average: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Average with Double = js.native
-  /* 4 */ val Count: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Count with Double = js.native
-  /* 9 */ val Custom: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Custom with Double = js.native
-  /* 8 */ val FalseCount: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.FalseCount with Double = js.native
-  /* 2 */ val Maximum: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Maximum with Double = js.native
-  /* 6 */ val MaximumDate: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.MaximumDate with Double = js.native
-  /* 3 */ val Minimum: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Minimum with Double = js.native
-  /* 5 */ val MinimumDate: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.MinimumDate with Double = js.native
-  /* 0 */ val Sum: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.Sum with Double = js.native
-  /* 7 */ val TrueCount: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.SummaryType.TrueCount with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SummaryType with Double] = js.native
+  /* 1 */ @js.native
+  object Average extends TopLevel[Average with Double]
+  
+  /* 4 */ @js.native
+  object Count extends TopLevel[Count with Double]
+  
+  /* 9 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 8 */ @js.native
+  object FalseCount extends TopLevel[FalseCount with Double]
+  
+  /* 2 */ @js.native
+  object Maximum extends TopLevel[Maximum with Double]
+  
+  /* 6 */ @js.native
+  object MaximumDate extends TopLevel[MaximumDate with Double]
+  
+  /* 3 */ @js.native
+  object Minimum extends TopLevel[Minimum with Double]
+  
+  /* 5 */ @js.native
+  object MinimumDate extends TopLevel[MinimumDate with Double]
+  
+  /* 0 */ @js.native
+  object Sum extends TopLevel[Sum with Double]
+  
+  /* 7 */ @js.native
+  object TrueCount extends TopLevel[TrueCount with Double]
+  
 }
 

@@ -2,8 +2,6 @@ package typingsSlinky.atMaterialChips
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialChips.chipDashSetAdapterMod.MDCChipSetAdapter
-import typingsSlinky.atMaterialChips.chipDashSetFoundationMod.MDCChipSetFoundation
-import typingsSlinky.atMaterialChips.chipDashSetFoundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

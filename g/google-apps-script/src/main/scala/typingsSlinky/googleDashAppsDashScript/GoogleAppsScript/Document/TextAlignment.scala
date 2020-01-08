@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,10 +27,16 @@ object TextAlignment extends js.Object {
   @js.native
   sealed trait SUPERSCRIPT extends TextAlignment
   
-  /* 0 */ val NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.TextAlignment.NORMAL with Double = js.native
-  /* 2 */ val SUBSCRIPT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.TextAlignment.SUBSCRIPT with Double = js.native
-  /* 1 */ val SUPERSCRIPT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.TextAlignment.SUPERSCRIPT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextAlignment with Double] = js.native
+  /* 0 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
+  /* 2 */ @js.native
+  object SUBSCRIPT extends TopLevel[SUBSCRIPT with Double]
+  
+  /* 1 */ @js.native
+  object SUPERSCRIPT extends TopLevel[SUPERSCRIPT with Double]
+  
 }
 

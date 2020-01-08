@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,14 +53,28 @@ object TestSessionSource extends js.Object {
   @js.native
   sealed trait XTWeb extends TestSessionSource
   
-  /* 2 */ val FeedbackDesktop: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.FeedbackDesktop with Double = js.native
-  /* 4 */ val FeedbackWeb: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.FeedbackWeb with Double = js.native
-  /* 6 */ val SessionInsightsForAll: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.SessionInsightsForAll with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.Unknown with Double = js.native
-  /* 1 */ val XTDesktop: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.XTDesktop with Double = js.native
-  /* 5 */ val XTDesktop2: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.XTDesktop2 with Double = js.native
-  /* 3 */ val XTWeb: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestSessionSource.XTWeb with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TestSessionSource with Double] = js.native
+  /* 2 */ @js.native
+  object FeedbackDesktop extends TopLevel[FeedbackDesktop with Double]
+  
+  /* 4 */ @js.native
+  object FeedbackWeb extends TopLevel[FeedbackWeb with Double]
+  
+  /* 6 */ @js.native
+  object SessionInsightsForAll extends TopLevel[SessionInsightsForAll with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
+  /* 1 */ @js.native
+  object XTDesktop extends TopLevel[XTDesktop with Double]
+  
+  /* 5 */ @js.native
+  object XTDesktop2 extends TopLevel[XTDesktop2 with Double]
+  
+  /* 3 */ @js.native
+  object XTWeb extends TopLevel[XTWeb with Double]
+  
 }
 

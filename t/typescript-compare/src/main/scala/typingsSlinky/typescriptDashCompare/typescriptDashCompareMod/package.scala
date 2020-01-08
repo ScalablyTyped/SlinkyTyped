@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typescriptDashCompareMod {
+  import typingsSlinky.typescriptDashCompare.typescriptDashCompareBooleans.`true`
   import typingsSlinky.typescriptDashCompare.typescriptDashCompareMod.Compare.Options
   import typingsSlinky.typescriptDashCompare.typescriptDashCompareNumbers.`0`
   import typingsSlinky.typescriptDashCompare.typescriptDashCompareNumbers.`1`
-  import typingsSlinky.typescriptDashCompare.typescriptDashCompareNumbers.`true`
   import typingsSlinky.typescriptDashLogic.typescriptDashLogicMod.And
   import typingsSlinky.typescriptDashLogic.typescriptDashLogicMod.If
   import typingsSlinky.typescriptDashLogic.typescriptDashLogicMod.Not

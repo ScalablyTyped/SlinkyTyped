@@ -35,8 +35,7 @@ import scala.scalajs.js.annotation._
   * @param opt_options Image ArcGIS Rest Options.
   * @api
   */
-class ImageArcGISRest ()
-  extends typingsSlinky.openlayers.openlayersMod.source.Image {
+class ImageArcGISRest () extends Image {
   def this(opt_options: ImageArcGISRestOptions) = this()
   /**
     * Return the image load function of the source.

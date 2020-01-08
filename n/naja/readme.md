@@ -12,7 +12,7 @@ Modern AJAX library for Nette Framework
 | Keywords           | nette, ajax, history |
 | # releases         | 9 |
 | # dependents       | 1 |
-| # downloads        | 6792 |
+| # downloads        | 8087 |
 | # stars            | 0 |
 
 ## Links

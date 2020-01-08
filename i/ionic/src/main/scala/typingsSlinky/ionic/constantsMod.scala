@@ -1,7 +1,7 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.ProjectType
-import typingsSlinky.ionic.ionicStrings.ionicDOTconfigDOTjson
+import typingsSlinky.ionic.ionicStrings.ionicDotconfigDotjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object constantsMod extends js.Object {
   val ASSETS_DIRECTORY: String = js.native
-  val PROJECT_FILE: ionicDOTconfigDOTjson = js.native
+  val PROJECT_FILE: ionicDotconfigDotjson = js.native
   val PROJECT_TYPES: js.Array[ProjectType] = js.native
 }
 

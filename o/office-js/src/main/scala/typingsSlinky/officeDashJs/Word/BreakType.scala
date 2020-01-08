@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,14 +72,28 @@ object BreakType extends js.Object {
   @js.native
   sealed trait sectionOdd extends BreakType
   
-  /* "Line" */ val line: typingsSlinky.officeDashJs.Word.BreakType.line with String = js.native
-  /* "Next" */ val next: typingsSlinky.officeDashJs.Word.BreakType.next with String = js.native
-  /* "Page" */ val page: typingsSlinky.officeDashJs.Word.BreakType.page with String = js.native
-  /* "SectionContinuous" */ val sectionContinuous: typingsSlinky.officeDashJs.Word.BreakType.sectionContinuous with String = js.native
-  /* "SectionEven" */ val sectionEven: typingsSlinky.officeDashJs.Word.BreakType.sectionEven with String = js.native
-  /* "SectionNext" */ val sectionNext: typingsSlinky.officeDashJs.Word.BreakType.sectionNext with String = js.native
-  /* "SectionOdd" */ val sectionOdd: typingsSlinky.officeDashJs.Word.BreakType.sectionOdd with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BreakType with String] = js.native
+  /* "Line" */ @js.native
+  object line extends TopLevel[line with String]
+  
+  /* "Next" */ @js.native
+  object next extends TopLevel[next with String]
+  
+  /* "Page" */ @js.native
+  object page extends TopLevel[page with String]
+  
+  /* "SectionContinuous" */ @js.native
+  object sectionContinuous extends TopLevel[sectionContinuous with String]
+  
+  /* "SectionEven" */ @js.native
+  object sectionEven extends TopLevel[sectionEven with String]
+  
+  /* "SectionNext" */ @js.native
+  object sectionNext extends TopLevel[sectionNext with String]
+  
+  /* "SectionOdd" */ @js.native
+  object sectionOdd extends TopLevel[sectionOdd with String]
+  
 }
 

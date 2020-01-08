@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object Gender extends js.Object {
   @js.native
   sealed trait MALE extends Gender
   
-  /* 1 */ val FEMALE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Gender.FEMALE with Double = js.native
-  /* 0 */ val MALE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Contacts.Gender.MALE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Gender with Double] = js.native
+  /* 1 */ @js.native
+  object FEMALE extends TopLevel[FEMALE with Double]
+  
+  /* 0 */ @js.native
+  object MALE extends TopLevel[MALE with Double]
+  
 }
 

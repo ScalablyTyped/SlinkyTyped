@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PivotGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,28 @@ object NumberFormat extends js.Object {
   @js.native
   sealed trait Text extends NumberFormat
   
-  /* 1 */ val Currency: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Currency with Double = js.native
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Default with Double = js.native
-  /* 3 */ val Fraction: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Fraction with Double = js.native
-  /* 6 */ val Notation: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Notation with Double = js.native
-  /* 2 */ val Percentage: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Percentage with Double = js.native
-  /* 4 */ val Scientific: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Scientific with Double = js.native
-  /* 5 */ val Text: typingsSlinky.ejDotWebDotAll.ej.PivotGauge.NumberFormat.Text with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NumberFormat with Double] = js.native
+  /* 1 */ @js.native
+  object Currency extends TopLevel[Currency with Double]
+  
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 3 */ @js.native
+  object Fraction extends TopLevel[Fraction with Double]
+  
+  /* 6 */ @js.native
+  object Notation extends TopLevel[Notation with Double]
+  
+  /* 2 */ @js.native
+  object Percentage extends TopLevel[Percentage with Double]
+  
+  /* 4 */ @js.native
+  object Scientific extends TopLevel[Scientific with Double]
+  
+  /* 5 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
 }
 

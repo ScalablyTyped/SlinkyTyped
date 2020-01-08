@@ -3,7 +3,6 @@ package typingsSlinky.baconjs
 import typingsSlinky.baconjs.typesObservableMod.EventStream
 import typingsSlinky.baconjs.typesObservableMod.Property
 import typingsSlinky.baconjs.typesObservableMod.default
-import typingsSlinky.baconjs.typesSampleMod.Combinator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

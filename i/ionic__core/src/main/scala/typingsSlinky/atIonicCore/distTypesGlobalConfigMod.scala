@@ -1,7 +1,6 @@
 package typingsSlinky.atIonicCore
 
 import org.scalajs.dom.raw.Window
-import typingsSlinky.atIonicCore.distTypesGlobalConfigMod.Config
 import typingsSlinky.atIonicCore.distTypesUtilsConfigMod.IonicConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

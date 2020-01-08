@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation._
 
 object atTensorflowTfjsDashConverterStrings {
   @js.native
-  sealed trait `1DOT3DOT2` extends js.Object
+  sealed trait `1Dot5Dot1` extends js.Object
   
   @js.native
-  sealed trait `?tfjs-format=file` extends js.Object
+  sealed trait `Questionmarktfjs-formatEqualssignfile` extends js.Object
   
   @js.native
   sealed trait arithmetic extends Category
@@ -62,7 +62,7 @@ object atTensorflowTfjsDashConverterStrings {
   sealed trait matrices extends Category
   
   @js.native
-  sealed trait modelDOTjson extends js.Object
+  sealed trait modelDotjson extends js.Object
   
   @js.native
   sealed trait normalization extends Category
@@ -104,9 +104,9 @@ object atTensorflowTfjsDashConverterStrings {
   sealed trait transformation extends Category
   
   @scala.inline
-  def `1DOT3DOT2`: `1DOT3DOT2` = "1.3.2".asInstanceOf[`1DOT3DOT2`]
+  def `1Dot5Dot1`: `1Dot5Dot1` = "1.5.1".asInstanceOf[`1Dot5Dot1`]
   @scala.inline
-  def `?tfjs-format=file`: `?tfjs-format=file` = "?tfjs-format=file".asInstanceOf[`?tfjs-format=file`]
+  def `Questionmarktfjs-formatEqualssignfile`: `Questionmarktfjs-formatEqualssignfile` = "?tfjs-format=file".asInstanceOf[`Questionmarktfjs-formatEqualssignfile`]
   @scala.inline
   def arithmetic: arithmetic = "arithmetic".asInstanceOf[arithmetic]
   @scala.inline
@@ -140,7 +140,7 @@ object atTensorflowTfjsDashConverterStrings {
   @scala.inline
   def matrices: matrices = "matrices".asInstanceOf[matrices]
   @scala.inline
-  def modelDOTjson: modelDOTjson = "model.json".asInstanceOf[modelDOTjson]
+  def modelDotjson: modelDotjson = "model.json".asInstanceOf[modelDotjson]
   @scala.inline
   def normalization: normalization = "normalization".asInstanceOf[normalization]
   @scala.inline

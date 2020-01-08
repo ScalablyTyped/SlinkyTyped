@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ExtrapolationType extends js.Object {
   @js.native
   sealed trait NONE extends ExtrapolationType
   
-  /* 2 */ val EXTRAPOLATE: typingsSlinky.cesium.cesiumMod.ExtrapolationType.EXTRAPOLATE with Double = js.native
-  /* 1 */ val HOLD: typingsSlinky.cesium.cesiumMod.ExtrapolationType.HOLD with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.cesium.cesiumMod.ExtrapolationType.NONE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtrapolationType with Double] = js.native
+  /* 2 */ @js.native
+  object EXTRAPOLATE extends TopLevel[EXTRAPOLATE with Double]
+  
+  /* 1 */ @js.native
+  object HOLD extends TopLevel[HOLD with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
 }
 

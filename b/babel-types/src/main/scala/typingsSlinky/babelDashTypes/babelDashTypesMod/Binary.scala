@@ -1,25 +1,27 @@
 package typingsSlinky.babelDashTypes.babelDashTypesMod
 
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`!==`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`!=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`%`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`&&`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`&`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`**`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`+`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`/`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`<<`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`<=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`<`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`===`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`==`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>>>`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>>`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`_backtick^_backtick`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`||`
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Ampersand
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.AmpersandAmpersand
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Asterisk
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.AsteriskAsterisk
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.EqualssignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.EqualssignEqualssignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.ExclamationmarkEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.ExclamationmarkEqualssignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Greaterthansign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.GreaterthansignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.GreaterthansignGreaterthansign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.GreaterthansignGreaterthansignGreaterthansign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Lessthansign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.LessthansignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.LessthansignLessthansign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Percentsign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Plussign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Slash
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Verticalline
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.VerticallineVerticalline
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.^
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-_`
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.in
 import typingsSlinky.babelDashTypes.babelDashTypesStrings.instanceof
 import scala.scalajs.js
@@ -38,7 +40,7 @@ object Binary {
     end: Double,
     left: Expression,
     loc: SourceLocation,
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.babelDashTypes.babelDashTypesStrings.`*` | `**` | `&` | typingsSlinky.babelDashTypes.babelDashTypesStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
     right: Expression,
     start: Double,
     `type`: typingsSlinky.babelDashTypes.babelDashTypesStrings.BinaryExpression,
@@ -58,7 +60,7 @@ object Binary {
     end: Double,
     left: Expression,
     loc: SourceLocation,
-    operator: `||` | `&&`,
+    operator: VerticallineVerticalline | AmpersandAmpersand,
     right: Expression,
     start: Double,
     `type`: typingsSlinky.babelDashTypes.babelDashTypesStrings.LogicalExpression,

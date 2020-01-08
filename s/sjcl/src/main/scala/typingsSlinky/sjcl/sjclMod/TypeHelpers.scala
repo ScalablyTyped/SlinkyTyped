@@ -1,7 +1,5 @@
 package typingsSlinky.sjcl.sjclMod
 
-import typingsSlinky.sjcl.sjclMod.TypeHelpers.One
-import typingsSlinky.sjcl.sjclMod.TypeHelpers.Two
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

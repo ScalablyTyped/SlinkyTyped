@@ -1,6 +1,5 @@
 package typingsSlinky.postmark
 
-import typingsSlinky.postmark.distClientAccountClientMod.AccountClient
 import typingsSlinky.postmark.distClientModelsClientCallbackMod.Callback
 import typingsSlinky.postmark.distClientModelsClientDefaultResponseMod.DefaultResponse
 import typingsSlinky.postmark.distClientModelsDomainsDomainMod.DomainDetails

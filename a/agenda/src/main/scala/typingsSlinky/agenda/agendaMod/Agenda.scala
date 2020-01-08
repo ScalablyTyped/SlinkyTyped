@@ -2,7 +2,7 @@ package typingsSlinky.agenda.agendaMod
 
 import typingsSlinky.mongodb.mongodbMod.Collection
 import typingsSlinky.mongodb.mongodbMod.Db
-import typingsSlinky.mongodb.mongodbMod.Default
+import typingsSlinky.mongodb.mongodbMod.DefaultSchema
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Date
 import typingsSlinky.std.Error
@@ -31,7 +31,7 @@ trait Agenda extends EventEmitter {
   def database(url: String): this.type = js.native
   def database(url: String, collection: String): this.type = js.native
   def database(url: String, collection: String, options: js.Any): this.type = js.native
-  def database(url: String, collection: String, options: js.Any, cb: ResultCallback[Collection[Default]]): this.type = js.native
+  def database(url: String, collection: String, options: js.Any, cb: ResultCallback[Collection[DefaultSchema]]): this.type = js.native
   /**
     * Takes a number which specifies the default number of a specific job that can be running at any given moment.
     * By default it is 5.
@@ -112,7 +112,7 @@ trait Agenda extends EventEmitter {
     */
   def mongo(db: Db): this.type = js.native
   def mongo(db: Db, collection: String): this.type = js.native
-  def mongo(db: Db, collection: String, cb: ResultCallback[Collection[Default]]): this.type = js.native
+  def mongo(db: Db, collection: String, cb: ResultCallback[Collection[DefaultSchema]]): this.type = js.native
   /**
     * Sets the agenda name.
     */

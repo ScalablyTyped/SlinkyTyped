@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object QueueOptions extends js.Object {
   @js.native
   sealed trait None extends QueueOptions
   
-  /* 1 */ val DoNotRun: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueueOptions.DoNotRun with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.QueueOptions.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueueOptions with Double] = js.native
+  /* 1 */ @js.native
+  object DoNotRun extends TopLevel[DoNotRun with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

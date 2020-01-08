@@ -3,6 +3,7 @@ package typingsSlinky.primereact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.primereact.Anon_NodeOriginalEvent
 import typingsSlinky.primereact.Anon_OriginalEventValue
@@ -19,7 +20,7 @@ object Tree
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, onContextMenu, onSelect */
+  /* The following DOM/SVG props were specified: className, disabled, id, onContextMenu, onSelect */
   def apply(
     contentClassName: String = null,
     contentStyle: js.Object = null,
@@ -79,6 +80,7 @@ object Tree
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.treeMod.Tree] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.treeMod.Tree](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TreeProps
 }
 

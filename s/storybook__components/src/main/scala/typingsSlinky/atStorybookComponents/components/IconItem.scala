@@ -16,9 +16,8 @@ object IconItem
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
+  def apply(name: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

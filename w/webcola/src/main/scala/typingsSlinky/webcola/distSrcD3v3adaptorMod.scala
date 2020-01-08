@@ -1,7 +1,6 @@
 package typingsSlinky.webcola
 
 import typingsSlinky.webcola.distSrcD3adaptorMod.ID3StyleLayoutAdaptor
-import typingsSlinky.webcola.distSrcD3v3adaptorMod.D3StyleLayoutAdaptor
 import typingsSlinky.webcola.distSrcLayoutMod.Event
 import typingsSlinky.webcola.distSrcLayoutMod.Layout
 import scala.scalajs.js

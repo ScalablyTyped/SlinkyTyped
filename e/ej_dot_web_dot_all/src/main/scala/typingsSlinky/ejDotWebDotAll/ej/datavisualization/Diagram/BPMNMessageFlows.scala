@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BPMNMessageFlows extends js.Object {
   @js.native
   sealed trait NonInitiatingMessage extends BPMNMessageFlows
   
-  /* 0 */ val Default: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNMessageFlows.Default with Double = js.native
-  /* 1 */ val InitiatingMessage: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNMessageFlows.InitiatingMessage with Double = js.native
-  /* 2 */ val NonInitiatingMessage: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNMessageFlows.NonInitiatingMessage with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNMessageFlows with Double] = js.native
+  /* 0 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 1 */ @js.native
+  object InitiatingMessage extends TopLevel[InitiatingMessage with Double]
+  
+  /* 2 */ @js.native
+  object NonInitiatingMessage extends TopLevel[NonInitiatingMessage with Double]
+  
 }
 

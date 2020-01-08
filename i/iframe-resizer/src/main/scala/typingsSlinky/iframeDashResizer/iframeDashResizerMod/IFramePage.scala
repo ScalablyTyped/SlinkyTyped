@@ -1,6 +1,6 @@
 package typingsSlinky.iframeDashResizer.iframeDashResizerMod
 
-import typingsSlinky.iframeDashResizer.iframeDashResizerNumbers.`false`
+import typingsSlinky.iframeDashResizer.iframeDashResizerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

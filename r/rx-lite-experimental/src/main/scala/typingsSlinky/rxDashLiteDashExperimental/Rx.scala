@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.rxDashCore.Rx.IPromise
 import typingsSlinky.rxDashCore.Rx.IScheduler
-import typingsSlinky.rxDashLiteDashExperimental.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

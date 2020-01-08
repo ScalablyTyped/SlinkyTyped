@@ -1,10 +1,13 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HorizontalStackGrowExample extends SharedApply_Object857666606 {
+object HorizontalStackGrowExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("office-ui-fabric-react/lib/components/Stack/examples/Stack.Horizontal.Grow.Example", "HorizontalStackGrowExample")
   @js.native
   object componentImport extends js.Object

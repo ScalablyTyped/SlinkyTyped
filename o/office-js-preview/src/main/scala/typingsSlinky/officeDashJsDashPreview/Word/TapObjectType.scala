@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +35,28 @@ object TapObjectType extends js.Object {
   @js.native
   sealed trait text extends TapObjectType
   
-  /* "Chart" */ val chart: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.chart with String = js.native
-  /* "Image" */ val image: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.image with String = js.native
-  /* "OLE" */ val ole: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.ole with String = js.native
-  /* "Slide" */ val slide: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.slide with String = js.native
-  /* "SmartArt" */ val smartArt: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.smartArt with String = js.native
-  /* "Table" */ val table: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.table with String = js.native
-  /* "Text" */ val text: typingsSlinky.officeDashJsDashPreview.Word.TapObjectType.text with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TapObjectType with String] = js.native
+  /* "Chart" */ @js.native
+  object chart extends TopLevel[chart with String]
+  
+  /* "Image" */ @js.native
+  object image extends TopLevel[image with String]
+  
+  /* "OLE" */ @js.native
+  object ole extends TopLevel[ole with String]
+  
+  /* "Slide" */ @js.native
+  object slide extends TopLevel[slide with String]
+  
+  /* "SmartArt" */ @js.native
+  object smartArt extends TopLevel[smartArt with String]
+  
+  /* "Table" */ @js.native
+  object table extends TopLevel[table with String]
+  
+  /* "Text" */ @js.native
+  object text extends TopLevel[text with String]
+  
 }
 

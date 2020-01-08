@@ -1,6 +1,6 @@
 package typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersMod
 
-import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersNumbers.`true`
+import typingsSlinky.libsodiumDashWrappers.libsodiumDashWrappersBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

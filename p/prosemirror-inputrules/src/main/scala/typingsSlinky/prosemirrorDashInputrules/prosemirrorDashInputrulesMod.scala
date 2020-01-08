@@ -1,7 +1,6 @@
 package typingsSlinky.prosemirrorDashInputrules
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.prosemirrorDashInputrules.prosemirrorDashInputrulesMod.InputRule
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.Node
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.NodeType
 import typingsSlinky.prosemirrorDashModel.prosemirrorDashModelMod.Schema

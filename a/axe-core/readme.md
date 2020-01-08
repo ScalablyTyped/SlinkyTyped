@@ -1,7 +1,7 @@
 
 # Scala.js typings for axe-core
 
-Typings are for version 3.4.0
+Typings are for version 3.4.1
 
 ## Library description:
 Accessibility engine for automated Web UI testing
@@ -9,10 +9,10 @@ Accessibility engine for automated Web UI testing
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | axe-core |
-| Keywords           | Accessibility, a11y, testing, unit, tdd, bdd, aXe |
-| # releases         | 78 |
-| # dependents       | 65 |
-| # downloads        | 7988608 |
+| Keywords           | Accessibility, a11y, testing, unit, tdd, bdd, axe |
+| # releases         | 262 |
+| # dependents       | 83 |
+| # downloads        | 20751373 |
 | # stars            | 21 |
 
 ## Links

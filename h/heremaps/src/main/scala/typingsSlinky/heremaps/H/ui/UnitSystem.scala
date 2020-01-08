@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.ui
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,9 +22,13 @@ object UnitSystem extends js.Object {
   @js.native
   sealed trait METRIC extends UnitSystem
   
-  /* 0 */ val IMPERIAL: typingsSlinky.heremaps.H.ui.UnitSystem.IMPERIAL with Double = js.native
-  /* 1 */ val METRIC: typingsSlinky.heremaps.H.ui.UnitSystem.METRIC with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UnitSystem with Double] = js.native
+  /* 0 */ @js.native
+  object IMPERIAL extends TopLevel[IMPERIAL with Double]
+  
+  /* 1 */ @js.native
+  object METRIC extends TopLevel[METRIC with Double]
+  
 }
 

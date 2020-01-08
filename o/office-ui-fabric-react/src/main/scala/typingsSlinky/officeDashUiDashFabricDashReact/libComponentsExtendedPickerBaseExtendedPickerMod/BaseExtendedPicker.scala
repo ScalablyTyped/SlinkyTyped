@@ -62,6 +62,7 @@ class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
   /* protected */ def onBackspace(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onCopy(ev: SyntheticClipboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onInputChange(value: String): Unit = js.native
+  /* protected */ def onInputChange(value: String, composing: Boolean): Unit = js.native
   /* protected */ def onInputClick(ev: SyntheticMouseEvent[HTMLInputElement | Autofill]): Unit = js.native
   /* protected */ def onInputFocus(ev: SyntheticFocusEvent[HTMLInputElement | Autofill]): Unit = js.native
   /* protected */ def onPaste(ev: SyntheticClipboardEvent[HTMLInputElement | Autofill]): Unit = js.native

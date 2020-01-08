@@ -8,7 +8,7 @@ import slinky.web.SyntheticFocusEvent
 import typingsSlinky.baseui.Anon_Clearable
 import typingsSlinky.baseui.Anon_Item
 import typingsSlinky.baseui.Anon_OptionOptionState
-import typingsSlinky.baseui.Anon_Option_666053661
+import typingsSlinky.baseui.Anon_Option_1721897024
 import typingsSlinky.dateDashFns.Locale
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.FormEvent
@@ -34,7 +34,7 @@ class Select ()
   def getOptionLabel(locale: Locale, hasOption: Anon_OptionOptionState): TagMod[Any] = js.native
   def getSharedProps(): Anon_Clearable = js.native
   def getValueArray(value: Value): js.Array[Option] = js.native
-  def getValueLabel(hasOption: Anon_Option_666053661): TagMod[Any] = js.native
+  def getValueLabel(hasOption: Anon_Option_1721897024): TagMod[Any] = js.native
   def handleBlur(event: Event): Unit = js.native
   def handleClick(event: MouseEvent): Unit = js.native
   def handleClick(event: TouchEvent): Unit = js.native

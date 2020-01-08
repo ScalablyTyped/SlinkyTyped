@@ -1,6 +1,6 @@
 package typingsSlinky.cacache.enMod.verify
 
-import typingsSlinky.cacache.cacacheNumbers.`false`
+import typingsSlinky.cacache.cacacheBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

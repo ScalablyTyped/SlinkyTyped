@@ -12,6 +12,18 @@ object distLibSerializationSerializersTypesMod extends js.Object {
     extends typingsSlinky.typedoc.distLibSerializationSerializersTypesArrayMod.ArrayTypeSerializer
   
   @js.native
+  class ConditionalTypeSerializer ()
+    extends typingsSlinky.typedoc.distLibSerializationSerializersTypesConditionalMod.ConditionalTypeSerializer
+  
+  @js.native
+  class IndexedAccessTypeSerializer ()
+    extends typingsSlinky.typedoc.distLibSerializationSerializersTypesIndexedDashAccessMod.IndexedAccessTypeSerializer
+  
+  @js.native
+  class InferredTypeSerializer ()
+    extends typingsSlinky.typedoc.distLibSerializationSerializersTypesInferredMod.InferredTypeSerializer
+  
+  @js.native
   class IntersectionTypeSerializer ()
     extends typingsSlinky.typedoc.distLibSerializationSerializersTypesIntersectionDashUnionMod.IntersectionTypeSerializer
   

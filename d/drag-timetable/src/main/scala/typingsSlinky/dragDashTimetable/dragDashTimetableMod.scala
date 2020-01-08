@@ -1,7 +1,6 @@
 package typingsSlinky.dragDashTimetable
 
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.dragDashTimetable.dragDashTimetableMod.TimetableInstance
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`

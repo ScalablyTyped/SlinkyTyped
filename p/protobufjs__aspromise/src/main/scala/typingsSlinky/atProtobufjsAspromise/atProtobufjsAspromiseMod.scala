@@ -1,6 +1,5 @@
 package typingsSlinky.atProtobufjsAspromise
 
-import typingsSlinky.atProtobufjsAspromise.atProtobufjsAspromiseMod.asPromiseCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

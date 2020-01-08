@@ -5,7 +5,6 @@ import typingsSlinky.atJupyterlabDocregistry.atJupyterlabDocregistryMod.ABCWidge
 import typingsSlinky.atJupyterlabDocregistry.libRegistryMod.DocumentRegistry.Context
 import typingsSlinky.atJupyterlabDocregistry.libRegistryMod.DocumentRegistry.IModel
 import typingsSlinky.atJupyterlabDocregistry.libRegistryMod.IDocumentWidget
-import typingsSlinky.atJupyterlabImageviewer.libWidgetMod.ImageViewer
 import typingsSlinky.atPhosphorAlgorithm.libIterMod.IIterator
 import typingsSlinky.atPhosphorMessaging.atPhosphorMessagingMod.Message
 import typingsSlinky.atPhosphorWidgets.atPhosphorWidgetsMod.Widget
@@ -305,7 +304,6 @@ object libWidgetMod extends js.Object {
       *
       * @param msg - The message to be processed.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def processMessage(msg: Message): Unit = js.native
     /**

@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeDashLanguageclient.libClientMod
 
+import typingsSlinky.vscodeDashLanguageserverDashProtocol.Anon_Placeholder
 import typingsSlinky.vscodeDashLanguageserverDashProtocol.libProtocolMod.TextDocumentPositionParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object PrepareRenameRequest extends js.Object {
   val `type`: typingsSlinky.vscodeDashJsonrpc.vscodeDashJsonrpcMod.RequestType[
     TextDocumentPositionParams, 
-    typingsSlinky.vscodeDashLanguageserverDashTypes.vscodeDashLanguageserverDashTypesMod.Range | typingsSlinky.vscodeDashLanguageserverDashProtocol.Anon_Placeholder | Null, 
+    typingsSlinky.vscodeDashLanguageserverDashTypes.vscodeDashLanguageserverDashTypesMod.Range | Anon_Placeholder | Null, 
     Unit, 
     Unit
   ] = js.native

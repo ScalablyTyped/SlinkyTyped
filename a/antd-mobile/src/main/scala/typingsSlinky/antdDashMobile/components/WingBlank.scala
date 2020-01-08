@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WingBlank
-  extends SharedApply_WingBlankProps_454726962[typingsSlinky.antdDashMobile.antdDashMobileMod.WingBlank] {
+  extends SharedApply_WingBlankProps445298219[typingsSlinky.antdDashMobile.antdDashMobileMod.WingBlank] {
   @JSImport("antd-mobile", "WingBlank")
   @js.native
   object componentImport extends js.Object

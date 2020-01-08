@@ -2,6 +2,7 @@ package typingsSlinky.bigDotJs.bigDotJsMod._Global_
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.bigDotJs.bigDotJsMod.BigSource
+import typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.BigConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +26,5 @@ class Big protected ()
 
 @JSGlobal("Big")
 @js.native
-object Big
-  extends TopLevel[typingsSlinky.bigDotJs.bigDotJsMod._Global_.BigJs.BigConstructor]
+object Big extends TopLevel[BigConstructor]
 

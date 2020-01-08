@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,13 @@ object EMaskUnits extends js.Object {
     extends EMaskUnits
        with TMaskUnits
   
-  /* "objectBoundingBox" */ val OBJECT_BOUNDING_BOX: typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.EMaskUnits.OBJECT_BOUNDING_BOX with String = js.native
-  /* "userSpaceOnUse" */ val USER_SPACE_ON_USE: typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.EMaskUnits.USER_SPACE_ON_USE with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EMaskUnits with String] = js.native
+  /* "objectBoundingBox" */ @js.native
+  object OBJECT_BOUNDING_BOX extends TopLevel[OBJECT_BOUNDING_BOX with String]
+  
+  /* "userSpaceOnUse" */ @js.native
+  object USER_SPACE_ON_USE extends TopLevel[USER_SPACE_ON_USE with String]
+  
 }
 

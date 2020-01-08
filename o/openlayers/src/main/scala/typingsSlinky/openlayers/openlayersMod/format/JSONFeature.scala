@@ -20,6 +20,5 @@ import scala.scalajs.js.annotation._
   * Base class for JSON feature formats.
   *
   */
-class JSONFeature ()
-  extends typingsSlinky.openlayers.openlayersMod.format.Feature
+class JSONFeature () extends Feature
 

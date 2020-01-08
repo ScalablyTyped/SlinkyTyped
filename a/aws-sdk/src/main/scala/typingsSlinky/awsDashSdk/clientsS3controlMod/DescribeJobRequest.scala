@@ -1,0 +1,27 @@
+package typingsSlinky.awsDashSdk.clientsS3controlMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DescribeJobRequest extends js.Object {
+  /**
+    * 
+    */
+  var AccountId: typingsSlinky.awsDashSdk.clientsS3controlMod.AccountId = js.native
+  /**
+    * The ID for the job whose information you want to retrieve.
+    */
+  var JobId: typingsSlinky.awsDashSdk.clientsS3controlMod.JobId = js.native
+}
+
+object DescribeJobRequest {
+  @scala.inline
+  def apply(AccountId: AccountId, JobId: JobId): DescribeJobRequest = {
+    val __obj = js.Dynamic.literal(AccountId = AccountId.asInstanceOf[js.Any], JobId = JobId.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[DescribeJobRequest]
+  }
+}
+

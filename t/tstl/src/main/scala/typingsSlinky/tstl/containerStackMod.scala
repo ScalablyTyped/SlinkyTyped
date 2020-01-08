@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.tstl.baseContainerAdaptorContainerMod.AdaptorContainer
-import typingsSlinky.tstl.containerStackMod.Stack
 import typingsSlinky.tstl.containerVectorMod.Vector
 import scala.scalajs.js
 import scala.scalajs.js.`|`

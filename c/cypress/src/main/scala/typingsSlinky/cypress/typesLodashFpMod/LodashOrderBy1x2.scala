@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashOrderBy1x2 extends js.Object {
-  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]]): LodashOrderBy1x3[T] = js.native
+  def apply[T](iteratees: Many[ValueIteratee[T]]): LodashOrderBy2x3[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       (js.Function1[

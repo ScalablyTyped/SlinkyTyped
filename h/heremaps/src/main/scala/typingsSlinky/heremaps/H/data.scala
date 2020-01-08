@@ -1,6 +1,6 @@
 package typingsSlinky.heremaps.H
 
-import typingsSlinky.heremaps.H.data.AbstractReader
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.data.AbstractReader.State
 import typingsSlinky.heremaps.H.map.Object
 import typingsSlinky.heremaps.H.map.layer.ObjectLayer
@@ -97,12 +97,20 @@ object data extends js.Object {
       @js.native
       sealed trait VISIT extends State
       
-      /* 0 */ val ERROR: typingsSlinky.heremaps.H.data.AbstractReader.State.ERROR with Double = js.native
-      /* 1 */ val LOADING: typingsSlinky.heremaps.H.data.AbstractReader.State.LOADING with Double = js.native
-      /* 3 */ val READY: typingsSlinky.heremaps.H.data.AbstractReader.State.READY with Double = js.native
-      /* 2 */ val VISIT: typingsSlinky.heremaps.H.data.AbstractReader.State.VISIT with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[State with Double] = js.native
+      /* 0 */ @js.native
+      object ERROR extends TopLevel[ERROR with Double]
+      
+      /* 1 */ @js.native
+      object LOADING extends TopLevel[LOADING with Double]
+      
+      /* 3 */ @js.native
+      object READY extends TopLevel[READY with Double]
+      
+      /* 2 */ @js.native
+      object VISIT extends TopLevel[VISIT with Double]
+      
     }
     
   }

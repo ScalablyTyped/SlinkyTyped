@@ -1,6 +1,5 @@
 package typingsSlinky.pgDashTypes
 
-import typingsSlinky.pgDashTypes.pgDashTypesMod.TypeParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

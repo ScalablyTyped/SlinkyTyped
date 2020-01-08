@@ -7,7 +7,6 @@ import typingsSlinky.phaser.Phaser.Game
 import typingsSlinky.phaser.Phaser.GameObjects.Components.TransformMatrix
 import typingsSlinky.phaser.Phaser.GameObjects.DisplayList
 import typingsSlinky.phaser.Phaser.GameObjects.GameObject
-import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Structs.Size
 import typingsSlinky.phaser.Phaser.Textures.Frame

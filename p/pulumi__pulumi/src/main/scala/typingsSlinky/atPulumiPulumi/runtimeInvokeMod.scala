@@ -2,7 +2,6 @@ package typingsSlinky.atPulumiPulumi
 
 import typingsSlinky.atPulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.atPulumiPulumi.outputMod.Inputs
-import typingsSlinky.atPulumiPulumi.runtimeInvokeMod.StreamInvokeResponse
 import typingsSlinky.atPulumiQuery.interfacesMod.AsyncIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

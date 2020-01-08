@@ -1,5 +1,6 @@
 package typingsSlinky.sipDotJs.libEnumsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -109,40 +110,106 @@ object TypeStrings extends js.Object {
   @js.native
   sealed trait URI extends TypeStrings
   
-  /* 0 */ val ClientContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.ClientContext with Double = js.native
-  /* 1 */ val ConfigurationError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.ConfigurationError with Double = js.native
-  /* 4 */ val DTMF: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.DTMF with Double = js.native
-  /* 2 */ val Dialog: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Dialog with Double = js.native
-  /* 3 */ val DigestAuthentication: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.DigestAuthentication with Double = js.native
-  /* 5 */ val IncomingMessage: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.IncomingMessage with Double = js.native
-  /* 6 */ val IncomingRequest: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.IncomingRequest with Double = js.native
-  /* 7 */ val IncomingResponse: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.IncomingResponse with Double = js.native
-  /* 8 */ val InvalidStateError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.InvalidStateError with Double = js.native
-  /* 9 */ val InviteClientContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.InviteClientContext with Double = js.native
-  /* 10 */ val InviteServerContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.InviteServerContext with Double = js.native
-  /* 11 */ val Logger: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Logger with Double = js.native
-  /* 12 */ val LoggerFactory: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.LoggerFactory with Double = js.native
-  /* 13 */ val MethodParameterError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.MethodParameterError with Double = js.native
-  /* 14 */ val NameAddrHeader: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.NameAddrHeader with Double = js.native
-  /* 15 */ val NotSupportedError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.NotSupportedError with Double = js.native
-  /* 16 */ val OutgoingRequest: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.OutgoingRequest with Double = js.native
-  /* 17 */ val Parameters: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Parameters with Double = js.native
-  /* 18 */ val PublishContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.PublishContext with Double = js.native
-  /* 19 */ val ReferClientContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.ReferClientContext with Double = js.native
-  /* 20 */ val ReferServerContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.ReferServerContext with Double = js.native
-  /* 21 */ val RegisterContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.RegisterContext with Double = js.native
-  /* 22 */ val RenegotiationError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.RenegotiationError with Double = js.native
-  /* 23 */ val RequestSender: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.RequestSender with Double = js.native
-  /* 24 */ val ServerContext: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.ServerContext with Double = js.native
-  /* 25 */ val Session: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Session with Double = js.native
-  /* 26 */ val SessionDescriptionHandler: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.SessionDescriptionHandler with Double = js.native
-  /* 27 */ val SessionDescriptionHandlerError: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.SessionDescriptionHandlerError with Double = js.native
-  /* 28 */ val SessionDescriptionHandlerObserver: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.SessionDescriptionHandlerObserver with Double = js.native
-  /* 29 */ val Subscription: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Subscription with Double = js.native
-  /* 30 */ val Transport: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.Transport with Double = js.native
-  /* 31 */ val UA: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.UA with Double = js.native
-  /* 32 */ val URI: typingsSlinky.sipDotJs.libEnumsMod.TypeStrings.URI with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TypeStrings with Double] = js.native
+  /* 0 */ @js.native
+  object ClientContext extends TopLevel[ClientContext with Double]
+  
+  /* 1 */ @js.native
+  object ConfigurationError extends TopLevel[ConfigurationError with Double]
+  
+  /* 4 */ @js.native
+  object DTMF extends TopLevel[DTMF with Double]
+  
+  /* 2 */ @js.native
+  object Dialog extends TopLevel[Dialog with Double]
+  
+  /* 3 */ @js.native
+  object DigestAuthentication extends TopLevel[DigestAuthentication with Double]
+  
+  /* 5 */ @js.native
+  object IncomingMessage extends TopLevel[IncomingMessage with Double]
+  
+  /* 6 */ @js.native
+  object IncomingRequest extends TopLevel[IncomingRequest with Double]
+  
+  /* 7 */ @js.native
+  object IncomingResponse extends TopLevel[IncomingResponse with Double]
+  
+  /* 8 */ @js.native
+  object InvalidStateError extends TopLevel[InvalidStateError with Double]
+  
+  /* 9 */ @js.native
+  object InviteClientContext extends TopLevel[InviteClientContext with Double]
+  
+  /* 10 */ @js.native
+  object InviteServerContext extends TopLevel[InviteServerContext with Double]
+  
+  /* 11 */ @js.native
+  object Logger extends TopLevel[Logger with Double]
+  
+  /* 12 */ @js.native
+  object LoggerFactory extends TopLevel[LoggerFactory with Double]
+  
+  /* 13 */ @js.native
+  object MethodParameterError extends TopLevel[MethodParameterError with Double]
+  
+  /* 14 */ @js.native
+  object NameAddrHeader extends TopLevel[NameAddrHeader with Double]
+  
+  /* 15 */ @js.native
+  object NotSupportedError extends TopLevel[NotSupportedError with Double]
+  
+  /* 16 */ @js.native
+  object OutgoingRequest extends TopLevel[OutgoingRequest with Double]
+  
+  /* 17 */ @js.native
+  object Parameters extends TopLevel[Parameters with Double]
+  
+  /* 18 */ @js.native
+  object PublishContext extends TopLevel[PublishContext with Double]
+  
+  /* 19 */ @js.native
+  object ReferClientContext extends TopLevel[ReferClientContext with Double]
+  
+  /* 20 */ @js.native
+  object ReferServerContext extends TopLevel[ReferServerContext with Double]
+  
+  /* 21 */ @js.native
+  object RegisterContext extends TopLevel[RegisterContext with Double]
+  
+  /* 22 */ @js.native
+  object RenegotiationError extends TopLevel[RenegotiationError with Double]
+  
+  /* 23 */ @js.native
+  object RequestSender extends TopLevel[RequestSender with Double]
+  
+  /* 24 */ @js.native
+  object ServerContext extends TopLevel[ServerContext with Double]
+  
+  /* 25 */ @js.native
+  object Session extends TopLevel[Session with Double]
+  
+  /* 26 */ @js.native
+  object SessionDescriptionHandler extends TopLevel[SessionDescriptionHandler with Double]
+  
+  /* 27 */ @js.native
+  object SessionDescriptionHandlerError extends TopLevel[SessionDescriptionHandlerError with Double]
+  
+  /* 28 */ @js.native
+  object SessionDescriptionHandlerObserver extends TopLevel[SessionDescriptionHandlerObserver with Double]
+  
+  /* 29 */ @js.native
+  object Subscription extends TopLevel[Subscription with Double]
+  
+  /* 30 */ @js.native
+  object Transport extends TopLevel[Transport with Double]
+  
+  /* 31 */ @js.native
+  object UA extends TopLevel[UA with Double]
+  
+  /* 32 */ @js.native
+  object URI extends TopLevel[URI with Double]
+  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.heremaps.H.map.render
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Event
 import typingsSlinky.heremaps.H.map.DataModel
 import typingsSlinky.heremaps.H.map.ViewModel
 import typingsSlinky.heremaps.H.map.ViewPort
-import typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers
 import typingsSlinky.heremaps.H.map.render.RenderEngine.Options
 import typingsSlinky.heremaps.H.util.EventTarget
 import scala.scalajs.js
@@ -94,13 +94,23 @@ object RenderEngine extends js.Object {
     @js.native
     sealed trait ZOOM extends InteractionModifiers
     
-    /* 4 */ val COORD: typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers.COORD with Double = js.native
-    /* 1 */ val HEADING: typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers.HEADING with Double = js.native
-    /* 3 */ val INCLINE: typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers.INCLINE with Double = js.native
-    /* 2 */ val TILT: typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers.TILT with Double = js.native
-    /* 0 */ val ZOOM: typingsSlinky.heremaps.H.map.render.RenderEngine.InteractionModifiers.ZOOM with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[InteractionModifiers with Double] = js.native
+    /* 4 */ @js.native
+    object COORD extends TopLevel[COORD with Double]
+    
+    /* 1 */ @js.native
+    object HEADING extends TopLevel[HEADING with Double]
+    
+    /* 3 */ @js.native
+    object INCLINE extends TopLevel[INCLINE with Double]
+    
+    /* 2 */ @js.native
+    object TILT extends TopLevel[TILT with Double]
+    
+    /* 0 */ @js.native
+    object ZOOM extends TopLevel[ZOOM with Double]
+    
   }
   
   /**

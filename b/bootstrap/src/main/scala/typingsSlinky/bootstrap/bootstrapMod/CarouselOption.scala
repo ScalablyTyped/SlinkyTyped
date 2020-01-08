@@ -1,6 +1,6 @@
 package typingsSlinky.bootstrap.bootstrapMod
 
-import typingsSlinky.bootstrap.bootstrapNumbers.`false`
+import typingsSlinky.bootstrap.bootstrapBooleans.`false`
 import typingsSlinky.bootstrap.bootstrapStrings.hover
 import typingsSlinky.bootstrap.bootstrapStrings.next
 import typingsSlinky.bootstrap.bootstrapStrings.prev

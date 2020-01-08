@@ -2,7 +2,7 @@ package typingsSlinky.nodemailer.libDkimRelaxedDashBodyMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import typingsSlinky.nodemailer.nodemailerStrings.close
 import typingsSlinky.nodemailer.nodemailerStrings.data
 import typingsSlinky.nodemailer.nodemailerStrings.end

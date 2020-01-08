@@ -1,5 +1,12 @@
 package typingsSlinky.atElasticElasticsearch.apiRequestParamsMod
 
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`d LeftparenthesisDaysRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`h LeftparenthesisHoursRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`m LeftparenthesisMinutesRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`micros LeftparenthesisMicrosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`ms LeftparenthesisMillisecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`nanos LeftparenthesisNanosecondsRightparenthesis`
+import typingsSlinky.atElasticElasticsearch.atElasticElasticsearchStrings.`s LeftparenthesisSecondsRightparenthesis`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +15,10 @@ trait CatHealth extends Generic {
   var format: js.UndefOr[String] = js.undefined
   var h: js.UndefOr[String | js.Array[String]] = js.undefined
   var help: js.UndefOr[Boolean] = js.undefined
-  var local: js.UndefOr[Boolean] = js.undefined
-  var master_timeout: js.UndefOr[String] = js.undefined
   var s: js.UndefOr[String | js.Array[String]] = js.undefined
+  var time: js.UndefOr[
+    (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`)
+  ] = js.undefined
   var ts: js.UndefOr[Boolean] = js.undefined
   var v: js.UndefOr[Boolean] = js.undefined
 }
@@ -25,12 +33,11 @@ object CatHealth {
     help: js.UndefOr[Boolean] = js.undefined,
     human: js.UndefOr[Boolean] = js.undefined,
     ignore: Double | js.Array[Double] = null,
-    local: js.UndefOr[Boolean] = js.undefined,
-    master_timeout: String = null,
     method: String = null,
     pretty: js.UndefOr[Boolean] = js.undefined,
     s: String | js.Array[String] = null,
     source: String = null,
+    time: (`d LeftparenthesisDaysRightparenthesis`) | (`h LeftparenthesisHoursRightparenthesis`) | (`m LeftparenthesisMinutesRightparenthesis`) | (`s LeftparenthesisSecondsRightparenthesis`) | (`ms LeftparenthesisMillisecondsRightparenthesis`) | (`micros LeftparenthesisMicrosecondsRightparenthesis`) | (`nanos LeftparenthesisNanosecondsRightparenthesis`) = null,
     ts: js.UndefOr[Boolean] = js.undefined,
     v: js.UndefOr[Boolean] = js.undefined
   ): CatHealth = {
@@ -42,12 +49,11 @@ object CatHealth {
     if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
     if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
     if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (master_timeout != null) __obj.updateDynamic("master_timeout")(master_timeout.asInstanceOf[js.Any])
     if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
     if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
     if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     if (!js.isUndefined(ts)) __obj.updateDynamic("ts")(ts.asInstanceOf[js.Any])
     if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatHealth]

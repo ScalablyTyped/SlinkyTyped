@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object MinimapPosition extends js.Object {
   @js.native
   sealed trait Inline extends MinimapPosition
   
-  /* 1 */ val Inline: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.MinimapPosition.Inline with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MinimapPosition with Double] = js.native
+  /* 1 */ @js.native
+  object Inline extends TopLevel[Inline with Double]
+  
 }
 

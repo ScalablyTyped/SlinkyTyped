@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object PnpObjectType extends js.Object {
   @js.native
   sealed trait unknown extends PnpObjectType
   
-  /* 3 */ val device: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.device with Double = js.native
-  /* 2 */ val deviceContainer: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceContainer with Double = js.native
-  /* 1 */ val deviceInterface: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceInterface with Double = js.native
-  /* 4 */ val deviceInterfaceClass: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.deviceInterfaceClass with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PnpObjectType with Double] = js.native
+  /* 3 */ @js.native
+  object device extends TopLevel[device with Double]
+  
+  /* 2 */ @js.native
+  object deviceContainer extends TopLevel[deviceContainer with Double]
+  
+  /* 1 */ @js.native
+  object deviceInterface extends TopLevel[deviceInterface with Double]
+  
+  /* 4 */ @js.native
+  object deviceInterfaceClass extends TopLevel[deviceInterfaceClass with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.inversify
 
-import typingsSlinky.inversify.dtsAnnotationInjectMod.LazyServiceIdentifer
-import typingsSlinky.inversify.dtsAnnotationInjectMod.ServiceIdentifierOrFunc
 import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Abstract
 import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.Newable
 import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.ServiceIdentifier

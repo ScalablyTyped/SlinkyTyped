@@ -56,8 +56,8 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.libCarouselMod.CarouselProps
 import typingsSlinky.reactstrap.libCarouselMod.default
+import typingsSlinky.reactstrap.reactstrapBooleans.`false`
 import typingsSlinky.reactstrap.reactstrapMod.CSSModule
-import typingsSlinky.reactstrap.reactstrapNumbers.`false`
 import typingsSlinky.reactstrap.reactstrapStrings.carousel
 import typingsSlinky.reactstrap.reactstrapStrings.hover
 import scala.scalajs.js

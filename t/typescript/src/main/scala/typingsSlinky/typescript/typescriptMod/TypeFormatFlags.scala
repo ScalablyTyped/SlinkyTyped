@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,28 +74,70 @@ object TypeFormatFlags extends js.Object {
   @js.native
   sealed trait WriteTypeArgumentsOfSignature extends TypeFormatFlags
   
-  /* 131072 */ val AddUndefined: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.AddUndefined with Double = js.native
-  /* 1048576 */ val AllowUniqueESSymbolType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.AllowUniqueESSymbolType with Double = js.native
-  /* 524288 */ val InArrayType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.InArrayType with Double = js.native
-  /* 2097152 */ val InElementType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.InElementType with Double = js.native
-  /* 4194304 */ val InFirstTypeArgument: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.InFirstTypeArgument with Double = js.native
-  /* 8388608 */ val InTypeAlias: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.InTypeAlias with Double = js.native
-  /* 1024 */ val MultilineObjectLiterals: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.MultilineObjectLiterals with Double = js.native
-  /* 1 */ val NoTruncation: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.NoTruncation with Double = js.native
-  /* 9469291 */ val NodeBuilderFlagsMask: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.NodeBuilderFlagsMask with Double = js.native
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.None with Double = js.native
-  /* 8192 */ val OmitParameterModifiers: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.OmitParameterModifiers with Double = js.native
-  /* 256 */ val SuppressAnyReturnType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.SuppressAnyReturnType with Double = js.native
-  /* 16384 */ val UseAliasDefinedOutsideCurrentScope: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.UseAliasDefinedOutsideCurrentScope with Double = js.native
-  /* 64 */ val UseFullyQualifiedType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.UseFullyQualifiedType with Double = js.native
-  /* 8 */ val UseStructuralFallback: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.UseStructuralFallback with Double = js.native
-  /* 4096 */ val UseTypeOfFunction: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.UseTypeOfFunction with Double = js.native
-  /* 2 */ val WriteArrayAsGenericType: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.WriteArrayAsGenericType with Double = js.native
-  /* 262144 */ val WriteArrowStyleSignature: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.WriteArrowStyleSignature with Double = js.native
-  /* 2048 */ val WriteClassExpressionAsTypeLiteral: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.WriteClassExpressionAsTypeLiteral with Double = js.native
-  /* 0 */ val WriteOwnNameForAnyLike: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.WriteOwnNameForAnyLike with Double = js.native
-  /* 32 */ val WriteTypeArgumentsOfSignature: typingsSlinky.typescript.typescriptMod.TypeFormatFlags.WriteTypeArgumentsOfSignature with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TypeFormatFlags with Double] = js.native
+  /* 131072 */ @js.native
+  object AddUndefined extends TopLevel[AddUndefined with Double]
+  
+  /* 1048576 */ @js.native
+  object AllowUniqueESSymbolType extends TopLevel[AllowUniqueESSymbolType with Double]
+  
+  /* 524288 */ @js.native
+  object InArrayType extends TopLevel[InArrayType with Double]
+  
+  /* 2097152 */ @js.native
+  object InElementType extends TopLevel[InElementType with Double]
+  
+  /* 4194304 */ @js.native
+  object InFirstTypeArgument extends TopLevel[InFirstTypeArgument with Double]
+  
+  /* 8388608 */ @js.native
+  object InTypeAlias extends TopLevel[InTypeAlias with Double]
+  
+  /* 1024 */ @js.native
+  object MultilineObjectLiterals extends TopLevel[MultilineObjectLiterals with Double]
+  
+  /* 1 */ @js.native
+  object NoTruncation extends TopLevel[NoTruncation with Double]
+  
+  /* 9469291 */ @js.native
+  object NodeBuilderFlagsMask extends TopLevel[NodeBuilderFlagsMask with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 8192 */ @js.native
+  object OmitParameterModifiers extends TopLevel[OmitParameterModifiers with Double]
+  
+  /* 256 */ @js.native
+  object SuppressAnyReturnType extends TopLevel[SuppressAnyReturnType with Double]
+  
+  /* 16384 */ @js.native
+  object UseAliasDefinedOutsideCurrentScope extends TopLevel[UseAliasDefinedOutsideCurrentScope with Double]
+  
+  /* 64 */ @js.native
+  object UseFullyQualifiedType extends TopLevel[UseFullyQualifiedType with Double]
+  
+  /* 8 */ @js.native
+  object UseStructuralFallback extends TopLevel[UseStructuralFallback with Double]
+  
+  /* 4096 */ @js.native
+  object UseTypeOfFunction extends TopLevel[UseTypeOfFunction with Double]
+  
+  /* 2 */ @js.native
+  object WriteArrayAsGenericType extends TopLevel[WriteArrayAsGenericType with Double]
+  
+  /* 262144 */ @js.native
+  object WriteArrowStyleSignature extends TopLevel[WriteArrowStyleSignature with Double]
+  
+  /* 2048 */ @js.native
+  object WriteClassExpressionAsTypeLiteral extends TopLevel[WriteClassExpressionAsTypeLiteral with Double]
+  
+  /* 0 */ @js.native
+  object WriteOwnNameForAnyLike extends TopLevel[WriteOwnNameForAnyLike with Double]
+  
+  /* 32 */ @js.native
+  object WriteTypeArgumentsOfSignature extends TopLevel[WriteTypeArgumentsOfSignature with Double]
+  
 }
 

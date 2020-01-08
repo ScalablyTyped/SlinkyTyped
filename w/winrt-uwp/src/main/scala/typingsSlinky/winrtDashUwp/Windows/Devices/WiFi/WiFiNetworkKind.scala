@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.WiFi
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object WiFiNetworkKind extends js.Object {
   @js.native
   sealed trait infrastructure extends WiFiNetworkKind
   
-  /* 2 */ val adhoc: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiNetworkKind.adhoc with Double = js.native
-  /* 0 */ val any: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiNetworkKind.any with Double = js.native
-  /* 1 */ val infrastructure: typingsSlinky.winrtDashUwp.Windows.Devices.WiFi.WiFiNetworkKind.infrastructure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WiFiNetworkKind with Double] = js.native
+  /* 2 */ @js.native
+  object adhoc extends TopLevel[adhoc with Double]
+  
+  /* 0 */ @js.native
+  object any extends TopLevel[any with Double]
+  
+  /* 1 */ @js.native
+  object infrastructure extends TopLevel[infrastructure with Double]
+  
 }
 

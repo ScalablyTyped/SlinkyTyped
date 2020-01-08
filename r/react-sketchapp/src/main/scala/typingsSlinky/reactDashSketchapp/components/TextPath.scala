@@ -50,8 +50,9 @@ object TextPath
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: href, name */
+  /* The following DOM/SVG props were specified: name */
   def apply(
+    href: String,
     alignmentBaseline: AlignmentBaseline = null,
     baselineShift: BaselineShift = null,
     clipPath: String = null,
@@ -109,7 +110,7 @@ object TextPath
     y: NumberProp = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
     if (alignmentBaseline != null) __obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
     if (baselineShift != null) __obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
     if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])

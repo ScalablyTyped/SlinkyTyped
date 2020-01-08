@@ -4,6 +4,7 @@ import typingsSlinky.instagramDashPrivateDashApi.distCoreRepositoryMod.Repositor
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesUserDotRepositoryDotInfoDotResponseMod.UserRepositoryInfoResponseUser
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesUserDotRepositoryDotSearchDotResponseMod.UserRepositorySearchResponseRootObject
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesUserDotRepositoryDotSearchDotResponseMod.UserRepositorySearchResponseUsersItem
+import typingsSlinky.instagramDashPrivateDashApi.distTypesUserDotLookupDotOptionsMod.UserLookupOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +26,7 @@ object distRepositoriesUserDotRepositoryMod extends js.Object {
     def getIdByUsername(username: String): js.Promise[Double] = js.native
     def info(id: String): js.Promise[UserRepositoryInfoResponseUser] = js.native
     def info(id: Double): js.Promise[UserRepositoryInfoResponseUser] = js.native
+    def lookup(options: UserLookupOptions): js.Promise[_] = js.native
     def search(username: String): js.Promise[UserRepositorySearchResponseRootObject] = js.native
     def searchExact(username: String): js.Promise[UserRepositorySearchResponseUsersItem] = js.native
     def sharedFollowerAccounts(id: String): js.Promise[_] = js.native

@@ -1,12 +1,6 @@
 package typingsSlinky.dropboxjs.Dropbox
 
 import typingsSlinky.dropboxjs.Dropbox.File.Stat
-import typingsSlinky.dropboxjs.Dropbox.Http.AppInfo
-import typingsSlinky.dropboxjs.Dropbox.Http.PollResult
-import typingsSlinky.dropboxjs.Dropbox.Http.PulledChange
-import typingsSlinky.dropboxjs.Dropbox.Http.PulledChanges
-import typingsSlinky.dropboxjs.Dropbox.Http.RangeInfo
-import typingsSlinky.dropboxjs.Dropbox.Http.UploadCursor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

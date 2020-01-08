@@ -10,9 +10,9 @@ A modular charting library built on D3
 | ------------------ | :-------------: |
 | Full name          | plottable |
 | Keywords           | - |
-| # releases         | 98 |
+| # releases         | 51 |
 | # dependents       | 3 |
-| # downloads        | 96909 |
+| # downloads        | 289459 |
 | # stars            | 0 |
 
 ## Links

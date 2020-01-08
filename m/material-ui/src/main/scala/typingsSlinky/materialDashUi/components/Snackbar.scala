@@ -20,9 +20,10 @@ object Snackbar
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, open */
+  /* The following DOM/SVG props were specified: className */
   def apply(
     message: TagMod[Any],
+    open: Boolean,
     action: TagMod[Any] = null,
     autoHideDuration: Int | Double = null,
     bodyStyle: CSSProperties = null,
@@ -32,7 +33,7 @@ object Snackbar
     style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
     if (autoHideDuration != null) __obj.updateDynamic("autoHideDuration")(autoHideDuration.asInstanceOf[js.Any])
     if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])

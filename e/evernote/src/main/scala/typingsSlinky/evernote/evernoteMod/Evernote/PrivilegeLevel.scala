@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,13 +34,25 @@ object PrivilegeLevel extends js.Object {
   @js.native
   sealed trait VIP extends PrivilegeLevel
   
-  /* 9 */ val ADMIN: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.ADMIN with Double = js.native
-  /* 7 */ val MANAGER: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.MANAGER with Double = js.native
-  /* 1 */ val NORMAL: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.NORMAL with Double = js.native
-  /* 3 */ val PREMIUM: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.PREMIUM with Double = js.native
-  /* 8 */ val SUPPORT: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.SUPPORT with Double = js.native
-  /* 5 */ val VIP: typingsSlinky.evernote.evernoteMod.Evernote.PrivilegeLevel.VIP with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrivilegeLevel with Double] = js.native
+  /* 9 */ @js.native
+  object ADMIN extends TopLevel[ADMIN with Double]
+  
+  /* 7 */ @js.native
+  object MANAGER extends TopLevel[MANAGER with Double]
+  
+  /* 1 */ @js.native
+  object NORMAL extends TopLevel[NORMAL with Double]
+  
+  /* 3 */ @js.native
+  object PREMIUM extends TopLevel[PREMIUM with Double]
+  
+  /* 8 */ @js.native
+  object SUPPORT extends TopLevel[SUPPORT with Double]
+  
+  /* 5 */ @js.native
+  object VIP extends TopLevel[VIP with Double]
+  
 }
 

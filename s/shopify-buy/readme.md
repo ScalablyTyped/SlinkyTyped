@@ -10,9 +10,9 @@ The JS Buy SDK is a lightweight library that allows you to build ecommerce into 
 | ------------------ | :-------------: |
 | Full name          | shopify-buy |
 | Keywords           | - |
-| # releases         | 35 |
-| # dependents       | 9 |
-| # downloads        | 188960 |
+| # releases         | 32 |
+| # dependents       | 23 |
+| # downloads        | 310273 |
 | # stars            | 2 |
 
 ## Links

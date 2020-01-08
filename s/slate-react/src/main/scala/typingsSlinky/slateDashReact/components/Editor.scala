@@ -15,6 +15,6 @@ object Editor
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  type Props = EditorProps
+  type Props = EditorProps[typingsSlinky.slateDashReact.slateDashReactMod.Editor]
 }
 

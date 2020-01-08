@@ -3,7 +3,7 @@ package typingsSlinky.atTensorflowTfjsDashData
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorUnderscoreTypesMod.TensorContainer
 import typingsSlinky.atTensorflowTfjsDashData.atTensorflowTfjsDashDataNumbers.`10000`
-import typingsSlinky.atTensorflowTfjsDashData.atTensorflowTfjsDashDataStrings.`1DOT3DOT2`
+import typingsSlinky.atTensorflowTfjsDashData.atTensorflowTfjsDashDataStrings.`1Dot5Dot1`
 import typingsSlinky.atTensorflowTfjsDashData.distDatasetMod.DatasetContainer
 import typingsSlinky.atTensorflowTfjsDashData.distDatasourceMod.DataSource
 import typingsSlinky.atTensorflowTfjsDashData.distIteratorsFileUnderscoreChunkUnderscoreIteratorMod.FileChunkIteratorOptions
@@ -107,7 +107,7 @@ object atTensorflowTfjsDashDataMod extends js.Object {
     def this(url: RequestInfo, fileOptions: FileChunkIteratorOptions) = this()
   }
   
-  val version_data: `1DOT3DOT2` = js.native
+  val version_data: `1Dot5Dot1` = js.native
   def array[T /* <: TensorContainer */](items: js.Array[T]): typingsSlinky.atTensorflowTfjsDashData.distDatasetMod.Dataset[T] = js.native
   def csv(source: RequestInfo): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native
   def csv(source: RequestInfo, csvConfig: CSVConfig): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native

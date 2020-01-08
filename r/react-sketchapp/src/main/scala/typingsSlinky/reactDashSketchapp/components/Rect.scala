@@ -26,8 +26,10 @@ object Rect
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, name, width */
+  /* The following DOM/SVG props were specified: name */
   def apply(
+    height: NumberProp,
+    width: NumberProp,
     x: NumberProp,
     y: NumberProp,
     clipPath: String = null,
@@ -62,7 +64,7 @@ object Rect
     translateY: NumberProp = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
     if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])

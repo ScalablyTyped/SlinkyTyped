@@ -12,10 +12,6 @@ import typingsSlinky.mapsjs.Anon_Data
 import typingsSlinky.mapsjs.Anon_DataFormat
 import typingsSlinky.mapsjs.Anon_Descriptor
 import typingsSlinky.mapsjs.Anon_EndpointCollection
-import typingsSlinky.mapsjs.mapsjsMod.tile.layer
-import typingsSlinky.mapsjs.mapsjsMod.tile.quad
-import typingsSlinky.mapsjs.mapsjsMod.tile.renderer
-import typingsSlinky.mapsjs.mapsjsMod.tile.requestor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

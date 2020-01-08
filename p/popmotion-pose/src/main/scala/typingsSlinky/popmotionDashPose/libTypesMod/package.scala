@@ -19,7 +19,7 @@ package object libTypesMod {
   import typingsSlinky.popmotionDashPose.Anon_Physics
   import typingsSlinky.popmotionDashPose.Anon_Spring
   import typingsSlinky.popmotionDashPose.Anon_Tween
-  import typingsSlinky.popmotionDashPose.popmotionDashPoseNumbers.`false`
+  import typingsSlinky.popmotionDashPose.popmotionDashPoseBooleans.`false`
   import typingsSlinky.tsDashEssentials.tsDashEssentialsMod.Merge
 
   type AnimationDef = TransitionDefinition

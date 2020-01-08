@@ -1,6 +1,6 @@
 package typingsSlinky.typescript
 
-import typingsSlinky.typescript.typescriptNumbers.`false`
+import typingsSlinky.typescript.typescriptBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

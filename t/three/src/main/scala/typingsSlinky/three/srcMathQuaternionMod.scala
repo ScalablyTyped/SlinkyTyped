@@ -3,7 +3,6 @@ package typingsSlinky.three
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.three.srcMathEulerMod.Euler
 import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
-import typingsSlinky.three.srcMathQuaternionMod.Quaternion
 import typingsSlinky.three.srcMathVector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`

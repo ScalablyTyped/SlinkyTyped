@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,23 +27,12 @@ class MultiAtlasFile protected ()
     * @param atlasXhrSettings Extra XHR Settings specifically for the atlas json file.
     * @param textureXhrSettings Extra XHR Settings specifically for the texture files.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, atlasURL: String) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: String, atlasURL: String) = this()
+  def this(loader: LoaderPlugin, key: String, atlasURL: String, path: String) = this()
+  def this(loader: LoaderPlugin, key: String, atlasURL: String, path: String, baseURL: String) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    atlasURL: String,
-    path: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    atlasURL: String,
-    path: String,
-    baseURL: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     atlasURL: String,
     path: String,
@@ -50,7 +40,7 @@ class MultiAtlasFile protected ()
     atlasXhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     atlasURL: String,
     path: String,

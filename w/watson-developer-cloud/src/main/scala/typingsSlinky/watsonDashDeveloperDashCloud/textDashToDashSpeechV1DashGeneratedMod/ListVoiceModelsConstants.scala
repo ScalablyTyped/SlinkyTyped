@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,18 +45,38 @@ object ListVoiceModelsConstants extends js.Object {
     @js.native
     sealed trait PT_BR extends Language
     
-    /* "de-DE" */ val DE_DE: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.DE_DE with String = js.native
-    /* "en-GB" */ val EN_GB: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.EN_GB with String = js.native
-    /* "en-US" */ val EN_US: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.EN_US with String = js.native
-    /* "es-ES" */ val ES_ES: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.ES_ES with String = js.native
-    /* "es-LA" */ val ES_LA: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.ES_LA with String = js.native
-    /* "es-US" */ val ES_US: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.ES_US with String = js.native
-    /* "fr-FR" */ val FR_FR: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.FR_FR with String = js.native
-    /* "it-IT" */ val IT_IT: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.IT_IT with String = js.native
-    /* "ja-JP" */ val JA_JP: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.JA_JP with String = js.native
-    /* "pt-BR" */ val PT_BR: typingsSlinky.watsonDashDeveloperDashCloud.textDashToDashSpeechV1DashGeneratedMod.ListVoiceModelsConstants.Language.PT_BR with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Language with String] = js.native
+    /* "de-DE" */ @js.native
+    object DE_DE extends TopLevel[DE_DE with String]
+    
+    /* "en-GB" */ @js.native
+    object EN_GB extends TopLevel[EN_GB with String]
+    
+    /* "en-US" */ @js.native
+    object EN_US extends TopLevel[EN_US with String]
+    
+    /* "es-ES" */ @js.native
+    object ES_ES extends TopLevel[ES_ES with String]
+    
+    /* "es-LA" */ @js.native
+    object ES_LA extends TopLevel[ES_LA with String]
+    
+    /* "es-US" */ @js.native
+    object ES_US extends TopLevel[ES_US with String]
+    
+    /* "fr-FR" */ @js.native
+    object FR_FR extends TopLevel[FR_FR with String]
+    
+    /* "it-IT" */ @js.native
+    object IT_IT extends TopLevel[IT_IT with String]
+    
+    /* "ja-JP" */ @js.native
+    object JA_JP extends TopLevel[JA_JP with String]
+    
+    /* "pt-BR" */ @js.native
+    object PT_BR extends TopLevel[PT_BR with String]
+    
   }
   
 }

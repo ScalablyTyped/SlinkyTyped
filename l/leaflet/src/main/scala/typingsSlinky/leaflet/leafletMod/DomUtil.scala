@@ -1,7 +1,7 @@
 package typingsSlinky.leaflet.leafletMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.leaflet.leafletNumbers.`false`
+import typingsSlinky.leaflet.leafletBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

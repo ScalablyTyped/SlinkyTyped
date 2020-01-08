@@ -11,8 +11,8 @@ The lodash method `_.drop` exported as a module.
 | Full name          | lodash.drop |
 | Keywords           | lodash-modularized, drop |
 | # releases         | 0 |
-| # dependents       | 7 |
-| # downloads        | 127998 |
+| # dependents       | 9 |
+| # downloads        | 151673 |
 | # stars            | 0 |
 
 ## Links

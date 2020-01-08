@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberRunloop
 
-import typingsSlinky.atEmberRunloop.atEmberRunloopMod.RunNamespace
 import typingsSlinky.atEmberRunloop.dashPrivateTypesMod.EmberRunQueues
 import typingsSlinky.atEmberRunloop.dashPrivateTypesMod.RunMethod
 import typingsSlinky.atEmberRunloop.typesMod.EmberRunTimer

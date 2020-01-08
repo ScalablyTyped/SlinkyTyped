@@ -1,6 +1,5 @@
 package typingsSlinky.typesettable
 
-import typingsSlinky.typesettable.buildSrcUtilsCacheMod.Cache
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

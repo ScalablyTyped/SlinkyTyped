@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CheckState extends js.Object {
   @js.native
   sealed trait Uncheck extends CheckState
   
-  /* 1 */ val Check: typingsSlinky.ejDotWebDotAll.ej.CheckState.Check with Double = js.native
-  /* 2 */ val Indeterminate: typingsSlinky.ejDotWebDotAll.ej.CheckState.Indeterminate with Double = js.native
-  /* 0 */ val Uncheck: typingsSlinky.ejDotWebDotAll.ej.CheckState.Uncheck with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CheckState with Double] = js.native
+  /* 1 */ @js.native
+  object Check extends TopLevel[Check with Double]
+  
+  /* 2 */ @js.native
+  object Indeterminate extends TopLevel[Indeterminate with Double]
+  
+  /* 0 */ @js.native
+  object Uncheck extends TopLevel[Uncheck with Double]
+  
 }
 

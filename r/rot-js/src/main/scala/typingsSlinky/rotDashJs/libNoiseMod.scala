@@ -1,6 +1,7 @@
 package typingsSlinky.rotDashJs
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,15 @@ object libNoiseMod extends js.Object {
       def this(gradients: Double) = this()
     }
     
-    var Simplex: Instantiable1[
-        js.UndefOr[/* gradients */ Double], 
-        typingsSlinky.rotDashJs.libNoiseSimplexMod.default
-      ] = js.native
+    @js.native
+    object Simplex
+      extends TopLevel[
+              Instantiable1[
+                js.UndefOr[/* gradients */ Double], 
+                typingsSlinky.rotDashJs.libNoiseSimplexMod.default
+              ]
+            ]
+    
   }
   
 }

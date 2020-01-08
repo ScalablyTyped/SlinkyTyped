@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object EActivationCodeClass extends js.Object {
   @js.native
   sealed trait WonCDKey extends EActivationCodeClass
   
-  /* 3 */ val DBLookup: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.DBLookup with Double = js.native
-  /* 2 */ val Doom3CDKey: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.Doom3CDKey with Double = js.native
-  /* 4294967295.0 */ val Invalid: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.Invalid with Double = js.native
-  /* 5 */ val Max: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.Max with Double = js.native
-  /* 4 */ val Steam2010Key: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.Steam2010Key with Double = js.native
-  /* 2147483647 */ val Test: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.Test with Double = js.native
-  /* 1 */ val ValveCDKey: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.ValveCDKey with Double = js.native
-  /* 0 */ val WonCDKey: typingsSlinky.steamDashClient.steamDashClientMod.EActivationCodeClass.WonCDKey with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EActivationCodeClass with Double] = js.native
+  /* 3 */ @js.native
+  object DBLookup extends TopLevel[DBLookup with Double]
+  
+  /* 2 */ @js.native
+  object Doom3CDKey extends TopLevel[Doom3CDKey with Double]
+  
+  /* 4294967295.0 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 5 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 4 */ @js.native
+  object Steam2010Key extends TopLevel[Steam2010Key with Double]
+  
+  /* 2147483647 */ @js.native
+  object Test extends TopLevel[Test with Double]
+  
+  /* 1 */ @js.native
+  object ValveCDKey extends TopLevel[ValveCDKey with Double]
+  
+  /* 0 */ @js.native
+  object WonCDKey extends TopLevel[WonCDKey with Double]
+  
 }
 

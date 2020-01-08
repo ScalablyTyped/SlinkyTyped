@@ -11,8 +11,8 @@ Provides a Redis store for the express-rate-limit RateLimit middleware.
 | Full name          | rate-limit-redis |
 | Keywords           | - |
 | # releases         | 5 |
-| # dependents       | 7 |
-| # downloads        | 709818 |
+| # dependents       | 8 |
+| # downloads        | 928763 |
 | # stars            | 3 |
 
 ## Links

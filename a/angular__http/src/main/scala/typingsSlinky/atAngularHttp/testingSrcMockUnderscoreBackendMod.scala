@@ -4,7 +4,6 @@ import typingsSlinky.atAngularHttp.atAngularHttpMod.Request
 import typingsSlinky.atAngularHttp.atAngularHttpMod.Response
 import typingsSlinky.atAngularHttp.srcInterfacesMod.Connection
 import typingsSlinky.atAngularHttp.srcInterfacesMod.ConnectionBackend
-import typingsSlinky.atAngularHttp.testingSrcMockUnderscoreBackendMod.MockConnection
 import typingsSlinky.rxjs.rxjsMod.ReplaySubject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

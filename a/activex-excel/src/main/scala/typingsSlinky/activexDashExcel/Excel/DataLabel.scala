@@ -13,7 +13,8 @@ class DataLabel protected () extends js.Object {
   val Border: typingsSlinky.activexDashExcel.Excel.Border = js.native
   var Caption: String = js.native
   val Creator: XlCreator = js.native
-  var `Excel.DataLabel_typekey`: DataLabel = js.native
+  @JSName("Excel.DataLabel_typekey")
+  var ExcelDotDataLabel_typekey: DataLabel = js.native
   val Fill: ChartFillFormat = js.native
   val Font: typingsSlinky.activexDashExcel.Excel.Font = js.native
   val Format: ChartFormat = js.native

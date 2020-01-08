@@ -1,5 +1,6 @@
 package typingsSlinky.tableau.tableau
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object SelectionUpdateType extends js.Object {
   @js.native
   sealed trait REPLACE extends SelectionUpdateType
   
-  /* "add" */ val ADD: typingsSlinky.tableau.tableau.SelectionUpdateType.ADD with String = js.native
-  /* "remove" */ val REMOVE: typingsSlinky.tableau.tableau.SelectionUpdateType.REMOVE with String = js.native
-  /* "replace" */ val REPLACE: typingsSlinky.tableau.tableau.SelectionUpdateType.REPLACE with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SelectionUpdateType with String] = js.native
+  /* "add" */ @js.native
+  object ADD extends TopLevel[ADD with String]
+  
+  /* "remove" */ @js.native
+  object REMOVE extends TopLevel[REMOVE with String]
+  
+  /* "replace" */ @js.native
+  object REPLACE extends TopLevel[REPLACE with String]
+  
 }
 

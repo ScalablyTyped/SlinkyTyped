@@ -14,8 +14,6 @@ import typingsSlinky.atIonicCore.atIonicCoreStrings.mobileweb
 import typingsSlinky.atIonicCore.atIonicCoreStrings.phablet
 import typingsSlinky.atIonicCore.atIonicCoreStrings.pwa
 import typingsSlinky.atIonicCore.atIonicCoreStrings.tablet
-import typingsSlinky.atIonicCore.distTypesUtilsPlatformMod.IsPlatformSignature
-import typingsSlinky.atIonicCore.distTypesUtilsPlatformMod.Platforms
 import typingsSlinky.std.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`

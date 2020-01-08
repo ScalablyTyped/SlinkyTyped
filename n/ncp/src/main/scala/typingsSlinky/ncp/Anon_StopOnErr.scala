@@ -1,6 +1,6 @@
 package typingsSlinky.ncp
 
-import typingsSlinky.ncp.ncpNumbers.`true`
+import typingsSlinky.ncp.ncpBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.chaiDashJestDashSnapshot.chaiDashJestDashSnapshotMod._Global_
 
-import typingsSlinky.chaiDashJestDashSnapshot.chaiDashJestDashSnapshotMod._Global_.Chai.Assertion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

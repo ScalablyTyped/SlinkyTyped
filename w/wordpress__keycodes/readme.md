@@ -10,9 +10,9 @@ Keycodes utilities for WordPress. Used to check for keyboard events across brows
 | ------------------ | :-------------: |
 | Full name          | @wordpress/keycodes |
 | Keywords           | wordpress, keycodes |
-| # releases         | 18 |
-| # dependents       | 10 |
-| # downloads        | 85565 |
+| # releases         | 25 |
+| # dependents       | 11 |
+| # downloads        | 191121 |
 | # stars            | 0 |
 
 ## Links

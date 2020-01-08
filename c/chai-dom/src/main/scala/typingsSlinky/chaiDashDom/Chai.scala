@@ -1,6 +1,5 @@
 package typingsSlinky.chaiDashDom
 
-import typingsSlinky.chaiDashDom.Chai.Assertion
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`

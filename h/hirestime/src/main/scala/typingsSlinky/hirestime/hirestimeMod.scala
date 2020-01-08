@@ -1,6 +1,5 @@
 package typingsSlinky.hirestime
 
-import typingsSlinky.hirestime.hirestimeMod.getElapsed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

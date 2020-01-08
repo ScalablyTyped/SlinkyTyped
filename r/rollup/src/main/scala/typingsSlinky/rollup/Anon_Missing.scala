@@ -1,7 +1,7 @@
 package typingsSlinky.rollup
 
+import typingsSlinky.rollup.rollupBooleans.`true`
 import typingsSlinky.rollup.rollupMod.DecodedSourceMapOrMissing
-import typingsSlinky.rollup.rollupNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

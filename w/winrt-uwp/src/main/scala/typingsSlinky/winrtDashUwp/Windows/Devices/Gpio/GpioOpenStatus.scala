@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Gpio
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object GpioOpenStatus extends js.Object {
   @js.native
   sealed trait sharingViolation extends GpioOpenStatus
   
-  /* 0 */ val pinOpened: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioOpenStatus.pinOpened with Double = js.native
-  /* 1 */ val pinUnavailable: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioOpenStatus.pinUnavailable with Double = js.native
-  /* 2 */ val sharingViolation: typingsSlinky.winrtDashUwp.Windows.Devices.Gpio.GpioOpenStatus.sharingViolation with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GpioOpenStatus with Double] = js.native
+  /* 0 */ @js.native
+  object pinOpened extends TopLevel[pinOpened with Double]
+  
+  /* 1 */ @js.native
+  object pinUnavailable extends TopLevel[pinUnavailable with Double]
+  
+  /* 2 */ @js.native
+  object sharingViolation extends TopLevel[sharingViolation with Double]
+  
 }
 

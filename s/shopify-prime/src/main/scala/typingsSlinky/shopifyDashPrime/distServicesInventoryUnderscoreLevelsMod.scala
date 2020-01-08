@@ -3,7 +3,6 @@ package typingsSlinky.shopifyDashPrime
 import typingsSlinky.shopifyDashPrime.distInfrastructureMod.BaseService
 import typingsSlinky.shopifyDashPrime.distModelsInventoryUnderscoreLevelMod.InventoryLevel
 import typingsSlinky.shopifyDashPrime.distOptionsInventoryUnderscoreLevelsMod.InventoryLevelListOptions
-import typingsSlinky.shopifyDashPrime.distServicesInventoryUnderscoreLevelsMod.InventoryLevels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

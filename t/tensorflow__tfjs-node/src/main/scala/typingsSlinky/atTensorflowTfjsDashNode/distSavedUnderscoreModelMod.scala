@@ -8,7 +8,6 @@ import typingsSlinky.atTensorflowTfjsDashCore.distModelUnderscoreTypesMod.ModelP
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorUnderscoreTypesMod.NamedTensorMap
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank
 import typingsSlinky.atTensorflowTfjsDashNode.distNodejsUnderscoreKernelUnderscoreBackendMod.NodeJSKernelBackend
-import typingsSlinky.atTensorflowTfjsDashNode.distSavedUnderscoreModelMod.TFSavedModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

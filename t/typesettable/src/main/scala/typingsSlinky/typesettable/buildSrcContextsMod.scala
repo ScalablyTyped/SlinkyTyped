@@ -6,8 +6,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.std.SVGGraphicsElement
 import typingsSlinky.typesettable.buildSrcContextsCanvasMod.ICanvasFontStyle
-import typingsSlinky.typesettable.buildSrcContextsMod.IPenFactoryContext
-import typingsSlinky.typesettable.buildSrcContextsMod.IRulerFactoryContext
 import typingsSlinky.typesettable.buildSrcMeasurersAbstractMeasurerMod.IDimensions
 import typingsSlinky.typesettable.buildSrcMeasurersAbstractMeasurerMod.IRuler
 import typingsSlinky.typesettable.buildSrcMeasurersAbstractMeasurerMod.IRulerFactory

@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ trait predominantCategories extends js.Object {
     * @param params.view The view in which features will be rendered.
     *
     */
-  def predominantCategories(params: predominantCategoriesPredominantCategoriesParams): IPromise[PredominantCategoriesResult]
+  def predominantCategories(params: predominantCategoriesPredominantCategoriesParams): js.Promise[PredominantCategoriesResult]
 }
 
 @JSGlobal("__esri.predominantCategories")

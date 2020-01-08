@@ -1,6 +1,5 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.viewMod.Default
 import typingsSlinky.moment.momentMod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`

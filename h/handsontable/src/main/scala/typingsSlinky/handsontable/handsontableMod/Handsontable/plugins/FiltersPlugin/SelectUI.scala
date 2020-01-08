@@ -1,6 +1,7 @@
 package typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.FiltersPlugin
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.EventManager
 import typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.Menu
 import typingsSlinky.handsontable.handsontableMod._Handsontable.Core
 import scala.scalajs.js
@@ -23,7 +24,7 @@ object SelectUI {
     closeOptions: () => Unit,
     destroy: () => Unit,
     element: () => Element,
-    eventManager: typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.EventManager,
+    eventManager: EventManager,
     focus: () => Unit,
     getValue: () => js.Any,
     hide: () => Unit,

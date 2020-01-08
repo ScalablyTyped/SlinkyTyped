@@ -1,8 +1,7 @@
 package typingsSlinky.atAngularCompiler
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atAngularCompiler.srcMlUnderscoreParserAstMod.Element
-import typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElement
-import typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,13 +46,23 @@ object srcTemplateUnderscoreParserTemplateUnderscorePreparserMod extends js.Obje
     @js.native
     sealed trait STYLESHEET extends PreparsedElementType
     
-    /* 0 */ val NG_CONTENT: typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType.NG_CONTENT with Double = js.native
-    /* 4 */ val OTHER: typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType.OTHER with Double = js.native
-    /* 3 */ val SCRIPT: typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType.SCRIPT with Double = js.native
-    /* 1 */ val STYLE: typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType.STYLE with Double = js.native
-    /* 2 */ val STYLESHEET: typingsSlinky.atAngularCompiler.srcTemplateUnderscoreParserTemplateUnderscorePreparserMod.PreparsedElementType.STYLESHEET with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PreparsedElementType with Double] = js.native
+    /* 0 */ @js.native
+    object NG_CONTENT extends TopLevel[NG_CONTENT with Double]
+    
+    /* 4 */ @js.native
+    object OTHER extends TopLevel[OTHER with Double]
+    
+    /* 3 */ @js.native
+    object SCRIPT extends TopLevel[SCRIPT with Double]
+    
+    /* 1 */ @js.native
+    object STYLE extends TopLevel[STYLE with Double]
+    
+    /* 2 */ @js.native
+    object STYLESHEET extends TopLevel[STYLESHEET with Double]
+    
   }
   
 }

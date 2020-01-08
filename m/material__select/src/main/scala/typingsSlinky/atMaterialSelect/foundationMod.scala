@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialSelect
 
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCFoundation
 import typingsSlinky.atMaterialSelect.adapterMod.MDCSelectAdapter
-import typingsSlinky.atMaterialSelect.foundationMod.MDCSelectFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

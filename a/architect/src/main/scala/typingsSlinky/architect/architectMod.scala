@@ -1,9 +1,5 @@
 package typingsSlinky.architect
 
-import typingsSlinky.architect.architectMod.Architect
-import typingsSlinky.architect.architectMod.Config
-import typingsSlinky.architect.architectMod.Plugin
-import typingsSlinky.architect.architectMod.Service
 import typingsSlinky.architect.architectStrings.error
 import typingsSlinky.architect.architectStrings.plugin
 import typingsSlinky.architect.architectStrings.ready

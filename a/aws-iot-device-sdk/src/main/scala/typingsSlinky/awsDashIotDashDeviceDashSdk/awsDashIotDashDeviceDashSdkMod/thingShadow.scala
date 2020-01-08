@@ -21,7 +21,7 @@ import typingsSlinky.mqtt.typesLibClientDashOptionsMod.IClientSubscribeOptions
 import typingsSlinky.mqtt.typesLibClientMod.ClientSubscribeCallback
 import typingsSlinky.mqtt.typesLibClientMod.ISubscriptionGrant
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

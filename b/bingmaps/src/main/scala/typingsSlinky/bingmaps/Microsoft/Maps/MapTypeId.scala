@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,16 +47,34 @@ object MapTypeId extends js.Object {
   @js.native
   sealed trait streetside extends MapTypeId
   
-  /* 0 */ val aerial: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.aerial with Double = js.native
-  /* 1 */ val birdseye: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.birdseye with Double = js.native
-  /* 2 */ val canvasDark: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.canvasDark with Double = js.native
-  /* 3 */ val canvasLight: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.canvasLight with Double = js.native
-  /* 4 */ val grayscale: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.grayscale with Double = js.native
-  /* 5 */ val mercator: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.mercator with Double = js.native
-  /* 6 */ val ordnanceSurvey: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.ordnanceSurvey with Double = js.native
-  /* 7 */ val road: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.road with Double = js.native
-  /* 8 */ val streetside: typingsSlinky.bingmaps.Microsoft.Maps.MapTypeId.streetside with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MapTypeId with Double] = js.native
+  /* 0 */ @js.native
+  object aerial extends TopLevel[aerial with Double]
+  
+  /* 1 */ @js.native
+  object birdseye extends TopLevel[birdseye with Double]
+  
+  /* 2 */ @js.native
+  object canvasDark extends TopLevel[canvasDark with Double]
+  
+  /* 3 */ @js.native
+  object canvasLight extends TopLevel[canvasLight with Double]
+  
+  /* 4 */ @js.native
+  object grayscale extends TopLevel[grayscale with Double]
+  
+  /* 5 */ @js.native
+  object mercator extends TopLevel[mercator with Double]
+  
+  /* 6 */ @js.native
+  object ordnanceSurvey extends TopLevel[ordnanceSurvey with Double]
+  
+  /* 7 */ @js.native
+  object road extends TopLevel[road with Double]
+  
+  /* 8 */ @js.native
+  object streetside extends TopLevel[streetside with Double]
+  
 }
 

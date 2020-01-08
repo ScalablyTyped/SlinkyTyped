@@ -28,7 +28,8 @@ class Row protected () extends js.Object {
   val Range: typingsSlinky.activexDashWord.Word.Range = js.native
   val Shading: typingsSlinky.activexDashWord.Word.Shading = js.native
   var SpaceBetweenColumns: Double = js.native
-  var `Word.Row_typekey`: Row = js.native
+  @JSName("Word.Row_typekey")
+  var WordDotRow_typekey: Row = js.native
   def ConvertToText(): typingsSlinky.activexDashWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any): typingsSlinky.activexDashWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any, NestedTables: js.Any): typingsSlinky.activexDashWord.Word.Range = js.native

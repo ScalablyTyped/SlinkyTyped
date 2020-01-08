@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,17 +41,37 @@ object CssTokenType extends js.Object {
   @js.native
   sealed trait Whitespace extends CssTokenType
   
-  /* 6 */ val AtKeyword: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.AtKeyword with Double = js.native
-  /* 7 */ val Character: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Character with Double = js.native
-  /* 2 */ val Comment: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Comment with Double = js.native
-  /* 0 */ val EOF: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.EOF with Double = js.native
-  /* 3 */ val Identifier: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Identifier with Double = js.native
-  /* 5 */ val IdentifierOrNumber: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.IdentifierOrNumber with Double = js.native
-  /* 9 */ val Invalid: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Invalid with Double = js.native
-  /* 4 */ val Number: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Number with Double = js.native
-  /* 1 */ val String: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.String with Double = js.native
-  /* 8 */ val Whitespace: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssTokenType.Whitespace with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CssTokenType with Double] = js.native
+  /* 6 */ @js.native
+  object AtKeyword extends TopLevel[AtKeyword with Double]
+  
+  /* 7 */ @js.native
+  object Character extends TopLevel[Character with Double]
+  
+  /* 2 */ @js.native
+  object Comment extends TopLevel[Comment with Double]
+  
+  /* 0 */ @js.native
+  object EOF extends TopLevel[EOF with Double]
+  
+  /* 3 */ @js.native
+  object Identifier extends TopLevel[Identifier with Double]
+  
+  /* 5 */ @js.native
+  object IdentifierOrNumber extends TopLevel[IdentifierOrNumber with Double]
+  
+  /* 9 */ @js.native
+  object Invalid extends TopLevel[Invalid with Double]
+  
+  /* 4 */ @js.native
+  object Number extends TopLevel[Number with Double]
+  
+  /* 1 */ @js.native
+  object String extends TopLevel[String with Double]
+  
+  /* 8 */ @js.native
+  object Whitespace extends TopLevel[Whitespace with Double]
+  
 }
 

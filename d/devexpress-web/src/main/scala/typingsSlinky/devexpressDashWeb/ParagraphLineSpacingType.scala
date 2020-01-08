@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,13 +50,31 @@ object ParagraphLineSpacingType extends js.Object {
   @js.native
   sealed trait Single extends ParagraphLineSpacingType
   
-  /* 5 */ val AtLeast: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.AtLeast with scala.Double = js.native
-  /* 2 */ val Double: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.Double with scala.Double = js.native
-  /* 4 */ val Exactly: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.Exactly with scala.Double = js.native
-  /* 3 */ val Multiple: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.Multiple with scala.Double = js.native
-  /* 1 */ val Sesquialteral: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.Sesquialteral with scala.Double = js.native
-  /* 0 */ val Single: typingsSlinky.devexpressDashWeb.ParagraphLineSpacingType.Single with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[ParagraphLineSpacingType with scala.Double] = js.native
+  /* 5 */ @js.native
+  object AtLeast
+    extends TopLevel[AtLeast with scala.Double]
+  
+  /* 2 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 4 */ @js.native
+  object Exactly
+    extends TopLevel[Exactly with scala.Double]
+  
+  /* 3 */ @js.native
+  object Multiple
+    extends TopLevel[Multiple with scala.Double]
+  
+  /* 1 */ @js.native
+  object Sesquialteral
+    extends TopLevel[Sesquialteral with scala.Double]
+  
+  /* 0 */ @js.native
+  object Single
+    extends TopLevel[Single with scala.Double]
+  
 }
 

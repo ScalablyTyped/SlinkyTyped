@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +22,16 @@ object PaneLayout extends js.Object {
   @js.native
   sealed trait GridOnly extends PaneLayout
   
-  /* 1 */ val GridAndGantt: typingsSlinky.sharepoint.SP.JsGrid.PaneLayout.GridAndGantt with Double = js.native
-  /* 2 */ val GridAndPivotedGrid: typingsSlinky.sharepoint.SP.JsGrid.PaneLayout.GridAndPivotedGrid with Double = js.native
-  /* 0 */ val GridOnly: typingsSlinky.sharepoint.SP.JsGrid.PaneLayout.GridOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PaneLayout with Double] = js.native
+  /* 1 */ @js.native
+  object GridAndGantt extends TopLevel[GridAndGantt with Double]
+  
+  /* 2 */ @js.native
+  object GridAndPivotedGrid extends TopLevel[GridAndPivotedGrid with Double]
+  
+  /* 0 */ @js.native
+  object GridOnly extends TopLevel[GridOnly with Double]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.instagramDashPrivateDashApi
 
 import typingsSlinky.instagramDashPrivateDashApi.distCoreRepositoryMod.Repository
+import typingsSlinky.instagramDashPrivateDashApi.distResponsesLiveDotAddDashToDashPostDotResponseMod.LiveAddToPostResponse
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesLiveDotCommentsDotResponseMod.LiveCommentsResponseRootObject
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesLiveDotCreateDashBroadcastDotResponseMod.LiveCreateBroadcastResponseRootObject
 import typingsSlinky.instagramDashPrivateDashApi.distResponsesLiveDotFinalDashViewersDotResponseMod.LiveFinalViewersResponseRootObject
@@ -23,6 +24,7 @@ object distRepositoriesLiveDotRepositoryMod extends js.Object {
   @js.native
   class LiveRepository () extends Repository {
     def activateQuestion(broadcastId: String, questionId: String): js.Promise[_] = js.native
+    def addToPostLive(broadcastId: String): js.Promise[LiveAddToPostResponse] = js.native
     def comment(broadcastId: String, message: String): js.Promise[_] = js.native
     def create(hasPreviewHeightPreviewWidthMessage: Anon_Message): js.Promise[LiveCreateBroadcastResponseRootObject] = js.native
     def createQuestion(broadcastId: String, question: String): js.Promise[_] = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.qiniu.qiniuMod
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.qiniu.qiniuMod.conf.Config
-import typingsSlinky.qiniu.qiniuMod.resume_up.PutExtra
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

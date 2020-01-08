@@ -1,5 +1,6 @@
 package typingsSlinky.typedDashRestDashClient.httpClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,38 +84,96 @@ object HttpCodes extends js.Object {
   sealed trait TemporaryRedirect extends HttpCodes
   
   @js.native
+  sealed trait TooManyRequests extends HttpCodes
+  
+  @js.native
   sealed trait Unauthorized extends HttpCodes
   
   @js.native
   sealed trait UseProxy extends HttpCodes
   
-  /* 502 */ val BadGateway: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.BadGateway with Double = js.native
-  /* 400 */ val BadRequest: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.BadRequest with Double = js.native
-  /* 409 */ val Conflict: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.Conflict with Double = js.native
-  /* 403 */ val Forbidden: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.Forbidden with Double = js.native
-  /* 504 */ val GatewayTimeout: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.GatewayTimeout with Double = js.native
-  /* 410 */ val Gone: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.Gone with Double = js.native
-  /* 500 */ val InternalServerError: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.InternalServerError with Double = js.native
-  /* 405 */ val MethodNotAllowed: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.MethodNotAllowed with Double = js.native
-  /* 301 */ val MovedPermanently: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.MovedPermanently with Double = js.native
-  /* 300 */ val MultipleChoices: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.MultipleChoices with Double = js.native
-  /* 406 */ val NotAcceptable: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.NotAcceptable with Double = js.native
-  /* 404 */ val NotFound: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.NotFound with Double = js.native
-  /* 501 */ val NotImplemented: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.NotImplemented with Double = js.native
-  /* 304 */ val NotModified: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.NotModified with Double = js.native
-  /* 200 */ val OK: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.OK with Double = js.native
-  /* 402 */ val PaymentRequired: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.PaymentRequired with Double = js.native
-  /* 308 */ val PermanentRedirect: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.PermanentRedirect with Double = js.native
-  /* 407 */ val ProxyAuthenticationRequired: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.ProxyAuthenticationRequired with Double = js.native
-  /* 408 */ val RequestTimeout: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.RequestTimeout with Double = js.native
-  /* 302 */ val ResourceMoved: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.ResourceMoved with Double = js.native
-  /* 303 */ val SeeOther: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.SeeOther with Double = js.native
-  /* 503 */ val ServiceUnavailable: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.ServiceUnavailable with Double = js.native
-  /* 306 */ val SwitchProxy: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.SwitchProxy with Double = js.native
-  /* 307 */ val TemporaryRedirect: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.TemporaryRedirect with Double = js.native
-  /* 401 */ val Unauthorized: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.Unauthorized with Double = js.native
-  /* 305 */ val UseProxy: typingsSlinky.typedDashRestDashClient.httpClientMod.HttpCodes.UseProxy with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HttpCodes with Double] = js.native
+  /* 502 */ @js.native
+  object BadGateway extends TopLevel[BadGateway with Double]
+  
+  /* 400 */ @js.native
+  object BadRequest extends TopLevel[BadRequest with Double]
+  
+  /* 409 */ @js.native
+  object Conflict extends TopLevel[Conflict with Double]
+  
+  /* 403 */ @js.native
+  object Forbidden extends TopLevel[Forbidden with Double]
+  
+  /* 504 */ @js.native
+  object GatewayTimeout extends TopLevel[GatewayTimeout with Double]
+  
+  /* 410 */ @js.native
+  object Gone extends TopLevel[Gone with Double]
+  
+  /* 500 */ @js.native
+  object InternalServerError extends TopLevel[InternalServerError with Double]
+  
+  /* 405 */ @js.native
+  object MethodNotAllowed extends TopLevel[MethodNotAllowed with Double]
+  
+  /* 301 */ @js.native
+  object MovedPermanently extends TopLevel[MovedPermanently with Double]
+  
+  /* 300 */ @js.native
+  object MultipleChoices extends TopLevel[MultipleChoices with Double]
+  
+  /* 406 */ @js.native
+  object NotAcceptable extends TopLevel[NotAcceptable with Double]
+  
+  /* 404 */ @js.native
+  object NotFound extends TopLevel[NotFound with Double]
+  
+  /* 501 */ @js.native
+  object NotImplemented extends TopLevel[NotImplemented with Double]
+  
+  /* 304 */ @js.native
+  object NotModified extends TopLevel[NotModified with Double]
+  
+  /* 200 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
+  /* 402 */ @js.native
+  object PaymentRequired extends TopLevel[PaymentRequired with Double]
+  
+  /* 308 */ @js.native
+  object PermanentRedirect extends TopLevel[PermanentRedirect with Double]
+  
+  /* 407 */ @js.native
+  object ProxyAuthenticationRequired extends TopLevel[ProxyAuthenticationRequired with Double]
+  
+  /* 408 */ @js.native
+  object RequestTimeout extends TopLevel[RequestTimeout with Double]
+  
+  /* 302 */ @js.native
+  object ResourceMoved extends TopLevel[ResourceMoved with Double]
+  
+  /* 303 */ @js.native
+  object SeeOther extends TopLevel[SeeOther with Double]
+  
+  /* 503 */ @js.native
+  object ServiceUnavailable extends TopLevel[ServiceUnavailable with Double]
+  
+  /* 306 */ @js.native
+  object SwitchProxy extends TopLevel[SwitchProxy with Double]
+  
+  /* 307 */ @js.native
+  object TemporaryRedirect extends TopLevel[TemporaryRedirect with Double]
+  
+  /* 429 */ @js.native
+  object TooManyRequests extends TopLevel[TooManyRequests with Double]
+  
+  /* 401 */ @js.native
+  object Unauthorized extends TopLevel[Unauthorized with Double]
+  
+  /* 305 */ @js.native
+  object UseProxy extends TopLevel[UseProxy with Double]
+  
 }
 

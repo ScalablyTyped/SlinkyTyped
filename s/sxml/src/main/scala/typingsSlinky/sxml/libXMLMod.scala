@@ -1,8 +1,6 @@
 package typingsSlinky.sxml
 
 import typingsSlinky.sxml.libXMLListMod.XMLList
-import typingsSlinky.sxml.libXMLMod.XML
-import typingsSlinky.sxml.libXMLMod.XML.ReverseIterator
 import typingsSlinky.tstl.containerHashMapMod.HashMap.Iterator
 import typingsSlinky.tstl.tstlMod.HashMap
 import scala.scalajs.js

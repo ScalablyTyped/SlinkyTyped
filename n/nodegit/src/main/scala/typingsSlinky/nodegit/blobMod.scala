@@ -2,9 +2,9 @@ package typingsSlinky.nodegit
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.fsMod.WriteStream
-import typingsSlinky.nodegit.blobMod.Blob
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
+import typingsSlinky.nodegit.wrapperMod.Wrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ object blobMod extends js.Object {
     def id(): Oid = js.native
     def isBinary(): Double = js.native
     def owner(): Repository = js.native
-    def rawcontent(): Buffer = js.native
+    def rawcontent(): Wrapper = js.native
     def rawsize(): Double = js.native
   }
   

@@ -3,7 +3,6 @@ package typingsSlinky.atJupyterlabApputils
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atJupyterlabApputils.atJupyterlabApputilsStrings.copy
 import typingsSlinky.atJupyterlabApputils.atJupyterlabApputilsStrings.cut
-import typingsSlinky.atJupyterlabApputils.libClipboardMod.ClipboardData
 import typingsSlinky.atPhosphorCoreutils.atPhosphorCoreutilsMod.MimeData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

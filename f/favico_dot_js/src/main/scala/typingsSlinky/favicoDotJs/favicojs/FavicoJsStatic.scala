@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait FavicoJsStatic
-  extends Instantiable0[typingsSlinky.favicoDotJs.favicojs.Favico]
-     with Instantiable1[/* opt */ FavicoJsOptions, typingsSlinky.favicoDotJs.favicojs.Favico]
+  extends Instantiable0[Favico]
+     with Instantiable1[/* opt */ FavicoJsOptions, Favico]
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object ProtectionPolicyEvaluationResult extends js.Object {
   @js.native
   sealed trait consentRequired extends ProtectionPolicyEvaluationResult
   
-  /* 0 */ val allowed: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult.allowed with Double = js.native
-  /* 1 */ val blocked: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult.blocked with Double = js.native
-  /* 2 */ val consentRequired: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult.consentRequired with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProtectionPolicyEvaluationResult with Double] = js.native
+  /* 0 */ @js.native
+  object allowed extends TopLevel[allowed with Double]
+  
+  /* 1 */ @js.native
+  object blocked extends TopLevel[blocked with Double]
+  
+  /* 2 */ @js.native
+  object consentRequired extends TopLevel[consentRequired with Double]
+  
 }
 

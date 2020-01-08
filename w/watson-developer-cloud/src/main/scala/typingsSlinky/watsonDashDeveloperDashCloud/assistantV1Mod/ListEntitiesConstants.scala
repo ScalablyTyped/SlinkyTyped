@@ -1,6 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.ListEntitiesConstants.Sort
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,14 @@ object ListEntitiesConstants extends js.Object {
     @js.native
     sealed trait UPDATED extends Sort
     
-    /* "entity" */ val ENTITY: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.ListEntitiesConstants.Sort.ENTITY with String = js.native
-    /* "updated" */ val UPDATED: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.ListEntitiesConstants.Sort.UPDATED with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Sort with String] = js.native
+    /* "entity" */ @js.native
+    object ENTITY extends TopLevel[ENTITY with String]
+    
+    /* "updated" */ @js.native
+    object UPDATED extends TopLevel[UPDATED with String]
+    
   }
   
 }

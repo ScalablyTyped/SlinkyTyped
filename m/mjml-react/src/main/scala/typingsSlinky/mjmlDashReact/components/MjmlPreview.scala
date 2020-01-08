@@ -1,11 +1,13 @@
 package typingsSlinky.mjmlDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MjmlPreview
-  extends SharedApply_Anon_Children_115411025[typingsSlinky.mjmlDashReact.mjmlDashReactMod.MjmlPreview] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.mjmlDashReact.mjmlDashReactMod.MjmlPreview] {
   @JSImport("mjml-react", "MjmlPreview")
   @js.native
   object componentImport extends js.Object

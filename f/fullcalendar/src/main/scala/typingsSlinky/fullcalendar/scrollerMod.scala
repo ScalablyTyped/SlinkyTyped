@@ -1,6 +1,5 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.scrollerMod.Default
 import typingsSlinky.fullcalendar.srcTypesJqueryDashHooksMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

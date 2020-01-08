@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,19 +60,43 @@ object BackgroundTaskCancellationReason extends js.Object {
   @js.native
   sealed trait uninstall extends BackgroundTaskCancellationReason
   
-  /* 0 */ val abort: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.abort with Double = js.native
-  /* 6 */ val conditionLoss: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.conditionLoss with Double = js.native
-  /* 11 */ val energySaver: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.energySaver with Double = js.native
-  /* 9 */ val executionTimeExceeded: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.executionTimeExceeded with Double = js.native
-  /* 4 */ val idleTask: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.idleTask with Double = js.native
-  /* 2 */ val loggingOff: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.loggingOff with Double = js.native
-  /* 8 */ val quietHoursEntered: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.quietHoursEntered with Double = js.native
-  /* 10 */ val resourceRevocation: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.resourceRevocation with Double = js.native
-  /* 3 */ val servicingUpdate: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.servicingUpdate with Double = js.native
-  /* 7 */ val systemPolicy: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.systemPolicy with Double = js.native
-  /* 1 */ val terminating: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.terminating with Double = js.native
-  /* 5 */ val uninstall: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskCancellationReason.uninstall with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BackgroundTaskCancellationReason with Double] = js.native
+  /* 0 */ @js.native
+  object abort extends TopLevel[abort with Double]
+  
+  /* 6 */ @js.native
+  object conditionLoss extends TopLevel[conditionLoss with Double]
+  
+  /* 11 */ @js.native
+  object energySaver extends TopLevel[energySaver with Double]
+  
+  /* 9 */ @js.native
+  object executionTimeExceeded extends TopLevel[executionTimeExceeded with Double]
+  
+  /* 4 */ @js.native
+  object idleTask extends TopLevel[idleTask with Double]
+  
+  /* 2 */ @js.native
+  object loggingOff extends TopLevel[loggingOff with Double]
+  
+  /* 8 */ @js.native
+  object quietHoursEntered extends TopLevel[quietHoursEntered with Double]
+  
+  /* 10 */ @js.native
+  object resourceRevocation extends TopLevel[resourceRevocation with Double]
+  
+  /* 3 */ @js.native
+  object servicingUpdate extends TopLevel[servicingUpdate with Double]
+  
+  /* 7 */ @js.native
+  object systemPolicy extends TopLevel[systemPolicy with Double]
+  
+  /* 1 */ @js.native
+  object terminating extends TopLevel[terminating with Double]
+  
+  /* 5 */ @js.native
+  object uninstall extends TopLevel[uninstall with Double]
+  
 }
 

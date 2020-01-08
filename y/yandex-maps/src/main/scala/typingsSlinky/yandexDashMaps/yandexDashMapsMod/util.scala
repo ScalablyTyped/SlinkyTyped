@@ -1,7 +1,6 @@
 package typingsSlinky.yandexDashMaps.yandexDashMapsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.util.cursor.Accessor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

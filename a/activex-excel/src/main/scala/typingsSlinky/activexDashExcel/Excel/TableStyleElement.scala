@@ -11,7 +11,8 @@ class TableStyleElement protected () extends js.Object {
   @JSName("Borders")
   val Borders_Original: Borders = js.native
   val Creator: XlCreator = js.native
-  var `Excel.TableStyleElement_typekey`: TableStyleElement = js.native
+  @JSName("Excel.TableStyleElement_typekey")
+  var ExcelDotTableStyleElement_typekey: TableStyleElement = js.native
   val Font: typingsSlinky.activexDashExcel.Excel.Font = js.native
   val HasFormat: Boolean = js.native
   val Interior: typingsSlinky.activexDashExcel.Excel.Interior = js.native

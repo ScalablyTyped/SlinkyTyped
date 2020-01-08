@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ChartBoxQuartileCalculation extends js.Object {
   @js.native
   sealed trait inclusive extends ChartBoxQuartileCalculation
   
-  /* "Exclusive" */ val exclusive: typingsSlinky.officeDashJs.Excel.ChartBoxQuartileCalculation.exclusive with String = js.native
-  /* "Inclusive" */ val inclusive: typingsSlinky.officeDashJs.Excel.ChartBoxQuartileCalculation.inclusive with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartBoxQuartileCalculation with String] = js.native
+  /* "Exclusive" */ @js.native
+  object exclusive extends TopLevel[exclusive with String]
+  
+  /* "Inclusive" */ @js.native
+  object inclusive extends TopLevel[inclusive with String]
+  
 }
 

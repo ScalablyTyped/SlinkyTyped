@@ -6,8 +6,6 @@ import org.scalajs.dom.raw.AudioContext
 import org.scalajs.dom.raw.GainNode
 import org.scalajs.dom.raw.HTMLMediaElement
 import typingsSlinky.three.srcAudioAudioListenerMod.AudioListener
-import typingsSlinky.three.srcAudioAudioMod.Audio
-import typingsSlinky.three.srcAudioAudioMod.AudioBuffer
 import typingsSlinky.three.srcCoreObject3DMod.Object3D
 import scala.scalajs.js
 import scala.scalajs.js.`|`

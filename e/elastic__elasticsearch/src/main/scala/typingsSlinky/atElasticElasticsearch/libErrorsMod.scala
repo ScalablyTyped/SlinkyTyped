@@ -1,6 +1,5 @@
 package typingsSlinky.atElasticElasticsearch
 
-import typingsSlinky.atElasticElasticsearch.libErrorsMod.ElasticsearchClientError
 import typingsSlinky.atElasticElasticsearch.libTransportMod.ApiResponse
 import typingsSlinky.std.Error
 import scala.scalajs.js

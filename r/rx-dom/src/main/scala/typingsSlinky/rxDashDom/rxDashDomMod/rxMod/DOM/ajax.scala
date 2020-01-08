@@ -1,5 +1,6 @@
 package typingsSlinky.rxDashDom.rxDashDomMod.rxMod.DOM
 
+import typingsSlinky.rxDashLiteDashAggregates.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("rx", "DOM.ajax")
 @js.native
 object ajax extends js.Object {
-  def apply(settingsOrUrl: String): typingsSlinky.rxDashLiteDashAggregates.Rx.Observable[AjaxSuccessResponse] = js.native
+  def apply(settingsOrUrl: String): Observable[AjaxSuccessResponse] = js.native
   // Ajax
-  def apply(settingsOrUrl: AjaxSettings): typingsSlinky.rxDashLiteDashAggregates.Rx.Observable[AjaxSuccessResponse] = js.native
+  def apply(settingsOrUrl: AjaxSettings): Observable[AjaxSuccessResponse] = js.native
 }
 

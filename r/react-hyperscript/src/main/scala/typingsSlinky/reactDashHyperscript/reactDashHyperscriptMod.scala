@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.reactMod.ComponentClass
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.react.reactMod.StatelessComponent
-import typingsSlinky.reactDashHyperscript.reactDashHyperscriptMod.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

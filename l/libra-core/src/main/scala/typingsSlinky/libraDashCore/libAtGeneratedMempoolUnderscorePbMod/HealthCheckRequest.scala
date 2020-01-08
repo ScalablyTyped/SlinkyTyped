@@ -6,7 +6,6 @@ import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.BinaryWriter
 import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.ExtensionFieldBinaryInfo
 import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.ExtensionFieldInfo
 import typingsSlinky.googleDashProtobuf.googleDashProtobufMod.Message
-import typingsSlinky.libraDashCore.libAtGeneratedMempoolUnderscorePbMod.HealthCheckRequest.AsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object reproStepsMode extends js.Object {
   @js.native
   sealed trait enabledWithNoScreenshots extends reproStepsMode
   
-  /* 1 */ val disabled: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.reproStepsMode.disabled with Double = js.native
-  /* 0 */ val enabled: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.reproStepsMode.enabled with Double = js.native
-  /* 2 */ val enabledWithNoScreenshots: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.reproStepsMode.enabledWithNoScreenshots with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[reproStepsMode with Double] = js.native
+  /* 1 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 0 */ @js.native
+  object enabled extends TopLevel[enabled with Double]
+  
+  /* 2 */ @js.native
+  object enabledWithNoScreenshots extends TopLevel[enabledWithNoScreenshots with Double]
+  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.ajvDashPack
 import typingsSlinky.ajv.ajvMod.Ajv
 import typingsSlinky.ajv.ajvMod.KeywordDefinition
 import typingsSlinky.ajv.ajvMod.ValidateFunction
-import typingsSlinky.ajvDashPack.ajvDashPackMod.AjvPack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,14 +54,14 @@ object ajvDashPackMod extends js.Object {
       * @param  schema JSON-schema
       * @return validation function
       */
-    def compile(`this`: Ajv, schema: js.Object): ValidateFunction = js.native
+    def compile(schema: js.Object): ValidateFunction = js.native
     /**
       * validate data against the schema
       * @param schema JSON-schema
       * @param data data to validate
       * @return validation result
       */
-    def validate(`this`: Ajv, schema: js.Object, data: js.Any): Boolean = js.native
+    def validate(schema: js.Object, data: js.Any): Boolean = js.native
   }
   
   def apply(ajv: Ajv, validate: ValidateFunction): String = js.native

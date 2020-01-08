@@ -5,7 +5,6 @@ import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkStrings.ERR_
 import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkStrings.ERR_ICF_IPC_MODULE_INACCESSIBLE
 import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkStrings.ERR_ICF_IPC_UNKNOWN_PROCEDURE
 import typingsSlinky.atIonicCliDashFramework.definitionsMod.ValidationError
-import typingsSlinky.atIonicCliDashFramework.errorsMod.BaseError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

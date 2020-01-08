@@ -6,7 +6,7 @@ import typingsSlinky.backbone.backboneMod.Model
 import typingsSlinky.backboneDotMarionette.Anon_Args
 import typingsSlinky.backboneDotMarionette.Anon_ArgsAny
 import typingsSlinky.backboneDotMarionette.Anon_PreventRender
-import typingsSlinky.backboneDotMarionette.backboneDotMarionetteNumbers.`false`
+import typingsSlinky.backboneDotMarionette.backboneDotMarionetteBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

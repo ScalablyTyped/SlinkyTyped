@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +35,28 @@ object ListBullet extends js.Object {
   @js.native
   sealed trait square extends ListBullet
   
-  /* "Arrow" */ val arrow: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.arrow with String = js.native
-  /* "Checkmark" */ val checkmark: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.checkmark with String = js.native
-  /* "Custom" */ val custom: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.custom with String = js.native
-  /* "Diamonds" */ val diamonds: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.diamonds with String = js.native
-  /* "Hollow" */ val hollow: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.hollow with String = js.native
-  /* "Solid" */ val solid: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.solid with String = js.native
-  /* "Square" */ val square: typingsSlinky.officeDashJsDashPreview.Word.ListBullet.square with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ListBullet with String] = js.native
+  /* "Arrow" */ @js.native
+  object arrow extends TopLevel[arrow with String]
+  
+  /* "Checkmark" */ @js.native
+  object checkmark extends TopLevel[checkmark with String]
+  
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "Diamonds" */ @js.native
+  object diamonds extends TopLevel[diamonds with String]
+  
+  /* "Hollow" */ @js.native
+  object hollow extends TopLevel[hollow with String]
+  
+  /* "Solid" */ @js.native
+  object solid extends TopLevel[solid with String]
+  
+  /* "Square" */ @js.native
+  object square extends TopLevel[square with String]
+  
 }
 

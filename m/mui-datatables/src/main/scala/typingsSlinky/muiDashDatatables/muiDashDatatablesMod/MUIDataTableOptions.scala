@@ -3,14 +3,13 @@ package typingsSlinky.muiDashDatatables.muiDashDatatablesMod
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.muiDashDatatables.Anon_ColIndex
-import typingsSlinky.muiDashDatatables.Anon_Data
 import typingsSlinky.muiDashDatatables.Anon_DataDataIndex
 import typingsSlinky.muiDashDatatables.Anon_DataIndexRowIndex
+import typingsSlinky.muiDashDatatables.Anon_DataKey
 import typingsSlinky.muiDashDatatables.Anon_Filename
 import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.chip
 import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.reset
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.std.BlobPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,7 +54,7 @@ trait MUIDataTableOptions extends js.Object {
   var customToolbar: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
   var customToolbarSelect: js.UndefOr[
     js.Function3[
-      /* selectedRows */ Anon_Data, 
+      /* selectedRows */ Anon_DataKey, 
       /* displayData */ js.Array[Anon_DataDataIndex], 
       /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit], 
       TagMod[Any]
@@ -89,13 +88,18 @@ trait MUIDataTableOptions extends js.Object {
   var onChangeRowsPerPage: js.UndefOr[js.Function1[/* numberOfRows */ Double, Unit]] = js.undefined
   var onColumnSortChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* direction */ String, Unit]] = js.undefined
   var onColumnViewChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* action */ String, Unit]] = js.undefined
+  /**
+    * A callback function that triggers when the user downloads the CSV file.
+    * In the callback, you can control what is written to the CSV file.
+    * Return false to cancel download of file.
+    */
   var onDownload: js.UndefOr[
     js.Function4[
       /* buildHead */ js.Function1[/* columns */ js.Any, String], 
       /* buildBody */ js.Function1[/* data */ js.Any, String], 
       /* columns */ js.Any, 
       /* data */ js.Any, 
-      BlobPart
+      String | Boolean
     ]
   ] = js.undefined
   var onFilterChange: js.UndefOr[
@@ -165,7 +169,7 @@ object MUIDataTableOptions {
     customSearchRender: (/* searchText */ String, /* handleSearch */ js.Any, /* hideSearch */ js.Any, /* options */ js.Any) => ReactComponentClass[js.Object] | Element = null,
     customSort: (/* data */ js.Array[_], /* colIndex */ Double, /* order */ String) => js.Array[_] = null,
     customToolbar: () => TagMod[Any] = null,
-    customToolbarSelect: (/* selectedRows */ Anon_Data, /* displayData */ js.Array[Anon_DataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any] = null,
+    customToolbarSelect: (/* selectedRows */ Anon_DataKey, /* displayData */ js.Array[Anon_DataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any] = null,
     disableToolbarSelect: js.UndefOr[Boolean] = js.undefined,
     download: js.UndefOr[Boolean] = js.undefined,
     downloadOptions: Anon_Filename = null,
@@ -182,7 +186,7 @@ object MUIDataTableOptions {
     onChangeRowsPerPage: /* numberOfRows */ Double => Unit = null,
     onColumnSortChange: (/* changedColumn */ String, /* direction */ String) => Unit = null,
     onColumnViewChange: (/* changedColumn */ String, /* action */ String) => Unit = null,
-    onDownload: (/* buildHead */ js.Function1[/* columns */ js.Any, String], /* buildBody */ js.Function1[/* data */ js.Any, String], /* columns */ js.Any, /* data */ js.Any) => BlobPart = null,
+    onDownload: (/* buildHead */ js.Function1[/* columns */ js.Any, String], /* buildBody */ js.Function1[/* data */ js.Any, String], /* columns */ js.Any, /* data */ js.Any) => String | Boolean = null,
     onFilterChange: (/* changedColumn */ String, /* filterList */ js.Array[_], /* type */ FilterType | chip | reset) => Unit = null,
     onFilterDialogClose: () => Unit = null,
     onFilterDialogOpen: () => Unit = null,

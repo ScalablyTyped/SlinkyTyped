@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object OwnershipType extends js.Object {
   @js.native
   sealed trait UserOwned extends OwnershipType
   
-  /* 0 */ val None: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.OwnershipType.None with scala.Double = js.native
-  /* 1 */ val OrganizationOwned: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.OwnershipType.OrganizationOwned with scala.Double = js.native
-  /* 2 */ val TeamOwned: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.OwnershipType.TeamOwned with scala.Double = js.native
-  /* 3 */ val UserOwned: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.OwnershipType.UserOwned with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[OwnershipType with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[OwnershipType with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object OrganizationOwned extends TopLevel[OrganizationOwned with Double]
+  
+  /* 2 */ @js.native
+  object TeamOwned extends TopLevel[TeamOwned with Double]
+  
+  /* 3 */ @js.native
+  object UserOwned extends TopLevel[UserOwned with Double]
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.cometd.cometdMod
 
 import typingsSlinky.cometd.Anon_Hosts
-import typingsSlinky.cometd.cometdNumbers.`true`
+import typingsSlinky.cometd.cometdBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

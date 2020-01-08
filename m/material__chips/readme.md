@@ -10,9 +10,9 @@ The Material Components for the Web chips component
 | ------------------ | :-------------: |
 | Full name          | @material/chips |
 | Keywords           | material components, material design, chips |
-| # releases         | 33 |
-| # dependents       | 17 |
-| # downloads        | 930452 |
+| # releases         | 127 |
+| # dependents       | 29 |
+| # downloads        | 1027685 |
 | # stars            | 0 |
 
 ## Links

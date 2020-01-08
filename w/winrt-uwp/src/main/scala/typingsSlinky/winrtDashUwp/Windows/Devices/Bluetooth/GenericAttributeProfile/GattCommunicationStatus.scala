@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object GattCommunicationStatus extends js.Object {
   @js.native
   sealed trait unreachable extends GattCommunicationStatus
   
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus.success with Double = js.native
-  /* 1 */ val unreachable: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus.unreachable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GattCommunicationStatus with Double] = js.native
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 1 */ @js.native
+  object unreachable extends TopLevel[unreachable with Double]
+  
 }
 

@@ -52,11 +52,7 @@ package object fridaDashGum {
     */
   type InvocationArguments = js.Array[NativePointer]
   type MemoryPatchApplyCallback = js.Function1[/* code */ NativePointer, Unit]
-  type MessageCallback = js.Function2[
-    /* message */ js.Any, 
-    /* data */ scala.scalajs.js.typedarray.ArrayBuffer | Null, 
-    Unit
-  ]
+  type MessageCallback = js.Function2[/* message */ js.Any, /* data */ ArrayBuffer | Null, Unit]
   /* Rewritten from type alias, can be one of: 
     - typings.fridaDashGum.MipsRegister
     - scala.Double

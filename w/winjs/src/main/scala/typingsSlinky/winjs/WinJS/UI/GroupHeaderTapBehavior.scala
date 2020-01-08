@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.WinJS.UI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,9 +26,13 @@ object GroupHeaderTapBehavior extends js.Object {
   @js.native
   sealed trait none extends GroupHeaderTapBehavior
   
-  /* 0 */ val invoke: typingsSlinky.winjs.WinJS.UI.GroupHeaderTapBehavior.invoke with Double = js.native
-  /* 1 */ val none: typingsSlinky.winjs.WinJS.UI.GroupHeaderTapBehavior.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GroupHeaderTapBehavior with Double] = js.native
+  /* 0 */ @js.native
+  object invoke extends TopLevel[invoke with Double]
+  
+  /* 1 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

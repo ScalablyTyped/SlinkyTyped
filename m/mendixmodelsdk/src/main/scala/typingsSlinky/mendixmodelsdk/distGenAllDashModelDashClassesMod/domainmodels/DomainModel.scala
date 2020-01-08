@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IModule
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
@@ -27,7 +28,7 @@ class DomainModel protected ()
 @js.native
 object DomainModel extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new DomainModel unit in the SDK and on the server.
     * Expects one argument, the projects.IModule in which this unit is contained.

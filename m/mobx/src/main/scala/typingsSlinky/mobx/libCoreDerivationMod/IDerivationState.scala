@@ -1,5 +1,6 @@
 package typingsSlinky.mobx.libCoreDerivationMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object IDerivationState extends js.Object {
   @js.native
   sealed trait UP_TO_DATE extends IDerivationState
   
-  /* -1 */ val NOT_TRACKING: typingsSlinky.mobx.libCoreDerivationMod.IDerivationState.NOT_TRACKING with Double = js.native
-  /* 1 */ val POSSIBLY_STALE: typingsSlinky.mobx.libCoreDerivationMod.IDerivationState.POSSIBLY_STALE with Double = js.native
-  /* 2 */ val STALE: typingsSlinky.mobx.libCoreDerivationMod.IDerivationState.STALE with Double = js.native
-  /* 0 */ val UP_TO_DATE: typingsSlinky.mobx.libCoreDerivationMod.IDerivationState.UP_TO_DATE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IDerivationState with Double] = js.native
+  /* -1 */ @js.native
+  object NOT_TRACKING extends TopLevel[NOT_TRACKING with Double]
+  
+  /* 1 */ @js.native
+  object POSSIBLY_STALE extends TopLevel[POSSIBLY_STALE with Double]
+  
+  /* 2 */ @js.native
+  object STALE extends TopLevel[STALE with Double]
+  
+  /* 0 */ @js.native
+  object UP_TO_DATE extends TopLevel[UP_TO_DATE with Double]
+  
 }
 

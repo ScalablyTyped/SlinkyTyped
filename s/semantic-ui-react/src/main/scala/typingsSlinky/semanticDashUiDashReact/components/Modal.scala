@@ -14,7 +14,7 @@ import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesModalModalAction
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesModalModalContentMod.ModalContentProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesModalModalHeaderMod.ModalHeaderProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesModalModalMod.ModalProps
-import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactNumbers.`true`
+import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactBooleans.`true`
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.blurring
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.fullscreen
 import typingsSlinky.semanticDashUiDashReact.semanticDashUiDashReactStrings.inverted
@@ -105,6 +105,9 @@ object Modal
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.semanticDashUiDashReact.distCommonjsModulesModalMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ModalProps
 }
 

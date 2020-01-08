@@ -18,13 +18,13 @@ object GatewayDest
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
   def apply(
+    name: String,
     component: String | ReactComponentClass[js.Object] = null,
     tagName: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

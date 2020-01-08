@@ -1,6 +1,5 @@
 package typingsSlinky.nodeDashForge.nodeDashForgeMod
 
-import typingsSlinky.nodeDashForge.nodeDashForgeMod.md.MessageDigest
 import typingsSlinky.nodeDashForge.nodeDashForgeMod.util.ByteStringBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

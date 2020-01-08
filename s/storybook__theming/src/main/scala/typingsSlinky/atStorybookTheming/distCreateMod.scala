@@ -1,7 +1,6 @@
 package typingsSlinky.atStorybookTheming
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atStorybookTheming.distCreateMod.Rest
 import typingsSlinky.atStorybookTheming.distTypesMod.ThemeVars
 import scala.scalajs.js
 import scala.scalajs.js.`|`

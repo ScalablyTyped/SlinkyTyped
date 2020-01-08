@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object ScaleModes extends js.Object {
   @js.native
   sealed trait NEAREST extends ScaleModes
   
-  /* 0 */ val DEFAULT: typingsSlinky.phaser.Phaser.ScaleModes.DEFAULT with Double = js.native
-  /* 1 */ val LINEAR: typingsSlinky.phaser.Phaser.ScaleModes.LINEAR with Double = js.native
-  /* 2 */ val NEAREST: typingsSlinky.phaser.Phaser.ScaleModes.NEAREST with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScaleModes with Double] = js.native
+  /* 0 */ @js.native
+  object DEFAULT extends TopLevel[DEFAULT with Double]
+  
+  /* 1 */ @js.native
+  object LINEAR extends TopLevel[LINEAR with Double]
+  
+  /* 2 */ @js.native
+  object NEAREST extends TopLevel[NEAREST with Double]
+  
 }
 

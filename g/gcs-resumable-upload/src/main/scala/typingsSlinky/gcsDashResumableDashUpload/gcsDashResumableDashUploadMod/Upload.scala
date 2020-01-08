@@ -1,6 +1,7 @@
 package typingsSlinky.gcsDashResumableDashUpload.gcsDashResumableDashUploadMod
 
 import typingsSlinky.gcsDashResumableDashUpload.Anon_Scopes
+import typingsSlinky.gcsDashResumableDashUpload.gcsDashResumableDashUploadStrings.Asterisk
 import typingsSlinky.googleDashAuthDashLibrary.googleDashAuthDashLibraryMod.GoogleAuth
 import typingsSlinky.node.Buffer
 import typingsSlinky.pumpify.pumpifyMod.^
@@ -20,7 +21,7 @@ class Upload protected () extends ^ {
   var bufferStream: js.UndefOr[js.Any] = js.native
   var cacheKey: String = js.native
   var configStore: typingsSlinky.configstore.configstoreMod.^ = js.native
-  var contentLength: Double | typingsSlinky.gcsDashResumableDashUpload.gcsDashResumableDashUploadStrings.`*` = js.native
+  var contentLength: Double | Asterisk = js.native
   var continueUploading: js.Any = js.native
   var encryption: js.UndefOr[Encryption] = js.native
   var file: String = js.native

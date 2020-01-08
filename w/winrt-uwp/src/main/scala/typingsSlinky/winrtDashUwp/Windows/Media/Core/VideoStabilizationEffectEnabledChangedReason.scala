@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object VideoStabilizationEffectEnabledChangedReason extends js.Object {
   @js.native
   sealed trait runningSlowly extends VideoStabilizationEffectEnabledChangedReason
   
-  /* 1 */ val pixelRateTooHigh: typingsSlinky.winrtDashUwp.Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason.pixelRateTooHigh with Double = js.native
-  /* 0 */ val programmatic: typingsSlinky.winrtDashUwp.Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason.programmatic with Double = js.native
-  /* 2 */ val runningSlowly: typingsSlinky.winrtDashUwp.Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason.runningSlowly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VideoStabilizationEffectEnabledChangedReason with Double] = js.native
+  /* 1 */ @js.native
+  object pixelRateTooHigh extends TopLevel[pixelRateTooHigh with Double]
+  
+  /* 0 */ @js.native
+  object programmatic extends TopLevel[programmatic with Double]
+  
+  /* 2 */ @js.native
+  object runningSlowly extends TopLevel[runningSlowly with Double]
+  
 }
 

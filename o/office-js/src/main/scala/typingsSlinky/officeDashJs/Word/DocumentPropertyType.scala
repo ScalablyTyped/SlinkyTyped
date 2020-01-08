@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object DocumentPropertyType extends js.Object {
   @js.native
   sealed trait string extends DocumentPropertyType
   
-  /* "Boolean" */ val boolean: typingsSlinky.officeDashJs.Word.DocumentPropertyType.boolean with String = js.native
-  /* "Date" */ val date: typingsSlinky.officeDashJs.Word.DocumentPropertyType.date with String = js.native
-  /* "Number" */ val number: typingsSlinky.officeDashJs.Word.DocumentPropertyType.number with String = js.native
-  /* "String" */ val string: typingsSlinky.officeDashJs.Word.DocumentPropertyType.string with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DocumentPropertyType with String] = js.native
+  /* "Boolean" */ @js.native
+  object boolean extends TopLevel[boolean with String]
+  
+  /* "Date" */ @js.native
+  object date extends TopLevel[date with String]
+  
+  /* "Number" */ @js.native
+  object number extends TopLevel[number with String]
+  
+  /* "String" */ @js.native
+  object string extends TopLevel[string with String]
+  
 }
 

@@ -3,14 +3,11 @@ package typingsSlinky.mendixmodelsdk
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenDatatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.domainmodels.IEntity
-import typingsSlinky.mendixmodelsdk.distGenImportmappingsMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenImportmappingsMod.importmappings.ImportMapping
-import typingsSlinky.mendixmodelsdk.distGenImportmappingsMod.importmappings.ImportObjectMappingElement
-import typingsSlinky.mendixmodelsdk.distGenImportmappingsMod.importmappings.ImportValueMappingElement
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.IMappingDocument
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.MappingDocument
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.ObjectMappingElement
 import typingsSlinky.mendixmodelsdk.distGenMappingsMod.mappings.ValueMappingElement
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -53,7 +50,7 @@ object distGenImportmappingsMod extends js.Object {
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
     - typings.mendixmodelsdk.distGenMappingsMod.mappings.IMappingDocument because Already inherited
-    - typings.mendixmodelsdk.distGenImportmappingsMod.importmappings.IImportMapping because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenImportmappingsMod.importmappings.IImportMapping because var conflicts: containerAsFolderBase, id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
     class ImportMapping protected () extends MappingDocument {
       def this(
         model: AbstractModel,
@@ -62,16 +59,25 @@ object distGenImportmappingsMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
+      @JSName("model")
+      var model_FImportMapping: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MImportMapping(): FolderBase = js.native
       /**
         * In version 7.16.0: deleted
         */
-      var parameter: IEntity | Null = js.native
-      val parameterQualifiedName: String | Null = js.native
+      def parameter(): IEntity | Null = js.native
+      def parameter(newValue: IEntity): js.Any = js.native
+      def parameterQualifiedName(): String | Null = js.native
       /**
         * In version 7.16.0: introduced
         */
-      var parameterType: DataType = js.native
-      var useSubtransactionsForMicroflows: Boolean = js.native
+      def parameterType(): DataType = js.native
+      def parameterType(newValue: DataType): js.Any = js.native
+      @JSName("parameter")
+      def parameter_Any(): js.Any = js.native
+      def useSubtransactionsForMicroflows(): Boolean = js.native
+      def useSubtransactionsForMicroflows(newValue: Boolean): js.Any = js.native
     }
     
     /**
@@ -87,6 +93,8 @@ object distGenImportmappingsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      @JSName("model")
+      var model_FImportObjectMappingElement: IModel = js.native
     }
     
     /**
@@ -102,6 +110,8 @@ object distGenImportmappingsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      @JSName("model")
+      var model_FImportValueMappingElement: IModel = js.native
     }
     
     /* static members */

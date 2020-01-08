@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
-import typingsSlinky.phaser.Phaser.Display.Color
 import typingsSlinky.phaser.Phaser.GameObjects.GameObject
 import typingsSlinky.phaser.Phaser.GameObjects.Graphics
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer

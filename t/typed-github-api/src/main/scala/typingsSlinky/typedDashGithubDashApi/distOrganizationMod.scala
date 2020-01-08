@@ -6,8 +6,6 @@ import typingsSlinky.typedDashGithubDashApi.distApiDashInterfacesUserMod.Organiz
 import typingsSlinky.typedDashGithubDashApi.distApiDashInterfacesUserMod.PrivateOrganization
 import typingsSlinky.typedDashGithubDashApi.distGithubDashRefMod.OptionsOrRef
 import typingsSlinky.typedDashGithubDashApi.distInterfacesOrganizationMod.MyOrganization
-import typingsSlinky.typedDashGithubDashApi.distOrganizationMod.OrganizationClass
-import typingsSlinky.typedDashGithubDashApi.distOrganizationMod.OrganizationSummaryClass
 import typingsSlinky.typedDashGithubDashApi.distOwnerDashRefMod.OwnerRefClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`

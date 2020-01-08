@@ -2,17 +2,13 @@ package typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeM
 
 import typingsSlinky.coinbaseDashCommerceDashNode.Anon_Block
 import typingsSlinky.coinbaseDashCommerceDashNode.Anon_Context
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeMod.resources.Charge
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeMod.resources.Checkout
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeMod.resources.Event
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeMod.resources.Resource
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:confirmed`
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:created`
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:delayed`
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:failed`
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:pending`
-import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.`charge:resolved`
 import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.charge
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColonconfirmed
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColoncreated
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColondelayed
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColonfailed
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColonpending
+import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.chargeColonresolved
 import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.checkout
 import typingsSlinky.coinbaseDashCommerceDashNode.coinbaseDashCommerceDashNodeStrings.event
 import typingsSlinky.std.Partial
@@ -194,7 +190,7 @@ object resources extends js.Object {
       * Event type.
       */
     /* CompleteClass */
-    override var `type`: `charge:created` | `charge:confirmed` | `charge:failed` | `charge:delayed` | `charge:pending` | `charge:resolved` = js.native
+    override var `type`: chargeColoncreated | chargeColonconfirmed | chargeColonfailed | chargeColondelayed | chargeColonpending | chargeColonresolved = js.native
   }
   
   /**

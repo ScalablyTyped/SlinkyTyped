@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Android extends SharedApply_SvgIconProps657215518[default] {
+object Android extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/action/android", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object GeometryType extends js.Object {
   @js.native
   sealed trait Normal extends GeometryType
   
-  /* 0 */ val Geographic: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.GeometryType.Geographic with Double = js.native
-  /* 1 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Map.GeometryType.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GeometryType with Double] = js.native
+  /* 0 */ @js.native
+  object Geographic extends TopLevel[Geographic with Double]
+  
+  /* 1 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

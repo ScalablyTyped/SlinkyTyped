@@ -12,7 +12,7 @@ Object mapping plugin for KnockoutJS
 | Keywords           | knockout, mapping, plugin |
 | # releases         | 0 |
 | # dependents       | 1 |
-| # downloads        | 29416 |
+| # downloads        | 69520 |
 | # stars            | 1 |
 
 ## Links

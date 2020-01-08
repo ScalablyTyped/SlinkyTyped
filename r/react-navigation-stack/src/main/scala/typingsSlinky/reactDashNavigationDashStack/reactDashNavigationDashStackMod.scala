@@ -1,8 +1,10 @@
 package typingsSlinky.reactDashNavigationDashStack
 
+import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import typingsSlinky.react.reactMod.Context
 import typingsSlinky.react.reactMod.Ref
 import typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.PanGestureHandler
@@ -68,10 +70,7 @@ object reactDashNavigationDashStackMod extends js.Object {
   }
   
   val Assets: js.Array[js.Any] = js.native
-  val Header: ComponentClassPickPropsscenenavigationpositionlayo | FunctionComponentPickPropsscenenavigationpositionl = js.native
   val StackGestureContext: Context[Ref[PanGestureHandler]] = js.native
-  val StackViewCard: ReactComponentClass[PickPropsstylechildrenscenenavigationrealPositiona] = js.native
-  val StackViewLayout: ReactComponentClass[PickPropsmodeheaderModeheaderLayoutPresetheaderTra] = js.native
   def ScenesReducer(
     scenes: js.Array[Scene],
     nextState: NavigationStackState,
@@ -92,6 +91,11 @@ object reactDashNavigationDashStackMod extends js.Object {
     routeConfigMap: NavigationRouteConfigMap[NavigationStackOptions, NavigationStackProp[NavigationRoute[NavigationParams], _]],
     stackConfig: CreateNavigatorConfigNavigationStackConfigNavigati
   ): js.Any = js.native
+  @js.native
+  object Header extends TopLevel[
+          ComponentClassPickPropsscenenavigationpositionlayo | FunctionComponentPickPropsscenenavigationpositionl
+        ]
+  
   /* static members */
   @js.native
   object HeaderBackButton extends js.Object {
@@ -146,6 +150,12 @@ object reactDashNavigationDashStackMod extends js.Object {
   object HeaderTitle extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
   }
+  
+  @js.native
+  object StackViewCard extends TopLevel[ComponentType[PickPropsstylechildrenscenenavigationrealPositiona]]
+  
+  @js.native
+  object StackViewLayout extends TopLevel[ComponentType[PickPropsmodeheaderModeheaderLayoutPresetheaderTra]]
   
   @js.native
   object StackViewStyleInterpolator extends js.Object {

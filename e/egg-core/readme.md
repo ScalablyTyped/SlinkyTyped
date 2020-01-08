@@ -1,7 +1,7 @@
 
 # Scala.js typings for egg-core
 
-Typings are for version 4.17.3
+Typings are for version 4.17.4
 
 ## Library description:
 A core Pluggable framework based on koa
@@ -10,9 +10,9 @@ A core Pluggable framework based on koa
 | ------------------ | :-------------: |
 | Full name          | egg-core |
 | Keywords           | egg, loader |
-| # releases         | 69 |
-| # dependents       | 10 |
-| # downloads        | 271539 |
+| # releases         | 39 |
+| # dependents       | 14 |
+| # downloads        | 315789 |
 | # stars            | 0 |
 
 ## Links

@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__installations-types
 
-Typings are for version 0.2.2
+Typings are for version 0.2.4
 
 ## Library description:
 @firebase/installations Types
@@ -10,9 +10,9 @@ Typings are for version 0.2.2
 | ------------------ | :-------------: |
 | Full name          | @firebase/installations-types |
 | Keywords           | - |
-| # releases         | 0 |
+| # releases         | 356 |
 | # dependents       | 1 |
-| # downloads        | 0 |
+| # downloads        | 7889508 |
 | # stars            | 0 |
 
 ## Links

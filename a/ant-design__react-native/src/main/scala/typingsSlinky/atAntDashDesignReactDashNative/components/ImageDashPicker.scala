@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ImageDashPicker extends SharedApply_ImagePickerProps1108768037[default] {
+object ImageDashPicker extends SharedApply_ImagePickerProps1857490719[default] {
   @JSImport("@ant-design/react-native/lib/image-picker", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,11 +1,14 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactMod
 
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsOverlayOverlayDotTypesMod.IOverlayProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react", "OverlayBase")
 @js.native
-class OverlayBase ()
-  extends typingsSlinky.officeDashUiDashFabricDashReact.libComponentsOverlayOverlayDotBaseMod.OverlayBase
+class OverlayBase protected ()
+  extends typingsSlinky.officeDashUiDashFabricDashReact.libOverlayMod.OverlayBase {
+  def this(props: IOverlayProps) = this()
+}
 

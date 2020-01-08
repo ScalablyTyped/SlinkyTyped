@@ -3,6 +3,7 @@ package typingsSlinky.griddleDashReact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.griddleDashReact.Anon_FilterPlaceholder
 import typingsSlinky.griddleDashReact.griddleDashReactMod.GriddleComponents
@@ -81,6 +82,9 @@ object GriddleDashReact
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.griddleDashReact.griddleDashReactMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.griddleDashReact.griddleDashReactMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GriddleProps[js.Any]
 }
 

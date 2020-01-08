@@ -10,10 +10,10 @@ simple, flexible, fun test framework
 | ------------------ | :-------------: |
 | Full name          | mocha |
 | Keywords           | mocha, test, bdd, tdd, tap |
-| # releases         | 29 |
-| # dependents       | 4992 |
-| # downloads        | 112488793 |
-| # stars            | 701 |
+| # releases         | 23 |
+| # dependents       | 5620 |
+| # downloads        | 147947557 |
+| # stars            | 704 |
 
 ## Links
 - [Homepage](https://mochajs.org/)

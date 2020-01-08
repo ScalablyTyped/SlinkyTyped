@@ -1,7 +1,5 @@
 package typingsSlinky.gzipDashSize
 
-import typingsSlinky.gzipDashSize.gzipDashSizeMod.GzipSizeStream
-import typingsSlinky.gzipDashSize.gzipDashSizeMod.Options
 import typingsSlinky.gzipDashSize.gzipDashSizeStrings.`gzip-size`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Transform

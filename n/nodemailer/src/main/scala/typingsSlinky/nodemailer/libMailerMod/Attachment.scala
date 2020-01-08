@@ -3,7 +3,7 @@ package typingsSlinky.nodemailer.libMailerMod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.nodemailer.nodemailerNumbers.`false`
+import typingsSlinky.nodemailer.nodemailerBooleans.`false`
 import typingsSlinky.nodemailer.nodemailerStrings.`7bit`
 import typingsSlinky.nodemailer.nodemailerStrings.`inline`
 import typingsSlinky.nodemailer.nodemailerStrings.`quoted-printable`

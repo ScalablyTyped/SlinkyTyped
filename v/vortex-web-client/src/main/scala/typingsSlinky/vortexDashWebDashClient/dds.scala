@@ -3,6 +3,7 @@ package typingsSlinky.vortexDashWebDashClient
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable5
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.vortexDashWebDashClient.DDS.EntityQos
 import typingsSlinky.vortexDashWebDashClient.DDS.Policy
 import typingsSlinky.vortexDashWebDashClient.DDS.Runtime
@@ -92,41 +93,61 @@ object dds extends js.Object {
     def this(did: Double, tname: String, qos: EntityQos, ttype: String, tregtype: String) = this()
   }
   
-  var DataCache: Instantiable2[
-    /* depth */ Double, 
-    /* cache */ js.Any, 
-    typingsSlinky.vortexDashWebDashClient.DDS.DataCache
-  ] = js.native
-  var DataReader: Instantiable3[
-    /* runtime */ Runtime, 
-    /* topic */ typingsSlinky.vortexDashWebDashClient.DDS.Topic, 
-    /* qos */ EntityQos, 
-    typingsSlinky.vortexDashWebDashClient.DDS.DataReader
-  ] = js.native
   var DataReaderQos: EntityQos = js.native
-  var DataWriter: Instantiable3[
-    /* runtime */ Runtime, 
-    /* topic */ typingsSlinky.vortexDashWebDashClient.DDS.Topic, 
-    /* qos */ EntityQos, 
-    typingsSlinky.vortexDashWebDashClient.DDS.DataWriter
-  ] = js.native
   var DataWriterQos: EntityQos = js.native
   var Durability: TypeofClassDurability = js.native
   var History: TypeofClassHistory = js.native
   var Reliability: TypeofClassReliability = js.native
-  var Topic: Instantiable5[
-    /* did */ Double, 
-    /* tname */ String, 
-    /* qos */ EntityQos, 
-    js.UndefOr[/* ttype */ String], 
-    js.UndefOr[/* tregtype */ String], 
-    typingsSlinky.vortexDashWebDashClient.DDS.Topic
-  ] = js.native
   var TopicQos: EntityQos = js.native
   var VERSION: String = js.native
   var runtime: Anon_Runtime = js.native
   def ContentFilter(expr: String): Policy = js.native
   def Partition(policies: String*): Policy = js.native
   def TimeFilter(period: Double): Policy = js.native
+  @js.native
+  object DataCache
+    extends TopLevel[
+          Instantiable2[
+            /* depth */ Double, 
+            /* cache */ js.Any, 
+            typingsSlinky.vortexDashWebDashClient.DDS.DataCache
+          ]
+        ]
+  
+  @js.native
+  object DataReader
+    extends TopLevel[
+          Instantiable3[
+            /* runtime */ Runtime, 
+            /* topic */ typingsSlinky.vortexDashWebDashClient.DDS.Topic, 
+            /* qos */ EntityQos, 
+            typingsSlinky.vortexDashWebDashClient.DDS.DataReader
+          ]
+        ]
+  
+  @js.native
+  object DataWriter
+    extends TopLevel[
+          Instantiable3[
+            /* runtime */ Runtime, 
+            /* topic */ typingsSlinky.vortexDashWebDashClient.DDS.Topic, 
+            /* qos */ EntityQos, 
+            typingsSlinky.vortexDashWebDashClient.DDS.DataWriter
+          ]
+        ]
+  
+  @js.native
+  object Topic
+    extends TopLevel[
+          Instantiable5[
+            /* did */ Double, 
+            /* tname */ String, 
+            /* qos */ EntityQos, 
+            js.UndefOr[/* ttype */ String], 
+            js.UndefOr[/* tregtype */ String], 
+            typingsSlinky.vortexDashWebDashClient.DDS.Topic
+          ]
+        ]
+  
 }
 

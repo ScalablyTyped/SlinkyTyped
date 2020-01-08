@@ -6,8 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object mongodbMod {
   import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.mongodb.Anon_IdAny
+  import typingsSlinky.mongodb.Anon_IdAnyOptional
   import typingsSlinky.mongodb.Anon_IdExtractIdType
+  import typingsSlinky.mongodb.Anon_IdExtractIdTypeTSchema
   import typingsSlinky.mongodb.mongodbStrings._id
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Pick
@@ -24,8 +25,12 @@ package object mongodbMod {
   type Condition[T] = MongoAltQuery[T] | QuerySelector[MongoAltQuery[T]]
   type CursorResult = js.Object | Null | Boolean
   type Default = js.Any
+  type DefaultSchema = js.Any
   type DotAndArrayNotation[AssignableType] = StringDictionary[AssignableType]
   type EndCallback = js.Function1[/* error */ MongoError, Unit]
+  // TypeScript Omit (Exclude to be specific) does not work for objects with an "any" indexed type
+  type EnhancedOmit[T, K] = (// T has indexed type e.g. { _id: string; [k: string]: any; } or it is "any"
+  Omit[T, K]) | T
   type ExtractIdType[TSchema] = typingsSlinky.bson.bsonMod.ObjectId | (Exclude[js.Any, js.Object])
   type FilterQuery[T] = typingsSlinky.mongodb.mongodbStrings.FilterQuery with T with RootQuerySelector[T]
   type GridFSBucketErrorCallback = js.Function1[/* err */ js.UndefOr[MongoError], Unit]
@@ -44,10 +49,11 @@ package object mongodbMod {
   type ObjectQuerySelector[T] = QuerySelector[T] | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? mongodb.mongodb.QuerySelector<T[key]>}
     */ typingsSlinky.mongodb.mongodbStrings.ObjectQuerySelector with T)
-  // This line can be removed after minimum required TypeScript Version is above 3.5
+  // We can use TypeScript Omit once minimum required TypeScript Version is above 3.5
   type Omit[T, K] = Pick[T, Exclude[String, K]]
   type OnlyFieldsOfType[TSchema, FieldType, AssignableType] = (AcceptedFields[TSchema, FieldType, AssignableType]) with (NotAcceptedFields[TSchema, FieldType]) with DotAndArrayNotation[AssignableType]
-  type OptionalId[TSchema] = (Omit[TSchema, _id]) with Anon_IdAny
+  // this makes _id optional
+  type OptionalId[TSchema /* <: Anon_IdAnyOptional */] = WithId[TSchema] | ((EnhancedOmit[TSchema, _id]) with Anon_IdExtractIdType[TSchema])
   type PullAllOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PullAllOperator with TSchema with (NotAcceptedFields[TSchema, js.Array[_]]) with StringDictionary[js.Array[_]]
   type PullOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PullOperator with js.Any with (NotAcceptedFields[TSchema, js.Array[_]]) with (StringDictionary[QuerySelector[_] | js.Any])
   type PushOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PushOperator with js.Any with (NotAcceptedFields[TSchema, js.Array[_]]) with (StringDictionary[ArrayOperator[_] | js.Any])
@@ -61,7 +67,7 @@ package object mongodbMod {
   type SetFields[TSchema] = typingsSlinky.mongodb.mongodbStrings.SetFields with js.Any with (NotAcceptedFields[TSchema, js.Array[_]]) with (StringDictionary[AddToSetOperators[_] | js.Any])
   type Unpacked[Type] = Type
   // this adds _id as a required property
-  type WithId[TSchema] = (Omit[TSchema, _id]) with Anon_IdExtractIdType[TSchema]
+  type WithId[TSchema] = (EnhancedOmit[TSchema, _id]) with Anon_IdExtractIdTypeTSchema[TSchema]
   type WithTransactionCallback[T] = js.Function1[/* session */ ClientSession, js.Promise[T]]
   type log = js.Function2[/* message */ js.UndefOr[String], /* state */ js.UndefOr[LoggerState], Unit]
 }

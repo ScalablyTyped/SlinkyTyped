@@ -4,7 +4,6 @@ import typingsSlinky.mendixmodelsdk.distSdkInternalAbstractModelMod.AbstractMode
 import typingsSlinky.mendixmodelsdk.distSdkInternalAbstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalElementsMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalElementsMod.Element
-import typingsSlinky.mendixmodelsdk.distSdkInternalInstancesMod.InstanceConstructor
 import typingsSlinky.mendixmodelsdk.distSdkInternalStructuresMod.IStructure
 import typingsSlinky.mendixmodelsdk.distSdkInternalStructuresMod.IStructureConstructor
 import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.IAbstractElementJson
@@ -27,10 +26,10 @@ object distSdkInternalInstancesMod extends js.Object {
   @js.native
   abstract class AbstractEnum protected () extends js.Object {
     def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
-    val name: String = js.native
     var qualifiedTsTypeName: String = js.native
     var versionInfo: LifeCycle = js.native
     def checkEnumVersion(metaModelVersion: Version, includeWarnings: Boolean): Unit = js.native
+    def name(): String = js.native
     def qualifiedTsLiteralName(): String = js.native
   }
   

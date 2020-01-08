@@ -1,7 +1,7 @@
 package typingsSlinky.tmiDotJs.tmiDotJsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tmiDotJs.tmiDotJsStrings.Empty
+import typingsSlinky.tmiDotJs.tmiDotJsStrings._empty
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.admin
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.anongiftpaidupgrade
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.global_mod
@@ -40,7 +40,7 @@ object AnonSubGiftUpgradeUserstate {
     `tmi-sent-ts`: String = null,
     turbo: js.UndefOr[Boolean] = js.undefined,
     `user-id`: String = null,
-    `user-type`: Empty | mod | global_mod | admin | staff = null
+    `user-type`: _empty | mod | global_mod | admin | staff = null
   ): AnonSubGiftUpgradeUserstate = {
     val __obj = js.Dynamic.literal()
     if (badges != null) __obj.updateDynamic("badges")(badges.asInstanceOf[js.Any])

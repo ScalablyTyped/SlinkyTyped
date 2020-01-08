@@ -1,6 +1,6 @@
 package typingsSlinky.nodemon.nodemonMod
 
-import typingsSlinky.nodemon.nodemonStrings.`config:update`
+import typingsSlinky.nodemon.nodemonStrings.configColonupdate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("nodemon", "emit")
 @js.native
 object emit_configupdate extends js.Object {
-  def apply(event: `config:update`): Boolean = js.native
+  def apply(event: configColonupdate): Boolean = js.native
 }
 

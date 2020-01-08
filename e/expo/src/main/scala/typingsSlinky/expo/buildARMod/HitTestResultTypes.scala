@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildARMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,13 +49,25 @@ object HitTestResultTypes extends js.Object {
   @js.native
   sealed trait VerticalPlane extends HitTestResultTypes
   
-  /* "existingPlane" */ val ExistingPlane: typingsSlinky.expo.buildARMod.HitTestResultTypes.ExistingPlane with String = js.native
-  /* "existingPlaneUsingExtent" */ val ExistingPlaneUsingExtent: typingsSlinky.expo.buildARMod.HitTestResultTypes.ExistingPlaneUsingExtent with String = js.native
-  /* "existingPlaneUsingGeometry" */ val ExistingPlaneUsingGeometry: typingsSlinky.expo.buildARMod.HitTestResultTypes.ExistingPlaneUsingGeometry with String = js.native
-  /* "featurePoint" */ val FeaturePoint: typingsSlinky.expo.buildARMod.HitTestResultTypes.FeaturePoint with String = js.native
-  /* "horizontalPlane" */ val HorizontalPlane: typingsSlinky.expo.buildARMod.HitTestResultTypes.HorizontalPlane with String = js.native
-  /* "verticalPlane" */ val VerticalPlane: typingsSlinky.expo.buildARMod.HitTestResultTypes.VerticalPlane with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[HitTestResultTypes with String] = js.native
+  /* "existingPlane" */ @js.native
+  object ExistingPlane extends TopLevel[ExistingPlane with String]
+  
+  /* "existingPlaneUsingExtent" */ @js.native
+  object ExistingPlaneUsingExtent extends TopLevel[ExistingPlaneUsingExtent with String]
+  
+  /* "existingPlaneUsingGeometry" */ @js.native
+  object ExistingPlaneUsingGeometry extends TopLevel[ExistingPlaneUsingGeometry with String]
+  
+  /* "featurePoint" */ @js.native
+  object FeaturePoint extends TopLevel[FeaturePoint with String]
+  
+  /* "horizontalPlane" */ @js.native
+  object HorizontalPlane extends TopLevel[HorizontalPlane with String]
+  
+  /* "verticalPlane" */ @js.native
+  object VerticalPlane extends TopLevel[VerticalPlane with String]
+  
 }
 

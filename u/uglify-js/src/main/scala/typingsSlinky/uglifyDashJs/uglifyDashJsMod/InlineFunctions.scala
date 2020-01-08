@@ -1,5 +1,6 @@
 package typingsSlinky.uglifyDashJs.uglifyDashJsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object InlineFunctions extends js.Object {
   @js.native
   sealed trait WithArgumentsAndVariables extends InlineFunctions
   
-  /* 0 */ val Disabled: typingsSlinky.uglifyDashJs.uglifyDashJsMod.InlineFunctions.Disabled with Double = js.native
-  /* 1 */ val SimpleFunctions: typingsSlinky.uglifyDashJs.uglifyDashJsMod.InlineFunctions.SimpleFunctions with Double = js.native
-  /* 2 */ val WithArguments: typingsSlinky.uglifyDashJs.uglifyDashJsMod.InlineFunctions.WithArguments with Double = js.native
-  /* 3 */ val WithArgumentsAndVariables: typingsSlinky.uglifyDashJs.uglifyDashJsMod.InlineFunctions.WithArgumentsAndVariables with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[InlineFunctions with Double] = js.native
+  /* 0 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 1 */ @js.native
+  object SimpleFunctions extends TopLevel[SimpleFunctions with Double]
+  
+  /* 2 */ @js.native
+  object WithArguments extends TopLevel[WithArguments with Double]
+  
+  /* 3 */ @js.native
+  object WithArgumentsAndVariables extends TopLevel[WithArgumentsAndVariables with Double]
+  
 }
 

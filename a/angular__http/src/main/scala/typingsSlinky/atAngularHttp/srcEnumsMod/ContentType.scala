@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularHttp.srcEnumsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object ContentType extends js.Object {
   @js.native
   sealed trait TEXT extends ContentType
   
-  /* 6 */ val ARRAY_BUFFER: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.ARRAY_BUFFER with Double = js.native
-  /* 5 */ val BLOB: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.BLOB with Double = js.native
-  /* 2 */ val FORM: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.FORM with Double = js.native
-  /* 3 */ val FORM_DATA: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.FORM_DATA with Double = js.native
-  /* 1 */ val JSON: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.JSON with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.NONE with Double = js.native
-  /* 4 */ val TEXT: typingsSlinky.atAngularHttp.srcEnumsMod.ContentType.TEXT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContentType with Double] = js.native
+  /* 6 */ @js.native
+  object ARRAY_BUFFER extends TopLevel[ARRAY_BUFFER with Double]
+  
+  /* 5 */ @js.native
+  object BLOB extends TopLevel[BLOB with Double]
+  
+  /* 2 */ @js.native
+  object FORM extends TopLevel[FORM with Double]
+  
+  /* 3 */ @js.native
+  object FORM_DATA extends TopLevel[FORM_DATA with Double]
+  
+  /* 1 */ @js.native
+  object JSON extends TopLevel[JSON with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 4 */ @js.native
+  object TEXT extends TopLevel[TEXT with Double]
+  
 }
 

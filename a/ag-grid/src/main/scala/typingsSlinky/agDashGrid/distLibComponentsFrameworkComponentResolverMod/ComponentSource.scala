@@ -1,5 +1,6 @@
 package typingsSlinky.agDashGrid.distLibComponentsFrameworkComponentResolverMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ComponentSource extends js.Object {
   @js.native
   sealed trait REGISTERED_BY_NAME extends ComponentSource
   
-  /* 0 */ val DEFAULT: typingsSlinky.agDashGrid.distLibComponentsFrameworkComponentResolverMod.ComponentSource.DEFAULT with Double = js.native
-  /* 2 */ val HARDCODED: typingsSlinky.agDashGrid.distLibComponentsFrameworkComponentResolverMod.ComponentSource.HARDCODED with Double = js.native
-  /* 1 */ val REGISTERED_BY_NAME: typingsSlinky.agDashGrid.distLibComponentsFrameworkComponentResolverMod.ComponentSource.REGISTERED_BY_NAME with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ComponentSource with Double] = js.native
+  /* 0 */ @js.native
+  object DEFAULT extends TopLevel[DEFAULT with Double]
+  
+  /* 2 */ @js.native
+  object HARDCODED extends TopLevel[HARDCODED with Double]
+  
+  /* 1 */ @js.native
+  object REGISTERED_BY_NAME extends TopLevel[REGISTERED_BY_NAME with Double]
+  
 }
 

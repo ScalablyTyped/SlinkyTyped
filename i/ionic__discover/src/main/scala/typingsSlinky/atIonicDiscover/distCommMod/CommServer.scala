@@ -24,7 +24,6 @@ class CommServer protected () extends EventEmitter {
     */
   port: Double
   ) = this()
-  val clients: Set[^] = js.native
   /**
     * Unique identifier of the publisher.
     */
@@ -36,6 +35,7 @@ class CommServer protected () extends EventEmitter {
     */
   var port: Double = js.native
   var server: js.UndefOr[Server] = js.native
+  def clients(): Set[^] = js.native
   @JSName("on")
   def on_connect(event: connect, listener: js.Function1[/* data */ CommServerConnectionPayload, Unit]): this.type = js.native
   @JSName("on")

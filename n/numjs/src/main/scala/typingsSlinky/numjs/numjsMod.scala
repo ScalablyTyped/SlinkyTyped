@@ -3,11 +3,6 @@ package typingsSlinky.numjs
 import typingsSlinky.ndarray.ndarrayMod.Data
 import typingsSlinky.ndarray.ndarrayMod.DataType
 import typingsSlinky.ndarray.ndarrayMod.ndarray
-import typingsSlinky.numjs.numjsMod.NdArray
-import typingsSlinky.numjs.numjsMod.NdArrayData
-import typingsSlinky.numjs.numjsMod.NdType
-import typingsSlinky.numjs.numjsMod.NjArray
-import typingsSlinky.numjs.numjsMod.NjParam
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.atJestTransform
 
-import typingsSlinky.atJestTransform.atJestTransformStrings.`ObjectDOT<anonymous>`
-import typingsSlinky.atJestTransform.buildScriptTransformerMod.ScriptTransformer
+import typingsSlinky.atJestTransform.atJestTransformStrings.ObjectDotLessthansignanonymousGreaterthansign
 import typingsSlinky.atJestTransform.buildTypesMod.Options
 import typingsSlinky.atJestTransform.buildTypesMod.TransformResult
 import typingsSlinky.atJestTypes.buildConfigMod.Path
@@ -31,12 +30,12 @@ object buildScriptTransformerMod extends js.Object {
     var _transformCache: js.Any = js.native
     var _transformConfigCache: js.Any = js.native
     def preloadTransformer(filepath: Path): Unit = js.native
-    def requireAndTranspileModule[ModuleType](moduleName: String): js.Promise[ModuleType] = js.native
-    def requireAndTranspileModule[ModuleType](moduleName: String, callback: js.Function1[/* module */ ModuleType, js.Promise[Unit]]): js.Promise[ModuleType] = js.native
+    def requireAndTranspileModule[ModuleType](moduleName: String): ModuleType = js.native
+    def requireAndTranspileModule[ModuleType](moduleName: String, callback: js.Function1[/* module */ ModuleType, Unit]): ModuleType = js.native
     @JSName("requireAndTranspileModule")
-    def requireAndTranspileModule_ModuleType_ModuleType[ModuleType](moduleName: String): ModuleType = js.native
+    def requireAndTranspileModule_ModuleType_Promise[ModuleType](moduleName: String): js.Promise[ModuleType] = js.native
     @JSName("requireAndTranspileModule")
-    def requireAndTranspileModule_ModuleType_ModuleType[ModuleType](moduleName: String, callback: js.Function1[/* module */ ModuleType, Unit]): ModuleType = js.native
+    def requireAndTranspileModule_ModuleType_Promise[ModuleType](moduleName: String, callback: js.Function1[/* module */ ModuleType, js.Promise[Unit]]): js.Promise[ModuleType] = js.native
     def shouldTransform(filename: Path): Boolean = js.native
     def transform(filename: Path, options: Options): TransformResult = js.native
     def transform(filename: Path, options: Options, fileSource: String): TransformResult = js.native
@@ -52,7 +51,7 @@ object buildScriptTransformerMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var EVAL_RESULT_VARIABLE: `ObjectDOT<anonymous>` = js.native
+    var EVAL_RESULT_VARIABLE: ObjectDotLessthansignanonymousGreaterthansign = js.native
   }
   
 }

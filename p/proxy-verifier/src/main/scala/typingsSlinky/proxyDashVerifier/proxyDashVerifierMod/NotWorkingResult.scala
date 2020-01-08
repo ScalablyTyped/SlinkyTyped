@@ -1,7 +1,7 @@
 package typingsSlinky.proxyDashVerifier.proxyDashVerifierMod
 
 import typingsSlinky.proxyDashVerifier.Anon_Code
-import typingsSlinky.proxyDashVerifier.proxyDashVerifierNumbers.`false`
+import typingsSlinky.proxyDashVerifier.proxyDashVerifierBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

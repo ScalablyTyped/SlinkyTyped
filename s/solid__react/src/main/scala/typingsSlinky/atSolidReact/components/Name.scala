@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Name
-  extends SharedApply_Anon_Src_1380078271[typingsSlinky.atSolidReact.atSolidReactMod.Name] {
+  extends SharedApply_Anon_Src_115666590[typingsSlinky.atSolidReact.atSolidReactMod.Name] {
   @JSImport("@solid/react", "Name")
   @js.native
   object componentImport extends js.Object

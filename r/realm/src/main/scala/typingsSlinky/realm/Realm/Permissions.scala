@@ -1,8 +1,5 @@
 package typingsSlinky.realm.Realm
 
-import typingsSlinky.realm.Realm.Permissions.Permission
-import typingsSlinky.realm.Realm.Permissions.Role
-import typingsSlinky.realm.Realm.Permissions.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

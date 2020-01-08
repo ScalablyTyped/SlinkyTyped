@@ -1,7 +1,7 @@
 package typingsSlinky.atWordpressData.atWordpressDataMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atWordpressData.atWordpressDataNumbers.`true`
+import typingsSlinky.atWordpressData.atWordpressDataBooleans.`true`
 import typingsSlinky.redux.reduxMod.AnyAction
 import typingsSlinky.redux.reduxMod.Reducer
 import typingsSlinky.std.Generator

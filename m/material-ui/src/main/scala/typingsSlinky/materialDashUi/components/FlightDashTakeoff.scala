@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FlightDashTakeoff extends SharedApply_SvgIconProps657215518[default] {
+object FlightDashTakeoff extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/action/flight-takeoff", JSImport.Default)
   @js.native
   object componentImport extends js.Object

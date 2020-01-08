@@ -3,8 +3,8 @@ package typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat
 import typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.atFormatjsIntlDashUnifiedDashNumberformatStrings.localeMatcher
 import typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.libCoreMod.UnifiedNumberFormat
 import typingsSlinky.atFormatjsIntlDashUnifiedDashNumberformat.libCoreMod.UnifiedNumberFormatOptions
-import typingsSlinky.atFormatjsIntlDashUtils.distUnifiedDashNumberformatDashTypesMod.UnifiedNumberFormatLocaleData
-import typingsSlinky.atFormatjsIntlDashUtils.distUnifiedDashNumberformatDashTypesMod.UnitData
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.NumberLocaleInternalData
+import typingsSlinky.atFormatjsIntlDashUtils.distNumberDashTypesMod.RawNumberLocaleData
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -25,14 +25,12 @@ object libLocalesMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    val __INTERNAL_SLOT_MAP__ : js.Any = js.native
     var __defaultLocale: js.Any = js.native
     var availableLocales: js.Any = js.native
-    var getDefaultLocale: js.Any = js.native
-    var localeData: Record[String, Record[String, UnitData]] = js.native
+    var localeData: Record[String, NumberLocaleInternalData] = js.native
     var polyfilled: Boolean = js.native
-    var relevantExtensionKeys: js.Any = js.native
-    def __addLocaleData(data: UnifiedNumberFormatLocaleData*): Unit = js.native
+    def __addLocaleData(data: RawNumberLocaleData*): Unit = js.native
+    def getDefaultLocale(): String = js.native
     def supportedLocalesOf(locales: String): js.Array[String] = js.native
     def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
     @JSName("supportedLocalesOf")

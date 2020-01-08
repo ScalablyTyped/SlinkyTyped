@@ -67,7 +67,6 @@ class Buffer protected ()
     */
   def this(str: java.lang.String) = this()
   def this(str: java.lang.String, encoding: BufferEncoding) = this()
-  var constructor: TypeofClassBuffer = js.native
   def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
   def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double): Double = js.native
   def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native

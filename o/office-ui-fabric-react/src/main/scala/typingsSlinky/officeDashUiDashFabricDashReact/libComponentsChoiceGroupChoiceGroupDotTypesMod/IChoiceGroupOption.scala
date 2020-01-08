@@ -22,6 +22,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsChoiceGroupCho
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsChoiceGroupChoiceGroupOptionChoiceGroupOptionDotTypesMod.IChoiceGroupOptionStyles
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsIconIconDotTypesMod.IIconProps
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEvent
 import typingsSlinky.react.reactMod.DragEvent
@@ -44,6 +45,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -115,7 +117,7 @@ trait IChoiceGroupOption extends InputHTMLAttributes[HTMLElement | HTMLInputElem
   /**
     * Optional override of label render
     */
-  var onRenderLabel: js.UndefOr[js.Function1[/* option */ IChoiceGroupOption, Element]] = js.undefined
+  var onRenderLabel: js.UndefOr[IRenderFunction[IChoiceGroupOption]] = js.undefined
   /**
     * The src of image for choice field which is selected.
     */
@@ -198,7 +200,7 @@ object IChoiceGroupOption {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     crossOrigin: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
@@ -310,7 +312,7 @@ object IChoiceGroupOption {
     onProgress: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
     onRateChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.HTMLInputElement] => Unit = null,
     onRenderField: (/* props */ js.UndefOr[IChoiceGroupOption], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IChoiceGroupOption], Element | Null]]) => Element | Null = null,
-    onRenderLabel: /* option */ IChoiceGroupOption => Element = null,
+    onRenderLabel: (/* props */ js.UndefOr[IChoiceGroupOption], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IChoiceGroupOption], Element | Null]]) => Element | Null = null,
     onReset: SyntheticEvent[
       EventTarget with (org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.HTMLInputElement), 
       Event
@@ -429,7 +431,7 @@ object IChoiceGroupOption {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
@@ -532,7 +534,7 @@ object IChoiceGroupOption {
     if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
     if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
     if (onRenderField != null) __obj.updateDynamic("onRenderField")(js.Any.fromFunction2(onRenderField))
-    if (onRenderLabel != null) __obj.updateDynamic("onRenderLabel")(js.Any.fromFunction1(onRenderLabel))
+    if (onRenderLabel != null) __obj.updateDynamic("onRenderLabel")(js.Any.fromFunction2(onRenderLabel))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
     if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))

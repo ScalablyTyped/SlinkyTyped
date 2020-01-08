@@ -1,6 +1,6 @@
 package typingsSlinky.kss.kssMod
 
-import typingsSlinky.kss.kssNumbers.`false`
+import typingsSlinky.kss.kssBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

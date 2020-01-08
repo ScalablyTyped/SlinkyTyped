@@ -21,10 +21,10 @@ object ReactDashCreditDashCards
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
   def apply(
     cvc: String | Double,
     expiry: String | Double,
+    name: String,
     number: String | Double,
     acceptedCards: js.Array[String] = null,
     callback: (/* type */ CallbackArgument, /* isValid */ Boolean) => Unit = null,
@@ -35,7 +35,7 @@ object ReactDashCreditDashCards
     preview: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
     if (acceptedCards != null) __obj.updateDynamic("acceptedCards")(acceptedCards.asInstanceOf[js.Any])
     if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction2(callback))
     if (focused != null) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])

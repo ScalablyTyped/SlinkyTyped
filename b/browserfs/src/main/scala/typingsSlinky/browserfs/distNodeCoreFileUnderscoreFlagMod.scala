@@ -1,7 +1,6 @@
 package typingsSlinky.browserfs
 
-import typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.ActionType
-import typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.FileFlag
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,12 +74,20 @@ object distNodeCoreFileUnderscoreFlagMod extends js.Object {
     @js.native
     sealed trait TRUNCATE_FILE extends ActionType
     
-    /* 3 */ val CREATE_FILE: typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.ActionType.CREATE_FILE with Double = js.native
-    /* 0 */ val NOP: typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.ActionType.NOP with Double = js.native
-    /* 1 */ val THROW_EXCEPTION: typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.ActionType.THROW_EXCEPTION with Double = js.native
-    /* 2 */ val TRUNCATE_FILE: typingsSlinky.browserfs.distNodeCoreFileUnderscoreFlagMod.ActionType.TRUNCATE_FILE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ActionType with Double] = js.native
+    /* 3 */ @js.native
+    object CREATE_FILE extends TopLevel[CREATE_FILE with Double]
+    
+    /* 0 */ @js.native
+    object NOP extends TopLevel[NOP with Double]
+    
+    /* 1 */ @js.native
+    object THROW_EXCEPTION extends TopLevel[THROW_EXCEPTION with Double]
+    
+    /* 2 */ @js.native
+    object TRUNCATE_FILE extends TopLevel[TRUNCATE_FILE with Double]
+    
   }
   
   /* static members */

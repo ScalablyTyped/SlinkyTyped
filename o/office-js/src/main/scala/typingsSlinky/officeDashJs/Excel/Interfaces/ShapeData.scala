@@ -3,7 +3,10 @@ package typingsSlinky.officeDashJs.Excel.Interfaces
 import typingsSlinky.officeDashJs.Excel.Placement
 import typingsSlinky.officeDashJs.Excel.ShapeType
 import typingsSlinky.officeDashJs.officeDashJsStrings.Absolute
+import typingsSlinky.officeDashJs.officeDashJsStrings.GeometricShape
 import typingsSlinky.officeDashJs.officeDashJsStrings.Group
+import typingsSlinky.officeDashJs.officeDashJsStrings.Image
+import typingsSlinky.officeDashJs.officeDashJsStrings.Line
 import typingsSlinky.officeDashJs.officeDashJsStrings.OneCell
 import typingsSlinky.officeDashJs.officeDashJsStrings.TwoCell
 import typingsSlinky.officeDashJs.officeDashJsStrings.Unsupported
@@ -129,9 +132,7 @@ trait ShapeData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: js.UndefOr[
-    ShapeType | Unsupported | typingsSlinky.officeDashJs.officeDashJsStrings.Image | typingsSlinky.officeDashJs.officeDashJsStrings.GeometricShape | Group | typingsSlinky.officeDashJs.officeDashJsStrings.Line
-  ] = js.undefined
+  var `type`: js.UndefOr[ShapeType | Unsupported | Image | GeometricShape | Group | Line] = js.undefined
   /**
     *
     * Represents the visibility of this shape.
@@ -174,7 +175,7 @@ object ShapeData {
     placement: Placement | TwoCell | OneCell | Absolute = null,
     rotation: Int | Double = null,
     top: Int | Double = null,
-    `type`: ShapeType | Unsupported | typingsSlinky.officeDashJs.officeDashJsStrings.Image | typingsSlinky.officeDashJs.officeDashJsStrings.GeometricShape | Group | typingsSlinky.officeDashJs.officeDashJsStrings.Line = null,
+    `type`: ShapeType | Unsupported | Image | GeometricShape | Group | Line = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     width: Int | Double = null,
     zOrderPosition: Int | Double = null

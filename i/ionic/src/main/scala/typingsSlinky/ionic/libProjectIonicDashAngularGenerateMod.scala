@@ -3,7 +3,6 @@ package typingsSlinky.ionic
 import typingsSlinky.ionic.definitionsMod.IonicAngularGenerateOptions
 import typingsSlinky.ionic.libGenerateMod.GenerateRunner
 import typingsSlinky.ionic.libGenerateMod.GenerateRunnerDeps
-import typingsSlinky.ionic.libProjectIonicDashAngularGenerateMod.IonicAngularGenerateRunnerDeps
 import typingsSlinky.ionic.libProjectIonicDashAngularMod.IonicAngularProject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

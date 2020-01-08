@@ -1,6 +1,5 @@
 package typingsSlinky.atSemanticDashUiDashReactEventDashStack
 
-import typingsSlinky.atSemanticDashUiDashReactEventDashStack.libTypesLibEventStackMod.EventStack
 import typingsSlinky.atSemanticDashUiDashReactEventDashStack.libTypesTypesMod.InputEventListener
 import typingsSlinky.atSemanticDashUiDashReactEventDashStack.libTypesTypesMod.Options
 import scala.scalajs.js

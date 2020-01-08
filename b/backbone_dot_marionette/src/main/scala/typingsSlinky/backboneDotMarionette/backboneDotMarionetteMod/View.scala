@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.backbone.backboneMod.Model
 import typingsSlinky.backboneDotMarionette.Anon_BehaviorClass
-import typingsSlinky.backboneDotMarionette.backboneDotMarionetteNumbers.`false`
+import typingsSlinky.backboneDotMarionette.backboneDotMarionetteBooleans.`false`
 import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

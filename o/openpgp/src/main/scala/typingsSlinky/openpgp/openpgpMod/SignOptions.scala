@@ -1,9 +1,9 @@
 package typingsSlinky.openpgp.openpgpMod
 
+import typingsSlinky.openpgp.openpgpBooleans.`false`
 import typingsSlinky.openpgp.openpgpMod.cleartext.CleartextMessage
 import typingsSlinky.openpgp.openpgpMod.key.Key
 import typingsSlinky.openpgp.openpgpMod.message.Message
-import typingsSlinky.openpgp.openpgpNumbers.`false`
 import typingsSlinky.openpgp.openpgpStrings.node
 import typingsSlinky.openpgp.openpgpStrings.web
 import scala.scalajs.js

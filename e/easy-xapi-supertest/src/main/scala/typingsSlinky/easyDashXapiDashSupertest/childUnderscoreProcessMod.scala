@@ -1,6 +1,5 @@
 package typingsSlinky.easyDashXapiDashSupertest
 
-import typingsSlinky.easyDashXapiDashSupertest.childUnderscoreProcessMod.ChildProcess
 import typingsSlinky.easyDashXapiDashSupertest.eventsMod.EventEmitter
 import typingsSlinky.easyDashXapiDashSupertest.streamMod.Readable
 import typingsSlinky.easyDashXapiDashSupertest.streamMod.Writable

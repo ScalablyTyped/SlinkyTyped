@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-drawer
 
-Typings are for version 3.0.2
+Typings are for version 3.1.1
 
 ## Library description:
 drawer component for react
@@ -10,9 +10,9 @@ drawer component for react
 | ------------------ | :-------------: |
 | Full name          | rc-drawer |
 | Keywords           | react, react-component, react-drawer, drawer, drawer-menu, rc-drawer-menu, react-drawer-menu, animation, drawer-motion, drawer-animation |
-| # releases         | 33 |
-| # dependents       | 82 |
-| # downloads        | 3142921 |
+| # releases         | 65 |
+| # dependents       | 146 |
+| # downloads        | 8780800 |
 | # stars            | 0 |
 
 ## Links

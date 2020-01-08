@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.UserProfiles
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FollowedStatus extends js.Object {
   @js.native
   sealed trait notFollowed extends FollowedStatus
   
-  /* 0 */ val followed: typingsSlinky.sharepoint.SP.UserProfiles.FollowedStatus.followed with Double = js.native
-  /* 2 */ val notFollowable: typingsSlinky.sharepoint.SP.UserProfiles.FollowedStatus.notFollowable with Double = js.native
-  /* 1 */ val notFollowed: typingsSlinky.sharepoint.SP.UserProfiles.FollowedStatus.notFollowed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FollowedStatus with Double] = js.native
+  /* 0 */ @js.native
+  object followed extends TopLevel[followed with Double]
+  
+  /* 2 */ @js.native
+  object notFollowable extends TopLevel[notFollowable with Double]
+  
+  /* 1 */ @js.native
+  object notFollowed extends TopLevel[notFollowed with Double]
+  
 }
 

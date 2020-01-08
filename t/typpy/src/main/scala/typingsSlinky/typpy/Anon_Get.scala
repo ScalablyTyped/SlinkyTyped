@@ -8,11 +8,11 @@ import typingsSlinky.std.ObjectConstructor
 import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpConstructor
 import typingsSlinky.std.StringConstructor
+import typingsSlinky.typpy.typpyBooleans.`false`
+import typingsSlinky.typpy.typpyBooleans.`true`
 import typingsSlinky.typpy.typpyMod.CompareFn
 import typingsSlinky.typpy.typpyMod.ConstructorFn
 import typingsSlinky.typpy.typpyMod.GetFn
-import typingsSlinky.typpy.typpyNumbers.`false`
-import typingsSlinky.typpy.typpyNumbers.`true`
 import typingsSlinky.typpy.typpyStrings.`null`
 import typingsSlinky.typpy.typpyStrings.`object`
 import typingsSlinky.typpy.typpyStrings.array
@@ -33,7 +33,7 @@ trait Anon_Get extends js.Object {
   var get_Original: GetFn = js.native
   @JSName("is")
   var is_Original: CompareFn = js.native
-  def get(): Unit = js.native
+  def get(): Null = js.native
   def get(input: String): StringConstructor = js.native
    // tslint:disable-line:ban-types
   def get(input: js.Any): ConstructorFn = js.native
@@ -43,7 +43,7 @@ trait Anon_Get extends js.Object {
   def get(input: Double): NumberConstructor | Double = js.native
   def get(input: RegExp): RegExpConstructor = js.native
   @JSName("get")
-  def get_Null(): Null = js.native
+  def get_Unit(): Unit = js.native
   @JSName("get")
   def get_false(input: js.UndefOr[scala.Nothing], asString: `false`): Unit = js.native
   @JSName("get")

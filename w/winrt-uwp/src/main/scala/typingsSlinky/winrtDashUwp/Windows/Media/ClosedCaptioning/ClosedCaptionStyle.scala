@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object ClosedCaptionStyle extends js.Object {
   @js.native
   sealed trait smallCapitals extends ClosedCaptionStyle
   
-  /* 5 */ val casual: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.casual with Double = js.native
-  /* 6 */ val cursive: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.cursive with Double = js.native
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.default with Double = js.native
-  /* 1 */ val monospacedWithSerifs: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.monospacedWithSerifs with Double = js.native
-  /* 3 */ val monospacedWithoutSerifs: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.monospacedWithoutSerifs with Double = js.native
-  /* 2 */ val proportionalWithSerifs: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.proportionalWithSerifs with Double = js.native
-  /* 4 */ val proportionalWithoutSerifs: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.proportionalWithoutSerifs with Double = js.native
-  /* 7 */ val smallCapitals: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.smallCapitals with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ClosedCaptionStyle with Double] = js.native
+  /* 5 */ @js.native
+  object casual extends TopLevel[casual with Double]
+  
+  /* 6 */ @js.native
+  object cursive extends TopLevel[cursive with Double]
+  
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object monospacedWithSerifs extends TopLevel[monospacedWithSerifs with Double]
+  
+  /* 3 */ @js.native
+  object monospacedWithoutSerifs extends TopLevel[monospacedWithoutSerifs with Double]
+  
+  /* 2 */ @js.native
+  object proportionalWithSerifs extends TopLevel[proportionalWithSerifs with Double]
+  
+  /* 4 */ @js.native
+  object proportionalWithoutSerifs extends TopLevel[proportionalWithoutSerifs with Double]
+  
+  /* 7 */ @js.native
+  object smallCapitals extends TopLevel[smallCapitals with Double]
+  
 }
 

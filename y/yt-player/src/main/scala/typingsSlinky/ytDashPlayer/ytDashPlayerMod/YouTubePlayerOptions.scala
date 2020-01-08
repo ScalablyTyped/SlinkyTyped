@@ -1,6 +1,6 @@
 package typingsSlinky.ytDashPlayer.ytDashPlayerMod
 
-import typingsSlinky.ytDashPlayer.ytDashPlayerNumbers.`false`
+import typingsSlinky.ytDashPlayer.ytDashPlayerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

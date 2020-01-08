@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libDropdownListMod.DropdownListMessages
 import typingsSlinky.reactDashWidgets.libDropdownListMod.DropdownListProps
-import typingsSlinky.reactDashWidgets.reactDashWidgetsNumbers.`false`
+import typingsSlinky.reactDashWidgets.libDropdownListMod.^
+import typingsSlinky.reactDashWidgets.reactDashWidgetsBooleans.`false`
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.contains
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.endsWith
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.onFilter
@@ -18,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropdownList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/DropdownList", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -28,6 +29,7 @@ object DropdownList
   def apply(
     allowCreate: Boolean | onFilter = null,
     busy: js.UndefOr[Boolean] = js.undefined,
+    busySpinner: TagMod[Any] = null,
     caseSensitive: js.UndefOr[Boolean] = js.undefined,
     containerClassName: String = null,
     data: js.Array[_] = null,
@@ -56,10 +58,11 @@ object DropdownList
     valueComponent: ReactComponentClass[_] = null,
     valueField: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (allowCreate != null) __obj.updateDynamic("allowCreate")(allowCreate.asInstanceOf[js.Any])
     if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
+    if (busySpinner != null) __obj.updateDynamic("busySpinner")(busySpinner.asInstanceOf[js.Any])
     if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.asInstanceOf[js.Any])
     if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
@@ -90,6 +93,7 @@ object DropdownList
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashWidgets.libDropdownListMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DropdownListProps
 }
 

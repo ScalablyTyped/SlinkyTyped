@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object MagneticStripeReaderTrackErrorType extends js.Object {
   @js.native
   sealed trait unknown extends MagneticStripeReaderTrackErrorType
   
-  /* 2 */ val endSentinelError: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.endSentinelError with Double = js.native
-  /* 4 */ val lrcError: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.lrcError with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.none with Double = js.native
-  /* 3 */ val parityError: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.parityError with Double = js.native
-  /* 1 */ val startSentinelError: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.startSentinelError with Double = js.native
-  /* 5 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MagneticStripeReaderTrackErrorType with Double] = js.native
+  /* 2 */ @js.native
+  object endSentinelError extends TopLevel[endSentinelError with Double]
+  
+  /* 4 */ @js.native
+  object lrcError extends TopLevel[lrcError with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object parityError extends TopLevel[parityError with Double]
+  
+  /* 1 */ @js.native
+  object startSentinelError extends TopLevel[startSentinelError with Double]
+  
+  /* 5 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

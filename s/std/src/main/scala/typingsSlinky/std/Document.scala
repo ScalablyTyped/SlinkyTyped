@@ -8,8 +8,6 @@ import typingsSlinky.std.stdStrings.MutationEvents
 import typingsSlinky.std.stdStrings.SVGZoomEvents
 import typingsSlinky.std.stdStrings.UIEvents
 import typingsSlinky.std.stdStrings.`VRDisplayEvent `
-import typingsSlinky.std.stdStrings.`http://wwwDOTw3DOTorg/1999/xhtml`
-import typingsSlinky.std.stdStrings.`http://wwwDOTw3DOTorg/2000/svg`
 import typingsSlinky.std.stdStrings.`object`
 import typingsSlinky.std.stdStrings.`var`
 import typingsSlinky.std.stdStrings.a
@@ -100,6 +98,8 @@ import typingsSlinky.std.stdStrings.header
 import typingsSlinky.std.stdStrings.hgroup
 import typingsSlinky.std.stdStrings.hr
 import typingsSlinky.std.stdStrings.html
+import typingsSlinky.std.stdStrings.httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml
+import typingsSlinky.std.stdStrings.httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg
 import typingsSlinky.std.stdStrings.i
 import typingsSlinky.std.stdStrings.iframe
 import typingsSlinky.std.stdStrings.image
@@ -385,19 +385,6 @@ trait Document
     */
   /** @deprecated */
   var vlinkColor: java.lang.String = js.native
-  /**
-    * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
-    * 
-    * The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
-    * 
-    * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
-    * 
-    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in §2.8 Observing event listeners.
-    * 
-    * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
-    * 
-    * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
-    */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -550,63 +537,72 @@ trait Document
   def createElementNS(namespaceURI: java.lang.String, qualifiedName: java.lang.String, options: ElementCreationOptions): org.scalajs.dom.raw.Element = js.native
   def createElementNS(namespaceURI: Null, qualifiedName: java.lang.String): org.scalajs.dom.raw.Element = js.native
   def createElementNS(namespaceURI: Null, qualifiedName: java.lang.String, options: ElementCreationOptions): org.scalajs.dom.raw.Element = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: a): org.scalajs.dom.raw.SVGAElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: circle): org.scalajs.dom.raw.SVGCircleElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: clipPath): org.scalajs.dom.raw.SVGClipPathElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: defs): org.scalajs.dom.raw.SVGDefsElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: desc): org.scalajs.dom.raw.SVGDescElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: ellipse): org.scalajs.dom.raw.SVGEllipseElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feBlend): org.scalajs.dom.raw.SVGFEBlendElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feColorMatrix): org.scalajs.dom.raw.SVGFEColorMatrixElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feComponentTransfer): org.scalajs.dom.raw.SVGFEComponentTransferElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feComposite): org.scalajs.dom.raw.SVGFECompositeElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feConvolveMatrix): org.scalajs.dom.raw.SVGFEConvolveMatrixElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feDiffuseLighting): org.scalajs.dom.raw.SVGFEDiffuseLightingElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feDisplacementMap): org.scalajs.dom.raw.SVGFEDisplacementMapElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feDistantLight): org.scalajs.dom.raw.SVGFEDistantLightElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feFlood): org.scalajs.dom.raw.SVGFEFloodElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feFuncA): org.scalajs.dom.raw.SVGFEFuncAElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feFuncB): org.scalajs.dom.raw.SVGFEFuncBElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feFuncG): org.scalajs.dom.raw.SVGFEFuncGElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feFuncR): org.scalajs.dom.raw.SVGFEFuncRElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feGaussianBlur): org.scalajs.dom.raw.SVGFEGaussianBlurElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feImage): org.scalajs.dom.raw.SVGFEImageElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feMerge): org.scalajs.dom.raw.SVGFEMergeElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feMergeNode): org.scalajs.dom.raw.SVGFEMergeNodeElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feMorphology): org.scalajs.dom.raw.SVGFEMorphologyElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feOffset): org.scalajs.dom.raw.SVGFEOffsetElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: fePointLight): org.scalajs.dom.raw.SVGFEPointLightElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feSpecularLighting): org.scalajs.dom.raw.SVGFESpecularLightingElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feSpotLight): org.scalajs.dom.raw.SVGFESpotLightElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feTile): org.scalajs.dom.raw.SVGFETileElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: feTurbulence): org.scalajs.dom.raw.SVGFETurbulenceElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: filter): org.scalajs.dom.raw.SVGFilterElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: foreignObject): SVGForeignObjectElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: g): org.scalajs.dom.raw.SVGGElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: image): org.scalajs.dom.raw.SVGImageElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: line): org.scalajs.dom.raw.SVGLineElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: linearGradient): org.scalajs.dom.raw.SVGLinearGradientElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: marker): org.scalajs.dom.raw.SVGMarkerElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: mask): org.scalajs.dom.raw.SVGMaskElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: metadata): org.scalajs.dom.raw.SVGMetadataElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: path): org.scalajs.dom.raw.SVGPathElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: pattern): org.scalajs.dom.raw.SVGPatternElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: polygon): org.scalajs.dom.raw.SVGPolygonElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: polyline): org.scalajs.dom.raw.SVGPolylineElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: radialGradient): org.scalajs.dom.raw.SVGRadialGradientElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: rect): org.scalajs.dom.raw.SVGRectElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: script): org.scalajs.dom.raw.SVGScriptElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: typingsSlinky.std.stdStrings.stop): org.scalajs.dom.raw.SVGStopElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: style): org.scalajs.dom.raw.SVGStyleElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: svg): org.scalajs.dom.raw.SVGSVGElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: switch): org.scalajs.dom.raw.SVGSwitchElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: symbol): org.scalajs.dom.raw.SVGSymbolElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: text): org.scalajs.dom.raw.SVGTextElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: textPath): org.scalajs.dom.raw.SVGTextPathElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: title): org.scalajs.dom.raw.SVGTitleElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: tspan): org.scalajs.dom.raw.SVGTSpanElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: use): org.scalajs.dom.raw.SVGUseElement = js.native
-  def createElementNS(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: view): org.scalajs.dom.raw.SVGViewElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: a): org.scalajs.dom.raw.SVGAElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: circle): org.scalajs.dom.raw.SVGCircleElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: clipPath): org.scalajs.dom.raw.SVGClipPathElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: defs): org.scalajs.dom.raw.SVGDefsElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: desc): org.scalajs.dom.raw.SVGDescElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: ellipse): org.scalajs.dom.raw.SVGEllipseElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feBlend): org.scalajs.dom.raw.SVGFEBlendElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feColorMatrix): org.scalajs.dom.raw.SVGFEColorMatrixElement = js.native
+  def createElementNS(
+    namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg,
+    qualifiedName: feComponentTransfer
+  ): org.scalajs.dom.raw.SVGFEComponentTransferElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feComposite): org.scalajs.dom.raw.SVGFECompositeElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feConvolveMatrix): org.scalajs.dom.raw.SVGFEConvolveMatrixElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feDiffuseLighting): org.scalajs.dom.raw.SVGFEDiffuseLightingElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feDisplacementMap): org.scalajs.dom.raw.SVGFEDisplacementMapElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feDistantLight): org.scalajs.dom.raw.SVGFEDistantLightElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feFlood): org.scalajs.dom.raw.SVGFEFloodElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feFuncA): org.scalajs.dom.raw.SVGFEFuncAElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feFuncB): org.scalajs.dom.raw.SVGFEFuncBElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feFuncG): org.scalajs.dom.raw.SVGFEFuncGElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feFuncR): org.scalajs.dom.raw.SVGFEFuncRElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feGaussianBlur): org.scalajs.dom.raw.SVGFEGaussianBlurElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feImage): org.scalajs.dom.raw.SVGFEImageElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feMerge): org.scalajs.dom.raw.SVGFEMergeElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feMergeNode): org.scalajs.dom.raw.SVGFEMergeNodeElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feMorphology): org.scalajs.dom.raw.SVGFEMorphologyElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feOffset): org.scalajs.dom.raw.SVGFEOffsetElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: fePointLight): org.scalajs.dom.raw.SVGFEPointLightElement = js.native
+  def createElementNS(
+    namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg,
+    qualifiedName: feSpecularLighting
+  ): org.scalajs.dom.raw.SVGFESpecularLightingElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feSpotLight): org.scalajs.dom.raw.SVGFESpotLightElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feTile): org.scalajs.dom.raw.SVGFETileElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: feTurbulence): org.scalajs.dom.raw.SVGFETurbulenceElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: filter): org.scalajs.dom.raw.SVGFilterElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: foreignObject): SVGForeignObjectElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: g): org.scalajs.dom.raw.SVGGElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: image): org.scalajs.dom.raw.SVGImageElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: line): org.scalajs.dom.raw.SVGLineElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: linearGradient): org.scalajs.dom.raw.SVGLinearGradientElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: marker): org.scalajs.dom.raw.SVGMarkerElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: mask): org.scalajs.dom.raw.SVGMaskElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: metadata): org.scalajs.dom.raw.SVGMetadataElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: path): org.scalajs.dom.raw.SVGPathElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: pattern): org.scalajs.dom.raw.SVGPatternElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: polygon): org.scalajs.dom.raw.SVGPolygonElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: polyline): org.scalajs.dom.raw.SVGPolylineElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: radialGradient): org.scalajs.dom.raw.SVGRadialGradientElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: rect): org.scalajs.dom.raw.SVGRectElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: script): org.scalajs.dom.raw.SVGScriptElement = js.native
+  def createElementNS(
+    namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg,
+    qualifiedName: typingsSlinky.std.stdStrings.stop
+  ): org.scalajs.dom.raw.SVGStopElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: style): org.scalajs.dom.raw.SVGStyleElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: svg): org.scalajs.dom.raw.SVGSVGElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: switch): org.scalajs.dom.raw.SVGSwitchElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: symbol): org.scalajs.dom.raw.SVGSymbolElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: text): org.scalajs.dom.raw.SVGTextElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: textPath): org.scalajs.dom.raw.SVGTextPathElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: title): org.scalajs.dom.raw.SVGTitleElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: tspan): org.scalajs.dom.raw.SVGTSpanElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: use): org.scalajs.dom.raw.SVGUseElement = js.native
+  def createElementNS(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: view): org.scalajs.dom.raw.SVGViewElement = js.native
   def createElementNS(namespace: java.lang.String, qualifiedName: java.lang.String, options: java.lang.String): org.scalajs.dom.raw.Element = js.native
   def createElementNS(namespace: Null, qualifiedName: java.lang.String, options: java.lang.String): org.scalajs.dom.raw.Element = js.native
   /**
@@ -625,9 +621,12 @@ trait Document
     * When supplied, options's is can be used to create a customized built-in element.
     */
   @JSName("createElementNS")
-  def createElementNS_httpwwww3org1999xhtml(namespaceURI: `http://wwwDOTw3DOTorg/1999/xhtml`, qualifiedName: java.lang.String): org.scalajs.dom.raw.HTMLElement = js.native
+  def createElementNS_httpwwww3org1999xhtml(
+    namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml,
+    qualifiedName: java.lang.String
+  ): org.scalajs.dom.raw.HTMLElement = js.native
   @JSName("createElementNS")
-  def createElementNS_httpwwww3org2000svg(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, qualifiedName: java.lang.String): org.scalajs.dom.raw.SVGElement = js.native
+  def createElementNS_httpwwww3org2000svg(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, qualifiedName: java.lang.String): org.scalajs.dom.raw.SVGElement = js.native
   /**
     * Creates an instance of the element for the specified tag.
     * @param tagName The name of an element.
@@ -1355,9 +1354,9 @@ trait Document
     * Otherwise, returns a HTMLCollection of all descendant elements whose namespace is namespace and local name is localName.
     */
   @JSName("getElementsByTagNameNS")
-  def getElementsByTagNameNS_httpwwww3org1999xhtml(namespaceURI: `http://wwwDOTw3DOTorg/1999/xhtml`, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
+  def getElementsByTagNameNS_httpwwww3org1999xhtml(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagNameNS")
-  def getElementsByTagNameNS_httpwwww3org2000svg(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.SVGElement] = js.native
+  def getElementsByTagNameNS_httpwwww3org2000svg(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.SVGElement] = js.native
   /**
     * Retrieves a collection of objects based on the specified element name.
     * @param name Specifies the name of an element.
@@ -1755,17 +1754,14 @@ trait Document
   def queryCommandValue(commandId: java.lang.String): java.lang.String = js.native
   /** @deprecated */
   def releaseEvents(): Unit = js.native
-  /**
-    * Removes the event listener in target's event listener list with the same type, callback, and options.
-    */
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
-    callback: EventListenerOrEventListenerObject,
+    listener: EventListenerOrEventListenerObject,
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")

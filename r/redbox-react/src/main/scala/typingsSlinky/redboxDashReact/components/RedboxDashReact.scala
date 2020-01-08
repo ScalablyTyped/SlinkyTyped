@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RedboxDashReact extends SharedApply_RedBoxProps_721629917[default] {
+object RedboxDashReact extends SharedApply_RedBoxProps_721795968[default] {
   @JSImport("redbox-react", JSImport.Default)
   @js.native
   object componentImport extends js.Object

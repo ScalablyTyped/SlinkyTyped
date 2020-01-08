@@ -1,7 +1,7 @@
 package typingsSlinky.onionoo.onionooMod.Onionoo
 
 import typingsSlinky.got.gotMod.Cache
-import typingsSlinky.onionoo.onionooNumbers.`false`
+import typingsSlinky.onionoo.onionooBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

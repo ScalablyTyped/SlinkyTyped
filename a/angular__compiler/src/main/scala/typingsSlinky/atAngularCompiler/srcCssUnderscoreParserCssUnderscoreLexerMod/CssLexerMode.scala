@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,21 +53,49 @@ object CssLexerMode extends js.Object {
   @js.native
   sealed trait STYLE_VALUE_FUNCTION extends CssLexerMode
   
-  /* 0 */ val ALL: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.ALL with Double = js.native
-  /* 1 */ val ALL_TRACK_WS: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.ALL_TRACK_WS with Double = js.native
-  /* 5 */ val ATTRIBUTE_SELECTOR: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.ATTRIBUTE_SELECTOR with Double = js.native
-  /* 6 */ val AT_RULE_QUERY: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.AT_RULE_QUERY with Double = js.native
-  /* 8 */ val BLOCK: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.BLOCK with Double = js.native
-  /* 9 */ val KEYFRAME_BLOCK: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.KEYFRAME_BLOCK with Double = js.native
-  /* 7 */ val MEDIA_QUERY: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.MEDIA_QUERY with Double = js.native
-  /* 3 */ val PSEUDO_SELECTOR: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.PSEUDO_SELECTOR with Double = js.native
-  /* 4 */ val PSEUDO_SELECTOR_WITH_ARGUMENTS: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.PSEUDO_SELECTOR_WITH_ARGUMENTS with Double = js.native
-  /* 2 */ val SELECTOR: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.SELECTOR with Double = js.native
-  /* 10 */ val STYLE_BLOCK: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.STYLE_BLOCK with Double = js.native
-  /* 13 */ val STYLE_CALC_FUNCTION: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.STYLE_CALC_FUNCTION with Double = js.native
-  /* 11 */ val STYLE_VALUE: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.STYLE_VALUE with Double = js.native
-  /* 12 */ val STYLE_VALUE_FUNCTION: typingsSlinky.atAngularCompiler.srcCssUnderscoreParserCssUnderscoreLexerMod.CssLexerMode.STYLE_VALUE_FUNCTION with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CssLexerMode with Double] = js.native
+  /* 0 */ @js.native
+  object ALL extends TopLevel[ALL with Double]
+  
+  /* 1 */ @js.native
+  object ALL_TRACK_WS extends TopLevel[ALL_TRACK_WS with Double]
+  
+  /* 5 */ @js.native
+  object ATTRIBUTE_SELECTOR extends TopLevel[ATTRIBUTE_SELECTOR with Double]
+  
+  /* 6 */ @js.native
+  object AT_RULE_QUERY extends TopLevel[AT_RULE_QUERY with Double]
+  
+  /* 8 */ @js.native
+  object BLOCK extends TopLevel[BLOCK with Double]
+  
+  /* 9 */ @js.native
+  object KEYFRAME_BLOCK extends TopLevel[KEYFRAME_BLOCK with Double]
+  
+  /* 7 */ @js.native
+  object MEDIA_QUERY extends TopLevel[MEDIA_QUERY with Double]
+  
+  /* 3 */ @js.native
+  object PSEUDO_SELECTOR extends TopLevel[PSEUDO_SELECTOR with Double]
+  
+  /* 4 */ @js.native
+  object PSEUDO_SELECTOR_WITH_ARGUMENTS extends TopLevel[PSEUDO_SELECTOR_WITH_ARGUMENTS with Double]
+  
+  /* 2 */ @js.native
+  object SELECTOR extends TopLevel[SELECTOR with Double]
+  
+  /* 10 */ @js.native
+  object STYLE_BLOCK extends TopLevel[STYLE_BLOCK with Double]
+  
+  /* 13 */ @js.native
+  object STYLE_CALC_FUNCTION extends TopLevel[STYLE_CALC_FUNCTION with Double]
+  
+  /* 11 */ @js.native
+  object STYLE_VALUE extends TopLevel[STYLE_VALUE with Double]
+  
+  /* 12 */ @js.native
+  object STYLE_VALUE_FUNCTION extends TopLevel[STYLE_VALUE_FUNCTION with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libComboboxMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type ComboBox = ReactElement
+  type ComboboxClass = ReactComponentClass[ComboboxProps]
 }

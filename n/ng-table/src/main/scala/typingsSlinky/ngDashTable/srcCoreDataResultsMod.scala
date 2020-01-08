@@ -1,6 +1,5 @@
 package typingsSlinky.ngDashTable
 
-import typingsSlinky.ngDashTable.srcCoreDataResultsMod.IDataRowGroup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

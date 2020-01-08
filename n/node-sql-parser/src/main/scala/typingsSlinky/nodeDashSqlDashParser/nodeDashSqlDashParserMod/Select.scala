@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserMod
 
+import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.Asterisk
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.DISTINCT
 import typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.select
 import scala.scalajs.js
@@ -7,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Select extends AST {
-  var columns: js.Array[_] | typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.`*`
+  var columns: js.Array[_] | Asterisk
   var distinct: DISTINCT | Null
   var from: (js.Array[From | Dual]) | Null
   var groupby: js.Array[ColumnRef] | Null
@@ -23,7 +24,7 @@ trait Select extends AST {
 object Select {
   @scala.inline
   def apply(
-    columns: js.Array[_] | typingsSlinky.nodeDashSqlDashParser.nodeDashSqlDashParserStrings.`*`,
+    columns: js.Array[_] | Asterisk,
     `type`: select,
     where: js.Any,
     distinct: DISTINCT = null,

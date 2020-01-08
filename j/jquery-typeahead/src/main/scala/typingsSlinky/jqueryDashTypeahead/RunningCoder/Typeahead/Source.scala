@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryDashTypeahead.RunningCoder.Typeahead
 
-import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadNumbers.`false`
+import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadBooleans.`false`
 import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadStrings.localStorage
 import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadStrings.sessionStorage
 import scala.scalajs.js

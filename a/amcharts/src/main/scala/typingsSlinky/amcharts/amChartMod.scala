@@ -1,7 +1,6 @@
 package typingsSlinky.amcharts
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.amcharts.amChartMod.AmChart
 import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`

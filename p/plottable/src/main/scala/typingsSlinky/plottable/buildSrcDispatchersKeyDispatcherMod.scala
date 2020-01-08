@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.plottable.buildSrcDispatchersDispatcherMod.Dispatcher
-import typingsSlinky.plottable.buildSrcDispatchersKeyDispatcherMod.KeyCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

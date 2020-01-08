@@ -3,7 +3,6 @@ package typingsSlinky.atGrpcGrpcDashJs
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcCallDashStreamMod.Call
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcCallDashStreamMod.StatusObject
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcCallDashStreamMod.WriteObject
-import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterDashStackMod.FilterStack
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterMod.Filter
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcFilterMod.FilterFactory
 import typingsSlinky.atGrpcGrpcDashJs.buildSrcMetadataMod.Metadata

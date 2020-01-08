@@ -1,9 +1,11 @@
 package typingsSlinky.sharedb.sharedbMod.middleware
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.sharedb.libAgentMod.^
 import typingsSlinky.sharedb.sharedbMod.DB
 import typingsSlinky.sharedb.sharedbMod.Projection
 import typingsSlinky.sharedb.sharedbMod.ProjectionFields
+import typingsSlinky.sharedb.sharedbMod.sharedb
 import typingsSlinky.sharedb.sharedbStrings.afterSubmit
 import typingsSlinky.sharedb.sharedbStrings.apply
 import typingsSlinky.sharedb.sharedbStrings.commit
@@ -35,8 +37,8 @@ object QueryContext {
   @scala.inline
   def apply(
     action: afterSubmit | apply | commit | connect | doc | op | query | readSnapshots | receive | reply | submit,
-    agent: typingsSlinky.sharedb.libAgentMod.^,
-    backend: typingsSlinky.sharedb.sharedbMod.sharedb,
+    agent: ^,
+    backend: sharedb,
     channel: String,
     collection: String,
     index: String,

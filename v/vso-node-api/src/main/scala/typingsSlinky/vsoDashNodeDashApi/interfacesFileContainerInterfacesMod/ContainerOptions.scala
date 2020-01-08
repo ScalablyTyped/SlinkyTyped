@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesFileContainerInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +17,10 @@ object ContainerOptions extends js.Object {
   @js.native
   sealed trait None extends ContainerOptions
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesFileContainerInterfacesMod.ContainerOptions.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContainerOptions with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.mobxDashCookie
 
 import typingsSlinky.jsDashCookie.jsDashCookieMod.CookieAttributes
-import typingsSlinky.mobxDashCookie.libMobxDashCookieMod.MobxCookie
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.std.Date
 import scala.scalajs.js

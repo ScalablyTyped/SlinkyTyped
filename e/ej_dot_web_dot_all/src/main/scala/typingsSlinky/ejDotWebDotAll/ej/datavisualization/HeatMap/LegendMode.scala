@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object LegendMode extends js.Object {
   @js.native
   sealed trait List extends LegendMode
   
-  /* 0 */ val Gradient: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.LegendMode.Gradient with Double = js.native
-  /* 1 */ val List: typingsSlinky.ejDotWebDotAll.ej.datavisualization.HeatMap.LegendMode.List with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LegendMode with Double] = js.native
+  /* 0 */ @js.native
+  object Gradient extends TopLevel[Gradient with Double]
+  
+  /* 1 */ @js.native
+  object List extends TopLevel[List with Double]
+  
 }
 

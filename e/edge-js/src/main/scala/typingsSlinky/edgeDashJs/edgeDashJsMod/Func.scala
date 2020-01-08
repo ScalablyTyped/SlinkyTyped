@@ -1,6 +1,6 @@
 package typingsSlinky.edgeDashJs.edgeDashJsMod
 
-import typingsSlinky.edgeDashJs.edgeDashJsNumbers.`true`
+import typingsSlinky.edgeDashJs.edgeDashJsBooleans.`true`
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

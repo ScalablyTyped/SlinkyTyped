@@ -2,11 +2,9 @@ package typingsSlinky.rxjs
 
 import typingsSlinky.rxjs.internalNotificationMod.Notification
 import typingsSlinky.rxjs.internalOperatorMod.Operator
-import typingsSlinky.rxjs.internalOperatorsObserveOnMod.ObserveOnMessage
 import typingsSlinky.rxjs.internalSubscriberMod.Subscriber
 import typingsSlinky.rxjs.internalTypesMod.MonoTypeOperatorFunction
 import typingsSlinky.rxjs.internalTypesMod.PartialObserver
-import typingsSlinky.rxjs.internalTypesMod.SchedulerAction
 import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
 import typingsSlinky.rxjs.internalTypesMod.TeardownLogic
 import scala.scalajs.js
@@ -48,7 +46,7 @@ object internalOperatorsObserveOnMod extends js.Object {
   @js.native
   object ObserveOnSubscriber extends js.Object {
     /** @nocollapse */
-    def dispatch(`this`: SchedulerAction[ObserveOnMessage], arg: ObserveOnMessage): Unit = js.native
+    def dispatch(arg: ObserveOnMessage): Unit = js.native
   }
   
 }

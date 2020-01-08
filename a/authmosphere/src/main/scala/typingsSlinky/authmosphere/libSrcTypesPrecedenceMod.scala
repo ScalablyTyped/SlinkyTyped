@@ -1,6 +1,5 @@
 package typingsSlinky.authmosphere
 
-import typingsSlinky.authmosphere.libSrcTypesPrecedenceMod.PrecedenceFunction
 import typingsSlinky.express.expressMod.NextFunction
 import typingsSlinky.express.expressMod.Request
 import typingsSlinky.express.expressMod.Response

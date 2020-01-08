@@ -56,8 +56,8 @@ class _Response () extends Response {
 @JSGlobal("_Response")
 @js.native
 object _Response
-  extends Instantiable1[/* body */ BodyInit, Response]
-     with Instantiable0[Response]
+  extends Instantiable0[Response]
+     with Instantiable1[/* body */ BodyInit, Response]
      with Instantiable2[
       (/* body */ BodyInit) | (/* body */ Null), 
       /* init */ typingsSlinky.std.ResponseInit, 

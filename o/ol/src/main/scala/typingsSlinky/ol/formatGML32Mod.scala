@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.formatGML32Mod.GML32
 import typingsSlinky.ol.formatGMLBaseMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`

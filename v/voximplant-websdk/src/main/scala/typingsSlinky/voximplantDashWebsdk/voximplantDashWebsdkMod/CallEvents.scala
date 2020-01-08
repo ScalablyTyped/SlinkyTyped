@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,17 +44,37 @@ object CallEvents extends js.Object {
   @js.native
   sealed trait TransferFailed extends CallEvents
   
-  /* 0 */ val Connected: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.Connected with Double = js.native
-  /* 1 */ val Disconnected: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.Disconnected with Double = js.native
-  /* 2 */ val Failed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.Failed with Double = js.native
-  /* 3 */ val ICETimeout: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.ICETimeout with Double = js.native
-  /* 4 */ val InfoReceived: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.InfoReceived with Double = js.native
-  /* 5 */ val MessageReceived: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.MessageReceived with Double = js.native
-  /* 6 */ val ProgressToneStart: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.ProgressToneStart with Double = js.native
-  /* 7 */ val ProgressToneStop: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.ProgressToneStop with Double = js.native
-  /* 8 */ val TransferComplete: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.TransferComplete with Double = js.native
-  /* 9 */ val TransferFailed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.CallEvents.TransferFailed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CallEvents with Double] = js.native
+  /* 0 */ @js.native
+  object Connected extends TopLevel[Connected with Double]
+  
+  /* 1 */ @js.native
+  object Disconnected extends TopLevel[Disconnected with Double]
+  
+  /* 2 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 3 */ @js.native
+  object ICETimeout extends TopLevel[ICETimeout with Double]
+  
+  /* 4 */ @js.native
+  object InfoReceived extends TopLevel[InfoReceived with Double]
+  
+  /* 5 */ @js.native
+  object MessageReceived extends TopLevel[MessageReceived with Double]
+  
+  /* 6 */ @js.native
+  object ProgressToneStart extends TopLevel[ProgressToneStart with Double]
+  
+  /* 7 */ @js.native
+  object ProgressToneStop extends TopLevel[ProgressToneStop with Double]
+  
+  /* 8 */ @js.native
+  object TransferComplete extends TopLevel[TransferComplete with Double]
+  
+  /* 9 */ @js.native
+  object TransferFailed extends TopLevel[TransferFailed with Double]
+  
 }
 

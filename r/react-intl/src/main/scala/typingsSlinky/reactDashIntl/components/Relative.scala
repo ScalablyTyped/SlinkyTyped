@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Relative extends SharedApply_Props1414091476[default] {
+object Relative extends SharedApply_Props114786680[default] {
   @JSImport("react-intl/lib/components/relative", JSImport.Default)
   @js.native
   object componentImport extends js.Object

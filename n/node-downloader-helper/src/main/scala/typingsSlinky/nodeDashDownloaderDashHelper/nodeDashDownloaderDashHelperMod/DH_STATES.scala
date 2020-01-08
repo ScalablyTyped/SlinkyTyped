@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object DH_STATES extends js.Object {
   @js.native
   sealed trait STOPPED extends DH_STATES
   
-  /* "DOWNLOADING" */ val DOWNLOADING: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.DOWNLOADING with String = js.native
-  /* "FAILED" */ val FAILED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.FAILED with String = js.native
-  /* "FINISHED" */ val FINISHED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.FINISHED with String = js.native
-  /* "IDLE" */ val IDLE: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.IDLE with String = js.native
-  /* "PAUSED" */ val PAUSED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.PAUSED with String = js.native
-  /* "RESUMED" */ val RESUMED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.RESUMED with String = js.native
-  /* "STARTED" */ val STARTED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.STARTED with String = js.native
-  /* "STOPPED" */ val STOPPED: typingsSlinky.nodeDashDownloaderDashHelper.nodeDashDownloaderDashHelperMod.DH_STATES.STOPPED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DH_STATES with String] = js.native
+  /* "DOWNLOADING" */ @js.native
+  object DOWNLOADING extends TopLevel[DOWNLOADING with String]
+  
+  /* "FAILED" */ @js.native
+  object FAILED extends TopLevel[FAILED with String]
+  
+  /* "FINISHED" */ @js.native
+  object FINISHED extends TopLevel[FINISHED with String]
+  
+  /* "IDLE" */ @js.native
+  object IDLE extends TopLevel[IDLE with String]
+  
+  /* "PAUSED" */ @js.native
+  object PAUSED extends TopLevel[PAUSED with String]
+  
+  /* "RESUMED" */ @js.native
+  object RESUMED extends TopLevel[RESUMED with String]
+  
+  /* "STARTED" */ @js.native
+  object STARTED extends TopLevel[STARTED with String]
+  
+  /* "STOPPED" */ @js.native
+  object STOPPED extends TopLevel[STOPPED with String]
+  
 }
 

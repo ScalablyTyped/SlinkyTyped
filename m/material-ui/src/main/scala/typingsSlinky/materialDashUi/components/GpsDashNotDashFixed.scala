@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GpsDashNotDashFixed extends SharedApply_SvgIconProps657215518[default] {
+object GpsDashNotDashFixed extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/device/gps-not-fixed", JSImport.Default)
   @js.native
   object componentImport extends js.Object

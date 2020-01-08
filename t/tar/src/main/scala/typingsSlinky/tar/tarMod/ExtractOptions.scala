@@ -2,7 +2,7 @@ package typingsSlinky.tar.tarMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.tar.tarNumbers.`false`
+import typingsSlinky.tar.tarBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

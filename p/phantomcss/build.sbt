@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "phantomcss"
-version := "0.11.1-dt-20190322Z-96c893"
+version := "0.11.1-dt-20190322Z-285146"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "casperjs" % "1.1-dt-20180214Z-45ba3a",
-  "org.scalablytyped.slinky" %%% "phantomjs" % "1.9-dt-20190322Z-90962d",
-  "org.scalablytyped.slinky" %%% "resemblejs" % "v1.3.0-dt-20190322Z-83ba2e",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "casperjs" % "1.1-dt-20180214Z-a40634",
+  "org.scalablytyped.slinky" %%% "phantomjs" % "1.9-dt-20190322Z-c0c4e0",
+  "org.scalablytyped.slinky" %%% "resemblejs" % "v1.3.0-dt-20190322Z-d58ee1",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

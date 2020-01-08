@@ -1,5 +1,6 @@
 package typingsSlinky.openpgp.openpgpMod.enums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object webHash extends js.Object {
   @js.native
   sealed trait `SHA-512` extends webHash
   
-  /* 2 */ val `SHA-1`: typingsSlinky.openpgp.openpgpMod.enums.webHash.`SHA-1` with Double = js.native
-  /* 8 */ val `SHA-256`: typingsSlinky.openpgp.openpgpMod.enums.webHash.`SHA-256` with Double = js.native
-  /* 9 */ val `SHA-384`: typingsSlinky.openpgp.openpgpMod.enums.webHash.`SHA-384` with Double = js.native
-  /* 10 */ val `SHA-512`: typingsSlinky.openpgp.openpgpMod.enums.webHash.`SHA-512` with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[webHash with Double] = js.native
+  /* 2 */ @js.native
+  object `SHA-1` extends TopLevel[`SHA-1` with Double]
+  
+  /* 8 */ @js.native
+  object `SHA-256` extends TopLevel[`SHA-256` with Double]
+  
+  /* 9 */ @js.native
+  object `SHA-384` extends TopLevel[`SHA-384` with Double]
+  
+  /* 10 */ @js.native
+  object `SHA-512` extends TopLevel[`SHA-512` with Double]
+  
 }
 

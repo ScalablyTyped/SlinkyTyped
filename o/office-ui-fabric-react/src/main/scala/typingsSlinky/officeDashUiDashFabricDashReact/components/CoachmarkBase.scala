@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
 import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
@@ -51,6 +52,7 @@ object CoachmarkBase
     onAnimationOpenEnd: () => Unit = null,
     onAnimationOpenStart: () => Unit = null,
     onDismiss: /* ev */ js.UndefOr[js.Any] => Unit = null,
+    persistentBeak: js.UndefOr[Boolean] = js.undefined,
     positioningContainerProps: IPositioningContainerProps = null,
     preventDismissOnLostFocus: js.UndefOr[Boolean] = js.undefined,
     preventFocusOnMount: js.UndefOr[Boolean] = js.undefined,
@@ -86,6 +88,7 @@ object CoachmarkBase
     if (onAnimationOpenEnd != null) __obj.updateDynamic("onAnimationOpenEnd")(js.Any.fromFunction0(onAnimationOpenEnd))
     if (onAnimationOpenStart != null) __obj.updateDynamic("onAnimationOpenStart")(js.Any.fromFunction0(onAnimationOpenStart))
     if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
+    if (!js.isUndefined(persistentBeak)) __obj.updateDynamic("persistentBeak")(persistentBeak.asInstanceOf[js.Any])
     if (positioningContainerProps != null) __obj.updateDynamic("positioningContainerProps")(positioningContainerProps.asInstanceOf[js.Any])
     if (!js.isUndefined(preventDismissOnLostFocus)) __obj.updateDynamic("preventDismissOnLostFocus")(preventDismissOnLostFocus.asInstanceOf[js.Any])
     if (!js.isUndefined(preventFocusOnMount)) __obj.updateDynamic("preventFocusOnMount")(preventFocusOnMount.asInstanceOf[js.Any])
@@ -97,6 +100,12 @@ object CoachmarkBase
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.officeDashUiDashFabricDashReact.libCoachmarkMod.CoachmarkBase
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libCoachmarkMod.CoachmarkBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ICoachmarkProps
 }
 

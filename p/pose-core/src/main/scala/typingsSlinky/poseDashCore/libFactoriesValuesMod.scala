@@ -1,7 +1,6 @@
 package typingsSlinky.poseDashCore
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.poseDashCore.libFactoriesValuesMod.ValueFactoryProps
 import typingsSlinky.poseDashCore.libTypesMod.ActivePoses
 import typingsSlinky.poseDashCore.libTypesMod.AncestorValueList
 import typingsSlinky.poseDashCore.libTypesMod.ConvertValue

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AlphaPicker
-  extends SharedApply_AlphaPickerProps1442616767[typingsSlinky.reactDashColor.reactDashColorMod.AlphaPicker] {
+  extends SharedApply_AlphaPickerProps2004301033[typingsSlinky.reactDashColor.reactDashColorMod.AlphaPicker] {
   @JSImport("react-color", "AlphaPicker")
   @js.native
   object componentImport extends js.Object

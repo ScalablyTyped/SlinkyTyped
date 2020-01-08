@@ -3,9 +3,7 @@ package typingsSlinky.cuint
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable4
-import typingsSlinky.cuint.cuintMod.Uint
-import typingsSlinky.cuint.cuintMod.Uint64Constructor
-import typingsSlinky.cuint.cuintMod.UintConstructor
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,10 +84,10 @@ object cuintMod extends js.Object {
   
   @js.native
   trait UintConstructor[T /* <: Uint */]
-    extends Instantiable2[(/* low */ Double) | (/* text */ String), /* high */ Double, T]
-       with // called as a constructor:
+    extends // called as a constructor:
   // tslint:disable-next-line:unified-signatures
-  Instantiable1[(/* low */ Double) | (/* text */ String), T] {
+  Instantiable1[(/* low */ Double) | (/* text */ String), T]
+       with Instantiable2[(/* low */ Double) | (/* text */ String), /* high */ Double, T] {
     // called as a function:
     def apply(low: Double): T = js.native
     def apply(low: Double, high: Double): T = js.native
@@ -98,7 +96,11 @@ object cuintMod extends js.Object {
     def apply(text: String, radix: Double): T = js.native
   }
   
-  val UINT32: UintConstructor[Uint] = js.native
-  val UINT64: Uint64Constructor[Uint] = js.native
+  @js.native
+  object UINT32 extends TopLevel[UintConstructor[Uint]]
+  
+  @js.native
+  object UINT64 extends TopLevel[Uint64Constructor[Uint]]
+  
 }
 

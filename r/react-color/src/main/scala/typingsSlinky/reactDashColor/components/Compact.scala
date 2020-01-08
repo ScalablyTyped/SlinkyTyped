@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Compact extends SharedApply_CompactPickerProps734668531[default] {
+object Compact extends SharedApply_CompactPickerProps49660934[default] {
   @JSImport("react-color/lib/components/compact/Compact", JSImport.Default)
   @js.native
   object componentImport extends js.Object

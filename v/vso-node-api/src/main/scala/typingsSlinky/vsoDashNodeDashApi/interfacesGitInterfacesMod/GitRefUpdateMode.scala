@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object GitRefUpdateMode extends js.Object {
   @js.native
   sealed trait BestEffort extends GitRefUpdateMode
   
-  /* 1 */ val AllOrNone: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitRefUpdateMode.AllOrNone with Double = js.native
-  /* 0 */ val BestEffort: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitRefUpdateMode.BestEffort with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitRefUpdateMode with Double] = js.native
+  /* 1 */ @js.native
+  object AllOrNone extends TopLevel[AllOrNone with Double]
+  
+  /* 0 */ @js.native
+  object BestEffort extends TopLevel[BestEffort with Double]
+  
 }
 

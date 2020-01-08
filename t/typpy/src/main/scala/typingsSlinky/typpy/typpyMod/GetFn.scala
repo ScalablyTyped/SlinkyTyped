@@ -7,8 +7,8 @@ import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpConstructor
 import typingsSlinky.std.StringConstructor
-import typingsSlinky.typpy.typpyNumbers.`false`
-import typingsSlinky.typpy.typpyNumbers.`true`
+import typingsSlinky.typpy.typpyBooleans.`false`
+import typingsSlinky.typpy.typpyBooleans.`true`
 import typingsSlinky.typpy.typpyStrings.`null`
 import typingsSlinky.typpy.typpyStrings.array
 import typingsSlinky.typpy.typpyStrings.boolean
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GetFn extends js.Object {
-  def apply(): Unit = js.native
+  def apply(): Null = js.native
   def apply(input: js.UndefOr[scala.Nothing], asString: `false`): Unit = js.native
   def apply(input: js.UndefOr[scala.Nothing], asString: `true`): undefined = js.native
   def apply(input: String): StringConstructor = js.native

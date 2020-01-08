@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseIteratorUnderscoreRepeaterMod._Repeater
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,11 @@ object baseIteratorUnderscoreRepeaterMod extends js.Object {
     def this(index: Double) = this()
     def this(index: Double, value: T) = this()
     var index_ : js.Any = js.native
-    val value: T = js.native
     var value_ : js.Any = js.native
     def equals(obj: _Repeater[T]): Boolean = js.native
     def index(): Double = js.native
     def next(): _Repeater[T] = js.native
+    def value(): T = js.native
   }
   
 }

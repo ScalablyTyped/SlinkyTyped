@@ -1,6 +1,5 @@
 package typingsSlinky.string
 
-import typingsSlinky.string.stringMod.StringJS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,10 @@
 package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services
 
+import typingsSlinky.typescriptDashServices.TypeScript.PositionedElement
+import typingsSlinky.typescriptDashServices.TypeScript.PositionedToken
+import typingsSlinky.typescriptDashServices.TypeScript.PullSymbol
 import typingsSlinky.typescriptDashServices.TypeScript.PullVisibleSymbolsInfo
+import typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,18 +19,18 @@ class CompletionHelpers ()
 @js.native
 object CompletionHelpers extends js.Object {
   def filterContextualMembersList(
-    contextualMemberSymbols: js.Array[typingsSlinky.typescriptDashServices.TypeScript.PullSymbol],
+    contextualMemberSymbols: js.Array[PullSymbol],
     existingMembers: PullVisibleSymbolsInfo,
     fileName: String,
     position: Double
-  ): js.Array[typingsSlinky.typescriptDashServices.TypeScript.PullSymbol] = js.native
-  def getContainingObjectLiteralApplicableForCompletion(sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax, position: Double): typingsSlinky.typescriptDashServices.TypeScript.PositionedElement = js.native
-  def getNonIdentifierCompleteTokenOnLeft(sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax, position: Double): typingsSlinky.typescriptDashServices.TypeScript.PositionedToken = js.native
+  ): js.Array[PullSymbol] = js.native
+  def getContainingObjectLiteralApplicableForCompletion(sourceUnit: SourceUnitSyntax, position: Double): PositionedElement = js.native
+  def getNonIdentifierCompleteTokenOnLeft(sourceUnit: SourceUnitSyntax, position: Double): PositionedToken = js.native
   /* private */ def getSpan(ast: js.Any): js.Any = js.native
   def getValidCompletionEntryDisplayName(displayName: String): String = js.native
-  def isCompletionListBlocker(sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax, position: Double): Boolean = js.native
-  def isIdentifierDefinitionLocation(sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax, position: Double): Boolean = js.native
-  def isRightOfIllegalDot(sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax, position: Double): Boolean = js.native
+  def isCompletionListBlocker(sourceUnit: SourceUnitSyntax, position: Double): Boolean = js.native
+  def isIdentifierDefinitionLocation(sourceUnit: SourceUnitSyntax, position: Double): Boolean = js.native
+  def isRightOfIllegalDot(sourceUnit: SourceUnitSyntax, position: Double): Boolean = js.native
   /* private */ def symbolDeclarationIntersectsPosition(symbol: js.Any, fileName: js.Any, position: js.Any): js.Any = js.native
 }
 

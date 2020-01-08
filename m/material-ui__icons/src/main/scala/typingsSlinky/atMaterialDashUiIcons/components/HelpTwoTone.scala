@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HelpTwoTone extends SharedApply_SvgIconProps1025744599[default] {
+object HelpTwoTone extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/HelpTwoTone", "default")
   @js.native
   object componentImport extends js.Object

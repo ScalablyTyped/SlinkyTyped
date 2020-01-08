@@ -2,7 +2,7 @@ package typingsSlinky.jss.jssMod
 
 import org.scalajs.dom.raw.CSSRule
 import org.scalajs.dom.raw.CSSRuleList
-import typingsSlinky.jss.jssNumbers.`false`
+import typingsSlinky.jss.jssBooleans.`false`
 import typingsSlinky.std.CSSStyleRule
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait Renderer extends js.Object {
   def attach(): Unit = js.native
   def deleteRule(cssRule: CSSRule): Boolean = js.native
-  def deploy(sheet: StyleSheet[String]): Unit = js.native
+  def deploy(sheet: StyleSheet[String | Double | js.Symbol]): Unit = js.native
   def detach(): Unit = js.native
   def getPropertyValue(cssRule: CSSStyleRule, prop: String): String = js.native
   def getPropertyValue(cssRule: HTMLElement, prop: String): String = js.native

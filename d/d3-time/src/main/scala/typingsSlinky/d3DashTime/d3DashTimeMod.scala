@@ -1,7 +1,5 @@
 package typingsSlinky.d3DashTime
 
-import typingsSlinky.d3DashTime.d3DashTimeMod.CountableTimeInterval
-import typingsSlinky.d3DashTime.d3DashTimeMod.TimeInterval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.yadda.libLocalisationLanguageMod
 
-import typingsSlinky.yadda.yaddaNumbers.`true`
+import typingsSlinky.yadda.yaddaBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

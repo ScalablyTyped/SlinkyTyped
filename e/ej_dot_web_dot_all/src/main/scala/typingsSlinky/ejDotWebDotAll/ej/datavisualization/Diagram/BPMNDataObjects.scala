@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BPMNDataObjects extends js.Object {
   @js.native
   sealed trait Output extends BPMNDataObjects
   
-  /* 0 */ val Input: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNDataObjects.Input with Double = js.native
-  /* 2 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNDataObjects.None with Double = js.native
-  /* 1 */ val Output: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNDataObjects.Output with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNDataObjects with Double] = js.native
+  /* 0 */ @js.native
+  object Input extends TopLevel[Input with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Output extends TopLevel[Output with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ConditionalRangeFontUnderlineStyle extends js.Object {
   @js.native
   sealed trait single extends ConditionalRangeFontUnderlineStyle
   
-  /* "Double" */ val double: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalRangeFontUnderlineStyle.double with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalRangeFontUnderlineStyle.none with String = js.native
-  /* "Single" */ val single: typingsSlinky.officeDashJsDashPreview.Excel.ConditionalRangeFontUnderlineStyle.single with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ConditionalRangeFontUnderlineStyle with String] = js.native
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "Single" */ @js.native
+  object single extends TopLevel[single with String]
+  
 }
 

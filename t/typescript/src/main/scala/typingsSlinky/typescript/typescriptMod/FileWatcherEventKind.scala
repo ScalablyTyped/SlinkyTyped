@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object FileWatcherEventKind extends js.Object {
   @js.native
   sealed trait Deleted extends FileWatcherEventKind
   
-  /* 1 */ val Changed: typingsSlinky.typescript.typescriptMod.FileWatcherEventKind.Changed with Double = js.native
-  /* 0 */ val Created: typingsSlinky.typescript.typescriptMod.FileWatcherEventKind.Created with Double = js.native
-  /* 2 */ val Deleted: typingsSlinky.typescript.typescriptMod.FileWatcherEventKind.Deleted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileWatcherEventKind with Double] = js.native
+  /* 1 */ @js.native
+  object Changed extends TopLevel[Changed with Double]
+  
+  /* 0 */ @js.native
+  object Created extends TopLevel[Created with Double]
+  
+  /* 2 */ @js.native
+  object Deleted extends TopLevel[Deleted with Double]
+  
 }
 

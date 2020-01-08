@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object RemoteSystemWatcherError extends js.Object {
   @js.native
   sealed trait unknown extends RemoteSystemWatcherError
   
-  /* 2 */ val authenticationError: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemWatcherError.authenticationError with Double = js.native
-  /* 1 */ val internetNotAvailable: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemWatcherError.internetNotAvailable with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemWatcherError.unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RemoteSystemWatcherError with Double] = js.native
+  /* 2 */ @js.native
+  object authenticationError extends TopLevel[authenticationError with Double]
+  
+  /* 1 */ @js.native
+  object internetNotAvailable extends TopLevel[internetNotAvailable with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
 }
 

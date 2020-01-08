@@ -1,6 +1,6 @@
 package typingsSlinky.qunitDashDom
 
-import typingsSlinky.qunitDashDom.qunitDashDomNumbers.`true`
+import typingsSlinky.qunitDashDom.qunitDashDomBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

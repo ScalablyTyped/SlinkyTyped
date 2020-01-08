@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.typesettable.buildSrcContextsCanvasMod.ICanvasFontStyle
 import typingsSlinky.typesettable.buildSrcContextsMod.ITypesetterContext
 import typingsSlinky.typesettable.buildSrcMeasurersMod.CacheMeasurer
-import typingsSlinky.typesettable.buildSrcTypesetterMod.Typesetter
 import typingsSlinky.typesettable.buildSrcWrappersMod.Wrapper
 import typingsSlinky.typesettable.buildSrcWritersMod.Writer
 import typingsSlinky.typesettable.buildSrcWritersWriterMod.IWriteOptions

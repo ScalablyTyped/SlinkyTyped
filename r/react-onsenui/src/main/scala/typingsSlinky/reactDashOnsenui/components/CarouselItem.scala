@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CarouselItem
-  extends SharedApply_HTMLAttributesidclassNamestylemodifierstring1359639792[typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.CarouselItem] {
+  extends SharedApply_HTMLAttributesidclassNamestylemodifierstring_686115526[typingsSlinky.reactDashOnsenui.reactDashOnsenuiMod.CarouselItem] {
   @JSImport("react-onsenui", "CarouselItem")
   @js.native
   object componentImport extends js.Object

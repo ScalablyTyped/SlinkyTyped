@@ -3,8 +3,6 @@ package typingsSlinky.prex
 import typingsSlinky.atEsfxCancelable.distMod.Cancelable
 import typingsSlinky.atEsfxDisposable.distMod.Disposable
 import typingsSlinky.prex.outLibCancellationMod.CancellationToken
-import typingsSlinky.prex.outLibReaderwriterlockMod.LockHandle
-import typingsSlinky.prex.outLibReaderwriterlockMod.UpgradeableLockHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.rotDashJs
 
-import typingsSlinky.rotDashJs.libMapIceymazeMod.IceyMaze
-import typingsSlinky.rotDashJs.rotDashJsNumbers.`false`
+import typingsSlinky.rotDashJs.rotDashJsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

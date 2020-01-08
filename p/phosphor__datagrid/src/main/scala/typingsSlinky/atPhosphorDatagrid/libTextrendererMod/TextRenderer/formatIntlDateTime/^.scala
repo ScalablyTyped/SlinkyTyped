@@ -22,8 +22,6 @@ object ^ extends js.Object {
     * This is the most flexible (but slowest) datetime formatter.
     */
   def apply(): FormatFunc = js.native
-  def apply(
-    options: typingsSlinky.atPhosphorDatagrid.libTextrendererMod.TextRenderer.formatIntlDateTime.IOptions
-  ): FormatFunc = js.native
+  def apply(options: IOptions): FormatFunc = js.native
 }
 

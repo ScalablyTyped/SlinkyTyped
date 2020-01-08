@@ -1,13 +1,11 @@
 package typingsSlinky.baseui.radioMod
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
-import typingsSlinky.react.reactMod.FormEventHandler
+import typingsSlinky.react.reactMod.ChangeEvent
+import typingsSlinky.react.reactMod.ChangeEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +16,7 @@ trait StatefulRadioGroupProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var initialState: js.UndefOr[State] = js.undefined
   var name: js.UndefOr[String] = js.undefined
-  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
+  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
   var overrides: js.UndefOr[RadioOverrides with RadioGroupOverrides] = js.undefined
 }
 
@@ -30,7 +28,7 @@ object StatefulRadioGroupProps {
     children: TagMod[Any] = null,
     initialState: State = null,
     name: String = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
     overrides: RadioOverrides with RadioGroupOverrides = null
   ): StatefulRadioGroupProps = {
     val __obj = js.Dynamic.literal()

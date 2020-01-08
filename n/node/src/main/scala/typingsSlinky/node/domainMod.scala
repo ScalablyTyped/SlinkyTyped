@@ -1,7 +1,6 @@
 package typingsSlinky.node
 
 import typingsSlinky.node.NodeJS.Timer
-import typingsSlinky.node.domainMod.Domain
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,11 +4,7 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.phaser.Phaser.Cameras.Controls.FixedKeyControl
-import typingsSlinky.phaser.Phaser.Cameras.Controls.SmoothedKeyControl
-import typingsSlinky.phaser.Phaser.Cameras.Scene2D.BaseCamera
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
-import typingsSlinky.phaser.Phaser.Cameras.Scene2D.CameraManager
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Fade
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Flash
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Pan

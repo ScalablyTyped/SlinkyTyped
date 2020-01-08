@@ -1,6 +1,5 @@
 package typingsSlinky.fridaDashGum
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +71,7 @@ class NativePointer protected ()
   def or(v: UInt64): NativePointer = js.native
   def readAnsiString(): String | Null = js.native
   def readAnsiString(size: Double): String | Null = js.native
-  def readByteArray(length: Double): scala.scalajs.js.typedarray.ArrayBuffer | Null = js.native
+  def readByteArray(length: Double): ArrayBuffer | Null = js.native
   def readCString(): String | Null = js.native
   def readCString(size: Double): String | Null = js.native
   def readDouble(): Double = js.native

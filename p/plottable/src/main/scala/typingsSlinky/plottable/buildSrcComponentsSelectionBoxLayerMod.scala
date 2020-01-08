@@ -1,7 +1,7 @@
 package typingsSlinky.plottable
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
-import typingsSlinky.plottable.buildSrcComponentsSelectionBoxLayerMod.PropertyMode
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Bounds
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.SimpleSelection
 import typingsSlinky.plottable.buildSrcScalesQuantitativeScaleMod.QuantitativeScale
@@ -102,10 +102,14 @@ object buildSrcComponentsSelectionBoxLayerMod extends js.Object {
     @js.native
     sealed trait VALUE extends PropertyMode
     
-    /* 1 */ val PIXEL: typingsSlinky.plottable.buildSrcComponentsSelectionBoxLayerMod.PropertyMode.PIXEL with Double = js.native
-    /* 0 */ val VALUE: typingsSlinky.plottable.buildSrcComponentsSelectionBoxLayerMod.PropertyMode.VALUE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PropertyMode with Double] = js.native
+    /* 1 */ @js.native
+    object PIXEL extends TopLevel[PIXEL with Double]
+    
+    /* 0 */ @js.native
+    object VALUE extends TopLevel[VALUE with Double]
+    
   }
   
 }

@@ -1,18 +1,18 @@
 package typingsSlinky.astDashTypes.genNamedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astDashTypes.astDashTypesStrings.`%=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`&=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`*=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`+=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`-=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`/=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`<<=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`>>>=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`^=`
-import typingsSlinky.astDashTypes.astDashTypesStrings.`|=`
+import typingsSlinky.astDashTypes.astDashTypesStrings.AmpersandEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.AsteriskEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.Equalssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.GreaterthansignGreaterthansignGreaterthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.LessthansignLessthansignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.PercentsignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.PlussignEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.SlashEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.VerticallineEqualssign
+import typingsSlinky.astDashTypes.astDashTypesStrings.`-Equalssign`
+import typingsSlinky.astDashTypes.astDashTypesStrings.`^Equalssign`
 import typingsSlinky.astDashTypes.genKindsMod.ExpressionKind
 import typingsSlinky.astDashTypes.genKindsMod.MemberExpressionKind
 import typingsSlinky.astDashTypes.genKindsMod.NodeKind
@@ -30,7 +30,7 @@ import scala.scalajs.js.annotation._
      with NodeKind
      with PrintableKind {
   var left: PatternKind | MemberExpressionKind
-  var operator: `=` | `+=` | `-=` | `*=` | `/=` | `%=` | `<<=` | `>>=` | `>>>=` | `|=` | `^=` | `&=`
+  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign
   var right: ExpressionKind
   var `type`: typingsSlinky.astDashTypes.astDashTypesStrings.AssignmentExpression
 }

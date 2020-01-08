@@ -4,7 +4,7 @@ import typingsSlinky.ssri.Anon_Algo1
 import typingsSlinky.ssri.Anon_Algo1Algo2
 import typingsSlinky.ssri.Anon_Sep
 import typingsSlinky.ssri.Anon_Strict
-import typingsSlinky.ssri.ssriNumbers.`false`
+import typingsSlinky.ssri.ssriBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

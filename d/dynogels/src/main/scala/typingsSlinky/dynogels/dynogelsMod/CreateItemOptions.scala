@@ -1,33 +1,26 @@
 package typingsSlinky.dynogels.dynogelsMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ConditionExpression
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ConditionalOperator
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ExpectedAttributeMap
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ExpressionAttributeNameMap
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ReturnConsumedCapacity
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ReturnItemCollectionMetrics
+import typingsSlinky.awsDashSdk.clientsDynamodbMod.ReturnValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CreateItemOptions extends js.Object {
-  var ConditionExpression: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ConditionExpression */ js.Any
-  ] = js.undefined
-  var ConditionalOperator: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ConditionalOperator */ js.Any
-  ] = js.undefined
-  var Expected: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ExpectedAttributeMap */ js.Any
-  ] = js.undefined
-  var ExpressionAttributeNames: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ExpressionAttributeNameMap */ js.Any
-  ] = js.undefined
+  var ConditionExpression: js.UndefOr[typingsSlinky.awsDashSdk.clientsDynamodbMod.ConditionExpression] = js.undefined
+  var ConditionalOperator: js.UndefOr[typingsSlinky.awsDashSdk.clientsDynamodbMod.ConditionalOperator] = js.undefined
+  var Expected: js.UndefOr[ExpectedAttributeMap] = js.undefined
+  var ExpressionAttributeNames: js.UndefOr[ExpressionAttributeNameMap] = js.undefined
   var ExpressionAttributeValues: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var ReturnConsumedCapacity: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnConsumedCapacity */ js.Any
-  ] = js.undefined
-  var ReturnItemCollectionMetrics: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnItemCollectionMetrics */ js.Any
-  ] = js.undefined
-  var ReturnValues: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnValue */ js.Any
-  ] = js.undefined
+  var ReturnConsumedCapacity: js.UndefOr[typingsSlinky.awsDashSdk.clientsDynamodbMod.ReturnConsumedCapacity] = js.undefined
+  var ReturnItemCollectionMetrics: js.UndefOr[typingsSlinky.awsDashSdk.clientsDynamodbMod.ReturnItemCollectionMetrics] = js.undefined
+  var ReturnValues: js.UndefOr[ReturnValue] = js.undefined
   var expected: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   var overwrite: js.UndefOr[Boolean] = js.undefined
 }
@@ -35,14 +28,14 @@ trait CreateItemOptions extends js.Object {
 object CreateItemOptions {
   @scala.inline
   def apply(
-    ConditionExpression: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ConditionExpression */ js.Any = null,
-    ConditionalOperator: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ConditionalOperator */ js.Any = null,
-    Expected: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ExpectedAttributeMap */ js.Any = null,
-    ExpressionAttributeNames: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ExpressionAttributeNameMap */ js.Any = null,
+    ConditionExpression: ConditionExpression = null,
+    ConditionalOperator: ConditionalOperator = null,
+    Expected: ExpectedAttributeMap = null,
+    ExpressionAttributeNames: ExpressionAttributeNameMap = null,
     ExpressionAttributeValues: StringDictionary[js.Any] = null,
-    ReturnConsumedCapacity: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnConsumedCapacity */ js.Any = null,
-    ReturnItemCollectionMetrics: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnItemCollectionMetrics */ js.Any = null,
-    ReturnValues: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AWS.DynamoDB.ReturnValue */ js.Any = null,
+    ReturnConsumedCapacity: ReturnConsumedCapacity = null,
+    ReturnItemCollectionMetrics: ReturnItemCollectionMetrics = null,
+    ReturnValues: ReturnValue = null,
     expected: StringDictionary[js.Any] = null,
     overwrite: js.UndefOr[Boolean] = js.undefined
   ): CreateItemOptions = {

@@ -1,6 +1,5 @@
 package typingsSlinky.twilioDashSync
 
-import typingsSlinky.twilioDashSync.libClientInfoMod.ClientInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

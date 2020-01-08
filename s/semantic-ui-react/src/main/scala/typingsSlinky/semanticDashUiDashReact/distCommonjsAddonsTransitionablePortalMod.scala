@@ -1,7 +1,8 @@
 package typingsSlinky.semanticDashUiDashReact
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.ComponentClass
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsAddonsTransitionablePortalTransitionablePortalMod.TransitionablePortalProps
 import scala.scalajs.js
@@ -18,6 +19,8 @@ object distCommonjsAddonsTransitionablePortalMod extends js.Object {
     def this(props: TransitionablePortalProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[TransitionablePortalProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentClass[TransitionablePortalProps, ComponentState]]
+  
 }
 

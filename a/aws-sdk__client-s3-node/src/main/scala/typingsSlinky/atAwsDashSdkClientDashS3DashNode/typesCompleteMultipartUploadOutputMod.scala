@@ -1,7 +1,7 @@
 package typingsSlinky.atAwsDashSdkClientDashS3DashNode
 
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.AES256
-import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`aws:kms`
+import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.awsColonkms
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.requester_
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.typesOutputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.atAwsDashSdkTypes.buildResponseMod.MetadataBearer
@@ -47,7 +47,7 @@ object typesCompleteMultipartUploadOutputMod extends js.Object {
     /**
       * <p>The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms).</p>
       */
-    var ServerSideEncryption: js.UndefOr[AES256 | `aws:kms` | String] = js.native
+    var ServerSideEncryption: js.UndefOr[AES256 | awsColonkms | String] = js.native
     /**
       * <p>Version of the object.</p>
       */

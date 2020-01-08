@@ -11,8 +11,8 @@ Fork of the famous Sylvester vector, matrix and geometry library. Rewritten in E
 | Full name          | sylvester-es6 |
 | Keywords           | sylvester, glutils, matrix, vector, geometry, es6 |
 | # releases         | 0 |
-| # dependents       | 5 |
-| # downloads        | 2423 |
+| # dependents       | 6 |
+| # downloads        | 6625 |
 | # stars            | 0 |
 
 ## Links

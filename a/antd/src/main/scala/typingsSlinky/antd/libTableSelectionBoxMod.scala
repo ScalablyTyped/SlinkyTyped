@@ -2,7 +2,6 @@ package typingsSlinky.antd
 
 import typingsSlinky.antd.libTableInterfaceMod.SelectionBoxProps
 import typingsSlinky.antd.libTableInterfaceMod.SelectionBoxState
-import typingsSlinky.antd.libTableSelectionBoxMod.SelectionBox
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

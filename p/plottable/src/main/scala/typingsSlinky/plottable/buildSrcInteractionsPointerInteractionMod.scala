@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
 import typingsSlinky.plottable.buildSrcInteractionsInteractionMod.Interaction
-import typingsSlinky.plottable.buildSrcInteractionsPointerInteractionMod.PointerCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

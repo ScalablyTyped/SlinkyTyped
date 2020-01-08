@@ -66,7 +66,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestToWorkIt
 import typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestVariable
 import typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.WorkItemReference
 import typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.WorkItemToTestLinks
-import typingsSlinky.vsoDashNodeDashApi.testApiMod.ITestApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

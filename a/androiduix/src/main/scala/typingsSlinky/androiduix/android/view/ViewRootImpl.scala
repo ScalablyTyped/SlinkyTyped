@@ -5,7 +5,6 @@ import typingsSlinky.androiduix.android.graphics.Point
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.os.Handler
 import typingsSlinky.androiduix.android.view.View.AttachInfo.InvalidateInfo
-import typingsSlinky.androiduix.android.view.ViewRootImpl.RunQueue
 import typingsSlinky.androiduix.java.lang.Runnable
 import typingsSlinky.std.Event
 import scala.scalajs.js

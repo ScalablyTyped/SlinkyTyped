@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object FrameType extends js.Object {
   @js.native
   sealed trait HalfCircle extends FrameType
   
-  /* 0 */ val FullCircle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.FrameType.FullCircle with Double = js.native
-  /* 1 */ val HalfCircle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.FrameType.HalfCircle with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FrameType with Double] = js.native
+  /* 0 */ @js.native
+  object FullCircle extends TopLevel[FullCircle with Double]
+  
+  /* 1 */ @js.native
+  object HalfCircle extends TopLevel[HalfCircle with Double]
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.scheduler
 
-import typingsSlinky.scheduler.schedulerMod.CallbackNode
-import typingsSlinky.scheduler.schedulerMod.FrameCallbackType
 import typingsSlinky.scheduler.schedulerNumbers.`1`
 import typingsSlinky.scheduler.schedulerNumbers.`2`
 import typingsSlinky.scheduler.schedulerNumbers.`3`
@@ -22,7 +20,7 @@ object schedulerMod extends js.Object {
     var next: CallbackNode | Null = js.native
     var prev: CallbackNode | Null = js.native
     var priorityLevel: Double = js.native
-    def callback(): (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias scheduler.scheduler.FrameCallbackType */ js.Object) | Unit = js.native
+    def callback(): (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias scheduler.scheduler.FrameCallbackType */ js.Object) | Unit = js.native
   }
   
   val unstable_IdlePriority: `5` = js.native
@@ -43,7 +41,7 @@ object schedulerMod extends js.Object {
   def unstable_shouldYield(): Boolean = js.native
   def unstable_wrapCallback(callback: FrameCallbackType): js.Function0[FrameCallbackType] = js.native
   type FrameCallbackType = js.Function0[
-    (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias scheduler.scheduler.FrameCallbackType */ js.Object) | Unit
+    (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias scheduler.scheduler.FrameCallbackType */ js.Object) | Unit
   ]
 }
 

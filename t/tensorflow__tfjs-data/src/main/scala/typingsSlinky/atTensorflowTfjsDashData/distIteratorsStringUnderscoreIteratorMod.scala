@@ -1,7 +1,6 @@
 package typingsSlinky.atTensorflowTfjsDashData
 
 import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.LazyIterator
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsStringUnderscoreIteratorMod.StringIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

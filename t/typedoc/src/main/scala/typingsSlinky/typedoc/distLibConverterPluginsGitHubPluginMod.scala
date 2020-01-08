@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.distLibConverterConverterMod.Converter
-import typingsSlinky.typedoc.distLibConverterPluginsGitHubPluginMod.Repository
 import typingsSlinky.typedoc.distLibUtilsComponentMod.AbstractComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,12 +1,13 @@
 package typingsSlinky.got.gotMod
 
-import typingsSlinky.got.gotNumbers.`true`
+import typingsSlinky.got.gotBooleans.`true`
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.netMod.Socket
+import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.urlMod.URLSearchParams
 import typingsSlinky.std.Record
@@ -37,7 +38,7 @@ object GotFormOptions {
     ciphers: String = null,
     clientCertEngine: String = null,
     cookieJar: CookieJar = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ Error, /* socket */ Socket, Unit]) => Socket = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
     crl: String | Buffer | (js.Array[String | Buffer]) = null,
     decompress: js.UndefOr[Boolean] = js.undefined,
     defaultPort: Double | String = null,
@@ -52,15 +53,17 @@ object GotFormOptions {
     host: String = null,
     hostname: String = null,
     json: js.UndefOr[Boolean] = js.undefined,
-    key: String | Buffer | (js.Array[Buffer | js.Object]) = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
     localAddress: String = null,
     maxVersion: SecureVersion = null,
     method: String = null,
     minVersion: SecureVersion = null,
     passphrase: String = null,
     path: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
     port: Double | String = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     protocol: String = null,
     query: (Record[String, _]) | URLSearchParams | String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
@@ -71,6 +74,7 @@ object GotFormOptions {
     servername: String = null,
     sessionIdContext: String = null,
     setHost: js.UndefOr[Boolean] = js.undefined,
+    sigalgs: String = null,
     socketPath: String = null,
     throwHttpErrors: js.UndefOr[Boolean] = js.undefined,
     timeout: Double | TimeoutOptions = null,
@@ -112,6 +116,8 @@ object GotFormOptions {
     if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
     if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
@@ -122,6 +128,7 @@ object GotFormOptions {
     if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
     if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
     if (!js.isUndefined(throwHttpErrors)) __obj.updateDynamic("throwHttpErrors")(throwHttpErrors.asInstanceOf[js.Any])
     if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])

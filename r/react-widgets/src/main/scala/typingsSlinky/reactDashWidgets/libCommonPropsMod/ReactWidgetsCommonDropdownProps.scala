@@ -1,13 +1,10 @@
 package typingsSlinky.reactDashWidgets.libCommonPropsMod
 
-import slinky.core.TagMod
-import typingsSlinky.react.reactMod.Key
-import typingsSlinky.react.reactMod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait ReactWidgetsCommonDropdownProps[C] extends ReactWidgetsCommonProps[C] {
+trait ReactWidgetsCommonDropdownProps extends ReactWidgetsCommonProps {
   /**
     * Show "drop up" not "drop down"
     * @default false
@@ -17,26 +14,20 @@ trait ReactWidgetsCommonDropdownProps[C] extends ReactWidgetsCommonProps[C] {
 
 object ReactWidgetsCommonDropdownProps {
   @scala.inline
-  def apply[C](
-    children: TagMod[Any] = null,
+  def apply(
     disabled: Boolean | js.Array[_] = null,
     dropUp: js.UndefOr[Boolean] = js.undefined,
     id: String = null,
     isRtl: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    readOnly: Boolean | js.Array[_] = null,
-    ref: LegacyRef[C] = null
-  ): ReactWidgetsCommonDropdownProps[C] = {
+    readOnly: Boolean | js.Array[_] = null
+  ): ReactWidgetsCommonDropdownProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
     if (!js.isUndefined(dropUp)) __obj.updateDynamic("dropUp")(dropUp.asInstanceOf[js.Any])
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReactWidgetsCommonDropdownProps[C]]
+    __obj.asInstanceOf[ReactWidgetsCommonDropdownProps]
   }
 }
 

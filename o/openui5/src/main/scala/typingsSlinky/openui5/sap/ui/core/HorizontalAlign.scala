@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object HorizontalAlign extends js.Object {
   @js.native
   sealed trait Right extends HorizontalAlign
   
-  /* 0 */ val Begin: typingsSlinky.openui5.sap.ui.core.HorizontalAlign.Begin with Double = js.native
-  /* 1 */ val Center: typingsSlinky.openui5.sap.ui.core.HorizontalAlign.Center with Double = js.native
-  /* 2 */ val End: typingsSlinky.openui5.sap.ui.core.HorizontalAlign.End with Double = js.native
-  /* 3 */ val Left: typingsSlinky.openui5.sap.ui.core.HorizontalAlign.Left with Double = js.native
-  /* 4 */ val Right: typingsSlinky.openui5.sap.ui.core.HorizontalAlign.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HorizontalAlign with Double] = js.native
+  /* 0 */ @js.native
+  object Begin extends TopLevel[Begin with Double]
+  
+  /* 1 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 2 */ @js.native
+  object End extends TopLevel[End with Double]
+  
+  /* 3 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 4 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.zapierDashPlatformDashCore
 
-import typingsSlinky.zapierDashPlatformDashCore.zapierDashPlatformDashCoreNumbers.`true`
+import typingsSlinky.zapierDashPlatformDashCore.zapierDashPlatformDashCoreBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

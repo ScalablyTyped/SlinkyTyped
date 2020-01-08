@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PeoplePickerItem extends SharedApply_IPeoplePickerItemSelectedProps_469588862 {
+object PeoplePickerItem extends SharedApply_IPeoplePickerItemSelectedProps1814152470 {
   @JSImport("office-ui-fabric-react/lib/Pickers", "PeoplePickerItem")
   @js.native
   object componentImport extends js.Object

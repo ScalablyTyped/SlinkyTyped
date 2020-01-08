@@ -1,6 +1,6 @@
 package typingsSlinky.hapi.hapiMod
 
-import typingsSlinky.hapi.hapiNumbers.`false`
+import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiStrings.`try`
 import typingsSlinky.hapi.hapiStrings.optional
 import typingsSlinky.hapi.hapiStrings.required

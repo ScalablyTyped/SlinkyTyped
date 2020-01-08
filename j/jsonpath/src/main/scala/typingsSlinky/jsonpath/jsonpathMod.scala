@@ -1,6 +1,5 @@
 package typingsSlinky.jsonpath
 
-import typingsSlinky.jsonpath.jsonpathMod.PathComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

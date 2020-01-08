@@ -1,23 +1,5 @@
 package typingsSlinky.mandrillDashApi
 
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Exports
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.ICallback
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.IErrorCallback
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Inbound
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Internal
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Ips
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Mandrill
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Messages
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Metadata
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Rejects
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Senders
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Subaccounts
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Tags
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Templates
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Urls
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Users
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Webhooks
-import typingsSlinky.mandrillDashApi.mandrillDashApiMod.Whitelists
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

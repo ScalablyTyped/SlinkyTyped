@@ -7,8 +7,8 @@ import typingsSlinky.cypress.JQuery.Ajax.ErrorCallback
 import typingsSlinky.cypress.JQuery.Ajax.StatusCodeCallbacks
 import typingsSlinky.cypress.JQuery.Ajax.SuccessCallback
 import typingsSlinky.cypress.JQuery.Ajax.XHRFields
-import typingsSlinky.cypress.cypressNumbers.`false`
-import typingsSlinky.cypress.cypressNumbers.`true`
+import typingsSlinky.cypress.cypressBooleans.`false`
+import typingsSlinky.cypress.cypressBooleans.`true`
 import typingsSlinky.cypress.cypressStrings.html_
 import typingsSlinky.cypress.cypressStrings.json_
 import typingsSlinky.cypress.cypressStrings.jsonp

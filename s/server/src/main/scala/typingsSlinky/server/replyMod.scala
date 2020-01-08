@@ -1,17 +1,6 @@
 package typingsSlinky.server
 
 import typingsSlinky.express.expressMod.CookieOptions
-import typingsSlinky.server.replyMod.Redirect
-import typingsSlinky.server.replyMod.Reply
-import typingsSlinky.server.replyMod.cookieType
-import typingsSlinky.server.replyMod.downloadType
-import typingsSlinky.server.replyMod.headerType
-import typingsSlinky.server.replyMod.jsonType
-import typingsSlinky.server.replyMod.jsonpType
-import typingsSlinky.server.replyMod.renderType
-import typingsSlinky.server.replyMod.sendType
-import typingsSlinky.server.replyMod.statusType
-import typingsSlinky.server.replyMod.typeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

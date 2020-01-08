@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,10 +30,16 @@ object TaskRevealKind extends js.Object {
   @js.native
   sealed trait Silent extends TaskRevealKind
   
-  /* 1 */ val Always: typingsSlinky.vscode.vscodeMod.TaskRevealKind.Always with Double = js.native
-  /* 3 */ val Never: typingsSlinky.vscode.vscodeMod.TaskRevealKind.Never with Double = js.native
-  /* 2 */ val Silent: typingsSlinky.vscode.vscodeMod.TaskRevealKind.Silent with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TaskRevealKind with Double] = js.native
+  /* 1 */ @js.native
+  object Always extends TopLevel[Always with Double]
+  
+  /* 3 */ @js.native
+  object Never extends TopLevel[Never with Double]
+  
+  /* 2 */ @js.native
+  object Silent extends TopLevel[Silent with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcDashFeedback extends SharedApply_ITouchProps_1207342059[default] {
+object RmcDashFeedback extends SharedApply_ITouchProps434036904[default] {
   @JSImport("rmc-feedback", JSImport.Default)
   @js.native
   object componentImport extends js.Object

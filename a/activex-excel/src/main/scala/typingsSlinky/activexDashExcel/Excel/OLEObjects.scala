@@ -1,7 +1,7 @@
 package typingsSlinky.activexDashExcel.Excel
 
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`false`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`true`
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`false`
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,8 @@ class OLEObjects protected () extends js.Object {
   val Count: Double = js.native
   val Creator: XlCreator = js.native
   var Enabled: Boolean = js.native
-  var `Excel.OLEObjects_typekey`: OLEObjects = js.native
+  @JSName("Excel.OLEObjects_typekey")
+  var ExcelDotOLEObjects_typekey: OLEObjects = js.native
   var Height: Double = js.native
   val Interior: typingsSlinky.activexDashExcel.Excel.Interior = js.native
   var Left: Double = js.native

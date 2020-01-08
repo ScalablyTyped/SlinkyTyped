@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,18 +77,51 @@ object ContributionPropertyType extends js.Object {
   @js.native
   sealed trait Uri extends ContributionPropertyType
   
-  /* 256 */ val Array: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Array with scala.Double = js.native
-  /* 8 */ val Boolean: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Boolean with scala.Double = js.native
-  /* 64 */ val DateTime: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.DateTime with scala.Double = js.native
-  /* 128 */ val Dictionary: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Dictionary with scala.Double = js.native
-  /* 32 */ val Double: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Double with scala.Double = js.native
-  /* 4 */ val Guid: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Guid with scala.Double = js.native
-  /* 16 */ val Integer: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Integer with scala.Double = js.native
-  /* 512 */ val Object: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Object with scala.Double = js.native
-  /* 1 */ val String: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.String with scala.Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Unknown with scala.Double = js.native
-  /* 2 */ val Uri: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ContributionPropertyType.Uri with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[ContributionPropertyType with scala.Double] = js.native
+  /* 256 */ @js.native
+  object Array
+    extends TopLevel[Array with scala.Double]
+  
+  /* 8 */ @js.native
+  object Boolean
+    extends TopLevel[Boolean with scala.Double]
+  
+  /* 64 */ @js.native
+  object DateTime
+    extends TopLevel[DateTime with scala.Double]
+  
+  /* 128 */ @js.native
+  object Dictionary
+    extends TopLevel[Dictionary with scala.Double]
+  
+  /* 32 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 4 */ @js.native
+  object Guid
+    extends TopLevel[Guid with scala.Double]
+  
+  /* 16 */ @js.native
+  object Integer
+    extends TopLevel[Integer with scala.Double]
+  
+  /* 512 */ @js.native
+  object Object
+    extends TopLevel[Object with scala.Double]
+  
+  /* 1 */ @js.native
+  object String
+    extends TopLevel[String with scala.Double]
+  
+  /* 0 */ @js.native
+  object Unknown
+    extends TopLevel[Unknown with scala.Double]
+  
+  /* 2 */ @js.native
+  object Uri
+    extends TopLevel[Uri with scala.Double]
+  
 }
 

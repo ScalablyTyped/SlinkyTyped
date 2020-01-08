@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object StorePreviewProductPurchaseStatus extends js.Object {
   @js.native
   sealed trait succeeded extends StorePreviewProductPurchaseStatus
   
-  /* 1 */ val alreadyPurchased: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus.alreadyPurchased with Double = js.native
-  /* 2 */ val notFulfilled: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus.notFulfilled with Double = js.native
-  /* 3 */ val notPurchased: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus.notPurchased with Double = js.native
-  /* 0 */ val succeeded: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus.succeeded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StorePreviewProductPurchaseStatus with Double] = js.native
+  /* 1 */ @js.native
+  object alreadyPurchased extends TopLevel[alreadyPurchased with Double]
+  
+  /* 2 */ @js.native
+  object notFulfilled extends TopLevel[notFulfilled with Double]
+  
+  /* 3 */ @js.native
+  object notPurchased extends TopLevel[notPurchased with Double]
+  
+  /* 0 */ @js.native
+  object succeeded extends TopLevel[succeeded with Double]
+  
 }
 

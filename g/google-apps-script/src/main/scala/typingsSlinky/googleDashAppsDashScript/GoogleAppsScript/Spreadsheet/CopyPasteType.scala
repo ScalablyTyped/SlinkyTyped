@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,15 +38,31 @@ object CopyPasteType extends js.Object {
   @js.native
   sealed trait PASTE_VALUES extends CopyPasteType
   
-  /* 7 */ val PASTE_COLUMN_WIDTHS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_COLUMN_WIDTHS with Double = js.native
-  /* 6 */ val PASTE_CONDITIONAL_FORMATTING: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_CONDITIONAL_FORMATTING with Double = js.native
-  /* 4 */ val PASTE_DATA_VALIDATION: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_DATA_VALIDATION with Double = js.native
-  /* 2 */ val PASTE_FORMAT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_FORMAT with Double = js.native
-  /* 3 */ val PASTE_FORMULA: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_FORMULA with Double = js.native
-  /* 0 */ val PASTE_NORMAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_NORMAL with Double = js.native
-  /* 1 */ val PASTE_NO_BORDERS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_NO_BORDERS with Double = js.native
-  /* 5 */ val PASTE_VALUES: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Spreadsheet.CopyPasteType.PASTE_VALUES with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CopyPasteType with Double] = js.native
+  /* 7 */ @js.native
+  object PASTE_COLUMN_WIDTHS extends TopLevel[PASTE_COLUMN_WIDTHS with Double]
+  
+  /* 6 */ @js.native
+  object PASTE_CONDITIONAL_FORMATTING extends TopLevel[PASTE_CONDITIONAL_FORMATTING with Double]
+  
+  /* 4 */ @js.native
+  object PASTE_DATA_VALIDATION extends TopLevel[PASTE_DATA_VALIDATION with Double]
+  
+  /* 2 */ @js.native
+  object PASTE_FORMAT extends TopLevel[PASTE_FORMAT with Double]
+  
+  /* 3 */ @js.native
+  object PASTE_FORMULA extends TopLevel[PASTE_FORMULA with Double]
+  
+  /* 0 */ @js.native
+  object PASTE_NORMAL extends TopLevel[PASTE_NORMAL with Double]
+  
+  /* 1 */ @js.native
+  object PASTE_NO_BORDERS extends TopLevel[PASTE_NO_BORDERS with Double]
+  
+  /* 5 */ @js.native
+  object PASTE_VALUES extends TopLevel[PASTE_VALUES with Double]
+  
 }
 

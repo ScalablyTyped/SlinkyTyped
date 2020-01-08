@@ -10,9 +10,9 @@ Node bindings for nanomsg
 | ------------------ | :-------------: |
 | Full name          | nanomsg |
 | Keywords           | nanomsg, native, binding, addon, nn, nanømsg |
-| # releases         | 4 |
-| # dependents       | 10 |
-| # downloads        | 26003 |
+| # releases         | 3 |
+| # dependents       | 11 |
+| # downloads        | 42118 |
 | # stars            | 9 |
 
 ## Links

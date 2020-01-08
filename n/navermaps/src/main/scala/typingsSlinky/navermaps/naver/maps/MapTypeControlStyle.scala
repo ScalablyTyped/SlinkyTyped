@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object MapTypeControlStyle extends js.Object {
   @js.native
   sealed trait DROPDOWN extends MapTypeControlStyle
   
-  /* 0 */ val BUTTON: typingsSlinky.navermaps.naver.maps.MapTypeControlStyle.BUTTON with Double = js.native
-  /* 1 */ val DROPDOWN: typingsSlinky.navermaps.naver.maps.MapTypeControlStyle.DROPDOWN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MapTypeControlStyle with Double] = js.native
+  /* 0 */ @js.native
+  object BUTTON extends TopLevel[BUTTON with Double]
+  
+  /* 1 */ @js.native
+  object DROPDOWN extends TopLevel[DROPDOWN with Double]
+  
 }
 

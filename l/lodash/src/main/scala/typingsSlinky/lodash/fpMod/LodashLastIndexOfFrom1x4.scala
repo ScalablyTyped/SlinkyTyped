@@ -1,7 +1,7 @@
 package typingsSlinky.lodash.fpMod
 
+import typingsSlinky.lodash.lodashBooleans.`true`
 import typingsSlinky.lodash.lodashMod.__
-import typingsSlinky.lodash.lodashNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

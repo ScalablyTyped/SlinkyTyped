@@ -1,9 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution
 
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs
-import typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtDashUwp.Windows.Foundation.TypedEventHandler
@@ -80,12 +77,20 @@ object Foreground extends js.Object {
     @js.native
     sealed trait unspecified extends ExtendedExecutionForegroundReason
     
-    /* 2 */ val backgroundAudio: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason.backgroundAudio with Double = js.native
-    /* 1 */ val savingData: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason.savingData with Double = js.native
-    /* 3 */ val unconstrained: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason.unconstrained with Double = js.native
-    /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason.unspecified with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ExtendedExecutionForegroundReason with Double] = js.native
+    /* 2 */ @js.native
+    object backgroundAudio extends TopLevel[backgroundAudio with Double]
+    
+    /* 1 */ @js.native
+    object savingData extends TopLevel[savingData with Double]
+    
+    /* 3 */ @js.native
+    object unconstrained extends TopLevel[unconstrained with Double]
+    
+    /* 0 */ @js.native
+    object unspecified extends TopLevel[unspecified with Double]
+    
   }
   
   /** Specifies the possible extended execution request result values. */
@@ -99,10 +104,14 @@ object Foreground extends js.Object {
     @js.native
     sealed trait denied extends ExtendedExecutionForegroundResult
     
-    /* 0 */ val allowed: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult.allowed with Double = js.native
-    /* 1 */ val denied: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult.denied with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ExtendedExecutionForegroundResult with Double] = js.native
+    /* 0 */ @js.native
+    object allowed extends TopLevel[allowed with Double]
+    
+    /* 1 */ @js.native
+    object denied extends TopLevel[denied with Double]
+    
   }
   
   /** Describes the reason extended execution was revoked. */
@@ -116,10 +125,14 @@ object Foreground extends js.Object {
     @js.native
     sealed trait systemPolicy extends ExtendedExecutionForegroundRevokedReason
     
-    /* 0 */ val resumed: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason.resumed with Double = js.native
-    /* 1 */ val systemPolicy: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason.systemPolicy with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ExtendedExecutionForegroundRevokedReason with Double] = js.native
+    /* 0 */ @js.native
+    object resumed extends TopLevel[resumed with Double]
+    
+    /* 1 */ @js.native
+    object systemPolicy extends TopLevel[systemPolicy with Double]
+    
   }
   
 }

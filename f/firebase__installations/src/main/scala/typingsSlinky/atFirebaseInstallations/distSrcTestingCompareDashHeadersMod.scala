@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseInstallations
 
-import typingsSlinky.atFirebaseInstallations.distSrcTestingCompareDashHeadersMod.HeadersWithEntries
 import typingsSlinky.std.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`

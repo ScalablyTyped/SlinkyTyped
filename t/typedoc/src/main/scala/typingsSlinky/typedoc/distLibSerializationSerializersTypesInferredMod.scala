@@ -1,0 +1,16 @@
+package typingsSlinky.typedoc
+
+import typingsSlinky.typedoc.distLibModelsMod.InferredType
+import typingsSlinky.typedoc.distLibSerializationComponentsMod.TypeSerializerComponent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc/dist/lib/serialization/serializers/types/inferred", JSImport.Namespace)
+@js.native
+object distLibSerializationSerializersTypesInferredMod extends js.Object {
+  @js.native
+  class InferredTypeSerializer () extends TypeSerializerComponent[InferredType]
+  
+}
+

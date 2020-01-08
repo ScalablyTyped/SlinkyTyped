@@ -1,6 +1,6 @@
 package typingsSlinky.atWordpressApiDashFetch
 
-import typingsSlinky.atWordpressApiDashFetch.atWordpressApiDashFetchNumbers.`false`
+import typingsSlinky.atWordpressApiDashFetch.atWordpressApiDashFetchBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
@@ -27,33 +28,16 @@ class HTMLTextureFile protected ()
     * @param height The height of the texture the HTML will be rendered to.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: HTMLTextureFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: HTMLTextureFileConfig, url: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: String, width: integer) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: HTMLTextureFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, url: String) = this()
+  def this(loader: LoaderPlugin, key: HTMLTextureFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, width: integer) = this()
+  def this(loader: LoaderPlugin, key: HTMLTextureFileConfig, url: String, width: integer) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, width: integer, height: integer) = this()
+  def this(loader: LoaderPlugin, key: HTMLTextureFileConfig, url: String, width: integer, height: integer) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: HTMLTextureFileConfig,
-    url: String,
-    width: integer
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: String,
-    width: integer,
-    height: integer
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: HTMLTextureFileConfig,
-    url: String,
-    width: integer,
-    height: integer
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: String,
     url: String,
     width: integer,
@@ -61,7 +45,7 @@ class HTMLTextureFile protected ()
     xhrSettings: XHRSettingsObject
   ) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: HTMLTextureFileConfig,
     url: String,
     width: integer,

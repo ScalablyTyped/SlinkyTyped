@@ -1,7 +1,7 @@
 package typingsSlinky.atAntDashDesignReactDashNative
 
 import slinky.core.TagMod
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.Empty
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings._empty
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.android
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.bottom
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.down
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 trait PartialListItemProps extends js.Object {
   var activeStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var align: js.UndefOr[top | middle | bottom] = js.undefined
-  var arrow: js.UndefOr[horizontal | down | up | empty | Empty] = js.undefined
+  var arrow: js.UndefOr[horizontal | down | up | empty | _empty] = js.undefined
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var delayLongPress: js.UndefOr[Double] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -45,7 +45,7 @@ object PartialListItemProps {
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     children: TagMod[Any] = null,
     delayLongPress: Int | Double = null,
     disabled: js.UndefOr[Boolean] = js.undefined,

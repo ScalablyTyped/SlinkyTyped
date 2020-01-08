@@ -1,6 +1,6 @@
 package typingsSlinky.ipaddrDotJs.ipaddrDotJsMod
 
-import typingsSlinky.ipaddrDotJs.ipaddrDotJsNumbers.`false`
+import typingsSlinky.ipaddrDotJs.ipaddrDotJsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

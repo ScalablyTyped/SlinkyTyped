@@ -3,8 +3,6 @@ package typingsSlinky.parchment
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Blot
-import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Parent
 import typingsSlinky.parchment.distSrcCollectionLinkedDashListMod.default
 import typingsSlinky.parchment.distSrcCollectionLinkedDashNodeMod.LinkedNode
 import typingsSlinky.std.MutationRecord

@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object UssdResultCode extends js.Object {
   @js.native
   sealed trait terminated extends UssdResultCode
   
-  /* 1 */ val actionRequired: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.actionRequired with Double = js.native
-  /* 5 */ val networkTimeout: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.networkTimeout with Double = js.native
-  /* 0 */ val noActionRequired: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.noActionRequired with Double = js.native
-  /* 4 */ val operationNotSupported: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.operationNotSupported with Double = js.native
-  /* 3 */ val otherLocalClient: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.otherLocalClient with Double = js.native
-  /* 2 */ val terminated: typingsSlinky.winrt.Windows.Networking.NetworkOperators.UssdResultCode.terminated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UssdResultCode with Double] = js.native
+  /* 1 */ @js.native
+  object actionRequired extends TopLevel[actionRequired with Double]
+  
+  /* 5 */ @js.native
+  object networkTimeout extends TopLevel[networkTimeout with Double]
+  
+  /* 0 */ @js.native
+  object noActionRequired extends TopLevel[noActionRequired with Double]
+  
+  /* 4 */ @js.native
+  object operationNotSupported extends TopLevel[operationNotSupported with Double]
+  
+  /* 3 */ @js.native
+  object otherLocalClient extends TopLevel[otherLocalClient with Double]
+  
+  /* 2 */ @js.native
+  object terminated extends TopLevel[terminated with Double]
+  
 }
 

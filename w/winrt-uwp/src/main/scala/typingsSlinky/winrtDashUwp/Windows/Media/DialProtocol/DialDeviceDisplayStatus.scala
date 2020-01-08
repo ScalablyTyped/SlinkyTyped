@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object DialDeviceDisplayStatus extends js.Object {
   @js.native
   sealed trait none extends DialDeviceDisplayStatus
   
-  /* 2 */ val connected: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.connected with Double = js.native
-  /* 1 */ val connecting: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.connecting with Double = js.native
-  /* 4 */ val disconnected: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.disconnected with Double = js.native
-  /* 3 */ val disconnecting: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.disconnecting with Double = js.native
-  /* 5 */ val error: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.error with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.DialProtocol.DialDeviceDisplayStatus.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DialDeviceDisplayStatus with Double] = js.native
+  /* 2 */ @js.native
+  object connected extends TopLevel[connected with Double]
+  
+  /* 1 */ @js.native
+  object connecting extends TopLevel[connecting with Double]
+  
+  /* 4 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
+  /* 3 */ @js.native
+  object disconnecting extends TopLevel[disconnecting with Double]
+  
+  /* 5 */ @js.native
+  object error extends TopLevel[error with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

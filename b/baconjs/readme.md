@@ -1,7 +1,7 @@
 
 # Scala.js typings for baconjs
 
-Typings are for version 3.0.11
+Typings are for version 3.0.12
 
 ## Library description:
 A small functional reactive programming lib for JavaScript.
@@ -10,9 +10,9 @@ A small functional reactive programming lib for JavaScript.
 | ------------------ | :-------------: |
 | Full name          | baconjs |
 | Keywords           | bacon.js, bacon, frp, functional, reactive, programming, stream, streams, EventStream, Rx, RxJs, Observable |
-| # releases         | 20 |
-| # dependents       | 122 |
-| # downloads        | 412341 |
+| # releases         | 28 |
+| # dependents       | 126 |
+| # downloads        | 516945 |
 | # stars            | 19 |
 
 ## Links

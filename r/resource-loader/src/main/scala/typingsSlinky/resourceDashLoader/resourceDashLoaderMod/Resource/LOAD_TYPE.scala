@@ -1,5 +1,6 @@
 package typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,11 +30,19 @@ object LOAD_TYPE extends js.Object {
   @js.native
   sealed trait XHR extends LOAD_TYPE
   
-  /* 2 */ val AUDIO: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.LOAD_TYPE.AUDIO with Double = js.native
-  /* 1 */ val IMAGE: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.LOAD_TYPE.IMAGE with Double = js.native
-  /* 3 */ val VIDEO: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.LOAD_TYPE.VIDEO with Double = js.native
-  /* 0 */ val XHR: typingsSlinky.resourceDashLoader.resourceDashLoaderMod.Resource.LOAD_TYPE.XHR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LOAD_TYPE with Double] = js.native
+  /* 2 */ @js.native
+  object AUDIO extends TopLevel[AUDIO with Double]
+  
+  /* 1 */ @js.native
+  object IMAGE extends TopLevel[IMAGE with Double]
+  
+  /* 3 */ @js.native
+  object VIDEO extends TopLevel[VIDEO with Double]
+  
+  /* 0 */ @js.native
+  object XHR extends TopLevel[XHR with Double]
+  
 }
 

@@ -40,6 +40,7 @@ object FontAwesomeIcon
     size: SizeProp = null,
     spin: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties = null,
+    swapOpacity: js.UndefOr[Boolean] = js.undefined,
     symbol: FaSymbol = null,
     title: String = null,
     transform: String | Transform = null,
@@ -59,6 +60,7 @@ object FontAwesomeIcon
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (!js.isUndefined(spin)) __obj.updateDynamic("spin")(spin.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(swapOpacity)) __obj.updateDynamic("swapOpacity")(swapOpacity.asInstanceOf[js.Any])
     if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])

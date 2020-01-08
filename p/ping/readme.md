@@ -11,8 +11,8 @@ a simple wrapper for ping
 | Full name          | ping |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 104 |
-| # downloads        | 577056 |
+| # dependents       | 126 |
+| # downloads        | 761546 |
 | # stars            | 9 |
 
 ## Links

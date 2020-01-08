@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeDashLanguageclient.vscodeDashLanguageclientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object TransportKind extends js.Object {
   @js.native
   sealed trait stdio extends TransportKind
   
-  /* 1 */ val ipc: typingsSlinky.vscodeDashLanguageclient.vscodeDashLanguageclientMod.TransportKind.ipc with Double = js.native
-  /* 2 */ val pipe: typingsSlinky.vscodeDashLanguageclient.vscodeDashLanguageclientMod.TransportKind.pipe with Double = js.native
-  /* 3 */ val socket: typingsSlinky.vscodeDashLanguageclient.vscodeDashLanguageclientMod.TransportKind.socket with Double = js.native
-  /* 0 */ val stdio: typingsSlinky.vscodeDashLanguageclient.vscodeDashLanguageclientMod.TransportKind.stdio with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TransportKind with Double] = js.native
+  /* 1 */ @js.native
+  object ipc extends TopLevel[ipc with Double]
+  
+  /* 2 */ @js.native
+  object pipe extends TopLevel[pipe with Double]
+  
+  /* 3 */ @js.native
+  object socket extends TopLevel[socket with Double]
+  
+  /* 0 */ @js.native
+  object stdio extends TopLevel[stdio with Double]
+  
 }
 

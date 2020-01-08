@@ -1,7 +1,6 @@
 package typingsSlinky.dojo.dojo
 
 import typingsSlinky.dojo.dojo._base.array
-import typingsSlinky.dojo.dojo.rpc.RpcService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

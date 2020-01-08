@@ -1,6 +1,5 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import typingsSlinky.atMaterialDashUiCore.utilsHelpersMod.ChainedFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -165,9 +165,9 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model[T, QueryH
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(conditions: js.Any, update: js.Any, options: Anon_New with QueryFindOneAndUpdateOptions): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
   /** Find One And Update only deleted documents */
-  def findOneAndUpdateDeleted(conditions: js.Any, update: js.Any, options: Anon_NewTrue with QueryFindOneAndUpdateOptions): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
-  /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(conditions: js.Any, update: js.Any, options: Anon_RawResult with QueryFindOneAndUpdateOptions): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
+  /** Find One And Update only deleted documents */
+  def findOneAndUpdateDeleted(conditions: js.Any, update: js.Any, options: Anon_NewTrue with QueryFindOneAndUpdateOptions): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(
     conditions: js.Any,
@@ -221,16 +221,21 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model[T, QueryH
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(conditions: js.Any, update: js.Any, options: Anon_New with QueryFindOneAndUpdateOptions): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
   /** Find One And Update all documents including deleted */
-  def findOneAndUpdateWithDeleted(conditions: js.Any, update: js.Any, options: Anon_NewTrue with QueryFindOneAndUpdateOptions): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
-  /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(conditions: js.Any, update: js.Any, options: Anon_RawResult with QueryFindOneAndUpdateOptions): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
+  /** Find One And Update all documents including deleted */
+  def findOneAndUpdateWithDeleted(conditions: js.Any, update: js.Any, options: Anon_NewTrue with QueryFindOneAndUpdateOptions): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(
     conditions: js.Any,
     update: js.Any,
-    options: Anon_NewTrue with QueryFindOneAndUpdateOptions,
-    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
-  ): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
+    options: Anon_New with QueryFindOneAndUpdateOptions,
+    callback: js.Function3[
+      /* err */ js.Any, 
+      /* doc */ FindAndModifyWriteOpResultObject[_], 
+      /* res */ js.Any, 
+      Unit
+    ]
+  ): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(
     conditions: js.Any,
@@ -247,14 +252,9 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model[T, QueryH
   def findOneAndUpdateWithDeleted(
     conditions: js.Any,
     update: js.Any,
-    options: Anon_New with QueryFindOneAndUpdateOptions,
-    callback: js.Function3[
-      /* err */ js.Any, 
-      /* doc */ FindAndModifyWriteOpResultObject[_], 
-      /* res */ js.Any, 
-      Unit
-    ]
-  ): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
+    options: Anon_NewTrue with QueryFindOneAndUpdateOptions,
+    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
+  ): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(conditions: js.Any, update: js.Any, options: QueryFindOneAndUpdateOptions): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
   /** Find One And Update all documents including deleted */

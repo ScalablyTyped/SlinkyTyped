@@ -1,7 +1,7 @@
 
 # Scala.js typings for ts-pnp
 
-Typings are for version 1.1.4
+Typings are for version 1.1.5
 
 ## Library description:
 plug'n'play resolver for TypeScript
@@ -10,9 +10,9 @@ plug'n'play resolver for TypeScript
 | ------------------ | :-------------: |
 | Full name          | ts-pnp |
 | Keywords           | typescript, yarn, plugnplay, pnp |
-| # releases         | 5 |
-| # dependents       | 6 |
-| # downloads        | 5015557 |
+| # releases         | 10 |
+| # dependents       | 619 |
+| # downloads        | 61719332 |
 | # stars            | 0 |
 
 ## Links

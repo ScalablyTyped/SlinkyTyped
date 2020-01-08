@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object MediaPixelFormat extends js.Object {
   @js.native
   sealed trait nv12 extends MediaPixelFormat
   
-  /* 1 */ val bgra8: typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties.MediaPixelFormat.bgra8 with Double = js.native
-  /* 0 */ val nv12: typingsSlinky.winrtDashUwp.Windows.Media.MediaProperties.MediaPixelFormat.nv12 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MediaPixelFormat with Double] = js.native
+  /* 1 */ @js.native
+  object bgra8 extends TopLevel[bgra8 with Double]
+  
+  /* 0 */ @js.native
+  object nv12 extends TopLevel[nv12 with Double]
+  
 }
 

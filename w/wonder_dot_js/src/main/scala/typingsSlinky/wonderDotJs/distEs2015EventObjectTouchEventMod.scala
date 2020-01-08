@@ -4,7 +4,6 @@ import typingsSlinky.wonderDotJs.distEs2015EventInterfaceIEventDataMod.ITouchDat
 import typingsSlinky.wonderDotJs.distEs2015EventInterfaceIEventDataMod.ITouchEventData
 import typingsSlinky.wonderDotJs.distEs2015EventObjectDomEventMod.DomEvent
 import typingsSlinky.wonderDotJs.distEs2015EventObjectEventNameHandlerMod.EEventName
-import typingsSlinky.wonderDotJs.distEs2015EventObjectTouchEventMod.TouchEvent
 import typingsSlinky.wonderDotJs.distEs2015StructurePointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,10 +1,6 @@
 package typingsSlinky.reactDashSpinners
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactDashSpinners.helpersProptypesMod.DefaultProps
-import typingsSlinky.reactDashSpinners.helpersProptypesMod.HeightWidthFunction
-import typingsSlinky.reactDashSpinners.helpersProptypesMod.HeightWidthRadiusFunction
-import typingsSlinky.reactDashSpinners.helpersProptypesMod.SizeFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

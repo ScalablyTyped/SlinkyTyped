@@ -1,7 +1,5 @@
 package typingsSlinky.antlr4
 
-import typingsSlinky.antlr4.intervalSetMod.Interval
-import typingsSlinky.antlr4.intervalSetMod.IntervalSet
 import typingsSlinky.antlr4.tokenMod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`

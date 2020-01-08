@@ -1,7 +1,6 @@
 package typingsSlinky.closureDashCompiler
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.closureDashCompiler.closureDashCompilerMod.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

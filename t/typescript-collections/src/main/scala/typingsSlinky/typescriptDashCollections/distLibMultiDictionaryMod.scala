@@ -1,6 +1,5 @@
 package typingsSlinky.typescriptDashCollections
 
-import typingsSlinky.typescriptDashCollections.distLibMultiDictionaryMod.MultiDictionary
 import typingsSlinky.typescriptDashCollections.distLibUtilMod.IEqualsFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

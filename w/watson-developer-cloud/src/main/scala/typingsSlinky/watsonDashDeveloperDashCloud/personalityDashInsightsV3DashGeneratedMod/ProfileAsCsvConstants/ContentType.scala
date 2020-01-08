@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileAsCsvConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,10 +21,16 @@ object ContentType extends js.Object {
   @js.native
   sealed trait TEXT_PLAIN extends ContentType
   
-  /* "application/json" */ val APPLICATION_JSON: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileAsCsvConstants.ContentType.APPLICATION_JSON with String = js.native
-  /* "text/html" */ val TEXT_HTML: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileAsCsvConstants.ContentType.TEXT_HTML with String = js.native
-  /* "text/plain" */ val TEXT_PLAIN: typingsSlinky.watsonDashDeveloperDashCloud.personalityDashInsightsV3DashGeneratedMod.ProfileAsCsvConstants.ContentType.TEXT_PLAIN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ContentType with String] = js.native
+  /* "application/json" */ @js.native
+  object APPLICATION_JSON extends TopLevel[APPLICATION_JSON with String]
+  
+  /* "text/html" */ @js.native
+  object TEXT_HTML extends TopLevel[TEXT_HTML with String]
+  
+  /* "text/plain" */ @js.native
+  object TEXT_PLAIN extends TopLevel[TEXT_PLAIN with String]
+  
 }
 

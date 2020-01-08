@@ -1,15 +1,10 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebProviderError
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequest
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestResult
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus
-import typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenResponse
 import typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccount
 import typingsSlinky.winrtDashUwp.Windows.Security.Credentials.WebAccountProvider
 import typingsSlinky.winrtDashUwp.Windows.System.User
@@ -213,10 +208,14 @@ object Core extends js.Object {
     @js.native
     sealed trait forceAuthentication extends WebTokenRequestPromptType
     
-    /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType.default with Double = js.native
-    /* 1 */ val forceAuthentication: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType.forceAuthentication with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[WebTokenRequestPromptType with Double] = js.native
+    /* 0 */ @js.native
+    object default extends TopLevel[default with Double]
+    
+    /* 1 */ @js.native
+    object forceAuthentication extends TopLevel[forceAuthentication with Double]
+    
   }
   
   /** Represents the status of a web token request. */
@@ -246,14 +245,26 @@ object Core extends js.Object {
     @js.native
     sealed trait userInteractionRequired extends WebTokenRequestStatus
     
-    /* 4 */ val accountProviderNotAvailable: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.accountProviderNotAvailable with Double = js.native
-    /* 2 */ val accountSwitch: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.accountSwitch with Double = js.native
-    /* 5 */ val providerError: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.providerError with Double = js.native
-    /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.success with Double = js.native
-    /* 1 */ val userCancel: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.userCancel with Double = js.native
-    /* 3 */ val userInteractionRequired: typingsSlinky.winrtDashUwp.Windows.Security.Authentication.Web.Core.WebTokenRequestStatus.userInteractionRequired with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[WebTokenRequestStatus with Double] = js.native
+    /* 4 */ @js.native
+    object accountProviderNotAvailable extends TopLevel[accountProviderNotAvailable with Double]
+    
+    /* 2 */ @js.native
+    object accountSwitch extends TopLevel[accountSwitch with Double]
+    
+    /* 5 */ @js.native
+    object providerError extends TopLevel[providerError with Double]
+    
+    /* 0 */ @js.native
+    object success extends TopLevel[success with Double]
+    
+    /* 1 */ @js.native
+    object userCancel extends TopLevel[userCancel with Double]
+    
+    /* 3 */ @js.native
+    object userInteractionRequired extends TopLevel[userInteractionRequired with Double]
+    
   }
   
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.atUirouterCore
 
-import typingsSlinky.atUirouterCore.libCommonGlobMod.Glob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

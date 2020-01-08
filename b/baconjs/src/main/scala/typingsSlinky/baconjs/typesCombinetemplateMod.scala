@@ -1,8 +1,5 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.typesCombinetemplateMod.ArrayTemplate
-import typingsSlinky.baconjs.typesCombinetemplateMod.CombinedTemplate
-import typingsSlinky.baconjs.typesCombinetemplateMod.ObjectTemplate
 import typingsSlinky.baconjs.typesObservableMod.Property
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +12,7 @@ object typesCombinetemplateMod extends js.Object {
   type ArrayTemplate[A] = js.Array[A | ObjectTemplate[A]]
   type CombinedTemplate[O] = O | ArrayTemplate[js.Any] | ObjectTemplate[O]
   type ObjectTemplate[O] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof O ]: O[K] extends baconjs.baconjs/types/observable.default<infer I>? any : O[K] extends std.Record<any, any>? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias baconjs.baconjs/types/combinetemplate.ObjectTemplate<O[K]> * / object : O[K] extends std.Array<infer I2>? baconjs.baconjs/types/combinetemplate.ArrayTemplate<any> : O[K]}
+  {[ K in keyof O ]: O[K] extends baconjs.baconjs/types/observable.default<infer I>? any : O[K] extends std.Record<any, any>? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias baconjs.baconjs/types/combinetemplate.ObjectTemplate<O[K]> * / object : O[K] extends std.Array<infer I2>? baconjs.baconjs/types/combinetemplate.ArrayTemplate<any> : O[K]}
     */ typingsSlinky.baconjs.baconjsStrings.ObjectTemplate with js.Any
 }
 

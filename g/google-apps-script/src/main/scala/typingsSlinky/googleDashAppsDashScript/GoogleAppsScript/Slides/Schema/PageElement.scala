@@ -6,40 +6,36 @@ import scala.scalajs.js.annotation._
 
 trait PageElement extends js.Object {
   var description: js.UndefOr[String] = js.undefined
-  var elementGroup: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Group] = js.undefined
-  var image: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Image] = js.undefined
-  var line: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Line] = js.undefined
+  var elementGroup: js.UndefOr[Group] = js.undefined
+  var image: js.UndefOr[Image] = js.undefined
+  var line: js.UndefOr[Line] = js.undefined
   var objectId: js.UndefOr[String] = js.undefined
-  var shape: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Shape] = js.undefined
-  var sheetsChart: js.UndefOr[
-    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.SheetsChart
-  ] = js.undefined
+  var shape: js.UndefOr[Shape] = js.undefined
+  var sheetsChart: js.UndefOr[SheetsChart] = js.undefined
   var size: js.UndefOr[Size] = js.undefined
-  var table: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Table] = js.undefined
+  var table: js.UndefOr[Table] = js.undefined
   var title: js.UndefOr[String] = js.undefined
-  var transform: js.UndefOr[
-    typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.AffineTransform
-  ] = js.undefined
-  var video: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Video] = js.undefined
-  var wordArt: js.UndefOr[typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.WordArt] = js.undefined
+  var transform: js.UndefOr[AffineTransform] = js.undefined
+  var video: js.UndefOr[Video] = js.undefined
+  var wordArt: js.UndefOr[WordArt] = js.undefined
 }
 
 object PageElement {
   @scala.inline
   def apply(
     description: String = null,
-    elementGroup: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Group = null,
-    image: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Image = null,
-    line: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Line = null,
+    elementGroup: Group = null,
+    image: Image = null,
+    line: Line = null,
     objectId: String = null,
-    shape: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Shape = null,
-    sheetsChart: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.SheetsChart = null,
+    shape: Shape = null,
+    sheetsChart: SheetsChart = null,
     size: Size = null,
-    table: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Table = null,
+    table: Table = null,
     title: String = null,
-    transform: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.AffineTransform = null,
-    video: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.Video = null,
-    wordArt: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.Schema.WordArt = null
+    transform: AffineTransform = null,
+    video: Video = null,
+    wordArt: WordArt = null
   ): PageElement = {
     val __obj = js.Dynamic.literal()
     if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])

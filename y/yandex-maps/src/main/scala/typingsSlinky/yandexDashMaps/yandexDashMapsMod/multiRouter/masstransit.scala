@@ -8,12 +8,6 @@ import typingsSlinky.yandexDashMaps.yandexDashMapsMod.Map
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.data.Manager
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.geometry.base.LineString
 import typingsSlinky.yandexDashMaps.yandexDashMapsMod.geometry.base.Point
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.PathModel
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.RouteModel
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.StopModel
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.TransferSegmentModel
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.TransportSegmentModel
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.multiRouter.masstransit.WalkSegmentModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

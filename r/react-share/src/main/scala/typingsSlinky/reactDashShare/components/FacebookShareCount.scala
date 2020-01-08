@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FacebookShareCount extends SharedApply_ShareCountComponentProps_2142398689 {
+object FacebookShareCount extends SharedApply_ShareCountComponentProps_1842317732 {
   @JSImport("react-share", "FacebookShareCount")
   @js.native
   object componentImport extends js.Object

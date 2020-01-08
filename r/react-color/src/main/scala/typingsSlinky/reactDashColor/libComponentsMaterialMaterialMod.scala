@@ -1,8 +1,6 @@
 package typingsSlinky.reactDashColor
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashColor.libComponentsMaterialMaterialMod.MaterialPicker
-import typingsSlinky.reactDashColor.libComponentsMaterialMaterialMod.MaterialPickerProps
 import typingsSlinky.reactDashColor.reactDashColorMod.ColorPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

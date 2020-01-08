@@ -1,6 +1,5 @@
 package typingsSlinky.reduxDashForm
 
-import typingsSlinky.reduxDashForm.libSubmissionErrorMod.SubmissionError
 import typingsSlinky.reduxDashForm.reduxDashFormMod.FormErrors
 import typingsSlinky.std.Error
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService
 
-import typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.equals
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,19 +55,39 @@ object FilterCompareOperator extends js.Object {
   @js.native
   sealed trait startsWith extends FilterCompareOperator
   
-  /* 0 */ val endsWith: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.endsWith with Double = js.native
   /* 1 */ @JSName("equals")
-  val equals_FFilterCompareOperator: equals with Double = js.native
-  /* 2 */ val greaterThan: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.greaterThan with Double = js.native
-  /* 3 */ val greaterThanOrEqual: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.greaterThanOrEqual with Double = js.native
-  /* 4 */ val isIn: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.isIn with Double = js.native
-  /* 5 */ val lessThan: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.lessThan with Double = js.native
-  /* 6 */ val lessThanOrEqual: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.lessThanOrEqual with Double = js.native
-  /* 7 */ val notEndsWith: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.notEndsWith with Double = js.native
-  /* 8 */ val notEquals: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.notEquals with Double = js.native
-  /* 9 */ val notStartsWith: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.notStartsWith with Double = js.native
-  /* 10 */ val startsWith: typingsSlinky.bingmaps.Microsoft.Maps.SpatialDataService.FilterCompareOperator.startsWith with Double = js.native
+  val equals_ : equals with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FilterCompareOperator with Double] = js.native
+  /* 0 */ @js.native
+  object endsWith extends TopLevel[endsWith with Double]
+  
+  /* 2 */ @js.native
+  object greaterThan extends TopLevel[greaterThan with Double]
+  
+  /* 3 */ @js.native
+  object greaterThanOrEqual extends TopLevel[greaterThanOrEqual with Double]
+  
+  /* 4 */ @js.native
+  object isIn extends TopLevel[isIn with Double]
+  
+  /* 5 */ @js.native
+  object lessThan extends TopLevel[lessThan with Double]
+  
+  /* 6 */ @js.native
+  object lessThanOrEqual extends TopLevel[lessThanOrEqual with Double]
+  
+  /* 7 */ @js.native
+  object notEndsWith extends TopLevel[notEndsWith with Double]
+  
+  /* 8 */ @js.native
+  object notEquals extends TopLevel[notEquals with Double]
+  
+  /* 9 */ @js.native
+  object notStartsWith extends TopLevel[notStartsWith with Double]
+  
+  /* 10 */ @js.native
+  object startsWith extends TopLevel[startsWith with Double]
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.agDashGrid
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.agDashGrid.distLibDragAndDropDragAndDropServiceMod.DropTarget
-import typingsSlinky.agDashGrid.distLibHeaderRenderingHeaderRowCompMod.HeaderRowType
 import typingsSlinky.agDashGrid.distLibInterfacesIComponentMod.IComponent
 import typingsSlinky.agDashGrid.distLibWidgetsComponentMod.Component
 import scala.scalajs.js
@@ -56,11 +56,17 @@ object distLibHeaderRenderingHeaderRowCompMod extends js.Object {
     @js.native
     sealed trait FLOATING_FILTER extends HeaderRowType
     
-    /* 1 */ val COLUMN: typingsSlinky.agDashGrid.distLibHeaderRenderingHeaderRowCompMod.HeaderRowType.COLUMN with Double = js.native
-    /* 0 */ val COLUMN_GROUP: typingsSlinky.agDashGrid.distLibHeaderRenderingHeaderRowCompMod.HeaderRowType.COLUMN_GROUP with Double = js.native
-    /* 2 */ val FLOATING_FILTER: typingsSlinky.agDashGrid.distLibHeaderRenderingHeaderRowCompMod.HeaderRowType.FLOATING_FILTER with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[HeaderRowType with Double] = js.native
+    /* 1 */ @js.native
+    object COLUMN extends TopLevel[COLUMN with Double]
+    
+    /* 0 */ @js.native
+    object COLUMN_GROUP extends TopLevel[COLUMN_GROUP with Double]
+    
+    /* 2 */ @js.native
+    object FLOATING_FILTER extends TopLevel[FLOATING_FILTER with Double]
+    
   }
   
 }

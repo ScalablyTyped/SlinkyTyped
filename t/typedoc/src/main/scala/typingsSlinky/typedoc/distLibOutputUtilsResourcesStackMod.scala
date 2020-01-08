@@ -2,11 +2,6 @@ package typingsSlinky.typedoc
 
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.Resource
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceClass
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceMap
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceOrigin
-import typingsSlinky.typedoc.distLibOutputUtilsResourcesStackMod.ResourceStack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

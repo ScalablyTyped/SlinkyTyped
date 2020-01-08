@@ -1,6 +1,6 @@
 package typingsSlinky.history.historyMod
 
-import typingsSlinky.history.historyNumbers.`false`
+import typingsSlinky.history.historyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

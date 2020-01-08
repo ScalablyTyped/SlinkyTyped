@@ -9,7 +9,7 @@ package object yargsMod {
   import typingsSlinky.std.Exclude
   import typingsSlinky.std.Extract
   import typingsSlinky.yargs.Anon_
-  import typingsSlinky.yargs.yargsNumbers.`true`
+  import typingsSlinky.yargs.yargsBooleans.`true`
 
   type Arguments[T] = T with Anon_
   type AsyncCompletionFunction = js.Function3[

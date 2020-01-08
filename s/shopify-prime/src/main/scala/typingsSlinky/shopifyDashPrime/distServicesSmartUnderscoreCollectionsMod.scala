@@ -6,7 +6,6 @@ import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.DateOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.PublishedOptions
 import typingsSlinky.shopifyDashPrime.distOptionsProductUnderscoreCollectionMod.CollectionListOptions
-import typingsSlinky.shopifyDashPrime.distServicesSmartUnderscoreCollectionsMod.SmartCollections
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

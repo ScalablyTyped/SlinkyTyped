@@ -2,14 +2,12 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.ReactBuildOptions
 import typingsSlinky.ionic.ionicStrings.`React Scripts`
-import typingsSlinky.ionic.ionicStrings.`ionic:build`
 import typingsSlinky.ionic.ionicStrings.`react-scripts`
+import typingsSlinky.ionic.ionicStrings.ionicColonbuild
 import typingsSlinky.ionic.libBuildMod.BuildCLI
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libBuildMod.BuildRunnerDeps
-import typingsSlinky.ionic.libProjectReactBuildMod.ReactBuildRunnerDeps
 import typingsSlinky.ionic.libProjectReactMod.ReactProject
-import typingsSlinky.node.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +25,7 @@ object libProjectReactBuildMod extends js.Object {
     @JSName("program")
     val program_ReactBuildCLI: `react-scripts` = js.native
     @JSName("script")
-    val script_ReactBuildCLI: `ionic:build` = js.native
-    /* protected */ def buildEnvVars(options: ReactBuildOptions): js.Promise[ProcessEnv] = js.native
+    val script_ReactBuildCLI: ionicColonbuild = js.native
   }
   
   @js.native

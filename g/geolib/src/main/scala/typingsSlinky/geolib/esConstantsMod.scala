@@ -1,7 +1,6 @@
 package typingsSlinky.geolib
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.geolib.esConstantsMod.unitObject
 import typingsSlinky.geolib.esTypesMod.AltitudeKeys
 import typingsSlinky.geolib.esTypesMod.LatitudeKeys
 import typingsSlinky.geolib.esTypesMod.LongitudeKeys

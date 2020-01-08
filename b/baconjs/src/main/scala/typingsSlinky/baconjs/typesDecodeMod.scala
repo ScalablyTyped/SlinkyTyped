@@ -1,7 +1,5 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.typesDecodeMod.DecodedValueOf
-import typingsSlinky.baconjs.typesDecodeMod.FlattenedObservable
 import typingsSlinky.baconjs.typesObservableMod.Observable
 import typingsSlinky.baconjs.typesObservableMod.Property
 import typingsSlinky.std.Record

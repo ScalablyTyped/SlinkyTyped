@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object SwipeDirection extends js.Object {
   @js.native
   sealed trait RightToLeft extends SwipeDirection
   
-  /* 0 */ val Both: typingsSlinky.openui5.sap.m.SwipeDirection.Both with Double = js.native
-  /* 1 */ val LeftToRight: typingsSlinky.openui5.sap.m.SwipeDirection.LeftToRight with Double = js.native
-  /* 2 */ val RightToLeft: typingsSlinky.openui5.sap.m.SwipeDirection.RightToLeft with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SwipeDirection with Double] = js.native
+  /* 0 */ @js.native
+  object Both extends TopLevel[Both with Double]
+  
+  /* 1 */ @js.native
+  object LeftToRight extends TopLevel[LeftToRight with Double]
+  
+  /* 2 */ @js.native
+  object RightToLeft extends TopLevel[RightToLeft with Double]
+  
 }
 

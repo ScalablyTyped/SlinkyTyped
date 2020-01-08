@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object NotificationOperation extends js.Object {
   @js.native
   sealed trait SuspendUnprocessed extends NotificationOperation
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationOperation.None with Double = js.native
-  /* 1 */ val SuspendUnprocessed: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationOperation.SuspendUnprocessed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationOperation with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object SuspendUnprocessed extends TopLevel[SuspendUnprocessed with Double]
+  
 }
 

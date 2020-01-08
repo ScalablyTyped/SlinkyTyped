@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object ManualInterventionStatus extends js.Object {
   @js.native
   sealed trait Unknown extends ManualInterventionStatus
   
-  /* 4 */ val Approved: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ManualInterventionStatus.Approved with Double = js.native
-  /* 8 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ManualInterventionStatus.Canceled with Double = js.native
-  /* 1 */ val Pending: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ManualInterventionStatus.Pending with Double = js.native
-  /* 2 */ val Rejected: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ManualInterventionStatus.Rejected with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ManualInterventionStatus.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ManualInterventionStatus with Double] = js.native
+  /* 4 */ @js.native
+  object Approved extends TopLevel[Approved with Double]
+  
+  /* 8 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 1 */ @js.native
+  object Pending extends TopLevel[Pending with Double]
+  
+  /* 2 */ @js.native
+  object Rejected extends TopLevel[Rejected with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

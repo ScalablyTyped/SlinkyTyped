@@ -1,7 +1,6 @@
 package typingsSlinky.webcola
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.webcola.distSrcDescentMod.Locks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

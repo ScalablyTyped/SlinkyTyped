@@ -1,5 +1,6 @@
 package typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object WebOrientationLock extends js.Object {
   @js.native
   sealed trait UNKNOWN extends WebOrientationLock
   
-  /* "any" */ val ANY: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.ANY with String = js.native
-  /* "landscape" */ val LANDSCAPE: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.LANDSCAPE with String = js.native
-  /* "landscape-primary" */ val LANDSCAPE_PRIMARY: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.LANDSCAPE_PRIMARY with String = js.native
-  /* "landscape-secondary" */ val LANDSCAPE_SECONDARY: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.LANDSCAPE_SECONDARY with String = js.native
-  /* "natural" */ val NATURAL: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.NATURAL with String = js.native
-  /* "portrait" */ val PORTRAIT: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.PORTRAIT with String = js.native
-  /* "portrait-primary" */ val PORTRAIT_PRIMARY: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.PORTRAIT_PRIMARY with String = js.native
-  /* "portrait-secondary" */ val PORTRAIT_SECONDARY: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.PORTRAIT_SECONDARY with String = js.native
-  /* "unknown" */ val UNKNOWN: typingsSlinky.expo.buildScreenOrientationScreenOrientationDotTypesMod.WebOrientationLock.UNKNOWN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[WebOrientationLock with String] = js.native
+  /* "any" */ @js.native
+  object ANY extends TopLevel[ANY with String]
+  
+  /* "landscape" */ @js.native
+  object LANDSCAPE extends TopLevel[LANDSCAPE with String]
+  
+  /* "landscape-primary" */ @js.native
+  object LANDSCAPE_PRIMARY extends TopLevel[LANDSCAPE_PRIMARY with String]
+  
+  /* "landscape-secondary" */ @js.native
+  object LANDSCAPE_SECONDARY extends TopLevel[LANDSCAPE_SECONDARY with String]
+  
+  /* "natural" */ @js.native
+  object NATURAL extends TopLevel[NATURAL with String]
+  
+  /* "portrait" */ @js.native
+  object PORTRAIT extends TopLevel[PORTRAIT with String]
+  
+  /* "portrait-primary" */ @js.native
+  object PORTRAIT_PRIMARY extends TopLevel[PORTRAIT_PRIMARY with String]
+  
+  /* "portrait-secondary" */ @js.native
+  object PORTRAIT_SECONDARY extends TopLevel[PORTRAIT_SECONDARY with String]
+  
+  /* "unknown" */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with String]
+  
 }
 

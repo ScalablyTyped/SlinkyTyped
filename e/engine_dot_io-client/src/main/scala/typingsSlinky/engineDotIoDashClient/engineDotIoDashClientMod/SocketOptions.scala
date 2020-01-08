@@ -1,7 +1,7 @@
 package typingsSlinky.engineDotIoDashClient.engineDotIoDashClientMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.engineDotIoDashClient.engineDotIoDashClientNumbers.`false`
+import typingsSlinky.engineDotIoDashClient.engineDotIoDashClientBooleans.`false`
 import typingsSlinky.node.httpMod.Agent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

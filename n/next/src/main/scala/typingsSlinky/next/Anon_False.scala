@@ -1,7 +1,7 @@
 package typingsSlinky.next
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.next.nextNumbers.`false`
+import typingsSlinky.next.nextBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

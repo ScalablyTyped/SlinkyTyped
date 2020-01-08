@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object BaseSlots extends js.Object {
   @js.native
   sealed trait primaryColor extends BaseSlots
   
-  /* 1 */ val backgroundColor: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.BaseSlots.backgroundColor with Double = js.native
-  /* 2 */ val foregroundColor: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.BaseSlots.foregroundColor with Double = js.native
-  /* 0 */ val primaryColor: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.BaseSlots.primaryColor with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BaseSlots with Double] = js.native
+  /* 1 */ @js.native
+  object backgroundColor extends TopLevel[backgroundColor with Double]
+  
+  /* 2 */ @js.native
+  object foregroundColor extends TopLevel[foregroundColor with Double]
+  
+  /* 0 */ @js.native
+  object primaryColor extends TopLevel[primaryColor with Double]
+  
 }
 

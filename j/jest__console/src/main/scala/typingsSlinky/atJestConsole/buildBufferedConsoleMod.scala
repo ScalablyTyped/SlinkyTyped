@@ -1,6 +1,5 @@
 package typingsSlinky.atJestConsole
 
-import typingsSlinky.atJestConsole.buildBufferedConsoleMod.BufferedConsole
 import typingsSlinky.atJestConsole.buildTypesMod.ConsoleBuffer
 import typingsSlinky.atJestConsole.buildTypesMod.LogEntry
 import typingsSlinky.atJestConsole.buildTypesMod.LogMessage

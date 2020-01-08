@@ -1,7 +1,6 @@
 package typingsSlinky.tsDashMockito
 
 import typingsSlinky.tsDashMockito.libMatcherTypeMatcherMod.Matcher
-import typingsSlinky.tsDashMockito.libMethodActionMod.MethodAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

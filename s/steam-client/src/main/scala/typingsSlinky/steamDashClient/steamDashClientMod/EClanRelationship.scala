@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object EClanRelationship extends js.Object {
   @js.native
   sealed trait None extends EClanRelationship
   
-  /* 1 */ val Blocked: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.Blocked with Double = js.native
-  /* 2 */ val Invited: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.Invited with Double = js.native
-  /* 5 */ val KickAcknowledged: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.KickAcknowledged with Double = js.native
-  /* 4 */ val Kicked: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.Kicked with Double = js.native
-  /* 3 */ val Member: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.Member with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.EClanRelationship.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EClanRelationship with Double] = js.native
+  /* 1 */ @js.native
+  object Blocked extends TopLevel[Blocked with Double]
+  
+  /* 2 */ @js.native
+  object Invited extends TopLevel[Invited with Double]
+  
+  /* 5 */ @js.native
+  object KickAcknowledged extends TopLevel[KickAcknowledged with Double]
+  
+  /* 4 */ @js.native
+  object Kicked extends TopLevel[Kicked with Double]
+  
+  /* 3 */ @js.native
+  object Member extends TopLevel[Member with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

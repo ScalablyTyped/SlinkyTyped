@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,6 @@ object PackableForInterpolation extends js.Object {
   @js.native
   sealed trait packedInterpolationLength extends PackableForInterpolation
   
-  /* 0 */ val packedInterpolationLength: typingsSlinky.cesium.cesiumMod.PackableForInterpolation.packedInterpolationLength with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PackableForInterpolation with Double] = js.native
   def convertPackedArrayForInterpolation(packedArray: js.Array[Double]): js.Array[Double] = js.native
@@ -30,5 +30,8 @@ object PackableForInterpolation extends js.Object {
     lastIndex: Double,
     result: js.Any
   ): js.Any = js.native
+  /* 0 */ @js.native
+  object packedInterpolationLength extends TopLevel[packedInterpolationLength with Double]
+  
 }
 

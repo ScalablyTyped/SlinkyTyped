@@ -15,7 +15,8 @@ class AnimationBehavior protected () extends js.Object {
   val FilterEffect: typingsSlinky.activexDashPowerpoint.PowerPoint.FilterEffect = js.native
   val MotionEffect: typingsSlinky.activexDashPowerpoint.PowerPoint.MotionEffect = js.native
   val Parent: js.Any = js.native
-  var `PowerPoint.AnimationBehavior_typekey`: AnimationBehavior = js.native
+  @JSName("PowerPoint.AnimationBehavior_typekey")
+  var PowerPointDotAnimationBehavior_typekey: AnimationBehavior = js.native
   val PropertyEffect: typingsSlinky.activexDashPowerpoint.PowerPoint.PropertyEffect = js.native
   val RotationEffect: typingsSlinky.activexDashPowerpoint.PowerPoint.RotationEffect = js.native
   val ScaleEffect: typingsSlinky.activexDashPowerpoint.PowerPoint.ScaleEffect = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object TextMessageTargetMode extends js.Object {
   @js.native
   sealed trait SERVER extends TextMessageTargetMode
   
-  /* 2 */ val CHANNEL: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.TextMessageTargetMode.CHANNEL with Double = js.native
-  /* 1 */ val CLIENT: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.TextMessageTargetMode.CLIENT with Double = js.native
-  /* 3 */ val SERVER: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.TextMessageTargetMode.SERVER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextMessageTargetMode with Double] = js.native
+  /* 2 */ @js.native
+  object CHANNEL extends TopLevel[CHANNEL with Double]
+  
+  /* 1 */ @js.native
+  object CLIENT extends TopLevel[CLIENT with Double]
+  
+  /* 3 */ @js.native
+  object SERVER extends TopLevel[SERVER with Double]
+  
 }
 

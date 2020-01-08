@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,10 +38,16 @@ object SubtotalLocationType extends js.Object {
   @js.native
   sealed trait off extends SubtotalLocationType
   
-  /* "AtBottom" */ val atBottom: typingsSlinky.officeDashJs.Excel.SubtotalLocationType.atBottom with String = js.native
-  /* "AtTop" */ val atTop: typingsSlinky.officeDashJs.Excel.SubtotalLocationType.atTop with String = js.native
-  /* "Off" */ val off: typingsSlinky.officeDashJs.Excel.SubtotalLocationType.off with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SubtotalLocationType with String] = js.native
+  /* "AtBottom" */ @js.native
+  object atBottom extends TopLevel[atBottom with String]
+  
+  /* "AtTop" */ @js.native
+  object atTop extends TopLevel[atTop with String]
+  
+  /* "Off" */ @js.native
+  object off extends TopLevel[off with String]
+  
 }
 

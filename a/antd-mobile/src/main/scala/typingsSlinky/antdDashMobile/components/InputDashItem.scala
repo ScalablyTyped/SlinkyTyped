@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InputDashItem extends SharedApply_InputItemProps_982683317[default] {
+object InputDashItem extends SharedApply_InputItemProps455901056[default] {
   @JSImport("antd-mobile/lib/input-item", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,9 +1,5 @@
 package typingsSlinky.famous
 
-import typingsSlinky.famous.coreMod.Clock
-import typingsSlinky.famous.coreMod.FamousEngine
-import typingsSlinky.famous.coreMod.Node
-import typingsSlinky.famous.coreMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

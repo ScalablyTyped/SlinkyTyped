@@ -1,17 +1,17 @@
 package typingsSlinky.sanctuary
 
-import typingsSlinky.sanctuary.sanctuaryStrings.`sanctuary/Either`
+import typingsSlinky.sanctuary.sanctuaryStrings.sanctuarySlashEither
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_SanctuaryEither extends js.Object {
-  var `@@type`: `sanctuary/Either`
+  var `@@type`: sanctuarySlashEither
 }
 
 object Anon_SanctuaryEither {
   @scala.inline
-  def apply(`@@type`: `sanctuary/Either`): Anon_SanctuaryEither = {
+  def apply(`@@type`: sanctuarySlashEither): Anon_SanctuaryEither = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("@@type")(`@@type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon_SanctuaryEither]

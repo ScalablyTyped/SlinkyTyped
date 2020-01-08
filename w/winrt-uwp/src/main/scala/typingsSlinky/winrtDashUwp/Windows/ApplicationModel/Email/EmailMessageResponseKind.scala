@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object EmailMessageResponseKind extends js.Object {
   @js.native
   sealed trait replyAll extends EmailMessageResponseKind
   
-  /* 3 */ val forward: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMessageResponseKind.forward with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMessageResponseKind.none with Double = js.native
-  /* 1 */ val reply: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMessageResponseKind.reply with Double = js.native
-  /* 2 */ val replyAll: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMessageResponseKind.replyAll with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMessageResponseKind with Double] = js.native
+  /* 3 */ @js.native
+  object forward extends TopLevel[forward with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object reply extends TopLevel[reply with Double]
+  
+  /* 2 */ @js.native
+  object replyAll extends TopLevel[replyAll with Double]
+  
 }
 

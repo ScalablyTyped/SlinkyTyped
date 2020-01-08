@@ -70,6 +70,7 @@ import typingsSlinky.atMaterialDashUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.atMaterialDashUiCore.tablePaginationTablePaginationActionsMod.TablePaginationActionsProps
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ChangeEventHandler
 import typingsSlinky.react.reactMod.ClipboardEventHandler
@@ -160,7 +161,7 @@ trait TablePaginationProps extends js.Object {
   var colSpan: js.UndefOr[Double] = js.native
   var color: js.UndefOr[String] = js.native
   var component: js.UndefOr[ReactComponentClass[TablePaginationBaseProps]] = js.native
-  var contentEditable: js.UndefOr[Boolean] = js.native
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var count: Double = js.native
   var dangerouslySetInnerHTML: js.UndefOr[Anon_Html] = js.native
@@ -168,7 +169,7 @@ trait TablePaginationProps extends js.Object {
   var defaultChecked: js.UndefOr[Boolean] = js.native
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.native
   var dir: js.UndefOr[String] = js.native
-  var draggable: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Booleanish] = js.native
   var headers: js.UndefOr[String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
@@ -282,7 +283,7 @@ trait TablePaginationProps extends js.Object {
   var security: js.UndefOr[String] = js.native
   var slot: js.UndefOr[String] = js.native
   var sortDirection: js.UndefOr[SortDirection] = js.native
-  var spellCheck: js.UndefOr[Boolean] = js.native
+  var spellCheck: js.UndefOr[Booleanish] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.native

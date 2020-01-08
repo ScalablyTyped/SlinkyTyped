@@ -1,8 +1,7 @@
 package typingsSlinky.atPulumiKubernetes
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`storageDOTk8sDOTio/v1`
-import typingsSlinky.atPulumiKubernetes.storageV1StorageClassMod.StorageClass
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.storageDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.TopologySelectorTerm
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -50,7 +49,7 @@ object storageV1StorageClassMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`storageDOTk8sDOTio/v1`] = js.native
+    val apiVersion: Output[storageDotk8sDotioSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

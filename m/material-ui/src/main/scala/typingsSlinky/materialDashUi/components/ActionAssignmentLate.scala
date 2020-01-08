@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionAssignmentLate
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionAssignmentLate] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionAssignmentLate] {
   @JSImport("material-ui/svg-icons", "ActionAssignmentLate")
   @js.native
   object componentImport extends js.Object

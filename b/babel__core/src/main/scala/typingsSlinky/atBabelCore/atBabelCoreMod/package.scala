@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object atBabelCoreMod {
-  import typingsSlinky.atBabelCore.atBabelCoreNumbers.`false`
+  import typingsSlinky.atBabelCore.atBabelCoreBooleans.`false`
   import typingsSlinky.atBabelTypes.atBabelTypesMod.File
   import typingsSlinky.atBabelTypes.atBabelTypesMod.Program
 

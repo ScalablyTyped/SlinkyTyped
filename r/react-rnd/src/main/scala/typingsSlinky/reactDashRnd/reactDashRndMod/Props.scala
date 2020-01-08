@@ -9,8 +9,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reDashResizable.reDashResizableMod.ResizeDirection
 import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.reactDashDraggable.reactDashDraggableBooleans.`false`
 import typingsSlinky.reactDashDraggable.reactDashDraggableMod.DraggableEvent
-import typingsSlinky.reactDashDraggable.reactDashDraggableNumbers.`false`
 import typingsSlinky.reactDashRnd.Anon_X
 import typingsSlinky.reactDashRnd.reactDashRndStrings.both
 import typingsSlinky.reactDashRnd.reactDashRndStrings.none

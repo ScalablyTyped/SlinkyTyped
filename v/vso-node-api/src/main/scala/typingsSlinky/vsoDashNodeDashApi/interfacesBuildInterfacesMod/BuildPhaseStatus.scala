@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object BuildPhaseStatus extends js.Object {
   @js.native
   sealed trait Unknown extends BuildPhaseStatus
   
-  /* 1 */ val Failed: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildPhaseStatus.Failed with Double = js.native
-  /* 2 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildPhaseStatus.Succeeded with Double = js.native
-  /* 0 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.BuildPhaseStatus.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BuildPhaseStatus with Double] = js.native
+  /* 1 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 2 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
+  /* 0 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

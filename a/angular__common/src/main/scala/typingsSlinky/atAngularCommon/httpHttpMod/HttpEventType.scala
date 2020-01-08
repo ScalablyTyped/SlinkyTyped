@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCommon.httpHttpMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object HttpEventType extends js.Object {
   @js.native
   sealed trait User extends HttpEventType
   
-  /* 3 */ val DownloadProgress: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.DownloadProgress with Double = js.native
-  /* 4 */ val Response: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.Response with Double = js.native
-  /* 2 */ val ResponseHeader: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.ResponseHeader with Double = js.native
-  /* 0 */ val Sent: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.Sent with Double = js.native
-  /* 1 */ val UploadProgress: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.UploadProgress with Double = js.native
-  /* 5 */ val User: typingsSlinky.atAngularCommon.httpHttpMod.HttpEventType.User with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HttpEventType with Double] = js.native
+  /* 3 */ @js.native
+  object DownloadProgress extends TopLevel[DownloadProgress with Double]
+  
+  /* 4 */ @js.native
+  object Response extends TopLevel[Response with Double]
+  
+  /* 2 */ @js.native
+  object ResponseHeader extends TopLevel[ResponseHeader with Double]
+  
+  /* 0 */ @js.native
+  object Sent extends TopLevel[Sent with Double]
+  
+  /* 1 */ @js.native
+  object UploadProgress extends TopLevel[UploadProgress with Double]
+  
+  /* 5 */ @js.native
+  object User extends TopLevel[User with Double]
+  
 }
 

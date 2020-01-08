@@ -1,7 +1,7 @@
 package typingsSlinky.clmtrackr.clmtrackrMod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.clmtrackr.clmtrackrNumbers.`false`
+import typingsSlinky.clmtrackr.clmtrackrBooleans.`false`
 import typingsSlinky.clmtrackr.clmtrackrStrings.blend
 import typingsSlinky.clmtrackr.clmtrackrStrings.cycle
 import typingsSlinky.clmtrackr.clmtrackrStrings.lbp

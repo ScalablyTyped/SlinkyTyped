@@ -8,7 +8,7 @@ package object libFormInterfaceMod {
   import org.scalablytyped.runtime.StringDictionary
   import slinky.core.ReactComponentClass
   import typingsSlinky.antd.Anon_WrappedComponent
-  import typingsSlinky.antd.antdNumbers.`true`
+  import typingsSlinky.antd.antdBooleans.`true`
   import typingsSlinky.antd.libFormFormMod.WrappedFormInternalProps
   import typingsSlinky.antd.libUnderscoreUtilTypeMod.Omit
   import typingsSlinky.react.reactMod._Global_.JSX.LibraryManagedAttributes

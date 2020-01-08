@@ -4,7 +4,7 @@ import typingsSlinky.gridfsDashStream.gridfsDashStreamMod.GridFSStream.Options
 import typingsSlinky.gridfsDashStream.gridfsDashStreamMod.GridFSStream.ReadStream
 import typingsSlinky.gridfsDashStream.gridfsDashStreamMod.GridFSStream.WriteStream
 import typingsSlinky.mongodb.mongodbMod.Collection
-import typingsSlinky.mongodb.mongodbMod.Default
+import typingsSlinky.mongodb.mongodbMod.DefaultSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation._
 @js.native
 class Grid () extends js.Object {
   var curCol: String = js.native
-  var files: Collection[Default] = js.native
-  def collection(): Collection[Default] = js.native
-  def collection(name: String): Collection[Default] = js.native
+  var files: Collection[DefaultSchema] = js.native
+  def collection(): Collection[DefaultSchema] = js.native
+  def collection(name: String): Collection[DefaultSchema] = js.native
   def createReadStream(): ReadStream = js.native
   def createReadStream(options: String): ReadStream = js.native
   def createReadStream(options: Options): ReadStream = js.native

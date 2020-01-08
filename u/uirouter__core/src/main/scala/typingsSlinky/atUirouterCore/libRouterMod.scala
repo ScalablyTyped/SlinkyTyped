@@ -6,8 +6,6 @@ import typingsSlinky.atUirouterCore.libCommonTraceMod.Trace
 import typingsSlinky.atUirouterCore.libGlobalsMod.UIRouterGlobals
 import typingsSlinky.atUirouterCore.libInterfaceMod.Disposable
 import typingsSlinky.atUirouterCore.libInterfaceMod.UIRouterPlugin
-import typingsSlinky.atUirouterCore.libRouterMod.PluginFactory
-import typingsSlinky.atUirouterCore.libRouterMod.UIRouter
 import typingsSlinky.atUirouterCore.libStateStateRegistryMod.StateRegistry
 import typingsSlinky.atUirouterCore.libStateStateServiceMod.StateService
 import typingsSlinky.atUirouterCore.libTransitionTransitionServiceMod.TransitionService

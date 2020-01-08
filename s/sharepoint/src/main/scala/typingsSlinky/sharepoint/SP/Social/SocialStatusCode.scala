@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Social
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,24 +73,58 @@ object SocialStatusCode extends js.Object {
   @js.native
   sealed trait personalSiteNotFound extends SocialStatusCode
   
-  /* 0 */ val OK: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.OK with Double = js.native
-  /* 2 */ val accessDenied: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.accessDenied with Double = js.native
-  /* 14 */ val attachmentError: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.attachmentError with Double = js.native
-  /* 7 */ val cacheReadError: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.cacheReadError with Double = js.native
-  /* 8 */ val cacheUpdateError: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.cacheUpdateError with Double = js.native
-  /* 12 */ val cannotCreatePersonalSite: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.cannotCreatePersonalSite with Double = js.native
-  /* 10 */ val failedToCreatePersonalSite: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.failedToCreatePersonalSite with Double = js.native
-  /* 16 */ val featureDisabled: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.featureDisabled with Double = js.native
-  /* 6 */ val internalError: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.internalError with Double = js.native
-  /* 4 */ val invalidOperation: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.invalidOperation with Double = js.native
-  /* 1 */ val invalidRequest: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.invalidRequest with Double = js.native
-  /* 3 */ val itemNotFound: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.itemNotFound with Double = js.native
-  /* 5 */ val itemNotModified: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.itemNotModified with Double = js.native
-  /* 13 */ val limitReached: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.limitReached with Double = js.native
-  /* 11 */ val notAuthorizedToCreatePersonalSite: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.notAuthorizedToCreatePersonalSite with Double = js.native
-  /* 15 */ val partialData: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.partialData with Double = js.native
-  /* 9 */ val personalSiteNotFound: typingsSlinky.sharepoint.SP.Social.SocialStatusCode.personalSiteNotFound with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocialStatusCode with Double] = js.native
+  /* 0 */ @js.native
+  object OK extends TopLevel[OK with Double]
+  
+  /* 2 */ @js.native
+  object accessDenied extends TopLevel[accessDenied with Double]
+  
+  /* 14 */ @js.native
+  object attachmentError extends TopLevel[attachmentError with Double]
+  
+  /* 7 */ @js.native
+  object cacheReadError extends TopLevel[cacheReadError with Double]
+  
+  /* 8 */ @js.native
+  object cacheUpdateError extends TopLevel[cacheUpdateError with Double]
+  
+  /* 12 */ @js.native
+  object cannotCreatePersonalSite extends TopLevel[cannotCreatePersonalSite with Double]
+  
+  /* 10 */ @js.native
+  object failedToCreatePersonalSite extends TopLevel[failedToCreatePersonalSite with Double]
+  
+  /* 16 */ @js.native
+  object featureDisabled extends TopLevel[featureDisabled with Double]
+  
+  /* 6 */ @js.native
+  object internalError extends TopLevel[internalError with Double]
+  
+  /* 4 */ @js.native
+  object invalidOperation extends TopLevel[invalidOperation with Double]
+  
+  /* 1 */ @js.native
+  object invalidRequest extends TopLevel[invalidRequest with Double]
+  
+  /* 3 */ @js.native
+  object itemNotFound extends TopLevel[itemNotFound with Double]
+  
+  /* 5 */ @js.native
+  object itemNotModified extends TopLevel[itemNotModified with Double]
+  
+  /* 13 */ @js.native
+  object limitReached extends TopLevel[limitReached with Double]
+  
+  /* 11 */ @js.native
+  object notAuthorizedToCreatePersonalSite extends TopLevel[notAuthorizedToCreatePersonalSite with Double]
+  
+  /* 15 */ @js.native
+  object partialData extends TopLevel[partialData with Double]
+  
+  /* 9 */ @js.native
+  object personalSiteNotFound extends TopLevel[personalSiteNotFound with Double]
+  
 }
 

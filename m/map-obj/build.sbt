@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "map-obj"
-version := "4.1.0-08ecf6"
+version := "4.1.0-7322cb"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

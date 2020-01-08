@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -115,7 +114,7 @@ trait PopupProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#promises)
     */
-  var promises: js.UndefOr[js.Array[IPromise[_]]] = js.undefined
+  var promises: js.UndefOr[js.Array[js.Promise[_]]] = js.undefined
   /**
     * Index of the feature that is [selected](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#selectedFeature). When [features](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#features) are set, the first index is automatically selected.
     *
@@ -176,7 +175,7 @@ object PopupProperties {
     id: String = null,
     label: String = null,
     location: PointProperties = null,
-    promises: js.Array[IPromise[_]] = null,
+    promises: js.Array[js.Promise[_]] = null,
     selectedFeatureIndex: Int | Double = null,
     spinnerEnabled: js.UndefOr[Boolean] = js.undefined,
     title: String = null,

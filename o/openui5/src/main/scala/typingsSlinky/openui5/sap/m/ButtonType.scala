@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,15 +38,31 @@ object ButtonType extends js.Object {
   @js.native
   sealed trait Up extends ButtonType
   
-  /* 0 */ val Accept: typingsSlinky.openui5.sap.m.ButtonType.Accept with Double = js.native
-  /* 1 */ val Back: typingsSlinky.openui5.sap.m.ButtonType.Back with Double = js.native
-  /* 2 */ val Default: typingsSlinky.openui5.sap.m.ButtonType.Default with Double = js.native
-  /* 3 */ val Emphasized: typingsSlinky.openui5.sap.m.ButtonType.Emphasized with Double = js.native
-  /* 4 */ val Reject: typingsSlinky.openui5.sap.m.ButtonType.Reject with Double = js.native
-  /* 5 */ val Transparent: typingsSlinky.openui5.sap.m.ButtonType.Transparent with Double = js.native
-  /* 6 */ val Unstyled: typingsSlinky.openui5.sap.m.ButtonType.Unstyled with Double = js.native
-  /* 7 */ val Up: typingsSlinky.openui5.sap.m.ButtonType.Up with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ButtonType with Double] = js.native
+  /* 0 */ @js.native
+  object Accept extends TopLevel[Accept with Double]
+  
+  /* 1 */ @js.native
+  object Back extends TopLevel[Back with Double]
+  
+  /* 2 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 3 */ @js.native
+  object Emphasized extends TopLevel[Emphasized with Double]
+  
+  /* 4 */ @js.native
+  object Reject extends TopLevel[Reject with Double]
+  
+  /* 5 */ @js.native
+  object Transparent extends TopLevel[Transparent with Double]
+  
+  /* 6 */ @js.native
+  object Unstyled extends TopLevel[Unstyled with Double]
+  
+  /* 7 */ @js.native
+  object Up extends TopLevel[Up with Double]
+  
 }
 

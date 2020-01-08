@@ -2,13 +2,6 @@ package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesObservableMod.Property
 import typingsSlinky.baconjs.typesObservableMod.default
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern1
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern2
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern3
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern4
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern5
-import typingsSlinky.baconjs.typesUpdateMod.UpdatePattern6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

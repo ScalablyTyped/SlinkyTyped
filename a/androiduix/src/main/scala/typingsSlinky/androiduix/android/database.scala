@@ -1,7 +1,5 @@
 package typingsSlinky.androiduix.android
 
-import typingsSlinky.androiduix.android.database.DataSetObserver
-import typingsSlinky.androiduix.android.database.Observable
 import typingsSlinky.androiduix.java.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`

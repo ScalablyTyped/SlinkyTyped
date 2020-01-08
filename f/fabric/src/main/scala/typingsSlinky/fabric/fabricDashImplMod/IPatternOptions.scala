@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricDashImplMod
 
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.fabric.fabricStrings.Empty
+import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.`use-credentials`
 import typingsSlinky.fabric.fabricStrings.anonymous
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait IPatternOptions extends js.Object {
   	 * @see https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes
   	 * @type String
   	 */
-  var crossOrigin: js.UndefOr[Empty | anonymous | `use-credentials`] = js.undefined
+  var crossOrigin: js.UndefOr[_empty | anonymous | `use-credentials`] = js.undefined
   /**
   	 * Pattern horizontal offset from object's left/top corner
   	 */
@@ -41,7 +41,7 @@ object IPatternOptions {
   @scala.inline
   def apply(
     source: String | HTMLImageElement,
-    crossOrigin: Empty | anonymous | `use-credentials` = null,
+    crossOrigin: _empty | anonymous | `use-credentials` = null,
     offsetX: Int | Double = null,
     offsetY: Int | Double = null,
     patternTransform: js.Array[Double] = null,

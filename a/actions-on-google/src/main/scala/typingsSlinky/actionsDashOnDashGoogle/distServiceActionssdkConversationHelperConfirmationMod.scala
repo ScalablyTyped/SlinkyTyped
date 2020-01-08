@@ -1,6 +1,6 @@
 package typingsSlinky.actionsDashOnDashGoogle
 
-import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDOTintentDOTCONFIRMATION
+import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDotintentDotCONFIRMATION
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsV2ConfirmationValueSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperHelperMod.Helper
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object distServiceActionssdkConversationHelperConfirmationMod extends js.Object {
   @js.native
-  class Confirmation protected () extends Helper[actionsDOTintentDOTCONFIRMATION, GoogleActionsV2ConfirmationValueSpec] {
+  class Confirmation protected () extends Helper[actionsDotintentDotCONFIRMATION, GoogleActionsV2ConfirmationValueSpec] {
     /**
       * @param text The confirmation prompt presented to the user to
       *     query for an affirmative or negative response.

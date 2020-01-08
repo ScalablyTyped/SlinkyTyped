@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object AllJoynAuthenticationMechanism extends js.Object {
   @js.native
   sealed trait srpLogon extends AllJoynAuthenticationMechanism
   
-  /* 5 */ val ecdheEcdsa: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.ecdheEcdsa with Double = js.native
-  /* 3 */ val ecdheNull: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.ecdheNull with Double = js.native
-  /* 4 */ val ecdhePsk: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.ecdhePsk with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.none with Double = js.native
-  /* 1 */ val srpAnonymous: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.srpAnonymous with Double = js.native
-  /* 2 */ val srpLogon: typingsSlinky.winrtDashUwp.Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism.srpLogon with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AllJoynAuthenticationMechanism with Double] = js.native
+  /* 5 */ @js.native
+  object ecdheEcdsa extends TopLevel[ecdheEcdsa with Double]
+  
+  /* 3 */ @js.native
+  object ecdheNull extends TopLevel[ecdheNull with Double]
+  
+  /* 4 */ @js.native
+  object ecdhePsk extends TopLevel[ecdhePsk with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object srpAnonymous extends TopLevel[srpAnonymous with Double]
+  
+  /* 2 */ @js.native
+  object srpLogon extends TopLevel[srpLogon with Double]
+  
 }
 

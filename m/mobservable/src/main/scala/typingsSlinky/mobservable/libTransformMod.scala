@@ -1,6 +1,5 @@
 package typingsSlinky.mobservable
 
-import typingsSlinky.mobservable.libTransformMod.ITransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

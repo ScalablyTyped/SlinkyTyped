@@ -5,8 +5,6 @@ import typingsSlinky.express.expressMod.Application
 import typingsSlinky.expressDashSession.expressDashSessionMod.SessionOptions
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.socketDotIo.socketDotIoMod.Socket
-import typingsSlinky.socketDotIoDotUsers.socketDotIoDotUsersMod.User
-import typingsSlinky.socketDotIoDotUsers.socketDotIoDotUsersMod.Users
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashLocal.passportDashLocalMod
 
-import typingsSlinky.passportDashLocal.passportDashLocalNumbers.`true`
+import typingsSlinky.passportDashLocal.passportDashLocalBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

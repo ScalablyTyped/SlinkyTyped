@@ -1,6 +1,6 @@
 package typingsSlinky.typescriptDashServices.TypeScript
 
-import typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.equals
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,9 +30,6 @@ object CharacterCodes extends js.Object {
   sealed trait Z extends CharacterCodes
   
   @js.native
-  sealed trait `_` extends CharacterCodes
-  
-  @js.native
   sealed trait _0 extends CharacterCodes
   
   @js.native
@@ -40,6 +37,9 @@ object CharacterCodes extends js.Object {
   
   @js.native
   sealed trait _9 extends CharacterCodes
+  
+  @js.native
+  sealed trait _underscore extends CharacterCodes
   
   @js.native
   sealed trait a extends CharacterCodes
@@ -284,99 +284,279 @@ object CharacterCodes extends js.Object {
   @js.native
   sealed trait zeroWidthSpace extends CharacterCodes
   
-  /* 36 */ val $: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.$ with Double = js.native
-  /* 65 */ val A: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.A with Double = js.native
-  /* 69 */ val E: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.E with Double = js.native
-  /* 70 */ val F: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.F with Double = js.native
-  /* 88 */ val X: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.X with Double = js.native
-  /* 90 */ val Z: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.Z with Double = js.native
-  /* 95 */ val `_`: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.`_` with Double = js.native
-  /* 48 */ val _0: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._0 with Double = js.native
-  /* 55 */ val _7: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._7 with Double = js.native
-  /* 57 */ val _9: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._9 with Double = js.native
-  /* 97 */ val a: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.a with Double = js.native
-  /* 38 */ val ampersand: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.ampersand with Double = js.native
-  /* 42 */ val asterisk: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.asterisk with Double = js.native
-  /* 64 */ val at: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.at with Double = js.native
-  /* 98 */ val b: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.b with Double = js.native
-  /* 92 */ val backslash: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.backslash with Double = js.native
-  /* 8 */ val backspace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.backspace with Double = js.native
-  /* 124 */ val bar: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.bar with Double = js.native
-  /* 65279 */ val byteOrderMark: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.byteOrderMark with Double = js.native
-  /* 99 */ val c: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.c with Double = js.native
-  /* 94 */ val caret: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.caret with Double = js.native
-  /* 13 */ val carriageReturn: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.carriageReturn with Double = js.native
-  /* 125 */ val closeBrace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.closeBrace with Double = js.native
-  /* 93 */ val closeBracket: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.closeBracket with Double = js.native
-  /* 41 */ val closeParen: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.closeParen with Double = js.native
-  /* 58 */ val colon: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.colon with Double = js.native
-  /* 44 */ val comma: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.comma with Double = js.native
-  /* 100 */ val d: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.d with Double = js.native
-  /* 46 */ val dot: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.dot with Double = js.native
-  /* 34 */ val doubleQuote: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.doubleQuote with Double = js.native
-  /* 101 */ val e: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.e with Double = js.native
-  /* 8193 */ val emQuad: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.emQuad with Double = js.native
-  /* 8195 */ val emSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.emSpace with Double = js.native
-  /* 8192 */ val enQuad: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.enQuad with Double = js.native
-  /* 8194 */ val enSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.enSpace with Double = js.native
   /* 61 */ @JSName("equals")
-  val equals_FCharacterCodes: equals with Double = js.native
-  /* 33 */ val exclamation: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.exclamation with Double = js.native
-  /* 102 */ val f: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.f with Double = js.native
-  /* 8199 */ val figureSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.figureSpace with Double = js.native
-  /* 12 */ val formFeed: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.formFeed with Double = js.native
-  /* 8197 */ val fourPerEmSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.fourPerEmSpace with Double = js.native
-  /* 103 */ val g: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.g with Double = js.native
-  /* 62 */ val greaterThan: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.greaterThan with Double = js.native
-  /* 104 */ val h: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.h with Double = js.native
-  /* 8202 */ val hairSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.hairSpace with Double = js.native
-  /* 105 */ val i: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.i with Double = js.native
-  /* 12288 */ val ideographicSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.ideographicSpace with Double = js.native
-  /* 107 */ val k: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.k with Double = js.native
-  /* 108 */ val l: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.l with Double = js.native
-  /* 60 */ val lessThan: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.lessThan with Double = js.native
-  /* 10 */ val lineFeed: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.lineFeed with Double = js.native
-  /* 8232 */ val lineSeparator: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.lineSeparator with Double = js.native
-  /* 109 */ val m: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.m with Double = js.native
-  /* 127 */ val maxAsciiCharacter: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.maxAsciiCharacter with Double = js.native
-  /* 45 */ val minus: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.minus with Double = js.native
-  /* 110 */ val n: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.n with Double = js.native
-  /* 8239 */ val narrowNoBreakSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.narrowNoBreakSpace with Double = js.native
-  /* 133 */ val nextLine: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.nextLine with Double = js.native
-  /* 160 */ val nonBreakingSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.nonBreakingSpace with Double = js.native
-  /* 0 */ val nullCharacter: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.nullCharacter with Double = js.native
-  /* 111 */ val o: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.o with Double = js.native
-  /* 123 */ val openBrace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.openBrace with Double = js.native
-  /* 91 */ val openBracket: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.openBracket with Double = js.native
-  /* 40 */ val openParen: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.openParen with Double = js.native
-  /* 112 */ val p: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.p with Double = js.native
-  /* 8233 */ val paragraphSeparator: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.paragraphSeparator with Double = js.native
-  /* 37 */ val percent: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.percent with Double = js.native
-  /* 43 */ val plus: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.plus with Double = js.native
-  /* 8200 */ val punctuationSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.punctuationSpace with Double = js.native
-  /* 113 */ val q: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.q with Double = js.native
-  /* 63 */ val question: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.question with Double = js.native
-  /* 114 */ val r: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.r with Double = js.native
-  /* 115 */ val s: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.s with Double = js.native
-  /* 59 */ val semicolon: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.semicolon with Double = js.native
-  /* 39 */ val singleQuote: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.singleQuote with Double = js.native
-  /* 8198 */ val sixPerEmSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.sixPerEmSpace with Double = js.native
-  /* 47 */ val slash: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.slash with Double = js.native
-  /* 32 */ val space: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.space with Double = js.native
-  /* 116 */ val t: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.t with Double = js.native
-  /* 9 */ val tab: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.tab with Double = js.native
-  /* 8201 */ val thinSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.thinSpace with Double = js.native
-  /* 8196 */ val threePerEmSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.threePerEmSpace with Double = js.native
-  /* 126 */ val tilde: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.tilde with Double = js.native
-  /* 117 */ val u: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.u with Double = js.native
-  /* 118 */ val v: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.v with Double = js.native
-  /* 11 */ val verticalTab: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.verticalTab with Double = js.native
-  /* 119 */ val w: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.w with Double = js.native
-  /* 120 */ val x: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.x with Double = js.native
-  /* 121 */ val y: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.y with Double = js.native
-  /* 122 */ val z: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.z with Double = js.native
-  /* 8203 */ val zeroWidthSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.zeroWidthSpace with Double = js.native
+  val equals_ : equals with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CharacterCodes with Double] = js.native
+  /* 36 */ @js.native
+  object $ extends TopLevel[$ with Double]
+  
+  /* 65 */ @js.native
+  object A extends TopLevel[A with Double]
+  
+  /* 69 */ @js.native
+  object E extends TopLevel[E with Double]
+  
+  /* 70 */ @js.native
+  object F extends TopLevel[F with Double]
+  
+  /* 88 */ @js.native
+  object X extends TopLevel[X with Double]
+  
+  /* 90 */ @js.native
+  object Z extends TopLevel[Z with Double]
+  
+  /* 48 */ @js.native
+  object _0 extends TopLevel[_0 with Double]
+  
+  /* 55 */ @js.native
+  object _7 extends TopLevel[_7 with Double]
+  
+  /* 57 */ @js.native
+  object _9 extends TopLevel[_9 with Double]
+  
+  /* 95 */ @js.native
+  object _underscore extends TopLevel[_underscore with Double]
+  
+  /* 97 */ @js.native
+  object a extends TopLevel[a with Double]
+  
+  /* 38 */ @js.native
+  object ampersand extends TopLevel[ampersand with Double]
+  
+  /* 42 */ @js.native
+  object asterisk extends TopLevel[asterisk with Double]
+  
+  /* 64 */ @js.native
+  object at extends TopLevel[at with Double]
+  
+  /* 98 */ @js.native
+  object b extends TopLevel[b with Double]
+  
+  /* 92 */ @js.native
+  object backslash extends TopLevel[backslash with Double]
+  
+  /* 8 */ @js.native
+  object backspace extends TopLevel[backspace with Double]
+  
+  /* 124 */ @js.native
+  object bar extends TopLevel[bar with Double]
+  
+  /* 65279 */ @js.native
+  object byteOrderMark extends TopLevel[byteOrderMark with Double]
+  
+  /* 99 */ @js.native
+  object c extends TopLevel[c with Double]
+  
+  /* 94 */ @js.native
+  object caret extends TopLevel[caret with Double]
+  
+  /* 13 */ @js.native
+  object carriageReturn extends TopLevel[carriageReturn with Double]
+  
+  /* 125 */ @js.native
+  object closeBrace extends TopLevel[closeBrace with Double]
+  
+  /* 93 */ @js.native
+  object closeBracket extends TopLevel[closeBracket with Double]
+  
+  /* 41 */ @js.native
+  object closeParen extends TopLevel[closeParen with Double]
+  
+  /* 58 */ @js.native
+  object colon extends TopLevel[colon with Double]
+  
+  /* 44 */ @js.native
+  object comma extends TopLevel[comma with Double]
+  
+  /* 100 */ @js.native
+  object d extends TopLevel[d with Double]
+  
+  /* 46 */ @js.native
+  object dot extends TopLevel[dot with Double]
+  
+  /* 34 */ @js.native
+  object doubleQuote extends TopLevel[doubleQuote with Double]
+  
+  /* 101 */ @js.native
+  object e extends TopLevel[e with Double]
+  
+  /* 8193 */ @js.native
+  object emQuad extends TopLevel[emQuad with Double]
+  
+  /* 8195 */ @js.native
+  object emSpace extends TopLevel[emSpace with Double]
+  
+  /* 8192 */ @js.native
+  object enQuad extends TopLevel[enQuad with Double]
+  
+  /* 8194 */ @js.native
+  object enSpace extends TopLevel[enSpace with Double]
+  
+  /* 33 */ @js.native
+  object exclamation extends TopLevel[exclamation with Double]
+  
+  /* 102 */ @js.native
+  object f extends TopLevel[f with Double]
+  
+  /* 8199 */ @js.native
+  object figureSpace extends TopLevel[figureSpace with Double]
+  
+  /* 12 */ @js.native
+  object formFeed extends TopLevel[formFeed with Double]
+  
+  /* 8197 */ @js.native
+  object fourPerEmSpace extends TopLevel[fourPerEmSpace with Double]
+  
+  /* 103 */ @js.native
+  object g extends TopLevel[g with Double]
+  
+  /* 62 */ @js.native
+  object greaterThan extends TopLevel[greaterThan with Double]
+  
+  /* 104 */ @js.native
+  object h extends TopLevel[h with Double]
+  
+  /* 8202 */ @js.native
+  object hairSpace extends TopLevel[hairSpace with Double]
+  
+  /* 105 */ @js.native
+  object i extends TopLevel[i with Double]
+  
+  /* 12288 */ @js.native
+  object ideographicSpace extends TopLevel[ideographicSpace with Double]
+  
+  /* 107 */ @js.native
+  object k extends TopLevel[k with Double]
+  
+  /* 108 */ @js.native
+  object l extends TopLevel[l with Double]
+  
+  /* 60 */ @js.native
+  object lessThan extends TopLevel[lessThan with Double]
+  
+  /* 10 */ @js.native
+  object lineFeed extends TopLevel[lineFeed with Double]
+  
+  /* 8232 */ @js.native
+  object lineSeparator extends TopLevel[lineSeparator with Double]
+  
+  /* 109 */ @js.native
+  object m extends TopLevel[m with Double]
+  
+  /* 127 */ @js.native
+  object maxAsciiCharacter extends TopLevel[maxAsciiCharacter with Double]
+  
+  /* 45 */ @js.native
+  object minus extends TopLevel[minus with Double]
+  
+  /* 110 */ @js.native
+  object n extends TopLevel[n with Double]
+  
+  /* 8239 */ @js.native
+  object narrowNoBreakSpace extends TopLevel[narrowNoBreakSpace with Double]
+  
+  /* 133 */ @js.native
+  object nextLine extends TopLevel[nextLine with Double]
+  
+  /* 160 */ @js.native
+  object nonBreakingSpace extends TopLevel[nonBreakingSpace with Double]
+  
+  /* 0 */ @js.native
+  object nullCharacter extends TopLevel[nullCharacter with Double]
+  
+  /* 111 */ @js.native
+  object o extends TopLevel[o with Double]
+  
+  /* 123 */ @js.native
+  object openBrace extends TopLevel[openBrace with Double]
+  
+  /* 91 */ @js.native
+  object openBracket extends TopLevel[openBracket with Double]
+  
+  /* 40 */ @js.native
+  object openParen extends TopLevel[openParen with Double]
+  
+  /* 112 */ @js.native
+  object p extends TopLevel[p with Double]
+  
+  /* 8233 */ @js.native
+  object paragraphSeparator extends TopLevel[paragraphSeparator with Double]
+  
+  /* 37 */ @js.native
+  object percent extends TopLevel[percent with Double]
+  
+  /* 43 */ @js.native
+  object plus extends TopLevel[plus with Double]
+  
+  /* 8200 */ @js.native
+  object punctuationSpace extends TopLevel[punctuationSpace with Double]
+  
+  /* 113 */ @js.native
+  object q extends TopLevel[q with Double]
+  
+  /* 63 */ @js.native
+  object question extends TopLevel[question with Double]
+  
+  /* 114 */ @js.native
+  object r extends TopLevel[r with Double]
+  
+  /* 115 */ @js.native
+  object s extends TopLevel[s with Double]
+  
+  /* 59 */ @js.native
+  object semicolon extends TopLevel[semicolon with Double]
+  
+  /* 39 */ @js.native
+  object singleQuote extends TopLevel[singleQuote with Double]
+  
+  /* 8198 */ @js.native
+  object sixPerEmSpace extends TopLevel[sixPerEmSpace with Double]
+  
+  /* 47 */ @js.native
+  object slash extends TopLevel[slash with Double]
+  
+  /* 32 */ @js.native
+  object space extends TopLevel[space with Double]
+  
+  /* 116 */ @js.native
+  object t extends TopLevel[t with Double]
+  
+  /* 9 */ @js.native
+  object tab extends TopLevel[tab with Double]
+  
+  /* 8201 */ @js.native
+  object thinSpace extends TopLevel[thinSpace with Double]
+  
+  /* 8196 */ @js.native
+  object threePerEmSpace extends TopLevel[threePerEmSpace with Double]
+  
+  /* 126 */ @js.native
+  object tilde extends TopLevel[tilde with Double]
+  
+  /* 117 */ @js.native
+  object u extends TopLevel[u with Double]
+  
+  /* 118 */ @js.native
+  object v extends TopLevel[v with Double]
+  
+  /* 11 */ @js.native
+  object verticalTab extends TopLevel[verticalTab with Double]
+  
+  /* 119 */ @js.native
+  object w extends TopLevel[w with Double]
+  
+  /* 120 */ @js.native
+  object x extends TopLevel[x with Double]
+  
+  /* 121 */ @js.native
+  object y extends TopLevel[y with Double]
+  
+  /* 122 */ @js.native
+  object z extends TopLevel[z with Double]
+  
+  /* 8203 */ @js.native
+  object zeroWidthSpace extends TopLevel[zeroWidthSpace with Double]
+  
 }
 

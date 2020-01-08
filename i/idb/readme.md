@@ -10,9 +10,9 @@ A small wrapper that makes IndexedDB usable
 | ------------------ | :-------------: |
 | Full name          | idb |
 | Keywords           | - |
-| # releases         | 18 |
-| # dependents       | 37 |
-| # downloads        | 590527 |
+| # releases         | 17 |
+| # dependents       | 68 |
+| # downloads        | 8379437 |
 | # stars            | 35 |
 
 ## Links

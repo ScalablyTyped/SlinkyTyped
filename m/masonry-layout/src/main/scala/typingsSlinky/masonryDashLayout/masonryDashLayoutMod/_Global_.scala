@@ -1,6 +1,5 @@
 package typingsSlinky.masonryDashLayout.masonryDashLayoutMod
 
-import typingsSlinky.masonryDashLayout.masonryDashLayoutMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

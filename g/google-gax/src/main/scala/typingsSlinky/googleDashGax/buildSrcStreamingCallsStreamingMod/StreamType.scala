@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashGax.buildSrcStreamingCallsStreamingMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object StreamType extends js.Object {
   @js.native
   sealed trait SERVER_STREAMING extends StreamType
   
-  /* 3 */ val BIDI_STREAMING: typingsSlinky.googleDashGax.buildSrcStreamingCallsStreamingMod.StreamType.BIDI_STREAMING with Double = js.native
-  /* 2 */ val CLIENT_STREAMING: typingsSlinky.googleDashGax.buildSrcStreamingCallsStreamingMod.StreamType.CLIENT_STREAMING with Double = js.native
-  /* 1 */ val SERVER_STREAMING: typingsSlinky.googleDashGax.buildSrcStreamingCallsStreamingMod.StreamType.SERVER_STREAMING with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StreamType with Double] = js.native
+  /* 3 */ @js.native
+  object BIDI_STREAMING extends TopLevel[BIDI_STREAMING with Double]
+  
+  /* 2 */ @js.native
+  object CLIENT_STREAMING extends TopLevel[CLIENT_STREAMING with Double]
+  
+  /* 1 */ @js.native
+  object SERVER_STREAMING extends TopLevel[SERVER_STREAMING with Double]
+  
 }
 

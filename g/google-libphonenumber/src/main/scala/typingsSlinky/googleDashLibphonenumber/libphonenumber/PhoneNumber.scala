@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashLibphonenumber.libphonenumber
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -78,12 +79,20 @@ object PhoneNumber extends js.Object {
     @js.native
     sealed trait FROM_NUMBER_WITH_PLUS_SIGN extends CountryCodeSource
     
-    /* 20 */ val FROM_DEFAULT_COUNTRY: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource.FROM_DEFAULT_COUNTRY with Double = js.native
-    /* 10 */ val FROM_NUMBER_WITHOUT_PLUS_SIGN: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource.FROM_NUMBER_WITHOUT_PLUS_SIGN with Double = js.native
-    /* 5 */ val FROM_NUMBER_WITH_IDD: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource.FROM_NUMBER_WITH_IDD with Double = js.native
-    /* 1 */ val FROM_NUMBER_WITH_PLUS_SIGN: typingsSlinky.googleDashLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource.FROM_NUMBER_WITH_PLUS_SIGN with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[CountryCodeSource with Double] = js.native
+    /* 20 */ @js.native
+    object FROM_DEFAULT_COUNTRY extends TopLevel[FROM_DEFAULT_COUNTRY with Double]
+    
+    /* 10 */ @js.native
+    object FROM_NUMBER_WITHOUT_PLUS_SIGN extends TopLevel[FROM_NUMBER_WITHOUT_PLUS_SIGN with Double]
+    
+    /* 5 */ @js.native
+    object FROM_NUMBER_WITH_IDD extends TopLevel[FROM_NUMBER_WITH_IDD with Double]
+    
+    /* 1 */ @js.native
+    object FROM_NUMBER_WITH_PLUS_SIGN extends TopLevel[FROM_NUMBER_WITH_PLUS_SIGN with Double]
+    
   }
   
 }

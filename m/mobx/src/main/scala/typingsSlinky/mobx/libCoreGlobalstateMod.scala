@@ -1,8 +1,6 @@
 package typingsSlinky.mobx
 
 import typingsSlinky.mobx.libCoreDerivationMod.IDerivation
-import typingsSlinky.mobx.libCoreGlobalstateMod.IUNCHANGED
-import typingsSlinky.mobx.libCoreGlobalstateMod.MobXGlobals
 import typingsSlinky.mobx.libCoreObservableMod.IObservable
 import typingsSlinky.mobx.libInternalMod.Reaction
 import typingsSlinky.mobx.mobxStrings.strict

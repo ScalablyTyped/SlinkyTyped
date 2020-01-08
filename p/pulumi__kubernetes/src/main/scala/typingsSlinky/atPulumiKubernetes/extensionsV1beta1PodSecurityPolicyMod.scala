@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`extensions/v1beta1`
-import typingsSlinky.atPulumiKubernetes.extensionsV1beta1PodSecurityPolicyMod.PodSecurityPolicy
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.extensionsSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.extensions.v1beta1.PodSecurityPolicySpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object extensionsV1beta1PodSecurityPolicyMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`extensions/v1beta1`] = js.native
+    val apiVersion: Output[extensionsSlashv1beta1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

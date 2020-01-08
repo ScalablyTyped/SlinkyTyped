@@ -14,10 +14,10 @@ object CharacterCodes extends js.Object {
   /* 70 */ val F: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.F with Double = js.native
   /* 88 */ val X: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.X with Double = js.native
   /* 90 */ val Z: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.Z with Double = js.native
-  /* 95 */ val `_`: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.`_` with Double = js.native
   /* 48 */ val _0: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._0 with Double = js.native
   /* 55 */ val _7: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._7 with Double = js.native
   /* 57 */ val _9: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._9 with Double = js.native
+  /* 95 */ val _underscore: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes._underscore with Double = js.native
   /* 97 */ val a: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.a with Double = js.native
   /* 38 */ val ampersand: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.ampersand with Double = js.native
   /* 42 */ val asterisk: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.asterisk with Double = js.native
@@ -44,7 +44,7 @@ object CharacterCodes extends js.Object {
   /* 8192 */ val enQuad: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.enQuad with Double = js.native
   /* 8194 */ val enSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.enSpace with Double = js.native
   /* 61 */ @JSName("equals")
-  val equals_FCharacterCodes: equals with Double = js.native
+  val equals_ : equals with Double = js.native
   /* 33 */ val exclamation: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.exclamation with Double = js.native
   /* 102 */ val f: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.f with Double = js.native
   /* 8199 */ val figureSpace: typingsSlinky.typescriptDashServices.TypeScript.CharacterCodes.figureSpace with Double = js.native

@@ -1,11 +1,14 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TeachingBubbleCondensedExample
-  extends SharedApply_Object152536094[
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTeachingBubbleExamplesTeachingBubbleDotCondensedDotExampleMod.TeachingBubbleCondensedExample
     ] {
   @JSImport("office-ui-fabric-react/lib/components/TeachingBubble/examples/TeachingBubble.Condensed.Example", "TeachingBubbleCondensedExample")

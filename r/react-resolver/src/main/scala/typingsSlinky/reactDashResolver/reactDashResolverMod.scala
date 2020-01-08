@@ -1,9 +1,9 @@
 package typingsSlinky.reactDashResolver
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Factory
-import typingsSlinky.reactDashResolver.reactDashResolverMod.ResolveFn
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,6 @@ object reactDashResolverMod extends js.Object {
     def resolve[P](factory: Factory[P]): js.Promise[Anon_Data[P]] = js.native
   }
   
-  val Resolver: typingsSlinky.reactDashResolver.reactDashResolverMod.Resolver = js.native
   def client(loadingComponent: ReactComponentClass[_]): js.Function1[/* component */ ReactComponentClass[_], ReactComponentClass[_]] = js.native
   def context[K /* <: String */](prop: K): js.Function1[
     /* component */ ReactComponentClass[_], 
@@ -41,6 +40,9 @@ object reactDashResolverMod extends js.Object {
     ], 
     ReactComponentClass[OwnProps with MoreProps]
   ] = js.native
+  @js.native
+  object Resolver extends TopLevel[Resolver]
+  
   type ResolveFn[Props, V] = js.Function1[/* props */ Props, js.Promise[V]]
 }
 

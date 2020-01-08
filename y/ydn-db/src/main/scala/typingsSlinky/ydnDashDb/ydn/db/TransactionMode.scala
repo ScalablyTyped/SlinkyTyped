@@ -1,5 +1,6 @@
 package typingsSlinky.ydnDashDb.ydn.db
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TransactionMode extends js.Object {
   @js.native
   sealed trait readwrite extends TransactionMode
   
-  /* 0 */ val readonly: typingsSlinky.ydnDashDb.ydn.db.TransactionMode.readonly with Double = js.native
-  /* 1 */ val readwrite: typingsSlinky.ydnDashDb.ydn.db.TransactionMode.readwrite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TransactionMode with Double] = js.native
+  /* 0 */ @js.native
+  object readonly extends TopLevel[readonly with Double]
+  
+  /* 1 */ @js.native
+  object readwrite extends TopLevel[readwrite with Double]
+  
 }
 

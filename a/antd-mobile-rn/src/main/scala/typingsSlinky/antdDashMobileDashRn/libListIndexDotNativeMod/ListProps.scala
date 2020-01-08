@@ -2,7 +2,7 @@ package typingsSlinky.antdDashMobileDashRn.libListIndexDotNativeMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.antdDashMobileDashRn.Anon_ArrowArrowV
-import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnNumbers.`false`
+import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnBooleans.`false`
 import typingsSlinky.antdDashMobileDashRn.libListPropsTypeMod.ListPropsType
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp

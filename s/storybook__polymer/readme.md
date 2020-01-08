@@ -10,9 +10,9 @@ Storybook for Polymer: Develop Polymer components in isolation with Hot Reloadin
 | ------------------ | :-------------: |
 | Full name          | @storybook/polymer |
 | Keywords           | storybook |
-| # releases         | 240 |
-| # dependents       | 3 |
-| # downloads        | 73728 |
+| # releases         | 398 |
+| # dependents       | 2 |
+| # downloads        | 134842 |
 | # stars            | 1 |
 
 ## Links

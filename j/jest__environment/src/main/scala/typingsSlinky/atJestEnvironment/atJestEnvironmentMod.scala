@@ -1,19 +1,13 @@
 package typingsSlinky.atJestEnvironment
 
-import typingsSlinky.atJestEnvironment.atJestEnvironmentMod.EnvironmentContext
-import typingsSlinky.atJestEnvironment.atJestEnvironmentMod.Jest
-import typingsSlinky.atJestEnvironment.atJestEnvironmentMod.JestMockFn
-import typingsSlinky.atJestEnvironment.atJestEnvironmentMod.JestMockSpyOn
-import typingsSlinky.atJestEnvironment.atJestEnvironmentMod.Module
 import typingsSlinky.atJestFakeDashTimers.atJestFakeDashTimersMod.JestFakeTimers
 import typingsSlinky.atJestTypes.buildCircusMod.Event
 import typingsSlinky.atJestTypes.buildCircusMod.State
 import typingsSlinky.atJestTypes.buildConfigMod.ProjectConfig
 import typingsSlinky.atJestTypes.buildGlobalMod.Global
 import typingsSlinky.jestDashMock.jestDashMockMod.ModuleMocker
+import typingsSlinky.node.NodeJS.Require
 import typingsSlinky.node.NodeModule
-import typingsSlinky.node.NodeRequire
-import typingsSlinky.node.NodeRequireFunction
 import typingsSlinky.node.vmMod.Script
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
@@ -266,7 +260,7 @@ object atJestEnvironmentMod extends js.Object {
   }
   
   @js.native
-  trait LocalModuleRequire extends NodeRequire {
+  trait LocalModuleRequire extends Require {
     def requireActual(moduleName: String): js.Any = js.native
     def requireMock(moduleName: String): js.Any = js.native
   }
@@ -278,13 +272,13 @@ object atJestEnvironmentMod extends js.Object {
   type ModuleWrapper = js.Function8[
     /* module */ Module, 
     /* import warning: importer.ImportType#apply Failed type conversion: @jest/environment.@jest/environment.Module['exports'] */ /* exports */ js.Any, 
-    /* require */ NodeRequireFunction with (js.Function1[/* id */ String, _]), 
+    /* require */ Require with (js.Function1[/* id */ String, _]), 
     /* __dirname */ String, 
     /* __filename */ String, 
     /* global */ Global, 
     /* jest */ Jest, 
     js.UndefOr[
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 54 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any
     ], 
     js.Any
   ]

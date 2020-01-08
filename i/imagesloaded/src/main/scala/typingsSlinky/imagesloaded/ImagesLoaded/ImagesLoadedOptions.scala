@@ -1,6 +1,6 @@
 package typingsSlinky.imagesloaded.ImagesLoaded
 
-import typingsSlinky.imagesloaded.imagesloadedNumbers.`true`
+import typingsSlinky.imagesloaded.imagesloadedBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

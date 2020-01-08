@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object StreamedFileFailureMode extends js.Object {
   @js.native
   sealed trait incomplete extends StreamedFileFailureMode
   
-  /* 1 */ val currentlyUnavailable: typingsSlinky.winrt.Windows.Storage.StreamedFileFailureMode.currentlyUnavailable with Double = js.native
-  /* 0 */ val failed: typingsSlinky.winrt.Windows.Storage.StreamedFileFailureMode.failed with Double = js.native
-  /* 2 */ val incomplete: typingsSlinky.winrt.Windows.Storage.StreamedFileFailureMode.incomplete with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StreamedFileFailureMode with Double] = js.native
+  /* 1 */ @js.native
+  object currentlyUnavailable extends TopLevel[currentlyUnavailable with Double]
+  
+  /* 0 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 2 */ @js.native
+  object incomplete extends TopLevel[incomplete with Double]
+  
 }
 

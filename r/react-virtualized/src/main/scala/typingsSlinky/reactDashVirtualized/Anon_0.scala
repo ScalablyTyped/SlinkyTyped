@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashVirtualized
 
+import typingsSlinky.reactDashVirtualized.reactDashVirtualizedBooleans.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`0`
-import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.edges
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.storage.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`storageDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.storageDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -8,6 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
+  * @deprecated storage/v1beta1/CSINode is deprecated by storage/v1beta1/CSINode and not
+  * supported by Kubernetes v<nil>+ clusters.
+  *
   * CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need
   * to create the CSINode object directly. As long as they use the node-driver-registrar sidecar
   * container, the kubelet will automatically populate the CSINode object for the CSI driver as
@@ -23,7 +26,7 @@ trait CSINode extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`storageDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[storageDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -45,7 +48,7 @@ object CSINode {
   @scala.inline
   def apply(
     spec: Input[CSINodeSpec],
-    apiVersion: Input[`storageDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[storageDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.CSINode] = null,
     metadata: Input[ObjectMeta] = null
   ): CSINode = {

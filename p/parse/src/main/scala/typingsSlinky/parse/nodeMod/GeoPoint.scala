@@ -1,5 +1,6 @@
 package typingsSlinky.parse.nodeMod
 
+import typingsSlinky.parse.Anon_Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,6 @@ import scala.scalajs.js.annotation._
   *   new GeoPoint({latitude: 30, longitude: 30})
   *   new GeoPoint()  // defaults to (0, 0)
   *   </pre>
-  * @class
   *
   * <p>Represents a latitude / longitude point that may be associated
   * with a key in a ParseObject or used as a reference point for geo queries.
@@ -30,8 +30,9 @@ import scala.scalajs.js.annotation._
 @JSImport("parse/node", "GeoPoint")
 @js.native
 class GeoPoint ()
-  extends typingsSlinky.parse.Parse.GeoPoint {
-  def this(arg1: js.Any) = this()
-  def this(arg1: js.Any, arg2: js.Any) = this()
+  extends typingsSlinky.parse.parseMod.GeoPoint {
+  def this(coords: js.Tuple2[Double, Double]) = this()
+  def this(coords: Anon_Latitude) = this()
+  def this(latitude: Double, longitude: Double) = this()
 }
 

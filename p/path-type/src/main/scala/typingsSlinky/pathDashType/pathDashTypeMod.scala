@@ -1,7 +1,5 @@
 package typingsSlinky.pathDashType
 
-import typingsSlinky.pathDashType.pathDashTypeMod.PathTypeFunction
-import typingsSlinky.pathDashType.pathDashTypeMod.PathTypeSyncFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

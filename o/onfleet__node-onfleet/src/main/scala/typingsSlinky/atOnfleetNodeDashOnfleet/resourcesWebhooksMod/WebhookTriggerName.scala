@@ -1,5 +1,6 @@
 package typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,21 +53,49 @@ object WebhookTriggerName extends js.Object {
   @js.native
   sealed trait WorkerDuty extends WebhookTriggerName
   
-  /* "smsRecipientResponseMissed" */ val SmsRecipientResponseMissed: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.SmsRecipientResponseMissed with String = js.native
-  /* "taskArrival" */ val TaskArrival: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskArrival with String = js.native
-  /* "taskAssigned" */ val TaskAssigned: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskAssigned with String = js.native
-  /* "taskCloned" */ val TaskCloned: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskCloned with String = js.native
-  /* "taskCompleted" */ val TaskCompleted: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskCompleted with String = js.native
-  /* "taskCreated" */ val TaskCreated: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskCreated with String = js.native
-  /* "taskDelayed" */ val TaskDelayed: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskDelayed with String = js.native
-  /* "taskDeleted" */ val TaskDeleted: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskDeleted with String = js.native
-  /* "taskEta" */ val TaskEta: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskEta with String = js.native
-  /* "taskFailed" */ val TaskFailed: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskFailed with String = js.native
-  /* "taskStarted" */ val TaskStarted: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskStarted with String = js.native
-  /* "taskUnassigned" */ val TaskUnassigned: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskUnassigned with String = js.native
-  /* "taskUpdated" */ val TaskUpdated: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.TaskUpdated with String = js.native
-  /* "workerDuty" */ val WorkerDuty: typingsSlinky.atOnfleetNodeDashOnfleet.resourcesWebhooksMod.WebhookTriggerName.WorkerDuty with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[WebhookTriggerName with String] = js.native
+  /* "smsRecipientResponseMissed" */ @js.native
+  object SmsRecipientResponseMissed extends TopLevel[SmsRecipientResponseMissed with String]
+  
+  /* "taskArrival" */ @js.native
+  object TaskArrival extends TopLevel[TaskArrival with String]
+  
+  /* "taskAssigned" */ @js.native
+  object TaskAssigned extends TopLevel[TaskAssigned with String]
+  
+  /* "taskCloned" */ @js.native
+  object TaskCloned extends TopLevel[TaskCloned with String]
+  
+  /* "taskCompleted" */ @js.native
+  object TaskCompleted extends TopLevel[TaskCompleted with String]
+  
+  /* "taskCreated" */ @js.native
+  object TaskCreated extends TopLevel[TaskCreated with String]
+  
+  /* "taskDelayed" */ @js.native
+  object TaskDelayed extends TopLevel[TaskDelayed with String]
+  
+  /* "taskDeleted" */ @js.native
+  object TaskDeleted extends TopLevel[TaskDeleted with String]
+  
+  /* "taskEta" */ @js.native
+  object TaskEta extends TopLevel[TaskEta with String]
+  
+  /* "taskFailed" */ @js.native
+  object TaskFailed extends TopLevel[TaskFailed with String]
+  
+  /* "taskStarted" */ @js.native
+  object TaskStarted extends TopLevel[TaskStarted with String]
+  
+  /* "taskUnassigned" */ @js.native
+  object TaskUnassigned extends TopLevel[TaskUnassigned with String]
+  
+  /* "taskUpdated" */ @js.native
+  object TaskUpdated extends TopLevel[TaskUpdated with String]
+  
+  /* "workerDuty" */ @js.native
+  object WorkerDuty extends TopLevel[WorkerDuty with String]
+  
 }
 

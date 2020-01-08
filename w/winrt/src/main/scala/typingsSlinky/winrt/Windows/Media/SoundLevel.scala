@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SoundLevel extends js.Object {
   @js.native
   sealed trait muted extends SoundLevel
   
-  /* 2 */ val full: typingsSlinky.winrt.Windows.Media.SoundLevel.full with Double = js.native
-  /* 1 */ val low: typingsSlinky.winrt.Windows.Media.SoundLevel.low with Double = js.native
-  /* 0 */ val muted: typingsSlinky.winrt.Windows.Media.SoundLevel.muted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SoundLevel with Double] = js.native
+  /* 2 */ @js.native
+  object full extends TopLevel[full with Double]
+  
+  /* 1 */ @js.native
+  object low extends TopLevel[low with Double]
+  
+  /* 0 */ @js.native
+  object muted extends TopLevel[muted with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MaterialCommunityIcons
-  extends SharedApply_IconProps_1525323211[
+  extends SharedApply_IconProps_207471041[
       typingsSlinky.atExpoVectorDashIcons.atExpoVectorDashIconsMod.MaterialCommunityIcons
     ] {
   @JSImport("@expo/vector-icons", "MaterialCommunityIcons")

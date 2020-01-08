@@ -2,8 +2,6 @@ package typingsSlinky.protractor
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.blockingDashProxy.blockingDashProxyMod.BPClient
-import typingsSlinky.protractor.builtBrowserMod.ElementHelper
-import typingsSlinky.protractor.builtBrowserMod.ProtractorBrowser
 import typingsSlinky.protractor.builtDebuggerMod.DebugHelper
 import typingsSlinky.protractor.builtElementMod.ElementArrayFinder
 import typingsSlinky.protractor.builtElementMod.ElementFinder
@@ -201,7 +199,7 @@ object builtBrowserMod extends js.Object {
       * @type {function(string): ElementArrayFinder}
       */
     @JSName("$$")
-    def $$(query: String): ElementArrayFinder = js.native
+    def DollarDollar(query: String): ElementArrayFinder = js.native
     /**
       * Add the base mock modules used for all Protractor tests.
       *
@@ -301,7 +299,7 @@ object builtBrowserMod extends js.Object {
     /* private */ def executeAsyncScript_(
       script: js.Any,
       description: js.Any,
-      /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param scriptArgs because its type <none> is not an array type */ scriptArgs: js.Any
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param scriptArgs because its type <none> is not an array type */ scriptArgs: js.Any
     ): js.Any = js.native
     /**
       * The same as {@code webdriver.WebDriver.prototype.executeScript},

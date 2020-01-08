@@ -1,6 +1,6 @@
 package typingsSlinky.i18next.i18nextMod
 
-import typingsSlinky.i18next.i18nextNumbers.`true`
+import typingsSlinky.i18next.i18nextBooleans.`true`
 import typingsSlinky.i18next.i18nextStrings.languageDetector
 import scala.scalajs.js
 import scala.scalajs.js.`|`

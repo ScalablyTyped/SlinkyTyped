@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object KeytipContentBase
-  extends SharedApply_IKeytipProps_1283077860[
+  extends SharedApply_IKeytipProps1676291299[
       typingsSlinky.officeDashUiDashFabricDashReact.libComponentsKeytipKeytipContentDotBaseMod.KeytipContentBase
     ] {
   @JSImport("office-ui-fabric-react/lib/components/Keytip/KeytipContent.base", "KeytipContentBase")

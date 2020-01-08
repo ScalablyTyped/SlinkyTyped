@@ -53,7 +53,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeTemplate
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeTemplateUpdateModel
 import typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemUpdate
-import typingsSlinky.vsoDashNodeDashApi.workItemTrackingApiMod.IWorkItemTrackingApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

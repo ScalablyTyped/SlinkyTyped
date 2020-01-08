@@ -1,7 +1,7 @@
 
 # Scala.js typings for iobroker
 
-Typings are for version 1.4
+Typings are for version 2.0
 
 ## Library description:
 automate your life - platfom
@@ -10,9 +10,9 @@ automate your life - platfom
 | ------------------ | :-------------: |
 | Full name          | iobroker |
 | Keywords           | ioBroker, Smarthome, Home Automation, Smart Metering, Homematic, Hue, KNX, Z-Wave, ZigBee, Bidcos, TV, Sonos, AV Receiver |
-| # releases         | 19 |
+| # releases         | 16 |
 | # dependents       | 0 |
-| # downloads        | 90497 |
+| # downloads        | 103564 |
 | # stars            | 4 |
 
 ## Links

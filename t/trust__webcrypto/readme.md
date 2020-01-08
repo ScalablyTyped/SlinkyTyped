@@ -11,8 +11,8 @@ WebCrypto API for Node.js
 | Full name          | @trust/webcrypto |
 | Keywords           | WebCrypto |
 | # releases         | 6 |
-| # dependents       | 20 |
-| # downloads        | 216782 |
+| # dependents       | 22 |
+| # downloads        | 223144 |
 | # stars            | 0 |
 
 ## Links

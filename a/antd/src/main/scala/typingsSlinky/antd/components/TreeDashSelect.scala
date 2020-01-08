@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeDashSelect
-  extends SharedApply_TreeSelectProps809525229[default[js.Any]] {
+  extends SharedApply_TreeSelectProps_24155021[default[js.Any]] {
   @JSImport("antd/lib/tree-select", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`private`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.public
 import scala.scalajs.js
@@ -99,8 +98,8 @@ trait PortalGroup extends Accessor {
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchCategorySchema(): IPromise[js.Array[_]] = js.native
-  def fetchCategorySchema(options: PortalGroupFetchCategorySchemaOptions): IPromise[js.Array[_]] = js.native
+  def fetchCategorySchema(): js.Promise[js.Array[_]] = js.native
+  def fetchCategorySchema(options: PortalGroupFetchCategorySchemaOptions): js.Promise[js.Array[_]] = js.native
   /**
     * Fetches the current members of the group. This method is only available to members or administrators of the group. View the ArcGIS REST API documentation for the [Group Users](https://developers.arcgis.com/rest/users-groups-and-items/group-users.htm) for more details.
     *
@@ -110,8 +109,8 @@ trait PortalGroup extends Accessor {
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchMembers(): IPromise[_] = js.native
-  def fetchMembers(options: PortalGroupFetchMembersOptions): IPromise[_] = js.native
+  def fetchMembers(): js.Promise[_] = js.native
+  def fetchMembers(options: PortalGroupFetchMembersOptions): js.Promise[_] = js.native
   /**
     * Get the URL to the thumbnail image for the group.  Available width sizes: 150, 300 and 600.
     *
@@ -132,11 +131,11 @@ trait PortalGroup extends Accessor {
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def queryItems(): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParams): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParamsProperties): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParamsProperties, options: PortalGroupQueryItemsOptions): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParams, options: PortalGroupQueryItemsOptions): IPromise[PortalQueryResult] = js.native
+  def queryItems(): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParamsProperties, options: PortalGroupQueryItemsOptions): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParams, options: PortalGroupQueryItemsOptions): js.Promise[PortalQueryResult] = js.native
 }
 
 @JSGlobal("__esri.PortalGroup")

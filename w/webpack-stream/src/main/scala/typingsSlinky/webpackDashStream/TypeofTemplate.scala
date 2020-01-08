@@ -5,7 +5,7 @@ import typingsSlinky.webpack.webpackMod.compilation.Chunk
 import typingsSlinky.webpack.webpackMod.compilation.Module
 import typingsSlinky.webpack.webpackMod.compilation.ModuleTemplate
 import typingsSlinky.webpackDashSources.webpackDashSourcesMod.ConcatSource
-import typingsSlinky.webpackDashStream.webpackDashStreamNumbers.`false`
+import typingsSlinky.webpackDashStream.webpackDashStreamBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,7 +4,6 @@ import typingsSlinky.leaflet.leafletMod.LatLng
 import typingsSlinky.leaflet.leafletMod.LatLngBounds
 import typingsSlinky.leaflet.leafletMod.Path
 import typingsSlinky.leaflet.leafletMod.PathOptions
-import typingsSlinky.leafletDashCurve.leafletMod.Curve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

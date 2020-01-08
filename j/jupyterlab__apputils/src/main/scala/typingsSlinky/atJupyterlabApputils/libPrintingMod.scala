@@ -1,6 +1,5 @@
 package typingsSlinky.atJupyterlabApputils
 
-import typingsSlinky.atJupyterlabApputils.libPrintingMod.Printing.OptionalAsyncThunk
 import typingsSlinky.atPhosphorWidgets.atPhosphorWidgetsMod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`

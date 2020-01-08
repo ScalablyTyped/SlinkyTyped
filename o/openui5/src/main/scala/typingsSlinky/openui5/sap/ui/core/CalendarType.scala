@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CalendarType extends js.Object {
   @js.native
   sealed trait Japanese extends CalendarType
   
-  /* 0 */ val Gregorian: typingsSlinky.openui5.sap.ui.core.CalendarType.Gregorian with Double = js.native
-  /* 1 */ val Islamic: typingsSlinky.openui5.sap.ui.core.CalendarType.Islamic with Double = js.native
-  /* 2 */ val Japanese: typingsSlinky.openui5.sap.ui.core.CalendarType.Japanese with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CalendarType with Double] = js.native
+  /* 0 */ @js.native
+  object Gregorian extends TopLevel[Gregorian with Double]
+  
+  /* 1 */ @js.native
+  object Islamic extends TopLevel[Islamic with Double]
+  
+  /* 2 */ @js.native
+  object Japanese extends TopLevel[Japanese with Double]
+  
 }
 

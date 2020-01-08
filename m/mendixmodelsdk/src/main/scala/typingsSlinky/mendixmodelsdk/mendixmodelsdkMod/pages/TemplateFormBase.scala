@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.pages
 
+import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,7 @@ import scala.scalajs.js.annotation._
 abstract class TemplateFormBase protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.pages.TemplateFormBase {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
@@ -26,6 +28,6 @@ abstract class TemplateFormBase protected ()
 @js.native
 object TemplateFormBase extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

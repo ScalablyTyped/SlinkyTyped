@@ -75,6 +75,27 @@ class Color () extends js.Object {
 @js.native
 object Color extends js.Object {
   /**
+  	 * Regex matching color in HSL or HSLA formats (ex: hsl(200, 80%, 10%), hsla(300, 50%, 80%, 0.5), hsla( 300 , 50% , 80% , 0.5 ))
+  	 * @static
+  	 * @field
+  	 * @memberOf fabric.Color
+  	 */
+  var reHSLa: js.RegExp = js.native
+  /**
+  	 * Regex matching color in HEX format (ex: #FF5544CC, #FF5555, 010155, aff)
+  	 * @static
+  	 * @field
+  	 * @memberOf fabric.Color
+  	 */
+  var reHex: js.RegExp = js.native
+  /**
+  	 * Regex matching color in RGB or RGBA formats (ex: rgb(0, 0, 0), rgba(255, 100, 10, 0.5), rgba( 255 , 100 , 10 , 0.5 ), rgb(1,1,1), rgba(100%, 60%, 10%, 0.5))
+  	 * @static
+  	 * @field
+  	 * @memberOf fabric.Color
+  	 */
+  var reRGBa: js.RegExp = js.native
+  /**
   	 * Returns new color object, when given a color in HEX format
   	 * @param color Color value ex: FF5555
   	 */

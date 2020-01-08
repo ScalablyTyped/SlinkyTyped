@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object EasPasswordHistoryResult extends js.Object {
   @js.native
   sealed trait requestedPolicyIsStricter extends EasPasswordHistoryResult
   
-  /* 2 */ val canBeCompliant: typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.canBeCompliant with Double = js.native
-  /* 1 */ val compliant: typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.compliant with Double = js.native
-  /* 4 */ val invalidParameter: typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.invalidParameter with Double = js.native
-  /* 0 */ val notEvaluated: typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.notEvaluated with Double = js.native
-  /* 3 */ val requestedPolicyIsStricter: typingsSlinky.winrtDashUwp.Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.requestedPolicyIsStricter with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EasPasswordHistoryResult with Double] = js.native
+  /* 2 */ @js.native
+  object canBeCompliant extends TopLevel[canBeCompliant with Double]
+  
+  /* 1 */ @js.native
+  object compliant extends TopLevel[compliant with Double]
+  
+  /* 4 */ @js.native
+  object invalidParameter extends TopLevel[invalidParameter with Double]
+  
+  /* 0 */ @js.native
+  object notEvaluated extends TopLevel[notEvaluated with Double]
+  
+  /* 3 */ @js.native
+  object requestedPolicyIsStricter extends TopLevel[requestedPolicyIsStricter with Double]
+  
 }
 

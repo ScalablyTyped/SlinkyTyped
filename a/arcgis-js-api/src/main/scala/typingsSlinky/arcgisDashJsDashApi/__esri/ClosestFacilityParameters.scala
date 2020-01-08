@@ -18,11 +18,11 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.centimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.complete
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.end
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.none
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.points
@@ -73,7 +73,7 @@ trait ClosestFacilityParameters
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ClosestFacilityParameters.html#directionsLengthUnits)
     */
-  var directionsLengthUnits: centimeters | `decimal-degrees` | decimeters | feet | inches | kilometers | meters | miles | millimeters | `nautical-miles` | points | yards = js.native
+  var directionsLengthUnits: centimeters | `decimal-degrees` | decimeters | feet_ | inches | kilometers_ | meters_ | miles_ | millimeters | `nautical-miles` | points | yards = js.native
   /**
     * Defines the amount of direction information returned. The default value is standard.
     *
@@ -135,7 +135,7 @@ trait ClosestFacilityParameters
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ClosestFacilityParameters.html#outputGeometryPrecisionUnits)
     */
-  var outputGeometryPrecisionUnits: centimeters | `decimal-degrees` | decimeters | feet | inches | kilometers | meters | miles | millimeters | `nautical-miles` | points | yards = js.native
+  var outputGeometryPrecisionUnits: centimeters | `decimal-degrees` | decimeters | feet_ | inches | kilometers_ | meters_ | miles_ | millimeters | `nautical-miles` | points | yards = js.native
   /**
     * The type of output lines to be generated in the result. The default is defined in the specific routing network layer used in your RouteTask.
     *

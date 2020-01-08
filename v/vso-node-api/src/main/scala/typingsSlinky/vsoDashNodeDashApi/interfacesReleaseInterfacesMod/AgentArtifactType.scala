@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object AgentArtifactType extends js.Object {
   @js.native
   sealed trait XamlBuild extends AgentArtifactType
   
-  /* 1 */ val Build: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.Build with Double = js.native
-  /* 9 */ val Custom: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.Custom with Double = js.native
-  /* 8 */ val ExternalTfsBuild: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.ExternalTfsBuild with Double = js.native
-  /* 3 */ val FileShare: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.FileShare with Double = js.native
-  /* 6 */ val GitHub: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.GitHub with Double = js.native
-  /* 2 */ val Jenkins: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.Jenkins with Double = js.native
-  /* 4 */ val Nuget: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.Nuget with Double = js.native
-  /* 7 */ val TFGit: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.TFGit with Double = js.native
-  /* 5 */ val TfsOnPrem: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.TfsOnPrem with Double = js.native
-  /* 10 */ val Tfvc: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.Tfvc with Double = js.native
-  /* 0 */ val XamlBuild: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.AgentArtifactType.XamlBuild with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AgentArtifactType with Double] = js.native
+  /* 1 */ @js.native
+  object Build extends TopLevel[Build with Double]
+  
+  /* 9 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 8 */ @js.native
+  object ExternalTfsBuild extends TopLevel[ExternalTfsBuild with Double]
+  
+  /* 3 */ @js.native
+  object FileShare extends TopLevel[FileShare with Double]
+  
+  /* 6 */ @js.native
+  object GitHub extends TopLevel[GitHub with Double]
+  
+  /* 2 */ @js.native
+  object Jenkins extends TopLevel[Jenkins with Double]
+  
+  /* 4 */ @js.native
+  object Nuget extends TopLevel[Nuget with Double]
+  
+  /* 7 */ @js.native
+  object TFGit extends TopLevel[TFGit with Double]
+  
+  /* 5 */ @js.native
+  object TfsOnPrem extends TopLevel[TfsOnPrem with Double]
+  
+  /* 10 */ @js.native
+  object Tfvc extends TopLevel[Tfvc with Double]
+  
+  /* 0 */ @js.native
+  object XamlBuild extends TopLevel[XamlBuild with Double]
+  
 }
 

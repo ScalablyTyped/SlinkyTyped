@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object GitResolutionMergeType extends js.Object {
   @js.native
   sealed trait UserMerged extends GitResolutionMergeType
   
-  /* 3 */ val AutoMerged: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionMergeType.AutoMerged with Double = js.native
-  /* 1 */ val TakeSourceContent: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionMergeType.TakeSourceContent with Double = js.native
-  /* 2 */ val TakeTargetContent: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionMergeType.TakeTargetContent with Double = js.native
-  /* 0 */ val Undecided: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionMergeType.Undecided with Double = js.native
-  /* 4 */ val UserMerged: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitResolutionMergeType.UserMerged with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitResolutionMergeType with Double] = js.native
+  /* 3 */ @js.native
+  object AutoMerged extends TopLevel[AutoMerged with Double]
+  
+  /* 1 */ @js.native
+  object TakeSourceContent extends TopLevel[TakeSourceContent with Double]
+  
+  /* 2 */ @js.native
+  object TakeTargetContent extends TopLevel[TakeTargetContent with Double]
+  
+  /* 0 */ @js.native
+  object Undecided extends TopLevel[Undecided with Double]
+  
+  /* 4 */ @js.native
+  object UserMerged extends TopLevel[UserMerged with Double]
+  
 }
 

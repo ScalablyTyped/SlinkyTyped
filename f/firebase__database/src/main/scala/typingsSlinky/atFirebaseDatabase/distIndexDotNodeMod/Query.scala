@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebaseDatabase.distIndexDotNodeMod
 
+import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.atFirebaseDatabase.distSrcCoreRepoMod.Repo
 import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilPathMod.Path
 import typingsSlinky.atFirebaseDatabase.distSrcCoreViewQueryParamsMod.QueryParams
@@ -18,7 +19,6 @@ class Query protected ()
 @JSImport("@firebase/database/dist/index.node", "Query")
 @js.native
 object Query extends js.Object {
-  var __referenceConstructor: js.Any = js.native
   /**
     * Helper used by .on and .once to extract the context and or cancel arguments.
     * @param {!string} fnName The function name (on or once)
@@ -40,5 +40,17 @@ object Query extends js.Object {
     * @private
     */
   var validateQueryEndpoints_ : js.Any = js.native
+  def __referenceConstructor(): Instantiable2[
+    /* repo */ Repo, 
+    /* path */ Path, 
+    typingsSlinky.atFirebaseDatabase.distSrcApiQueryMod.Query
+  ] = js.native
+  def __referenceConstructor(
+    `val`: Instantiable2[
+      /* repo */ Repo, 
+      /* path */ Path, 
+      typingsSlinky.atFirebaseDatabase.distSrcApiQueryMod.Query
+    ]
+  ): js.Any = js.native
 }
 

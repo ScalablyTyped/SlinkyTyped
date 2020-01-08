@@ -5,344 +5,344 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.fileDashType.fileDashTypeStrings.`image/jpeg`
-  - typings.fileDashType.fileDashTypeStrings.`image/png`
-  - typings.fileDashType.fileDashTypeStrings.`image/gif`
-  - typings.fileDashType.fileDashTypeStrings.`image/webp`
-  - typings.fileDashType.fileDashTypeStrings.`image/flif`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-canon-cr2`
-  - typings.fileDashType.fileDashTypeStrings.`image/tiff`
-  - typings.fileDashType.fileDashTypeStrings.`image/bmp`
-  - typings.fileDashType.fileDashTypeStrings.`image/vndDOTms-photo`
-  - typings.fileDashType.fileDashTypeStrings.`image/vndDOTadobeDOTphotoshop`
-  - typings.fileDashType.fileDashTypeStrings.`application/epub+zip`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-xpinstall`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTtext`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTspreadsheet`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTpresentation`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTwordprocessingmlDOTdocument`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTpresentationmlDOTpresentation`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTspreadsheetmlDOTsheet`
-  - typings.fileDashType.fileDashTypeStrings.`application/zip`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-tar`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-rar-compressed`
-  - typings.fileDashType.fileDashTypeStrings.`application/gzip`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-bzip2`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-7z-compressed`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-apple-diskimage`
-  - typings.fileDashType.fileDashTypeStrings.`video/mp4`
-  - typings.fileDashType.fileDashTypeStrings.`audio/midi`
-  - typings.fileDashType.fileDashTypeStrings.`video/x-matroska`
-  - typings.fileDashType.fileDashTypeStrings.`video/webm`
-  - typings.fileDashType.fileDashTypeStrings.`video/quicktime`
-  - typings.fileDashType.fileDashTypeStrings.`video/vndDOTavi`
-  - typings.fileDashType.fileDashTypeStrings.`audio/vndDOTwave`
-  - typings.fileDashType.fileDashTypeStrings.`audio/qcelp`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-ms-wma`
-  - typings.fileDashType.fileDashTypeStrings.`video/x-ms-asf`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTms-asf`
-  - typings.fileDashType.fileDashTypeStrings.`video/mpeg`
-  - typings.fileDashType.fileDashTypeStrings.`video/3gpp`
-  - typings.fileDashType.fileDashTypeStrings.`audio/mpeg`
-  - typings.fileDashType.fileDashTypeStrings.`audio/mp4`
-  - typings.fileDashType.fileDashTypeStrings.`audio/opus`
-  - typings.fileDashType.fileDashTypeStrings.`video/ogg`
-  - typings.fileDashType.fileDashTypeStrings.`audio/ogg`
-  - typings.fileDashType.fileDashTypeStrings.`application/ogg`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-flac`
-  - typings.fileDashType.fileDashTypeStrings.`audio/ape`
-  - typings.fileDashType.fileDashTypeStrings.`audio/wavpack`
-  - typings.fileDashType.fileDashTypeStrings.`audio/amr`
-  - typings.fileDashType.fileDashTypeStrings.`application/pdf`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-msdownload`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-shockwave-flash`
-  - typings.fileDashType.fileDashTypeStrings.`application/rtf`
-  - typings.fileDashType.fileDashTypeStrings.`application/wasm`
-  - typings.fileDashType.fileDashTypeStrings.`font/woff`
-  - typings.fileDashType.fileDashTypeStrings.`font/woff2`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTms-fontobject`
-  - typings.fileDashType.fileDashTypeStrings.`font/ttf`
-  - typings.fileDashType.fileDashTypeStrings.`font/otf`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-icon`
-  - typings.fileDashType.fileDashTypeStrings.`video/x-flv`
-  - typings.fileDashType.fileDashTypeStrings.`application/postscript`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-xz`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-sqlite3`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-nintendo-nes-rom`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-google-chrome-extension`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTms-cab-compressed`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-deb`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-unix-archive`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-rpm`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-compress`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-lzip`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-msi`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-mie`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-apache-arrow`
-  - typings.fileDashType.fileDashTypeStrings.`application/mxf`
-  - typings.fileDashType.fileDashTypeStrings.`video/mp2t`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-blender`
-  - typings.fileDashType.fileDashTypeStrings.`image/bpg`
-  - typings.fileDashType.fileDashTypeStrings.`image/jp2`
-  - typings.fileDashType.fileDashTypeStrings.`image/jpx`
-  - typings.fileDashType.fileDashTypeStrings.`image/jpm`
-  - typings.fileDashType.fileDashTypeStrings.`image/mj2`
-  - typings.fileDashType.fileDashTypeStrings.`audio/aiff`
-  - typings.fileDashType.fileDashTypeStrings.`application/xml`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-mobipocket-ebook`
-  - typings.fileDashType.fileDashTypeStrings.`image/heif`
-  - typings.fileDashType.fileDashTypeStrings.`image/heif-sequence`
-  - typings.fileDashType.fileDashTypeStrings.`image/heic`
-  - typings.fileDashType.fileDashTypeStrings.`image/heic-sequence`
-  - typings.fileDashType.fileDashTypeStrings.`image/ktx`
-  - typings.fileDashType.fileDashTypeStrings.`application/dicom`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-musepack`
-  - typings.fileDashType.fileDashTypeStrings.`text/calendar`
-  - typings.fileDashType.fileDashTypeStrings.`model/gltf-binary`
-  - typings.fileDashType.fileDashTypeStrings.`application/vndDOTtcpdumpDOTpcap`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-dsf`
-  - typings.fileDashType.fileDashTypeStrings.`application/xDOTmsDOTshortcut`
-  - typings.fileDashType.fileDashTypeStrings.`application/xDOTappleDOTalias`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-voc`
-  - typings.fileDashType.fileDashTypeStrings.`audio/vndDOTdolbyDOTdd-raw`
-  - typings.fileDashType.fileDashTypeStrings.`audio/x-m4a`
-  - typings.fileDashType.fileDashTypeStrings.`image/apng`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-olympus-orf`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-sony-arw`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-adobe-dng`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-nikon-nef`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-panasonic-rw2`
-  - typings.fileDashType.fileDashTypeStrings.`image/x-fujifilm-raf`
-  - typings.fileDashType.fileDashTypeStrings.`video/x-m4v`
-  - typings.fileDashType.fileDashTypeStrings.`video/3gpp2`
-  - typings.fileDashType.fileDashTypeStrings.`application/x-esri-shape`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashjpeg
+  - typings.fileDashType.fileDashTypeStrings.imageSlashpng
+  - typings.fileDashType.fileDashTypeStrings.imageSlashgif
+  - typings.fileDashType.fileDashTypeStrings.imageSlashwebp
+  - typings.fileDashType.fileDashTypeStrings.imageSlashflif
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-canon-cr2`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashtiff
+  - typings.fileDashType.fileDashTypeStrings.imageSlashbmp
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashvndDotms-photo`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashvndDotadobeDotphotoshop
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashepubPlussignzip
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-xpinstall`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDottext
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDotspreadsheet
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDotpresentation
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotpresentationmlDotpresentation`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotspreadsheetmlDotsheet`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashzip
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-tar`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-rar-compressed`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashgzip
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-bzip2`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-7z-compressed`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-apple-diskimage`
+  - typings.fileDashType.fileDashTypeStrings.videoSlashmp4
+  - typings.fileDashType.fileDashTypeStrings.audioSlashmidi
+  - typings.fileDashType.fileDashTypeStrings.`videoSlashx-matroska`
+  - typings.fileDashType.fileDashTypeStrings.videoSlashwebm
+  - typings.fileDashType.fileDashTypeStrings.videoSlashquicktime
+  - typings.fileDashType.fileDashTypeStrings.videoSlashvndDotavi
+  - typings.fileDashType.fileDashTypeStrings.audioSlashvndDotwave
+  - typings.fileDashType.fileDashTypeStrings.audioSlashqcelp
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-ms-wma`
+  - typings.fileDashType.fileDashTypeStrings.`videoSlashx-ms-asf`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-asf`
+  - typings.fileDashType.fileDashTypeStrings.videoSlashmpeg
+  - typings.fileDashType.fileDashTypeStrings.videoSlash3gpp
+  - typings.fileDashType.fileDashTypeStrings.audioSlashmpeg
+  - typings.fileDashType.fileDashTypeStrings.audioSlashmp4
+  - typings.fileDashType.fileDashTypeStrings.audioSlashopus
+  - typings.fileDashType.fileDashTypeStrings.videoSlashogg
+  - typings.fileDashType.fileDashTypeStrings.audioSlashogg
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashogg
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-flac`
+  - typings.fileDashType.fileDashTypeStrings.audioSlashape
+  - typings.fileDashType.fileDashTypeStrings.audioSlashwavpack
+  - typings.fileDashType.fileDashTypeStrings.audioSlashamr
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashpdf
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-msdownload`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-shockwave-flash`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashrtf
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashwasm
+  - typings.fileDashType.fileDashTypeStrings.fontSlashwoff
+  - typings.fileDashType.fileDashTypeStrings.fontSlashwoff2
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-fontobject`
+  - typings.fileDashType.fileDashTypeStrings.fontSlashttf
+  - typings.fileDashType.fileDashTypeStrings.fontSlashotf
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-icon`
+  - typings.fileDashType.fileDashTypeStrings.`videoSlashx-flv`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashpostscript
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-xz`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-sqlite3`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-nintendo-nes-rom`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-google-chrome-extension`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-cab-compressed`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-deb`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-unix-archive`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-rpm`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-compress`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-lzip`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-msi`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-mie`
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-apache-arrow`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashmxf
+  - typings.fileDashType.fileDashTypeStrings.videoSlashmp2t
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-blender`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashbpg
+  - typings.fileDashType.fileDashTypeStrings.imageSlashjp2
+  - typings.fileDashType.fileDashTypeStrings.imageSlashjpx
+  - typings.fileDashType.fileDashTypeStrings.imageSlashjpm
+  - typings.fileDashType.fileDashTypeStrings.imageSlashmj2
+  - typings.fileDashType.fileDashTypeStrings.audioSlashaiff
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashxml
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-mobipocket-ebook`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashheif
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashheif-sequence`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashheic
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashheic-sequence`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashktx
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashdicom
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-musepack`
+  - typings.fileDashType.fileDashTypeStrings.textSlashcalendar
+  - typings.fileDashType.fileDashTypeStrings.`modelSlashgltf-binary`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashvndDottcpdumpDotpcap
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-dsf`
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashxDotmsDotshortcut
+  - typings.fileDashType.fileDashTypeStrings.applicationSlashxDotappleDotalias
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-voc`
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashvndDotdolbyDotdd-raw`
+  - typings.fileDashType.fileDashTypeStrings.`audioSlashx-m4a`
+  - typings.fileDashType.fileDashTypeStrings.imageSlashapng
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-olympus-orf`
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-sony-arw`
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-adobe-dng`
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-nikon-nef`
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-panasonic-rw2`
+  - typings.fileDashType.fileDashTypeStrings.`imageSlashx-fujifilm-raf`
+  - typings.fileDashType.fileDashTypeStrings.`videoSlashx-m4v`
+  - typings.fileDashType.fileDashTypeStrings.videoSlash3gpp2
+  - typings.fileDashType.fileDashTypeStrings.`applicationSlashx-esri-shape`
 */
 trait MimeType extends js.Object
 
 object MimeType {
   @scala.inline
-  def `application/dicom`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/dicom` = this.cast("application/dicom")
+  def applicationSlashdicom: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashdicom = this.cast("application/dicom")
   @scala.inline
-  def `application/epub+zip`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/epub+zip` = this.cast("application/epub+zip")
+  def applicationSlashepubPlussignzip: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashepubPlussignzip = this.cast("application/epub+zip")
   @scala.inline
-  def `application/gzip`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/gzip` = this.cast("application/gzip")
+  def applicationSlashgzip: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashgzip = this.cast("application/gzip")
   @scala.inline
-  def `application/mxf`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/mxf` = this.cast("application/mxf")
+  def applicationSlashmxf: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashmxf = this.cast("application/mxf")
   @scala.inline
-  def `application/ogg`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/ogg` = this.cast("application/ogg")
+  def applicationSlashogg: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashogg = this.cast("application/ogg")
   @scala.inline
-  def `application/pdf`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/pdf` = this.cast("application/pdf")
+  def applicationSlashpdf: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashpdf = this.cast("application/pdf")
   @scala.inline
-  def `application/postscript`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/postscript` = this.cast("application/postscript")
+  def applicationSlashpostscript: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashpostscript = this.cast("application/postscript")
   @scala.inline
-  def `application/rtf`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/rtf` = this.cast("application/rtf")
+  def applicationSlashrtf: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashrtf = this.cast("application/rtf")
   @scala.inline
-  def `application/vndDOTms-asf`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTms-asf` = this.cast("application/vnd.ms-asf")
+  def `applicationSlashvndDotms-asf`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-asf` = this.cast("application/vnd.ms-asf")
   @scala.inline
-  def `application/vndDOTms-cab-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTms-cab-compressed` = this.cast("application/vnd.ms-cab-compressed")
+  def `applicationSlashvndDotms-cab-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-cab-compressed` = this.cast("application/vnd.ms-cab-compressed")
   @scala.inline
-  def `application/vndDOTms-fontobject`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTms-fontobject` = this.cast("application/vnd.ms-fontobject")
+  def `applicationSlashvndDotms-fontobject`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotms-fontobject` = this.cast("application/vnd.ms-fontobject")
   @scala.inline
-  def `application/vndDOToasisDOTopendocumentDOTpresentation`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTpresentation` = this.cast("application/vnd.oasis.opendocument.presentation")
+  def applicationSlashvndDotoasisDotopendocumentDotpresentation: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDotpresentation = this.cast("application/vnd.oasis.opendocument.presentation")
   @scala.inline
-  def `application/vndDOToasisDOTopendocumentDOTspreadsheet`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTspreadsheet` = this.cast("application/vnd.oasis.opendocument.spreadsheet")
+  def applicationSlashvndDotoasisDotopendocumentDotspreadsheet: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDotspreadsheet = this.cast("application/vnd.oasis.opendocument.spreadsheet")
   @scala.inline
-  def `application/vndDOToasisDOTopendocumentDOTtext`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOToasisDOTopendocumentDOTtext` = this.cast("application/vnd.oasis.opendocument.text")
+  def applicationSlashvndDotoasisDotopendocumentDottext: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashvndDotoasisDotopendocumentDottext = this.cast("application/vnd.oasis.opendocument.text")
   @scala.inline
-  def `application/vndDOTopenxmlformats-officedocumentDOTpresentationmlDOTpresentation`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTpresentationmlDOTpresentation` = this.cast("application/vnd.openxmlformats-officedocument.presentationml.presentation")
+  def `applicationSlashvndDotopenxmlformats-officedocumentDotpresentationmlDotpresentation`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotpresentationmlDotpresentation` = this.cast("application/vnd.openxmlformats-officedocument.presentationml.presentation")
   @scala.inline
-  def `application/vndDOTopenxmlformats-officedocumentDOTspreadsheetmlDOTsheet`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTspreadsheetmlDOTsheet` = this.cast("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+  def `applicationSlashvndDotopenxmlformats-officedocumentDotspreadsheetmlDotsheet`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotspreadsheetmlDotsheet` = this.cast("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
   @scala.inline
-  def `application/vndDOTopenxmlformats-officedocumentDOTwordprocessingmlDOTdocument`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTopenxmlformats-officedocumentDOTwordprocessingmlDOTdocument` = this.cast("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+  def `applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument` = this.cast("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
   @scala.inline
-  def `application/vndDOTtcpdumpDOTpcap`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/vndDOTtcpdumpDOTpcap` = this.cast("application/vnd.tcpdump.pcap")
+  def applicationSlashvndDottcpdumpDotpcap: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashvndDottcpdumpDotpcap = this.cast("application/vnd.tcpdump.pcap")
   @scala.inline
-  def `application/wasm`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/wasm` = this.cast("application/wasm")
+  def applicationSlashwasm: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashwasm = this.cast("application/wasm")
   @scala.inline
-  def `application/x-7z-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-7z-compressed` = this.cast("application/x-7z-compressed")
+  def `applicationSlashx-7z-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-7z-compressed` = this.cast("application/x-7z-compressed")
   @scala.inline
-  def `application/x-apache-arrow`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-apache-arrow` = this.cast("application/x-apache-arrow")
+  def `applicationSlashx-apache-arrow`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-apache-arrow` = this.cast("application/x-apache-arrow")
   @scala.inline
-  def `application/x-apple-diskimage`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-apple-diskimage` = this.cast("application/x-apple-diskimage")
+  def `applicationSlashx-apple-diskimage`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-apple-diskimage` = this.cast("application/x-apple-diskimage")
   @scala.inline
-  def `application/x-blender`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-blender` = this.cast("application/x-blender")
+  def `applicationSlashx-blender`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-blender` = this.cast("application/x-blender")
   @scala.inline
-  def `application/x-bzip2`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-bzip2` = this.cast("application/x-bzip2")
+  def `applicationSlashx-bzip2`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-bzip2` = this.cast("application/x-bzip2")
   @scala.inline
-  def `application/x-compress`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-compress` = this.cast("application/x-compress")
+  def `applicationSlashx-compress`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-compress` = this.cast("application/x-compress")
   @scala.inline
-  def `application/x-deb`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-deb` = this.cast("application/x-deb")
+  def `applicationSlashx-deb`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-deb` = this.cast("application/x-deb")
   @scala.inline
-  def `application/x-esri-shape`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-esri-shape` = this.cast("application/x-esri-shape")
+  def `applicationSlashx-esri-shape`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-esri-shape` = this.cast("application/x-esri-shape")
   @scala.inline
-  def `application/x-google-chrome-extension`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-google-chrome-extension` = this.cast("application/x-google-chrome-extension")
+  def `applicationSlashx-google-chrome-extension`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-google-chrome-extension` = this.cast("application/x-google-chrome-extension")
   @scala.inline
-  def `application/x-lzip`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-lzip` = this.cast("application/x-lzip")
+  def `applicationSlashx-lzip`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-lzip` = this.cast("application/x-lzip")
   @scala.inline
-  def `application/x-mie`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-mie` = this.cast("application/x-mie")
+  def `applicationSlashx-mie`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-mie` = this.cast("application/x-mie")
   @scala.inline
-  def `application/x-mobipocket-ebook`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-mobipocket-ebook` = this.cast("application/x-mobipocket-ebook")
+  def `applicationSlashx-mobipocket-ebook`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-mobipocket-ebook` = this.cast("application/x-mobipocket-ebook")
   @scala.inline
-  def `application/x-msdownload`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-msdownload` = this.cast("application/x-msdownload")
+  def `applicationSlashx-msdownload`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-msdownload` = this.cast("application/x-msdownload")
   @scala.inline
-  def `application/x-msi`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-msi` = this.cast("application/x-msi")
+  def `applicationSlashx-msi`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-msi` = this.cast("application/x-msi")
   @scala.inline
-  def `application/x-nintendo-nes-rom`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-nintendo-nes-rom` = this.cast("application/x-nintendo-nes-rom")
+  def `applicationSlashx-nintendo-nes-rom`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-nintendo-nes-rom` = this.cast("application/x-nintendo-nes-rom")
   @scala.inline
-  def `application/x-rar-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-rar-compressed` = this.cast("application/x-rar-compressed")
+  def `applicationSlashx-rar-compressed`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-rar-compressed` = this.cast("application/x-rar-compressed")
   @scala.inline
-  def `application/x-rpm`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-rpm` = this.cast("application/x-rpm")
+  def `applicationSlashx-rpm`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-rpm` = this.cast("application/x-rpm")
   @scala.inline
-  def `application/x-shockwave-flash`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-shockwave-flash` = this.cast("application/x-shockwave-flash")
+  def `applicationSlashx-shockwave-flash`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-shockwave-flash` = this.cast("application/x-shockwave-flash")
   @scala.inline
-  def `application/x-sqlite3`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-sqlite3` = this.cast("application/x-sqlite3")
+  def `applicationSlashx-sqlite3`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-sqlite3` = this.cast("application/x-sqlite3")
   @scala.inline
-  def `application/x-tar`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-tar` = this.cast("application/x-tar")
+  def `applicationSlashx-tar`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-tar` = this.cast("application/x-tar")
   @scala.inline
-  def `application/x-unix-archive`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-unix-archive` = this.cast("application/x-unix-archive")
+  def `applicationSlashx-unix-archive`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-unix-archive` = this.cast("application/x-unix-archive")
   @scala.inline
-  def `application/x-xpinstall`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-xpinstall` = this.cast("application/x-xpinstall")
+  def `applicationSlashx-xpinstall`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-xpinstall` = this.cast("application/x-xpinstall")
   @scala.inline
-  def `application/x-xz`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/x-xz` = this.cast("application/x-xz")
+  def `applicationSlashx-xz`: typingsSlinky.fileDashType.fileDashTypeStrings.`applicationSlashx-xz` = this.cast("application/x-xz")
   @scala.inline
-  def `application/xDOTappleDOTalias`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/xDOTappleDOTalias` = this.cast("application/x.apple.alias")
+  def applicationSlashxDotappleDotalias: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashxDotappleDotalias = this.cast("application/x.apple.alias")
   @scala.inline
-  def `application/xDOTmsDOTshortcut`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/xDOTmsDOTshortcut` = this.cast("application/x.ms.shortcut")
+  def applicationSlashxDotmsDotshortcut: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashxDotmsDotshortcut = this.cast("application/x.ms.shortcut")
   @scala.inline
-  def `application/xml`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/xml` = this.cast("application/xml")
+  def applicationSlashxml: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashxml = this.cast("application/xml")
   @scala.inline
-  def `application/zip`: typingsSlinky.fileDashType.fileDashTypeStrings.`application/zip` = this.cast("application/zip")
+  def applicationSlashzip: typingsSlinky.fileDashType.fileDashTypeStrings.applicationSlashzip = this.cast("application/zip")
   @scala.inline
-  def `audio/aiff`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/aiff` = this.cast("audio/aiff")
+  def audioSlashaiff: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashaiff = this.cast("audio/aiff")
   @scala.inline
-  def `audio/amr`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/amr` = this.cast("audio/amr")
+  def audioSlashamr: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashamr = this.cast("audio/amr")
   @scala.inline
-  def `audio/ape`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/ape` = this.cast("audio/ape")
+  def audioSlashape: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashape = this.cast("audio/ape")
   @scala.inline
-  def `audio/midi`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/midi` = this.cast("audio/midi")
+  def audioSlashmidi: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashmidi = this.cast("audio/midi")
   @scala.inline
-  def `audio/mp4`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/mp4` = this.cast("audio/mp4")
+  def audioSlashmp4: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashmp4 = this.cast("audio/mp4")
   @scala.inline
-  def `audio/mpeg`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/mpeg` = this.cast("audio/mpeg")
+  def audioSlashmpeg: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashmpeg = this.cast("audio/mpeg")
   @scala.inline
-  def `audio/ogg`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/ogg` = this.cast("audio/ogg")
+  def audioSlashogg: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashogg = this.cast("audio/ogg")
   @scala.inline
-  def `audio/opus`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/opus` = this.cast("audio/opus")
+  def audioSlashopus: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashopus = this.cast("audio/opus")
   @scala.inline
-  def `audio/qcelp`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/qcelp` = this.cast("audio/qcelp")
+  def audioSlashqcelp: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashqcelp = this.cast("audio/qcelp")
   @scala.inline
-  def `audio/vndDOTdolbyDOTdd-raw`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/vndDOTdolbyDOTdd-raw` = this.cast("audio/vnd.dolby.dd-raw")
+  def `audioSlashvndDotdolbyDotdd-raw`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashvndDotdolbyDotdd-raw` = this.cast("audio/vnd.dolby.dd-raw")
   @scala.inline
-  def `audio/vndDOTwave`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/vndDOTwave` = this.cast("audio/vnd.wave")
+  def audioSlashvndDotwave: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashvndDotwave = this.cast("audio/vnd.wave")
   @scala.inline
-  def `audio/wavpack`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/wavpack` = this.cast("audio/wavpack")
+  def audioSlashwavpack: typingsSlinky.fileDashType.fileDashTypeStrings.audioSlashwavpack = this.cast("audio/wavpack")
   @scala.inline
-  def `audio/x-dsf`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-dsf` = this.cast("audio/x-dsf")
+  def `audioSlashx-dsf`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-dsf` = this.cast("audio/x-dsf")
   @scala.inline
-  def `audio/x-flac`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-flac` = this.cast("audio/x-flac")
+  def `audioSlashx-flac`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-flac` = this.cast("audio/x-flac")
   @scala.inline
-  def `audio/x-m4a`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-m4a` = this.cast("audio/x-m4a")
+  def `audioSlashx-m4a`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-m4a` = this.cast("audio/x-m4a")
   @scala.inline
-  def `audio/x-ms-wma`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-ms-wma` = this.cast("audio/x-ms-wma")
+  def `audioSlashx-ms-wma`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-ms-wma` = this.cast("audio/x-ms-wma")
   @scala.inline
-  def `audio/x-musepack`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-musepack` = this.cast("audio/x-musepack")
+  def `audioSlashx-musepack`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-musepack` = this.cast("audio/x-musepack")
   @scala.inline
-  def `audio/x-voc`: typingsSlinky.fileDashType.fileDashTypeStrings.`audio/x-voc` = this.cast("audio/x-voc")
+  def `audioSlashx-voc`: typingsSlinky.fileDashType.fileDashTypeStrings.`audioSlashx-voc` = this.cast("audio/x-voc")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def `font/otf`: typingsSlinky.fileDashType.fileDashTypeStrings.`font/otf` = this.cast("font/otf")
+  def fontSlashotf: typingsSlinky.fileDashType.fileDashTypeStrings.fontSlashotf = this.cast("font/otf")
   @scala.inline
-  def `font/ttf`: typingsSlinky.fileDashType.fileDashTypeStrings.`font/ttf` = this.cast("font/ttf")
+  def fontSlashttf: typingsSlinky.fileDashType.fileDashTypeStrings.fontSlashttf = this.cast("font/ttf")
   @scala.inline
-  def `font/woff`: typingsSlinky.fileDashType.fileDashTypeStrings.`font/woff` = this.cast("font/woff")
+  def fontSlashwoff: typingsSlinky.fileDashType.fileDashTypeStrings.fontSlashwoff = this.cast("font/woff")
   @scala.inline
-  def `font/woff2`: typingsSlinky.fileDashType.fileDashTypeStrings.`font/woff2` = this.cast("font/woff2")
+  def fontSlashwoff2: typingsSlinky.fileDashType.fileDashTypeStrings.fontSlashwoff2 = this.cast("font/woff2")
   @scala.inline
-  def `image/apng`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/apng` = this.cast("image/apng")
+  def imageSlashapng: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashapng = this.cast("image/apng")
   @scala.inline
-  def `image/bmp`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/bmp` = this.cast("image/bmp")
+  def imageSlashbmp: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashbmp = this.cast("image/bmp")
   @scala.inline
-  def `image/bpg`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/bpg` = this.cast("image/bpg")
+  def imageSlashbpg: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashbpg = this.cast("image/bpg")
   @scala.inline
-  def `image/flif`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/flif` = this.cast("image/flif")
+  def imageSlashflif: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashflif = this.cast("image/flif")
   @scala.inline
-  def `image/gif`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/gif` = this.cast("image/gif")
+  def imageSlashgif: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashgif = this.cast("image/gif")
   @scala.inline
-  def `image/heic`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/heic` = this.cast("image/heic")
+  def imageSlashheic: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashheic = this.cast("image/heic")
   @scala.inline
-  def `image/heic-sequence`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/heic-sequence` = this.cast("image/heic-sequence")
+  def `imageSlashheic-sequence`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashheic-sequence` = this.cast("image/heic-sequence")
   @scala.inline
-  def `image/heif`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/heif` = this.cast("image/heif")
+  def imageSlashheif: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashheif = this.cast("image/heif")
   @scala.inline
-  def `image/heif-sequence`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/heif-sequence` = this.cast("image/heif-sequence")
+  def `imageSlashheif-sequence`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashheif-sequence` = this.cast("image/heif-sequence")
   @scala.inline
-  def `image/jp2`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/jp2` = this.cast("image/jp2")
+  def imageSlashjp2: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashjp2 = this.cast("image/jp2")
   @scala.inline
-  def `image/jpeg`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/jpeg` = this.cast("image/jpeg")
+  def imageSlashjpeg: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashjpeg = this.cast("image/jpeg")
   @scala.inline
-  def `image/jpm`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/jpm` = this.cast("image/jpm")
+  def imageSlashjpm: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashjpm = this.cast("image/jpm")
   @scala.inline
-  def `image/jpx`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/jpx` = this.cast("image/jpx")
+  def imageSlashjpx: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashjpx = this.cast("image/jpx")
   @scala.inline
-  def `image/ktx`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/ktx` = this.cast("image/ktx")
+  def imageSlashktx: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashktx = this.cast("image/ktx")
   @scala.inline
-  def `image/mj2`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/mj2` = this.cast("image/mj2")
+  def imageSlashmj2: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashmj2 = this.cast("image/mj2")
   @scala.inline
-  def `image/png`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/png` = this.cast("image/png")
+  def imageSlashpng: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashpng = this.cast("image/png")
   @scala.inline
-  def `image/tiff`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/tiff` = this.cast("image/tiff")
+  def imageSlashtiff: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashtiff = this.cast("image/tiff")
   @scala.inline
-  def `image/vndDOTadobeDOTphotoshop`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/vndDOTadobeDOTphotoshop` = this.cast("image/vnd.adobe.photoshop")
+  def imageSlashvndDotadobeDotphotoshop: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashvndDotadobeDotphotoshop = this.cast("image/vnd.adobe.photoshop")
   @scala.inline
-  def `image/vndDOTms-photo`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/vndDOTms-photo` = this.cast("image/vnd.ms-photo")
+  def `imageSlashvndDotms-photo`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashvndDotms-photo` = this.cast("image/vnd.ms-photo")
   @scala.inline
-  def `image/webp`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/webp` = this.cast("image/webp")
+  def imageSlashwebp: typingsSlinky.fileDashType.fileDashTypeStrings.imageSlashwebp = this.cast("image/webp")
   @scala.inline
-  def `image/x-adobe-dng`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-adobe-dng` = this.cast("image/x-adobe-dng")
+  def `imageSlashx-adobe-dng`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-adobe-dng` = this.cast("image/x-adobe-dng")
   @scala.inline
-  def `image/x-canon-cr2`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-canon-cr2` = this.cast("image/x-canon-cr2")
+  def `imageSlashx-canon-cr2`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-canon-cr2` = this.cast("image/x-canon-cr2")
   @scala.inline
-  def `image/x-fujifilm-raf`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-fujifilm-raf` = this.cast("image/x-fujifilm-raf")
+  def `imageSlashx-fujifilm-raf`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-fujifilm-raf` = this.cast("image/x-fujifilm-raf")
   @scala.inline
-  def `image/x-icon`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-icon` = this.cast("image/x-icon")
+  def `imageSlashx-icon`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-icon` = this.cast("image/x-icon")
   @scala.inline
-  def `image/x-nikon-nef`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-nikon-nef` = this.cast("image/x-nikon-nef")
+  def `imageSlashx-nikon-nef`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-nikon-nef` = this.cast("image/x-nikon-nef")
   @scala.inline
-  def `image/x-olympus-orf`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-olympus-orf` = this.cast("image/x-olympus-orf")
+  def `imageSlashx-olympus-orf`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-olympus-orf` = this.cast("image/x-olympus-orf")
   @scala.inline
-  def `image/x-panasonic-rw2`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-panasonic-rw2` = this.cast("image/x-panasonic-rw2")
+  def `imageSlashx-panasonic-rw2`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-panasonic-rw2` = this.cast("image/x-panasonic-rw2")
   @scala.inline
-  def `image/x-sony-arw`: typingsSlinky.fileDashType.fileDashTypeStrings.`image/x-sony-arw` = this.cast("image/x-sony-arw")
+  def `imageSlashx-sony-arw`: typingsSlinky.fileDashType.fileDashTypeStrings.`imageSlashx-sony-arw` = this.cast("image/x-sony-arw")
   @scala.inline
-  def `model/gltf-binary`: typingsSlinky.fileDashType.fileDashTypeStrings.`model/gltf-binary` = this.cast("model/gltf-binary")
+  def `modelSlashgltf-binary`: typingsSlinky.fileDashType.fileDashTypeStrings.`modelSlashgltf-binary` = this.cast("model/gltf-binary")
   @scala.inline
-  def `text/calendar`: typingsSlinky.fileDashType.fileDashTypeStrings.`text/calendar` = this.cast("text/calendar")
+  def textSlashcalendar: typingsSlinky.fileDashType.fileDashTypeStrings.textSlashcalendar = this.cast("text/calendar")
   @scala.inline
-  def `video/3gpp`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/3gpp` = this.cast("video/3gpp")
+  def videoSlash3gpp: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlash3gpp = this.cast("video/3gpp")
   @scala.inline
-  def `video/3gpp2`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/3gpp2` = this.cast("video/3gpp2")
+  def videoSlash3gpp2: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlash3gpp2 = this.cast("video/3gpp2")
   @scala.inline
-  def `video/mp2t`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/mp2t` = this.cast("video/mp2t")
+  def videoSlashmp2t: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashmp2t = this.cast("video/mp2t")
   @scala.inline
-  def `video/mp4`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/mp4` = this.cast("video/mp4")
+  def videoSlashmp4: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashmp4 = this.cast("video/mp4")
   @scala.inline
-  def `video/mpeg`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/mpeg` = this.cast("video/mpeg")
+  def videoSlashmpeg: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashmpeg = this.cast("video/mpeg")
   @scala.inline
-  def `video/ogg`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/ogg` = this.cast("video/ogg")
+  def videoSlashogg: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashogg = this.cast("video/ogg")
   @scala.inline
-  def `video/quicktime`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/quicktime` = this.cast("video/quicktime")
+  def videoSlashquicktime: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashquicktime = this.cast("video/quicktime")
   @scala.inline
-  def `video/vndDOTavi`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/vndDOTavi` = this.cast("video/vnd.avi")
+  def videoSlashvndDotavi: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashvndDotavi = this.cast("video/vnd.avi")
   @scala.inline
-  def `video/webm`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/webm` = this.cast("video/webm")
+  def videoSlashwebm: typingsSlinky.fileDashType.fileDashTypeStrings.videoSlashwebm = this.cast("video/webm")
   @scala.inline
-  def `video/x-flv`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/x-flv` = this.cast("video/x-flv")
+  def `videoSlashx-flv`: typingsSlinky.fileDashType.fileDashTypeStrings.`videoSlashx-flv` = this.cast("video/x-flv")
   @scala.inline
-  def `video/x-m4v`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/x-m4v` = this.cast("video/x-m4v")
+  def `videoSlashx-m4v`: typingsSlinky.fileDashType.fileDashTypeStrings.`videoSlashx-m4v` = this.cast("video/x-m4v")
   @scala.inline
-  def `video/x-matroska`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/x-matroska` = this.cast("video/x-matroska")
+  def `videoSlashx-matroska`: typingsSlinky.fileDashType.fileDashTypeStrings.`videoSlashx-matroska` = this.cast("video/x-matroska")
   @scala.inline
-  def `video/x-ms-asf`: typingsSlinky.fileDashType.fileDashTypeStrings.`video/x-ms-asf` = this.cast("video/x-ms-asf")
+  def `videoSlashx-ms-asf`: typingsSlinky.fileDashType.fileDashTypeStrings.`videoSlashx-ms-asf` = this.cast("video/x-ms-asf")
 }
 

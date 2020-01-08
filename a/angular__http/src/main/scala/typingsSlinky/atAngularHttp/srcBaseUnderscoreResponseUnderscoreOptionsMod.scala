@@ -1,7 +1,6 @@
 package typingsSlinky.atAngularHttp
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.atAngularHttp.srcBaseUnderscoreResponseUnderscoreOptionsMod.ResponseOptions
 import typingsSlinky.atAngularHttp.srcHeadersMod.Headers
 import typingsSlinky.atAngularHttp.srcInterfacesMod.ResponseOptionsArgs
 import scala.scalajs.js

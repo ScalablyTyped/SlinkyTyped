@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.plottable.buildSrcAxesAxisMod.AxisOrientation
 import typingsSlinky.plottable.buildSrcComponentsComponentMod.Component
 import typingsSlinky.plottable.buildSrcCoreFormattersMod.Formatter
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.SimpleSelection

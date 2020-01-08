@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object StandardTileType extends js.Object {
   @js.native
   sealed trait None extends StandardTileType
   
-  /* 0 */ val Create: typingsSlinky.openui5.sap.m.StandardTileType.Create with Double = js.native
-  /* 1 */ val Monitor: typingsSlinky.openui5.sap.m.StandardTileType.Monitor with Double = js.native
-  /* 2 */ val None: typingsSlinky.openui5.sap.m.StandardTileType.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StandardTileType with Double] = js.native
+  /* 0 */ @js.native
+  object Create extends TopLevel[Create with Double]
+  
+  /* 1 */ @js.native
+  object Monitor extends TopLevel[Monitor with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

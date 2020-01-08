@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FileOptions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object OptimizeMode extends js.Object {
   @js.native
   sealed trait SPEED extends OptimizeMode
   
-  /* 2 */ val CODE_SIZE: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FileOptions.OptimizeMode.CODE_SIZE with Double = js.native
-  /* 3 */ val LITE_RUNTIME: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FileOptions.OptimizeMode.LITE_RUNTIME with Double = js.native
-  /* 1 */ val SPEED: typingsSlinky.googleDashProtobuf.googleProtobufDescriptorUnderscorePbMod.FileOptions.OptimizeMode.SPEED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OptimizeMode with Double] = js.native
+  /* 2 */ @js.native
+  object CODE_SIZE extends TopLevel[CODE_SIZE with Double]
+  
+  /* 3 */ @js.native
+  object LITE_RUNTIME extends TopLevel[LITE_RUNTIME with Double]
+  
+  /* 1 */ @js.native
+  object SPEED extends TopLevel[SPEED with Double]
+  
 }
 

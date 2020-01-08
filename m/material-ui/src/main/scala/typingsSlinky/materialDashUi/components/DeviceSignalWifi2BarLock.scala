@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeviceSignalWifi2BarLock
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalWifi2BarLock] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalWifi2BarLock] {
   @JSImport("material-ui/svg-icons", "DeviceSignalWifi2BarLock")
   @js.native
   object componentImport extends js.Object

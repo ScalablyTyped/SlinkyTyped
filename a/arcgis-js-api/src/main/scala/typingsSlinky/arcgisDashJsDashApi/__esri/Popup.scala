@@ -3,7 +3,6 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisDashJsDashApi.IHandle
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`bottom-center`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`bottom-left`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`bottom-right`
@@ -140,7 +139,7 @@ trait Popup
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#promises)
     */
-  var promises: js.Array[IPromise[_]] = js.native
+  var promises: js.Array[js.Promise[_]] = js.native
   /**
     * The selected feature accessed by the popup. The content of the Popup is determined based on the [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) assigned to this feature.
     *

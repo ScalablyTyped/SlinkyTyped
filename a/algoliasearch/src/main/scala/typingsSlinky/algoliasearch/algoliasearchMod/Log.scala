@@ -1,6 +1,6 @@
 package typingsSlinky.algoliasearch.algoliasearchMod
 
-import typingsSlinky.algoliasearch.algoliasearchNumbers.`false`
+import typingsSlinky.algoliasearch.algoliasearchBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InputGroup extends SharedApply_GroupProps940133887 {
+object InputGroup extends SharedApply_GroupProps1157303187 {
   @JSImport("antd", "Input.Group")
   @js.native
   object componentImport extends js.Object

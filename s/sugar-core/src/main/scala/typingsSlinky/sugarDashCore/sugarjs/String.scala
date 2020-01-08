@@ -6,7 +6,6 @@ import typingsSlinky.sugarDashCore.sugarDashCoreStrings.NFC
 import typingsSlinky.sugarDashCore.sugarDashCoreStrings.NFD
 import typingsSlinky.sugarDashCore.sugarDashCoreStrings.NFKC
 import typingsSlinky.sugarDashCore.sugarDashCoreStrings.NFKD
-import typingsSlinky.sugarDashCore.sugarjs.String.ChainableBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

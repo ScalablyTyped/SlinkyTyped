@@ -10,9 +10,9 @@ Official SendGrid NodeJS library.
 | ------------------ | :-------------: |
 | Full name          | sendgrid |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 118 |
-| # downloads        | 3417398 |
+| # releases         | 1 |
+| # dependents       | 120 |
+| # downloads        | 3898466 |
 | # stars            | 36 |
 
 ## Links

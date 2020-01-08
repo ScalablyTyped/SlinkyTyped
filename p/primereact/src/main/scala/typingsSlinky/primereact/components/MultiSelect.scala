@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.primereact.componentsMultiselectMultiSelectMod.MultiSelectProps
 import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
@@ -25,10 +26,12 @@ object MultiSelect
     filter: js.UndefOr[Boolean] = js.undefined,
     fixedPlaceholder: js.UndefOr[Boolean] = js.undefined,
     itemTemplate: /* item */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    maxSelectedLabels: Int | Double = null,
     optionLabel: String = null,
     options: js.Array[_] = null,
     scrollHeight: String = null,
     selectedItemTemplate: /* value */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    selectedItemsLabel: String = null,
     style: js.Object = null,
     tabIndex: js.UndefOr[Boolean] = js.undefined,
     tooltip: js.Any = null,
@@ -42,10 +45,12 @@ object MultiSelect
     if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     if (!js.isUndefined(fixedPlaceholder)) __obj.updateDynamic("fixedPlaceholder")(fixedPlaceholder.asInstanceOf[js.Any])
     if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
+    if (maxSelectedLabels != null) __obj.updateDynamic("maxSelectedLabels")(maxSelectedLabels.asInstanceOf[js.Any])
     if (optionLabel != null) __obj.updateDynamic("optionLabel")(optionLabel.asInstanceOf[js.Any])
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
     if (selectedItemTemplate != null) __obj.updateDynamic("selectedItemTemplate")(js.Any.fromFunction1(selectedItemTemplate))
+    if (selectedItemsLabel != null) __obj.updateDynamic("selectedItemsLabel")(selectedItemsLabel.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
     if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
@@ -54,6 +59,7 @@ object MultiSelect
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.multiselectMod.MultiSelect] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.multiselectMod.MultiSelect](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MultiSelectProps
 }
 

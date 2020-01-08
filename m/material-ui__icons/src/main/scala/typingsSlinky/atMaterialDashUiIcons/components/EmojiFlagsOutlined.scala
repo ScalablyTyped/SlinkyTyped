@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EmojiFlagsOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object EmojiFlagsOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/EmojiFlagsOutlined", "default")
   @js.native
   object componentImport extends js.Object

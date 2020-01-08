@@ -1,6 +1,6 @@
 package typingsSlinky.tabulatorDashTables.Tabulator
 
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`true`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

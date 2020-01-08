@@ -14,11 +14,11 @@ trait Constructor
      with Instantiable1[/* raw */ typingsSlinky.sugar.RegExp, Chainable[typingsSlinky.sugar.RegExp]] {
   def apply(): Chainable[typingsSlinky.sugar.RegExp] = js.native
   def apply(raw: typingsSlinky.sugar.RegExp): Chainable[typingsSlinky.sugar.RegExp] = js.native
-  def addFlags(instance: typingsSlinky.sugar.RegExp, flags: java.lang.String): typingsSlinky.sugar.RegExp = js.native
-  def escape(): java.lang.String = js.native
-  def escape(str: java.lang.String): java.lang.String = js.native
-  def getFlags(instance: typingsSlinky.sugar.RegExp): java.lang.String = js.native
-  def removeFlags(instance: typingsSlinky.sugar.RegExp, flags: java.lang.String): typingsSlinky.sugar.RegExp = js.native
-  def setFlags(instance: typingsSlinky.sugar.RegExp, flags: java.lang.String): typingsSlinky.sugar.RegExp = js.native
+  def addFlags(instance: typingsSlinky.sugar.RegExp, flags: String): typingsSlinky.sugar.RegExp = js.native
+  def escape(): String = js.native
+  def escape(str: String): String = js.native
+  def getFlags(instance: typingsSlinky.sugar.RegExp): String = js.native
+  def removeFlags(instance: typingsSlinky.sugar.RegExp, flags: String): typingsSlinky.sugar.RegExp = js.native
+  def setFlags(instance: typingsSlinky.sugar.RegExp, flags: String): typingsSlinky.sugar.RegExp = js.native
 }
 

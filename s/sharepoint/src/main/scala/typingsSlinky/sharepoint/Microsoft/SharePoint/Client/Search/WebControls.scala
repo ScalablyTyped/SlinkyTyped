@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search
 
-import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.WebControls.MessageLevel
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sharepoint.SP.ClientValueObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,11 +39,17 @@ object WebControls extends js.Object {
     @js.native
     sealed trait warning extends MessageLevel
     
-    /* 2 */ val error: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.WebControls.MessageLevel.error with Double = js.native
-    /* 0 */ val information: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.WebControls.MessageLevel.information with Double = js.native
-    /* 1 */ val warning: typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.WebControls.MessageLevel.warning with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[MessageLevel with Double] = js.native
+    /* 2 */ @js.native
+    object error extends TopLevel[error with Double]
+    
+    /* 0 */ @js.native
+    object information extends TopLevel[information with Double]
+    
+    /* 1 */ @js.native
+    object warning extends TopLevel[warning with Double]
+    
   }
   
 }

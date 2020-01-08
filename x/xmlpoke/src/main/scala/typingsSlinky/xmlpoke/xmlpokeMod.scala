@@ -1,6 +1,7 @@
 package typingsSlinky.xmlpoke
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.xmlpoke.XmlPoke.API
 import typingsSlinky.xmlpoke.XmlPoke.XmlValue
 import scala.scalajs.js
@@ -25,8 +26,13 @@ object xmlpokeMod extends js.Object {
     override var value: String = js.native
   }
   
-  var CDataValue: Instantiable1[/* value */ String, typingsSlinky.xmlpoke.XmlPoke.CDataValue] = js.native
-  var XmlString: Instantiable1[/* value */ String, XmlValue] = js.native
   def apply(xml: String, modify: js.Function1[/* api */ API, Unit]): String = js.native
+  @js.native
+  object CDataValue
+    extends TopLevel[Instantiable1[/* value */ String, typingsSlinky.xmlpoke.XmlPoke.CDataValue]]
+  
+  @js.native
+  object XmlString extends TopLevel[Instantiable1[/* value */ String, XmlValue]]
+  
 }
 

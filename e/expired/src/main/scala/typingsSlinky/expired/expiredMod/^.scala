@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("expired", JSImport.Namespace)
 @js.native
-object ^
-  extends TopLevel[typingsSlinky.expired.expiredMod.expired]
+object ^ extends TopLevel[expired]
 

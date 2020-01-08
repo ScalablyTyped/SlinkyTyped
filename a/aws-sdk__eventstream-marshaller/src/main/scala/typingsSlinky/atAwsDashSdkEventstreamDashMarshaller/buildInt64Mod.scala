@@ -1,6 +1,5 @@
 package typingsSlinky.atAwsDashSdkEventstreamDashMarshaller
 
-import typingsSlinky.atAwsDashSdkEventstreamDashMarshaller.buildInt64Mod.Int64
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

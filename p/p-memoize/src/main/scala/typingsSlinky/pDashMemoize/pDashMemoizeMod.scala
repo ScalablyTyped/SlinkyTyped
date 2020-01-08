@@ -1,6 +1,5 @@
 package typingsSlinky.pDashMemoize
 
-import typingsSlinky.pDashMemoize.pDashMemoizeMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

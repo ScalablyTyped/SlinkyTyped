@@ -20,11 +20,11 @@ object Category
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
   def apply(
     emojiProps: EmojiProps,
     i18n: I18n,
     id: CategoryName,
+    name: String,
     native: Boolean,
     perLine: Double,
     emojis: js.Array[String | EmojiData] = null,
@@ -32,7 +32,7 @@ object Category
     recent: js.Array[String] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(emojiProps = emojiProps.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], perLine = perLine.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(emojiProps = emojiProps.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], perLine = perLine.asInstanceOf[js.Any])
     if (emojis != null) __obj.updateDynamic("emojis")(emojis.asInstanceOf[js.Any])
     if (!js.isUndefined(hasStickyPosition)) __obj.updateDynamic("hasStickyPosition")(hasStickyPosition.asInstanceOf[js.Any])
     if (recent != null) __obj.updateDynamic("recent")(recent.asInstanceOf[js.Any])

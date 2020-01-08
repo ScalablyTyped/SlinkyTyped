@@ -1,6 +1,5 @@
 package typingsSlinky.atJestCore
 
-import typingsSlinky.atJestCore.buildTestNamePatternPromptMod.TestNamePatternPrompt
 import typingsSlinky.atJestTestDashResult.buildTypesMod.TestResult
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.std.ScrollOptions

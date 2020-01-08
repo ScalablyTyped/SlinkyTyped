@@ -1,6 +1,5 @@
 package typingsSlinky.chownr
 
-import typingsSlinky.chownr.chownrMod.PathLike
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.urlMod.URL

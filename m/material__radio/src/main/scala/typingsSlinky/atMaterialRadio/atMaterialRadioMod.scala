@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialRadio
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialRadio.adapterMod.MDCRadioAdapter
-import typingsSlinky.atMaterialRadio.atMaterialRadioMod.MDCRadio
 import typingsSlinky.atMaterialRadio.foundationMod.default
 import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
 import scala.scalajs.js

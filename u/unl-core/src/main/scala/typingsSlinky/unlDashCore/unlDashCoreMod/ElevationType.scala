@@ -1,5 +1,6 @@
 package typingsSlinky.unlDashCore.unlDashCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ElevationType extends js.Object {
   @js.native
   sealed trait heightincm extends ElevationType
   
-  /* "floor" */ val floor: typingsSlinky.unlDashCore.unlDashCoreMod.ElevationType.floor with String = js.native
-  /* "heightincm" */ val heightincm: typingsSlinky.unlDashCore.unlDashCoreMod.ElevationType.heightincm with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ElevationType with String] = js.native
+  /* "floor" */ @js.native
+  object floor extends TopLevel[floor with String]
+  
+  /* "heightincm" */ @js.native
+  object heightincm extends TopLevel[heightincm with String]
+  
 }
 

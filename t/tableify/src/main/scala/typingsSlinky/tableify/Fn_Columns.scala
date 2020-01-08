@@ -1,7 +1,7 @@
 package typingsSlinky.tableify
 
 import typingsSlinky.std.Record
-import typingsSlinky.tableify.tableifyNumbers.`false`
+import typingsSlinky.tableify.tableifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

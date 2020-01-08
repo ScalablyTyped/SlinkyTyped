@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SPClientTemplates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DateTimeDisplayFormat extends js.Object {
   @js.native
   sealed trait TimeOnly extends DateTimeDisplayFormat
   
-  /* 0 */ val DateOnly: typingsSlinky.sharepoint.SPClientTemplates.DateTimeDisplayFormat.DateOnly with Double = js.native
-  /* 1 */ val DateTime: typingsSlinky.sharepoint.SPClientTemplates.DateTimeDisplayFormat.DateTime with Double = js.native
-  /* 2 */ val TimeOnly: typingsSlinky.sharepoint.SPClientTemplates.DateTimeDisplayFormat.TimeOnly with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DateTimeDisplayFormat with Double] = js.native
+  /* 0 */ @js.native
+  object DateOnly extends TopLevel[DateOnly with Double]
+  
+  /* 1 */ @js.native
+  object DateTime extends TopLevel[DateTime with Double]
+  
+  /* 2 */ @js.native
+  object TimeOnly extends TopLevel[TimeOnly with Double]
+  
 }
 

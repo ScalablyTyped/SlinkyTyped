@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DaumPostcode
-  extends SharedApply_DaumPostcodeProps2112282185[
+  extends SharedApply_DaumPostcodeProps_519330571[
       typingsSlinky.reactDashDaumDashPostcode.reactDashDaumDashPostcodeMod.DaumPostcode
     ] {
   @JSImport("react-daum-postcode", "DaumPostcode")

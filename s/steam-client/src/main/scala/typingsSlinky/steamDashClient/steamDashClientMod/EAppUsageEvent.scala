@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object EAppUsageEvent extends js.Object {
   @js.native
   sealed trait PreloadStart extends EAppUsageEvent
   
-  /* 1 */ val GameLaunch: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.GameLaunch with Double = js.native
-  /* 8 */ val GameLaunchFreeWeekend: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.GameLaunchFreeWeekend with Double = js.native
-  /* 2 */ val GameLaunchTrial: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.GameLaunchTrial with Double = js.native
-  /* 7 */ val InGameAdViewed: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.InGameAdViewed with Double = js.native
-  /* 6 */ val MarketingMessageView: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.MarketingMessageView with Double = js.native
-  /* 3 */ val Media: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.Media with Double = js.native
-  /* 5 */ val PreloadFinish: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.PreloadFinish with Double = js.native
-  /* 4 */ val PreloadStart: typingsSlinky.steamDashClient.steamDashClientMod.EAppUsageEvent.PreloadStart with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EAppUsageEvent with Double] = js.native
+  /* 1 */ @js.native
+  object GameLaunch extends TopLevel[GameLaunch with Double]
+  
+  /* 8 */ @js.native
+  object GameLaunchFreeWeekend extends TopLevel[GameLaunchFreeWeekend with Double]
+  
+  /* 2 */ @js.native
+  object GameLaunchTrial extends TopLevel[GameLaunchTrial with Double]
+  
+  /* 7 */ @js.native
+  object InGameAdViewed extends TopLevel[InGameAdViewed with Double]
+  
+  /* 6 */ @js.native
+  object MarketingMessageView extends TopLevel[MarketingMessageView with Double]
+  
+  /* 3 */ @js.native
+  object Media extends TopLevel[Media with Double]
+  
+  /* 5 */ @js.native
+  object PreloadFinish extends TopLevel[PreloadFinish with Double]
+  
+  /* 4 */ @js.native
+  object PreloadStart extends TopLevel[PreloadStart with Double]
+  
 }
 

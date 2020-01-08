@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object libEsmCommonPropsMod {
   import org.scalajs.dom.raw.HTMLDivElement
   import org.scalajs.dom.raw.HTMLInputElement
-  import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreNumbers.`false`
+  import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreBooleans.`false`
   import typingsSlinky.react.reactMod.HTMLAttributes
   import typingsSlinky.react.reactMod.InputHTMLAttributes
   import typingsSlinky.react.reactMod._Global_.JSX.Element

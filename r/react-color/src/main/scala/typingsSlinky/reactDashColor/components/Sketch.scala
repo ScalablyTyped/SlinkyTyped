@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sketch extends SharedApply_SketchPickerProps_989867026[default] {
+object Sketch extends SharedApply_SketchPickerProps_593696754[default] {
   @JSImport("react-color/lib/components/sketch/Sketch", JSImport.Default)
   @js.native
   object componentImport extends js.Object

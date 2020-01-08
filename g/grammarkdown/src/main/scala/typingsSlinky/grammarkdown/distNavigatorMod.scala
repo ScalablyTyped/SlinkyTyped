@@ -1,7 +1,6 @@
 package typingsSlinky.grammarkdown
 
 import typingsSlinky.grammarkdown.distCoreMod.Position
-import typingsSlinky.grammarkdown.distNavigatorMod.NodeNavigator
 import typingsSlinky.grammarkdown.distNodesMod.Node
 import typingsSlinky.grammarkdown.distNodesMod.SourceFile
 import typingsSlinky.grammarkdown.distTokensMod.SyntaxKind

@@ -1,8 +1,6 @@
 package typingsSlinky.astDashTypes
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.astDashTypes.libScopeMod.Scope
-import typingsSlinky.astDashTypes.libScopeMod.ScopeConstructor
 import typingsSlinky.astDashTypes.typesMod.Fork
 import scala.scalajs.js
 import scala.scalajs.js.`|`

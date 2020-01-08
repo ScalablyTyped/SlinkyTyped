@@ -4,8 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BulletList extends SharedApply_IContentLoaderProps_565519551 {
-  @JSImport("react-content-loader", "BulletList")
+object BulletList extends SharedApply_IContentLoaderProps1611409330 {
+  @JSImport("react-content-loader/dist/native", "BulletList")
   @js.native
   object componentImport extends js.Object
   

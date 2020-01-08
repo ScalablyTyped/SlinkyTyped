@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenPagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -19,7 +20,10 @@ abstract class EntityWidget protected () extends ConditionallyVisibleWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  var dataSource: DataSource = js.native
+  @JSName("model")
+  var model_FEntityWidget: IModel = js.native
+  def dataSource(): DataSource = js.native
+  def dataSource(newValue: DataSource): js.Any = js.native
 }
 
 /* static members */

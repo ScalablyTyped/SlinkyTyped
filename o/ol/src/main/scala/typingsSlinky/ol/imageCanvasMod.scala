@@ -2,8 +2,6 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.imageCanvasMod.ImageCanvas
-import typingsSlinky.ol.imageCanvasMod.Loader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

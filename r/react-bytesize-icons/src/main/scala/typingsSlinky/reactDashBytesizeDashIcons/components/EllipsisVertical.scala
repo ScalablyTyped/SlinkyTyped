@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EllipsisVertical
-  extends SharedApply_BytesizeIconsProps219891393[
+  extends SharedApply_BytesizeIconsProps1658782493[
       typingsSlinky.reactDashBytesizeDashIcons.reactDashBytesizeDashIconsMod.EllipsisVertical
     ] {
   @JSImport("react-bytesize-icons", "EllipsisVertical")

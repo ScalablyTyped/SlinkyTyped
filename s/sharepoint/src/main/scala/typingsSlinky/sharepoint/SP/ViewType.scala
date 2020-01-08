@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object ViewType extends js.Object {
   @js.native
   sealed trait recurrence extends ViewType
   
-  /* 3 */ val calendar: typingsSlinky.sharepoint.SP.ViewType.calendar with Double = js.native
-  /* 5 */ val chart: typingsSlinky.sharepoint.SP.ViewType.chart with Double = js.native
-  /* 6 */ val gantt: typingsSlinky.sharepoint.SP.ViewType.gantt with Double = js.native
-  /* 2 */ val grid: typingsSlinky.sharepoint.SP.ViewType.grid with Double = js.native
-  /* 1 */ val html: typingsSlinky.sharepoint.SP.ViewType.html with Double = js.native
-  /* 0 */ val none: typingsSlinky.sharepoint.SP.ViewType.none with Double = js.native
-  /* 4 */ val recurrence: typingsSlinky.sharepoint.SP.ViewType.recurrence with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ViewType with Double] = js.native
+  /* 3 */ @js.native
+  object calendar extends TopLevel[calendar with Double]
+  
+  /* 5 */ @js.native
+  object chart extends TopLevel[chart with Double]
+  
+  /* 6 */ @js.native
+  object gantt extends TopLevel[gantt with Double]
+  
+  /* 2 */ @js.native
+  object grid extends TopLevel[grid with Double]
+  
+  /* 1 */ @js.native
+  object html extends TopLevel[html with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 4 */ @js.native
+  object recurrence extends TopLevel[recurrence with Double]
+  
 }
 

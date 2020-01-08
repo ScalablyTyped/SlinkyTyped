@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object PublisherQueryFlags extends js.Object {
   @js.native
   sealed trait None extends PublisherQueryFlags
   
-  /* 2 */ val IncludeEmailAddress: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherQueryFlags.IncludeEmailAddress with Double = js.native
-  /* 1 */ val IncludeExtensions: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherQueryFlags.IncludeExtensions with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherQueryFlags.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PublisherQueryFlags with Double] = js.native
+  /* 2 */ @js.native
+  object IncludeEmailAddress extends TopLevel[IncludeEmailAddress with Double]
+  
+  /* 1 */ @js.native
+  object IncludeExtensions extends TopLevel[IncludeExtensions with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

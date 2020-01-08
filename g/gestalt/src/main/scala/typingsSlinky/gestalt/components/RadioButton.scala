@@ -19,14 +19,15 @@ object RadioButton
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, disabled, id, name */
+  /* The following DOM/SVG props were specified: checked, disabled, name */
   def apply(
+    id: String,
     onChange: Anon_Checked => Unit,
     size: sm | md = null,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.RadioButton] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

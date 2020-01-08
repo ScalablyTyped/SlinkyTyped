@@ -1,12 +1,8 @@
 package typingsSlinky.reactDashNativeDashVectorDashIcons
 
+import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.AllowOnlyOne
-import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.FontAwesome5IconProps
-import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.FontAwesome5IconVariants
-import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.Omit
-import typingsSlinky.reactDashNativeDashVectorDashIcons.fontAwesome5Mod.ValueOf
 import typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.IconProps
 import typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.ImageSource
 import typingsSlinky.reactDashNativeDashVectorDashIcons.reactDashNativeDashVectorDashIconsNumbers.`0`
@@ -37,6 +33,10 @@ object fontAwesome5Mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
+    var Button: Instantiable0[typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.Icon.Button] = js.native
+    var TabBarItem: Instantiable0[typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.Icon.TabBarItem] = js.native
+    var TabBarItemIOS: Instantiable0[typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.Icon.TabBarItemIOS] = js.native
+    var ToolbarAndroid: Instantiable0[typingsSlinky.reactDashNativeDashVectorDashIcons.iconMod.Icon.ToolbarAndroid] = js.native
     def getImageSource(name: String): js.Promise[ImageSource] = js.native
     def getImageSource(name: String, size: Double): js.Promise[ImageSource] = js.native
     def getImageSource(name: String, size: Double, color: String): js.Promise[ImageSource] = js.native

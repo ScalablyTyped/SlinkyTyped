@@ -1,8 +1,6 @@
 package typingsSlinky.babelDashTemplate
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babelDashTemplate.babelDashTemplateMod.Node
-import typingsSlinky.babelDashTemplate.babelDashTemplateMod.UseTemplate
 import typingsSlinky.babylon.babylonMod.BabylonOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

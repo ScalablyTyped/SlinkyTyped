@@ -6,7 +6,6 @@ import typingsSlinky.graphql.languageAstMod.FragmentDefinitionNode
 import typingsSlinky.graphql.languageAstMod.InlineFragmentNode
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLOutputType
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLResolveInfo
-import typingsSlinky.graphqlDashCompose.libUtilsProjectionMod.ProjectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

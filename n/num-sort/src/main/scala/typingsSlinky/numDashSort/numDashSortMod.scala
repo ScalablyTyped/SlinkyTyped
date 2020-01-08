@@ -1,6 +1,5 @@
 package typingsSlinky.numDashSort
 
-import typingsSlinky.numDashSort.numDashSortMod.NumberComparator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

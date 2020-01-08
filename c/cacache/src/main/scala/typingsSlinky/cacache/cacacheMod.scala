@@ -1,6 +1,6 @@
 package typingsSlinky.cacache
 
-import typingsSlinky.cacache.cacacheNumbers.`false`
+import typingsSlinky.cacache.cacacheBooleans.`false`
 import typingsSlinky.cacache.enMod.CacheObject
 import typingsSlinky.cacache.enMod.GetCacheObject
 import typingsSlinky.cacache.enMod.get.HasContentObject

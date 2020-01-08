@@ -1,7 +1,7 @@
 package typingsSlinky.nodeDashRal.nodeDashRalMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.nodeDashRal.nodeDashRalNumbers.`false`
+import typingsSlinky.nodeDashRal.nodeDashRalBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

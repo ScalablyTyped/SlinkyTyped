@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,11 +29,19 @@ object Type extends js.Object {
   @js.native
   sealed trait TERRAIN extends Type
   
-  /* 3 */ val HYBRID: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Type.HYBRID with Double = js.native
-  /* 0 */ val ROADMAP: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Type.ROADMAP with Double = js.native
-  /* 1 */ val SATELLITE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Type.SATELLITE with Double = js.native
-  /* 2 */ val TERRAIN: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Maps.Type.TERRAIN with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Type with Double] = js.native
+  /* 3 */ @js.native
+  object HYBRID extends TopLevel[HYBRID with Double]
+  
+  /* 0 */ @js.native
+  object ROADMAP extends TopLevel[ROADMAP with Double]
+  
+  /* 1 */ @js.native
+  object SATELLITE extends TopLevel[SATELLITE with Double]
+  
+  /* 2 */ @js.native
+  object TERRAIN extends TopLevel[TERRAIN with Double]
+  
 }
 

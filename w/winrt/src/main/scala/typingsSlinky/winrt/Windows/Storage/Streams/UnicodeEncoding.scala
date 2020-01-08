@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object UnicodeEncoding extends js.Object {
   @js.native
   sealed trait utf8 extends UnicodeEncoding
   
-  /* 2 */ val utf16BE: typingsSlinky.winrt.Windows.Storage.Streams.UnicodeEncoding.utf16BE with Double = js.native
-  /* 1 */ val utf16LE: typingsSlinky.winrt.Windows.Storage.Streams.UnicodeEncoding.utf16LE with Double = js.native
-  /* 0 */ val utf8: typingsSlinky.winrt.Windows.Storage.Streams.UnicodeEncoding.utf8 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UnicodeEncoding with Double] = js.native
+  /* 2 */ @js.native
+  object utf16BE extends TopLevel[utf16BE with Double]
+  
+  /* 1 */ @js.native
+  object utf16LE extends TopLevel[utf16LE with Double]
+  
+  /* 0 */ @js.native
+  object utf8 extends TopLevel[utf8 with Double]
+  
 }
 

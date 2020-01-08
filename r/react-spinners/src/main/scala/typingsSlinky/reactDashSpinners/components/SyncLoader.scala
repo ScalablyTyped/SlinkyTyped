@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SyncLoader extends SharedApply_LoaderSizeMarginProps1778921353[default] {
+object SyncLoader extends SharedApply_LoaderSizeMarginProps2112337662[default] {
   @JSImport("react-spinners/SyncLoader", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.semanticDashUiDashReact.distCommonjsGenericMod.SemanticShorthandContent
@@ -25,6 +26,7 @@ object SearchCategory
     active: js.UndefOr[Boolean] = js.undefined,
     as: js.Any = null,
     content: SemanticShorthandContent = null,
+    layoutRenderer: (/* categoryContent */ ReactElement, /* resultsContent */ ReactElement) => ReactElement = null,
     renderer: /* props */ SearchCategoryProps => ReactElement = null,
     results: js.Array[ReactComponentClass[SearchResultProps]] = null,
     _overrides: StringDictionary[js.Any] = null
@@ -33,11 +35,13 @@ object SearchCategory
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (layoutRenderer != null) __obj.updateDynamic("layoutRenderer")(js.Any.fromFunction2(layoutRenderer))
     if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
     if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SearchCategoryProps
 }
 

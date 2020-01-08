@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,19 +48,43 @@ object EClientPersonaStateFlag extends js.Object {
   @js.native
   sealed trait Status extends EClientPersonaStateFlag
   
-  /* 128 */ val ClanInfo: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.ClanInfo with Double = js.native
-  /* 1024 */ val ClanTag: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.ClanTag with Double = js.native
-  /* 2048 */ val Facebook: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.Facebook with Double = js.native
-  /* 512 */ val GameDataBlob: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.GameDataBlob with Double = js.native
-  /* 256 */ val GameExtraInfo: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.GameExtraInfo with Double = js.native
-  /* 64 */ val LastSeen: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.LastSeen with Double = js.native
-  /* 32 */ val Metadata: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.Metadata with Double = js.native
-  /* 2 */ val PlayerName: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.PlayerName with Double = js.native
-  /* 16 */ val Presence: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.Presence with Double = js.native
-  /* 4 */ val QueryPort: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.QueryPort with Double = js.native
-  /* 8 */ val SourceID: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.SourceID with Double = js.native
-  /* 1 */ val Status: typingsSlinky.steamDashClient.steamDashClientMod.EClientPersonaStateFlag.Status with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EClientPersonaStateFlag with Double] = js.native
+  /* 128 */ @js.native
+  object ClanInfo extends TopLevel[ClanInfo with Double]
+  
+  /* 1024 */ @js.native
+  object ClanTag extends TopLevel[ClanTag with Double]
+  
+  /* 2048 */ @js.native
+  object Facebook extends TopLevel[Facebook with Double]
+  
+  /* 512 */ @js.native
+  object GameDataBlob extends TopLevel[GameDataBlob with Double]
+  
+  /* 256 */ @js.native
+  object GameExtraInfo extends TopLevel[GameExtraInfo with Double]
+  
+  /* 64 */ @js.native
+  object LastSeen extends TopLevel[LastSeen with Double]
+  
+  /* 32 */ @js.native
+  object Metadata extends TopLevel[Metadata with Double]
+  
+  /* 2 */ @js.native
+  object PlayerName extends TopLevel[PlayerName with Double]
+  
+  /* 16 */ @js.native
+  object Presence extends TopLevel[Presence with Double]
+  
+  /* 4 */ @js.native
+  object QueryPort extends TopLevel[QueryPort with Double]
+  
+  /* 8 */ @js.native
+  object SourceID extends TopLevel[SourceID with Double]
+  
+  /* 1 */ @js.native
+  object Status extends TopLevel[Status with Double]
+  
 }
 

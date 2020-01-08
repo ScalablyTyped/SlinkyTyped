@@ -7,7 +7,6 @@ import typingsSlinky.ol.layerLayerMod.State
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import typingsSlinky.ol.renderEventTypeMod.EventType
-import typingsSlinky.ol.rendererMapMod.MapRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

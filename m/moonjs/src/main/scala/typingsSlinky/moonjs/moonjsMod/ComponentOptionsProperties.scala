@@ -1,7 +1,7 @@
 package typingsSlinky.moonjs.moonjsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.moonjs.moonjsNumbers.`true`
+import typingsSlinky.moonjs.moonjsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

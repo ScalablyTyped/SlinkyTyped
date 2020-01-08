@@ -1,10 +1,6 @@
 package typingsSlinky.d3DashDsv
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.d3DashDsv.d3DashDsvMod.DSV
-import typingsSlinky.d3DashDsv.d3DashDsvMod.DSVParsedArray
-import typingsSlinky.d3DashDsv.d3DashDsvMod.DSVRowArray
-import typingsSlinky.d3DashDsv.d3DashDsvMod.DSVRowString
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,7 +1,7 @@
 
 # Scala.js typings for get-port
 
-Typings are for version 5.0.0
+Typings are for version 5.1.0
 
 ## Library description:
 Get an available port
@@ -10,9 +10,9 @@ Get an available port
 | ------------------ | :-------------: |
 | Full name          | get-port |
 | Keywords           | port, find, finder, portfinder, free, available, connection, connect, open, net, tcp, scan, random, preferred, chosen |
-| # releases         | 5 |
-| # dependents       | 495 |
-| # downloads        | 31465669 |
+| # releases         | 4 |
+| # dependents       | 666 |
+| # downloads        | 65595878 |
 | # stars            | 17 |
 
 ## Links

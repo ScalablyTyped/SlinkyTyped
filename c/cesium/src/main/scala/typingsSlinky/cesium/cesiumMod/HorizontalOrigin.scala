@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object HorizontalOrigin extends js.Object {
   @js.native
   sealed trait RIGHT extends HorizontalOrigin
   
-  /* 0 */ val CENTER: typingsSlinky.cesium.cesiumMod.HorizontalOrigin.CENTER with Double = js.native
-  /* 1 */ val LEFT: typingsSlinky.cesium.cesiumMod.HorizontalOrigin.LEFT with Double = js.native
-  /* 2 */ val RIGHT: typingsSlinky.cesium.cesiumMod.HorizontalOrigin.RIGHT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HorizontalOrigin with Double] = js.native
+  /* 0 */ @js.native
+  object CENTER extends TopLevel[CENTER with Double]
+  
+  /* 1 */ @js.native
+  object LEFT extends TopLevel[LEFT with Double]
+  
+  /* 2 */ @js.native
+  object RIGHT extends TopLevel[RIGHT with Double]
+  
 }
 

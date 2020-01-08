@@ -6,6 +6,7 @@ import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.MultiLineString
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.MultiPoint
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.MultiPolygon
 import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.Point
+import typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.Polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,10 +27,7 @@ object Geometry {
     __obj.asInstanceOf[Geometry]
   }
   @scala.inline
-  def Anon_CoordinatesLineString(
-    coordinates: js.Array[js.Tuple2[Double, Double]],
-    `type`: MultiPoint | LineString | typingsSlinky.amapDashJsDashApi.amapDashJsDashApiStrings.Polygon
-  ): Geometry = {
+  def Anon_CoordinatesLineString(coordinates: js.Array[js.Tuple2[Double, Double]], `type`: MultiPoint | LineString | Polygon): Geometry = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Geometry]
@@ -43,7 +41,7 @@ object Geometry {
   @scala.inline
   def Anon_Geometries(
     geometries: js.Array[
-      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias amap-js-api.AMap.GeoJSON.Geometry */ js.Object
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias amap-js-api.AMap.GeoJSON.Geometry */ js.Object
     ],
     `type`: GeometryCollection
   ): Geometry = {

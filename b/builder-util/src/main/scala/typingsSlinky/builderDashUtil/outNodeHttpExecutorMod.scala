@@ -1,6 +1,5 @@
 package typingsSlinky.builderDashUtil
 
-import typingsSlinky.builderDashUtil.outNodeHttpExecutorMod.NodeHttpExecutor
 import typingsSlinky.builderDashUtilDashRuntime.builderDashUtilDashRuntimeMod.HttpExecutor
 import typingsSlinky.node.httpMod.ClientRequest
 import scala.scalajs.js

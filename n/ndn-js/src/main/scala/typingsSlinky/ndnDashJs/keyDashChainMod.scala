@@ -1,15 +1,9 @@
 package typingsSlinky.ndnDashJs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ndnDashJs.dataMod.Data
 import typingsSlinky.ndnDashJs.interestMod.Interest
-import typingsSlinky.ndnDashJs.keyDashChainMod.CertificateV2
-import typingsSlinky.ndnDashJs.keyDashChainMod.KeyParams
-import typingsSlinky.ndnDashJs.keyDashChainMod.Pib
-import typingsSlinky.ndnDashJs.keyDashChainMod.PibIdentity
-import typingsSlinky.ndnDashJs.keyDashChainMod.PibKey
-import typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo
 import typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType
-import typingsSlinky.ndnDashJs.keyDashChainMod.Tpm
 import typingsSlinky.ndnDashJs.nameMod.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -177,13 +171,23 @@ object keyDashChainMod extends js.Object {
       @js.native
       sealed trait SHA256 extends SignerType
       
-      /* 3 */ val CERT: typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType.CERT with Double = js.native
-      /* 1 */ val ID: typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType.ID with Double = js.native
-      /* 2 */ val KEY: typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType.KEY with Double = js.native
-      /* 0 */ val NULL: typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType.NULL with Double = js.native
-      /* 4 */ val SHA256: typingsSlinky.ndnDashJs.keyDashChainMod.SigningInfo.SignerType.SHA256 with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[SignerType with Double] = js.native
+      /* 3 */ @js.native
+      object CERT extends TopLevel[CERT with Double]
+      
+      /* 1 */ @js.native
+      object ID extends TopLevel[ID with Double]
+      
+      /* 2 */ @js.native
+      object KEY extends TopLevel[KEY with Double]
+      
+      /* 0 */ @js.native
+      object NULL extends TopLevel[NULL with Double]
+      
+      /* 4 */ @js.native
+      object SHA256 extends TopLevel[SHA256 with Double]
+      
     }
     
   }

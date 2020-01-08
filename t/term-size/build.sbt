@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "term-size"
-version := "2.1.0-bcc869"
+version := "2.1.1-027368"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

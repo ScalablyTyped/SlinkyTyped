@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object ContentWidgetPositionPreference extends js.Object {
   @js.native
   sealed trait EXACT extends ContentWidgetPositionPreference
   
-  /* 1 */ val ABOVE: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ContentWidgetPositionPreference.ABOVE with Double = js.native
-  /* 2 */ val BELOW: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ContentWidgetPositionPreference.BELOW with Double = js.native
-  /* 0 */ val EXACT: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ContentWidgetPositionPreference.EXACT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContentWidgetPositionPreference with Double] = js.native
+  /* 1 */ @js.native
+  object ABOVE extends TopLevel[ABOVE with Double]
+  
+  /* 2 */ @js.native
+  object BELOW extends TopLevel[BELOW with Double]
+  
+  /* 0 */ @js.native
+  object EXACT extends TopLevel[EXACT with Double]
+  
 }
 

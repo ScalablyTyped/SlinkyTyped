@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object BingMapsStyle extends js.Object {
   @js.native
   sealed trait ROAD extends BingMapsStyle
   
-  /* 0 */ val AERIAL: typingsSlinky.cesium.cesiumMod.BingMapsStyle.AERIAL with Double = js.native
-  /* 1 */ val AERIAL_WITH_LABELS: typingsSlinky.cesium.cesiumMod.BingMapsStyle.AERIAL_WITH_LABELS with Double = js.native
-  /* 4 */ val COLLINS_BART: typingsSlinky.cesium.cesiumMod.BingMapsStyle.COLLINS_BART with Double = js.native
-  /* 3 */ val ORDNANCE_SURVEY: typingsSlinky.cesium.cesiumMod.BingMapsStyle.ORDNANCE_SURVEY with Double = js.native
-  /* 2 */ val ROAD: typingsSlinky.cesium.cesiumMod.BingMapsStyle.ROAD with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BingMapsStyle with Double] = js.native
+  /* 0 */ @js.native
+  object AERIAL extends TopLevel[AERIAL with Double]
+  
+  /* 1 */ @js.native
+  object AERIAL_WITH_LABELS extends TopLevel[AERIAL_WITH_LABELS with Double]
+  
+  /* 4 */ @js.native
+  object COLLINS_BART extends TopLevel[COLLINS_BART with Double]
+  
+  /* 3 */ @js.native
+  object ORDNANCE_SURVEY extends TopLevel[ORDNANCE_SURVEY with Double]
+  
+  /* 2 */ @js.native
+  object ROAD extends TopLevel[ROAD with Double]
+  
 }
 

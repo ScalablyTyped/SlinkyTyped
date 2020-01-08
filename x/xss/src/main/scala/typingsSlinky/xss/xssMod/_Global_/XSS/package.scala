@@ -18,7 +18,7 @@ package object XSS {
     /* tag */ String, 
     /* name */ String, 
     /* value */ String, 
-    /* cssFilter */ typingsSlinky.xss.xssMod._Global_.XSS.ICSSFilter, 
+    /* cssFilter */ ICSSFilter, 
     String
   ]
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsRatingRatingDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object RatingSize extends js.Object {
   @js.native
   sealed trait Small extends RatingSize
   
-  /* 1 */ val Large: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsRatingRatingDotTypesMod.RatingSize.Large with Double = js.native
-  /* 0 */ val Small: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsRatingRatingDotTypesMod.RatingSize.Small with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RatingSize with Double] = js.native
+  /* 1 */ @js.native
+  object Large extends TopLevel[Large with Double]
+  
+  /* 0 */ @js.native
+  object Small extends TopLevel[Small with Double]
+  
 }
 

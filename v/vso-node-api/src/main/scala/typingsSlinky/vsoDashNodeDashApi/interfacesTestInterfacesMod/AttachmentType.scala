@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,19 +47,43 @@ object AttachmentType extends js.Object {
   @js.native
   sealed trait TmiTestRunSummary extends AttachmentType
   
-  /* 1 */ val AfnStrip: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.AfnStrip with Double = js.native
-  /* 2 */ val BugFilingData: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.BugFilingData with Double = js.native
-  /* 3 */ val CodeCoverage: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.CodeCoverage with Double = js.native
-  /* 11 */ val ConsoleLog: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.ConsoleLog with Double = js.native
-  /* 0 */ val GeneralAttachment: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.GeneralAttachment with Double = js.native
-  /* 4 */ val IntermediateCollectorData: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.IntermediateCollectorData with Double = js.native
-  /* 5 */ val RunConfig: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.RunConfig with Double = js.native
-  /* 6 */ val TestImpactDetails: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.TestImpactDetails with Double = js.native
-  /* 9 */ val TmiTestResultDetail: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.TmiTestResultDetail with Double = js.native
-  /* 7 */ val TmiTestRunDeploymentFiles: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.TmiTestRunDeploymentFiles with Double = js.native
-  /* 8 */ val TmiTestRunReverseDeploymentFiles: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.TmiTestRunReverseDeploymentFiles with Double = js.native
-  /* 10 */ val TmiTestRunSummary: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.AttachmentType.TmiTestRunSummary with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AttachmentType with Double] = js.native
+  /* 1 */ @js.native
+  object AfnStrip extends TopLevel[AfnStrip with Double]
+  
+  /* 2 */ @js.native
+  object BugFilingData extends TopLevel[BugFilingData with Double]
+  
+  /* 3 */ @js.native
+  object CodeCoverage extends TopLevel[CodeCoverage with Double]
+  
+  /* 11 */ @js.native
+  object ConsoleLog extends TopLevel[ConsoleLog with Double]
+  
+  /* 0 */ @js.native
+  object GeneralAttachment extends TopLevel[GeneralAttachment with Double]
+  
+  /* 4 */ @js.native
+  object IntermediateCollectorData extends TopLevel[IntermediateCollectorData with Double]
+  
+  /* 5 */ @js.native
+  object RunConfig extends TopLevel[RunConfig with Double]
+  
+  /* 6 */ @js.native
+  object TestImpactDetails extends TopLevel[TestImpactDetails with Double]
+  
+  /* 9 */ @js.native
+  object TmiTestResultDetail extends TopLevel[TmiTestResultDetail with Double]
+  
+  /* 7 */ @js.native
+  object TmiTestRunDeploymentFiles extends TopLevel[TmiTestRunDeploymentFiles with Double]
+  
+  /* 8 */ @js.native
+  object TmiTestRunReverseDeploymentFiles extends TopLevel[TmiTestRunReverseDeploymentFiles with Double]
+  
+  /* 10 */ @js.native
+  object TmiTestRunSummary extends TopLevel[TmiTestRunSummary with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ColumnResizeMode extends js.Object {
   @js.native
   sealed trait Normal extends ColumnResizeMode
   
-  /* 0 */ val FixedColumns: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ColumnResizeMode.FixedColumns with Double = js.native
-  /* 1 */ val NextColumn: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ColumnResizeMode.NextColumn with Double = js.native
-  /* 2 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.ColumnResizeMode.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ColumnResizeMode with Double] = js.native
+  /* 0 */ @js.native
+  object FixedColumns extends TopLevel[FixedColumns with Double]
+  
+  /* 1 */ @js.native
+  object NextColumn extends TopLevel[NextColumn with Double]
+  
+  /* 2 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

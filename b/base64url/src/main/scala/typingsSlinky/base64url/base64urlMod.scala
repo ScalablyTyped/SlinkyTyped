@@ -1,6 +1,5 @@
 package typingsSlinky.base64url
 
-import typingsSlinky.base64url.base64urlMod.Base64Url
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

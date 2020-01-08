@@ -1,6 +1,5 @@
 package typingsSlinky.hashids
 
-import typingsSlinky.hashids.hashidsMod.Hashids
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

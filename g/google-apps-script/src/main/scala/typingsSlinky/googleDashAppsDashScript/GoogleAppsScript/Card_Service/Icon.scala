@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,38 +107,100 @@ object Icon extends js.Object {
   @js.native
   sealed trait VIDEO_PLAY extends Icon
   
-  /* 1 */ val AIRPLANE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.AIRPLANE with Double = js.native
-  /* 2 */ val BOOKMARK: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.BOOKMARK with Double = js.native
-  /* 3 */ val BUS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.BUS with Double = js.native
-  /* 4 */ val CAR: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.CAR with Double = js.native
-  /* 5 */ val CLOCK: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.CLOCK with Double = js.native
-  /* 6 */ val CONFIRMATION_NUMBER_ICON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.CONFIRMATION_NUMBER_ICON with Double = js.native
-  /* 8 */ val DESCRIPTION: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.DESCRIPTION with Double = js.native
-  /* 7 */ val DOLLAR: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.DOLLAR with Double = js.native
-  /* 9 */ val EMAIL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.EMAIL with Double = js.native
-  /* 10 */ val EVENT_PERFORMER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.EVENT_PERFORMER with Double = js.native
-  /* 11 */ val EVENT_SEAT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.EVENT_SEAT with Double = js.native
-  /* 12 */ val FLIGHT_ARRIVAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.FLIGHT_ARRIVAL with Double = js.native
-  /* 13 */ val FLIGHT_DEPARTURE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.FLIGHT_DEPARTURE with Double = js.native
-  /* 14 */ val HOTEL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.HOTEL with Double = js.native
-  /* 15 */ val HOTEL_ROOM_TYPE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.HOTEL_ROOM_TYPE with Double = js.native
-  /* 16 */ val INVITE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.INVITE with Double = js.native
-  /* 17 */ val MAP_PIN: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.MAP_PIN with Double = js.native
-  /* 18 */ val MEMBERSHIP: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.MEMBERSHIP with Double = js.native
-  /* 19 */ val MULTIPLE_PEOPLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.MULTIPLE_PEOPLE with Double = js.native
-  /* 0 */ val NONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.NONE with Double = js.native
-  /* 20 */ val OFFER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.OFFER with Double = js.native
-  /* 21 */ val PERSON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.PERSON with Double = js.native
-  /* 22 */ val PHONE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.PHONE with Double = js.native
-  /* 23 */ val RESTAURANT_ICON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.RESTAURANT_ICON with Double = js.native
-  /* 24 */ val SHOPPING_CART: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.SHOPPING_CART with Double = js.native
-  /* 25 */ val STAR: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.STAR with Double = js.native
-  /* 26 */ val STORE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.STORE with Double = js.native
-  /* 27 */ val TICKET: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.TICKET with Double = js.native
-  /* 28 */ val TRAIN: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.TRAIN with Double = js.native
-  /* 29 */ val VIDEO_CAMERA: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.VIDEO_CAMERA with Double = js.native
-  /* 30 */ val VIDEO_PLAY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Card_Service.Icon.VIDEO_PLAY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Icon with Double] = js.native
+  /* 1 */ @js.native
+  object AIRPLANE extends TopLevel[AIRPLANE with Double]
+  
+  /* 2 */ @js.native
+  object BOOKMARK extends TopLevel[BOOKMARK with Double]
+  
+  /* 3 */ @js.native
+  object BUS extends TopLevel[BUS with Double]
+  
+  /* 4 */ @js.native
+  object CAR extends TopLevel[CAR with Double]
+  
+  /* 5 */ @js.native
+  object CLOCK extends TopLevel[CLOCK with Double]
+  
+  /* 6 */ @js.native
+  object CONFIRMATION_NUMBER_ICON extends TopLevel[CONFIRMATION_NUMBER_ICON with Double]
+  
+  /* 8 */ @js.native
+  object DESCRIPTION extends TopLevel[DESCRIPTION with Double]
+  
+  /* 7 */ @js.native
+  object DOLLAR extends TopLevel[DOLLAR with Double]
+  
+  /* 9 */ @js.native
+  object EMAIL extends TopLevel[EMAIL with Double]
+  
+  /* 10 */ @js.native
+  object EVENT_PERFORMER extends TopLevel[EVENT_PERFORMER with Double]
+  
+  /* 11 */ @js.native
+  object EVENT_SEAT extends TopLevel[EVENT_SEAT with Double]
+  
+  /* 12 */ @js.native
+  object FLIGHT_ARRIVAL extends TopLevel[FLIGHT_ARRIVAL with Double]
+  
+  /* 13 */ @js.native
+  object FLIGHT_DEPARTURE extends TopLevel[FLIGHT_DEPARTURE with Double]
+  
+  /* 14 */ @js.native
+  object HOTEL extends TopLevel[HOTEL with Double]
+  
+  /* 15 */ @js.native
+  object HOTEL_ROOM_TYPE extends TopLevel[HOTEL_ROOM_TYPE with Double]
+  
+  /* 16 */ @js.native
+  object INVITE extends TopLevel[INVITE with Double]
+  
+  /* 17 */ @js.native
+  object MAP_PIN extends TopLevel[MAP_PIN with Double]
+  
+  /* 18 */ @js.native
+  object MEMBERSHIP extends TopLevel[MEMBERSHIP with Double]
+  
+  /* 19 */ @js.native
+  object MULTIPLE_PEOPLE extends TopLevel[MULTIPLE_PEOPLE with Double]
+  
+  /* 0 */ @js.native
+  object NONE extends TopLevel[NONE with Double]
+  
+  /* 20 */ @js.native
+  object OFFER extends TopLevel[OFFER with Double]
+  
+  /* 21 */ @js.native
+  object PERSON extends TopLevel[PERSON with Double]
+  
+  /* 22 */ @js.native
+  object PHONE extends TopLevel[PHONE with Double]
+  
+  /* 23 */ @js.native
+  object RESTAURANT_ICON extends TopLevel[RESTAURANT_ICON with Double]
+  
+  /* 24 */ @js.native
+  object SHOPPING_CART extends TopLevel[SHOPPING_CART with Double]
+  
+  /* 25 */ @js.native
+  object STAR extends TopLevel[STAR with Double]
+  
+  /* 26 */ @js.native
+  object STORE extends TopLevel[STORE with Double]
+  
+  /* 27 */ @js.native
+  object TICKET extends TopLevel[TICKET with Double]
+  
+  /* 28 */ @js.native
+  object TRAIN extends TopLevel[TRAIN with Double]
+  
+  /* 29 */ @js.native
+  object VIDEO_CAMERA extends TopLevel[VIDEO_CAMERA with Double]
+  
+  /* 30 */ @js.native
+  object VIDEO_PLAY extends TopLevel[VIDEO_PLAY with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.phaser
 
-import typingsSlinky.phaser.phaserNumbers.`false`
+import typingsSlinky.phaser.phaserBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.amazonDashConnectDashStreams.connect
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object SoftphoneCallType extends js.Object {
   @js.native
   sealed trait VIDEO_ONLY extends SoftphoneCallType
   
-  /* "audio_only" */ val AUDIO_ONLY: typingsSlinky.amazonDashConnectDashStreams.connect.SoftphoneCallType.AUDIO_ONLY with String = js.native
-  /* "audio_video" */ val AUDIO_VIDEO: typingsSlinky.amazonDashConnectDashStreams.connect.SoftphoneCallType.AUDIO_VIDEO with String = js.native
-  /* "none" */ val NONE: typingsSlinky.amazonDashConnectDashStreams.connect.SoftphoneCallType.NONE with String = js.native
-  /* "video_only" */ val VIDEO_ONLY: typingsSlinky.amazonDashConnectDashStreams.connect.SoftphoneCallType.VIDEO_ONLY with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SoftphoneCallType with String] = js.native
+  /* "audio_only" */ @js.native
+  object AUDIO_ONLY extends TopLevel[AUDIO_ONLY with String]
+  
+  /* "audio_video" */ @js.native
+  object AUDIO_VIDEO extends TopLevel[AUDIO_VIDEO with String]
+  
+  /* "none" */ @js.native
+  object NONE extends TopLevel[NONE with String]
+  
+  /* "video_only" */ @js.native
+  object VIDEO_ONLY extends TopLevel[VIDEO_ONLY with String]
+  
 }
 

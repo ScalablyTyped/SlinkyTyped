@@ -1,14 +1,15 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`private`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.anonymous
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.auto
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.english
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.immediate
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.metric
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.multitenant
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.public
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.singletenant
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -271,6 +272,12 @@ trait Portal
     */
   var isPortal: Boolean = js.native
   /**
+    * Indicates if the portal is in read-only mode. When `true`, content cannot be created, modified, or deleted on the Portal.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#isReadOnly)
+    */
+  var isReadOnly: Boolean = js.native
+  /**
     * The query that identifies the group containing editing templates.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#layerTemplatesGroupQuery)
@@ -309,11 +316,11 @@ trait Portal
     */
   var portalHostname: String = js.native
   /**
-    * The portal mode.  **Possible Values:** multitenant | singletenant
+    * The portal mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#portalMode)
     */
-  var portalMode: String = js.native
+  var portalMode: multitenant | singletenant = js.native
   /**
     * Properties specific to the organization, for example the "contact us" link. If the organization is public, the properties are visible to the anonymous user.
     *
@@ -427,7 +434,7 @@ trait Portal
     *
     *
     */
-  def createClosestFacilityTask(): IPromise[ClosestFacilityTask] = js.native
+  def createClosestFacilityTask(): js.Promise[ClosestFacilityTask] = js.native
   /**
     * A helper function that returns an array of [ElevationsLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) derived from the Portal's [Limited Error Raster Compression (LERC) elevation helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
@@ -435,7 +442,7 @@ trait Portal
     *
     *
     */
-  def createElevationLayers(): IPromise[js.Array[ElevationLayer]] = js.native
+  def createElevationLayers(): js.Promise[js.Array[ElevationLayer]] = js.native
   /**
     * A helper function that returns an instance of the portal's [GeometryService](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
@@ -443,7 +450,7 @@ trait Portal
     *
     *
     */
-  def createGeometryService(): IPromise[GeometryService] = js.native
+  def createGeometryService(): js.Promise[GeometryService] = js.native
   /**
     * A helper function that returns an instance of the portal's [PrintTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-PrintTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
@@ -451,7 +458,7 @@ trait Portal
     *
     *
     */
-  def createPrintTask(): IPromise[PrintTask] = js.native
+  def createPrintTask(): js.Promise[PrintTask] = js.native
   /**
     * A helper function that returns an instance of the portal's [RouteTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-RouteTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
@@ -459,7 +466,7 @@ trait Portal
     *
     *
     */
-  def createRouteTask(): IPromise[RouteTask] = js.native
+  def createRouteTask(): js.Promise[RouteTask] = js.native
   /**
     * A helper function that returns an instance of the portal's [ServiceAreaTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-ServiceAreaTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
@@ -467,7 +474,7 @@ trait Portal
     *
     *
     */
-  def createServiceAreaTask(): IPromise[ServiceAreaTask] = js.native
+  def createServiceAreaTask(): js.Promise[ServiceAreaTask] = js.native
   /**
     * Fetches the [basemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) that are displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html). When [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is `true`, the basemaps will be based on [vectorBasemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#vectorBasemapGalleryGroupQuery).  Otherwise, it is based on [basemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#basemapGalleryGroupQuery).
     *
@@ -478,9 +485,9 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchBasemaps(): IPromise[js.Array[Basemap]] = js.native
-  def fetchBasemaps(basemapGalleryGroupQuery: String): IPromise[js.Array[Basemap]] = js.native
-  def fetchBasemaps(basemapGalleryGroupQuery: String, options: PortalFetchBasemapsOptions): IPromise[js.Array[Basemap]] = js.native
+  def fetchBasemaps(): js.Promise[js.Array[Basemap]] = js.native
+  def fetchBasemaps(basemapGalleryGroupQuery: String): js.Promise[js.Array[Basemap]] = js.native
+  def fetchBasemaps(basemapGalleryGroupQuery: String, options: PortalFetchBasemapsOptions): js.Promise[js.Array[Basemap]] = js.native
   /**
     * If present, fetches the organization's category schema.
     *
@@ -490,8 +497,8 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchCategorySchema(): IPromise[js.Array[_]] = js.native
-  def fetchCategorySchema(options: PortalFetchCategorySchemaOptions): IPromise[js.Array[_]] = js.native
+  def fetchCategorySchema(): js.Promise[js.Array[_]] = js.native
+  def fetchCategorySchema(options: PortalFetchCategorySchemaOptions): js.Promise[js.Array[_]] = js.native
   /**
     * Fetches the featured groups in the Portal.
     *
@@ -501,8 +508,8 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchFeaturedGroups(): IPromise[js.Array[PortalGroup]] = js.native
-  def fetchFeaturedGroups(options: PortalFetchFeaturedGroupsOptions): IPromise[js.Array[PortalGroup]] = js.native
+  def fetchFeaturedGroups(): js.Promise[js.Array[PortalGroup]] = js.native
+  def fetchFeaturedGroups(options: PortalFetchFeaturedGroupsOptions): js.Promise[js.Array[PortalGroup]] = js.native
   /**
     * Fetches and returns the associated regions with the portal instance.
     *
@@ -512,8 +519,8 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def fetchRegions(): IPromise[js.Array[_]] = js.native
-  def fetchRegions(options: PortalFetchRegionsOptions): IPromise[js.Array[_]] = js.native
+  def fetchRegions(): js.Promise[js.Array[_]] = js.native
+  def fetchRegions(options: PortalFetchRegionsOptions): js.Promise[js.Array[_]] = js.native
   /**
     * Executes a query against the Portal to return an array of [PortalGroup](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html) objects that match the input query.
     *
@@ -524,10 +531,10 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def queryGroups(queryParams: PortalQueryParams): IPromise[PortalQueryResult] = js.native
-  def queryGroups(queryParams: PortalQueryParamsProperties): IPromise[PortalQueryResult] = js.native
-  def queryGroups(queryParams: PortalQueryParamsProperties, options: PortalQueryGroupsOptions): IPromise[PortalQueryResult] = js.native
-  def queryGroups(queryParams: PortalQueryParams, options: PortalQueryGroupsOptions): IPromise[PortalQueryResult] = js.native
+  def queryGroups(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
+  def queryGroups(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
+  def queryGroups(queryParams: PortalQueryParamsProperties, options: PortalQueryGroupsOptions): js.Promise[PortalQueryResult] = js.native
+  def queryGroups(queryParams: PortalQueryParams, options: PortalQueryGroupsOptions): js.Promise[PortalQueryResult] = js.native
   /**
     * Executes a query against the Portal to return an array of [PortalItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) objects that match the input query.
     *
@@ -538,10 +545,10 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def queryItems(queryParams: PortalQueryParams): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParamsProperties): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParamsProperties, options: PortalQueryItemsOptions): IPromise[PortalQueryResult] = js.native
-  def queryItems(queryParams: PortalQueryParams, options: PortalQueryItemsOptions): IPromise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParamsProperties, options: PortalQueryItemsOptions): js.Promise[PortalQueryResult] = js.native
+  def queryItems(queryParams: PortalQueryParams, options: PortalQueryItemsOptions): js.Promise[PortalQueryResult] = js.native
   /**
     * Executes a query against the Portal to return an array of [PortalUser](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html) objects that match the input query.
     *
@@ -552,10 +559,10 @@ trait Portal
     * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
     *
     */
-  def queryUsers(queryParams: PortalQueryParams): IPromise[PortalQueryResult] = js.native
-  def queryUsers(queryParams: PortalQueryParamsProperties): IPromise[PortalQueryResult] = js.native
-  def queryUsers(queryParams: PortalQueryParamsProperties, options: PortalQueryUsersOptions): IPromise[PortalQueryResult] = js.native
-  def queryUsers(queryParams: PortalQueryParams, options: PortalQueryUsersOptions): IPromise[PortalQueryResult] = js.native
+  def queryUsers(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
+  def queryUsers(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
+  def queryUsers(queryParams: PortalQueryParamsProperties, options: PortalQueryUsersOptions): js.Promise[PortalQueryResult] = js.native
+  def queryUsers(queryParams: PortalQueryParams, options: PortalQueryUsersOptions): js.Promise[PortalQueryResult] = js.native
 }
 
 @JSGlobal("__esri.Portal")

@@ -5,7 +5,6 @@ import typingsSlinky.jpm.jpmStrings.activate
 import typingsSlinky.jpm.jpmStrings.close
 import typingsSlinky.jpm.jpmStrings.deactivate
 import typingsSlinky.jpm.jpmStrings.open
-import typingsSlinky.jpm.sdkWindowsMod.BrowserWindows
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

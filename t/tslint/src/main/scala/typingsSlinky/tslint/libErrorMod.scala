@@ -1,6 +1,5 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.libErrorMod.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

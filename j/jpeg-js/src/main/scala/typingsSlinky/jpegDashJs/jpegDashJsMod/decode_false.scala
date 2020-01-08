@@ -1,6 +1,6 @@
 package typingsSlinky.jpegDashJs.jpegDashJsMod
 
-import typingsSlinky.jpegDashJs.jpegDashJsNumbers.`false`
+import typingsSlinky.jpegDashJs.jpegDashJsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.notyf.notyfDotOptionsMod
 
-import typingsSlinky.notyf.notyfNumbers.`false`
+import typingsSlinky.notyf.notyfBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

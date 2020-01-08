@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait IOperation extends IBase {
   /** [Config Option] (String) */
-  var action: js.UndefOr[java.lang.String] = js.undefined
+  var action: js.UndefOr[String] = js.undefined
   /** [Property] (RegExp) */
   var actionCommitRecordsRe: js.UndefOr[js.RegExp] = js.undefined
   /** [Property] (RegExp) */
@@ -89,7 +89,7 @@ trait IOperation extends IBase {
 object IOperation {
   @scala.inline
   def apply(
-    action: java.lang.String = null,
+    action: String = null,
     actionCommitRecordsRe: js.RegExp = null,
     actionSkipSyncRe: js.RegExp = null,
     alias: Array = null,
@@ -102,10 +102,10 @@ object IOperation {
     callback: js.Any = null,
     commitRecords: /* serverRecords */ js.UndefOr[Array] => Unit = null,
     config: js.Any = null,
-    extend: java.lang.String = null,
+    extend: String = null,
     filters: Array = null,
     getError: () => _ = null,
-    getInitialConfig: /* name */ js.UndefOr[java.lang.String] => _ = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
     getRecords: () => Array = null,
     getResultSet: () => IResultSet = null,
     groupers: Array = null,

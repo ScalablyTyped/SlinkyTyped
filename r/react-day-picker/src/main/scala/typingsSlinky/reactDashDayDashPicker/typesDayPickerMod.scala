@@ -2,7 +2,6 @@ package typingsSlinky.reactDashDayDashPicker
 
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashDayDashPicker.typesDayPickerMod.DayPicker
 import typingsSlinky.reactDashDayDashPicker.typesPropsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

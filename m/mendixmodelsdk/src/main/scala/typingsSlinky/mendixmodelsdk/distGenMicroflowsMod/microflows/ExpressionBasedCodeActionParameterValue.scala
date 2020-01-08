@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -22,6 +23,8 @@ abstract class ExpressionBasedCodeActionParameterValue protected () extends Code
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  @JSName("model")
+  var model_FExpressionBasedCodeActionParameterValue: IModel = js.native
 }
 
 /* static members */

@@ -1,7 +1,7 @@
 package typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginNumbers.`false`
+import typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginBooleans.`false`
 import typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginStrings.all
 import typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginStrings.auto
 import typingsSlinky.htmlDashWebpackDashPlugin.htmlDashWebpackDashPluginStrings.body

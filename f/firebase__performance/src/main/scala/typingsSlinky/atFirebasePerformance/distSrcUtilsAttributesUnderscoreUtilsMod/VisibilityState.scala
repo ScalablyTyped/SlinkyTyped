@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebasePerformance.distSrcUtilsAttributesUnderscoreUtilsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object VisibilityState extends js.Object {
   @js.native
   sealed trait VISIBLE extends VisibilityState
   
-  /* 2 */ val HIDDEN: typingsSlinky.atFirebasePerformance.distSrcUtilsAttributesUnderscoreUtilsMod.VisibilityState.HIDDEN with Double = js.native
-  /* 0 */ val UNKNOWN: typingsSlinky.atFirebasePerformance.distSrcUtilsAttributesUnderscoreUtilsMod.VisibilityState.UNKNOWN with Double = js.native
-  /* 1 */ val VISIBLE: typingsSlinky.atFirebasePerformance.distSrcUtilsAttributesUnderscoreUtilsMod.VisibilityState.VISIBLE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VisibilityState with Double] = js.native
+  /* 2 */ @js.native
+  object HIDDEN extends TopLevel[HIDDEN with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWN extends TopLevel[UNKNOWN with Double]
+  
+  /* 1 */ @js.native
+  object VISIBLE extends TopLevel[VISIBLE with Double]
+  
 }
 

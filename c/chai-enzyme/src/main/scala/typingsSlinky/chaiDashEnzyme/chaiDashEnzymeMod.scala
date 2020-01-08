@@ -2,7 +2,6 @@ package typingsSlinky.chaiDashEnzyme
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.chai.Chai.ChaiPlugin
-import typingsSlinky.chaiDashEnzyme.chaiDashEnzymeMod.DebugWrapper
 import typingsSlinky.cheerio.Cheerio
 import typingsSlinky.enzyme.enzymeMod.ReactWrapper
 import typingsSlinky.enzyme.enzymeMod.ShallowWrapper

@@ -1,6 +1,5 @@
 package typingsSlinky.seleniumDashWebdriver
 
-import typingsSlinky.seleniumDashWebdriver.libByMod.By
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Locator
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.WebDriver
 import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod._Locator

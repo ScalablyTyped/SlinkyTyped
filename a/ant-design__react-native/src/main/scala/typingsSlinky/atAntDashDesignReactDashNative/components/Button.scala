@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.ghost
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.large
@@ -14,6 +15,7 @@ import typingsSlinky.atAntDashDesignReactDashNative.libButtonMod.ButtonProps
 import typingsSlinky.atAntDashDesignReactDashNative.libButtonMod.default
 import typingsSlinky.atAntDashDesignReactDashNative.libButtonStyleMod.ButtonStyles
 import typingsSlinky.reactDashNative.Anon_ActionName
+import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityRole
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityState
 import typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityStates
@@ -49,7 +51,7 @@ object Button
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: disabled, onBlur, onFocus */
   def apply(
-    accessibilityActions: js.Array[typingsSlinky.reactDashNative.reactDashNativeMod.AccessibilityActionInfo] = null,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
     accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
     accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
     accessibilityHint: String = null,
@@ -135,6 +137,9 @@ object Button
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atAntDashDesignReactDashNative.libButtonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ButtonProps
 }
 

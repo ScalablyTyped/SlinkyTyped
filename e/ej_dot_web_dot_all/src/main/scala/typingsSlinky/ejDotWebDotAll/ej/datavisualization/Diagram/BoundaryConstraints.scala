@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,19 @@ object BoundaryConstraints extends js.Object {
   @js.native
   sealed trait Page extends BoundaryConstraints
   
-  /* 1 */ val Diagram: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BoundaryConstraints.Diagram with Double = js.native
-  /* 0 */ val Infinite: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BoundaryConstraints.Infinite with Double = js.native
-  /* 2 */ val Page: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BoundaryConstraints.Page with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BoundaryConstraints with Double] = js.native
+  /* 1 */ @js.native
+  object Diagram
+    extends TopLevel[
+          typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BoundaryConstraints.Diagram with Double
+        ]
+  
+  /* 0 */ @js.native
+  object Infinite extends TopLevel[Infinite with Double]
+  
+  /* 2 */ @js.native
+  object Page extends TopLevel[Page with Double]
+  
 }
 

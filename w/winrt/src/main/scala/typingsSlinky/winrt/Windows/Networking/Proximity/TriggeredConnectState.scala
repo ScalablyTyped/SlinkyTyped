@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Networking.Proximity
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object TriggeredConnectState extends js.Object {
   @js.native
   sealed trait peerFound extends TriggeredConnectState
   
-  /* 4 */ val canceled: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.canceled with Double = js.native
-  /* 3 */ val completed: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.completed with Double = js.native
-  /* 2 */ val connecting: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.connecting with Double = js.native
-  /* 5 */ val failed: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.failed with Double = js.native
-  /* 1 */ val listening: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.listening with Double = js.native
-  /* 0 */ val peerFound: typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState.peerFound with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TriggeredConnectState with Double] = js.native
+  /* 4 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 3 */ @js.native
+  object completed extends TopLevel[completed with Double]
+  
+  /* 2 */ @js.native
+  object connecting extends TopLevel[connecting with Double]
+  
+  /* 5 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 1 */ @js.native
+  object listening extends TopLevel[listening with Double]
+  
+  /* 0 */ @js.native
+  object peerFound extends TopLevel[peerFound with Double]
+  
 }
 

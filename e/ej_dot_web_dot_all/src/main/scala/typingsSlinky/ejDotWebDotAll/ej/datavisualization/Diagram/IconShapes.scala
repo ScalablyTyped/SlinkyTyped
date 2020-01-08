@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +39,28 @@ object IconShapes extends js.Object {
   @js.native
   sealed trait Template extends IconShapes
   
-  /* 1 */ val Arrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Arrow with Double = js.native
-  /* 6 */ val Image: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Image with Double = js.native
-  /* 3 */ val Minus: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Minus with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.None with Double = js.native
-  /* 4 */ val Path: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Path with Double = js.native
-  /* 2 */ val Plus: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Plus with Double = js.native
-  /* 5 */ val Template: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.IconShapes.Template with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IconShapes with Double] = js.native
+  /* 1 */ @js.native
+  object Arrow extends TopLevel[Arrow with Double]
+  
+  /* 6 */ @js.native
+  object Image extends TopLevel[Image with Double]
+  
+  /* 3 */ @js.native
+  object Minus extends TopLevel[Minus with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object Path extends TopLevel[Path with Double]
+  
+  /* 2 */ @js.native
+  object Plus extends TopLevel[Plus with Double]
+  
+  /* 5 */ @js.native
+  object Template extends TopLevel[Template with Double]
+  
 }
 

@@ -2,6 +2,7 @@ package typingsSlinky.sparqljs.sparqljsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.sparqljs.Anon_Default
+import typingsSlinky.sparqljs.sparqljsStrings.Asterisk
 import typingsSlinky.sparqljs.sparqljsStrings.SELECT
 import typingsSlinky.sparqljs.sparqljsStrings.query
 import scala.scalajs.js
@@ -21,7 +22,7 @@ trait SelectQuery
   var order: js.UndefOr[js.Array[Ordering]] = js.undefined
   var queryType: SELECT
   var reduced: js.UndefOr[Boolean] = js.undefined
-  var variables: js.Array[typingsSlinky.sparqljs.sparqljsStrings.`*` | Variable]
+  var variables: js.Array[Asterisk | Variable]
 }
 
 object SelectQuery {
@@ -30,7 +31,7 @@ object SelectQuery {
     prefixes: StringDictionary[String],
     queryType: SELECT,
     `type`: query,
-    variables: js.Array[typingsSlinky.sparqljs.sparqljsStrings.`*` | Variable],
+    variables: js.Array[Asterisk | Variable],
     base: String = null,
     distinct: js.UndefOr[Boolean] = js.undefined,
     from: Anon_Default = null,

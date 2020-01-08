@@ -4,7 +4,6 @@ import org.scalajs.dom.experimental.Response
 import org.scalajs.dom.experimental.URL
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.oDotJs.distTypesOHandlerMod.BodyType
 import typingsSlinky.oDotJs.distTypesORequestMod.ORequest
 import typingsSlinky.oDotJs.distTypesOdataConfigMod.OdataConfig
 import typingsSlinky.oDotJs.distTypesOdataQueryMod.OdataQuery

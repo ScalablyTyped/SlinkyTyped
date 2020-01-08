@@ -1,6 +1,6 @@
 package typingsSlinky.mongooseDashSimpleDashRandom.mongooseDashSimpleDashRandomMod
 
-import typingsSlinky.mongoose.mongooseMod.Document
+import org.scalajs.dom.raw.Document
 import typingsSlinky.mongoose.mongooseMod.ModelProperties
 import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Chrome extends SharedApply_ChromePickerProps1338114999[default] {
+object Chrome extends SharedApply_ChromePickerProps559780953[default] {
   @JSImport("react-color/lib/components/chrome/Chrome", JSImport.Default)
   @js.native
   object componentImport extends js.Object

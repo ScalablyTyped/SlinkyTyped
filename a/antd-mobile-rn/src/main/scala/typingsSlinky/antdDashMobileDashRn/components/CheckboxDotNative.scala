@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CheckboxDotNative extends SharedApply_ICheckboxNativeProps_1990796354[default] {
+object CheckboxDotNative extends SharedApply_ICheckboxNativeProps_881382853[default] {
   @JSImport("antd-mobile-rn/lib/checkbox/Checkbox.native", JSImport.Default)
   @js.native
   object componentImport extends js.Object

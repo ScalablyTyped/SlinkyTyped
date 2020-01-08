@@ -1,6 +1,5 @@
 package typingsSlinky.iferr
 
-import typingsSlinky.iferr.iferrMod.nodeCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

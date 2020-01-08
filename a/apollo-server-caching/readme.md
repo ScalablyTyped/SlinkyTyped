@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollo-server-caching
 
-Typings are for version 0.5.0
+Typings are for version 0.5.1
 
 ## Library description:
 [![npm version](https://badge.fury.io/js/apollo-server-caching.svg)](https://badge.fury.io/js/apollo-server-caching) [![Build Status](https://circleci.com/gh/apollographql/apollo-server.svg?style=svg)](https://circleci.com/gh/apollographql/apollo-server)
@@ -10,9 +10,9 @@ Typings are for version 0.5.0
 | ------------------ | :-------------: |
 | Full name          | apollo-server-caching |
 | Keywords           | - |
-| # releases         | 31 |
-| # dependents       | 23 |
-| # downloads        | 7217065 |
+| # releases         | 37 |
+| # dependents       | 36 |
+| # downloads        | 22658110 |
 | # stars            | 0 |
 
 ## Links

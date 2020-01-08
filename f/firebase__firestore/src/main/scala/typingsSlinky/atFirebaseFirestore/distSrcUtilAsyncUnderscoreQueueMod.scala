@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atFirebaseFirestore.distSrcUtilPromiseMod.CancelablePromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -141,17 +141,35 @@ object distSrcUtilAsyncUnderscoreQueueMod extends js.Object {
     @js.native
     sealed trait WriteStreamIdle extends TimerId
     
-    /* "all" */ val All: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.All with String = js.native
-    /* "client_metadata_refresh" */ val ClientMetadataRefresh: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.ClientMetadataRefresh with String = js.native
-    /* "listen_stream_connection_backoff" */ val ListenStreamConnectionBackoff: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.ListenStreamConnectionBackoff with String = js.native
-    /* "listen_stream_idle" */ val ListenStreamIdle: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.ListenStreamIdle with String = js.native
-    /* "lru_garbage_collection" */ val LruGarbageCollection: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.LruGarbageCollection with String = js.native
-    /* "online_state_timeout" */ val OnlineStateTimeout: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.OnlineStateTimeout with String = js.native
-    /* "retry_transaction" */ val RetryTransaction: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.RetryTransaction with String = js.native
-    /* "write_stream_connection_backoff" */ val WriteStreamConnectionBackoff: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.WriteStreamConnectionBackoff with String = js.native
-    /* "write_stream_idle" */ val WriteStreamIdle: typingsSlinky.atFirebaseFirestore.distSrcUtilAsyncUnderscoreQueueMod.TimerId.WriteStreamIdle with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[TimerId with String] = js.native
+    /* "all" */ @js.native
+    object All extends TopLevel[All with String]
+    
+    /* "client_metadata_refresh" */ @js.native
+    object ClientMetadataRefresh extends TopLevel[ClientMetadataRefresh with String]
+    
+    /* "listen_stream_connection_backoff" */ @js.native
+    object ListenStreamConnectionBackoff extends TopLevel[ListenStreamConnectionBackoff with String]
+    
+    /* "listen_stream_idle" */ @js.native
+    object ListenStreamIdle extends TopLevel[ListenStreamIdle with String]
+    
+    /* "lru_garbage_collection" */ @js.native
+    object LruGarbageCollection extends TopLevel[LruGarbageCollection with String]
+    
+    /* "online_state_timeout" */ @js.native
+    object OnlineStateTimeout extends TopLevel[OnlineStateTimeout with String]
+    
+    /* "retry_transaction" */ @js.native
+    object RetryTransaction extends TopLevel[RetryTransaction with String]
+    
+    /* "write_stream_connection_backoff" */ @js.native
+    object WriteStreamConnectionBackoff extends TopLevel[WriteStreamConnectionBackoff with String]
+    
+    /* "write_stream_idle" */ @js.native
+    object WriteStreamIdle extends TopLevel[WriteStreamIdle with String]
+    
   }
   
 }

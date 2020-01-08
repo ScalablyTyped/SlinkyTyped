@@ -1,5 +1,6 @@
 package typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +35,31 @@ object EDepthFunction extends js.Object {
   @js.native
   sealed trait NOTEQUAL extends EDepthFunction
   
-  /* 1 */ val ALWAYS: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.ALWAYS with Double = js.native
-  /* 4 */ val EQUAL: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.EQUAL with Double = js.native
-  /* 5 */ val GEQUAL: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.GEQUAL with Double = js.native
-  /* 6 */ val GREATER: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.GREATER with Double = js.native
-  /* 3 */ val LEQUAL: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.LEQUAL with Double = js.native
-  /* 2 */ val LESS: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.LESS with Double = js.native
-  /* 0 */ val NEVER: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.NEVER with Double = js.native
-  /* 7 */ val NOTEQUAL: typingsSlinky.wonderDotJs.distEs2015DeviceDeviceManagerMod.EDepthFunction.NOTEQUAL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EDepthFunction with Double] = js.native
+  /* 1 */ @js.native
+  object ALWAYS extends TopLevel[ALWAYS with Double]
+  
+  /* 4 */ @js.native
+  object EQUAL extends TopLevel[EQUAL with Double]
+  
+  /* 5 */ @js.native
+  object GEQUAL extends TopLevel[GEQUAL with Double]
+  
+  /* 6 */ @js.native
+  object GREATER extends TopLevel[GREATER with Double]
+  
+  /* 3 */ @js.native
+  object LEQUAL extends TopLevel[LEQUAL with Double]
+  
+  /* 2 */ @js.native
+  object LESS extends TopLevel[LESS with Double]
+  
+  /* 0 */ @js.native
+  object NEVER extends TopLevel[NEVER with Double]
+  
+  /* 7 */ @js.native
+  object NOTEQUAL extends TopLevel[NOTEQUAL with Double]
+  
 }
 

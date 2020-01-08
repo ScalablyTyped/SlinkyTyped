@@ -24,10 +24,12 @@ object FixedSizeList
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, height, onScroll, width */
+  /* The following DOM/SVG props were specified: className, onScroll */
   def apply(
+    height: Double | String,
     itemCount: Double,
     itemSize: Double,
+    width: Double | String,
     direction: CSSDirection | Direction = null,
     initialScrollOffset: Int | Double = null,
     innerElementType: ReactElementType = null,
@@ -45,7 +47,7 @@ object FixedSizeList
     useIsScrolling: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashWindow.reactDashWindowMod.FixedSizeList] = {
-    val __obj = js.Dynamic.literal(itemCount = itemCount.asInstanceOf[js.Any], itemSize = itemSize.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], itemCount = itemCount.asInstanceOf[js.Any], itemSize = itemSize.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
     if (initialScrollOffset != null) __obj.updateDynamic("initialScrollOffset")(initialScrollOffset.asInstanceOf[js.Any])
     if (innerElementType != null) __obj.updateDynamic("innerElementType")(innerElementType.asInstanceOf[js.Any])

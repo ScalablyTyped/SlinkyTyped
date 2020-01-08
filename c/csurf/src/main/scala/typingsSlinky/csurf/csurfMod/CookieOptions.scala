@@ -1,5 +1,8 @@
 package typingsSlinky.csurf.csurfMod
 
+import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreStrings.lax
+import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreStrings.none
+import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreStrings.strict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +22,7 @@ object CookieOptions {
     key: String = null,
     maxAge: Int | Double = null,
     path: String = null,
-    sameSite: Boolean | String = null,
+    sameSite: Boolean | lax | strict | none = null,
     secure: js.UndefOr[Boolean] = js.undefined,
     signed: js.UndefOr[Boolean] = js.undefined
   ): CookieOptions = {

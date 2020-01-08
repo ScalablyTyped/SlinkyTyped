@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object StorageItemTypes extends js.Object {
   @js.native
   sealed trait none extends StorageItemTypes
   
-  /* 1 */ val file: typingsSlinky.winrt.Windows.Storage.StorageItemTypes.file with Double = js.native
-  /* 2 */ val folder: typingsSlinky.winrt.Windows.Storage.StorageItemTypes.folder with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrt.Windows.Storage.StorageItemTypes.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StorageItemTypes with Double] = js.native
+  /* 1 */ @js.native
+  object file extends TopLevel[file with Double]
+  
+  /* 2 */ @js.native
+  object folder extends TopLevel[folder with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

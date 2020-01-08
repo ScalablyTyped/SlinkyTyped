@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1EventMod.Event
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.EventSeries
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.EventSource
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.ObjectReference

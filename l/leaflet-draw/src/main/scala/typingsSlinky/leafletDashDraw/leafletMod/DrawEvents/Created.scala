@@ -6,6 +6,7 @@ import typingsSlinky.leaflet.leafletMod.Circle
 import typingsSlinky.leaflet.leafletMod.CircleMarker
 import typingsSlinky.leaflet.leafletMod.LeafletEvent
 import typingsSlinky.leaflet.leafletMod.Marker
+import typingsSlinky.leaflet.leafletMod.Polygon
 import typingsSlinky.leaflet.leafletMod.Polyline
 import typingsSlinky.leaflet.leafletMod.Rectangle
 import scala.scalajs.js
@@ -21,13 +22,13 @@ trait Created extends LeafletEvent {
     * Layer that was just created.
     */
   @JSName("layer")
-  var layer_Created: Circle[_] | CircleMarker[_] | Marker[_] | typingsSlinky.leaflet.leafletMod.Polygon[_] | (Polyline[LineString | MultiLineString, _]) | Rectangle[_]
+  var layer_Created: Circle[_] | CircleMarker[_] | Marker[_] | Polygon[_] | (Polyline[LineString | MultiLineString, _]) | Rectangle[_]
 }
 
 object Created {
   @scala.inline
   def apply(
-    layer: Circle[_] | CircleMarker[_] | Marker[_] | typingsSlinky.leaflet.leafletMod.Polygon[_] | (Polyline[LineString | MultiLineString, _]) | Rectangle[_],
+    layer: Circle[_] | CircleMarker[_] | Marker[_] | Polygon[_] | (Polyline[LineString | MultiLineString, _]) | Rectangle[_],
     layerType: String,
     propagatedFrom: js.Any,
     sourceTarget: js.Any,

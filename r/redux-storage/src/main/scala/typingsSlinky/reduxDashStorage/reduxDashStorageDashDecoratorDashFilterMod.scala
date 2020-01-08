@@ -1,7 +1,6 @@
 package typingsSlinky.reduxDashStorage
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.reduxDashStorage.reduxDashStorageDashDecoratorDashFilterMod.FilterList
 import typingsSlinky.reduxDashStorage.reduxDashStorageMod.StorageEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`

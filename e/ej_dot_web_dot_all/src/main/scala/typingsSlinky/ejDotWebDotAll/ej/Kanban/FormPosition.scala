@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Kanban
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object FormPosition extends js.Object {
   @js.native
   sealed trait Right extends FormPosition
   
-  /* 0 */ val Bottom: typingsSlinky.ejDotWebDotAll.ej.Kanban.FormPosition.Bottom with Double = js.native
-  /* 1 */ val Right: typingsSlinky.ejDotWebDotAll.ej.Kanban.FormPosition.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FormPosition with Double] = js.native
+  /* 0 */ @js.native
+  object Bottom extends TopLevel[Bottom with Double]
+  
+  /* 1 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

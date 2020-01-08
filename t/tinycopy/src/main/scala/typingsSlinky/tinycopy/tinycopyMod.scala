@@ -3,7 +3,6 @@ package typingsSlinky.tinycopy
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
-import typingsSlinky.tinycopy.tinycopyMod.TinyCopy
 import typingsSlinky.tinycopy.tinycopyStrings.error
 import typingsSlinky.tinycopy.tinycopyStrings.success
 import scala.scalajs.js

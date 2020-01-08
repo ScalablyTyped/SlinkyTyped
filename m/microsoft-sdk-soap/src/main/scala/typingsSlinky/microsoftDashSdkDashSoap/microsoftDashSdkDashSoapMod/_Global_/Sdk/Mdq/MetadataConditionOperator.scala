@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object MetadataConditionOperator extends js.Object {
   @js.native
   sealed trait NotIn extends MetadataConditionOperator
   
-  /* 0 */ val Equals: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.Equals with scala.Double = js.native
-  /* 4 */ val GreaterThan: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.GreaterThan with scala.Double = js.native
-  /* 2 */ val In: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.In with scala.Double = js.native
-  /* 5 */ val LessThan: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.LessThan with scala.Double = js.native
-  /* 1 */ val NotEquals: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.NotEquals with scala.Double = js.native
-  /* 3 */ val NotIn: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.MetadataConditionOperator.NotIn with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[MetadataConditionOperator with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[MetadataConditionOperator with Double] = js.native
+  /* 0 */ @js.native
+  object Equals extends TopLevel[Equals with Double]
+  
+  /* 4 */ @js.native
+  object GreaterThan extends TopLevel[GreaterThan with Double]
+  
+  /* 2 */ @js.native
+  object In extends TopLevel[In with Double]
+  
+  /* 5 */ @js.native
+  object LessThan extends TopLevel[LessThan with Double]
+  
+  /* 1 */ @js.native
+  object NotEquals extends TopLevel[NotEquals with Double]
+  
+  /* 3 */ @js.native
+  object NotIn extends TopLevel[NotIn with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation extends js.Object 
   @js.native
   sealed trait strongAlgorithm extends EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation
   
-  /* 2 */ val anyAlgorithm: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation.anyAlgorithm with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation.none with Double = js.native
-  /* 1 */ val strongAlgorithm: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation.strongAlgorithm with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation with Double] = js.native
+  /* 2 */ @js.native
+  object anyAlgorithm extends TopLevel[anyAlgorithm with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object strongAlgorithm extends TopLevel[strongAlgorithm with Double]
+  
 }
 

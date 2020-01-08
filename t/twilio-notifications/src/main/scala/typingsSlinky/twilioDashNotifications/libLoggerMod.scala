@@ -1,6 +1,5 @@
 package typingsSlinky.twilioDashNotifications
 
-import typingsSlinky.twilioDashNotifications.libLoggerMod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

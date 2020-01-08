@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object Design extends js.Object {
   @js.native
   sealed trait Standard extends Design
   
-  /* 0 */ val Monospace: typingsSlinky.openui5.sap.ui.core.Design.Monospace with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.openui5.sap.ui.core.Design.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Design with Double] = js.native
+  /* 0 */ @js.native
+  object Monospace extends TopLevel[Monospace with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

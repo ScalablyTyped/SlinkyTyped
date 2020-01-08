@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,26 +88,64 @@ object LoggingFieldFormat extends js.Object {
   @js.native
   sealed trait xml extends LoggingFieldFormat
   
-  /* 3 */ val boolean: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.boolean with Double = js.native
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.default with Double = js.native
-  /* 16 */ val fileTime: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.fileTime with Double = js.native
-  /* 4 */ val hexadecimal: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.hexadecimal with Double = js.native
-  /* 1 */ val hidden: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.hidden with Double = js.native
-  /* 15 */ val hresult: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.hresult with Double = js.native
-  /* 8 */ val ipv4Address: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.ipv4Address with Double = js.native
-  /* 9 */ val ipv6Address: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.ipv6Address with Double = js.native
-  /* 12 */ val json: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.json with Double = js.native
-  /* 14 */ val ntStatus: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.ntStatus with Double = js.native
-  /* 7 */ val port: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.port with Double = js.native
-  /* 5 */ val processId: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.processId with Double = js.native
-  /* 17 */ val signed: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.signed with Double = js.native
-  /* 10 */ val socketAddress: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.socketAddress with Double = js.native
-  /* 2 */ val string: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.string with Double = js.native
-  /* 6 */ val threadId: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.threadId with Double = js.native
-  /* 18 */ val unsigned: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.unsigned with Double = js.native
-  /* 13 */ val win32Error: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.win32Error with Double = js.native
-  /* 11 */ val xml: typingsSlinky.winrtDashUwp.Windows.Foundation.Diagnostics.LoggingFieldFormat.xml with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LoggingFieldFormat with Double] = js.native
+  /* 3 */ @js.native
+  object boolean extends TopLevel[boolean with Double]
+  
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 16 */ @js.native
+  object fileTime extends TopLevel[fileTime with Double]
+  
+  /* 4 */ @js.native
+  object hexadecimal extends TopLevel[hexadecimal with Double]
+  
+  /* 1 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 15 */ @js.native
+  object hresult extends TopLevel[hresult with Double]
+  
+  /* 8 */ @js.native
+  object ipv4Address extends TopLevel[ipv4Address with Double]
+  
+  /* 9 */ @js.native
+  object ipv6Address extends TopLevel[ipv6Address with Double]
+  
+  /* 12 */ @js.native
+  object json extends TopLevel[json with Double]
+  
+  /* 14 */ @js.native
+  object ntStatus extends TopLevel[ntStatus with Double]
+  
+  /* 7 */ @js.native
+  object port extends TopLevel[port with Double]
+  
+  /* 5 */ @js.native
+  object processId extends TopLevel[processId with Double]
+  
+  /* 17 */ @js.native
+  object signed extends TopLevel[signed with Double]
+  
+  /* 10 */ @js.native
+  object socketAddress extends TopLevel[socketAddress with Double]
+  
+  /* 2 */ @js.native
+  object string extends TopLevel[string with Double]
+  
+  /* 6 */ @js.native
+  object threadId extends TopLevel[threadId with Double]
+  
+  /* 18 */ @js.native
+  object unsigned extends TopLevel[unsigned with Double]
+  
+  /* 13 */ @js.native
+  object win32Error extends TopLevel[win32Error with Double]
+  
+  /* 11 */ @js.native
+  object xml extends TopLevel[xml with Double]
+  
 }
 

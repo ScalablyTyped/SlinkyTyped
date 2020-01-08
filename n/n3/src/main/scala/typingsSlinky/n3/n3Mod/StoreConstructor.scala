@@ -18,9 +18,5 @@ trait StoreConstructor
       /* triples */ js.Array[typingsSlinky.rdfDashJs.rdfDashJsMod.BaseQuad], 
       /* options */ StoreOptions, 
       N3Store[typingsSlinky.rdfDashJs.rdfDashJsMod.BaseQuad, BaseQuad]
-    ] {
-  def apply[Q_RDF /* <: typingsSlinky.rdfDashJs.rdfDashJsMod.BaseQuad */, Q_N3 /* <: BaseQuad */](): N3Store[Q_RDF, Q_N3] = js.native
-  def apply[Q_RDF /* <: typingsSlinky.rdfDashJs.rdfDashJsMod.BaseQuad */, Q_N3 /* <: BaseQuad */](triples: js.Array[Q_RDF]): N3Store[Q_RDF, Q_N3] = js.native
-  def apply[Q_RDF /* <: typingsSlinky.rdfDashJs.rdfDashJsMod.BaseQuad */, Q_N3 /* <: BaseQuad */](triples: js.Array[Q_RDF], options: StoreOptions): N3Store[Q_RDF, Q_N3] = js.native
-}
+    ]
 

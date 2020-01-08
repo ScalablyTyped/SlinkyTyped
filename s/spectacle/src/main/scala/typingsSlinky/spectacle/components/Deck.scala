@@ -3,6 +3,7 @@ package typingsSlinky.spectacle.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.spectacle.spectacleMod.DeckProps
 import typingsSlinky.spectacle.spectacleMod.Theme
@@ -27,6 +28,8 @@ object Deck
     autoplayOnStart: js.UndefOr[Boolean] = js.undefined,
     contentHeight: String = null,
     contentWidth: String = null,
+    disableKeyboardControls: js.UndefOr[Boolean] = js.undefined,
+    disableTouchControls: js.UndefOr[Boolean] = js.undefined,
     globalStyles: js.UndefOr[Boolean] = js.undefined,
     history: js.Any = null,
     onStateChange: (/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String]) => Unit = null,
@@ -44,6 +47,8 @@ object Deck
     if (!js.isUndefined(autoplayOnStart)) __obj.updateDynamic("autoplayOnStart")(autoplayOnStart.asInstanceOf[js.Any])
     if (contentHeight != null) __obj.updateDynamic("contentHeight")(contentHeight.asInstanceOf[js.Any])
     if (contentWidth != null) __obj.updateDynamic("contentWidth")(contentWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableKeyboardControls)) __obj.updateDynamic("disableKeyboardControls")(disableKeyboardControls.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableTouchControls)) __obj.updateDynamic("disableTouchControls")(disableTouchControls.asInstanceOf[js.Any])
     if (!js.isUndefined(globalStyles)) __obj.updateDynamic("globalStyles")(globalStyles.asInstanceOf[js.Any])
     if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
     if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction2(onStateChange))
@@ -55,6 +60,7 @@ object Deck
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Deck] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.Deck](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DeckProps
 }
 

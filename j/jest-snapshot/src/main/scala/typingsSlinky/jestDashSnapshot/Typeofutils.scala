@@ -2,14 +2,14 @@ package typingsSlinky.jestDashSnapshot
 
 import typingsSlinky.atJestTypes.buildConfigMod.SnapshotUpdateState
 import typingsSlinky.jestDashSnapshot.jestDashSnapshotStrings.`1`
-import typingsSlinky.jestDashSnapshot.jestDashSnapshotStrings.`https://gooDOTgl/fbAQLP`
+import typingsSlinky.jestDashSnapshot.jestDashSnapshotStrings.httpsColonSlashSlashgooDotglSlashfbAQLP
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Typeofutils extends js.Object {
-  val SNAPSHOT_GUIDE_LINK: `https://gooDOTgl/fbAQLP`
+  val SNAPSHOT_GUIDE_LINK: httpsColonSlashSlashgooDotglSlashfbAQLP
   val SNAPSHOT_VERSION: `1`
   val SNAPSHOT_VERSION_WARNING: String
   def deepMerge(target: js.Any, source: js.Any): js.Any
@@ -26,7 +26,7 @@ trait Typeofutils extends js.Object {
 object Typeofutils {
   @scala.inline
   def apply(
-    SNAPSHOT_GUIDE_LINK: `https://gooDOTgl/fbAQLP`,
+    SNAPSHOT_GUIDE_LINK: httpsColonSlashSlashgooDotglSlashfbAQLP,
     SNAPSHOT_VERSION: `1`,
     SNAPSHOT_VERSION_WARNING: String,
     deepMerge: (js.Any, js.Any) => js.Any,

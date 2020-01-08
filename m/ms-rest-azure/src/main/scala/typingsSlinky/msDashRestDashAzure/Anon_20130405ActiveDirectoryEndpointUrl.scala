@@ -1,68 +1,68 @@
 package typingsSlinky.msDashRestDashAzure
 
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureNumbers.`true`
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureBooleans.`true`
 import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.AzureChina
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DOTcoreDOTchinacloudapiDOTcn
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DOTdatabaseDOTchinacloudapiDOTcn
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DOTvaultDOTazureDOTcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DotcoreDotchinacloudapiDotcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DotdatabaseDotchinacloudapiDotcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.DotvaultDotazureDotcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.NSlashA
 import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`2013-04-05`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`N/A`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://batchDOTchinacloudapiDOTcn/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://galleryDOTchinacloudapiDOTcn/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://goDOTmicrosoftDOTcom/fwlink/?LinkID=301774`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://graphDOTchinacloudapiDOTcn/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://loginDOTchinacloudapiDOTcn/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://managementDOTchinacloudapiDOTcn`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://managementDOTcoreDOTchinacloudapiDOTcn/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://managementDOTcoreDOTchinacloudapiDOTcn:8443/`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://managementDOTcoreDOTchinacloudapiDOTcn`
-import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.`https://portalDOTazureDOTcn`
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashbatchDotchinacloudapiDotcnSlash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashgalleryDotchinacloudapiDotcnSlash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashgoDotmicrosoftDotcomSlashfwlinkSlashQuestionmarkLinkIDEqualssign301774
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashgraphDotchinacloudapiDotcnSlash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashloginDotchinacloudapiDotcnSlash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashmanagementDotchinacloudapiDotcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcn
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnColon8443Slash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnSlash
+import typingsSlinky.msDashRestDashAzure.msDashRestDashAzureStrings.httpsColonSlashSlashportalDotazureDotcn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_20130405ActiveDirectoryEndpointUrl extends js.Object {
-  var activeDirectoryEndpointUrl: `https://loginDOTchinacloudapiDOTcn/`
+  var activeDirectoryEndpointUrl: httpsColonSlashSlashloginDotchinacloudapiDotcnSlash
   var activeDirectoryGraphApiVersion: `2013-04-05`
-  var activeDirectoryGraphResourceId: `https://graphDOTchinacloudapiDOTcn/`
-  var activeDirectoryResourceId: `https://managementDOTcoreDOTchinacloudapiDOTcn/`
-  var azureDataLakeAnalyticsCatalogAndJobEndpointSuffix: `N/A`
+  var activeDirectoryGraphResourceId: httpsColonSlashSlashgraphDotchinacloudapiDotcnSlash
+  var activeDirectoryResourceId: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnSlash
+  var azureDataLakeAnalyticsCatalogAndJobEndpointSuffix: NSlashA
   // TODO: add dns suffixes for the china cloud for datalake store and datalake analytics once they are defined.
-  var azureDataLakeStoreFileSystemEndpointSuffix: `N/A`
-  var batchResourceId: `https://batchDOTchinacloudapiDOTcn/`
-  var galleryEndpointUrl: `https://galleryDOTchinacloudapiDOTcn/`
-  var keyVaultDnsSuffix: DOTvaultDOTazureDOTcn
-  var managementEndpointUrl: `https://managementDOTcoreDOTchinacloudapiDOTcn`
+  var azureDataLakeStoreFileSystemEndpointSuffix: NSlashA
+  var batchResourceId: httpsColonSlashSlashbatchDotchinacloudapiDotcnSlash
+  var galleryEndpointUrl: httpsColonSlashSlashgalleryDotchinacloudapiDotcnSlash
+  var keyVaultDnsSuffix: DotvaultDotazureDotcn
+  var managementEndpointUrl: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcn
   var name: AzureChina
-  var portalUrl: `https://portalDOTazureDOTcn`
-  var publishingProfileUrl: `https://goDOTmicrosoftDOTcom/fwlink/?LinkID=301774`
-  var resourceManagerEndpointUrl: `https://managementDOTchinacloudapiDOTcn`
-  var sqlManagementEndpointUrl: `https://managementDOTcoreDOTchinacloudapiDOTcn:8443/`
-  var sqlServerHostnameSuffix: DOTdatabaseDOTchinacloudapiDOTcn
-  var storageEndpointSuffix: DOTcoreDOTchinacloudapiDOTcn
+  var portalUrl: httpsColonSlashSlashportalDotazureDotcn
+  var publishingProfileUrl: httpsColonSlashSlashgoDotmicrosoftDotcomSlashfwlinkSlashQuestionmarkLinkIDEqualssign301774
+  var resourceManagerEndpointUrl: httpsColonSlashSlashmanagementDotchinacloudapiDotcn
+  var sqlManagementEndpointUrl: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnColon8443Slash
+  var sqlServerHostnameSuffix: DotdatabaseDotchinacloudapiDotcn
+  var storageEndpointSuffix: DotcoreDotchinacloudapiDotcn
   var validateAuthority: `true`
 }
 
 object Anon_20130405ActiveDirectoryEndpointUrl {
   @scala.inline
   def apply(
-    activeDirectoryEndpointUrl: `https://loginDOTchinacloudapiDOTcn/`,
+    activeDirectoryEndpointUrl: httpsColonSlashSlashloginDotchinacloudapiDotcnSlash,
     activeDirectoryGraphApiVersion: `2013-04-05`,
-    activeDirectoryGraphResourceId: `https://graphDOTchinacloudapiDOTcn/`,
-    activeDirectoryResourceId: `https://managementDOTcoreDOTchinacloudapiDOTcn/`,
-    azureDataLakeAnalyticsCatalogAndJobEndpointSuffix: `N/A`,
-    azureDataLakeStoreFileSystemEndpointSuffix: `N/A`,
-    batchResourceId: `https://batchDOTchinacloudapiDOTcn/`,
-    galleryEndpointUrl: `https://galleryDOTchinacloudapiDOTcn/`,
-    keyVaultDnsSuffix: DOTvaultDOTazureDOTcn,
-    managementEndpointUrl: `https://managementDOTcoreDOTchinacloudapiDOTcn`,
+    activeDirectoryGraphResourceId: httpsColonSlashSlashgraphDotchinacloudapiDotcnSlash,
+    activeDirectoryResourceId: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnSlash,
+    azureDataLakeAnalyticsCatalogAndJobEndpointSuffix: NSlashA,
+    azureDataLakeStoreFileSystemEndpointSuffix: NSlashA,
+    batchResourceId: httpsColonSlashSlashbatchDotchinacloudapiDotcnSlash,
+    galleryEndpointUrl: httpsColonSlashSlashgalleryDotchinacloudapiDotcnSlash,
+    keyVaultDnsSuffix: DotvaultDotazureDotcn,
+    managementEndpointUrl: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcn,
     name: AzureChina,
-    portalUrl: `https://portalDOTazureDOTcn`,
-    publishingProfileUrl: `https://goDOTmicrosoftDOTcom/fwlink/?LinkID=301774`,
-    resourceManagerEndpointUrl: `https://managementDOTchinacloudapiDOTcn`,
-    sqlManagementEndpointUrl: `https://managementDOTcoreDOTchinacloudapiDOTcn:8443/`,
-    sqlServerHostnameSuffix: DOTdatabaseDOTchinacloudapiDOTcn,
-    storageEndpointSuffix: DOTcoreDOTchinacloudapiDOTcn,
+    portalUrl: httpsColonSlashSlashportalDotazureDotcn,
+    publishingProfileUrl: httpsColonSlashSlashgoDotmicrosoftDotcomSlashfwlinkSlashQuestionmarkLinkIDEqualssign301774,
+    resourceManagerEndpointUrl: httpsColonSlashSlashmanagementDotchinacloudapiDotcn,
+    sqlManagementEndpointUrl: httpsColonSlashSlashmanagementDotcoreDotchinacloudapiDotcnColon8443Slash,
+    sqlServerHostnameSuffix: DotdatabaseDotchinacloudapiDotcn,
+    storageEndpointSuffix: DotcoreDotchinacloudapiDotcn,
     validateAuthority: `true`
   ): Anon_20130405ActiveDirectoryEndpointUrl = {
     val __obj = js.Dynamic.literal(activeDirectoryEndpointUrl = activeDirectoryEndpointUrl.asInstanceOf[js.Any], activeDirectoryGraphApiVersion = activeDirectoryGraphApiVersion.asInstanceOf[js.Any], activeDirectoryGraphResourceId = activeDirectoryGraphResourceId.asInstanceOf[js.Any], activeDirectoryResourceId = activeDirectoryResourceId.asInstanceOf[js.Any], azureDataLakeAnalyticsCatalogAndJobEndpointSuffix = azureDataLakeAnalyticsCatalogAndJobEndpointSuffix.asInstanceOf[js.Any], azureDataLakeStoreFileSystemEndpointSuffix = azureDataLakeStoreFileSystemEndpointSuffix.asInstanceOf[js.Any], batchResourceId = batchResourceId.asInstanceOf[js.Any], galleryEndpointUrl = galleryEndpointUrl.asInstanceOf[js.Any], keyVaultDnsSuffix = keyVaultDnsSuffix.asInstanceOf[js.Any], managementEndpointUrl = managementEndpointUrl.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], portalUrl = portalUrl.asInstanceOf[js.Any], publishingProfileUrl = publishingProfileUrl.asInstanceOf[js.Any], resourceManagerEndpointUrl = resourceManagerEndpointUrl.asInstanceOf[js.Any], sqlManagementEndpointUrl = sqlManagementEndpointUrl.asInstanceOf[js.Any], sqlServerHostnameSuffix = sqlServerHostnameSuffix.asInstanceOf[js.Any], storageEndpointSuffix = storageEndpointSuffix.asInstanceOf[js.Any], validateAuthority = validateAuthority.asInstanceOf[js.Any])

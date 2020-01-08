@@ -5,43 +5,43 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARco
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLAReq
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARew
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARpr
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARgt
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARge
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARlt
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARle
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARne
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARregex
-  - typings.atOracleOraclejet.atOracleOraclejetStrings.DOLLARsw
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$co
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$eq
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$ew
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$pr
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$gt
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$ge
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$lt
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$le
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$ne
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$regex
+  - typings.atOracleOraclejet.atOracleOraclejetStrings.$sw
 */
 trait AttributeOperator extends js.Object
 
 object AttributeOperator {
   @scala.inline
-  def DOLLARco: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARco = this.cast("$co")
+  def $co: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$co = this.cast("$co")
   @scala.inline
-  def DOLLAReq: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLAReq = this.cast("$eq")
+  def $eq: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$eq = this.cast("$eq")
   @scala.inline
-  def DOLLARew: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARew = this.cast("$ew")
+  def $ew: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$ew = this.cast("$ew")
   @scala.inline
-  def DOLLARge: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARge = this.cast("$ge")
+  def $ge: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$ge = this.cast("$ge")
   @scala.inline
-  def DOLLARgt: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARgt = this.cast("$gt")
+  def $gt: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$gt = this.cast("$gt")
   @scala.inline
-  def DOLLARle: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARle = this.cast("$le")
+  def $le: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$le = this.cast("$le")
   @scala.inline
-  def DOLLARlt: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARlt = this.cast("$lt")
+  def $lt: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$lt = this.cast("$lt")
   @scala.inline
-  def DOLLARne: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARne = this.cast("$ne")
+  def $ne: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$ne = this.cast("$ne")
   @scala.inline
-  def DOLLARpr: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARpr = this.cast("$pr")
+  def $pr: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$pr = this.cast("$pr")
   @scala.inline
-  def DOLLARregex: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARregex = this.cast("$regex")
+  def $regex: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$regex = this.cast("$regex")
   @scala.inline
-  def DOLLARsw: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.DOLLARsw = this.cast("$sw")
+  def $sw: typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.$sw = this.cast("$sw")
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
 }

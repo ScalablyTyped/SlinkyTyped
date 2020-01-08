@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object SpeechContinuousRecognitionMode extends js.Object {
   @js.native
   sealed trait pauseOnRecognition extends SpeechContinuousRecognitionMode
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode.default with Double = js.native
-  /* 1 */ val pauseOnRecognition: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode.pauseOnRecognition with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpeechContinuousRecognitionMode with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object pauseOnRecognition extends TopLevel[pauseOnRecognition with Double]
+  
 }
 

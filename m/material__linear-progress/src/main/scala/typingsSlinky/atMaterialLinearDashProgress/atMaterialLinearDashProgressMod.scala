@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialLinearDashProgress
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialLinearDashProgress.adapterMod.MDCLinearProgressAdapter
-import typingsSlinky.atMaterialLinearDashProgress.atMaterialLinearDashProgressMod.MDCLinearProgress
 import typingsSlinky.atMaterialLinearDashProgress.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

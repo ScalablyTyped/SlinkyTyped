@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,10 +30,17 @@ object ProgressLocation extends js.Object {
   @js.native
   sealed trait Window extends ProgressLocation
   
-  /* 15 */ val Notification: typingsSlinky.vscode.vscodeMod.ProgressLocation.Notification with Double = js.native
-  /* 1 */ val SourceControl: typingsSlinky.vscode.vscodeMod.ProgressLocation.SourceControl with Double = js.native
-  /* 10 */ val Window: typingsSlinky.vscode.vscodeMod.ProgressLocation.Window with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProgressLocation with Double] = js.native
+  /* 15 */ @js.native
+  object Notification extends TopLevel[Notification with Double]
+  
+  /* 1 */ @js.native
+  object SourceControl
+    extends TopLevel[typingsSlinky.vscode.vscodeMod.ProgressLocation.SourceControl with Double]
+  
+  /* 10 */ @js.native
+  object Window extends TopLevel[Window with Double]
+  
 }
 

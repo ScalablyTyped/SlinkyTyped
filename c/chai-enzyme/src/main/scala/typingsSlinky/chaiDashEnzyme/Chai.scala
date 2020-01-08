@@ -2,8 +2,6 @@ package typingsSlinky.chaiDashEnzyme
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.chaiDashEnzyme.Chai.Assertion
-import typingsSlinky.chaiDashEnzyme.Chai.EnzymeSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

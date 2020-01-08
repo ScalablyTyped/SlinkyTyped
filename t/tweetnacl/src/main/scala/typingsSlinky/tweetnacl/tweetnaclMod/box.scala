@@ -1,8 +1,8 @@
 package typingsSlinky.tweetnacl.tweetnaclMod
 
+import typingsSlinky.tweetnacl.tweetnaclBooleans.`false`
 import typingsSlinky.tweetnacl.tweetnaclMod.box.keyPair
 import typingsSlinky.tweetnacl.tweetnaclMod.box.open
-import typingsSlinky.tweetnacl.tweetnaclNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

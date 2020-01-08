@@ -3,9 +3,6 @@ package typingsSlinky.marko
 import typingsSlinky.asyncDashWriter.asyncDashWriterMod.AsyncWriter
 import typingsSlinky.marko.srcRuntimeHtmlAsyncStreamMod.AsyncStream
 import typingsSlinky.marko.srcRuntimeHtmlRenderResultMod.RenderResult
-import typingsSlinky.marko.srcRuntimeHtmlTemplateMod.Readable
-import typingsSlinky.marko.srcRuntimeHtmlTemplateMod.Renderable
-import typingsSlinky.marko.srcRuntimeHtmlTemplateMod.Template
 import typingsSlinky.marko.srcRuntimeVdomAsyncVDOMBuilderMod.AsyncVDOMBuilder
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
@@ -45,8 +42,9 @@ object srcRuntimeHtmlTemplateMod extends js.Object {
   
   @js.native
   trait Template extends Renderable {
-    var `_`: js.Any = js.native
     var ___shouldBuffer: Boolean = js.native
+    @JSName("_")
+    var _underscore: js.Any = js.native
     var meta: js.Any = js.native
     var path: String = js.native
     def apply(path: String, renderFunc: js.Any, options: js.Any): Template = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for gatsby
 
-Typings are for version 2.18.4
+Typings are for version 2.18.17
 
 ## Library description:
 Blazing fast modern site generator for React
@@ -10,9 +10,9 @@ Blazing fast modern site generator for React
 | ------------------ | :-------------: |
 | Full name          | gatsby |
 | Keywords           | blog, generator, jekyll, markdown, react, ssg, website |
-| # releases         | 868 |
-| # dependents       | 124 |
-| # downloads        | 9741030 |
+| # releases         | 901 |
+| # dependents       | 335 |
+| # downloads        | 12961013 |
 | # stars            | 23 |
 
 ## Links

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.reactDashNative.reactDashNativeStrings.Empty
+  - typings.reactDashNative.reactDashNativeStrings._empty
   - typings.reactDashNative.reactDashNativeStrings.arraybuffer
   - typings.reactDashNative.reactDashNativeStrings.blob
   - typings.reactDashNative.reactDashNativeStrings.document
@@ -16,7 +16,7 @@ trait XMLHttpRequestResponseType extends js.Object
 
 object XMLHttpRequestResponseType {
   @scala.inline
-  def Empty: typingsSlinky.reactDashNative.reactDashNativeStrings.Empty = this.cast("")
+  def _empty: typingsSlinky.reactDashNative.reactDashNativeStrings._empty = this.cast("")
   @scala.inline
   def arraybuffer: typingsSlinky.reactDashNative.reactDashNativeStrings.arraybuffer = this.cast("arraybuffer")
   @scala.inline

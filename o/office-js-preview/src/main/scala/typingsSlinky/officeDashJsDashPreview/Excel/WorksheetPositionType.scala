@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object WorksheetPositionType extends js.Object {
   @js.native
   sealed trait none extends WorksheetPositionType
   
-  /* "After" */ val after: typingsSlinky.officeDashJsDashPreview.Excel.WorksheetPositionType.after with String = js.native
-  /* "Before" */ val before: typingsSlinky.officeDashJsDashPreview.Excel.WorksheetPositionType.before with String = js.native
-  /* "Beginning" */ val beginning: typingsSlinky.officeDashJsDashPreview.Excel.WorksheetPositionType.beginning with String = js.native
-  /* "End" */ val end: typingsSlinky.officeDashJsDashPreview.Excel.WorksheetPositionType.end with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJsDashPreview.Excel.WorksheetPositionType.none with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[WorksheetPositionType with String] = js.native
+  /* "After" */ @js.native
+  object after extends TopLevel[after with String]
+  
+  /* "Before" */ @js.native
+  object before extends TopLevel[before with String]
+  
+  /* "Beginning" */ @js.native
+  object beginning extends TopLevel[beginning with String]
+  
+  /* "End" */ @js.native
+  object end extends TopLevel[end with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
 }
 

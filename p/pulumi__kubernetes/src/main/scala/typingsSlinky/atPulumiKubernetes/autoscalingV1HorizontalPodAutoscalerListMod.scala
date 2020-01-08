@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`autoscaling/v1`
-import typingsSlinky.atPulumiKubernetes.autoscalingV1HorizontalPodAutoscalerListMod.HorizontalPodAutoscalerList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.autoscalingSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.autoscaling.v1.HorizontalPodAutoscaler
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object autoscalingV1HorizontalPodAutoscalerListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`autoscaling/v1`] = js.native
+    val apiVersion: Output[autoscalingSlashv1] = js.native
     /**
       * list of horizontal pod autoscaler objects.
       */

@@ -1,11 +1,11 @@
 package typingsSlinky.xadesjs.xadesjsMod.xml
 
-import typingsSlinky.xmlDashCore.xmlDashCoreMod.XmlCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("xadesjs", "xml.SigningCertificate")
 @js.native
-class SigningCertificate () extends XmlCollection[Cert]
+class SigningCertificate ()
+  extends typingsSlinky.xadesjs.buildTypesXmlMod.SigningCertificate
 

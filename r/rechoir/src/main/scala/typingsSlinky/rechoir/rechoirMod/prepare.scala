@@ -1,7 +1,7 @@
 package typingsSlinky.rechoir.rechoirMod
 
 import typingsSlinky.interpret.interpretMod.Extensions
-import typingsSlinky.rechoir.rechoirNumbers.`true`
+import typingsSlinky.rechoir.rechoirBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

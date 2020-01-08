@@ -20,8 +20,9 @@ object PortWidget
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, name */
+  /* The following DOM/SVG props were specified: className */
   def apply(
+    name: String,
     node: NodeModel,
     baseClass: String = null,
     extraProps: js.Any = null,
@@ -30,7 +31,7 @@ object PortWidget
     tag.type, 
     typingsSlinky.stormDashReactDashDiagrams.distSrcWidgetsPortWidgetMod.PortWidget
   ] = {
-    val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     if (baseClass != null) __obj.updateDynamic("baseClass")(baseClass.asInstanceOf[js.Any])
     if (extraProps != null) __obj.updateDynamic("extraProps")(extraProps.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

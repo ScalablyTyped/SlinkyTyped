@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,15 +59,31 @@ object EvaluationOperationStatus extends js.Object {
   @js.native
   sealed trait TimedOut extends EvaluationOperationStatus
   
-  /* 3 */ val Cancelled: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.Cancelled with Double = js.native
-  /* 5 */ val Failed: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.Failed with Double = js.native
-  /* 2 */ val InProgress: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.InProgress with Double = js.native
-  /* 7 */ val NotFound: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.NotFound with Double = js.native
-  /* 0 */ val NotSet: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.NotSet with Double = js.native
-  /* 1 */ val Queued: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.Queued with Double = js.native
-  /* 4 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.Succeeded with Double = js.native
-  /* 6 */ val TimedOut: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.EvaluationOperationStatus.TimedOut with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EvaluationOperationStatus with Double] = js.native
+  /* 3 */ @js.native
+  object Cancelled extends TopLevel[Cancelled with Double]
+  
+  /* 5 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 2 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
+  /* 7 */ @js.native
+  object NotFound extends TopLevel[NotFound with Double]
+  
+  /* 0 */ @js.native
+  object NotSet extends TopLevel[NotSet with Double]
+  
+  /* 1 */ @js.native
+  object Queued extends TopLevel[Queued with Double]
+  
+  /* 4 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
+  /* 6 */ @js.native
+  object TimedOut extends TopLevel[TimedOut with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.googleDashGax.buildSrcStreamingCallsStreamingMod
 
-import typingsSlinky.googleDashGax.googleDashGaxNumbers.`false`
+import typingsSlinky.googleDashGax.googleDashGaxBooleans.`false`
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable

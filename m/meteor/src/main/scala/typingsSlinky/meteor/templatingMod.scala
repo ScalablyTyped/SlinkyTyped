@@ -1,6 +1,7 @@
 package typingsSlinky.meteor
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +23,9 @@ object templatingMod extends js.Object {
     var body: typingsSlinky.meteor.Blaze.Template = js.native
   }
   
-  var Template: typingsSlinky.meteor.templatingMod.TemplateStatic = js.native
+  @js.native
+  object Template
+    extends TopLevel[typingsSlinky.meteor.templatingMod.TemplateStatic]
+  
 }
 

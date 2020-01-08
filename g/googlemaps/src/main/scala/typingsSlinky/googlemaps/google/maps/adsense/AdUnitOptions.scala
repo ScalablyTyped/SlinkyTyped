@@ -1,5 +1,6 @@
 package typingsSlinky.googlemaps.google.maps.adsense
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.ControlPosition
 import typingsSlinky.googlemaps.google.maps.Map
 import scala.scalajs.js
@@ -11,7 +12,7 @@ trait AdUnitOptions extends js.Object {
   var borderColor: js.UndefOr[String] = js.undefined
   var channelNumber: js.UndefOr[String] = js.undefined
   var format: js.UndefOr[AdFormat] = js.undefined
-  var map: js.UndefOr[Map] = js.undefined
+  var map: js.UndefOr[Map[Element]] = js.undefined
   var position: js.UndefOr[ControlPosition] = js.undefined
   var publisherId: js.UndefOr[String] = js.undefined
   var textColor: js.UndefOr[String] = js.undefined
@@ -26,7 +27,7 @@ object AdUnitOptions {
     borderColor: String = null,
     channelNumber: String = null,
     format: AdFormat = null,
-    map: Map = null,
+    map: Map[Element] = null,
     position: ControlPosition = null,
     publisherId: String = null,
     textColor: String = null,

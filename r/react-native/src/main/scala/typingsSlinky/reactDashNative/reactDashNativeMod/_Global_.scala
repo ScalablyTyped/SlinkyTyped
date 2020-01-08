@@ -1,7 +1,5 @@
 package typingsSlinky.reactDashNative.reactDashNativeMod
 
-import typingsSlinky.reactDashNative.reactDashNativeMod._Global_.Console
-import typingsSlinky.reactDashNative.reactDashNativeMod._Global_.NodeRequire
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

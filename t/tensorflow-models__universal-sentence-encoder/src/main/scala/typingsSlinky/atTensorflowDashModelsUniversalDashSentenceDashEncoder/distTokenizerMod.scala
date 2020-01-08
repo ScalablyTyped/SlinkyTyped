@@ -1,6 +1,5 @@
 package typingsSlinky.atTensorflowDashModelsUniversalDashSentenceDashEncoder
 
-import typingsSlinky.atTensorflowDashModelsUniversalDashSentenceDashEncoder.distTokenizerMod.Vocabulary
 import typingsSlinky.atTensorflowDashModelsUniversalDashSentenceDashEncoder.distTokenizerTrieMod.Trie
 import scala.scalajs.js
 import scala.scalajs.js.`|`

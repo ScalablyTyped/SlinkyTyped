@@ -1,7 +1,7 @@
 
 # Scala.js typings for semantic-ui-react
 
-Typings are for version 0.88.1
+Typings are for version 0.88.2
 
 ## Library description:
 The official Semantic-UI-React integration.
@@ -10,9 +10,9 @@ The official Semantic-UI-React integration.
 | ------------------ | :-------------: |
 | Full name          | semantic-ui-react |
 | Keywords           | - |
-| # releases         | 50 |
-| # dependents       | 322 |
-| # downloads        | 6394932 |
+| # releases         | 32 |
+| # dependents       | 405 |
+| # downloads        | 8296103 |
 | # stars            | 14 |
 
 ## Links

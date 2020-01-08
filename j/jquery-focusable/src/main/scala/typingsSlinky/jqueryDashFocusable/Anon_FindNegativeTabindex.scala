@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryDashFocusable
 
-import typingsSlinky.jqueryDashFocusable.jqueryDashFocusableNumbers.`true`
+import typingsSlinky.jqueryDashFocusable.jqueryDashFocusableBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

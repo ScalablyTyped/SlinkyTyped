@@ -6,9 +6,10 @@ import scala.scalajs.js.annotation._
 
 package object chart {
   import typingsSlinky.extjs.Ext.IBase
+  import typingsSlinky.extjs.Ext.draw.IComponent
 
   type ICallout = IBase
   type IShape = IBase
   type ITip = IBase
-  type ITipSurface = typingsSlinky.extjs.Ext.draw.IComponent
+  type ITipSurface = IComponent
 }

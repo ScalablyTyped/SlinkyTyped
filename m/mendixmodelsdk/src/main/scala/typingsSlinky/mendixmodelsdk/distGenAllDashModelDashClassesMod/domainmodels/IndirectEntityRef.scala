@@ -3,6 +3,7 @@ package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.domainmod
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.EntityWidget
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.CreateObjectClientAction
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.EntityPathSource
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.NewButton
@@ -37,7 +38,7 @@ class IndirectEntityRef protected ()
 @js.native
 object IndirectEntityRef extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

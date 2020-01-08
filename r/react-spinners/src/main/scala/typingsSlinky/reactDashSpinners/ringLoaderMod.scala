@@ -4,7 +4,6 @@ import typingsSlinky.react.reactMod.Component
 import typingsSlinky.reactDashSpinners.interfacesMod.LoaderSizeProps
 import typingsSlinky.reactDashSpinners.interfacesMod.StyleFunction
 import typingsSlinky.reactDashSpinners.interfacesMod.StyleFunctionWithIndex
-import typingsSlinky.reactDashSpinners.ringLoaderMod.Loader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

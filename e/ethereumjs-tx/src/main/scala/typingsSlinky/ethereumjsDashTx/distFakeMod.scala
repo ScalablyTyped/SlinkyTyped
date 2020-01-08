@@ -1,6 +1,5 @@
 package typingsSlinky.ethereumjsDashTx
 
-import typingsSlinky.ethereumjsDashTx.distFakeMod.FakeTransaction
 import typingsSlinky.ethereumjsDashTx.distTypesMod.BufferLike
 import typingsSlinky.ethereumjsDashTx.distTypesMod.FakeTxData
 import typingsSlinky.ethereumjsDashTx.distTypesMod.PrefixedHexString

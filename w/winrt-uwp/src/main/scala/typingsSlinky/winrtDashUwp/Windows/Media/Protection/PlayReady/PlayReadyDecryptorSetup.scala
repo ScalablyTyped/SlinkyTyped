@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object PlayReadyDecryptorSetup extends js.Object {
   @js.native
   sealed trait uninitialized extends PlayReadyDecryptorSetup
   
-  /* 1 */ val onDemand: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.PlayReadyDecryptorSetup.onDemand with Double = js.native
-  /* 0 */ val uninitialized: typingsSlinky.winrtDashUwp.Windows.Media.Protection.PlayReady.PlayReadyDecryptorSetup.uninitialized with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlayReadyDecryptorSetup with Double] = js.native
+  /* 1 */ @js.native
+  object onDemand extends TopLevel[onDemand with Double]
+  
+  /* 0 */ @js.native
+  object uninitialized extends TopLevel[uninitialized with Double]
+  
 }
 

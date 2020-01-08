@@ -3,6 +3,7 @@ package typingsSlinky.antdDashMobileDashRn.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.lg
 import typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnStrings.md
@@ -34,6 +35,9 @@ object WhiteSpace
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnMod.WhiteSpace] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.antdDashMobileDashRn.antdDashMobileDashRnMod.WhiteSpace](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = WhiteSpaceProps
 }
 

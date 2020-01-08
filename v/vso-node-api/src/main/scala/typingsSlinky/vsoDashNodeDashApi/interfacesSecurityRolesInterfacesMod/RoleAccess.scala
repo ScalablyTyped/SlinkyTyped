@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object RoleAccess extends js.Object {
   @js.native
   sealed trait Inherited extends RoleAccess
   
-  /* 1 */ val Assigned: typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod.RoleAccess.Assigned with Double = js.native
-  /* 2 */ val Inherited: typingsSlinky.vsoDashNodeDashApi.interfacesSecurityRolesInterfacesMod.RoleAccess.Inherited with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RoleAccess with Double] = js.native
+  /* 1 */ @js.native
+  object Assigned extends TopLevel[Assigned with Double]
+  
+  /* 2 */ @js.native
+  object Inherited extends TopLevel[Inherited with Double]
+  
 }
 

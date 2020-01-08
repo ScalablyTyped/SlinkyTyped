@@ -1,6 +1,6 @@
 package typingsSlinky.ember.emberMod.Ember
 
-import typingsSlinky.ember.emberNumbers.`true`
+import typingsSlinky.ember.emberBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

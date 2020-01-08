@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Comment
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.snabbdom.htmldomapiMod.DOMAPI
 import typingsSlinky.snabbdom.modulesAttributesMod._Global_.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

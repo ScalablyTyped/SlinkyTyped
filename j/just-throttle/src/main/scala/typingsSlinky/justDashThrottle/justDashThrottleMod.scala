@@ -1,7 +1,7 @@
 package typingsSlinky.justDashThrottle
 
-import typingsSlinky.justDashThrottle.justDashThrottleNumbers.`false`
-import typingsSlinky.justDashThrottle.justDashThrottleNumbers.`true`
+import typingsSlinky.justDashThrottle.justDashThrottleBooleans.`false`
+import typingsSlinky.justDashThrottle.justDashThrottleBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

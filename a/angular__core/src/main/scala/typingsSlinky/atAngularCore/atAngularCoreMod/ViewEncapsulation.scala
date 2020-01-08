@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,11 +49,19 @@ object ViewEncapsulation extends js.Object {
   @js.native
   sealed trait ShadowDom extends ViewEncapsulation
   
-  /* 0 */ val Emulated: typingsSlinky.atAngularCore.atAngularCoreMod.ViewEncapsulation.Emulated with Double = js.native
-  /* 1 */ val Native: typingsSlinky.atAngularCore.atAngularCoreMod.ViewEncapsulation.Native with Double = js.native
-  /* 2 */ val None: typingsSlinky.atAngularCore.atAngularCoreMod.ViewEncapsulation.None with Double = js.native
-  /* 3 */ val ShadowDom: typingsSlinky.atAngularCore.atAngularCoreMod.ViewEncapsulation.ShadowDom with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ViewEncapsulation with Double] = js.native
+  /* 0 */ @js.native
+  object Emulated extends TopLevel[Emulated with Double]
+  
+  /* 1 */ @js.native
+  object Native extends TopLevel[Native with Double]
+  
+  /* 2 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object ShadowDom extends TopLevel[ShadowDom with Double]
+  
 }
 

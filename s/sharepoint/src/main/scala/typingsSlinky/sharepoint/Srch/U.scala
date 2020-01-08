@@ -1,11 +1,11 @@
 package typingsSlinky.sharepoint.Srch
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.ResultTable
 import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.ResultTableCollection
-import typingsSlinky.sharepoint.Srch.U.LoadScriptsProgress
 import typingsSlinky.sharepoint.sharepointStrings.Body
 import typingsSlinky.sharepoint.sharepointStrings.Group
 import typingsSlinky.sharepoint.sharepointStrings.IsFirstPinnedResultBlock
@@ -379,11 +379,17 @@ object U extends js.Object {
     @js.native
     sealed trait success extends LoadScriptsProgress
     
-    /* 2 */ val failure: typingsSlinky.sharepoint.Srch.U.LoadScriptsProgress.failure with Double = js.native
-    /* 0 */ val loading: typingsSlinky.sharepoint.Srch.U.LoadScriptsProgress.loading with Double = js.native
-    /* 1 */ val success: typingsSlinky.sharepoint.Srch.U.LoadScriptsProgress.success with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[LoadScriptsProgress with Double] = js.native
+    /* 2 */ @js.native
+    object failure extends TopLevel[failure with Double]
+    
+    /* 0 */ @js.native
+    object loading extends TopLevel[loading with Double]
+    
+    /* 1 */ @js.native
+    object success extends TopLevel[success with Double]
+    
   }
   
   /* static members */

@@ -1,8 +1,11 @@
 package typingsSlinky.officeDashJs.OneNote.Interfaces
 
 import typingsSlinky.officeDashJs.OneNote.ParagraphType
+import typingsSlinky.officeDashJs.officeDashJsStrings.Image
 import typingsSlinky.officeDashJs.officeDashJsStrings.Ink
 import typingsSlinky.officeDashJs.officeDashJsStrings.Other
+import typingsSlinky.officeDashJs.officeDashJsStrings.RichText
+import typingsSlinky.officeDashJs.officeDashJsStrings.Table
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,9 +60,7 @@ trait ParagraphData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var `type`: js.UndefOr[
-    ParagraphType | typingsSlinky.officeDashJs.officeDashJsStrings.RichText | typingsSlinky.officeDashJs.officeDashJsStrings.Image | typingsSlinky.officeDashJs.officeDashJsStrings.Table | Ink | Other
-  ] = js.undefined
+  var `type`: js.UndefOr[ParagraphType | RichText | Image | Table | Ink | Other] = js.undefined
 }
 
 object ParagraphData {
@@ -71,7 +72,7 @@ object ParagraphData {
     paragraphs: js.Array[ParagraphData] = null,
     richText: RichTextData = null,
     table: TableData = null,
-    `type`: ParagraphType | typingsSlinky.officeDashJs.officeDashJsStrings.RichText | typingsSlinky.officeDashJs.officeDashJsStrings.Image | typingsSlinky.officeDashJs.officeDashJsStrings.Table | Ink | Other = null
+    `type`: ParagraphType | RichText | Image | Table | Ink | Other = null
   ): ParagraphData = {
     val __obj = js.Dynamic.literal()
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])

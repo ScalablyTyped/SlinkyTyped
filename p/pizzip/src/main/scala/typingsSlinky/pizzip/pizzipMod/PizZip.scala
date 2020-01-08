@@ -65,13 +65,13 @@ trait PizZip extends js.Object {
     * @param options the options to generate the zip file
     */
   def generate(): String = js.native
-  def generate(options: GenerateOptions with Anon_Nodebuffer): Buffer = js.native
+  def generate(options: GenerateOptions with Anon_Base64String): String = js.native
   @JSName("generate")
   def generate_ArrayBuffer(options: GenerateOptions with Anon_Arraybuffer): scala.scalajs.js.typedarray.ArrayBuffer = js.native
   @JSName("generate")
   def generate_Blob(options: GenerateOptions with Anon_Blob): Blob = js.native
   @JSName("generate")
-  def generate_String(options: GenerateOptions with Anon_Base64String): String = js.native
+  def generate_Buffer(options: GenerateOptions with Anon_Nodebuffer): Buffer = js.native
   @JSName("generate")
   def generate_Uint8Array(options: GenerateOptions with Anon_Type): scala.scalajs.js.typedarray.Uint8Array = js.native
   /**

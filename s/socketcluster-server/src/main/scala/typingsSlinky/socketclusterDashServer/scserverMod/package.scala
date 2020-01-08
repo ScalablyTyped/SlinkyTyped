@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object scserverMod {
   import org.scalablytyped.runtime.StringDictionary
   import typingsSlinky.socketclusterDashServer.Anon_Channel
-  import typingsSlinky.socketclusterDashServer.socketclusterDashServerNumbers.`true`
+  import typingsSlinky.socketclusterDashServer.socketclusterDashServerBooleans.`true`
 
   type AuthToken = StringDictionary[js.Any]
   type badSocketAuthTokenListenerFunction = js.Function2[

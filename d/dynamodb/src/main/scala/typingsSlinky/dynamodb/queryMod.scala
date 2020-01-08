@@ -2,7 +2,6 @@ package typingsSlinky.dynamodb
 
 import typingsSlinky.dynamodb.callbackMod.Callback
 import typingsSlinky.dynamodb.executeFilterMod.ExecuteFilter
-import typingsSlinky.dynamodb.queryMod.Query
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

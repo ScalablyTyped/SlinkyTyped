@@ -1,7 +1,5 @@
 package typingsSlinky.domDashHelpers
 
-import typingsSlinky.domDashHelpers.cjsTypesMod.CamelProperty
-import typingsSlinky.domDashHelpers.cjsTypesMod.HyphenProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

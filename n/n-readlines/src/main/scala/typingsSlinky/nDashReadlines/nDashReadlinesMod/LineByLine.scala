@@ -1,6 +1,6 @@
 package typingsSlinky.nDashReadlines.nDashReadlinesMod
 
-import typingsSlinky.nDashReadlines.nDashReadlinesNumbers.`false`
+import typingsSlinky.nDashReadlines.nDashReadlinesBooleans.`false`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

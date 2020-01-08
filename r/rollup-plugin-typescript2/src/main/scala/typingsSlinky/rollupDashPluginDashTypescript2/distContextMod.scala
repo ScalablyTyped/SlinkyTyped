@@ -1,7 +1,6 @@
 package typingsSlinky.rollupDashPluginDashTypescript2
 
-import typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.IContext
-import typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.VerbosityLevel
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,12 +45,20 @@ object distContextMod extends js.Object {
     @js.native
     sealed trait Warning extends VerbosityLevel
     
-    /* 3 */ val Debug: typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.VerbosityLevel.Debug with Double = js.native
-    /* 0 */ val Error: typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.VerbosityLevel.Error with Double = js.native
-    /* 2 */ val Info: typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.VerbosityLevel.Info with Double = js.native
-    /* 1 */ val Warning: typingsSlinky.rollupDashPluginDashTypescript2.distContextMod.VerbosityLevel.Warning with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[VerbosityLevel with Double] = js.native
+    /* 3 */ @js.native
+    object Debug extends TopLevel[Debug with Double]
+    
+    /* 0 */ @js.native
+    object Error extends TopLevel[Error with Double]
+    
+    /* 2 */ @js.native
+    object Info extends TopLevel[Info with Double]
+    
+    /* 1 */ @js.native
+    object Warning extends TopLevel[Warning with Double]
+    
   }
   
 }

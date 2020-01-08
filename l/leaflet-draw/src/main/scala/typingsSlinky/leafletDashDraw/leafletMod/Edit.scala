@@ -2,12 +2,6 @@ package typingsSlinky.leafletDashDraw.leafletMod
 
 import typingsSlinky.leaflet.leafletMod.Handler
 import typingsSlinky.leaflet.leafletMod.LatLngExpression
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.Circle
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.CircleMarker
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.Marker
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.Polyline
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.Rectangle
-import typingsSlinky.leafletDashDraw.leafletMod.Edit.SimpleShape
 import typingsSlinky.leafletDashDraw.leafletMod.EditOptions.EditPolyVerticesEditOptions
 import typingsSlinky.leafletDashDraw.leafletMod.EditOptions.EditSimpleShapeOptions
 import scala.scalajs.js

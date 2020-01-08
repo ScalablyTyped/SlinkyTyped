@@ -2,7 +2,7 @@ package typingsSlinky.reactDashLoadable.LoadableExport
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactDashLoadable.reactDashLoadableNumbers.`false`
+import typingsSlinky.reactDashLoadable.reactDashLoadableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ object OptionsWithRender {
   @scala.inline
   def apply[Props, Exports /* <: js.Object */](
     loader: () => js.Promise[Exports],
-    loading: ReactComponentClass[LoadingComponentProps] | js.Function0[Null],
+    loading: ReactComponentClass[LoadingComponentProps],
     render: (Exports, Props) => TagMod[Any],
     delay: Double | `false` = null,
     modules: js.Array[String] = null,

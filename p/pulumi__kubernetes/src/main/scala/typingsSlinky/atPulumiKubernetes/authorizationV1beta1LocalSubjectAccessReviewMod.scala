@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`authorizationDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.authorizationV1beta1LocalSubjectAccessReviewMod.LocalSubjectAccessReview
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.authorizationDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.authorization.v1beta1.SubjectAccessReviewSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.authorization.v1beta1.SubjectAccessReviewStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
@@ -42,7 +41,7 @@ object authorizationV1beta1LocalSubjectAccessReviewMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`authorizationDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[authorizationDotk8sDotioSlashv1beta1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

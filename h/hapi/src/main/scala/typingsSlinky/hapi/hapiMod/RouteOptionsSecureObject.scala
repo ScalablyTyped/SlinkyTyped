@@ -2,8 +2,8 @@ package typingsSlinky.hapi.hapiMod
 
 import typingsSlinky.hapi.Anon_Allowfrom
 import typingsSlinky.hapi.Anon_IncludeSubdomains
-import typingsSlinky.hapi.hapiNumbers.`false`
-import typingsSlinky.hapi.hapiNumbers.`true`
+import typingsSlinky.hapi.hapiBooleans.`false`
+import typingsSlinky.hapi.hapiBooleans.`true`
 import typingsSlinky.hapi.hapiStrings.deny
 import typingsSlinky.hapi.hapiStrings.sameorigin
 import scala.scalajs.js

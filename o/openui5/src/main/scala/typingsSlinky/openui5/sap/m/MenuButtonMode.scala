@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object MenuButtonMode extends js.Object {
   @js.native
   sealed trait Split extends MenuButtonMode
   
-  /* 0 */ val Regular: typingsSlinky.openui5.sap.m.MenuButtonMode.Regular with Double = js.native
-  /* 1 */ val Split: typingsSlinky.openui5.sap.m.MenuButtonMode.Split with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MenuButtonMode with Double] = js.native
+  /* 0 */ @js.native
+  object Regular extends TopLevel[Regular with Double]
+  
+  /* 1 */ @js.native
+  object Split extends TopLevel[Split with Double]
+  
 }
 

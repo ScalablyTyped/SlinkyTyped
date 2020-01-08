@@ -3,24 +3,6 @@
 
 Typings are for version 4.0.1
 
-## Library description:
-Client library to use the IBM Watson Services
-
-|                    |                 |
-| ------------------ | :-------------: |
-| Full name          | watson-developer-cloud |
-| Keywords           | assistant, compare comply, discovery, ibm, natural language classifier, natural language understanding, personality insights, speech to text, text to speech, tone analyzer, tone_analyzer, visual recognition, watson developer cloud, watson, wdc |
-| # releases         | 76 |
-| # dependents       | 95 |
-| # downloads        | 868303 |
-| # stars            | 32 |
-
-## Links
-- [Homepage](https://github.com/watson-developer-cloud/node-sdk#readme)
-- [Bugs](https://github.com/watson-developer-cloud/node-sdk/issues)
-- [Repository](https://github.com/watson-developer-cloud/node-sdk)
-- [Npm](https://www.npmjs.com/package/watson-developer-cloud)
-    
 
 
 ## Note

@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc
 
-import typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel
-import typingsSlinky.typedoc.distLibUtilsLoggersMod.Logger
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.typescript.typescriptMod.Diagnostic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -57,13 +56,23 @@ object distLibUtilsLoggersMod extends js.Object {
     @js.native
     sealed trait Warn extends LogLevel
     
-    /* 3 */ val Error: typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel.Error with Double = js.native
-    /* 1 */ val Info: typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel.Info with Double = js.native
-    /* 4 */ val Success: typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel.Success with Double = js.native
-    /* 0 */ val Verbose: typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel.Verbose with Double = js.native
-    /* 2 */ val Warn: typingsSlinky.typedoc.distLibUtilsLoggersMod.LogLevel.Warn with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[LogLevel with Double] = js.native
+    /* 3 */ @js.native
+    object Error extends TopLevel[Error with Double]
+    
+    /* 1 */ @js.native
+    object Info extends TopLevel[Info with Double]
+    
+    /* 4 */ @js.native
+    object Success extends TopLevel[Success with Double]
+    
+    /* 0 */ @js.native
+    object Verbose extends TopLevel[Verbose with Double]
+    
+    /* 2 */ @js.native
+    object Warn extends TopLevel[Warn with Double]
+    
   }
   
 }

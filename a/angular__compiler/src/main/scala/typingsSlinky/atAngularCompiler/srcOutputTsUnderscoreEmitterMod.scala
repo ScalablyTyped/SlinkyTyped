@@ -5,7 +5,6 @@ import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.Expressio
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.ExternalReference
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.Statement
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.Type
-import typingsSlinky.atAngularCompiler.srcOutputTsUnderscoreEmitterMod.ReferenceFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

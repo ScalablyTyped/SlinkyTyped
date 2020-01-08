@@ -6,7 +6,6 @@ import typingsSlinky.atUirouterCore.libStateInterfaceMod.StateOrName
 import typingsSlinky.atUirouterCore.libStateInterfaceMod._RedirectToResult
 import typingsSlinky.atUirouterCore.libStateStateObjectMod.StateObject
 import typingsSlinky.atUirouterCore.libStateStateRegistryMod.StateRegistry
-import typingsSlinky.atUirouterCore.libStateTargetStateMod.TargetState
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

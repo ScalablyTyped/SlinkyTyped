@@ -1,8 +1,5 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sensors
 
-import typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.Custom.CustomSensor
-import typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.Custom.CustomSensorReading
-import typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtDashUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtDashUwp.Windows.Foundation.IPromiseWithIAsyncOperation

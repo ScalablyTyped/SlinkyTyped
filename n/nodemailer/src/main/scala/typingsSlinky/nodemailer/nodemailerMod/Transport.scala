@@ -1,7 +1,7 @@
 package typingsSlinky.nodemailer.nodemailerMod
 
 import typingsSlinky.nodemailer.libMailerMod.^
-import typingsSlinky.nodemailer.nodemailerNumbers.`true`
+import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashSimpleDashMaps.reactDashSimpleDashMapsMod
 
-import typingsSlinky.react.reactMod.Component
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.react.reactMod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-simple-maps", "Geographies")
 @js.native
-class Geographies ()
-  extends Component[GeographiesProps, js.Object, js.Any]
+object Geographies extends TopLevel[FunctionComponent[GeographiesProps]]
 

@@ -1,7 +1,7 @@
 
 # Scala.js typings for apollo-datasource
 
-Typings are for version 0.6.3
+Typings are for version 0.6.4
 
 
 
@@ -9,9 +9,9 @@ Typings are for version 0.6.3
 | ------------------ | :-------------: |
 | Full name          | apollo-datasource |
 | Keywords           | - |
-| # releases         | 25 |
-| # dependents       | 21 |
-| # downloads        | 7117397 |
+| # releases         | 36 |
+| # dependents       | 32 |
+| # downloads        | 22557695 |
 | # stars            | 0 |
 
 ## Links

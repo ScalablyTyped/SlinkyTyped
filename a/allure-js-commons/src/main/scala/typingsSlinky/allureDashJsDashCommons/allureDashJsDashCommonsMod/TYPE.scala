@@ -1,5 +1,6 @@
 package typingsSlinky.allureDashJsDashCommons.allureDashJsDashCommonsMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object TYPE extends js.Object {
   @js.native
   sealed trait TEXT extends TYPE
   
-  /* "html" */ val HTML: typingsSlinky.allureDashJsDashCommons.allureDashJsDashCommonsMod.TYPE.HTML with String = js.native
-  /* "markdown" */ val MARKDOWN: typingsSlinky.allureDashJsDashCommons.allureDashJsDashCommonsMod.TYPE.MARKDOWN with String = js.native
-  /* "text" */ val TEXT: typingsSlinky.allureDashJsDashCommons.allureDashJsDashCommonsMod.TYPE.TEXT with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TYPE with String] = js.native
+  /* "html" */ @js.native
+  object HTML extends TopLevel[HTML with String]
+  
+  /* "markdown" */ @js.native
+  object MARKDOWN extends TopLevel[MARKDOWN with String]
+  
+  /* "text" */ @js.native
+  object TEXT extends TopLevel[TEXT with String]
+  
 }
 

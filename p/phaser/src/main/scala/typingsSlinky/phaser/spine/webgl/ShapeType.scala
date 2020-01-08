@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.spine.webgl
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ShapeType extends js.Object {
   @js.native
   sealed trait Point extends ShapeType
   
-  /* 4 */ val Filled: typingsSlinky.phaser.spine.webgl.ShapeType.Filled with Double = js.native
-  /* 1 */ val Line: typingsSlinky.phaser.spine.webgl.ShapeType.Line with Double = js.native
-  /* 0 */ val Point: typingsSlinky.phaser.spine.webgl.ShapeType.Point with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ShapeType with Double] = js.native
+  /* 4 */ @js.native
+  object Filled extends TopLevel[Filled with Double]
+  
+  /* 1 */ @js.native
+  object Line extends TopLevel[Line with Double]
+  
+  /* 0 */ @js.native
+  object Point extends TopLevel[Point with Double]
+  
 }
 

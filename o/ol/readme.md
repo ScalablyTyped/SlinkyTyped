@@ -10,9 +10,9 @@ OpenLayers mapping library
 | ------------------ | :-------------: |
 | Full name          | ol |
 | Keywords           | map, mapping, ol |
-| # releases         | 61 |
-| # dependents       | 95 |
-| # downloads        | 716400 |
+| # releases         | 327 |
+| # dependents       | 163 |
+| # downloads        | 2062854 |
 | # stars            | 10 |
 
 ## Links

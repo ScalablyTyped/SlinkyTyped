@@ -1,6 +1,5 @@
 package typingsSlinky.promiseDashMapDashLimit
 
-import typingsSlinky.promiseDashMapDashLimit.promiseDashMapDashLimitMod.IIteratee
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.iri
 
-import typingsSlinky.iri.iriMod.IRI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

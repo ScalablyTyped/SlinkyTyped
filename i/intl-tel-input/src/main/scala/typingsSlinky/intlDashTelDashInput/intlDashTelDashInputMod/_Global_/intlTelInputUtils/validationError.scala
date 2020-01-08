@@ -1,5 +1,6 @@
 package typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object validationError extends js.Object {
   @js.native
   sealed trait TOO_SHORT extends validationError
   
-  /* 1 */ val INVALID_COUNTRY_CODE: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.validationError.INVALID_COUNTRY_CODE with Double = js.native
-  /* 0 */ val IS_POSSIBLE: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.validationError.IS_POSSIBLE with Double = js.native
-  /* 4 */ val NOT_A_NUMBER: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.validationError.NOT_A_NUMBER with Double = js.native
-  /* 3 */ val TOO_LONG: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.validationError.TOO_LONG with Double = js.native
-  /* 2 */ val TOO_SHORT: typingsSlinky.intlDashTelDashInput.intlDashTelDashInputMod._Global_.intlTelInputUtils.validationError.TOO_SHORT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[validationError with Double] = js.native
+  /* 1 */ @js.native
+  object INVALID_COUNTRY_CODE extends TopLevel[INVALID_COUNTRY_CODE with Double]
+  
+  /* 0 */ @js.native
+  object IS_POSSIBLE extends TopLevel[IS_POSSIBLE with Double]
+  
+  /* 4 */ @js.native
+  object NOT_A_NUMBER extends TopLevel[NOT_A_NUMBER with Double]
+  
+  /* 3 */ @js.native
+  object TOO_LONG extends TopLevel[TOO_LONG with Double]
+  
+  /* 2 */ @js.native
+  object TOO_SHORT extends TopLevel[TOO_SHORT with Double]
+  
 }
 

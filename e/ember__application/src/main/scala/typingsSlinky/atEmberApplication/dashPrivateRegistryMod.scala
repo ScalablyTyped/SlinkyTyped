@@ -1,6 +1,5 @@
 package typingsSlinky.atEmberApplication
 
-import typingsSlinky.atEmberApplication.dashPrivateRegistryMod.Registry
 import typingsSlinky.atEmberObject.dashPrivateTypesMod.EmberClassConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,7 +4,6 @@ import typingsSlinky.inquirer.inquirerMod.Answers
 import typingsSlinky.inquirer.inquirerMod.DistinctQuestion
 import typingsSlinky.inquirer.inquirerMod.KeyUnion
 import typingsSlinky.inquirer.inquirerMod.UnionToIntersection
-import typingsSlinky.inquirer.libUtilsUtilsMod.QuestionProperty
 import typingsSlinky.rxjs.rxjsMod.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

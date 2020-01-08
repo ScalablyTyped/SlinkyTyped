@@ -1,6 +1,6 @@
 package typingsSlinky.tar
 
-import typingsSlinky.tar.tarNumbers.`true`
+import typingsSlinky.tar.tarBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

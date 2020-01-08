@@ -6,15 +6,15 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.LegacyRef
-import typingsSlinky.reactDashWidgets.libComboboxMod.ComboBoxMessages
-import typingsSlinky.reactDashWidgets.libComboboxMod.ComboBoxProps
+import typingsSlinky.reactDashWidgets.libComboboxMod.ComboboxMessages
+import typingsSlinky.reactDashWidgets.libComboboxMod.ComboboxProps
+import typingsSlinky.reactDashWidgets.libComboboxMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Combobox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
   @JSImport("react-widgets/lib/Combobox", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object
@@ -39,7 +39,7 @@ object Combobox
     itemComponent: ReactComponentClass[_] = null,
     listComponent: ReactComponentClass[_] | String = null,
     listProps: js.Object = null,
-    messages: ComboBoxMessages = null,
+    messages: ComboboxMessages = null,
     minLength: Int | Double = null,
     onToggle: /* isOpen */ Boolean => Unit = null,
     popupTransition: ReactComponentClass[_] | String = null,
@@ -49,7 +49,7 @@ object Combobox
     value: js.Any = null,
     valueField: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
+  ): BuildingComponent[tag.type, ^] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
     if (busySpinner != null) __obj.updateDynamic("busySpinner")(busySpinner.asInstanceOf[js.Any])
@@ -80,6 +80,7 @@ object Combobox
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = ComboBoxProps
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDashWidgets.libComboboxMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = ComboboxProps
 }
 

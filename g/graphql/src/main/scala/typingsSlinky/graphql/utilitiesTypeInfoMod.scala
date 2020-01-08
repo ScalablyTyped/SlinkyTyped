@@ -13,7 +13,6 @@ import typingsSlinky.graphql.typeDefinitionMod.GraphQLOutputType
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLType
 import typingsSlinky.graphql.typeDirectivesMod.GraphQLDirective
 import typingsSlinky.graphql.typeSchemaMod.GraphQLSchema
-import typingsSlinky.graphql.utilitiesTypeInfoMod.getFieldDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

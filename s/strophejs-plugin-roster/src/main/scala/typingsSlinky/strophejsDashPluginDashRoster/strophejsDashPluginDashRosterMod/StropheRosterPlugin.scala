@@ -1,6 +1,6 @@
 package typingsSlinky.strophejsDashPluginDashRoster.strophejsDashPluginDashRosterMod
 
-import typingsSlinky.strophejsDashPluginDashRoster.strophejsDashPluginDashRosterNumbers.`false`
+import typingsSlinky.strophejsDashPluginDashRoster.strophejsDashPluginDashRosterBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

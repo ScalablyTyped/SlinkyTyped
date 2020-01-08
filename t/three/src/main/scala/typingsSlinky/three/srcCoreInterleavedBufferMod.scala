@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.three.srcCoreInterleavedBufferAttributeMod.InterleavedBufferAttribute
-import typingsSlinky.three.srcCoreInterleavedBufferMod.InterleavedBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -3,6 +3,7 @@ package typingsSlinky.stripe.stripeMod.payouts
 import typingsSlinky.stripe.stripeMod.IMetadata
 import typingsSlinky.stripe.stripeMod.IResourceObject
 import typingsSlinky.stripe.stripeMod.balance.IBalanceTransaction
+import typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount
 import typingsSlinky.stripe.stripeMod.cards.ICardHash
 import typingsSlinky.stripe.stripeStrings.alipay_account
 import typingsSlinky.stripe.stripeStrings.bank_account
@@ -51,7 +52,7 @@ trait IPayout extends IResourceObject {
   /**
     * ID of the bank account or card the payout was sent to. [Expandable]
     */
-  var destination: String | typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount | ICardHash
+  var destination: String | IBankAccount | ICardHash
   /**
     * If the payout failed or was canceled, this will be the ID of the balance
     * transaction that reversed the initial balance transaction, and puts the
@@ -118,7 +119,7 @@ object IPayout {
     created: Double,
     currency: String,
     description: String,
-    destination: String | typingsSlinky.stripe.stripeMod.bankAccounts.IBankAccount | ICardHash,
+    destination: String | IBankAccount | ICardHash,
     failure_balance_transaction: String | IBalanceTransaction,
     failure_code: String,
     failure_message: String,

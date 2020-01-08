@@ -1,7 +1,5 @@
 package typingsSlinky.copyDashPaste
 
-import typingsSlinky.copyDashPaste.copyDashPasteMod.CopyCallback
-import typingsSlinky.copyDashPaste.copyDashPasteMod.PasteCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

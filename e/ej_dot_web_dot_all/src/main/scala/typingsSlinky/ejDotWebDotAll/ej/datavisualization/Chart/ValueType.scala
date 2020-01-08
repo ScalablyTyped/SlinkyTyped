@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,23 @@ object ValueType extends js.Object {
   @js.native
   sealed trait Logarithmic extends ValueType
   
-  /* 1 */ val Category: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ValueType.Category with scala.Double = js.native
-  /* 2 */ val DateTime: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ValueType.DateTime with scala.Double = js.native
-  /* 0 */ val Double: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ValueType.Double with scala.Double = js.native
-  /* 3 */ val Logarithmic: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.ValueType.Logarithmic with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[ValueType with scala.Double] = js.native
+  /* 1 */ @js.native
+  object Category
+    extends TopLevel[Category with scala.Double]
+  
+  /* 2 */ @js.native
+  object DateTime
+    extends TopLevel[DateTime with scala.Double]
+  
+  /* 0 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 3 */ @js.native
+  object Logarithmic
+    extends TopLevel[Logarithmic with scala.Double]
+  
 }
 

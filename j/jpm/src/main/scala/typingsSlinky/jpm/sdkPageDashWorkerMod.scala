@@ -3,7 +3,6 @@ package typingsSlinky.jpm
 import typingsSlinky.jpm.FFAddonSDK.Port
 import typingsSlinky.jpm.jpmStrings.error
 import typingsSlinky.jpm.jpmStrings.message
-import typingsSlinky.jpm.sdkPageDashWorkerMod.PageWorker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

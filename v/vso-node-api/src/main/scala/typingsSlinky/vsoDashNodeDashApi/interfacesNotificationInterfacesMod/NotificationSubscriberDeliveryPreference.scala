@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object NotificationSubscriberDeliveryPreference extends js.Object {
   @js.native
   sealed trait PreferredEmailAddress extends NotificationSubscriberDeliveryPreference
   
-  /* 2 */ val EachMember: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationSubscriberDeliveryPreference.EachMember with Double = js.native
-  /* -1 */ val NoDelivery: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationSubscriberDeliveryPreference.NoDelivery with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationSubscriberDeliveryPreference.None with Double = js.native
-  /* -2147483648 */ val NotSet: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationSubscriberDeliveryPreference.NotSet with Double = js.native
-  /* 1 */ val PreferredEmailAddress: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationSubscriberDeliveryPreference.PreferredEmailAddress with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationSubscriberDeliveryPreference with Double] = js.native
+  /* 2 */ @js.native
+  object EachMember extends TopLevel[EachMember with Double]
+  
+  /* -1 */ @js.native
+  object NoDelivery extends TopLevel[NoDelivery with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* -2147483648 */ @js.native
+  object NotSet extends TopLevel[NotSet with Double]
+  
+  /* 1 */ @js.native
+  object PreferredEmailAddress extends TopLevel[PreferredEmailAddress with Double]
+  
 }
 

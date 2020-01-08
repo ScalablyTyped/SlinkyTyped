@@ -15,14 +15,14 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.acres
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.area
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.ares
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.distance
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.hectares
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.imperial
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.metric
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -63,7 +63,7 @@ trait Measurement extends Widget {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Measurement.html#linearUnit)
     */
-  var linearUnit: metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers = js.native
+  var linearUnit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_ = js.native
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
     *

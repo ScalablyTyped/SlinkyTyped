@@ -10,9 +10,9 @@ render dom nodes to string
 | ------------------ | :-------------: |
 | Full name          | dom-serializer |
 | Keywords           | html, xml, render |
-| # releases         | 2 |
-| # dependents       | 58 |
-| # downloads        | 198539995 |
+| # releases         | 5 |
+| # dependents       | 65 |
+| # downloads        | 320211984 |
 | # stars            | 2 |
 
 ## Links

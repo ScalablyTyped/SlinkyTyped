@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,19 +83,43 @@ object PublisherPermissions extends js.Object {
   @js.native
   sealed trait ViewPermissions extends PublisherPermissions
   
-  /* 16 */ val Admin: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.Admin with Double = js.native
-  /* 4 */ val CreatePublisher: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.CreatePublisher with Double = js.native
-  /* 128 */ val DeleteExtension: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.DeleteExtension with Double = js.native
-  /* 2048 */ val DeletePublisher: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.DeletePublisher with Double = js.native
-  /* 256 */ val EditSettings: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.EditSettings with Double = js.native
-  /* 1024 */ val ManagePermissions: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.ManagePermissions with Double = js.native
-  /* 64 */ val PrivateRead: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.PrivateRead with Double = js.native
-  /* 8 */ val PublishExtension: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.PublishExtension with Double = js.native
-  /* 1 */ val Read: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.Read with Double = js.native
-  /* 32 */ val TrustedPartner: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.TrustedPartner with Double = js.native
-  /* 2 */ val UpdateExtension: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.UpdateExtension with Double = js.native
-  /* 512 */ val ViewPermissions: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.PublisherPermissions.ViewPermissions with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PublisherPermissions with Double] = js.native
+  /* 16 */ @js.native
+  object Admin extends TopLevel[Admin with Double]
+  
+  /* 4 */ @js.native
+  object CreatePublisher extends TopLevel[CreatePublisher with Double]
+  
+  /* 128 */ @js.native
+  object DeleteExtension extends TopLevel[DeleteExtension with Double]
+  
+  /* 2048 */ @js.native
+  object DeletePublisher extends TopLevel[DeletePublisher with Double]
+  
+  /* 256 */ @js.native
+  object EditSettings extends TopLevel[EditSettings with Double]
+  
+  /* 1024 */ @js.native
+  object ManagePermissions extends TopLevel[ManagePermissions with Double]
+  
+  /* 64 */ @js.native
+  object PrivateRead extends TopLevel[PrivateRead with Double]
+  
+  /* 8 */ @js.native
+  object PublishExtension extends TopLevel[PublishExtension with Double]
+  
+  /* 1 */ @js.native
+  object Read extends TopLevel[Read with Double]
+  
+  /* 32 */ @js.native
+  object TrustedPartner extends TopLevel[TrustedPartner with Double]
+  
+  /* 2 */ @js.native
+  object UpdateExtension extends TopLevel[UpdateExtension with Double]
+  
+  /* 512 */ @js.native
+  object ViewPermissions extends TopLevel[ViewPermissions with Double]
+  
 }
 

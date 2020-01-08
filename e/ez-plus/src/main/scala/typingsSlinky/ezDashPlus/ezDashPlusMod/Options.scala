@@ -1,8 +1,8 @@
 package typingsSlinky.ezDashPlus.ezDashPlusMod
 
+import typingsSlinky.ezDashPlus.ezDashPlusBooleans.`false`
 import typingsSlinky.ezDashPlus.ezDashPlusNumbers.`0`
 import typingsSlinky.ezDashPlus.ezDashPlusNumbers.`1`
-import typingsSlinky.ezDashPlus.ezDashPlusNumbers.`false`
 import typingsSlinky.ezDashPlus.ezDashPlusStrings.click
 import typingsSlinky.ezDashPlus.ezDashPlusStrings.crosshair
 import typingsSlinky.ezDashPlus.ezDashPlusStrings.cursor

@@ -1,6 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libIndexDotBundleMod
 
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactNumbers.`false`
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactBooleans.`false`
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

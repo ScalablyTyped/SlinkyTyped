@@ -1,5 +1,6 @@
 package typingsSlinky.ol.interactionSelectMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object SelectEventType extends js.Object {
   @js.native
   sealed trait SELECT extends SelectEventType
   
-  /* "select" */ val SELECT: typingsSlinky.ol.interactionSelectMod.SelectEventType.SELECT with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SelectEventType with String] = js.native
+  /* "select" */ @js.native
+  object SELECT extends TopLevel[SELECT with String]
+  
 }
 

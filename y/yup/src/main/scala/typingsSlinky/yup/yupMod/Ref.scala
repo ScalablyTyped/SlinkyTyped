@@ -1,7 +1,7 @@
 package typingsSlinky.yup.yupMod
 
 import typingsSlinky.yup.Anon_ContextPrefix
-import typingsSlinky.yup.yupNumbers.`true`
+import typingsSlinky.yup.yupBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -8,7 +8,6 @@ import typingsSlinky.shopifyDashPrime.distOptionsOrdersMod.OrderCancelOptions
 import typingsSlinky.shopifyDashPrime.distOptionsOrdersMod.OrderCountOptions
 import typingsSlinky.shopifyDashPrime.distOptionsOrdersMod.OrderCreateOptions
 import typingsSlinky.shopifyDashPrime.distOptionsOrdersMod.OrderListOptions
-import typingsSlinky.shopifyDashPrime.distServicesOrdersMod.Orders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

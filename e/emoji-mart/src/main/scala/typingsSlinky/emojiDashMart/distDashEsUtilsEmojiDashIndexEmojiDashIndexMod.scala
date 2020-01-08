@@ -3,7 +3,7 @@ package typingsSlinky.emojiDashMart
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.emojiDashMart.distDashEsUtilsEmojiDashIndexNimbleDashEmojiDashIndexMod.EmojiData
 import typingsSlinky.emojiDashMart.distDashEsUtilsEmojiDashIndexNimbleDashEmojiDashIndexMod.EmojiEntry
-import typingsSlinky.emojiDashMart.emojiDashMartStrings.Empty
+import typingsSlinky.emojiDashMart.emojiDashMartStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object distDashEsUtilsEmojiDashIndexEmojiDashIndexMod extends js.Object {
     /** Mapping of string to keyof emojis */
     var emoticons: StringDictionary[String] = js.native
     def search(query: String): js.Array[EmojiData] | Null = js.native
-    def search(query: Empty): Null = js.native
+    def search(query: _empty): Null = js.native
   }
   
 }

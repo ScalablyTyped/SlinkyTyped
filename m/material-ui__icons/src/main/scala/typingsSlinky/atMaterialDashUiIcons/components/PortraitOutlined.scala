@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PortraitOutlined extends SharedApply_SvgIconProps1025744599[default] {
+object PortraitOutlined extends SharedApply_SvgIconProps171782814[default] {
   @JSImport("@material-ui/icons/PortraitOutlined", "default")
   @js.native
   object componentImport extends js.Object

@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object fpMod {
   import typingsSlinky.lodash.Typeoflodash
+  import typingsSlinky.lodash.lodashBooleans.`false`
+  import typingsSlinky.lodash.lodashBooleans.`true`
   import typingsSlinky.lodash.lodashMod.AssignCustomizer
   import typingsSlinky.lodash.lodashMod.Cancelable
   import typingsSlinky.lodash.lodashMod.CloneDeepWithCustomizer
@@ -55,9 +57,7 @@ package object fpMod {
   import typingsSlinky.lodash.lodashMod.ValueKeyIteratee
   import typingsSlinky.lodash.lodashMod.isMatchWithCustomizer
   import typingsSlinky.lodash.lodashNumbers.`0`
-  import typingsSlinky.lodash.lodashNumbers.`false`
-  import typingsSlinky.lodash.lodashNumbers.`true`
-  import typingsSlinky.lodash.lodashStrings.Empty
+  import typingsSlinky.lodash.lodashStrings._empty
   import typingsSlinky.lodash.lodashStrings.asc
   import typingsSlinky.lodash.lodashStrings.desc
   import typingsSlinky.std.Exclude
@@ -142,7 +142,7 @@ package object fpMod {
   type LodashCloneWith1x1[T, TResult] = js.Function1[/* value */ T, TResult]
   type LodashCloneWith2x1[T, TResult] = js.Function1[/* value */ T, TResult | T]
   type LodashCompact = js.Function1[
-    /* array */ js.UndefOr[(List[js.UndefOr[js.Any | Null | `false` | Empty | `0`]]) | Null], 
+    /* array */ js.UndefOr[(List[js.UndefOr[js.Any | Null | `false` | _empty | `0`]]) | Null], 
     js.Array[js.Any]
   ]
   type LodashConcat1x1[T] = js.Function1[/* values */ Many[T], js.Array[T]]

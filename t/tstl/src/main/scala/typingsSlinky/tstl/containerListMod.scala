@@ -5,7 +5,6 @@ import typingsSlinky.tstl.baseContainerListContainerMod.ListContainer
 import typingsSlinky.tstl.baseDisposableIListAlgorithmMod._IListAlgorithm
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IPushBack
 import typingsSlinky.tstl.baseIteratorListIteratorMod.ListIterator
-import typingsSlinky.tstl.containerListMod.List
 import typingsSlinky.tstl.containerListMod.List.Iterator
 import typingsSlinky.tstl.containerListMod.List.ReverseIterator
 import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
@@ -106,7 +105,9 @@ object containerListMod extends js.Object {
     /* InferMemberOverrides */
     override def pop_front(): Unit = js.native
     /**
-      * @inheritDoc
+      * Insert an element at the end.
+      *
+      * @param val Value to insert.
       */
     /* InferMemberOverrides */
     override def push_back(`val`: T): Unit = js.native
@@ -202,6 +203,10 @@ object containerListMod extends js.Object {
         * @hidden
         */
       var source_ptr_ : js.Any = js.native
+      /**
+        * @inheritDoc
+        */
+      def value(`val`: T): js.Any = js.native
     }
     
     /**
@@ -211,7 +216,12 @@ object containerListMod extends js.Object {
       */
     @js.native
     class ReverseIterator[T] ()
-      extends typingsSlinky.tstl.baseIteratorReverseIteratorMod.ReverseIterator[T, List[T], Iterator[T], ReverseIterator[T], T]
+      extends typingsSlinky.tstl.baseIteratorReverseIteratorMod.ReverseIterator[T, List[T], Iterator[T], ReverseIterator[T], T] {
+      /**
+        * @inheritDoc
+        */
+      def value(`val`: T): js.Any = js.native
+    }
     
   }
   

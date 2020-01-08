@@ -2,9 +2,6 @@ package typingsSlinky.atReachDialog
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.atReachDialog.atReachDialogMod.DialogContentProps
-import typingsSlinky.atReachDialog.atReachDialogMod.DialogOverlayProps
-import typingsSlinky.atReachDialog.atReachDialogMod.DialogProps
 import typingsSlinky.react.reactMod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

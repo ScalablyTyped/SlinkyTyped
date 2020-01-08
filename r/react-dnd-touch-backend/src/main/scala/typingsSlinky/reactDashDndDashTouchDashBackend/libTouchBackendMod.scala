@@ -5,7 +5,6 @@ import typingsSlinky.dndDashCore.libInterfacesMod.Backend
 import typingsSlinky.dndDashCore.libInterfacesMod.DragDropManager
 import typingsSlinky.dndDashCore.libInterfacesMod.Unsubscribe
 import typingsSlinky.reactDashDndDashTouchDashBackend.libInterfacesMod.TouchBackendOptions
-import typingsSlinky.reactDashDndDashTouchDashBackend.libTouchBackendMod.TouchBackend
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

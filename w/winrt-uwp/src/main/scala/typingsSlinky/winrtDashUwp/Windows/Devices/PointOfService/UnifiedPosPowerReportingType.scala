@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object UnifiedPosPowerReportingType extends js.Object {
   @js.native
   sealed trait unknownPowerReportingType extends UnifiedPosPowerReportingType
   
-  /* 2 */ val advanced: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosPowerReportingType.advanced with Double = js.native
-  /* 1 */ val standard: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosPowerReportingType.standard with Double = js.native
-  /* 0 */ val unknownPowerReportingType: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosPowerReportingType.unknownPowerReportingType with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UnifiedPosPowerReportingType with Double] = js.native
+  /* 2 */ @js.native
+  object advanced extends TopLevel[advanced with Double]
+  
+  /* 1 */ @js.native
+  object standard extends TopLevel[standard with Double]
+  
+  /* 0 */ @js.native
+  object unknownPowerReportingType extends TopLevel[unknownPowerReportingType with Double]
+  
 }
 

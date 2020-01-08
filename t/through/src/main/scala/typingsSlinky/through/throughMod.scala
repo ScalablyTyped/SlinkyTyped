@@ -1,7 +1,6 @@
 package typingsSlinky.through
 
 import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.through.throughMod.ThroughStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

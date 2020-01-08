@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialCheckbox
 
 import typingsSlinky.atMaterialCheckbox.adapterMod.MDCCheckboxAdapter
-import typingsSlinky.atMaterialCheckbox.foundationMod.MDCCheckboxFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object ExtensionUpdateType extends js.Object {
   @js.native
   sealed trait VersionUpdated extends ExtensionUpdateType
   
-  /* 6 */ val ActionRequired: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.ActionRequired with Double = js.native
-  /* 7 */ val ActionResolved: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.ActionResolved with Double = js.native
-  /* 4 */ val Disabled: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.Disabled with Double = js.native
-  /* 3 */ val Enabled: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.Enabled with Double = js.native
-  /* 1 */ val Installed: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.Installed with Double = js.native
-  /* 2 */ val Uninstalled: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.Uninstalled with Double = js.native
-  /* 5 */ val VersionUpdated: typingsSlinky.vsoDashNodeDashApi.interfacesExtensionManagementInterfacesMod.ExtensionUpdateType.VersionUpdated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionUpdateType with Double] = js.native
+  /* 6 */ @js.native
+  object ActionRequired extends TopLevel[ActionRequired with Double]
+  
+  /* 7 */ @js.native
+  object ActionResolved extends TopLevel[ActionResolved with Double]
+  
+  /* 4 */ @js.native
+  object Disabled extends TopLevel[Disabled with Double]
+  
+  /* 3 */ @js.native
+  object Enabled extends TopLevel[Enabled with Double]
+  
+  /* 1 */ @js.native
+  object Installed extends TopLevel[Installed with Double]
+  
+  /* 2 */ @js.native
+  object Uninstalled extends TopLevel[Uninstalled with Double]
+  
+  /* 5 */ @js.native
+  object VersionUpdated extends TopLevel[VersionUpdated with Double]
+  
 }
 

@@ -1,6 +1,8 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.horizontal
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,13 +45,13 @@ trait HistogramProperties extends WidgetProperties {
     */
   var labelFormatFunction: js.UndefOr[LabelFormatter] = js.undefined
   /**
-    * Determines the orientation of the Histogram widget.  **Possible Values:** vertical | horizontal
+    * Determines the orientation of the Histogram widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#layout)
     *
     * @default horizontal
     */
-  var layout: js.UndefOr[String] = js.undefined
+  var layout: js.UndefOr[vertical | horizontal] = js.undefined
   /**
     * The maximum value or bound of the entire histogram. This should match the maximum bound of the last [bin](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#bins).
     *
@@ -83,7 +85,7 @@ object HistogramProperties {
     id: String = null,
     label: String = null,
     labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
-    layout: String = null,
+    layout: vertical | horizontal = null,
     max: Int | Double = null,
     min: Int | Double = null,
     viewModel: HistogramViewModelProperties = null

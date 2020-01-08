@@ -12,7 +12,7 @@ Strips HTML tags from strings. Detects legit unencoded brackets.
 | Keywords           | amount, currency, digits, from, numbers, remove, separator, separators, string, thousand, thousands |
 | # releases         | 92 |
 | # dependents       | 13 |
-| # downloads        | 176319 |
+| # downloads        | 191414 |
 | # stars            | 0 |
 
 ## Links

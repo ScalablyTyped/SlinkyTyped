@@ -1,8 +1,9 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +32,14 @@ object Themed extends js.Object {
     def this(props: ThemedTextInputProps, context: js.Any) = this()
   }
   
-  val StatusBar: ReactComponentClass[ThemedStatusBarProps] = js.native
-  val Text: ReactComponentClass[ThemedTextProps] = js.native
-  val TextInput: ReactComponentClass[ThemedTextInputProps] = js.native
+  @js.native
+  object StatusBar extends TopLevel[ComponentType[ThemedStatusBarProps]]
+  
+  @js.native
+  object Text extends TopLevel[ComponentType[ThemedTextProps]]
+  
+  @js.native
+  object TextInput extends TopLevel[ComponentType[ThemedTextInputProps]]
+  
 }
 

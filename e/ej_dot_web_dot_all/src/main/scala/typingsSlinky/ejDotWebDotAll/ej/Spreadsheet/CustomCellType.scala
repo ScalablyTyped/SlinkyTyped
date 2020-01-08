@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Spreadsheet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object CustomCellType extends js.Object {
   @js.native
   sealed trait DropDownList extends CustomCellType
   
-  /* 0 */ val Button: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CustomCellType.Button with Double = js.native
-  /* 1 */ val CheckBox: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CustomCellType.CheckBox with Double = js.native
-  /* 2 */ val DatePicker: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CustomCellType.DatePicker with Double = js.native
-  /* 3 */ val DropDownList: typingsSlinky.ejDotWebDotAll.ej.Spreadsheet.CustomCellType.DropDownList with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CustomCellType with Double] = js.native
+  /* 0 */ @js.native
+  object Button extends TopLevel[Button with Double]
+  
+  /* 1 */ @js.native
+  object CheckBox extends TopLevel[CheckBox with Double]
+  
+  /* 2 */ @js.native
+  object DatePicker extends TopLevel[DatePicker with Double]
+  
+  /* 3 */ @js.native
+  object DropDownList extends TopLevel[DropDownList with Double]
+  
 }
 

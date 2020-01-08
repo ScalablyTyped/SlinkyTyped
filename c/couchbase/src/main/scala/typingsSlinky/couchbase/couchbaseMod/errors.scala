@@ -1,5 +1,6 @@
 package typingsSlinky.couchbase.couchbaseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -185,50 +186,136 @@ object errors extends js.Object {
   @js.native
   sealed trait wrongServer extends errors
   
-  /* 1 */ val authContinue: typingsSlinky.couchbase.couchbaseMod.errors.authContinue with Double = js.native
-  /* 2 */ val authError: typingsSlinky.couchbase.couchbaseMod.errors.authError with Double = js.native
-  /* 35 */ val badEnvironmentVariable: typingsSlinky.couchbase.couchbaseMod.errors.badEnvironmentVariable with Double = js.native
-  /* 29 */ val badHandle: typingsSlinky.couchbase.couchbaseMod.errors.badHandle with Double = js.native
-  /* 26 */ val bukcketNotFound: typingsSlinky.couchbase.couchbaseMod.errors.bukcketNotFound with Double = js.native
-  /* 10 */ val cLibGenericError: typingsSlinky.couchbase.couchbaseMod.errors.cLibGenericError with Double = js.native
-  /* 6 */ val cLibInternal: typingsSlinky.couchbase.couchbaseMod.errors.cLibInternal with Double = js.native
-  /* 8 */ val cLibOutOfMemory: typingsSlinky.couchbase.couchbaseMod.errors.cLibOutOfMemory with Double = js.native
-  /* 7 */ val cLinInvalidArgument: typingsSlinky.couchbase.couchbaseMod.errors.cLinInvalidArgument with Double = js.native
-  /* 39 */ val checkResults: typingsSlinky.couchbase.couchbaseMod.errors.checkResults with Double = js.native
-  /* 27 */ val clientOutOfMemory: typingsSlinky.couchbase.couchbaseMod.errors.clientOutOfMemory with Double = js.native
-  /* 28 */ val clientTemporaryError: typingsSlinky.couchbase.couchbaseMod.errors.clientTemporaryError with Double = js.native
-  /* 25 */ val connectError: typingsSlinky.couchbase.couchbaseMod.errors.connectError with Double = js.native
-  /* 3 */ val deltaBadVal: typingsSlinky.couchbase.couchbaseMod.errors.deltaBadVal with Double = js.native
-  /* 33 */ val duplicateItems: typingsSlinky.couchbase.couchbaseMod.errors.duplicateItems with Double = js.native
-  /* 41 */ val durabilityFailed: typingsSlinky.couchbase.couchbaseMod.errors.durabilityFailed with Double = js.native
-  /* 15 */ val failedToFindSymbol: typingsSlinky.couchbase.couchbaseMod.errors.failedToFindSymbol with Double = js.native
-  /* 14 */ val failedToOpenLibrary: typingsSlinky.couchbase.couchbaseMod.errors.failedToOpenLibrary with Double = js.native
-  /* 40 */ val genericError: typingsSlinky.couchbase.couchbaseMod.errors.genericError with Double = js.native
-  /* 37 */ val invalidArguments: typingsSlinky.couchbase.couchbaseMod.errors.invalidArguments with Double = js.native
-  /* 31 */ val invalidHostFormat: typingsSlinky.couchbase.couchbaseMod.errors.invalidHostFormat with Double = js.native
-  /* 9 */ val invalidRange: typingsSlinky.couchbase.couchbaseMod.errors.invalidRange with Double = js.native
-  /* 12 */ val keyAlreadyExists: typingsSlinky.couchbase.couchbaseMod.errors.keyAlreadyExists with Double = js.native
-  /* 13 */ val keyNotFound: typingsSlinky.couchbase.couchbaseMod.errors.keyNotFound with Double = js.native
-  /* 16 */ val networkError: typingsSlinky.couchbase.couchbaseMod.errors.networkError with Double = js.native
-  /* 34 */ val noMatchingServerForKey: typingsSlinky.couchbase.couchbaseMod.errors.noMatchingServerForKey with Double = js.native
-  /* 32 */ val notEnoughNodes: typingsSlinky.couchbase.couchbaseMod.errors.notEnoughNodes with Double = js.native
-  /* 18 */ val notMyVBucket: typingsSlinky.couchbase.couchbaseMod.errors.notMyVBucket with Double = js.native
-  /* 19 */ val notSorted: typingsSlinky.couchbase.couchbaseMod.errors.notSorted with Double = js.native
-  /* 20 */ val notSupported: typingsSlinky.couchbase.couchbaseMod.errors.notSupported with Double = js.native
-  /* 4 */ val objectTooBig: typingsSlinky.couchbase.couchbaseMod.errors.objectTooBig with Double = js.native
-  /* 36 */ val outOfMemory: typingsSlinky.couchbase.couchbaseMod.errors.outOfMemory with Double = js.native
-  /* 23 */ val protocolError: typingsSlinky.couchbase.couchbaseMod.errors.protocolError with Double = js.native
-  /* 42 */ val restError: typingsSlinky.couchbase.couchbaseMod.errors.restError with Double = js.native
-  /* 38 */ val schedulingError: typingsSlinky.couchbase.couchbaseMod.errors.schedulingError with Double = js.native
-  /* 30 */ val serverBug: typingsSlinky.couchbase.couchbaseMod.errors.serverBug with Double = js.native
-  /* 5 */ val serverBusy: typingsSlinky.couchbase.couchbaseMod.errors.serverBusy with Double = js.native
-  /* 0 */ val success: typingsSlinky.couchbase.couchbaseMod.errors.success with Double = js.native
-  /* 11 */ val temporaryError: typingsSlinky.couchbase.couchbaseMod.errors.temporaryError with Double = js.native
-  /* 24 */ val timedOut: typingsSlinky.couchbase.couchbaseMod.errors.timedOut with Double = js.native
-  /* 21 */ val unknownCommand: typingsSlinky.couchbase.couchbaseMod.errors.unknownCommand with Double = js.native
-  /* 22 */ val unknownHost: typingsSlinky.couchbase.couchbaseMod.errors.unknownHost with Double = js.native
-  /* 17 */ val wrongServer: typingsSlinky.couchbase.couchbaseMod.errors.wrongServer with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[errors with Double] = js.native
+  /* 1 */ @js.native
+  object authContinue extends TopLevel[authContinue with Double]
+  
+  /* 2 */ @js.native
+  object authError extends TopLevel[authError with Double]
+  
+  /* 35 */ @js.native
+  object badEnvironmentVariable extends TopLevel[badEnvironmentVariable with Double]
+  
+  /* 29 */ @js.native
+  object badHandle extends TopLevel[badHandle with Double]
+  
+  /* 26 */ @js.native
+  object bukcketNotFound extends TopLevel[bukcketNotFound with Double]
+  
+  /* 10 */ @js.native
+  object cLibGenericError extends TopLevel[cLibGenericError with Double]
+  
+  /* 6 */ @js.native
+  object cLibInternal extends TopLevel[cLibInternal with Double]
+  
+  /* 8 */ @js.native
+  object cLibOutOfMemory extends TopLevel[cLibOutOfMemory with Double]
+  
+  /* 7 */ @js.native
+  object cLinInvalidArgument extends TopLevel[cLinInvalidArgument with Double]
+  
+  /* 39 */ @js.native
+  object checkResults extends TopLevel[checkResults with Double]
+  
+  /* 27 */ @js.native
+  object clientOutOfMemory extends TopLevel[clientOutOfMemory with Double]
+  
+  /* 28 */ @js.native
+  object clientTemporaryError extends TopLevel[clientTemporaryError with Double]
+  
+  /* 25 */ @js.native
+  object connectError extends TopLevel[connectError with Double]
+  
+  /* 3 */ @js.native
+  object deltaBadVal extends TopLevel[deltaBadVal with Double]
+  
+  /* 33 */ @js.native
+  object duplicateItems extends TopLevel[duplicateItems with Double]
+  
+  /* 41 */ @js.native
+  object durabilityFailed extends TopLevel[durabilityFailed with Double]
+  
+  /* 15 */ @js.native
+  object failedToFindSymbol extends TopLevel[failedToFindSymbol with Double]
+  
+  /* 14 */ @js.native
+  object failedToOpenLibrary extends TopLevel[failedToOpenLibrary with Double]
+  
+  /* 40 */ @js.native
+  object genericError extends TopLevel[genericError with Double]
+  
+  /* 37 */ @js.native
+  object invalidArguments extends TopLevel[invalidArguments with Double]
+  
+  /* 31 */ @js.native
+  object invalidHostFormat extends TopLevel[invalidHostFormat with Double]
+  
+  /* 9 */ @js.native
+  object invalidRange extends TopLevel[invalidRange with Double]
+  
+  /* 12 */ @js.native
+  object keyAlreadyExists extends TopLevel[keyAlreadyExists with Double]
+  
+  /* 13 */ @js.native
+  object keyNotFound extends TopLevel[keyNotFound with Double]
+  
+  /* 16 */ @js.native
+  object networkError extends TopLevel[networkError with Double]
+  
+  /* 34 */ @js.native
+  object noMatchingServerForKey extends TopLevel[noMatchingServerForKey with Double]
+  
+  /* 32 */ @js.native
+  object notEnoughNodes extends TopLevel[notEnoughNodes with Double]
+  
+  /* 18 */ @js.native
+  object notMyVBucket extends TopLevel[notMyVBucket with Double]
+  
+  /* 19 */ @js.native
+  object notSorted extends TopLevel[notSorted with Double]
+  
+  /* 20 */ @js.native
+  object notSupported extends TopLevel[notSupported with Double]
+  
+  /* 4 */ @js.native
+  object objectTooBig extends TopLevel[objectTooBig with Double]
+  
+  /* 36 */ @js.native
+  object outOfMemory extends TopLevel[outOfMemory with Double]
+  
+  /* 23 */ @js.native
+  object protocolError extends TopLevel[protocolError with Double]
+  
+  /* 42 */ @js.native
+  object restError extends TopLevel[restError with Double]
+  
+  /* 38 */ @js.native
+  object schedulingError extends TopLevel[schedulingError with Double]
+  
+  /* 30 */ @js.native
+  object serverBug extends TopLevel[serverBug with Double]
+  
+  /* 5 */ @js.native
+  object serverBusy extends TopLevel[serverBusy with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 11 */ @js.native
+  object temporaryError extends TopLevel[temporaryError with Double]
+  
+  /* 24 */ @js.native
+  object timedOut extends TopLevel[timedOut with Double]
+  
+  /* 21 */ @js.native
+  object unknownCommand extends TopLevel[unknownCommand with Double]
+  
+  /* 22 */ @js.native
+  object unknownHost extends TopLevel[unknownHost with Double]
+  
+  /* 17 */ @js.native
+  object wrongServer extends TopLevel[wrongServer with Double]
+  
 }
 

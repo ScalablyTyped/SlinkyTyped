@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SPClientTemplates
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object UrlFormatType extends js.Object {
   @js.native
   sealed trait Image extends UrlFormatType
   
-  /* 0 */ val Hyperlink: typingsSlinky.sharepoint.SPClientTemplates.UrlFormatType.Hyperlink with Double = js.native
-  /* 1 */ val Image: typingsSlinky.sharepoint.SPClientTemplates.UrlFormatType.Image with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UrlFormatType with Double] = js.native
+  /* 0 */ @js.native
+  object Hyperlink extends TopLevel[Hyperlink with Double]
+  
+  /* 1 */ @js.native
+  object Image extends TopLevel[Image with Double]
+  
 }
 

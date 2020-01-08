@@ -1,6 +1,6 @@
 package typingsSlinky.chessDotJs
 
-import typingsSlinky.chessDotJs.chessDotJsNumbers.`false`
+import typingsSlinky.chessDotJs.chessDotJsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

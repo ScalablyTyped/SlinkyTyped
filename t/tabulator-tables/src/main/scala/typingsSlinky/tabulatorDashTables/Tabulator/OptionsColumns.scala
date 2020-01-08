@@ -1,7 +1,7 @@
 package typingsSlinky.tabulatorDashTables.Tabulator
 
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`false`
-import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`true`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`false`
+import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`true`
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.both
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.bottom
 import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.cell

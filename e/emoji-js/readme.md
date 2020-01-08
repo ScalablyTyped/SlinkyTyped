@@ -10,9 +10,9 @@ A JS Emoji conversion library
 | ------------------ | :-------------: |
 | Full name          | emoji-js |
 | Keywords           | emoji, emoticon, mobile, browser |
-| # releases         | 3 |
-| # dependents       | 51 |
-| # downloads        | 272561 |
+| # releases         | 1 |
+| # dependents       | 58 |
+| # downloads        | 329404 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,16 +41,34 @@ object MimeType extends js.Object {
   @js.native
   sealed trait XML extends MimeType
   
-  /* 0 */ val ATOM: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.ATOM with Double = js.native
-  /* 1 */ val CSV: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.CSV with Double = js.native
-  /* 2 */ val ICAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.ICAL with Double = js.native
-  /* 3 */ val JAVASCRIPT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.JAVASCRIPT with Double = js.native
-  /* 4 */ val JSON: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.JSON with Double = js.native
-  /* 5 */ val RSS: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.RSS with Double = js.native
-  /* 6 */ val TEXT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.TEXT with Double = js.native
-  /* 7 */ val VCARD: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.VCARD with Double = js.native
-  /* 8 */ val XML: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Content.MimeType.XML with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MimeType with Double] = js.native
+  /* 0 */ @js.native
+  object ATOM extends TopLevel[ATOM with Double]
+  
+  /* 1 */ @js.native
+  object CSV extends TopLevel[CSV with Double]
+  
+  /* 2 */ @js.native
+  object ICAL extends TopLevel[ICAL with Double]
+  
+  /* 3 */ @js.native
+  object JAVASCRIPT extends TopLevel[JAVASCRIPT with Double]
+  
+  /* 4 */ @js.native
+  object JSON extends TopLevel[JSON with Double]
+  
+  /* 5 */ @js.native
+  object RSS extends TopLevel[RSS with Double]
+  
+  /* 6 */ @js.native
+  object TEXT extends TopLevel[TEXT with Double]
+  
+  /* 7 */ @js.native
+  object VCARD extends TopLevel[VCARD with Double]
+  
+  /* 8 */ @js.native
+  object XML extends TopLevel[XML with Double]
+  
 }
 

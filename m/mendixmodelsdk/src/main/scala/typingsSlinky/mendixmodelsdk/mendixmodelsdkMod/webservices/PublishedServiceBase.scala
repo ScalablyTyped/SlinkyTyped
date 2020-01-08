@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.webservices
 
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,7 @@ import scala.scalajs.js.annotation._
 abstract class PublishedServiceBase protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.webservices.PublishedServiceBase {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
@@ -23,6 +25,6 @@ abstract class PublishedServiceBase protected ()
 @js.native
 object PublishedServiceBase extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
 }
 

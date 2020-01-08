@@ -1,5 +1,6 @@
 package typingsSlinky.javaDashApplet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object JavaAppletStatus extends js.Object {
   @js.native
   sealed trait Ready extends JavaAppletStatus
   
-  /* 3 */ val Error: typingsSlinky.javaDashApplet.JavaAppletStatus.Error with Double = js.native
-  /* 1 */ val Loading: typingsSlinky.javaDashApplet.JavaAppletStatus.Loading with Double = js.native
-  /* 2 */ val Ready: typingsSlinky.javaDashApplet.JavaAppletStatus.Ready with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[JavaAppletStatus with Double] = js.native
+  /* 3 */ @js.native
+  object Error extends TopLevel[Error with Double]
+  
+  /* 1 */ @js.native
+  object Loading extends TopLevel[Loading with Double]
+  
+  /* 2 */ @js.native
+  object Ready extends TopLevel[Ready with Double]
+  
 }
 

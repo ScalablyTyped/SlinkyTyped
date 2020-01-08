@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object UserInteractionMode extends js.Object {
   @js.native
   sealed trait touch extends UserInteractionMode
   
-  /* 0 */ val mouse: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.UserInteractionMode.mouse with Double = js.native
-  /* 1 */ val touch: typingsSlinky.winrtDashUwp.Windows.UI.ViewManagement.UserInteractionMode.touch with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserInteractionMode with Double] = js.native
+  /* 0 */ @js.native
+  object mouse extends TopLevel[mouse with Double]
+  
+  /* 1 */ @js.native
+  object touch extends TopLevel[touch with Double]
+  
 }
 

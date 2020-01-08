@@ -26,7 +26,14 @@ object GlobalHeader
     collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
     isMobile: js.UndefOr[Boolean] = js.undefined,
     logo: TagMod[Any] = null,
-    menuHeaderRender: WithFalse[js.Function2[/* logo */ TagMod[Any], /* title */ TagMod[Any], TagMod[Any]]] = null,
+    menuHeaderRender: WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[GlobalHeaderProps], 
+        TagMod[Any]
+      ]
+    ] = null,
     menuRender: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any = null,
     onCollapse: /* collapsed */ Boolean => Unit = null,
     rightContentRender: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]] = null,
@@ -46,6 +53,9 @@ object GlobalHeader
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.atAntDashDesignProDashLayout.libGlobalHeaderMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GlobalHeaderProps
 }
 

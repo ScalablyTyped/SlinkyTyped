@@ -1,6 +1,6 @@
 package typingsSlinky.momentDashPreciseDashRangeDashPlugin.momentDashPreciseDashRangeDashPluginMod.momentMod
 
-import typingsSlinky.momentDashPreciseDashRangeDashPlugin.momentDashPreciseDashRangeDashPluginNumbers.`true`
+import typingsSlinky.momentDashPreciseDashRangeDashPlugin.momentDashPreciseDashRangeDashPluginBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

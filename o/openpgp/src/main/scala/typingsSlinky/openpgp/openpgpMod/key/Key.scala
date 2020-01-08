@@ -79,10 +79,10 @@ class Key protected () extends js.Object {
     * @param userId, optional
     * @returns key or null if no encryption key has been found
     */
-  def getEncryptionKey(): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
-  def getEncryptionKey(keyId: Keyid): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
-  def getEncryptionKey(keyId: Keyid, date: js.Date): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
-  def getEncryptionKey(keyId: Keyid, date: js.Date, userId: String): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
+  def getEncryptionKey(): js.Promise[Key | SubKey | Null] = js.native
+  def getEncryptionKey(keyId: Keyid): js.Promise[Key | SubKey | Null] = js.native
+  def getEncryptionKey(keyId: Keyid, date: js.Date): js.Promise[Key | SubKey | Null] = js.native
+  def getEncryptionKey(keyId: Keyid, date: js.Date, userId: String): js.Promise[Key | SubKey | Null] = js.native
   /**
     * Returns the latest date when the key can be used for encrypting, signing, or both, depending on the `capabilities` paramater.
     * When `capabilities` is null, defaults to returning the expiry date of the primary key.
@@ -143,9 +143,9 @@ class Key protected () extends js.Object {
     * @param userId, optional user ID
     * @returns key or null if no signing key has been found
     */
-  def getSigningKey(keyId: Keyid): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
-  def getSigningKey(keyId: Keyid, date: js.Date): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
-  def getSigningKey(keyId: Keyid, date: js.Date, userId: js.Object): js.Promise[Key | typingsSlinky.openpgp.openpgpMod.key.SubKey | Null] = js.native
+  def getSigningKey(keyId: Keyid): js.Promise[Key | SubKey | Null] = js.native
+  def getSigningKey(keyId: Keyid, date: js.Date): js.Promise[Key | SubKey | Null] = js.native
+  def getSigningKey(keyId: Keyid, date: js.Date, userId: js.Object): js.Promise[Key | SubKey | Null] = js.native
   /**
     * Returns an array containing all public or private subkeys matching keyId;
     * If keyId is not present, returns all subkeys.

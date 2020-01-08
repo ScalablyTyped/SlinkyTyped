@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object StringFormat extends js.Object {
   @js.native
   sealed trait VersionNumber extends StringFormat
   
-  /* 0 */ val Email: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.Email with scala.Double = js.native
-  /* 1 */ val PhoneticGuide: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.PhoneticGuide with scala.Double = js.native
-  /* 2 */ val Text: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.Text with scala.Double = js.native
-  /* 3 */ val TextArea: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.TextArea with scala.Double = js.native
-  /* 4 */ val TickerSymbol: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.TickerSymbol with scala.Double = js.native
-  /* 5 */ val Url: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.Url with scala.Double = js.native
-  /* 6 */ val VersionNumber: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.StringFormat.VersionNumber with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[StringFormat with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[StringFormat with Double] = js.native
+  /* 0 */ @js.native
+  object Email extends TopLevel[Email with Double]
+  
+  /* 1 */ @js.native
+  object PhoneticGuide extends TopLevel[PhoneticGuide with Double]
+  
+  /* 2 */ @js.native
+  object Text extends TopLevel[Text with Double]
+  
+  /* 3 */ @js.native
+  object TextArea extends TopLevel[TextArea with Double]
+  
+  /* 4 */ @js.native
+  object TickerSymbol extends TopLevel[TickerSymbol with Double]
+  
+  /* 5 */ @js.native
+  object Url extends TopLevel[Url with Double]
+  
+  /* 6 */ @js.native
+  object VersionNumber extends TopLevel[VersionNumber with Double]
+  
 }
 

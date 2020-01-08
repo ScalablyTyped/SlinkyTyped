@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object ResultPhase extends js.Object {
   @js.native
   sealed trait Preliminary extends ResultPhase
   
-  /* 1 */ val Full: typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.ResultPhase.Full with Double = js.native
-  /* 0 */ val Preliminary: typingsSlinky.vsoDashNodeDashApi.interfacesProjectAnalysisInterfacesMod.ResultPhase.Preliminary with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResultPhase with Double] = js.native
+  /* 1 */ @js.native
+  object Full extends TopLevel[Full with Double]
+  
+  /* 0 */ @js.native
+  object Preliminary extends TopLevel[Preliminary with Double]
+  
 }
 

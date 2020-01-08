@@ -55,6 +55,12 @@ object DateHeader
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.DateHeader[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.DateHeader[js.Any]
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashCalendarDashTimeline.reactDashCalendarDashTimelineMod.DateHeader[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DateHeaderProps[js.Any]
 }
 

@@ -5,9 +5,6 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.nodeDashInt64.nodeDashInt64Mod.^
 import typingsSlinky.parquetjs.libMetadataDotInterfaceMod.MetadataInterface
 import typingsSlinky.parquetjs.libMetadataDotInterfaceMod.MetadataRowGroupsInterface
-import typingsSlinky.parquetjs.libReaderMod.ParquetCursor
-import typingsSlinky.parquetjs.libReaderMod.ParquetEnvelopeReader
-import typingsSlinky.parquetjs.libReaderMod.ParquetReader
 import typingsSlinky.parquetjs.libRowBufferDotInterfaceMod.RowBufferInterface
 import typingsSlinky.parquetjs.libRowDotInterfaceMod.RowInterface
 import typingsSlinky.parquetjs.libSchemaMod.ParquetSchema

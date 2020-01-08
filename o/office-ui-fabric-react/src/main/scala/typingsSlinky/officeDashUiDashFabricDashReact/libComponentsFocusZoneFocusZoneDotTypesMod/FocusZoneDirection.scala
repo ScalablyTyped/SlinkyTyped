@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFocusZoneFocusZoneDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,11 +30,19 @@ object FocusZoneDirection extends js.Object {
   @js.native
   sealed trait vertical extends FocusZoneDirection
   
-  /* 2 */ val bidirectional: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFocusZoneFocusZoneDotTypesMod.FocusZoneDirection.bidirectional with Double = js.native
-  /* 3 */ val domOrder: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFocusZoneFocusZoneDotTypesMod.FocusZoneDirection.domOrder with Double = js.native
-  /* 1 */ val horizontal: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFocusZoneFocusZoneDotTypesMod.FocusZoneDirection.horizontal with Double = js.native
-  /* 0 */ val vertical: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsFocusZoneFocusZoneDotTypesMod.FocusZoneDirection.vertical with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FocusZoneDirection with Double] = js.native
+  /* 2 */ @js.native
+  object bidirectional extends TopLevel[bidirectional with Double]
+  
+  /* 3 */ @js.native
+  object domOrder extends TopLevel[domOrder with Double]
+  
+  /* 1 */ @js.native
+  object horizontal extends TopLevel[horizontal with Double]
+  
+  /* 0 */ @js.native
+  object vertical extends TopLevel[vertical with Double]
+  
 }
 

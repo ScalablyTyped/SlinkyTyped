@@ -1,7 +1,6 @@
 package typingsSlinky.atFirebaseStorage
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.atFirebaseStorage.distSrcImplementationBlobMod.FbsBlob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

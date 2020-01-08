@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object PullRequestStatus extends js.Object {
   @js.native
   sealed trait NotSet extends PullRequestStatus
   
-  /* 2 */ val Abandoned: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestStatus.Abandoned with Double = js.native
-  /* 1 */ val Active: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestStatus.Active with Double = js.native
-  /* 4 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestStatus.All with Double = js.native
-  /* 3 */ val Completed: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestStatus.Completed with Double = js.native
-  /* 0 */ val NotSet: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestStatus.NotSet with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PullRequestStatus with Double] = js.native
+  /* 2 */ @js.native
+  object Abandoned extends TopLevel[Abandoned with Double]
+  
+  /* 1 */ @js.native
+  object Active extends TopLevel[Active with Double]
+  
+  /* 4 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 3 */ @js.native
+  object Completed extends TopLevel[Completed with Double]
+  
+  /* 0 */ @js.native
+  object NotSet extends TopLevel[NotSet with Double]
+  
 }
 

@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object dom {
-  type ICompositeElement = typingsSlinky.senchaUnderscoreTouch.Ext.dom.ICompositeElementLite
+  type ICompositeElement = ICompositeElementLite
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcScalesQuantitativeScaleMod.QuantitativeScale
-import typingsSlinky.plottable.buildSrcScalesTickGeneratorsMod.ITickGenerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.apolloDashLink
 
 import typingsSlinky.apolloDashLink.libLinkMod.ApolloLink
-import typingsSlinky.apolloDashLink.libTestDashUtilsMockLinkMod.MockLink
 import typingsSlinky.apolloDashLink.libTypesMod.RequestHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`

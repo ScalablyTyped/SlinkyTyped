@@ -10,12 +10,12 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.decimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.depth
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.diameter
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.distance
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.height
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.millimeters
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.radius
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.unknown
@@ -124,7 +124,7 @@ trait SizeVariableProperties extends VisualVariableProperties {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html#valueUnit)
     */
   var valueUnit: js.UndefOr[
-    unknown | inches | feet | yards | miles | `nautical-miles` | millimeters | centimeters | decimeters | meters | kilometers | `decimal-degrees`
+    unknown | inches | feet_ | yards | miles_ | `nautical-miles` | millimeters | centimeters | decimeters | meters_ | kilometers_ | `decimal-degrees`
   ] = js.undefined
 }
 
@@ -146,7 +146,7 @@ object SizeVariableProperties {
     valueExpression: String = null,
     valueExpressionTitle: String = null,
     valueRepresentation: radius | diameter | area | width | distance = null,
-    valueUnit: unknown | inches | feet | yards | miles | `nautical-miles` | millimeters | centimeters | decimeters | meters | kilometers | `decimal-degrees` = null
+    valueUnit: unknown | inches | feet_ | yards | miles_ | `nautical-miles` | millimeters | centimeters | decimeters | meters_ | kilometers_ | `decimal-degrees` = null
   ): SizeVariableProperties = {
     val __obj = js.Dynamic.literal()
     if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])

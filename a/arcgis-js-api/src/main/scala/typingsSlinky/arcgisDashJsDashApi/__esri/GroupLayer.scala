@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.exclusive
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.group
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.independent
@@ -37,7 +36,7 @@ trait GroupLayer
     *
     *
     */
-  def loadAll(): IPromise[GroupLayer] = js.native
+  def loadAll(): js.Promise[GroupLayer] = js.native
 }
 
 @JSGlobal("__esri.GroupLayer")

@@ -1,7 +1,7 @@
 
 # Scala.js typings for foundation-sites
 
-Typings are for version 6.5.3
+Typings are for version 6.6.1
 
 ## Library description:
 The most advanced responsive front-end framework in the world.
@@ -10,9 +10,9 @@ The most advanced responsive front-end framework in the world.
 | ------------------ | :-------------: |
 | Full name          | foundation-sites |
 | Keywords           | css, scss, sass, js, responsive, mobile-first, framework, eyeglass-module, handlebars-helper-rel, handlebars-helper-slugify |
-| # releases         | 22 |
-| # dependents       | 116 |
-| # downloads        | 4309256 |
+| # releases         | 9 |
+| # dependents       | 133 |
+| # downloads        | 3725115 |
 | # stars            | 17 |
 
 ## Links

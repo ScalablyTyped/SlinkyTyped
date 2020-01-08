@@ -1,7 +1,6 @@
 package typingsSlinky.atUirouterCore
 
 import typingsSlinky.atUirouterCore.libStateStateObjectMod.StateObject
-import typingsSlinky.atUirouterCore.libTransitionHookRegistryMod.RegisteredHook
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.HookFn
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.HookMatchCriteria
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.HookMatchCriterion

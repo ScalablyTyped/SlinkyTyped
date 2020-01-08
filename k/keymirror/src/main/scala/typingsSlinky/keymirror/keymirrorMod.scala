@@ -1,6 +1,6 @@
 package typingsSlinky.keymirror
 
-import typingsSlinky.keymirror.keymirrorStrings.`_backtick^_backtick`
+import typingsSlinky.keymirror.keymirrorStrings.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object keymirrorMod extends js.Object {
   def apply[T](obj: T): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: K}
-    */ `_backtick^_backtick` with js.Any = js.native
+    */ ^  with js.Any = js.native
 }
 

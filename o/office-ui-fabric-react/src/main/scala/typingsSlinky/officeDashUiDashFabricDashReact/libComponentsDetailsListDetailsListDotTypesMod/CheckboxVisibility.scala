@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object CheckboxVisibility extends js.Object {
   @js.native
   sealed trait onHover extends CheckboxVisibility
   
-  /* 1 */ val always: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.CheckboxVisibility.always with Double = js.native
-  /* 2 */ val hidden: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.CheckboxVisibility.hidden with Double = js.native
-  /* 0 */ val onHover: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.CheckboxVisibility.onHover with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CheckboxVisibility with Double] = js.native
+  /* 1 */ @js.native
+  object always extends TopLevel[always with Double]
+  
+  /* 2 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 0 */ @js.native
+  object onHover extends TopLevel[onHover with Double]
+  
 }
 

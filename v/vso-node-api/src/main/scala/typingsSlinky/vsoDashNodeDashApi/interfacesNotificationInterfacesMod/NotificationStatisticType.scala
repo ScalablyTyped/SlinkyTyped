@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,36 +98,94 @@ object NotificationStatisticType extends js.Object {
   @js.native
   sealed trait UnprocessedRangeStart extends NotificationStatisticType
   
-  /* 200 */ val DelayRangeStart: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.DelayRangeStart with Double = js.native
-  /* 203 */ val EventPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.EventPipelineTime with Double = js.native
-  /* 5 */ val Events: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.Events with Double = js.native
-  /* 1 */ val EventsByEventType: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.EventsByEventType with Double = js.native
-  /* 3 */ val EventsByEventTypePerUser: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.EventsByEventTypePerUser with Double = js.native
-  /* 1203 */ val HourlyEventPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyEventPipelineTime with Double = js.native
-  /* 1003 */ val HourlyEvents: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyEvents with Double = js.native
-  /* 1002 */ val HourlyEventsByEventTypePerUser: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyEventsByEventTypePerUser with Double = js.native
-  /* 1001 */ val HourlyNotificationBySubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyNotificationBySubscription with Double = js.native
-  /* 1202 */ val HourlyNotificationPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyNotificationPipelineTime with Double = js.native
-  /* 1004 */ val HourlyNotifications: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyNotifications with Double = js.native
-  /* 1000 */ val HourlyRangeStart: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyRangeStart with Double = js.native
-  /* 1201 */ val HourlyTotalPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyTotalPipelineTime with Double = js.native
-  /* 1102 */ val HourlyUnprocessedEventDelayByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyUnprocessedEventDelayByPublisher with Double = js.native
-  /* 1101 */ val HourlyUnprocessedEventsByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyUnprocessedEventsByPublisher with Double = js.native
-  /* 1104 */ val HourlyUnprocessedNotificationDelayByChannelByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyUnprocessedNotificationDelayByChannelByPublisher with Double = js.native
-  /* 1103 */ val HourlyUnprocessedNotificationsByChannelByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.HourlyUnprocessedNotificationsByChannelByPublisher with Double = js.native
-  /* 2 */ val NotificationByEventType: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.NotificationByEventType with Double = js.native
-  /* 4 */ val NotificationByEventTypePerUser: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.NotificationByEventTypePerUser with Double = js.native
-  /* 0 */ val NotificationBySubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.NotificationBySubscription with Double = js.native
-  /* 7 */ val NotificationFailureBySubscription: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.NotificationFailureBySubscription with Double = js.native
-  /* 202 */ val NotificationPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.NotificationPipelineTime with Double = js.native
-  /* 6 */ val Notifications: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.Notifications with Double = js.native
-  /* 201 */ val TotalPipelineTime: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.TotalPipelineTime with Double = js.native
-  /* 102 */ val UnprocessedEventDelayByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.UnprocessedEventDelayByPublisher with Double = js.native
-  /* 101 */ val UnprocessedEventsByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.UnprocessedEventsByPublisher with Double = js.native
-  /* 104 */ val UnprocessedNotificationDelayByChannelByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.UnprocessedNotificationDelayByChannelByPublisher with Double = js.native
-  /* 103 */ val UnprocessedNotificationsByChannelByPublisher: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.UnprocessedNotificationsByChannelByPublisher with Double = js.native
-  /* 100 */ val UnprocessedRangeStart: typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.NotificationStatisticType.UnprocessedRangeStart with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NotificationStatisticType with Double] = js.native
+  /* 200 */ @js.native
+  object DelayRangeStart extends TopLevel[DelayRangeStart with Double]
+  
+  /* 203 */ @js.native
+  object EventPipelineTime extends TopLevel[EventPipelineTime with Double]
+  
+  /* 5 */ @js.native
+  object Events extends TopLevel[Events with Double]
+  
+  /* 1 */ @js.native
+  object EventsByEventType extends TopLevel[EventsByEventType with Double]
+  
+  /* 3 */ @js.native
+  object EventsByEventTypePerUser extends TopLevel[EventsByEventTypePerUser with Double]
+  
+  /* 1203 */ @js.native
+  object HourlyEventPipelineTime extends TopLevel[HourlyEventPipelineTime with Double]
+  
+  /* 1003 */ @js.native
+  object HourlyEvents extends TopLevel[HourlyEvents with Double]
+  
+  /* 1002 */ @js.native
+  object HourlyEventsByEventTypePerUser extends TopLevel[HourlyEventsByEventTypePerUser with Double]
+  
+  /* 1001 */ @js.native
+  object HourlyNotificationBySubscription extends TopLevel[HourlyNotificationBySubscription with Double]
+  
+  /* 1202 */ @js.native
+  object HourlyNotificationPipelineTime extends TopLevel[HourlyNotificationPipelineTime with Double]
+  
+  /* 1004 */ @js.native
+  object HourlyNotifications extends TopLevel[HourlyNotifications with Double]
+  
+  /* 1000 */ @js.native
+  object HourlyRangeStart extends TopLevel[HourlyRangeStart with Double]
+  
+  /* 1201 */ @js.native
+  object HourlyTotalPipelineTime extends TopLevel[HourlyTotalPipelineTime with Double]
+  
+  /* 1102 */ @js.native
+  object HourlyUnprocessedEventDelayByPublisher extends TopLevel[HourlyUnprocessedEventDelayByPublisher with Double]
+  
+  /* 1101 */ @js.native
+  object HourlyUnprocessedEventsByPublisher extends TopLevel[HourlyUnprocessedEventsByPublisher with Double]
+  
+  /* 1104 */ @js.native
+  object HourlyUnprocessedNotificationDelayByChannelByPublisher extends TopLevel[HourlyUnprocessedNotificationDelayByChannelByPublisher with Double]
+  
+  /* 1103 */ @js.native
+  object HourlyUnprocessedNotificationsByChannelByPublisher extends TopLevel[HourlyUnprocessedNotificationsByChannelByPublisher with Double]
+  
+  /* 2 */ @js.native
+  object NotificationByEventType extends TopLevel[NotificationByEventType with Double]
+  
+  /* 4 */ @js.native
+  object NotificationByEventTypePerUser extends TopLevel[NotificationByEventTypePerUser with Double]
+  
+  /* 0 */ @js.native
+  object NotificationBySubscription extends TopLevel[NotificationBySubscription with Double]
+  
+  /* 7 */ @js.native
+  object NotificationFailureBySubscription extends TopLevel[NotificationFailureBySubscription with Double]
+  
+  /* 202 */ @js.native
+  object NotificationPipelineTime extends TopLevel[NotificationPipelineTime with Double]
+  
+  /* 6 */ @js.native
+  object Notifications extends TopLevel[Notifications with Double]
+  
+  /* 201 */ @js.native
+  object TotalPipelineTime extends TopLevel[TotalPipelineTime with Double]
+  
+  /* 102 */ @js.native
+  object UnprocessedEventDelayByPublisher extends TopLevel[UnprocessedEventDelayByPublisher with Double]
+  
+  /* 101 */ @js.native
+  object UnprocessedEventsByPublisher extends TopLevel[UnprocessedEventsByPublisher with Double]
+  
+  /* 104 */ @js.native
+  object UnprocessedNotificationDelayByChannelByPublisher extends TopLevel[UnprocessedNotificationDelayByChannelByPublisher with Double]
+  
+  /* 103 */ @js.native
+  object UnprocessedNotificationsByChannelByPublisher extends TopLevel[UnprocessedNotificationsByChannelByPublisher with Double]
+  
+  /* 100 */ @js.native
+  object UnprocessedRangeStart extends TopLevel[UnprocessedRangeStart with Double]
+  
 }
 

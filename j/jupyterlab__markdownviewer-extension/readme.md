@@ -10,12 +10,13 @@ JupyterLab - Markdown Renderer Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/markdownviewer-extension |
 | Keywords           | - |
-| # releases         | 40 |
+| # releases         | 62 |
 | # dependents       | 1 |
-| # downloads        | 569146 |
+| # downloads        | 748033 |
 | # stars            | 0 |
 
 ## Links
+- [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fmarkdownviewer-extension)
     
 

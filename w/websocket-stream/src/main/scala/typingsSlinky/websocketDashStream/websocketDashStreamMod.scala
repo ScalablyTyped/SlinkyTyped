@@ -2,8 +2,6 @@ package typingsSlinky.websocketDashStream
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.streamMod.Duplex
-import typingsSlinky.websocketDashStream.websocketDashStreamMod.Server
-import typingsSlinky.websocketDashStream.websocketDashStreamMod.WebSocketDuplex
 import typingsSlinky.websocketDashStream.websocketDashStreamStrings.connection
 import typingsSlinky.websocketDashStream.websocketDashStreamStrings.error
 import typingsSlinky.websocketDashStream.websocketDashStreamStrings.headers

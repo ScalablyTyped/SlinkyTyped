@@ -1,19 +1,21 @@
 package typingsSlinky.antd.libIconMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGSVGElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.KeyboardEventHandler
 import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.reactMod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IconProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
-  var component: js.UndefOr[ReactComponentClass[CustomIconComponentProps]] = js.undefined
+  var component: js.UndefOr[ReactComponentClass[CustomIconComponentProps | SVGProps[SVGSVGElement]]] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
   var onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLElement]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -33,7 +35,7 @@ object IconProps {
   @scala.inline
   def apply(
     className: String = null,
-    component: ReactComponentClass[CustomIconComponentProps] = null,
+    component: ReactComponentClass[CustomIconComponentProps | SVGProps[SVGSVGElement]] = null,
     onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
     prefixCls: String = null,

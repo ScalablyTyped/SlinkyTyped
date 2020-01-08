@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object BugsBehavior extends js.Object {
   @js.native
   sealed trait Off extends BugsBehavior
   
-  /* 1 */ val AsRequirements: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.BugsBehavior.AsRequirements with Double = js.native
-  /* 2 */ val AsTasks: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.BugsBehavior.AsTasks with Double = js.native
-  /* 0 */ val Off: typingsSlinky.vsoDashNodeDashApi.interfacesWorkInterfacesMod.BugsBehavior.Off with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BugsBehavior with Double] = js.native
+  /* 1 */ @js.native
+  object AsRequirements extends TopLevel[AsRequirements with Double]
+  
+  /* 2 */ @js.native
+  object AsTasks extends TopLevel[AsTasks with Double]
+  
+  /* 0 */ @js.native
+  object Off extends TopLevel[Off with Double]
+  
 }
 

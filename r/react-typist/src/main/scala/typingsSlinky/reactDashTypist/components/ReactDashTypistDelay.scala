@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashTypistDelay extends SharedApply_DelayProps_1646964161[Delay] {
+object ReactDashTypistDelay extends SharedApply_DelayProps_1798624415[Delay] {
   @JSImport("react-typist", "default.Delay")
   @js.native
   object componentImport extends js.Object

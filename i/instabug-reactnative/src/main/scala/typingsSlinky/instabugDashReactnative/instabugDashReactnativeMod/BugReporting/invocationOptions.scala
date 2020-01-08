@@ -1,5 +1,6 @@
 package typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,28 +12,30 @@ sealed trait invocationOptions extends js.Object
 @js.native
 object invocationOptions extends js.Object {
   @js.native
-  sealed trait commentFieldRequired
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions
+  sealed trait commentFieldRequired extends invocationOptions
   
   @js.native
-  sealed trait disablePostSendingDialog
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions
+  sealed trait disablePostSendingDialog extends invocationOptions
   
   @js.native
-  sealed trait emailFieldHidden
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions
+  sealed trait emailFieldHidden extends invocationOptions
   
   @js.native
-  sealed trait emailFieldOptional
-    extends typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions
+  sealed trait emailFieldOptional extends invocationOptions
   
-  /* 2 */ val commentFieldRequired: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions.commentFieldRequired with Double = js.native
-  /* 3 */ val disablePostSendingDialog: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions.disablePostSendingDialog with Double = js.native
-  /* 0 */ val emailFieldHidden: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions.emailFieldHidden with Double = js.native
-  /* 1 */ val emailFieldOptional: typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions.emailFieldOptional with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[
-    typingsSlinky.instabugDashReactnative.instabugDashReactnativeMod.BugReporting.invocationOptions with Double
-  ] = js.native
+  def apply(value: Double): js.UndefOr[invocationOptions with Double] = js.native
+  /* 2 */ @js.native
+  object commentFieldRequired extends TopLevel[commentFieldRequired with Double]
+  
+  /* 3 */ @js.native
+  object disablePostSendingDialog extends TopLevel[disablePostSendingDialog with Double]
+  
+  /* 0 */ @js.native
+  object emailFieldHidden extends TopLevel[emailFieldHidden with Double]
+  
+  /* 1 */ @js.native
+  object emailFieldOptional extends TopLevel[emailFieldOptional with Double]
+  
 }
 

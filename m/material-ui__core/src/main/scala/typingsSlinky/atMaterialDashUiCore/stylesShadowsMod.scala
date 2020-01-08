@@ -1,6 +1,5 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import typingsSlinky.atMaterialDashUiCore.stylesShadowsMod.Shadows
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

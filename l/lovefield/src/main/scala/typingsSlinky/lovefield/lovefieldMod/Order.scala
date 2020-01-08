@@ -1,5 +1,6 @@
 package typingsSlinky.lovefield.lovefieldMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Order extends js.Object {
   @js.native
   sealed trait DESC extends Order
   
-  /* 0 */ val ASC: typingsSlinky.lovefield.lovefieldMod.Order.ASC with Double = js.native
-  /* 1 */ val DESC: typingsSlinky.lovefield.lovefieldMod.Order.DESC with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Order with Double] = js.native
+  /* 0 */ @js.native
+  object ASC extends TopLevel[ASC with Double]
+  
+  /* 1 */ @js.native
+  object DESC extends TopLevel[DESC with Double]
+  
 }
 

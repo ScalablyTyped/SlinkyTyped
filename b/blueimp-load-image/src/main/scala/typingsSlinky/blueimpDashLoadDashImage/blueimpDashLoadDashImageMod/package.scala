@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object blueimpDashLoadDashImageMod {
   import org.scalablytyped.runtime.NumberDictionary
+  import org.scalajs.dom.raw.Event
   import org.scalajs.dom.raw.HTMLCanvasElement
   import org.scalajs.dom.raw.HTMLImageElement
 
@@ -13,7 +14,7 @@ package object blueimpDashLoadDashImageMod {
   type Exif = NumberDictionary[Double | String | js.Array[String]]
   type Iptc = NumberDictionary[Double | String | js.Array[String]]
   type LoadImageCallback = js.Function2[
-    /* image */ HTMLCanvasElement | HTMLImageElement, 
+    /* eventOrImage */ Event | HTMLCanvasElement | HTMLImageElement, 
     /* data */ js.UndefOr[MetaData], 
     Unit
   ]

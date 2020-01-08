@@ -2,8 +2,6 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.projMod.ProjectionLike
-import typingsSlinky.ol.projMod.TransformFunction
 import typingsSlinky.ol.projProjectionMod.default
 import typingsSlinky.ol.projUnitsMod.Units
 import scala.scalajs.js

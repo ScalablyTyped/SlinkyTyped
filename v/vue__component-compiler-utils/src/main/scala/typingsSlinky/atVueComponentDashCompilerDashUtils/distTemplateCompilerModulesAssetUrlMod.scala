@@ -1,7 +1,6 @@
 package typingsSlinky.atVueComponentDashCompilerDashUtils
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atVueComponentDashCompilerDashUtils.distTemplateCompilerModulesAssetUrlMod.AssetURLOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

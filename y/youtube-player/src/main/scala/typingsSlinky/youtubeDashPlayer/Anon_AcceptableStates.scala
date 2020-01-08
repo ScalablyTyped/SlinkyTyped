@@ -2,7 +2,7 @@ package typingsSlinky.youtubeDashPlayer
 
 import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates.ENDED
 import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates.PAUSED
-import typingsSlinky.youtubeDashPlayer.youtubeDashPlayerNumbers.`false`
+import typingsSlinky.youtubeDashPlayer.youtubeDashPlayerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

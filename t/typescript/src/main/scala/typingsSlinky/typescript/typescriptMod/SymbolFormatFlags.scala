@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object SymbolFormatFlags extends js.Object {
   @js.native
   sealed trait WriteTypeParametersOrArguments extends SymbolFormatFlags
   
-  /* 4 */ val AllowAnyNodeKind: typingsSlinky.typescript.typescriptMod.SymbolFormatFlags.AllowAnyNodeKind with Double = js.native
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.SymbolFormatFlags.None with Double = js.native
-  /* 8 */ val UseAliasDefinedOutsideCurrentScope: typingsSlinky.typescript.typescriptMod.SymbolFormatFlags.UseAliasDefinedOutsideCurrentScope with Double = js.native
-  /* 2 */ val UseOnlyExternalAliasing: typingsSlinky.typescript.typescriptMod.SymbolFormatFlags.UseOnlyExternalAliasing with Double = js.native
-  /* 1 */ val WriteTypeParametersOrArguments: typingsSlinky.typescript.typescriptMod.SymbolFormatFlags.WriteTypeParametersOrArguments with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SymbolFormatFlags with Double] = js.native
+  /* 4 */ @js.native
+  object AllowAnyNodeKind extends TopLevel[AllowAnyNodeKind with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 8 */ @js.native
+  object UseAliasDefinedOutsideCurrentScope extends TopLevel[UseAliasDefinedOutsideCurrentScope with Double]
+  
+  /* 2 */ @js.native
+  object UseOnlyExternalAliasing extends TopLevel[UseOnlyExternalAliasing with Double]
+  
+  /* 1 */ @js.native
+  object WriteTypeParametersOrArguments extends TopLevel[WriteTypeParametersOrArguments with Double]
+  
 }
 

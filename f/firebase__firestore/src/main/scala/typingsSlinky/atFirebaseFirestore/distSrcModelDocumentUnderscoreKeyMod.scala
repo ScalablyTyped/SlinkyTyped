@@ -1,6 +1,5 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcModelDocumentUnderscoreKeyMod.DocumentKey
 import typingsSlinky.atFirebaseFirestore.distSrcModelPathMod.ResourcePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.webservices
 
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,7 @@ import scala.scalajs.js.annotation._
 class PublishedAppService protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.webservices.PublishedAppService {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
@@ -26,7 +28,7 @@ class PublishedAppService protected ()
 @js.native
 object PublishedAppService extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new PublishedAppService unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.

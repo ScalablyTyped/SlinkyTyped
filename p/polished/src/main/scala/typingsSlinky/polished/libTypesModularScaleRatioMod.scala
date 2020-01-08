@@ -1,6 +1,5 @@
 package typingsSlinky.polished
 
-import typingsSlinky.polished.libTypesModularScaleRatioMod._ModularScaleRatio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

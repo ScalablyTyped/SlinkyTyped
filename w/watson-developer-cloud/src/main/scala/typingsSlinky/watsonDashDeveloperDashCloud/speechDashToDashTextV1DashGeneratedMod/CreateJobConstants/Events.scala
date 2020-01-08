@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.CreateJobConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +24,19 @@ object Events extends js.Object {
   @js.native
   sealed trait RECOGNITIONS_STARTED extends Events
   
-  /* "recognitions.completed" */ val RECOGNITIONS_COMPLETED: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.CreateJobConstants.Events.RECOGNITIONS_COMPLETED with String = js.native
-  /* "recognitions.completed_with_results" */ val RECOGNITIONS_COMPLETED_WITH_RESULTS: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.CreateJobConstants.Events.RECOGNITIONS_COMPLETED_WITH_RESULTS with String = js.native
-  /* "recognitions.failed" */ val RECOGNITIONS_FAILED: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.CreateJobConstants.Events.RECOGNITIONS_FAILED with String = js.native
-  /* "recognitions.started" */ val RECOGNITIONS_STARTED: typingsSlinky.watsonDashDeveloperDashCloud.speechDashToDashTextV1DashGeneratedMod.CreateJobConstants.Events.RECOGNITIONS_STARTED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Events with String] = js.native
+  /* "recognitions.completed" */ @js.native
+  object RECOGNITIONS_COMPLETED extends TopLevel[RECOGNITIONS_COMPLETED with String]
+  
+  /* "recognitions.completed_with_results" */ @js.native
+  object RECOGNITIONS_COMPLETED_WITH_RESULTS extends TopLevel[RECOGNITIONS_COMPLETED_WITH_RESULTS with String]
+  
+  /* "recognitions.failed" */ @js.native
+  object RECOGNITIONS_FAILED extends TopLevel[RECOGNITIONS_FAILED with String]
+  
+  /* "recognitions.started" */ @js.native
+  object RECOGNITIONS_STARTED extends TopLevel[RECOGNITIONS_STARTED with String]
+  
 }
 

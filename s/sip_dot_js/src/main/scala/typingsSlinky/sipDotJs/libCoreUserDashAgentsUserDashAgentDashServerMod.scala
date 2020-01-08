@@ -10,7 +10,6 @@ import typingsSlinky.sipDotJs.libCoreTransactionsMod.ServerTransaction
 import typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashUserMod.ServerTransactionUser
 import typingsSlinky.sipDotJs.libCoreTransportMod.Transport
 import typingsSlinky.sipDotJs.libCoreUserDashAgentDashCoreMod.UserAgentCore
-import typingsSlinky.sipDotJs.libCoreUserDashAgentsUserDashAgentDashServerMod.ServerTransactionConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,8 +33,6 @@ object libCoreUserDashAgentsUserDashAgentDashServerMod extends js.Object {
     var _transaction: js.Any = js.native
     val acceptable: Boolean = js.native
     var core: UserAgentCore = js.native
-    @JSName("delegate")
-    var delegate_UserAgentServer: js.UndefOr[IncomingRequestDelegate] = js.native
     var init: js.Any = js.native
     var logger: Logger = js.native
     val loggerFactory: LoggerFactory = js.native

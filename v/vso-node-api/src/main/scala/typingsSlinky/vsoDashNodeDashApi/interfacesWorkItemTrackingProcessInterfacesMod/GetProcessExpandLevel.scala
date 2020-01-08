@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object GetProcessExpandLevel extends js.Object {
   @js.native
   sealed trait Projects extends GetProcessExpandLevel
   
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetProcessExpandLevel.None with Double = js.native
-  /* 1 */ val Projects: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingProcessInterfacesMod.GetProcessExpandLevel.Projects with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GetProcessExpandLevel with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Projects extends TopLevel[Projects with Double]
+  
 }
 

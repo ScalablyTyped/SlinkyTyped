@@ -6,11 +6,15 @@ import scala.scalajs.js.annotation._
 
 package object reduxMod {
   import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.redux.Anon_CombinedState
 
   type ActionCreator[A] = js.Function1[/* repeated */ js.Any, A]
   type ActionCreatorsMapObject[A] = StringDictionary[ActionCreator[A]]
+  type ActionFromReducer[R] = js.Any
+  type ActionFromReducersMapObject[M] = ActionFromReducer[ReducerFromReducersMapObject[M]]
+  type CombinedState[S] = Anon_CombinedState with S
   type DeepPartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof T ]:? T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt $anonfun#applyOrElse Simplified recursive type alias redux.redux.DeepPartial<T[K]> * / object : T[K]}
+  {[ K in keyof T ]:? T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias redux.redux.DeepPartial<T[K]> * / object : T[K]}
     */ typingsSlinky.redux.reduxStrings.DeepPartial with js.Any
   type Dispatch[A /* <: Action[_] */] = js.Function1[/* action */ A, A]
   /* compose */
@@ -22,17 +26,24 @@ package object reduxMod {
     /* api */ MiddlewareAPI[D, S], 
     js.Function1[/* next */ Dispatch[AnyAction], js.Function1[/* action */ js.Any, js.Any]]
   ]
+  type PreloadedState[S] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof S ]: S[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias redux.redux.PreloadedState<S[K]> * / object : S[K]}
+    */ typingsSlinky.redux.reduxStrings.PreloadedState with js.Any
   type Reducer[S, A /* <: Action[_] */] = js.Function2[/* state */ js.UndefOr[S], /* action */ A, S]
+  type ReducerFromReducersMapObject[M] = js.Any
   type ReducersMapObject[S, A /* <: Action[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof S ]: redux.redux.Reducer<S[K], A>}
     */ typingsSlinky.redux.reduxStrings.ReducersMapObject with S
+  type StateFromReducersMapObject[M] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof M ]: M[P] extends redux.redux.Reducer<infer S, any>? any : never}
+    */ typingsSlinky.redux.reduxStrings.StateFromReducersMapObject with M
   type StoreEnhancer[Ext, StateExt] = js.Function1[
     /* next */ StoreEnhancerStoreCreator[js.Object, js.Object], 
     StoreEnhancerStoreCreator[Ext, StateExt]
   ]
   type StoreEnhancerStoreCreator[Ext, StateExt] = js.Function2[
     /* reducer */ Reducer[js.Any, AnyAction], 
-    /* preloadedState */ js.UndefOr[DeepPartial[js.Any]], 
+    /* preloadedState */ js.UndefOr[PreloadedState[js.Any]], 
     (Store[js.Any with StateExt, AnyAction]) with Ext
   ]
   type Unsubscribe = js.Function0[Unit]

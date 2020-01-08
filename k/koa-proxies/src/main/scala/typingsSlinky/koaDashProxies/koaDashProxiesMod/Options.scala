@@ -1,9 +1,9 @@
 package typingsSlinky.koaDashProxies.koaDashProxiesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.httpDashProxy.httpDashProxyBooleans.`false`
 import typingsSlinky.httpDashProxy.httpDashProxyMod.ProxyTargetUrl
 import typingsSlinky.httpDashProxy.httpDashProxyMod.ServerOptions
-import typingsSlinky.httpDashProxy.httpDashProxyNumbers.`false`
 import typingsSlinky.koa.koaMod.DefaultContext
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js

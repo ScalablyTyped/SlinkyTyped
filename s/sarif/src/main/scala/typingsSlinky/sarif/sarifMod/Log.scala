@@ -1,7 +1,7 @@
 package typingsSlinky.sarif.sarifMod
 
 import typingsSlinky.sarif.sarifMod.Log.version
-import typingsSlinky.sarif.sarifStrings.`2DOT1DOT0`
+import typingsSlinky.sarif.sarifStrings.`2Dot1Dot0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +34,6 @@ trait Log extends js.Object {
 @JSImport("sarif", "Log")
 @js.native
 object Log extends js.Object {
-  type version = `2DOT1DOT0`
+  type version = `2Dot1Dot0`
 }
 

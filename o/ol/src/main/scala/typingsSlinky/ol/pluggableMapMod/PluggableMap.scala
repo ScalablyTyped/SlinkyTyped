@@ -5,10 +5,10 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.featureMod.FeatureLike
 import typingsSlinky.ol.objectMod.ObjectEvent
-import typingsSlinky.ol.olStrings.`change:layerGroup`
-import typingsSlinky.ol.olStrings.`change:size`
-import typingsSlinky.ol.olStrings.`change:target`
-import typingsSlinky.ol.olStrings.`change:view`
+import typingsSlinky.ol.olStrings.changeColonlayerGroup
+import typingsSlinky.ol.olStrings.changeColonsize
+import typingsSlinky.ol.olStrings.changeColontarget
+import typingsSlinky.ol.olStrings.changeColonview
 import typingsSlinky.ol.olStrings.click
 import typingsSlinky.ol.olStrings.dblclick
 import typingsSlinky.ol.olStrings.moveend
@@ -101,13 +101,13 @@ trait PluggableMap
   def hasFeatureAtPixel[U](pixel: Pixel, opt_options: AtPixelOptions): Boolean = js.native
   def isRendered(): Boolean = js.native
   @JSName("on")
-  def on_changelayerGroup(`type`: `change:layerGroup`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changelayerGroup(`type`: changeColonlayerGroup, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changesize(`type`: `change:size`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changesize(`type`: changeColonsize, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changetarget(`type`: `change:target`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changetarget(`type`: changeColontarget, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
-  def on_changeview(`type`: `change:view`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def on_changeview(`type`: changeColonview, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
   def on_click(`type`: click, listener: js.Function1[/* evt */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]): EventsKey = js.native
   @JSName("on")
@@ -152,13 +152,13 @@ trait PluggableMap
     listener: js.Function1[/* evt */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]
   ): EventsKey = js.native
   @JSName("once")
-  def once_changelayerGroup(`type`: `change:layerGroup`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changelayerGroup(`type`: changeColonlayerGroup, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changesize(`type`: `change:size`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changesize(`type`: changeColonsize, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changetarget(`type`: `change:target`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changetarget(`type`: changeColontarget, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
-  def once_changeview(`type`: `change:view`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  def once_changeview(`type`: changeColonview, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
   def once_click(`type`: click, listener: js.Function1[/* evt */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]): EventsKey = js.native
   @JSName("once")
@@ -217,13 +217,13 @@ trait PluggableMap
   def setView(view: typingsSlinky.ol.viewMod.default): Unit = js.native
   def skipFeature(feature: typingsSlinky.ol.featureMod.default): Unit = js.native
   @JSName("un")
-  def un_changelayerGroup(`type`: `change:layerGroup`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changelayerGroup(`type`: changeColonlayerGroup, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changesize(`type`: `change:size`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changesize(`type`: changeColonsize, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changetarget(`type`: `change:target`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changetarget(`type`: changeColontarget, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
-  def un_changeview(`type`: `change:view`, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
+  def un_changeview(`type`: changeColonview, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
   def un_click(`type`: click, listener: js.Function1[/* evt */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]): Unit = js.native
   @JSName("un")

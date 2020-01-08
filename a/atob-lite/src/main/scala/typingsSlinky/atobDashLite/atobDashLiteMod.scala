@@ -1,6 +1,5 @@
 package typingsSlinky.atobDashLite
 
-import typingsSlinky.atobDashLite.atobDashLiteMod.DecodedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

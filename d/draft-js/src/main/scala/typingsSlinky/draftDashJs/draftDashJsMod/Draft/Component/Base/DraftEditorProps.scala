@@ -1,10 +1,15 @@
 package typingsSlinky.draftDashJs.draftDashJsMod.Draft.Component.Base
 
 import org.scalajs.dom.raw.Blob
+import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.Constants.DraftDragType
 import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.Constants.DraftHandleValue
+import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock
 import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.DraftInlineStyle
+import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState
+import typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.SelectionState
 import typingsSlinky.draftDashJs.draftDashJsMod.SyntheticEvent
+import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,27 +33,13 @@ trait DraftEditorProps extends js.Object {
   // For a given `ContentBlock` object, return an object that specifies
   // a custom block component and/or props. If no object is returned,
   // the default `TextEditorBlock` is used.
-  var blockRendererFn: js.UndefOr[
-    js.Function1[
-      /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock, 
-      _
-    ]
-  ] = js.undefined
+  var blockRendererFn: js.UndefOr[js.Function1[/* block */ ContentBlock, _]] = js.undefined
   // Function that allows to define class names to apply to the given block when it is rendered.
-  var blockStyleFn: js.UndefOr[
-    js.Function1[
-      /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock, 
-      String
-    ]
-  ] = js.undefined
-  // Provide a function that will construct CSS style objects given inline
-  // style names.
+  var blockStyleFn: js.UndefOr[js.Function1[/* block */ ContentBlock, String]] = js.undefined
+  // Define a function to transform inline styles to CSS objects
+  // that are applied to spans of text.
   var customStyleFn: js.UndefOr[
-    js.Function2[
-      /* style */ DraftInlineStyle, 
-      /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock, 
-      DraftStyleMap
-    ]
+    js.Function2[/* style */ DraftInlineStyle, /* block */ ContentBlock, CSSProperties]
   ] = js.undefined
   // Provide a map of inline style names corresponding to CSS style objects
   // that will be rendered for matching ranges.
@@ -56,7 +47,7 @@ trait DraftEditorProps extends js.Object {
   // If using server-side rendering, this prop is required to be set to
   // avoid client/server mismatches.
   var editorKey: js.UndefOr[String] = js.undefined
-  var editorState: typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState
+  var editorState: EditorState
   // Handle intended text insertion before the insertion occurs. This may be
   // useful in cases where the user has entered characters that you would like
   // to trigger some special behavior. E.g. immediately converting `:)` to an
@@ -65,7 +56,7 @@ trait DraftEditorProps extends js.Object {
   var handleBeforeInput: js.UndefOr[
     js.Function3[
       /* chars */ String, 
-      /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, 
+      /* editorState */ EditorState, 
       /* eventTimeStamp */ Double, 
       DraftHandleValue
     ]
@@ -73,7 +64,7 @@ trait DraftEditorProps extends js.Object {
   // Handle other drops to prevent default text movement/insertion behaviour
   var handleDrop: js.UndefOr[
     js.Function3[
-      /* selection */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.SelectionState, 
+      /* selection */ SelectionState, 
       /* dataTransfer */ js.Object, 
       /* isInternal */ DraftDragType, 
       DraftHandleValue
@@ -81,18 +72,14 @@ trait DraftEditorProps extends js.Object {
   ] = js.undefined
   // Handle dropped files
   var handleDroppedFiles: js.UndefOr[
-    js.Function2[
-      /* selection */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.SelectionState, 
-      /* files */ js.Array[Blob], 
-      DraftHandleValue
-    ]
+    js.Function2[/* selection */ SelectionState, /* files */ js.Array[Blob], DraftHandleValue]
   ] = js.undefined
   // Map a key command string provided by your key binding function to a
   // specified behavior.
   var handleKeyCommand: js.UndefOr[
     js.Function3[
       /* command */ EditorCommand, 
-      /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, 
+      /* editorState */ EditorState, 
       /* eventTimeStamp */ Double, 
       DraftHandleValue
     ]
@@ -102,7 +89,7 @@ trait DraftEditorProps extends js.Object {
     js.Function3[
       /* text */ String, 
       /* html */ js.UndefOr[String], 
-      /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, 
+      /* editorState */ EditorState, 
       DraftHandleValue
     ]
   ] = js.undefined
@@ -113,27 +100,23 @@ trait DraftEditorProps extends js.Object {
   // Useful for managing special behavior for pressing the `Return` key. E.g.
   // removing the style from an empty list item.
   var handleReturn: js.UndefOr[
-    js.Function2[
-      slinky.web.SyntheticKeyboardEvent[js.Object], 
-      /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, 
-      DraftHandleValue
-    ]
+    js.Function2[SyntheticKeyboardEvent[js.Object], /* editorState */ EditorState, DraftHandleValue]
   ] = js.undefined
   // A function that accepts a synthetic key event and returns
   // the matching DraftEditorCommand constant, or null if no command should
   // be invoked.
-  var keyBindingFn: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], EditorCommand | Null]] = js.undefined
+  var keyBindingFn: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], EditorCommand | Null]] = js.undefined
   var onBlur: js.UndefOr[js.Function1[/* e */ SyntheticEvent, Unit]] = js.undefined
-  var onDownArrow: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onDownArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
   /**
     * Non-cancelable event triggers.
     */
-  var onEscape: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onEscape: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
   var onFocus: js.UndefOr[js.Function1[/* e */ SyntheticEvent, Unit]] = js.undefined
-  var onLeftArrow: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
-  var onRightArrow: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
-  var onTab: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
-  var onUpArrow: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onLeftArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onRightArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onTab: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
+  var onUpArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.undefined
   var placeholder: js.UndefOr[String] = js.undefined
   // Set whether the `DraftEditor` component should be editable. Useful for
   // temporarily disabling edit behavior or allowing `DraftEditor` rendering
@@ -155,14 +138,14 @@ trait DraftEditorProps extends js.Object {
   // regardless of input characters.
   var textDirectionality: js.UndefOr[DraftTextDirectionality] = js.undefined
   var webDriverTestID: js.UndefOr[String] = js.undefined
-  def onChange(editorState: typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState): Unit
+  def onChange(editorState: EditorState): Unit
 }
 
 object DraftEditorProps {
   @scala.inline
   def apply(
-    editorState: typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState,
-    onChange: typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState => Unit,
+    editorState: EditorState,
+    onChange: EditorState => Unit,
     ariaActiveDescendantID: String = null,
     ariaAutoComplete: String = null,
     ariaControls: String = null,
@@ -174,27 +157,27 @@ object DraftEditorProps {
     autoComplete: String = null,
     autoCorrect: String = null,
     blockRenderMap: DraftBlockRenderMap = null,
-    blockRendererFn: /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock => _ = null,
-    blockStyleFn: /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock => String = null,
-    customStyleFn: (/* style */ DraftInlineStyle, /* block */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.ContentBlock) => DraftStyleMap = null,
+    blockRendererFn: /* block */ ContentBlock => _ = null,
+    blockStyleFn: /* block */ ContentBlock => String = null,
+    customStyleFn: (/* style */ DraftInlineStyle, /* block */ ContentBlock) => CSSProperties = null,
     customStyleMap: DraftStyleMap = null,
     editorKey: String = null,
-    handleBeforeInput: (/* chars */ String, /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, /* eventTimeStamp */ Double) => DraftHandleValue = null,
-    handleDrop: (/* selection */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.SelectionState, /* dataTransfer */ js.Object, /* isInternal */ DraftDragType) => DraftHandleValue = null,
-    handleDroppedFiles: (/* selection */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.SelectionState, /* files */ js.Array[Blob]) => DraftHandleValue = null,
-    handleKeyCommand: (/* command */ EditorCommand, /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState, /* eventTimeStamp */ Double) => DraftHandleValue = null,
+    handleBeforeInput: (/* chars */ String, /* editorState */ EditorState, /* eventTimeStamp */ Double) => DraftHandleValue = null,
+    handleDrop: (/* selection */ SelectionState, /* dataTransfer */ js.Object, /* isInternal */ DraftDragType) => DraftHandleValue = null,
+    handleDroppedFiles: (/* selection */ SelectionState, /* files */ js.Array[Blob]) => DraftHandleValue = null,
+    handleKeyCommand: (/* command */ EditorCommand, /* editorState */ EditorState, /* eventTimeStamp */ Double) => DraftHandleValue = null,
     handlePastedFiles: /* files */ js.Array[Blob] => DraftHandleValue = null,
-    handlePastedText: (/* text */ String, /* html */ js.UndefOr[String], /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState) => DraftHandleValue = null,
-    handleReturn: (slinky.web.SyntheticKeyboardEvent[js.Object], /* editorState */ typingsSlinky.draftDashJs.draftDashJsMod.Draft.Model.ImmutableData.EditorState) => DraftHandleValue = null,
-    keyBindingFn: slinky.web.SyntheticKeyboardEvent[js.Object] => EditorCommand | Null = null,
+    handlePastedText: (/* text */ String, /* html */ js.UndefOr[String], /* editorState */ EditorState) => DraftHandleValue = null,
+    handleReturn: (SyntheticKeyboardEvent[js.Object], /* editorState */ EditorState) => DraftHandleValue = null,
+    keyBindingFn: SyntheticKeyboardEvent[js.Object] => EditorCommand | Null = null,
     onBlur: /* e */ SyntheticEvent => Unit = null,
-    onDownArrow: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onEscape: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onDownArrow: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onEscape: SyntheticKeyboardEvent[js.Object] => Unit = null,
     onFocus: /* e */ SyntheticEvent => Unit = null,
-    onLeftArrow: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onRightArrow: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onTab: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onUpArrow: slinky.web.SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onLeftArrow: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onRightArrow: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onTab: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onUpArrow: SyntheticKeyboardEvent[js.Object] => Unit = null,
     placeholder: String = null,
     readOnly: js.UndefOr[Boolean] = js.undefined,
     role: String = null,

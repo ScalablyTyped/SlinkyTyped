@@ -2,9 +2,7 @@ package typingsSlinky.instagramDashPrivateDashApi
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.caseless.caselessMod.Caseless
-import typingsSlinky.instagramDashPrivateDashApi.distTypesCommonDotTypesMod._IgAppModule
 import typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiStrings.close
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
@@ -25,8 +23,8 @@ object distTypesCommonDotTypesMod extends js.Object {
   trait IgResponse[Body] extends js.Object {
     @JSName("_destroy")
     var _destroy_Original: js.Function2[
-        /* error */ Error, 
-        /* callback */ js.Function1[/* error */ js.UndefOr[Error | Null], Unit], 
+        /* error */ js.Error, 
+        /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
         Unit
       ] = js.native
     @JSName("_read")
@@ -121,7 +119,7 @@ object distTypesCommonDotTypesMod extends js.Object {
     var url: js.UndefOr[String] = js.native
     @JSName("wrap")
     var wrap_Original: js.Function1[/* oldStream */ ReadableStream, this.type] = js.native
-    def _destroy(error: Error, callback: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Unit = js.native
+    def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     def _read(size: Double): Unit = js.native
     @JSName("addListener")
     def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -191,6 +189,7 @@ object distTypesCommonDotTypesMod extends js.Object {
     - typings.instagramDashPrivateDashApi.instagramDashPrivateDashApiStrings.story_viewer_default
     - typings.instagramDashPrivateDashApi.instagramDashPrivateDashApiStrings.find_friends_contacts
     - typings.instagramDashPrivateDashApi.instagramDashPrivateDashApiStrings.explore_people
+    - typings.instagramDashPrivateDashApi.instagramDashPrivateDashApiStrings.igtv_feed_timeline
     - java.lang.String
   */
   type IgAppModule = _IgAppModule | String

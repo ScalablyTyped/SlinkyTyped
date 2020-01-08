@@ -1,19 +1,16 @@
 package typingsSlinky.esriDashLeafletDashGeocoder.leafletMod.esri.Geocoding
 
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.Service
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.Task
-import typingsSlinky.esriDashLeaflet.esriDashLeafletMod.leafletMod.esri.TaskOptions
 import typingsSlinky.leaflet.leafletMod.LatLngBoundsExpression
 import typingsSlinky.leaflet.leafletMod.LatLngExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("leaflet", "esri.Geocoding.Suggest")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Task * / any */ @JSImport("leaflet", "esri.Geocoding.Suggest")
 @js.native
-class Suggest () extends Task {
-  def this(options: Service) = this()
-  def this(options: TaskOptions) = this()
+class Suggest () extends js.Object {
+  def this(options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TaskOptions */ js.Any) = this()
   def category(text: String): this.type = js.native
   def nearby(latlng: LatLngExpression, distance: Double): this.type = js.native
   def run(
@@ -31,7 +28,8 @@ class Suggest () extends Task {
 @js.native
 object suggest extends js.Object {
   def apply(): Suggest = js.native
-  def apply(options: Service): Suggest = js.native
-  def apply(options: TaskOptions): Suggest = js.native
+  def apply(
+    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TaskOptions */ js.Any
+  ): Suggest = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.tsutils
 
 import typingsSlinky.std.Map
-import typingsSlinky.tsutils.tsutilsStrings.BACKSLASHn
-import typingsSlinky.tsutils.tsutilsStrings.BACKSLASHrBACKSLASHn
+import typingsSlinky.tsutils.tsutilsStrings.CarriagereturnLinefeed
+import typingsSlinky.tsutils.tsutilsStrings.Linefeed
 import typingsSlinky.tsutils.tsutilsStrings.stripInternal
 import typingsSlinky.tsutils.utilControlDashFlowMod.ControlFlowEnd
 import typingsSlinky.tsutils.utilConvertDashAstMod.ConvertedAst
@@ -110,7 +110,7 @@ object tsutilsMod extends js.Object {
   def getJsDoc(node: Node, sourceFile: SourceFile): js.Array[JSDoc] = js.native
   def getLateBoundPropertyNames(node: Expression, checker: TypeChecker): LateBoundPropertyNames = js.native
   def getLateBoundPropertyNamesOfPropertyName(node: PropertyName, checker: TypeChecker): LateBoundPropertyNames = js.native
-  def getLineBreakStyle(sourceFile: SourceFile): BACKSLASHn | BACKSLASHrBACKSLASHn = js.native
+  def getLineBreakStyle(sourceFile: SourceFile): Linefeed | CarriagereturnLinefeed = js.native
   def getLineRanges(sourceFile: SourceFile): js.Array[LineRange] = js.native
   @JSName("getModifier")
   def getModifier_kind(

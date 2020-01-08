@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GridLoader
-  extends SharedApply_MarginLoaderProps_986148290[typingsSlinky.halogenium.halogeniumMod.GridLoader] {
+  extends SharedApply_MarginLoaderProps929156443[typingsSlinky.halogenium.halogeniumMod.GridLoader] {
   @JSImport("halogenium", "GridLoader")
   @js.native
   object componentImport extends js.Object

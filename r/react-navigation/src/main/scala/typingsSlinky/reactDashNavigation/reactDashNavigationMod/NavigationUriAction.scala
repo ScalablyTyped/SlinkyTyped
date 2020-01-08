@@ -1,17 +1,17 @@
 package typingsSlinky.reactDashNavigation.reactDashNavigationMod
 
-import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.`Navigation/URI`
+import typingsSlinky.reactDashNavigation.reactDashNavigationStrings.NavigationSlashURI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait NavigationUriAction extends NavigationUriActionPayload {
-  var `type`: `Navigation/URI`
+  var `type`: NavigationSlashURI
 }
 
 object NavigationUriAction {
   @scala.inline
-  def apply(`type`: `Navigation/URI`, uri: String): NavigationUriAction = {
+  def apply(`type`: NavigationSlashURI, uri: String): NavigationUriAction = {
     val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationUriAction]

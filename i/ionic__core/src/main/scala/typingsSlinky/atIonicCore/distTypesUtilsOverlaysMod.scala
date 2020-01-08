@@ -65,7 +65,6 @@ import typingsSlinky.atIonicCore.distTypesUtilsAnimationAnimationDashInterfaceMo
 import typingsSlinky.atIonicCore.distTypesUtilsAnimationOldDashAnimationAnimationDashInterfaceMod.AnimationBuilder
 import typingsSlinky.atIonicCore.distTypesUtilsOverlaysDashInterfaceMod.HTMLIonOverlayElement
 import typingsSlinky.atIonicCore.distTypesUtilsOverlaysDashInterfaceMod.OverlayInterface
-import typingsSlinky.atIonicCore.distTypesUtilsOverlaysMod.IonicAnimationInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

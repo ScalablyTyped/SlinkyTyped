@@ -1,7 +1,7 @@
 package typingsSlinky.chromeDashApps.chrome.fileSystem
 
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`false`
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`true`
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`false`
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`true`
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.openDirectory
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.openFile
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.openWritableFile
@@ -20,34 +20,6 @@ import scala.scalajs.js.annotation._
 trait ChooseEntryOptions extends js.Object
 
 object ChooseEntryOptions {
-  @scala.inline
-  def ChooseFileEntryOptions(
-    `type`: openFile | openWritableFile,
-    accepts: js.Array[AcceptOptions] = null,
-    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
-    acceptsMultiple: `false` = null,
-    suggestedName: String = null
-  ): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
-    if (acceptsMultiple != null) __obj.updateDynamic("acceptsMultiple")(acceptsMultiple.asInstanceOf[js.Any])
-    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
-  @scala.inline
-  def ChooseEntryOptionsBase(
-    accepts: js.Array[AcceptOptions] = null,
-    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
-    suggestedName: String = null
-  ): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
-    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
   @scala.inline
   def ChooseMultipleFilesEntryOptions(
     acceptsMultiple: `true`,
@@ -72,6 +44,34 @@ object ChooseEntryOptions {
   ): ChooseEntryOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
+    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
+    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChooseEntryOptions]
+  }
+  @scala.inline
+  def ChooseFileEntryOptions(
+    `type`: openFile | openWritableFile,
+    accepts: js.Array[AcceptOptions] = null,
+    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
+    acceptsMultiple: `false` = null,
+    suggestedName: String = null
+  ): ChooseEntryOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
+    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
+    if (acceptsMultiple != null) __obj.updateDynamic("acceptsMultiple")(acceptsMultiple.asInstanceOf[js.Any])
+    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChooseEntryOptions]
+  }
+  @scala.inline
+  def ChooseEntryOptionsBase(
+    accepts: js.Array[AcceptOptions] = null,
+    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
+    suggestedName: String = null
+  ): ChooseEntryOptions = {
+    val __obj = js.Dynamic.literal()
     if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
     if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
     if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])

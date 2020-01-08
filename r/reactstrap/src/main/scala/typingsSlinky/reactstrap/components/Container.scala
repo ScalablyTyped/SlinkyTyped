@@ -8,6 +8,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.CSSProperties
@@ -128,7 +129,7 @@ object Container
     contextMenu: String = null,
     cssModule: CSSModule = null,
     datatype: String = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
+    fluid: Boolean | String = null,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
     is: String = null,
@@ -216,7 +217,7 @@ object Container
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+    if (fluid != null) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
     if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
     if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
@@ -249,6 +250,9 @@ object Container
   slinky.web.html.`*`.tag.type, 
   typingsSlinky.reactstrap.libContainerMod.default[js.Any]]]
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactstrap.libContainerMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ContainerProps
 }
 

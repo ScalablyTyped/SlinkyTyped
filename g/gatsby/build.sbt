@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "gatsby"
-version := "2.18.4-8ab4c8"
+version := "2.18.17-e8881b"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-34c756",
-  "org.scalablytyped.slinky" %%% "gatsby-link" % "2.2.25-50d661",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20191126Z-44cadc",
-  "org.scalablytyped.slinky" %%% "node" % "12.12-dt-20191126Z-6a8cbf",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-243f84",
-  "org.scalablytyped.slinky" %%% "reach__router" % "1.2-dt-20191009Z-db6144",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191126Z-6c3558",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-f22bc8",
+  "org.scalablytyped.slinky" %%% "gatsby-link" % "2.2.27-2012ee",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20191126Z-50a366",
+  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-1d231d",
+  "org.scalablytyped.slinky" %%% "reach__router" % "1.2-dt-20191009Z-7b8a4c",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191220Z-f02704",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

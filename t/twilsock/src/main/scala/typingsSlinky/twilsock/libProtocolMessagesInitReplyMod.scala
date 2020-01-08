@@ -1,7 +1,6 @@
 package typingsSlinky.twilsock
 
 import typingsSlinky.twilsock.libProtocolMessagesAbstractmessageMod.AbstractMessage
-import typingsSlinky.twilsock.libProtocolMessagesInitReplyMod.ContinuationTokenStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -20,10 +20,11 @@ object Resizable
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, size */
+  /* The following DOM/SVG props were specified: className */
   def apply(
     onLayoutLock: js.UndefOr[Boolean] => Unit,
     orientation: Orientation,
+    size: Double,
     isResizable: js.UndefOr[Boolean] = js.undefined,
     maxSize: Int | Double = null,
     minSize: Int | Double = null,
@@ -35,7 +36,7 @@ object Resizable
     tag.type, 
     typingsSlinky.atBlueprintjsTable.libEsmInteractionsResizableMod.Resizable
   ] = {
-    val __obj = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
     if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
     if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])

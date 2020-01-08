@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTopDashAppDashBar
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialRipple.atMaterialRippleMod.MDCRipple
 import typingsSlinky.atMaterialTopDashAppDashBar.adapterMod.MDCTopAppBarAdapter
-import typingsSlinky.atMaterialTopDashAppDashBar.atMaterialTopDashAppDashBarMod.MDCTopAppBar
 import typingsSlinky.atMaterialTopDashAppDashBar.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

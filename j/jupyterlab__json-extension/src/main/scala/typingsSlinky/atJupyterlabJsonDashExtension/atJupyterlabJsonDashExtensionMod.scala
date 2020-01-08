@@ -1,7 +1,7 @@
 package typingsSlinky.atJupyterlabJsonDashExtension
 
 import typingsSlinky.atJupyterlabApputils.libPrintingMod.Printing.IPrintable
-import typingsSlinky.atJupyterlabJsonDashExtension.atJupyterlabJsonDashExtensionStrings.`application/json`
+import typingsSlinky.atJupyterlabJsonDashExtension.atJupyterlabJsonDashExtensionStrings.applicationSlashjson
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IExtension
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRenderer
 import typingsSlinky.atJupyterlabRendermimeDashInterfaces.atJupyterlabRendermimeDashInterfacesMod.IRenderMime.IRendererFactory
@@ -263,7 +263,6 @@ object atJupyterlabJsonDashExtensionMod extends js.Object {
       *
       * @param msg - The message to be processed.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def processMessage(msg: Message): Unit = js.native
     /**
@@ -342,7 +341,7 @@ object atJupyterlabJsonDashExtensionMod extends js.Object {
     override def update(): Unit = js.native
   }
   
-  val MIME_TYPE: `application/json` = js.native
+  val MIME_TYPE: applicationSlashjson = js.native
   val default: IExtension | js.Array[IExtension] = js.native
   val rendererFactory: IRendererFactory = js.native
 }

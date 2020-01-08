@@ -20,8 +20,8 @@ import typingsSlinky.reactDashIntl.libTypesMod.FormatNumberOptions
 import typingsSlinky.reactDashIntl.libTypesMod.IntlCache
 import typingsSlinky.reactDashIntl.libTypesMod.IntlConfig
 import typingsSlinky.reactDashIntl.libTypesMod.IntlShape
-import typingsSlinky.reactDashIntl.reactDashIntlNumbers.`false`
-import typingsSlinky.reactDashIntl.reactDashIntlNumbers.`true`
+import typingsSlinky.reactDashIntl.reactDashIntlBooleans.`false`
+import typingsSlinky.reactDashIntl.reactDashIntlBooleans.`true`
 import typingsSlinky.reactDashIntl.reactDashIntlStrings.`type`
 import typingsSlinky.reactDashIntl.reactDashIntlStrings.children
 import typingsSlinky.reactDashIntl.reactDashIntlStrings.defaultFormats
@@ -77,7 +77,7 @@ object libMod extends js.Object {
   val FormattedPlural: (ForwardRefExoticComponent[
     (Pick[
       typingsSlinky.reactDashIntl.libComponentsPluralMod.Props, 
-      children | other | zero | one | two | few | many | `type` | localeMatcher | format | value
+      children | other | zero | one | two | few | many | localeMatcher | `type` | format | value
     ]) with Anon_ForwardedRefInstance with RefAttributes[_]
   ]) with Anon_WrappedComponentComponentType = js.native
   val FormattedTime: ReactComponentClass[DateTimeFormatOptions with CustomFormatConfig with Anon_Value] = js.native

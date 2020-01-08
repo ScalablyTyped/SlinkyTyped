@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,13 +47,25 @@ object ReviewPatchOperation extends js.Object {
   @js.native
   sealed trait UpdateReview extends ReviewPatchOperation
   
-  /* 4 */ val AdminResponseForReview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.AdminResponseForReview with Double = js.native
-  /* 5 */ val DeleteAdminReply: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.DeleteAdminReply with Double = js.native
-  /* 6 */ val DeletePublisherReply: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.DeletePublisherReply with Double = js.native
-  /* 1 */ val FlagReview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.FlagReview with Double = js.native
-  /* 3 */ val ReplyToReview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.ReplyToReview with Double = js.native
-  /* 2 */ val UpdateReview: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ReviewPatchOperation.UpdateReview with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReviewPatchOperation with Double] = js.native
+  /* 4 */ @js.native
+  object AdminResponseForReview extends TopLevel[AdminResponseForReview with Double]
+  
+  /* 5 */ @js.native
+  object DeleteAdminReply extends TopLevel[DeleteAdminReply with Double]
+  
+  /* 6 */ @js.native
+  object DeletePublisherReply extends TopLevel[DeletePublisherReply with Double]
+  
+  /* 1 */ @js.native
+  object FlagReview extends TopLevel[FlagReview with Double]
+  
+  /* 3 */ @js.native
+  object ReplyToReview extends TopLevel[ReplyToReview with Double]
+  
+  /* 2 */ @js.native
+  object UpdateReview extends TopLevel[UpdateReview with Double]
+  
 }
 

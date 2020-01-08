@@ -7,6 +7,7 @@ import typingsSlinky.recharts.rechartsMod.LayoutType
 import typingsSlinky.recharts.rechartsMod.LegendType
 import typingsSlinky.recharts.rechartsMod.PickedCSSStyleDeclarationKeys
 import typingsSlinky.recharts.rechartsMod.PositionType
+import typingsSlinky.recharts.rechartsMod.ReferenceLinePosition
 import typingsSlinky.recharts.rechartsMod.ScaleType
 import typingsSlinky.recharts.rechartsMod.StackOffsetType
 import typingsSlinky.recharts.rechartsMod._AxisDomain
@@ -144,7 +145,9 @@ object rechartsStrings {
   sealed trait enableBackground extends PickedCSSStyleDeclarationKeys
   
   @js.native
-  sealed trait end extends PositionType
+  sealed trait end
+    extends PositionType
+       with ReferenceLinePosition
   
   @js.native
   sealed trait expand extends StackOffsetType
@@ -287,7 +290,7 @@ object rechartsStrings {
   sealed trait mask extends PickedCSSStyleDeclarationKeys
   
   @js.native
-  sealed trait middle extends js.Object
+  sealed trait middle extends ReferenceLinePosition
   
   @js.native
   sealed trait monotone extends _LineType
@@ -399,7 +402,7 @@ object rechartsStrings {
        with LegendType
   
   @js.native
-  sealed trait start extends js.Object
+  sealed trait start extends ReferenceLinePosition
   
   @js.native
   sealed trait step extends _LineType

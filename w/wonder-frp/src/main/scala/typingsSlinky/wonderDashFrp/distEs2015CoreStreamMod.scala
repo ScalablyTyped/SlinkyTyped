@@ -3,7 +3,6 @@ package typingsSlinky.wonderDashFrp
 import typingsSlinky.wonderDashFrp.distEs2015CoreEntityMod.Entity
 import typingsSlinky.wonderDashFrp.distEs2015CoreObserverMod.Observer
 import typingsSlinky.wonderDashFrp.distEs2015CoreSchedulerMod.Scheduler
-import typingsSlinky.wonderDashFrp.distEs2015CoreStreamMod.Stream
 import typingsSlinky.wonderDashFrp.distEs2015DisposableIDisposableMod.IDisposable
 import typingsSlinky.wonderDashFrp.distEs2015ObserverIObserverMod.IObserver
 import typingsSlinky.wonderDashFrp.distEs2015SubjectSubjectMod.Subject

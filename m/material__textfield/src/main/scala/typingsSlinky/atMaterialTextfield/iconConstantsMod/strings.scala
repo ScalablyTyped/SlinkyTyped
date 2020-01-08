@@ -2,21 +2,21 @@ package typingsSlinky.atMaterialTextfield.iconConstantsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atMaterialBase.foundationMod.MDCStrings
-import typingsSlinky.atMaterialTextfield.atMaterialTextfieldStrings.`MDCTextField:icon`
+import typingsSlinky.atMaterialTextfield.atMaterialTextfieldStrings.MDCTextFieldColonicon
 import typingsSlinky.atMaterialTextfield.atMaterialTextfieldStrings.button
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait strings extends MDCStrings {
-  var ICON_EVENT: `MDCTextField:icon`
+  var ICON_EVENT: MDCTextFieldColonicon
   var ICON_ROLE: button
 }
 
 object strings {
   @scala.inline
   def apply(
-    ICON_EVENT: `MDCTextField:icon`,
+    ICON_EVENT: MDCTextFieldColonicon,
     ICON_ROLE: button,
     StringDictionary: StringDictionary[String] = null
   ): strings = {

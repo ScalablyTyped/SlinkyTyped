@@ -35,7 +35,7 @@ object Tag
     color: String = null,
     isFocused: js.UndefOr[Boolean] = js.undefined,
     isHovered: js.UndefOr[Boolean] = js.undefined,
-    kind: custom_ | negative | warning | accent | positive | neutral | primary = null,
+    kind: custom_ | accent | primary | neutral | positive | warning | negative = null,
     onActionClick: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
     onActionKeyDown: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
     overrides: TagOverrides = null,
@@ -55,6 +55,7 @@ object Tag
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.tagMod.Tag] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.tagMod.Tag](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TagProps
 }
 

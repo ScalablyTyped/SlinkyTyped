@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DrawerItems
-  extends SharedApply_DrawerNavigatorItemsProps_960062686[
+  extends SharedApply_DrawerNavigatorItemsProps_2113662511[
       typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerMod.DrawerItems
     ] {
   @JSImport("react-navigation-drawer", "DrawerItems")

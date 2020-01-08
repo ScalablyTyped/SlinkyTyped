@@ -2,7 +2,7 @@ package typingsSlinky.httpDashServer.httpDashServerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.connect.connectMod.HandleFunction
-import typingsSlinky.httpDashServer.httpDashServerNumbers.`true`
+import typingsSlinky.httpDashServer.httpDashServerBooleans.`true`
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.httpsMod.ServerOptions

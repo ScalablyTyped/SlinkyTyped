@@ -1,7 +1,7 @@
 
 # Scala.js typings for ant-design__create-react-context
 
-Typings are for version 0.2.4
+Typings are for version 0.2.5
 
 ## Library description:
 A fork of create-react-context in MIT license
@@ -10,9 +10,9 @@ A fork of create-react-context in MIT license
 | ------------------ | :-------------: |
 | Full name          | @ant-design/create-react-context |
 | Keywords           | react, context, contextTypes, polyfill, ponyfill |
-| # releases         | 0 |
-| # dependents       | 0 |
-| # downloads        | 0 |
+| # releases         | 4 |
+| # dependents       | 50 |
+| # downloads        | 4993293 |
 | # stars            | 0 |
 
 ## Links

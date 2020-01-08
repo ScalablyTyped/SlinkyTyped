@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseInstallations
 
-import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
+import typingsSlinky.atFirebaseInstallations.distSrcInterfacesFirebaseDashDependenciesMod.FirebaseDependencies
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/installations/dist/src/functions/delete-installation", JSImport.Namespace)
 @js.native
 object distSrcFunctionsDeleteDashInstallationMod extends js.Object {
-  def deleteInstallation(app: FirebaseApp): js.Promise[Unit] = js.native
+  def deleteInstallation(dependencies: FirebaseDependencies): js.Promise[Unit] = js.native
 }
 

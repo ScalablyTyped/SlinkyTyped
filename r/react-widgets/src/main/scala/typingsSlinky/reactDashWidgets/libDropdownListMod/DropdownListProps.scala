@@ -3,11 +3,9 @@ package typingsSlinky.reactDashWidgets.libDropdownListMod
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.react.reactMod.Key
-import typingsSlinky.react.reactMod.LegacyRef
 import typingsSlinky.reactDashWidgets.libCommonPropsMod.AutoFocus
 import typingsSlinky.reactDashWidgets.libCommonPropsMod.ReactWidgetsCommonDropdownProps
-import typingsSlinky.reactDashWidgets.reactDashWidgetsNumbers.`false`
+import typingsSlinky.reactDashWidgets.reactDashWidgetsBooleans.`false`
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.contains
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.endsWith
 import typingsSlinky.reactDashWidgets.reactDashWidgetsStrings.onFilter
@@ -17,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DropdownListProps
-  extends ReactWidgetsCommonDropdownProps[DropdownListClass]
+  extends ReactWidgetsCommonDropdownProps
      with AutoFocus {
   /**
     * Allow to create a new option on the data list.
@@ -29,6 +27,11 @@ trait DropdownListProps
     * @default false
     */
   var busy: js.UndefOr[Boolean] = js.undefined
+  /**
+    * An optional ReactNode to override the spinner gif element when the busy property
+    * is set to true.
+    */
+  var busySpinner: js.UndefOr[TagMod[Any]] = js.undefined
   /**
     * Use in conjunction with the filter prop. Filter the list without regard for case. This
     * only applies to non function values for filter
@@ -193,8 +196,8 @@ object DropdownListProps {
     allowCreate: Boolean | onFilter = null,
     autoFocus: js.UndefOr[Boolean] = js.undefined,
     busy: js.UndefOr[Boolean] = js.undefined,
+    busySpinner: TagMod[Any] = null,
     caseSensitive: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
     containerClassName: String = null,
     data: js.Array[_] = null,
     defaultOpen: js.UndefOr[Boolean] = js.undefined,
@@ -209,7 +212,6 @@ object DropdownListProps {
     id: String = null,
     isRtl: js.UndefOr[Boolean] = js.undefined,
     itemComponent: ReactComponentClass[_] | String = null,
-    key: Key = null,
     listComponent: ReactComponentClass[_] | String = null,
     listProps: js.Object = null,
     messages: DropdownListMessages = null,
@@ -226,7 +228,6 @@ object DropdownListProps {
     open: js.UndefOr[Boolean] = js.undefined,
     placeholder: String = null,
     readOnly: Boolean | js.Array[_] = null,
-    ref: LegacyRef[DropdownListClass] = null,
     searchTerm: String = null,
     textField: String | (js.Function1[/* dataItem */ js.Any, String]) = null,
     value: js.Any = null,
@@ -237,8 +238,8 @@ object DropdownListProps {
     if (allowCreate != null) __obj.updateDynamic("allowCreate")(allowCreate.asInstanceOf[js.Any])
     if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
     if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
+    if (busySpinner != null) __obj.updateDynamic("busySpinner")(busySpinner.asInstanceOf[js.Any])
     if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.asInstanceOf[js.Any])
@@ -253,7 +254,6 @@ object DropdownListProps {
     if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
     if (itemComponent != null) __obj.updateDynamic("itemComponent")(itemComponent.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     if (listComponent != null) __obj.updateDynamic("listComponent")(listComponent.asInstanceOf[js.Any])
     if (listProps != null) __obj.updateDynamic("listProps")(listProps.asInstanceOf[js.Any])
     if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
@@ -270,7 +270,6 @@ object DropdownListProps {
     if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
     if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     if (searchTerm != null) __obj.updateDynamic("searchTerm")(searchTerm.asInstanceOf[js.Any])
     if (textField != null) __obj.updateDynamic("textField")(textField.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

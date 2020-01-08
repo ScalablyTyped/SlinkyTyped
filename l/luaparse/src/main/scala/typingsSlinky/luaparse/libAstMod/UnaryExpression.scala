@@ -1,9 +1,9 @@
 package typingsSlinky.luaparse.libAstMod
 
 import typingsSlinky.luaparse.Anon_End
-import typingsSlinky.luaparse.luaparseStrings.`#`
-import typingsSlinky.luaparse.luaparseStrings.`-`
-import typingsSlinky.luaparse.luaparseStrings.`~`
+import typingsSlinky.luaparse.luaparseStrings.Numbersign
+import typingsSlinky.luaparse.luaparseStrings.Tilde
+import typingsSlinky.luaparse.luaparseStrings.`-_`
 import typingsSlinky.luaparse.luaparseStrings.not
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +13,14 @@ trait UnaryExpression
   extends Expression
      with Base[typingsSlinky.luaparse.luaparseStrings.UnaryExpression] {
   var argument: Expression
-  var operator: not | `-` | `~` | `#`
+  var operator: not | `-_` | Tilde | Numbersign
 }
 
 object UnaryExpression {
   @scala.inline
   def apply(
     argument: Expression,
-    operator: not | `-` | `~` | `#`,
+    operator: not | `-_` | Tilde | Numbersign,
     `type`: typingsSlinky.luaparse.luaparseStrings.UnaryExpression,
     loc: Anon_End = null
   ): UnaryExpression = {

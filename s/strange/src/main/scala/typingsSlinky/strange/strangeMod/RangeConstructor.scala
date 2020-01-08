@@ -20,12 +20,12 @@ trait RangeConstructor
   * @param bounds Range's bounds.
   */
 Instantiable0[typingsSlinky.std.Range]
+     with Instantiable1[/* begin */ Endpoint, typingsSlinky.std.Range]
      with Instantiable2[
       (/* begin */ Endpoint) | (/* begin */ Null), 
       /* end */ Endpoint, 
       typingsSlinky.std.Range
     ]
-     with Instantiable1[/* begin */ Endpoint, typingsSlinky.std.Range]
      with Instantiable3[
       (/* begin */ Endpoint) | (/* begin */ Null), 
       (/* end */ Endpoint) | (/* end */ Null), 

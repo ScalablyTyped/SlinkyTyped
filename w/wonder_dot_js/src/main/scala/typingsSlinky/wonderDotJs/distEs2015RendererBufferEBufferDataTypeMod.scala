@@ -1,6 +1,6 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferDataTypeMod.EBufferDataType
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +19,14 @@ object distEs2015RendererBufferEBufferDataTypeMod extends js.Object {
     @js.native
     sealed trait VERTICE extends EBufferDataType
     
-    /* 1 */ val INDICE: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferDataTypeMod.EBufferDataType.INDICE with Double = js.native
-    /* 0 */ val VERTICE: typingsSlinky.wonderDotJs.distEs2015RendererBufferEBufferDataTypeMod.EBufferDataType.VERTICE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[EBufferDataType with Double] = js.native
+    /* 1 */ @js.native
+    object INDICE extends TopLevel[INDICE with Double]
+    
+    /* 0 */ @js.native
+    object VERTICE extends TopLevel[VERTICE with Double]
+    
   }
   
 }

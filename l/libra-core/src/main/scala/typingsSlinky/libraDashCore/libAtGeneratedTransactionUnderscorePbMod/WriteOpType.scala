@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedTransactionUnderscorePbMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object WriteOpType extends js.Object {
   @js.native
   sealed trait WRITE extends WriteOpType
   
-  /* 1 */ val DELETE: typingsSlinky.libraDashCore.libAtGeneratedTransactionUnderscorePbMod.WriteOpType.DELETE with Double = js.native
-  /* 0 */ val WRITE: typingsSlinky.libraDashCore.libAtGeneratedTransactionUnderscorePbMod.WriteOpType.WRITE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WriteOpType with Double] = js.native
+  /* 1 */ @js.native
+  object DELETE extends TopLevel[DELETE with Double]
+  
+  /* 0 */ @js.native
+  object WRITE extends TopLevel[WRITE with Double]
+  
 }
 

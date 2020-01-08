@@ -1,8 +1,6 @@
 package typingsSlinky.useDashCallbackDashRef
 
 import typingsSlinky.react.reactMod.MutableRefObject
-import typingsSlinky.useDashCallbackDashRef.distEs5TypesMod.RefCallback
-import typingsSlinky.useDashCallbackDashRef.distEs5TypesMod.RefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

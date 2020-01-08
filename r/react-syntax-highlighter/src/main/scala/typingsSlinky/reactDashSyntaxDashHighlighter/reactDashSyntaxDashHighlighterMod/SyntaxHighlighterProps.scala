@@ -2,7 +2,7 @@ package typingsSlinky.reactDashSyntaxDashHighlighter.reactDashSyntaxDashHighligh
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.reactMod.DOMAttributes
+import typingsSlinky.react.reactMod.HTMLProps
 import typingsSlinky.reactDashSyntaxDashHighlighter.lineTagPropsFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation._
 
 trait SyntaxHighlighterProps
   extends /* spread */ StringDictionary[js.Any] {
-  var codeTagProps: js.UndefOr[DOMAttributes[HTMLElement]] = js.undefined
+  var codeTagProps: js.UndefOr[HTMLProps[HTMLElement]] = js.undefined
   var customStyle: js.UndefOr[js.Any] = js.undefined
   var language: js.UndefOr[String] = js.undefined
   var lineNumberStyle: js.UndefOr[js.Any] = js.undefined
-  var lineProps: js.UndefOr[lineTagPropsFunction | DOMAttributes[HTMLElement]] = js.undefined
+  var lineProps: js.UndefOr[lineTagPropsFunction | HTMLProps[HTMLElement]] = js.undefined
   var showLineNumbers: js.UndefOr[Boolean] = js.undefined
   var startingLineNumber: js.UndefOr[Double] = js.undefined
   var style: js.UndefOr[js.Any] = js.undefined
@@ -25,11 +25,11 @@ object SyntaxHighlighterProps {
   @scala.inline
   def apply(
     StringDictionary: /* spread */ StringDictionary[js.Any] = null,
-    codeTagProps: DOMAttributes[HTMLElement] = null,
+    codeTagProps: HTMLProps[HTMLElement] = null,
     customStyle: js.Any = null,
     language: String = null,
     lineNumberStyle: js.Any = null,
-    lineProps: lineTagPropsFunction | DOMAttributes[HTMLElement] = null,
+    lineProps: lineTagPropsFunction | HTMLProps[HTMLElement] = null,
     showLineNumbers: js.UndefOr[Boolean] = js.undefined,
     startingLineNumber: Int | Double = null,
     style: js.Any = null,

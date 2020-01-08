@@ -1,8 +1,6 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.std.stdStrings.`http://wwwDOTw3DOTorg/1999/xhtml`
-import typingsSlinky.std.stdStrings.`http://wwwDOTw3DOTorg/2000/svg`
 import typingsSlinky.std.stdStrings.`object`
 import typingsSlinky.std.stdStrings.`var`
 import typingsSlinky.std.stdStrings.a
@@ -94,6 +92,8 @@ import typingsSlinky.std.stdStrings.header
 import typingsSlinky.std.stdStrings.hgroup
 import typingsSlinky.std.stdStrings.hr
 import typingsSlinky.std.stdStrings.html
+import typingsSlinky.std.stdStrings.httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml
+import typingsSlinky.std.stdStrings.httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg
 import typingsSlinky.std.stdStrings.i
 import typingsSlinky.std.stdStrings.iframe
 import typingsSlinky.std.stdStrings.image
@@ -643,9 +643,9 @@ trait Element
   def getElementsByTagName(qualifiedName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
   def getElementsByTagNameNS(namespaceURI: java.lang.String, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
   @JSName("getElementsByTagNameNS")
-  def getElementsByTagNameNS_httpwwww3org1999xhtml(namespaceURI: `http://wwwDOTw3DOTorg/1999/xhtml`, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
+  def getElementsByTagNameNS_httpwwww3org1999xhtml(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagNameNS")
-  def getElementsByTagNameNS_httpwwww3org2000svg(namespaceURI: `http://wwwDOTw3DOTorg/2000/svg`, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.SVGElement] = js.native
+  def getElementsByTagNameNS_httpwwww3org2000svg(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.SVGElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_a(qualifiedName: a): HTMLCollectionOf[org.scalajs.dom.raw.HTMLAnchorElement] = js.native
   @JSName("getElementsByTagName")

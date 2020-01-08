@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +37,7 @@ class Star protected ()
     * @param fillAlpha The alpha the star will be filled with. You can also set the alpha of the overall Shape using its `alpha` property.
     */
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: js.UndefOr[Double],
     y: js.UndefOr[Double],
     points: js.UndefOr[Double],

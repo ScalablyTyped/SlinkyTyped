@@ -10,9 +10,9 @@ Log a deprecation message with stack
 | ------------------ | :-------------: |
 | Full name          | deprecation |
 | Keywords           | deprecate, deprecated, deprecation |
-| # releases         | 4 |
-| # dependents       | 2 |
-| # downloads        | 927774 |
+| # releases         | 9 |
+| # dependents       | 8 |
+| # downloads        | 25052282 |
 | # stars            | 0 |
 
 ## Links

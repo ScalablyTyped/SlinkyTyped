@@ -2,7 +2,6 @@ package typingsSlinky.popmotion
 
 import typingsSlinky.popmotion.libObserverTypesMod.ObserverProps
 import typingsSlinky.popmotion.libReactionsMod.BaseMulticast
-import typingsSlinky.popmotion.libReactionsMulticastMod.Multicast
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

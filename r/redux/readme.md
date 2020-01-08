@@ -1,7 +1,7 @@
 
 # Scala.js typings for redux
 
-Typings are for version 4.0.4
+Typings are for version 4.0.5
 
 ## Library description:
 Predictable state container for JavaScript apps
@@ -11,9 +11,9 @@ Predictable state container for JavaScript apps
 | Full name          | redux |
 | Keywords           | redux, reducer, state, predictable, functional, immutable, hot, live, replay, flux, elm |
 | # releases         | 9 |
-| # dependents       | 5818 |
-| # downloads        | 113415680 |
-| # stars            | 246 |
+| # dependents       | 7261 |
+| # downloads        | 173098595 |
+| # stars            | 248 |
 
 ## Links
 - [Homepage](http://redux.js.org)

@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object TextDirection extends js.Object {
   @js.native
   sealed trait RTL extends TextDirection
   
-  /* 0 */ val Inherit: typingsSlinky.openui5.sap.ui.core.TextDirection.Inherit with Double = js.native
-  /* 1 */ val LTR: typingsSlinky.openui5.sap.ui.core.TextDirection.LTR with Double = js.native
-  /* 2 */ val RTL: typingsSlinky.openui5.sap.ui.core.TextDirection.RTL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TextDirection with Double] = js.native
+  /* 0 */ @js.native
+  object Inherit extends TopLevel[Inherit with Double]
+  
+  /* 1 */ @js.native
+  object LTR extends TopLevel[LTR with Double]
+  
+  /* 2 */ @js.native
+  object RTL extends TopLevel[RTL with Double]
+  
 }
 

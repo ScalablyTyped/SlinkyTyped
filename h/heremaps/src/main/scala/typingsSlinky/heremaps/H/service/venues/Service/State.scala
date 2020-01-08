@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.service.venues.Service
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object State extends js.Object {
   @js.native
   sealed trait READY extends State
   
-  /* 0 */ val ERROR: typingsSlinky.heremaps.H.service.venues.Service.State.ERROR with Double = js.native
-  /* 1 */ val INIT: typingsSlinky.heremaps.H.service.venues.Service.State.INIT with Double = js.native
-  /* 2 */ val READY: typingsSlinky.heremaps.H.service.venues.Service.State.READY with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[State with Double] = js.native
+  /* 0 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 1 */ @js.native
+  object INIT extends TopLevel[INIT with Double]
+  
+  /* 2 */ @js.native
+  object READY extends TopLevel[READY with Double]
+  
 }
 

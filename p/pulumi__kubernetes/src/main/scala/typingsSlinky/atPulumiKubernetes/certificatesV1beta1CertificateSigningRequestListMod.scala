@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`certificatesDOTk8sDOTio/v1beta1`
-import typingsSlinky.atPulumiKubernetes.certificatesV1beta1CertificateSigningRequestListMod.CertificateSigningRequestList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.certificatesDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.certificates.v1beta1.CertificateSigningRequest
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object certificatesV1beta1CertificateSigningRequestListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`certificatesDOTk8sDOTio/v1beta1`] = js.native
+    val apiVersion: Output[certificatesDotk8sDotioSlashv1beta1] = js.native
     val items: Output[js.Array[CertificateSigningRequest]] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Gantt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object minutesPerInterval extends js.Object {
   @js.native
   sealed trait ThirtyMinutes extends minutesPerInterval
   
-  /* 0 */ val Auto: typingsSlinky.ejDotWebDotAll.ej.Gantt.minutesPerInterval.Auto with Double = js.native
-  /* 3 */ val FifteenMinutes: typingsSlinky.ejDotWebDotAll.ej.Gantt.minutesPerInterval.FifteenMinutes with Double = js.native
-  /* 2 */ val FiveMinutes: typingsSlinky.ejDotWebDotAll.ej.Gantt.minutesPerInterval.FiveMinutes with Double = js.native
-  /* 1 */ val OneMinute: typingsSlinky.ejDotWebDotAll.ej.Gantt.minutesPerInterval.OneMinute with Double = js.native
-  /* 4 */ val ThirtyMinutes: typingsSlinky.ejDotWebDotAll.ej.Gantt.minutesPerInterval.ThirtyMinutes with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[minutesPerInterval with Double] = js.native
+  /* 0 */ @js.native
+  object Auto extends TopLevel[Auto with Double]
+  
+  /* 3 */ @js.native
+  object FifteenMinutes extends TopLevel[FifteenMinutes with Double]
+  
+  /* 2 */ @js.native
+  object FiveMinutes extends TopLevel[FiveMinutes with Double]
+  
+  /* 1 */ @js.native
+  object OneMinute extends TopLevel[OneMinute with Double]
+  
+  /* 4 */ @js.native
+  object ThirtyMinutes extends TopLevel[ThirtyMinutes with Double]
+  
 }
 

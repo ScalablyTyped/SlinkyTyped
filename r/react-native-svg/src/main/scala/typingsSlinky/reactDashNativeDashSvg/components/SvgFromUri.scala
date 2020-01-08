@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SvgFromUri
-  extends SharedApply_UriProps_400300367[typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.SvgFromUri] {
+  extends SharedApply_UriProps_540132099[typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.SvgFromUri] {
   @JSImport("react-native-svg", "SvgFromUri")
   @js.native
   object componentImport extends js.Object

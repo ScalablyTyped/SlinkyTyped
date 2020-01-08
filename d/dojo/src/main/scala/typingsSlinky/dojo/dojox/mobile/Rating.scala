@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dijit._WidgetBase
 import typingsSlinky.dojo.dojoStrings.alt
+import typingsSlinky.dojo.dojoStrings.image
 import typingsSlinky.dojo.dojoStrings.numStars
 import typingsSlinky.dojo.dojoStrings.style
 import typingsSlinky.dojo.dojoStrings.value
@@ -56,7 +57,7 @@ class Rating () extends _WidgetBase {
   @JSName("get")
   def get_alt(property: alt): String = js.native
   @JSName("get")
-  def get_image(property: typingsSlinky.dojo.dojoStrings.image): String = js.native
+  def get_image(property: image): String = js.native
   @JSName("get")
   def get_numStars(property: numStars): Double = js.native
   @JSName("get")
@@ -70,7 +71,7 @@ class Rating () extends _WidgetBase {
   @JSName("set")
   def set_alt(property: alt, value: String): Unit = js.native
   @JSName("set")
-  def set_image(property: typingsSlinky.dojo.dojoStrings.image, value: String): Unit = js.native
+  def set_image(property: image, value: String): Unit = js.native
   @JSName("set")
   def set_numStars(property: numStars, value: Double): Unit = js.native
   @JSName("set")
@@ -89,7 +90,7 @@ class Rating () extends _WidgetBase {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_image(
-    property: typingsSlinky.dojo.dojoStrings.image,
+    property: image,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[String], 

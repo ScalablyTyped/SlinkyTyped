@@ -2,7 +2,6 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.Ionic1ServeOptions
 import typingsSlinky.ionic.libProjectIonic1Mod.Ionic1Project
-import typingsSlinky.ionic.libProjectIonic1ServeMod.Ionic1ServeRunnerDeps
 import typingsSlinky.ionic.libServeMod.ServeRunner
 import typingsSlinky.ionic.libServeMod.ServeRunnerDeps
 import scala.scalajs.js

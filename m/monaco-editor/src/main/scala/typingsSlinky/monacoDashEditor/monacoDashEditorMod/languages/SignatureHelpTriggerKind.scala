@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object SignatureHelpTriggerKind extends js.Object {
   @js.native
   sealed trait TriggerCharacter extends SignatureHelpTriggerKind
   
-  /* 3 */ val ContentChange: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SignatureHelpTriggerKind.ContentChange with Double = js.native
-  /* 1 */ val Invoke: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SignatureHelpTriggerKind.Invoke with Double = js.native
-  /* 2 */ val TriggerCharacter: typingsSlinky.monacoDashEditor.monacoDashEditorMod.languages.SignatureHelpTriggerKind.TriggerCharacter with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SignatureHelpTriggerKind with Double] = js.native
+  /* 3 */ @js.native
+  object ContentChange extends TopLevel[ContentChange with Double]
+  
+  /* 1 */ @js.native
+  object Invoke extends TopLevel[Invoke with Double]
+  
+  /* 2 */ @js.native
+  object TriggerCharacter extends TopLevel[TriggerCharacter with Double]
+  
 }
 

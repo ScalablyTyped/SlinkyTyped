@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ListLevelType extends js.Object {
   @js.native
   sealed trait picture extends ListLevelType
   
-  /* "Bullet" */ val bullet: typingsSlinky.officeDashJs.Word.ListLevelType.bullet with String = js.native
-  /* "Number" */ val number: typingsSlinky.officeDashJs.Word.ListLevelType.number with String = js.native
-  /* "Picture" */ val picture: typingsSlinky.officeDashJs.Word.ListLevelType.picture with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ListLevelType with String] = js.native
+  /* "Bullet" */ @js.native
+  object bullet extends TopLevel[bullet with String]
+  
+  /* "Number" */ @js.native
+  object number extends TopLevel[number with String]
+  
+  /* "Picture" */ @js.native
+  object picture extends TopLevel[picture with String]
+  
 }
 

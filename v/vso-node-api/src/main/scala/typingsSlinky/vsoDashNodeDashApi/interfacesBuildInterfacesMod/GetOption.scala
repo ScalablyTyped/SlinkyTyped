@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object GetOption extends js.Object {
   @js.native
   sealed trait LatestOnQueue extends GetOption
   
-  /* 2 */ val Custom: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.GetOption.Custom with Double = js.native
-  /* 1 */ val LatestOnBuild: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.GetOption.LatestOnBuild with Double = js.native
-  /* 0 */ val LatestOnQueue: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.GetOption.LatestOnQueue with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GetOption with Double] = js.native
+  /* 2 */ @js.native
+  object Custom extends TopLevel[Custom with Double]
+  
+  /* 1 */ @js.native
+  object LatestOnBuild extends TopLevel[LatestOnBuild with Double]
+  
+  /* 0 */ @js.native
+  object LatestOnQueue extends TopLevel[LatestOnQueue with Double]
+  
 }
 

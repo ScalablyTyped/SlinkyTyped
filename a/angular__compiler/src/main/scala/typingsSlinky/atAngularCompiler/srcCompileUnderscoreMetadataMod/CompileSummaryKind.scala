@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object CompileSummaryKind extends js.Object {
   @js.native
   sealed trait Pipe extends CompileSummaryKind
   
-  /* 1 */ val Directive: typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod.CompileSummaryKind.Directive with Double = js.native
-  /* 3 */ val Injectable: typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod.CompileSummaryKind.Injectable with Double = js.native
-  /* 2 */ val NgModule: typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod.CompileSummaryKind.NgModule with Double = js.native
-  /* 0 */ val Pipe: typingsSlinky.atAngularCompiler.srcCompileUnderscoreMetadataMod.CompileSummaryKind.Pipe with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CompileSummaryKind with Double] = js.native
+  /* 1 */ @js.native
+  object Directive extends TopLevel[Directive with Double]
+  
+  /* 3 */ @js.native
+  object Injectable extends TopLevel[Injectable with Double]
+  
+  /* 2 */ @js.native
+  object NgModule extends TopLevel[NgModule with Double]
+  
+  /* 0 */ @js.native
+  object Pipe extends TopLevel[Pipe with Double]
+  
 }
 

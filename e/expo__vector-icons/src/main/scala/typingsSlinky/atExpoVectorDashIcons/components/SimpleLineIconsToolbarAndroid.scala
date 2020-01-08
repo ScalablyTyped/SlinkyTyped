@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SimpleLineIconsToolbarAndroid extends SharedApply_ToolbarAndroidProps1440336791[ToolbarAndroid] {
+object SimpleLineIconsToolbarAndroid extends SharedApply_ToolbarAndroidProps1090159515[ToolbarAndroid] {
   @JSImport("@expo/vector-icons", "SimpleLineIcons.ToolbarAndroid")
   @js.native
   object componentImport extends js.Object

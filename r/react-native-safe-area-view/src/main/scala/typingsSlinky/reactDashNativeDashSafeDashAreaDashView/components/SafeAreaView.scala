@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SafeAreaView
-  extends SharedApply_SafeAreaViewProps1215074097[
+  extends SharedApply_SafeAreaViewProps_1251795845[
       typingsSlinky.reactDashNativeDashSafeDashAreaDashView.reactDashNativeDashSafeDashAreaDashViewMod.SafeAreaView
     ] {
   @JSImport("react-native-safe-area-view", "SafeAreaView")

@@ -1,13 +1,5 @@
 package typingsSlinky.typescriptDashTuple
 
-import typingsSlinky.typescriptDashTuple.libUtilsMod.Concat
-import typingsSlinky.typescriptDashTuple.libUtilsMod.First
-import typingsSlinky.typescriptDashTuple.libUtilsMod.IsFinite
-import typingsSlinky.typescriptDashTuple.libUtilsMod.Reverse
-import typingsSlinky.typescriptDashTuple.libUtilsMod._AllIndexesEqual
-import typingsSlinky.typescriptDashTuple.libUtilsMod._AllIndexesSubset
-import typingsSlinky.typescriptDashTuple.libUtilsMod._AllIndexesSuperset
-import typingsSlinky.typescriptDashTuple.libUtilsMod._LastIndexFirst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

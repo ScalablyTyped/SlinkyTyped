@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ShimmerGapBase extends SharedApply_IShimmerGapProps_1597279017 {
+object ShimmerGapBase extends SharedApply_IShimmerGapProps_1351612620 {
   @JSImport("office-ui-fabric-react/lib/Shimmer", "ShimmerGapBase")
   @js.native
   object componentImport extends js.Object

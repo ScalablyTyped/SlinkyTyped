@@ -2,7 +2,6 @@ package typingsSlinky.smoothDashScrollbar
 
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.smoothDashScrollbar.interfacesScrollbarMod.Scrollbar
-import typingsSlinky.smoothDashScrollbar.utilsEventDashHubMod.EventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

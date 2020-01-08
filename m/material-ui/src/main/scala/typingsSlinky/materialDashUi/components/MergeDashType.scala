@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MergeDashType extends SharedApply_SvgIconProps657215518[default] {
+object MergeDashType extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/editor/merge-type", JSImport.Default)
   @js.native
   object componentImport extends js.Object

@@ -1,17 +1,17 @@
 package typingsSlinky.babelDashTypes.babelDashTypesMod
 
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`%=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`&=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`*=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`+=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`/=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`<<=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>>=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`>>>=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`^=`
-import typingsSlinky.babelDashTypes.babelDashTypesStrings.`|=`
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.AmpersandEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.AsteriskEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.Equalssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.GreaterthansignGreaterthansignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.GreaterthansignGreaterthansignGreaterthansignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.LessthansignLessthansignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.PercentsignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.PlussignEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.SlashEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.VerticallineEqualssign
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.`-Equalssign`
+import typingsSlinky.babelDashTypes.babelDashTypesStrings.`^Equalssign`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait AssignmentExpression
   extends Node
      with Expression {
   var left: LVal
-  var operator: `=` | `+=` | `-=` | `*=` | `/=` | `%=` | `<<=` | `>>=` | `>>>=` | `|=` | `^=` | `&=`
+  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign
   var right: Expression
   @JSName("type")
   var type_AssignmentExpression: typingsSlinky.babelDashTypes.babelDashTypesStrings.AssignmentExpression
@@ -32,7 +32,7 @@ object AssignmentExpression {
     end: Double,
     left: LVal,
     loc: SourceLocation,
-    operator: `=` | `+=` | `-=` | `*=` | `/=` | `%=` | `<<=` | `>>=` | `>>>=` | `|=` | `^=` | `&=`,
+    operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign,
     right: Expression,
     start: Double,
     `type`: typingsSlinky.babelDashTypes.babelDashTypesStrings.AssignmentExpression,

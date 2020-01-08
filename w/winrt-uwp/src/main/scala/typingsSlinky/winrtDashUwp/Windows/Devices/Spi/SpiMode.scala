@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Spi
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object SpiMode extends js.Object {
   @js.native
   sealed trait mode3 extends SpiMode
   
-  /* 0 */ val mode0: typingsSlinky.winrtDashUwp.Windows.Devices.Spi.SpiMode.mode0 with Double = js.native
-  /* 1 */ val mode1: typingsSlinky.winrtDashUwp.Windows.Devices.Spi.SpiMode.mode1 with Double = js.native
-  /* 2 */ val mode2: typingsSlinky.winrtDashUwp.Windows.Devices.Spi.SpiMode.mode2 with Double = js.native
-  /* 3 */ val mode3: typingsSlinky.winrtDashUwp.Windows.Devices.Spi.SpiMode.mode3 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpiMode with Double] = js.native
+  /* 0 */ @js.native
+  object mode0 extends TopLevel[mode0 with Double]
+  
+  /* 1 */ @js.native
+  object mode1 extends TopLevel[mode1 with Double]
+  
+  /* 2 */ @js.native
+  object mode2 extends TopLevel[mode2 with Double]
+  
+  /* 3 */ @js.native
+  object mode3 extends TopLevel[mode3 with Double]
+  
 }
 

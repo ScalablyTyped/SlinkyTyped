@@ -1,5 +1,6 @@
 package typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,13 @@ object ToType extends js.Object {
   @js.native
   sealed trait Year extends ToType
   
-  /* 1 */ val Max: typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.ToType.Max with Double = js.native
-  /* 0 */ val Year: typingsSlinky.timezonecomplete.distLibTzDashDatabaseMod.ToType.Year with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ToType with Double] = js.native
+  /* 1 */ @js.native
+  object Max extends TopLevel[Max with Double]
+  
+  /* 0 */ @js.native
+  object Year extends TopLevel[Year with Double]
+  
 }
 

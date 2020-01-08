@@ -8,12 +8,12 @@ import typingsSlinky.jqueryDotFancytree.Fancytree.Extensions.DragAndDrop5
 import typingsSlinky.jqueryDotFancytree.Fancytree.Extensions.Filter
 import typingsSlinky.jqueryDotFancytree.Fancytree.Extensions.Table
 import typingsSlinky.jqueryDotFancytree.JQuery
+import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeBooleans.`false`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`0`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`1`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`2`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`3`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`4`
-import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeNumbers.`false`
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeStrings.dnd5
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeStrings.filter
 import typingsSlinky.jqueryDotFancytree.jqueryDotFancytreeStrings.table

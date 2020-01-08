@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "reserved-words"
-version := "0.1-dt-20190312Z-6fed00"
+version := "0.1-dt-20190312Z-617000"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

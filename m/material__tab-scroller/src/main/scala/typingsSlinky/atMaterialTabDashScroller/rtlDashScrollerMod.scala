@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialTabDashScroller
 
 import typingsSlinky.atMaterialTabDashScroller.adapterMod.MDCTabScrollerAdapter
-import typingsSlinky.atMaterialTabDashScroller.rtlDashScrollerMod.MDCTabScrollerRTL
 import typingsSlinky.atMaterialTabDashScroller.typesMod.MDCTabScrollerAnimation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

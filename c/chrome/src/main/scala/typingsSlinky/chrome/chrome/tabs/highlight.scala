@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.chrome.tabs
 
+import typingsSlinky.chrome.chrome.windows.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object highlight extends js.Object {
   def apply(highlightInfo: HighlightInfo): Unit = js.native
-  def apply(
-    highlightInfo: HighlightInfo,
-    callback: js.Function1[/* window */ typingsSlinky.chrome.chrome.windows.Window, Unit]
-  ): Unit = js.native
+  def apply(highlightInfo: HighlightInfo, callback: js.Function1[/* window */ Window, Unit]): Unit = js.native
 }
 

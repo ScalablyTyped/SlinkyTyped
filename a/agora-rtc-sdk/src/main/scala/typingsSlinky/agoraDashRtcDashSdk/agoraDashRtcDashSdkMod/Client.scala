@@ -8,7 +8,7 @@ import typingsSlinky.agoraDashRtcDashSdk.Anon_CurState
 import typingsSlinky.agoraDashRtcDashSdk.Anon_Forceturn
 import typingsSlinky.agoraDashRtcDashSdk.Anon_Reason
 import typingsSlinky.agoraDashRtcDashSdk.Anon_Role
-import typingsSlinky.agoraDashRtcDashSdk.Anon_Stream_1783294717
+import typingsSlinky.agoraDashRtcDashSdk.Anon_Stream_461528808
 import typingsSlinky.agoraDashRtcDashSdk.Anon_Uid
 import typingsSlinky.agoraDashRtcDashSdk.Anon_UidString
 import typingsSlinky.agoraDashRtcDashSdk.agoraDashRtcDashSdkNumbers.`0`
@@ -1035,7 +1035,7 @@ trait Client extends js.Object {
     * When a remote stream calls the [[addTrack]] or [[removeTrack]] method, the SDK triggers this callback.
     */
   @JSName("on")
-  def on_streamupdated(event: `stream-updated`, callback: js.Function1[/* evt */ Anon_Stream_1783294717, Unit]): Unit = js.native
+  def on_streamupdated(event: `stream-updated`, callback: js.Function1[/* evt */ Anon_Stream_461528808, Unit]): Unit = js.native
   /**
     * Occurs when the peer user unmutes the audio.
     * @example **Sample Code**

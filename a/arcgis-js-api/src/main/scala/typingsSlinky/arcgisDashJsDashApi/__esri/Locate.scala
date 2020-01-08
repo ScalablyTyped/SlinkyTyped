@@ -2,7 +2,6 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisDashJsDashApi.IHandle
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`locate-error`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.locate
 import scala.scalajs.js
@@ -84,7 +83,7 @@ trait Locate
     *
     *
     */
-  def locate(): IPromise[_] = js.native
+  def locate(): js.Promise[_] = js.native
   @JSName("on")
   def on_locate(name: locate, eventHandler: LocateLocateEventHandler): IHandle = js.native
   @JSName("on")

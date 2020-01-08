@@ -5,8 +5,6 @@ import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.CodeActionPa
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.INanoflow
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.JavaActionParameterMapping
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.JavaScriptActionParameterMapping
-import typingsSlinky.mendixmodelsdk.distGenNanoflowsMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenNanoflowsMod.nanoflows.NanoflowParameterValue
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -43,8 +41,13 @@ object distGenNanoflowsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
-      var nanoflow: INanoflow | Null = js.native
-      val nanoflowQualifiedName: String | Null = js.native
+      @JSName("model")
+      var model_FNanoflowParameterValue: IModel = js.native
+      def nanoflow(): INanoflow | Null = js.native
+      def nanoflow(newValue: INanoflow): js.Any = js.native
+      def nanoflowQualifiedName(): String | Null = js.native
+      @JSName("nanoflow")
+      def nanoflow_Any(): js.Any = js.native
     }
     
     /* static members */

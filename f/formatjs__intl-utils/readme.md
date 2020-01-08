@@ -1,7 +1,7 @@
 
 # Scala.js typings for formatjs__intl-utils
 
-Typings are for version 1.4.4
+Typings are for version 2.0.1
 
 ## Library description:
 Smartly determine best unit for relative time format
@@ -10,9 +10,9 @@ Smartly determine best unit for relative time format
 | ------------------ | :-------------: |
 | Full name          | @formatjs/intl-utils |
 | Keywords           | intl, i18n, relative, moment, format, date |
-| # releases         | 19 |
-| # dependents       | 0 |
-| # downloads        | 5436 |
+| # releases         | 37 |
+| # dependents       | 5 |
+| # downloads        | 1869760 |
 | # stars            | 0 |
 
 ## Links

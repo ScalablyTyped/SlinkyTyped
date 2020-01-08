@@ -1,15 +1,15 @@
 package typingsSlinky.plotlyDotJs.plotlyDotJsMod
 
 import typingsSlinky.plotlyDotJs.Anon_Filename
+import typingsSlinky.plotlyDotJs.plotlyDotJsBooleans.`false`
 import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`0`
 import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`1`
 import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`2`
-import typingsSlinky.plotlyDotJs.plotlyDotJsNumbers.`false`
-import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.`reset+autosize`
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.autosize
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.hover
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.opaque
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.reset
+import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.resetPlussignautosize
 import typingsSlinky.plotlyDotJs.plotlyDotJsStrings.transparent
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -24,7 +24,7 @@ trait Config extends js.Object {
   /** add the plotly logo on the end of the mode bar */
   var displaylogo: Boolean
   /** double click interaction (false, 'reset', 'autosize' or 'reset+autosize') */
-  var doubleClick: `reset+autosize` | reset | autosize | `false`
+  var doubleClick: resetPlussignautosize | reset | autosize | `false`
   /** we can edit titles, move annotations, etc */
   var editable: Boolean
   var edits: Partial[Edits]
@@ -99,7 +99,7 @@ object Config {
     autosizable: Boolean,
     displayModeBar: hover | Boolean,
     displaylogo: Boolean,
-    doubleClick: `reset+autosize` | reset | autosize | `false`,
+    doubleClick: resetPlussignautosize | reset | autosize | `false`,
     editable: Boolean,
     edits: Partial[Edits],
     fillFrame: Boolean,

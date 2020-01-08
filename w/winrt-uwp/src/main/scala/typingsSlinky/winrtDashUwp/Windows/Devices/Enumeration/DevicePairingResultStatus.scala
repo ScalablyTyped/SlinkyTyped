@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,27 +92,67 @@ object DevicePairingResultStatus extends js.Object {
   @js.native
   sealed trait tooManyConnections extends DevicePairingResultStatus
   
-  /* 12 */ val accessDenied: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.accessDenied with Double = js.native
-  /* 3 */ val alreadyPaired: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.alreadyPaired with Double = js.native
-  /* 9 */ val authenticationFailure: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.authenticationFailure with Double = js.native
-  /* 8 */ val authenticationNotAllowed: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.authenticationNotAllowed with Double = js.native
-  /* 7 */ val authenticationTimeout: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.authenticationTimeout with Double = js.native
-  /* 4 */ val connectionRejected: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.connectionRejected with Double = js.native
-  /* 19 */ val failed: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.failed with Double = js.native
-  /* 6 */ val hardwareFailure: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.hardwareFailure with Double = js.native
-  /* 13 */ val invalidCeremonyData: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.invalidCeremonyData with Double = js.native
-  /* 10 */ val noSupportedProfiles: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.noSupportedProfiles with Double = js.native
-  /* 2 */ val notPaired: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.notPaired with Double = js.native
-  /* 1 */ val notReadyToPair: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.notReadyToPair with Double = js.native
-  /* 15 */ val operationAlreadyInProgress: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.operationAlreadyInProgress with Double = js.native
-  /* 0 */ val paired: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.paired with Double = js.native
-  /* 14 */ val pairingCanceled: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.pairingCanceled with Double = js.native
-  /* 11 */ val protectionLevelCouldNotBeMet: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.protectionLevelCouldNotBeMet with Double = js.native
-  /* 17 */ val rejectedByHandler: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.rejectedByHandler with Double = js.native
-  /* 18 */ val remoteDeviceHasAssociation: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.remoteDeviceHasAssociation with Double = js.native
-  /* 16 */ val requiredHandlerNotRegistered: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.requiredHandlerNotRegistered with Double = js.native
-  /* 5 */ val tooManyConnections: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DevicePairingResultStatus.tooManyConnections with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DevicePairingResultStatus with Double] = js.native
+  /* 12 */ @js.native
+  object accessDenied extends TopLevel[accessDenied with Double]
+  
+  /* 3 */ @js.native
+  object alreadyPaired extends TopLevel[alreadyPaired with Double]
+  
+  /* 9 */ @js.native
+  object authenticationFailure extends TopLevel[authenticationFailure with Double]
+  
+  /* 8 */ @js.native
+  object authenticationNotAllowed extends TopLevel[authenticationNotAllowed with Double]
+  
+  /* 7 */ @js.native
+  object authenticationTimeout extends TopLevel[authenticationTimeout with Double]
+  
+  /* 4 */ @js.native
+  object connectionRejected extends TopLevel[connectionRejected with Double]
+  
+  /* 19 */ @js.native
+  object failed extends TopLevel[failed with Double]
+  
+  /* 6 */ @js.native
+  object hardwareFailure extends TopLevel[hardwareFailure with Double]
+  
+  /* 13 */ @js.native
+  object invalidCeremonyData extends TopLevel[invalidCeremonyData with Double]
+  
+  /* 10 */ @js.native
+  object noSupportedProfiles extends TopLevel[noSupportedProfiles with Double]
+  
+  /* 2 */ @js.native
+  object notPaired extends TopLevel[notPaired with Double]
+  
+  /* 1 */ @js.native
+  object notReadyToPair extends TopLevel[notReadyToPair with Double]
+  
+  /* 15 */ @js.native
+  object operationAlreadyInProgress extends TopLevel[operationAlreadyInProgress with Double]
+  
+  /* 0 */ @js.native
+  object paired extends TopLevel[paired with Double]
+  
+  /* 14 */ @js.native
+  object pairingCanceled extends TopLevel[pairingCanceled with Double]
+  
+  /* 11 */ @js.native
+  object protectionLevelCouldNotBeMet extends TopLevel[protectionLevelCouldNotBeMet with Double]
+  
+  /* 17 */ @js.native
+  object rejectedByHandler extends TopLevel[rejectedByHandler with Double]
+  
+  /* 18 */ @js.native
+  object remoteDeviceHasAssociation extends TopLevel[remoteDeviceHasAssociation with Double]
+  
+  /* 16 */ @js.native
+  object requiredHandlerNotRegistered extends TopLevel[requiredHandlerNotRegistered with Double]
+  
+  /* 5 */ @js.native
+  object tooManyConnections extends TopLevel[tooManyConnections with Double]
+  
 }
 

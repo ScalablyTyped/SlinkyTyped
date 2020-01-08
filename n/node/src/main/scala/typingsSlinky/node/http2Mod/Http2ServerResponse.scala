@@ -1,9 +1,8 @@
 package typingsSlinky.node.http2Mod
 
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.netMod.Socket
-import typingsSlinky.node.nodeStrings.Empty
+import typingsSlinky.node.nodeStrings._empty
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.drain
 import typingsSlinky.node.nodeStrings.error
@@ -13,6 +12,7 @@ import typingsSlinky.node.nodeStrings.unpipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.internal
 import typingsSlinky.node.tlsMod.TLSSocket
+import typingsSlinky.std.Error
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,14 +28,14 @@ class Http2ServerResponse protected () extends internal {
   var sendDate: Boolean = js.native
   val socket: Socket | TLSSocket = js.native
   var statusCode: Double = js.native
-  var statusMessage: Empty = js.native
+  var statusMessage: _empty = js.native
   val stream: ServerHttp2Stream = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_error(event: error, listener: js.Function1[/* error */ Error, Unit]): this.type = js.native
+  def addListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -45,14 +45,14 @@ class Http2ServerResponse protected () extends internal {
   def addTrailers(trailers: OutgoingHttpHeaders): Unit = js.native
   def createPushResponse(
     headers: OutgoingHttpHeaders,
-    callback: js.Function2[/* err */ Error | Null, /* res */ this.type, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* res */ this.type, Unit]
   ): Unit = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
   def emit_drain(event: drain): Boolean = js.native
   @JSName("emit")
-  def emit_error(event: error, error: Error): Boolean = js.native
+  def emit_error(event: error, error: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_finish(event: finish): Boolean = js.native
   @JSName("emit")
@@ -61,24 +61,24 @@ class Http2ServerResponse protected () extends internal {
   def emit_unpipe(event: unpipe, src: Readable): Boolean = js.native
   def end(): Unit = js.native
   def end(callback: js.Function0[Unit]): Unit = js.native
-  def end(data: java.lang.String): Unit = js.native
-  def end(data: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: java.lang.String, encoding: java.lang.String): Unit = js.native
-  def end(data: java.lang.String, encoding: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: String): Unit = js.native
+  def end(data: String, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: String, encoding: String): Unit = js.native
+  def end(data: String, encoding: String, callback: js.Function0[Unit]): Unit = js.native
   def end(data: Uint8Array): Unit = js.native
   def end(data: Uint8Array, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: Uint8Array, encoding: java.lang.String): Unit = js.native
-  def end(data: Uint8Array, encoding: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
-  def getHeader(name: java.lang.String): java.lang.String = js.native
-  def getHeaderNames(): js.Array[java.lang.String] = js.native
+  def end(data: Uint8Array, encoding: String): Unit = js.native
+  def end(data: Uint8Array, encoding: String, callback: js.Function0[Unit]): Unit = js.native
+  def getHeader(name: String): String = js.native
+  def getHeaderNames(): js.Array[String] = js.native
   def getHeaders(): OutgoingHttpHeaders = js.native
-  def hasHeader(name: java.lang.String): Boolean = js.native
+  def hasHeader(name: String): Boolean = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
-  def on_error(event: error, listener: js.Function1[/* error */ Error, Unit]): this.type = js.native
+  def on_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -90,7 +90,7 @@ class Http2ServerResponse protected () extends internal {
   @JSName("once")
   def once_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
-  def once_error(event: error, listener: js.Function1[/* error */ Error, Unit]): this.type = js.native
+  def once_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -102,7 +102,7 @@ class Http2ServerResponse protected () extends internal {
   @JSName("prependListener")
   def prependListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
-  def prependListener_error(event: error, listener: js.Function1[/* error */ Error, Unit]): this.type = js.native
+  def prependListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -114,31 +114,31 @@ class Http2ServerResponse protected () extends internal {
   @JSName("prependOnceListener")
   def prependOnceListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_error(event: error, listener: js.Function1[/* error */ Error, Unit]): this.type = js.native
+  def prependOnceListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
-  def removeHeader(name: java.lang.String): Unit = js.native
-  def setHeader(name: java.lang.String, value: java.lang.String): Unit = js.native
-  def setHeader(name: java.lang.String, value: js.Array[java.lang.String]): Unit = js.native
-  def setHeader(name: java.lang.String, value: Double): Unit = js.native
+  def removeHeader(name: String): Unit = js.native
+  def setHeader(name: String, value: String): Unit = js.native
+  def setHeader(name: String, value: js.Array[String]): Unit = js.native
+  def setHeader(name: String, value: Double): Unit = js.native
   def setTimeout(msecs: Double): Unit = js.native
   def setTimeout(msecs: Double, callback: js.Function0[Unit]): Unit = js.native
-  def write(chunk: java.lang.String): Boolean = js.native
-  def write(chunk: java.lang.String, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
-  def write(chunk: java.lang.String, encoding: java.lang.String): Boolean = js.native
-  def write(chunk: java.lang.String, encoding: java.lang.String, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
+  def write(chunk: String): Boolean = js.native
+  def write(chunk: String, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
+  def write(chunk: String, encoding: String): Boolean = js.native
+  def write(chunk: String, encoding: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
   def write(chunk: Uint8Array): Boolean = js.native
   def write(chunk: Uint8Array, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
-  def write(chunk: Uint8Array, encoding: java.lang.String): Boolean = js.native
-  def write(chunk: Uint8Array, encoding: java.lang.String, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
+  def write(chunk: Uint8Array, encoding: String): Boolean = js.native
+  def write(chunk: Uint8Array, encoding: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
   def writeContinue(): Unit = js.native
   def writeHead(statusCode: Double): this.type = js.native
   def writeHead(statusCode: Double, headers: OutgoingHttpHeaders): this.type = js.native
-  def writeHead(statusCode: Double, statusMessage: java.lang.String): this.type = js.native
-  def writeHead(statusCode: Double, statusMessage: java.lang.String, headers: OutgoingHttpHeaders): this.type = js.native
+  def writeHead(statusCode: Double, statusMessage: String): this.type = js.native
+  def writeHead(statusCode: Double, statusMessage: String, headers: OutgoingHttpHeaders): this.type = js.native
 }
 

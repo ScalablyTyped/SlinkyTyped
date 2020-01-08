@@ -3,7 +3,6 @@ package typingsSlinky.parchment
 import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Blot
 import typingsSlinky.parchment.distSrcBlotAbstractBlotMod.Parent
-import typingsSlinky.parchment.distSrcBlotAbstractShadowMod.ShadowBlot
 import typingsSlinky.parchment.distSrcCollectionLinkedDashNodeMod.LinkedNode
 import typingsSlinky.parchment.distSrcRegistryMod.Scope
 import scala.scalajs.js

@@ -16,13 +16,6 @@ import scala.scalajs.js.annotation._
 trait SequelizeStatic
   extends SequelizeStaticAndInstance
      with DataTypes
-     with Instantiable4[
-      /* database */ String, 
-      /* username */ String, 
-      /* password */ String, 
-      /* options */ Options, 
-      Sequelize
-    ]
      with /**
   * Instantiate sequelize with an URI
   * @name Sequelize
@@ -74,7 +67,14 @@ Instantiable3[
       (/* options */ Options) | (/* password */ String), 
       Sequelize
     ]
-     with Instantiable2[/* database */ String, (/* options */ Options) | (/* username */ String), Sequelize] {
+     with Instantiable2[/* database */ String, (/* options */ Options) | (/* username */ String), Sequelize]
+     with Instantiable4[
+      /* database */ String, 
+      /* username */ String, 
+      /* password */ String, 
+      /* options */ Options, 
+      Sequelize
+    ] {
   /**
     * Export sequelize static on the instance for `import Sequelize from 'sequelize';` kind of imports
     */

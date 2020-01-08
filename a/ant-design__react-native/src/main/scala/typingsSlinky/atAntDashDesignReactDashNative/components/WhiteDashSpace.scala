@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WhiteDashSpace extends SharedApply_WhiteSpaceProps1456367875[default] {
+object WhiteDashSpace extends SharedApply_WhiteSpaceProps2128096257[default] {
   @JSImport("@ant-design/react-native/lib/white-space", JSImport.Default)
   @js.native
   object componentImport extends js.Object

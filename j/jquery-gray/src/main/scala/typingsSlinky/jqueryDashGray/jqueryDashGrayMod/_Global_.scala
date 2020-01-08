@@ -1,6 +1,5 @@
 package typingsSlinky.jqueryDashGray.jqueryDashGrayMod
 
-import typingsSlinky.jqueryDashGray.jqueryDashGrayMod._Global_.JQuery
 import typingsSlinky.jqueryDashGray.jqueryDashGrayStrings.`grayscale-off`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

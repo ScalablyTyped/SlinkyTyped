@@ -2,7 +2,7 @@ package typingsSlinky.electronDashPackager.electronDashPackagerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.electronDashPackager.Anon_Name
-import typingsSlinky.electronDashPackager.electronDashPackagerNumbers.`false`
+import typingsSlinky.electronDashPackager.electronDashPackagerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

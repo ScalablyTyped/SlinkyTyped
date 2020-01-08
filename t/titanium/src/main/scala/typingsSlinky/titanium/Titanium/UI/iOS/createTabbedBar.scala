@@ -10,7 +10,7 @@ object createTabbedBar extends js.Object {
   /**
   			 * Creates and returns an instance of <Titanium.UI.iOS.TabbedBar>.
   			 */
-  def apply(): typingsSlinky.titanium.Titanium.UI.iOS.TabbedBar = js.native
-  def apply(parameters: js.Any): typingsSlinky.titanium.Titanium.UI.iOS.TabbedBar = js.native
+  def apply(): TabbedBar = js.native
+  def apply(parameters: js.Any): TabbedBar = js.native
 }
 

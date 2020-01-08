@@ -2,7 +2,6 @@ package typingsSlinky.atEmberArray
 
 import typingsSlinky.atEmberArray.dashPrivateNativeDashArrayMod.NativeArray
 import typingsSlinky.atEmberArray.mutableMod.MutableArray
-import typingsSlinky.atEmberArray.proxyMod.ArrayProxy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object proxyMod extends js.Object {
     * where being able to swap out the underlying array is useful.
     */
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
-  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall $anonfun class extends from : EmberObject.extend(MutableArray as object) * / any */ @js.native
+  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : EmberObject.extend(MutableArray as object) * / any */ @js.native
   trait ArrayProxy[T] extends MutableArray[T] {
     var content: NativeArray[T] = js.native
     /**

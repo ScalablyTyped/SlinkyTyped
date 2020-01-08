@@ -1,5 +1,6 @@
 package typingsSlinky.streamDashMock.libHelpersWarningMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object WARNING_TYPES extends js.Object {
   @js.native
   sealed trait DEPRECATED extends WARNING_TYPES
   
-  /* "DeprecationWarning" */ val DEPRECATED: typingsSlinky.streamDashMock.libHelpersWarningMod.WARNING_TYPES.DEPRECATED with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[WARNING_TYPES with String] = js.native
+  /* "DeprecationWarning" */ @js.native
+  object DEPRECATED extends TopLevel[DEPRECATED with String]
+  
 }
 

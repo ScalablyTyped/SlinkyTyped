@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object ChartAxisPosition extends js.Object {
   @js.native
   sealed trait minimum extends ChartAxisPosition
   
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJs.Excel.ChartAxisPosition.automatic with String = js.native
-  /* "Custom" */ val custom: typingsSlinky.officeDashJs.Excel.ChartAxisPosition.custom with String = js.native
-  /* "Maximum" */ val maximum: typingsSlinky.officeDashJs.Excel.ChartAxisPosition.maximum with String = js.native
-  /* "Minimum" */ val minimum: typingsSlinky.officeDashJs.Excel.ChartAxisPosition.minimum with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartAxisPosition with String] = js.native
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "Maximum" */ @js.native
+  object maximum extends TopLevel[maximum with String]
+  
+  /* "Minimum" */ @js.native
+  object minimum extends TopLevel[minimum with String]
+  
 }
 

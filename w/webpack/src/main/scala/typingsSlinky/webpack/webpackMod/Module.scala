@@ -11,10 +11,6 @@ trait Module extends js.Object {
   var exprContextRequest: js.UndefOr[String] = js.undefined
   /** A RegExp or an array of RegExps. Don’t parse files matching. */
   var noParse: js.UndefOr[js.RegExp | js.Array[js.RegExp] | (js.Function1[/* content */ String, Boolean])] = js.undefined
-  /** A array of applied post loaders. */
-  var postLoaders: js.UndefOr[js.Array[RuleSetRule]] = js.undefined
-  /** A array of applied pre loaders. */
-  var preLoaders: js.UndefOr[js.Array[RuleSetRule]] = js.undefined
   /** An array of rules applied for modules. */
   var rules: js.Array[RuleSetRule]
   var strictExportPresence: js.UndefOr[Boolean] = js.undefined
@@ -36,8 +32,6 @@ object Module {
     exprContextRegExp: js.RegExp = null,
     exprContextRequest: String = null,
     noParse: js.RegExp | js.Array[js.RegExp] | (js.Function1[/* content */ String, Boolean]) = null,
-    postLoaders: js.Array[RuleSetRule] = null,
-    preLoaders: js.Array[RuleSetRule] = null,
     strictExportPresence: js.UndefOr[Boolean] = js.undefined,
     unknownContextCritical: js.UndefOr[Boolean] = js.undefined,
     unknownContextRecursive: js.UndefOr[Boolean] = js.undefined,
@@ -53,8 +47,6 @@ object Module {
     if (exprContextRegExp != null) __obj.updateDynamic("exprContextRegExp")(exprContextRegExp.asInstanceOf[js.Any])
     if (exprContextRequest != null) __obj.updateDynamic("exprContextRequest")(exprContextRequest.asInstanceOf[js.Any])
     if (noParse != null) __obj.updateDynamic("noParse")(noParse.asInstanceOf[js.Any])
-    if (postLoaders != null) __obj.updateDynamic("postLoaders")(postLoaders.asInstanceOf[js.Any])
-    if (preLoaders != null) __obj.updateDynamic("preLoaders")(preLoaders.asInstanceOf[js.Any])
     if (!js.isUndefined(strictExportPresence)) __obj.updateDynamic("strictExportPresence")(strictExportPresence.asInstanceOf[js.Any])
     if (!js.isUndefined(unknownContextCritical)) __obj.updateDynamic("unknownContextCritical")(unknownContextCritical.asInstanceOf[js.Any])
     if (!js.isUndefined(unknownContextRecursive)) __obj.updateDynamic("unknownContextRecursive")(unknownContextRecursive.asInstanceOf[js.Any])

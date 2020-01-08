@@ -1,5 +1,6 @@
 package typingsSlinky.promDashClient.promDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,23 @@ object MetricType extends js.Object {
   @js.native
   sealed trait Summary extends MetricType
   
-  /* 0 */ val Counter: typingsSlinky.promDashClient.promDashClientMod.MetricType.Counter with Double = js.native
-  /* 1 */ val Gauge: typingsSlinky.promDashClient.promDashClientMod.MetricType.Gauge with Double = js.native
-  /* 2 */ val Histogram: typingsSlinky.promDashClient.promDashClientMod.MetricType.Histogram with Double = js.native
-  /* 3 */ val Summary: typingsSlinky.promDashClient.promDashClientMod.MetricType.Summary with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MetricType with Double] = js.native
+  /* 0 */ @js.native
+  object Counter
+    extends TopLevel[typingsSlinky.promDashClient.promDashClientMod.MetricType.Counter with Double]
+  
+  /* 1 */ @js.native
+  object Gauge
+    extends TopLevel[typingsSlinky.promDashClient.promDashClientMod.MetricType.Gauge with Double]
+  
+  /* 2 */ @js.native
+  object Histogram
+    extends TopLevel[typingsSlinky.promDashClient.promDashClientMod.MetricType.Histogram with Double]
+  
+  /* 3 */ @js.native
+  object Summary
+    extends TopLevel[typingsSlinky.promDashClient.promDashClientMod.MetricType.Summary with Double]
+  
 }
 

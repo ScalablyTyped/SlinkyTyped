@@ -1,7 +1,7 @@
 
 # Scala.js typings for emotion
 
-Typings are for version 10.0.23
+Typings are for version 10.0.27
 
 ## Library description:
 The Next Generation of CSS-in-JS.
@@ -10,10 +10,10 @@ The Next Generation of CSS-in-JS.
 | ------------------ | :-------------: |
 | Full name          | emotion |
 | Keywords           | styles, emotion, react, css, css-in-js |
-| # releases         | 136 |
-| # dependents       | 472 |
-| # downloads        | 14362529 |
-| # stars            | 7 |
+| # releases         | 53 |
+| # dependents       | 686 |
+| # downloads        | 36807935 |
+| # stars            | 8 |
 
 ## Links
 - [Homepage](https://emotion.sh)

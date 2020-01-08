@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,29 +77,73 @@ object FabricSlots extends js.Object {
   @js.native
   sealed trait white extends FabricSlots
   
-  /* 20 */ val black: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.black with Double = js.native
-  /* 19 */ val neutralDark: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralDark with Double = js.native
-  /* 11 */ val neutralLight: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralLight with Double = js.native
-  /* 10 */ val neutralLighter: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralLighter with Double = js.native
-  /* 9 */ val neutralLighterAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralLighterAlt with Double = js.native
-  /* 18 */ val neutralPrimary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralPrimary with Double = js.native
-  /* 17 */ val neutralPrimaryAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralPrimaryAlt with Double = js.native
-  /* 13 */ val neutralQuaternary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralQuaternary with Double = js.native
-  /* 12 */ val neutralQuaternaryAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralQuaternaryAlt with Double = js.native
-  /* 16 */ val neutralSecondary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralSecondary with Double = js.native
-  /* 15 */ val neutralTertiary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralTertiary with Double = js.native
-  /* 14 */ val neutralTertiaryAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.neutralTertiaryAlt with Double = js.native
-  /* 7 */ val themeDark: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeDark with Double = js.native
-  /* 6 */ val themeDarkAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeDarkAlt with Double = js.native
-  /* 8 */ val themeDarker: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeDarker with Double = js.native
-  /* 3 */ val themeLight: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeLight with Double = js.native
-  /* 2 */ val themeLighter: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeLighter with Double = js.native
-  /* 1 */ val themeLighterAlt: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeLighterAlt with Double = js.native
-  /* 0 */ val themePrimary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themePrimary with Double = js.native
-  /* 5 */ val themeSecondary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeSecondary with Double = js.native
-  /* 4 */ val themeTertiary: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.themeTertiary with Double = js.native
-  /* 21 */ val white: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsThemeGeneratorThemeRulesStandardMod.FabricSlots.white with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FabricSlots with Double] = js.native
+  /* 20 */ @js.native
+  object black extends TopLevel[black with Double]
+  
+  /* 19 */ @js.native
+  object neutralDark extends TopLevel[neutralDark with Double]
+  
+  /* 11 */ @js.native
+  object neutralLight extends TopLevel[neutralLight with Double]
+  
+  /* 10 */ @js.native
+  object neutralLighter extends TopLevel[neutralLighter with Double]
+  
+  /* 9 */ @js.native
+  object neutralLighterAlt extends TopLevel[neutralLighterAlt with Double]
+  
+  /* 18 */ @js.native
+  object neutralPrimary extends TopLevel[neutralPrimary with Double]
+  
+  /* 17 */ @js.native
+  object neutralPrimaryAlt extends TopLevel[neutralPrimaryAlt with Double]
+  
+  /* 13 */ @js.native
+  object neutralQuaternary extends TopLevel[neutralQuaternary with Double]
+  
+  /* 12 */ @js.native
+  object neutralQuaternaryAlt extends TopLevel[neutralQuaternaryAlt with Double]
+  
+  /* 16 */ @js.native
+  object neutralSecondary extends TopLevel[neutralSecondary with Double]
+  
+  /* 15 */ @js.native
+  object neutralTertiary extends TopLevel[neutralTertiary with Double]
+  
+  /* 14 */ @js.native
+  object neutralTertiaryAlt extends TopLevel[neutralTertiaryAlt with Double]
+  
+  /* 7 */ @js.native
+  object themeDark extends TopLevel[themeDark with Double]
+  
+  /* 6 */ @js.native
+  object themeDarkAlt extends TopLevel[themeDarkAlt with Double]
+  
+  /* 8 */ @js.native
+  object themeDarker extends TopLevel[themeDarker with Double]
+  
+  /* 3 */ @js.native
+  object themeLight extends TopLevel[themeLight with Double]
+  
+  /* 2 */ @js.native
+  object themeLighter extends TopLevel[themeLighter with Double]
+  
+  /* 1 */ @js.native
+  object themeLighterAlt extends TopLevel[themeLighterAlt with Double]
+  
+  /* 0 */ @js.native
+  object themePrimary extends TopLevel[themePrimary with Double]
+  
+  /* 5 */ @js.native
+  object themeSecondary extends TopLevel[themeSecondary with Double]
+  
+  /* 4 */ @js.native
+  object themeTertiary extends TopLevel[themeTertiary with Double]
+  
+  /* 21 */ @js.native
+  object white extends TopLevel[white with Double]
+  
 }
 

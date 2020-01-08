@@ -6,15 +6,6 @@ import scala.scalajs.js.annotation._
 
 object yamlStrings {
   @js.native
-  sealed trait `,` extends js.Object
-  
-  @js.native
-  sealed trait `:` extends js.Object
-  
-  @js.native
-  sealed trait `?` extends js.Object
-  
-  @js.native
   sealed trait ALIAS extends js.Object
   
   @js.native
@@ -36,6 +27,12 @@ object yamlStrings {
   sealed trait COMMENT extends js.Object
   
   @js.native
+  sealed trait Colon extends js.Object
+  
+  @js.native
+  sealed trait Comma extends js.Object
+  
+  @js.native
   sealed trait DIRECTIVE extends js.Object
   
   @js.native
@@ -52,6 +49,9 @@ object yamlStrings {
   
   @js.native
   sealed trait KEEP extends js.Object
+  
+  @js.native
+  sealed trait Leftcurlybracket extends js.Object
   
   @js.native
   sealed trait MAP extends js.Object
@@ -79,6 +79,12 @@ object yamlStrings {
   
   @js.native
   sealed trait QUOTE_SINGLE extends js.Object
+  
+  @js.native
+  sealed trait Questionmark extends js.Object
+  
+  @js.native
+  sealed trait Rightcurlybracket extends js.Object
   
   @js.native
   sealed trait SEQ extends js.Object
@@ -117,20 +123,8 @@ object yamlStrings {
   sealed trait json extends js.Object
   
   @js.native
-  sealed trait `yaml-1DOT1` extends js.Object
+  sealed trait `yaml-1Dot1` extends js.Object
   
-  @js.native
-  sealed trait `{` extends js.Object
-  
-  @js.native
-  sealed trait `}` extends js.Object
-  
-  @scala.inline
-  def `,`: `,` = ",".asInstanceOf[`,`]
-  @scala.inline
-  def `:`: `:` = ":".asInstanceOf[`:`]
-  @scala.inline
-  def `?`: `?` = "?".asInstanceOf[`?`]
   @scala.inline
   def ALIAS: ALIAS = "ALIAS".asInstanceOf[ALIAS]
   @scala.inline
@@ -146,6 +140,10 @@ object yamlStrings {
   @scala.inline
   def COMMENT: COMMENT = "COMMENT".asInstanceOf[COMMENT]
   @scala.inline
+  def Colon: Colon = ":".asInstanceOf[Colon]
+  @scala.inline
+  def Comma: Comma = ",".asInstanceOf[Comma]
+  @scala.inline
   def DIRECTIVE: DIRECTIVE = "DIRECTIVE".asInstanceOf[DIRECTIVE]
   @scala.inline
   def DOCUMENT: DOCUMENT = "DOCUMENT".asInstanceOf[DOCUMENT]
@@ -157,6 +155,8 @@ object yamlStrings {
   def HEX: HEX = "HEX".asInstanceOf[HEX]
   @scala.inline
   def KEEP: KEEP = "KEEP".asInstanceOf[KEEP]
+  @scala.inline
+  def Leftcurlybracket: Leftcurlybracket = "{".asInstanceOf[Leftcurlybracket]
   @scala.inline
   def MAP: MAP = "MAP".asInstanceOf[MAP]
   @scala.inline
@@ -175,6 +175,10 @@ object yamlStrings {
   def QUOTE_DOUBLE: QUOTE_DOUBLE = "QUOTE_DOUBLE".asInstanceOf[QUOTE_DOUBLE]
   @scala.inline
   def QUOTE_SINGLE: QUOTE_SINGLE = "QUOTE_SINGLE".asInstanceOf[QUOTE_SINGLE]
+  @scala.inline
+  def Questionmark: Questionmark = "?".asInstanceOf[Questionmark]
+  @scala.inline
+  def Rightcurlybracket: Rightcurlybracket = "}".asInstanceOf[Rightcurlybracket]
   @scala.inline
   def SEQ: SEQ = "SEQ".asInstanceOf[SEQ]
   @scala.inline
@@ -200,10 +204,6 @@ object yamlStrings {
   @scala.inline
   def json: json = "json".asInstanceOf[json]
   @scala.inline
-  def `yaml-1DOT1`: `yaml-1DOT1` = "yaml-1.1".asInstanceOf[`yaml-1DOT1`]
-  @scala.inline
-  def `{`: `{` = "{".asInstanceOf[`{`]
-  @scala.inline
-  def `}`: `}` = "}".asInstanceOf[`}`]
+  def `yaml-1Dot1`: `yaml-1Dot1` = "yaml-1.1".asInstanceOf[`yaml-1Dot1`]
 }
 

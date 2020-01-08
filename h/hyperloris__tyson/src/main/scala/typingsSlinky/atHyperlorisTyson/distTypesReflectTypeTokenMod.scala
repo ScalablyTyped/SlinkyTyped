@@ -1,7 +1,6 @@
 package typingsSlinky.atHyperlorisTyson
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.atHyperlorisTyson.distTypesReflectTypeTokenMod.ClassType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

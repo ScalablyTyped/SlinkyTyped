@@ -10,7 +10,7 @@ import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3Da
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.REPLICA
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.STANDARD
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.STANDARD_IA
-import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.`aws:kms`
+import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.awsColonkms
 import typingsSlinky.atAwsDashSdkClientDashS3DashNode.atAwsDashSdkClientDashS3DashNodeStrings.requester_
 import typingsSlinky.atAwsDashSdkTypes.buildResponseMod.MetadataBearer
 import scala.scalajs.js
@@ -117,7 +117,7 @@ object typesGetObjectOutputMod extends js.Object {
     /**
       * <p>The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms).</p>
       */
-    var ServerSideEncryption: js.UndefOr[AES256 | `aws:kms` | String] = js.native
+    var ServerSideEncryption: js.UndefOr[AES256 | awsColonkms | String] = js.native
     /**
       * _StorageClass shape
       */

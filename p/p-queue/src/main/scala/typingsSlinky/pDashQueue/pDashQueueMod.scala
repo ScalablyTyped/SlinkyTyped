@@ -4,8 +4,6 @@ import typingsSlinky.eventemitter3.eventemitter3Mod.^
 import typingsSlinky.pDashQueue.distOptionsMod.Options
 import typingsSlinky.pDashQueue.distOptionsMod.QueueAddOptions
 import typingsSlinky.pDashQueue.distQueueMod.Queue
-import typingsSlinky.pDashQueue.pDashQueueMod.PQueue
-import typingsSlinky.pDashQueue.pDashQueueMod.Task
 import typingsSlinky.pDashQueue.pDashQueueStrings.active
 import typingsSlinky.std.Partial
 import scala.scalajs.js

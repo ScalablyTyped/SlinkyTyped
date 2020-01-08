@@ -1,5 +1,6 @@
 package typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,17 +44,37 @@ object Events extends js.Object {
   @js.native
   sealed trait SourcesInfoUpdated extends Events
   
-  /* 0 */ val AuthResult: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.AuthResult with Double = js.native
-  /* 1 */ val ConnectionClosed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.ConnectionClosed with Double = js.native
-  /* 2 */ val ConnectionEstablished: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.ConnectionEstablished with Double = js.native
-  /* 3 */ val ConnectionFailed: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.ConnectionFailed with Double = js.native
-  /* 4 */ val IncomingCall: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.IncomingCall with Double = js.native
-  /* 5 */ val MicAccessResult: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.MicAccessResult with Double = js.native
-  /* 6 */ val NetStatsReceived: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.NetStatsReceived with Double = js.native
-  /* 7 */ val PlaybackFinished: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.PlaybackFinished with Double = js.native
-  /* 8 */ val SDKReady: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.SDKReady with Double = js.native
-  /* 9 */ val SourcesInfoUpdated: typingsSlinky.voximplantDashWebsdk.voximplantDashWebsdkMod.Events.SourcesInfoUpdated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Events with Double] = js.native
+  /* 0 */ @js.native
+  object AuthResult extends TopLevel[AuthResult with Double]
+  
+  /* 1 */ @js.native
+  object ConnectionClosed extends TopLevel[ConnectionClosed with Double]
+  
+  /* 2 */ @js.native
+  object ConnectionEstablished extends TopLevel[ConnectionEstablished with Double]
+  
+  /* 3 */ @js.native
+  object ConnectionFailed extends TopLevel[ConnectionFailed with Double]
+  
+  /* 4 */ @js.native
+  object IncomingCall extends TopLevel[IncomingCall with Double]
+  
+  /* 5 */ @js.native
+  object MicAccessResult extends TopLevel[MicAccessResult with Double]
+  
+  /* 6 */ @js.native
+  object NetStatsReceived extends TopLevel[NetStatsReceived with Double]
+  
+  /* 7 */ @js.native
+  object PlaybackFinished extends TopLevel[PlaybackFinished with Double]
+  
+  /* 8 */ @js.native
+  object SDKReady extends TopLevel[SDKReady with Double]
+  
+  /* 9 */ @js.native
+  object SourcesInfoUpdated extends TopLevel[SourcesInfoUpdated with Double]
+  
 }
 

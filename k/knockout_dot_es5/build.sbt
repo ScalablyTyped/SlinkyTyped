@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "knockout_dot_es5"
-version := "0.0-unknown-dt-20190322Z-009d1a"
+version := "0.0-unknown-dt-20190322Z-77a6c9"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "knockout" % "v3.4.0-dt-20190819Z-09c2d6",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821")
+  "org.scalablytyped.slinky" %%% "knockout" % "v3.4.0-dt-20190819Z-564082",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

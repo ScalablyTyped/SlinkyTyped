@@ -18,28 +18,15 @@ import typingsSlinky.cypress.JQuery.htmlString
 import typingsSlinky.cypress.JQueryStatic
 import typingsSlinky.cypress.Mocha.IRunnable
 import typingsSlinky.cypress.Mocha.ITest
-import typingsSlinky.cypress.cypressNumbers.`false`
-import typingsSlinky.cypress.cypressStrings.`command:end`
-import typingsSlinky.cypress.cypressStrings.`command:enqueued`
-import typingsSlinky.cypress.cypressStrings.`command:retry`
-import typingsSlinky.cypress.cypressStrings.`command:start`
-import typingsSlinky.cypress.cypressStrings.`log:added`
-import typingsSlinky.cypress.cypressStrings.`log:changed`
-import typingsSlinky.cypress.cypressStrings.`test:after:run`
-import typingsSlinky.cypress.cypressStrings.`test:before:run`
-import typingsSlinky.cypress.cypressStrings.`uncaught:exception`
-import typingsSlinky.cypress.cypressStrings.`url:changed`
-import typingsSlinky.cypress.cypressStrings.`viewport:changed`
-import typingsSlinky.cypress.cypressStrings.`window:alert`
-import typingsSlinky.cypress.cypressStrings.`window:before:load`
-import typingsSlinky.cypress.cypressStrings.`window:before:unload`
-import typingsSlinky.cypress.cypressStrings.`window:confirm`
-import typingsSlinky.cypress.cypressStrings.`window:load`
-import typingsSlinky.cypress.cypressStrings.`window:unload`
+import typingsSlinky.cypress.cypressBooleans.`false`
 import typingsSlinky.cypress.cypressStrings.animationDistanceThreshold
 import typingsSlinky.cypress.cypressStrings.baseUrl
 import typingsSlinky.cypress.cypressStrings.bundled
 import typingsSlinky.cypress.cypressStrings.chromeWebSecurity
+import typingsSlinky.cypress.cypressStrings.commandColonend
+import typingsSlinky.cypress.cypressStrings.commandColonenqueued
+import typingsSlinky.cypress.cypressStrings.commandColonretry
+import typingsSlinky.cypress.cypressStrings.commandColonstart
 import typingsSlinky.cypress.cypressStrings.defaultCommandTimeout
 import typingsSlinky.cypress.cypressStrings.env
 import typingsSlinky.cypress.cypressStrings.execTimeout
@@ -48,6 +35,8 @@ import typingsSlinky.cypress.cypressStrings.fileServerFolder
 import typingsSlinky.cypress.cypressStrings.fixturesFolder
 import typingsSlinky.cypress.cypressStrings.ignoreTestFiles
 import typingsSlinky.cypress.cypressStrings.integrationFolder
+import typingsSlinky.cypress.cypressStrings.logColonadded
+import typingsSlinky.cypress.cypressStrings.logColonchanged
 import typingsSlinky.cypress.cypressStrings.nodeVersion
 import typingsSlinky.cypress.cypressStrings.numTestsKeptInMemory
 import typingsSlinky.cypress.cypressStrings.pageLoadTimeout
@@ -62,15 +51,26 @@ import typingsSlinky.cypress.cypressStrings.screenshotsFolder
 import typingsSlinky.cypress.cypressStrings.scrolled
 import typingsSlinky.cypress.cypressStrings.supportFile
 import typingsSlinky.cypress.cypressStrings.system
+import typingsSlinky.cypress.cypressStrings.testColonafterColonrun
+import typingsSlinky.cypress.cypressStrings.testColonbeforeColonrun
 import typingsSlinky.cypress.cypressStrings.trashAssetsBeforeRuns
+import typingsSlinky.cypress.cypressStrings.uncaughtColonexception
+import typingsSlinky.cypress.cypressStrings.urlColonchanged
 import typingsSlinky.cypress.cypressStrings.video
 import typingsSlinky.cypress.cypressStrings.videoCompression
 import typingsSlinky.cypress.cypressStrings.videoUploadOnPasses
 import typingsSlinky.cypress.cypressStrings.videosFolder
+import typingsSlinky.cypress.cypressStrings.viewportColonchanged
 import typingsSlinky.cypress.cypressStrings.viewportHeight
 import typingsSlinky.cypress.cypressStrings.viewportWidth
 import typingsSlinky.cypress.cypressStrings.waitForAnimations
 import typingsSlinky.cypress.cypressStrings.watchForFileChanges
+import typingsSlinky.cypress.cypressStrings.windowColonalert
+import typingsSlinky.cypress.cypressStrings.windowColonbeforeColonload
+import typingsSlinky.cypress.cypressStrings.windowColonbeforeColonunload
+import typingsSlinky.cypress.cypressStrings.windowColonconfirm
+import typingsSlinky.cypress.cypressStrings.windowColonload
+import typingsSlinky.cypress.cypressStrings.windowColonunload
 import typingsSlinky.cypress.typesCyDashBlobDashUtilMod.BlobUtilStatic
 import typingsSlinky.cypress.typesCyDashBluebirdMod.BluebirdStatic
 import typingsSlinky.cypress.typesCyDashMinimatchMod.MinimatchOptions
@@ -154,7 +154,7 @@ trait Cypress extends js.Object {
     *    Cypress._.keys(obj)
     */
   @JSName("_")
-  var __Original: LoDashStatic = js.native
+  var _underscore_Original: LoDashStatic = js.native
   /**
     * CPU architecture, from Node `os.arch()`
     *
@@ -318,64 +318,16 @@ trait Cypress extends js.Object {
     */
   @JSName("$")
   def $[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
-  /**
-    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param element_elementArray _&#x40;param_ `element_elementArray`
-    * <br>
-    * * `element` — A DOM element to wrap in a jQuery object. <br>
-    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @example ​ ````Set the background color of the page to black.
-  ```javascript
-  $( document.body ).css( "background", "black" );
-  ```
-    * @example ​ ````Hide all the input elements within a form.
-  ```javascript
-  $( myForm.elements ).hide();
-  ```
-    */
-  /**
-    * jQuery library
-    *
-    * @see https://on.cypress.io/$
-    * @example
-    *    Cypress.$('p')
-    */
-  @JSName("$")
-  def $[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
   @JSName("$")
   def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   /**
-    * Creates DOM elements on the fly from the provided string of raw HTML.
-    * @param html _&#x40;param_ `html`
-    * <br>
-    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
-    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
-    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
-    * <br>
-    * * `ownerDocument` — A document in which the new elements will be created. <br>
-    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
+    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+    * @param object A plain object to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
-    * @since 1.4
-    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
-  ```javascript
-  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
-  ```
-    * @example ​ ````Create some DOM elements.
-  ```javascript
-  $( "<div/>", {
-    "class": "test",
-    text: "Click me!",
-    click: function() {
-    $( this ).toggleClass( "test" );
-    }
-  })
-    .appendTo( "body" );
-  ```
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   /**
     * jQuery library
     *
@@ -384,11 +336,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
+  def $[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -404,10 +352,6 @@ trait Cypress extends js.Object {
     */
   @JSName("$")
   def $[T](selection: JQuery[T]): JQuery[T] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -454,14 +398,70 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
+  def $[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
   @JSName("$")
-  def $_TElement_Element[TElement /* <: Element */](selector: Selector, context: org.scalajs.dom.raw.Document): JQuery[TElement] = js.native
+  def $[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
   /**
-    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
+    * <br>
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
+  ```javascript
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
+  ```
+    * @example ​ ````Create some DOM elements.
+  ```javascript
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
+  ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  /**
+    * jQuery library
+    *
+    * @see https://on.cypress.io/$
+    * @example
+    *    Cypress.$('p')
+    */
+  @JSName("$")
+  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
+  @JSName("$")
+  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: org.scalajs.dom.raw.Document): JQuery[TElement] = js.native
+  /**
+    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
   /**
     * jQuery library
@@ -471,7 +471,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
+  def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -547,7 +547,8 @@ trait Cypress extends js.Object {
     * @example
     *    Cypress._.keys(obj)
     */
-  def `_`[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("_")
+  def _underscore[T](value: T): LoDashImplicitWrapper[T] = js.native
   /**
     * Returns all configuration objects.
     * @see https://on.cypress.io/config
@@ -855,7 +856,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def off(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -874,7 +875,7 @@ trait Cypress extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def off(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def off(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -884,7 +885,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -894,7 +895,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def off_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -904,7 +905,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -914,7 +915,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def off_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -934,7 +935,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def off_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -944,7 +945,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def off_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -964,7 +965,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def off_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -974,7 +978,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def off_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -984,7 +991,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def off_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -994,7 +1001,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def off_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -1016,9 +1023,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def off_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("off")
-  def off_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def off_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1028,7 +1035,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def off_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1038,9 +1045,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def off_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("off")
-  def off_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def off_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1050,7 +1057,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def off_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1060,7 +1067,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def off_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -1092,7 +1099,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def on(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -1111,7 +1118,7 @@ trait Cypress extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def on(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def on(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1121,7 +1128,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1131,7 +1138,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def on_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1141,7 +1148,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1151,7 +1158,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def on_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1171,7 +1178,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def on_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1181,7 +1188,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def on_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1201,7 +1208,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def on_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1211,7 +1221,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def on_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1221,7 +1234,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def on_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1231,7 +1244,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def on_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -1253,9 +1266,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def on_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("on")
-  def on_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def on_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1265,7 +1278,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def on_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1275,9 +1288,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def on_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("on")
-  def on_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def on_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1287,7 +1300,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def on_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1297,7 +1310,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def on_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -1329,7 +1342,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   def once(
-    action: `uncaught:exception`,
+    action: uncaughtColonexception,
     fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
@@ -1348,7 +1361,7 @@ trait Cypress extends js.Object {
     * These events come from Cypress as it issues commands and reacts to their state. These are all useful to listen to for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def once(action: `window:confirm`, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
+  def once(action: windowColonconfirm, fn: js.Function1[/* text */ String, `false` | Unit]): Unit = js.native
   /**
     * Fires when cy finishes running and executing your command. Useful for debugging and understanding how commands are handled.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1358,7 +1371,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandend(action: `command:end`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandend(action: commandColonend, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when a cy command is first invoked and enqueued to be run later. Useful for debugging purposes if you're confused about the order in which commands will execute.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1368,7 +1381,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandenqueued(action: `command:enqueued`, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
+  def once_commandenqueued(action: commandColonenqueued, fn: js.Function1[/* command */ EnqueuedCommand, Unit]): Unit = js.native
   /**
     * Fires whenever a command begins its retrying routines. This is called on the trailing edge after Cypress has internally waited for the retry interval. Useful to understand **why** a command is retrying, and generally includes the actual error causing the retry to happen. When commands fail the final error is the one that actually bubbles up to fail the test. This event is essentially to debug why Cypress is failing.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1378,7 +1391,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandretry(action: `command:retry`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandretry(action: commandColonretry, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when cy begins actually running and executing your command. Useful for debugging and understanding how the command queue is async.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1388,7 +1401,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_commandstart(action: `command:start`, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
+  def once_commandstart(action: commandColonstart, fn: js.Function1[/* command */ CommandQueue, Unit]): Unit = js.native
   /**
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1408,7 +1421,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_logadded(action: `log:added`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def once_logadded(action: logColonadded, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever a command's attributes changes. This event is debounced to prevent it from firing too quickly and too often. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1418,7 +1431,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_logchanged(action: `log:changed`, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
+  def once_logchanged(action: logColonchanged, fn: js.Function2[/* log */ js.Any, /* interactive */ Boolean, Unit]): Unit = js.native
   /**
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1438,7 +1451,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_testafterrun(action: `test:after:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def once_testafterrun(
+    action: testColonafterColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires before the test and all **before** and **beforeEach** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1448,7 +1464,10 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_testbeforerun(action: `test:before:run`, fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]): Unit = js.native
+  def once_testbeforerun(
+    action: testColonbeforeColonrun,
+    fn: js.Function2[/* attributes */ ObjectLike, /* test */ ITest, Unit]
+  ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1458,7 +1477,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_urlchanged(action: `url:changed`, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
+  def once_urlchanged(action: urlColonchanged, fn: js.Function1[/* url */ String, Unit]): Unit = js.native
   /**
     * Fires whenever the viewport changes via a `cy.viewport()` or naturally when Cypress resets the viewport to the default between tests. Useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1468,7 +1487,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_viewportchanged(action: `viewport:changed`, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
+  def once_viewportchanged(action: viewportColonchanged, fn: js.Function1[/* viewport */ Viewport, Unit]): Unit = js.native
   /**
     * Fires when your app calls the global `window.alert()` method.
     * Cypress will auto accept alerts. You cannot change this behavior.
@@ -1490,9 +1509,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowalert(action: `window:alert`, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def once_windowalert(action: windowColonalert, fn: js.Function1[/* text */ String, Unit]): Unit = js.native
   @JSName("once")
-  def once_windowalert(action: `window:alert`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def once_windowalert(action: windowColonalert, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1502,7 +1521,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowbeforeload(action: `window:before:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def once_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1512,9 +1531,9 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowbeforeunload(action: `window:before:unload`, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
+  def once_windowbeforeunload(action: windowColonbeforeColonunload, fn: js.Function1[/* event */ BeforeUnloadEvent, Unit]): Unit = js.native
   @JSName("once")
-  def once_windowconfirm(action: `window:confirm`, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
+  def once_windowconfirm(action: windowColonconfirm, fn: SinonSpyAgent[SinonSpy | SinonStub]): Unit = js.native
   /**
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1524,7 +1543,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowload(action: `window:load`, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
+  def once_windowload(action: windowColonload, fn: js.Function1[/* win */ org.scalajs.dom.raw.Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1534,6 +1553,6 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowunload(action: `window:unload`, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def once_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
 }
 

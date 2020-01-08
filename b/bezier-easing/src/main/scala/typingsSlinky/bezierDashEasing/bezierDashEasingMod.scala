@@ -1,6 +1,5 @@
 package typingsSlinky.bezierDashEasing
 
-import typingsSlinky.bezierDashEasing.bezierDashEasingMod.EasingFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

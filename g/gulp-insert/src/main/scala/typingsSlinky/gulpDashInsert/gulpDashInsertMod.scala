@@ -1,8 +1,7 @@
 package typingsSlinky.gulpDashInsert
 
-import typingsSlinky.gulpDashInsert.gulpDashInsertMod.Transformer
+import org.scalajs.dom.raw.File
 import typingsSlinky.node.NodeJS.ReadWriteStream
-import typingsSlinky.vinyl.vinylMod.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.fastclick
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import scala.scalajs.js
@@ -47,8 +48,10 @@ object fastclickMod extends js.Object {
     override def needsFocus(target: js.Any): Boolean = js.native
   }
   
-  var FastClick: FastClickStatic = js.native
   def apply(layer: js.Any): FastClickObject = js.native
   def apply(layer: js.Any, options: FastClickOptions): FastClickObject = js.native
+  @js.native
+  object FastClick extends TopLevel[FastClickStatic]
+  
 }
 

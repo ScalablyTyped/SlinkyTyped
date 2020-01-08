@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
-import typingsSlinky.rcDashMentions.rcDashMentionsNumbers.`false`
+import typingsSlinky.rcDashMentions.rcDashMentionsBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.FocusEventHandler
 import scala.scalajs.js

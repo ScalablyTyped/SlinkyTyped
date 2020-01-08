@@ -1,8 +1,5 @@
 package typingsSlinky.ndnDashJs
 
-import typingsSlinky.ndnDashJs.transportMod.TcpTransport.ConnectionInfo
-import typingsSlinky.ndnDashJs.transportMod.Transport
-import typingsSlinky.ndnDashJs.transportMod.TransportConnectionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,7 +45,7 @@ object transportMod extends js.Object {
     @js.native
     class ConnectionInfo protected () extends TransportConnectionInfo {
       def this(filePath: String) = this()
-      def equals(other: typingsSlinky.ndnDashJs.transportMod.UnixTransport.ConnectionInfo): Boolean = js.native
+      def equals(other: ConnectionInfo): Boolean = js.native
     }
     
   }
@@ -59,7 +56,7 @@ object transportMod extends js.Object {
     class ConnectionInfo protected () extends TransportConnectionInfo {
       def this(hostOrUri: String) = this()
       def this(hostOrUri: String, port: Double) = this()
-      def equals(other: typingsSlinky.ndnDashJs.transportMod.WebSocketTransport.ConnectionInfo): Boolean = js.native
+      def equals(other: ConnectionInfo): Boolean = js.native
     }
     
   }

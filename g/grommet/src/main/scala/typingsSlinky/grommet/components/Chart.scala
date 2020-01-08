@@ -6,6 +6,7 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import typingsSlinky.grommet.Anon_Args
 import typingsSlinky.grommet.Anon_Color
+import typingsSlinky.grommet.Anon_ColorValue
 import typingsSlinky.grommet.Anon_Full
 import typingsSlinky.grommet.componentsChartMod.ChartProps
 import typingsSlinky.grommet.grommetStrings.area
@@ -16,6 +17,7 @@ import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.line
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.none
+import typingsSlinky.grommet.grommetStrings.point
 import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.xlarge
 import typingsSlinky.grommet.grommetStrings.xsmall
@@ -42,7 +44,7 @@ object Chart
     a11yTitle: A11yTitleType = null,
     alignSelf: AlignSelfType = null,
     bounds: js.Array[js.Array[Double]] = null,
-    color: String | Anon_Color = null,
+    color: String | Anon_Color | js.Array[Anon_ColorValue] = null,
     gap: GapType = null,
     gridArea: GridAreaType = null,
     margin: MarginType = null,
@@ -51,7 +53,7 @@ object Chart
     round: js.UndefOr[Boolean] = js.undefined,
     size: xxsmall | xsmall | small | medium | large | xlarge | full | Anon_Full | String = null,
     thickness: hair | xsmall | small | medium | large | xlarge | none | String = null,
-    `type`: bar | line | area = null,
+    `type`: bar | line | area | point = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.Chart] = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])

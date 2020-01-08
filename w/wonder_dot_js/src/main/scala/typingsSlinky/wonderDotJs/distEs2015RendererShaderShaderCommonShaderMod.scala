@@ -2,7 +2,6 @@ package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015MaterialMaterialMod.Material
 import typingsSlinky.wonderDotJs.distEs2015RendererCommandQuadCommandMod.QuadCommand
-import typingsSlinky.wonderDotJs.distEs2015RendererShaderShaderCommonShaderMod.CommonShader
 import typingsSlinky.wonderDotJs.distEs2015RendererShaderShaderEngineShaderMod.EngineShader
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata.State
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -115,12 +116,20 @@ object KnowledgeOperationMetadata extends js.Object {
     @js.native
     sealed trait STATE_UNSPECIFIED extends State
     
-    /* 3 */ val DONE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata.State.DONE with Double = js.native
-    /* 1 */ val PENDING: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata.State.PENDING with Double = js.native
-    /* 2 */ val RUNNING: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata.State.RUNNING with Double = js.native
-    /* 0 */ val STATE_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata.State.STATE_UNSPECIFIED with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[State with Double] = js.native
+    /* 3 */ @js.native
+    object DONE extends TopLevel[DONE with Double]
+    
+    /* 1 */ @js.native
+    object PENDING extends TopLevel[PENDING with Double]
+    
+    /* 2 */ @js.native
+    object RUNNING extends TopLevel[RUNNING with Double]
+    
+    /* 0 */ @js.native
+    object STATE_UNSPECIFIED extends TopLevel[STATE_UNSPECIFIED with Double]
+    
   }
   
 }

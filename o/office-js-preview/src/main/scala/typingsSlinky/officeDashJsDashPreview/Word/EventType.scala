@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,14 +73,28 @@ object EventType extends js.Object {
   @js.native
   sealed trait contentControlSelectionChanged extends EventType
   
-  /* "AnnotationAdded" */ val annotationAdded: typingsSlinky.officeDashJsDashPreview.Word.EventType.annotationAdded with String = js.native
-  /* "AnnotationChanged" */ val annotationChanged: typingsSlinky.officeDashJsDashPreview.Word.EventType.annotationChanged with String = js.native
-  /* "AnnotationDeleted" */ val annotationDeleted: typingsSlinky.officeDashJsDashPreview.Word.EventType.annotationDeleted with String = js.native
-  /* "ContentControlAdded" */ val contentControlAdded: typingsSlinky.officeDashJsDashPreview.Word.EventType.contentControlAdded with String = js.native
-  /* "ContentControlDataChanged" */ val contentControlDataChanged: typingsSlinky.officeDashJsDashPreview.Word.EventType.contentControlDataChanged with String = js.native
-  /* "ContentControlDeleted" */ val contentControlDeleted: typingsSlinky.officeDashJsDashPreview.Word.EventType.contentControlDeleted with String = js.native
-  /* "ContentControlSelectionChanged" */ val contentControlSelectionChanged: typingsSlinky.officeDashJsDashPreview.Word.EventType.contentControlSelectionChanged with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EventType with String] = js.native
+  /* "AnnotationAdded" */ @js.native
+  object annotationAdded extends TopLevel[annotationAdded with String]
+  
+  /* "AnnotationChanged" */ @js.native
+  object annotationChanged extends TopLevel[annotationChanged with String]
+  
+  /* "AnnotationDeleted" */ @js.native
+  object annotationDeleted extends TopLevel[annotationDeleted with String]
+  
+  /* "ContentControlAdded" */ @js.native
+  object contentControlAdded extends TopLevel[contentControlAdded with String]
+  
+  /* "ContentControlDataChanged" */ @js.native
+  object contentControlDataChanged extends TopLevel[contentControlDataChanged with String]
+  
+  /* "ContentControlDeleted" */ @js.native
+  object contentControlDeleted extends TopLevel[contentControlDeleted with String]
+  
+  /* "ContentControlSelectionChanged" */ @js.native
+  object contentControlSelectionChanged extends TopLevel[contentControlSelectionChanged with String]
+  
 }
 

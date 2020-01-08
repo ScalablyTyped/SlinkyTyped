@@ -1,8 +1,6 @@
 package typingsSlinky.stellarDashSdk
 
 import typingsSlinky.std.Error
-import typingsSlinky.stellarDashSdk.libErrorsMod.InvalidSep10ChallengeError
-import typingsSlinky.stellarDashSdk.libErrorsMod.NetworkError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

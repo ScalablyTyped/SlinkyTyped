@@ -2,7 +2,6 @@ package typingsSlinky.appDashBuilderDashLib
 
 import typingsSlinky.appDashBuilderDashLib.appDashBuilderDashLibStrings.S3
 import typingsSlinky.appDashBuilderDashLib.outPublishS3BaseS3PublisherMod.BaseS3Publisher
-import typingsSlinky.appDashBuilderDashLib.outPublishS3S3PublisherMod.S3Publisher
 import typingsSlinky.builderDashUtilDashRuntime.outPublishOptionsMod.S3Options
 import typingsSlinky.electronDashPublish.electronDashPublishMod.PublishContext
 import scala.scalajs.js

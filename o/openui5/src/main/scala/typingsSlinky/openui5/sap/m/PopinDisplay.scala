@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object PopinDisplay extends js.Object {
   @js.native
   sealed trait WithoutHeader extends PopinDisplay
   
-  /* 0 */ val Block: typingsSlinky.openui5.sap.m.PopinDisplay.Block with Double = js.native
-  /* 1 */ val Inline: typingsSlinky.openui5.sap.m.PopinDisplay.Inline with Double = js.native
-  /* 2 */ val WithoutHeader: typingsSlinky.openui5.sap.m.PopinDisplay.WithoutHeader with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PopinDisplay with Double] = js.native
+  /* 0 */ @js.native
+  object Block extends TopLevel[Block with Double]
+  
+  /* 1 */ @js.native
+  object Inline extends TopLevel[Inline with Double]
+  
+  /* 2 */ @js.native
+  object WithoutHeader extends TopLevel[WithoutHeader with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.scheduling.v1alpha1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`schedulingDOTk8sDOTio/v1alpha1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.schedulingDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait PriorityClassList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`schedulingDOTk8sDOTio/v1alpha1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[schedulingDotk8sDotioSlashv1alpha1]] = js.undefined
   /**
     * items is the list of PriorityClasses
     */
@@ -42,7 +42,7 @@ object PriorityClassList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[PriorityClass]]],
-    apiVersion: Input[`schedulingDOTk8sDOTio/v1alpha1`] = null,
+    apiVersion: Input[schedulingDotk8sDotioSlashv1alpha1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.PriorityClassList] = null,
     metadata: Input[ListMeta] = null
   ): PriorityClassList = {

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesDashboardInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object GroupMemberPermission extends js.Object {
   @js.native
   sealed trait None extends GroupMemberPermission
   
-  /* 1 */ val Edit: typingsSlinky.vsoDashNodeDashApi.interfacesDashboardInterfacesMod.GroupMemberPermission.Edit with Double = js.native
-  /* 2 */ val Manage: typingsSlinky.vsoDashNodeDashApi.interfacesDashboardInterfacesMod.GroupMemberPermission.Manage with Double = js.native
-  /* 3 */ val ManagePermissions: typingsSlinky.vsoDashNodeDashApi.interfacesDashboardInterfacesMod.GroupMemberPermission.ManagePermissions with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesDashboardInterfacesMod.GroupMemberPermission.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GroupMemberPermission with Double] = js.native
+  /* 1 */ @js.native
+  object Edit extends TopLevel[Edit with Double]
+  
+  /* 2 */ @js.native
+  object Manage extends TopLevel[Manage with Double]
+  
+  /* 3 */ @js.native
+  object ManagePermissions extends TopLevel[ManagePermissions with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

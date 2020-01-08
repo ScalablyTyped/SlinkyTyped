@@ -11,8 +11,8 @@ A foreign function interface (FFI) for Node.js
 | Full name          | ffi |
 | Keywords           | foreign, function, interface, ffi, libffi, binding, c |
 | # releases         | 2 |
-| # dependents       | 273 |
-| # downloads        | 1520467 |
+| # dependents       | 307 |
+| # downloads        | 1666361 |
 | # stars            | 24 |
 
 ## Links

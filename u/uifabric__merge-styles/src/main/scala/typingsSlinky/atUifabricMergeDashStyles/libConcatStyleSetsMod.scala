@@ -1,6 +1,6 @@
 package typingsSlinky.atUifabricMergeDashStyles
 
-import typingsSlinky.atUifabricMergeDashStyles.atUifabricMergeDashStylesNumbers.`false`
+import typingsSlinky.atUifabricMergeDashStyles.atUifabricMergeDashStylesBooleans.`false`
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IConcatenatedStyleSet
 import typingsSlinky.atUifabricMergeDashStyles.libIStyleSetMod.IStyleSet
 import scala.scalajs.js

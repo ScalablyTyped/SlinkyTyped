@@ -1,6 +1,6 @@
 package typingsSlinky.sipDotJs
 
-import typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +34,29 @@ object libCoreTransactionsTransactionDashStateMod extends js.Object {
     @js.native
     sealed trait Trying extends TransactionState
     
-    /* "Accepted" */ val Accepted: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Accepted with String = js.native
-    /* "Calling" */ val Calling: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Calling with String = js.native
-    /* "Completed" */ val Completed: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Completed with String = js.native
-    /* "Confirmed" */ val Confirmed: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Confirmed with String = js.native
-    /* "Proceeding" */ val Proceeding: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Proceeding with String = js.native
-    /* "Terminated" */ val Terminated: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Terminated with String = js.native
-    /* "Trying" */ val Trying: typingsSlinky.sipDotJs.libCoreTransactionsTransactionDashStateMod.TransactionState.Trying with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[TransactionState with String] = js.native
+    /* "Accepted" */ @js.native
+    object Accepted extends TopLevel[Accepted with String]
+    
+    /* "Calling" */ @js.native
+    object Calling extends TopLevel[Calling with String]
+    
+    /* "Completed" */ @js.native
+    object Completed extends TopLevel[Completed with String]
+    
+    /* "Confirmed" */ @js.native
+    object Confirmed extends TopLevel[Confirmed with String]
+    
+    /* "Proceeding" */ @js.native
+    object Proceeding extends TopLevel[Proceeding with String]
+    
+    /* "Terminated" */ @js.native
+    object Terminated extends TopLevel[Terminated with String]
+    
+    /* "Trying" */ @js.native
+    object Trying extends TopLevel[Trying with String]
+    
   }
   
 }

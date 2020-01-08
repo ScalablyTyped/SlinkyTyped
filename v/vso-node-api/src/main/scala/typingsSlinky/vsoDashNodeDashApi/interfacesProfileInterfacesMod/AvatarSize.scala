@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object AvatarSize extends js.Object {
   @js.native
   sealed trait Small extends AvatarSize
   
-  /* 2 */ val Large: typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.AvatarSize.Large with Double = js.native
-  /* 1 */ val Medium: typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.AvatarSize.Medium with Double = js.native
-  /* 0 */ val Small: typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.AvatarSize.Small with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AvatarSize with Double] = js.native
+  /* 2 */ @js.native
+  object Large extends TopLevel[Large with Double]
+  
+  /* 1 */ @js.native
+  object Medium extends TopLevel[Medium with Double]
+  
+  /* 0 */ @js.native
+  object Small extends TopLevel[Small with Double]
+  
 }
 

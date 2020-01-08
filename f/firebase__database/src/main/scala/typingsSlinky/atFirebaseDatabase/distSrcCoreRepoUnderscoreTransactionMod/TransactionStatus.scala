@@ -1,5 +1,6 @@
 package typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object TransactionStatus extends js.Object {
   @js.native
   sealed trait SENT_NEEDS_ABORT extends TransactionStatus
   
-  /* 2 */ val COMPLETED: typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod.TransactionStatus.COMPLETED with Double = js.native
-  /* 4 */ val NEEDS_ABORT: typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod.TransactionStatus.NEEDS_ABORT with Double = js.native
-  /* 0 */ val RUN: typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod.TransactionStatus.RUN with Double = js.native
-  /* 1 */ val SENT: typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod.TransactionStatus.SENT with Double = js.native
-  /* 3 */ val SENT_NEEDS_ABORT: typingsSlinky.atFirebaseDatabase.distSrcCoreRepoUnderscoreTransactionMod.TransactionStatus.SENT_NEEDS_ABORT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TransactionStatus with Double] = js.native
+  /* 2 */ @js.native
+  object COMPLETED extends TopLevel[COMPLETED with Double]
+  
+  /* 4 */ @js.native
+  object NEEDS_ABORT extends TopLevel[NEEDS_ABORT with Double]
+  
+  /* 0 */ @js.native
+  object RUN extends TopLevel[RUN with Double]
+  
+  /* 1 */ @js.native
+  object SENT extends TopLevel[SENT with Double]
+  
+  /* 3 */ @js.native
+  object SENT_NEEDS_ABORT extends TopLevel[SENT_NEEDS_ABORT with Double]
+  
 }
 

@@ -1,8 +1,6 @@
 package typingsSlinky.ethers
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ethers.distTypesContractsContractMod.Bucket
-import typingsSlinky.ethers.distTypesContractsContractMod.Contract
 import typingsSlinky.ethers.distTypesContractsInterfaceMod.Interface
 import typingsSlinky.ethers.distTypesUtilsTypesMod.BigNumber
 import typingsSlinky.ethers.distTypesUtilsTypesMod.ContractFunction

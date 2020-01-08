@@ -1,7 +1,5 @@
 package typingsSlinky.intlDashFormatDashCache
 
-import typingsSlinky.intlDashFormatDashCache.intlDashFormatDashCacheMod.CacheValue
-import typingsSlinky.intlDashFormatDashCache.intlDashFormatDashCacheMod.MemoizeFormatConstructorFn
 import typingsSlinky.std.ConstructorParameters
 import typingsSlinky.std.Intl.DateTimeFormat
 import typingsSlinky.std.Intl.NumberFormat

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Vpn
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object VpnAppIdType extends js.Object {
   @js.native
   sealed trait packageFamilyName extends VpnAppIdType
   
-  /* 2 */ val filePath: typingsSlinky.winrtDashUwp.Windows.Networking.Vpn.VpnAppIdType.filePath with Double = js.native
-  /* 1 */ val fullyQualifiedBinaryName: typingsSlinky.winrtDashUwp.Windows.Networking.Vpn.VpnAppIdType.fullyQualifiedBinaryName with Double = js.native
-  /* 0 */ val packageFamilyName: typingsSlinky.winrtDashUwp.Windows.Networking.Vpn.VpnAppIdType.packageFamilyName with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VpnAppIdType with Double] = js.native
+  /* 2 */ @js.native
+  object filePath extends TopLevel[filePath with Double]
+  
+  /* 1 */ @js.native
+  object fullyQualifiedBinaryName extends TopLevel[fullyQualifiedBinaryName with Double]
+  
+  /* 0 */ @js.native
+  object packageFamilyName extends TopLevel[packageFamilyName with Double]
+  
 }
 

@@ -10,9 +10,9 @@ register/unregister a keyboard shortcut locally to a BrowserWindow instance, wit
 | ------------------ | :-------------: |
 | Full name          | electron-localshortcut |
 | Keywords           | electron, shortcuts, browser-window |
-| # releases         | 8 |
-| # dependents       | 26 |
-| # downloads        | 823292 |
+| # releases         | 5 |
+| # dependents       | 28 |
+| # downloads        | 1011501 |
 | # stars            | 6 |
 
 ## Links

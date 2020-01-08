@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.settings
 
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IProject
+import typingsSlinky.mendixmodelsdk.distGenSettingsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +28,7 @@ class ProjectSettings protected ()
 @js.native
 object ProjectSettings extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenSettingsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new ProjectSettings unit in the SDK and on the server.
     * Expects one argument, the projects.IProject in which this unit is contained.

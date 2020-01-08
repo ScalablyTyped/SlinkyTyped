@@ -5,11 +5,11 @@ import typingsSlinky.reactDashVirtualized.distEsTableMod.TableHeaderRowProps
 import typingsSlinky.reactDashVirtualized.distEsTableMod.TableHeaderRowRenderer
 import typingsSlinky.reactDashVirtualized.distEsTableMod.TableRowProps
 import typingsSlinky.reactDashVirtualized.distEsTableMod.TableRowRenderer
+import typingsSlinky.reactDashVirtualized.reactDashVirtualizedBooleans.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`-1`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`0`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`10`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`30`
-import typingsSlinky.reactDashVirtualized.reactDashVirtualizedNumbers.`false`
 import typingsSlinky.reactDashVirtualized.reactDashVirtualizedStrings.auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`

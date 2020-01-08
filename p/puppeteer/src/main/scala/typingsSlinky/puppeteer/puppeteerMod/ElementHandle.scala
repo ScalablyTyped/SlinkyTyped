@@ -3,7 +3,7 @@ package typingsSlinky.puppeteer.puppeteerMod
 import org.scalajs.dom.raw.Element
 import typingsSlinky.node.Buffer
 import typingsSlinky.puppeteer.Anon_Delay
-import typingsSlinky.puppeteer.Anon_DelayNumber_574745146
+import typingsSlinky.puppeteer.Anon_DelayNumber_2003735715
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,18 +21,18 @@ trait ElementHandle[E /* <: Element */]
   @JSName("$")
   def $(selector: String): js.Promise[ElementHandle[Element] | Null] = js.native
   /**
+    * @param selector XPath expression to evaluate.
+    */
+  @JSName("$x")
+  def $x(expression: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
+  /**
     * The method runs element.querySelectorAll within the page.
     * If no elements match the selector, the return value resolve to [].
     * @param selector A selector to query element for
     * @since 0.13.0
     */
   @JSName("$$")
-  def $$(selector: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
-  /**
-    * @param selector XPath expression to evaluate.
-    */
-  @JSName("$x")
-  def $x(expression: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
+  def DollarDollar(selector: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
   /**
     * This method returns the value resolve to the bounding box of the element (relative to the main frame), or null if the element is not visible.
     */
@@ -103,7 +103,7 @@ trait ElementHandle[E /* <: Element */]
     * @param options The typing options.
     */
   def `type`(text: String): js.Promise[Unit] = js.native
-  def `type`(text: String, options: Anon_DelayNumber_574745146): js.Promise[Unit] = js.native
+  def `type`(text: String, options: Anon_DelayNumber_2003735715): js.Promise[Unit] = js.native
   /**
     * This method expects elementHandle to point to an input element.
     * @param filePaths Sets the value of the file input these paths. If some of the filePaths are relative paths, then they are resolved relative to current working directory.

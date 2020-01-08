@@ -10,9 +10,9 @@ Send parameterized requests to GitHub’s APIs with sensible defaults in browser
 | ------------------ | :-------------: |
 | Full name          | @octokit/request |
 | Keywords           | octokit, github, api, request |
-| # releases         | 18 |
-| # dependents       | 7 |
-| # downloads        | 7158340 |
+| # releases         | 37 |
+| # dependents       | 20 |
+| # downloads        | 33066393 |
 | # stars            | 0 |
 
 ## Links

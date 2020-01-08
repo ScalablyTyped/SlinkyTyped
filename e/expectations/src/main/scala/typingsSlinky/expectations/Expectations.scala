@@ -1,7 +1,5 @@
 package typingsSlinky.expectations
 
-import typingsSlinky.expectations.Expectations.Expect
-import typingsSlinky.expectations.Expectations.IAssertions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

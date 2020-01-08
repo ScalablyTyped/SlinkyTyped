@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object TrendlinesType extends js.Object {
   @js.native
   sealed trait Power extends TrendlinesType
   
-  /* 1 */ val Exponential: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.TrendlinesType.Exponential with Double = js.native
-  /* 0 */ val Linear: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.TrendlinesType.Linear with Double = js.native
-  /* 2 */ val Logarithmic: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.TrendlinesType.Logarithmic with Double = js.native
-  /* 4 */ val Polynomial: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.TrendlinesType.Polynomial with Double = js.native
-  /* 3 */ val Power: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.TrendlinesType.Power with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TrendlinesType with Double] = js.native
+  /* 1 */ @js.native
+  object Exponential extends TopLevel[Exponential with Double]
+  
+  /* 0 */ @js.native
+  object Linear extends TopLevel[Linear with Double]
+  
+  /* 2 */ @js.native
+  object Logarithmic extends TopLevel[Logarithmic with Double]
+  
+  /* 4 */ @js.native
+  object Polynomial extends TopLevel[Polynomial with Double]
+  
+  /* 3 */ @js.native
+  object Power extends TopLevel[Power with Double]
+  
 }
 

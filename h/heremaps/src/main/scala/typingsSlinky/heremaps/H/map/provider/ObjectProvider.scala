@@ -1,5 +1,6 @@
 package typingsSlinky.heremaps.H.map.provider
 
+import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.DomMarker
 import typingsSlinky.heremaps.H.map.Marker
 import typingsSlinky.heremaps.H.map.Object
@@ -64,12 +65,7 @@ class ObjectProvider () extends Provider {
     * @param cacheOnly {boolean} - Indicates whether only cached objects are to be considered
     * @returns {Array<H.map.DomMarker>} - a list of intersecting objects
     */
-  def requestDomMarkers(
-    geoRect: typingsSlinky.heremaps.H.geo.Rect,
-    zoomLevel: Double,
-    visiblesOnly: Boolean,
-    cacheOnly: Boolean
-  ): js.Array[DomMarker] = js.native
+  def requestDomMarkers(geoRect: Rect, zoomLevel: Double, visiblesOnly: Boolean, cacheOnly: Boolean): js.Array[DomMarker] = js.native
   /**
     * Returns all Marker map objects which intersect with the provided rectangular area.
     * @param geoRect {H.geo.Rect} - A rectangular area in geo space to intersect with
@@ -78,12 +74,7 @@ class ObjectProvider () extends Provider {
     * @param cacheOnly {boolean} - Indicates whether only cached objects are to be considered
     * @returns {Array<H.map.Marker>} - a list of intersecting objects
     */
-  def requestMarkers(
-    geoRect: typingsSlinky.heremaps.H.geo.Rect,
-    zoomLevel: Double,
-    visiblesOnly: Boolean,
-    cacheOnly: Boolean
-  ): js.Array[Marker] = js.native
+  def requestMarkers(geoRect: Rect, zoomLevel: Double, visiblesOnly: Boolean, cacheOnly: Boolean): js.Array[Marker] = js.native
   /**
     * Returns all Overlay objects which intersect with the provided area.
     * @param geoRect {H.geo.Rect} - A rectangular area in geo space to intersect with
@@ -92,12 +83,7 @@ class ObjectProvider () extends Provider {
     * @param cacheOnly {boolean} - Indicates whether only cached objects are to be considered
     * @returns {Array<H.map.Overlay>} - a list of intersecting objects
     */
-  def requestOverlays(
-    geoRect: typingsSlinky.heremaps.H.geo.Rect,
-    zoomLevel: Double,
-    visiblesOnly: Boolean,
-    cacheOnly: Boolean
-  ): js.Array[Overlay] = js.native
+  def requestOverlays(geoRect: Rect, zoomLevel: Double, visiblesOnly: Boolean, cacheOnly: Boolean): js.Array[Overlay] = js.native
   /**
     * Returns all polyline, polygon, circle and rect objects which intersect with the provided area.
     * @param geoRect {H.geo.Rect} - A rectangular area in geo space to intersect with
@@ -106,12 +92,7 @@ class ObjectProvider () extends Provider {
     * @param cacheOnly {boolean} - Indicates whether only cached objects are to be considered
     * @returns {Array<H.map.Spatial>} - a list of intersecting objects
     */
-  def requestSpatials(
-    geoRect: typingsSlinky.heremaps.H.geo.Rect,
-    zoomLevel: Double,
-    visiblesOnly: Boolean,
-    cacheOnly: Boolean
-  ): js.Array[Spatial] = js.native
+  def requestSpatials(geoRect: Rect, zoomLevel: Double, visiblesOnly: Boolean, cacheOnly: Boolean): js.Array[Spatial] = js.native
   /**
     * Returns the spatial objects which intersect the given tile
     * @param tile {H.map.provider.SpatialTile} - The tile for which the objects are requested

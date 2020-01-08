@@ -43,7 +43,7 @@ trait StalkerOptions extends js.Object {
     *               See `gumevent.h` for details about the format.
     *               Use `Stalker.parse()` to examine the data.
     */
-  var onReceive: js.UndefOr[js.Function1[/* events */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]] = js.undefined
+  var onReceive: js.UndefOr[js.Function1[/* events */ ArrayBuffer, Unit]] = js.undefined
   /**
     * Callback that transforms each basic block compiled whenever Stalker
     * wants to recompile a basic block of the code that's about to be executed
@@ -58,7 +58,7 @@ object StalkerOptions {
     data: NativePointerValue = null,
     events: Anon_Block = null,
     onCallSummary: /* summary */ StalkerCallSummary => Unit = null,
-    onReceive: /* events */ scala.scalajs.js.typedarray.ArrayBuffer => Unit = null,
+    onReceive: /* events */ ArrayBuffer => Unit = null,
     transform: StalkerTransformCallback = null
   ): StalkerOptions = {
     val __obj = js.Dynamic.literal()

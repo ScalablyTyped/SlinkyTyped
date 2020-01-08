@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object ChartErrorBarsType extends js.Object {
   @js.native
   sealed trait stError extends ChartErrorBarsType
   
-  /* "Custom" */ val custom: typingsSlinky.officeDashJsDashPreview.Excel.ChartErrorBarsType.custom with String = js.native
-  /* "FixedValue" */ val fixedValue: typingsSlinky.officeDashJsDashPreview.Excel.ChartErrorBarsType.fixedValue with String = js.native
-  /* "Percent" */ val percent: typingsSlinky.officeDashJsDashPreview.Excel.ChartErrorBarsType.percent with String = js.native
-  /* "StDev" */ val stDev: typingsSlinky.officeDashJsDashPreview.Excel.ChartErrorBarsType.stDev with String = js.native
-  /* "StError" */ val stError: typingsSlinky.officeDashJsDashPreview.Excel.ChartErrorBarsType.stError with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartErrorBarsType with String] = js.native
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "FixedValue" */ @js.native
+  object fixedValue extends TopLevel[fixedValue with String]
+  
+  /* "Percent" */ @js.native
+  object percent extends TopLevel[percent with String]
+  
+  /* "StDev" */ @js.native
+  object stDev extends TopLevel[stDev with String]
+  
+  /* "StError" */ @js.native
+  object stError extends TopLevel[stError with String]
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.smartDashFoxDashServer.SFS2X.Requests
 
 import typingsSlinky.smartDashFoxDashServer.SFS2X.Entities.Data.Vec3D
 import typingsSlinky.smartDashFoxDashServer.SFS2X.Entities.MMORoom
-import typingsSlinky.smartDashFoxDashServer.SFS2X.Requests.MMO.MapLimits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

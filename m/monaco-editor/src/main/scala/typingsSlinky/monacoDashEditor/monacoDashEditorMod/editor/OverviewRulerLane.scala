@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object OverviewRulerLane extends js.Object {
   @js.native
   sealed trait Right extends OverviewRulerLane
   
-  /* 2 */ val Center: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverviewRulerLane.Center with Double = js.native
-  /* 7 */ val Full: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverviewRulerLane.Full with Double = js.native
-  /* 1 */ val Left: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverviewRulerLane.Left with Double = js.native
-  /* 4 */ val Right: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverviewRulerLane.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OverviewRulerLane with Double] = js.native
+  /* 2 */ @js.native
+  object Center extends TopLevel[Center with Double]
+  
+  /* 7 */ @js.native
+  object Full extends TopLevel[Full with Double]
+  
+  /* 1 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 4 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

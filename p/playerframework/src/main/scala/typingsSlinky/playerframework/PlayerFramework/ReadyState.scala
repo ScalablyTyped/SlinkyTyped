@@ -1,5 +1,6 @@
 package typingsSlinky.playerframework.PlayerFramework
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +41,22 @@ object ReadyState extends js.Object {
   @js.native
   sealed trait nothing extends ReadyState
   
-  /* 2 */ val currentData: typingsSlinky.playerframework.PlayerFramework.ReadyState.currentData with Double = js.native
-  /* 4 */ val enoughData: typingsSlinky.playerframework.PlayerFramework.ReadyState.enoughData with Double = js.native
-  /* 3 */ val futureData: typingsSlinky.playerframework.PlayerFramework.ReadyState.futureData with Double = js.native
-  /* 1 */ val metadata: typingsSlinky.playerframework.PlayerFramework.ReadyState.metadata with Double = js.native
-  /* 0 */ val nothing: typingsSlinky.playerframework.PlayerFramework.ReadyState.nothing with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReadyState with Double] = js.native
+  /* 2 */ @js.native
+  object currentData extends TopLevel[currentData with Double]
+  
+  /* 4 */ @js.native
+  object enoughData extends TopLevel[enoughData with Double]
+  
+  /* 3 */ @js.native
+  object futureData extends TopLevel[futureData with Double]
+  
+  /* 1 */ @js.native
+  object metadata extends TopLevel[metadata with Double]
+  
+  /* 0 */ @js.native
+  object nothing extends TopLevel[nothing with Double]
+  
 }
 

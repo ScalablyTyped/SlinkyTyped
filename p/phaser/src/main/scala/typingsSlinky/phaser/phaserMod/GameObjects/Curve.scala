@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,24 +34,19 @@ class Curve protected ()
     * @param fillColor The color the curve will be filled with, i.e. 0xff0000 for red.
     * @param fillAlpha The alpha the curve will be filled with. You can also set the alpha of the overall Shape using its `alpha` property.
     */
-  def this(scene: typingsSlinky.phaser.Phaser.Scene) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double) = this()
-  def this(scene: typingsSlinky.phaser.Phaser.Scene, x: Double, y: Double) = this()
+  def this(scene: Scene) = this()
+  def this(scene: Scene, x: Double) = this()
+  def this(scene: Scene, x: Double, y: Double) = this()
+  def this(scene: Scene, x: Double, y: Double, curve: typingsSlinky.phaser.Phaser.Curves.Curve) = this()
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
-    x: Double,
-    y: Double,
-    curve: typingsSlinky.phaser.Phaser.Curves.Curve
-  ) = this()
-  def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: Double,
     y: Double,
     curve: typingsSlinky.phaser.Phaser.Curves.Curve,
     fillColor: Double
   ) = this()
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: Double,
     y: Double,
     curve: typingsSlinky.phaser.Phaser.Curves.Curve,

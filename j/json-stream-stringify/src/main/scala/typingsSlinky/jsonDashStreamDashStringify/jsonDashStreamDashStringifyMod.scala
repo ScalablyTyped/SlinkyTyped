@@ -1,6 +1,5 @@
 package typingsSlinky.jsonDashStreamDashStringify
 
-import typingsSlinky.jsonDashStreamDashStringify.jsonDashStreamDashStringifyMod.JsonStreamStringify
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

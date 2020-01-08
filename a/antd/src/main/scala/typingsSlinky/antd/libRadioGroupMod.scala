@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
-import typingsSlinky.antd.libRadioGroupMod.RadioGroup
 import typingsSlinky.antd.libRadioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupProps
 import typingsSlinky.antd.libRadioInterfaceMod.RadioGroupState

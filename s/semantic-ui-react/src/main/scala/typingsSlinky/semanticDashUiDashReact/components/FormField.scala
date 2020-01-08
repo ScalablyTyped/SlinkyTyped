@@ -3,6 +3,7 @@ package typingsSlinky.semanticDashUiDashReact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.semanticDashUiDashReact.distCommonjsCollectionsFormFormFieldMod.FormFieldProps
 import typingsSlinky.semanticDashUiDashReact.distCommonjsElementsLabelLabelMod.LabelProps
@@ -27,6 +28,7 @@ object FormField
     content: SemanticShorthandContent = null,
     control: js.Any = null,
     error: Boolean | SemanticShorthandItem[LabelProps] = null,
+    id: Double | String = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
     label: SemanticShorthandItem[HtmlLabelProps] = null,
     required: js.Any = null,
@@ -38,6 +40,7 @@ object FormField
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
     if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
     if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
@@ -45,6 +48,7 @@ object FormField
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FormFieldProps
 }
 

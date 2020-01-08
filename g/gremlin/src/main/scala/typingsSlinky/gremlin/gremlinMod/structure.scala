@@ -1,12 +1,6 @@
 package typingsSlinky.gremlin.gremlinMod
 
 import typingsSlinky.gremlin.gremlinMod.process.GraphTraversalSource
-import typingsSlinky.gremlin.gremlinMod.structure.Element
-import typingsSlinky.gremlin.gremlinMod.structure.Long
-import typingsSlinky.gremlin.gremlinMod.structure.Path
-import typingsSlinky.gremlin.gremlinMod.structure.Property
-import typingsSlinky.gremlin.gremlinMod.structure.Vertex
-import typingsSlinky.gremlin.gremlinMod.structure.VertexProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

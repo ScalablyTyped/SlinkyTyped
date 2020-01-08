@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,14 +33,28 @@ object EnumDWT_CapLightSource extends js.Object {
   @js.native
   sealed trait TWLS_WHITE extends EnumDWT_CapLightSource
   
-  /* 2 */ val TWLS_BLUE: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_BLUE with Double = js.native
-  /* 1 */ val TWLS_GREEN: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_GREEN with Double = js.native
-  /* 6 */ val TWLS_IR: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_IR with Double = js.native
-  /* 3 */ val TWLS_NONE: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_NONE with Double = js.native
-  /* 0 */ val TWLS_RED: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_RED with Double = js.native
-  /* 5 */ val TWLS_UV: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_UV with Double = js.native
-  /* 4 */ val TWLS_WHITE: typingsSlinky.dwt.EnumDWT_CapLightSource.TWLS_WHITE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_CapLightSource with Double] = js.native
+  /* 2 */ @js.native
+  object TWLS_BLUE extends TopLevel[TWLS_BLUE with Double]
+  
+  /* 1 */ @js.native
+  object TWLS_GREEN extends TopLevel[TWLS_GREEN with Double]
+  
+  /* 6 */ @js.native
+  object TWLS_IR extends TopLevel[TWLS_IR with Double]
+  
+  /* 3 */ @js.native
+  object TWLS_NONE extends TopLevel[TWLS_NONE with Double]
+  
+  /* 0 */ @js.native
+  object TWLS_RED extends TopLevel[TWLS_RED with Double]
+  
+  /* 5 */ @js.native
+  object TWLS_UV extends TopLevel[TWLS_UV with Double]
+  
+  /* 4 */ @js.native
+  object TWLS_WHITE extends TopLevel[TWLS_WHITE with Double]
+  
 }
 

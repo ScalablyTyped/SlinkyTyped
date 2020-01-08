@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ReactDashDataDashGrid
-  extends SharedApply_GridProps_67560248[^[js.Any]] {
+  extends SharedApply_GridProps2055870710[^[js.Any]] {
   @JSImport("react-data-grid", JSImport.Namespace)
   @js.native
   object componentImport extends js.Object

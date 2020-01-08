@@ -10,9 +10,9 @@ ANSI escape codes for some terminal swag
 | ------------------ | :-------------: |
 | Full name          | sisteransi |
 | Keywords           | ansi, escape codes, escape, terminal, style |
-| # releases         | 6 |
-| # dependents       | 1 |
-| # downloads        | 56866148 |
+| # releases         | 10 |
+| # dependents       | 13 |
+| # downloads        | 177172034 |
 | # stars            | 0 |
 
 ## Links

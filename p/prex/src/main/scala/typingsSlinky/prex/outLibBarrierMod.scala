@@ -1,7 +1,6 @@
 package typingsSlinky.prex
 
 import typingsSlinky.atEsfxCancelable.distMod.Cancelable
-import typingsSlinky.prex.outLibBarrierMod.Barrier
 import typingsSlinky.prex.outLibCancellationMod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.chromeDashApps.chrome.runtime
 
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`false`
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

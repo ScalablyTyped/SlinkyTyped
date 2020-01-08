@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashCollapsible extends SharedApply_CollapsibleProps936719589[default] {
+object ReactDashCollapsible extends SharedApply_CollapsibleProps465954608[default] {
   @JSImport("react-collapsible", JSImport.Default)
   @js.native
   object componentImport extends js.Object

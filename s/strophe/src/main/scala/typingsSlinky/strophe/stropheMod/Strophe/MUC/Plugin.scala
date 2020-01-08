@@ -1,6 +1,7 @@
 package typingsSlinky.strophe.stropheMod.Strophe.MUC
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.strophe.mucMod.stropheMod.Strophe.Connection
 import typingsSlinky.strophe.stropheStrings.chat
 import typingsSlinky.strophe.stropheStrings.groupchat
 import scala.scalajs.js
@@ -113,7 +114,7 @@ trait Plugin extends js.Object {
     *
     * @param conn - the connection instance.
     */
-  def init(conn: typingsSlinky.strophe.mucMod.stropheMod.Strophe.Connection): Unit = js.native
+  def init(conn: Connection): Unit = js.native
   /**
     * Send a mediated invitation.
     *

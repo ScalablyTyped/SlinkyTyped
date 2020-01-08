@@ -1,8 +1,6 @@
 package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.threadConditionVariableMod.ConditionVariable
-import typingsSlinky.tstl.threadConditionVariableMod.Predicator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

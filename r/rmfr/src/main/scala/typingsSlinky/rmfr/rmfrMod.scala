@@ -1,6 +1,5 @@
 package typingsSlinky.rmfr
 
-import typingsSlinky.rmfr.rmfrMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

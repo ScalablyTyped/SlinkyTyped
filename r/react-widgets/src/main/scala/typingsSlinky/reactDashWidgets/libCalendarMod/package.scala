@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libCalendarMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type Calendar = ReactElement
+  type CalendarClass = ReactComponentClass[CalendarProps]
 }

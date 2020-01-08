@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DefaultHeader
-  extends SharedApply_HeaderViewProps1034851724[
+  extends SharedApply_HeaderViewProps_611694126[
       typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutMod.DefaultHeader
     ] {
   @JSImport("@ant-design/pro-layout", "DefaultHeader")

@@ -1,7 +1,7 @@
 package typingsSlinky.puppeteer.puppeteerMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.puppeteer.Anon_DelayNumber_574745146
+import typingsSlinky.puppeteer.Anon_DelayNumber_2003735715
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,17 +17,17 @@ trait FrameBase
   @JSName("$")
   def $(selector: String): js.Promise[ElementHandle[Element] | Null] = js.native
   /**
-    * The method runs document.querySelectorAll within the frame.
-    * If no elements match the selector, the return value resolve to [].
-    */
-  @JSName("$$")
-  def $$(selector: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
-  /**
     * The method evaluates the XPath expression.
     * @param expression XPath expression to evaluate.
     */
   @JSName("$x")
   def $x(expression: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
+  /**
+    * The method runs document.querySelectorAll within the frame.
+    * If no elements match the selector, the return value resolve to [].
+    */
+  @JSName("$$")
+  def DollarDollar(selector: String): js.Promise[js.Array[ElementHandle[Element]]] = js.native
   /** Adds a `<script>` tag into the page with the desired url or content. */
   def addScriptTag(options: ScriptTagOptions): js.Promise[Unit] = js.native
   /** Adds a `<link rel="stylesheet">` tag into the page with the desired url or a `<style type="text/css">` tag with the content. */
@@ -90,7 +90,7 @@ trait FrameBase
     * @param options: The typing parameters.
     */
   def `type`(selector: String, text: String): js.Promise[Unit] = js.native
-  def `type`(selector: String, text: String, options: Anon_DelayNumber_574745146): js.Promise[Unit] = js.native
+  def `type`(selector: String, text: String, options: Anon_DelayNumber_2003735715): js.Promise[Unit] = js.native
   /** Returns frame's url. */
   def url(): String = js.native
   /**

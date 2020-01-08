@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SvgCssUri extends SharedApply_UriProps_613837332 {
+object SvgCssUri extends SharedApply_UriProps623854813 {
   @JSImport("react-native-svg", "SvgCssUri")
   @js.native
   object componentImport extends js.Object

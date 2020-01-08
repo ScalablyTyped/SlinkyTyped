@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object CurrencyFormatterMode extends js.Object {
   @js.native
   sealed trait useSymbol extends CurrencyFormatterMode
   
-  /* 1 */ val useCurrencyCode: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.CurrencyFormatterMode.useCurrencyCode with Double = js.native
-  /* 0 */ val useSymbol: typingsSlinky.winrtDashUwp.Windows.Globalization.NumberFormatting.CurrencyFormatterMode.useSymbol with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CurrencyFormatterMode with Double] = js.native
+  /* 1 */ @js.native
+  object useCurrencyCode extends TopLevel[useCurrencyCode with Double]
+  
+  /* 0 */ @js.native
+  object useSymbol extends TopLevel[useSymbol with Double]
+  
 }
 

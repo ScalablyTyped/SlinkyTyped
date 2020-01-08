@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.StartScreen
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object TileOptions extends js.Object {
   @js.native
   sealed trait showNameOnWideLogo extends TileOptions
   
-  /* 3 */ val copyOnDeployment: typingsSlinky.winrtDashUwp.Windows.UI.StartScreen.TileOptions.copyOnDeployment with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.UI.StartScreen.TileOptions.none with Double = js.native
-  /* 1 */ val showNameOnLogo: typingsSlinky.winrtDashUwp.Windows.UI.StartScreen.TileOptions.showNameOnLogo with Double = js.native
-  /* 2 */ val showNameOnWideLogo: typingsSlinky.winrtDashUwp.Windows.UI.StartScreen.TileOptions.showNameOnWideLogo with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TileOptions with Double] = js.native
+  /* 3 */ @js.native
+  object copyOnDeployment extends TopLevel[copyOnDeployment with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object showNameOnLogo extends TopLevel[showNameOnLogo with Double]
+  
+  /* 2 */ @js.native
+  object showNameOnWideLogo extends TopLevel[showNameOnWideLogo with Double]
+  
 }
 

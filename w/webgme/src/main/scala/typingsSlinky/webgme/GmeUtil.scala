@@ -1,6 +1,5 @@
 package typingsSlinky.webgme
 
-import typingsSlinky.webgme.GmeUtil.Canon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,28 +74,91 @@ object AttributeTypeCode extends js.Object {
   @js.native
   sealed trait Virtual extends AttributeTypeCode
   
-  /* 0 */ val BigInt: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.BigInt with scala.Double = js.native
-  /* 1 */ val Boolean: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Boolean with scala.Double = js.native
-  /* 2 */ val CalendarRules: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.CalendarRules with scala.Double = js.native
-  /* 3 */ val Customer: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Customer with scala.Double = js.native
-  /* 4 */ val DateTime: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.DateTime with scala.Double = js.native
-  /* 5 */ val Decimal: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Decimal with scala.Double = js.native
-  /* 6 */ val Double: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Double with scala.Double = js.native
-  /* 7 */ val EntityName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.EntityName with scala.Double = js.native
-  /* 8 */ val Integer: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Integer with scala.Double = js.native
-  /* 9 */ val Lookup: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Lookup with scala.Double = js.native
-  /* 10 */ val ManagedProperty: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.ManagedProperty with scala.Double = js.native
-  /* 11 */ val Memo: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Memo with scala.Double = js.native
-  /* 12 */ val Money: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Money with scala.Double = js.native
-  /* 13 */ val Owner: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Owner with scala.Double = js.native
-  /* 14 */ val PartyList: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.PartyList with scala.Double = js.native
-  /* 15 */ val Picklist: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Picklist with scala.Double = js.native
-  /* 16 */ val State: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.State with scala.Double = js.native
-  /* 17 */ val Status: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Status with scala.Double = js.native
-  /* 18 */ val String: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.String with scala.Double = js.native
-  /* 19 */ val Uniqueidentifier: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Uniqueidentifier with scala.Double = js.native
-  /* 20 */ val Virtual: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.AttributeTypeCode.Virtual with scala.Double = js.native
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[AttributeTypeCode with scala.Double] = js.native
+  /* 0 */ @js.native
+  object BigInt
+    extends TopLevel[BigInt with scala.Double]
+  
+  /* 1 */ @js.native
+  object Boolean
+    extends TopLevel[Boolean with scala.Double]
+  
+  /* 2 */ @js.native
+  object CalendarRules
+    extends TopLevel[CalendarRules with scala.Double]
+  
+  /* 3 */ @js.native
+  object Customer
+    extends TopLevel[Customer with scala.Double]
+  
+  /* 4 */ @js.native
+  object DateTime
+    extends TopLevel[DateTime with scala.Double]
+  
+  /* 5 */ @js.native
+  object Decimal
+    extends TopLevel[Decimal with scala.Double]
+  
+  /* 6 */ @js.native
+  object Double
+    extends TopLevel[Double with scala.Double]
+  
+  /* 7 */ @js.native
+  object EntityName
+    extends TopLevel[EntityName with scala.Double]
+  
+  /* 8 */ @js.native
+  object Integer
+    extends TopLevel[Integer with scala.Double]
+  
+  /* 9 */ @js.native
+  object Lookup
+    extends TopLevel[Lookup with scala.Double]
+  
+  /* 10 */ @js.native
+  object ManagedProperty
+    extends TopLevel[ManagedProperty with scala.Double]
+  
+  /* 11 */ @js.native
+  object Memo
+    extends TopLevel[Memo with scala.Double]
+  
+  /* 12 */ @js.native
+  object Money
+    extends TopLevel[Money with scala.Double]
+  
+  /* 13 */ @js.native
+  object Owner
+    extends TopLevel[Owner with scala.Double]
+  
+  /* 14 */ @js.native
+  object PartyList
+    extends TopLevel[PartyList with scala.Double]
+  
+  /* 15 */ @js.native
+  object Picklist
+    extends TopLevel[Picklist with scala.Double]
+  
+  /* 16 */ @js.native
+  object State
+    extends TopLevel[State with scala.Double]
+  
+  /* 17 */ @js.native
+  object Status
+    extends TopLevel[Status with scala.Double]
+  
+  /* 18 */ @js.native
+  object String
+    extends TopLevel[String with scala.Double]
+  
+  /* 19 */ @js.native
+  object Uniqueidentifier
+    extends TopLevel[Uniqueidentifier with scala.Double]
+  
+  /* 20 */ @js.native
+  object Virtual
+    extends TopLevel[Virtual with scala.Double]
+  
 }
 

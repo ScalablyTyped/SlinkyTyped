@@ -1,7 +1,7 @@
 package typingsSlinky.webpack.webpackMod.Options
 
+import typingsSlinky.webpack.webpackBooleans.`false`
 import typingsSlinky.webpack.webpackMod.Plugin
-import typingsSlinky.webpack.webpackNumbers.`false`
 import typingsSlinky.webpack.webpackStrings.`total-size`
 import typingsSlinky.webpack.webpackStrings.hashed
 import typingsSlinky.webpack.webpackStrings.multiple

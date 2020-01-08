@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeviceSignalCellularConnectedNoInternet4Bar
-  extends SharedApply_SvgIconProps657215518[
+  extends SharedApply_SvgIconProps221151894[
       typingsSlinky.materialDashUi.svgDashIconsMod.DeviceSignalCellularConnectedNoInternet4Bar
     ] {
   @JSImport("material-ui/svg-icons", "DeviceSignalCellularConnectedNoInternet4Bar")

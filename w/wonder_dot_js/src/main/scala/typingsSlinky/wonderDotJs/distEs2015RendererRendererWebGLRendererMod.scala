@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDotJs
 
 import typingsSlinky.wonderDotJs.distEs2015RendererRendererRendererMod.Renderer
-import typingsSlinky.wonderDotJs.distEs2015RendererRendererWebGLRendererMod.WebGLRenderer
 import typingsSlinky.wonderDotJs.distEs2015StructureColorMod.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`

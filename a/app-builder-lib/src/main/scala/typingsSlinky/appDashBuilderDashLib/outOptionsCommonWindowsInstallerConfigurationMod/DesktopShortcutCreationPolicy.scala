@@ -1,5 +1,6 @@
 package typingsSlinky.appDashBuilderDashLib.outOptionsCommonWindowsInstallerConfigurationMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DesktopShortcutCreationPolicy extends js.Object {
   @js.native
   sealed trait NEVER extends DesktopShortcutCreationPolicy
   
-  /* 1 */ val ALWAYS: typingsSlinky.appDashBuilderDashLib.outOptionsCommonWindowsInstallerConfigurationMod.DesktopShortcutCreationPolicy.ALWAYS with Double = js.native
-  /* 0 */ val FRESH_INSTALL: typingsSlinky.appDashBuilderDashLib.outOptionsCommonWindowsInstallerConfigurationMod.DesktopShortcutCreationPolicy.FRESH_INSTALL with Double = js.native
-  /* 2 */ val NEVER: typingsSlinky.appDashBuilderDashLib.outOptionsCommonWindowsInstallerConfigurationMod.DesktopShortcutCreationPolicy.NEVER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DesktopShortcutCreationPolicy with Double] = js.native
+  /* 1 */ @js.native
+  object ALWAYS extends TopLevel[ALWAYS with Double]
+  
+  /* 0 */ @js.native
+  object FRESH_INSTALL extends TopLevel[FRESH_INSTALL with Double]
+  
+  /* 2 */ @js.native
+  object NEVER extends TopLevel[NEVER with Double]
+  
 }
 

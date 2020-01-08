@@ -3,6 +3,7 @@ package typingsSlinky.reactDashToastDashNotifications.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashToastDashNotifications.Anon_Toast
 import typingsSlinky.reactDashToastDashNotifications.reactDashToastDashNotificationsMod.Placement
@@ -22,6 +23,7 @@ object ToastProvider
   
   override val component: String | js.Object = this.componentImport
   def apply(
+    autoDismiss: Boolean | Double = null,
     autoDismissTimeout: Int | Double = null,
     components: Anon_Toast = null,
     placement: Placement = null,
@@ -32,6 +34,7 @@ object ToastProvider
     typingsSlinky.reactDashToastDashNotifications.reactDashToastDashNotificationsMod.ToastProvider
   ] = {
     val __obj = js.Dynamic.literal()
+    if (autoDismiss != null) __obj.updateDynamic("autoDismiss")(autoDismiss.asInstanceOf[js.Any])
     if (autoDismissTimeout != null) __obj.updateDynamic("autoDismissTimeout")(autoDismissTimeout.asInstanceOf[js.Any])
     if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
@@ -39,6 +42,12 @@ object ToastProvider
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashToastDashNotifications.reactDashToastDashNotificationsMod.ToastProvider
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashToastDashNotifications.reactDashToastDashNotificationsMod.ToastProvider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ToastProviderProps
 }
 

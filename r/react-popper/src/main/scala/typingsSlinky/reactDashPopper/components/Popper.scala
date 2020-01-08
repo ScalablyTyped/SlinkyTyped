@@ -3,6 +3,7 @@ package typingsSlinky.reactDashPopper.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.popperDotJs.popperDotJsMod.Modifiers
 import typingsSlinky.popperDotJs.popperDotJsMod.Placement
@@ -39,6 +40,9 @@ object Popper
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashPopper.reactDashPopperMod.Popper] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashPopper.reactDashPopperMod.Popper](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PopperProps
 }
 

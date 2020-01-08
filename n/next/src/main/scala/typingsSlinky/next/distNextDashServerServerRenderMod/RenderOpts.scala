@@ -3,8 +3,8 @@ package typingsSlinky.next.distNextDashServerServerRenderMod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import typingsSlinky.next.Anon_Error
-import typingsSlinky.next.Anon_FalseProps
 import typingsSlinky.next.Anon_Params
+import typingsSlinky.next.Anon_Props
 import typingsSlinky.next.distNextDashServerLibUtilsMod.AppType
 import typingsSlinky.next.distNextDashServerLibUtilsMod.DocumentType
 import typingsSlinky.next.distNextDashServerLibUtilsMod.NextPageContext
@@ -40,8 +40,8 @@ trait RenderOpts extends js.Object {
   var reactLoadableManifest: ReactLoadableManifest
   var runtimeConfig: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   var staticMarkup: Boolean
-  var unstable_getStaticParams: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var unstable_getStaticProps: js.UndefOr[js.Function1[/* params */ Anon_Params, Anon_FalseProps]] = js.undefined
+  var unstable_getStaticPaths: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var unstable_getStaticProps: js.UndefOr[js.Function1[/* params */ Anon_Params, Anon_Props]] = js.undefined
   def DocumentMiddleware(ctx: NextPageContext): Unit
 }
 
@@ -75,8 +75,8 @@ object RenderOpts {
     inAmpMode: js.UndefOr[Boolean] = js.undefined,
     nextExport: js.UndefOr[Boolean] = js.undefined,
     runtimeConfig: StringDictionary[js.Any] = null,
-    unstable_getStaticParams: () => Unit = null,
-    unstable_getStaticProps: /* params */ Anon_Params => Anon_FalseProps = null
+    unstable_getStaticPaths: () => Unit = null,
+    unstable_getStaticProps: /* params */ Anon_Params => Anon_Props = null
   ): RenderOpts = {
     val __obj = js.Dynamic.literal(App = App.asInstanceOf[js.Any], Component = Component.asInstanceOf[js.Any], Document = Document.asInstanceOf[js.Any], DocumentMiddleware = js.Any.fromFunction1(DocumentMiddleware), ampBindInitData = ampBindInitData.asInstanceOf[js.Any], buildId = buildId.asInstanceOf[js.Any], buildManifest = buildManifest.asInstanceOf[js.Any], canonicalBase = canonicalBase.asInstanceOf[js.Any], dangerousAsPath = dangerousAsPath.asInstanceOf[js.Any], documentMiddlewareEnabled = documentMiddlewareEnabled.asInstanceOf[js.Any], hasCssMode = hasCssMode.asInstanceOf[js.Any], pageConfig = pageConfig.asInstanceOf[js.Any], reactLoadableManifest = reactLoadableManifest.asInstanceOf[js.Any], staticMarkup = staticMarkup.asInstanceOf[js.Any])
     if (ErrorDebug != null) __obj.updateDynamic("ErrorDebug")(ErrorDebug.asInstanceOf[js.Any])
@@ -92,7 +92,7 @@ object RenderOpts {
     if (!js.isUndefined(inAmpMode)) __obj.updateDynamic("inAmpMode")(inAmpMode.asInstanceOf[js.Any])
     if (!js.isUndefined(nextExport)) __obj.updateDynamic("nextExport")(nextExport.asInstanceOf[js.Any])
     if (runtimeConfig != null) __obj.updateDynamic("runtimeConfig")(runtimeConfig.asInstanceOf[js.Any])
-    if (unstable_getStaticParams != null) __obj.updateDynamic("unstable_getStaticParams")(js.Any.fromFunction0(unstable_getStaticParams))
+    if (unstable_getStaticPaths != null) __obj.updateDynamic("unstable_getStaticPaths")(js.Any.fromFunction0(unstable_getStaticPaths))
     if (unstable_getStaticProps != null) __obj.updateDynamic("unstable_getStaticProps")(js.Any.fromFunction1(unstable_getStaticProps))
     __obj.asInstanceOf[RenderOpts]
   }

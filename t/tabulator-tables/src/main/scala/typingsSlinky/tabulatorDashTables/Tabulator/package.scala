@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object Tabulator {
   import org.scalajs.dom.raw.HTMLElement
   import typingsSlinky.std.Record
-  import typingsSlinky.tabulatorDashTables.tabulatorDashTablesNumbers.`false`
+  import typingsSlinky.tabulatorDashTables.tabulatorDashTablesBooleans.`false`
   import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.clipboard
   import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.data
   import typingsSlinky.tabulatorDashTables.tabulatorDashTablesStrings.download
@@ -76,7 +76,7 @@ package object Tabulator {
     js.Any
   ])
   /* Rewritten from type alias, can be one of: 
-    - typings.tabulatorDashTables.tabulatorDashTablesNumbers.`true`
+    - typings.tabulatorDashTables.tabulatorDashTablesBooleans.`true`
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.input
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.textarea
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.number
@@ -91,7 +91,7 @@ package object Tabulator {
   / * success * / typings.tabulatorDashTables.Tabulator.ValueBooleanCallback, 
   / * cancel * / typings.tabulatorDashTables.Tabulator.ValueVoidCallback, 
   / * editorParams * / js.Object, 
-  typings.std.HTMLElement | typings.tabulatorDashTables.tabulatorDashTablesNumbers.`false`]
+  typings.std.HTMLElement | typings.tabulatorDashTables.tabulatorDashTablesBooleans.`false`]
   */
   type Editor = _Editor | (js.Function5[
     /* cell */ CellComponent, 
@@ -133,6 +133,7 @@ package object Tabulator {
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.rownum
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.handle
     - typings.tabulatorDashTables.tabulatorDashTablesStrings.rowSelection
+    - typings.tabulatorDashTables.tabulatorDashTablesStrings.responsiveCollapse
     - js.Function3[
   / * cell * / typings.tabulatorDashTables.Tabulator.CellComponent, 
   / * formatterParams * / js.Object, 
@@ -163,7 +164,7 @@ package object Tabulator {
   type JSONRecord = Record[String, String | Double | Boolean]
   type RowChangedCallback = js.Function1[/* row */ RowComponent, Unit]
   type RowEventCallback = js.Function2[/* e */ js.Any, /* row */ RowComponent, Unit]
-  type RowLookup = RowComponent | HTMLElement | String | Double
+  type RowLookup = RowComponent | HTMLElement | String | Double | (js.Array[Double | String])
   type StandardStringParam = String | HTMLElement | (js.Function0[String | HTMLElement])
   type ValueBooleanCallback = js.Function1[/* value */ js.Any, Boolean]
   type ValueStringCallback = js.Function1[/* value */ js.Any, String]

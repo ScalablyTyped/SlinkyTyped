@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object WorkItemErrorPolicy extends js.Object {
   @js.native
   sealed trait Omit extends WorkItemErrorPolicy
   
-  /* 1 */ val Fail: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemErrorPolicy.Fail with Double = js.native
-  /* 2 */ val Omit: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemErrorPolicy.Omit with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WorkItemErrorPolicy with Double] = js.native
+  /* 1 */ @js.native
+  object Fail extends TopLevel[Fail with Double]
+  
+  /* 2 */ @js.native
+  object Omit extends TopLevel[Omit with Double]
+  
 }
 

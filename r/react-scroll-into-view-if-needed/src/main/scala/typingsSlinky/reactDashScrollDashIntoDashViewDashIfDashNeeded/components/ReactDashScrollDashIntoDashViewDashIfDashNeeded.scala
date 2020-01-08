@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.CSSProperties
@@ -56,6 +57,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactDashScrollDashIntoDashViewDashIfDashNeeded.reactDashScrollDashIntoDashViewDashIfDashNeededMod.ReactScrollIntoViewIfNeededProps
 import typingsSlinky.reactDashScrollDashIntoDashViewDashIfDashNeeded.reactDashScrollDashIntoDashViewDashIfDashNeededMod.default
+import typingsSlinky.scrollDashIntoDashViewDashIfDashNeeded.scrollDashIntoDashViewDashIfDashNeededMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -170,7 +172,7 @@ object ReactDashScrollDashIntoDashViewDashIfDashNeeded
     onAuxClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
     onBeforeInput: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
     onReset: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ScrollIntoViewIfNeeded.Options */ js.Any = null,
+    options: Options[_] = null,
     playsInline: js.UndefOr[Boolean] = js.undefined,
     prefix: String = null,
     property: String = null,
@@ -327,6 +329,9 @@ object ReactDashScrollDashIntoDashViewDashIfDashNeeded
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashScrollDashIntoDashViewDashIfDashNeeded.reactDashScrollDashIntoDashViewDashIfDashNeededMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ReactScrollIntoViewIfNeededProps
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CollapsibleSection
-  extends SharedApply_IProperties285475691[
+  extends SharedApply_IProperties_1987414545[
       typingsSlinky.atJupyterlabExtensionmanager.atJupyterlabExtensionmanagerMod.CollapsibleSection
     ] {
   @JSImport("@jupyterlab/extensionmanager", "CollapsibleSection")

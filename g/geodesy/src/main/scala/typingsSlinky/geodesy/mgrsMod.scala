@@ -9,9 +9,6 @@ import typingsSlinky.geodesy.geodesyNumbers.`2`
 import typingsSlinky.geodesy.geodesyNumbers.`4`
 import typingsSlinky.geodesy.geodesyNumbers.`6`
 import typingsSlinky.geodesy.geodesyNumbers.`8`
-import typingsSlinky.geodesy.mgrsMod.Latlon_Utm_Mgrs
-import typingsSlinky.geodesy.mgrsMod.Mgrs
-import typingsSlinky.geodesy.mgrsMod.Utm_Mgrs
 import typingsSlinky.geodesy.utmMod.LatLon_Utm
 import scala.scalajs.js
 import scala.scalajs.js.`|`

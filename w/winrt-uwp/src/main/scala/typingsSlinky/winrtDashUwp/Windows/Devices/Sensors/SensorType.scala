@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sensors
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,21 +68,49 @@ object SensorType extends js.Object {
   @js.native
   sealed trait simpleOrientationSensor extends SensorType
   
-  /* 0 */ val accelerometer: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.accelerometer with Double = js.native
-  /* 1 */ val activitySensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.activitySensor with Double = js.native
-  /* 2 */ val barometer: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.barometer with Double = js.native
-  /* 3 */ val compass: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.compass with Double = js.native
-  /* 4 */ val customSensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.customSensor with Double = js.native
-  /* 5 */ val gyroscope: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.gyroscope with Double = js.native
-  /* 7 */ val inclinometer: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.inclinometer with Double = js.native
-  /* 8 */ val lightSensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.lightSensor with Double = js.native
-  /* 9 */ val orientationSensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.orientationSensor with Double = js.native
-  /* 10 */ val pedometer: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.pedometer with Double = js.native
-  /* 6 */ val proximitySensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.proximitySensor with Double = js.native
-  /* 11 */ val relativeInclinometer: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.relativeInclinometer with Double = js.native
-  /* 12 */ val relativeOrientationSensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.relativeOrientationSensor with Double = js.native
-  /* 13 */ val simpleOrientationSensor: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.SensorType.simpleOrientationSensor with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SensorType with Double] = js.native
+  /* 0 */ @js.native
+  object accelerometer extends TopLevel[accelerometer with Double]
+  
+  /* 1 */ @js.native
+  object activitySensor extends TopLevel[activitySensor with Double]
+  
+  /* 2 */ @js.native
+  object barometer extends TopLevel[barometer with Double]
+  
+  /* 3 */ @js.native
+  object compass extends TopLevel[compass with Double]
+  
+  /* 4 */ @js.native
+  object customSensor extends TopLevel[customSensor with Double]
+  
+  /* 5 */ @js.native
+  object gyroscope extends TopLevel[gyroscope with Double]
+  
+  /* 7 */ @js.native
+  object inclinometer extends TopLevel[inclinometer with Double]
+  
+  /* 8 */ @js.native
+  object lightSensor extends TopLevel[lightSensor with Double]
+  
+  /* 9 */ @js.native
+  object orientationSensor extends TopLevel[orientationSensor with Double]
+  
+  /* 10 */ @js.native
+  object pedometer extends TopLevel[pedometer with Double]
+  
+  /* 6 */ @js.native
+  object proximitySensor extends TopLevel[proximitySensor with Double]
+  
+  /* 11 */ @js.native
+  object relativeInclinometer extends TopLevel[relativeInclinometer with Double]
+  
+  /* 12 */ @js.native
+  object relativeOrientationSensor extends TopLevel[relativeOrientationSensor with Double]
+  
+  /* 13 */ @js.native
+  object simpleOrientationSensor extends TopLevel[simpleOrientationSensor with Double]
+  
 }
 

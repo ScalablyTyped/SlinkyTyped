@@ -5,7 +5,6 @@ import typingsSlinky.shopifyDashPrime.distModelsGiftUnderscoreCardMod.GiftCard
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.FieldOptions
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.ListOptions
 import typingsSlinky.shopifyDashPrime.distOptionsGiftUnderscoreCardsMod.GiftCardOptions
-import typingsSlinky.shopifyDashPrime.distServicesGiftUnderscoreCardsMod.GiftCards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

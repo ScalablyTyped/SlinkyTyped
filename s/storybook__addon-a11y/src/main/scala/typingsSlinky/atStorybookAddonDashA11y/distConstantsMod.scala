@@ -1,8 +1,8 @@
 package typingsSlinky.atStorybookAddonDashA11y
 
-import typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.`storybook/a11y`
 import typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.a11y
 import typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.iframe
+import typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.storybookSlasha11y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/addon-a11y/dist/constants", JSImport.Namespace)
 @js.native
 object distConstantsMod extends js.Object {
-  val ADDON_ID: `storybook/a11y` = js.native
+  val ADDON_ID: storybookSlasha11y = js.native
   val ADD_ELEMENT: typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.ADD_ELEMENT = js.native
   val CLEAR_ELEMENTS: typingsSlinky.atStorybookAddonDashA11y.atStorybookAddonDashA11yStrings.CLEAR_ELEMENTS = js.native
   val IFRAME: iframe = js.native
@@ -18,6 +18,7 @@ object distConstantsMod extends js.Object {
   val PARAM_KEY: a11y = js.native
   @js.native
   object EVENTS extends js.Object {
+    var ERROR: String = js.native
     var REQUEST: String = js.native
     var RESULT: String = js.native
   }

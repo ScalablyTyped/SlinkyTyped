@@ -1,6 +1,5 @@
 package typingsSlinky.xstate.libTypesMod
 
-import typingsSlinky.std.Record
 import typingsSlinky.xstate.xstateStrings.external
 import typingsSlinky.xstate.xstateStrings.internal
 import typingsSlinky.xstate.xstateStrings.platform
@@ -13,12 +12,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object SCXML extends js.Object {
   @js.native
-  trait Event extends js.Object {
+  trait Event[TEvent /* <: EventObject */] extends js.Object {
     /**
       * @private
       */
     @JSName("$$type")
-    var $$type: scxml = js.native
+    var DollarDollartype: scxml = js.native
     /**
       * This field contains whatever data the sending entity chose to include in this event.
       * The receiving SCXML Processor should reformat this data to match its data model,
@@ -27,7 +26,7 @@ object SCXML extends js.Object {
       * If the conversion is not possible, the Processor must leave the field blank
       * and must place an error 'error.execution' in the internal event queue.
       */
-    var data: js.UndefOr[Record[String, _]] = js.native
+    var data: TEvent = js.native
     /**
       * If this event is generated from an invoked child process, the SCXML Processor
       * must set this field to the invoke id of the invocation that triggered the child process.

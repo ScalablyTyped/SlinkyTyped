@@ -17,6 +17,7 @@ import typingsSlinky.dojo.dojoStrings.createItemFunc
 import typingsSlinky.dojo.dojoStrings.createOnGridClick
 import typingsSlinky.dojo.dojoStrings.cssClassFunc
 import typingsSlinky.dojo.dojoStrings.currentView
+import typingsSlinky.dojo.dojoStrings.date
 import typingsSlinky.dojo.dojoStrings.dateInterval
 import typingsSlinky.dojo.dojoStrings.dateIntervalSteps
 import typingsSlinky.dojo.dojoStrings.datePackage
@@ -511,7 +512,7 @@ class CalendarBase protected () extends _WidgetBase {
   @JSName("get")
   def get_currentView(property: currentView): js.Object = js.native
   @JSName("get")
-  def get_date(property: typingsSlinky.dojo.dojoStrings.date): js.Date = js.native
+  def get_date(property: date): js.Date = js.native
   @JSName("get")
   def get_dateInterval(property: dateInterval): String = js.native
   @JSName("get")
@@ -939,7 +940,7 @@ class CalendarBase protected () extends _WidgetBase {
   @JSName("set")
   def set_currentView(property: currentView, value: js.Object): Unit = js.native
   @JSName("set")
-  def set_date(property: typingsSlinky.dojo.dojoStrings.date, value: js.Date): Unit = js.native
+  def set_date(property: date, value: js.Date): Unit = js.native
   @JSName("set")
   def set_dateInterval(property: dateInterval, value: String): Unit = js.native
   @JSName("set")
@@ -1136,7 +1137,7 @@ class CalendarBase protected () extends _WidgetBase {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_date(
-    property: typingsSlinky.dojo.dojoStrings.date,
+    property: date,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Date], 

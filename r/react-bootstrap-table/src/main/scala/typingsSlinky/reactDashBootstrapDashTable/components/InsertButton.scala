@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InsertButton
-  extends SharedApply_ButtonProps9298374[
+  extends SharedApply_ButtonProps_1635531571[
       typingsSlinky.reactDashBootstrapDashTable.reactDashBootstrapDashTableMod.InsertButton
     ] {
   @JSImport("react-bootstrap-table", "InsertButton")

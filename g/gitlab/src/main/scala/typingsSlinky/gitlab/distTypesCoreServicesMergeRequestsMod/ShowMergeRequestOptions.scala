@@ -1,6 +1,6 @@
 package typingsSlinky.gitlab.distTypesCoreServicesMergeRequestsMod
 
-import typingsSlinky.gitlab.gitlabNumbers.`true`
+import typingsSlinky.gitlab.gitlabBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

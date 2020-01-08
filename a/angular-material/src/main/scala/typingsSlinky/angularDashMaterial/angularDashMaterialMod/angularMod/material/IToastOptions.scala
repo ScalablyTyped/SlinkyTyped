@@ -6,7 +6,7 @@ import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.angularMod.IControllerConstructor
 import typingsSlinky.angular.angularMod.IScope
 import typingsSlinky.angular.angularMod.Injectable
-import typingsSlinky.angularDashMaterial.angularDashMaterialNumbers.`false`
+import typingsSlinky.angularDashMaterial.angularDashMaterialBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

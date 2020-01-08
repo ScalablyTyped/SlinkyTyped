@@ -10,9 +10,9 @@ VDOM Transform for jupyter outputs
 | ------------------ | :-------------: |
 | Full name          | @nteract/transform-vdom |
 | Keywords           | - |
-| # releases         | 29 |
-| # dependents       | 6 |
-| # downloads        | 768087 |
+| # releases         | 20 |
+| # dependents       | 7 |
+| # downloads        | 1095674 |
 | # stars            | 0 |
 
 ## Links

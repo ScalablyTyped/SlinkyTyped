@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object AudioProcessing extends js.Object {
   @js.native
   sealed trait raw extends AudioProcessing
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.AudioProcessing.default with Double = js.native
-  /* 1 */ val raw: typingsSlinky.winrtDashUwp.Windows.Media.AudioProcessing.raw with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AudioProcessing with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 1 */ @js.native
+  object raw extends TopLevel[raw with Double]
+  
 }
 

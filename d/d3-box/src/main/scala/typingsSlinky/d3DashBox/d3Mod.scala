@@ -1,6 +1,5 @@
 package typingsSlinky.d3DashBox
 
-import typingsSlinky.d3DashBox.d3Mod.Box
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.BaseType
 import typingsSlinky.d3DashSelection.d3DashSelectionMod.Selection
 import scala.scalajs.js
@@ -16,9 +15,9 @@ object d3Mod extends js.Object {
     def apply(
       sel: Selection[
           _, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for Datum */ _, 
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for Datum */ _, 
           BaseType, 
-          /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for PDatum */ _
+          /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for PDatum */ _
         ]
     ): Unit = js.native
     def domain(): js.Function0[js.Array[Double]] = js.native

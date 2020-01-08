@@ -27,8 +27,7 @@ import scala.scalajs.js.annotation._
   * @param opt_options Options.
   * @api
   */
-class MVT ()
-  extends typingsSlinky.openlayers.openlayersMod.format.Feature {
+class MVT () extends Feature {
   def this(opt_options: MVTOptions) = this()
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.openlayersMod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.openlayersMod.Feature] = js.native

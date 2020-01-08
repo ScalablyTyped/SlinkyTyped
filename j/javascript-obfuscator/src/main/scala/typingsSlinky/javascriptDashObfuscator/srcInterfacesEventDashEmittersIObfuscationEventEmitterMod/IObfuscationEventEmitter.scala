@@ -4,8 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Events * / any */ trait IObfuscationEventEmitter extends js.Object {
+trait IObfuscationEventEmitter extends js.Object {
+  /**
+    * @param {ObfuscationEvent} event
+    * @param args
+    * @returns {boolean}
+    */
+  def emit(
+    event: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationEvent */ js.Any,
+    args: js.Any*
+  ): Boolean
   /**
     * @param event
     * @param listener
@@ -29,10 +37,11 @@ import scala.scalajs.js.annotation._
 object IObfuscationEventEmitter {
   @scala.inline
   def apply(
+    emit: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationEvent */ js.Any, /* repeated */ js.Any) => Boolean,
     on: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationEvent */ js.Any, js.Function) => IObfuscationEventEmitter,
     once: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationEvent */ js.Any, js.Function) => IObfuscationEventEmitter
   ): IObfuscationEventEmitter = {
-    val __obj = js.Dynamic.literal(on = js.Any.fromFunction2(on), once = js.Any.fromFunction2(once))
+    val __obj = js.Dynamic.literal(emit = js.Any.fromFunction2(emit), on = js.Any.fromFunction2(on), once = js.Any.fromFunction2(once))
   
     __obj.asInstanceOf[IObfuscationEventEmitter]
   }

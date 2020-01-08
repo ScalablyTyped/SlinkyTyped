@@ -5,7 +5,6 @@ import typingsSlinky.atFirebaseDatabase.distSrcApiDataSnapshotMod.DataSnapshot
 import typingsSlinky.atFirebaseDatabase.distSrcApiDatabaseMod.Database
 import typingsSlinky.atFirebaseDatabase.distSrcApiOnDisconnectMod.OnDisconnect
 import typingsSlinky.atFirebaseDatabase.distSrcApiQueryMod.Query
-import typingsSlinky.atFirebaseDatabase.distSrcApiReferenceMod.Reference
 import typingsSlinky.atFirebaseDatabase.distSrcApiTransactionResultMod.TransactionResult
 import typingsSlinky.atFirebaseDatabase.distSrcCoreRepoMod.Repo
 import typingsSlinky.atFirebaseDatabase.distSrcCoreUtilPathMod.Path
@@ -30,10 +29,6 @@ object distSrcApiReferenceMod extends js.Object {
       * @extends {Query}
       */
     def this(repo: Repo, path: Path) = this()
-    val database: Database = js.native
-    val key: String | Null = js.native
-    val parent: Reference | Null = js.native
-    val root: Reference = js.native
     def `catch`(): js.Promise[_] = js.native
     def `catch`(a: js.Error): js.Promise[_] = js.native
     /**
@@ -42,6 +37,7 @@ object distSrcApiReferenceMod extends js.Object {
       */
     def child(pathString: String): Reference = js.native
     def child(pathString: Path): Reference = js.native
+    def database(): Database = js.native
     /** @return {!Database} */
     def databaseProp(): Database = js.native
     /** @return {?string} */
@@ -50,10 +46,12 @@ object distSrcApiReferenceMod extends js.Object {
     def getParent(): Reference | Null = js.native
     /** @return {!Reference} */
     def getRoot(): Reference = js.native
+    def key(): String | Null = js.native
     /**
       * @return {!OnDisconnect}
       */
     def onDisconnect(): OnDisconnect = js.native
+    def parent(): Reference | Null = js.native
     /**
       * @param {*=} value
       * @param {function(?Error)=} onComplete
@@ -68,6 +66,7 @@ object distSrcApiReferenceMod extends js.Object {
       */
     def remove(): js.Promise[_] = js.native
     def remove(onComplete: js.Function1[/* a */ js.Error | Null, Unit]): js.Promise[_] = js.native
+    def root(): Reference = js.native
     /**
       * @param {*} newVal
       * @param {function(?Error)=} onComplete

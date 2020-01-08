@@ -1,7 +1,6 @@
 package typingsSlinky.samchon
 
 import typingsSlinky.samchon.protocolEntityEntityArrayMod.EntityArray
-import typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke
 import typingsSlinky.samchon.protocolInvokeInvokeParameterMod.InvokeParameter
 import typingsSlinky.sxml.sxmlMod.XML
 import scala.scalajs.js

@@ -3,10 +3,11 @@ package typingsSlinky.baseui.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.baseui.Anon_BeginDate
 import typingsSlinky.baseui.Anon_DateEvent
-import typingsSlinky.baseui.Anon_Date_1450110798
+import typingsSlinky.baseui.Anon_Date_912435367
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.datepickerMod.CalendarProps
@@ -37,8 +38,8 @@ object Calendar
     onDayClick: /* args */ Anon_DateEvent => _ = null,
     onDayMouseLeave: /* args */ Anon_DateEvent => _ = null,
     onDayMouseOver: /* args */ Anon_DateEvent => _ = null,
-    onMonthChange: /* args */ Anon_Date_1450110798 => _ = null,
-    onYearChange: /* args */ Anon_Date_1450110798 => _ = null,
+    onMonthChange: /* args */ Anon_Date_912435367 => _ = null,
+    onYearChange: /* args */ Anon_Date_912435367 => _ = null,
     orientation: horizontal | vertical = null,
     overrides: DatepickerOverrides[SharedStylePropsT] = null,
     peekNextMonth: js.UndefOr[Boolean] = js.undefined,
@@ -77,6 +78,7 @@ object Calendar
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.datepickerMod.Calendar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.datepickerMod.Calendar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CalendarProps
 }
 

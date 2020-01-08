@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoCompleteOption extends SharedApply_OptionProps755128378 {
+object AutoCompleteOption extends SharedApply_OptionProps1474586566 {
   @JSImport("antd", "AutoComplete.Option")
   @js.native
   object componentImport extends js.Object

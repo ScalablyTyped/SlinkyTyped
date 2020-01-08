@@ -1,7 +1,5 @@
 package typingsSlinky.integer
 
-import typingsSlinky.integer.integerMod.IntClass
-import typingsSlinky.integer.integerMod.IntLike
 import typingsSlinky.integer.integerNumbers.`-1`
 import typingsSlinky.integer.integerNumbers.`0`
 import typingsSlinky.integer.integerNumbers.`1`

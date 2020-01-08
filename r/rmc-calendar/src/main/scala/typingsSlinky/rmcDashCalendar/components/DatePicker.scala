@@ -3,6 +3,7 @@ package typingsSlinky.rmcDashCalendar.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.rmcDashCalendar.libDateDataTypesMod.Models.ExtraData
 import typingsSlinky.rmcDashCalendar.libDateDataTypesMod.Models.Locale
@@ -60,6 +61,9 @@ object DatePicker
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.rmcDashCalendar.libDatePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PropsType
 }
 

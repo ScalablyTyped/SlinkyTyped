@@ -1,5 +1,6 @@
 package typingsSlinky.tsmonad.libSrcMaybeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object MaybeType extends js.Object {
   @js.native
   sealed trait Nothing extends MaybeType
   
-  /* 1 */ val Just: typingsSlinky.tsmonad.libSrcMaybeMod.MaybeType.Just with Double = js.native
-  /* 0 */ val Nothing: typingsSlinky.tsmonad.libSrcMaybeMod.MaybeType.Nothing with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MaybeType with Double] = js.native
+  /* 1 */ @js.native
+  object Just extends TopLevel[Just with Double]
+  
+  /* 0 */ @js.native
+  object Nothing extends TopLevel[Nothing with Double]
+  
 }
 

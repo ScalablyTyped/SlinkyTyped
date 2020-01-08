@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object QueryProtocol extends js.Object {
   @js.native
   sealed trait SSH extends QueryProtocol
   
-  /* "raw" */ val RAW: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.QueryProtocol.RAW with String = js.native
-  /* "ssh" */ val SSH: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.QueryProtocol.SSH with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[QueryProtocol with String] = js.native
+  /* "raw" */ @js.native
+  object RAW extends TopLevel[RAW with String]
+  
+  /* "ssh" */ @js.native
+  object SSH extends TopLevel[SSH with String]
+  
 }
 

@@ -1,8 +1,6 @@
 package typingsSlinky.nodeDashLocalstorage
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.nodeDashLocalstorage.nodeDashLocalstorageMod.LocalStorage
-import typingsSlinky.nodeDashLocalstorage.nodeDashLocalstorageMod.StorageEvent
 import typingsSlinky.nodeDashLocalstorage.nodeDashLocalstorageStrings.storage
 import typingsSlinky.std.Error
 import scala.scalajs.js

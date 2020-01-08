@@ -1,11 +1,12 @@
 package typingsSlinky.rollupDashPluginDashTypescript2
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Numbers.`false`
-import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.JS
-import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.`0DOT8`
-import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.`3DOT7`
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Booleans.`false`
+import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.`0Dot8`
+import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.`3Dot7`
 import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.dts
+import typingsSlinky.rollupDashPluginDashTypescript2.rollupDashPluginDashTypescript2Strings.js_
 import typingsSlinky.typescript.Anon_Config
 import typingsSlinky.typescript.Anon_Errors
 import typingsSlinky.typescript.Anon_ErrorsOptions
@@ -358,17 +359,16 @@ object distTsproxyMod extends js.Object {
     class OperationCanceledException ()
       extends typingsSlinky.typescript.typescriptMod.OperationCanceledException
     
-    var OperationCanceledException: Instantiable0[typingsSlinky.typescript.typescriptMod.OperationCanceledException] = js.native
     val ScriptSnapshot: TypeofScriptSnapshot = js.native
     var disableIncrementalParsing: Boolean = js.native
     val server: js.Any = js.native
     /** The version of the language service API */
-    val servicesVersion: `0DOT8` = js.native
+    val servicesVersion: `0Dot8` = js.native
     var sys: System = js.native
     var unchangedTextChangeRange: TextChangeRange = js.native
     /** The version of the TypeScript compiler release */
     val version: String = js.native
-    val versionMajorMinor: `3DOT7` = js.native
+    val versionMajorMinor: `3Dot7` = js.native
     /**
       * Adds an EmitHelper to a node.
       */
@@ -3388,9 +3388,9 @@ object distTsproxyMod extends js.Object {
     @JSName("createUnparsedSourceFile")
     def createUnparsedSourceFile_dts(inputFile: InputFiles, `type`: dts, stripInternal: Boolean): UnparsedSource = js.native
     @JSName("createUnparsedSourceFile")
-    def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: JS): UnparsedSource = js.native
+    def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: js_): UnparsedSource = js.native
     @JSName("createUnparsedSourceFile")
-    def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: JS, stripInternal: Boolean): UnparsedSource = js.native
+    def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: js_, stripInternal: Boolean): UnparsedSource = js.native
     def createVariableDeclaration(name: String): VariableDeclaration = js.native
     def createVariableDeclaration(name: String, `type`: TypeNode): VariableDeclaration = js.native
     def createVariableDeclaration(name: String, `type`: TypeNode, initializer: Expression): VariableDeclaration = js.native
@@ -7153,6 +7153,10 @@ object distTsproxyMod extends js.Object {
       nodesVisitor: Fn_Count
     ): NodeArray[ParameterDeclaration] = js.native
     def walkUpBindingElementsAndPatterns(binding: BindingElement): VariableDeclaration | ParameterDeclaration = js.native
+    @js.native
+    object OperationCanceledException
+      extends TopLevel[Instantiable0[typingsSlinky.typescript.typescriptMod.OperationCanceledException]]
+    
   }
   
 }

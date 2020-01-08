@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object DeviceClass extends js.Object {
   @js.native
   sealed trait videoCapture extends DeviceClass
   
-  /* 0 */ val all: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.all with Double = js.native
-  /* 1 */ val audioCapture: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.audioCapture with Double = js.native
-  /* 2 */ val audioRender: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.audioRender with Double = js.native
-  /* 5 */ val imageScanner: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.imageScanner with Double = js.native
-  /* 6 */ val location: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.location with Double = js.native
-  /* 3 */ val portableStorageDevice: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.portableStorageDevice with Double = js.native
-  /* 4 */ val videoCapture: typingsSlinky.winrtDashUwp.Windows.Devices.Enumeration.DeviceClass.videoCapture with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeviceClass with Double] = js.native
+  /* 0 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 1 */ @js.native
+  object audioCapture extends TopLevel[audioCapture with Double]
+  
+  /* 2 */ @js.native
+  object audioRender extends TopLevel[audioRender with Double]
+  
+  /* 5 */ @js.native
+  object imageScanner extends TopLevel[imageScanner with Double]
+  
+  /* 6 */ @js.native
+  object location extends TopLevel[location with Double]
+  
+  /* 3 */ @js.native
+  object portableStorageDevice extends TopLevel[portableStorageDevice with Double]
+  
+  /* 4 */ @js.native
+  object videoCapture extends TopLevel[videoCapture with Double]
+  
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ActivityDashIndicator extends SharedApply_ActivityIndicatorNativeProps_562242781[default] {
+object ActivityDashIndicator extends SharedApply_ActivityIndicatorNativeProps_1480779262[default] {
   @JSImport("@ant-design/react-native/lib/activity-indicator", JSImport.Default)
   @js.native
   object componentImport extends js.Object

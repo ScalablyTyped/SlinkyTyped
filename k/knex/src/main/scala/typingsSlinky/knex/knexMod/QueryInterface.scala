@@ -3,8 +3,9 @@ package typingsSlinky.knex.knexMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.knex.Anon_Asc
 import typingsSlinky.knex.Anon_Column
+import typingsSlinky.knex.knexBooleans.`false`
 import typingsSlinky.knex.knexMod.DeferredKeySelection.AddUnionMember
-import typingsSlinky.knex.knexNumbers.`false`
+import typingsSlinky.knex.knexStrings.Asterisk
 import typingsSlinky.knex.knexStrings.Count
 import typingsSlinky.knex.knexStrings.asc
 import typingsSlinky.knex.knexStrings.desc
@@ -295,7 +296,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def column(): QueryBuilder[TRecord, TResult] = js.native
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
-  def column(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def column(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -306,11 +307,11 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def column[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def column[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
   def column[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
   def column_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
   def column_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
@@ -323,7 +324,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def columns(): QueryBuilder[TRecord, TResult] = js.native
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
-  def columns(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def columns(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -334,11 +335,11 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def columns[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def columns[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
   def columns[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
   def columns_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
   def columns_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
@@ -378,7 +379,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def decrement(columnName: String): QueryBuilder[TRecord, Double] = js.native
   def decrement(columnName: String, amount: Double): QueryBuilder[TRecord, Double] = js.native
-  def del(returning: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def del(returning: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -390,7 +391,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def del[TKey /* <: StrKey[TRecord] */, TResult2](returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("del")
   def del_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](returning: js.Array[TKey]): QueryBuilder[TRecord, js.Array[TResult2]] = js.native
-  def delete(returning: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def delete(returning: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -404,7 +405,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def delete_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
-  def distinct(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def distinct(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -423,7 +424,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
   // Others
-  def first(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def first(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -443,12 +444,12 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   def first[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
   def first_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
@@ -491,7 +492,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
   // Group by
-  def groupBy(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def groupBy(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -581,7 +582,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, column1: String, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, columns: StringDictionary[String | Double | Boolean | Raw[_]]): QueryBuilder[TRecord2, TResult2] = js.native
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
-  def insert(data: MaybeArray[SafePartial[TRecord]], returning: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def insert(data: MaybeArray[SafePartial[TRecord]], returning: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -925,7 +926,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ] = js.native
   def pluck[TResult2 /* <: js.Object */](column: String): QueryBuilder[TRecord, TResult2] = js.native
-  def returning(column: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def returning(column: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -983,7 +984,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def select(): QueryBuilder[TRecord, TResult] = js.native
   // When all columns are known to be keys of original record,
   // we can extend our selection by these columns
-  def select(columnName: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def select(columnName: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, String, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -994,11 +995,11 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def select[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def select[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
   def select[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
   def select_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
-    /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
   def select_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
@@ -1035,7 +1036,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     callback: MaybeArray[(QueryCallback[_, js.Array[_]]) | (QueryBuilder[TRecord, _]) | Raw[_]],
     wrap: Boolean
   ): QueryBuilder[TRecord, TResult] = js.native
-  def update(data: MaybeArray[SafePartial[TRecord]], returning: typingsSlinky.knex.knexStrings.`*`): QueryBuilder[
+  def update(data: MaybeArray[SafePartial[TRecord]], returning: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
@@ -1049,8 +1050,8 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def update[TResult2](columnName: String, value: Value, returning: String): QueryBuilder[TRecord, TResult2] = js.native
   def update[TResult2](columnName: String, value: Value, returning: js.Array[String]): QueryBuilder[TRecord, TResult2] = js.native
   def update[TResult2](data: MaybeArray[SafePartial[TRecord]]): QueryBuilder[TRecord, TResult2] = js.native
-  def update[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
-  def update[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def update[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def update[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   def update[K1 /* <: StrKey[TRecord] */, K2 /* <: StrKey[TRecord] */, TResult2](
     columnName: K1,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K1] */ js.Any,
@@ -1062,9 +1063,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     returning: js.Array[K1]
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("update")
-  def update_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def update_TKey_StringTResult2_ArrayObject[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("update")
-  def update_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def update_TKey_StringTResult2_ArrayObject[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   // Wheres
   def where(callback: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def where(columnName: String): QueryBuilder[TRecord, TResult] = js.native

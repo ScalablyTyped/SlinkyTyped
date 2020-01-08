@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WingBlank
-  extends SharedApply_WingBlankProps1514475846[
+  extends SharedApply_WingBlankProps523442545[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.WingBlank
     ] {
   @JSImport("@ant-design/react-native", "WingBlank")

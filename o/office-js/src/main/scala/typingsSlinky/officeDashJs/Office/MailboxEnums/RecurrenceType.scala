@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,12 +50,22 @@ object RecurrenceType extends js.Object {
   @js.native
   sealed trait Yearly extends RecurrenceType
   
-  /* "daily" */ val Daily: typingsSlinky.officeDashJs.Office.MailboxEnums.RecurrenceType.Daily with String = js.native
-  /* "monthly" */ val Monthly: typingsSlinky.officeDashJs.Office.MailboxEnums.RecurrenceType.Monthly with String = js.native
-  /* "weekday" */ val Weekday: typingsSlinky.officeDashJs.Office.MailboxEnums.RecurrenceType.Weekday with String = js.native
-  /* "weekly" */ val Weekly: typingsSlinky.officeDashJs.Office.MailboxEnums.RecurrenceType.Weekly with String = js.native
-  /* "yearly" */ val Yearly: typingsSlinky.officeDashJs.Office.MailboxEnums.RecurrenceType.Yearly with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[RecurrenceType with String] = js.native
+  /* "daily" */ @js.native
+  object Daily extends TopLevel[Daily with String]
+  
+  /* "monthly" */ @js.native
+  object Monthly extends TopLevel[Monthly with String]
+  
+  /* "weekday" */ @js.native
+  object Weekday extends TopLevel[Weekday with String]
+  
+  /* "weekly" */ @js.native
+  object Weekly extends TopLevel[Weekly with String]
+  
+  /* "yearly" */ @js.native
+  object Yearly extends TopLevel[Yearly with String]
+  
 }
 

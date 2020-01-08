@@ -1,6 +1,7 @@
 package typingsSlinky.atAngularAnimations.atAngularAnimationsMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.atAngularAnimations.atAngularAnimationsStrings.Asterisk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +14,13 @@ trait AnimationStyleMetadata extends AnimationMetadata {
   /**
     * A set of CSS style properties.
     */
-  var styles: typingsSlinky.atAngularAnimations.atAngularAnimationsStrings.`*` | (StringDictionary[String | Double]) | (js.Array[
-    (StringDictionary[String | Double]) | typingsSlinky.atAngularAnimations.atAngularAnimationsStrings.`*`
-  ])
+  var styles: Asterisk | (StringDictionary[String | Double]) | (js.Array[(StringDictionary[String | Double]) | Asterisk])
 }
 
 object AnimationStyleMetadata {
   @scala.inline
   def apply(
-    styles: typingsSlinky.atAngularAnimations.atAngularAnimationsStrings.`*` | (StringDictionary[String | Double]) | (js.Array[
-      (StringDictionary[String | Double]) | typingsSlinky.atAngularAnimations.atAngularAnimationsStrings.`*`
-    ]),
+    styles: Asterisk | (StringDictionary[String | Double]) | (js.Array[(StringDictionary[String | Double]) | Asterisk]),
     `type`: AnimationMetadataType,
     offset: Int | Double = null
   ): AnimationStyleMetadata = {

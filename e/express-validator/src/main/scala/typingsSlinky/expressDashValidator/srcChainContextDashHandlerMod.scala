@@ -1,6 +1,6 @@
 package typingsSlinky.expressDashValidator
 
-import typingsSlinky.expressDashValidator.expressDashValidatorNumbers.`true`
+import typingsSlinky.expressDashValidator.expressDashValidatorBooleans.`true`
 import typingsSlinky.expressDashValidator.srcBaseMod.CustomValidator
 import typingsSlinky.expressDashValidator.srcChainValidationDashChainMod.ValidationChain
 import typingsSlinky.expressDashValidator.srcContextMod.Optional

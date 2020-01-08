@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.UserProfiles
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,22 +57,52 @@ object ObjectTypes extends js.Object {
   @js.native
   sealed trait webLog extends ObjectTypes
   
-  /* 14 */ val all: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.all with Double = js.native
-  /* 3 */ val anniversary: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.anniversary with Double = js.native
-  /* 7 */ val colleague: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.colleague with Double = js.native
-  /* 11 */ val custom: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.custom with Double = js.native
-  /* 4 */ val dlMembership: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.dlMembership with Double = js.native
-  /* 2 */ val multiValueProperty: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.multiValueProperty with Double = js.native
-  /* 0 */ val none: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.none with Double = js.native
-  /* 13 */ val organizationMembership: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.organizationMembership with Double = js.native
-  /* 12 */ val organizationProfile: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.organizationProfile with Double = js.native
-  /* 8 */ val personalizationSite: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.personalizationSite with Double = js.native
-  /* 6 */ val quickLink: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.quickLink with Double = js.native
-  /* 1 */ val singleValueProperty: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.singleValueProperty with Double = js.native
-  /* 5 */ val siteMembership: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.siteMembership with Double = js.native
-  /* 9 */ val userProfile: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.userProfile with Double = js.native
-  /* 10 */ val webLog: typingsSlinky.sharepoint.SP.UserProfiles.ObjectTypes.webLog with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ObjectTypes with Double] = js.native
+  /* 14 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 3 */ @js.native
+  object anniversary extends TopLevel[anniversary with Double]
+  
+  /* 7 */ @js.native
+  object colleague extends TopLevel[colleague with Double]
+  
+  /* 11 */ @js.native
+  object custom extends TopLevel[custom with Double]
+  
+  /* 4 */ @js.native
+  object dlMembership extends TopLevel[dlMembership with Double]
+  
+  /* 2 */ @js.native
+  object multiValueProperty extends TopLevel[multiValueProperty with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 13 */ @js.native
+  object organizationMembership extends TopLevel[organizationMembership with Double]
+  
+  /* 12 */ @js.native
+  object organizationProfile extends TopLevel[organizationProfile with Double]
+  
+  /* 8 */ @js.native
+  object personalizationSite extends TopLevel[personalizationSite with Double]
+  
+  /* 6 */ @js.native
+  object quickLink extends TopLevel[quickLink with Double]
+  
+  /* 1 */ @js.native
+  object singleValueProperty extends TopLevel[singleValueProperty with Double]
+  
+  /* 5 */ @js.native
+  object siteMembership extends TopLevel[siteMembership with Double]
+  
+  /* 9 */ @js.native
+  object userProfile extends TopLevel[userProfile with Double]
+  
+  /* 10 */ @js.native
+  object webLog extends TopLevel[webLog with Double]
+  
 }
 

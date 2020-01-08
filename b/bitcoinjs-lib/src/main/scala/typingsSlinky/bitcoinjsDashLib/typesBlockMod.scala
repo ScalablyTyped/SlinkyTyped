@@ -1,6 +1,5 @@
 package typingsSlinky.bitcoinjsDashLib
 
-import typingsSlinky.bitcoinjsDashLib.typesBlockMod.Block
 import typingsSlinky.bitcoinjsDashLib.typesTransactionMod.Transaction
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

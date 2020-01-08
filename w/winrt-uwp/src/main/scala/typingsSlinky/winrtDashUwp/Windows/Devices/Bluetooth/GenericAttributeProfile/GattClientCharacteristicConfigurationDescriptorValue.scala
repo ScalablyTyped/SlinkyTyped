@@ -1,6 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile
 
-import typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue.notify
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,11 +24,15 @@ object GattClientCharacteristicConfigurationDescriptorValue extends js.Object {
   @js.native
   sealed trait notify extends GattClientCharacteristicConfigurationDescriptorValue
   
-  /* 2 */ val indicate: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue.indicate with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue.none with Double = js.native
   /* 1 */ @JSName("notify")
-  val notify_FGattClientCharacteristicConfigurationDescriptorValue: notify with Double = js.native
+  val notify_ : notify with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GattClientCharacteristicConfigurationDescriptorValue with Double] = js.native
+  /* 2 */ @js.native
+  object indicate extends TopLevel[indicate with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

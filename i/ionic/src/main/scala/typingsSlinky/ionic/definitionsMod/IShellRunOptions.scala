@@ -2,6 +2,7 @@ package typingsSlinky.ionic.definitionsMod
 
 import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.childUnderscoreProcessMod.SerializationType
 import typingsSlinky.node.childUnderscoreProcessMod.StdioOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +25,7 @@ object IShellRunOptions {
     fatalOnNotFound: js.UndefOr[Boolean] = js.undefined,
     gid: Int | Double = null,
     killOnExit: js.UndefOr[Boolean] = js.undefined,
+    serialization: SerializationType = null,
     shell: Boolean | String = null,
     showCommand: js.UndefOr[Boolean] = js.undefined,
     showError: js.UndefOr[Boolean] = js.undefined,
@@ -44,6 +46,7 @@ object IShellRunOptions {
     if (!js.isUndefined(fatalOnNotFound)) __obj.updateDynamic("fatalOnNotFound")(fatalOnNotFound.asInstanceOf[js.Any])
     if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
     if (!js.isUndefined(killOnExit)) __obj.updateDynamic("killOnExit")(killOnExit.asInstanceOf[js.Any])
+    if (serialization != null) __obj.updateDynamic("serialization")(serialization.asInstanceOf[js.Any])
     if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
     if (!js.isUndefined(showCommand)) __obj.updateDynamic("showCommand")(showCommand.asInstanceOf[js.Any])
     if (!js.isUndefined(showError)) __obj.updateDynamic("showError")(showError.asInstanceOf[js.Any])

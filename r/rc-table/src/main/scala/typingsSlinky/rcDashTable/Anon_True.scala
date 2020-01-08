@@ -1,6 +1,6 @@
 package typingsSlinky.rcDashTable
 
-import typingsSlinky.rcDashTable.rcDashTableNumbers.`true`
+import typingsSlinky.rcDashTable.rcDashTableBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDashFrp
 
-import typingsSlinky.wonderDashFrp.distCommonjsCoreSchedulerMod.Scheduler
 import typingsSlinky.wonderDashFrp.distCommonjsObserverIObserverMod.IObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`

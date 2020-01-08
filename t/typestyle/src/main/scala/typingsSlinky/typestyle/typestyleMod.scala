@@ -6,7 +6,7 @@ import typingsSlinky.typestyle.libTypesMod.FontFace
 import typingsSlinky.typestyle.libTypesMod.KeyFrames
 import typingsSlinky.typestyle.libTypesMod.MediaQuery
 import typingsSlinky.typestyle.libTypesMod.NestedCSSProperties
-import typingsSlinky.typestyle.typestyleNumbers.`false`
+import typingsSlinky.typestyle.typestyleBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

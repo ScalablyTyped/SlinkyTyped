@@ -3,7 +3,6 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDocument
-import typingsSlinky.ol.pointerPointerEventHandlerMod.PointerEventHandler
 import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`

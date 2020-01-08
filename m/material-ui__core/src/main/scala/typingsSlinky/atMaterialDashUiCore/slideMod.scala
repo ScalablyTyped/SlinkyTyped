@@ -1,9 +1,10 @@
 package typingsSlinky.atMaterialDashUiCore
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.atMaterialDashUiCore.slideSlideMod.SlideProps
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.reactMod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +19,8 @@ object slideMod extends js.Object {
     def this(props: SlideProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[SlideProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentType[SlideProps]]
+  
 }
 

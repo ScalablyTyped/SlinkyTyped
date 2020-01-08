@@ -1,7 +1,7 @@
 package typingsSlinky.sha1.sha1Mod
 
-import typingsSlinky.sha1.sha1Numbers.`false`
-import typingsSlinky.sha1.sha1Numbers.`true`
+import typingsSlinky.sha1.sha1Booleans.`false`
+import typingsSlinky.sha1.sha1Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

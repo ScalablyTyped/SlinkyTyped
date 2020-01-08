@@ -2,7 +2,6 @@ package typingsSlinky.rmcDashDialog
 
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.rmcDashDialog.libDialogMod.Dialog
 import typingsSlinky.rmcDashDialog.libIDialogPropTypesMod.IDialogPropTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`

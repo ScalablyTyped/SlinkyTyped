@@ -1,6 +1,6 @@
 package typingsSlinky.mailgunDashJs.mailgunDashJsMod
 
-import typingsSlinky.mailgunDashJs.mailgunDashJsNumbers.`false`
+import typingsSlinky.mailgunDashJs.mailgunDashJsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

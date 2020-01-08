@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object OverlayWidgetPositionPreference extends js.Object {
   @js.native
   sealed trait TOP_RIGHT_CORNER extends OverlayWidgetPositionPreference
   
-  /* 1 */ val BOTTOM_RIGHT_CORNER: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverlayWidgetPositionPreference.BOTTOM_RIGHT_CORNER with Double = js.native
-  /* 2 */ val TOP_CENTER: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverlayWidgetPositionPreference.TOP_CENTER with Double = js.native
-  /* 0 */ val TOP_RIGHT_CORNER: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.OverlayWidgetPositionPreference.TOP_RIGHT_CORNER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OverlayWidgetPositionPreference with Double] = js.native
+  /* 1 */ @js.native
+  object BOTTOM_RIGHT_CORNER extends TopLevel[BOTTOM_RIGHT_CORNER with Double]
+  
+  /* 2 */ @js.native
+  object TOP_CENTER extends TopLevel[TOP_CENTER with Double]
+  
+  /* 0 */ @js.native
+  object TOP_RIGHT_CORNER extends TopLevel[TOP_RIGHT_CORNER with Double]
+  
 }
 

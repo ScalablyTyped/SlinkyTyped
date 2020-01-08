@@ -1,7 +1,6 @@
 package typingsSlinky.d3DashDispatch
 
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.d3DashDispatch.d3DashDispatchMod.Dispatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

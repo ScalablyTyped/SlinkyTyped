@@ -1,5 +1,6 @@
 package typingsSlinky.vortexDashWebDashClient.DDS
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object DurabilityKind extends js.Object {
   @js.native
   sealed trait Volatile extends DurabilityKind
   
-  /* 3 */ val Persistent: typingsSlinky.vortexDashWebDashClient.DDS.DurabilityKind.Persistent with Double = js.native
-  /* 2 */ val Transient: typingsSlinky.vortexDashWebDashClient.DDS.DurabilityKind.Transient with Double = js.native
-  /* 1 */ val TransientLocal: typingsSlinky.vortexDashWebDashClient.DDS.DurabilityKind.TransientLocal with Double = js.native
-  /* 0 */ val Volatile: typingsSlinky.vortexDashWebDashClient.DDS.DurabilityKind.Volatile with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DurabilityKind with Double] = js.native
+  /* 3 */ @js.native
+  object Persistent extends TopLevel[Persistent with Double]
+  
+  /* 2 */ @js.native
+  object Transient extends TopLevel[Transient with Double]
+  
+  /* 1 */ @js.native
+  object TransientLocal extends TopLevel[TransientLocal with Double]
+  
+  /* 0 */ @js.native
+  object Volatile extends TopLevel[Volatile with Double]
+  
 }
 

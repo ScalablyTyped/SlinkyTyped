@@ -3,7 +3,6 @@ package typingsSlinky.atAngularCompiler
 import typingsSlinky.atAngularCompiler.srcI18nI18nUnderscoreAstMod.AST
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.Expression
 import typingsSlinky.atAngularCompiler.srcOutputOutputUnderscoreAstMod.ReadVarExpr
-import typingsSlinky.atAngularCompiler.srcRender3ViewI18nContextMod.I18nContext
 import typingsSlinky.std.Map
 import typingsSlinky.std.Set
 import scala.scalajs.js

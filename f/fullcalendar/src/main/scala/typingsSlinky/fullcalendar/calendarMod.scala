@@ -1,7 +1,6 @@
 package typingsSlinky.fullcalendar
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fullcalendar.calendarMod.Default
 import typingsSlinky.fullcalendar.srcTypesInputDashTypesMod.EventObjectInput
 import typingsSlinky.fullcalendar.srcTypesInputDashTypesMod.EventSourceInput
 import typingsSlinky.fullcalendar.srcTypesInputDashTypesMod.MomentInput

@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atIonicCore.atIonicCoreNumbers.`32`
 import typingsSlinky.atIonicCore.atIonicCoreNumbers.`400`
 import typingsSlinky.atIonicCore.distTypesUtilsAnimationOldDashAnimationAnimationDashInterfaceMod.PlayOptions
-import typingsSlinky.atIonicCore.distTypesUtilsAnimationOldDashAnimationAnimatorMod.Animator
 import typingsSlinky.std.Node
 import typingsSlinky.std.NodeList
 import scala.scalajs.js

@@ -3,7 +3,6 @@ package typingsSlinky.rmcDashFeedback
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.rmcDashFeedback.libPropTypesMod.ITouchProps
 import typingsSlinky.rmcDashFeedback.libPropTypesMod.ITouchState
-import typingsSlinky.rmcDashFeedback.libTouchFeedbackMod.TouchFeedback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

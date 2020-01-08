@@ -1,7 +1,7 @@
 
 # Scala.js typings for javascript-obfuscator
 
-Typings are for version 0.18.4
+Typings are for version 0.18.8
 
 ## Library description:
 JavaScript obfuscator
@@ -10,9 +10,9 @@ JavaScript obfuscator
 | ------------------ | :-------------: |
 | Full name          | javascript-obfuscator |
 | Keywords           | obfuscator, obfuscation, uglify, crush, code protection, javascript obfuscator, js obfuscator |
-| # releases         | 44 |
-| # dependents       | 44 |
-| # downloads        | 757578 |
+| # releases         | 32 |
+| # dependents       | 61 |
+| # downloads        | 911666 |
 | # stars            | 12 |
 
 ## Links

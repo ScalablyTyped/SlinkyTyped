@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object ChartAxisScaleType extends js.Object {
   @js.native
   sealed trait logarithmic extends ChartAxisScaleType
   
-  /* "Linear" */ val linear: typingsSlinky.officeDashJs.Excel.ChartAxisScaleType.linear with String = js.native
-  /* "Logarithmic" */ val logarithmic: typingsSlinky.officeDashJs.Excel.ChartAxisScaleType.logarithmic with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartAxisScaleType with String] = js.native
+  /* "Linear" */ @js.native
+  object linear extends TopLevel[linear with String]
+  
+  /* "Logarithmic" */ @js.native
+  object logarithmic extends TopLevel[logarithmic with String]
+  
 }
 

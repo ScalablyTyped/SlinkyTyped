@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.OneNote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object EventType extends js.Object {
   @js.native
   sealed trait stickyNotesContextMenuExecuted extends EventType
   
-  /* "NotebookChanged" */ val notebookChanged: typingsSlinky.officeDashJsDashPreview.OneNote.EventType.notebookChanged with String = js.native
-  /* "PageSelectionChanged" */ val pageSelectionChanged: typingsSlinky.officeDashJsDashPreview.OneNote.EventType.pageSelectionChanged with String = js.native
-  /* "SectionSelectionChanged" */ val sectionSelectionChanged: typingsSlinky.officeDashJsDashPreview.OneNote.EventType.sectionSelectionChanged with String = js.native
-  /* "StickyNotesContextMenuExecuted" */ val stickyNotesContextMenuExecuted: typingsSlinky.officeDashJsDashPreview.OneNote.EventType.stickyNotesContextMenuExecuted with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EventType with String] = js.native
+  /* "NotebookChanged" */ @js.native
+  object notebookChanged extends TopLevel[notebookChanged with String]
+  
+  /* "PageSelectionChanged" */ @js.native
+  object pageSelectionChanged extends TopLevel[pageSelectionChanged with String]
+  
+  /* "SectionSelectionChanged" */ @js.native
+  object sectionSelectionChanged extends TopLevel[sectionSelectionChanged with String]
+  
+  /* "StickyNotesContextMenuExecuted" */ @js.native
+  object stickyNotesContextMenuExecuted extends TopLevel[stickyNotesContextMenuExecuted with String]
+  
 }
 

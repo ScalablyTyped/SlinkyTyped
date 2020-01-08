@@ -1,5 +1,6 @@
 package typingsSlinky.mongoose.mongooseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object ConnectionStates extends js.Object {
   @js.native
   sealed trait uninitialized extends ConnectionStates
   
-  /* 1 */ val connected: typingsSlinky.mongoose.mongooseMod.ConnectionStates.connected with Double = js.native
-  /* 2 */ val connecting: typingsSlinky.mongoose.mongooseMod.ConnectionStates.connecting with Double = js.native
-  /* 0 */ val disconnected: typingsSlinky.mongoose.mongooseMod.ConnectionStates.disconnected with Double = js.native
-  /* 3 */ val disconnecting: typingsSlinky.mongoose.mongooseMod.ConnectionStates.disconnecting with Double = js.native
-  /* 99 */ val uninitialized: typingsSlinky.mongoose.mongooseMod.ConnectionStates.uninitialized with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConnectionStates with Double] = js.native
+  /* 1 */ @js.native
+  object connected extends TopLevel[connected with Double]
+  
+  /* 2 */ @js.native
+  object connecting extends TopLevel[connecting with Double]
+  
+  /* 0 */ @js.native
+  object disconnected extends TopLevel[disconnected with Double]
+  
+  /* 3 */ @js.native
+  object disconnecting extends TopLevel[disconnecting with Double]
+  
+  /* 99 */ @js.native
+  object uninitialized extends TopLevel[uninitialized with Double]
+  
 }
 

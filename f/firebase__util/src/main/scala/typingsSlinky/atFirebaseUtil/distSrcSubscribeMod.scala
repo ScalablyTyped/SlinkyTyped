@@ -1,13 +1,5 @@
 package typingsSlinky.atFirebaseUtil
 
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.CompleteFn
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.ErrorFn
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.Executor
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.NextFn
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.Observer
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.PartialObserver
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.Subscribe
-import typingsSlinky.atFirebaseUtil.distSrcSubscribeMod.Unsubscribe
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

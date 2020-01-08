@@ -12,13 +12,14 @@ import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.vertical
 import typingsSlinky.grommet.grommetStrings.xsmall
 import typingsSlinky.grommet.grommetStrings.xxsmall
+import typingsSlinky.grommet.utilsMod.ColorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Anon_Anchor extends js.Object {
   var anchor: js.UndefOr[center | vertical | horizontal] = js.undefined
-  var color: js.UndefOr[String | Anon_Dark] = js.undefined
+  var color: js.UndefOr[ColorType] = js.undefined
   var fromTarget: String | js.Object
   var label: js.UndefOr[String] = js.undefined
   var offset: js.UndefOr[xsmall | small | medium | large | String] = js.undefined
@@ -33,7 +34,7 @@ object Anon_Anchor {
     fromTarget: String | js.Object,
     toTarget: String | js.Object,
     anchor: center | vertical | horizontal = null,
-    color: String | Anon_Dark = null,
+    color: ColorType = null,
     label: String = null,
     offset: xsmall | small | medium | large | String = null,
     thickness: hair | xxsmall | xsmall | small | medium | large | String = null,

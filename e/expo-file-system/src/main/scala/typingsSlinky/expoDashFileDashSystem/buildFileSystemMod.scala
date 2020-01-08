@@ -9,7 +9,6 @@ import typingsSlinky.expoDashFileDashSystem.buildFileSystemDotTypesMod.DownloadR
 import typingsSlinky.expoDashFileDashSystem.buildFileSystemDotTypesMod.FileInfo
 import typingsSlinky.expoDashFileDashSystem.buildFileSystemDotTypesMod.ReadingOptions
 import typingsSlinky.expoDashFileDashSystem.buildFileSystemDotTypesMod.WritingOptions
-import typingsSlinky.expoDashFileDashSystem.buildFileSystemMod.DownloadResumable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +44,7 @@ object buildFileSystemMod extends js.Object {
     def savable(): DownloadPauseState = js.native
   }
   
-  /* import warning: parser.TsParser#tsDeclVar $anonfun Dropped List(bundleDirectory) */ val bundledAssets: String | Null = js.native
+  /* import warning: parser.TsParser#tsDeclVar Dropped IArray(bundleDirectory) */ val bundledAssets: String | Null = js.native
   val cacheDirectory: String | Null = js.native
   val documentDirectory: String | Null = js.native
   def copyAsync(options: Anon_From): js.Promise[Unit] = js.native

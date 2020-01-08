@@ -1,7 +1,6 @@
 package typingsSlinky.jsmediatags
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.jsmediatags.build2BlobFileReaderMod.BlobFileReader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.androiduix.androidui.image.NetDrawable
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TileMode extends js.Object {
   @js.native
   sealed trait REPEAT extends TileMode
   
-  /* 0 */ val DEFAULT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.DEFAULT with Double = js.native
-  /* 1 */ val REPEAT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.REPEAT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TileMode with Double] = js.native
+  /* 0 */ @js.native
+  object DEFAULT extends TopLevel[DEFAULT with Double]
+  
+  /* 1 */ @js.native
+  object REPEAT extends TopLevel[REPEAT with Double]
+  
 }
 

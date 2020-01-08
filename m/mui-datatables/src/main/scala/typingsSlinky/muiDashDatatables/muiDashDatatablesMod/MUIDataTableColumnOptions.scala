@@ -6,6 +6,7 @@ import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.`true`
 import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.asc
 import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.desc
 import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.excluded
+import typingsSlinky.muiDashDatatables.muiDashDatatablesStrings.none
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +43,7 @@ trait MUIDataTableColumnOptions extends js.Object {
     js.Function3[/* cellValue */ String, /* rowIndex */ Double, /* columnIndex */ Double, js.Object]
   ] = js.undefined
   var sort: js.UndefOr[Boolean] = js.undefined
-  var sortDirection: js.UndefOr[asc | desc] = js.undefined
+  var sortDirection: js.UndefOr[asc | desc | none] = js.undefined
   var viewColumns: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -65,7 +66,7 @@ object MUIDataTableColumnOptions {
     setCellHeaderProps: /* columnMeta */ MUIDataTableCustomHeadRenderer => js.Object = null,
     setCellProps: (/* cellValue */ String, /* rowIndex */ Double, /* columnIndex */ Double) => js.Object = null,
     sort: js.UndefOr[Boolean] = js.undefined,
-    sortDirection: asc | desc = null,
+    sortDirection: asc | desc | none = null,
     viewColumns: js.UndefOr[Boolean] = js.undefined
   ): MUIDataTableColumnOptions = {
     val __obj = js.Dynamic.literal()

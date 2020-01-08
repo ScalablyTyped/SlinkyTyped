@@ -1,6 +1,5 @@
 package typingsSlinky.atGrampsRestDashHelpers
 
-import typingsSlinky.atGrampsRestDashHelpers.atGrampsRestDashHelpersMod.GraphQLConnector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

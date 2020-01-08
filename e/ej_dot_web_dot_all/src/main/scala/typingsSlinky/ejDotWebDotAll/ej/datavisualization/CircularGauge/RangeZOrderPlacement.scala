@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object RangeZOrderPlacement extends js.Object {
   @js.native
   sealed trait Rear extends RangeZOrderPlacement
   
-  /* 1 */ val Front: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.RangeZOrderPlacement.Front with Double = js.native
-  /* 0 */ val Rear: typingsSlinky.ejDotWebDotAll.ej.datavisualization.CircularGauge.RangeZOrderPlacement.Rear with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RangeZOrderPlacement with Double] = js.native
+  /* 1 */ @js.native
+  object Front extends TopLevel[Front with Double]
+  
+  /* 0 */ @js.native
+  object Rear extends TopLevel[Rear with Double]
+  
 }
 

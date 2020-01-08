@@ -1,6 +1,6 @@
 package typingsSlinky.atAntDashDesignProDashLayout.libSettingDrawerMod
 
-import typingsSlinky.atAntDashDesignProDashLayout.Anon_Locale
+import typingsSlinky.atAntDashDesignProDashLayout.Anon_DefaultOpenAll
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.realDark
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.sidemenu
 import typingsSlinky.atAntDashDesignProDashLayout.atAntDashDesignProDashLayoutStrings.topmenu
@@ -19,7 +19,7 @@ trait SettingDrawerState extends js.Object {
   var iconfontUrl: js.UndefOr[String] = js.undefined
   var language: js.UndefOr[String] = js.undefined
   var layout: js.UndefOr[sidemenu | topmenu] = js.undefined
-  var menu: js.UndefOr[Anon_Locale] = js.undefined
+  var menu: js.UndefOr[Anon_DefaultOpenAll] = js.undefined
   var navTheme: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
   ] = js.undefined
@@ -38,7 +38,7 @@ object SettingDrawerState {
     iconfontUrl: String = null,
     language: String = null,
     layout: sidemenu | topmenu = null,
-    menu: Anon_Locale = null,
+    menu: Anon_DefaultOpenAll = null,
     navTheme: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark = null,
     primaryColor: String = null,
     title: String = null

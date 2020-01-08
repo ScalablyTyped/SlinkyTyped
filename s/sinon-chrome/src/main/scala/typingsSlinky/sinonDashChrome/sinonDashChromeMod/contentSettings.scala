@@ -1,6 +1,5 @@
 package typingsSlinky.sinonDashChrome.sinonDashChromeMod
 
-import typingsSlinky.sinonDashChrome.sinonDashChromeMod.contentSettings.StubbedContentSetting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

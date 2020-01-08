@@ -5,7 +5,9 @@ import typingsSlinky.broccoliDashNodeDashApi.broccoliDashNodeDashApiMod.FeatureS
 import typingsSlinky.broccoliDashNodeDashApi.broccoliDashNodeDashApiMod.InputNode
 import typingsSlinky.broccoliDashNodeDashApi.broccoliDashNodeDashApiMod.NodeCommon
 import typingsSlinky.broccoliDashNodeDashApi.broccoliDashNodeDashApiMod.TransformNodeInfo
+import typingsSlinky.broccoliDashOutputDashWrapper.broccoliDashOutputDashWrapperMod.FSOutput
 import typingsSlinky.broccoliDashPlugin.distInterfacesMod.MapSeriesIterator
+import typingsSlinky.fsDashMerger.fsDashMergerMod.FS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +36,13 @@ trait Plugin extends NodeCommon[TransformNodeInfo] {
     * is not needed, set needsCache to false when calling broccoli-plugin constructor.
     */
   var cachePath: js.UndefOr[String] = js.native
+  val input: FS = js.native
   /**
     * An array of paths on disk corresponding to each node in inputNodes.
     * Your plugin will read files from these paths.
     */
   val inputPaths: js.Array[String] = js.native
+  val output: FSOutput = js.native
   /**
     * The path on disk corresponding to this plugin instance (this node).
     * Your plugin will write files to this path. This directory is emptied by Broccoli before each build, unless the persistentOutput options is true.

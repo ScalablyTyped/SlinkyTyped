@@ -1,9 +1,5 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.typesBufferMod.Buffer
-import typingsSlinky.baconjs.typesBufferMod.BufferHandler
-import typingsSlinky.baconjs.typesBufferMod.DelayFunction
-import typingsSlinky.baconjs.typesBufferMod.VoidFunction
 import typingsSlinky.baconjs.typesEventMod.End
 import typingsSlinky.baconjs.typesEventMod.Event
 import typingsSlinky.baconjs.typesObservableMod.EventStream

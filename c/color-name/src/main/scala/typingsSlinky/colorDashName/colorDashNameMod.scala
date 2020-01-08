@@ -1,6 +1,5 @@
 package typingsSlinky.colorDashName
 
-import typingsSlinky.colorDashName.colorDashNameMod.RGB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

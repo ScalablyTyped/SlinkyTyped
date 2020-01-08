@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Text
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object FontStyle extends js.Object {
   @js.native
   sealed trait oblique extends FontStyle
   
-  /* 2 */ val italic: typingsSlinky.winrtDashUwp.Windows.UI.Text.FontStyle.italic with Double = js.native
-  /* 0 */ val normal: typingsSlinky.winrtDashUwp.Windows.UI.Text.FontStyle.normal with Double = js.native
-  /* 1 */ val oblique: typingsSlinky.winrtDashUwp.Windows.UI.Text.FontStyle.oblique with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FontStyle with Double] = js.native
+  /* 2 */ @js.native
+  object italic extends TopLevel[italic with Double]
+  
+  /* 0 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
+  /* 1 */ @js.native
+  object oblique extends TopLevel[oblique with Double]
+  
 }
 

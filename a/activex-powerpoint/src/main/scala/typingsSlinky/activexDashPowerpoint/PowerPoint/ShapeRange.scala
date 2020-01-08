@@ -67,7 +67,8 @@ class ShapeRange protected () extends js.Object {
   val ParentGroup: Shape = js.native
   val PictureFormat: typingsSlinky.activexDashPowerpoint.PowerPoint.PictureFormat = js.native
   val PlaceholderFormat: typingsSlinky.activexDashPowerpoint.PowerPoint.PlaceholderFormat = js.native
-  var `PowerPoint.ShapeRange_typekey`: ShapeRange = js.native
+  @JSName("PowerPoint.ShapeRange_typekey")
+  var PowerPointDotShapeRange_typekey: ShapeRange = js.native
   val RTF: String = js.native
   val Reflection: ReflectionFormat = js.native
   var Rotation: Double = js.native

@@ -19,7 +19,8 @@ class Explorer protected () extends js.Object {
   var Height: Double = js.native
   var Left: Double = js.native
   val NavigationPane: typingsSlinky.activexDashOutlook.Outlook.NavigationPane = js.native
-  var `Outlook.Explorer_typekey`: Explorer = js.native
+  @JSName("Outlook.Explorer_typekey")
+  var OutlookDotExplorer_typekey: Explorer = js.native
   val Panes: typingsSlinky.activexDashOutlook.Outlook.Panes = js.native
   val Parent: js.Any = js.native
   val Selection: typingsSlinky.activexDashOutlook.Outlook.Selection = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown
 
-import typingsSlinky.grammarkdown.grammarkdownNumbers.`true`
+import typingsSlinky.grammarkdown.grammarkdownBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

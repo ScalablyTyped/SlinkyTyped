@@ -1,9 +1,6 @@
 package typingsSlinky.androiduix.android.content
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.res.ColorStateList
-import typingsSlinky.androiduix.android.content.res.Resources
-import typingsSlinky.androiduix.android.content.res.TypedArray
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.util.DisplayMetrics
 import typingsSlinky.androiduix.android.util.Pools.SynchronizedPool

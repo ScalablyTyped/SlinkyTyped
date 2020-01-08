@@ -1,18 +1,18 @@
 
 # Scala.js typings for cli-progress
 
-Typings are for version 1.8
+Typings are for version 3.4
 
 ## Library description:
-Easy to use Progress-Bar for Command-Line/Terminal Applications
+easy to use progress-bar for command-line/terminal applications
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | cli-progress |
-| Keywords           | cli, tty, terminal, progress, progressbar, bar, status, statusbar, utility, widget |
-| # releases         | 13 |
-| # dependents       | 215 |
-| # downloads        | 3347938 |
+| Keywords           | cli, tty, terminal, progress, progressbar, multibar, bar, status, statusbar, utility, widget |
+| # releases         | 10 |
+| # dependents       | 391 |
+| # downloads        | 7248725 |
 | # stars            | 6 |
 
 ## Links

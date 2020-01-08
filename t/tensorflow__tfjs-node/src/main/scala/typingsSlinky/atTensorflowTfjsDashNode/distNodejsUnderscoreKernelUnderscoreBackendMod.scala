@@ -17,14 +17,13 @@ import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank.R2
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank.R3
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank.R4
 import typingsSlinky.atTensorflowTfjsDashCore.distTypesMod.Rank.R5
-import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.Empty
+import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings._empty
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.bilinear
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.cm
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.grayscale
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.in
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.nearest
 import typingsSlinky.atTensorflowTfjsDashNode.atTensorflowTfjsDashNodeStrings.rgb
-import typingsSlinky.atTensorflowTfjsDashNode.distNodejsUnderscoreKernelUnderscoreBackendMod.NodeJSKernelBackend
 import typingsSlinky.atTensorflowTfjsDashNode.distTfjsUnderscoreBindingMod.TFEOpAttr
 import typingsSlinky.atTensorflowTfjsDashNode.distTfjsUnderscoreBindingMod.TFJSBinding
 import scala.scalajs.js
@@ -159,7 +158,7 @@ object distNodejsUnderscoreKernelUnderscoreBackendMod extends js.Object {
     def encodeJpeg_cm(
       imageData: scala.scalajs.js.typedarray.Uint8Array,
       imageShape: js.Array[Double],
-      format: Empty,
+      format: _empty,
       quality: Double,
       progressive: Boolean,
       optimizeSize: Boolean,
@@ -173,7 +172,7 @@ object distNodejsUnderscoreKernelUnderscoreBackendMod extends js.Object {
     def encodeJpeg_in(
       imageData: scala.scalajs.js.typedarray.Uint8Array,
       imageShape: js.Array[Double],
-      format: Empty,
+      format: _empty,
       quality: Double,
       progressive: Boolean,
       optimizeSize: Boolean,

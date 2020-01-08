@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object NetworkConnectivityLevel extends js.Object {
   @js.native
   sealed trait none extends NetworkConnectivityLevel
   
-  /* 2 */ val constrainedInternetAccess: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.NetworkConnectivityLevel.constrainedInternetAccess with Double = js.native
-  /* 3 */ val internetAccess: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.NetworkConnectivityLevel.internetAccess with Double = js.native
-  /* 1 */ val localAccess: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.NetworkConnectivityLevel.localAccess with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.Connectivity.NetworkConnectivityLevel.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NetworkConnectivityLevel with Double] = js.native
+  /* 2 */ @js.native
+  object constrainedInternetAccess extends TopLevel[constrainedInternetAccess with Double]
+  
+  /* 3 */ @js.native
+  object internetAccess extends TopLevel[internetAccess with Double]
+  
+  /* 1 */ @js.native
+  object localAccess extends TopLevel[localAccess with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

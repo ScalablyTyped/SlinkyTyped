@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.OneNote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +29,22 @@ object ParagraphType extends js.Object {
   @js.native
   sealed trait table extends ParagraphType
   
-  /* "Image" */ val image: typingsSlinky.officeDashJs.OneNote.ParagraphType.image with String = js.native
-  /* "Ink" */ val ink: typingsSlinky.officeDashJs.OneNote.ParagraphType.ink with String = js.native
-  /* "Other" */ val other: typingsSlinky.officeDashJs.OneNote.ParagraphType.other with String = js.native
-  /* "RichText" */ val richText: typingsSlinky.officeDashJs.OneNote.ParagraphType.richText with String = js.native
-  /* "Table" */ val table: typingsSlinky.officeDashJs.OneNote.ParagraphType.table with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ParagraphType with String] = js.native
+  /* "Image" */ @js.native
+  object image extends TopLevel[image with String]
+  
+  /* "Ink" */ @js.native
+  object ink extends TopLevel[ink with String]
+  
+  /* "Other" */ @js.native
+  object other extends TopLevel[other with String]
+  
+  /* "RichText" */ @js.native
+  object richText extends TopLevel[richText with String]
+  
+  /* "Table" */ @js.native
+  object table extends TopLevel[table with String]
+  
 }
 

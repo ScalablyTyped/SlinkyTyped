@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +26,19 @@ object SortOn extends js.Object {
   @js.native
   sealed trait value extends SortOn
   
-  /* "CellColor" */ val cellColor: typingsSlinky.officeDashJs.Excel.SortOn.cellColor with String = js.native
-  /* "FontColor" */ val fontColor: typingsSlinky.officeDashJs.Excel.SortOn.fontColor with String = js.native
-  /* "Icon" */ val icon: typingsSlinky.officeDashJs.Excel.SortOn.icon with String = js.native
-  /* "Value" */ val value: typingsSlinky.officeDashJs.Excel.SortOn.value with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SortOn with String] = js.native
+  /* "CellColor" */ @js.native
+  object cellColor extends TopLevel[cellColor with String]
+  
+  /* "FontColor" */ @js.native
+  object fontColor extends TopLevel[fontColor with String]
+  
+  /* "Icon" */ @js.native
+  object icon extends TopLevel[icon with String]
+  
+  /* "Value" */ @js.native
+  object value extends TopLevel[value with String]
+  
 }
 

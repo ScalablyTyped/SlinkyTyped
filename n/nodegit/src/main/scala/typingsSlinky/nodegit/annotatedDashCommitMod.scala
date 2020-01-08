@@ -1,6 +1,5 @@
 package typingsSlinky.nodegit
 
-import typingsSlinky.nodegit.annotatedDashCommitMod.AnnotatedCommit
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.referenceMod.Reference
 import typingsSlinky.nodegit.repositoryMod.Repository

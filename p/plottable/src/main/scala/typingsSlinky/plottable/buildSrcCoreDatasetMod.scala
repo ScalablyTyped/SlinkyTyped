@@ -1,7 +1,5 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.plottable.buildSrcCoreDatasetMod.Dataset
-import typingsSlinky.plottable.buildSrcCoreDatasetMod.DatasetCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

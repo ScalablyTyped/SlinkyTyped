@@ -1,7 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
 import typingsSlinky.cesium.Anon_DataSourceCollection
-import typingsSlinky.cesium.cesiumMod.DataSourceDisplay.VisualizersCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

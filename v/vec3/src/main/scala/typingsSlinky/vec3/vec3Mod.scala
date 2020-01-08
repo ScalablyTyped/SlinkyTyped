@@ -1,6 +1,5 @@
 package typingsSlinky.vec3
 
-import typingsSlinky.vec3.vec3Mod.Vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

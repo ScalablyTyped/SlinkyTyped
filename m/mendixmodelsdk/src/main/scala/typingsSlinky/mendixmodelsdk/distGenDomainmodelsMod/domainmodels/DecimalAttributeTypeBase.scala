@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation._
 - typings.mendixmodelsdk.distSdkInternalElementsMod.IElement because Already inherited
 - typings.mendixmodelsdk.distGenDomainmodelsMod.domainmodels.IAttributeType because Already inherited
 - typings.mendixmodelsdk.distGenDomainmodelsMod.domainmodels.INumericAttributeTypeBase because Already inherited
-- typings.mendixmodelsdk.distGenDomainmodelsMod.domainmodels.IDecimalAttributeTypeBase because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.DecimalAttributeTypeBase")
+- typings.mendixmodelsdk.distGenDomainmodelsMod.domainmodels.IDecimalAttributeTypeBase because var conflicts: containerAsAttribute, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.DecimalAttributeTypeBase")
 @js.native
 abstract class DecimalAttributeTypeBase protected () extends NumericAttributeTypeBase {
   def this(
@@ -25,6 +26,10 @@ abstract class DecimalAttributeTypeBase protected () extends NumericAttributeTyp
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  @JSName("model")
+  var model_FDecimalAttributeTypeBase: IModel = js.native
+  @JSName("containerAsAttribute")
+  def containerAsAttribute_MDecimalAttributeTypeBase(): Attribute = js.native
 }
 
 /* static members */

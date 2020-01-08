@@ -1,6 +1,5 @@
 package typingsSlinky.stringDashTemplate
 
-import typingsSlinky.stringDashTemplate.StringTemplate.Template
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,8 +5,6 @@ import typingsSlinky.box2d.Box2D.Collision.b2ContactID
 import typingsSlinky.box2d.Box2D.Collision.b2Manifold
 import typingsSlinky.box2d.Box2D.Collision.b2WorldManifold
 import typingsSlinky.box2d.Box2D.Common.Math.b2Vec2
-import typingsSlinky.box2d.Box2D.Dynamics.Contacts.b2Contact
-import typingsSlinky.box2d.Box2D.Dynamics.Contacts.b2ContactEdge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

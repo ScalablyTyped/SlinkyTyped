@@ -9,6 +9,14 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`letter-ansi
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`map-only`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`tabloid-ansi-b-landscape`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`tabloid-ansi-b-portrait`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.eps
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.gif
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.jpg
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.pdf
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.png32
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.png8
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.svg
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.svgz
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,13 +45,13 @@ trait PrintTemplateProperties extends js.Object {
     */
   var forceFeatureAttributes: js.UndefOr[Boolean] = js.undefined
   /**
-    * The output format for the printed map.  **Possible Values:** pdf | png32 | png8 | jpg | gif | eps | svg | svgz
+    * The output format for the printed map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#format)
     *
     * @default png32
     */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[pdf | png32 | png8 | jpg | gif | eps | svg | svgz] = js.undefined
   /**
     * The layout used for the print output. When the value is `map-only` or is empty, the output map does not contain any page layout surroundings (for example, title, legend, scale bar and so forth). The print service provides out-of-the-box templates listed in possible values. The server administrator can add additional templates to the print service.  Possible values are listed below:
     *
@@ -105,7 +113,7 @@ object PrintTemplateProperties {
     attributionVisible: js.UndefOr[Boolean] = js.undefined,
     exportOptions: PrintTemplateExportOptions = null,
     forceFeatureAttributes: js.UndefOr[Boolean] = js.undefined,
-    format: String = null,
+    format: pdf | png32 | png8 | jpg | gif | eps | svg | svgz = null,
     layout: `map-only` | `a3-landscape` | `a3-portrait` | `a4-landscape` | `a4-portrait` | `letter-ansi-a-landscape` | `letter-ansi-a-portrait` | `tabloid-ansi-b-landscape` | `tabloid-ansi-b-portrait` = null,
     layoutOptions: PrintTemplateLayoutOptions = null,
     outScale: Int | Double = null,

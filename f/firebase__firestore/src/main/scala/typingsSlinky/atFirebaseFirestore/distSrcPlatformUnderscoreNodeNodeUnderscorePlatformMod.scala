@@ -2,7 +2,7 @@ package typingsSlinky.atFirebaseFirestore
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Window
-import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreNumbers.`true`
+import typingsSlinky.atFirebaseFirestore.atFirebaseFirestoreBooleans.`true`
 import typingsSlinky.atFirebaseFirestore.distSrcCoreDatabaseUnderscoreInfoMod.DatabaseId
 import typingsSlinky.atFirebaseFirestore.distSrcCoreDatabaseUnderscoreInfoMod.DatabaseInfo
 import typingsSlinky.atFirebaseFirestore.distSrcCoreTypesMod.ProtoByteString

@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenDatatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.distGenDatatypesMod.datatypes.IDataType
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.Document
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distSdkInternalInstancesMod.IList
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
@@ -19,7 +21,7 @@ import scala.scalajs.js.annotation._
 - typings.mendixmodelsdk.distSdkInternalElementsMod.IByNameReferrable because Already inherited
 - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
 - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
-- typings.mendixmodelsdk.distGenMicroflowsMod.microflows.IMicroflowBase because var conflicts: id, isLoaded, model, name, structureTypeName, unit. Inlined returnType, microflowReturnType */ @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowBase")
+- typings.mendixmodelsdk.distGenMicroflowsMod.microflows.IMicroflowBase because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined returnType, microflowReturnType */ @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowBase")
 @js.native
 abstract class MicroflowBase protected () extends Document {
   def this(
@@ -29,19 +31,41 @@ abstract class MicroflowBase protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  val flows: IList[Flow] = js.native
-  var markAsUsed: Boolean = js.native
   /**
+    * This property is required and cannot be set to null.
+    *
     * In version 7.9.0: introduced
     */
-  var microflowReturnType: DataType | IDataType = js.native
-  var objectCollection: MicroflowObjectCollection = js.native
+  @JSName("microflowReturnType")
+  val microflowReturnType_FMicroflowBase: IDataType = js.native
+  @JSName("model")
+  var model_FMicroflowBase: IModel = js.native
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
     * In version 7.9.0: deleted
     */
-  var returnType: Null | String = js.native
+  @JSName("returnType")
+  val returnType_FMicroflowBase: String | Null = js.native
+  @JSName("containerAsFolderBase")
+  def containerAsFolderBase_MMicroflowBase(): FolderBase = js.native
+  def flows(): IList[Flow] = js.native
+  def markAsUsed(): Boolean = js.native
+  def markAsUsed(newValue: Boolean): js.Any = js.native
+  /**
+    * In version 7.9.0: introduced
+    */
+  def microflowReturnType(): DataType = js.native
+  def microflowReturnType(newValue: DataType): js.Any = js.native
+  def objectCollection(): MicroflowObjectCollection = js.native
+  def objectCollection(newValue: MicroflowObjectCollection): js.Any = js.native
+  /**
+    * The value of this property is conceptually of type dataTypes.LegacyDataType.
+    *
+    * In version 7.9.0: deleted
+    */
+  def returnType(): String = js.native
+  def returnType(newValue: String): js.Any = js.native
 }
 
 /* static members */

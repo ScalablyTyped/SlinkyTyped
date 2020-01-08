@@ -2,10 +2,6 @@ package typingsSlinky.stylenames
 
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
-import typingsSlinky.stylenames.stylenamesMod.StyleObject
-import typingsSlinky.stylenames.stylenamesMod.StyleValue
-import typingsSlinky.stylenames.stylenamesMod.StyleValueConditionFunction
-import typingsSlinky.stylenames.stylenamesMod.StyleValueObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

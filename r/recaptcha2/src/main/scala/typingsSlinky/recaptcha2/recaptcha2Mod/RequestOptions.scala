@@ -1,6 +1,6 @@
 package typingsSlinky.recaptcha2.recaptcha2Mod
 
-import typingsSlinky.recaptcha2.recaptcha2Numbers.`true`
+import typingsSlinky.recaptcha2.recaptcha2Booleans.`true`
 import typingsSlinky.recaptcha2.recaptcha2Strings.POST
 import scala.scalajs.js
 import scala.scalajs.js.`|`

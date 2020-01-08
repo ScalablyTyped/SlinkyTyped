@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.ComboBox
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,23 +13,26 @@ sealed trait SortOrder extends js.Object
 object SortOrder extends js.Object {
   ///The data source is sorting with ascending order.
   @js.native
-  sealed trait Ascending
-    extends typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder
+  sealed trait Ascending extends SortOrder
   
   ///The data source is sorting with descending order.
   @js.native
-  sealed trait Descending
-    extends typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder
+  sealed trait Descending extends SortOrder
   
   ///The data source is not sorting.
   @js.native
-  sealed trait None
-    extends typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder
+  sealed trait None extends SortOrder
   
-  /* 1 */ val Ascending: typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder.Ascending with Double = js.native
-  /* 2 */ val Descending: typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder.Descending with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder.None with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.ComboBox.SortOrder with Double] = js.native
+  def apply(value: Double): js.UndefOr[SortOrder with Double] = js.native
+  /* 1 */ @js.native
+  object Ascending extends TopLevel[Ascending with Double]
+  
+  /* 2 */ @js.native
+  object Descending extends TopLevel[Descending with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

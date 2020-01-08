@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconFontAwesome extends SharedApply_IconProps_1525323211[FontAwesome] {
+object IconFontAwesome extends SharedApply_IconProps_207471041[FontAwesome] {
   @JSImport("expo/build/globals.web", "Icon.FontAwesome")
   @js.native
   object componentImport extends js.Object

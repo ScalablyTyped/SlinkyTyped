@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Swipeout extends SharedApply_IPropTypes_1913766539[default] {
+object Swipeout extends SharedApply_IPropTypes_792425628[default] {
   @JSImport("rc-swipeout/lib/Swipeout", JSImport.Default)
   @js.native
   object componentImport extends js.Object

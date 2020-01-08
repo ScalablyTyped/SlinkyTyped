@@ -1,17 +1,17 @@
 package typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesTypesMod
 
-import typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesStrings.`@@redux-saga/CHANNEL_END`
+import typingsSlinky.atReduxDashSagaTypes.atReduxDashSagaTypesStrings.`@@redux-sagaSlashCHANNEL_END`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait END extends js.Object {
-  var `type`: `@@redux-saga/CHANNEL_END`
+  var `type`: `@@redux-sagaSlashCHANNEL_END`
 }
 
 object END {
   @scala.inline
-  def apply(`type`: `@@redux-saga/CHANNEL_END`): END = {
+  def apply(`type`: `@@redux-sagaSlashCHANNEL_END`): END = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[END]

@@ -6,8 +6,13 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`greater-tha
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`less-than`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`not-between`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`not-equal`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.average
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.between
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.equal
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.max
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.min
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.tick
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,9 +65,9 @@ object HistogramRangeSliderViewModelProperties {
   def apply(
     average: Int | Double = null,
     bins: js.Array[Bin] = null,
-    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
-    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => Double = null,
-    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[String], /* index */ js.UndefOr[Double]) => String = null,
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
     max: Int | Double = null,
     min: Int | Double = null,
     precision: Int | Double = null,

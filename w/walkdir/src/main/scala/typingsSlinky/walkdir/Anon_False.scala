@@ -1,7 +1,7 @@
 package typingsSlinky.walkdir
 
-import typingsSlinky.walkdir.walkdirNumbers.`false`
-import typingsSlinky.walkdir.walkdirNumbers.`true`
+import typingsSlinky.walkdir.walkdirBooleans.`false`
+import typingsSlinky.walkdir.walkdirBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

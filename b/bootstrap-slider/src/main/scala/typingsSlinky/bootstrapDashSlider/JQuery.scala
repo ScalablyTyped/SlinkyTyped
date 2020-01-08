@@ -1,6 +1,6 @@
 package typingsSlinky.bootstrapDashSlider
 
-import typingsSlinky.bootstrapDashSlider.bootstrapDashSliderNumbers.`false`
+import typingsSlinky.bootstrapDashSlider.bootstrapDashSliderBooleans.`false`
 import typingsSlinky.bootstrapDashSlider.bootstrapDashSliderStrings.slide
 import scala.scalajs.js
 import scala.scalajs.js.`|`

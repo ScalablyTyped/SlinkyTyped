@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesKeytipsIKeytipTransitionKeyMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object KeytipTransitionModifier extends js.Object {
   @js.native
   sealed trait shift extends KeytipTransitionModifier
   
-  /* 2 */ val alt: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesKeytipsIKeytipTransitionKeyMod.KeytipTransitionModifier.alt with Double = js.native
-  /* 1 */ val ctrl: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesKeytipsIKeytipTransitionKeyMod.KeytipTransitionModifier.ctrl with Double = js.native
-  /* 3 */ val meta: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesKeytipsIKeytipTransitionKeyMod.KeytipTransitionModifier.meta with Double = js.native
-  /* 0 */ val shift: typingsSlinky.officeDashUiDashFabricDashReact.libUtilitiesKeytipsIKeytipTransitionKeyMod.KeytipTransitionModifier.shift with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[KeytipTransitionModifier with Double] = js.native
+  /* 2 */ @js.native
+  object alt extends TopLevel[alt with Double]
+  
+  /* 1 */ @js.native
+  object ctrl extends TopLevel[ctrl with Double]
+  
+  /* 3 */ @js.native
+  object meta extends TopLevel[meta with Double]
+  
+  /* 0 */ @js.native
+  object shift extends TopLevel[shift with Double]
+  
 }
 

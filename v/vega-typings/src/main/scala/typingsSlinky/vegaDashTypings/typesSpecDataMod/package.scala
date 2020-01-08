@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 package object typesSpecDataMod {
   import org.scalablytyped.runtime.StringDictionary
+  import typingsSlinky.vegaDashTypings.Anon_Async
+  import typingsSlinky.vegaDashTypings.Anon_AsyncFormat
   import typingsSlinky.vegaDashTypings.Anon_Exterior
   import typingsSlinky.vegaDashTypings.Anon_Feature
   import typingsSlinky.vegaDashTypings.Anon_Property
   import typingsSlinky.vegaDashTypings.Anon_Source
-  import typingsSlinky.vegaDashTypings.Anon_Url
-  import typingsSlinky.vegaDashTypings.Anon_Values
   import typingsSlinky.vegaDashTypings.vegaDashTypingsStrings.auto
 
   type Data = SourceData | ValuesData | UrlData | BaseData
@@ -27,6 +27,6 @@ package object typesSpecDataMod {
   type FormatTopoJSON = Anon_Property with (Anon_Feature | Anon_Exterior)
   type Parse = auto | (StringDictionary[DataType | String])
   type SourceData = Anon_Source with BaseData
-  type UrlData = Anon_Url with BaseData
-  type ValuesData = Anon_Values with BaseData
+  type UrlData = Anon_AsyncFormat with BaseData
+  type ValuesData = Anon_Async with BaseData
 }

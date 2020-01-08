@@ -10,9 +10,9 @@ Slugifies a String
 | ------------------ | :-------------: |
 | Full name          | slugify |
 | Keywords           | slugify, slug, url, urlify |
-| # releases         | 11 |
-| # dependents       | 478 |
-| # downloads        | 15265399 |
+| # releases         | 8 |
+| # dependents       | 493 |
+| # downloads        | 16892251 |
 | # stars            | 20 |
 
 ## Links

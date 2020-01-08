@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object VMInvariantViolationError extends js.Object {
   @js.native
   sealed trait UNKNOWNINVARIANTVIOLATIONERROR extends VMInvariantViolationError
   
-  /* 4 */ val EMPTYCALLSTACK: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.EMPTYCALLSTACK with Double = js.native
-  /* 3 */ val EMPTYVALUESTACK: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.EMPTYVALUESTACK with Double = js.native
-  /* 6 */ val LINKERERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.LINKERERROR with Double = js.native
-  /* 7 */ val LOCALREFERENCEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.LOCALREFERENCEERROR with Double = js.native
-  /* 1 */ val OUTOFBOUNDSINDEX: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.OUTOFBOUNDSINDEX with Double = js.native
-  /* 2 */ val OUTOFBOUNDSRANGE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.OUTOFBOUNDSRANGE with Double = js.native
-  /* 5 */ val PCOVERFLOW: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.PCOVERFLOW with Double = js.native
-  /* 8 */ val STORAGEERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.STORAGEERROR with Double = js.native
-  /* 0 */ val UNKNOWNINVARIANTVIOLATIONERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMInvariantViolationError.UNKNOWNINVARIANTVIOLATIONERROR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VMInvariantViolationError with Double] = js.native
+  /* 4 */ @js.native
+  object EMPTYCALLSTACK extends TopLevel[EMPTYCALLSTACK with Double]
+  
+  /* 3 */ @js.native
+  object EMPTYVALUESTACK extends TopLevel[EMPTYVALUESTACK with Double]
+  
+  /* 6 */ @js.native
+  object LINKERERROR extends TopLevel[LINKERERROR with Double]
+  
+  /* 7 */ @js.native
+  object LOCALREFERENCEERROR extends TopLevel[LOCALREFERENCEERROR with Double]
+  
+  /* 1 */ @js.native
+  object OUTOFBOUNDSINDEX extends TopLevel[OUTOFBOUNDSINDEX with Double]
+  
+  /* 2 */ @js.native
+  object OUTOFBOUNDSRANGE extends TopLevel[OUTOFBOUNDSRANGE with Double]
+  
+  /* 5 */ @js.native
+  object PCOVERFLOW extends TopLevel[PCOVERFLOW with Double]
+  
+  /* 8 */ @js.native
+  object STORAGEERROR extends TopLevel[STORAGEERROR with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWNINVARIANTVIOLATIONERROR extends TopLevel[UNKNOWNINVARIANTVIOLATIONERROR with Double]
+  
 }
 

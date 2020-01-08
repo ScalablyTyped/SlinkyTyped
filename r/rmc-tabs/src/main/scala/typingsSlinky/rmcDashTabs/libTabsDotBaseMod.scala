@@ -7,7 +7,6 @@ import slinky.core.TagMod
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.rmcDashTabs.libModelsMod.Models.TabData
 import typingsSlinky.rmcDashTabs.libPropsTypeMod.PropsType
-import typingsSlinky.rmcDashTabs.libTabsDotBaseMod.StateType
 import typingsSlinky.rmcDashTabs.rmcDashTabsStrings.horizontal
 import typingsSlinky.rmcDashTabs.rmcDashTabsStrings.vertical
 import scala.scalajs.js

@@ -1,5 +1,6 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,15 +36,31 @@ object AudioEncoding extends js.Object {
   @js.native
   sealed trait AUDIO_ENCODING_UNSPECIFIED extends AudioEncoding
   
-  /* 4 */ val AUDIO_ENCODING_AMR: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_AMR with Double = js.native
-  /* 5 */ val AUDIO_ENCODING_AMR_WB: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_AMR_WB with Double = js.native
-  /* 2 */ val AUDIO_ENCODING_FLAC: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_FLAC with Double = js.native
-  /* 1 */ val AUDIO_ENCODING_LINEAR_16: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_LINEAR_16 with Double = js.native
-  /* 3 */ val AUDIO_ENCODING_MULAW: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_MULAW with Double = js.native
-  /* 6 */ val AUDIO_ENCODING_OGG_OPUS: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_OGG_OPUS with Double = js.native
-  /* 7 */ val AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE with Double = js.native
-  /* 0 */ val AUDIO_ENCODING_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_UNSPECIFIED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AudioEncoding with Double] = js.native
+  /* 4 */ @js.native
+  object AUDIO_ENCODING_AMR extends TopLevel[AUDIO_ENCODING_AMR with Double]
+  
+  /* 5 */ @js.native
+  object AUDIO_ENCODING_AMR_WB extends TopLevel[AUDIO_ENCODING_AMR_WB with Double]
+  
+  /* 2 */ @js.native
+  object AUDIO_ENCODING_FLAC extends TopLevel[AUDIO_ENCODING_FLAC with Double]
+  
+  /* 1 */ @js.native
+  object AUDIO_ENCODING_LINEAR_16 extends TopLevel[AUDIO_ENCODING_LINEAR_16 with Double]
+  
+  /* 3 */ @js.native
+  object AUDIO_ENCODING_MULAW extends TopLevel[AUDIO_ENCODING_MULAW with Double]
+  
+  /* 6 */ @js.native
+  object AUDIO_ENCODING_OGG_OPUS extends TopLevel[AUDIO_ENCODING_OGG_OPUS with Double]
+  
+  /* 7 */ @js.native
+  object AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE extends TopLevel[AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE with Double]
+  
+  /* 0 */ @js.native
+  object AUDIO_ENCODING_UNSPECIFIED extends TopLevel[AUDIO_ENCODING_UNSPECIFIED with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TestResultsContextType extends js.Object {
   @js.native
   sealed trait Release extends TestResultsContextType
   
-  /* 1 */ val Build: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestResultsContextType.Build with Double = js.native
-  /* 2 */ val Release: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.TestResultsContextType.Release with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TestResultsContextType with Double] = js.native
+  /* 1 */ @js.native
+  object Build extends TopLevel[Build with Double]
+  
+  /* 2 */ @js.native
+  object Release extends TopLevel[Release with Double]
+  
 }
 

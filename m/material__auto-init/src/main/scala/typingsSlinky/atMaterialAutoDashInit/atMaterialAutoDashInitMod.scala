@@ -1,8 +1,6 @@
 package typingsSlinky.atMaterialAutoDashInit
 
 import org.scalajs.dom.raw.Document
-import typingsSlinky.atMaterialAutoDashInit.atMaterialAutoDashInitMod.MDCAutoInit
-import typingsSlinky.atMaterialAutoDashInit.atMaterialAutoDashInitMod.MDCLogger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

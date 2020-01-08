@@ -3,7 +3,6 @@ package typingsSlinky.koaDashHtmlDashMinifier
 import typingsSlinky.koa.koaMod.DefaultContext
 import typingsSlinky.koa.koaMod.DefaultState
 import typingsSlinky.koa.koaMod.Middleware
-import typingsSlinky.koaDashHtmlDashMinifier.koaDashHtmlDashMinifierMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

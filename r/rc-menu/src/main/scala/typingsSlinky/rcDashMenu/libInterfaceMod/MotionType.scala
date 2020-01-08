@@ -3,7 +3,7 @@ package typingsSlinky.rcDashMenu.libInterfaceMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticTransitionEvent
-import typingsSlinky.rcDashMenu.rcDashMenuNumbers.`false`
+import typingsSlinky.rcDashMenu.rcDashMenuBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

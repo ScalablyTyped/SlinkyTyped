@@ -6,7 +6,6 @@ import typingsSlinky.androiduix.android.graphics.Canvas
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.Callback
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.ConstantState
-import typingsSlinky.androiduix.android.graphics.drawable.LayerDrawable.ChildDrawable
 import typingsSlinky.androiduix.android.graphics.drawable.LayerDrawable.LayerState
 import typingsSlinky.androiduix.java.lang.Runnable
 import scala.scalajs.js

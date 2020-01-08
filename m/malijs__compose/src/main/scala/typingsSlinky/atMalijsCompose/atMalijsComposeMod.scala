@@ -1,7 +1,5 @@
 package typingsSlinky.atMalijsCompose
 
-import typingsSlinky.atMalijsCompose.atMalijsComposeMod.ComposedMiddleware
-import typingsSlinky.atMalijsCompose.atMalijsComposeMod.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

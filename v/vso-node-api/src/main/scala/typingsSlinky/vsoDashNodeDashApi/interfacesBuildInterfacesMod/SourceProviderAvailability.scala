@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object SourceProviderAvailability extends js.Object {
   @js.native
   sealed trait OnPremises extends SourceProviderAvailability
   
-  /* 3 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.SourceProviderAvailability.All with Double = js.native
-  /* 1 */ val Hosted: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.SourceProviderAvailability.Hosted with Double = js.native
-  /* 2 */ val OnPremises: typingsSlinky.vsoDashNodeDashApi.interfacesBuildInterfacesMod.SourceProviderAvailability.OnPremises with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SourceProviderAvailability with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 1 */ @js.native
+  object Hosted extends TopLevel[Hosted with Double]
+  
+  /* 2 */ @js.native
+  object OnPremises extends TopLevel[OnPremises with Double]
+  
 }
 

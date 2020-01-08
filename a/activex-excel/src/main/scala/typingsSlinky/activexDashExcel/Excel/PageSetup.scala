@@ -1,8 +1,8 @@
 package typingsSlinky.activexDashExcel.Excel
 
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`false`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`1`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`2`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`false`
 import typingsSlinky.std.SafeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,8 @@ class PageSetup protected () extends js.Object {
   var DifferentFirstPageHeaderFooter: Boolean = js.native
   var Draft: Boolean = js.native
   val EvenPage: Page = js.native
-  var `Excel.PageSetup_typekey`: PageSetup = js.native
+  @JSName("Excel.PageSetup_typekey")
+  var ExcelDotPageSetup_typekey: PageSetup = js.native
   val FirstPage: Page = js.native
   var FirstPageNumber: Double = js.native
   var FitToPagesTall: Double | `false` = js.native

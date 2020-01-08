@@ -1,12 +1,12 @@
 package typingsSlinky.reactDashSimpleDashMaps.reactDashSimpleDashMapsMod
 
-import typingsSlinky.react.reactMod.Component
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.react.reactMod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-simple-maps", "ComposableMap")
 @js.native
-class ComposableMap ()
-  extends Component[ComposableMapProps, js.Object, js.Any]
+object ComposableMap extends TopLevel[FunctionComponent[ComposableMapProps]]
 

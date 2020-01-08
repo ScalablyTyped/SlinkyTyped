@@ -11,11 +11,12 @@ import typingsSlinky.got.gotMod.RequestFunction
 import typingsSlinky.got.gotMod.RetryOptions
 import typingsSlinky.got.gotMod.TimeoutOptions
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.urlMod.URLSearchParams
 import typingsSlinky.std.Record
@@ -60,7 +61,7 @@ object DownloadOptions {
     ciphers: String = null,
     clientCertEngine: String = null,
     cookieJar: CookieJar = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ Error, /* socket */ Socket, Unit]) => Socket = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
     crl: String | Buffer | (js.Array[String | Buffer]) = null,
     decompress: js.UndefOr[Boolean] = js.undefined,
     defaultPort: Double | String = null,
@@ -77,7 +78,7 @@ object DownloadOptions {
     hooks: Hooks[GotBodyOptions[String], String | Buffer | Readable] = null,
     host: String = null,
     hostname: String = null,
-    key: String | Buffer | (js.Array[Buffer | js.Object]) = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
     localAddress: String = null,
     map: /* file */ File => File = null,
     maxVersion: SecureVersion = null,
@@ -85,9 +86,11 @@ object DownloadOptions {
     minVersion: SecureVersion = null,
     passphrase: String = null,
     path: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
     plugins: js.Array[_] = null,
     port: Double | String = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     protocol: String = null,
     proxy: String = null,
     query: (Record[String, _]) | URLSearchParams | String = null,
@@ -99,6 +102,7 @@ object DownloadOptions {
     servername: String = null,
     sessionIdContext: String = null,
     setHost: js.UndefOr[Boolean] = js.undefined,
+    sigalgs: String = null,
     socketPath: String = null,
     strip: Int | Double = null,
     throwHttpErrors: js.UndefOr[Boolean] = js.undefined,
@@ -145,6 +149,8 @@ object DownloadOptions {
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
     if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
     if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
     if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
@@ -156,6 +162,7 @@ object DownloadOptions {
     if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
     if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
     if (strip != null) __obj.updateDynamic("strip")(strip.asInstanceOf[js.Any])
     if (!js.isUndefined(throwHttpErrors)) __obj.updateDynamic("throwHttpErrors")(throwHttpErrors.asInstanceOf[js.Any])

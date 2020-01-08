@@ -17,7 +17,6 @@ import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.RegisteredHooks
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TransitionOptions
 import typingsSlinky.atUirouterCore.libTransitionInterfaceMod.TreeChanges
 import typingsSlinky.atUirouterCore.libTransitionRejectFactoryMod.Rejection
-import typingsSlinky.atUirouterCore.libTransitionTransitionMod.Transition
 import typingsSlinky.atUirouterCore.libViewInterfaceMod.ViewConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

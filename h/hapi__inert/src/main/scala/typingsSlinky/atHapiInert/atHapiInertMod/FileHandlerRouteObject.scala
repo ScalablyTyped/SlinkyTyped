@@ -1,7 +1,7 @@
 package typingsSlinky.atHapiInert.atHapiInertMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atHapiInert.atHapiInertNumbers.`false`
+import typingsSlinky.atHapiInert.atHapiInertBooleans.`false`
 import typingsSlinky.atHapiInert.atHapiInertStrings.`inline`
 import typingsSlinky.atHapiInert.atHapiInertStrings.attachment
 import typingsSlinky.atHapiInert.atHapiInertStrings.hash

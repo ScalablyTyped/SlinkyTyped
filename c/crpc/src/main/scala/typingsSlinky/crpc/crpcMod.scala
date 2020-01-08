@@ -1,6 +1,5 @@
 package typingsSlinky.crpc
 
-import typingsSlinky.crpc.crpcMod.Client
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

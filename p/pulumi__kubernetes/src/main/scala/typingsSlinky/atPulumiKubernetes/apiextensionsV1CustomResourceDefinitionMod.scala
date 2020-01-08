@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.apiextensionsV1CustomResourceDefinitionMod.CustomResourceDefinition
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`apiextensionsDOTk8sDOTio/v1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.apiextensionsDotk8sDotioSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.apiextensions.v1.CustomResourceDefinitionSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.apiextensions.v1.CustomResourceDefinitionStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
@@ -42,7 +41,7 @@ object apiextensionsV1CustomResourceDefinitionMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`apiextensionsDOTk8sDOTio/v1`] = js.native
+    val apiVersion: Output[apiextensionsDotk8sDotioSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.PlayTo
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object PlayToConnectionError extends js.Object {
   @js.native
   sealed trait protectedPlaybackFailed extends PlayToConnectionError
   
-  /* 2 */ val deviceError: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionError.deviceError with Double = js.native
-  /* 3 */ val deviceLocked: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionError.deviceLocked with Double = js.native
-  /* 1 */ val deviceNotResponding: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionError.deviceNotResponding with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionError.none with Double = js.native
-  /* 4 */ val protectedPlaybackFailed: typingsSlinky.winrtDashUwp.Windows.Media.PlayTo.PlayToConnectionError.protectedPlaybackFailed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PlayToConnectionError with Double] = js.native
+  /* 2 */ @js.native
+  object deviceError extends TopLevel[deviceError with Double]
+  
+  /* 3 */ @js.native
+  object deviceLocked extends TopLevel[deviceLocked with Double]
+  
+  /* 1 */ @js.native
+  object deviceNotResponding extends TopLevel[deviceNotResponding with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 4 */ @js.native
+  object protectedPlaybackFailed extends TopLevel[protectedPlaybackFailed with Double]
+  
 }
 

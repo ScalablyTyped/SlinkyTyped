@@ -1,13 +1,6 @@
 package typingsSlinky.nodeDashVagrant
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.Callback
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.ErrorArg
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.Machine
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.MachineEmitter
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.Plugin
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.ProgressEmitter
-import typingsSlinky.nodeDashVagrant.nodeDashVagrantMod.Snapshots
 import typingsSlinky.nodeDashVagrant.nodeDashVagrantStrings.`up-progress`
 import typingsSlinky.nodeDashVagrant.nodeDashVagrantStrings.progress
 import typingsSlinky.nodeDashVagrant.nodeDashVagrantStrings.stderr

@@ -1,5 +1,6 @@
 package typingsSlinky.atHyperlorisTyson.distTypesAnnotationsJsonPropertyMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,9 +25,13 @@ object Access extends js.Object {
   @js.native
   sealed trait TOJSON_ONLY extends Access
   
-  /* "FROMJSON_ONLY" */ val FROMJSON_ONLY: typingsSlinky.atHyperlorisTyson.distTypesAnnotationsJsonPropertyMod.Access.FROMJSON_ONLY with String = js.native
-  /* "TOJSON_ONLY" */ val TOJSON_ONLY: typingsSlinky.atHyperlorisTyson.distTypesAnnotationsJsonPropertyMod.Access.TOJSON_ONLY with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[Access with String] = js.native
+  /* "FROMJSON_ONLY" */ @js.native
+  object FROMJSON_ONLY extends TopLevel[FROMJSON_ONLY with String]
+  
+  /* "TOJSON_ONLY" */ @js.native
+  object TOJSON_ONLY extends TopLevel[TOJSON_ONLY with String]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.evernote.evernoteMod.Evernote
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,12 +30,22 @@ object NoteSortOrder extends js.Object {
   @js.native
   sealed trait UPDATE_SEQUENCE_NUMBER extends NoteSortOrder
   
-  /* 1 */ val CREATED: typingsSlinky.evernote.evernoteMod.Evernote.NoteSortOrder.CREATED with Double = js.native
-  /* 3 */ val RELEVANCE: typingsSlinky.evernote.evernoteMod.Evernote.NoteSortOrder.RELEVANCE with Double = js.native
-  /* 5 */ val TITLE: typingsSlinky.evernote.evernoteMod.Evernote.NoteSortOrder.TITLE with Double = js.native
-  /* 2 */ val UPDATED: typingsSlinky.evernote.evernoteMod.Evernote.NoteSortOrder.UPDATED with Double = js.native
-  /* 4 */ val UPDATE_SEQUENCE_NUMBER: typingsSlinky.evernote.evernoteMod.Evernote.NoteSortOrder.UPDATE_SEQUENCE_NUMBER with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[NoteSortOrder with Double] = js.native
+  /* 1 */ @js.native
+  object CREATED extends TopLevel[CREATED with Double]
+  
+  /* 3 */ @js.native
+  object RELEVANCE extends TopLevel[RELEVANCE with Double]
+  
+  /* 5 */ @js.native
+  object TITLE extends TopLevel[TITLE with Double]
+  
+  /* 2 */ @js.native
+  object UPDATED extends TopLevel[UPDATED with Double]
+  
+  /* 4 */ @js.native
+  object UPDATE_SEQUENCE_NUMBER extends TopLevel[UPDATE_SEQUENCE_NUMBER with Double]
+  
 }
 

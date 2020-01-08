@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BatteryDash30 extends SharedApply_SvgIconProps657215518[default] {
+object BatteryDash30 extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/device/battery-30", JSImport.Default)
   @js.native
   object componentImport extends js.Object

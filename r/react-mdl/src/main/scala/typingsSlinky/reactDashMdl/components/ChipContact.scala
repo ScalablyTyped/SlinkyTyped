@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChipContact
-  extends SharedApply___MDLOtherProps_1000145419[typingsSlinky.reactDashMdl.reactDashMdlMod.ChipContact] {
+  extends SharedApply___MDLOtherProps980119514[typingsSlinky.reactDashMdl.reactDashMdlMod.ChipContact] {
   @JSImport("react-mdl", "ChipContact")
   @js.native
   object componentImport extends js.Object

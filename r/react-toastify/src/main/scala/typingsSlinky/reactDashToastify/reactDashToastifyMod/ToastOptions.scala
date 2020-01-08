@@ -2,7 +2,7 @@ package typingsSlinky.reactDashToastify.reactDashToastifyMod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactDashToastify.reactDashToastifyNumbers.`false`
+import typingsSlinky.reactDashToastify.reactDashToastifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

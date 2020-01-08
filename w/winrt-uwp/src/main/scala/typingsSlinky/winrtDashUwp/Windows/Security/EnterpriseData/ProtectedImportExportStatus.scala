@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object ProtectedImportExportStatus extends js.Object {
   @js.native
   sealed trait unprotected extends ProtectedImportExportStatus
   
-  /* 7 */ val accessSuspended: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.accessSuspended with Double = js.native
-  /* 6 */ val licenseExpired: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.licenseExpired with Double = js.native
-  /* 4 */ val notRoamable: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.notRoamable with Double = js.native
-  /* 0 */ val ok: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.ok with Double = js.native
-  /* 5 */ val protectedToOtherIdentity: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.protectedToOtherIdentity with Double = js.native
-  /* 3 */ val revoked: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.revoked with Double = js.native
-  /* 1 */ val undetermined: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.undetermined with Double = js.native
-  /* 2 */ val unprotected: typingsSlinky.winrtDashUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus.unprotected with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProtectedImportExportStatus with Double] = js.native
+  /* 7 */ @js.native
+  object accessSuspended extends TopLevel[accessSuspended with Double]
+  
+  /* 6 */ @js.native
+  object licenseExpired extends TopLevel[licenseExpired with Double]
+  
+  /* 4 */ @js.native
+  object notRoamable extends TopLevel[notRoamable with Double]
+  
+  /* 0 */ @js.native
+  object ok extends TopLevel[ok with Double]
+  
+  /* 5 */ @js.native
+  object protectedToOtherIdentity extends TopLevel[protectedToOtherIdentity with Double]
+  
+  /* 3 */ @js.native
+  object revoked extends TopLevel[revoked with Double]
+  
+  /* 1 */ @js.native
+  object undetermined extends TopLevel[undetermined with Double]
+  
+  /* 2 */ @js.native
+  object unprotected extends TopLevel[unprotected with Double]
+  
 }
 

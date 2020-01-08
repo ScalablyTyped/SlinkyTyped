@@ -6,7 +6,9 @@ import typingsSlinky.dojo.Anon_Unwatch
 import typingsSlinky.dojo.dijit._Widget
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.centerIndicator
+import typingsSlinky.dojo.dojoStrings.color
 import typingsSlinky.dojo.dojoStrings.duration
+import typingsSlinky.dojo.dojoStrings.image
 import typingsSlinky.dojo.dojoStrings.imageText
 import typingsSlinky.dojo.dojoStrings.opacity
 import typingsSlinky.dojo.dojoStrings.searchContainerNode
@@ -145,11 +147,11 @@ class Standby () extends _Widget {
   @JSName("get")
   def get_centerIndicator(property: centerIndicator): String = js.native
   @JSName("get")
-  def get_color(property: typingsSlinky.dojo.dojoStrings.color): String = js.native
+  def get_color(property: color): String = js.native
   @JSName("get")
   def get_duration(property: duration): Double = js.native
   @JSName("get")
-  def get_image(property: typingsSlinky.dojo.dojoStrings.image): String = js.native
+  def get_image(property: image): String = js.native
   @JSName("get")
   def get_imageText(property: imageText): String = js.native
   @JSName("get")
@@ -181,11 +183,11 @@ class Standby () extends _Widget {
   @JSName("set")
   def set_centerIndicator(property: centerIndicator, value: String): Unit = js.native
   @JSName("set")
-  def set_color(property: typingsSlinky.dojo.dojoStrings.color, value: String): Unit = js.native
+  def set_color(property: color, value: String): Unit = js.native
   @JSName("set")
   def set_duration(property: duration, value: Double): Unit = js.native
   @JSName("set")
-  def set_image(property: typingsSlinky.dojo.dojoStrings.image, value: String): Unit = js.native
+  def set_image(property: image, value: String): Unit = js.native
   @JSName("set")
   def set_imageText(property: imageText, value: String): Unit = js.native
   @JSName("set")
@@ -232,7 +234,7 @@ class Standby () extends _Widget {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_color(
-    property: typingsSlinky.dojo.dojoStrings.color,
+    property: color,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[String], 
@@ -252,7 +254,7 @@ class Standby () extends _Widget {
   ): Anon_Unwatch = js.native
   @JSName("watch")
   def watch_image(
-    property: typingsSlinky.dojo.dojoStrings.image,
+    property: image,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[String], 

@@ -1,6 +1,5 @@
 package typingsSlinky.sugarDashCore.sugarjs
 
-import typingsSlinky.sugarDashCore.sugarjs.Function.ChainableBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

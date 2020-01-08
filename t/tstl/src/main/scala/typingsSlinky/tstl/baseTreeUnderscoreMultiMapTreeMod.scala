@@ -4,7 +4,7 @@ import typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.Iterator
 import typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.ReverseIterator
 import typingsSlinky.tstl.baseContainerMultiMapMod.MultiMap
 import typingsSlinky.tstl.baseTreeUnderscoreMapTreeMod._MapTree
-import typingsSlinky.tstl.tstlNumbers.`false`
+import typingsSlinky.tstl.tstlBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

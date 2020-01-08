@@ -3,11 +3,12 @@ package typingsSlinky.victory.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.std.Pick
+import typingsSlinky.victory.Anon_XY
 import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.Anon_XYNumberOptional
 import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
 import typingsSlinky.victory.victoryMod.D3Scale
 import typingsSlinky.victory.victoryMod.DomainPaddingPropType
@@ -42,8 +43,8 @@ object VictoryChart
     groupComponent: ReactElement = null,
     height: Int | Double = null,
     horizontal: js.UndefOr[Boolean] = js.undefined,
-    maxDomain: Double | Anon_XYNumberOptional = null,
-    minDomain: Double | Anon_XYNumberOptional = null,
+    maxDomain: Double | Anon_XY = null,
+    minDomain: Double | Anon_XY = null,
     padding: PaddingProps = null,
     scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
@@ -73,6 +74,7 @@ object VictoryChart
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryChart] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryChartProps
 }
 

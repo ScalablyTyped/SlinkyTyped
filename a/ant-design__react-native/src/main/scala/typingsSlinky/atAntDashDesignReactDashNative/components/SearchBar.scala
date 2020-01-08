@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SearchBar
-  extends SharedApply_SearchBarProps1647249290[
+  extends SharedApply_SearchBarProps_1220499827[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.SearchBar
     ] {
   @JSImport("@ant-design/react-native", "SearchBar")

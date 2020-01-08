@@ -10,21 +10,13 @@ trait HotkeysProviderChained extends js.Object {
   def add(
     combo: String,
     description: String,
-    callback: js.Function2[
-      /* event */ Event, 
-      /* hotkeys */ typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.Hotkey, 
-      Unit
-    ]
-  ): typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.HotkeysProviderChained = js.native
+    callback: js.Function2[/* event */ Event, /* hotkeys */ Hotkey, Unit]
+  ): HotkeysProviderChained = js.native
   def add(
     combo: js.Array[String],
     description: String,
-    callback: js.Function2[
-      /* event */ Event, 
-      /* hotkeys */ typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.Hotkey, 
-      Unit
-    ]
-  ): typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.HotkeysProviderChained = js.native
-  def add(hotkeyObj: typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.Hotkey): typingsSlinky.angularDashHotkeys.angularDashHotkeysMod.angularMod.hotkeys.HotkeysProviderChained = js.native
+    callback: js.Function2[/* event */ Event, /* hotkeys */ Hotkey, Unit]
+  ): HotkeysProviderChained = js.native
+  def add(hotkeyObj: Hotkey): HotkeysProviderChained = js.native
 }
 

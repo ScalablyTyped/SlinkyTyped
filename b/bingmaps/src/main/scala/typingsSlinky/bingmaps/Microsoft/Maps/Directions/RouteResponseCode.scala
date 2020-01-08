@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Directions
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,25 +95,61 @@ object RouteResponseCode extends js.Object {
   @js.native
   sealed trait waypointDisambiguation extends RouteResponseCode
   
-  /* 15 */ val atleastTwoWaypointRequired: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.atleastTwoWaypointRequired with Double = js.native
-  /* 2 */ val cannotFindNearbyRoad: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.cannotFindNearbyRoad with Double = js.native
-  /* 5 */ val dataSourceNotFound: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.dataSourceNotFound with Double = js.native
-  /* 14 */ val exceedMaxWaypointLimit: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.exceedMaxWaypointLimit with Double = js.native
-  /* 16 */ val firstOrLastStoppointIsVia: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.firstOrLastStoppointIsVia with Double = js.native
-  /* 13 */ val hasEmptyWaypoint: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.hasEmptyWaypoint with Double = js.native
-  /* 18 */ val invalidCredentials: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.invalidCredentials with Double = js.native
-  /* 7 */ val noAvailableTransitTrip: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.noAvailableTransitTrip with Double = js.native
-  /* 4 */ val noSolution: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.noSolution with Double = js.native
-  /* 10 */ val outOfTransitBounds: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.outOfTransitBounds with Double = js.native
-  /* 17 */ val searchServiceFailed: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.searchServiceFailed with Double = js.native
-  /* 0 */ val success: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.success with Double = js.native
-  /* 11 */ val timeOut: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.timeOut with Double = js.native
-  /* 3 */ val tooFar: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.tooFar with Double = js.native
-  /* 8 */ val transitStopsTooClose: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.transitStopsTooClose with Double = js.native
-  /* 1 */ val unknownError: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.unknownError with Double = js.native
-  /* 9 */ val walkingBestAlternative: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.walkingBestAlternative with Double = js.native
-  /* 12 */ val waypointDisambiguation: typingsSlinky.bingmaps.Microsoft.Maps.Directions.RouteResponseCode.waypointDisambiguation with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RouteResponseCode with Double] = js.native
+  /* 15 */ @js.native
+  object atleastTwoWaypointRequired extends TopLevel[atleastTwoWaypointRequired with Double]
+  
+  /* 2 */ @js.native
+  object cannotFindNearbyRoad extends TopLevel[cannotFindNearbyRoad with Double]
+  
+  /* 5 */ @js.native
+  object dataSourceNotFound extends TopLevel[dataSourceNotFound with Double]
+  
+  /* 14 */ @js.native
+  object exceedMaxWaypointLimit extends TopLevel[exceedMaxWaypointLimit with Double]
+  
+  /* 16 */ @js.native
+  object firstOrLastStoppointIsVia extends TopLevel[firstOrLastStoppointIsVia with Double]
+  
+  /* 13 */ @js.native
+  object hasEmptyWaypoint extends TopLevel[hasEmptyWaypoint with Double]
+  
+  /* 18 */ @js.native
+  object invalidCredentials extends TopLevel[invalidCredentials with Double]
+  
+  /* 7 */ @js.native
+  object noAvailableTransitTrip extends TopLevel[noAvailableTransitTrip with Double]
+  
+  /* 4 */ @js.native
+  object noSolution extends TopLevel[noSolution with Double]
+  
+  /* 10 */ @js.native
+  object outOfTransitBounds extends TopLevel[outOfTransitBounds with Double]
+  
+  /* 17 */ @js.native
+  object searchServiceFailed extends TopLevel[searchServiceFailed with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 11 */ @js.native
+  object timeOut extends TopLevel[timeOut with Double]
+  
+  /* 3 */ @js.native
+  object tooFar extends TopLevel[tooFar with Double]
+  
+  /* 8 */ @js.native
+  object transitStopsTooClose extends TopLevel[transitStopsTooClose with Double]
+  
+  /* 1 */ @js.native
+  object unknownError extends TopLevel[unknownError with Double]
+  
+  /* 9 */ @js.native
+  object walkingBestAlternative extends TopLevel[walkingBestAlternative with Double]
+  
+  /* 12 */ @js.native
+  object waypointDisambiguation extends TopLevel[waypointDisambiguation with Double]
+  
 }
 

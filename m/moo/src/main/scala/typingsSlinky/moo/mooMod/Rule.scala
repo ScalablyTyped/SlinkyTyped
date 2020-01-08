@@ -1,6 +1,6 @@
 package typingsSlinky.moo.mooMod
 
-import typingsSlinky.moo.mooNumbers.`true`
+import typingsSlinky.moo.mooBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi
 
 import typingsSlinky.vsoDashNodeDashApi.clientApiBasesMod.ClientApiBase
-import typingsSlinky.vsoDashNodeDashApi.dashboardApiMod.IDashboardApi
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRequestOptions
 import typingsSlinky.vsoDashNodeDashApi.interfacesCoreInterfacesMod.TeamContext

@@ -1,5 +1,6 @@
 package typingsSlinky.roxDashNode.roxDashNodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object RoxFetcherStatus extends js.Object {
   @js.native
   sealed trait ErrorFetchFailed extends RoxFetcherStatus
   
-  /* "APPLIED_FROM_CACHE" */ val AppliedFromCache: typingsSlinky.roxDashNode.roxDashNodeMod.RoxFetcherStatus.AppliedFromCache with String = js.native
-  /* "APPLIED_FROM_EMBEDDED" */ val AppliedFromEmbedded: typingsSlinky.roxDashNode.roxDashNodeMod.RoxFetcherStatus.AppliedFromEmbedded with String = js.native
-  /* "APPLIED_FROM_NETWORK" */ val AppliedFromNetwork: typingsSlinky.roxDashNode.roxDashNodeMod.RoxFetcherStatus.AppliedFromNetwork with String = js.native
-  /* "ERROR_FETCH_FAILED" */ val ErrorFetchFailed: typingsSlinky.roxDashNode.roxDashNodeMod.RoxFetcherStatus.ErrorFetchFailed with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[RoxFetcherStatus with String] = js.native
+  /* "APPLIED_FROM_CACHE" */ @js.native
+  object AppliedFromCache extends TopLevel[AppliedFromCache with String]
+  
+  /* "APPLIED_FROM_EMBEDDED" */ @js.native
+  object AppliedFromEmbedded extends TopLevel[AppliedFromEmbedded with String]
+  
+  /* "APPLIED_FROM_NETWORK" */ @js.native
+  object AppliedFromNetwork extends TopLevel[AppliedFromNetwork with String]
+  
+  /* "ERROR_FETCH_FAILED" */ @js.native
+  object ErrorFetchFailed extends TopLevel[ErrorFetchFailed with String]
+  
 }
 

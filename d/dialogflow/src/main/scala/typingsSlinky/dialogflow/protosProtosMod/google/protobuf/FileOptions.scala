@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.protobuf
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.protosProtosMod.google.protobuf.FileOptions.OptimizeMode
 import typingsSlinky.protobufjs.protobufjsMod.IConversionOptions
 import typingsSlinky.protobufjs.protobufjsMod.Reader
@@ -172,11 +173,17 @@ object FileOptions extends js.Object {
     @js.native
     sealed trait SPEED extends OptimizeMode
     
-    /* 2 */ val CODE_SIZE: typingsSlinky.dialogflow.protosProtosMod.google.protobuf.FileOptions.OptimizeMode.CODE_SIZE with Double = js.native
-    /* 3 */ val LITE_RUNTIME: typingsSlinky.dialogflow.protosProtosMod.google.protobuf.FileOptions.OptimizeMode.LITE_RUNTIME with Double = js.native
-    /* 1 */ val SPEED: typingsSlinky.dialogflow.protosProtosMod.google.protobuf.FileOptions.OptimizeMode.SPEED with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[OptimizeMode with Double] = js.native
+    /* 2 */ @js.native
+    object CODE_SIZE extends TopLevel[CODE_SIZE with Double]
+    
+    /* 3 */ @js.native
+    object LITE_RUNTIME extends TopLevel[LITE_RUNTIME with Double]
+    
+    /* 1 */ @js.native
+    object SPEED extends TopLevel[SPEED with Double]
+    
   }
   
 }

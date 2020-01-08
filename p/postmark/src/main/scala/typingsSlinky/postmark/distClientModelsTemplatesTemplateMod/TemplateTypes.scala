@@ -1,5 +1,6 @@
 package typingsSlinky.postmark.distClientModelsTemplatesTemplateMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TemplateTypes extends js.Object {
   @js.native
   sealed trait Standard extends TemplateTypes
   
-  /* "Layout" */ val Layout: typingsSlinky.postmark.distClientModelsTemplatesTemplateMod.TemplateTypes.Layout with String = js.native
-  /* "Standard" */ val Standard: typingsSlinky.postmark.distClientModelsTemplatesTemplateMod.TemplateTypes.Standard with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[TemplateTypes with String] = js.native
+  /* "Layout" */ @js.native
+  object Layout extends TopLevel[Layout with String]
+  
+  /* "Standard" */ @js.native
+  object Standard extends TopLevel[Standard with String]
+  
 }
 

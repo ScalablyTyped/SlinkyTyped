@@ -15,7 +15,7 @@ class WriteBatch protected ()
   var _mutations: js.Any = js.native
   var verifyNotCommitted: js.Any = js.native
   def update(
-    documentRef: typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentReference,
+    documentRef: typingsSlinky.atFirebaseFirestoreDashTypes.atFirebaseFirestoreDashTypesMod.DocumentReference[_],
     field: FieldPath,
     value: js.Any,
     moreFieldsAndValues: js.Any*

@@ -1,12 +1,12 @@
 package typingsSlinky.activexDashExcel.Excel
 
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`false`
+import typingsSlinky.activexDashExcel.activexDashExcelBooleans.`true`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`1`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`2`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`3`
 import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`4`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`false`
-import typingsSlinky.activexDashExcel.activexDashExcelNumbers.`true`
-import typingsSlinky.activexDashExcel.activexDashExcelStrings.Empty
+import typingsSlinky.activexDashExcel.activexDashExcelStrings._empty
 import typingsSlinky.activexDashOffice.Office.COMAddIn
 import typingsSlinky.activexDashOffice.Office.COMAddIns
 import typingsSlinky.activexDashOffice.Office.CommandBar
@@ -136,11 +136,12 @@ class Application protected () extends js.Object {
   var EnableSound: Boolean = js.native
   var EnableTipWizard: Boolean = js.native
   val ErrorCheckingOptions: typingsSlinky.activexDashExcel.Excel.ErrorCheckingOptions = js.native
-  var `Excel.Application_typekey`: typingsSlinky.activexDashExcel.Excel.Application = js.native
   @JSName("Excel4IntlMacroSheets")
   val Excel4IntlMacroSheets_Original: Sheets[Sheet] = js.native
   @JSName("Excel4MacroSheets")
   val Excel4MacroSheets_Original: Sheets[Sheet] = js.native
+  @JSName("Excel.Application_typekey")
+  var ExcelDotApplication_typekey: typingsSlinky.activexDashExcel.Excel.Application = js.native
   var ExtendList: Boolean = js.native
   var FeatureInstall: MsoFeatureInstall = js.native
   @JSName("FileExportConverters")
@@ -619,7 +620,7 @@ class Application protected () extends js.Object {
   def RecentFiles(Index: Double): RecentFile = js.native
   def RecordMacro(BasicCode: String): Unit = js.native
   /** This overload prevents recording */
-  def RecordMacro(BasicCode: Empty, XlmCode: Empty): Unit = js.native
+  def RecordMacro(BasicCode: _empty, XlmCode: _empty): Unit = js.native
   def RegisterXLL(Filename: String): Boolean = js.native
   def RegisteredFunctions(): SafeArray[_] | Null = js.native
   def RegisteredFunctions(Index1: js.UndefOr[scala.Nothing], Index2: String): SafeArray[_] | Null = js.native

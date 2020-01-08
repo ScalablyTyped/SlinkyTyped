@@ -1,6 +1,5 @@
 package typingsSlinky.rxDashLiteDashCoincidence
 
-import typingsSlinky.rxDashLiteDashCoincidence.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

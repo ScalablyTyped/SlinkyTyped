@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object EmailMailboxCreateFolderStatus extends js.Object {
   @js.native
   sealed trait unknownFailure extends EmailMailboxCreateFolderStatus
   
-  /* 5 */ val nameCollision: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.nameCollision with Double = js.native
-  /* 1 */ val networkError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.networkError with Double = js.native
-  /* 2 */ val permissionsError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.permissionsError with Double = js.native
-  /* 3 */ val serverError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.serverError with Double = js.native
-  /* 6 */ val serverRejected: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.serverRejected with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.success with Double = js.native
-  /* 4 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus.unknownFailure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailMailboxCreateFolderStatus with Double] = js.native
+  /* 5 */ @js.native
+  object nameCollision extends TopLevel[nameCollision with Double]
+  
+  /* 1 */ @js.native
+  object networkError extends TopLevel[networkError with Double]
+  
+  /* 2 */ @js.native
+  object permissionsError extends TopLevel[permissionsError with Double]
+  
+  /* 3 */ @js.native
+  object serverError extends TopLevel[serverError with Double]
+  
+  /* 6 */ @js.native
+  object serverRejected extends TopLevel[serverRejected with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 4 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
 }
 

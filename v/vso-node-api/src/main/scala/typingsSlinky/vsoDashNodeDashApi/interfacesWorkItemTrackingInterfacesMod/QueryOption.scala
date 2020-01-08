@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object QueryOption extends js.Object {
   @js.native
   sealed trait Followed extends QueryOption
   
-  /* 1 */ val Doing: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryOption.Doing with Double = js.native
-  /* 2 */ val Done: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryOption.Done with Double = js.native
-  /* 3 */ val Followed: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.QueryOption.Followed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[QueryOption with Double] = js.native
+  /* 1 */ @js.native
+  object Doing extends TopLevel[Doing with Double]
+  
+  /* 2 */ @js.native
+  object Done extends TopLevel[Done with Double]
+  
+  /* 3 */ @js.native
+  object Followed extends TopLevel[Followed with Double]
+  
 }
 

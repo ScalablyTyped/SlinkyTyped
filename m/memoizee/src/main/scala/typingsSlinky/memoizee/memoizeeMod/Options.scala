@@ -1,7 +1,7 @@
 package typingsSlinky.memoizee.memoizeeMod
 
-import typingsSlinky.memoizee.memoizeeNumbers.`false`
-import typingsSlinky.memoizee.memoizeeNumbers.`true`
+import typingsSlinky.memoizee.memoizeeBooleans.`false`
+import typingsSlinky.memoizee.memoizeeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

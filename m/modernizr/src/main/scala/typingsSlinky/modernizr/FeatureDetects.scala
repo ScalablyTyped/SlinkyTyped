@@ -1,6 +1,6 @@
 package typingsSlinky.modernizr
 
-import typingsSlinky.modernizr.modernizrNumbers.`false`
+import typingsSlinky.modernizr.modernizrBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialNotchedDashOutline
 
 import typingsSlinky.atMaterialNotchedDashOutline.adapterMod.MDCNotchedOutlineAdapter
-import typingsSlinky.atMaterialNotchedDashOutline.foundationMod.MDCNotchedOutlineFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

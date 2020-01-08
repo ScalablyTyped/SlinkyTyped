@@ -1,14 +1,14 @@
 package typingsSlinky.screeps
 
 import typingsSlinky.screeps.screepsNumbers.`0`
+import typingsSlinky.screeps.screepsNumbers.`1.1`
+import typingsSlinky.screeps.screepsNumbers.`1.2`
+import typingsSlinky.screeps.screepsNumbers.`1.3`
+import typingsSlinky.screeps.screepsNumbers.`1.4`
+import typingsSlinky.screeps.screepsNumbers.`1.5`
 import typingsSlinky.screeps.screepsNumbers.`100`
 import typingsSlinky.screeps.screepsNumbers.`10`
 import typingsSlinky.screeps.screepsNumbers.`14`
-import typingsSlinky.screeps.screepsNumbers.`1DOT1`
-import typingsSlinky.screeps.screepsNumbers.`1DOT2`
-import typingsSlinky.screeps.screepsNumbers.`1DOT3`
-import typingsSlinky.screeps.screepsNumbers.`1DOT4`
-import typingsSlinky.screeps.screepsNumbers.`1DOT5`
 import typingsSlinky.screeps.screepsNumbers.`22`
 import typingsSlinky.screeps.screepsNumbers.`2`
 import typingsSlinky.screeps.screepsNumbers.`3`
@@ -22,7 +22,7 @@ trait Anon_010 extends js.Object {
   var className: operator
   var cooldown: `10`
   var duration: `100`
-  var effect: js.Tuple5[`1DOT1`, `1DOT2`, `1DOT3`, `1DOT4`, `1DOT5`]
+  var effect: js.Tuple5[`1.1`, `1.2`, `1.3`, `1.4`, `1.5`]
   var level: js.Tuple5[`0`, `2`, `7`, `14`, `22`]
   var ops: `10`
   var range: `3`
@@ -34,7 +34,7 @@ object Anon_010 {
     className: operator,
     cooldown: `10`,
     duration: `100`,
-    effect: js.Tuple5[`1DOT1`, `1DOT2`, `1DOT3`, `1DOT4`, `1DOT5`],
+    effect: js.Tuple5[`1.1`, `1.2`, `1.3`, `1.4`, `1.5`],
     level: js.Tuple5[`0`, `2`, `7`, `14`, `22`],
     ops: `10`,
     range: `3`

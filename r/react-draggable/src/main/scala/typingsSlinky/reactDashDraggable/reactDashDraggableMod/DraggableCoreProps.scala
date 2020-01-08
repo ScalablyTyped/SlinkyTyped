@@ -2,7 +2,7 @@ package typingsSlinky.reactDashDraggable.reactDashDraggableMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.reactDashDraggable.reactDashDraggableNumbers.`false`
+import typingsSlinky.reactDashDraggable.reactDashDraggableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

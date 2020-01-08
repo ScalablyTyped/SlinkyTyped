@@ -1,7 +1,5 @@
 package typingsSlinky.internalDashIp
 
-import typingsSlinky.internalDashIp.internalDashIpMod.v4
-import typingsSlinky.internalDashIp.internalDashIpMod.v6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

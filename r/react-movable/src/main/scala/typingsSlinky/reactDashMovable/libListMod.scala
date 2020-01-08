@@ -9,7 +9,6 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashMovable.libListMod.List
 import typingsSlinky.reactDashMovable.libTypesMod.IProps
 import typingsSlinky.reactDashMovable.libTypesMod.TEvent
 import scala.scalajs.js

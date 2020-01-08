@@ -1,7 +1,6 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.dayGridMod.Default
-import typingsSlinky.fullcalendar.fullcalendarNumbers.`false`
+import typingsSlinky.fullcalendar.fullcalendarBooleans.`false`
 import typingsSlinky.fullcalendar.srcTypesJqueryDashHooksMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

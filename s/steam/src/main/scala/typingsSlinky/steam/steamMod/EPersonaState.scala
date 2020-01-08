@@ -1,5 +1,6 @@
 package typingsSlinky.steam.steamMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,10 @@ object EPersonaState extends js.Object {
   @js.native
   sealed trait Online extends EPersonaState
   
-  /* 0 */ val Online: typingsSlinky.steam.steamMod.EPersonaState.Online with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EPersonaState with Double] = js.native
+  /* 0 */ @js.native
+  object Online extends TopLevel[Online with Double]
+  
 }
 

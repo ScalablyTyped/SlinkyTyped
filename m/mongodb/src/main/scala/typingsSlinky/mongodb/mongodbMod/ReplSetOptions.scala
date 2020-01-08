@@ -1,7 +1,6 @@
 package typingsSlinky.mongodb.mongodbMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.tlsMod.PeerCertificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +28,7 @@ trait ReplSetOptions
 object ReplSetOptions {
   @scala.inline
   def apply(
-    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[Error]]) = null,
+    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]) = null,
     ciphers: String = null,
     connectWithNoPrimary: js.UndefOr[Boolean] = js.undefined,
     domainsEnabled: js.UndefOr[Boolean] = js.undefined,

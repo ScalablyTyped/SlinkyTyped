@@ -1,6 +1,5 @@
 package typingsSlinky.yandexDashMaps.yandexDashMapsMod
 
-import typingsSlinky.yandexDashMaps.yandexDashMapsMod.vow.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

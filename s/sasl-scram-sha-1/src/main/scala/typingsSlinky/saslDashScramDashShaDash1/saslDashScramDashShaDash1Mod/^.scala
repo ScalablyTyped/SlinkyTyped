@@ -2,7 +2,7 @@ package typingsSlinky.saslDashScramDashShaDash1.saslDashScramDashShaDash1Mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.saslDashScramDashShaDash1.TypeofClassScramSha1Mechanism
-import typingsSlinky.saslDashScramDashShaDash1.saslDashScramDashShaDash1Numbers.`true`
+import typingsSlinky.saslDashScramDashShaDash1.saslDashScramDashShaDash1Booleans.`true`
 import typingsSlinky.saslDashScramDashShaDash1.saslDashScramDashShaDash1Strings.`SCRAM-SHA-1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.UI.Text.Core
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object CoreTextFormatUpdatingReason extends js.Object {
   @js.native
   sealed trait none extends CoreTextFormatUpdatingReason
   
-  /* 2 */ val compositionConverted: typingsSlinky.winrtDashUwp.Windows.UI.Text.Core.CoreTextFormatUpdatingReason.compositionConverted with Double = js.native
-  /* 4 */ val compositionTargetConverted: typingsSlinky.winrtDashUwp.Windows.UI.Text.Core.CoreTextFormatUpdatingReason.compositionTargetConverted with Double = js.native
-  /* 3 */ val compositionTargetUnconverted: typingsSlinky.winrtDashUwp.Windows.UI.Text.Core.CoreTextFormatUpdatingReason.compositionTargetUnconverted with Double = js.native
-  /* 1 */ val compositionUnconverted: typingsSlinky.winrtDashUwp.Windows.UI.Text.Core.CoreTextFormatUpdatingReason.compositionUnconverted with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.UI.Text.Core.CoreTextFormatUpdatingReason.none with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CoreTextFormatUpdatingReason with Double] = js.native
+  /* 2 */ @js.native
+  object compositionConverted extends TopLevel[compositionConverted with Double]
+  
+  /* 4 */ @js.native
+  object compositionTargetConverted extends TopLevel[compositionTargetConverted with Double]
+  
+  /* 3 */ @js.native
+  object compositionTargetUnconverted extends TopLevel[compositionTargetUnconverted with Double]
+  
+  /* 1 */ @js.native
+  object compositionUnconverted extends TopLevel[compositionUnconverted with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
 }
 

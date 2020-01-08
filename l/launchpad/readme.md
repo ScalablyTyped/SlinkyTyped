@@ -11,8 +11,8 @@ You can launch browsers! From NodeJS! Local ones! Remote ones! Browserstack ones
 | Full name          | launchpad |
 | Keywords           | browsers, launcher, chrome, ie, firefox, opera, phantomjs, browserstack |
 | # releases         | 5 |
-| # dependents       | 8 |
-| # downloads        | 875839 |
+| # dependents       | 9 |
+| # downloads        | 893030 |
 | # stars            | 0 |
 
 ## Links

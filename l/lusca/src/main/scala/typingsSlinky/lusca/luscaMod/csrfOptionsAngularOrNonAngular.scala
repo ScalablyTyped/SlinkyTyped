@@ -2,8 +2,8 @@ package typingsSlinky.lusca.luscaMod
 
 import typingsSlinky.lusca.Anon_Name
 import typingsSlinky.lusca.Anon_Options
-import typingsSlinky.lusca.luscaNumbers.`false`
-import typingsSlinky.lusca.luscaNumbers.`true`
+import typingsSlinky.lusca.luscaBooleans.`false`
+import typingsSlinky.lusca.luscaBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

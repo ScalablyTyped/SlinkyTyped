@@ -1,6 +1,6 @@
 package typingsSlinky.atOracleOraclejet
 
-import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.Empty
+import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings._empty
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.focus
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.hidden
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.image
@@ -20,7 +20,7 @@ trait Anon_ extends js.Object {
   var changeYear: select | none
   var currentMonthPos: Double
   var daysOutsideMonth: hidden | visible | selectable
-  var footerLayout: Empty | today
+  var footerLayout: _empty | today
   var numberOfMonths: Double
   var showOn: focus | image
   var stepBigMonths: Double
@@ -36,7 +36,7 @@ object Anon_ {
     changeYear: select | none,
     currentMonthPos: Double,
     daysOutsideMonth: hidden | visible | selectable,
-    footerLayout: Empty | today,
+    footerLayout: _empty | today,
     numberOfMonths: Double,
     showOn: focus | image,
     stepBigMonths: Double,

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Adc
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object AdcChannelMode extends js.Object {
   @js.native
   sealed trait singleEnded extends AdcChannelMode
   
-  /* 1 */ val differential: typingsSlinky.winrtDashUwp.Windows.Devices.Adc.AdcChannelMode.differential with Double = js.native
-  /* 0 */ val singleEnded: typingsSlinky.winrtDashUwp.Windows.Devices.Adc.AdcChannelMode.singleEnded with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AdcChannelMode with Double] = js.native
+  /* 1 */ @js.native
+  object differential extends TopLevel[differential with Double]
+  
+  /* 0 */ @js.native
+  object singleEnded extends TopLevel[singleEnded with Double]
+  
 }
 

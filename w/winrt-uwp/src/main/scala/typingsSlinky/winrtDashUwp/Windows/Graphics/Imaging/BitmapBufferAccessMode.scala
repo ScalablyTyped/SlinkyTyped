@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object BitmapBufferAccessMode extends js.Object {
   @js.native
   sealed trait write extends BitmapBufferAccessMode
   
-  /* 0 */ val read: typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapBufferAccessMode.read with Double = js.native
-  /* 1 */ val readWrite: typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapBufferAccessMode.readWrite with Double = js.native
-  /* 2 */ val write: typingsSlinky.winrtDashUwp.Windows.Graphics.Imaging.BitmapBufferAccessMode.write with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BitmapBufferAccessMode with Double] = js.native
+  /* 0 */ @js.native
+  object read extends TopLevel[read with Double]
+  
+  /* 1 */ @js.native
+  object readWrite extends TopLevel[readWrite with Double]
+  
+  /* 2 */ @js.native
+  object write extends TopLevel[write with Double]
+  
 }
 

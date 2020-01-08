@@ -1,7 +1,6 @@
 package typingsSlinky.blobDashStream
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.blobDashStream.blobDashStreamMod.IBlobStream
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

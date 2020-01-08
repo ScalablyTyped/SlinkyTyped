@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.PivotClient
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object DefaultView extends js.Object {
   @js.native
   sealed trait Grid extends DefaultView
   
-  /* 0 */ val Chart: typingsSlinky.ejDotWebDotAll.ej.PivotClient.DefaultView.Chart with Double = js.native
-  /* 1 */ val Grid: typingsSlinky.ejDotWebDotAll.ej.PivotClient.DefaultView.Grid with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DefaultView with Double] = js.native
+  /* 0 */ @js.native
+  object Chart extends TopLevel[Chart with Double]
+  
+  /* 1 */ @js.native
+  object Grid extends TopLevel[Grid with Double]
+  
 }
 

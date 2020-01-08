@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object EChatMemberStateChange extends js.Object {
   @js.native
   sealed trait VoiceSpeaking extends EChatMemberStateChange
   
-  /* 0x10 */ val Banned: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.Banned with Double = js.native
-  /* 0x04 */ val Disconnected: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.Disconnected with Double = js.native
-  /* 0x01 */ val Entered: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.Entered with Double = js.native
-  /* 0x08 */ val Kicked: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.Kicked with Double = js.native
-  /* 0x02 */ val Left: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.Left with Double = js.native
-  /* 0x2000 */ val VoiceDoneSpeaking: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.VoiceDoneSpeaking with Double = js.native
-  /* 0x1000 */ val VoiceSpeaking: typingsSlinky.steamDashClient.steamDashClientMod.EChatMemberStateChange.VoiceSpeaking with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EChatMemberStateChange with Double] = js.native
+  /* 0x10 */ @js.native
+  object Banned extends TopLevel[Banned with Double]
+  
+  /* 0x04 */ @js.native
+  object Disconnected extends TopLevel[Disconnected with Double]
+  
+  /* 0x01 */ @js.native
+  object Entered extends TopLevel[Entered with Double]
+  
+  /* 0x08 */ @js.native
+  object Kicked extends TopLevel[Kicked with Double]
+  
+  /* 0x02 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 0x2000 */ @js.native
+  object VoiceDoneSpeaking extends TopLevel[VoiceDoneSpeaking with Double]
+  
+  /* 0x1000 */ @js.native
+  object VoiceSpeaking extends TopLevel[VoiceSpeaking with Double]
+  
 }
 

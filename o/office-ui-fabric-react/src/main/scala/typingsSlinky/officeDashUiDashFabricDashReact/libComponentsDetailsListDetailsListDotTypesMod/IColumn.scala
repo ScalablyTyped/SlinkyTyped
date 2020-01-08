@@ -2,8 +2,11 @@ package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDe
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFunctionOrObject
 import typingsSlinky.atUifabricUtilities.libIRenderFunctionMod.IRenderFunction
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsColumnDotTypesMod.IDetailsColumnProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsColumnDotTypesMod.IDetailsColumnStyleProps
+import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsColumnDotTypesMod.IDetailsColumnStyles
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -188,6 +191,10 @@ trait IColumn extends js.Object {
     * ARIA label for the sort order of this column when sorted descending.
     */
   var sortDescendingAriaLabel: js.UndefOr[String] = js.undefined
+  /**
+    * Style function to be passed in to override the themed or default styles
+    */
+  var styles: js.UndefOr[IStyleFunctionOrObject[IDetailsColumnStyleProps, IDetailsColumnStyles]] = js.undefined
 }
 
 object IColumn {
@@ -228,7 +235,8 @@ object IColumn {
     onRender: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => _ = null,
     onRenderDivider: (/* props */ js.UndefOr[IDetailsColumnProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsColumnProps], Element | Null]]) => Element | Null = null,
     sortAscendingAriaLabel: String = null,
-    sortDescendingAriaLabel: String = null
+    sortDescendingAriaLabel: String = null,
+    styles: IStyleFunctionOrObject[IDetailsColumnStyleProps, IDetailsColumnStyles] = null
   ): IColumn = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], minWidth = minWidth.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
@@ -264,6 +272,7 @@ object IColumn {
     if (onRenderDivider != null) __obj.updateDynamic("onRenderDivider")(js.Any.fromFunction2(onRenderDivider))
     if (sortAscendingAriaLabel != null) __obj.updateDynamic("sortAscendingAriaLabel")(sortAscendingAriaLabel.asInstanceOf[js.Any])
     if (sortDescendingAriaLabel != null) __obj.updateDynamic("sortDescendingAriaLabel")(sortDescendingAriaLabel.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumn]
   }
 }

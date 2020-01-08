@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object ClosedCaptionEdgeEffect extends js.Object {
   @js.native
   sealed trait uniform extends ClosedCaptionEdgeEffect
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.default with Double = js.native
-  /* 3 */ val depressed: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.depressed with Double = js.native
-  /* 5 */ val dropShadow: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.dropShadow with Double = js.native
-  /* 1 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.none with Double = js.native
-  /* 2 */ val raised: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.raised with Double = js.native
-  /* 4 */ val uniform: typingsSlinky.winrtDashUwp.Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect.uniform with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ClosedCaptionEdgeEffect with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 3 */ @js.native
+  object depressed extends TopLevel[depressed with Double]
+  
+  /* 5 */ @js.native
+  object dropShadow extends TopLevel[dropShadow with Double]
+  
+  /* 1 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object raised extends TopLevel[raised with Double]
+  
+  /* 4 */ @js.native
+  object uniform extends TopLevel[uniform with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object IndexKind extends js.Object {
   @js.native
   sealed trait String extends IndexKind
   
-  /* 1 */ val Number: typingsSlinky.typescript.typescriptMod.IndexKind.Number with Double = js.native
-  /* 0 */ val String: typingsSlinky.typescript.typescriptMod.IndexKind.String with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndexKind with Double] = js.native
+  /* 1 */ @js.native
+  object Number extends TopLevel[Number with Double]
+  
+  /* 0 */ @js.native
+  object String extends TopLevel[String with Double]
+  
 }
 

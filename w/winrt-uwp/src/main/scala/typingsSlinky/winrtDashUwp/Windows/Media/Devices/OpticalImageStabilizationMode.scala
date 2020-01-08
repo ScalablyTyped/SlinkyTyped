@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Devices
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object OpticalImageStabilizationMode extends js.Object {
   @js.native
   sealed trait on extends OpticalImageStabilizationMode
   
-  /* 2 */ val auto: typingsSlinky.winrtDashUwp.Windows.Media.Devices.OpticalImageStabilizationMode.auto with Double = js.native
-  /* 0 */ val off: typingsSlinky.winrtDashUwp.Windows.Media.Devices.OpticalImageStabilizationMode.off with Double = js.native
-  /* 1 */ val on: typingsSlinky.winrtDashUwp.Windows.Media.Devices.OpticalImageStabilizationMode.on with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OpticalImageStabilizationMode with Double] = js.native
+  /* 2 */ @js.native
+  object auto extends TopLevel[auto with Double]
+  
+  /* 0 */ @js.native
+  object off extends TopLevel[off with Double]
+  
+  /* 1 */ @js.native
+  object on extends TopLevel[on with Double]
+  
 }
 

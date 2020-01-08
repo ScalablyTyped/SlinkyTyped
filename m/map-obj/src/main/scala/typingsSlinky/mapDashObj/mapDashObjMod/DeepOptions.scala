@@ -1,7 +1,7 @@
 package typingsSlinky.mapDashObj.mapDashObjMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mapDashObj.mapDashObjNumbers.`true`
+import typingsSlinky.mapDashObj.mapDashObjBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

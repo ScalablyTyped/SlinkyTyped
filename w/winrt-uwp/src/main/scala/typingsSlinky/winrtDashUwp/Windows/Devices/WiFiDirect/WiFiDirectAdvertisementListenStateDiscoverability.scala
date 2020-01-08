@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object WiFiDirectAdvertisementListenStateDiscoverability extends js.Object {
   @js.native
   sealed trait normal extends WiFiDirectAdvertisementListenStateDiscoverability
   
-  /* 2 */ val intensive: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability.intensive with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability.none with Double = js.native
-  /* 1 */ val normal: typingsSlinky.winrtDashUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability.normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WiFiDirectAdvertisementListenStateDiscoverability with Double] = js.native
+  /* 2 */ @js.native
+  object intensive extends TopLevel[intensive with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 1 */ @js.native
+  object normal extends TopLevel[normal with Double]
+  
 }
 

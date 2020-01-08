@@ -3,6 +3,7 @@ package typingsSlinky.chromeDashApps.chrome.app
 import typingsSlinky.chromeDashApps.Anon_FULLSCREEN
 import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
 import typingsSlinky.chromeDashApps.chrome.integer
+import typingsSlinky.chromeDashApps.chromeDashAppsStrings.chrome
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.fullscreen
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.maximized
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.minimized
@@ -46,9 +47,7 @@ trait CreateWindowOptions extends ContentBounds {
     * -webkit-app-region: drag can be used to mark regions draggable. no-drag can be used to disable this style on nested elements.
     * @since Use of FrameOptions is new in M36.
     */
-  var frame: js.UndefOr[
-    none_ | typingsSlinky.chromeDashApps.chromeDashAppsStrings.chrome | FrameOptions | FrameOptionsChrome
-  ] = js.undefined
+  var frame: js.UndefOr[none_ | chrome | FrameOptions | FrameOptionsChrome] = js.undefined
   /**
     * If true, the window will be created in a hidden state. Call show() on the window to show it once it has been created. Defaults to false.
     */
@@ -160,7 +159,7 @@ object CreateWindowOptions {
     alwaysOnTop: js.UndefOr[Boolean] = js.undefined,
     bounds: ContentBounds = null,
     focused: js.UndefOr[Boolean] = js.undefined,
-    frame: none_ | typingsSlinky.chromeDashApps.chromeDashAppsStrings.chrome | FrameOptions | FrameOptionsChrome = null,
+    frame: none_ | chrome | FrameOptions | FrameOptionsChrome = null,
     height: Int | Double = null,
     hidden: js.UndefOr[Boolean] = js.undefined,
     icon: String = null,

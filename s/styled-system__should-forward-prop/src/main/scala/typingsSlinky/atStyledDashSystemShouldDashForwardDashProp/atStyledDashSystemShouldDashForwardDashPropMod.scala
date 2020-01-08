@@ -1,6 +1,5 @@
 package typingsSlinky.atStyledDashSystemShouldDashForwardDashProp
 
-import typingsSlinky.atStyledDashSystemShouldDashForwardDashProp.atStyledDashSystemShouldDashForwardDashPropMod.genericShouldForwardProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

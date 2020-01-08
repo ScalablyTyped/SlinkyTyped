@@ -2,8 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.three.srcCoreBufferAttributeMod.BufferAttribute
-import typingsSlinky.three.srcMathMatrix3Mod.Matrix
-import typingsSlinky.three.srcMathMatrix3Mod.Matrix3
 import typingsSlinky.three.srcMathMatrix4Mod.Matrix4
 import typingsSlinky.three.srcMathVector3Mod.Vector3
 import scala.scalajs.js

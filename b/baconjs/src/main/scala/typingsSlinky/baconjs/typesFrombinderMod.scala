@@ -1,10 +1,6 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesEventMod.Event
-import typingsSlinky.baconjs.typesFrombinderMod.Binder
-import typingsSlinky.baconjs.typesFrombinderMod.EventLike
-import typingsSlinky.baconjs.typesFrombinderMod.EventTransformer
-import typingsSlinky.baconjs.typesFrombinderMod.FlexibleSink
 import typingsSlinky.baconjs.typesObservableMod.EventStream
 import typingsSlinky.baconjs.typesReplyMod.Reply
 import typingsSlinky.baconjs.typesTypesMod.Unsub

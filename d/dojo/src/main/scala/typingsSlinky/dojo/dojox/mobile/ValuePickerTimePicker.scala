@@ -2,6 +2,7 @@ package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.dojoStrings.date
 import typingsSlinky.dojo.dojoStrings.hourMinusBtnLabel
 import typingsSlinky.dojo.dojoStrings.hourMinusBtnLabelRef
 import typingsSlinky.dojo.dojoStrings.hourPlusBtnLabel
@@ -99,7 +100,7 @@ class ValuePickerTimePicker () extends ValuePicker {
     */
   var values12: js.Array[_] = js.native
   @JSName("get")
-  def get_date(property: typingsSlinky.dojo.dojoStrings.date): js.Date = js.native
+  def get_date(property: date): js.Date = js.native
   @JSName("get")
   def get_hourMinusBtnLabel(property: hourMinusBtnLabel): String = js.native
   @JSName("get")
@@ -128,7 +129,7 @@ class ValuePickerTimePicker () extends ValuePicker {
     */
   def onBtnClick(): Unit = js.native
   @JSName("set")
-  def set_date(property: typingsSlinky.dojo.dojoStrings.date, value: js.Date): Unit = js.native
+  def set_date(property: date, value: js.Date): Unit = js.native
   @JSName("set")
   def set_hourMinusBtnLabel(property: hourMinusBtnLabel, value: String): Unit = js.native
   @JSName("set")
@@ -153,7 +154,7 @@ class ValuePickerTimePicker () extends ValuePicker {
   def set_values12(property: values12, value: js.Array[_]): Unit = js.native
   @JSName("watch")
   def watch_date(
-    property: typingsSlinky.dojo.dojoStrings.date,
+    property: date,
     callback: js.Function3[
       /* property */ js.UndefOr[String], 
       /* oldValue */ js.UndefOr[js.Date], 

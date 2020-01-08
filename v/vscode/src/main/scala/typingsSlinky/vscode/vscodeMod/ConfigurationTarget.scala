@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,17 @@ object ConfigurationTarget extends js.Object {
   @js.native
   sealed trait WorkspaceFolder extends ConfigurationTarget
   
-  /* 1 */ val Global: typingsSlinky.vscode.vscodeMod.ConfigurationTarget.Global with Double = js.native
-  /* 2 */ val Workspace: typingsSlinky.vscode.vscodeMod.ConfigurationTarget.Workspace with Double = js.native
-  /* 3 */ val WorkspaceFolder: typingsSlinky.vscode.vscodeMod.ConfigurationTarget.WorkspaceFolder with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConfigurationTarget with Double] = js.native
+  /* 1 */ @js.native
+  object Global extends TopLevel[Global with Double]
+  
+  /* 2 */ @js.native
+  object Workspace extends TopLevel[Workspace with Double]
+  
+  /* 3 */ @js.native
+  object WorkspaceFolder
+    extends TopLevel[typingsSlinky.vscode.vscodeMod.ConfigurationTarget.WorkspaceFolder with Double]
+  
 }
 

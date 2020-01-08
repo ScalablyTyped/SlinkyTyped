@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object PosPrinterMapMode extends js.Object {
   @js.native
   sealed trait twips extends PosPrinterMapMode
   
-  /* 0 */ val dots: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterMapMode.dots with Double = js.native
-  /* 2 */ val english: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterMapMode.english with Double = js.native
-  /* 3 */ val metric: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterMapMode.metric with Double = js.native
-  /* 1 */ val twips: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.PosPrinterMapMode.twips with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PosPrinterMapMode with Double] = js.native
+  /* 0 */ @js.native
+  object dots extends TopLevel[dots with Double]
+  
+  /* 2 */ @js.native
+  object english extends TopLevel[english with Double]
+  
+  /* 3 */ @js.native
+  object metric extends TopLevel[metric with Double]
+  
+  /* 1 */ @js.native
+  object twips extends TopLevel[twips with Double]
+  
 }
 

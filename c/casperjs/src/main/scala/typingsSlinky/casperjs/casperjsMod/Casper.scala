@@ -1,8 +1,8 @@
 package typingsSlinky.casperjs.casperjsMod
 
 import typingsSlinky.casperjs.Anon_Url
-import typingsSlinky.casperjs.casperjsNumbers.`false`
-import typingsSlinky.casperjs.casperjsNumbers.`true`
+import typingsSlinky.casperjs.casperjsBooleans.`false`
+import typingsSlinky.casperjs.casperjsBooleans.`true`
 import typingsSlinky.phantomjs.ClipRect
 import typingsSlinky.std.RegExp
 import scala.scalajs.js

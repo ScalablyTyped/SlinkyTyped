@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.ssh2.ssh2Mod.ConnectConfig
 import typingsSlinky.ssh2.ssh2Mod.SFTPWrapper
-import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientNumbers.`false`
-import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientStrings.`-`
+import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientBooleans.`false`
+import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientStrings.`-_`
 import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientStrings.d
 import typingsSlinky.ssh2DashSftpDashClient.ssh2DashSftpDashClientStrings.l
 import typingsSlinky.ssh2DashStreams.ssh2DashStreamsMod.TransferOptions
+import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +26,7 @@ trait sftp extends js.Object {
   def cwd(): js.Promise[String] = js.native
   def delete(remoteFilePath: String): js.Promise[String] = js.native
   def end(): js.Promise[Unit] = js.native
-  def exists(remotePath: String): js.Promise[`false` | d | `-` | l] = js.native
+  def exists(remotePath: String): js.Promise[`false` | d | `-_` | l] = js.native
   def fastGet(remoteFilePath: String, localPath: String): js.Promise[String] = js.native
   def fastGet(remoteFilePath: String, localPath: String, options: TransferOptions): js.Promise[String] = js.native
   def fastPut(localPath: String, remoteFilePath: String): js.Promise[String] = js.native
@@ -36,6 +37,8 @@ trait sftp extends js.Object {
   def get(path: String, dst: ReadableStream): js.Promise[String | ReadableStream | Buffer] = js.native
   def get(path: String, dst: ReadableStream, options: TransferOptions): js.Promise[String | ReadableStream | Buffer] = js.native
   def list(remoteFilePath: String): js.Promise[js.Array[FileInfo]] = js.native
+  def list(remoteFilePath: String, pattern: String): js.Promise[js.Array[FileInfo]] = js.native
+  def list(remoteFilePath: String, pattern: RegExp): js.Promise[js.Array[FileInfo]] = js.native
   def mkdir(remoteFilePath: String): js.Promise[String] = js.native
   def mkdir(remoteFilePath: String, recursive: Boolean): js.Promise[String] = js.native
   def on(event: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Unit = js.native

@@ -10,9 +10,9 @@ A React component that is a base button.
 | ------------------ | :-------------: |
 | Full name          | @atlaskit/button |
 | Keywords           | - |
-| # releases         | 117 |
-| # dependents       | 44 |
-| # downloads        | 3264006 |
+| # releases         | 116 |
+| # dependents       | 58 |
+| # downloads        | 4261229 |
 | # stars            | 0 |
 
 ## Links

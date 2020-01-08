@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object AppointmentStoreAccessType extends js.Object {
   @js.native
   sealed trait appCalendarsReadWrite extends AppointmentStoreAccessType
   
-  /* 1 */ val allCalendarsReadOnly: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreAccessType.allCalendarsReadOnly with Double = js.native
-  /* 2 */ val allCalendarsReadWrite: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreAccessType.allCalendarsReadWrite with Double = js.native
-  /* 0 */ val appCalendarsReadWrite: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentStoreAccessType.appCalendarsReadWrite with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentStoreAccessType with Double] = js.native
+  /* 1 */ @js.native
+  object allCalendarsReadOnly extends TopLevel[allCalendarsReadOnly with Double]
+  
+  /* 2 */ @js.native
+  object allCalendarsReadWrite extends TopLevel[allCalendarsReadWrite with Double]
+  
+  /* 0 */ @js.native
+  object appCalendarsReadWrite extends TopLevel[appCalendarsReadWrite with Double]
+  
 }
 

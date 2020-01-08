@@ -1,5 +1,9 @@
 package typingsSlinky.responseDashTime.responseDashTimeMod
 
+import typingsSlinky.express.expressMod.Request
+import typingsSlinky.express.expressMod.RequestHandler
+import typingsSlinky.express.expressMod.Response
+import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod.ParamsDictionary
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
@@ -19,12 +23,9 @@ object ^ extends js.Object {
     /* callback */ js.Function1[/* err */ js.Any, Unit], 
     _
   ] = js.native
-  def apply(fn: ResponseTimeFunction): js.Function3[
-    /* request */ IncomingMessage, 
-    /* response */ ServerResponse, 
-    /* callback */ js.Function1[/* err */ js.Any, Unit], 
-    _
-  ] = js.native
+  def apply(
+    fn: js.Function3[/* request */ Request[ParamsDictionary], /* response */ Response, /* time */ Double, _]
+  ): RequestHandler[ParamsDictionary] = js.native
   def apply(options: ResponseTimeOptions): js.Function3[
     /* request */ IncomingMessage, 
     /* response */ ServerResponse, 

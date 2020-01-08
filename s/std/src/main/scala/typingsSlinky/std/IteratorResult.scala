@@ -1,7 +1,7 @@
 package typingsSlinky.std
 
-import typingsSlinky.std.stdNumbers.`false`
-import typingsSlinky.std.stdNumbers.`true`
+import typingsSlinky.std.stdBooleans.`false`
+import typingsSlinky.std.stdBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

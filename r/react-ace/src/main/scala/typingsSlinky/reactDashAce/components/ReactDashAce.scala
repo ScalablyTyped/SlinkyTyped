@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDashAce extends SharedApply_IAceEditorProps_561331326[default] {
+object ReactDashAce extends SharedApply_IAceEditorProps_2134960771[default] {
   @JSImport("react-ace", JSImport.Default)
   @js.native
   object componentImport extends js.Object

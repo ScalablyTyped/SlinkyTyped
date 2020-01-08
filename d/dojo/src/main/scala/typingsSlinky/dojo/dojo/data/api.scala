@@ -1,8 +1,5 @@
 package typingsSlinky.dojo.dojo.data
 
-import typingsSlinky.dojo.dojo.data.api.Item
-import typingsSlinky.dojo.dojo.data.api.Read
-import typingsSlinky.dojo.dojo.data.api.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

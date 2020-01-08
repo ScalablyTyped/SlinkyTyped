@@ -2,6 +2,7 @@ package typingsSlinky.textDashBuffer.textDashBufferMod._Global_.TextBuffer.Struc
 
 import typingsSlinky.std.RegExpExecArray
 import typingsSlinky.textDashBuffer.textDashBufferMod._Global_.TextBuffer.Range
+import typingsSlinky.textDashBuffer.textDashBufferMod._Global_.TextBuffer.TextBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ trait ContextualBufferScanResult extends BufferScanResult {
 object ContextualBufferScanResult {
   @scala.inline
   def apply(
-    buffer: typingsSlinky.textDashBuffer.textDashBufferMod._Global_.TextBuffer.TextBuffer,
+    buffer: TextBuffer,
     leadingContextLines: js.Array[String],
     lineText: String,
     `match`: RegExpExecArray,

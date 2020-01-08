@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`batch/v1`
-import typingsSlinky.atPulumiKubernetes.batchV1JobMod.Job
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.batchSlashv1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.batch.v1.JobSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.batch.v1.JobStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta
@@ -39,7 +38,7 @@ object batchV1JobMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`batch/v1`] = js.native
+    val apiVersion: Output[batchSlashv1] = js.native
     /**
       * Kind is a string value representing the REST resource this object represents. Servers may
       * infer this from the endpoint the client submits requests to. Cannot be updated. In

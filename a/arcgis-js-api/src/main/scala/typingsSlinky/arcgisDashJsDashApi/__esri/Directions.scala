@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,7 +78,7 @@ trait Directions
     *
     *
     */
-  def getDirections(): IPromise[RouteResult] = js.native
+  def getDirections(): js.Promise[RouteResult] = js.native
   /**
     * Zoom so that the full route is displayed within the current map extent.
     *

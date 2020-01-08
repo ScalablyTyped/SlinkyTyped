@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BPMNSequenceFlows extends js.Object {
   @js.native
   sealed trait Normal extends BPMNSequenceFlows
   
-  /* 1 */ val Conditional: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSequenceFlows.Conditional with Double = js.native
-  /* 2 */ val Default: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSequenceFlows.Default with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.BPMNSequenceFlows.Normal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BPMNSequenceFlows with Double] = js.native
+  /* 1 */ @js.native
+  object Conditional extends TopLevel[Conditional with Double]
+  
+  /* 2 */ @js.native
+  object Default extends TopLevel[Default with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.dialogflowStrings.content
 import typingsSlinky.dialogflow.dialogflowStrings.contentUri
 import typingsSlinky.dialogflow.dialogflowStrings.rawContent
@@ -135,11 +136,17 @@ object Document extends js.Object {
     @js.native
     sealed trait KNOWLEDGE_TYPE_UNSPECIFIED extends KnowledgeType
     
-    /* 2 */ val EXTRACTIVE_QA: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.EXTRACTIVE_QA with Double = js.native
-    /* 1 */ val FAQ: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.FAQ with Double = js.native
-    /* 0 */ val KNOWLEDGE_TYPE_UNSPECIFIED: typingsSlinky.dialogflow.protosProtosMod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.KNOWLEDGE_TYPE_UNSPECIFIED with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[KnowledgeType with Double] = js.native
+    /* 2 */ @js.native
+    object EXTRACTIVE_QA extends TopLevel[EXTRACTIVE_QA with Double]
+    
+    /* 1 */ @js.native
+    object FAQ extends TopLevel[FAQ with Double]
+    
+    /* 0 */ @js.native
+    object KNOWLEDGE_TYPE_UNSPECIFIED extends TopLevel[KNOWLEDGE_TYPE_UNSPECIFIED with Double]
+    
   }
   
 }

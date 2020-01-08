@@ -1,6 +1,5 @@
 package typingsSlinky.youtubeDashPlayer
 
-import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

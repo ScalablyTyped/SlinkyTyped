@@ -1,6 +1,6 @@
 package typingsSlinky.atFrctlFractal.atFrctlFractalMod.fractal.api.files
 
-import typingsSlinky.atFrctlFractal.atFrctlFractalNumbers.`true`
+import typingsSlinky.atFrctlFractal.atFrctlFractalBooleans.`true`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js

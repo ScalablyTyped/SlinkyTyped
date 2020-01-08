@@ -1,6 +1,5 @@
 package typingsSlinky.grammarkdown
 
-import typingsSlinky.grammarkdown.distBinderMod.BindingTable
 import typingsSlinky.grammarkdown.distNodesMod.Node
 import typingsSlinky.grammarkdown.distNodesMod.Parameter
 import typingsSlinky.grammarkdown.distNodesMod.Production

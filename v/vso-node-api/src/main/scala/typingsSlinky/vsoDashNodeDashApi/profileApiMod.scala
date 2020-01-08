@@ -11,7 +11,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.Profile
 import typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.ProfileAttribute
 import typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.ProfileAttributeBase
 import typingsSlinky.vsoDashNodeDashApi.interfacesProfileInterfacesMod.ProfileRegions
-import typingsSlinky.vsoDashNodeDashApi.profileApiMod.IProfileApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Tile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object CaptionPosition extends js.Object {
   @js.native
   sealed trait Outer extends CaptionPosition
   
-  /* 1 */ val Innerbottom: typingsSlinky.ejDotWebDotAll.ej.Tile.CaptionPosition.Innerbottom with Double = js.native
-  /* 0 */ val Innertop: typingsSlinky.ejDotWebDotAll.ej.Tile.CaptionPosition.Innertop with Double = js.native
-  /* 2 */ val Outer: typingsSlinky.ejDotWebDotAll.ej.Tile.CaptionPosition.Outer with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CaptionPosition with Double] = js.native
+  /* 1 */ @js.native
+  object Innerbottom extends TopLevel[Innerbottom with Double]
+  
+  /* 0 */ @js.native
+  object Innertop extends TopLevel[Innertop with Double]
+  
+  /* 2 */ @js.native
+  object Outer extends TopLevel[Outer with Double]
+  
 }
 

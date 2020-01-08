@@ -33,6 +33,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -62,6 +63,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.react.Anon_Html
 import typingsSlinky.react.reactMod.AnimationEventHandler
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.ClipboardEventHandler
 import typingsSlinky.react.reactMod.CompositionEventHandler
@@ -143,7 +145,7 @@ trait CardProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
-  var contentEditable: js.UndefOr[Boolean] = js.undefined
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
   var cover: js.UndefOr[TagMod[Any]] = js.undefined
   var dangerouslySetInnerHTML: js.UndefOr[Anon_Html] = js.undefined
@@ -152,7 +154,7 @@ trait CardProps extends js.Object {
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
   var dir: js.UndefOr[String] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
+  var draggable: js.UndefOr[Booleanish] = js.undefined
   var extra: js.UndefOr[TagMod[Any]] = js.undefined
   var headStyle: js.UndefOr[CSSProperties] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
@@ -260,7 +262,7 @@ trait CardProps extends js.Object {
   var security: js.UndefOr[String] = js.undefined
   var size: js.UndefOr[CardSize] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
-  var spellCheck: js.UndefOr[Boolean] = js.undefined
+  var spellCheck: js.UndefOr[Booleanish] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
@@ -338,7 +340,7 @@ object CardProps {
     children: TagMod[Any] = null,
     className: String = null,
     color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     cover: TagMod[Any] = null,
     dangerouslySetInnerHTML: Anon_Html = null,
@@ -530,7 +532,7 @@ object CardProps {
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cover != null) __obj.updateDynamic("cover")(cover.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])

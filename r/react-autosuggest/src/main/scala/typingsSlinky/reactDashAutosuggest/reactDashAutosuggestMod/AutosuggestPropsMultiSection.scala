@@ -2,7 +2,7 @@ package typingsSlinky.reactDashAutosuggest.reactDashAutosuggestMod
 
 import slinky.core.TagMod
 import typingsSlinky.react.reactMod.FormEvent
-import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestNumbers.`true`
+import typingsSlinky.reactDashAutosuggest.reactDashAutosuggestBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

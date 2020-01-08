@@ -10,7 +10,6 @@ import typingsSlinky.atUirouterCore.libStateStateBuilderMod.BuilderFunction
 import typingsSlinky.atUirouterCore.libStateStateMatcherMod.StateMatcher
 import typingsSlinky.atUirouterCore.libStateStateObjectMod.StateObject
 import typingsSlinky.atUirouterCore.libStateStateQueueManagerMod.StateQueueManager
-import typingsSlinky.atUirouterCore.libStateStateRegistryMod.StateRegistryListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

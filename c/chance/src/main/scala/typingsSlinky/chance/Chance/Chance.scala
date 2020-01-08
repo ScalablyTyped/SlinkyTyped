@@ -243,10 +243,10 @@ trait Chance extends Seeded {
   def provinces(): js.Array[Name] = js.native
   def radio(): String = js.native
   def radio(opts: Options): String = js.native
-  def rpg(dice: String): js.Array[Double] = js.native
+  def rpg(dice: String): js.Array[Double] | Double = js.native
   def rpg(dice: String, opts: Options): js.Array[Double] | Double = js.native
   @JSName("rpg")
-  def rpg_Union(dice: String): js.Array[Double] | Double = js.native
+  def rpg_Array(dice: String): js.Array[Double] = js.native
   def second(): Double = js.native
   def sentence(): String = js.native
   def sentence(
@@ -308,7 +308,7 @@ trait Chance extends Seeded {
   def tv(opts: Options): String = js.native
   def twitter(): String = js.native
   def unique[T](generator: js.Function0[T], count: Double): js.Array[T] = js.native
-  def unique[T, O /* <: Options */](generator: js.Function1[/* options */ O, T], count: Double, options: O): js.Array[T] = js.native
+  def unique[T, O /* <: UniqueOptions[T] */](generator: js.Function1[/* options */ O, T], count: Double, options: O): js.Array[T] = js.native
   def url(): String = js.native
   def url(
     opts: AtLeastOneKey[

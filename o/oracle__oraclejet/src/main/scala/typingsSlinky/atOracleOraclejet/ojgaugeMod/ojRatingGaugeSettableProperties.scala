@@ -2,8 +2,8 @@ package typingsSlinky.atOracleOraclejet.ojgaugeMod
 
 import typingsSlinky.atOracleOraclejet.Anon_BorderColorCircle
 import typingsSlinky.atOracleOraclejet.Anon_ComponentNameLabelAndValue
-import typingsSlinky.atOracleOraclejet.Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965
-import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`0DOT5`
+import typingsSlinky.atOracleOraclejet.Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666
+import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`0.5`
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetNumbers.`1`
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.auto
 import typingsSlinky.atOracleOraclejet.atOracleOraclejetStrings.horizontal
@@ -27,9 +27,9 @@ trait ojRatingGaugeSettableProperties extends dvtBaseGaugeSettableProperties {
   var preserveAspectRatio: none | meet
   var readonly: Boolean
   var selectedState: Anon_BorderColorCircle
-  var step: `0DOT5` | `1`
+  var step: `0.5` | `1`
   var thresholds: js.Array[Threshold]
-  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965
+  var tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666
   val transientValue: Double | Null
   var unselectedState: Anon_BorderColorCircle
   var value: Double | Null
@@ -48,9 +48,9 @@ object ojRatingGaugeSettableProperties {
     preserveAspectRatio: none | meet,
     readonly: Boolean,
     selectedState: Anon_BorderColorCircle,
-    step: `0DOT5` | `1`,
+    step: `0.5` | `1`,
     thresholds: js.Array[Threshold],
-    tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_656598965,
+    tooltip: Anon_ContextRendererAnonInsertAnonPreventDefaultTooltipContext_1916286666,
     trackResize: on | off,
     translations: Anon_ComponentNameLabelAndValue,
     unselectedState: Anon_BorderColorCircle,

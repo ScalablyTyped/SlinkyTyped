@@ -1,7 +1,6 @@
 package typingsSlinky.nodeDashJsonDashDb
 
 import typingsSlinky.nodeDashJsonDashDb.distLibJsonDBConfigMod.Config
-import typingsSlinky.nodeDashJsonDashDb.nodeDashJsonDashDbMod.FindCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

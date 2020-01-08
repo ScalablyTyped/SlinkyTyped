@@ -1,11 +1,11 @@
 package typingsSlinky.atFirebaseStorage
 
 import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
+import typingsSlinky.atFirebaseAuthDashInteropDashTypes.atFirebaseAuthDashInteropDashTypesMod.FirebaseAuthInternalName
+import typingsSlinky.atFirebaseComponent.atFirebaseComponentMod.Provider
 import typingsSlinky.atFirebaseStorage.distSrcImplementationAuthwrapperMod.AuthWrapper
 import typingsSlinky.atFirebaseStorage.distSrcImplementationXhriopoolMod.XhrIoPool
 import typingsSlinky.atFirebaseStorage.distSrcReferenceMod.Reference
-import typingsSlinky.atFirebaseStorage.distSrcServiceMod.Service
-import typingsSlinky.atFirebaseStorage.distSrcServiceMod.ServiceInternals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
 object distSrcServiceMod extends js.Object {
   @js.native
   class Service protected () extends js.Object {
-    def this(app: FirebaseApp, pool: XhrIoPool) = this()
-    def this(app: FirebaseApp, pool: XhrIoPool, url: String) = this()
+    def this(app: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName], pool: XhrIoPool) = this()
+    def this(app: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName], pool: XhrIoPool, url: String) = this()
     var app_ : js.Any = js.native
     var authWrapper_ : AuthWrapper = js.native
     var bucket_ : js.Any = js.native

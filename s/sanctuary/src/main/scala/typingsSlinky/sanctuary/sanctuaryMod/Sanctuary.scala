@@ -12,7 +12,6 @@ import typingsSlinky.sanctuary.Fn_R
 import typingsSlinky.sanctuary.Fn_X
 import typingsSlinky.sanctuary.Fn_XY
 import typingsSlinky.sanctuary.Fn_Xs
-import typingsSlinky.sanctuary.sanctuaryMod.Sanctuary.Static
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

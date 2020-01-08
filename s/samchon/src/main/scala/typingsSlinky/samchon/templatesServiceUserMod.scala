@@ -70,6 +70,8 @@ object templatesServiceUserMod extends js.Object {
       *
       * @return Iterator to the first element.
       */
+    /* CompleteClass */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def begin(): typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
         Entry[Double, Client], 
@@ -126,12 +128,15 @@ object templatesServiceUserMod extends js.Object {
       * Test whether container is empty.
       */
     /* InferMemberOverrides */
+    /* InferMemberOverrides */
     override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
       */
+    /* CompleteClass */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
         Entry[Double, Client], 
@@ -177,6 +182,8 @@ object templatesServiceUserMod extends js.Object {
       * @param items Items to insert.
       * @return Number of elements in the container after insertion.
       */
+    /* CompleteClass */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def push(items: (IPair[Double, Client])*): Double = js.native
     /**
@@ -184,6 +191,8 @@ object templatesServiceUserMod extends js.Object {
       *
       * @return Reverse iterator to the first.
       */
+    /* CompleteClass */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[Double, Client] = js.native
     /* InferMemberOverrides */
@@ -201,6 +210,8 @@ object templatesServiceUserMod extends js.Object {
       *
       * @return Reverse iterator to the end.
       */
+    /* CompleteClass */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[Double, Client] = js.native
     /**

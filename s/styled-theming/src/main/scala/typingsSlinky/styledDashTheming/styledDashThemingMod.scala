@@ -4,13 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.styledDashComponents.styledDashComponentsMod.FlattenInterpolation
 import typingsSlinky.styledDashComponents.styledDashComponentsMod.ThemeProps
 import typingsSlinky.styledDashComponents.styledDashComponentsMod.ThemedStyledProps
-import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeMap
-import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeSet
-import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValue
-import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValueFn
-import typingsSlinky.styledDashTheming.styledDashThemingMod.ThemeValueResult
-import typingsSlinky.styledDashTheming.styledDashThemingMod.VariantMap
-import typingsSlinky.styledDashTheming.styledDashThemingMod.VariantSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

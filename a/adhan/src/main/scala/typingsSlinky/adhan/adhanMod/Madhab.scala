@@ -1,5 +1,6 @@
 package typingsSlinky.adhan.adhanMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Madhab extends js.Object {
   @js.native
   sealed trait Shafi extends Madhab
   
-  /* 0 */ val Hanafi: typingsSlinky.adhan.adhanMod.Madhab.Hanafi with Double = js.native
-  /* 1 */ val Shafi: typingsSlinky.adhan.adhanMod.Madhab.Shafi with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Madhab with Double] = js.native
+  /* 0 */ @js.native
+  object Hanafi extends TopLevel[Hanafi with Double]
+  
+  /* 1 */ @js.native
+  object Shafi extends TopLevel[Shafi with Double]
+  
 }
 

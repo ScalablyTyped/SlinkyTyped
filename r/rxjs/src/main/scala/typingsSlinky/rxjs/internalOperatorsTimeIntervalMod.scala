@@ -1,6 +1,5 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.rxjs.internalOperatorsTimeIntervalMod.TimeInterval
 import typingsSlinky.rxjs.internalTypesMod.OperatorFunction
 import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
 import scala.scalajs.js

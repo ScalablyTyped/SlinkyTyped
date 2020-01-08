@@ -1,7 +1,7 @@
 
 # Scala.js typings for javascript-stringify
 
-Typings are for version 2.0.0
+Typings are for version 2.0.1
 
 ## Library description:
 Stringify is to `eval` as `JSON.stringify` is to `JSON.parse`
@@ -10,9 +10,9 @@ Stringify is to `eval` as `JSON.stringify` is to `JSON.parse`
 | ------------------ | :-------------: |
 | Full name          | javascript-stringify |
 | Keywords           | stringify, javascript, object, eval, string, code |
-| # releases         | 2 |
-| # dependents       | 95 |
-| # downloads        | 9448976 |
+| # releases         | 3 |
+| # dependents       | 131 |
+| # downloads        | 21936607 |
 | # stars            | 1 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -178,33 +179,85 @@ object CategoryColor extends js.Object {
   @js.native
   sealed trait Preset9 extends CategoryColor
   
-  /* 0 */ val None: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.None with Double = js.native
-  /* 1 */ val Preset0: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset0 with Double = js.native
-  /* 2 */ val Preset1: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset1 with Double = js.native
-  /* 11 */ val Preset10: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset10 with Double = js.native
-  /* 12 */ val Preset11: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset11 with Double = js.native
-  /* 13 */ val Preset12: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset12 with Double = js.native
-  /* 14 */ val Preset13: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset13 with Double = js.native
-  /* 15 */ val Preset14: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset14 with Double = js.native
-  /* 16 */ val Preset15: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset15 with Double = js.native
-  /* 17 */ val Preset16: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset16 with Double = js.native
-  /* 18 */ val Preset17: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset17 with Double = js.native
-  /* 19 */ val Preset18: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset18 with Double = js.native
-  /* 20 */ val Preset19: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset19 with Double = js.native
-  /* 3 */ val Preset2: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset2 with Double = js.native
-  /* 21 */ val Preset20: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset20 with Double = js.native
-  /* 22 */ val Preset21: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset21 with Double = js.native
-  /* 23 */ val Preset22: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset22 with Double = js.native
-  /* 24 */ val Preset23: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset23 with Double = js.native
-  /* 25 */ val Preset24: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset24 with Double = js.native
-  /* 4 */ val Preset3: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset3 with Double = js.native
-  /* 5 */ val Preset4: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset4 with Double = js.native
-  /* 6 */ val Preset5: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset5 with Double = js.native
-  /* 7 */ val Preset6: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset6 with Double = js.native
-  /* 8 */ val Preset7: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset7 with Double = js.native
-  /* 9 */ val Preset8: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset8 with Double = js.native
-  /* 10 */ val Preset9: typingsSlinky.officeDashJsDashPreview.Office.MailboxEnums.CategoryColor.Preset9 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CategoryColor with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Preset0 extends TopLevel[Preset0 with Double]
+  
+  /* 2 */ @js.native
+  object Preset1 extends TopLevel[Preset1 with Double]
+  
+  /* 11 */ @js.native
+  object Preset10 extends TopLevel[Preset10 with Double]
+  
+  /* 12 */ @js.native
+  object Preset11 extends TopLevel[Preset11 with Double]
+  
+  /* 13 */ @js.native
+  object Preset12 extends TopLevel[Preset12 with Double]
+  
+  /* 14 */ @js.native
+  object Preset13 extends TopLevel[Preset13 with Double]
+  
+  /* 15 */ @js.native
+  object Preset14 extends TopLevel[Preset14 with Double]
+  
+  /* 16 */ @js.native
+  object Preset15 extends TopLevel[Preset15 with Double]
+  
+  /* 17 */ @js.native
+  object Preset16 extends TopLevel[Preset16 with Double]
+  
+  /* 18 */ @js.native
+  object Preset17 extends TopLevel[Preset17 with Double]
+  
+  /* 19 */ @js.native
+  object Preset18 extends TopLevel[Preset18 with Double]
+  
+  /* 20 */ @js.native
+  object Preset19 extends TopLevel[Preset19 with Double]
+  
+  /* 3 */ @js.native
+  object Preset2 extends TopLevel[Preset2 with Double]
+  
+  /* 21 */ @js.native
+  object Preset20 extends TopLevel[Preset20 with Double]
+  
+  /* 22 */ @js.native
+  object Preset21 extends TopLevel[Preset21 with Double]
+  
+  /* 23 */ @js.native
+  object Preset22 extends TopLevel[Preset22 with Double]
+  
+  /* 24 */ @js.native
+  object Preset23 extends TopLevel[Preset23 with Double]
+  
+  /* 25 */ @js.native
+  object Preset24 extends TopLevel[Preset24 with Double]
+  
+  /* 4 */ @js.native
+  object Preset3 extends TopLevel[Preset3 with Double]
+  
+  /* 5 */ @js.native
+  object Preset4 extends TopLevel[Preset4 with Double]
+  
+  /* 6 */ @js.native
+  object Preset5 extends TopLevel[Preset5 with Double]
+  
+  /* 7 */ @js.native
+  object Preset6 extends TopLevel[Preset6 with Double]
+  
+  /* 8 */ @js.native
+  object Preset7 extends TopLevel[Preset7 with Double]
+  
+  /* 9 */ @js.native
+  object Preset8 extends TopLevel[Preset8 with Double]
+  
+  /* 10 */ @js.native
+  object Preset9 extends TopLevel[Preset9 with Double]
+  
 }
 

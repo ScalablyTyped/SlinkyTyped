@@ -2,8 +2,6 @@ package typingsSlinky.ol
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ol.eventsMod.EventsKey
-import typingsSlinky.ol.objectMod.BaseObject
-import typingsSlinky.ol.objectMod.ObjectEvent
 import typingsSlinky.ol.olStrings.propertychange
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,8 +1,6 @@
 package typingsSlinky.graphqlDashResolveDashBatch
 
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLResolveInfo
-import typingsSlinky.graphqlDashResolveDashBatch.graphqlDashResolveDashBatchMod.BatchResolveFunction
-import typingsSlinky.graphqlDashResolveDashBatch.graphqlDashResolveDashBatchMod.ResolverFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

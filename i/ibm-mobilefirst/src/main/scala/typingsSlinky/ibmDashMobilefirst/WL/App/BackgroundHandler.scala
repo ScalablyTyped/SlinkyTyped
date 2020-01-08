@@ -1,6 +1,5 @@
 package typingsSlinky.ibmDashMobilefirst.WL.App
 
-import typingsSlinky.ibmDashMobilefirst.WL.App.BackgroundHandler.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

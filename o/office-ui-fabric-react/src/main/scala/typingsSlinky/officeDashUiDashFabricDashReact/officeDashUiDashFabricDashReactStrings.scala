@@ -12,10 +12,7 @@ import scala.scalajs.js.annotation._
 
 object officeDashUiDashFabricDashReactStrings {
   @js.native
-  sealed trait `, ` extends js.Object
-  
-  @js.native
-  sealed trait `-` extends js.Object
+  sealed trait `-_` extends js.Object
   
   @js.native
   sealed trait `100px` extends js.Object
@@ -63,19 +60,19 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait `8px` extends js.Object
   
   @js.native
-  sealed trait `@media screen and (-ms-high-contrast: active)` extends js.Object
+  sealed trait `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis` extends js.Object
   
   @js.native
-  sealed trait `@media screen and (-ms-high-contrast: black-on-white)` extends js.Object
+  sealed trait `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis` extends js.Object
   
   @js.native
-  sealed trait `@media screen and (-ms-high-contrast: white-on-black)` extends js.Object
+  sealed trait `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis` extends js.Object
+  
+  @js.native
+  sealed trait `Comma ` extends js.Object
   
   @js.native
   sealed trait Components extends PageKind
-  
-  @js.native
-  sealed trait Empty extends js.Object
   
   @js.native
   sealed trait IBaseCardProps extends js.Object
@@ -87,7 +84,10 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait References extends PageKind
   
   @js.native
-  sealed trait Underscore extends js.Object
+  sealed trait _empty extends js.Object
+  
+  @js.native
+  sealed trait _underscore extends js.Object
   
   @js.native
   sealed trait a extends js.Object
@@ -521,7 +521,7 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait hover_a1e11561 extends js.Object
   
   @js.native
-  sealed trait iconContainer_c8ddd097 extends js.Object
+  sealed trait iconContainer_9cea25a6 extends js.Object
   
   @js.native
   sealed trait incrementButtonIcon extends js.Object
@@ -680,10 +680,10 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait loadingText extends js.Object
   
   @js.native
-  sealed trait logoFillIcon_c8ddd097 extends js.Object
+  sealed trait logoFillIcon_9cea25a6 extends js.Object
   
   @js.native
-  sealed trait logoIcon_c8ddd097 extends js.Object
+  sealed trait logoIcon_9cea25a6 extends js.Object
   
   @js.native
   sealed trait ltr extends js.Object
@@ -1058,9 +1058,6 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait rightDate_442ea326 extends js.Object
   
   @js.native
-  sealed trait role extends js.Object
-  
-  @js.native
   sealed trait rootIsChecked_8fa98695 extends js.Object
   
   @js.native
@@ -1107,6 +1104,9 @@ object officeDashUiDashFabricDashReactStrings {
   
   @js.native
   sealed trait shouldSelectFirstItem extends js.Object
+  
+  @js.native
+  sealed trait showForceResolve extends js.Object
   
   @js.native
   sealed trait showRemoveButtons extends js.Object
@@ -1369,9 +1369,7 @@ object officeDashUiDashFabricDashReactStrings {
   sealed trait yellowLight extends js.Object
   
   @scala.inline
-  def `, `: `, ` = ", ".asInstanceOf[`, `]
-  @scala.inline
-  def `-`: `-` = "-".asInstanceOf[`-`]
+  def `-_`: `-_` = "-".asInstanceOf[`-_`]
   @scala.inline
   def `100px`: `100px` = "100px".asInstanceOf[`100px`]
   @scala.inline
@@ -1403,15 +1401,15 @@ object officeDashUiDashFabricDashReactStrings {
   @scala.inline
   def `8px`: `8px` = "8px".asInstanceOf[`8px`]
   @scala.inline
-  def `@media screen and (-ms-high-contrast: active)`: `@media screen and (-ms-high-contrast: active)` = "@media screen and (-ms-high-contrast: active)".asInstanceOf[`@media screen and (-ms-high-contrast: active)`]
+  def `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis`: `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis` = "@media screen and (-ms-high-contrast: active)".asInstanceOf[`@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis`]
   @scala.inline
-  def `@media screen and (-ms-high-contrast: black-on-white)`: `@media screen and (-ms-high-contrast: black-on-white)` = "@media screen and (-ms-high-contrast: black-on-white)".asInstanceOf[`@media screen and (-ms-high-contrast: black-on-white)`]
+  def `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis`: `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis` = "@media screen and (-ms-high-contrast: black-on-white)".asInstanceOf[`@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis`]
   @scala.inline
-  def `@media screen and (-ms-high-contrast: white-on-black)`: `@media screen and (-ms-high-contrast: white-on-black)` = "@media screen and (-ms-high-contrast: white-on-black)".asInstanceOf[`@media screen and (-ms-high-contrast: white-on-black)`]
+  def `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis`: `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis` = "@media screen and (-ms-high-contrast: white-on-black)".asInstanceOf[`@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis`]
+  @scala.inline
+  def `Comma `: `Comma ` = ", ".asInstanceOf[`Comma `]
   @scala.inline
   def Components: Components = "Components".asInstanceOf[Components]
-  @scala.inline
-  def Empty: Empty = "".asInstanceOf[Empty]
   @scala.inline
   def IBaseCardProps: IBaseCardProps = "IBaseCardProps".asInstanceOf[IBaseCardProps]
   @scala.inline
@@ -1419,7 +1417,9 @@ object officeDashUiDashFabricDashReactStrings {
   @scala.inline
   def References: References = "References".asInstanceOf[References]
   @scala.inline
-  def Underscore: Underscore = "_".asInstanceOf[Underscore]
+  def _empty: _empty = "".asInstanceOf[_empty]
+  @scala.inline
+  def _underscore: _underscore = "_".asInstanceOf[_underscore]
   @scala.inline
   def a: a = "a".asInstanceOf[a]
   @scala.inline
@@ -1705,7 +1705,7 @@ object officeDashUiDashFabricDashReactStrings {
   @scala.inline
   def hover_a1e11561: hover_a1e11561 = "hover_a1e11561".asInstanceOf[hover_a1e11561]
   @scala.inline
-  def iconContainer_c8ddd097: iconContainer_c8ddd097 = "iconContainer_c8ddd097".asInstanceOf[iconContainer_c8ddd097]
+  def iconContainer_9cea25a6: iconContainer_9cea25a6 = "iconContainer_9cea25a6".asInstanceOf[iconContainer_9cea25a6]
   @scala.inline
   def incrementButtonIcon: incrementButtonIcon = "incrementButtonIcon".asInstanceOf[incrementButtonIcon]
   @scala.inline
@@ -1811,9 +1811,9 @@ object officeDashUiDashFabricDashReactStrings {
   @scala.inline
   def loadingText: loadingText = "loadingText".asInstanceOf[loadingText]
   @scala.inline
-  def logoFillIcon_c8ddd097: logoFillIcon_c8ddd097 = "logoFillIcon_c8ddd097".asInstanceOf[logoFillIcon_c8ddd097]
+  def logoFillIcon_9cea25a6: logoFillIcon_9cea25a6 = "logoFillIcon_9cea25a6".asInstanceOf[logoFillIcon_9cea25a6]
   @scala.inline
-  def logoIcon_c8ddd097: logoIcon_c8ddd097 = "logoIcon_c8ddd097".asInstanceOf[logoIcon_c8ddd097]
+  def logoIcon_9cea25a6: logoIcon_9cea25a6 = "logoIcon_9cea25a6".asInstanceOf[logoIcon_9cea25a6]
   @scala.inline
   def ltr: ltr = "ltr".asInstanceOf[ltr]
   @scala.inline
@@ -2063,8 +2063,6 @@ object officeDashUiDashFabricDashReactStrings {
   @scala.inline
   def rightDate_442ea326: rightDate_442ea326 = "rightDate_442ea326".asInstanceOf[rightDate_442ea326]
   @scala.inline
-  def role: role = "role".asInstanceOf[role]
-  @scala.inline
   def rootIsChecked_8fa98695: rootIsChecked_8fa98695 = "rootIsChecked_8fa98695".asInstanceOf[rootIsChecked_8fa98695]
   @scala.inline
   def rootVertical_c0c0a405: rootVertical_c0c0a405 = "rootVertical_c0c0a405".asInstanceOf[rootVertical_c0c0a405]
@@ -2096,6 +2094,8 @@ object officeDashUiDashFabricDashReactStrings {
   def selected: selected = "selected".asInstanceOf[selected]
   @scala.inline
   def shouldSelectFirstItem: shouldSelectFirstItem = "shouldSelectFirstItem".asInstanceOf[shouldSelectFirstItem]
+  @scala.inline
+  def showForceResolve: showForceResolve = "showForceResolve".asInstanceOf[showForceResolve]
   @scala.inline
   def showRemoveButtons: showRemoveButtons = "showRemoveButtons".asInstanceOf[showRemoveButtons]
   @scala.inline

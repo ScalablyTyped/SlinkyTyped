@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -187,66 +188,188 @@ object SymbolFlags extends js.Object {
   @js.native
   sealed trait Variable extends SymbolFlags
   
-  /* 98304 */ val Accessor: typingsSlinky.typescript.typescriptMod.SymbolFlags.Accessor with Double = js.native
-  /* 2097152 */ val Alias: typingsSlinky.typescript.typescriptMod.SymbolFlags.Alias with Double = js.native
-  /* 2097152 */ val AliasExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.AliasExcludes with Double = js.native
-  /* 67108864 */ val Assignment: typingsSlinky.typescript.typescriptMod.SymbolFlags.Assignment with Double = js.native
-  /* 418 */ val BlockScoped: typingsSlinky.typescript.typescriptMod.SymbolFlags.BlockScoped with Double = js.native
-  /* 2 */ val BlockScopedVariable: typingsSlinky.typescript.typescriptMod.SymbolFlags.BlockScopedVariable with Double = js.native
-  /* 111551 */ val BlockScopedVariableExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.BlockScopedVariableExcludes with Double = js.native
-  /* 32 */ val Class: typingsSlinky.typescript.typescriptMod.SymbolFlags.Class with Double = js.native
-  /* 899503 */ val ClassExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.ClassExcludes with Double = js.native
-  /* 106500 */ val ClassMember: typingsSlinky.typescript.typescriptMod.SymbolFlags.ClassMember with Double = js.native
-  /* 128 */ val ConstEnum: typingsSlinky.typescript.typescriptMod.SymbolFlags.ConstEnum with Double = js.native
-  /* 899967 */ val ConstEnumExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.ConstEnumExcludes with Double = js.native
-  /* 16384 */ val Constructor: typingsSlinky.typescript.typescriptMod.SymbolFlags.Constructor with Double = js.native
-  /* 384 */ val Enum: typingsSlinky.typescript.typescriptMod.SymbolFlags.Enum with Double = js.native
-  /* 8 */ val EnumMember: typingsSlinky.typescript.typescriptMod.SymbolFlags.EnumMember with Double = js.native
-  /* 900095 */ val EnumMemberExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.EnumMemberExcludes with Double = js.native
-  /* 944 */ val ExportHasLocal: typingsSlinky.typescript.typescriptMod.SymbolFlags.ExportHasLocal with Double = js.native
-  /* 8388608 */ val ExportStar: typingsSlinky.typescript.typescriptMod.SymbolFlags.ExportStar with Double = js.native
-  /* 1048576 */ val ExportValue: typingsSlinky.typescript.typescriptMod.SymbolFlags.ExportValue with Double = js.native
-  /* 16 */ val Function: typingsSlinky.typescript.typescriptMod.SymbolFlags.Function with Double = js.native
-  /* 110991 */ val FunctionExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.FunctionExcludes with Double = js.native
-  /* 1 */ val FunctionScopedVariable: typingsSlinky.typescript.typescriptMod.SymbolFlags.FunctionScopedVariable with Double = js.native
-  /* 111550 */ val FunctionScopedVariableExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.FunctionScopedVariableExcludes with Double = js.native
-  /* 32768 */ val GetAccessor: typingsSlinky.typescript.typescriptMod.SymbolFlags.GetAccessor with Double = js.native
-  /* 46015 */ val GetAccessorExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.GetAccessorExcludes with Double = js.native
-  /* 64 */ val Interface: typingsSlinky.typescript.typescriptMod.SymbolFlags.Interface with Double = js.native
-  /* 788872 */ val InterfaceExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.InterfaceExcludes with Double = js.native
-  /* 8192 */ val Method: typingsSlinky.typescript.typescriptMod.SymbolFlags.Method with Double = js.native
-  /* 103359 */ val MethodExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.MethodExcludes with Double = js.native
-  /* 1536 */ val Module: typingsSlinky.typescript.typescriptMod.SymbolFlags.Module with Double = js.native
-  /* 134217728 */ val ModuleExports: typingsSlinky.typescript.typescriptMod.SymbolFlags.ModuleExports with Double = js.native
-  /* 2623475 */ val ModuleMember: typingsSlinky.typescript.typescriptMod.SymbolFlags.ModuleMember with Double = js.native
-  /* 1920 */ val Namespace: typingsSlinky.typescript.typescriptMod.SymbolFlags.Namespace with Double = js.native
-  /* 1024 */ val NamespaceModule: typingsSlinky.typescript.typescriptMod.SymbolFlags.NamespaceModule with Double = js.native
-  /* 0 */ val NamespaceModuleExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.NamespaceModuleExcludes with Double = js.native
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.SymbolFlags.None with Double = js.native
-  /* 4096 */ val ObjectLiteral: typingsSlinky.typescript.typescriptMod.SymbolFlags.ObjectLiteral with Double = js.native
-  /* 16777216 */ val Optional: typingsSlinky.typescript.typescriptMod.SymbolFlags.Optional with Double = js.native
-  /* 111551 */ val ParameterExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.ParameterExcludes with Double = js.native
-  /* 4 */ val Property: typingsSlinky.typescript.typescriptMod.SymbolFlags.Property with Double = js.native
-  /* 0 */ val PropertyExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.PropertyExcludes with Double = js.native
-  /* 98308 */ val PropertyOrAccessor: typingsSlinky.typescript.typescriptMod.SymbolFlags.PropertyOrAccessor with Double = js.native
-  /* 4194304 */ val Prototype: typingsSlinky.typescript.typescriptMod.SymbolFlags.Prototype with Double = js.native
-  /* 256 */ val RegularEnum: typingsSlinky.typescript.typescriptMod.SymbolFlags.RegularEnum with Double = js.native
-  /* 899327 */ val RegularEnumExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.RegularEnumExcludes with Double = js.native
-  /* 65536 */ val SetAccessor: typingsSlinky.typescript.typescriptMod.SymbolFlags.SetAccessor with Double = js.native
-  /* 78783 */ val SetAccessorExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.SetAccessorExcludes with Double = js.native
-  /* 131072 */ val Signature: typingsSlinky.typescript.typescriptMod.SymbolFlags.Signature with Double = js.native
-  /* 33554432 */ val Transient: typingsSlinky.typescript.typescriptMod.SymbolFlags.Transient with Double = js.native
-  /* 788968 */ val Type: typingsSlinky.typescript.typescriptMod.SymbolFlags.Type with Double = js.native
-  /* 524288 */ val TypeAlias: typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeAlias with Double = js.native
-  /* 788968 */ val TypeAliasExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeAliasExcludes with Double = js.native
-  /* 2048 */ val TypeLiteral: typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeLiteral with Double = js.native
-  /* 262144 */ val TypeParameter: typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeParameter with Double = js.native
-  /* 526824 */ val TypeParameterExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeParameterExcludes with Double = js.native
-  /* 111551 */ val Value: typingsSlinky.typescript.typescriptMod.SymbolFlags.Value with Double = js.native
-  /* 512 */ val ValueModule: typingsSlinky.typescript.typescriptMod.SymbolFlags.ValueModule with Double = js.native
-  /* 110735 */ val ValueModuleExcludes: typingsSlinky.typescript.typescriptMod.SymbolFlags.ValueModuleExcludes with Double = js.native
-  /* 3 */ val Variable: typingsSlinky.typescript.typescriptMod.SymbolFlags.Variable with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SymbolFlags with Double] = js.native
+  /* 98304 */ @js.native
+  object Accessor extends TopLevel[Accessor with Double]
+  
+  /* 2097152 */ @js.native
+  object Alias extends TopLevel[Alias with Double]
+  
+  /* 2097152 */ @js.native
+  object AliasExcludes extends TopLevel[AliasExcludes with Double]
+  
+  /* 67108864 */ @js.native
+  object Assignment extends TopLevel[Assignment with Double]
+  
+  /* 418 */ @js.native
+  object BlockScoped extends TopLevel[BlockScoped with Double]
+  
+  /* 2 */ @js.native
+  object BlockScopedVariable extends TopLevel[BlockScopedVariable with Double]
+  
+  /* 111551 */ @js.native
+  object BlockScopedVariableExcludes extends TopLevel[BlockScopedVariableExcludes with Double]
+  
+  /* 32 */ @js.native
+  object Class extends TopLevel[Class with Double]
+  
+  /* 899503 */ @js.native
+  object ClassExcludes extends TopLevel[ClassExcludes with Double]
+  
+  /* 106500 */ @js.native
+  object ClassMember extends TopLevel[ClassMember with Double]
+  
+  /* 128 */ @js.native
+  object ConstEnum extends TopLevel[ConstEnum with Double]
+  
+  /* 899967 */ @js.native
+  object ConstEnumExcludes extends TopLevel[ConstEnumExcludes with Double]
+  
+  /* 16384 */ @js.native
+  object Constructor extends TopLevel[Constructor with Double]
+  
+  /* 384 */ @js.native
+  object Enum extends TopLevel[Enum with Double]
+  
+  /* 8 */ @js.native
+  object EnumMember
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SymbolFlags.EnumMember with Double]
+  
+  /* 900095 */ @js.native
+  object EnumMemberExcludes extends TopLevel[EnumMemberExcludes with Double]
+  
+  /* 944 */ @js.native
+  object ExportHasLocal extends TopLevel[ExportHasLocal with Double]
+  
+  /* 8388608 */ @js.native
+  object ExportStar extends TopLevel[ExportStar with Double]
+  
+  /* 1048576 */ @js.native
+  object ExportValue extends TopLevel[ExportValue with Double]
+  
+  /* 16 */ @js.native
+  object Function extends TopLevel[Function with Double]
+  
+  /* 110991 */ @js.native
+  object FunctionExcludes extends TopLevel[FunctionExcludes with Double]
+  
+  /* 1 */ @js.native
+  object FunctionScopedVariable extends TopLevel[FunctionScopedVariable with Double]
+  
+  /* 111550 */ @js.native
+  object FunctionScopedVariableExcludes extends TopLevel[FunctionScopedVariableExcludes with Double]
+  
+  /* 32768 */ @js.native
+  object GetAccessor extends TopLevel[GetAccessor with Double]
+  
+  /* 46015 */ @js.native
+  object GetAccessorExcludes extends TopLevel[GetAccessorExcludes with Double]
+  
+  /* 64 */ @js.native
+  object Interface extends TopLevel[Interface with Double]
+  
+  /* 788872 */ @js.native
+  object InterfaceExcludes extends TopLevel[InterfaceExcludes with Double]
+  
+  /* 8192 */ @js.native
+  object Method extends TopLevel[Method with Double]
+  
+  /* 103359 */ @js.native
+  object MethodExcludes extends TopLevel[MethodExcludes with Double]
+  
+  /* 1536 */ @js.native
+  object Module extends TopLevel[Module with Double]
+  
+  /* 134217728 */ @js.native
+  object ModuleExports extends TopLevel[ModuleExports with Double]
+  
+  /* 2623475 */ @js.native
+  object ModuleMember extends TopLevel[ModuleMember with Double]
+  
+  /* 1920 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
+  
+  /* 1024 */ @js.native
+  object NamespaceModule extends TopLevel[NamespaceModule with Double]
+  
+  /* 0 */ @js.native
+  object NamespaceModuleExcludes extends TopLevel[NamespaceModuleExcludes with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4096 */ @js.native
+  object ObjectLiteral extends TopLevel[ObjectLiteral with Double]
+  
+  /* 16777216 */ @js.native
+  object Optional extends TopLevel[Optional with Double]
+  
+  /* 111551 */ @js.native
+  object ParameterExcludes extends TopLevel[ParameterExcludes with Double]
+  
+  /* 4 */ @js.native
+  object Property extends TopLevel[Property with Double]
+  
+  /* 0 */ @js.native
+  object PropertyExcludes extends TopLevel[PropertyExcludes with Double]
+  
+  /* 98308 */ @js.native
+  object PropertyOrAccessor extends TopLevel[PropertyOrAccessor with Double]
+  
+  /* 4194304 */ @js.native
+  object Prototype extends TopLevel[Prototype with Double]
+  
+  /* 256 */ @js.native
+  object RegularEnum extends TopLevel[RegularEnum with Double]
+  
+  /* 899327 */ @js.native
+  object RegularEnumExcludes extends TopLevel[RegularEnumExcludes with Double]
+  
+  /* 65536 */ @js.native
+  object SetAccessor extends TopLevel[SetAccessor with Double]
+  
+  /* 78783 */ @js.native
+  object SetAccessorExcludes extends TopLevel[SetAccessorExcludes with Double]
+  
+  /* 131072 */ @js.native
+  object Signature
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SymbolFlags.Signature with Double]
+  
+  /* 33554432 */ @js.native
+  object Transient extends TopLevel[Transient with Double]
+  
+  /* 788968 */ @js.native
+  object Type
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SymbolFlags.Type with Double]
+  
+  /* 524288 */ @js.native
+  object TypeAlias extends TopLevel[TypeAlias with Double]
+  
+  /* 788968 */ @js.native
+  object TypeAliasExcludes extends TopLevel[TypeAliasExcludes with Double]
+  
+  /* 2048 */ @js.native
+  object TypeLiteral extends TopLevel[TypeLiteral with Double]
+  
+  /* 262144 */ @js.native
+  object TypeParameter
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.SymbolFlags.TypeParameter with Double]
+  
+  /* 526824 */ @js.native
+  object TypeParameterExcludes extends TopLevel[TypeParameterExcludes with Double]
+  
+  /* 111551 */ @js.native
+  object Value extends TopLevel[Value with Double]
+  
+  /* 512 */ @js.native
+  object ValueModule extends TopLevel[ValueModule with Double]
+  
+  /* 110735 */ @js.native
+  object ValueModuleExcludes extends TopLevel[ValueModuleExcludes with Double]
+  
+  /* 3 */ @js.native
+  object Variable extends TopLevel[Variable with Double]
+  
 }
 

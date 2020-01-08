@@ -20,7 +20,9 @@ object Stalker extends js.Object {
     * Time in milliseconds between each time the event queue is drained.
     *
     * Defaults to 250 ms, which means that the event queue is drained four
-    * times per second.
+    * times per second. You may also set this property to zero to disable
+    * periodic draining and instead call `Stalker.flush()` when you would
+    * like the queue to be drained.
     */
   var queueDrainInterval: Double = js.native
   /**
@@ -82,8 +84,8 @@ object Stalker extends js.Object {
     * @param events Binary blob containing zero or more `Gum.Event` values.
     * @param options Options for customizing the output.
     */
-  def parse(events: scala.scalajs.js.typedarray.ArrayBuffer): js.Array[StalkerEventBare | StalkerEventFull] = js.native
-  def parse(events: scala.scalajs.js.typedarray.ArrayBuffer, options: StalkerParseOptions): js.Array[StalkerEventBare | StalkerEventFull] = js.native
+  def parse(events: ArrayBuffer): js.Array[StalkerEventBare | StalkerEventFull] = js.native
+  def parse(events: ArrayBuffer, options: StalkerParseOptions): js.Array[StalkerEventBare | StalkerEventFull] = js.native
   /**
     * Removes a call probe added by `addCallProbe()`.
     *

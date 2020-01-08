@@ -10,7 +10,8 @@ class TextStyle protected () extends js.Object {
   val Application: typingsSlinky.activexDashPowerpoint.PowerPoint.Application = js.native
   val Levels: TextStyleLevels = js.native
   val Parent: js.Any = js.native
-  var `PowerPoint.TextStyle_typekey`: TextStyle = js.native
+  @JSName("PowerPoint.TextStyle_typekey")
+  var PowerPointDotTextStyle_typekey: TextStyle = js.native
   val Ruler: typingsSlinky.activexDashPowerpoint.PowerPoint.Ruler = js.native
   val TextFrame: typingsSlinky.activexDashPowerpoint.PowerPoint.TextFrame = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,22 +72,52 @@ object WalletDetailViewPosition extends js.Object {
   @js.native
   sealed trait secondaryField5 extends WalletDetailViewPosition
   
-  /* 10 */ val centerField1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.centerField1 with Double = js.native
-  /* 11 */ val footerField1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.footerField1 with Double = js.native
-  /* 12 */ val footerField2: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.footerField2 with Double = js.native
-  /* 13 */ val footerField3: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.footerField3 with Double = js.native
-  /* 14 */ val footerField4: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.footerField4 with Double = js.native
-  /* 1 */ val headerField1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.headerField1 with Double = js.native
-  /* 2 */ val headerField2: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.headerField2 with Double = js.native
-  /* 0 */ val hidden: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.hidden with Double = js.native
-  /* 3 */ val primaryField1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.primaryField1 with Double = js.native
-  /* 4 */ val primaryField2: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.primaryField2 with Double = js.native
-  /* 5 */ val secondaryField1: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.secondaryField1 with Double = js.native
-  /* 6 */ val secondaryField2: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.secondaryField2 with Double = js.native
-  /* 7 */ val secondaryField3: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.secondaryField3 with Double = js.native
-  /* 8 */ val secondaryField4: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.secondaryField4 with Double = js.native
-  /* 9 */ val secondaryField5: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Wallet.WalletDetailViewPosition.secondaryField5 with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WalletDetailViewPosition with Double] = js.native
+  /* 10 */ @js.native
+  object centerField1 extends TopLevel[centerField1 with Double]
+  
+  /* 11 */ @js.native
+  object footerField1 extends TopLevel[footerField1 with Double]
+  
+  /* 12 */ @js.native
+  object footerField2 extends TopLevel[footerField2 with Double]
+  
+  /* 13 */ @js.native
+  object footerField3 extends TopLevel[footerField3 with Double]
+  
+  /* 14 */ @js.native
+  object footerField4 extends TopLevel[footerField4 with Double]
+  
+  /* 1 */ @js.native
+  object headerField1 extends TopLevel[headerField1 with Double]
+  
+  /* 2 */ @js.native
+  object headerField2 extends TopLevel[headerField2 with Double]
+  
+  /* 0 */ @js.native
+  object hidden extends TopLevel[hidden with Double]
+  
+  /* 3 */ @js.native
+  object primaryField1 extends TopLevel[primaryField1 with Double]
+  
+  /* 4 */ @js.native
+  object primaryField2 extends TopLevel[primaryField2 with Double]
+  
+  /* 5 */ @js.native
+  object secondaryField1 extends TopLevel[secondaryField1 with Double]
+  
+  /* 6 */ @js.native
+  object secondaryField2 extends TopLevel[secondaryField2 with Double]
+  
+  /* 7 */ @js.native
+  object secondaryField3 extends TopLevel[secondaryField3 with Double]
+  
+  /* 8 */ @js.native
+  object secondaryField4 extends TopLevel[secondaryField4 with Double]
+  
+  /* 9 */ @js.native
+  object secondaryField5 extends TopLevel[secondaryField5 with Double]
+  
 }
 

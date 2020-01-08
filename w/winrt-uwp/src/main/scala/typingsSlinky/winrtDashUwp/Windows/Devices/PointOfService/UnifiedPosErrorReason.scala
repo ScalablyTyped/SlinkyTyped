@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,18 +56,40 @@ object UnifiedPosErrorReason extends js.Object {
   @js.native
   sealed trait unknownErrorReason extends UnifiedPosErrorReason
   
-  /* 9 */ val busy: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.busy with Double = js.native
-  /* 5 */ val closed: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.closed with Double = js.native
-  /* 2 */ val disabled: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.disabled with Double = js.native
-  /* 10 */ val extended: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.extended with Double = js.native
-  /* 7 */ val failure: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.failure with Double = js.native
-  /* 3 */ val illegal: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.illegal with Double = js.native
-  /* 4 */ val noHardware: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.noHardware with Double = js.native
-  /* 1 */ val noService: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.noService with Double = js.native
-  /* 6 */ val offline: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.offline with Double = js.native
-  /* 8 */ val timeout: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.timeout with Double = js.native
-  /* 0 */ val unknownErrorReason: typingsSlinky.winrtDashUwp.Windows.Devices.PointOfService.UnifiedPosErrorReason.unknownErrorReason with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UnifiedPosErrorReason with Double] = js.native
+  /* 9 */ @js.native
+  object busy extends TopLevel[busy with Double]
+  
+  /* 5 */ @js.native
+  object closed extends TopLevel[closed with Double]
+  
+  /* 2 */ @js.native
+  object disabled extends TopLevel[disabled with Double]
+  
+  /* 10 */ @js.native
+  object extended extends TopLevel[extended with Double]
+  
+  /* 7 */ @js.native
+  object failure extends TopLevel[failure with Double]
+  
+  /* 3 */ @js.native
+  object illegal extends TopLevel[illegal with Double]
+  
+  /* 4 */ @js.native
+  object noHardware extends TopLevel[noHardware with Double]
+  
+  /* 1 */ @js.native
+  object noService extends TopLevel[noService with Double]
+  
+  /* 6 */ @js.native
+  object offline extends TopLevel[offline with Double]
+  
+  /* 8 */ @js.native
+  object timeout extends TopLevel[timeout with Double]
+  
+  /* 0 */ @js.native
+  object unknownErrorReason extends TopLevel[unknownErrorReason with Double]
+  
 }
 

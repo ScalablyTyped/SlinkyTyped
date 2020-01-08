@@ -3,8 +3,8 @@ package typingsSlinky.youtubeDashPlayer
 import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates.ENDED
 import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates.PAUSED
 import typingsSlinky.youtubeDashPlayer.distConstantsPlayerStatesMod.PlayerStates.PLAYING
+import typingsSlinky.youtubeDashPlayer.youtubeDashPlayerBooleans.`true`
 import typingsSlinky.youtubeDashPlayer.youtubeDashPlayerNumbers.`3000`
-import typingsSlinky.youtubeDashPlayer.youtubeDashPlayerNumbers.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

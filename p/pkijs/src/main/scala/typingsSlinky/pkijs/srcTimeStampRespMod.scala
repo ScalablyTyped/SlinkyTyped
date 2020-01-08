@@ -3,7 +3,6 @@ package typingsSlinky.pkijs
 import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.pkijs.srcSignedDataMod.VerifyParams
 import typingsSlinky.pkijs.srcSignedDataMod.VerifyResult
-import typingsSlinky.pkijs.srcTimeStampRespMod.TimeStampResp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

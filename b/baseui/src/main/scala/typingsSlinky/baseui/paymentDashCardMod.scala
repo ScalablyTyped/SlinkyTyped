@@ -4,8 +4,6 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.baseui.inputMod.InputOverrides
 import typingsSlinky.baseui.inputMod.InputProps
 import typingsSlinky.baseui.inputMod.StatefulContainerProps
-import typingsSlinky.baseui.paymentDashCardMod.PaymentCardProps
-import typingsSlinky.baseui.paymentDashCardMod.StatefulPaymentCardProps
 import typingsSlinky.cardDashValidator.Anon_MinLength
 import typingsSlinky.cardDashValidator.Anon_Month
 import typingsSlinky.cardDashValidator.cardDashValidatorMod.validExpirationDate

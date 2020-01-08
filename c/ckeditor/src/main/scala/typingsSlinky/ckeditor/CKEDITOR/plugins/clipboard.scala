@@ -6,9 +6,9 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
 import typingsSlinky.ckeditor.CKEDITOR.dom.domObject
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
+import typingsSlinky.ckeditor.CKEDITOR.dom.event
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
 import typingsSlinky.ckeditor.CKEDITOR.editor
-import typingsSlinky.ckeditor.CKEDITOR.plugins.clipboard.dataTransfer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,11 +53,11 @@ object clipboard extends js.Object {
   def getDropTarget(editor: editor): domObject = js.native
   def getRangeAtDropPosition(domEvent: Event, editor: editor): range = js.native
   def initDragDataTransfer(): Unit = js.native
-  def initDragDataTransfer(evt: typingsSlinky.ckeditor.CKEDITOR.dom.event): Unit = js.native
-  def initDragDataTransfer(evt: typingsSlinky.ckeditor.CKEDITOR.dom.event, editor: editor): Unit = js.native
+  def initDragDataTransfer(evt: event): Unit = js.native
+  def initDragDataTransfer(evt: event, editor: editor): Unit = js.native
   def initPasteDataTransfer(): Unit = js.native
-  def initPasteDataTransfer(evt: typingsSlinky.ckeditor.CKEDITOR.dom.event): Unit = js.native
-  def initPasteDataTransfer(evt: typingsSlinky.ckeditor.CKEDITOR.dom.event, sourceEditor: editor): Unit = js.native
+  def initPasteDataTransfer(evt: event): Unit = js.native
+  def initPasteDataTransfer(evt: event, sourceEditor: editor): Unit = js.native
   def preventDefaultDropOnElement(element: element): Unit = js.native
   def resetDragDataTransfer(): Unit = js.native
 }

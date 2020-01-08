@@ -2,7 +2,7 @@ package typingsSlinky.reactDashLoadable.LoadableExport
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactDashLoadable.Anon_Default
-import typingsSlinky.reactDashLoadable.reactDashLoadableNumbers.`false`
+import typingsSlinky.reactDashLoadable.reactDashLoadableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object OptionsWithoutRender {
   @scala.inline
   def apply[Props](
     loader: () => js.Promise[ReactComponentClass[Props] | Anon_Default[Props]],
-    loading: ReactComponentClass[LoadingComponentProps] | js.Function0[Null],
+    loading: ReactComponentClass[LoadingComponentProps],
     delay: Double | `false` = null,
     modules: js.Array[String] = null,
     timeout: Double | `false` = null,

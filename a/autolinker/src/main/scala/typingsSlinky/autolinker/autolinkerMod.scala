@@ -1,7 +1,7 @@
 package typingsSlinky.autolinker
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.autolinker.autolinkerStrings.`3DOT11DOT1`
+import typingsSlinky.autolinker.autolinkerStrings.`3Dot11Dot1`
 import typingsSlinky.autolinker.distCommonjsAnchorDashTagDashBuilderMod.AnchorTagBuilderCfg
 import typingsSlinky.autolinker.distCommonjsAutolinkerMod.AutolinkerConfig
 import typingsSlinky.autolinker.distCommonjsHtmlDashTagMod.HtmlTagCfg
@@ -220,7 +220,7 @@ object autolinkerMod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: `3DOT11DOT1` = js.native
+    val version: `3Dot11Dot1` = js.native
     /**
       * Automatically links URLs, Email addresses, Phone Numbers, Twitter handles,
       * Hashtags, and Mentions found in the given chunk of HTML. Does not link URLs
@@ -318,7 +318,7 @@ object autolinkerMod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: `3DOT11DOT1` = js.native
+    val version: `3Dot11Dot1` = js.native
     /**
       * Automatically links URLs, Email addresses, Phone Numbers, Twitter handles,
       * Hashtags, and Mentions found in the given chunk of HTML. Does not link URLs

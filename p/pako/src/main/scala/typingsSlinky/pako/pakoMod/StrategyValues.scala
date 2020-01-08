@@ -1,5 +1,6 @@
 package typingsSlinky.pako.pakoMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object StrategyValues extends js.Object {
   @js.native
   sealed trait Z_RLE extends StrategyValues
   
-  /* 0 */ val Z_DEFAULT_STRATEGY: typingsSlinky.pako.pakoMod.StrategyValues.Z_DEFAULT_STRATEGY with Double = js.native
-  /* 1 */ val Z_FILTERED: typingsSlinky.pako.pakoMod.StrategyValues.Z_FILTERED with Double = js.native
-  /* 4 */ val Z_FIXED: typingsSlinky.pako.pakoMod.StrategyValues.Z_FIXED with Double = js.native
-  /* 2 */ val Z_HUFFMAN_ONLY: typingsSlinky.pako.pakoMod.StrategyValues.Z_HUFFMAN_ONLY with Double = js.native
-  /* 3 */ val Z_RLE: typingsSlinky.pako.pakoMod.StrategyValues.Z_RLE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[StrategyValues with Double] = js.native
+  /* 0 */ @js.native
+  object Z_DEFAULT_STRATEGY extends TopLevel[Z_DEFAULT_STRATEGY with Double]
+  
+  /* 1 */ @js.native
+  object Z_FILTERED extends TopLevel[Z_FILTERED with Double]
+  
+  /* 4 */ @js.native
+  object Z_FIXED extends TopLevel[Z_FIXED with Double]
+  
+  /* 2 */ @js.native
+  object Z_HUFFMAN_ONLY extends TopLevel[Z_HUFFMAN_ONLY with Double]
+  
+  /* 3 */ @js.native
+  object Z_RLE extends TopLevel[Z_RLE with Double]
+  
 }
 

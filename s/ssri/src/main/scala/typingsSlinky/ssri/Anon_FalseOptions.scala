@@ -1,6 +1,6 @@
 package typingsSlinky.ssri
 
-import typingsSlinky.ssri.ssriNumbers.`false`
+import typingsSlinky.ssri.ssriBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

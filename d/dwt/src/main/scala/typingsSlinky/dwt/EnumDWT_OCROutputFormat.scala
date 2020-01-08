@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,22 @@ object EnumDWT_OCROutputFormat extends js.Object {
   @js.native
   sealed trait OCROF_TEXT extends EnumDWT_OCROutputFormat
   
-  /* 2 */ val OCROF_PDFIMAGEOVERTEXT: typingsSlinky.dwt.EnumDWT_OCROutputFormat.OCROF_PDFIMAGEOVERTEXT with Double = js.native
-  /* 4 */ val OCROF_PDFIMAGEOVERTEXT_PDFX: typingsSlinky.dwt.EnumDWT_OCROutputFormat.OCROF_PDFIMAGEOVERTEXT_PDFX with Double = js.native
-  /* 1 */ val OCROF_PDFPLAINTEXT: typingsSlinky.dwt.EnumDWT_OCROutputFormat.OCROF_PDFPLAINTEXT with Double = js.native
-  /* 3 */ val OCROF_PDFPLAINTEXT_PDFX: typingsSlinky.dwt.EnumDWT_OCROutputFormat.OCROF_PDFPLAINTEXT_PDFX with Double = js.native
-  /* 0 */ val OCROF_TEXT: typingsSlinky.dwt.EnumDWT_OCROutputFormat.OCROF_TEXT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_OCROutputFormat with Double] = js.native
+  /* 2 */ @js.native
+  object OCROF_PDFIMAGEOVERTEXT extends TopLevel[OCROF_PDFIMAGEOVERTEXT with Double]
+  
+  /* 4 */ @js.native
+  object OCROF_PDFIMAGEOVERTEXT_PDFX extends TopLevel[OCROF_PDFIMAGEOVERTEXT_PDFX with Double]
+  
+  /* 1 */ @js.native
+  object OCROF_PDFPLAINTEXT extends TopLevel[OCROF_PDFPLAINTEXT with Double]
+  
+  /* 3 */ @js.native
+  object OCROF_PDFPLAINTEXT_PDFX extends TopLevel[OCROF_PDFPLAINTEXT_PDFX with Double]
+  
+  /* 0 */ @js.native
+  object OCROF_TEXT extends TopLevel[OCROF_TEXT with Double]
+  
 }
 

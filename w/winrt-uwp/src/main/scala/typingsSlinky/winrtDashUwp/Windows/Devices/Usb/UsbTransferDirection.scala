@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Usb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object UsbTransferDirection extends js.Object {
   @js.native
   sealed trait out extends UsbTransferDirection
   
-  /* 1 */ val in: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbTransferDirection.in with Double = js.native
-  /* 0 */ val out: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbTransferDirection.out with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UsbTransferDirection with Double] = js.native
+  /* 1 */ @js.native
+  object in extends TopLevel[in with Double]
+  
+  /* 0 */ @js.native
+  object out extends TopLevel[out with Double]
+  
 }
 

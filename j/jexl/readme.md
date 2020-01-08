@@ -1,7 +1,7 @@
 
 # Scala.js typings for jexl
 
-Typings are for version 2.1
+Typings are for version 2.2
 
 ## Library description:
 Javascript Expression Language: Powerful context-based expression parser and evaluator
@@ -10,9 +10,9 @@ Javascript Expression Language: Powerful context-based expression parser and eva
 | ------------------ | :-------------: |
 | Full name          | jexl |
 | Keywords           | JSON, expression, evaluator, parser, target, context, jsep, filter, selector |
-| # releases         | 6 |
-| # dependents       | 17 |
-| # downloads        | 84371 |
+| # releases         | 9 |
+| # dependents       | 31 |
+| # downloads        | 214729 |
 | # stars            | 4 |
 
 ## Links

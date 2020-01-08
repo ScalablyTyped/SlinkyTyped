@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object AppointmentWeekOfMonth extends js.Object {
   @js.native
   sealed trait third extends AppointmentWeekOfMonth
   
-  /* 0 */ val first: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth.first with Double = js.native
-  /* 3 */ val fourth: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth.fourth with Double = js.native
-  /* 4 */ val last: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth.last with Double = js.native
-  /* 1 */ val second: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth.second with Double = js.native
-  /* 2 */ val third: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth.third with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AppointmentWeekOfMonth with Double] = js.native
+  /* 0 */ @js.native
+  object first extends TopLevel[first with Double]
+  
+  /* 3 */ @js.native
+  object fourth extends TopLevel[fourth with Double]
+  
+  /* 4 */ @js.native
+  object last extends TopLevel[last with Double]
+  
+  /* 1 */ @js.native
+  object second extends TopLevel[second with Double]
+  
+  /* 2 */ @js.native
+  object third extends TopLevel[third with Double]
+  
 }
 

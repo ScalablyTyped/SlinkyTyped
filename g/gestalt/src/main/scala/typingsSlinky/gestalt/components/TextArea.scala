@@ -21,15 +21,16 @@ object TextArea
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, name, onBlur, onFocus, placeholder, rows */
+  /* The following DOM/SVG props were specified: disabled, name, onBlur, onFocus, placeholder, rows */
   def apply(
+    id: String,
     onChange: Anon_EventValue => Unit,
     errorMessage: String = null,
     idealErrorDirection: up | right | down | left = null,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.TextArea] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
     if (idealErrorDirection != null) __obj.updateDynamic("idealErrorDirection")(idealErrorDirection.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

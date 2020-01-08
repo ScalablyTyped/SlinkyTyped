@@ -1,7 +1,6 @@
 package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.antlr4Numbers.`-1`
-import typingsSlinky.antlr4.errorErrorsMod.RecognitionException
 import typingsSlinky.antlr4.inputStreamMod.InputStream
 import typingsSlinky.antlr4.parserRuleContextMod.ParserRuleContext
 import typingsSlinky.antlr4.recognizerMod.Recognizer

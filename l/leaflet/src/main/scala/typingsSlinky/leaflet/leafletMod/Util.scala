@@ -1,6 +1,6 @@
 package typingsSlinky.leaflet.leafletMod
 
-import typingsSlinky.leaflet.leafletNumbers.`false`
+import typingsSlinky.leaflet.leafletBooleans.`false`
 import typingsSlinky.std.PropertyDescriptorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`

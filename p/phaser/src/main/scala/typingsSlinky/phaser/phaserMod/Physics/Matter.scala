@@ -2,6 +2,7 @@ package typingsSlinky.phaser.phaserMod.Physics
 
 import typingsSlinky.phaser.MatterJS.Body
 import typingsSlinky.phaser.Phaser.GameObjects.GameObject
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterTileOptions
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterWorldConfig
@@ -89,7 +90,7 @@ object Matter extends js.Object {
       * 
       * @param scene [description]
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene) = this()
+    def this(scene: Scene) = this()
   }
   
   /**
@@ -111,12 +112,8 @@ object Matter extends js.Object {
       * @param world A reference to the Matter World instance to which this Constraint belongs.
       * @param options A Constraint configuration object.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, world: typingsSlinky.phaser.Phaser.Physics.Matter.World) = this()
-    def this(
-      scene: typingsSlinky.phaser.Phaser.Scene,
-      world: typingsSlinky.phaser.Phaser.Physics.Matter.World,
-      options: js.Object
-    ) = this()
+    def this(scene: Scene, world: typingsSlinky.phaser.Phaser.Physics.Matter.World) = this()
+    def this(scene: Scene, world: typingsSlinky.phaser.Phaser.Physics.Matter.World, options: js.Object) = this()
   }
   
   /**
@@ -211,7 +208,7 @@ object Matter extends js.Object {
       * @param scene The Scene to which this Matter World instance belongs.
       * @param config The Matter World configuration object.
       */
-    def this(scene: typingsSlinky.phaser.Phaser.Scene, config: MatterWorldConfig) = this()
+    def this(scene: Scene, config: MatterWorldConfig) = this()
   }
   
   /**

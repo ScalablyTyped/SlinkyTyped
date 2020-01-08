@@ -157,15 +157,13 @@ object libKernelMod extends js.Object {
   
   @js.native
   object KernelMessage extends js.Object {
-    def createMessage[T /* <: IErrorMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
+    def createMessage[T /* <: ICommInfoReplyMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_IClearOutputMsg[T /* <: IClearOutputMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_ICommCloseMsgiopub[T /* <: ICommCloseMsg[iopub] */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_ICommCloseMsgshell[T /* <: ICommCloseMsg[shell] */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
-    @JSName("createMessage")
-    def createMessage_T_ICommInfoReplyMsg[T /* <: ICommInfoReplyMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_ICommInfoRequestMsg[T /* <: ICommInfoRequestMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
@@ -209,6 +207,8 @@ object libKernelMod extends js.Object {
     def createMessage_T_IDebugRequestMsg[T /* <: IDebugRequestMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_IDisplayDataMsg[T /* <: IDisplayDataMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
+    @JSName("createMessage")
+    def createMessage_T_IErrorMsg[T /* <: IErrorMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")
     def createMessage_T_IExecuteInputMsg[T /* <: IExecuteInputMsg */](options: typingsSlinky.atJupyterlabServices.libKernelMessagesMod.KernelMessage.IOptions[T]): T = js.native
     @JSName("createMessage")

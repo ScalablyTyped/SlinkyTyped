@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Usb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object UsbReadOptions extends js.Object {
   @js.native
   sealed trait overrideAutomaticBufferManagement extends UsbReadOptions
   
-  /* 4 */ val allowPartialReads: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbReadOptions.allowPartialReads with Double = js.native
-  /* 1 */ val autoClearStall: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbReadOptions.autoClearStall with Double = js.native
-  /* 3 */ val ignoreShortPacket: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbReadOptions.ignoreShortPacket with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbReadOptions.none with Double = js.native
-  /* 2 */ val overrideAutomaticBufferManagement: typingsSlinky.winrtDashUwp.Windows.Devices.Usb.UsbReadOptions.overrideAutomaticBufferManagement with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UsbReadOptions with Double] = js.native
+  /* 4 */ @js.native
+  object allowPartialReads extends TopLevel[allowPartialReads with Double]
+  
+  /* 1 */ @js.native
+  object autoClearStall extends TopLevel[autoClearStall with Double]
+  
+  /* 3 */ @js.native
+  object ignoreShortPacket extends TopLevel[ignoreShortPacket with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object overrideAutomaticBufferManagement extends TopLevel[overrideAutomaticBufferManagement with Double]
+  
 }
 

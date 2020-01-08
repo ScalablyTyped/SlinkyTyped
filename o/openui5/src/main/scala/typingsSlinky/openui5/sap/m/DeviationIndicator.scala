@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object DeviationIndicator extends js.Object {
   @js.native
   sealed trait Up extends DeviationIndicator
   
-  /* 0 */ val Down: typingsSlinky.openui5.sap.m.DeviationIndicator.Down with Double = js.native
-  /* 1 */ val None: typingsSlinky.openui5.sap.m.DeviationIndicator.None with Double = js.native
-  /* 2 */ val Up: typingsSlinky.openui5.sap.m.DeviationIndicator.Up with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeviationIndicator with Double] = js.native
+  /* 0 */ @js.native
+  object Down extends TopLevel[Down with Double]
+  
+  /* 1 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Up extends TopLevel[Up with Double]
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.geopattern.geopatternMod
 
-import typingsSlinky.geopattern.geopatternMod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

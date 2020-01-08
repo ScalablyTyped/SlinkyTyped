@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,12 +57,22 @@ object InsertLocation extends js.Object {
   @js.native
   sealed trait start extends InsertLocation
   
-  /* "After" */ val after: typingsSlinky.officeDashJs.Word.InsertLocation.after with String = js.native
-  /* "Before" */ val before: typingsSlinky.officeDashJs.Word.InsertLocation.before with String = js.native
-  /* "End" */ val end: typingsSlinky.officeDashJs.Word.InsertLocation.end with String = js.native
-  /* "Replace" */ val replace: typingsSlinky.officeDashJs.Word.InsertLocation.replace with String = js.native
-  /* "Start" */ val start: typingsSlinky.officeDashJs.Word.InsertLocation.start with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[InsertLocation with String] = js.native
+  /* "After" */ @js.native
+  object after extends TopLevel[after with String]
+  
+  /* "Before" */ @js.native
+  object before extends TopLevel[before with String]
+  
+  /* "End" */ @js.native
+  object end extends TopLevel[end with String]
+  
+  /* "Replace" */ @js.native
+  object replace extends TopLevel[replace with String]
+  
+  /* "Start" */ @js.native
+  object start extends TopLevel[start with String]
+  
 }
 

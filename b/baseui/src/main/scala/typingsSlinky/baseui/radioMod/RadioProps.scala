@@ -1,9 +1,6 @@
 package typingsSlinky.baseui.radioMod
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -11,8 +8,9 @@ import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.left
 import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.baseuiStrings.top
+import typingsSlinky.react.reactMod.ChangeEvent
+import typingsSlinky.react.reactMod.ChangeEventHandler
 import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.FormEventHandler
 import typingsSlinky.react.reactMod.MouseEventHandler
 import typingsSlinky.react.reactMod.Ref
 import scala.scalajs.js
@@ -30,7 +28,7 @@ trait RadioProps extends js.Object {
   var labelPlacement: js.UndefOr[top | right | bottom | left] = js.undefined
   var name: js.UndefOr[String] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
+  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
   var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
   var onMouseDown: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.undefined
   var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.undefined
@@ -54,7 +52,7 @@ object RadioProps {
     labelPlacement: top | right | bottom | left = null,
     name: String = null,
     onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onMouseDown: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[HTMLInputElement] => Unit = null,

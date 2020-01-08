@@ -5,7 +5,6 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.layerLayerMod.State
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.ol.rendererCanvasLayerMod.CanvasLayerRenderer
 import typingsSlinky.ol.transformMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

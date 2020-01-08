@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ColumnLayout extends js.Object {
   @js.native
   sealed trait Fixed extends ColumnLayout
   
-  /* 0 */ val Auto: typingsSlinky.ejDotWebDotAll.ej.Grid.ColumnLayout.Auto with Double = js.native
-  /* 1 */ val Fixed: typingsSlinky.ejDotWebDotAll.ej.Grid.ColumnLayout.Fixed with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ColumnLayout with Double] = js.native
+  /* 0 */ @js.native
+  object Auto extends TopLevel[Auto with Double]
+  
+  /* 1 */ @js.native
+  object Fixed extends TopLevel[Fixed with Double]
+  
 }
 

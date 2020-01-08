@@ -1,6 +1,6 @@
 package typingsSlinky.ejs.ejsMod
 
-import typingsSlinky.ejs.Anon_AsyncClientFalse
+import typingsSlinky.ejs.Anon_AsyncClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object compile extends js.Object {
   def apply(template: String): TemplateFunction | AsyncTemplateFunction = js.native
-  def apply(template: String, opts: Options with Anon_AsyncClientFalse): TemplateFunction = js.native
+  def apply(template: String, opts: Options with Anon_AsyncClient): AsyncClientFunction = js.native
 }
 

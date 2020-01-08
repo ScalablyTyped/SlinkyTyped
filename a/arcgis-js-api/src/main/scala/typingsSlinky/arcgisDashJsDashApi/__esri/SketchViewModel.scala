@@ -2,10 +2,10 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisDashJsDashApi.IHandle
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.active
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.circle
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.create
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.delete
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.disabled
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.move
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.multipoint
@@ -39,6 +39,12 @@ trait SketchViewModel
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#createGraphic)
     */
   val createGraphic: Graphic = js.native
+  /**
+    * Default create options set for the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#defaultCreateOptions)
+    */
+  var defaultCreateOptions: SketchViewModelDefaultCreateOptions = js.native
   /**
     * Default update options set for the SketchViewModel. Update options set on this property will be overridden by options passed to the [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) method.
     *
@@ -157,8 +163,18 @@ trait SketchViewModel
     */
   def create(tool: String): Unit = js.native
   def create(tool: String, createOptions: SketchViewModelCreateCreateOptions): Unit = js.native
+  /**
+    * Deletes the selected graphics used in the update workflow. Calling this method will fire the [delete](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-delete) event.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#delete)
+    *
+    *
+    */
+  def delete(): Unit = js.native
   @JSName("on")
   def on_create(name: create, eventHandler: SketchViewModelCreateEventHandler): IHandle = js.native
+  @JSName("on")
+  def on_delete(name: delete, eventHandler: SketchViewModelDeleteEventHandler): IHandle = js.native
   @JSName("on")
   def on_redo(name: redo, eventHandler: SketchViewModelRedoEventHandler): IHandle = js.native
   @JSName("on")
@@ -181,8 +197,8 @@ trait SketchViewModel
     *
     */
   def undo(): Unit = js.native
-  def update(graphics: js.Array[Graphic]): IPromise[Unit] = js.native
-  def update(graphics: js.Array[Graphic], updateOptions: SketchViewModelUpdateUpdateOptions): IPromise[Unit] = js.native
+  def update(graphics: js.Array[Graphic]): js.Promise[Unit] = js.native
+  def update(graphics: js.Array[Graphic], updateOptions: SketchViewModelUpdateUpdateOptions): js.Promise[Unit] = js.native
   /**
     * Initializes an update operation for the specified graphic(s) and fires [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-update) event.
     *
@@ -204,8 +220,8 @@ trait SketchViewModel
     * @param updateOptions.toggleToolOnClick Indicates if the graphic being updated can be toggled between `transform` and `reshape` update options.
     *
     */
-  def update(graphics: Graphic): IPromise[Unit] = js.native
-  def update(graphics: Graphic, updateOptions: SketchViewModelUpdateUpdateOptions): IPromise[Unit] = js.native
+  def update(graphics: Graphic): js.Promise[Unit] = js.native
+  def update(graphics: Graphic, updateOptions: SketchViewModelUpdateUpdateOptions): js.Promise[Unit] = js.native
 }
 
 @JSGlobal("__esri.SketchViewModel")

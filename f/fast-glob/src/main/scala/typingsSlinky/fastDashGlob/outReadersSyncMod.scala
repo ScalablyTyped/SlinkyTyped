@@ -2,7 +2,6 @@ package typingsSlinky.fastDashGlob
 
 import typingsSlinky.atNodelibFsDotStat.outSettingsMod.Options
 import typingsSlinky.atNodelibFsDotStat.outTypesMod.Stats
-import typingsSlinky.fastDashGlob.outReadersSyncMod.ReaderSync
 import typingsSlinky.fastDashGlob.outTypesMod.Entry
 import scala.scalajs.js
 import scala.scalajs.js.`|`

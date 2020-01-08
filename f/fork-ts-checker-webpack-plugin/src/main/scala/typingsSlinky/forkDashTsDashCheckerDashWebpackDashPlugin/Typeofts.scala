@@ -1,11 +1,11 @@
 package typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginNumbers.`false`
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.JS
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.`0DOT8`
-import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.`3DOT7`
+import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginBooleans.`false`
+import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.`0Dot8`
+import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.`3Dot7`
 import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.dts
+import typingsSlinky.forkDashTsDashCheckerDashWebpackDashPlugin.forkDashTsDashCheckerDashWebpackDashPluginStrings.js_
 import typingsSlinky.typescript.Anon_Config
 import typingsSlinky.typescript.Anon_Errors
 import typingsSlinky.typescript.Anon_ErrorsOptions
@@ -355,12 +355,12 @@ trait Typeofts extends js.Object {
   var disableIncrementalParsing: Boolean = js.native
   val server: js.Any = js.native
   /** The version of the language service API */
-  val servicesVersion: `0DOT8` = js.native
+  val servicesVersion: `0Dot8` = js.native
   var sys: System = js.native
   var unchangedTextChangeRange: TextChangeRange = js.native
   /** The version of the TypeScript compiler release */
   val version: String = js.native
-  val versionMajorMinor: `3DOT7` = js.native
+  val versionMajorMinor: `3Dot7` = js.native
   /**
     * Adds an EmitHelper to a node.
     */
@@ -3380,9 +3380,9 @@ trait Typeofts extends js.Object {
   @JSName("createUnparsedSourceFile")
   def createUnparsedSourceFile_dts(inputFile: InputFiles, `type`: dts, stripInternal: Boolean): UnparsedSource = js.native
   @JSName("createUnparsedSourceFile")
-  def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: JS): UnparsedSource = js.native
+  def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: js_): UnparsedSource = js.native
   @JSName("createUnparsedSourceFile")
-  def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: JS, stripInternal: Boolean): UnparsedSource = js.native
+  def createUnparsedSourceFile_js(inputFile: InputFiles, `type`: js_, stripInternal: Boolean): UnparsedSource = js.native
   def createVariableDeclaration(name: String): VariableDeclaration = js.native
   def createVariableDeclaration(name: String, `type`: TypeNode): VariableDeclaration = js.native
   def createVariableDeclaration(name: String, `type`: TypeNode, initializer: Expression): VariableDeclaration = js.native

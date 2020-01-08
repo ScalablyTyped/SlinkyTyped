@@ -2,7 +2,6 @@ package typingsSlinky.atTensorflowTfjsDashLayers
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Scalar
-import typingsSlinky.atTensorflowTfjsDashLayers.distLogsMod.UnresolvedLogs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

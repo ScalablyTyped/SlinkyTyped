@@ -1,7 +1,6 @@
 package typingsSlinky.nodegit
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.nodegit.odbDashObjectMod.OdbObject
 import typingsSlinky.nodegit.oidMod.Oid
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -3,7 +3,7 @@ package typingsSlinky.mongoose.mongooseMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.mongodbMod.CollectionCreateOptions
 import typingsSlinky.mongodb.mongodbMod.Db
-import typingsSlinky.mongodb.mongodbMod.Default
+import typingsSlinky.mongodb.mongodbMod.DefaultSchema
 import typingsSlinky.mongoose.Anon_Catch
 import typingsSlinky.mongoose.mongooseStrings.autoCreate
 import typingsSlinky.mongoose.mongooseStrings.autoIndex
@@ -80,7 +80,7 @@ trait ConnectionBase extends EventEmitter {
     options: CollectionCreateOptions,
     cb: js.Function2[
       /* err */ js.Any, 
-      /* collection */ typingsSlinky.mongodb.mongodbMod.Collection[Default], 
+      /* collection */ typingsSlinky.mongodb.mongodbMod.Collection[DefaultSchema], 
       Unit
     ]
   ): js.Promise[typingsSlinky.mongodb.mongodbMod.Collection[T]] = js.native
@@ -132,13 +132,13 @@ trait ConnectionBase extends EventEmitter {
     */
   def openUri(uri: String): js.Promise[Connection] = js.native
   def openUri(uri: String, callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection], Unit]): Connection = js.native
-  def openUri(uri: String, options: ConnectionOptions): js.Promise[Connection] = js.native
+  def openUri(uri: String, options: ConnectionOptions): Connection with Anon_Catch = js.native
   def openUri(
     uri: String,
     options: ConnectionOptions,
     callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection], Unit]
   ): Connection with Anon_Catch = js.native
   @JSName("openUri")
-  def openUri_Intersection(uri: String, options: ConnectionOptions): Connection with Anon_Catch = js.native
+  def openUri_Promise(uri: String, options: ConnectionOptions): js.Promise[Connection] = js.native
 }
 

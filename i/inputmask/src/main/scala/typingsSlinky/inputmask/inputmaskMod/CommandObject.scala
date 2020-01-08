@@ -1,7 +1,7 @@
 package typingsSlinky.inputmask.inputmaskMod
 
 import typingsSlinky.inputmask.Anon_EndStart
-import typingsSlinky.inputmask.inputmaskNumbers.`true`
+import typingsSlinky.inputmask.inputmaskBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

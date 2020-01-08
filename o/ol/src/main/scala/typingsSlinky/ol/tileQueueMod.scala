@@ -1,8 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
-import typingsSlinky.ol.tileQueueMod.PriorityFunction
-import typingsSlinky.ol.tileQueueMod.TileQueue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

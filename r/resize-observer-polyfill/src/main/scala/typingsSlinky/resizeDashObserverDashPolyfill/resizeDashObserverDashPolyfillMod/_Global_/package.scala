@@ -5,9 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object _Global_ {
-  type ResizeObserverCallback = js.Function2[
-    /* entries */ js.Array[ResizeObserverEntry], 
-    /* observer */ typingsSlinky.resizeDashObserverDashPolyfill.resizeDashObserverDashPolyfillMod._Global_.ResizeObserver, 
-    Unit
-  ]
+  type ResizeObserverCallback = js.Function2[/* entries */ js.Array[ResizeObserverEntry], /* observer */ ResizeObserver, Unit]
 }

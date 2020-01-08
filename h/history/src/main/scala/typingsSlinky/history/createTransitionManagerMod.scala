@@ -1,8 +1,5 @@
 package typingsSlinky.history
 
-import typingsSlinky.history.createTransitionManagerMod.Prompt
-import typingsSlinky.history.createTransitionManagerMod.PromptFunction
-import typingsSlinky.history.createTransitionManagerMod.TransitionManager
 import typingsSlinky.history.historyMod.Action
 import typingsSlinky.history.historyMod.Location
 import typingsSlinky.history.historyMod.LocationListener

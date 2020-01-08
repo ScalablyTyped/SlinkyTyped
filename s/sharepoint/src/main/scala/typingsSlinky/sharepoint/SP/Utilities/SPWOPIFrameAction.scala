@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Utilities
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object SPWOPIFrameAction extends js.Object {
   @js.native
   sealed trait view extends SPWOPIFrameAction
   
-  /* 1 */ val edit: typingsSlinky.sharepoint.SP.Utilities.SPWOPIFrameAction.edit with Double = js.native
-  /* 3 */ val interactivePreview: typingsSlinky.sharepoint.SP.Utilities.SPWOPIFrameAction.interactivePreview with Double = js.native
-  /* 2 */ val mobileView: typingsSlinky.sharepoint.SP.Utilities.SPWOPIFrameAction.mobileView with Double = js.native
-  /* 0 */ val view: typingsSlinky.sharepoint.SP.Utilities.SPWOPIFrameAction.view with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SPWOPIFrameAction with Double] = js.native
+  /* 1 */ @js.native
+  object edit extends TopLevel[edit with Double]
+  
+  /* 3 */ @js.native
+  object interactivePreview extends TopLevel[interactivePreview with Double]
+  
+  /* 2 */ @js.native
+  object mobileView extends TopLevel[mobileView with Double]
+  
+  /* 0 */ @js.native
+  object view extends TopLevel[view with Double]
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.fullcalendar
 
-import typingsSlinky.fullcalendar.listenerMixinMod.Default
-import typingsSlinky.fullcalendar.listenerMixinMod.ListenerInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

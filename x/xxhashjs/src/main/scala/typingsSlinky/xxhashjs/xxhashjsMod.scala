@@ -2,9 +2,6 @@ package typingsSlinky.xxhashjs
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.xxhashjs.xxhashjsMod.HashInterface
-import typingsSlinky.xxhashjs.xxhashjsMod.HashObject
-import typingsSlinky.xxhashjs.xxhashjsMod.UINT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

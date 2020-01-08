@@ -1,7 +1,6 @@
 package typingsSlinky.fullcalendar
 
 import typingsSlinky.fullcalendar.fullcalendarMod.EventSource
-import typingsSlinky.fullcalendar.pluginsGcalGcalEventSourceMod.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

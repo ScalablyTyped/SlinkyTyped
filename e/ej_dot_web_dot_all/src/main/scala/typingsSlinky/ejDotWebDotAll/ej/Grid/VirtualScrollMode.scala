@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.Grid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +13,19 @@ sealed trait VirtualScrollMode extends js.Object
 object VirtualScrollMode extends js.Object {
   ///virtual scroll mode is continuous.
   @js.native
-  sealed trait Continuous
-    extends typingsSlinky.ejDotWebDotAll.ej.Grid.VirtualScrollMode
+  sealed trait Continuous extends VirtualScrollMode
   
   ///virtual scroll mode is normal.
   @js.native
-  sealed trait Normal
-    extends typingsSlinky.ejDotWebDotAll.ej.Grid.VirtualScrollMode
+  sealed trait Normal extends VirtualScrollMode
   
-  /* 1 */ val Continuous: typingsSlinky.ejDotWebDotAll.ej.Grid.VirtualScrollMode.Continuous with Double = js.native
-  /* 0 */ val Normal: typingsSlinky.ejDotWebDotAll.ej.Grid.VirtualScrollMode.Normal with Double = js.native
   @JSBracketAccess
-  def apply(value: Double): js.UndefOr[typingsSlinky.ejDotWebDotAll.ej.Grid.VirtualScrollMode with Double] = js.native
+  def apply(value: Double): js.UndefOr[VirtualScrollMode with Double] = js.native
+  /* 1 */ @js.native
+  object Continuous extends TopLevel[Continuous with Double]
+  
+  /* 0 */ @js.native
+  object Normal extends TopLevel[Normal with Double]
+  
 }
 

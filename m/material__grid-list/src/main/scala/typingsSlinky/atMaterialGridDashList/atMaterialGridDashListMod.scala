@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialGridDashList
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.atMaterialBaseMod.MDCComponent
 import typingsSlinky.atMaterialGridDashList.adapterMod.MDCGridListAdapter
-import typingsSlinky.atMaterialGridDashList.atMaterialGridDashListMod.MDCGridList
 import typingsSlinky.atMaterialGridDashList.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libSelectListMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type SelectList = ReactElement
+  type SelectListClass = ReactComponentClass[SelectListProps]
 }

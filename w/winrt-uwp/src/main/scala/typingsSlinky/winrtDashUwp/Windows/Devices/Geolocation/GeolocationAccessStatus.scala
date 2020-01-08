@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object GeolocationAccessStatus extends js.Object {
   @js.native
   sealed trait unspecified extends GeolocationAccessStatus
   
-  /* 1 */ val allowed: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.GeolocationAccessStatus.allowed with Double = js.native
-  /* 2 */ val denied: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.GeolocationAccessStatus.denied with Double = js.native
-  /* 0 */ val unspecified: typingsSlinky.winrtDashUwp.Windows.Devices.Geolocation.GeolocationAccessStatus.unspecified with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GeolocationAccessStatus with Double] = js.native
+  /* 1 */ @js.native
+  object allowed extends TopLevel[allowed with Double]
+  
+  /* 2 */ @js.native
+  object denied extends TopLevel[denied with Double]
+  
+  /* 0 */ @js.native
+  object unspecified extends TopLevel[unspecified with Double]
+  
 }
 

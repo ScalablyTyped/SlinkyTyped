@@ -1,6 +1,5 @@
 package typingsSlinky.commonDashErrors.commonDashErrorsMod
 
-import typingsSlinky.commonDashErrors.commonDashErrorsMod.io.IOError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

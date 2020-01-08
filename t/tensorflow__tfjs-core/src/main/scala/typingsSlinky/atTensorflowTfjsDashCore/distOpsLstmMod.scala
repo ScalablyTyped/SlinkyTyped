@@ -1,6 +1,5 @@
 package typingsSlinky.atTensorflowTfjsDashCore
 
-import typingsSlinky.atTensorflowTfjsDashCore.distOpsLstmMod.LSTMCellFunc
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Scalar
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor1D
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor2D

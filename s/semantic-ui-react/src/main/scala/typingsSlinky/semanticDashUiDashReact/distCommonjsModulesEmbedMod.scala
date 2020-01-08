@@ -1,7 +1,8 @@
 package typingsSlinky.semanticDashUiDashReact
 
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.reactMod.ComponentClass
 import typingsSlinky.react.reactMod.ComponentState
 import typingsSlinky.semanticDashUiDashReact.distCommonjsModulesEmbedEmbedMod.EmbedProps
 import scala.scalajs.js
@@ -18,6 +19,8 @@ object distCommonjsModulesEmbedMod extends js.Object {
     def this(props: EmbedProps, context: js.Any) = this()
   }
   
-  val default: ReactComponentClass[EmbedProps] = js.native
+  @js.native
+  object default extends TopLevel[ComponentClass[EmbedProps, ComponentState]]
+  
 }
 

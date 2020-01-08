@@ -1,6 +1,6 @@
 package typingsSlinky.mysql.mysqlMod
 
-import typingsSlinky.mysql.mysqlNumbers.`false`
+import typingsSlinky.mysql.mysqlBooleans.`false`
 import typingsSlinky.mysql.mysqlStrings.offline
 import typingsSlinky.mysql.mysqlStrings.remove
 import scala.scalajs.js

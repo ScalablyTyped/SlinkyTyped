@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object EmailBatchStatus extends js.Object {
   @js.native
   sealed trait success extends EmailBatchStatus
   
-  /* 1 */ val serverSearchSyncManagerError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailBatchStatus.serverSearchSyncManagerError with Double = js.native
-  /* 2 */ val serverSearchUnknownError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailBatchStatus.serverSearchUnknownError with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailBatchStatus.success with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailBatchStatus with Double] = js.native
+  /* 1 */ @js.native
+  object serverSearchSyncManagerError extends TopLevel[serverSearchSyncManagerError with Double]
+  
+  /* 2 */ @js.native
+  object serverSearchUnknownError extends TopLevel[serverSearchUnknownError with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
 }
 

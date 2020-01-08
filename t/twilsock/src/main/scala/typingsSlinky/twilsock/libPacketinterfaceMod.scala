@@ -2,7 +2,6 @@ package typingsSlinky.twilsock
 
 import typingsSlinky.twilsock.libConfigurationMod.Configuration
 import typingsSlinky.twilsock.libInterfacesChannelMod.Channel
-import typingsSlinky.twilsock.libPacketinterfaceMod.PacketResponse
 import typingsSlinky.twilsock.libProtocolMessagesMod.InitReply
 import typingsSlinky.twilsock.libProtocolProtocolMod.Protocol.Header
 import scala.scalajs.js

@@ -1,6 +1,5 @@
 package typingsSlinky.fuzzysetDotJs
 
-import typingsSlinky.fuzzysetDotJs.fuzzysetDotJsMod.FuzzySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

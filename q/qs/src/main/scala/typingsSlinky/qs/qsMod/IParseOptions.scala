@@ -1,6 +1,6 @@
 package typingsSlinky.qs.qsMod
 
-import typingsSlinky.qs.qsNumbers.`false`
+import typingsSlinky.qs.qsBooleans.`false`
 import typingsSlinky.qs.qsStrings.`iso-8859-1`
 import typingsSlinky.qs.qsStrings.`utf-8`
 import typingsSlinky.qs.qsStrings.key

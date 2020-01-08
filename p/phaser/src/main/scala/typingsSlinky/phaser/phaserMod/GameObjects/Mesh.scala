@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.GameObjects
 
+import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +26,7 @@ class Mesh protected ()
     * @param frame An optional frame from the Texture this Game Object is rendering with.
     */
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: Double,
     y: Double,
     vertices: js.Array[Double],
@@ -35,7 +36,7 @@ class Mesh protected ()
     texture: String
   ) = this()
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: Double,
     y: Double,
     vertices: js.Array[Double],
@@ -46,7 +47,7 @@ class Mesh protected ()
     frame: String
   ) = this()
   def this(
-    scene: typingsSlinky.phaser.Phaser.Scene,
+    scene: Scene,
     x: Double,
     y: Double,
     vertices: js.Array[Double],

@@ -2,7 +2,7 @@ package typingsSlinky.nextDashServer.distServerRenderMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.nextDashServer.Anon_Error_1933525888
+import typingsSlinky.nextDashServer.Anon_Error_1641997805
 import typingsSlinky.nextDashServer.distLibUtilsMod.AppType
 import typingsSlinky.nextDashServer.distLibUtilsMod.DocumentType
 import typingsSlinky.nextDashServer.distLibUtilsMod.NextPageContext
@@ -16,7 +16,7 @@ trait RenderOpts extends js.Object {
   var App: AppType
   var Component: ReactComponentClass[js.Object]
   var Document: DocumentType
-  var ErrorDebug: js.UndefOr[ReactComponentClass[Anon_Error_1933525888]] = js.undefined
+  var ErrorDebug: js.UndefOr[ReactComponentClass[Anon_Error_1641997805]] = js.undefined
   var ampBindInitData: Boolean
   var ampMode: js.UndefOr[js.Any] = js.undefined
   var ampPath: js.UndefOr[String] = js.undefined
@@ -57,7 +57,7 @@ object RenderOpts {
     pageConfig: PageConfig,
     reactLoadableManifest: ReactLoadableManifest,
     staticMarkup: Boolean,
-    ErrorDebug: ReactComponentClass[Anon_Error_1933525888] = null,
+    ErrorDebug: ReactComponentClass[Anon_Error_1641997805] = null,
     ampMode: js.Any = null,
     ampPath: String = null,
     ampValidator: (/* html */ String, /* pathname */ String) => js.Promise[Unit] = null,

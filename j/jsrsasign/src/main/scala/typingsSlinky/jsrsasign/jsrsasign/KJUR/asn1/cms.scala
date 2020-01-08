@@ -12,9 +12,6 @@ import typingsSlinky.jsrsasign.Anon_Issuer
 import typingsSlinky.jsrsasign.Anon_Name
 import typingsSlinky.jsrsasign.Anon_Oid
 import typingsSlinky.jsrsasign.Anon_Sorted
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.ContentInfo
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SignerInfo
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey

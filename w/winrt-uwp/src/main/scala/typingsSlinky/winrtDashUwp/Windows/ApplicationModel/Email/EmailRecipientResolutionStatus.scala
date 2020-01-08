@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,15 +44,31 @@ object EmailRecipientResolutionStatus extends js.Object {
   @js.native
   sealed trait unknownFailure extends EmailRecipientResolutionStatus
   
-  /* 2 */ val ambiguousRecipient: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.ambiguousRecipient with Double = js.native
-  /* 5 */ val cannotResolveDistributionList: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.cannotResolveDistributionList with Double = js.native
-  /* 4 */ val certificateRequestLimitReached: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.certificateRequestLimitReached with Double = js.native
-  /* 3 */ val noCertificate: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.noCertificate with Double = js.native
-  /* 1 */ val recipientNotFound: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.recipientNotFound with Double = js.native
-  /* 6 */ val serverError: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.serverError with Double = js.native
-  /* 0 */ val success: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.success with Double = js.native
-  /* 7 */ val unknownFailure: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Email.EmailRecipientResolutionStatus.unknownFailure with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmailRecipientResolutionStatus with Double] = js.native
+  /* 2 */ @js.native
+  object ambiguousRecipient extends TopLevel[ambiguousRecipient with Double]
+  
+  /* 5 */ @js.native
+  object cannotResolveDistributionList extends TopLevel[cannotResolveDistributionList with Double]
+  
+  /* 4 */ @js.native
+  object certificateRequestLimitReached extends TopLevel[certificateRequestLimitReached with Double]
+  
+  /* 3 */ @js.native
+  object noCertificate extends TopLevel[noCertificate with Double]
+  
+  /* 1 */ @js.native
+  object recipientNotFound extends TopLevel[recipientNotFound with Double]
+  
+  /* 6 */ @js.native
+  object serverError extends TopLevel[serverError with Double]
+  
+  /* 0 */ @js.native
+  object success extends TopLevel[success with Double]
+  
+  /* 7 */ @js.native
+  object unknownFailure extends TopLevel[unknownFailure with Double]
+  
 }
 

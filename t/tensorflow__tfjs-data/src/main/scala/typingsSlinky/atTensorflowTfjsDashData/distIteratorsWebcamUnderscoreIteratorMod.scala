@@ -3,7 +3,6 @@ package typingsSlinky.atTensorflowTfjsDashData
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorMod.Tensor3D
 import typingsSlinky.atTensorflowTfjsDashData.distIteratorsLazyUnderscoreIteratorMod.LazyIterator
-import typingsSlinky.atTensorflowTfjsDashData.distIteratorsWebcamUnderscoreIteratorMod.WebcamIterator
 import typingsSlinky.atTensorflowTfjsDashData.distTypesMod.WebcamConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,12 +1,12 @@
 package typingsSlinky.extjs.Ext.form
 
 import typingsSlinky.extjs.Ext.IComponent
+import typingsSlinky.extjs.Ext.form.field.IBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait IHidden
-  extends typingsSlinky.extjs.Ext.form.field.IBase {
+trait IHidden extends IBase {
   /** [Method] Clear any invalid styles messages for this field  */
   @JSName("clearInvalid")
   var clearInvalid_IHidden: js.UndefOr[js.Function0[Unit]] = js.undefined
@@ -43,7 +43,7 @@ trait IHidden
 object IHidden {
   @scala.inline
   def apply(
-    IBase: typingsSlinky.extjs.Ext.form.field.IBase = null,
+    IBase: IBase = null,
     clearInvalid: () => Unit = null,
     markInvalid: () => Unit = null,
     setHeight: () => IComponent = null,

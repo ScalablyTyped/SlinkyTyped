@@ -1,12 +1,12 @@
 package typingsSlinky.extjs.Ext.window
 
+import typingsSlinky.extjs.Ext.panel.IPanel
 import typingsSlinky.extjs.Ext.util.IComponentDragger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait IWindow
-  extends typingsSlinky.extjs.Ext.panel.IPanel {
+trait IWindow extends IPanel {
   /** [Method] Invoked after the Panel is Collapsed  */
   @JSName("afterCollapse")
   var afterCollapse_IWindow: js.UndefOr[js.Function0[Unit]] = js.undefined
@@ -72,7 +72,7 @@ trait IWindow
 object IWindow {
   @scala.inline
   def apply(
-    IPanel: typingsSlinky.extjs.Ext.panel.IPanel = null,
+    IPanel: IPanel = null,
     afterCollapse: () => Unit = null,
     afterExpand: () => Unit = null,
     animateTarget: js.Any = null,
@@ -85,15 +85,15 @@ object IWindow {
     hideShadowOnDeactivate: js.UndefOr[Boolean] = js.undefined,
     isWindow: js.UndefOr[Boolean] = js.undefined,
     maximizable: js.UndefOr[Boolean] = js.undefined,
-    maximize: /* animate */ js.UndefOr[Boolean] => typingsSlinky.extjs.Ext.window.IWindow = null,
+    maximize: /* animate */ js.UndefOr[Boolean] => IWindow = null,
     maximized: js.UndefOr[Boolean] = js.undefined,
     minimizable: js.UndefOr[Boolean] = js.undefined,
-    minimize: () => typingsSlinky.extjs.Ext.window.IWindow = null,
+    minimize: () => IWindow = null,
     modal: js.UndefOr[Boolean] = js.undefined,
     onEsc: js.Any = null,
     plain: js.UndefOr[Boolean] = js.undefined,
-    restore: /* animate */ js.UndefOr[js.Any] => typingsSlinky.extjs.Ext.window.IWindow = null,
-    toggleMaximize: () => typingsSlinky.extjs.Ext.window.IWindow = null,
+    restore: /* animate */ js.UndefOr[js.Any] => IWindow = null,
+    toggleMaximize: () => IWindow = null,
     x: Int | Double = null,
     y: Int | Double = null
   ): IWindow = {

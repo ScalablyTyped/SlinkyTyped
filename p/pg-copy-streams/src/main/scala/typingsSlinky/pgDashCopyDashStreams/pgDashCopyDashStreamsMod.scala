@@ -6,8 +6,6 @@ import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.node.streamMod.TransformOptions
 import typingsSlinky.pg.pgMod.Connection
 import typingsSlinky.pg.pgMod.Submittable
-import typingsSlinky.pgDashCopyDashStreams.pgDashCopyDashStreamsMod.CopyStreamQuery
-import typingsSlinky.pgDashCopyDashStreams.pgDashCopyDashStreamsMod.CopyToStreamQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +18,7 @@ object pgDashCopyDashStreamsMod extends js.Object {
     extends Transform
        with Submittable {
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def pipe[T /* <: WritableStream */](destination: T): T = js.native
-    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def pipe[T /* <: WritableStream */](destination: T, options: Anon_End): T = js.native
     /* CompleteClass */
@@ -34,9 +30,7 @@ object pgDashCopyDashStreamsMod extends js.Object {
     extends Transform
        with Submittable {
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def pipe[T /* <: WritableStream */](destination: T): T = js.native
-    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def pipe[T /* <: WritableStream */](destination: T, options: Anon_End): T = js.native
     /* CompleteClass */

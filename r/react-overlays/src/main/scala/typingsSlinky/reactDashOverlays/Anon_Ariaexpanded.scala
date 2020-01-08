@@ -1,7 +1,7 @@
 package typingsSlinky.reactDashOverlays
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactDashOverlays.reactDashOverlaysNumbers.`true`
+import typingsSlinky.reactDashOverlays.reactDashOverlaysBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

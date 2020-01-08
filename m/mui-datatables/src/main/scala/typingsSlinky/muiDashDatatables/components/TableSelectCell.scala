@@ -16,8 +16,9 @@ object TableSelectCell
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, onChange */
+  /* The following DOM/SVG props were specified: onChange */
   def apply(
+    checked: Boolean,
     fixedHeader: Boolean,
     classes: js.Object = null,
     expandableOn: js.UndefOr[Boolean] = js.undefined,
@@ -29,7 +30,7 @@ object TableSelectCell
     selectableOn: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(fixedHeader = fixedHeader.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], fixedHeader = fixedHeader.asInstanceOf[js.Any])
     if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
     if (!js.isUndefined(expandableOn)) __obj.updateDynamic("expandableOn")(expandableOn.asInstanceOf[js.Any])
     if (!js.isUndefined(isHeaderCell)) __obj.updateDynamic("isHeaderCell")(isHeaderCell.asInstanceOf[js.Any])

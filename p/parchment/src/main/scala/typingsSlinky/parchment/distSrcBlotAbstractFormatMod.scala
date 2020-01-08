@@ -3,7 +3,6 @@ package typingsSlinky.parchment
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.parchment.distSrcBlotAbstractFormatMod.FormatBlot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

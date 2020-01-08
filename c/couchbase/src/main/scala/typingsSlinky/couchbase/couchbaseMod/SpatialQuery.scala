@@ -1,5 +1,6 @@
 package typingsSlinky.couchbase.couchbaseMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.couchbase.couchbaseMod.SpatialQuery.Update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -80,11 +81,17 @@ object SpatialQuery extends js.Object {
     @js.native
     sealed trait NONE extends Update
     
-    /* 2 */ val AFTER: typingsSlinky.couchbase.couchbaseMod.SpatialQuery.Update.AFTER with Double = js.native
-    /* 0 */ val BEFORE: typingsSlinky.couchbase.couchbaseMod.SpatialQuery.Update.BEFORE with Double = js.native
-    /* 1 */ val NONE: typingsSlinky.couchbase.couchbaseMod.SpatialQuery.Update.NONE with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[Update with Double] = js.native
+    /* 2 */ @js.native
+    object AFTER extends TopLevel[AFTER with Double]
+    
+    /* 0 */ @js.native
+    object BEFORE extends TopLevel[BEFORE with Double]
+    
+    /* 1 */ @js.native
+    object NONE extends TopLevel[NONE with Double]
+    
   }
   
 }

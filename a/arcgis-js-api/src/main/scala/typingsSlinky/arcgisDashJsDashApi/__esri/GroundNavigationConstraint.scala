@@ -1,6 +1,8 @@
 package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import typingsSlinky.arcgisDashJsDashApi.HashMap
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`stay-above`
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.none
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +21,7 @@ trait GroundNavigationConstraint extends AnonymousAccessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#navigationConstraint)
     */
-  var `type`: String
+  var `type`: `stay-above` | none
 }
 
 object GroundNavigationConstraint {
@@ -28,7 +30,7 @@ object GroundNavigationConstraint {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
-    `type`: String,
+    `type`: `stay-above` | none,
     get: /* propertyName */ String => _ = null,
     set: (js.Function2[/* propertyName */ String, /* value */ js.Any, GroundNavigationConstraint]) with (js.Function1[/* props */ HashMap[_], GroundNavigationConstraint]) = null,
     watch: (/* path */ String | js.Array[String], /* callback */ WatchCallback, /* sync */ js.UndefOr[Boolean]) => WatchHandle = null

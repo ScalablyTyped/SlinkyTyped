@@ -1,6 +1,6 @@
 package typingsSlinky.systemjs.System
 
-import typingsSlinky.systemjs.systemjsNumbers.`false`
+import typingsSlinky.systemjs.systemjsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

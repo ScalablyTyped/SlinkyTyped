@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Web.Http
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object HttpCompletionOption extends js.Object {
   @js.native
   sealed trait responseHeadersRead extends HttpCompletionOption
   
-  /* 0 */ val responseContentRead: typingsSlinky.winrtDashUwp.Windows.Web.Http.HttpCompletionOption.responseContentRead with Double = js.native
-  /* 1 */ val responseHeadersRead: typingsSlinky.winrtDashUwp.Windows.Web.Http.HttpCompletionOption.responseHeadersRead with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HttpCompletionOption with Double] = js.native
+  /* 0 */ @js.native
+  object responseContentRead extends TopLevel[responseContentRead with Double]
+  
+  /* 1 */ @js.native
+  object responseHeadersRead extends TopLevel[responseHeadersRead with Double]
+  
 }
 

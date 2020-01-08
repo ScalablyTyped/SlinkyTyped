@@ -1,7 +1,7 @@
 package typingsSlinky.atAngularCore.atAngularCoreMod
 
 import typingsSlinky.atAngularCore.atAngularCoreStrings.noop
-import typingsSlinky.atAngularCore.atAngularCoreStrings.zoneDOTjs
+import typingsSlinky.atAngularCore.atAngularCoreStrings.zoneDotjs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait BootstrapOptions extends js.Object {
     * - `zone.js` - Use default `NgZone` which requires `Zone.js`.
     * - `noop` - Use `NoopNgZone` which does nothing.
     */
-  var ngZone: js.UndefOr[NgZone | zoneDOTjs | noop] = js.undefined
+  var ngZone: js.UndefOr[NgZone | zoneDotjs | noop] = js.undefined
 }
 
 object BootstrapOptions {
   @scala.inline
-  def apply(ngZone: NgZone | zoneDOTjs | noop = null): BootstrapOptions = {
+  def apply(ngZone: NgZone | zoneDotjs | noop = null): BootstrapOptions = {
     val __obj = js.Dynamic.literal()
     if (ngZone != null) __obj.updateDynamic("ngZone")(ngZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapOptions]

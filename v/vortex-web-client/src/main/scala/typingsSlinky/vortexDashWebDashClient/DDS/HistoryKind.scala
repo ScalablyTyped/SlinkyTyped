@@ -1,5 +1,6 @@
 package typingsSlinky.vortexDashWebDashClient.DDS
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object HistoryKind extends js.Object {
   @js.native
   sealed trait KeepLast extends HistoryKind
   
-  /* 0 */ val KeepAll: typingsSlinky.vortexDashWebDashClient.DDS.HistoryKind.KeepAll with Double = js.native
-  /* 1 */ val KeepLast: typingsSlinky.vortexDashWebDashClient.DDS.HistoryKind.KeepLast with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HistoryKind with Double] = js.native
+  /* 0 */ @js.native
+  object KeepAll extends TopLevel[KeepAll with Double]
+  
+  /* 1 */ @js.native
+  object KeepLast extends TopLevel[KeepLast with Double]
+  
 }
 

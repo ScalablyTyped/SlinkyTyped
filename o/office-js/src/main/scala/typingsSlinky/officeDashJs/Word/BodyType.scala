@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Word
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,13 +32,25 @@ object BodyType extends js.Object {
   @js.native
   sealed trait unknown extends BodyType
   
-  /* "Footer" */ val footer: typingsSlinky.officeDashJs.Word.BodyType.footer with String = js.native
-  /* "Header" */ val header: typingsSlinky.officeDashJs.Word.BodyType.header with String = js.native
-  /* "MainDoc" */ val mainDoc: typingsSlinky.officeDashJs.Word.BodyType.mainDoc with String = js.native
-  /* "Section" */ val section: typingsSlinky.officeDashJs.Word.BodyType.section with String = js.native
-  /* "TableCell" */ val tableCell: typingsSlinky.officeDashJs.Word.BodyType.tableCell with String = js.native
-  /* "Unknown" */ val unknown: typingsSlinky.officeDashJs.Word.BodyType.unknown with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[BodyType with String] = js.native
+  /* "Footer" */ @js.native
+  object footer extends TopLevel[footer with String]
+  
+  /* "Header" */ @js.native
+  object header extends TopLevel[header with String]
+  
+  /* "MainDoc" */ @js.native
+  object mainDoc extends TopLevel[mainDoc with String]
+  
+  /* "Section" */ @js.native
+  object section extends TopLevel[section with String]
+  
+  /* "TableCell" */ @js.native
+  object tableCell extends TopLevel[tableCell with String]
+  
+  /* "Unknown" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
 }
 

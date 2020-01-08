@@ -1,6 +1,6 @@
 package typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerMod
 
-import typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerNumbers.`false`
+import typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerBooleans.`false`
 import typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerStrings.`no-2009`
 import typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerStrings.`no-autoplace`
 import typingsSlinky.gulpDashAutoprefixer.gulpDashAutoprefixerStrings.autoplace

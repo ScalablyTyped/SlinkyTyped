@@ -1,6 +1,6 @@
 package typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobMod
 
-import typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobStrings.Empty
+import typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobStrings._empty
 import typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobStrings.ascii
 import typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobStrings.base64
 import typingsSlinky.reactDashNativeDashFetchDashBlob.reactDashNativeDashFetchDashBlobStrings.blob
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 trait RNFetchBlobResponseInfo extends js.Object {
   var headers: js.Any
-  var respType: text | blob | Empty | json
+  var respType: text | blob | _empty | json
   var rnfbEncode: path | base64 | ascii | utf8
   var state: Double
   var status: Double
@@ -25,7 +25,7 @@ object RNFetchBlobResponseInfo {
   @scala.inline
   def apply(
     headers: js.Any,
-    respType: text | blob | Empty | json,
+    respType: text | blob | _empty | json,
     rnfbEncode: path | base64 | ascii | utf8,
     state: Double,
     status: Double,

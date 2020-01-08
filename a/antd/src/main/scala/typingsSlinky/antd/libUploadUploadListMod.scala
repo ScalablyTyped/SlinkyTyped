@@ -6,7 +6,6 @@ import slinky.core.SyntheticEvent
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.libUploadInterfaceMod.UploadFile
 import typingsSlinky.antd.libUploadInterfaceMod.UploadListProps
-import typingsSlinky.antd.libUploadUploadListMod.UploadList
 import typingsSlinky.react.reactMod.Component
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

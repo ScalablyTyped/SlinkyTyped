@@ -10,15 +10,13 @@ JupyterLab - Main Menu
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/mainmenu |
 | Keywords           | - |
-| # releases         | 29 |
-| # dependents       | 64 |
-| # downloads        | 605570 |
+| # releases         | 63 |
+| # dependents       | 117 |
+| # downloads        | 823942 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fmainmenu)
     
 

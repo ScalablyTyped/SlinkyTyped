@@ -2,7 +2,6 @@ package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.parchment.distSrcBlotTextMod.TextBlot
 import typingsSlinky.parchment.distSrcRegistryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`

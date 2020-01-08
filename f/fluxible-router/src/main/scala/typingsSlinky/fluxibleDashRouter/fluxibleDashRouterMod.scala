@@ -2,7 +2,6 @@ package typingsSlinky.fluxibleDashRouter
 
 import typingsSlinky.fluxible.addonsBaseStoreMod.^
 import typingsSlinky.fluxible.fluxibleMod.FluxibleContext
-import typingsSlinky.fluxibleDashRouter.fluxibleDashRouterMod.NavLinkProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

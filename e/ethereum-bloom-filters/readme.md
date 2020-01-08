@@ -11,8 +11,8 @@ Ability to test bloom filters for ethereum.
 | Full name          | ethereum-bloom-filters |
 | Keywords           | ethereum, blockchain, blooms, bloom, bloom filters |
 | # releases         | 9 |
-| # dependents       | 1 |
-| # downloads        | 56269 |
+| # dependents       | 2 |
+| # downloads        | 224251 |
 | # stars            | 0 |
 
 ## Links

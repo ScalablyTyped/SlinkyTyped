@@ -9,7 +9,7 @@ import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.baseui.Anon_LabelKey
 import typingsSlinky.baseui.Anon_Option
-import typingsSlinky.baseui.Anon_Option_666053661
+import typingsSlinky.baseui.Anon_Option_1721897024
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -45,7 +45,7 @@ trait SelectProps extends js.Object {
   ] = js.undefined
   var filterOutSelected: js.UndefOr[Boolean] = js.undefined
   var getOptionLabel: js.UndefOr[js.Function1[/* args */ Anon_Option, TagMod[Any]]] = js.undefined
-  var getValueLabel: js.UndefOr[js.Function1[/* args */ Anon_Option_666053661, TagMod[Any]]] = js.undefined
+  var getValueLabel: js.UndefOr[js.Function1[/* args */ Anon_Option_1721897024, TagMod[Any]]] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var isLoading: js.UndefOr[Boolean] = js.undefined
   var labelKey: js.UndefOr[String] = js.undefined
@@ -63,7 +63,7 @@ trait SelectProps extends js.Object {
   var onOpen: js.UndefOr[js.Function0[_]] = js.undefined
   var onSelectResetsInput: js.UndefOr[Boolean] = js.undefined
   var openOnClick: js.UndefOr[Boolean] = js.undefined
-  var options: js.UndefOr[Value] = js.undefined
+  var options: js.UndefOr[OptionsT] = js.undefined
   var overrides: js.UndefOr[SelectOverrides] = js.undefined
   var placeholder: js.UndefOr[TagMod[Any]] = js.undefined
   var positive: js.UndefOr[Boolean] = js.undefined
@@ -94,7 +94,7 @@ object SelectProps {
     filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[Anon_LabelKey]) => Value = null,
     filterOutSelected: js.UndefOr[Boolean] = js.undefined,
     getOptionLabel: /* args */ Anon_Option => TagMod[Any] = null,
-    getValueLabel: /* args */ Anon_Option_666053661 => TagMod[Any] = null,
+    getValueLabel: /* args */ Anon_Option_1721897024 => TagMod[Any] = null,
     id: String = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
@@ -112,7 +112,7 @@ object SelectProps {
     onOpen: () => _ = null,
     onSelectResetsInput: js.UndefOr[Boolean] = js.undefined,
     openOnClick: js.UndefOr[Boolean] = js.undefined,
-    options: Value = null,
+    options: OptionsT = null,
     overrides: SelectOverrides = null,
     placeholder: TagMod[Any] = null,
     positive: js.UndefOr[Boolean] = js.undefined,

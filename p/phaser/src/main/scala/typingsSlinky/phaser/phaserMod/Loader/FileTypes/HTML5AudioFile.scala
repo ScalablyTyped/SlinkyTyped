@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.AudioFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
@@ -24,21 +25,11 @@ class HTML5AudioFile protected ()
     * @param urlConfig The absolute or relative URL to load this file from.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: AudioFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, urlConfig: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: AudioFileConfig, urlConfig: String) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    urlConfig: String,
-    xhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: AudioFileConfig,
-    urlConfig: String,
-    xhrSettings: XHRSettingsObject
-  ) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: String) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig, urlConfig: String) = this()
+  def this(loader: LoaderPlugin, key: String, urlConfig: String, xhrSettings: XHRSettingsObject) = this()
+  def this(loader: LoaderPlugin, key: AudioFileConfig, urlConfig: String, xhrSettings: XHRSettingsObject) = this()
 }
 

@@ -55,8 +55,8 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.libCarouselMod.UncontrolledCarouselProps
+import typingsSlinky.reactstrap.reactstrapBooleans.`false`
 import typingsSlinky.reactstrap.reactstrapMod.CSSModule
-import typingsSlinky.reactstrap.reactstrapNumbers.`false`
 import typingsSlinky.reactstrap.reactstrapStrings.carousel
 import typingsSlinky.reactstrap.reactstrapStrings.hover
 import scala.scalajs.js

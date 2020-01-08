@@ -1,5 +1,7 @@
 package typingsSlinky.superstruct
 
+import typingsSlinky.superstruct.libStructDashErrorMod.Branch
+import typingsSlinky.superstruct.libStructDashErrorMod.Path
 import typingsSlinky.superstruct.libStructMod.Struct
 import typingsSlinky.superstruct.libSuperstructMod.Superstruct
 import typingsSlinky.superstruct.libTypesMod.Validator
@@ -12,12 +14,7 @@ import scala.scalajs.js.annotation._
 object libStructsMod extends js.Object {
   def createArray(schema: js.Array[_], defaults: js.Any, struct: Superstruct): Struct = js.native
   def createDynamic(
-    schema: js.Function3[
-      /* value */ js.Any, 
-      /* branch */ js.Array[_], 
-      /* path */ js.Array[String | Double], 
-      Struct
-    ],
+    schema: js.Function3[/* value */ js.Any, /* branch */ Branch, /* path */ Path, Struct],
     defaults: js.Any,
     struct: Superstruct
   ): Struct = js.native

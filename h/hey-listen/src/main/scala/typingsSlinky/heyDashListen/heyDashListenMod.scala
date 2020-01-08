@@ -1,6 +1,5 @@
 package typingsSlinky.heyDashListen
 
-import typingsSlinky.heyDashListen.heyDashListenMod.DevMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +31,22 @@ object PermissionGroupTypes extends js.Object {
   @js.native
   sealed trait ServerGroup extends PermissionGroupTypes
   
-  /* 2 */ val Channel: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupTypes.Channel with Double = js.native
-  /* 4 */ val ChannelClient: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupTypes.ChannelClient with Double = js.native
-  /* 3 */ val ChannelGroup: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupTypes.ChannelGroup with Double = js.native
-  /* 1 */ val GlobalClient: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupTypes.GlobalClient with Double = js.native
-  /* 0 */ val ServerGroup: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupTypes.ServerGroup with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PermissionGroupTypes with Double] = js.native
+  /* 2 */ @js.native
+  object Channel extends TopLevel[Channel with Double]
+  
+  /* 4 */ @js.native
+  object ChannelClient extends TopLevel[ChannelClient with Double]
+  
+  /* 3 */ @js.native
+  object ChannelGroup extends TopLevel[ChannelGroup with Double]
+  
+  /* 1 */ @js.native
+  object GlobalClient extends TopLevel[GlobalClient with Double]
+  
+  /* 0 */ @js.native
+  object ServerGroup extends TopLevel[ServerGroup with Double]
+  
 }
 

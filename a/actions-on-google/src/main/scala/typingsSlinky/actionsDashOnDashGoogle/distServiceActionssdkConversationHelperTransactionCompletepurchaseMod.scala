@@ -1,6 +1,6 @@
 package typingsSlinky.actionsDashOnDashGoogle
 
-import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDOTintentDOTCOMPLETE_PURCHASE
+import typingsSlinky.actionsDashOnDashGoogle.actionsDashOnDashGoogleStrings.actionsDotintentDotCOMPLETE_PURCHASE
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsTransactionsV3CompletePurchaseValue
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkApiV2Mod.GoogleActionsTransactionsV3CompletePurchaseValueSpec
 import typingsSlinky.actionsDashOnDashGoogle.distServiceActionssdkConversationHelperHelperMod.Helper
@@ -17,7 +17,7 @@ object distServiceActionssdkConversationHelperTransactionCompletepurchaseMod ext
     * @public
     */
   class CompletePurchase () extends Helper[
-          actionsDOTintentDOTCOMPLETE_PURCHASE, 
+          actionsDotintentDotCOMPLETE_PURCHASE, 
           GoogleActionsTransactionsV3CompletePurchaseValueSpec
         ] {
     def this(options: GoogleActionsTransactionsV3CompletePurchaseValueSpec) = this()

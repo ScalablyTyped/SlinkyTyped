@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SortableTreeWithoutDndContext
-  extends SharedApply_ReactSortableTreeProps1992911220[
+  extends SharedApply_ReactSortableTreeProps_1934647021[
       typingsSlinky.reactDashSortableDashTree.reactDashSortableDashTreeMod.SortableTreeWithoutDndContext
     ] {
   @JSImport("react-sortable-tree", "SortableTreeWithoutDndContext")

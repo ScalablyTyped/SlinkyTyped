@@ -26,7 +26,7 @@ class ContentFactory ()
     * This is a separate readonly attribute rather than a factory method as we need
     * to pass it around.
     */
-  /* CompleteClass */
+  /* InferMemberOverrides */
   override val editorFactory: Factory = js.native
   /**
     * Create a new cell header for the parent widget.
@@ -54,6 +54,7 @@ class ContentFactory ()
   /**
     * Create an output prompt.
     */
+  /* CompleteClass */
   /* InferMemberOverrides */
   override def createOutputPrompt(): IOutputPrompt = js.native
   /**
@@ -64,6 +65,7 @@ class ContentFactory ()
   /**
     * Create an stdin widget.
     */
+  /* CompleteClass */
   /* InferMemberOverrides */
   override def createStdin(options: typingsSlinky.atJupyterlabOutputarea.libWidgetMod.Stdin.IOptions): IStdin = js.native
 }

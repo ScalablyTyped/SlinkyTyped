@@ -2,7 +2,6 @@ package typingsSlinky.vsoDashNodeDashApi
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.vsoDashNodeDashApi.clientApiBasesMod.ClientApiBase
-import typingsSlinky.vsoDashNodeDashApi.gitApiMod.IGitApi
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.IdentityRef
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVSSInterfacesMod.JsonPatchDocument
 import typingsSlinky.vsoDashNodeDashApi.interfacesCommonVsoBaseInterfacesMod.IRequestHandler

@@ -2,12 +2,12 @@ package typingsSlinky.xhr.xhrMod
 
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.xhr.xhrStrings.DELETE
-import typingsSlinky.xhr.xhrStrings.Empty
 import typingsSlinky.xhr.xhrStrings.GET
 import typingsSlinky.xhr.xhrStrings.HEAD
 import typingsSlinky.xhr.xhrStrings.OPTIONS
 import typingsSlinky.xhr.xhrStrings.POST
 import typingsSlinky.xhr.xhrStrings.PUT
+import typingsSlinky.xhr.xhrStrings._empty
 import typingsSlinky.xhr.xhrStrings.arraybuffer
 import typingsSlinky.xhr.xhrStrings.blob
 import typingsSlinky.xhr.xhrStrings.document
@@ -24,7 +24,7 @@ trait XhrBaseConfig extends js.Object {
   var json: js.UndefOr[Boolean] = js.undefined
   var method: js.UndefOr[DELETE | GET | HEAD | OPTIONS | POST | PUT] = js.undefined
   var password: js.UndefOr[String] = js.undefined
-  var responseType: js.UndefOr[Empty | arraybuffer | blob | document | json | text] = js.undefined
+  var responseType: js.UndefOr[_empty | arraybuffer | blob | document | json | text] = js.undefined
   var sync: js.UndefOr[Boolean] = js.undefined
   var timeout: js.UndefOr[Double] = js.undefined
   var useXDR: js.UndefOr[Boolean] = js.undefined
@@ -42,7 +42,7 @@ object XhrBaseConfig {
     json: js.UndefOr[Boolean] = js.undefined,
     method: DELETE | GET | HEAD | OPTIONS | POST | PUT = null,
     password: String = null,
-    responseType: Empty | arraybuffer | blob | document | json | text = null,
+    responseType: _empty | arraybuffer | blob | document | json | text = null,
     sync: js.UndefOr[Boolean] = js.undefined,
     timeout: Int | Double = null,
     useXDR: js.UndefOr[Boolean] = js.undefined,

@@ -1,14 +1,13 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.IonicAngularBuildOptions
-import typingsSlinky.ionic.ionicStrings.`@ionic/app-scripts`
+import typingsSlinky.ionic.ionicStrings.`@ionicSlashapp-scripts`
 import typingsSlinky.ionic.ionicStrings.`Ionic App Scripts`
 import typingsSlinky.ionic.ionicStrings.`app-scripts`
 import typingsSlinky.ionic.ionicStrings.`ionic-app-scripts`
 import typingsSlinky.ionic.libBuildMod.BuildCLI
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libBuildMod.BuildRunnerDeps
-import typingsSlinky.ionic.libProjectIonicDashAngularBuildMod.IonicAngularBuildRunnerDeps
 import typingsSlinky.ionic.libProjectIonicDashAngularMod.IonicAngularProject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,7 @@ object libProjectIonicDashAngularBuildMod extends js.Object {
     @JSName("name")
     val name_IonicAngularBuildCLI: `Ionic App Scripts` = js.native
     @JSName("pkg")
-    val pkg_IonicAngularBuildCLI: `@ionic/app-scripts` = js.native
+    val pkg_IonicAngularBuildCLI: `@ionicSlashapp-scripts` = js.native
     val prefix: `app-scripts` = js.native
     @JSName("program")
     val program_IonicAngularBuildCLI: `ionic-app-scripts` = js.native

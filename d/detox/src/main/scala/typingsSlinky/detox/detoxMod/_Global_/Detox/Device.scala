@@ -1,7 +1,7 @@
 package typingsSlinky.detox.detoxMod._Global_.Detox
 
 import typingsSlinky.detox.Anon_SourceApp
-import typingsSlinky.detox.detoxNumbers.`true`
+import typingsSlinky.detox.detoxBooleans.`true`
 import typingsSlinky.detox.detoxStrings.android
 import typingsSlinky.detox.detoxStrings.ios
 import scala.scalajs.js

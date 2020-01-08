@@ -59,43 +59,43 @@ import scala.scalajs.js.annotation._
   - typings.convertDashUnits.convertDashUnitsStrings.gal
   - typings.convertDashUnits.convertDashUnitsStrings.ft3
   - typings.convertDashUnits.convertDashUnitsStrings.yd3
-  - typings.convertDashUnits.convertDashUnitsStrings.`mm3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`cm3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`ml/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`cl/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`dl/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`l/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`l/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`l/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`kl/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`kl/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`kl/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m3/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m3/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`km3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`tsp/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`Tbs/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`in3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`in3/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`in3/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`fl-oz/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`fl-oz/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`fl-oz/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`cup/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`pnt/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`pnt/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`pnt/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`qt/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`gal/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`gal/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`gal/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`ft3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`ft3/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`ft3/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`yd3/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`yd3/min`
-  - typings.convertDashUnits.convertDashUnitsStrings.`yd3/h`
+  - typings.convertDashUnits.convertDashUnitsStrings.mm3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.cm3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.mlSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.clSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.dlSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.lSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.lSlashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.lSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.klSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.klSlashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.klSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.m3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.m3Slashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.m3Slashh
+  - typings.convertDashUnits.convertDashUnitsStrings.km3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.tspSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.TbsSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.in3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.in3Slashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.in3Slashh
+  - typings.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashs`
+  - typings.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashmin`
+  - typings.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashh`
+  - typings.convertDashUnits.convertDashUnitsStrings.cupSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.pntSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.pntSlashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.pntSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.qtSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.galSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.galSlashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.galSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.ft3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.ft3Slashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.ft3Slashh
+  - typings.convertDashUnits.convertDashUnitsStrings.yd3Slashs
+  - typings.convertDashUnits.convertDashUnitsStrings.yd3Slashmin
+  - typings.convertDashUnits.convertDashUnitsStrings.yd3Slashh
   - typings.convertDashUnits.convertDashUnitsStrings.C
   - typings.convertDashUnits.convertDashUnitsStrings.F
   - typings.convertDashUnits.convertDashUnitsStrings.K
@@ -117,16 +117,16 @@ import scala.scalajs.js.annotation._
   - typings.convertDashUnits.convertDashUnitsStrings.GHz
   - typings.convertDashUnits.convertDashUnitsStrings.THz
   - typings.convertDashUnits.convertDashUnitsStrings.rpm
-  - typings.convertDashUnits.convertDashUnitsStrings.`deg/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`rad/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`km/h`
-  - typings.convertDashUnits.convertDashUnitsStrings.`m/h`
+  - typings.convertDashUnits.convertDashUnitsStrings.degSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.radSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.mSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.kmSlashh
+  - typings.convertDashUnits.convertDashUnitsStrings.mSlashh
   - typings.convertDashUnits.convertDashUnitsStrings.knot
-  - typings.convertDashUnits.convertDashUnitsStrings.`ft/s`
-  - typings.convertDashUnits.convertDashUnitsStrings.`s/m`
-  - typings.convertDashUnits.convertDashUnitsStrings.`min/km`
-  - typings.convertDashUnits.convertDashUnitsStrings.`s/ft`
+  - typings.convertDashUnits.convertDashUnitsStrings.ftSlashs
+  - typings.convertDashUnits.convertDashUnitsStrings.sSlashm
+  - typings.convertDashUnits.convertDashUnitsStrings.minSlashkm
+  - typings.convertDashUnits.convertDashUnitsStrings.sSlashft
   - typings.convertDashUnits.convertDashUnitsStrings.Pa
   - typings.convertDashUnits.convertDashUnitsStrings.hPa
   - typings.convertDashUnits.convertDashUnitsStrings.kPa
@@ -258,7 +258,7 @@ object unit {
   @scala.inline
   def Tbs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.Tbs = this.cast("Tbs")
   @scala.inline
-  def `Tbs/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`Tbs/s` = this.cast("Tbs/s")
+  def TbsSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.TbsSlashs = this.cast("Tbs/s")
   @scala.inline
   def V: typingsSlinky.convertDashUnits.convertDashUnitsStrings.V = this.cast("V")
   @scala.inline
@@ -284,7 +284,7 @@ object unit {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def `cl/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`cl/s` = this.cast("cl/s")
+  def clSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.clSlashs = this.cast("cl/s")
   @scala.inline
   def cm: typingsSlinky.convertDashUnits.convertDashUnitsStrings.cm = this.cast("cm")
   @scala.inline
@@ -292,27 +292,27 @@ object unit {
   @scala.inline
   def cm3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.cm3 = this.cast("cm3")
   @scala.inline
-  def `cm3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`cm3/s` = this.cast("cm3/s")
+  def cm3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.cm3Slashs = this.cast("cm3/s")
   @scala.inline
   def cup: typingsSlinky.convertDashUnits.convertDashUnitsStrings.cup = this.cast("cup")
   @scala.inline
-  def `cup/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`cup/s` = this.cast("cup/s")
+  def cupSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.cupSlashs = this.cast("cup/s")
   @scala.inline
   def d: typingsSlinky.convertDashUnits.convertDashUnitsStrings.d = this.cast("d")
   @scala.inline
   def deg: typingsSlinky.convertDashUnits.convertDashUnitsStrings.deg = this.cast("deg")
   @scala.inline
-  def `deg/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`deg/s` = this.cast("deg/s")
+  def degSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.degSlashs = this.cast("deg/s")
   @scala.inline
-  def `dl/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`dl/s` = this.cast("dl/s")
+  def dlSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.dlSlashs = this.cast("dl/s")
   @scala.inline
   def `fl-oz`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-oz` = this.cast("fl-oz")
   @scala.inline
-  def `fl-oz/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-oz/h` = this.cast("fl-oz/h")
+  def `fl-ozSlashh`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashh` = this.cast("fl-oz/h")
   @scala.inline
-  def `fl-oz/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-oz/min` = this.cast("fl-oz/min")
+  def `fl-ozSlashmin`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashmin` = this.cast("fl-oz/min")
   @scala.inline
-  def `fl-oz/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-oz/s` = this.cast("fl-oz/s")
+  def `fl-ozSlashs`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`fl-ozSlashs` = this.cast("fl-oz/s")
   @scala.inline
   def ft: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft = this.cast("ft")
   @scala.inline
@@ -320,27 +320,27 @@ object unit {
   @scala.inline
   def `ft-us`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft-us` = this.cast("ft-us")
   @scala.inline
-  def `ft/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft/s` = this.cast("ft/s")
-  @scala.inline
   def ft2: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft2 = this.cast("ft2")
   @scala.inline
   def ft3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft3 = this.cast("ft3")
   @scala.inline
-  def `ft3/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft3/h` = this.cast("ft3/h")
+  def ft3Slashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft3Slashh = this.cast("ft3/h")
   @scala.inline
-  def `ft3/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft3/min` = this.cast("ft3/min")
+  def ft3Slashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft3Slashmin = this.cast("ft3/min")
   @scala.inline
-  def `ft3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ft3/s` = this.cast("ft3/s")
+  def ft3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ft3Slashs = this.cast("ft3/s")
+  @scala.inline
+  def ftSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ftSlashs = this.cast("ft/s")
   @scala.inline
   def g: typingsSlinky.convertDashUnits.convertDashUnitsStrings.g = this.cast("g")
   @scala.inline
   def gal: typingsSlinky.convertDashUnits.convertDashUnitsStrings.gal = this.cast("gal")
   @scala.inline
-  def `gal/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`gal/h` = this.cast("gal/h")
+  def galSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.galSlashh = this.cast("gal/h")
   @scala.inline
-  def `gal/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`gal/min` = this.cast("gal/min")
+  def galSlashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.galSlashmin = this.cast("gal/min")
   @scala.inline
-  def `gal/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`gal/s` = this.cast("gal/s")
+  def galSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.galSlashs = this.cast("gal/s")
   @scala.inline
   def grad: typingsSlinky.convertDashUnits.convertDashUnitsStrings.grad = this.cast("grad")
   @scala.inline
@@ -356,11 +356,11 @@ object unit {
   @scala.inline
   def in3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.in3 = this.cast("in3")
   @scala.inline
-  def `in3/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`in3/h` = this.cast("in3/h")
+  def in3Slashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.in3Slashh = this.cast("in3/h")
   @scala.inline
-  def `in3/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`in3/min` = this.cast("in3/min")
+  def in3Slashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.in3Slashmin = this.cast("in3/min")
   @scala.inline
-  def `in3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`in3/s` = this.cast("in3/s")
+  def in3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.in3Slashs = this.cast("in3/s")
   @scala.inline
   def kA: typingsSlinky.convertDashUnits.convertDashUnitsStrings.kA = this.cast("kA")
   @scala.inline
@@ -386,21 +386,21 @@ object unit {
   @scala.inline
   def kl: typingsSlinky.convertDashUnits.convertDashUnitsStrings.kl = this.cast("kl")
   @scala.inline
-  def `kl/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`kl/h` = this.cast("kl/h")
+  def klSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.klSlashh = this.cast("kl/h")
   @scala.inline
-  def `kl/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`kl/min` = this.cast("kl/min")
+  def klSlashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.klSlashmin = this.cast("kl/min")
   @scala.inline
-  def `kl/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`kl/s` = this.cast("kl/s")
+  def klSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.klSlashs = this.cast("kl/s")
   @scala.inline
   def km: km_ = this.cast("km")
-  @scala.inline
-  def `km/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`km/h` = this.cast("km/h")
   @scala.inline
   def km2: typingsSlinky.convertDashUnits.convertDashUnitsStrings.km2 = this.cast("km2")
   @scala.inline
   def km3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.km3 = this.cast("km3")
   @scala.inline
-  def `km3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`km3/s` = this.cast("km3/s")
+  def km3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.km3Slashs = this.cast("km3/s")
+  @scala.inline
+  def kmSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.kmSlashh = this.cast("km/h")
   @scala.inline
   def knot: typingsSlinky.convertDashUnits.convertDashUnitsStrings.knot = this.cast("knot")
   @scala.inline
@@ -408,11 +408,11 @@ object unit {
   @scala.inline
   def l: typingsSlinky.convertDashUnits.convertDashUnitsStrings.l = this.cast("l")
   @scala.inline
-  def `l/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`l/h` = this.cast("l/h")
+  def lSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.lSlashh = this.cast("l/h")
   @scala.inline
-  def `l/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`l/min` = this.cast("l/min")
+  def lSlashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.lSlashmin = this.cast("l/min")
   @scala.inline
-  def `l/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`l/s` = this.cast("l/s")
+  def lSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.lSlashs = this.cast("l/s")
   @scala.inline
   def lb: typingsSlinky.convertDashUnits.convertDashUnitsStrings.lb = this.cast("lb")
   @scala.inline
@@ -420,23 +420,23 @@ object unit {
   @scala.inline
   def m: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m = this.cast("m")
   @scala.inline
-  def `m/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m/h` = this.cast("m/h")
-  @scala.inline
-  def `m/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m/s` = this.cast("m/s")
-  @scala.inline
   def m2: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m2 = this.cast("m2")
   @scala.inline
   def m3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m3 = this.cast("m3")
   @scala.inline
-  def `m3/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m3/h` = this.cast("m3/h")
+  def m3Slashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m3Slashh = this.cast("m3/h")
   @scala.inline
-  def `m3/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m3/min` = this.cast("m3/min")
+  def m3Slashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m3Slashmin = this.cast("m3/min")
   @scala.inline
-  def `m3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`m3/s` = this.cast("m3/s")
+  def m3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.m3Slashs = this.cast("m3/s")
   @scala.inline
   def mA: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mA = this.cast("mA")
   @scala.inline
   def mHz: mHz_ = this.cast("mHz")
+  @scala.inline
+  def mSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mSlashh = this.cast("m/h")
+  @scala.inline
+  def mSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mSlashs = this.cast("m/s")
   @scala.inline
   def mV: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mV = this.cast("mV")
   @scala.inline
@@ -460,11 +460,11 @@ object unit {
   @scala.inline
   def min: typingsSlinky.convertDashUnits.convertDashUnitsStrings.min = this.cast("min")
   @scala.inline
-  def `min/km`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`min/km` = this.cast("min/km")
+  def minSlashkm: typingsSlinky.convertDashUnits.convertDashUnitsStrings.minSlashkm = this.cast("min/km")
   @scala.inline
   def ml: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ml = this.cast("ml")
   @scala.inline
-  def `ml/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`ml/s` = this.cast("ml/s")
+  def mlSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mlSlashs = this.cast("ml/s")
   @scala.inline
   def mm: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mm = this.cast("mm")
   @scala.inline
@@ -472,7 +472,7 @@ object unit {
   @scala.inline
   def mm3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mm3 = this.cast("mm3")
   @scala.inline
-  def `mm3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`mm3/s` = this.cast("mm3/s")
+  def mm3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.mm3Slashs = this.cast("mm3/s")
   @scala.inline
   def month: typingsSlinky.convertDashUnits.convertDashUnitsStrings.month = this.cast("month")
   @scala.inline
@@ -488,11 +488,11 @@ object unit {
   @scala.inline
   def pnt: typingsSlinky.convertDashUnits.convertDashUnitsStrings.pnt = this.cast("pnt")
   @scala.inline
-  def `pnt/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`pnt/h` = this.cast("pnt/h")
+  def pntSlashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.pntSlashh = this.cast("pnt/h")
   @scala.inline
-  def `pnt/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`pnt/min` = this.cast("pnt/min")
+  def pntSlashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.pntSlashmin = this.cast("pnt/min")
   @scala.inline
-  def `pnt/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`pnt/s` = this.cast("pnt/s")
+  def pntSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.pntSlashs = this.cast("pnt/s")
   @scala.inline
   def ppb: typingsSlinky.convertDashUnits.convertDashUnitsStrings.ppb = this.cast("ppb")
   @scala.inline
@@ -506,19 +506,19 @@ object unit {
   @scala.inline
   def qt: typingsSlinky.convertDashUnits.convertDashUnitsStrings.qt = this.cast("qt")
   @scala.inline
-  def `qt/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`qt/s` = this.cast("qt/s")
+  def qtSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.qtSlashs = this.cast("qt/s")
   @scala.inline
   def rad: typingsSlinky.convertDashUnits.convertDashUnitsStrings.rad = this.cast("rad")
   @scala.inline
-  def `rad/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`rad/s` = this.cast("rad/s")
+  def radSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.radSlashs = this.cast("rad/s")
   @scala.inline
   def rpm: typingsSlinky.convertDashUnits.convertDashUnitsStrings.rpm = this.cast("rpm")
   @scala.inline
   def s: typingsSlinky.convertDashUnits.convertDashUnitsStrings.s = this.cast("s")
   @scala.inline
-  def `s/ft`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`s/ft` = this.cast("s/ft")
+  def sSlashft: typingsSlinky.convertDashUnits.convertDashUnitsStrings.sSlashft = this.cast("s/ft")
   @scala.inline
-  def `s/m`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`s/m` = this.cast("s/m")
+  def sSlashm: typingsSlinky.convertDashUnits.convertDashUnitsStrings.sSlashm = this.cast("s/m")
   @scala.inline
   def t: typingsSlinky.convertDashUnits.convertDashUnitsStrings.t = this.cast("t")
   @scala.inline
@@ -526,17 +526,17 @@ object unit {
   @scala.inline
   def tsp: typingsSlinky.convertDashUnits.convertDashUnitsStrings.tsp = this.cast("tsp")
   @scala.inline
-  def `tsp/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`tsp/s` = this.cast("tsp/s")
+  def tspSlashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.tspSlashs = this.cast("tsp/s")
   @scala.inline
   def week: typingsSlinky.convertDashUnits.convertDashUnitsStrings.week = this.cast("week")
   @scala.inline
   def yd3: typingsSlinky.convertDashUnits.convertDashUnitsStrings.yd3 = this.cast("yd3")
   @scala.inline
-  def `yd3/h`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`yd3/h` = this.cast("yd3/h")
+  def yd3Slashh: typingsSlinky.convertDashUnits.convertDashUnitsStrings.yd3Slashh = this.cast("yd3/h")
   @scala.inline
-  def `yd3/min`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`yd3/min` = this.cast("yd3/min")
+  def yd3Slashmin: typingsSlinky.convertDashUnits.convertDashUnitsStrings.yd3Slashmin = this.cast("yd3/min")
   @scala.inline
-  def `yd3/s`: typingsSlinky.convertDashUnits.convertDashUnitsStrings.`yd3/s` = this.cast("yd3/s")
+  def yd3Slashs: typingsSlinky.convertDashUnits.convertDashUnitsStrings.yd3Slashs = this.cast("yd3/s")
   @scala.inline
   def year: typingsSlinky.convertDashUnits.convertDashUnitsStrings.year = this.cast("year")
 }

@@ -31,8 +31,9 @@ object TextField
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, name, onBlur, onFocus, placeholder */
+  /* The following DOM/SVG props were specified: disabled, name, onBlur, onFocus, placeholder */
   def apply(
+    id: String,
     onChange: Anon_EventValue => Unit,
     autoComplete: `current-password` | on | off | username = null,
     errorMessage: String = null,
@@ -41,7 +42,7 @@ object TextField
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.TextField] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
     if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
     if (idealErrorDirection != null) __obj.updateDynamic("idealErrorDirection")(idealErrorDirection.asInstanceOf[js.Any])

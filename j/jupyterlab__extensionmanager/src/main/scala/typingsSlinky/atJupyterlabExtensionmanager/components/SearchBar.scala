@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SearchBar
-  extends SharedApply_IProperties20078928[
+  extends SharedApply_IProperties_1856788622[
       typingsSlinky.atJupyterlabExtensionmanager.atJupyterlabExtensionmanagerMod.SearchBar
     ] {
   @JSImport("@jupyterlab/extensionmanager", "SearchBar")

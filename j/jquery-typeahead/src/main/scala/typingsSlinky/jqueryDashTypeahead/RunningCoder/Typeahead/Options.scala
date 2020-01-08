@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryDashTypeahead.RunningCoder.Typeahead
 
 import typingsSlinky.jqueryDashTypeahead.JQuery
-import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadNumbers.`false`
-import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadNumbers.`true`
+import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadBooleans.`false`
+import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadBooleans.`true`
 import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadStrings.any
 import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadStrings.asc
 import typingsSlinky.jqueryDashTypeahead.jqueryDashTypeaheadStrings.desc
@@ -302,7 +302,7 @@ object Options {
       /* resultCountPerGroup */ js.UndefOr[Double], 
       js.Array[_]
     ]) = null,
-    groupTemplate: Null = null,
+    groupTemplate: js.UndefOr[scala.Nothing] = js.undefined,
     highlight: any | Boolean = null,
     hint: Boolean | CssObject = null,
     href: String | (js.Function1[/* item */ js.UndefOr[js.Any], String]) = null,
@@ -346,7 +346,7 @@ object Options {
     if (!js.isUndefined(generateOnLoad)) __obj.updateDynamic("generateOnLoad")(generateOnLoad.asInstanceOf[js.Any])
     if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
     if (groupOrder != null) __obj.updateDynamic("groupOrder")(groupOrder.asInstanceOf[js.Any])
-    if (groupTemplate != null) __obj.updateDynamic("groupTemplate")(groupTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupTemplate)) __obj.updateDynamic("groupTemplate")(groupTemplate.asInstanceOf[js.Any])
     if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
     if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
     if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])

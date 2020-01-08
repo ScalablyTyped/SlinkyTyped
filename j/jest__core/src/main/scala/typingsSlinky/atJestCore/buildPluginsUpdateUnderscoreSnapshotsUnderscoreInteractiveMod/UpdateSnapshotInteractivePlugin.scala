@@ -1,7 +1,7 @@
 package typingsSlinky.atJestCore.buildPluginsUpdateUnderscoreSnapshotsUnderscoreInteractiveMod
 
 import typingsSlinky.atJestCore.Anon_Key
-import typingsSlinky.atJestCore.atJestCoreNumbers.`true`
+import typingsSlinky.atJestCore.atJestCoreBooleans.`true`
 import typingsSlinky.atJestTestDashResult.buildTypesMod.AggregatedResult
 import typingsSlinky.atJestTestDashResult.buildTypesMod.AssertionLocation
 import typingsSlinky.atJestTypes.buildConfigMod.GlobalConfig

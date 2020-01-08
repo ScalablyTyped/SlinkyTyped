@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 /* Rewritten from type alias, can be one of: 
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.__all
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Atomics
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTvalues
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTentries
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTgetOwnPropertyDescriptors
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTpadEnd
-  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTpadStart
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotvalues
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotentries
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotgetOwnPropertyDescriptors
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotpadEnd
+  - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotpadStart
   - typings.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.SharedArrayBuffer
 */
 trait ES2017Builtins extends js.Object
@@ -20,17 +20,17 @@ object ES2017Builtins {
   @scala.inline
   def Atomics: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.Atomics = this.cast("Atomics")
   @scala.inline
-  def ObjectDOTentries: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTentries = this.cast("Object.entries")
+  def ObjectDotentries: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotentries = this.cast("Object.entries")
   @scala.inline
-  def ObjectDOTgetOwnPropertyDescriptors: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTgetOwnPropertyDescriptors = this.cast("Object.getOwnPropertyDescriptors")
+  def ObjectDotgetOwnPropertyDescriptors: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotgetOwnPropertyDescriptors = this.cast("Object.getOwnPropertyDescriptors")
   @scala.inline
-  def ObjectDOTvalues: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDOTvalues = this.cast("Object.values")
+  def ObjectDotvalues: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.ObjectDotvalues = this.cast("Object.values")
   @scala.inline
   def SharedArrayBuffer: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.SharedArrayBuffer = this.cast("SharedArrayBuffer")
   @scala.inline
-  def StringDOTprototypeDOTpadEnd: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTpadEnd = this.cast("String.prototype.padEnd")
+  def StringDotprototypeDotpadEnd: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotpadEnd = this.cast("String.prototype.padEnd")
   @scala.inline
-  def StringDOTprototypeDOTpadStart: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDOTprototypeDOTpadStart = this.cast("String.prototype.padStart")
+  def StringDotprototypeDotpadStart: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.StringDotprototypeDotpadStart = this.cast("String.prototype.padStart")
   @scala.inline
   def __all: typingsSlinky.esDashFeatureDashDetection.esDashFeatureDashDetectionStrings.__all = this.cast("__all")
   @scala.inline

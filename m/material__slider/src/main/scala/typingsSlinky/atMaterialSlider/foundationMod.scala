@@ -1,7 +1,6 @@
 package typingsSlinky.atMaterialSlider
 
 import typingsSlinky.atMaterialSlider.adapterMod.MDCSliderAdapter
-import typingsSlinky.atMaterialSlider.foundationMod.MDCSliderFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

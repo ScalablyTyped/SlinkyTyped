@@ -4,7 +4,6 @@ import typingsSlinky.std.MouseEvent
 import typingsSlinky.std.TouchEvent
 import typingsSlinky.vanillaDashSwipe.libTypesMod.ConstructorProps
 import typingsSlinky.vanillaDashSwipe.libTypesMod.State
-import typingsSlinky.vanillaDashSwipe.vanillaDashSwipeMod.VanillaSwipe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,6 @@ import scala.scalajs.js.annotation._
 object vanillaDashSwipeMod extends js.Object {
   @js.native
   trait VanillaSwipe extends js.Object {
-    var isPassiveSupported: Boolean = js.native
     var props: ConstructorProps = js.native
     var state: State = js.native
     def cleanupMouseListeners(): Unit = js.native

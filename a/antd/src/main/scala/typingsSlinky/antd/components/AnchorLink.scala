@@ -18,9 +18,14 @@ object AnchorLink
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, href, target */
-  def apply(title: TagMod[Any], prefixCls: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+  /* The following DOM/SVG props were specified: className, target */
+  def apply(
+    href: String,
+    title: TagMod[Any],
+    prefixCls: String = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

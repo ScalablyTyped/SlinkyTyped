@@ -1,5 +1,6 @@
 package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services
 
+import typingsSlinky.typescriptDashServices.TypeScript.MemberName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 class TypeInfo protected ()
   extends typingsSlinky.typescriptDashServices.TypeScript.Services.TypeInfo {
   def this(
-    memberName: typingsSlinky.typescriptDashServices.TypeScript.MemberName,
+    memberName: MemberName,
     docComment: String,
     fullSymbolName: String,
     kind: String,

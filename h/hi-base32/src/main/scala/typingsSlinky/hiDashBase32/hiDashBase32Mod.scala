@@ -1,7 +1,5 @@
 package typingsSlinky.hiDashBase32
 
-import typingsSlinky.hiDashBase32.hiDashBase32Mod.Decode
-import typingsSlinky.hiDashBase32.hiDashBase32Mod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

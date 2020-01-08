@@ -1,5 +1,6 @@
 package typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,18 +58,40 @@ object Status extends js.Object {
   @js.native
   sealed trait REDIRECT extends Status
   
-  /* 8 */ val ATTACHED: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.ATTACHED with Double = js.native
-  /* 3 */ val AUTHENTICATING: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.AUTHENTICATING with Double = js.native
-  /* 4 */ val AUTHFAIL: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.AUTHFAIL with Double = js.native
-  /* 5 */ val CONNECTED: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.CONNECTED with Double = js.native
-  /* 1 */ val CONNECTING: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.CONNECTING with Double = js.native
-  /* 2 */ val CONNFAIL: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.CONNFAIL with Double = js.native
-  /* 10 */ val CONNTIMEOUT: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.CONNTIMEOUT with Double = js.native
-  /* 6 */ val DISCONNECTED: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.DISCONNECTED with Double = js.native
-  /* 7 */ val DISCONNECTING: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.DISCONNECTING with Double = js.native
-  /* 0 */ val ERROR: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.ERROR with Double = js.native
-  /* 9 */ val REDIRECT: typingsSlinky.stropheDotJs.stropheDotJsMod.Strophe.Status.REDIRECT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Status with Double] = js.native
+  /* 8 */ @js.native
+  object ATTACHED extends TopLevel[ATTACHED with Double]
+  
+  /* 3 */ @js.native
+  object AUTHENTICATING extends TopLevel[AUTHENTICATING with Double]
+  
+  /* 4 */ @js.native
+  object AUTHFAIL extends TopLevel[AUTHFAIL with Double]
+  
+  /* 5 */ @js.native
+  object CONNECTED extends TopLevel[CONNECTED with Double]
+  
+  /* 1 */ @js.native
+  object CONNECTING extends TopLevel[CONNECTING with Double]
+  
+  /* 2 */ @js.native
+  object CONNFAIL extends TopLevel[CONNFAIL with Double]
+  
+  /* 10 */ @js.native
+  object CONNTIMEOUT extends TopLevel[CONNTIMEOUT with Double]
+  
+  /* 6 */ @js.native
+  object DISCONNECTED extends TopLevel[DISCONNECTED with Double]
+  
+  /* 7 */ @js.native
+  object DISCONNECTING extends TopLevel[DISCONNECTING with Double]
+  
+  /* 0 */ @js.native
+  object ERROR extends TopLevel[ERROR with Double]
+  
+  /* 9 */ @js.native
+  object REDIRECT extends TopLevel[REDIRECT with Double]
+  
 }
 

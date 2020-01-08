@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +35,16 @@ object FeedbackType extends js.Object {
   @js.native
   sealed trait INCORRECT extends FeedbackType
   
-  /* 0 */ val CORRECT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms.FeedbackType.CORRECT with Double = js.native
-  /* 2 */ val GENERAL: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms.FeedbackType.GENERAL with Double = js.native
-  /* 1 */ val INCORRECT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Forms.FeedbackType.INCORRECT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FeedbackType with Double] = js.native
+  /* 0 */ @js.native
+  object CORRECT extends TopLevel[CORRECT with Double]
+  
+  /* 2 */ @js.native
+  object GENERAL extends TopLevel[GENERAL with Double]
+  
+  /* 1 */ @js.native
+  object INCORRECT extends TopLevel[INCORRECT with Double]
+  
 }
 

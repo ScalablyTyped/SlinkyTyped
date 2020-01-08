@@ -1,6 +1,6 @@
 package typingsSlinky.atBlueprintjsCore
 
-import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreNumbers.`true`
+import typingsSlinky.atBlueprintjsCore.atBlueprintjsCoreBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

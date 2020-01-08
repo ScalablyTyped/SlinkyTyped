@@ -1,5 +1,6 @@
 package typingsSlinky.milkcocoa.milkcocoa
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.milkcocoa.Anon_Id
 import typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.AddAccount
 import typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.GetCurrentUser
@@ -51,10 +52,14 @@ object MilkCocoa extends js.Object {
       @js.native
       sealed trait FormatError extends AddAccount
       
-      /* 1 */ val AlreadyExist: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.AddAccount.AlreadyExist with Double = js.native
-      /* 0 */ val FormatError: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.AddAccount.FormatError with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[AddAccount with Double] = js.native
+      /* 1 */ @js.native
+      object AlreadyExist extends TopLevel[AlreadyExist with Double]
+      
+      /* 0 */ @js.native
+      object FormatError extends TopLevel[FormatError with Double]
+      
     }
     
     @js.native
@@ -63,9 +68,11 @@ object MilkCocoa extends js.Object {
       @js.native
       sealed trait NotLoggedIn extends GetCurrentUser
       
-      /* 0 */ val NotLoggedIn: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.GetCurrentUser.NotLoggedIn with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[GetCurrentUser with Double] = js.native
+      /* 0 */ @js.native
+      object NotLoggedIn extends TopLevel[NotLoggedIn with Double]
+      
     }
     
     @js.native
@@ -80,11 +87,17 @@ object MilkCocoa extends js.Object {
       @js.native
       sealed trait LoginError extends Login
       
-      /* 2 */ val EmailNotVerificated: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.Login.EmailNotVerificated with Double = js.native
-      /* 0 */ val FormatError: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.Login.FormatError with Double = js.native
-      /* 1 */ val LoginError: typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.Login.LoginError with Double = js.native
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[Login with Double] = js.native
+      /* 2 */ @js.native
+      object EmailNotVerificated extends TopLevel[EmailNotVerificated with Double]
+      
+      /* 0 */ @js.native
+      object FormatError extends TopLevel[FormatError with Double]
+      
+      /* 1 */ @js.native
+      object LoginError extends TopLevel[LoginError with Double]
+      
     }
     
   }

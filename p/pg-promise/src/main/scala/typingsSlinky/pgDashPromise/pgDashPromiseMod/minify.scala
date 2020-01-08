@@ -1,6 +1,7 @@
 package typingsSlinky.pgDashPromise.pgDashPromiseMod
 
 import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.pgDashMinify.pgDashMinifyMod.IMinifyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,8 +14,11 @@ object minify extends js.Object {
   class SQLParsingError ()
     extends typingsSlinky.pgDashMinify.pgDashMinifyMod.SQLParsingError
   
-  var SQLParsingError: Instantiable0[typingsSlinky.pgDashMinify.pgDashMinifyMod.SQLParsingError] = js.native
   def apply(sql: String): String = js.native
   def apply(sql: String, options: IMinifyOptions): String = js.native
+  @js.native
+  object SQLParsingError
+    extends TopLevel[Instantiable0[typingsSlinky.pgDashMinify.pgDashMinifyMod.SQLParsingError]]
+  
 }
 

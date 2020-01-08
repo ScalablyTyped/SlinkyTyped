@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.GestureResponderEvent
 import typingsSlinky.reactDashNative.reactDashNativeMod.NativeTouchEvent
@@ -47,6 +48,10 @@ object Line
     fill: Color = null,
     fillOpacity: NumberProp = null,
     fillRule: FillRule = null,
+    marker: String = null,
+    markerEnd: String = null,
+    markerMid: String = null,
+    markerStart: String = null,
     mask: String = null,
     onLongPress: /* event */ GestureResponderEvent => Unit = null,
     onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
@@ -106,6 +111,10 @@ object Line
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
     if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
     if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
+    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
+    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
     if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
     if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
@@ -157,6 +166,9 @@ object Line
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.Line] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashSvg.reactDashNativeDashSvgMod.Line](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LineProps
 }
 

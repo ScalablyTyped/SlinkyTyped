@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Rejected extends SharedApply_Anon_ChildrenPersistBoolean956371948 {
+object Rejected extends SharedApply_Anon_ChildrenPersistBoolean1979580617 {
   @JSImport("react-async", "default.Rejected")
   @js.native
   object componentImport extends js.Object

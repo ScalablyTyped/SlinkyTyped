@@ -54,24 +54,24 @@ object libUtilsArchiveMod extends js.Object {
     ): Unit = js.native
     def extract(options: ExtractOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
     def extract(
-      options: ExtractOptions,
-      fileList: js.Array[String],
-      callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
-    ): Writable = js.native
-    @JSName("extract")
-    def extract_Unit(options: ExtractOptions with FileOptions with Anon_Sync): Unit = js.native
-    @JSName("extract")
-    def extract_Unit(options: ExtractOptions with FileOptions with Anon_Sync, fileList: js.Array[String]): Unit = js.native
-    @JSName("extract")
-    def extract_Unit(
       options: ExtractOptions with FileOptions,
       fileList: js.Array[String],
       callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
     ): Unit = js.native
     @JSName("extract")
+    def extract_Unit(options: ExtractOptions with FileOptions with Anon_Sync): Unit = js.native
+    @JSName("extract")
+    def extract_Unit(options: ExtractOptions with FileOptions with Anon_Sync, fileList: js.Array[String]): Unit = js.native
+    @JSName("extract")
     def extract_Writable(options: ExtractOptions): Writable = js.native
     @JSName("extract")
     def extract_Writable(options: ExtractOptions, fileList: js.Array[String]): Writable = js.native
+    @JSName("extract")
+    def extract_Writable(
+      options: ExtractOptions,
+      fileList: js.Array[String],
+      callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+    ): Writable = js.native
     def list(): Writable = js.native
     def list(options: ListOptions with FileOptions): js.Promise[Unit] = js.native
     def list(options: ListOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
@@ -114,7 +114,7 @@ object libUtilsArchiveMod extends js.Object {
     ): js.Promise[Unit] = js.native
     @js.native
     object c extends js.Object {
-      def apply(options: CreateOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
+      def apply(options: CreateOptions, fileList: js.Array[String]): Readable = js.native
       def apply(
         options: CreateOptions,
         fileList: js.Array[String],
@@ -192,8 +192,8 @@ object libUtilsArchiveMod extends js.Object {
     @js.native
     object t extends js.Object {
       def apply(): Writable = js.native
-      def apply(options: ListOptions): Writable = js.native
-      def apply(options: ListOptions, fileList: js.Array[String]): Writable = js.native
+      def apply(options: ListOptions with FileOptions): js.Promise[Unit] = js.native
+      def apply(options: ListOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
       def apply(
         options: ListOptions,
         fileList: js.Array[String],
@@ -203,7 +203,6 @@ object libUtilsArchiveMod extends js.Object {
     
     @js.native
     object types extends js.Object {
-      var Empty: String = js.native
       var `0`: String = js.native
       var `1`: String = js.native
       var `2`: String = js.native
@@ -233,6 +232,8 @@ object libUtilsArchiveMod extends js.Object {
       var N: String = js.native
       var NextFileHasLonLinkPath: String = js.native
       var NextFileHasLongPath: String = js.native
+      @JSName("\u0000")
+      var Null: String = js.native
       var OldExtendedHeader: String = js.native
       var OldFile: String = js.native
       var S: String = js.native
@@ -241,6 +242,8 @@ object libUtilsArchiveMod extends js.Object {
       var TapeVolumeHeader: String = js.native
       var V: String = js.native
       var X: String = js.native
+      @JSName("")
+      var _empty: String = js.native
       var g: String = js.native
       var x: String = js.native
     }
@@ -263,18 +266,18 @@ object libUtilsArchiveMod extends js.Object {
     
     @js.native
     object x extends js.Object {
+      def apply(options: ExtractOptions with FileOptions): js.Promise[Unit] = js.native
       def apply(
         options: ExtractOptions with FileOptions,
         fileList: js.UndefOr[scala.Nothing],
         callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
       ): Unit = js.native
-      def apply(options: ExtractOptions): Writable = js.native
-      def apply(options: ExtractOptions, fileList: js.Array[String]): Writable = js.native
+      def apply(options: ExtractOptions with FileOptions, fileList: js.Array[String]): js.Promise[Unit] = js.native
       def apply(
-        options: ExtractOptions,
+        options: ExtractOptions with FileOptions,
         fileList: js.Array[String],
         callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
-      ): Writable = js.native
+      ): Unit = js.native
     }
     
   }

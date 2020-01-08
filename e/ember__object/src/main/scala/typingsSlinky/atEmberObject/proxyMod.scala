@@ -2,7 +2,6 @@ package typingsSlinky.atEmberObject
 
 import typingsSlinky.atEmberObject.dashPrivateTypesMod.UnwrapComputedPropertyGetter
 import typingsSlinky.atEmberObject.dashPrivateTypesMod.UnwrapComputedPropertyGetters
-import typingsSlinky.atEmberObject.proxyMod.ObjectProxy
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object proxyMod extends js.Object {
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
-  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall $anonfun class extends from : CoreObject.extend(Observable) * / any */ @js.native
+  - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : CoreObject.extend(Observable) * / any */ @js.native
   trait ObjectProxy[T /* <: js.Object */] extends js.Object {
     /**
       * The object whose properties will be forwarded.

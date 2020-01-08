@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable5
 import org.scalablytyped.runtime.Instantiable7
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.highchartsMod.AnimationOptionsObject
 import typingsSlinky.highcharts.highchartsMod.AnnotationsOptions
@@ -373,73 +374,6 @@ object Highcharts extends js.Object {
     def this(chart: typingsSlinky.highcharts.highchartsMod.Chart, options: TooltipOptions) = this()
   }
   
-  var Annotation: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* userOptions */ AnnotationsOptions, 
-    typingsSlinky.highcharts.highchartsMod.Annotation
-  ] = js.native
-  var Axis: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* options */ AxisOptions, 
-    typingsSlinky.highcharts.highchartsMod.Axis
-  ] = js.native
-  var Chart: Instantiable2[
-    /* options */ Options, 
-    js.UndefOr[/* callback */ ChartCallbackFunction], 
-    typingsSlinky.highcharts.highchartsMod.Chart
-  ] = js.native
-  var Color: Instantiable1[/* input */ ColorType, typingsSlinky.highcharts.highchartsMod.Color] = js.native
-  var ColorAxis: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* userOptions */ ColorAxisOptions, 
-    typingsSlinky.highcharts.highchartsMod.ColorAxis
-  ] = js.native
-  var Legend: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* options */ LegendOptions, 
-    typingsSlinky.highcharts.highchartsMod.Legend
-  ] = js.native
-  var PlotLineOrBand: Instantiable2[
-    /* axis */ typingsSlinky.highcharts.highchartsMod.Axis, 
-    js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
-    typingsSlinky.highcharts.highchartsMod.PlotLineOrBand
-  ] = js.native
-  var Point: Instantiable0[typingsSlinky.highcharts.highchartsMod.Point] = js.native
-  var Pointer: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* options */ Options, 
-    typingsSlinky.highcharts.highchartsMod.Pointer
-  ] = js.native
-  var SVGElement: Instantiable0[typingsSlinky.highcharts.highchartsMod.SVGElement] = js.native
-  var SVGRenderer: Instantiable7[
-    HTMLElement, 
-    /* width */ Double, 
-    /* height */ Double, 
-    js.UndefOr[/* style */ CSSObject], 
-    js.UndefOr[/* forExport */ Boolean], 
-    js.UndefOr[/* allowHTML */ Boolean], 
-    js.UndefOr[/* styledMode */ Boolean], 
-    typingsSlinky.highcharts.highchartsMod.SVGRenderer
-  ] = js.native
-  var Series: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* options */ js.Object | SeriesOptionsType, 
-    typingsSlinky.highcharts.highchartsMod.Series
-  ] = js.native
-  var Tick: Instantiable5[
-    /* axis */ typingsSlinky.highcharts.highchartsMod.Axis, 
-    /* pos */ Double, 
-    js.UndefOr[/* type */ String], 
-    js.UndefOr[/* noLabel */ Boolean], 
-    js.UndefOr[/* parameters */ js.Object], 
-    typingsSlinky.highcharts.highchartsMod.Tick
-  ] = js.native
-  var Time: Instantiable1[/* options */ TimeOptions, typingsSlinky.highcharts.highchartsMod.Time] = js.native
-  var Tooltip: Instantiable2[
-    /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
-    /* options */ TooltipOptions, 
-    typingsSlinky.highcharts.highchartsMod.Tooltip
-  ] = js.native
   var charts: js.Array[js.UndefOr[typingsSlinky.highcharts.highchartsMod.Chart]] = js.native
   var dateFormats: Dictionary[TimeFormatCallbackFunction] = js.native
   var defaultOptions: Options = js.native
@@ -634,5 +568,143 @@ object Highcharts extends js.Object {
   def syncTimeout(fn: js.Function, delay: Double, context: js.Any): Double = js.native
   def uniqueKey(): String = js.native
   def wrap(obj: js.Any, method: String, func: WrapProceedFunction): Unit = js.native
+  @js.native
+  object Annotation
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* userOptions */ AnnotationsOptions, 
+            typingsSlinky.highcharts.highchartsMod.Annotation
+          ]
+        ]
+  
+  @js.native
+  object Axis
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* options */ AxisOptions, 
+            typingsSlinky.highcharts.highchartsMod.Axis
+          ]
+        ]
+  
+  @js.native
+  object Chart
+    extends TopLevel[
+          Instantiable2[
+            /* options */ Options, 
+            js.UndefOr[/* callback */ ChartCallbackFunction], 
+            typingsSlinky.highcharts.highchartsMod.Chart
+          ]
+        ]
+  
+  @js.native
+  object Color
+    extends TopLevel[
+          Instantiable1[/* input */ ColorType, typingsSlinky.highcharts.highchartsMod.Color]
+        ]
+  
+  @js.native
+  object ColorAxis
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* userOptions */ ColorAxisOptions, 
+            typingsSlinky.highcharts.highchartsMod.ColorAxis
+          ]
+        ]
+  
+  @js.native
+  object Legend
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* options */ LegendOptions, 
+            typingsSlinky.highcharts.highchartsMod.Legend
+          ]
+        ]
+  
+  @js.native
+  object PlotLineOrBand
+    extends TopLevel[
+          Instantiable2[
+            /* axis */ typingsSlinky.highcharts.highchartsMod.Axis, 
+            js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
+            typingsSlinky.highcharts.highchartsMod.PlotLineOrBand
+          ]
+        ]
+  
+  @js.native
+  object Point
+    extends TopLevel[Instantiable0[typingsSlinky.highcharts.highchartsMod.Point]]
+  
+  @js.native
+  object Pointer
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* options */ Options, 
+            typingsSlinky.highcharts.highchartsMod.Pointer
+          ]
+        ]
+  
+  @js.native
+  object SVGElement
+    extends TopLevel[Instantiable0[typingsSlinky.highcharts.highchartsMod.SVGElement]]
+  
+  @js.native
+  object SVGRenderer
+    extends TopLevel[
+          Instantiable7[
+            /* container */ HTMLDOMElement, 
+            /* width */ Double, 
+            /* height */ Double, 
+            js.UndefOr[/* style */ CSSObject], 
+            js.UndefOr[/* forExport */ Boolean], 
+            js.UndefOr[/* allowHTML */ Boolean], 
+            js.UndefOr[/* styledMode */ Boolean], 
+            typingsSlinky.highcharts.highchartsMod.SVGRenderer
+          ]
+        ]
+  
+  @js.native
+  object Series
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* options */ js.Object | SeriesOptionsType, 
+            typingsSlinky.highcharts.highchartsMod.Series
+          ]
+        ]
+  
+  @js.native
+  object Tick
+    extends TopLevel[
+          Instantiable5[
+            /* axis */ typingsSlinky.highcharts.highchartsMod.Axis, 
+            /* pos */ Double, 
+            js.UndefOr[/* type */ String], 
+            js.UndefOr[/* noLabel */ Boolean], 
+            js.UndefOr[/* parameters */ js.Object], 
+            typingsSlinky.highcharts.highchartsMod.Tick
+          ]
+        ]
+  
+  @js.native
+  object Time
+    extends TopLevel[
+          Instantiable1[/* options */ TimeOptions, typingsSlinky.highcharts.highchartsMod.Time]
+        ]
+  
+  @js.native
+  object Tooltip
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ typingsSlinky.highcharts.highchartsMod.Chart, 
+            /* options */ TooltipOptions, 
+            typingsSlinky.highcharts.highchartsMod.Tooltip
+          ]
+        ]
+  
 }
 

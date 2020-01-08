@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object UserDataAccountContentKinds extends js.Object {
   @js.native
   sealed trait email extends UserDataAccountContentKinds
   
-  /* 2 */ val appointment: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds.appointment with Double = js.native
-  /* 1 */ val contact: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds.contact with Double = js.native
-  /* 0 */ val email: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds.email with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserDataAccountContentKinds with Double] = js.native
+  /* 2 */ @js.native
+  object appointment extends TopLevel[appointment with Double]
+  
+  /* 1 */ @js.native
+  object contact extends TopLevel[contact with Double]
+  
+  /* 0 */ @js.native
+  object email extends TopLevel[email with Double]
+  
 }
 

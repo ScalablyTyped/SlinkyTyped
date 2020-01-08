@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object LineCap extends js.Object {
   @js.native
   sealed trait Square extends LineCap
   
-  /* 0 */ val Butt: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineCap.Butt with Double = js.native
-  /* 1 */ val Round: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineCap.Round with Double = js.native
-  /* 2 */ val Square: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.LineCap.Square with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LineCap with Double] = js.native
+  /* 0 */ @js.native
+  object Butt extends TopLevel[Butt with Double]
+  
+  /* 1 */ @js.native
+  object Round extends TopLevel[Round with Double]
+  
+  /* 2 */ @js.native
+  object Square extends TopLevel[Square with Double]
+  
 }
 

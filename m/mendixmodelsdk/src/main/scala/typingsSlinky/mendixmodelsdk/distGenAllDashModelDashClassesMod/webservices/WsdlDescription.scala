@@ -2,6 +2,7 @@ package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.webservic
 
 import typingsSlinky.mendixmodelsdk.distGenAppservicesMod.appservices.Msd
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -28,7 +29,7 @@ class WsdlDescription protected ()
 @js.native
 object WsdlDescription extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenWebservicesMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new WsdlDescription instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

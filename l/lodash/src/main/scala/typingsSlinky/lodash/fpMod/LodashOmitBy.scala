@@ -24,7 +24,7 @@ trait LodashOmitBy extends js.Object {
   ): PartialObject[T] = js.native
   def apply[T](predicate: ValueKeyIteratee[T], `object`: Dictionary[T]): Dictionary[T] = js.native
   def apply[T](predicate: ValueKeyIteratee[T], `object`: NumericDictionary[T]): NumericDictionary[T] = js.native
-  def apply[T /* <: js.Object */](predicate: __): LodashOmitBy3x2[T] = js.native
+  def apply[T](predicate: __): LodashOmitBy2x2[T] = js.native
   def apply[T /* <: js.Object */](predicate: __, `object`: T): LodashOmitBy3x2[T] = js.native
   def apply[T](predicate: __, `object`: Dictionary[T]): LodashOmitBy1x2[T] = js.native
   def apply[T](predicate: __, `object`: NumericDictionary[T]): LodashOmitBy2x2[T] = js.native

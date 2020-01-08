@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashRelay
 
 import typingsSlinky.react.reactMod._Global_.JSX.Element
-import typingsSlinky.reactDashRelay.libRelayDashExperimentalLazyLoadEntryPointContainerMod.EntryPointContainerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +22,6 @@ object libRelayDashExperimentalLazyLoadEntryPointContainerMod extends js.Object 
   TExtraProps
     ]
   ): Element = js.native
-  type EntryPointContainerProps[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = Anon_EntryPointEntryPointParams[TPreloadedQueries, TRuntimeProps, TExtraProps, TPreloadedEntryPoints, TEntryPointParams]
+  type EntryPointContainerProps[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = Anon_EntryPointEntryPointParams[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps]
 }
 

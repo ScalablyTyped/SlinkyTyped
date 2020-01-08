@@ -1,7 +1,6 @@
 package typingsSlinky.openpgp.openpgpMod
 
 import typingsSlinky.openpgp.Anon_Keyid
-import typingsSlinky.openpgp.openpgpMod.cleartext.CleartextMessage
 import typingsSlinky.openpgp.openpgpMod.signature.Signature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -74,7 +73,7 @@ object cleartext extends js.Object {
     * Creates a new CleartextMessage object from text
     * @param text
     */
-  def fromText(text: String): Unit = js.native
+  def fromText(text: String): CleartextMessage = js.native
   /**
     * reads an OpenPGP cleartext signed message and returns a CleartextMessage object
     * @param armoredText text to be parsed

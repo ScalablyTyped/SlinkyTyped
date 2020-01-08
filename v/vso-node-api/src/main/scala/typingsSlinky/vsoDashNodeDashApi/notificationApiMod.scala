@@ -20,7 +20,6 @@ import typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.Noti
 import typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionQuery
 import typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionQueryFlags
 import typingsSlinky.vsoDashNodeDashApi.interfacesNotificationInterfacesMod.SubscriptionUserSettings
-import typingsSlinky.vsoDashNodeDashApi.notificationApiMod.INotificationApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

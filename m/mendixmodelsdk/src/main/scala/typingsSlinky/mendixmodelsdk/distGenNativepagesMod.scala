@@ -3,15 +3,6 @@ package typingsSlinky.mendixmodelsdk
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.distGenMenusMod.menus.MenuItem
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.BottomBarItem
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.INativeLayout
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.INativePage
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayout
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativeLayoutCallArgument
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativePage
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativePageClientAction
-import typingsSlinky.mendixmodelsdk.distGenNativepagesMod.nativepages.NativePlaceholder
 import typingsSlinky.mendixmodelsdk.distGenNavigationMod.navigation.NativeNavigationProfile
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ActionButton
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ActionItem
@@ -44,6 +35,7 @@ import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TabPage
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.Widget
+import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.distGenTextsMod.texts.Text
 import typingsSlinky.mendixmodelsdk.distSdkInternalInstancesMod.IList
@@ -86,12 +78,17 @@ object distGenNativepagesMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
-      var action: ClientAction = js.native
-      var caption: Text = js.native
-      val containerAsNativeNavigationProfile: NativeNavigationProfile = js.native
-      var icon: Icon | Null = js.native
       @JSName("model")
-      var model_BottomBarItem: IModel = js.native
+      var model_FBottomBarItem: IModel = js.native
+      def action(): ClientAction = js.native
+      def action(newValue: ClientAction): js.Any = js.native
+      def caption(): Text = js.native
+      def caption(newValue: Text): js.Any = js.native
+      def containerAsNativeNavigationProfile(): NativeNavigationProfile = js.native
+      def icon(): Icon | Null = js.native
+      def icon(newValue: Icon): js.Any = js.native
+      @JSName("icon")
+      def icon_Any(): js.Any = js.native
     }
     
     /**
@@ -127,7 +124,7 @@ object distGenNativepagesMod extends js.Object {
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
     - typings.mendixmodelsdk.distGenPagesMod.pages.IFormBase because Already inherited
-    - typings.mendixmodelsdk.distGenNativepagesMod.nativepages.INativeLayout because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenNativepagesMod.nativepages.INativeLayout because var conflicts: containerAsFolderBase, id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
     class NativeLayout protected () extends FormBase {
       def this(
         model: AbstractModel,
@@ -136,11 +133,18 @@ object distGenNativepagesMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
+      @JSName("model")
+      var model_FNativeLayout: IModel = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MNativeLayout(): FolderBase = js.native
       /**
         * In version 7.22.0: introduced
         */
-      var headerWidget: Widget | Null = js.native
-      val widgets: IList[Widget] = js.native
+      def headerWidget(): Widget | Null = js.native
+      def headerWidget(newValue: Widget): js.Any = js.native
+      @JSName("headerWidget")
+      def headerWidget_Any(): js.Any = js.native
+      def widgets(): IList[Widget] = js.native
     }
     
     /**
@@ -159,12 +163,13 @@ object distGenNativepagesMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
-      val containerAsNativePage: NativePage = js.native
       @JSName("model")
-      var model_NativeLayoutCallArgument: IModel = js.native
-      var parameter: ILayoutParameter = js.native
-      val parameterQualifiedName: String = js.native
-      val widgets: IList[Widget] = js.native
+      var model_FNativeLayoutCallArgument: IModel = js.native
+      def containerAsNativePage(): NativePage = js.native
+      def parameter(): ILayoutParameter = js.native
+      def parameter(newValue: ILayoutParameter): js.Any = js.native
+      def parameterQualifiedName(): String = js.native
+      def widgets(): IList[Widget] = js.native
     }
     
     /**
@@ -182,7 +187,7 @@ object distGenNativepagesMod extends js.Object {
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IModuleDocument because Already inherited
     - typings.mendixmodelsdk.distGenProjectsMod.projects.IDocument because Already inherited
     - typings.mendixmodelsdk.distGenPagesMod.pages.IFormBase because Already inherited
-    - typings.mendixmodelsdk.distGenNativepagesMod.nativepages.INativePage because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
+    - typings.mendixmodelsdk.distGenNativepagesMod.nativepages.INativePage because var conflicts: containerAsFolderBase, id, isLoaded, model, structureTypeName, unit. Inlined  */ @js.native
     class NativePage protected () extends FormBase {
       def this(
         model: AbstractModel,
@@ -191,17 +196,22 @@ object distGenNativepagesMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
+      @JSName("model")
+      var model_FNativePage: IModel = js.native
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
         *
         * In version 7.23.0: introduced
         */
-      val arguments: IList[NativeLayoutCallArgument] = js.native
+      def arguments(): IList[NativeLayoutCallArgument] = js.native
+      @JSName("containerAsFolderBase")
+      def containerAsFolderBase_MNativePage(): FolderBase = js.native
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
         */
-      var layout: INativeLayout = js.native
-      val layoutQualifiedName: String = js.native
+      def layout(): INativeLayout = js.native
+      def layout(newValue: INativeLayout): js.Any = js.native
+      def layoutQualifiedName(): String = js.native
     }
     
     /**
@@ -220,11 +230,16 @@ object distGenNativepagesMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      @JSName("model")
+      var model_FNativePageClientAction: IModel = js.native
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
         */
-      var page: INativePage | Null = js.native
-      val pageQualifiedName: String | Null = js.native
+      def page(): INativePage | Null = js.native
+      def page(newValue: INativePage): js.Any = js.native
+      def pageQualifiedName(): String | Null = js.native
+      @JSName("page")
+      def page_Any(): js.Any = js.native
     }
     
     /**
@@ -243,6 +258,8 @@ object distGenNativepagesMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      @JSName("model")
+      var model_FNativePlaceholder: IModel = js.native
     }
     
     /* static members */

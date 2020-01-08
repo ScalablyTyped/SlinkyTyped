@@ -2,7 +2,6 @@ package typingsSlinky.meteor
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.connect.connectMod.Server
-import typingsSlinky.meteor.webappMod.StaticFiles
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js

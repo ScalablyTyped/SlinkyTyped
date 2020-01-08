@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,11 +45,19 @@ object HorizontalAlignment extends js.Object {
   @js.native
   sealed trait RIGHT extends HorizontalAlignment
   
-  /* 1 */ val CENTER: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.HorizontalAlignment.CENTER with Double = js.native
-  /* 3 */ val JUSTIFY: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.HorizontalAlignment.JUSTIFY with Double = js.native
-  /* 0 */ val LEFT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.HorizontalAlignment.LEFT with Double = js.native
-  /* 2 */ val RIGHT: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Document.HorizontalAlignment.RIGHT with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HorizontalAlignment with Double] = js.native
+  /* 1 */ @js.native
+  object CENTER extends TopLevel[CENTER with Double]
+  
+  /* 3 */ @js.native
+  object JUSTIFY extends TopLevel[JUSTIFY with Double]
+  
+  /* 0 */ @js.native
+  object LEFT extends TopLevel[LEFT with Double]
+  
+  /* 2 */ @js.native
+  object RIGHT extends TopLevel[RIGHT with Double]
+  
 }
 

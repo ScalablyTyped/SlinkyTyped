@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object FileFormats extends js.Object {
   @js.native
   sealed trait SVG extends FileFormats
   
-  /* 2 */ val BMP: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FileFormats.BMP with Double = js.native
-  /* 0 */ val JPG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FileFormats.JPG with Double = js.native
-  /* 1 */ val PNG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FileFormats.PNG with Double = js.native
-  /* 3 */ val SVG: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.FileFormats.SVG with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[FileFormats with Double] = js.native
+  /* 2 */ @js.native
+  object BMP extends TopLevel[BMP with Double]
+  
+  /* 0 */ @js.native
+  object JPG extends TopLevel[JPG with Double]
+  
+  /* 1 */ @js.native
+  object PNG extends TopLevel[PNG with Double]
+  
+  /* 3 */ @js.native
+  object SVG extends TopLevel[SVG with Double]
+  
 }
 

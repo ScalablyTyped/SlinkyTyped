@@ -1,10 +1,5 @@
 package typingsSlinky.atIonicCliDashFramework
 
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.ColorFunction
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.Colors
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.HelpColors
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.HelpGroupColors
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.LoggerColors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

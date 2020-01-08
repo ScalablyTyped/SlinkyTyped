@@ -1,5 +1,6 @@
 package typingsSlinky.estraverse.estraverseMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object VisitorOption extends js.Object {
   @js.native
   sealed trait Skip extends VisitorOption
   
-  /* 1 */ val Break: typingsSlinky.estraverse.estraverseMod.VisitorOption.Break with Double = js.native
-  /* 2 */ val Remove: typingsSlinky.estraverse.estraverseMod.VisitorOption.Remove with Double = js.native
-  /* 0 */ val Skip: typingsSlinky.estraverse.estraverseMod.VisitorOption.Skip with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[VisitorOption with Double] = js.native
+  /* 1 */ @js.native
+  object Break extends TopLevel[Break with Double]
+  
+  /* 2 */ @js.native
+  object Remove extends TopLevel[Remove with Double]
+  
+  /* 0 */ @js.native
+  object Skip extends TopLevel[Skip with Double]
+  
 }
 

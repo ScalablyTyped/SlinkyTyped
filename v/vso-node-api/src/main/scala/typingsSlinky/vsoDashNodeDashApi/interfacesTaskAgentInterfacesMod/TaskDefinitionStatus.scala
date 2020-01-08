@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object TaskDefinitionStatus extends js.Object {
   @js.native
   sealed trait Updated extends TaskDefinitionStatus
   
-  /* 8 */ val AlreadyUpToDate: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.AlreadyUpToDate with Double = js.native
-  /* 9 */ val InlineUpdateReceived: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.InlineUpdateReceived with Double = js.native
-  /* 3 */ val Installed: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.Installed with Double = js.native
-  /* 1 */ val Preinstalled: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.Preinstalled with Double = js.native
-  /* 2 */ val ReceivedInstallOrUpdate: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.ReceivedInstallOrUpdate with Double = js.native
-  /* 4 */ val ReceivedUninstall: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.ReceivedUninstall with Double = js.native
-  /* 6 */ val RequestedUpdate: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.RequestedUpdate with Double = js.native
-  /* 5 */ val Uninstalled: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.Uninstalled with Double = js.native
-  /* 7 */ val Updated: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskDefinitionStatus.Updated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TaskDefinitionStatus with Double] = js.native
+  /* 8 */ @js.native
+  object AlreadyUpToDate extends TopLevel[AlreadyUpToDate with Double]
+  
+  /* 9 */ @js.native
+  object InlineUpdateReceived extends TopLevel[InlineUpdateReceived with Double]
+  
+  /* 3 */ @js.native
+  object Installed extends TopLevel[Installed with Double]
+  
+  /* 1 */ @js.native
+  object Preinstalled extends TopLevel[Preinstalled with Double]
+  
+  /* 2 */ @js.native
+  object ReceivedInstallOrUpdate extends TopLevel[ReceivedInstallOrUpdate with Double]
+  
+  /* 4 */ @js.native
+  object ReceivedUninstall extends TopLevel[ReceivedUninstall with Double]
+  
+  /* 6 */ @js.native
+  object RequestedUpdate extends TopLevel[RequestedUpdate with Double]
+  
+  /* 5 */ @js.native
+  object Uninstalled extends TopLevel[Uninstalled with Double]
+  
+  /* 7 */ @js.native
+  object Updated extends TopLevel[Updated with Double]
+  
 }
 

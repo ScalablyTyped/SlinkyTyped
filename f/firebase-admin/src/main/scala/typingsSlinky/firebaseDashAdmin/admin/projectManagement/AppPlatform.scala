@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseDashAdmin.admin.projectManagement
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object AppPlatform extends js.Object {
   @js.native
   sealed trait PLATFORM_UNKNOWN extends AppPlatform
   
-  /* "ANDROID" */ val ANDROID: typingsSlinky.firebaseDashAdmin.admin.projectManagement.AppPlatform.ANDROID with String = js.native
-  /* "IOS" */ val IOS: typingsSlinky.firebaseDashAdmin.admin.projectManagement.AppPlatform.IOS with String = js.native
-  /* "PLATFORM_UNKNOWN" */ val PLATFORM_UNKNOWN: typingsSlinky.firebaseDashAdmin.admin.projectManagement.AppPlatform.PLATFORM_UNKNOWN with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[AppPlatform with String] = js.native
+  /* "ANDROID" */ @js.native
+  object ANDROID extends TopLevel[ANDROID with String]
+  
+  /* "IOS" */ @js.native
+  object IOS extends TopLevel[IOS with String]
+  
+  /* "PLATFORM_UNKNOWN" */ @js.native
+  object PLATFORM_UNKNOWN extends TopLevel[PLATFORM_UNKNOWN with String]
+  
 }
 

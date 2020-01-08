@@ -1,7 +1,7 @@
 package typingsSlinky.imap.imapMod
 
 import typingsSlinky.imap.Anon_Other
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

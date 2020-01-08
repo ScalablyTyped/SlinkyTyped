@@ -10,9 +10,9 @@ Manipulate the HTTP Vary header
 | ------------------ | :-------------: |
 | Full name          | vary |
 | Keywords           | http, res, vary |
-| # releases         | 2 |
-| # dependents       | 229 |
-| # downloads        | 294483158 |
+| # releases         | 1 |
+| # dependents       | 257 |
+| # downloads        | 418195728 |
 | # stars            | 8 |
 
 ## Links

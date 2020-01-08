@@ -2,7 +2,6 @@ package typingsSlinky.thenDashEos
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.thenDashEos.thenDashEosMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

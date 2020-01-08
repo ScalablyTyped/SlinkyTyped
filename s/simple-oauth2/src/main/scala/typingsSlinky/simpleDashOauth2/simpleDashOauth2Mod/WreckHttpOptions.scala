@@ -1,7 +1,7 @@
 package typingsSlinky.simpleDashOauth2.simpleDashOauth2Mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.simpleDashOauth2.simpleDashOauth2Numbers.`true`
+import typingsSlinky.simpleDashOauth2.simpleDashOauth2Booleans.`true`
 import typingsSlinky.simpleDashOauth2.simpleDashOauth2Strings.force
 import typingsSlinky.simpleDashOauth2.simpleDashOauth2Strings.strict
 import scala.scalajs.js

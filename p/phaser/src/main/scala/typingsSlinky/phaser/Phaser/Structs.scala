@@ -7,11 +7,6 @@ import typingsSlinky.phaser.EachMapCallback
 import typingsSlinky.phaser.EachSetCallback
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Math.Vector2
-import typingsSlinky.phaser.Phaser.Structs.List
-import typingsSlinky.phaser.Phaser.Structs.Map
-import typingsSlinky.phaser.Phaser.Structs.ProcessQueue
-import typingsSlinky.phaser.Phaser.Structs.Set
-import typingsSlinky.phaser.Phaser.Structs.Size
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

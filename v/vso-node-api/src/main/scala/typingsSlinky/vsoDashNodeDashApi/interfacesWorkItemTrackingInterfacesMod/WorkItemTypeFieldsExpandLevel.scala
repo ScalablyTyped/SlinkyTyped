@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object WorkItemTypeFieldsExpandLevel extends js.Object {
   @js.native
   sealed trait None extends WorkItemTypeFieldsExpandLevel
   
-  /* 3 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeFieldsExpandLevel.All with Double = js.native
-  /* 1 */ val AllowedValues: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeFieldsExpandLevel.AllowedValues with Double = js.native
-  /* 2 */ val DependentFields: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeFieldsExpandLevel.DependentFields with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesWorkItemTrackingInterfacesMod.WorkItemTypeFieldsExpandLevel.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WorkItemTypeFieldsExpandLevel with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 1 */ @js.native
+  object AllowedValues extends TopLevel[AllowedValues with Double]
+  
+  /* 2 */ @js.native
+  object DependentFields extends TopLevel[DependentFields with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

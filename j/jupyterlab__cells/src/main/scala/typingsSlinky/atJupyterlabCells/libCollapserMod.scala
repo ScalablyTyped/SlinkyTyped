@@ -3,7 +3,6 @@ package typingsSlinky.atJupyterlabCells
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.atJupyterlabApputils.atJupyterlabApputilsMod.ReactWidget
-import typingsSlinky.atJupyterlabCells.libCollapserMod.Collapser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

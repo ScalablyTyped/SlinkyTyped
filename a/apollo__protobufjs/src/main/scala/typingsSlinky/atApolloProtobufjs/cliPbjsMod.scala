@@ -1,6 +1,5 @@
 package typingsSlinky.atApolloProtobufjs
 
-import typingsSlinky.atApolloProtobufjs.cliPbjsMod.pbjsCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

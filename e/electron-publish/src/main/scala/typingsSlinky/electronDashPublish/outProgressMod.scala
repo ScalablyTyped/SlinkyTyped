@@ -1,6 +1,5 @@
 package typingsSlinky.electronDashPublish
 
-import typingsSlinky.electronDashPublish.outProgressMod.ProgressBar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

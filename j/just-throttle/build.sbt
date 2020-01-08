@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "just-throttle"
-version := "1.1-dt-20191002Z-9a7ca1"
+version := "1.1-dt-20191002Z-1ce9e3"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

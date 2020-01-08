@@ -1,5 +1,6 @@
 package typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object PermissionGroupDatabaseTypes extends js.Object {
   @js.native
   sealed trait Template extends PermissionGroupDatabaseTypes
   
-  /* 2 */ val Query: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupDatabaseTypes.Query with Double = js.native
-  /* 1 */ val Regular: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupDatabaseTypes.Regular with Double = js.native
-  /* 0 */ val Template: typingsSlinky.ts3DashNodejsDashLibrary.libTypesEnumMod.PermissionGroupDatabaseTypes.Template with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PermissionGroupDatabaseTypes with Double] = js.native
+  /* 2 */ @js.native
+  object Query extends TopLevel[Query with Double]
+  
+  /* 1 */ @js.native
+  object Regular extends TopLevel[Regular with Double]
+  
+  /* 0 */ @js.native
+  object Template extends TopLevel[Template with Double]
+  
 }
 

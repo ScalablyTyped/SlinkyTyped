@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseDisposableIPartialContainersMod._IPushBack
 import typingsSlinky.tstl.baseIteratorUnderscoreInsertIteratorMod._InsertIterator
-import typingsSlinky.tstl.iteratorBackInsertIteratorMod.BackInsertIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +21,11 @@ object iteratorBackInsertIteratorMod extends js.Object {
       * @hidden
       */
     var source_ : js.Any = js.native
+    /**
+      * @inheritDoc
+      */
+    @JSName("value")
+    def value_MBackInsertIterator(`val`: T): js.Any = js.native
   }
   
 }

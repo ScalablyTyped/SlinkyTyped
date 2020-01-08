@@ -10,7 +10,6 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashRange.libRangeMod.Range
 import typingsSlinky.reactDashRange.libTypesMod.IProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

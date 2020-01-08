@@ -3,7 +3,7 @@ package typingsSlinky.antd.libTransferListMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import typingsSlinky.antd.Anon_FilteredItems
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.part

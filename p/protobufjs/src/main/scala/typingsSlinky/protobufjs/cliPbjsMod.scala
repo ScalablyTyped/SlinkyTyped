@@ -1,6 +1,5 @@
 package typingsSlinky.protobufjs
 
-import typingsSlinky.protobufjs.cliPbjsMod.pbjsCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

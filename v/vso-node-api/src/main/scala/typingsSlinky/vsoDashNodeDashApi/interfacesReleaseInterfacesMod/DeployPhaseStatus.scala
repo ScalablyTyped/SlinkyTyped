@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object DeployPhaseStatus extends js.Object {
   @js.native
   sealed trait Undefined extends DeployPhaseStatus
   
-  /* 32 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Canceled with Double = js.native
-  /* 128 */ val Cancelling: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Cancelling with Double = js.native
-  /* 16 */ val Failed: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Failed with Double = js.native
-  /* 2 */ val InProgress: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.InProgress with Double = js.native
-  /* 1 */ val NotStarted: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.NotStarted with Double = js.native
-  /* 4 */ val PartiallySucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.PartiallySucceeded with Double = js.native
-  /* 64 */ val Skipped: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Skipped with Double = js.native
-  /* 8 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Succeeded with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.DeployPhaseStatus.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DeployPhaseStatus with Double] = js.native
+  /* 32 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 128 */ @js.native
+  object Cancelling extends TopLevel[Cancelling with Double]
+  
+  /* 16 */ @js.native
+  object Failed extends TopLevel[Failed with Double]
+  
+  /* 2 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
+  /* 1 */ @js.native
+  object NotStarted extends TopLevel[NotStarted with Double]
+  
+  /* 4 */ @js.native
+  object PartiallySucceeded extends TopLevel[PartiallySucceeded with Double]
+  
+  /* 64 */ @js.native
+  object Skipped extends TopLevel[Skipped with Double]
+  
+  /* 8 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

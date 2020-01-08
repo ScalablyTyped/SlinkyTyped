@@ -1,7 +1,7 @@
 package typingsSlinky.atJestCore.buildPluginsTestUnderscoreNameUnderscorePatternMod
 
 import typingsSlinky.atJestCore.Anon_Key
-import typingsSlinky.atJestCore.atJestCoreNumbers.`true`
+import typingsSlinky.atJestCore.atJestCoreBooleans.`true`
 import typingsSlinky.atJestTypes.buildConfigMod.GlobalConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

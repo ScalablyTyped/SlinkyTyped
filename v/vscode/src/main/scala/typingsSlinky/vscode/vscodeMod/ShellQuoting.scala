@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,10 +38,16 @@ object ShellQuoting extends js.Object {
   @js.native
   sealed trait Weak extends ShellQuoting
   
-  /* 1 */ val Escape: typingsSlinky.vscode.vscodeMod.ShellQuoting.Escape with Double = js.native
-  /* 2 */ val Strong: typingsSlinky.vscode.vscodeMod.ShellQuoting.Strong with Double = js.native
-  /* 3 */ val Weak: typingsSlinky.vscode.vscodeMod.ShellQuoting.Weak with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ShellQuoting with Double] = js.native
+  /* 1 */ @js.native
+  object Escape extends TopLevel[Escape with Double]
+  
+  /* 2 */ @js.native
+  object Strong extends TopLevel[Strong with Double]
+  
+  /* 3 */ @js.native
+  object Weak extends TopLevel[Weak with Double]
+  
 }
 

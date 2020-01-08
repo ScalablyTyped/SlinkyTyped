@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object TrackedRangeStickiness extends js.Object {
   @js.native
   sealed trait NeverGrowsWhenTypingAtEdges extends TrackedRangeStickiness
   
-  /* 0 */ val AlwaysGrowsWhenTypingAtEdges: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TrackedRangeStickiness.AlwaysGrowsWhenTypingAtEdges with Double = js.native
-  /* 3 */ val GrowsOnlyWhenTypingAfter: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TrackedRangeStickiness.GrowsOnlyWhenTypingAfter with Double = js.native
-  /* 2 */ val GrowsOnlyWhenTypingBefore: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TrackedRangeStickiness.GrowsOnlyWhenTypingBefore with Double = js.native
-  /* 1 */ val NeverGrowsWhenTypingAtEdges: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TrackedRangeStickiness with Double] = js.native
+  /* 0 */ @js.native
+  object AlwaysGrowsWhenTypingAtEdges extends TopLevel[AlwaysGrowsWhenTypingAtEdges with Double]
+  
+  /* 3 */ @js.native
+  object GrowsOnlyWhenTypingAfter extends TopLevel[GrowsOnlyWhenTypingAfter with Double]
+  
+  /* 2 */ @js.native
+  object GrowsOnlyWhenTypingBefore extends TopLevel[GrowsOnlyWhenTypingBefore with Double]
+  
+  /* 1 */ @js.native
+  object NeverGrowsWhenTypingAtEdges extends TopLevel[NeverGrowsWhenTypingAtEdges with Double]
+  
 }
 

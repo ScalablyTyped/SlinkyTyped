@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object EnvironmentStatus extends js.Object {
   @js.native
   sealed trait Undefined extends EnvironmentStatus
   
-  /* 8 */ val Canceled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Canceled with Double = js.native
-  /* 2 */ val InProgress: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.InProgress with Double = js.native
-  /* 1 */ val NotStarted: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.NotStarted with Double = js.native
-  /* 128 */ val PartiallySucceeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.PartiallySucceeded with Double = js.native
-  /* 32 */ val Queued: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Queued with Double = js.native
-  /* 16 */ val Rejected: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Rejected with Double = js.native
-  /* 64 */ val Scheduled: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Scheduled with Double = js.native
-  /* 4 */ val Succeeded: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Succeeded with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.EnvironmentStatus.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnvironmentStatus with Double] = js.native
+  /* 8 */ @js.native
+  object Canceled extends TopLevel[Canceled with Double]
+  
+  /* 2 */ @js.native
+  object InProgress extends TopLevel[InProgress with Double]
+  
+  /* 1 */ @js.native
+  object NotStarted extends TopLevel[NotStarted with Double]
+  
+  /* 128 */ @js.native
+  object PartiallySucceeded extends TopLevel[PartiallySucceeded with Double]
+  
+  /* 32 */ @js.native
+  object Queued extends TopLevel[Queued with Double]
+  
+  /* 16 */ @js.native
+  object Rejected extends TopLevel[Rejected with Double]
+  
+  /* 64 */ @js.native
+  object Scheduled extends TopLevel[Scheduled with Double]
+  
+  /* 4 */ @js.native
+  object Succeeded extends TopLevel[Succeeded with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

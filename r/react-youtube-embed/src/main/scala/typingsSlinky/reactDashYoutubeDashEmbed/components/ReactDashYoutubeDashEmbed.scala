@@ -17,15 +17,15 @@ object ReactDashYoutubeDashEmbed
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
   def apply(
+    id: String,
     appendSrc: String = null,
     aspectRatio: String = null,
     prependSrc: String = null,
     width: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     if (appendSrc != null) __obj.updateDynamic("appendSrc")(appendSrc.asInstanceOf[js.Any])
     if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
     if (prependSrc != null) __obj.updateDynamic("prependSrc")(prependSrc.asInstanceOf[js.Any])

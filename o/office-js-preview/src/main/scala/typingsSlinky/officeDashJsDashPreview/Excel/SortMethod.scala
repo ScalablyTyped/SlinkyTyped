@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object SortMethod extends js.Object {
   @js.native
   sealed trait strokeCount extends SortMethod
   
-  /* "PinYin" */ val pinYin: typingsSlinky.officeDashJsDashPreview.Excel.SortMethod.pinYin with String = js.native
-  /* "StrokeCount" */ val strokeCount: typingsSlinky.officeDashJsDashPreview.Excel.SortMethod.strokeCount with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[SortMethod with String] = js.native
+  /* "PinYin" */ @js.native
+  object pinYin extends TopLevel[pinYin with String]
+  
+  /* "StrokeCount" */ @js.native
+  object strokeCount extends TopLevel[strokeCount with String]
+  
 }
 

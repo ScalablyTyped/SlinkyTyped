@@ -22,8 +22,9 @@ object SelectList
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, name, placeholder */
+  /* The following DOM/SVG props were specified: disabled, name, placeholder */
   def apply(
+    id: String,
     onChange: Anon_EventValue => Unit,
     options: js.Array[Anon_Label],
     errorMessage: String = null,
@@ -31,7 +32,7 @@ object SelectList
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.SelectList] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
     if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
     if (idealErrorDirection != null) __obj.updateDynamic("idealErrorDirection")(idealErrorDirection.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

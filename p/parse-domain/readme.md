@@ -10,9 +10,9 @@ Splits an url into sub-domain, domain and effective top-level-domain
 | ------------------ | :-------------: |
 | Full name          | parse-domain |
 | Keywords           | domain, url, sub-domain, tld, parse, extract, sanitize, country, top-level |
-| # releases         | 18 |
-| # dependents       | 68 |
-| # downloads        | 4678339 |
+| # releases         | 17 |
+| # dependents       | 71 |
+| # downloads        | 4859172 |
 | # stars            | 5 |
 
 ## Links

@@ -1,9 +1,6 @@
 package typingsSlinky.vegaDashTypings
 
 import typingsSlinky.vegaDashTypings.typesSpecExprMod.Expr
-import typingsSlinky.vegaDashTypings.typesSpecOnDashEventsMod.EventListener
-import typingsSlinky.vegaDashTypings.typesSpecOnDashEventsMod._EventListener
-import typingsSlinky.vegaDashTypings.typesSpecOnDashEventsMod._Update
 import typingsSlinky.vegaDashTypings.typesSpecSelectorMod.EventSelector
 import typingsSlinky.vegaDashTypings.typesSpecStreamMod.EventStream
 import scala.scalajs.js

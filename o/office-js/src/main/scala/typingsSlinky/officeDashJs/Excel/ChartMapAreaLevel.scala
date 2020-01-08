@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,15 +41,31 @@ object ChartMapAreaLevel extends js.Object {
   @js.native
   sealed trait world extends ChartMapAreaLevel
   
-  /* "Automatic" */ val automatic: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.automatic with String = js.native
-  /* "City" */ val city: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.city with String = js.native
-  /* "Continent" */ val continent: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.continent with String = js.native
-  /* "Country" */ val country: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.country with String = js.native
-  /* "County" */ val county: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.county with String = js.native
-  /* "DataOnly" */ val dataOnly: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.dataOnly with String = js.native
-  /* "State" */ val state: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.state with String = js.native
-  /* "World" */ val world: typingsSlinky.officeDashJs.Excel.ChartMapAreaLevel.world with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartMapAreaLevel with String] = js.native
+  /* "Automatic" */ @js.native
+  object automatic extends TopLevel[automatic with String]
+  
+  /* "City" */ @js.native
+  object city extends TopLevel[city with String]
+  
+  /* "Continent" */ @js.native
+  object continent extends TopLevel[continent with String]
+  
+  /* "Country" */ @js.native
+  object country extends TopLevel[country with String]
+  
+  /* "County" */ @js.native
+  object county extends TopLevel[county with String]
+  
+  /* "DataOnly" */ @js.native
+  object dataOnly extends TopLevel[dataOnly with String]
+  
+  /* "State" */ @js.native
+  object state extends TopLevel[state with String]
+  
+  /* "World" */ @js.native
+  object world extends TopLevel[world with String]
+  
 }
 

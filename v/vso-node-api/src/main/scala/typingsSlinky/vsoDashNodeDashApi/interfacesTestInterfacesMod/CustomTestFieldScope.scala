@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,25 @@ object CustomTestFieldScope extends js.Object {
   @js.native
   sealed trait TestRun extends CustomTestFieldScope
   
-  /* 7 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.All with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.None with Double = js.native
-  /* 4 */ val System: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.System with Double = js.native
-  /* 2 */ val TestResult: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.TestResult with Double = js.native
-  /* 1 */ val TestRun: typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.TestRun with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CustomTestFieldScope with Double] = js.native
+  /* 7 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 4 */ @js.native
+  object System extends TopLevel[System with Double]
+  
+  /* 2 */ @js.native
+  object TestResult extends TopLevel[TestResult with Double]
+  
+  /* 1 */ @js.native
+  object TestRun
+    extends TopLevel[
+          typingsSlinky.vsoDashNodeDashApi.interfacesTestInterfacesMod.CustomTestFieldScope.TestRun with Double
+        ]
+  
 }
 

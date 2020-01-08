@@ -1,5 +1,6 @@
 package typingsSlinky.downshift.downshiftMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,22 +56,52 @@ object StateChangeTypes extends js.Object {
   @js.native
   sealed trait unknown extends StateChangeTypes
   
-  /* "__autocomplete_blur_button__" */ val blurButton: typingsSlinky.downshift.downshiftMod.StateChangeTypes.blurButton with String = js.native
-  /* "__autocomplete_blur_input__" */ val blurInput: typingsSlinky.downshift.downshiftMod.StateChangeTypes.blurInput with String = js.native
-  /* "__autocomplete_change_input__" */ val changeInput: typingsSlinky.downshift.downshiftMod.StateChangeTypes.changeInput with String = js.native
-  /* "__autocomplete_click_button__" */ val clickButton: typingsSlinky.downshift.downshiftMod.StateChangeTypes.clickButton with String = js.native
-  /* "__autocomplete_click_item__" */ val clickItem: typingsSlinky.downshift.downshiftMod.StateChangeTypes.clickItem with String = js.native
-  /* "__autocomplete_controlled_prop_updated_selected_item__" */ val controlledPropUpdatedSelectedItem: typingsSlinky.downshift.downshiftMod.StateChangeTypes.controlledPropUpdatedSelectedItem with String = js.native
-  /* "__autocomplete_item_mouseenter__" */ val itemMouseEnter: typingsSlinky.downshift.downshiftMod.StateChangeTypes.itemMouseEnter with String = js.native
-  /* "__autocomplete_keydown_arrow_down__" */ val keyDownArrowDown: typingsSlinky.downshift.downshiftMod.StateChangeTypes.keyDownArrowDown with String = js.native
-  /* "__autocomplete_keydown_arrow_up__" */ val keyDownArrowUp: typingsSlinky.downshift.downshiftMod.StateChangeTypes.keyDownArrowUp with String = js.native
-  /* "__autocomplete_keydown_enter__" */ val keyDownEnter: typingsSlinky.downshift.downshiftMod.StateChangeTypes.keyDownEnter with String = js.native
-  /* "__autocomplete_keydown_escape__" */ val keyDownEscape: typingsSlinky.downshift.downshiftMod.StateChangeTypes.keyDownEscape with String = js.native
-  /* "__autocomplete_keydown_space_button__" */ val keyDownSpaceButton: typingsSlinky.downshift.downshiftMod.StateChangeTypes.keyDownSpaceButton with String = js.native
-  /* "__autocomplete_mouseup__" */ val mouseUp: typingsSlinky.downshift.downshiftMod.StateChangeTypes.mouseUp with String = js.native
-  /* "__autocomplete_touchend__" */ val touchEnd: typingsSlinky.downshift.downshiftMod.StateChangeTypes.touchEnd with String = js.native
-  /* "__autocomplete_unknown__" */ val unknown: typingsSlinky.downshift.downshiftMod.StateChangeTypes.unknown with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[StateChangeTypes with String] = js.native
+  /* "__autocomplete_blur_button__" */ @js.native
+  object blurButton extends TopLevel[blurButton with String]
+  
+  /* "__autocomplete_blur_input__" */ @js.native
+  object blurInput extends TopLevel[blurInput with String]
+  
+  /* "__autocomplete_change_input__" */ @js.native
+  object changeInput extends TopLevel[changeInput with String]
+  
+  /* "__autocomplete_click_button__" */ @js.native
+  object clickButton extends TopLevel[clickButton with String]
+  
+  /* "__autocomplete_click_item__" */ @js.native
+  object clickItem extends TopLevel[clickItem with String]
+  
+  /* "__autocomplete_controlled_prop_updated_selected_item__" */ @js.native
+  object controlledPropUpdatedSelectedItem extends TopLevel[controlledPropUpdatedSelectedItem with String]
+  
+  /* "__autocomplete_item_mouseenter__" */ @js.native
+  object itemMouseEnter extends TopLevel[itemMouseEnter with String]
+  
+  /* "__autocomplete_keydown_arrow_down__" */ @js.native
+  object keyDownArrowDown extends TopLevel[keyDownArrowDown with String]
+  
+  /* "__autocomplete_keydown_arrow_up__" */ @js.native
+  object keyDownArrowUp extends TopLevel[keyDownArrowUp with String]
+  
+  /* "__autocomplete_keydown_enter__" */ @js.native
+  object keyDownEnter extends TopLevel[keyDownEnter with String]
+  
+  /* "__autocomplete_keydown_escape__" */ @js.native
+  object keyDownEscape extends TopLevel[keyDownEscape with String]
+  
+  /* "__autocomplete_keydown_space_button__" */ @js.native
+  object keyDownSpaceButton extends TopLevel[keyDownSpaceButton with String]
+  
+  /* "__autocomplete_mouseup__" */ @js.native
+  object mouseUp extends TopLevel[mouseUp with String]
+  
+  /* "__autocomplete_touchend__" */ @js.native
+  object touchEnd extends TopLevel[touchEnd with String]
+  
+  /* "__autocomplete_unknown__" */ @js.native
+  object unknown extends TopLevel[unknown with String]
+  
 }
 

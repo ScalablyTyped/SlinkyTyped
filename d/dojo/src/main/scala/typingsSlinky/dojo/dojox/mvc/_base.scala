@@ -25,6 +25,7 @@ import typingsSlinky.dojo.dojoStrings.contextRequire
 import typingsSlinky.dojo.dojoStrings.cursor
 import typingsSlinky.dojo.dojoStrings.cursorId
 import typingsSlinky.dojo.dojoStrings.cursorIndex
+import typingsSlinky.dojo.dojoStrings.data
 import typingsSlinky.dojo.dojoStrings.dataBindAttr
 import typingsSlinky.dojo.dojoStrings.exprchar
 import typingsSlinky.dojo.dojoStrings.getPlainValueOptions
@@ -1226,7 +1227,7 @@ object _base extends js.Object {
     def commit(): Unit = js.native
     def commit(store: DataStore): Unit = js.native
     @JSName("get")
-    def get_data(property: typingsSlinky.dojo.dojoStrings.data): js.Object = js.native
+    def get_data(property: data): js.Object = js.native
     @JSName("get")
     def get_getPlainValueOptions(property: getPlainValueOptions): js.Object = js.native
     @JSName("get")
@@ -1254,7 +1255,7 @@ object _base extends js.Object {
       */
     def reset(): Unit = js.native
     @JSName("set")
-    def set_data(property: typingsSlinky.dojo.dojoStrings.data, value: js.Object): Unit = js.native
+    def set_data(property: data, value: js.Object): Unit = js.native
     @JSName("set")
     def set_getPlainValueOptions(property: getPlainValueOptions, value: js.Object): Unit = js.native
     @JSName("set")
@@ -1281,7 +1282,7 @@ object _base extends js.Object {
     def toPlainObject(): js.Any = js.native
     @JSName("watch")
     def watch_data(
-      property: typingsSlinky.dojo.dojoStrings.data,
+      property: data,
       callback: js.Function3[
           /* property */ js.UndefOr[String], 
           /* oldValue */ js.UndefOr[js.Object], 

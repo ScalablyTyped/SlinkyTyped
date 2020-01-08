@@ -5,20 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.strange.strangeStrings.`()`
+  - typings.strange.strangeStrings.LeftparenthesisRightparenthesis
   - typings.strange.strangeStrings.`[]`
-  - typings.strange.strangeStrings.`[)`
-  - typings.strange.strangeStrings.`(]`
+  - typings.strange.strangeStrings.`[Rightparenthesis`
+  - typings.strange.strangeStrings.`Leftparenthesis]`
 */
 trait Bounds extends js.Object
 
 object Bounds {
   @scala.inline
-  def `()`: typingsSlinky.strange.strangeStrings.`()` = this.cast("()")
+  def LeftparenthesisRightparenthesis: typingsSlinky.strange.strangeStrings.LeftparenthesisRightparenthesis = this.cast("()")
   @scala.inline
-  def `(]`: typingsSlinky.strange.strangeStrings.`(]` = this.cast("(]")
+  def `Leftparenthesis]`: typingsSlinky.strange.strangeStrings.`Leftparenthesis]` = this.cast("(]")
   @scala.inline
-  def `[)`: typingsSlinky.strange.strangeStrings.`[)` = this.cast("[)")
+  def `[Rightparenthesis`: typingsSlinky.strange.strangeStrings.`[Rightparenthesis` = this.cast("[)")
   @scala.inline
   def `[]`: typingsSlinky.strange.strangeStrings.`[]` = this.cast("[]")
   @scala.inline

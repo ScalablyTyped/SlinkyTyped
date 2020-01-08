@@ -1,12 +1,6 @@
 package typingsSlinky.sodiumjs
 
 import typingsSlinky.sodiumjs.distTypingsSodiumCellMod.Cell
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda1
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda2
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda3
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda4
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda5
-import typingsSlinky.sodiumjs.distTypingsSodiumLambdaMod.Lambda6
 import typingsSlinky.sodiumjs.distTypingsSodiumStreamMod.Stream
 import typingsSlinky.sodiumjs.distTypingsSodiumVertexMod.Source
 import scala.scalajs.js

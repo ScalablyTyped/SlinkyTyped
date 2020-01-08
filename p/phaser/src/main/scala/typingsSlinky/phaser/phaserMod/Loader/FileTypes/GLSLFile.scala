@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.phaserMod.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.GLSLFileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import scala.scalajs.js
@@ -25,31 +26,15 @@ class GLSLFile protected ()
     * @param shaderType The type of shader. Either `fragment` for a fragment shader, or `vertex` for a vertex shader. This is ignored if you load a shader bundle. Default 'fragment'.
     * @param xhrSettings Extra XHR Settings specifically for this file.
     */
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: GLSLFileConfig) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: String, url: String) = this()
-  def this(loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin, key: GLSLFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String) = this()
+  def this(loader: LoaderPlugin, key: GLSLFileConfig) = this()
+  def this(loader: LoaderPlugin, key: String, url: String) = this()
+  def this(loader: LoaderPlugin, key: GLSLFileConfig, url: String) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, shaderType: String) = this()
+  def this(loader: LoaderPlugin, key: GLSLFileConfig, url: String, shaderType: String) = this()
+  def this(loader: LoaderPlugin, key: String, url: String, shaderType: String, xhrSettings: XHRSettingsObject) = this()
   def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: String,
-    shaderType: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: GLSLFileConfig,
-    url: String,
-    shaderType: String
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
-    key: String,
-    url: String,
-    shaderType: String,
-    xhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: typingsSlinky.phaser.Phaser.Loader.LoaderPlugin,
+    loader: LoaderPlugin,
     key: GLSLFileConfig,
     url: String,
     shaderType: String,

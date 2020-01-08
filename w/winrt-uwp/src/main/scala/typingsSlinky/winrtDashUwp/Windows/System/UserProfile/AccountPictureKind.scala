@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.UserProfile
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object AccountPictureKind extends js.Object {
   @js.native
   sealed trait video extends AccountPictureKind
   
-  /* 1 */ val largeImage: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.AccountPictureKind.largeImage with Double = js.native
-  /* 0 */ val smallImage: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.AccountPictureKind.smallImage with Double = js.native
-  /* 2 */ val video: typingsSlinky.winrtDashUwp.Windows.System.UserProfile.AccountPictureKind.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[AccountPictureKind with Double] = js.native
+  /* 1 */ @js.native
+  object largeImage extends TopLevel[largeImage with Double]
+  
+  /* 0 */ @js.native
+  object smallImage extends TopLevel[smallImage with Double]
+  
+  /* 2 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

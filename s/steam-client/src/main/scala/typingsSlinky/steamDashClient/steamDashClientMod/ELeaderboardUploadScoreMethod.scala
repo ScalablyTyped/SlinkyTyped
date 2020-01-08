@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ELeaderboardUploadScoreMethod extends js.Object {
   @js.native
   sealed trait None extends ELeaderboardUploadScoreMethod
   
-  /* 2 */ val ForceUpdate: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardUploadScoreMethod.ForceUpdate with Double = js.native
-  /* 1 */ val KeepBest: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardUploadScoreMethod.KeepBest with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardUploadScoreMethod.None with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ELeaderboardUploadScoreMethod with Double] = js.native
+  /* 2 */ @js.native
+  object ForceUpdate extends TopLevel[ForceUpdate with Double]
+  
+  /* 1 */ @js.native
+  object KeepBest extends TopLevel[KeepBest with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
 }
 

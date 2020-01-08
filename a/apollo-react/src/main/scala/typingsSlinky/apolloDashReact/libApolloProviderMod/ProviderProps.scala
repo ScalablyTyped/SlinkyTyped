@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 trait ProviderProps extends js.Object {
   var client: typingsSlinky.apolloDashClient.apolloDashClientMod.default[
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for TCacheShape */ _
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for TCacheShape */ _
   ]
   var immutable: js.UndefOr[Boolean] = js.undefined
   var store: js.UndefOr[Store[_, AnyAction]] = js.undefined
@@ -18,7 +18,7 @@ object ProviderProps {
   @scala.inline
   def apply(
     client: typingsSlinky.apolloDashClient.apolloDashClientMod.default[
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef $anonfun#applyOrElse newTParams $anonfun next no default parameter for TCacheShape */ _
+      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for TCacheShape */ _
     ],
     immutable: js.UndefOr[Boolean] = js.undefined,
     store: Store[_, AnyAction] = null

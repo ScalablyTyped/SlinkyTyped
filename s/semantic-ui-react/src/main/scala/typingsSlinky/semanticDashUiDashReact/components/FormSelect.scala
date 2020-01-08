@@ -65,6 +65,7 @@ object FormSelect
     fluid: js.UndefOr[Boolean] = js.undefined,
     header: TagMod[Any] = null,
     icon: js.Any = null,
+    id: Double | String = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
     item: js.UndefOr[Boolean] = js.undefined,
     label: SemanticShorthandItem[HtmlLabelProps] = null,
@@ -133,6 +134,7 @@ object FormSelect
     if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
     if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
     if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     if (!js.isUndefined(item)) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])

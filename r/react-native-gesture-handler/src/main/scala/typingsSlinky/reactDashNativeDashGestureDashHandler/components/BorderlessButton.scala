@@ -3,6 +3,7 @@ package typingsSlinky.reactDashNativeDashGestureDashHandler.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.react.reactMod.Ref
 import typingsSlinky.reactDashNative.reactDashNativeMod.StyleProp
@@ -31,6 +32,7 @@ object BorderlessButton
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: id */
   def apply(
+    accessibilityLabel: String = null,
     activeOpacity: Int | Double = null,
     borderless: js.UndefOr[Boolean] = js.undefined,
     disallowInterruption: js.UndefOr[Boolean] = js.undefined,
@@ -54,6 +56,7 @@ object BorderlessButton
     typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton
   ] = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
     if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
     if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.asInstanceOf[js.Any])
     if (!js.isUndefined(disallowInterruption)) __obj.updateDynamic("disallowInterruption")(disallowInterruption.asInstanceOf[js.Any])
@@ -74,6 +77,12 @@ object BorderlessButton
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.BorderlessButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BorderlessButtonProperties
 }
 

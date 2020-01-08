@@ -5,6 +5,7 @@ import typingsSlinky.blessed.blessedMod.Widgets.Types.TPosition
 import typingsSlinky.blessed.blessedMod.Widgets.Types.TTopLeft
 import typingsSlinky.blessed.blessedStrings.bg
 import typingsSlinky.blessed.blessedStrings.bottom
+import typingsSlinky.blessed.blessedStrings.line
 import typingsSlinky.blessed.blessedStrings.middle
 import typingsSlinky.blessed.blessedStrings.top
 import scala.scalajs.js
@@ -30,7 +31,7 @@ object TextOptions {
     align: TAlign = null,
     bg: String = null,
     bold: String = null,
-    border: Border | typingsSlinky.blessed.blessedStrings.line | bg = null,
+    border: Border | line | bg = null,
     bottom: TPosition = null,
     ch: String = null,
     children: js.Array[Node] = null,

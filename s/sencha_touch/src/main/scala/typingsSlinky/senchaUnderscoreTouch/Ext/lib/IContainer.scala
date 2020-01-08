@@ -47,14 +47,14 @@ trait IContainer
   		*/
   var child: js.UndefOr[
     js.Function1[
-      /* selector */ js.UndefOr[java.lang.String], 
+      /* selector */ js.UndefOr[String], 
       typingsSlinky.senchaUnderscoreTouch.Ext.IComponent
     ]
   ] = js.undefined
   /** [Config Option] (Object) */
   var control: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var defaultType: js.UndefOr[java.lang.String] = js.undefined
+  var defaultType: js.UndefOr[String] = js.undefined
   /** [Config Option] (Object) */
   var defaults: js.UndefOr[js.Any] = js.undefined
   /** [Method] Retrieves the first descendant of this container which matches the passed selector
@@ -63,7 +63,7 @@ trait IContainer
   		*/
   var down: js.UndefOr[
     js.Function1[
-      /* selector */ js.UndefOr[java.lang.String], 
+      /* selector */ js.UndefOr[String], 
       typingsSlinky.senchaUnderscoreTouch.Ext.IComponent
     ]
   ] = js.undefined
@@ -99,7 +99,7 @@ trait IContainer
   /** [Method] Returns the value of defaultType
   		* @returns String
   		*/
-  var getDefaultType: js.UndefOr[js.Function0[java.lang.String]] = js.undefined
+  var getDefaultType: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Method] Returns the value of defaults
   		* @returns Object
   		*/
@@ -163,7 +163,7 @@ trait IContainer
   		* @param selector String Selector complying to an Ext.ComponentQuery selector.
   		* @returns Array Ext.Component's which matched the selector.
   		*/
-  var query: js.UndefOr[js.Function1[/* selector */ js.UndefOr[java.lang.String], Array]] = js.undefined
+  var query: js.UndefOr[js.Function1[/* selector */ js.UndefOr[String], Array]] = js.undefined
   /** [Method] Removes an item from this Container optionally destroying it
   		* @param item Object The item to remove.
   		* @param destroy Boolean Calls the Component's destroy method if true.
@@ -227,7 +227,7 @@ trait IContainer
   /** [Method] Sets the value of defaultType
   		* @param defaultType String The new value.
   		*/
-  var setDefaultType: js.UndefOr[js.Function1[/* defaultType */ js.UndefOr[java.lang.String], Unit]] = js.undefined
+  var setDefaultType: js.UndefOr[js.Function1[/* defaultType */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the value of defaults
   		* @param defaults Object The new value.
   		*/
@@ -278,17 +278,17 @@ object IContainer {
     applyMasked: /* masked */ js.UndefOr[js.Any] => _ = null,
     autoDestroy: js.UndefOr[Boolean] = js.undefined,
     cardSwitchAnimation: js.Any = null,
-    child: /* selector */ js.UndefOr[java.lang.String] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
+    child: /* selector */ js.UndefOr[String] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
     control: js.Any = null,
-    defaultType: java.lang.String = null,
+    defaultType: String = null,
     defaults: js.Any = null,
-    down: /* selector */ js.UndefOr[java.lang.String] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
+    down: /* selector */ js.UndefOr[String] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
     getActiveItem: () => _ = null,
     getAt: /* index */ js.UndefOr[Double] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
     getAutoDestroy: () => Boolean = null,
     getComponent: /* component */ js.UndefOr[js.Any] => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
     getControl: () => _ = null,
-    getDefaultType: () => java.lang.String = null,
+    getDefaultType: () => String = null,
     getDefaults: () => _ = null,
     getDockedComponent: /* component */ js.UndefOr[js.Any] => _ = null,
     getDockedItems: () => Array = null,
@@ -304,17 +304,17 @@ object IContainer {
     layout: js.Any = null,
     mask: /* mask */ js.UndefOr[js.Any] => Unit = null,
     masked: js.Any = null,
-    query: /* selector */ js.UndefOr[java.lang.String] => Array = null,
+    query: /* selector */ js.UndefOr[String] => Array = null,
     remove: (/* item */ js.UndefOr[js.Any], /* destroy */ js.UndefOr[Boolean]) => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
     removeAll: (/* destroy */ js.UndefOr[Boolean], /* everything */ js.UndefOr[Boolean]) => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
-    removeAt: /* index */ js.UndefOr[Double] => typingsSlinky.senchaUnderscoreTouch.Ext.lib.IContainer = null,
+    removeAt: /* index */ js.UndefOr[Double] => IContainer = null,
     removeDocked: (/* item */ js.UndefOr[js.Any], /* destroy */ js.UndefOr[Boolean]) => typingsSlinky.senchaUnderscoreTouch.Ext.IComponent = null,
-    removeInnerAt: /* index */ js.UndefOr[Double] => typingsSlinky.senchaUnderscoreTouch.Ext.lib.IContainer = null,
+    removeInnerAt: /* index */ js.UndefOr[Double] => IContainer = null,
     scrollable: js.Any = null,
     setActiveItem: /* activeItem */ js.UndefOr[js.Any] => Unit = null,
     setAutoDestroy: /* autoDestroy */ js.UndefOr[Boolean] => Unit = null,
     setControl: /* control */ js.UndefOr[js.Any] => Unit = null,
-    setDefaultType: /* defaultType */ js.UndefOr[java.lang.String] => Unit = null,
+    setDefaultType: /* defaultType */ js.UndefOr[String] => Unit = null,
     setDefaults: /* defaults */ js.UndefOr[js.Any] => Unit = null,
     setHideOnMaskTap: /* hideOnMaskTap */ js.UndefOr[Boolean] => Unit = null,
     setItems: /* items */ js.UndefOr[js.Any] => Unit = null,

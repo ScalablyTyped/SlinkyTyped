@@ -1,6 +1,5 @@
 package typingsSlinky.easyDashXDashHeaders
 
-import typingsSlinky.easyDashXDashHeaders.domainMod.Domain
 import typingsSlinky.easyDashXDashHeaders.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

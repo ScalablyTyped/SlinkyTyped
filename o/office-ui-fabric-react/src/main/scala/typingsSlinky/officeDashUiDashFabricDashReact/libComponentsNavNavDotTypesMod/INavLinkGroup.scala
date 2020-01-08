@@ -24,6 +24,10 @@ trait INavLinkGroup extends js.Object {
     */
   var expandAriaLabel: js.UndefOr[String] = js.undefined
   /**
+    * (Optional) Any additional properties to apply to a group.
+    */
+  var groupData: js.UndefOr[js.Any] = js.undefined
+  /**
     * Links to render within this group
     */
   var links: js.Array[INavLink]
@@ -51,6 +55,7 @@ object INavLinkGroup {
     collapseAriaLabel: String = null,
     collapseByDefault: js.UndefOr[Boolean] = js.undefined,
     expandAriaLabel: String = null,
+    groupData: js.Any = null,
     name: String = null,
     onHeaderClick: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* isCollapsing */ js.UndefOr[Boolean]) => Unit = null
   ): INavLinkGroup = {
@@ -59,6 +64,7 @@ object INavLinkGroup {
     if (collapseAriaLabel != null) __obj.updateDynamic("collapseAriaLabel")(collapseAriaLabel.asInstanceOf[js.Any])
     if (!js.isUndefined(collapseByDefault)) __obj.updateDynamic("collapseByDefault")(collapseByDefault.asInstanceOf[js.Any])
     if (expandAriaLabel != null) __obj.updateDynamic("expandAriaLabel")(expandAriaLabel.asInstanceOf[js.Any])
+    if (groupData != null) __obj.updateDynamic("groupData")(groupData.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     if (onHeaderClick != null) __obj.updateDynamic("onHeaderClick")(js.Any.fromFunction2(onHeaderClick))
     __obj.asInstanceOf[INavLinkGroup]

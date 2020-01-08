@@ -2,7 +2,7 @@ package typingsSlinky.officeDashUiDashFabricDashReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsTextFieldTextFieldDotTypesMod.ITextFieldProps
-import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.Underscore
+import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings._underscore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object libTextFieldMod extends js.Object {
     def this(props: ITextFieldProps) = this()
   }
   
-  val DEFAULT_MASK_CHAR: Underscore = js.native
+  val DEFAULT_MASK_CHAR: _underscore = js.native
   val TextField: ReactComponentClass[ITextFieldProps] = js.native
   /* static members */
   @js.native

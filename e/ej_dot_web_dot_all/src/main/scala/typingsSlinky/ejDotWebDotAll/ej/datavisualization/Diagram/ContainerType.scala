@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object ContainerType extends js.Object {
   @js.native
   sealed trait Stack extends ContainerType
   
-  /* 0 */ val Canvas: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ContainerType.Canvas with Double = js.native
-  /* 1 */ val Stack: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Diagram.ContainerType.Stack with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContainerType with Double] = js.native
+  /* 0 */ @js.native
+  object Canvas extends TopLevel[Canvas with Double]
+  
+  /* 1 */ @js.native
+  object Stack extends TopLevel[Stack with Double]
+  
 }
 

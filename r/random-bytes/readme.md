@@ -10,9 +10,9 @@ URL and cookie safe UIDs
 | ------------------ | :-------------: |
 | Full name          | random-bytes |
 | Keywords           | bytes, generator, random, safe |
-| # releases         | 1 |
-| # dependents       | 5 |
-| # downloads        | 29282269 |
+| # releases         | 0 |
+| # dependents       | 6 |
+| # downloads        | 34879723 |
 | # stars            | 2 |
 
 ## Links

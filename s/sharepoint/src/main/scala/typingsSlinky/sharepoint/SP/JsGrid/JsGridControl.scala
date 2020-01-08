@@ -5,11 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.microsoftDashAjax.Sys.UI.DomEvent
 import typingsSlinky.sharepoint.Anon_Begin
 import typingsSlinky.sharepoint.SP.JsGrid.Internal.DiffTracker
-import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.GanttParameters
 import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.Parameters
-import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.PivotedGridParameters
-import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.RowViewParameters
-import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.TableViewParameters
 import typingsSlinky.sharepoint.SP.Utilities.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

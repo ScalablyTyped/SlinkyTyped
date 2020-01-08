@@ -1,6 +1,6 @@
 package typingsSlinky.passportDashGoogleDashOauth20.passportDashGoogleDashOauth20Mod
 
-import typingsSlinky.passportDashGoogleDashOauth20.passportDashGoogleDashOauth20Numbers.`true`
+import typingsSlinky.passportDashGoogleDashOauth20.passportDashGoogleDashOauth20Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,6 @@
 package typingsSlinky.dojo.dojox
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dojox.dnd.Selector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

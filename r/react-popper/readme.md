@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-popper
 
-Typings are for version 1.3.6
+Typings are for version 1.3.7
 
 ## Library description:
 React wrapper around Popper.js
@@ -10,9 +10,9 @@ React wrapper around Popper.js
 | ------------------ | :-------------: |
 | Full name          | react-popper |
 | Keywords           | react, react-popper, popperjs, component, drop, tooltip, popover |
-| # releases         | 48 |
-| # dependents       | 238 |
-| # downloads        | 34949158 |
+| # releases         | 38 |
+| # dependents       | 363 |
+| # downloads        | 76864187 |
 | # stars            | 1 |
 
 ## Links

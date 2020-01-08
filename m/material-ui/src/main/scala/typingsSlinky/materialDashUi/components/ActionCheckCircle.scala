@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionCheckCircle
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionCheckCircle] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionCheckCircle] {
   @JSImport("material-ui/svg-icons", "ActionCheckCircle")
   @js.native
   object componentImport extends js.Object

@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait UserProperties extends js.Object {
-  /** @deprecated DO NOT USE */ def deleteAllProperties(): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Properties.UserProperties = js.native
-  /** @deprecated DO NOT USE */ def deleteProperty(key: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Properties.UserProperties = js.native
+  /** @deprecated DO NOT USE */ def deleteAllProperties(): UserProperties = js.native
+  /** @deprecated DO NOT USE */ def deleteProperty(key: String): UserProperties = js.native
   /** @deprecated DO NOT USE */ def getKeys(): js.Array[String] = js.native
   /** @deprecated DO NOT USE */ def getProperties(): StringDictionary[String] = js.native
   /** @deprecated DO NOT USE */ def getProperty(key: String): String | Null = js.native
-  /** @deprecated DO NOT USE */ def setProperties(properties: StringDictionary[String]): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Properties.UserProperties = js.native
-  /** @deprecated DO NOT USE */ def setProperties(properties: StringDictionary[String], deleteAllOthers: Boolean): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Properties.UserProperties = js.native
-  /** @deprecated DO NOT USE */ def setProperty(key: String, value: String): typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Properties.UserProperties = js.native
+  /** @deprecated DO NOT USE */ def setProperties(properties: StringDictionary[String]): UserProperties = js.native
+  /** @deprecated DO NOT USE */ def setProperties(properties: StringDictionary[String], deleteAllOthers: Boolean): UserProperties = js.native
+  /** @deprecated DO NOT USE */ def setProperty(key: String, value: String): UserProperties = js.native
 }
 

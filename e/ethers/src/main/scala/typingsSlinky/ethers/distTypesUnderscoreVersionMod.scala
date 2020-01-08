@@ -1,6 +1,6 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.ethersStrings.`4DOT0DOT0-betaDOT3`
+import typingsSlinky.ethers.ethersStrings.`4Dot0Dot0-betaDot3`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ethers/dist/types/_version", JSImport.Namespace)
 @js.native
 object distTypesUnderscoreVersionMod extends js.Object {
-  val version: `4DOT0DOT0-betaDOT3` = js.native
+  val version: `4Dot0Dot0-betaDot3` = js.native
 }
 

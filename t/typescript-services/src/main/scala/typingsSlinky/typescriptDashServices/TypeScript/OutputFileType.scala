@@ -1,5 +1,6 @@
 package typingsSlinky.typescriptDashServices.TypeScript
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object OutputFileType extends js.Object {
   @js.native
   sealed trait SourceMap extends OutputFileType
   
-  /* 2 */ val Declaration: typingsSlinky.typescriptDashServices.TypeScript.OutputFileType.Declaration with Double = js.native
-  /* 0 */ val JavaScript: typingsSlinky.typescriptDashServices.TypeScript.OutputFileType.JavaScript with Double = js.native
-  /* 1 */ val SourceMap: typingsSlinky.typescriptDashServices.TypeScript.OutputFileType.SourceMap with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[OutputFileType with Double] = js.native
+  /* 2 */ @js.native
+  object Declaration extends TopLevel[Declaration with Double]
+  
+  /* 0 */ @js.native
+  object JavaScript extends TopLevel[JavaScript with Double]
+  
+  /* 1 */ @js.native
+  object SourceMap extends TopLevel[SourceMap with Double]
+  
 }
 

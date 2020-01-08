@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashWeb
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +32,16 @@ object MailMergeExportRange extends js.Object {
   @js.native
   sealed trait Range extends MailMergeExportRange
   
-  /* 0 */ val AllRecords: typingsSlinky.devexpressDashWeb.MailMergeExportRange.AllRecords with Double = js.native
-  /* 1 */ val CurrentRecord: typingsSlinky.devexpressDashWeb.MailMergeExportRange.CurrentRecord with Double = js.native
-  /* 2 */ val Range: typingsSlinky.devexpressDashWeb.MailMergeExportRange.Range with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[MailMergeExportRange with Double] = js.native
+  /* 0 */ @js.native
+  object AllRecords extends TopLevel[AllRecords with Double]
+  
+  /* 1 */ @js.native
+  object CurrentRecord extends TopLevel[CurrentRecord with Double]
+  
+  /* 2 */ @js.native
+  object Range extends TopLevel[Range with Double]
+  
 }
 

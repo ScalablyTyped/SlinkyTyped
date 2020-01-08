@@ -1,8 +1,6 @@
 package typingsSlinky.reactDashColor
 
 import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashColor.libComponentsCommonSaturationMod.Saturation
-import typingsSlinky.reactDashColor.libComponentsCommonSaturationMod.SaturationProps
 import typingsSlinky.reactDashColor.reactDashColorMod.CustomPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

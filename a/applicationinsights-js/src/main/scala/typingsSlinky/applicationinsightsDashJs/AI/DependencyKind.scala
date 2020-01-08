@@ -1,5 +1,6 @@
 package typingsSlinky.applicationinsightsDashJs.AI
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object DependencyKind extends js.Object {
   @js.native
   sealed trait SQL extends DependencyKind
   
-  /* 1 */ val Http: typingsSlinky.applicationinsightsDashJs.AI.DependencyKind.Http with Double = js.native
-  /* 2 */ val Other: typingsSlinky.applicationinsightsDashJs.AI.DependencyKind.Other with Double = js.native
-  /* 0 */ val SQL: typingsSlinky.applicationinsightsDashJs.AI.DependencyKind.SQL with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DependencyKind with Double] = js.native
+  /* 1 */ @js.native
+  object Http extends TopLevel[Http with Double]
+  
+  /* 2 */ @js.native
+  object Other extends TopLevel[Other with Double]
+  
+  /* 0 */ @js.native
+  object SQL extends TopLevel[SQL with Double]
+  
 }
 

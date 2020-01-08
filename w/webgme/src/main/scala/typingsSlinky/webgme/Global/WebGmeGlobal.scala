@@ -1,7 +1,9 @@
 package typingsSlinky.webgme.Global
 
+import typingsSlinky.webgme.GmeConfig.GmeConfig
 import typingsSlinky.webgme.GmePanel.LayoutManager
 import typingsSlinky.webgme.GmePanel.PanelManager
+import typingsSlinky.webgme.Toolbar.Toolbar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,25 +16,25 @@ trait WebGmeGlobal extends js.Object {
   var PanelManager: js.UndefOr[typingsSlinky.webgme.GmePanel.PanelManager] = js.undefined
   var State: js.UndefOr[typingsSlinky.webgme.Global.State] = js.undefined
   var Toolbar: js.UndefOr[typingsSlinky.webgme.Toolbar.Toolbar] = js.undefined
-  var gmeConfig: typingsSlinky.webgme.GmeConfig.GmeConfig
+  var gmeConfig: GmeConfig
   var history: js.UndefOr[History] = js.undefined
   var userInfo: js.UndefOr[UserInfo] = js.undefined
   var version: js.UndefOr[String] = js.undefined
-  def getConfig(): typingsSlinky.webgme.GmeConfig.GmeConfig
+  def getConfig(): GmeConfig
 }
 
 object WebGmeGlobal {
   @scala.inline
   def apply(
-    getConfig: () => typingsSlinky.webgme.GmeConfig.GmeConfig,
-    gmeConfig: typingsSlinky.webgme.GmeConfig.GmeConfig,
+    getConfig: () => GmeConfig,
+    gmeConfig: GmeConfig,
     GitHubVersion: String = null,
     KeyboardManager: KeyboardManager = null,
     LayoutManager: LayoutManager = null,
     NpmVersion: String = null,
     PanelManager: PanelManager = null,
     State: State = null,
-    Toolbar: typingsSlinky.webgme.Toolbar.Toolbar = null,
+    Toolbar: Toolbar = null,
     history: History = null,
     userInfo: UserInfo = null,
     version: String = null

@@ -13,41 +13,41 @@ import typingsSlinky.atJupyterlabMainmenu.atJupyterlabMainmenuMod.SettingsMenu
 import typingsSlinky.atJupyterlabMainmenu.atJupyterlabMainmenuMod.TabsMenu
 import typingsSlinky.atJupyterlabMainmenu.atJupyterlabMainmenuMod.ViewMenu
 import typingsSlinky.atJupyterlabMainmenu.libTokensMod.IMainMenu
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:clear-all`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:clear-current`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:find`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:go-to-line`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:redo`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenu:undo`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenu:close-and-cleanup`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenu:create-console`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenu:logout`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenu:shutdown`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`helpmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:change`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:interrupt`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:restart-and-clear`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:restart`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:shutdownAll`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenu:shutdown`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`mainmenu:open-first`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:restart-and-run-all`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:run-above`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:run-all`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:run-below`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenu:run`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`settingsmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`tabsmenu:activate-by-id`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`tabsmenu:activate-previously-used-tab`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`tabsmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenu:line-numbering`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenu:match-brackets`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenu:open`
-import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenu:word-wrap`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenuColonclear-all`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenuColonclear-current`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`editmenuColongo-to-line`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenuColonclose-and-cleanup`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`filemenuColoncreate-console`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`kernelmenuColonrestart-and-clear`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`mainmenuColonopen-first`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenuColonrestart-and-run-all`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenuColonrun-above`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenuColonrun-all`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`runmenuColonrun-below`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`tabsmenuColonactivate-by-id`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`tabsmenuColonactivate-previously-used-tab`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenuColonline-numbering`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenuColonmatch-brackets`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.`viewmenuColonword-wrap`
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.editmenuColonfind
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.editmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.editmenuColonredo
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.editmenuColonundo
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.filemenuColonlogout
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.filemenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.filemenuColonshutdown
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.helpmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColonchange
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColoninterrupt
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColonrestart
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColonshutdown
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.kernelmenuColonshutdownAll
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.runmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.runmenuColonrun
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.settingsmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.tabsmenuColonopen
+import typingsSlinky.atJupyterlabMainmenuDashExtension.atJupyterlabMainmenuDashExtensionStrings.viewmenuColonopen
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,47 +63,47 @@ object atJupyterlabMainmenuDashExtensionMod extends js.Object {
   def createFileMenu(app: JupyterFrontEnd[IShell], menu: FileMenu, router: IRouter): Unit = js.native
   def createKernelMenu(app: JupyterFrontEnd[IShell], menu: KernelMenu): Unit = js.native
   def createRunMenu(app: JupyterFrontEnd[IShell], menu: RunMenu): Unit = js.native
-  def createSettingsMenu(`_`: JupyterFrontEnd[IShell], menu: SettingsMenu): Unit = js.native
+  def createSettingsMenu(_underscore: JupyterFrontEnd[IShell], menu: SettingsMenu): Unit = js.native
   def createTabsMenu(app: JupyterFrontEnd[IShell], menu: TabsMenu): Unit = js.native
   def createTabsMenu(app: JupyterFrontEnd[IShell], menu: TabsMenu, labShell: ILabShell): Unit = js.native
   def createViewMenu(app: JupyterFrontEnd[IShell], menu: ViewMenu): Unit = js.native
   @js.native
   object CommandIDs extends js.Object {
-    val activateById: `tabsmenu:activate-by-id` = js.native
-    val activatePreviouslyUsedTab: `tabsmenu:activate-previously-used-tab` = js.native
-    val changeKernel: `kernelmenu:change` = js.native
-    val clearAll: `editmenu:clear-all` = js.native
-    val clearCurrent: `editmenu:clear-current` = js.native
-    val closeAndCleanup: `filemenu:close-and-cleanup` = js.native
-    val createConsole: `filemenu:create-console` = js.native
-    val find: `editmenu:find` = js.native
-    val goToLine: `editmenu:go-to-line` = js.native
-    val interruptKernel: `kernelmenu:interrupt` = js.native
-    val lineNumbering: `viewmenu:line-numbering` = js.native
-    val logout: `filemenu:logout` = js.native
-    val matchBrackets: `viewmenu:match-brackets` = js.native
-    val openEdit: `editmenu:open` = js.native
-    val openFile: `filemenu:open` = js.native
-    val openFirst: `mainmenu:open-first` = js.native
-    val openHelp: `helpmenu:open` = js.native
-    val openKernel: `kernelmenu:open` = js.native
-    val openRun: `runmenu:open` = js.native
-    val openSettings: `settingsmenu:open` = js.native
-    val openTabs: `tabsmenu:open` = js.native
-    val openView: `viewmenu:open` = js.native
-    val redo: `editmenu:redo` = js.native
-    val restartAndRunAll: `runmenu:restart-and-run-all` = js.native
-    val restartKernel: `kernelmenu:restart` = js.native
-    val restartKernelAndClear: `kernelmenu:restart-and-clear` = js.native
-    val run: `runmenu:run` = js.native
-    val runAbove: `runmenu:run-above` = js.native
-    val runAll: `runmenu:run-all` = js.native
-    val runBelow: `runmenu:run-below` = js.native
-    val shutdown: `filemenu:shutdown` = js.native
-    val shutdownAllKernels: `kernelmenu:shutdownAll` = js.native
-    val shutdownKernel: `kernelmenu:shutdown` = js.native
-    val undo: `editmenu:undo` = js.native
-    val wordWrap: `viewmenu:word-wrap` = js.native
+    val activateById: `tabsmenuColonactivate-by-id` = js.native
+    val activatePreviouslyUsedTab: `tabsmenuColonactivate-previously-used-tab` = js.native
+    val changeKernel: kernelmenuColonchange = js.native
+    val clearAll: `editmenuColonclear-all` = js.native
+    val clearCurrent: `editmenuColonclear-current` = js.native
+    val closeAndCleanup: `filemenuColonclose-and-cleanup` = js.native
+    val createConsole: `filemenuColoncreate-console` = js.native
+    val find: editmenuColonfind = js.native
+    val goToLine: `editmenuColongo-to-line` = js.native
+    val interruptKernel: kernelmenuColoninterrupt = js.native
+    val lineNumbering: `viewmenuColonline-numbering` = js.native
+    val logout: filemenuColonlogout = js.native
+    val matchBrackets: `viewmenuColonmatch-brackets` = js.native
+    val openEdit: editmenuColonopen = js.native
+    val openFile: filemenuColonopen = js.native
+    val openFirst: `mainmenuColonopen-first` = js.native
+    val openHelp: helpmenuColonopen = js.native
+    val openKernel: kernelmenuColonopen = js.native
+    val openRun: runmenuColonopen = js.native
+    val openSettings: settingsmenuColonopen = js.native
+    val openTabs: tabsmenuColonopen = js.native
+    val openView: viewmenuColonopen = js.native
+    val redo: editmenuColonredo = js.native
+    val restartAndRunAll: `runmenuColonrestart-and-run-all` = js.native
+    val restartKernel: kernelmenuColonrestart = js.native
+    val restartKernelAndClear: `kernelmenuColonrestart-and-clear` = js.native
+    val run: runmenuColonrun = js.native
+    val runAbove: `runmenuColonrun-above` = js.native
+    val runAll: `runmenuColonrun-all` = js.native
+    val runBelow: `runmenuColonrun-below` = js.native
+    val shutdown: filemenuColonshutdown = js.native
+    val shutdownAllKernels: kernelmenuColonshutdownAll = js.native
+    val shutdownKernel: kernelmenuColonshutdown = js.native
+    val undo: editmenuColonundo = js.native
+    val wordWrap: `viewmenuColonword-wrap` = js.native
   }
   
 }

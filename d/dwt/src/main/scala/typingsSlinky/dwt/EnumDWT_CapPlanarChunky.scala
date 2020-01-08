@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +18,13 @@ object EnumDWT_CapPlanarChunky extends js.Object {
   @js.native
   sealed trait TWPC_PLANAR extends EnumDWT_CapPlanarChunky
   
-  /* 0 */ val TWPC_CHUNKY: typingsSlinky.dwt.EnumDWT_CapPlanarChunky.TWPC_CHUNKY with Double = js.native
-  /* 1 */ val TWPC_PLANAR: typingsSlinky.dwt.EnumDWT_CapPlanarChunky.TWPC_PLANAR with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EnumDWT_CapPlanarChunky with Double] = js.native
+  /* 0 */ @js.native
+  object TWPC_CHUNKY extends TopLevel[TWPC_CHUNKY with Double]
+  
+  /* 1 */ @js.native
+  object TWPC_PLANAR extends TopLevel[TWPC_PLANAR with Double]
+  
 }
 

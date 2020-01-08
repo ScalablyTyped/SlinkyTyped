@@ -3,7 +3,7 @@ package typingsSlinky.cypress.Cypress
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.cypress.Anon_At
 import typingsSlinky.cypress.JQuery
-import typingsSlinky.cypress.cypressStrings.DOLLARel
+import typingsSlinky.cypress.cypressStrings.$el
 import typingsSlinky.cypress.cypressStrings.displayName
 import typingsSlinky.cypress.cypressStrings.message
 import typingsSlinky.cypress.cypressStrings.name
@@ -20,7 +20,7 @@ trait Log extends js.Object {
   @JSName("get")
   def get_displayName(attr: displayName): String = js.native
   @JSName("get")
-  def get_el(attr: DOLLARel): JQuery[HTMLElement] = js.native
+  def get_el(attr: $el): JQuery[HTMLElement] = js.native
   @JSName("get")
   def get_message(attr: message): js.Array[_] = js.native
   @JSName("get")
@@ -29,7 +29,7 @@ trait Log extends js.Object {
   @JSName("set")
   def set_displayName(key: displayName, value: String): Log = js.native
   @JSName("set")
-  def set_el(key: DOLLARel, value: JQuery[HTMLElement]): Log = js.native
+  def set_el(key: $el, value: JQuery[HTMLElement]): Log = js.native
   @JSName("set")
   def set_message(key: message, value: js.Array[_]): Log = js.native
   @JSName("set")

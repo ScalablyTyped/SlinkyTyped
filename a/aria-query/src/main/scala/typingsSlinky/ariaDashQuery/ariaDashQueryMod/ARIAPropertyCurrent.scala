@@ -1,14 +1,14 @@
 package typingsSlinky.ariaDashQuery.ariaDashQueryMod
 
-import typingsSlinky.ariaDashQuery.ariaDashQueryNumbers.`false`
+import typingsSlinky.ariaDashQuery.ariaDashQueryBooleans.`false`
 import typingsSlinky.ariaDashQuery.ariaDashQueryStrings.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ariaDashQuery.ariaDashQueryNumbers.`true`
-  - typings.ariaDashQuery.ariaDashQueryNumbers.`false`
+  - typings.ariaDashQuery.ariaDashQueryBooleans.`true`
+  - typings.ariaDashQuery.ariaDashQueryBooleans.`false`
   - typings.ariaDashQuery.ariaDashQueryStrings.page
   - typings.ariaDashQuery.ariaDashQueryStrings.step
   - typings.ariaDashQuery.ariaDashQueryStrings.location
@@ -38,7 +38,7 @@ object ARIAPropertyCurrent {
   @scala.inline
   def time: typingsSlinky.ariaDashQuery.ariaDashQueryStrings.time = this.cast("time")
   @scala.inline
-  def `true`: typingsSlinky.ariaDashQuery.ariaDashQueryNumbers.`true` = this.cast(true)
+  def `true`: typingsSlinky.ariaDashQuery.ariaDashQueryBooleans.`true` = this.cast(true)
   @JSName("true")
   @scala.inline
   def true_true: `true` = this.cast("true")

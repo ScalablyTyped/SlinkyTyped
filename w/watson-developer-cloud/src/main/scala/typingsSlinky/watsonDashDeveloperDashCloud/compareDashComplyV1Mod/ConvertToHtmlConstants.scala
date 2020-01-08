@@ -1,7 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod
 
-import typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType
-import typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.Model
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,17 +45,37 @@ object ConvertToHtmlConstants extends js.Object {
     @js.native
     sealed trait TEXT_PLAIN extends FileContentType
     
-    /* "application/msword" */ val APPLICATION_MSWORD: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.APPLICATION_MSWORD with String = js.native
-    /* "application/pdf" */ val APPLICATION_PDF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.APPLICATION_PDF with String = js.native
-    /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ val APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String = js.native
-    /* "image/bmp" */ val IMAGE_BMP: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.IMAGE_BMP with String = js.native
-    /* "image/gif" */ val IMAGE_GIF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.IMAGE_GIF with String = js.native
-    /* "image/jpeg" */ val IMAGE_JPEG: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.IMAGE_JPEG with String = js.native
-    /* "image/png" */ val IMAGE_PNG: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.IMAGE_PNG with String = js.native
-    /* "image/tiff" */ val IMAGE_TIFF: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.IMAGE_TIFF with String = js.native
-    /* "text/plain" */ val TEXT_PLAIN: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.FileContentType.TEXT_PLAIN with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[FileContentType with String] = js.native
+    /* "application/msword" */ @js.native
+    object APPLICATION_MSWORD extends TopLevel[APPLICATION_MSWORD with String]
+    
+    /* "application/pdf" */ @js.native
+    object APPLICATION_PDF extends TopLevel[APPLICATION_PDF with String]
+    
+    /* "application/vnd.openxmlformats-officedocument.wordprocessingml.document" */ @js.native
+    object APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT extends TopLevel[
+              APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT with String
+            ]
+    
+    /* "image/bmp" */ @js.native
+    object IMAGE_BMP extends TopLevel[IMAGE_BMP with String]
+    
+    /* "image/gif" */ @js.native
+    object IMAGE_GIF extends TopLevel[IMAGE_GIF with String]
+    
+    /* "image/jpeg" */ @js.native
+    object IMAGE_JPEG extends TopLevel[IMAGE_JPEG with String]
+    
+    /* "image/png" */ @js.native
+    object IMAGE_PNG extends TopLevel[IMAGE_PNG with String]
+    
+    /* "image/tiff" */ @js.native
+    object IMAGE_TIFF extends TopLevel[IMAGE_TIFF with String]
+    
+    /* "text/plain" */ @js.native
+    object TEXT_PLAIN extends TopLevel[TEXT_PLAIN with String]
+    
   }
   
   /** The analysis model to be used by the service. For the **Element classification** and **Compare two documents** methods, the default is `contracts`. For the **Extract tables** method, the default is `tables`. These defaults apply to the standalone methods as well as to the methods' use in batch-processing requests. */
@@ -68,10 +87,14 @@ object ConvertToHtmlConstants extends js.Object {
     @js.native
     sealed trait TABLES extends Model
     
-    /* "contracts" */ val CONTRACTS: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.Model.CONTRACTS with String = js.native
-    /* "tables" */ val TABLES: typingsSlinky.watsonDashDeveloperDashCloud.compareDashComplyV1Mod.ConvertToHtmlConstants.Model.TABLES with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[Model with String] = js.native
+    /* "contracts" */ @js.native
+    object CONTRACTS extends TopLevel[CONTRACTS with String]
+    
+    /* "tables" */ @js.native
+    object TABLES extends TopLevel[TABLES with String]
+    
   }
   
 }

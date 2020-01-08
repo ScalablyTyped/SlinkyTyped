@@ -5,17 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeRequest
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeSendHeaders
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonSendHeaders
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonHeadersReceived
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonAuthRequired
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonResponseStarted
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeRedirect
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonCompleted
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonErrorOccured
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonRequest
-  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonMessage
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeRequest
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeSendHeaders
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonSendHeaders
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonHeadersReceived
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonAuthRequired
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonResponseStarted
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeRedirect
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonCompleted
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonErrorOccured
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonRequest
+  - typings.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonMessage
 */
 trait DeclarativeWebRequestEventList extends js.Object
 
@@ -23,26 +23,26 @@ object DeclarativeWebRequestEventList {
   @scala.inline
   /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   @scala.inline
-  def declarativeContentDOTonAuthRequired: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonAuthRequired = this.cast("declarativeContent.onAuthRequired")
+  def declarativeContentDotonAuthRequired: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonAuthRequired = this.cast("declarativeContent.onAuthRequired")
   @scala.inline
-  def declarativeContentDOTonBeforeRedirect: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeRedirect = this.cast("declarativeContent.onBeforeRedirect")
+  def declarativeContentDotonBeforeRedirect: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeRedirect = this.cast("declarativeContent.onBeforeRedirect")
   @scala.inline
-  def declarativeContentDOTonBeforeRequest: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeRequest = this.cast("declarativeContent.onBeforeRequest")
+  def declarativeContentDotonBeforeRequest: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeRequest = this.cast("declarativeContent.onBeforeRequest")
   @scala.inline
-  def declarativeContentDOTonBeforeSendHeaders: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonBeforeSendHeaders = this.cast("declarativeContent.onBeforeSendHeaders")
+  def declarativeContentDotonBeforeSendHeaders: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonBeforeSendHeaders = this.cast("declarativeContent.onBeforeSendHeaders")
   @scala.inline
-  def declarativeContentDOTonCompleted: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonCompleted = this.cast("declarativeContent.onCompleted")
+  def declarativeContentDotonCompleted: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonCompleted = this.cast("declarativeContent.onCompleted")
   @scala.inline
-  def declarativeContentDOTonErrorOccured: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonErrorOccured = this.cast("declarativeContent.onErrorOccured")
+  def declarativeContentDotonErrorOccured: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonErrorOccured = this.cast("declarativeContent.onErrorOccured")
   @scala.inline
-  def declarativeContentDOTonHeadersReceived: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonHeadersReceived = this.cast("declarativeContent.onHeadersReceived")
+  def declarativeContentDotonHeadersReceived: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonHeadersReceived = this.cast("declarativeContent.onHeadersReceived")
   @scala.inline
-  def declarativeContentDOTonMessage: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonMessage = this.cast("declarativeContent.onMessage")
+  def declarativeContentDotonMessage: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonMessage = this.cast("declarativeContent.onMessage")
   @scala.inline
-  def declarativeContentDOTonRequest: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonRequest = this.cast("declarativeContent.onRequest")
+  def declarativeContentDotonRequest: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonRequest = this.cast("declarativeContent.onRequest")
   @scala.inline
-  def declarativeContentDOTonResponseStarted: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonResponseStarted = this.cast("declarativeContent.onResponseStarted")
+  def declarativeContentDotonResponseStarted: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonResponseStarted = this.cast("declarativeContent.onResponseStarted")
   @scala.inline
-  def declarativeContentDOTonSendHeaders: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDOTonSendHeaders = this.cast("declarativeContent.onSendHeaders")
+  def declarativeContentDotonSendHeaders: typingsSlinky.chromeDashApps.chromeDashAppsStrings.declarativeContentDotonSendHeaders = this.cast("declarativeContent.onSendHeaders")
 }
 

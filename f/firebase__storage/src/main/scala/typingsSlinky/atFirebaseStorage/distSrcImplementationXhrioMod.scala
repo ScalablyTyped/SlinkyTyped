@@ -1,10 +1,8 @@
 package typingsSlinky.atFirebaseStorage
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.ErrorCode
-import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.Headers
-import typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.XhrIo
 import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.Blob
 import scala.scalajs.js
@@ -50,11 +48,17 @@ object distSrcImplementationXhrioMod extends js.Object {
     @js.native
     sealed trait NO_ERROR extends ErrorCode
     
-    /* 2 */ val ABORT: typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.ErrorCode.ABORT with Double = js.native
-    /* 1 */ val NETWORK_ERROR: typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.ErrorCode.NETWORK_ERROR with Double = js.native
-    /* 0 */ val NO_ERROR: typingsSlinky.atFirebaseStorage.distSrcImplementationXhrioMod.ErrorCode.NO_ERROR with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ErrorCode with Double] = js.native
+    /* 2 */ @js.native
+    object ABORT extends TopLevel[ABORT with Double]
+    
+    /* 1 */ @js.native
+    object NETWORK_ERROR extends TopLevel[NETWORK_ERROR with Double]
+    
+    /* 0 */ @js.native
+    object NO_ERROR extends TopLevel[NO_ERROR with Double]
+    
   }
   
   type Headers = StringDictionary[String | Double]

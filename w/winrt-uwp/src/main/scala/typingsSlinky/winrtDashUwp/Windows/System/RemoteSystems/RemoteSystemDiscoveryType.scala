@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object RemoteSystemDiscoveryType extends js.Object {
   @js.native
   sealed trait spatiallyProximal extends RemoteSystemDiscoveryType
   
-  /* 0 */ val any: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemDiscoveryType.any with Double = js.native
-  /* 2 */ val cloud: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemDiscoveryType.cloud with Double = js.native
-  /* 1 */ val proximal: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemDiscoveryType.proximal with Double = js.native
-  /* 3 */ val spatiallyProximal: typingsSlinky.winrtDashUwp.Windows.System.RemoteSystems.RemoteSystemDiscoveryType.spatiallyProximal with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[RemoteSystemDiscoveryType with Double] = js.native
+  /* 0 */ @js.native
+  object any extends TopLevel[any with Double]
+  
+  /* 2 */ @js.native
+  object cloud extends TopLevel[cloud with Double]
+  
+  /* 1 */ @js.native
+  object proximal extends TopLevel[proximal with Double]
+  
+  /* 3 */ @js.native
+  object spatiallyProximal extends TopLevel[spatiallyProximal with Double]
+  
 }
 

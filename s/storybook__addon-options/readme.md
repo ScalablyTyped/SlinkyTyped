@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__addon-options
 
-Typings are for version 5.2.6
+Typings are for version 5.2.8
 
 ## Library description:
 Options addon for storybook
@@ -10,15 +10,15 @@ Options addon for storybook
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-options |
 | Keywords           | addon, storybook |
-| # releases         | 244 |
-| # dependents       | 54 |
-| # downloads        | 13142135 |
+| # releases         | 416 |
+| # dependents       | 69 |
+| # downloads        | 9405654 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/storybooks/storybook/tree/master/addons/options)
-- [Bugs](https://github.com/storybooks/storybook/issues)
-- [Repository](https://github.com/storybooks/storybook)
+- [Homepage](https://github.com/storybookjs/storybook/tree/master/addons/options)
+- [Bugs](https://github.com/storybookjs/storybook/issues)
+- [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Faddon-options)
     
 

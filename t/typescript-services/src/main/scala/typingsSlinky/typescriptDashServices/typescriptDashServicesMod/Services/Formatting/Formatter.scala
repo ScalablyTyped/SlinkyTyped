@@ -2,6 +2,8 @@ package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services.
 
 import typingsSlinky.typescriptDashServices.FormattingOptions
 import typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.ITextSnapshot
+import typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax
+import typingsSlinky.typescriptDashServices.TypeScript.TextSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +13,8 @@ import scala.scalajs.js.annotation._
 class Formatter protected ()
   extends typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.Formatter {
   def this(
-    textSpan: typingsSlinky.typescriptDashServices.TypeScript.TextSpan,
-    sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax,
+    textSpan: TextSpan,
+    sourceUnit: SourceUnitSyntax,
     indentFirstToken: Boolean,
     options: FormattingOptions,
     snapshot: ITextSnapshot,
@@ -26,8 +28,8 @@ class Formatter protected ()
 @js.native
 object Formatter extends js.Object {
   def getEdits(
-    textSpan: typingsSlinky.typescriptDashServices.TypeScript.TextSpan,
-    sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax,
+    textSpan: TextSpan,
+    sourceUnit: SourceUnitSyntax,
     options: FormattingOptions,
     indentFirstToken: Boolean,
     snapshot: ITextSnapshot,

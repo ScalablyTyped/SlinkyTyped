@@ -24,8 +24,8 @@ import typingsSlinky.chromeDashApps.Anon_NEWNOTE
 import typingsSlinky.chromeDashApps.Anon_Partitions
 import typingsSlinky.chromeDashApps.Anon_Tcp
 import typingsSlinky.chromeDashApps.chrome.ToStringLiteral
+import typingsSlinky.chromeDashApps.chromeDashAppsBooleans.`true`
 import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`2`
-import typingsSlinky.chromeDashApps.chromeDashAppsNumbers.`true`
 import typingsSlinky.chromeDashApps.chromeDashAppsStrings.new_note
 import typingsSlinky.std.Exclude
 import scala.scalajs.js

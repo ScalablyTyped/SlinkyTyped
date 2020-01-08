@@ -1,5 +1,6 @@
 package typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,11 +32,19 @@ object ContentAlignment extends js.Object {
   @js.native
   sealed trait UNSUPPORTED extends ContentAlignment
   
-  /* 3 */ val BOTTOM: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ContentAlignment.BOTTOM with Double = js.native
-  /* 2 */ val MIDDLE: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ContentAlignment.MIDDLE with Double = js.native
-  /* 1 */ val TOP: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ContentAlignment.TOP with Double = js.native
-  /* 0 */ val UNSUPPORTED: typingsSlinky.googleDashAppsDashScript.GoogleAppsScript.Slides.ContentAlignment.UNSUPPORTED with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContentAlignment with Double] = js.native
+  /* 3 */ @js.native
+  object BOTTOM extends TopLevel[BOTTOM with Double]
+  
+  /* 2 */ @js.native
+  object MIDDLE extends TopLevel[MIDDLE with Double]
+  
+  /* 1 */ @js.native
+  object TOP extends TopLevel[TOP with Double]
+  
+  /* 0 */ @js.native
+  object UNSUPPORTED extends TopLevel[UNSUPPORTED with Double]
+  
 }
 

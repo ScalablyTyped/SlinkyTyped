@@ -1,7 +1,5 @@
 package typingsSlinky.multisort
 
-import typingsSlinky.multisort.multisortMod.Criterion
-import typingsSlinky.multisort.multisortMod.SortFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

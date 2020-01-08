@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,26 +87,64 @@ object Shape extends js.Object {
   @js.native
   sealed trait VertLine extends Shape
   
-  /* 3 */ val Circle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Circle with Double = js.native
-  /* 4 */ val Cross: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Cross with Double = js.native
-  /* 7 */ val Diamond: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Diamond with Double = js.native
-  /* 16 */ val DownArrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.DownArrow with Double = js.native
-  /* 13 */ val Ellipse: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Ellipse with Double = js.native
-  /* 10 */ val Hexagon: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Hexagon with Double = js.native
-  /* 5 */ val HorizLine: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.HorizLine with Double = js.native
-  /* 17 */ val Image: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Image with Double = js.native
-  /* 1 */ val LeftArrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.LeftArrow with Double = js.native
-  /* 0 */ val None: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.None with Double = js.native
-  /* 11 */ val Pentagon: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Pentagon with Double = js.native
-  /* 8 */ val Rectangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Rectangle with Double = js.native
-  /* 2 */ val RightArrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.RightArrow with Double = js.native
-  /* 18 */ val SeriesType: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.SeriesType with Double = js.native
-  /* 12 */ val Star: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Star with Double = js.native
-  /* 14 */ val Trapezoid: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Trapezoid with Double = js.native
-  /* 9 */ val Triangle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.Triangle with Double = js.native
-  /* 15 */ val UpArrow: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.UpArrow with Double = js.native
-  /* 6 */ val VertLine: typingsSlinky.ejDotWebDotAll.ej.datavisualization.Chart.Shape.VertLine with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Shape with Double] = js.native
+  /* 3 */ @js.native
+  object Circle extends TopLevel[Circle with Double]
+  
+  /* 4 */ @js.native
+  object Cross extends TopLevel[Cross with Double]
+  
+  /* 7 */ @js.native
+  object Diamond extends TopLevel[Diamond with Double]
+  
+  /* 16 */ @js.native
+  object DownArrow extends TopLevel[DownArrow with Double]
+  
+  /* 13 */ @js.native
+  object Ellipse extends TopLevel[Ellipse with Double]
+  
+  /* 10 */ @js.native
+  object Hexagon extends TopLevel[Hexagon with Double]
+  
+  /* 5 */ @js.native
+  object HorizLine extends TopLevel[HorizLine with Double]
+  
+  /* 17 */ @js.native
+  object Image extends TopLevel[Image with Double]
+  
+  /* 1 */ @js.native
+  object LeftArrow extends TopLevel[LeftArrow with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 11 */ @js.native
+  object Pentagon extends TopLevel[Pentagon with Double]
+  
+  /* 8 */ @js.native
+  object Rectangle extends TopLevel[Rectangle with Double]
+  
+  /* 2 */ @js.native
+  object RightArrow extends TopLevel[RightArrow with Double]
+  
+  /* 18 */ @js.native
+  object SeriesType extends TopLevel[SeriesType with Double]
+  
+  /* 12 */ @js.native
+  object Star extends TopLevel[Star with Double]
+  
+  /* 14 */ @js.native
+  object Trapezoid extends TopLevel[Trapezoid with Double]
+  
+  /* 9 */ @js.native
+  object Triangle extends TopLevel[Triangle with Double]
+  
+  /* 15 */ @js.native
+  object UpArrow extends TopLevel[UpArrow with Double]
+  
+  /* 6 */ @js.native
+  object VertLine extends TopLevel[VertLine with Double]
+  
 }
 

@@ -5,10 +5,6 @@ import typingsSlinky.geodesy.geodesyMod.Datum
 import typingsSlinky.geodesy.geodesyMod.Dp
 import typingsSlinky.geodesy.geodesyMod.Format
 import typingsSlinky.geodesy.latlonDashEllipsoidalMod.Vector3d
-import typingsSlinky.geodesy.latlonDashNvectorDashEllipsoidalMod.Cartesian_Nvector
-import typingsSlinky.geodesy.latlonDashNvectorDashEllipsoidalMod.LatLon_NvectorEllipsoidal
-import typingsSlinky.geodesy.latlonDashNvectorDashEllipsoidalMod.Ned
-import typingsSlinky.geodesy.latlonDashNvectorDashEllipsoidalMod.NvectorEllipsoidal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.terminalDashKit.terminalMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.terminalDashKit.terminalDashKitNumbers.`true`
+import typingsSlinky.terminalDashKit.terminalDashKitBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

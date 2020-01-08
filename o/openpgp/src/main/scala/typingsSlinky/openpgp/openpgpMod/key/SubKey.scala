@@ -83,7 +83,7 @@ class SubKey () extends js.Object {
     * @param date optional, override the creationtime of the revocation signature
     * @returns new subkey with revocation signature
     */
-  def revoke(primaryKey: SecretKey, reasonForRevocation: revoke_reasonForRevocation, date: js.Date): js.Promise[typingsSlinky.openpgp.openpgpMod.key.SubKey] = js.native
+  def revoke(primaryKey: SecretKey, reasonForRevocation: revoke_reasonForRevocation, date: js.Date): js.Promise[SubKey] = js.native
   /**
     * Transforms structured subkey data to packetlist
     * @returns
@@ -95,8 +95,8 @@ class SubKey () extends js.Object {
     * @param primaryKey primary key used for validation
     * @returns
     */
-  def update(subKey: typingsSlinky.openpgp.openpgpMod.key.SubKey, primaryKey: SecretKey): js.Promise[js.UndefOr[scala.Nothing]] = js.native
-  def update(subKey: typingsSlinky.openpgp.openpgpMod.key.SubKey, primaryKey: SecretSubkey): js.Promise[js.UndefOr[scala.Nothing]] = js.native
+  def update(subKey: SubKey, primaryKey: SecretKey): js.Promise[js.UndefOr[scala.Nothing]] = js.native
+  def update(subKey: SubKey, primaryKey: SecretSubkey): js.Promise[js.UndefOr[scala.Nothing]] = js.native
   def verify(primaryKey: PublicKey, date: js.Date): js.Promise[keyStatus] = js.native
   /**
     * Verify subkey. Checks for revocation signatures, expiration time

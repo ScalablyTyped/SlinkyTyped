@@ -1,6 +1,5 @@
 package typingsSlinky.rrule
 
-import typingsSlinky.rrule.distEsmSrcRrulesetMod.RRuleSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

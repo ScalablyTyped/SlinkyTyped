@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object UserCustomActionScope extends js.Object {
   @js.native
   sealed trait web extends UserCustomActionScope
   
-  /* 3 */ val list: typingsSlinky.sharepoint.SP.UserCustomActionScope.list with Double = js.native
-  /* 1 */ val site: typingsSlinky.sharepoint.SP.UserCustomActionScope.site with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.sharepoint.SP.UserCustomActionScope.unknown with Double = js.native
-  /* 2 */ val web: typingsSlinky.sharepoint.SP.UserCustomActionScope.web with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[UserCustomActionScope with Double] = js.native
+  /* 3 */ @js.native
+  object list extends TopLevel[list with Double]
+  
+  /* 1 */ @js.native
+  object site extends TopLevel[site with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 2 */ @js.native
+  object web extends TopLevel[web with Double]
+  
 }
 

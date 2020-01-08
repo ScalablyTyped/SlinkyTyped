@@ -1,6 +1,6 @@
 package typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonMod
 
-import typingsSlinky.node.NodeJS.Module
+import typingsSlinky.node.NodeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   def apply(): FinderIterator = js.native
   def apply(root: String): FinderIterator = js.native
-  def apply(root: Module): FinderIterator = js.native
+  def apply(root: NodeModule): FinderIterator = js.native
 }
 

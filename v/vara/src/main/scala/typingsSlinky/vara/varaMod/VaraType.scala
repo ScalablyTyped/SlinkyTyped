@@ -6,7 +6,7 @@ import org.scalajs.dom.raw.SVGGElement
 import typingsSlinky.vara.Anon_BreakPoints
 import typingsSlinky.vara.Anon_XY
 import typingsSlinky.vara.Anon_XYBoolean
-import typingsSlinky.vara.varaNumbers.`false`
+import typingsSlinky.vara.varaBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

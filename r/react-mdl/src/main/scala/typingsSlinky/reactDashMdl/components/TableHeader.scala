@@ -20,8 +20,9 @@ object TableHeader
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, action, alt, async, autoComplete, autoFocus, challenge, checked, className, colSpan, cols, content, contentEditable, controls, coords, default, defaultChecked, defaultValue, defer, dir, disabled, download, draggable, headers, height, hidden, high, href, htmlFor, id, integrity, kind, lang, list, loop, low, manifest, max, media, method, min, multiple, muted, name, nonce, onAbort, onBlur, onCanPlay, onCanPlayThrough, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onVolumeChange, onWaiting, onWheel, open, optimum, pattern, placeholder, poster, preload, readOnly, rel, required, reversed, rowSpan, sandbox, scope, scoped, scrolling, selected, shape, sizes, spellCheck, src, start, step, tabIndex, target, type, width, wrap */
+  /* The following DOM/SVG props were specified: accept, action, alt, async, autoComplete, autoFocus, challenge, checked, className, colSpan, cols, content, controls, coords, default, defaultChecked, defaultValue, defer, dir, disabled, download, draggable, headers, height, hidden, high, href, htmlFor, id, integrity, kind, lang, list, loop, low, manifest, max, media, method, min, multiple, muted, nonce, onAbort, onBlur, onCanPlay, onCanPlayThrough, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onVolumeChange, onWaiting, onWheel, open, optimum, pattern, placeholder, poster, preload, readOnly, rel, required, reversed, rowSpan, sandbox, scope, scoped, scrolling, selected, shape, sizes, spellCheck, src, start, step, tabIndex, target, type, width, wrap */
   def apply(
+    name: String,
     about: String = null,
     acceptCharset: String = null,
     accessKey: String = null,
@@ -38,6 +39,7 @@ object TableHeader
     charSet: String = null,
     classID: String = null,
     color: String = null,
+    contentEditable: js.UndefOr[Boolean] = js.undefined,
     contextMenu: String = null,
     crossOrigin: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
@@ -96,7 +98,7 @@ object TableHeader
     wmode: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.reactDashMdl.reactDashMdlMod.TableHeader] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (acceptCharset != null) __obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
@@ -113,6 +115,7 @@ object TableHeader
     if (charSet != null) __obj.updateDynamic("charSet")(charSet.asInstanceOf[js.Any])
     if (classID != null) __obj.updateDynamic("classID")(classID.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])

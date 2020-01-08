@@ -20,8 +20,9 @@ object ReactDashInlinesvg
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onError, src */
+  /* The following DOM/SVG props were specified: onError */
   def apply(
+    src: String,
     baseURL: String = null,
     cacheRequests: js.UndefOr[Boolean] = js.undefined,
     description: String = null,
@@ -34,7 +35,7 @@ object ReactDashInlinesvg
     uniquifyIDs: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     if (baseURL != null) __obj.updateDynamic("baseURL")(baseURL.asInstanceOf[js.Any])
     if (!js.isUndefined(cacheRequests)) __obj.updateDynamic("cacheRequests")(cacheRequests.asInstanceOf[js.Any])
     if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])

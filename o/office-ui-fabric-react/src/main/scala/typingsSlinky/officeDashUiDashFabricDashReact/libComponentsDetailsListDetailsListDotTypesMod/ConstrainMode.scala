@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,13 @@ object ConstrainMode extends js.Object {
   @js.native
   sealed trait unconstrained extends ConstrainMode
   
-  /* 1 */ val horizontalConstrained: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.ConstrainMode.horizontalConstrained with Double = js.native
-  /* 0 */ val unconstrained: typingsSlinky.officeDashUiDashFabricDashReact.libComponentsDetailsListDetailsListDotTypesMod.ConstrainMode.unconstrained with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ConstrainMode with Double] = js.native
+  /* 1 */ @js.native
+  object horizontalConstrained extends TopLevel[horizontalConstrained with Double]
+  
+  /* 0 */ @js.native
+  object unconstrained extends TopLevel[unconstrained with Double]
+  
 }
 

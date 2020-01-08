@@ -1,5 +1,6 @@
 package typingsSlinky.atAngularCommon.atAngularCommonMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +27,19 @@ object TranslationWidth extends js.Object {
   @js.native
   sealed trait Wide extends TranslationWidth
   
-  /* 1 */ val Abbreviated: typingsSlinky.atAngularCommon.atAngularCommonMod.TranslationWidth.Abbreviated with Double = js.native
-  /* 0 */ val Narrow: typingsSlinky.atAngularCommon.atAngularCommonMod.TranslationWidth.Narrow with Double = js.native
-  /* 3 */ val Short: typingsSlinky.atAngularCommon.atAngularCommonMod.TranslationWidth.Short with Double = js.native
-  /* 2 */ val Wide: typingsSlinky.atAngularCommon.atAngularCommonMod.TranslationWidth.Wide with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TranslationWidth with Double] = js.native
+  /* 1 */ @js.native
+  object Abbreviated extends TopLevel[Abbreviated with Double]
+  
+  /* 0 */ @js.native
+  object Narrow extends TopLevel[Narrow with Double]
+  
+  /* 3 */ @js.native
+  object Short extends TopLevel[Short with Double]
+  
+  /* 2 */ @js.native
+  object Wide extends TopLevel[Wide with Double]
+  
 }
 

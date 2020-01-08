@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-svg
 
-Typings are for version 9.13.3
+Typings are for version 9.13.6
 
 ## Library description:
 SVG library for react-native
@@ -10,13 +10,13 @@ SVG library for react-native
 | ------------------ | :-------------: |
 | Full name          | react-native-svg |
 | Keywords           | react-component, react-native, ios, android, SVG, ART, VML, gradient |
-| # releases         | 89 |
-| # dependents       | 101 |
-| # downloads        | 4443149 |
+| # releases         | 104 |
+| # dependents       | 164 |
+| # downloads        | 8042313 |
 | # stars            | 18 |
 
 ## Links
-- [Homepage](https://github.com/react-native-community/react-native-svg#readme)
+- [Homepage](https://github.com/react-native-community/react-native-svg)
 - [Bugs](https://github.com/react-native-community/react-native-svg/issues)
 - [Repository](https://github.com/react-native-community/react-native-svg)
 - [Npm](https://www.npmjs.com/package/react-native-svg)

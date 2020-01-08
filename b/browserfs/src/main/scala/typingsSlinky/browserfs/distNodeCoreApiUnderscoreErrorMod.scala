@@ -2,8 +2,7 @@ package typingsSlinky.browserfs
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ApiError
-import typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
@@ -13,8 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("browserfs/dist/node/core/api_error", JSImport.Namespace)
 @js.native
 object distNodeCoreApiUnderscoreErrorMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-  - typings.std.Error because var conflicts: stack. Inlined message, name */ @js.native
+  @js.native
   class ApiError protected () extends ErrnoException {
     /**
       * Represents a BrowserFS error. Passed back to applications after a failed
@@ -33,8 +31,10 @@ object distNodeCoreApiUnderscoreErrorMod extends js.Object {
     var code_ApiError: String = js.native
     @JSName("errno")
     var errno_ApiError: ErrorCode = js.native
-    var message: String = js.native
-    var name: String = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     @JSName("path")
     var path_ApiError: js.UndefOr[String] = js.native
     @JSName("stack")
@@ -122,29 +122,59 @@ object distNodeCoreApiUnderscoreErrorMod extends js.Object {
     @js.native
     sealed trait EROFS extends ErrorCode
     
-    /* 13 */ val EACCES: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EACCES with Double = js.native
-    /* 9 */ val EBADF: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EBADF with Double = js.native
-    /* 16 */ val EBUSY: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EBUSY with Double = js.native
-    /* 17 */ val EEXIST: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EEXIST with Double = js.native
-    /* 27 */ val EFBIG: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EFBIG with Double = js.native
-    /* 22 */ val EINVAL: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EINVAL with Double = js.native
-    /* 5 */ val EIO: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EIO with Double = js.native
-    /* 21 */ val EISDIR: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EISDIR with Double = js.native
-    /* 2 */ val ENOENT: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.ENOENT with Double = js.native
-    /* 28 */ val ENOSPC: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.ENOSPC with Double = js.native
-    /* 20 */ val ENOTDIR: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.ENOTDIR with Double = js.native
-    /* 39 */ val ENOTEMPTY: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.ENOTEMPTY with Double = js.native
-    /* 95 */ val ENOTSUP: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.ENOTSUP with Double = js.native
-    /* 1 */ val EPERM: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EPERM with Double = js.native
-    /* 30 */ val EROFS: typingsSlinky.browserfs.distNodeCoreApiUnderscoreErrorMod.ErrorCode.EROFS with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ErrorCode with Double] = js.native
+    /* 13 */ @js.native
+    object EACCES extends TopLevel[EACCES with Double]
+    
+    /* 9 */ @js.native
+    object EBADF extends TopLevel[EBADF with Double]
+    
+    /* 16 */ @js.native
+    object EBUSY extends TopLevel[EBUSY with Double]
+    
+    /* 17 */ @js.native
+    object EEXIST extends TopLevel[EEXIST with Double]
+    
+    /* 27 */ @js.native
+    object EFBIG extends TopLevel[EFBIG with Double]
+    
+    /* 22 */ @js.native
+    object EINVAL extends TopLevel[EINVAL with Double]
+    
+    /* 5 */ @js.native
+    object EIO extends TopLevel[EIO with Double]
+    
+    /* 21 */ @js.native
+    object EISDIR extends TopLevel[EISDIR with Double]
+    
+    /* 2 */ @js.native
+    object ENOENT extends TopLevel[ENOENT with Double]
+    
+    /* 28 */ @js.native
+    object ENOSPC extends TopLevel[ENOSPC with Double]
+    
+    /* 20 */ @js.native
+    object ENOTDIR extends TopLevel[ENOTDIR with Double]
+    
+    /* 39 */ @js.native
+    object ENOTEMPTY extends TopLevel[ENOTEMPTY with Double]
+    
+    /* 95 */ @js.native
+    object ENOTSUP extends TopLevel[ENOTSUP with Double]
+    
+    /* 1 */ @js.native
+    object EPERM extends TopLevel[EPERM with Double]
+    
+    /* 30 */ @js.native
+    object EROFS extends TopLevel[EROFS with Double]
+    
   }
   
   @js.native
   object ErrorStrings
-    extends /* code */ StringDictionary[String]
-       with /* code */ NumberDictionary[String]
+    extends /* code */ NumberDictionary[String]
+       with /* code */ StringDictionary[String]
   
 }
 

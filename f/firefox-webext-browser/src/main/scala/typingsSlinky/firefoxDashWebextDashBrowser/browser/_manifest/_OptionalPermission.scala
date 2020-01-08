@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.browserSettings
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.cookies
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloads
-  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloadsDOTopen
+  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloadsDotopen
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.clipboardRead
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.clipboardWrite
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.geolocation
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.bookmarks
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.find
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.history
-  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.menusDOToverrideContext
+  - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.menusDotoverrideContext
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.search
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.activeTab
   - typings.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.tabs
@@ -47,7 +47,7 @@ object _OptionalPermission {
   @scala.inline
   def downloads: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloads = this.cast("downloads")
   @scala.inline
-  def downloadsDOTopen: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloadsDOTopen = this.cast("downloads.open")
+  def downloadsDotopen: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.downloadsDotopen = this.cast("downloads.open")
   @scala.inline
   def find: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.find = this.cast("find")
   @scala.inline
@@ -57,7 +57,7 @@ object _OptionalPermission {
   @scala.inline
   def idle: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.idle = this.cast("idle")
   @scala.inline
-  def menusDOToverrideContext: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.menusDOToverrideContext = this.cast("menus.overrideContext")
+  def menusDotoverrideContext: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.menusDotoverrideContext = this.cast("menus.overrideContext")
   @scala.inline
   def notifications: typingsSlinky.firefoxDashWebextDashBrowser.firefoxDashWebextDashBrowserStrings.notifications = this.cast("notifications")
   @scala.inline

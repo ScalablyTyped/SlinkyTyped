@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MusicDashVideo extends SharedApply_SvgIconProps657215518[default] {
+object MusicDashVideo extends SharedApply_SvgIconProps221151894[default] {
   @JSImport("material-ui/svg-icons/av/music-video", JSImport.Default)
   @js.native
   object componentImport extends js.Object

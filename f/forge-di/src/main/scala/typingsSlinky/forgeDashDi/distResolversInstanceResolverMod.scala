@@ -1,6 +1,5 @@
 package typingsSlinky.forgeDashDi
 
-import typingsSlinky.forgeDashDi.distResolversInstanceResolverMod.InstanceResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

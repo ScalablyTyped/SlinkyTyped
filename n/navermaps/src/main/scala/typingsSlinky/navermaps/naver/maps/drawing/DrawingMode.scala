@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps.drawing
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object DrawingMode extends js.Object {
   @js.native
   sealed trait RECTANGLE extends DrawingMode
   
-  /* 3 */ val ARROWLINE: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.ARROWLINE with Double = js.native
-  /* 1 */ val ELLIPSE: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.ELLIPSE with Double = js.native
-  /* 0 */ val HAND: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.HAND with Double = js.native
-  /* 5 */ val MARKER: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.MARKER with Double = js.native
-  /* 4 */ val POLYGON: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.POLYGON with Double = js.native
-  /* 2 */ val POLYLINE: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.POLYLINE with Double = js.native
-  /* 0 */ val RECTANGLE: typingsSlinky.navermaps.naver.maps.drawing.DrawingMode.RECTANGLE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DrawingMode with Double] = js.native
+  /* 3 */ @js.native
+  object ARROWLINE extends TopLevel[ARROWLINE with Double]
+  
+  /* 1 */ @js.native
+  object ELLIPSE extends TopLevel[ELLIPSE with Double]
+  
+  /* 0 */ @js.native
+  object HAND extends TopLevel[HAND with Double]
+  
+  /* 5 */ @js.native
+  object MARKER extends TopLevel[MARKER with Double]
+  
+  /* 4 */ @js.native
+  object POLYGON extends TopLevel[POLYGON with Double]
+  
+  /* 2 */ @js.native
+  object POLYLINE extends TopLevel[POLYLINE with Double]
+  
+  /* 0 */ @js.native
+  object RECTANGLE extends TopLevel[RECTANGLE with Double]
+  
 }
 

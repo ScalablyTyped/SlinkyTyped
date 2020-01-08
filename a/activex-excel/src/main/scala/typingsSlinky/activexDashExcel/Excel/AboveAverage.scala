@@ -15,7 +15,8 @@ class AboveAverage protected () extends js.Object {
   val Borders_Original: Borders = js.native
   var CalcFor: XlCalcFor = js.native
   val Creator: XlCreator = js.native
-  var `Excel.AboveAverage_typekey`: AboveAverage = js.native
+  @JSName("Excel.AboveAverage_typekey")
+  var ExcelDotAboveAverage_typekey: AboveAverage = js.native
   val Font: typingsSlinky.activexDashExcel.Excel.Font = js.native
   val Interior: typingsSlinky.activexDashExcel.Excel.Interior = js.native
   var NumStdDev: Double = js.native

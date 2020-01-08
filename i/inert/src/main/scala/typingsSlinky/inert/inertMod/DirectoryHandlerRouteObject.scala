@@ -1,6 +1,6 @@
 package typingsSlinky.inert.inertMod
 
-import typingsSlinky.inert.inertNumbers.`false`
+import typingsSlinky.inert.inertBooleans.`false`
 import typingsSlinky.inert.inertStrings.hash
 import typingsSlinky.inert.inertStrings.simple
 import scala.scalajs.js

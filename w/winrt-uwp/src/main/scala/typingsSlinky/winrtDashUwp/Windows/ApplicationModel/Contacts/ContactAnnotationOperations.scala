@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,13 +36,25 @@ object ContactAnnotationOperations extends js.Object {
   @js.native
   sealed trait videoCall extends ContactAnnotationOperations
   
-  /* 3 */ val audioCall: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.audioCall with Double = js.native
-  /* 1 */ val contactProfile: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.contactProfile with Double = js.native
-  /* 2 */ val message: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.message with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.none with Double = js.native
-  /* 5 */ val socialFeeds: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.socialFeeds with Double = js.native
-  /* 4 */ val videoCall: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Contacts.ContactAnnotationOperations.videoCall with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ContactAnnotationOperations with Double] = js.native
+  /* 3 */ @js.native
+  object audioCall extends TopLevel[audioCall with Double]
+  
+  /* 1 */ @js.native
+  object contactProfile extends TopLevel[contactProfile with Double]
+  
+  /* 2 */ @js.native
+  object message extends TopLevel[message with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 5 */ @js.native
+  object socialFeeds extends TopLevel[socialFeeds with Double]
+  
+  /* 4 */ @js.native
+  object videoCall extends TopLevel[videoCall with Double]
+  
 }
 

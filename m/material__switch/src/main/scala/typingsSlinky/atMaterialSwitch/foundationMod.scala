@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialSwitch
 import org.scalajs.dom.raw.Event
 import typingsSlinky.atMaterialBase.foundationMod.MDCFoundation
 import typingsSlinky.atMaterialSwitch.adapterMod.MDCSwitchAdapter
-import typingsSlinky.atMaterialSwitch.foundationMod.MDCSwitchFoundation
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

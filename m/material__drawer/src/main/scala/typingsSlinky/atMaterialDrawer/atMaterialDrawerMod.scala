@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialDrawer
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialBase.componentMod.default
 import typingsSlinky.atMaterialDrawer.adapterMod.MDCDrawerAdapter
-import typingsSlinky.atMaterialDrawer.atMaterialDrawerMod.MDCDrawer
 import typingsSlinky.atMaterialDrawer.focusDashTrapMod.FocusTrap
 import typingsSlinky.atMaterialList.atMaterialListMod.MDCList
 import scala.scalajs.js

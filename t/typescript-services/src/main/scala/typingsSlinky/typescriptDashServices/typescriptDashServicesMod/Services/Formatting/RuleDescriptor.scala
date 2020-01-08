@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services.Formatting
 
 import typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.Shared.TokenRange
+import typingsSlinky.typescriptDashServices.TypeScript.SyntaxKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +17,9 @@ class RuleDescriptor protected ()
 @JSImport("typescript-services", "Services.Formatting.RuleDescriptor")
 @js.native
 object RuleDescriptor extends js.Object {
-  def create1(
-    left: typingsSlinky.typescriptDashServices.TypeScript.SyntaxKind,
-    right: typingsSlinky.typescriptDashServices.TypeScript.SyntaxKind
-  ): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
-  def create2(left: TokenRange, right: typingsSlinky.typescriptDashServices.TypeScript.SyntaxKind): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
-  def create3(left: typingsSlinky.typescriptDashServices.TypeScript.SyntaxKind, right: TokenRange): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
+  def create1(left: SyntaxKind, right: SyntaxKind): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
+  def create2(left: TokenRange, right: SyntaxKind): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
+  def create3(left: SyntaxKind, right: TokenRange): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
   def create4(left: TokenRange, right: TokenRange): typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
 }
 

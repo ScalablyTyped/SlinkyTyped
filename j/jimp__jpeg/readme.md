@@ -3,21 +3,6 @@
 
 Typings are for version 0.8.5
 
-## Library description:
-Default Jimp jpeg encoder/decoder.
-
-|                    |                 |
-| ------------------ | :-------------: |
-| Full name          | @jimp/jpeg |
-| Keywords           | - |
-| # releases         | 17 |
-| # dependents       | 2 |
-| # downloads        | 7475532 |
-| # stars            | 0 |
-
-## Links
-- [Npm](https://www.npmjs.com/package/%40jimp%2Fjpeg)
-    
 
 
 ## Note

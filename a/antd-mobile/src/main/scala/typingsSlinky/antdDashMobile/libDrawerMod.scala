@@ -1,6 +1,5 @@
 package typingsSlinky.antdDashMobile
 
-import typingsSlinky.antdDashMobile.libDrawerMod.Drawer
 import typingsSlinky.antdDashMobile.libDrawerPropsTypeMod.DrawerWebProps
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js

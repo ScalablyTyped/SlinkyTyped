@@ -1,7 +1,7 @@
 
 # Scala.js typings for fortawesome__free-solid-svg-icons
 
-Typings are for version 5.11.2
+Typings are for version 5.12.0
 
 ## Library description:
 The iconic font, CSS, and SVG framework
@@ -10,9 +10,9 @@ The iconic font, CSS, and SVG framework
 | ------------------ | :-------------: |
 | Full name          | @fortawesome/free-solid-svg-icons |
 | Keywords           | font, awesome, fontawesome, icon, svg, bootstrap |
-| # releases         | 30 |
-| # dependents       | 405 |
-| # downloads        | 9607506 |
+| # releases         | 55 |
+| # dependents       | 865 |
+| # downloads        | 14171606 |
 | # stars            | 0 |
 
 ## Links

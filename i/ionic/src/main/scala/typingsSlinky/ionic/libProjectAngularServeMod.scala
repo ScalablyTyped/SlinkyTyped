@@ -1,12 +1,11 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.AngularServeOptions
-import typingsSlinky.ionic.ionicStrings.`@angular/cli`
+import typingsSlinky.ionic.ionicStrings.`@angularSlashcli`
 import typingsSlinky.ionic.ionicStrings.`Angular CLI`
-import typingsSlinky.ionic.ionicStrings.`ionic:serve`
+import typingsSlinky.ionic.ionicStrings.ionicColonserve
 import typingsSlinky.ionic.ionicStrings.ng
 import typingsSlinky.ionic.libProjectAngularMod.AngularProject
-import typingsSlinky.ionic.libProjectAngularServeMod.AngularServeRunnerDeps
 import typingsSlinky.ionic.libServeMod.ServeCLI
 import typingsSlinky.ionic.libServeMod.ServeRunner
 import typingsSlinky.ionic.libServeMod.ServeRunnerDeps
@@ -23,13 +22,13 @@ object libProjectAngularServeMod extends js.Object {
     @JSName("name")
     val name_AngularServeCLI: `Angular CLI` = js.native
     @JSName("pkg")
-    val pkg_AngularServeCLI: `@angular/cli` = js.native
+    val pkg_AngularServeCLI: `@angularSlashcli` = js.native
     @JSName("prefix")
     val prefix_AngularServeCLI: ng = js.native
     @JSName("program")
     val program_AngularServeCLI: ng = js.native
     @JSName("script")
-    val script_AngularServeCLI: `ionic:serve` = js.native
+    val script_AngularServeCLI: ionicColonserve = js.native
     /* protected */ def buildArchitectCommand(options: AngularServeOptions): js.Array[String] = js.native
     /* protected */ def serveOptionsToNgArgs(options: AngularServeOptions): js.Promise[js.Array[String]] = js.native
   }

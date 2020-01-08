@@ -1,7 +1,6 @@
 package typingsSlinky.reactDashSvg
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactDashSvg.distShallowDashDiffersMod.O
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

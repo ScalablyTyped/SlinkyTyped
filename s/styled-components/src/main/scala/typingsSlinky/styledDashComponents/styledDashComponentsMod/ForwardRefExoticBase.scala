@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ForwardRefExoticBase[P] extends js.Object {
   @JSName("$$typeof")
-  var $$typeof: js.Symbol = js.native
+  var DollarDollartypeof: js.Symbol = js.native
   var defaultProps: js.UndefOr[
     Partial[typingsSlinky.styledDashComponents.styledDashComponentsStrings.defaultProps]
   ] = js.native

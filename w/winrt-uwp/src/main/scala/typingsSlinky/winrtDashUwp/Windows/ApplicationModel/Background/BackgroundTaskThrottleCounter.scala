@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object BackgroundTaskThrottleCounter extends js.Object {
   @js.native
   sealed trait network extends BackgroundTaskThrottleCounter
   
-  /* 0 */ val all: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter.all with Double = js.native
-  /* 1 */ val cpu: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter.cpu with Double = js.native
-  /* 2 */ val network: typingsSlinky.winrtDashUwp.Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter.network with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BackgroundTaskThrottleCounter with Double] = js.native
+  /* 0 */ @js.native
+  object all extends TopLevel[all with Double]
+  
+  /* 1 */ @js.native
+  object cpu extends TopLevel[cpu with Double]
+  
+  /* 2 */ @js.native
+  object network extends TopLevel[network with Double]
+  
 }
 

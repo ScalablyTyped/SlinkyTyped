@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleRadioButtonUnchecked
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ToggleRadioButtonUnchecked] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ToggleRadioButtonUnchecked] {
   @JSImport("material-ui/svg-icons", "ToggleRadioButtonUnchecked")
   @js.native
   object componentImport extends js.Object

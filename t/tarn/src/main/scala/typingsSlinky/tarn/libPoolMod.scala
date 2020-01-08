@@ -3,9 +3,6 @@ package typingsSlinky.tarn
 import typingsSlinky.node.NodeJS.Timer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.tarn.libPendingOperationMod.PendingOperation
-import typingsSlinky.tarn.libPoolMod.Callback
-import typingsSlinky.tarn.libPoolMod.CallbackOrPromise
-import typingsSlinky.tarn.libPoolMod.PoolOptions
 import typingsSlinky.tarn.libPromiseInspectionMod.PromiseInspection
 import typingsSlinky.tarn.libResourceMod.Resource
 import typingsSlinky.tarn.tarnStrings.acquireFail
@@ -60,7 +57,7 @@ object libPoolMod extends js.Object {
     def _doCreate(): Unit = js.native
     def _executeEventHandlers(
       eventName: String,
-      /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
     ): Unit = js.native
     def _hasFreeResources(): Boolean = js.native
     def _logDestroyerError(eventId: Double, resource: T, err: js.Error): Unit = js.native

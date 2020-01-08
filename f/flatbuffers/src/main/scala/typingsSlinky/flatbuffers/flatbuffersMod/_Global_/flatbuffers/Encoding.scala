@@ -1,5 +1,6 @@
 package typingsSlinky.flatbuffers.flatbuffersMod._Global_.flatbuffers
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Encoding extends js.Object {
   @js.native
   sealed trait UTF8_BYTES extends Encoding
   
-  /* 1 */ val UTF16_STRING: typingsSlinky.flatbuffers.flatbuffersMod._Global_.flatbuffers.Encoding.UTF16_STRING with Double = js.native
-  /* 0 */ val UTF8_BYTES: typingsSlinky.flatbuffers.flatbuffersMod._Global_.flatbuffers.Encoding.UTF8_BYTES with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Encoding with Double] = js.native
+  /* 1 */ @js.native
+  object UTF16_STRING extends TopLevel[UTF16_STRING with Double]
+  
+  /* 0 */ @js.native
+  object UTF8_BYTES extends TopLevel[UTF8_BYTES with Double]
+  
 }
 

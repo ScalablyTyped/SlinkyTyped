@@ -1,8 +1,6 @@
 package typingsSlinky.graphql
 
 import typingsSlinky.graphql.languageVisitorMod.ASTVisitor
-import typingsSlinky.graphql.validationRulesOverlappingFieldsCanBeMergedMod.ConflictReason
-import typingsSlinky.graphql.validationRulesOverlappingFieldsCanBeMergedMod.ConflictReasonMessage
 import typingsSlinky.graphql.validationValidationContextMod.ValidationContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`

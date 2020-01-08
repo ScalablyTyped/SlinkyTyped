@@ -1,7 +1,6 @@
 package typingsSlinky.wonderDashFrp
 
 import typingsSlinky.wonderDashFrp.distCommonjsCoreObserverMod.Observer
-import typingsSlinky.wonderDashFrp.distCommonjsTestingMockObserverMod.MockObserver
 import typingsSlinky.wonderDashFrp.distCommonjsTestingRecordMod.Record
 import typingsSlinky.wonderDashFrp.distCommonjsTestingTestSchedulerMod.TestScheduler
 import scala.scalajs.js

@@ -1,7 +1,6 @@
 package typingsSlinky.nodeDashJsonDashDb
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodeDashJsonDashDb.distLibUtilsMod.KeyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

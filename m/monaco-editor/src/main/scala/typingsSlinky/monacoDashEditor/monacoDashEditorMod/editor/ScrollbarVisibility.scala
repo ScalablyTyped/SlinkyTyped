@@ -1,5 +1,6 @@
 package typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object ScrollbarVisibility extends js.Object {
   @js.native
   sealed trait Visible extends ScrollbarVisibility
   
-  /* 1 */ val Auto: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ScrollbarVisibility.Auto with Double = js.native
-  /* 2 */ val Hidden: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ScrollbarVisibility.Hidden with Double = js.native
-  /* 3 */ val Visible: typingsSlinky.monacoDashEditor.monacoDashEditorMod.editor.ScrollbarVisibility.Visible with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ScrollbarVisibility with Double] = js.native
+  /* 1 */ @js.native
+  object Auto extends TopLevel[Auto with Double]
+  
+  /* 2 */ @js.native
+  object Hidden extends TopLevel[Hidden with Double]
+  
+  /* 3 */ @js.native
+  object Visible extends TopLevel[Visible with Double]
+  
 }
 

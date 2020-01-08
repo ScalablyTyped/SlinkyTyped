@@ -3,7 +3,7 @@ package typingsSlinky.videoDotJs.videoDotJsMod.videojs
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.HTMLTrackElement
-import typingsSlinky.videoDotJs.videoDotJsNumbers.`true`
+import typingsSlinky.videoDotJs.videoDotJsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

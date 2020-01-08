@@ -1,6 +1,6 @@
 package typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmMod
 
-import typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmStrings.`%`
+import typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmStrings.Percentsign
 import typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmStrings.ch
 import typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmStrings.dashed
 import typingsSlinky.compassDashVerticalDashRhythm.compassDashVerticalDashRhythmStrings.dotted
@@ -31,7 +31,7 @@ trait Options extends js.Object {
   ] = js.undefined
   var defaultRhythmBorderWidth: js.UndefOr[String] = js.undefined
   var minLinePadding: js.UndefOr[String] = js.undefined
-  var rhythmUnit: js.UndefOr[`%` | em | ex | ch | px | rem | vw | vh | vmin] = js.undefined
+  var rhythmUnit: js.UndefOr[Percentsign | em | ex | ch | px | rem | vw | vh | vmin] = js.undefined
   var roundToNearestHalfLine: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -43,7 +43,7 @@ object Options {
     defaultRhythmBorderStyle: solid | none | hidden | dashed | dotted | double | groove | ridge | inset | outset = null,
     defaultRhythmBorderWidth: String = null,
     minLinePadding: String = null,
-    rhythmUnit: `%` | em | ex | ch | px | rem | vw | vh | vmin = null,
+    rhythmUnit: Percentsign | em | ex | ch | px | rem | vw | vh | vmin = null,
     roundToNearestHalfLine: js.UndefOr[Boolean] = js.undefined
   ): Options = {
     val __obj = js.Dynamic.literal()

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TypistBackspace extends SharedApply_BackSpaceProps885484458[Backspace] {
+object TypistBackspace extends SharedApply_BackSpaceProps1953521536[Backspace] {
   @JSImport("react-typist", "Typist.Backspace")
   @js.native
   object componentImport extends js.Object

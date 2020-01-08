@@ -1,6 +1,6 @@
 package typingsSlinky.webpagetest.webpagetestMod
 
-import typingsSlinky.webpagetest.webpagetestNumbers.`false`
+import typingsSlinky.webpagetest.webpagetestBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "backbone_dot_layoutmanager"
-version := "0.9-dt-20190619Z-59bf37"
+version := "0.9-dt-20190619Z-e2411e"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "backbone" % "1.4-dt-20190619Z-ab3058",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20191126Z-ae0751",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-c4cdb0",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-cc3821",
-  "org.scalablytyped.slinky" %%% "underscore" % "1.9-dt-20191118Z-a842a8")
+  "org.scalablytyped.slinky" %%% "backbone" % "1.4-dt-20190619Z-04fb07",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20191126Z-c6d356",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-dd2029",
+  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
+  "org.scalablytyped.slinky" %%% "underscore" % "1.9-dt-20191118Z-8df05b")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

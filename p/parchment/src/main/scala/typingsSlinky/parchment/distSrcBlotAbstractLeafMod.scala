@@ -1,7 +1,6 @@
 package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.Node
-import typingsSlinky.parchment.distSrcBlotAbstractLeafMod.LeafBlot
 import typingsSlinky.parchment.distSrcRegistryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`

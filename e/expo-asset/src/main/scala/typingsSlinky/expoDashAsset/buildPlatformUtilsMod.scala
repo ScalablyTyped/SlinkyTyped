@@ -1,7 +1,7 @@
 package typingsSlinky.expoDashAsset
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expoDashAsset.expoDashAssetNumbers.`true`
+import typingsSlinky.expoDashAsset.expoDashAssetBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

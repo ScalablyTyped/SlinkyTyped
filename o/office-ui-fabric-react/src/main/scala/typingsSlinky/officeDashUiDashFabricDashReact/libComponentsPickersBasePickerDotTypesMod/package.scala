@@ -19,6 +19,7 @@ package object libComponentsPickersBasePickerDotTypesMod {
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.resultsMaximumNumber
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.searchForMoreText
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.searchingText
+  import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.showForceResolve
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.showRemoveButtons
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsAvailableAlertText
   import typingsSlinky.officeDashUiDashFabricDashReact.officeDashUiDashFabricDashReactStrings.suggestionsClassName
@@ -31,6 +32,6 @@ package object libComponentsPickersBasePickerDotTypesMod {
   type IBasePickerStyleProps = (Pick[IBasePickerProps[_], theme | className | disabled]) with Anon_InputClassName
   type IBasePickerSuggestionsProps[T] = Pick[
     ISuggestionsProps[T], 
-    onRenderNoResultFound | suggestionsHeaderText | mostRecentlyUsedHeaderText | noResultsFoundText | className | suggestionsClassName | suggestionsItemClassName | searchForMoreText | forceResolveText | loadingText | searchingText | resultsFooterFull | resultsFooter | resultsMaximumNumber | showRemoveButtons | suggestionsAvailableAlertText | suggestionsContainerAriaLabel
+    onRenderNoResultFound | suggestionsHeaderText | mostRecentlyUsedHeaderText | noResultsFoundText | className | suggestionsClassName | suggestionsItemClassName | searchForMoreText | forceResolveText | loadingText | searchingText | resultsFooterFull | resultsFooter | resultsMaximumNumber | showRemoveButtons | suggestionsAvailableAlertText | suggestionsContainerAriaLabel | showForceResolve
   ]
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonMod
 
-import typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonNumbers.`false`
-import typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonNumbers.`true`
+import typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonBooleans.`false`
+import typingsSlinky.findDashPackageDashJson.findDashPackageDashJsonBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

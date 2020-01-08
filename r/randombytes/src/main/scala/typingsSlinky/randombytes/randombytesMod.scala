@@ -1,7 +1,6 @@
 package typingsSlinky.randombytes
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object randombytesMod extends js.Object {
   def apply(size: Double): Buffer = js.native
-  def apply(size: Double, callback: js.Function2[/* err */ Error | Null, /* buf */ Buffer, Unit]): Unit = js.native
+  def apply(size: Double, callback: js.Function2[/* err */ js.Error | Null, /* buf */ Buffer, Unit]): Unit = js.native
 }
 

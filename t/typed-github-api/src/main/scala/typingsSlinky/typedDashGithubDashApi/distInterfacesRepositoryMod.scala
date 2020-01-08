@@ -9,9 +9,8 @@ import typingsSlinky.typedDashGithubDashApi.distInterfacesIssueMod.IssueRef
 import typingsSlinky.typedDashGithubDashApi.distInterfacesOwnerDashRefMod.OwnerRef
 import typingsSlinky.typedDashGithubDashApi.distInterfacesPullDashRequestMod.PullRequest
 import typingsSlinky.typedDashGithubDashApi.distInterfacesPullDashRequestMod.PullRequestRef
-import typingsSlinky.typedDashGithubDashApi.distInterfacesRepositoryMod.Repository
-import typingsSlinky.typedDashGithubDashApi.distInterfacesRepositoryMod.RepositoryRef
 import typingsSlinky.typedDashGithubDashApi.distInterfacesUserMod.UserSummary
+import typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.Asterisk
 import typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.`long-running`
 import typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.all
 import typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.closed
@@ -110,13 +109,9 @@ object distInterfacesRepositoryMod extends js.Object {
       * @returns             The resulting array of issues
       */
     def loadIssuesAsync(
-      milestone: js.UndefOr[
-          Double | typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.`*` | none
-        ],
+      milestone: js.UndefOr[Double | Asterisk | none],
       state: js.UndefOr[open | closed | all],
-      assignee: js.UndefOr[
-          String | typingsSlinky.typedDashGithubDashApi.typedDashGithubDashApiStrings.`*` | none
-        ],
+      assignee: js.UndefOr[String | Asterisk | none],
       creator: js.UndefOr[String],
       mentioned: js.UndefOr[String],
       labels: js.UndefOr[js.Array[String]],

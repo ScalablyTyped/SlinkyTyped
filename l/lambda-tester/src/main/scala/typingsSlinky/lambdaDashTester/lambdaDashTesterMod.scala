@@ -3,12 +3,6 @@ package typingsSlinky.lambdaDashTester
 import typingsSlinky.awsDashLambda.awsDashLambdaMod.ClientContext
 import typingsSlinky.awsDashLambda.awsDashLambdaMod.Context
 import typingsSlinky.awsDashLambda.awsDashLambdaMod.Handler
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.HandlerError
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.HandlerEvent
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.HandlerResult
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.LambdaTester
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.Verifier
-import typingsSlinky.lambdaDashTester.lambdaDashTesterMod.VerifierFn
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

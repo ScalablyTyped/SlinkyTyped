@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.Casting
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object CastingPlaybackTypes extends js.Object {
   @js.native
   sealed trait video extends CastingPlaybackTypes
   
-  /* 1 */ val audio: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingPlaybackTypes.audio with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingPlaybackTypes.none with Double = js.native
-  /* 3 */ val picture: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingPlaybackTypes.picture with Double = js.native
-  /* 2 */ val video: typingsSlinky.winrtDashUwp.Windows.Media.Casting.CastingPlaybackTypes.video with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[CastingPlaybackTypes with Double] = js.native
+  /* 1 */ @js.native
+  object audio extends TopLevel[audio with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object picture extends TopLevel[picture with Double]
+  
+  /* 2 */ @js.native
+  object video extends TopLevel[video with Double]
+  
 }
 

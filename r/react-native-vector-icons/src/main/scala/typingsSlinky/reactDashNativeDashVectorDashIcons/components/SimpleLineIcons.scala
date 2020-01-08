@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SimpleLineIcons extends SharedApply_IconProps_1525323211[default] {
+object SimpleLineIcons extends SharedApply_IconProps_207471041[default] {
   @JSImport("react-native-vector-icons/SimpleLineIcons", JSImport.Default)
   @js.native
   object componentImport extends js.Object

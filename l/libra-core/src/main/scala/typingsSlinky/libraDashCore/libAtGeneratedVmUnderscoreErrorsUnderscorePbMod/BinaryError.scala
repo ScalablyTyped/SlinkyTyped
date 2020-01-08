@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +44,40 @@ object BinaryError extends js.Object {
   @js.native
   sealed trait UNKNOWNVERSION extends BinaryError
   
-  /* 8 */ val BADHEADERTABLE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.BADHEADERTABLE with Double = js.native
-  /* 2 */ val BADMAGIC: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.BADMAGIC with Double = js.native
-  /* 10 */ val DUPLICATETABLE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.DUPLICATETABLE with Double = js.native
-  /* 1 */ val MALFORMED: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.MALFORMED with Double = js.native
-  /* 9 */ val UNEXPECTEDSIGNATURETYPE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNEXPECTEDSIGNATURETYPE with Double = js.native
-  /* 0 */ val UNKNOWNBINARYERROR: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNBINARYERROR with Double = js.native
-  /* 7 */ val UNKNOWNOPCODE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNOPCODE with Double = js.native
-  /* 6 */ val UNKNOWNSERIALIZEDTYPE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNSERIALIZEDTYPE with Double = js.native
-  /* 5 */ val UNKNOWNSIGNATURETYPE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNSIGNATURETYPE with Double = js.native
-  /* 4 */ val UNKNOWNTABLETYPE: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNTABLETYPE with Double = js.native
-  /* 3 */ val UNKNOWNVERSION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.BinaryError.UNKNOWNVERSION with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BinaryError with Double] = js.native
+  /* 8 */ @js.native
+  object BADHEADERTABLE extends TopLevel[BADHEADERTABLE with Double]
+  
+  /* 2 */ @js.native
+  object BADMAGIC extends TopLevel[BADMAGIC with Double]
+  
+  /* 10 */ @js.native
+  object DUPLICATETABLE extends TopLevel[DUPLICATETABLE with Double]
+  
+  /* 1 */ @js.native
+  object MALFORMED extends TopLevel[MALFORMED with Double]
+  
+  /* 9 */ @js.native
+  object UNEXPECTEDSIGNATURETYPE extends TopLevel[UNEXPECTEDSIGNATURETYPE with Double]
+  
+  /* 0 */ @js.native
+  object UNKNOWNBINARYERROR extends TopLevel[UNKNOWNBINARYERROR with Double]
+  
+  /* 7 */ @js.native
+  object UNKNOWNOPCODE extends TopLevel[UNKNOWNOPCODE with Double]
+  
+  /* 6 */ @js.native
+  object UNKNOWNSERIALIZEDTYPE extends TopLevel[UNKNOWNSERIALIZEDTYPE with Double]
+  
+  /* 5 */ @js.native
+  object UNKNOWNSIGNATURETYPE extends TopLevel[UNKNOWNSIGNATURETYPE with Double]
+  
+  /* 4 */ @js.native
+  object UNKNOWNTABLETYPE extends TopLevel[UNKNOWNTABLETYPE with Double]
+  
+  /* 3 */ @js.native
+  object UNKNOWNVERSION extends TopLevel[UNKNOWNVERSION with Double]
+  
 }
 

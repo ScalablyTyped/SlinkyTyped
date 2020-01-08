@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ARTGroup extends SharedApply_ARTGroupProps_107905800[GroupCls] {
+object ARTGroup extends SharedApply_ARTGroupProps_1757151433[GroupCls] {
   @JSImport("react-native", "ART.Group")
   @js.native
   object componentImport extends js.Object

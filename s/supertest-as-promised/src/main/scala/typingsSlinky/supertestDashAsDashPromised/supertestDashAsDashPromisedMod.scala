@@ -1,10 +1,6 @@
 package typingsSlinky.supertestDashAsDashPromised
 
 import typingsSlinky.bluebird.bluebirdMod.^
-import typingsSlinky.supertestDashAsDashPromised.supertestDashAsDashPromisedMod.Request
-import typingsSlinky.supertestDashAsDashPromised.supertestDashAsDashPromisedMod.Response
-import typingsSlinky.supertestDashAsDashPromised.supertestDashAsDashPromisedMod.SuperTest
-import typingsSlinky.supertestDashAsDashPromised.supertestDashAsDashPromisedMod.Test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.cookieDashSignature
 
-import typingsSlinky.cookieDashSignature.cookieDashSignatureNumbers.`false`
+import typingsSlinky.cookieDashSignature.cookieDashSignatureBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

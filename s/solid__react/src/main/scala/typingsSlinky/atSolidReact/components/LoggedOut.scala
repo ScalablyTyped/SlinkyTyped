@@ -1,11 +1,13 @@
 package typingsSlinky.atSolidReact.components
 
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LoggedOut
-  extends SharedApply_Object152536094[typingsSlinky.atSolidReact.atSolidReactMod.LoggedOut] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.atSolidReact.atSolidReactMod.LoggedOut] {
   @JSImport("@solid/react", "LoggedOut")
   @js.native
   object componentImport extends js.Object

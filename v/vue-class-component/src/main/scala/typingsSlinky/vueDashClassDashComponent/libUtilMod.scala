@@ -9,7 +9,6 @@ import typingsSlinky.vue.typesOptionsMod.PropsDefinition
 import typingsSlinky.vue.typesVueMod.Vue
 import typingsSlinky.vue.typesVueMod.VueConstructor
 import typingsSlinky.vueDashClassDashComponent.libDeclarationsMod.VueClass
-import typingsSlinky.vueDashClassDashComponent.libUtilMod.VueDecorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

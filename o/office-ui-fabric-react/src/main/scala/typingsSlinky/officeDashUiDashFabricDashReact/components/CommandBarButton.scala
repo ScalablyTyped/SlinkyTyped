@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CommandBarButton
-  extends SharedApply_IButtonProps_1043969546[typingsSlinky.officeDashUiDashFabricDashReact.libButtonMod.CommandBarButton] {
+  extends SharedApply_IButtonProps_2021318183[typingsSlinky.officeDashUiDashFabricDashReact.libButtonMod.CommandBarButton] {
   @JSImport("office-ui-fabric-react/lib/Button", "CommandBarButton")
   @js.native
   object componentImport extends js.Object

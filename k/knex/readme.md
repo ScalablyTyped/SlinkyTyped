@@ -10,15 +10,15 @@ A batteries-included SQL query & schema builder for Postgres, MySQL and SQLite3 
 | ------------------ | :-------------: |
 | Full name          | knex |
 | Keywords           | sql, query, postgresql, mysql, sqlite3, oracle, mssql |
-| # releases         | 26 |
-| # dependents       | 931 |
-| # downloads        | 9351155 |
-| # stars            | 125 |
+| # releases         | 61 |
+| # dependents       | 1147 |
+| # downloads        | 16117386 |
+| # stars            | 126 |
 
 ## Links
 - [Homepage](https://knexjs.org)
-- [Bugs](https://github.com/tgriesser/knex/issues)
-- [Repository](https://github.com/tgriesser/knex)
+- [Bugs](https://github.com/knex/knex/issues)
+- [Repository](https://github.com/knex/knex)
 - [Npm](https://www.npmjs.com/package/knex)
     
 

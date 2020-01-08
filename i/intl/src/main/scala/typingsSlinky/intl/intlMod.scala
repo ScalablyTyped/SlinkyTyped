@@ -53,13 +53,13 @@ object intlMod extends js.Object {
   @js.native
   object Collator
     extends Instantiable0[typingsSlinky.std.Intl.Collator]
+       with Instantiable1[
+          (/* locales */ js.Array[String]) | (/* locales */ String), 
+          typingsSlinky.std.Intl.Collator
+        ]
        with Instantiable2[
           (/* locales */ js.Array[String]) | (/* locales */ String), 
           /* options */ CollatorOptions, 
-          typingsSlinky.std.Intl.Collator
-        ]
-       with Instantiable1[
-          (/* locales */ js.Array[String]) | (/* locales */ String), 
           typingsSlinky.std.Intl.Collator
         ] {
     def apply(): typingsSlinky.std.Intl.Collator = js.native
@@ -76,13 +76,13 @@ object intlMod extends js.Object {
   @js.native
   object DateTimeFormat
     extends Instantiable0[typingsSlinky.std.Intl.DateTimeFormat]
+       with Instantiable1[
+          (/* locales */ js.Array[String]) | (/* locales */ String), 
+          typingsSlinky.std.Intl.DateTimeFormat
+        ]
        with Instantiable2[
           (/* locales */ js.Array[String]) | (/* locales */ String), 
           /* options */ DateTimeFormatOptions, 
-          typingsSlinky.std.Intl.DateTimeFormat
-        ]
-       with Instantiable1[
-          (/* locales */ js.Array[String]) | (/* locales */ String), 
           typingsSlinky.std.Intl.DateTimeFormat
         ] {
     def apply(): typingsSlinky.std.Intl.DateTimeFormat = js.native
@@ -99,13 +99,13 @@ object intlMod extends js.Object {
   @js.native
   object NumberFormat
     extends Instantiable0[typingsSlinky.std.Intl.NumberFormat]
+       with Instantiable1[
+          (/* locales */ js.Array[String]) | (/* locales */ String), 
+          typingsSlinky.std.Intl.NumberFormat
+        ]
        with Instantiable2[
           (/* locales */ js.Array[String]) | (/* locales */ String), 
           /* options */ NumberFormatOptions, 
-          typingsSlinky.std.Intl.NumberFormat
-        ]
-       with Instantiable1[
-          (/* locales */ js.Array[String]) | (/* locales */ String), 
           typingsSlinky.std.Intl.NumberFormat
         ] {
     def apply(): typingsSlinky.std.Intl.NumberFormat = js.native
@@ -122,13 +122,13 @@ object intlMod extends js.Object {
   @js.native
   object PluralRules
     extends Instantiable0[typingsSlinky.std.Intl.PluralRules]
+       with Instantiable1[
+          (/* locales */ js.Array[String]) | (/* locales */ String), 
+          typingsSlinky.std.Intl.PluralRules
+        ]
        with Instantiable2[
           (/* locales */ js.Array[String]) | (/* locales */ String), 
           /* options */ PluralRulesOptions, 
-          typingsSlinky.std.Intl.PluralRules
-        ]
-       with Instantiable1[
-          (/* locales */ js.Array[String]) | (/* locales */ String), 
           typingsSlinky.std.Intl.PluralRules
         ] {
     def apply(): typingsSlinky.std.Intl.PluralRules = js.native

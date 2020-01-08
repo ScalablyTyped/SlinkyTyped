@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object HorizontalAlignment extends js.Object {
   @js.native
   sealed trait Right extends HorizontalAlignment
   
-  /* 1 */ val Left: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.HorizontalAlignment.Left with Double = js.native
-  /* 0 */ val Middle: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.HorizontalAlignment.Middle with Double = js.native
-  /* 2 */ val Right: typingsSlinky.ejDotWebDotAll.ej.datavisualization.RangeNavigator.HorizontalAlignment.Right with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[HorizontalAlignment with Double] = js.native
+  /* 1 */ @js.native
+  object Left extends TopLevel[Left with Double]
+  
+  /* 0 */ @js.native
+  object Middle extends TopLevel[Middle with Double]
+  
+  /* 2 */ @js.native
+  object Right extends TopLevel[Right with Double]
+  
 }
 

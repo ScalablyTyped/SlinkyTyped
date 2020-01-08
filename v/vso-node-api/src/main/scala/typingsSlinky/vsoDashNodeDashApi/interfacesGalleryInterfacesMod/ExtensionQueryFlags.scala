@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,23 +107,55 @@ object ExtensionQueryFlags extends js.Object {
   @js.native
   sealed trait UseFallbackAssetUri extends ExtensionQueryFlags
   
-  /* 479 */ val AllAttributes: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.AllAttributes with Double = js.native
-  /* 32 */ val ExcludeNonValidated: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.ExcludeNonValidated with Double = js.native
-  /* 128 */ val IncludeAssetUri: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeAssetUri with Double = js.native
-  /* 4 */ val IncludeCategoryAndTags: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeCategoryAndTags with Double = js.native
-  /* 2 */ val IncludeFiles: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeFiles with Double = js.native
-  /* 64 */ val IncludeInstallationTargets: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeInstallationTargets with Double = js.native
-  /* 512 */ val IncludeLatestVersionOnly: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeLatestVersionOnly with Double = js.native
-  /* 8192 */ val IncludeLcids: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeLcids with Double = js.native
-  /* 2048 */ val IncludeMetadata: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeMetadata with Double = js.native
-  /* 4096 */ val IncludeMinimalPayloadForVsIde: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeMinimalPayloadForVsIde with Double = js.native
-  /* 8 */ val IncludeSharedAccounts: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeSharedAccounts with Double = js.native
-  /* 256 */ val IncludeStatistics: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeStatistics with Double = js.native
-  /* 16 */ val IncludeVersionProperties: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeVersionProperties with Double = js.native
-  /* 1 */ val IncludeVersions: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.IncludeVersions with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.None with Double = js.native
-  /* 1024 */ val UseFallbackAssetUri: typingsSlinky.vsoDashNodeDashApi.interfacesGalleryInterfacesMod.ExtensionQueryFlags.UseFallbackAssetUri with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ExtensionQueryFlags with Double] = js.native
+  /* 479 */ @js.native
+  object AllAttributes extends TopLevel[AllAttributes with Double]
+  
+  /* 32 */ @js.native
+  object ExcludeNonValidated extends TopLevel[ExcludeNonValidated with Double]
+  
+  /* 128 */ @js.native
+  object IncludeAssetUri extends TopLevel[IncludeAssetUri with Double]
+  
+  /* 4 */ @js.native
+  object IncludeCategoryAndTags extends TopLevel[IncludeCategoryAndTags with Double]
+  
+  /* 2 */ @js.native
+  object IncludeFiles extends TopLevel[IncludeFiles with Double]
+  
+  /* 64 */ @js.native
+  object IncludeInstallationTargets extends TopLevel[IncludeInstallationTargets with Double]
+  
+  /* 512 */ @js.native
+  object IncludeLatestVersionOnly extends TopLevel[IncludeLatestVersionOnly with Double]
+  
+  /* 8192 */ @js.native
+  object IncludeLcids extends TopLevel[IncludeLcids with Double]
+  
+  /* 2048 */ @js.native
+  object IncludeMetadata extends TopLevel[IncludeMetadata with Double]
+  
+  /* 4096 */ @js.native
+  object IncludeMinimalPayloadForVsIde extends TopLevel[IncludeMinimalPayloadForVsIde with Double]
+  
+  /* 8 */ @js.native
+  object IncludeSharedAccounts extends TopLevel[IncludeSharedAccounts with Double]
+  
+  /* 256 */ @js.native
+  object IncludeStatistics extends TopLevel[IncludeStatistics with Double]
+  
+  /* 16 */ @js.native
+  object IncludeVersionProperties extends TopLevel[IncludeVersionProperties with Double]
+  
+  /* 1 */ @js.native
+  object IncludeVersions extends TopLevel[IncludeVersions with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1024 */ @js.native
+  object UseFallbackAssetUri extends TopLevel[UseFallbackAssetUri with Double]
+  
 }
 

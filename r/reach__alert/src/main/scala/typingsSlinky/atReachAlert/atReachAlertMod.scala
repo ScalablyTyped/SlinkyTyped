@@ -2,7 +2,6 @@ package typingsSlinky.atReachAlert
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.atReachAlert.atReachAlertMod.AlertProps
 import typingsSlinky.react.reactMod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Devices.Sensors
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object PedometerStepKind extends js.Object {
   @js.native
   sealed trait walking extends PedometerStepKind
   
-  /* 2 */ val running: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.PedometerStepKind.running with Double = js.native
-  /* 0 */ val unknown: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.PedometerStepKind.unknown with Double = js.native
-  /* 1 */ val walking: typingsSlinky.winrtDashUwp.Windows.Devices.Sensors.PedometerStepKind.walking with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PedometerStepKind with Double] = js.native
+  /* 2 */ @js.native
+  object running extends TopLevel[running with Double]
+  
+  /* 0 */ @js.native
+  object unknown extends TopLevel[unknown with Double]
+  
+  /* 1 */ @js.native
+  object walking extends TopLevel[walking with Double]
+  
 }
 

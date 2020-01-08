@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,17 @@ object IndentStyle extends js.Object {
   @js.native
   sealed trait Smart extends IndentStyle
   
-  /* 1 */ val Block: typingsSlinky.typescript.typescriptMod.IndentStyle.Block with Double = js.native
-  /* 0 */ val None: typingsSlinky.typescript.typescriptMod.IndentStyle.None with Double = js.native
-  /* 2 */ val Smart: typingsSlinky.typescript.typescriptMod.IndentStyle.Smart with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndentStyle with Double] = js.native
+  /* 1 */ @js.native
+  object Block
+    extends TopLevel[typingsSlinky.typescript.typescriptMod.IndentStyle.Block with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 2 */ @js.native
+  object Smart extends TopLevel[Smart with Double]
+  
 }
 

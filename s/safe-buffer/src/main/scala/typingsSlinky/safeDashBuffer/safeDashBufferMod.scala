@@ -1,6 +1,5 @@
 package typingsSlinky.safeDashBuffer
 
-import typingsSlinky.safeDashBuffer.safeDashBufferMod.Buffer
 import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

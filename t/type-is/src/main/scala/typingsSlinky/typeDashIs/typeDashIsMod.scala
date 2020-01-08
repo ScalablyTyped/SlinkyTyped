@@ -1,7 +1,7 @@
 package typingsSlinky.typeDashIs
 
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.typeDashIs.typeDashIsNumbers.`false`
+import typingsSlinky.typeDashIs.typeDashIsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

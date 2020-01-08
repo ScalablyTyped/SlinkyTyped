@@ -1,7 +1,7 @@
 package typingsSlinky.instagramDashPrivateDashApi.distTypesMediaDotConfigureDashStoryDotOptionsMod
 
-import typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiNumbers.`false`
-import typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiNumbers.`true`
+import typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiBooleans.`false`
+import typingsSlinky.instagramDashPrivateDashApi.instagramDashPrivateDashApiBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

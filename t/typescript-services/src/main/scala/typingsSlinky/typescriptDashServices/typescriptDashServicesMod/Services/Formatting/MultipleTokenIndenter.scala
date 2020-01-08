@@ -2,6 +2,8 @@ package typingsSlinky.typescriptDashServices.typescriptDashServicesMod.Services.
 
 import typingsSlinky.typescriptDashServices.FormattingOptions
 import typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.ITextSnapshot
+import typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax
+import typingsSlinky.typescriptDashServices.TypeScript.TextSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +13,8 @@ import scala.scalajs.js.annotation._
 class MultipleTokenIndenter protected ()
   extends typingsSlinky.typescriptDashServices.TypeScript.Services.Formatting.MultipleTokenIndenter {
   def this(
-    textSpan: typingsSlinky.typescriptDashServices.TypeScript.TextSpan,
-    sourceUnit: typingsSlinky.typescriptDashServices.TypeScript.SourceUnitSyntax,
+    textSpan: TextSpan,
+    sourceUnit: SourceUnitSyntax,
     snapshot: ITextSnapshot,
     indentFirstToken: Boolean,
     options: FormattingOptions

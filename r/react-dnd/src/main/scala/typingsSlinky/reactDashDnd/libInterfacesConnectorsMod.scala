@@ -3,8 +3,6 @@ package typingsSlinky.reactDashDnd
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.reactDashDnd.libInterfacesConnectorsMod.ConnectableElement
-import typingsSlinky.reactDashDnd.libInterfacesConnectorsMod.DragElementWrapper
 import typingsSlinky.reactDashDnd.libInterfacesOptionsMod.DragPreviewOptions
 import typingsSlinky.reactDashDnd.libInterfacesOptionsMod.DragSourceOptions
 import scala.scalajs.js

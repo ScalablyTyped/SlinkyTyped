@@ -2,7 +2,6 @@ package typingsSlinky.atBlueprintjsSelect
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.atBlueprintjsSelect.libEsmCommonItemListRendererMod.IItemListRendererProps
 import typingsSlinky.atBlueprintjsSelect.libEsmCommonListItemsUtilsMod.ICreateNewItem
 import typingsSlinky.react.reactMod._Global_.JSX.Element
 import scala.scalajs.js

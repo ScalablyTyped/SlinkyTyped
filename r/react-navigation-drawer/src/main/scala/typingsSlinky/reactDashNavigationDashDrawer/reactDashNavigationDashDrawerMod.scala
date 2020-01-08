@@ -11,14 +11,14 @@ import typingsSlinky.reactDashNavigationDashDrawer.libTypescriptSrcTypesMod.Navi
 import typingsSlinky.reactDashNavigationDashDrawer.libTypescriptSrcViewsDrawerNavigatorItemsMod.default
 import typingsSlinky.reactDashNavigationDashDrawer.libTypescriptSrcViewsDrawerViewMod.Props
 import typingsSlinky.reactDashNavigationDashDrawer.libTypescriptSrcViewsDrawerViewMod.State
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/CLOSE_DRAWER`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/DRAWER_CLOSED`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/DRAWER_OPENED`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/MARK_DRAWER_ACTIVE`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/MARK_DRAWER_IDLE`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/MARK_DRAWER_SETTLING`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/OPEN_DRAWER`
-import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.`Navigation/TOGGLE_DRAWER`
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashCLOSE_DRAWER
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashDRAWER_CLOSED
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashDRAWER_OPENED
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashMARK_DRAWER_ACTIVE
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashMARK_DRAWER_IDLE
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashMARK_DRAWER_SETTLING
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashOPEN_DRAWER
+import typingsSlinky.reactDashNavigationDashDrawer.reactDashNavigationDashDrawerStrings.NavigationSlashTOGGLE_DRAWER
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,14 +64,14 @@ object reactDashNavigationDashDrawerMod extends js.Object {
   ): js.Any = js.native
   @js.native
   object DrawerActions extends js.Object {
-    val CLOSE_DRAWER: `Navigation/CLOSE_DRAWER` = js.native
-    val DRAWER_CLOSED: `Navigation/DRAWER_CLOSED` = js.native
-    val DRAWER_OPENED: `Navigation/DRAWER_OPENED` = js.native
-    val MARK_DRAWER_ACTIVE: `Navigation/MARK_DRAWER_ACTIVE` = js.native
-    val MARK_DRAWER_IDLE: `Navigation/MARK_DRAWER_IDLE` = js.native
-    val MARK_DRAWER_SETTLING: `Navigation/MARK_DRAWER_SETTLING` = js.native
-    val OPEN_DRAWER: `Navigation/OPEN_DRAWER` = js.native
-    val TOGGLE_DRAWER: `Navigation/TOGGLE_DRAWER` = js.native
+    val CLOSE_DRAWER: NavigationSlashCLOSE_DRAWER = js.native
+    val DRAWER_CLOSED: NavigationSlashDRAWER_CLOSED = js.native
+    val DRAWER_OPENED: NavigationSlashDRAWER_OPENED = js.native
+    val MARK_DRAWER_ACTIVE: NavigationSlashMARK_DRAWER_ACTIVE = js.native
+    val MARK_DRAWER_IDLE: NavigationSlashMARK_DRAWER_IDLE = js.native
+    val MARK_DRAWER_SETTLING: NavigationSlashMARK_DRAWER_SETTLING = js.native
+    val OPEN_DRAWER: NavigationSlashOPEN_DRAWER = js.native
+    val TOGGLE_DRAWER: NavigationSlashTOGGLE_DRAWER = js.native
     def closeDrawer(): js.Any = js.native
     def closeDrawer(payload: js.Any): js.Any = js.native
     def openDrawer(): js.Any = js.native

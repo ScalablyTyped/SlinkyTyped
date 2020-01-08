@@ -1,7 +1,7 @@
 package typingsSlinky.atFirebasePerformance
 
 import typingsSlinky.atFirebaseAppDashTypes.atFirebaseAppDashTypesMod.FirebaseApp
-import typingsSlinky.atFirebasePerformance.distSrcServicesSettingsUnderscoreServiceMod.SettingsService
+import typingsSlinky.atFirebaseInstallationsDashTypes.atFirebaseInstallationsDashTypesMod.FirebaseInstallations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,7 @@ object distSrcServicesSettingsUnderscoreServiceMod extends js.Object {
     var configTimeToLive: Double = js.native
     var dataCollectionEnabled: Boolean = js.native
     var firebaseAppInstance: FirebaseApp = js.native
+    var installationsService: FirebaseInstallations = js.native
     var instrumentationEnabled: Boolean = js.native
     var logEndPointUrl: String = js.native
     var logNetworkAfterSampling: Boolean = js.native

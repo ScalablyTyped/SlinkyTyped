@@ -1,30 +1,32 @@
 package typingsSlinky.babelDashCore.babelDashCoreMod
 
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`!==`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`!=`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`!`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`%`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`&&`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`&`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`**`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`++`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`+`
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Ampersand
+import typingsSlinky.babelDashCore.babelDashCoreStrings.AmpersandAmpersand
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Asterisk
+import typingsSlinky.babelDashCore.babelDashCoreStrings.AsteriskAsterisk
+import typingsSlinky.babelDashCore.babelDashCoreStrings.EqualssignEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.EqualssignEqualssignEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Exclamationmark
+import typingsSlinky.babelDashCore.babelDashCoreStrings.ExclamationmarkEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.ExclamationmarkEqualssignEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Greaterthansign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.GreaterthansignEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.GreaterthansignGreaterthansign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.GreaterthansignGreaterthansignGreaterthansign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Lessthansign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.LessthansignEqualssign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.LessthansignLessthansign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Percentsign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Plussign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.PlussignPlussign
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Slash
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Tilde
+import typingsSlinky.babelDashCore.babelDashCoreStrings.Verticalline
+import typingsSlinky.babelDashCore.babelDashCoreStrings.VerticallineVerticalline
+import typingsSlinky.babelDashCore.babelDashCoreStrings.^
 import typingsSlinky.babelDashCore.babelDashCoreStrings.`--`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`-`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`/`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`<<`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`<=`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`<`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`===`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`==`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`>=`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`>>>`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`>>`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`>`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`_backtick^_backtick`
+import typingsSlinky.babelDashCore.babelDashCoreStrings.`-_`
 import typingsSlinky.babelDashCore.babelDashCoreStrings.`var`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`||`
-import typingsSlinky.babelDashCore.babelDashCoreStrings.`~`
 import typingsSlinky.babelDashCore.babelDashCoreStrings.const
 import typingsSlinky.babelDashCore.babelDashCoreStrings.constructor
 import typingsSlinky.babelDashCore.babelDashCoreStrings.delete
@@ -1576,14 +1578,14 @@ object types extends js.Object {
   def awaitExpression(argument: Expression): AwaitExpression = js.native
   def binaryExpression(): BinaryExpression = js.native
   def binaryExpression(
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.babelDashCore.babelDashCoreStrings.`*` | `**` | `&` | typingsSlinky.babelDashCore.babelDashCoreStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign
   ): BinaryExpression = js.native
   def binaryExpression(
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.babelDashCore.babelDashCoreStrings.`*` | `**` | `&` | typingsSlinky.babelDashCore.babelDashCoreStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
     left: Expression
   ): BinaryExpression = js.native
   def binaryExpression(
-    operator: `+` | `-` | `/` | `%` | typingsSlinky.babelDashCore.babelDashCoreStrings.`*` | `**` | `&` | typingsSlinky.babelDashCore.babelDashCoreStrings.`|` | `>>` | `>>>` | `<<` | `_backtick^_backtick` | `==` | `===` | `!=` | `!==` | in | instanceof | `>` | `<` | `>=` | `<=`,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
     left: Expression,
     right: Expression
   ): BinaryExpression = js.native
@@ -3070,12 +3072,12 @@ object types extends js.Object {
   def labeledStatement(label: Identifier): LabeledStatement = js.native
   def labeledStatement(label: Identifier, body: Statement): LabeledStatement = js.native
   def logicalExpression(): LogicalExpression = js.native
-  def logicalExpression(operator: `&&`): LogicalExpression = js.native
-  def logicalExpression(operator: `&&`, left: Expression): LogicalExpression = js.native
-  def logicalExpression(operator: `&&`, left: Expression, right: Expression): LogicalExpression = js.native
-  def logicalExpression(operator: `||`): LogicalExpression = js.native
-  def logicalExpression(operator: `||`, left: Expression): LogicalExpression = js.native
-  def logicalExpression(operator: `||`, left: Expression, right: Expression): LogicalExpression = js.native
+  def logicalExpression(operator: AmpersandAmpersand): LogicalExpression = js.native
+  def logicalExpression(operator: AmpersandAmpersand, left: Expression): LogicalExpression = js.native
+  def logicalExpression(operator: AmpersandAmpersand, left: Expression, right: Expression): LogicalExpression = js.native
+  def logicalExpression(operator: VerticallineVerticalline): LogicalExpression = js.native
+  def logicalExpression(operator: VerticallineVerticalline, left: Expression): LogicalExpression = js.native
+  def logicalExpression(operator: VerticallineVerticalline, left: Expression, right: Expression): LogicalExpression = js.native
   def memberExpression(): MemberExpression = js.native
   def memberExpression(`object`: Expression): MemberExpression = js.native
   def memberExpression(`object`: Expression, property: Expression): MemberExpression = js.native
@@ -3239,24 +3241,24 @@ object types extends js.Object {
   def typeofTypeAnnotation(): TypeofTypeAnnotation = js.native
   def typeofTypeAnnotation(argument: FlowTypeAnnotation): TypeofTypeAnnotation = js.native
   def unaryExpression(): UnaryExpression = js.native
-  def unaryExpression(operator: `!`): UnaryExpression = js.native
-  def unaryExpression(operator: `!`, argument: Expression): UnaryExpression = js.native
-  def unaryExpression(operator: `!`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `++`): UnaryExpression = js.native
-  def unaryExpression(operator: `++`, argument: Expression): UnaryExpression = js.native
-  def unaryExpression(operator: `++`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `+`): UnaryExpression = js.native
-  def unaryExpression(operator: `+`, argument: Expression): UnaryExpression = js.native
-  def unaryExpression(operator: `+`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Exclamationmark): UnaryExpression = js.native
+  def unaryExpression(operator: Exclamationmark, argument: Expression): UnaryExpression = js.native
+  def unaryExpression(operator: Exclamationmark, argument: Expression, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Plussign): UnaryExpression = js.native
+  def unaryExpression(operator: PlussignPlussign): UnaryExpression = js.native
+  def unaryExpression(operator: PlussignPlussign, argument: Expression): UnaryExpression = js.native
+  def unaryExpression(operator: PlussignPlussign, argument: Expression, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Plussign, argument: Expression): UnaryExpression = js.native
+  def unaryExpression(operator: Plussign, argument: Expression, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: Tilde): UnaryExpression = js.native
+  def unaryExpression(operator: Tilde, argument: Expression): UnaryExpression = js.native
+  def unaryExpression(operator: Tilde, argument: Expression, prefix: Boolean): UnaryExpression = js.native
   def unaryExpression(operator: `--`): UnaryExpression = js.native
   def unaryExpression(operator: `--`, argument: Expression): UnaryExpression = js.native
   def unaryExpression(operator: `--`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `-`): UnaryExpression = js.native
-  def unaryExpression(operator: `-`, argument: Expression): UnaryExpression = js.native
-  def unaryExpression(operator: `-`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
-  def unaryExpression(operator: `~`): UnaryExpression = js.native
-  def unaryExpression(operator: `~`, argument: Expression): UnaryExpression = js.native
-  def unaryExpression(operator: `~`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
+  def unaryExpression(operator: `-_`): UnaryExpression = js.native
+  def unaryExpression(operator: `-_`, argument: Expression): UnaryExpression = js.native
+  def unaryExpression(operator: `-_`, argument: Expression, prefix: Boolean): UnaryExpression = js.native
   @JSName("unaryExpression")
   def unaryExpression_delete(operator: delete): UnaryExpression = js.native
   @JSName("unaryExpression")
@@ -3278,9 +3280,9 @@ object types extends js.Object {
   def unionTypeAnnotation(): UnionTypeAnnotation = js.native
   def unionTypeAnnotation(types: js.Array[FlowTypeAnnotation]): UnionTypeAnnotation = js.native
   def updateExpression(): UpdateExpression = js.native
-  def updateExpression(operator: `++`): UpdateExpression = js.native
-  def updateExpression(operator: `++`, argument: Expression): UpdateExpression = js.native
-  def updateExpression(operator: `++`, argument: Expression, prefix: Boolean): UpdateExpression = js.native
+  def updateExpression(operator: PlussignPlussign): UpdateExpression = js.native
+  def updateExpression(operator: PlussignPlussign, argument: Expression): UpdateExpression = js.native
+  def updateExpression(operator: PlussignPlussign, argument: Expression, prefix: Boolean): UpdateExpression = js.native
   def updateExpression(operator: `--`): UpdateExpression = js.native
   def updateExpression(operator: `--`, argument: Expression): UpdateExpression = js.native
   def updateExpression(operator: `--`, argument: Expression, prefix: Boolean): UpdateExpression = js.native

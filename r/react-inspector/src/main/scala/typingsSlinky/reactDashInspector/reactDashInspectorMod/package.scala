@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object reactDashInspectorMod {
   import slinky.core.TagMod
-  import typingsSlinky.reactDashInspector.Anon_Data
 
-  type nodeRenderer = js.Function1[/* params */ Anon_Data, TagMod[Any]]
+  type InspectorNodeRenderer = js.Function1[/* params */ InspectorNodeParams, TagMod[Any]]
 }

@@ -2,6 +2,7 @@ package typingsSlinky.blessed.blessedMod.Widgets.Types
 
 import typingsSlinky.blessed.Anon_Bg
 import typingsSlinky.blessed.blessedStrings.bg
+import typingsSlinky.blessed.blessedStrings.line
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ trait TStyle extends js.Object {
   var bg: js.UndefOr[String] = js.undefined
   var blink: js.UndefOr[Boolean] = js.undefined
   var bold: js.UndefOr[Boolean] = js.undefined
-  var border: js.UndefOr[typingsSlinky.blessed.blessedStrings.line | bg | TBorder] = js.undefined
+  var border: js.UndefOr[line | bg | TBorder] = js.undefined
   var ch: js.UndefOr[String] = js.undefined
   var fg: js.UndefOr[String] = js.undefined
   var focus: js.UndefOr[Boolean] = js.undefined
@@ -31,7 +32,7 @@ object TStyle {
     bg: String = null,
     blink: js.UndefOr[Boolean] = js.undefined,
     bold: js.UndefOr[Boolean] = js.undefined,
-    border: typingsSlinky.blessed.blessedStrings.line | bg | TBorder = null,
+    border: line | bg | TBorder = null,
     ch: String = null,
     fg: String = null,
     focus: js.UndefOr[Boolean] = js.undefined,

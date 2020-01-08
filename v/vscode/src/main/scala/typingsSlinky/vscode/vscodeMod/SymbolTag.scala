@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.vscodeMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +17,10 @@ object SymbolTag extends js.Object {
   @js.native
   sealed trait Deprecated extends SymbolTag
   
-  /* 1 */ val Deprecated: typingsSlinky.vscode.vscodeMod.SymbolTag.Deprecated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SymbolTag with Double] = js.native
+  /* 1 */ @js.native
+  object Deprecated extends TopLevel[Deprecated with Double]
+  
 }
 

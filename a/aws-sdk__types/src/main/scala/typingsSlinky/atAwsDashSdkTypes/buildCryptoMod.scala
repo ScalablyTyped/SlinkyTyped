@@ -5,8 +5,6 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.atAwsDashSdkTypes.atAwsDashSdkTypesStrings.ascii
 import typingsSlinky.atAwsDashSdkTypes.atAwsDashSdkTypesStrings.latin1
 import typingsSlinky.atAwsDashSdkTypes.atAwsDashSdkTypesStrings.utf8
-import typingsSlinky.atAwsDashSdkTypes.buildCryptoMod.Hash
-import typingsSlinky.atAwsDashSdkTypes.buildCryptoMod.SourceData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -100,22 +101,52 @@ object GitConflictType extends js.Object {
   @js.native
   sealed trait RenameRename extends GitConflictType
   
-  /* 1 */ val AddAdd: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.AddAdd with Double = js.native
-  /* 2 */ val AddRename: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.AddRename with Double = js.native
-  /* 3 */ val DeleteEdit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.DeleteEdit with Double = js.native
-  /* 4 */ val DeleteRename: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.DeleteRename with Double = js.native
-  /* 6 */ val DirectoryChild: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.DirectoryChild with Double = js.native
-  /* 5 */ val DirectoryFile: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.DirectoryFile with Double = js.native
-  /* 7 */ val EditDelete: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.EditDelete with Double = js.native
-  /* 8 */ val EditEdit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.EditEdit with Double = js.native
-  /* 9 */ val FileDirectory: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.FileDirectory with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.None with Double = js.native
-  /* 10 */ val Rename1to2: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.Rename1to2 with Double = js.native
-  /* 11 */ val Rename2to1: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.Rename2to1 with Double = js.native
-  /* 12 */ val RenameAdd: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.RenameAdd with Double = js.native
-  /* 13 */ val RenameDelete: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.RenameDelete with Double = js.native
-  /* 14 */ val RenameRename: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitConflictType.RenameRename with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitConflictType with Double] = js.native
+  /* 1 */ @js.native
+  object AddAdd extends TopLevel[AddAdd with Double]
+  
+  /* 2 */ @js.native
+  object AddRename extends TopLevel[AddRename with Double]
+  
+  /* 3 */ @js.native
+  object DeleteEdit extends TopLevel[DeleteEdit with Double]
+  
+  /* 4 */ @js.native
+  object DeleteRename extends TopLevel[DeleteRename with Double]
+  
+  /* 6 */ @js.native
+  object DirectoryChild extends TopLevel[DirectoryChild with Double]
+  
+  /* 5 */ @js.native
+  object DirectoryFile extends TopLevel[DirectoryFile with Double]
+  
+  /* 7 */ @js.native
+  object EditDelete extends TopLevel[EditDelete with Double]
+  
+  /* 8 */ @js.native
+  object EditEdit extends TopLevel[EditEdit with Double]
+  
+  /* 9 */ @js.native
+  object FileDirectory extends TopLevel[FileDirectory with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 10 */ @js.native
+  object Rename1to2 extends TopLevel[Rename1to2 with Double]
+  
+  /* 11 */ @js.native
+  object Rename2to1 extends TopLevel[Rename2to1 with Double]
+  
+  /* 12 */ @js.native
+  object RenameAdd extends TopLevel[RenameAdd with Double]
+  
+  /* 13 */ @js.native
+  object RenameDelete extends TopLevel[RenameDelete with Double]
+  
+  /* 14 */ @js.native
+  object RenameRename extends TopLevel[RenameRename with Double]
+  
 }
 

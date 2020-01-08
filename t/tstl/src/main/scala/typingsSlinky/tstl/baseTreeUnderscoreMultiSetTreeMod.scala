@@ -4,7 +4,7 @@ import typingsSlinky.tstl.baseContainerMultiSetMod.MultiSet
 import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator
 import typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator
 import typingsSlinky.tstl.baseTreeUnderscoreSetTreeMod._SetTree
-import typingsSlinky.tstl.tstlNumbers.`false`
+import typingsSlinky.tstl.tstlBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

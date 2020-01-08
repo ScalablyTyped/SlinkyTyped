@@ -1,10 +1,9 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerMapContainerMod.MapContainer
-import typingsSlinky.tstl.baseContainerUniqueMapMod.UniqueMap
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapIterator
 import typingsSlinky.tstl.baseIteratorIMapIteratorMod.IMapReverseIterator
-import typingsSlinky.tstl.tstlNumbers.`true`
+import typingsSlinky.tstl.tstlBooleans.`true`
 import typingsSlinky.tstl.utilityEntryMod.Entry
 import typingsSlinky.tstl.utilityPairMod.Pair
 import scala.scalajs.js
@@ -33,20 +32,20 @@ object baseContainerUniqueMapMod extends js.Object {
       */
     var _Insert_or_assign_with_key_value: js.Any = js.native
     /**
-      * Extract an element by iterator.
-      *
-      * @param pos The iterator to the element for extraction.
-      * @return Iterator following the *pos*, strained by the extraction.
-      */
-    def extract(pos: Iterator): Iterator = js.native
-    /**
       * Extract an element by key.
       *
       * @param key Key to search for.
       * @return The extracted element.
       */
+    def extract(key: Key): Entry[Key, T] = js.native
+    /**
+      * Extract an element by iterator.
+      *
+      * @param pos The iterator to the element for extraction.
+      * @return Iterator following the *pos*, strained by the extraction.
+      */
     @JSName("extract")
-    def extract_Entry(key: Key): Entry[Key, T] = js.native
+    def extract_Iterator(pos: Iterator): Iterator = js.native
     /**
       * Get a value.
       *

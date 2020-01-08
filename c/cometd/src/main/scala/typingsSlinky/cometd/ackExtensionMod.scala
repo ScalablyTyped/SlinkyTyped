@@ -1,6 +1,5 @@
 package typingsSlinky.cometd
 
-import typingsSlinky.cometd.ackExtensionMod.AckExtension
 import typingsSlinky.cometd.cometdMod.CometD
 import typingsSlinky.cometd.cometdMod.Extension
 import typingsSlinky.cometd.cometdMod.Listener

@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.libTypesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +28,9 @@ object ActionTypes extends js.Object {
   
   @js.native
   sealed trait ErrorCommunication extends ActionTypes
+  
+  @js.native
+  sealed trait ErrorCustom extends ActionTypes
   
   @js.native
   sealed trait ErrorExecution extends ActionTypes
@@ -64,25 +68,65 @@ object ActionTypes extends js.Object {
   @js.native
   sealed trait Update extends ActionTypes
   
-  /* "xstate.after" */ val After: typingsSlinky.xstate.libTypesMod.ActionTypes.After with String = js.native
-  /* "xstate.assign" */ val Assign: typingsSlinky.xstate.libTypesMod.ActionTypes.Assign with String = js.native
-  /* "xstate.cancel" */ val Cancel: typingsSlinky.xstate.libTypesMod.ActionTypes.Cancel with String = js.native
-  /* "done.invoke" */ val DoneInvoke: typingsSlinky.xstate.libTypesMod.ActionTypes.DoneInvoke with String = js.native
-  /* "done.state" */ val DoneState: typingsSlinky.xstate.libTypesMod.ActionTypes.DoneState with String = js.native
-  /* "error.communication" */ val ErrorCommunication: typingsSlinky.xstate.libTypesMod.ActionTypes.ErrorCommunication with String = js.native
-  /* "error.execution" */ val ErrorExecution: typingsSlinky.xstate.libTypesMod.ActionTypes.ErrorExecution with String = js.native
-  /* "error.platform" */ val ErrorPlatform: typingsSlinky.xstate.libTypesMod.ActionTypes.ErrorPlatform with String = js.native
-  /* "xstate.init" */ val Init: typingsSlinky.xstate.libTypesMod.ActionTypes.Init with String = js.native
-  /* "xstate.invoke" */ val Invoke: typingsSlinky.xstate.libTypesMod.ActionTypes.Invoke with String = js.native
-  /* "xstate.log" */ val Log: typingsSlinky.xstate.libTypesMod.ActionTypes.Log with String = js.native
-  /* "" */ val NullEvent: typingsSlinky.xstate.libTypesMod.ActionTypes.NullEvent with String = js.native
-  /* "xstate.pure" */ val Pure: typingsSlinky.xstate.libTypesMod.ActionTypes.Pure with String = js.native
-  /* "xstate.raise" */ val Raise: typingsSlinky.xstate.libTypesMod.ActionTypes.Raise with String = js.native
-  /* "xstate.send" */ val Send: typingsSlinky.xstate.libTypesMod.ActionTypes.Send with String = js.native
-  /* "xstate.start" */ val Start: typingsSlinky.xstate.libTypesMod.ActionTypes.Start with String = js.native
-  /* "xstate.stop" */ val Stop: typingsSlinky.xstate.libTypesMod.ActionTypes.Stop with String = js.native
-  /* "xstate.update" */ val Update: typingsSlinky.xstate.libTypesMod.ActionTypes.Update with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ActionTypes with String] = js.native
+  /* "xstate.after" */ @js.native
+  object After extends TopLevel[After with String]
+  
+  /* "xstate.assign" */ @js.native
+  object Assign extends TopLevel[Assign with String]
+  
+  /* "xstate.cancel" */ @js.native
+  object Cancel extends TopLevel[Cancel with String]
+  
+  /* "done.invoke" */ @js.native
+  object DoneInvoke extends TopLevel[DoneInvoke with String]
+  
+  /* "done.state" */ @js.native
+  object DoneState extends TopLevel[DoneState with String]
+  
+  /* "error.communication" */ @js.native
+  object ErrorCommunication extends TopLevel[ErrorCommunication with String]
+  
+  /* "xstate.error" */ @js.native
+  object ErrorCustom extends TopLevel[ErrorCustom with String]
+  
+  /* "error.execution" */ @js.native
+  object ErrorExecution extends TopLevel[ErrorExecution with String]
+  
+  /* "error.platform" */ @js.native
+  object ErrorPlatform extends TopLevel[ErrorPlatform with String]
+  
+  /* "xstate.init" */ @js.native
+  object Init extends TopLevel[Init with String]
+  
+  /* "xstate.invoke" */ @js.native
+  object Invoke extends TopLevel[Invoke with String]
+  
+  /* "xstate.log" */ @js.native
+  object Log extends TopLevel[Log with String]
+  
+  /* "" */ @js.native
+  object NullEvent
+    extends TopLevel[typingsSlinky.xstate.libTypesMod.ActionTypes.NullEvent with String]
+  
+  /* "xstate.pure" */ @js.native
+  object Pure extends TopLevel[Pure with String]
+  
+  /* "xstate.raise" */ @js.native
+  object Raise extends TopLevel[Raise with String]
+  
+  /* "xstate.send" */ @js.native
+  object Send extends TopLevel[Send with String]
+  
+  /* "xstate.start" */ @js.native
+  object Start extends TopLevel[Start with String]
+  
+  /* "xstate.stop" */ @js.native
+  object Stop extends TopLevel[Stop with String]
+  
+  /* "xstate.update" */ @js.native
+  object Update extends TopLevel[Update with String]
+  
 }
 

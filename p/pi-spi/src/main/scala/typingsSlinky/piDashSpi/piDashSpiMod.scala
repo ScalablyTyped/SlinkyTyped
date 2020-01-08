@@ -1,9 +1,7 @@
 package typingsSlinky.piDashSpi
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
-import typingsSlinky.piDashSpi.piDashSpiMod.SPI
-import typingsSlinky.piDashSpi.piDashSpiMod.mode
-import typingsSlinky.piDashSpi.piDashSpiMod.order
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,10 +44,14 @@ object piDashSpiMod extends js.Object {
     @js.native
     sealed trait CPOL extends mode
     
-    /* 0x01 */ val CPHA: typingsSlinky.piDashSpi.piDashSpiMod.mode.CPHA with Double = js.native
-    /* 0x02 */ val CPOL: typingsSlinky.piDashSpi.piDashSpiMod.mode.CPOL with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[mode with Double] = js.native
+    /* 0x01 */ @js.native
+    object CPHA extends TopLevel[CPHA with Double]
+    
+    /* 0x02 */ @js.native
+    object CPOL extends TopLevel[CPOL with Double]
+    
   }
   
   @js.native
@@ -60,10 +62,14 @@ object piDashSpiMod extends js.Object {
     @js.native
     sealed trait MSB_FIRST extends order
     
-    /* 1 */ val LSB_FIRST: typingsSlinky.piDashSpi.piDashSpiMod.order.LSB_FIRST with Double = js.native
-    /* 0 */ val MSB_FIRST: typingsSlinky.piDashSpi.piDashSpiMod.order.MSB_FIRST with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[order with Double] = js.native
+    /* 1 */ @js.native
+    object LSB_FIRST extends TopLevel[LSB_FIRST with Double]
+    
+    /* 0 */ @js.native
+    object MSB_FIRST extends TopLevel[MSB_FIRST with Double]
+    
   }
   
 }

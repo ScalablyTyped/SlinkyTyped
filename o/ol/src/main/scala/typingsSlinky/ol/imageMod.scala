@@ -1,8 +1,6 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.imageMod.ImageWrapper
-import typingsSlinky.ol.imageMod.LoadFunction
 import typingsSlinky.std.HTMLCanvasElement
 import typingsSlinky.std.HTMLImageElement
 import typingsSlinky.std.HTMLVideoElement

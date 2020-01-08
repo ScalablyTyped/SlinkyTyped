@@ -1,7 +1,5 @@
 package typingsSlinky.seleniumDashWebdriver
 
-import typingsSlinky.seleniumDashWebdriver.firefoxMod.Driver
-import typingsSlinky.seleniumDashWebdriver.firefoxMod.Options
 import typingsSlinky.seleniumDashWebdriver.httpMod.Executor
 import typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService
 import typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService.Builder

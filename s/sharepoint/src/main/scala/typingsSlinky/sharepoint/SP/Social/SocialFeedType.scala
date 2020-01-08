@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Social
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +27,22 @@ object SocialFeedType extends js.Object {
   @js.native
   sealed trait timeline extends SocialFeedType
   
-  /* 4 */ val everyone: typingsSlinky.sharepoint.SP.Social.SocialFeedType.everyone with Double = js.native
-  /* 3 */ val likes: typingsSlinky.sharepoint.SP.Social.SocialFeedType.likes with Double = js.native
-  /* 1 */ val news: typingsSlinky.sharepoint.SP.Social.SocialFeedType.news with Double = js.native
-  /* 0 */ val personal: typingsSlinky.sharepoint.SP.Social.SocialFeedType.personal with Double = js.native
-  /* 2 */ val timeline: typingsSlinky.sharepoint.SP.Social.SocialFeedType.timeline with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocialFeedType with Double] = js.native
+  /* 4 */ @js.native
+  object everyone extends TopLevel[everyone with Double]
+  
+  /* 3 */ @js.native
+  object likes extends TopLevel[likes with Double]
+  
+  /* 1 */ @js.native
+  object news extends TopLevel[news with Double]
+  
+  /* 0 */ @js.native
+  object personal extends TopLevel[personal with Double]
+  
+  /* 2 */ @js.native
+  object timeline extends TopLevel[timeline with Double]
+  
 }
 

@@ -2,12 +2,12 @@ package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Formatter
 import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Type
-import typingsSlinky.echarts.echartsStrings.`mousemove|click`
 import typingsSlinky.echarts.echartsStrings.axis
 import typingsSlinky.echarts.echartsStrings.click
 import typingsSlinky.echarts.echartsStrings.html
 import typingsSlinky.echarts.echartsStrings.item
 import typingsSlinky.echarts.echartsStrings.mousemove
+import typingsSlinky.echarts.echartsStrings.mousemoveVerticallineclick
 import typingsSlinky.echarts.echartsStrings.none
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ trait Tooltip_ extends js.Object {
     * Notice: configurations of `tooltip.axisPointer` has
     * lower priority than that of `someAxis.axisPointer`.
     *
-    * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#tooltip.axisPointer
+    * @see https://echarts.apache.org/en/option.html#tooltip.axisPointer
     */
   var axisPointer: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer] = js.undefined
   /**
@@ -220,7 +220,7 @@ trait Tooltip_ extends js.Object {
     *   + Return:
     *     position as `String`, `Array` or `Object` described above
     *
-    * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#tooltip.position
+    * @see https://echarts.apache.org/en/option.html#tooltip.position
     */
   var position: js.UndefOr[Type] = js.undefined
   /**
@@ -304,7 +304,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'mousemove|click'
     */
-  var triggerOn: js.UndefOr[mousemove | click | `mousemove|click` | none] = js.undefined
+  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.undefined
 }
 
 object Tooltip_ {
@@ -329,7 +329,7 @@ object Tooltip_ {
     textStyle: BaseTextStyle = null,
     transitionDuration: Int | Double = null,
     trigger: item | axis | none = null,
-    triggerOn: mousemove | click | `mousemove|click` | none = null
+    triggerOn: mousemove | click | mousemoveVerticallineclick | none = null
   ): Tooltip_ = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(alwaysShowContent)) __obj.updateDynamic("alwaysShowContent")(alwaysShowContent.asInstanceOf[js.Any])

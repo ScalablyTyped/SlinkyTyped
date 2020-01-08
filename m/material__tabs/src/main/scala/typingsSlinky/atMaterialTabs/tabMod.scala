@@ -3,7 +3,6 @@ package typingsSlinky.atMaterialTabs
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialTabs.tabAdapterMod.MDCTabAdapter
 import typingsSlinky.atMaterialTabs.tabFoundationMod.default
-import typingsSlinky.atMaterialTabs.tabMod.MDCTab
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

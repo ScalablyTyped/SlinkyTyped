@@ -15,10 +15,10 @@ package object atHapiHapiMod {
   import typingsSlinky.atHapiHapi.Anon_ExpiresAt
   import typingsSlinky.atHapiHapi.Anon_ExpiresAtExpiresIn
   import typingsSlinky.atHapiHapi.Anon_ExpiresAtExpiresInUndefined
+  import typingsSlinky.atHapiHapi.atHapiHapiBooleans.`false`
+  import typingsSlinky.atHapiHapi.atHapiHapiBooleans.`true`
   import typingsSlinky.atHapiHapi.atHapiHapiMod.Lifecycle.Method
   import typingsSlinky.atHapiHapi.atHapiHapiMod.Util.Dictionary
-  import typingsSlinky.atHapiHapi.atHapiHapiNumbers.`false`
-  import typingsSlinky.atHapiHapi.atHapiHapiNumbers.`true`
   import typingsSlinky.atHapiJoi.atHapiJoiMod.Schema
   import typingsSlinky.atHapiJoi.atHapiJoiMod.SchemaMap
   import typingsSlinky.atHapiJoi.atHapiJoiMod.ValidationOptions

@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,12 +48,6 @@ object IconSet extends js.Object {
   sealed trait invalid extends IconSet
   
   @js.native
-  sealed trait linkedEntityFinanceIcon extends IconSet
-  
-  @js.native
-  sealed trait linkedEntityMapIcon extends IconSet
-  
-  @js.native
   sealed trait threeArrows extends IconSet
   
   @js.native
@@ -82,30 +77,70 @@ object IconSet extends js.Object {
   @js.native
   sealed trait threeTriangles extends IconSet
   
-  /* "FiveArrows" */ val fiveArrows: typingsSlinky.officeDashJs.Excel.IconSet.fiveArrows with String = js.native
-  /* "FiveArrowsGray" */ val fiveArrowsGray: typingsSlinky.officeDashJs.Excel.IconSet.fiveArrowsGray with String = js.native
-  /* "FiveBoxes" */ val fiveBoxes: typingsSlinky.officeDashJs.Excel.IconSet.fiveBoxes with String = js.native
-  /* "FiveQuarters" */ val fiveQuarters: typingsSlinky.officeDashJs.Excel.IconSet.fiveQuarters with String = js.native
-  /* "FiveRating" */ val fiveRating: typingsSlinky.officeDashJs.Excel.IconSet.fiveRating with String = js.native
-  /* "FourArrows" */ val fourArrows: typingsSlinky.officeDashJs.Excel.IconSet.fourArrows with String = js.native
-  /* "FourArrowsGray" */ val fourArrowsGray: typingsSlinky.officeDashJs.Excel.IconSet.fourArrowsGray with String = js.native
-  /* "FourRating" */ val fourRating: typingsSlinky.officeDashJs.Excel.IconSet.fourRating with String = js.native
-  /* "FourRedToBlack" */ val fourRedToBlack: typingsSlinky.officeDashJs.Excel.IconSet.fourRedToBlack with String = js.native
-  /* "FourTrafficLights" */ val fourTrafficLights: typingsSlinky.officeDashJs.Excel.IconSet.fourTrafficLights with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeDashJs.Excel.IconSet.invalid with String = js.native
-  /* "LinkedEntityFinanceIcon" */ val linkedEntityFinanceIcon: typingsSlinky.officeDashJs.Excel.IconSet.linkedEntityFinanceIcon with String = js.native
-  /* "LinkedEntityMapIcon" */ val linkedEntityMapIcon: typingsSlinky.officeDashJs.Excel.IconSet.linkedEntityMapIcon with String = js.native
-  /* "ThreeArrows" */ val threeArrows: typingsSlinky.officeDashJs.Excel.IconSet.threeArrows with String = js.native
-  /* "ThreeArrowsGray" */ val threeArrowsGray: typingsSlinky.officeDashJs.Excel.IconSet.threeArrowsGray with String = js.native
-  /* "ThreeFlags" */ val threeFlags: typingsSlinky.officeDashJs.Excel.IconSet.threeFlags with String = js.native
-  /* "ThreeSigns" */ val threeSigns: typingsSlinky.officeDashJs.Excel.IconSet.threeSigns with String = js.native
-  /* "ThreeStars" */ val threeStars: typingsSlinky.officeDashJs.Excel.IconSet.threeStars with String = js.native
-  /* "ThreeSymbols" */ val threeSymbols: typingsSlinky.officeDashJs.Excel.IconSet.threeSymbols with String = js.native
-  /* "ThreeSymbols2" */ val threeSymbols2: typingsSlinky.officeDashJs.Excel.IconSet.threeSymbols2 with String = js.native
-  /* "ThreeTrafficLights1" */ val threeTrafficLights1: typingsSlinky.officeDashJs.Excel.IconSet.threeTrafficLights1 with String = js.native
-  /* "ThreeTrafficLights2" */ val threeTrafficLights2: typingsSlinky.officeDashJs.Excel.IconSet.threeTrafficLights2 with String = js.native
-  /* "ThreeTriangles" */ val threeTriangles: typingsSlinky.officeDashJs.Excel.IconSet.threeTriangles with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[IconSet with String] = js.native
+  /* "FiveArrows" */ @js.native
+  object fiveArrows extends TopLevel[fiveArrows with String]
+  
+  /* "FiveArrowsGray" */ @js.native
+  object fiveArrowsGray extends TopLevel[fiveArrowsGray with String]
+  
+  /* "FiveBoxes" */ @js.native
+  object fiveBoxes extends TopLevel[fiveBoxes with String]
+  
+  /* "FiveQuarters" */ @js.native
+  object fiveQuarters extends TopLevel[fiveQuarters with String]
+  
+  /* "FiveRating" */ @js.native
+  object fiveRating extends TopLevel[fiveRating with String]
+  
+  /* "FourArrows" */ @js.native
+  object fourArrows extends TopLevel[fourArrows with String]
+  
+  /* "FourArrowsGray" */ @js.native
+  object fourArrowsGray extends TopLevel[fourArrowsGray with String]
+  
+  /* "FourRating" */ @js.native
+  object fourRating extends TopLevel[fourRating with String]
+  
+  /* "FourRedToBlack" */ @js.native
+  object fourRedToBlack extends TopLevel[fourRedToBlack with String]
+  
+  /* "FourTrafficLights" */ @js.native
+  object fourTrafficLights extends TopLevel[fourTrafficLights with String]
+  
+  /* "Invalid" */ @js.native
+  object invalid extends TopLevel[invalid with String]
+  
+  /* "ThreeArrows" */ @js.native
+  object threeArrows extends TopLevel[threeArrows with String]
+  
+  /* "ThreeArrowsGray" */ @js.native
+  object threeArrowsGray extends TopLevel[threeArrowsGray with String]
+  
+  /* "ThreeFlags" */ @js.native
+  object threeFlags extends TopLevel[threeFlags with String]
+  
+  /* "ThreeSigns" */ @js.native
+  object threeSigns extends TopLevel[threeSigns with String]
+  
+  /* "ThreeStars" */ @js.native
+  object threeStars extends TopLevel[threeStars with String]
+  
+  /* "ThreeSymbols" */ @js.native
+  object threeSymbols extends TopLevel[threeSymbols with String]
+  
+  /* "ThreeSymbols2" */ @js.native
+  object threeSymbols2 extends TopLevel[threeSymbols2 with String]
+  
+  /* "ThreeTrafficLights1" */ @js.native
+  object threeTrafficLights1 extends TopLevel[threeTrafficLights1 with String]
+  
+  /* "ThreeTrafficLights2" */ @js.native
+  object threeTrafficLights2 extends TopLevel[threeTrafficLights2 with String]
+  
+  /* "ThreeTriangles" */ @js.native
+  object threeTriangles extends TopLevel[threeTriangles with String]
+  
 }
 

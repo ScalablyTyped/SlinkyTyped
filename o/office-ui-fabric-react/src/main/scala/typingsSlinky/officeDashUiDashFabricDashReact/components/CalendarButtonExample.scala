@@ -3,6 +3,7 @@ package typingsSlinky.officeDashUiDashFabricDashReact.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsCalendarExamplesCalendarDotButtonDotExampleMod.ICalendarButtonExampleProps
 import scala.scalajs.js
@@ -43,6 +44,12 @@ object CalendarButtonExample
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.officeDashUiDashFabricDashReact.libComponentsCalendarExamplesCalendarDotButtonDotExampleMod.CalendarButtonExample
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.officeDashUiDashFabricDashReact.libComponentsCalendarExamplesCalendarDotButtonDotExampleMod.CalendarButtonExample](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ICalendarButtonExampleProps
 }
 

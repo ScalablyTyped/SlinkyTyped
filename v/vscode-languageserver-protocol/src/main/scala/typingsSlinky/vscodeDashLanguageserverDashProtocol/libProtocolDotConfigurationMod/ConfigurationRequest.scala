@@ -4,7 +4,6 @@ import typingsSlinky.vscodeDashJsonrpc.libCancellationMod.CancellationToken
 import typingsSlinky.vscodeDashJsonrpc.vscodeDashJsonrpcMod.HandlerResult
 import typingsSlinky.vscodeDashJsonrpc.vscodeDashJsonrpcMod.RequestHandler
 import typingsSlinky.vscodeDashJsonrpc.vscodeDashJsonrpcMod.RequestType
-import typingsSlinky.vscodeDashLanguageserverDashProtocol.libProtocolDotConfigurationMod.ConfigurationRequest.HandlerSignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

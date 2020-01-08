@@ -1,6 +1,5 @@
 package typingsSlinky.rollupDashPluginDashTypescript2
 
-import typingsSlinky.rollupDashPluginDashTypescript2.distDiagnosticsDashFormatDashHostMod.FormatHost
 import typingsSlinky.typescript.typescriptMod.FormatDiagnosticsHost
 import scala.scalajs.js
 import scala.scalajs.js.`|`

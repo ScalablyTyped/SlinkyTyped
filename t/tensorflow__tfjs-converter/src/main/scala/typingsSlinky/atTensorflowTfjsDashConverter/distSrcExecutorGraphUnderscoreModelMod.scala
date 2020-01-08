@@ -1,10 +1,9 @@
 package typingsSlinky.atTensorflowTfjsDashConverter
 
-import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.`?tfjs-format=file`
-import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.modelDOTjson
+import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.`Questionmarktfjs-formatEqualssignfile`
+import typingsSlinky.atTensorflowTfjsDashConverter.atTensorflowTfjsDashConverterStrings.modelDotjson
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataTypesMod.NamedTensorsMap
 import typingsSlinky.atTensorflowTfjsDashConverter.distSrcDataTypesMod.TensorInfo
-import typingsSlinky.atTensorflowTfjsDashConverter.distSrcExecutorGraphUnderscoreModelMod.GraphModel
 import typingsSlinky.atTensorflowTfjsDashCore.atTensorflowTfjsDashCoreMod.Tensor
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.IOHandler
 import typingsSlinky.atTensorflowTfjsDashCore.distIoTypesMod.LoadOptions
@@ -148,8 +147,8 @@ object distSrcExecutorGraphUnderscoreModelMod extends js.Object {
     def predict(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
   }
   
-  val DEFAULT_MODEL_NAME: modelDOTjson = js.native
-  val TFHUB_SEARCH_PARAM: `?tfjs-format=file` = js.native
+  val DEFAULT_MODEL_NAME: modelDotjson = js.native
+  val TFHUB_SEARCH_PARAM: `Questionmarktfjs-formatEqualssignfile` = js.native
   def loadGraphModel(modelUrl: String): js.Promise[GraphModel] = js.native
   def loadGraphModel(modelUrl: String, options: LoadOptions): js.Promise[GraphModel] = js.native
   def loadGraphModel(modelUrl: IOHandler): js.Promise[GraphModel] = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.sugarDashCore.sugarjs
 
 import typingsSlinky.std.Intl.DateTimeFormatOptions
-import typingsSlinky.sugarDashCore.sugarjs.Date.ChainableBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -6,7 +6,7 @@ import typingsSlinky.bootstrapDashSwitch.BootstrapSwitch.BootstrapSwitchOptions
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.animate
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.baseClass
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.disabled
-import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.initDOTbootstrapSwitch
+import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.initDotbootstrapSwitch
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.labelText
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.offColor
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.offText
@@ -16,7 +16,7 @@ import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.radioAllOff
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.readonly
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.size
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.state
-import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.switchChangeDOTbootstrapSwitch
+import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.switchChangeDotbootstrapSwitch
 import typingsSlinky.bootstrapDashSwitch.bootstrapDashSwitchStrings.wrapperClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -56,62 +56,62 @@ trait JQuery extends js.Object {
   @JSName("bootstrapSwitch")
   def bootstrapSwitch_wrapperClass(method: wrapperClass): String = js.native
   @JSName("off")
-  def off_initbootstrapSwitch(events: initDOTbootstrapSwitch): JQuery = js.native
+  def off_initbootstrapSwitch(events: initDotbootstrapSwitch): JQuery = js.native
   @JSName("off")
   def off_initbootstrapSwitch(
-    events: initDOTbootstrapSwitch,
+    events: initDotbootstrapSwitch,
     handler: js.Function1[/* eventobject */ BootstrapSwitchEventObject, _]
   ): JQuery = js.native
   @JSName("off")
-  def off_initbootstrapSwitch(events: initDOTbootstrapSwitch, selector: String): JQuery = js.native
+  def off_initbootstrapSwitch(events: initDotbootstrapSwitch, selector: String): JQuery = js.native
   @JSName("off")
   def off_initbootstrapSwitch(
-    events: initDOTbootstrapSwitch,
+    events: initDotbootstrapSwitch,
     selector: String,
     handler: js.Function1[/* eventobject */ BootstrapSwitchEventObject, _]
   ): JQuery = js.native
   @JSName("off")
-  def off_switchChangebootstrapSwitch(events: switchChangeDOTbootstrapSwitch): JQuery = js.native
+  def off_switchChangebootstrapSwitch(events: switchChangeDotbootstrapSwitch): JQuery = js.native
   @JSName("off")
   def off_switchChangebootstrapSwitch(
-    events: switchChangeDOTbootstrapSwitch,
+    events: switchChangeDotbootstrapSwitch,
     handler: js.Function1[/* eventobject */ BootstrapSwitchChangeEventObject, _]
   ): JQuery = js.native
   @JSName("off")
-  def off_switchChangebootstrapSwitch(events: switchChangeDOTbootstrapSwitch, selector: String): JQuery = js.native
+  def off_switchChangebootstrapSwitch(events: switchChangeDotbootstrapSwitch, selector: String): JQuery = js.native
   @JSName("off")
   def off_switchChangebootstrapSwitch(
-    events: switchChangeDOTbootstrapSwitch,
+    events: switchChangeDotbootstrapSwitch,
     selector: String,
     handler: js.Function1[/* eventobject */ BootstrapSwitchChangeEventObject, _]
   ): JQuery = js.native
   @JSName("on")
-  def on_initbootstrapSwitch(events: initDOTbootstrapSwitch): JQuery = js.native
+  def on_initbootstrapSwitch(events: initDotbootstrapSwitch): JQuery = js.native
   @JSName("on")
   def on_initbootstrapSwitch(
-    events: initDOTbootstrapSwitch,
+    events: initDotbootstrapSwitch,
     handler: js.Function1[/* eventobject */ BootstrapSwitchEventObject, _]
   ): JQuery = js.native
   @JSName("on")
-  def on_initbootstrapSwitch(events: initDOTbootstrapSwitch, selector: String): JQuery = js.native
+  def on_initbootstrapSwitch(events: initDotbootstrapSwitch, selector: String): JQuery = js.native
   @JSName("on")
   def on_initbootstrapSwitch(
-    events: initDOTbootstrapSwitch,
+    events: initDotbootstrapSwitch,
     selector: String,
     handler: js.Function1[/* eventobject */ BootstrapSwitchEventObject, _]
   ): JQuery = js.native
   @JSName("on")
-  def on_switchChangebootstrapSwitch(events: switchChangeDOTbootstrapSwitch): JQuery = js.native
+  def on_switchChangebootstrapSwitch(events: switchChangeDotbootstrapSwitch): JQuery = js.native
   @JSName("on")
   def on_switchChangebootstrapSwitch(
-    events: switchChangeDOTbootstrapSwitch,
+    events: switchChangeDotbootstrapSwitch,
     handler: js.Function1[/* eventobject */ BootstrapSwitchChangeEventObject, _]
   ): JQuery = js.native
   @JSName("on")
-  def on_switchChangebootstrapSwitch(events: switchChangeDOTbootstrapSwitch, selector: String): JQuery = js.native
+  def on_switchChangebootstrapSwitch(events: switchChangeDotbootstrapSwitch, selector: String): JQuery = js.native
   @JSName("on")
   def on_switchChangebootstrapSwitch(
-    events: switchChangeDOTbootstrapSwitch,
+    events: switchChangeDotbootstrapSwitch,
     selector: String,
     handler: js.Function1[/* eventobject */ BootstrapSwitchChangeEventObject, _]
   ): JQuery = js.native

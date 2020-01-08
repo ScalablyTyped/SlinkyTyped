@@ -17,6 +17,7 @@ import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesDiscoverDotRepo
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesFbsearchDotRepositoryMod.FbsearchRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesFriendshipDotRepositoryMod.FriendshipRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesHighlightsDotRepositoryMod.HighlightsRepository
+import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesIgtvDotRepositoryMod.IgtvRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesLauncherDotRepositoryMod.LauncherRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesLinkedDashAccountDotRepositoryMod.LinkedAccountRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesLiveDotRepositoryMod.LiveRepository
@@ -29,6 +30,7 @@ import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesNewsDotReposito
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesQeDotRepositoryMod.QeRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesQpDotRepositoryMod.QpRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesRestrictDashActionDotRepositoryMod.RestrictActionRepository
+import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesStatusDotRepositoryMod.StatusRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesTagDotRepositoryMod.TagRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesUploadDotRepositoryMod.UploadRepository
 import typingsSlinky.instagramDashPrivateDashApi.distRepositoriesUserDotRepositoryMod.UserRepository
@@ -62,6 +64,7 @@ object distCoreClientMod extends js.Object {
     var feed: FeedFactory = js.native
     var friendship: FriendshipRepository = js.native
     var highlights: HighlightsRepository = js.native
+    var igtv: IgtvRepository = js.native
     var insights: InsightsService = js.native
     var launcher: LauncherRepository = js.native
     var linkedAccount: LinkedAccountRepository = js.native
@@ -80,6 +83,7 @@ object distCoreClientMod extends js.Object {
     var search: SearchService = js.native
     var simulate: SimulateService = js.native
     var state: State = js.native
+    var status: StatusRepository = js.native
     var story: StoryService = js.native
     var tag: TagRepository = js.native
     var upload: UploadRepository = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.atTensorflowTfjs.atTensorflowTfjsMod
 
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.atTensorflowTfjs.atTensorflowTfjsNumbers.`10000`
-import typingsSlinky.atTensorflowTfjs.atTensorflowTfjsStrings.`1DOT3DOT2`
+import typingsSlinky.atTensorflowTfjs.atTensorflowTfjsStrings.`1Dot5Dot1`
 import typingsSlinky.atTensorflowTfjsDashCore.distTensorUnderscoreTypesMod.TensorContainer
 import typingsSlinky.atTensorflowTfjsDashData.distDatasetMod.DatasetContainer
 import typingsSlinky.atTensorflowTfjsDashData.distDatasourceMod.DataSource
@@ -107,7 +107,7 @@ object data extends js.Object {
     def this(url: RequestInfo, fileOptions: FileChunkIteratorOptions) = this()
   }
   
-  val version_data: `1DOT3DOT2` = js.native
+  val version_data: `1Dot5Dot1` = js.native
   def array[T /* <: TensorContainer */](items: js.Array[T]): typingsSlinky.atTensorflowTfjsDashData.distDatasetMod.Dataset[T] = js.native
   def csv(source: RequestInfo): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native
   def csv(source: RequestInfo, csvConfig: CSVConfig): typingsSlinky.atTensorflowTfjsDashData.distDatasetsCsvUnderscoreDatasetMod.CSVDataset = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +19,13 @@ object EditActorUpdateType extends js.Object {
   @js.native
   sealed trait Uncommitted extends EditActorUpdateType
   
-  /* 0 */ val Committed: typingsSlinky.sharepoint.SP.JsGrid.EditActorUpdateType.Committed with Double = js.native
-  /* 1 */ val Uncommitted: typingsSlinky.sharepoint.SP.JsGrid.EditActorUpdateType.Uncommitted with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EditActorUpdateType with Double] = js.native
+  /* 0 */ @js.native
+  object Committed extends TopLevel[Committed with Double]
+  
+  /* 1 */ @js.native
+  object Uncommitted extends TopLevel[Uncommitted with Double]
+  
 }
 

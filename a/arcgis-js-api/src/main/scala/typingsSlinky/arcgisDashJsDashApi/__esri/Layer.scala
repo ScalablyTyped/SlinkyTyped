@@ -2,7 +2,6 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisDashJsDashApi.IHandle
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`base-dynamic`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`base-elevation`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`base-tile`
@@ -120,8 +119,8 @@ trait Layer
     * @param options.signal A signal to abort the creation of the layerview.
     *
     */
-  def createLayerView(view: js.Any): Unit = js.native
-  def createLayerView(view: js.Any, options: LayerCreateLayerViewOptions): Unit = js.native
+  def createLayerView(view: js.Any): js.Promise[LayerView] = js.native
+  def createLayerView(view: js.Any, options: LayerCreateLayerViewOptions): js.Promise[LayerView] = js.native
   /**
     * Fetches custom attribution data for the layer when it becomes available.
     *
@@ -129,7 +128,7 @@ trait Layer
     *
     *
     */
-  def fetchAttributionData(): IPromise[_] = js.native
+  def fetchAttributionData(): js.Promise[_] = js.native
   @JSName("on")
   def on_layerviewcreate(name: `layerview-create`, eventHandler: LayerLayerviewCreateEventHandler): IHandle = js.native
   @JSName("on")

@@ -11,8 +11,8 @@ Utility for managing video streams using ffmpeg
 | Full name          | ffmpeg |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 24 |
-| # downloads        | 547231 |
+| # dependents       | 40 |
+| # downloads        | 847276 |
 | # stars            | 22 |
 
 ## Links

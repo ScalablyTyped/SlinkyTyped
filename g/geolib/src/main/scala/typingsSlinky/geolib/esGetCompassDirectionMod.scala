@@ -1,6 +1,5 @@
 package typingsSlinky.geolib
 
-import typingsSlinky.geolib.esGetCompassDirectionMod.BearingFunction
 import typingsSlinky.geolib.esTypesMod.GeolibInputCoordinates
 import typingsSlinky.geolib.geolibStrings.E
 import typingsSlinky.geolib.geolibStrings.ENE

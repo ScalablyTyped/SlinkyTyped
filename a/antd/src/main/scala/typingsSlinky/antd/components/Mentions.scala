@@ -10,7 +10,7 @@ import typingsSlinky.antd.libMentionsMod.MentionProps
 import typingsSlinky.antd.libMentionsMod.default
 import typingsSlinky.rcDashMentions.libMentionsMod.Placement
 import typingsSlinky.rcDashMentions.libOptionMod.OptionProps
-import typingsSlinky.rcDashMentions.rcDashMentionsNumbers.`false`
+import typingsSlinky.rcDashMentions.rcDashMentionsBooleans.`false`
 import typingsSlinky.react.reactMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,6 +61,7 @@ object Mentions
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libMentionsMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MentionProps
 }
 

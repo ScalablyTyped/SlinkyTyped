@@ -1,9 +1,8 @@
 package typingsSlinky.simplecrawler
 
 import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.simplecrawler.cacheDashBackendDashFsMod.FSBackend
 import typingsSlinky.simplecrawler.queueMod.QueueItem
-import typingsSlinky.simplecrawler.simplecrawlerNumbers.`false`
+import typingsSlinky.simplecrawler.simplecrawlerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.three.srcCoreDirectGeometryMod.DirectGeometry
 import typingsSlinky.three.srcCoreGeometryMod.Geometry
 import typingsSlinky.three.srcCoreGeometryMod.MorphTarget
 import typingsSlinky.three.srcMathBox3Mod.Box3

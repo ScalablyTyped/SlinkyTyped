@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
 import typingsSlinky.primereact.componentsPasswordPasswordMod.PasswordProps
@@ -335,6 +336,7 @@ object Password
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.passwordMod.Password] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.primereact.passwordMod.Password](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PasswordProps
 }
 

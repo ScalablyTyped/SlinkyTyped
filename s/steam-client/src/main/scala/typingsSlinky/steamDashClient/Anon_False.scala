@@ -1,8 +1,8 @@
 package typingsSlinky.steamDashClient
 
+import typingsSlinky.steamDashClient.steamDashClientBooleans.`false`
 import typingsSlinky.steamDashClient.steamDashClientMod.CMsgProtoBufHeader
 import typingsSlinky.steamDashClient.steamDashClientMod.EMsg
-import typingsSlinky.steamDashClient.steamDashClientNumbers.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

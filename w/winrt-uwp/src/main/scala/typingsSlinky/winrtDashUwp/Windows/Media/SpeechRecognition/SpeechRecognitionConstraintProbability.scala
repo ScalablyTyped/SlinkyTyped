@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,10 +24,16 @@ object SpeechRecognitionConstraintProbability extends js.Object {
   @js.native
   sealed trait min extends SpeechRecognitionConstraintProbability
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability.default with Double = js.native
-  /* 2 */ val max: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability.max with Double = js.native
-  /* 1 */ val min: typingsSlinky.winrtDashUwp.Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability.min with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SpeechRecognitionConstraintProbability with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 2 */ @js.native
+  object max extends TopLevel[max with Double]
+  
+  /* 1 */ @js.native
+  object min extends TopLevel[min with Double]
+  
 }
 

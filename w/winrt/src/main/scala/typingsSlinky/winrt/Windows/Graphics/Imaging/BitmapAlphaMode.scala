@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.Windows.Graphics.Imaging
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object BitmapAlphaMode extends js.Object {
   @js.native
   sealed trait straight extends BitmapAlphaMode
   
-  /* 2 */ val ignore: typingsSlinky.winrt.Windows.Graphics.Imaging.BitmapAlphaMode.ignore with Double = js.native
-  /* 0 */ val premultiplied: typingsSlinky.winrt.Windows.Graphics.Imaging.BitmapAlphaMode.premultiplied with Double = js.native
-  /* 1 */ val straight: typingsSlinky.winrt.Windows.Graphics.Imaging.BitmapAlphaMode.straight with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BitmapAlphaMode with Double] = js.native
+  /* 2 */ @js.native
+  object ignore extends TopLevel[ignore with Double]
+  
+  /* 0 */ @js.native
+  object premultiplied extends TopLevel[premultiplied with Double]
+  
+  /* 1 */ @js.native
+  object straight extends TopLevel[straight with Double]
+  
 }
 

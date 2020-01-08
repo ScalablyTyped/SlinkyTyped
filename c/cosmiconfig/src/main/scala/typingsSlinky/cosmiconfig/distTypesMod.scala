@@ -5,8 +5,6 @@ import typingsSlinky.cosmiconfig.cosmiconfigMod.Loader
 import typingsSlinky.cosmiconfig.cosmiconfigMod.LoaderSync
 import typingsSlinky.cosmiconfig.cosmiconfigMod.Options
 import typingsSlinky.cosmiconfig.cosmiconfigMod.OptionsSync
-import typingsSlinky.cosmiconfig.distTypesMod.Config
-import typingsSlinky.cosmiconfig.distTypesMod.CosmiconfigResult
 import typingsSlinky.std.Map
 import typingsSlinky.std.Required
 import scala.scalajs.js

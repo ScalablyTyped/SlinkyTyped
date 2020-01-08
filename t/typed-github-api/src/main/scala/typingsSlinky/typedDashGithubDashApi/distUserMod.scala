@@ -6,8 +6,6 @@ import typingsSlinky.typedDashGithubDashApi.distApiDashInterfacesUserMod.User
 import typingsSlinky.typedDashGithubDashApi.distApiDashInterfacesUserMod.UserSummary
 import typingsSlinky.typedDashGithubDashApi.distGithubDashRefMod.OptionsOrRef
 import typingsSlinky.typedDashGithubDashApi.distOwnerDashRefMod.OwnerRefClass
-import typingsSlinky.typedDashGithubDashApi.distUserMod.UserClass
-import typingsSlinky.typedDashGithubDashApi.distUserMod.UserSummaryClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

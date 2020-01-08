@@ -25,7 +25,14 @@ trait LodashMapValues extends js.Object {
     */ typingsSlinky.cypress.cypressStrings.LodashMapValues with js.Any = js.native
   def apply[T](iteratee: js.Object, obj: Dictionary[T]): Dictionary[Boolean] = js.native
   def apply[T](iteratee: js.Object, obj: NumericDictionary[T]): Dictionary[Boolean] = js.native
-  def apply[T, TResult](callback: js.Function1[/* value */ T, TResult]): LodashMapValues1x1[T, TResult] = js.native
+  def apply[T /* <: js.Object */, TResult](
+    callback: js.Function1[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+      TResult
+    ]
+  ): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]: TResult}
+    */ typingsSlinky.cypress.cypressStrings.LodashMapValues with js.Any = js.native
   def apply[T /* <: js.Object */, TResult](
     callback: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 

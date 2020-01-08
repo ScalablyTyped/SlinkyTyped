@@ -1,7 +1,6 @@
 package typingsSlinky.caniuseDashApi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.caniuseDashApi.caniuseDashApiMod.BrowserSupport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

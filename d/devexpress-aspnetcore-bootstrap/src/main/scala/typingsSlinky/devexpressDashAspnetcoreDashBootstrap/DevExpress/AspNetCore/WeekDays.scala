@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,17 +41,37 @@ object WeekDays extends js.Object {
   @js.native
   sealed trait WorkDays extends WeekDays
   
-  /* 127 */ val EveryDay: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.EveryDay with Double = js.native
-  /* 32 */ val Friday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Friday with Double = js.native
-  /* 2 */ val Monday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Monday with Double = js.native
-  /* 64 */ val Saturday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Saturday with Double = js.native
-  /* 1 */ val Sunday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Sunday with Double = js.native
-  /* 16 */ val Thursday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Thursday with Double = js.native
-  /* 4 */ val Tuesday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Tuesday with Double = js.native
-  /* 8 */ val Wednesday: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.Wednesday with Double = js.native
-  /* 65 */ val WeekendDays: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.WeekendDays with Double = js.native
-  /* 62 */ val WorkDays: typingsSlinky.devexpressDashAspnetcoreDashBootstrap.DevExpress.AspNetCore.WeekDays.WorkDays with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WeekDays with Double] = js.native
+  /* 127 */ @js.native
+  object EveryDay extends TopLevel[EveryDay with Double]
+  
+  /* 32 */ @js.native
+  object Friday extends TopLevel[Friday with Double]
+  
+  /* 2 */ @js.native
+  object Monday extends TopLevel[Monday with Double]
+  
+  /* 64 */ @js.native
+  object Saturday extends TopLevel[Saturday with Double]
+  
+  /* 1 */ @js.native
+  object Sunday extends TopLevel[Sunday with Double]
+  
+  /* 16 */ @js.native
+  object Thursday extends TopLevel[Thursday with Double]
+  
+  /* 4 */ @js.native
+  object Tuesday extends TopLevel[Tuesday with Double]
+  
+  /* 8 */ @js.native
+  object Wednesday extends TopLevel[Wednesday with Double]
+  
+  /* 65 */ @js.native
+  object WeekendDays extends TopLevel[WeekendDays with Double]
+  
+  /* 62 */ @js.native
+  object WorkDays extends TopLevel[WorkDays with Double]
+  
 }
 

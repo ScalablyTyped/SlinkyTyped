@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,18 +102,40 @@ object ChartAxisDisplayUnit extends js.Object {
   @js.native
   sealed trait trillions extends ChartAxisDisplayUnit
   
-  /* "Billions" */ val billions: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.billions with String = js.native
-  /* "Custom" */ val custom: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.custom with String = js.native
-  /* "HundredMillions" */ val hundredMillions: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.hundredMillions with String = js.native
-  /* "HundredThousands" */ val hundredThousands: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.hundredThousands with String = js.native
-  /* "Hundreds" */ val hundreds: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.hundreds with String = js.native
-  /* "Millions" */ val millions: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.millions with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.none with String = js.native
-  /* "TenMillions" */ val tenMillions: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.tenMillions with String = js.native
-  /* "TenThousands" */ val tenThousands: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.tenThousands with String = js.native
-  /* "Thousands" */ val thousands: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.thousands with String = js.native
-  /* "Trillions" */ val trillions: typingsSlinky.officeDashJs.Excel.ChartAxisDisplayUnit.trillions with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ChartAxisDisplayUnit with String] = js.native
+  /* "Billions" */ @js.native
+  object billions extends TopLevel[billions with String]
+  
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "HundredMillions" */ @js.native
+  object hundredMillions extends TopLevel[hundredMillions with String]
+  
+  /* "HundredThousands" */ @js.native
+  object hundredThousands extends TopLevel[hundredThousands with String]
+  
+  /* "Hundreds" */ @js.native
+  object hundreds extends TopLevel[hundreds with String]
+  
+  /* "Millions" */ @js.native
+  object millions extends TopLevel[millions with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "TenMillions" */ @js.native
+  object tenMillions extends TopLevel[tenMillions with String]
+  
+  /* "TenThousands" */ @js.native
+  object tenThousands extends TopLevel[tenThousands with String]
+  
+  /* "Thousands" */ @js.native
+  object thousands extends TopLevel[thousands with String]
+  
+  /* "Trillions" */ @js.native
+  object trillions extends TopLevel[trillions with String]
+  
 }
 

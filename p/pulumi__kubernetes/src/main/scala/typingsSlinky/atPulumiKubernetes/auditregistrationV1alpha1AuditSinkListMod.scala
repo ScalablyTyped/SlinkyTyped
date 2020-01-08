@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`auditregistrationDOTk8sDOTio/v1alpha1`
-import typingsSlinky.atPulumiKubernetes.auditregistrationV1alpha1AuditSinkListMod.AuditSinkList
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.auditregistrationDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.auditregistration.v1alpha1.AuditSink
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.atPulumiPulumiMod.CustomResource
@@ -41,7 +40,7 @@ object auditregistrationV1alpha1AuditSinkListMod extends js.Object {
       * values. More info:
       * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
       */
-    val apiVersion: Output[`auditregistrationDOTk8sDOTio/v1alpha1`] = js.native
+    val apiVersion: Output[auditregistrationDotk8sDotioSlashv1alpha1] = js.native
     /**
       * List of audit configurations.
       */

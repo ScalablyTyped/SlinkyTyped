@@ -1,6 +1,6 @@
 package typingsSlinky.sqlDashTemplate.sqlDashTemplateMod
 
-import typingsSlinky.sqlDashTemplate.sqlDashTemplateNumbers.`false`
+import typingsSlinky.sqlDashTemplate.sqlDashTemplateBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

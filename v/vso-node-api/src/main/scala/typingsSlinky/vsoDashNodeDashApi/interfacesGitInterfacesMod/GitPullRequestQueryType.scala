@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +29,16 @@ object GitPullRequestQueryType extends js.Object {
   @js.native
   sealed trait NotSet extends GitPullRequestQueryType
   
-  /* 2 */ val Commit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPullRequestQueryType.Commit with Double = js.native
-  /* 1 */ val LastMergeCommit: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPullRequestQueryType.LastMergeCommit with Double = js.native
-  /* 0 */ val NotSet: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.GitPullRequestQueryType.NotSet with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitPullRequestQueryType with Double] = js.native
+  /* 2 */ @js.native
+  object Commit extends TopLevel[Commit with Double]
+  
+  /* 1 */ @js.native
+  object LastMergeCommit extends TopLevel[LastMergeCommit with Double]
+  
+  /* 0 */ @js.native
+  object NotSet extends TopLevel[NotSet with Double]
+  
 }
 

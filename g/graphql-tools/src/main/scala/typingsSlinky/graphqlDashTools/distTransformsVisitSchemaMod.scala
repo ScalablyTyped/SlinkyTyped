@@ -1,12 +1,10 @@
 package typingsSlinky.graphqlDashTools
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.graphql.graphqlMod.GraphQLSchema
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLNamedType
 import typingsSlinky.graphql.typeDefinitionMod.GraphQLType
-import typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.SchemaVisitor
-import typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.TypeVisitor
-import typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,21 +58,47 @@ object distTransformsVisitSchemaMod extends js.Object {
     @js.native
     sealed trait UNION_TYPE extends VisitSchemaKind
     
-    /* "VisitSchemaKind.ABSTRACT_TYPE" */ val ABSTRACT_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.ABSTRACT_TYPE with String = js.native
-    /* "VisitSchemaKind.COMPOSITE_TYPE" */ val COMPOSITE_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.COMPOSITE_TYPE with String = js.native
-    /* "VisitSchemaKind.ENUM_TYPE" */ val ENUM_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.ENUM_TYPE with String = js.native
-    /* "VisitSchemaKind.INPUT_OBJECT_TYPE" */ val INPUT_OBJECT_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.INPUT_OBJECT_TYPE with String = js.native
-    /* "VisitSchemaKind.INTERFACE_TYPE" */ val INTERFACE_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.INTERFACE_TYPE with String = js.native
-    /* "VisitSchemaKind.MUTATION" */ val MUTATION: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.MUTATION with String = js.native
-    /* "VisitSchemaKind.OBJECT_TYPE" */ val OBJECT_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.OBJECT_TYPE with String = js.native
-    /* "VisitSchemaKind.QUERY" */ val QUERY: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.QUERY with String = js.native
-    /* "VisitSchemaKind.ROOT_OBJECT" */ val ROOT_OBJECT: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.ROOT_OBJECT with String = js.native
-    /* "VisitSchemaKind.SCALAR_TYPE" */ val SCALAR_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.SCALAR_TYPE with String = js.native
-    /* "VisitSchemaKind.SUBSCRIPTION" */ val SUBSCRIPTION: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.SUBSCRIPTION with String = js.native
-    /* "VisitSchemaKind.TYPE" */ val TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.TYPE with String = js.native
-    /* "VisitSchemaKind.UNION_TYPE" */ val UNION_TYPE: typingsSlinky.graphqlDashTools.distTransformsVisitSchemaMod.VisitSchemaKind.UNION_TYPE with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[VisitSchemaKind with String] = js.native
+    /* "VisitSchemaKind.ABSTRACT_TYPE" */ @js.native
+    object ABSTRACT_TYPE extends TopLevel[ABSTRACT_TYPE with String]
+    
+    /* "VisitSchemaKind.COMPOSITE_TYPE" */ @js.native
+    object COMPOSITE_TYPE extends TopLevel[COMPOSITE_TYPE with String]
+    
+    /* "VisitSchemaKind.ENUM_TYPE" */ @js.native
+    object ENUM_TYPE extends TopLevel[ENUM_TYPE with String]
+    
+    /* "VisitSchemaKind.INPUT_OBJECT_TYPE" */ @js.native
+    object INPUT_OBJECT_TYPE extends TopLevel[INPUT_OBJECT_TYPE with String]
+    
+    /* "VisitSchemaKind.INTERFACE_TYPE" */ @js.native
+    object INTERFACE_TYPE extends TopLevel[INTERFACE_TYPE with String]
+    
+    /* "VisitSchemaKind.MUTATION" */ @js.native
+    object MUTATION extends TopLevel[MUTATION with String]
+    
+    /* "VisitSchemaKind.OBJECT_TYPE" */ @js.native
+    object OBJECT_TYPE extends TopLevel[OBJECT_TYPE with String]
+    
+    /* "VisitSchemaKind.QUERY" */ @js.native
+    object QUERY extends TopLevel[QUERY with String]
+    
+    /* "VisitSchemaKind.ROOT_OBJECT" */ @js.native
+    object ROOT_OBJECT extends TopLevel[ROOT_OBJECT with String]
+    
+    /* "VisitSchemaKind.SCALAR_TYPE" */ @js.native
+    object SCALAR_TYPE extends TopLevel[SCALAR_TYPE with String]
+    
+    /* "VisitSchemaKind.SUBSCRIPTION" */ @js.native
+    object SUBSCRIPTION extends TopLevel[SUBSCRIPTION with String]
+    
+    /* "VisitSchemaKind.TYPE" */ @js.native
+    object TYPE extends TopLevel[TYPE with String]
+    
+    /* "VisitSchemaKind.UNION_TYPE" */ @js.native
+    object UNION_TYPE extends TopLevel[UNION_TYPE with String]
+    
   }
   
   type SchemaVisitor = StringDictionary[TypeVisitor]

@@ -9,7 +9,7 @@ import typingsSlinky.gapiDotCalendar.Anon_FileId
 import typingsSlinky.gapiDotCalendar.Anon_Key
 import typingsSlinky.gapiDotCalendar.Anon_OverridesUseDefault
 import typingsSlinky.gapiDotCalendar.Anon_Title
-import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.`calendar#event`
+import typingsSlinky.gapiDotCalendar.gapiDotCalendarStrings.calendarNumbersignevent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ class Event () extends js.Object {
   var htmlLink: String = js.native
   var iCalUID: String = js.native
   var id: String = js.native
-  var kind: `calendar#event` = js.native
+  var kind: calendarNumbersignevent = js.native
   var location: js.UndefOr[String] = js.native
   // Whether this is a locked event copy where no changes can be made to the main event fields "summary", "description", "location", "start", "end" or "recurrence". The default is False. Read-Only.
   var locked: js.UndefOr[Boolean] = js.native

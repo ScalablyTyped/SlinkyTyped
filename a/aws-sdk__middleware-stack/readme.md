@@ -10,9 +10,9 @@ Provides a means for composing multiple middleware functions into a single handl
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/middleware-stack |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 16 |
-| # downloads        | 6750 |
+| # releases         | 10 |
+| # dependents       | 368 |
+| # downloads        | 33332 |
 | # stars            | 0 |
 
 ## Links

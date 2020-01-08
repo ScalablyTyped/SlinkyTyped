@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.Social
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +30,25 @@ object SocialThreadAttributes extends js.Object {
   @js.native
   sealed trait replyLimitReached extends SocialThreadAttributes
   
-  /* 3 */ val canLock: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.canLock with Double = js.native
-  /* 2 */ val canReply: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.canReply with Double = js.native
-  /* 1 */ val isDigest: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.isDigest with Double = js.native
-  /* 4 */ val isLocked: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.isLocked with Double = js.native
-  /* 0 */ val none: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.none with Double = js.native
-  /* 5 */ val replyLimitReached: typingsSlinky.sharepoint.SP.Social.SocialThreadAttributes.replyLimitReached with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocialThreadAttributes with Double] = js.native
+  /* 3 */ @js.native
+  object canLock extends TopLevel[canLock with Double]
+  
+  /* 2 */ @js.native
+  object canReply extends TopLevel[canReply with Double]
+  
+  /* 1 */ @js.native
+  object isDigest extends TopLevel[isDigest with Double]
+  
+  /* 4 */ @js.native
+  object isLocked extends TopLevel[isLocked with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 5 */ @js.native
+  object replyLimitReached extends TopLevel[replyLimitReached with Double]
+  
 }
 

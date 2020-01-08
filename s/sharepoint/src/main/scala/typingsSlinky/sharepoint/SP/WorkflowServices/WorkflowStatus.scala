@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.SP.WorkflowServices
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,16 +38,34 @@ object WorkflowStatus extends js.Object {
   @js.native
   sealed trait terminated extends WorkflowStatus
   
-  /* 4 */ val canceled: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.canceled with Double = js.native
-  /* 3 */ val canceling: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.canceling with Double = js.native
-  /* 6 */ val completed: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.completed with Double = js.native
-  /* 8 */ val invalid: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.invalid with Double = js.native
-  /* 7 */ val notSpecified: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.notSpecified with Double = js.native
-  /* 0 */ val notStarted: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.notStarted with Double = js.native
-  /* 1 */ val started: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.started with Double = js.native
-  /* 2 */ val suspended: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.suspended with Double = js.native
-  /* 5 */ val terminated: typingsSlinky.sharepoint.SP.WorkflowServices.WorkflowStatus.terminated with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WorkflowStatus with Double] = js.native
+  /* 4 */ @js.native
+  object canceled extends TopLevel[canceled with Double]
+  
+  /* 3 */ @js.native
+  object canceling extends TopLevel[canceling with Double]
+  
+  /* 6 */ @js.native
+  object completed extends TopLevel[completed with Double]
+  
+  /* 8 */ @js.native
+  object invalid extends TopLevel[invalid with Double]
+  
+  /* 7 */ @js.native
+  object notSpecified extends TopLevel[notSpecified with Double]
+  
+  /* 0 */ @js.native
+  object notStarted extends TopLevel[notStarted with Double]
+  
+  /* 1 */ @js.native
+  object started extends TopLevel[started with Double]
+  
+  /* 2 */ @js.native
+  object suspended extends TopLevel[suspended with Double]
+  
+  /* 5 */ @js.native
+  object terminated extends TopLevel[terminated with Double]
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Networking.Sockets
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +28,19 @@ object SocketActivityKind extends js.Object {
   @js.native
   sealed trait streamSocketListener extends SocketActivityKind
   
-  /* 2 */ val datagramSocket: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityKind.datagramSocket with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityKind.none with Double = js.native
-  /* 3 */ val streamSocket: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityKind.streamSocket with Double = js.native
-  /* 1 */ val streamSocketListener: typingsSlinky.winrtDashUwp.Windows.Networking.Sockets.SocketActivityKind.streamSocketListener with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SocketActivityKind with Double] = js.native
+  /* 2 */ @js.native
+  object datagramSocket extends TopLevel[datagramSocket with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 3 */ @js.native
+  object streamSocket extends TopLevel[streamSocket with Double]
+  
+  /* 1 */ @js.native
+  object streamSocketListener extends TopLevel[streamSocketListener with Double]
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.timm
 
-import typingsSlinky.timm.timmMod.ArrayOrObject
-import typingsSlinky.timm.timmMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

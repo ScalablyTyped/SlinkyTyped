@@ -6,18 +6,23 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.ReactSVGElement
+import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`after-edge`
 import typingsSlinky.react.reactStrings.`before-edge`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.`text-after-edge`
 import typingsSlinky.react.reactStrings.`text-before-edge`
+import typingsSlinky.react.reactStrings.`use-credentials`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.alphabetic
+import typingsSlinky.react.reactStrings.anonymous
 import typingsSlinky.react.reactStrings.ascending
 import typingsSlinky.react.reactStrings.assertive
 import typingsSlinky.react.reactStrings.auto
@@ -148,7 +153,7 @@ object ReactDashIconDashBase
     ascent: Double | String = null,
     attributeName: String = null,
     attributeType: String = null,
-    autoReverse: Double | String = null,
+    autoReverse: js.UndefOr[Boolean] = js.undefined,
     azimuth: Double | String = null,
     baseFrequency: Double | String = null,
     baseProfile: Double | String = null,
@@ -170,6 +175,7 @@ object ReactDashIconDashBase
     colorRendering: Double | String = null,
     contentScriptType: Double | String = null,
     contentStyleType: Double | String = null,
+    crossOrigin: anonymous | `use-credentials` | _empty = null,
     cursor: Double | String = null,
     cx: Double | String = null,
     cy: Double | String = null,
@@ -189,7 +195,7 @@ object ReactDashIconDashBase
     enableBackground: Double | String = null,
     end: Double | String = null,
     exponent: Double | String = null,
-    externalResourcesRequired: Double | String = null,
+    externalResourcesRequired: js.UndefOr[Boolean] = js.undefined,
     fill: String = null,
     fillOpacity: Double | String = null,
     fillRule: nonzero | evenodd | inherit = null,
@@ -198,7 +204,7 @@ object ReactDashIconDashBase
     filterUnits: Double | String = null,
     floodColor: Double | String = null,
     floodOpacity: Double | String = null,
-    focusable: Double | String = null,
+    focusable: Booleanish | auto = null,
     fontFamily: String = null,
     fontSize: Double | String = null,
     fontSizeAdjust: Double | String = null,
@@ -278,7 +284,7 @@ object ReactDashIconDashBase
     pointsAtX: Double | String = null,
     pointsAtY: Double | String = null,
     pointsAtZ: Double | String = null,
-    preserveAlpha: Double | String = null,
+    preserveAlpha: js.UndefOr[Boolean] = js.undefined,
     preserveAspectRatio: String = null,
     primitiveUnits: Double | String = null,
     r: Double | String = null,
@@ -339,7 +345,6 @@ object ReactDashIconDashBase
     u1: Double | String = null,
     u2: Double | String = null,
     underlinePosition: Double | String = null,
-    underlineThickness: Double | String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -402,7 +407,7 @@ object ReactDashIconDashBase
     if (ascent != null) __obj.updateDynamic("ascent")(ascent.asInstanceOf[js.Any])
     if (attributeName != null) __obj.updateDynamic("attributeName")(attributeName.asInstanceOf[js.Any])
     if (attributeType != null) __obj.updateDynamic("attributeType")(attributeType.asInstanceOf[js.Any])
-    if (autoReverse != null) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoReverse)) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
     if (azimuth != null) __obj.updateDynamic("azimuth")(azimuth.asInstanceOf[js.Any])
     if (baseFrequency != null) __obj.updateDynamic("baseFrequency")(baseFrequency.asInstanceOf[js.Any])
     if (baseProfile != null) __obj.updateDynamic("baseProfile")(baseProfile.asInstanceOf[js.Any])
@@ -424,6 +429,7 @@ object ReactDashIconDashBase
     if (colorRendering != null) __obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
     if (contentScriptType != null) __obj.updateDynamic("contentScriptType")(contentScriptType.asInstanceOf[js.Any])
     if (contentStyleType != null) __obj.updateDynamic("contentStyleType")(contentStyleType.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
     if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
     if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
@@ -443,7 +449,7 @@ object ReactDashIconDashBase
     if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
     if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
     if (exponent != null) __obj.updateDynamic("exponent")(exponent.asInstanceOf[js.Any])
-    if (externalResourcesRequired != null) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
+    if (!js.isUndefined(externalResourcesRequired)) __obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
     if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
     if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
     if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
@@ -532,7 +538,7 @@ object ReactDashIconDashBase
     if (pointsAtX != null) __obj.updateDynamic("pointsAtX")(pointsAtX.asInstanceOf[js.Any])
     if (pointsAtY != null) __obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
     if (pointsAtZ != null) __obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
-    if (preserveAlpha != null) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveAlpha)) __obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
     if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
     if (primitiveUnits != null) __obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
     if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
@@ -593,10 +599,12 @@ object ReactDashIconDashBase
     if (u1 != null) __obj.updateDynamic("u1")(u1.asInstanceOf[js.Any])
     if (u2 != null) __obj.updateDynamic("u2")(u2.asInstanceOf[js.Any])
     if (underlinePosition != null) __obj.updateDynamic("underlinePosition")(underlinePosition.asInstanceOf[js.Any])
-    if (underlineThickness != null) __obj.updateDynamic("underlineThickness")(underlineThickness.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashIconDashBase.reactDashIconDashBaseMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = IconBaseProps
 }
 

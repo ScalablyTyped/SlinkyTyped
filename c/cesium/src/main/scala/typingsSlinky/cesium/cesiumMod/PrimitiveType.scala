@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.cesiumMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object PrimitiveType extends js.Object {
   @js.native
   sealed trait TRIANGLE_STRIP extends PrimitiveType
   
-  /* 1 */ val LINES: typingsSlinky.cesium.cesiumMod.PrimitiveType.LINES with Double = js.native
-  /* 2 */ val LINE_LOOP: typingsSlinky.cesium.cesiumMod.PrimitiveType.LINE_LOOP with Double = js.native
-  /* 3 */ val LINE_STRIP: typingsSlinky.cesium.cesiumMod.PrimitiveType.LINE_STRIP with Double = js.native
-  /* 0 */ val POINTS: typingsSlinky.cesium.cesiumMod.PrimitiveType.POINTS with Double = js.native
-  /* 4 */ val TRIANGLES: typingsSlinky.cesium.cesiumMod.PrimitiveType.TRIANGLES with Double = js.native
-  /* 6 */ val TRIANGLE_FAN: typingsSlinky.cesium.cesiumMod.PrimitiveType.TRIANGLE_FAN with Double = js.native
-  /* 5 */ val TRIANGLE_STRIP: typingsSlinky.cesium.cesiumMod.PrimitiveType.TRIANGLE_STRIP with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrimitiveType with Double] = js.native
+  /* 1 */ @js.native
+  object LINES extends TopLevel[LINES with Double]
+  
+  /* 2 */ @js.native
+  object LINE_LOOP extends TopLevel[LINE_LOOP with Double]
+  
+  /* 3 */ @js.native
+  object LINE_STRIP extends TopLevel[LINE_STRIP with Double]
+  
+  /* 0 */ @js.native
+  object POINTS extends TopLevel[POINTS with Double]
+  
+  /* 4 */ @js.native
+  object TRIANGLES extends TopLevel[TRIANGLES with Double]
+  
+  /* 6 */ @js.native
+  object TRIANGLE_FAN extends TopLevel[TRIANGLE_FAN with Double]
+  
+  /* 5 */ @js.native
+  object TRIANGLE_STRIP extends TopLevel[TRIANGLE_STRIP with Double]
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.store2.store2Mod
 
-import typingsSlinky.store2.store2Numbers.`false`
+import typingsSlinky.store2.store2Booleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

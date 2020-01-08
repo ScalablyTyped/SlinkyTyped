@@ -1,7 +1,6 @@
 package typingsSlinky.signalsDotJs
 
 import typingsSlinky.signalsDotJs.libOrgOsflashSignalsISlotMod.ISlot
-import typingsSlinky.signalsDotJs.libOrgOsflashSignalsSlotListMod.SlotList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -9,7 +9,6 @@ import typingsSlinky.jpm.jpmStrings.message
 import typingsSlinky.jpm.jpmStrings.ready
 import typingsSlinky.jpm.jpmStrings.show
 import typingsSlinky.jpm.jpmStrings.start
-import typingsSlinky.jpm.sdkPanelMod.Panel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

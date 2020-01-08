@@ -1,6 +1,5 @@
 package typingsSlinky.digibyte.digibyteMod
 
-import typingsSlinky.digibyte.digibyteMod.crypto.Signature
 import typingsSlinky.digibyte.digibyteStrings.little
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

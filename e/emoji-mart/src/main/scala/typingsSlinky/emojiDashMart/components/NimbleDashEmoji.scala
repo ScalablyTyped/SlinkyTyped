@@ -24,10 +24,10 @@ object NimbleDashEmoji
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
   def apply(
     data: Data,
     emoji: String | EmojiData,
+    size: Double,
     backgroundImageFn: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String = null,
     fallback: (/* emoji */ EmojiData, NimbleEmojiProps) => ReactComponentClass[js.Object] = null,
     forceSize: js.UndefOr[Boolean] = js.undefined,
@@ -44,7 +44,7 @@ object NimbleDashEmoji
     tooltip: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], emoji = emoji.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], emoji = emoji.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     if (backgroundImageFn != null) __obj.updateDynamic("backgroundImageFn")(js.Any.fromFunction2(backgroundImageFn))
     if (fallback != null) __obj.updateDynamic("fallback")(js.Any.fromFunction2(fallback))
     if (!js.isUndefined(forceSize)) __obj.updateDynamic("forceSize")(forceSize.asInstanceOf[js.Any])

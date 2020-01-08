@@ -56,7 +56,6 @@ object libLinearListCollectionMod extends js.Object {
     /**
       * Test whether container is empty.
       */
-    /* CompleteClass */
     /* InferMemberOverrides */
     override def empty(): Boolean = js.native
     /**
@@ -72,6 +71,7 @@ object libLinearListCollectionMod extends js.Object {
       * Erase the first element.
       */
     /* InferMemberOverrides */
+    /* InferMemberOverrides */
     override def pop_front(): Unit = js.native
     /**
       * Insert items at the end.
@@ -79,10 +79,13 @@ object libLinearListCollectionMod extends js.Object {
       * @param items Items to insert.
       * @return Number of elements in the container after insertion.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def push(items: T*): Double = js.native
     /**
-      * @inheritDoc
+      * Insert an element at the end.
+      *
+      * @param val Value to insert.
       */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
@@ -92,6 +95,7 @@ object libLinearListCollectionMod extends js.Object {
       *
       * @param val Value to insert.
       */
+    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def push_front(`val`: T): Unit = js.native
     /**
@@ -162,6 +166,10 @@ object libLinearListCollectionMod extends js.Object {
         */
       var source_ptr_ : js.Any = js.native
       def equals(obj: typingsSlinky.tstl.containerListMod.List.Iterator[T]): Boolean = js.native
+      /**
+        * @inheritDoc
+        */
+      def value(`val`: T): js.Any = js.native
     }
     
     /**
@@ -177,34 +185,39 @@ object libLinearListCollectionMod extends js.Object {
               typingsSlinky.tstl.containerListMod.List.Iterator[T], 
               typingsSlinky.tstl.containerListMod.List.ReverseIterator[T], 
               T
-            ]
+            ] {
+      /**
+        * @inheritDoc
+        */
+      def value(`val`: T): js.Any = js.native
+    }
     
     val Event: Instantiable3[
         /* type */ String, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ /* first */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ /* last */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* first */ js.Any, 
+        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* last */ js.Any, 
         CollectionEvent[
           js.Object, 
           Container[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
           typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
           typingsSlinky.tstl.tstlMod.base.ReverseIterator[
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam SourceT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam IteratorT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam ReverseT */ js.Any, 
-            /* import warning: RewrittenClass.unapply cls $anonfun was tparam T */ js.Any
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ]
         ]
       ] = js.native

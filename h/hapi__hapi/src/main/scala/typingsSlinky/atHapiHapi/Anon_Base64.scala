@@ -1,6 +1,6 @@
 package typingsSlinky.atHapiHapi
 
-import typingsSlinky.atHapiHapi.atHapiHapiNumbers.`false`
+import typingsSlinky.atHapiHapi.atHapiHapiBooleans.`false`
 import typingsSlinky.atHapiHapi.atHapiHapiStrings.Lax
 import typingsSlinky.atHapiHapi.atHapiHapiStrings.Strict
 import typingsSlinky.atHapiHapi.atHapiHapiStrings.base64

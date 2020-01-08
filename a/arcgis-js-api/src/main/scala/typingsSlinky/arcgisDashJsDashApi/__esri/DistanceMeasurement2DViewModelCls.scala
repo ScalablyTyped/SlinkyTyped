@@ -3,15 +3,15 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-feet`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.disabled
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.imperial
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.measured
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.measuring
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.metric
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.ready
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
@@ -68,7 +68,7 @@ class DistanceMeasurement2DViewModelCls () extends DistanceMeasurement2DViewMode
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#unit)
     */
   /* CompleteClass */
-  override var unit: metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers = js.native
+  override var unit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_ = js.native
   /**
     * List of available units and unit systems (imperial, metric) for displaying the distance values.
     *
@@ -76,7 +76,7 @@ class DistanceMeasurement2DViewModelCls () extends DistanceMeasurement2DViewMode
     */
   /* CompleteClass */
   override var unitOptions: js.Array[
-    metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers
+    metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
   ] = js.native
   /**
     * The view from which the widget will operate.

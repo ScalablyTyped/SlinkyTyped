@@ -1,12 +1,13 @@
 package typingsSlinky.agentkeepalive.agentkeepaliveMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.Error
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.dnsMod.LookupOneOptions
 import typingsSlinky.node.httpsMod.AgentOptions
 import typingsSlinky.node.netMod.Socket
+import typingsSlinky.node.tlsMod.KeyObject
 import typingsSlinky.node.tlsMod.PeerCertificate
+import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
 import typingsSlinky.node.tlsMod.SecureVersion
 import scala.scalajs.js
@@ -23,10 +24,10 @@ object HttpsOptions {
   @scala.inline
   def apply(
     ALPNProtocols: (js.Array[String | scala.scalajs.js.typedarray.Uint8Array]) | scala.scalajs.js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
     ca: String | Buffer | (js.Array[String | Buffer]) = null,
     cert: String | Buffer | (js.Array[String | Buffer]) = null,
-    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[Error] = null,
+    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
     ciphers: String = null,
     clientCertEngine: String = null,
     crl: String | Buffer | (js.Array[String | Buffer]) = null,
@@ -39,7 +40,7 @@ object HttpsOptions {
     host: String = null,
     keepAlive: js.UndefOr[Boolean] = js.undefined,
     keepAliveMsecs: Int | Double = null,
-    key: String | Buffer | (js.Array[Buffer | js.Object]) = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
     lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
     maxCachedSessions: Int | Double = null,
     maxFreeSockets: Int | Double = null,
@@ -49,8 +50,10 @@ object HttpsOptions {
     minVersion: SecureVersion = null,
     passphrase: String = null,
     path: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
     port: Int | Double = null,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
@@ -59,6 +62,7 @@ object HttpsOptions {
     servername: String = null,
     session: Buffer = null,
     sessionIdContext: String = null,
+    sigalgs: String = null,
     socket: Socket = null,
     socketActiveTTL: Int | Double = null,
     timeout: Int | Double = null
@@ -93,6 +97,8 @@ object HttpsOptions {
     if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
@@ -101,6 +107,7 @@ object HttpsOptions {
     if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
     if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
     if (socketActiveTTL != null) __obj.updateDynamic("socketActiveTTL")(socketActiveTTL.asInstanceOf[js.Any])
     if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])

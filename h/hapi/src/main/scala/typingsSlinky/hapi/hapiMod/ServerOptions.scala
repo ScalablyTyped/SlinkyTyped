@@ -6,7 +6,7 @@ import typingsSlinky.hapi.Anon_Concurrent
 import typingsSlinky.hapi.Anon_False
 import typingsSlinky.hapi.Anon_IsCaseSensitive
 import typingsSlinky.hapi.Anon_Parser
-import typingsSlinky.hapi.hapiNumbers.`false`
+import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.mimos.mimosMod.MimosOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -12,7 +12,6 @@ import typingsSlinky.jsrsasign.Anon_HashAlgHashValue
 import typingsSlinky.jsrsasign.Anon_Micros
 import typingsSlinky.jsrsasign.Anon_Status
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SignedData
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.MessageImprint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

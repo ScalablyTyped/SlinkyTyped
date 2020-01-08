@@ -1,7 +1,5 @@
 package typingsSlinky.titanium.Titanium
 
-import typingsSlinky.titanium.Titanium.Database.DB
-import typingsSlinky.titanium.Titanium.Database.ResultSet
 import typingsSlinky.titanium.Titanium.Filesystem.File
 import typingsSlinky.titanium.Titanium.UI.TabGroup
 import typingsSlinky.titanium.Titanium.UI.Window

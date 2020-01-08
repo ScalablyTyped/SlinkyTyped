@@ -1,9 +1,11 @@
 package typingsSlinky.reactour.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.web.html.button.tag
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.`*`.tag
 import typingsSlinky.reactour.reactourMod.CloseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +18,12 @@ object Close
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onClick */
-  def apply(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    onClick: SyntheticMouseEvent[HTMLButtonElement] => Unit,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal(onClick = js.Any.fromFunction1(onClick))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

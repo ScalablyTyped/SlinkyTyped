@@ -21,6 +21,7 @@ import typingsSlinky.stripe.stripeMod.resources.FileLinks
 import typingsSlinky.stripe.stripeMod.resources.Files
 import typingsSlinky.stripe.stripeMod.resources.InvoiceItems
 import typingsSlinky.stripe.stripeMod.resources.Invoices
+import typingsSlinky.stripe.stripeMod.resources.Issuing
 import typingsSlinky.stripe.stripeMod.resources.OAuth
 import typingsSlinky.stripe.stripeMod.resources.Orders
 import typingsSlinky.stripe.stripeMod.resources.PaymentIntents
@@ -80,6 +81,7 @@ trait Stripe extends js.Object {
   var files: Files = js.native
   var invoiceItems: InvoiceItems = js.native
   var invoices: Invoices = js.native
+  var issuing: Issuing = js.native
   var oauth: OAuth = js.native
   var orders: Orders = js.native
   var paymentIntents: PaymentIntents = js.native

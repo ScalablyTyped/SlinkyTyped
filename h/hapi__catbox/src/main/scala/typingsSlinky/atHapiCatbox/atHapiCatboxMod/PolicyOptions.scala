@@ -1,6 +1,6 @@
 package typingsSlinky.atHapiCatbox.atHapiCatboxMod
 
-import typingsSlinky.atHapiCatbox.atHapiCatboxNumbers.`false`
+import typingsSlinky.atHapiCatbox.atHapiCatboxBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

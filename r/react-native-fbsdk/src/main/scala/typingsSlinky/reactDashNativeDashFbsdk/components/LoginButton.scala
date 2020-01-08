@@ -3,6 +3,7 @@ package typingsSlinky.reactDashNativeDashFbsdk.components
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.reactDashNative.reactDashNativeMod.ViewStyle
 import typingsSlinky.reactDashNativeDashFbsdk.reactDashNativeDashFbsdkMod.DefaultAudience
@@ -52,6 +53,12 @@ object LoginButton
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.reactDashNativeDashFbsdk.reactDashNativeDashFbsdkMod.LoginButton
+  ] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.reactDashNativeDashFbsdk.reactDashNativeDashFbsdkMod.LoginButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LoginButtonProps
 }
 

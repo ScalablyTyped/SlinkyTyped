@@ -1,5 +1,6 @@
 package typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,14 +32,28 @@ object WordLen extends js.Object {
   @js.native
   sealed trait S7WLWord extends WordLen
   
-  /* 0x01 */ val S7WLBit: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLBit with Double = js.native
-  /* 0x02 */ val S7WLByte: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLByte with Double = js.native
-  /* 0x1C */ val S7WLCounter: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLCounter with Double = js.native
-  /* 0x06 */ val S7WLDWord: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLDWord with Double = js.native
-  /* 0x08 */ val S7WLReal: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLReal with Double = js.native
-  /* 0x1D */ val S7WLTimer: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLTimer with Double = js.native
-  /* 0x04 */ val S7WLWord: typingsSlinky.nodeDashSnap7.nodeDashSnap7Mod.WordLen.S7WLWord with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[WordLen with Double] = js.native
+  /* 0x01 */ @js.native
+  object S7WLBit extends TopLevel[S7WLBit with Double]
+  
+  /* 0x02 */ @js.native
+  object S7WLByte extends TopLevel[S7WLByte with Double]
+  
+  /* 0x1C */ @js.native
+  object S7WLCounter extends TopLevel[S7WLCounter with Double]
+  
+  /* 0x06 */ @js.native
+  object S7WLDWord extends TopLevel[S7WLDWord with Double]
+  
+  /* 0x08 */ @js.native
+  object S7WLReal extends TopLevel[S7WLReal with Double]
+  
+  /* 0x1D */ @js.native
+  object S7WLTimer extends TopLevel[S7WLTimer with Double]
+  
+  /* 0x04 */ @js.native
+  object S7WLWord extends TopLevel[S7WLWord with Double]
+  
 }
 

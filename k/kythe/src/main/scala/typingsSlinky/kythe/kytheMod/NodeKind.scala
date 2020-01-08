@@ -1,5 +1,6 @@
 package typingsSlinky.kythe.kytheMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,32 +86,82 @@ object NodeKind extends js.Object {
   @js.native
   sealed trait VCS extends NodeKind
   
-  /* "abs" */ val ABS: typingsSlinky.kythe.kytheMod.NodeKind.ABS with String = js.native
-  /* "absvar" */ val ABSVAR: typingsSlinky.kythe.kytheMod.NodeKind.ABSVAR with String = js.native
-  /* "anchor" */ val ANCHOR: typingsSlinky.kythe.kytheMod.NodeKind.ANCHOR with String = js.native
-  /* "constant" */ val CONSTANT: typingsSlinky.kythe.kytheMod.NodeKind.CONSTANT with String = js.native
-  /* "diagnostic" */ val DIAGNOSTIC: typingsSlinky.kythe.kytheMod.NodeKind.DIAGNOSTIC with String = js.native
-  /* "doc" */ val DOC: typingsSlinky.kythe.kytheMod.NodeKind.DOC with String = js.native
-  /* "file" */ val FILE: typingsSlinky.kythe.kytheMod.NodeKind.FILE with String = js.native
-  /* "function" */ val FUNCTION: typingsSlinky.kythe.kytheMod.NodeKind.FUNCTION with String = js.native
-  /* "interface" */ val INTERFACE: typingsSlinky.kythe.kytheMod.NodeKind.INTERFACE with String = js.native
-  /* "lookup" */ val LOOKUP: typingsSlinky.kythe.kytheMod.NodeKind.LOOKUP with String = js.native
-  /* "macro" */ val MACRO: typingsSlinky.kythe.kytheMod.NodeKind.MACRO with String = js.native
-  /* "meta" */ val META: typingsSlinky.kythe.kytheMod.NodeKind.META with String = js.native
-  /* "name" */ val NAME: typingsSlinky.kythe.kytheMod.NodeKind.NAME with String = js.native
-  /* "package" */ val PACKAGE: typingsSlinky.kythe.kytheMod.NodeKind.PACKAGE with String = js.native
-  /* "process" */ val PROCESS: typingsSlinky.kythe.kytheMod.NodeKind.PROCESS with String = js.native
-  /* "record" */ val RECORD: typingsSlinky.kythe.kytheMod.NodeKind.RECORD with String = js.native
-  /* "sum" */ val SUM: typingsSlinky.kythe.kytheMod.NodeKind.SUM with String = js.native
-  /* "symbol" */ val SYMBOL: typingsSlinky.kythe.kytheMod.NodeKind.SYMBOL with String = js.native
-  /* "talias" */ val TALIAS: typingsSlinky.kythe.kytheMod.NodeKind.TALIAS with String = js.native
-  /* "tapp" */ val TAPP: typingsSlinky.kythe.kytheMod.NodeKind.TAPP with String = js.native
-  /* "tbuiltin" */ val TBUILTIN: typingsSlinky.kythe.kytheMod.NodeKind.TBUILTIN with String = js.native
-  /* "tnominal" */ val TNOMINAL: typingsSlinky.kythe.kytheMod.NodeKind.TNOMINAL with String = js.native
-  /* "tsigma" */ val TSIGMA: typingsSlinky.kythe.kytheMod.NodeKind.TSIGMA with String = js.native
-  /* "variable" */ val VARIABLE: typingsSlinky.kythe.kytheMod.NodeKind.VARIABLE with String = js.native
-  /* "vcs" */ val VCS: typingsSlinky.kythe.kytheMod.NodeKind.VCS with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[NodeKind with String] = js.native
+  /* "abs" */ @js.native
+  object ABS extends TopLevel[ABS with String]
+  
+  /* "absvar" */ @js.native
+  object ABSVAR extends TopLevel[ABSVAR with String]
+  
+  /* "anchor" */ @js.native
+  object ANCHOR extends TopLevel[ANCHOR with String]
+  
+  /* "constant" */ @js.native
+  object CONSTANT extends TopLevel[CONSTANT with String]
+  
+  /* "diagnostic" */ @js.native
+  object DIAGNOSTIC extends TopLevel[DIAGNOSTIC with String]
+  
+  /* "doc" */ @js.native
+  object DOC extends TopLevel[DOC with String]
+  
+  /* "file" */ @js.native
+  object FILE extends TopLevel[FILE with String]
+  
+  /* "function" */ @js.native
+  object FUNCTION extends TopLevel[FUNCTION with String]
+  
+  /* "interface" */ @js.native
+  object INTERFACE extends TopLevel[INTERFACE with String]
+  
+  /* "lookup" */ @js.native
+  object LOOKUP extends TopLevel[LOOKUP with String]
+  
+  /* "macro" */ @js.native
+  object MACRO extends TopLevel[MACRO with String]
+  
+  /* "meta" */ @js.native
+  object META extends TopLevel[META with String]
+  
+  /* "name" */ @js.native
+  object NAME extends TopLevel[NAME with String]
+  
+  /* "package" */ @js.native
+  object PACKAGE extends TopLevel[PACKAGE with String]
+  
+  /* "process" */ @js.native
+  object PROCESS extends TopLevel[PROCESS with String]
+  
+  /* "record" */ @js.native
+  object RECORD extends TopLevel[RECORD with String]
+  
+  /* "sum" */ @js.native
+  object SUM extends TopLevel[SUM with String]
+  
+  /* "symbol" */ @js.native
+  object SYMBOL extends TopLevel[SYMBOL with String]
+  
+  /* "talias" */ @js.native
+  object TALIAS extends TopLevel[TALIAS with String]
+  
+  /* "tapp" */ @js.native
+  object TAPP extends TopLevel[TAPP with String]
+  
+  /* "tbuiltin" */ @js.native
+  object TBUILTIN extends TopLevel[TBUILTIN with String]
+  
+  /* "tnominal" */ @js.native
+  object TNOMINAL extends TopLevel[TNOMINAL with String]
+  
+  /* "tsigma" */ @js.native
+  object TSIGMA extends TopLevel[TSIGMA with String]
+  
+  /* "variable" */ @js.native
+  object VARIABLE extends TopLevel[VARIABLE with String]
+  
+  /* "vcs" */ @js.native
+  object VCS extends TopLevel[VCS with String]
+  
 }
 

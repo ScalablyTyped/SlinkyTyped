@@ -1,5 +1,6 @@
 package typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +29,25 @@ object ErrorTypeCase extends js.Object {
   @js.native
   sealed trait VERIFICATION extends ErrorTypeCase
   
-  /* 4 */ val DESERIALIZATION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.DESERIALIZATION with Double = js.native
-  /* 0 */ val ERRORTYPE_NOT_SET: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.ERRORTYPE_NOT_SET with Double = js.native
-  /* 5 */ val EXECUTION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.EXECUTION with Double = js.native
-  /* 3 */ val INVARIANT_VIOLATION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.INVARIANT_VIOLATION with Double = js.native
-  /* 1 */ val VALIDATION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.VALIDATION with Double = js.native
-  /* 2 */ val VERIFICATION: typingsSlinky.libraDashCore.libAtGeneratedVmUnderscoreErrorsUnderscorePbMod.VMStatus.ErrorTypeCase.VERIFICATION with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ErrorTypeCase with Double] = js.native
+  /* 4 */ @js.native
+  object DESERIALIZATION extends TopLevel[DESERIALIZATION with Double]
+  
+  /* 0 */ @js.native
+  object ERRORTYPE_NOT_SET extends TopLevel[ERRORTYPE_NOT_SET with Double]
+  
+  /* 5 */ @js.native
+  object EXECUTION extends TopLevel[EXECUTION with Double]
+  
+  /* 3 */ @js.native
+  object INVARIANT_VIOLATION extends TopLevel[INVARIANT_VIOLATION with Double]
+  
+  /* 1 */ @js.native
+  object VALIDATION extends TopLevel[VALIDATION with Double]
+  
+  /* 2 */ @js.native
+  object VERIFICATION extends TopLevel[VERIFICATION with Double]
+  
 }
 

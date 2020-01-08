@@ -12,7 +12,7 @@ Lightweight util.format() for the browser.
 | Keywords           | util, format, string |
 | # releases         | 0 |
 | # dependents       | 4 |
-| # downloads        | 10199210 |
+| # downloads        | 19511489 |
 | # stars            | 0 |
 
 ## Links

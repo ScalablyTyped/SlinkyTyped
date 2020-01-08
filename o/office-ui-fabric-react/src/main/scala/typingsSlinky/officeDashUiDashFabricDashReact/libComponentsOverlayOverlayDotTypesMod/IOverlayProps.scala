@@ -19,6 +19,7 @@ import typingsSlinky.atUifabricMergeDashStyles.libIStyleFunctionMod.IStyleFuncti
 import typingsSlinky.atUifabricStyling.libInterfacesIThemeMod.ITheme
 import typingsSlinky.atUifabricUtilities.libCreateRefMod.IRefObject
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -39,6 +40,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -73,6 +75,11 @@ import scala.scalajs.js.annotation._
 
 trait IOverlayProps extends HTMLAttributes[HTMLElement] {
   /**
+    * Allow body scroll on touch devices. Changing after mounting has no effect.
+    * @defaultvalue false
+    */
+  var allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined
+  /**
     * Gets the component ref.
     */
   var componentRef: js.UndefOr[IRefObject[IOverlay]] = js.undefined
@@ -98,6 +105,7 @@ object IOverlayProps {
   def apply(
     about: String = null,
     accessKey: String = null,
+    allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined,
     `aria-activedescendant`: String = null,
     `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
     `aria-autocomplete`: none | `inline` | list | both = null,
@@ -153,7 +161,7 @@ object IOverlayProps {
     className: String = null,
     color: String = null,
     componentRef: IRefObject[IOverlay] = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
     datatype: String = null,
@@ -277,6 +285,7 @@ object IOverlayProps {
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTouchBodyScroll)) __obj.updateDynamic("allowTouchBodyScroll")(allowTouchBodyScroll.asInstanceOf[js.Any])
     if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
     if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
@@ -332,7 +341,7 @@ object IOverlayProps {
     if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])

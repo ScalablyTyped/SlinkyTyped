@@ -1,6 +1,5 @@
 package typingsSlinky.momentDashShortformat.momentDashShortformatMod
 
-import typingsSlinky.momentDashShortformat.momentDashShortformatMod.momentMod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

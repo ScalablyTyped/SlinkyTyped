@@ -2,7 +2,6 @@ package typingsSlinky.ionic
 
 import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkMod.BaseError
 import typingsSlinky.ionic.ionicStrings.Exception
-import typingsSlinky.ionic.libErrorsMod.BaseException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

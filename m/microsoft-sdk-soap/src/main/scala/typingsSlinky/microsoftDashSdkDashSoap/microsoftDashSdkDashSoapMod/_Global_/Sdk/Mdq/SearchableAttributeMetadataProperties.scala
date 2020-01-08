@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -127,46 +128,124 @@ object SearchableAttributeMetadataProperties extends js.Object {
   @js.native
   sealed trait YomiOf extends SearchableAttributeMetadataProperties
   
-  /* 0 */ val AttributeOf: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.AttributeOf with scala.Double = js.native
-  /* 1 */ val AttributeType: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.AttributeType with scala.Double = js.native
-  /* 2 */ val CalculationOf: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.CalculationOf with scala.Double = js.native
-  /* 3 */ val CanBeSecuredForCreate: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForCreate with scala.Double = js.native
-  /* 4 */ val CanBeSecuredForRead: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForRead with scala.Double = js.native
-  /* 5 */ val CanBeSecuredForUpdate: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForUpdate with scala.Double = js.native
-  /* 6 */ val CanModifyAdditionalSettings: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.CanModifyAdditionalSettings with scala.Double = js.native
-  /* 7 */ val ColumnNumber: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.ColumnNumber with scala.Double = js.native
-  /* 8 */ val DefaultFormValue: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.DefaultFormValue with scala.Double = js.native
-  /* 9 */ val DefaultValue: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.DefaultValue with scala.Double = js.native
-  /* 10 */ val DeprecatedVersion: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.DeprecatedVersion with scala.Double = js.native
-  /* 11 */ val EntityLogicalName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.EntityLogicalName with scala.Double = js.native
-  /* 12 */ val Format: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.Format with scala.Double = js.native
-  /* 13 */ val FormatName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.FormatName with scala.Double = js.native
-  /* 14 */ val ImeMode: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.ImeMode with scala.Double = js.native
-  /* 15 */ val IntroducedVersion: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IntroducedVersion with scala.Double = js.native
-  /* 16 */ val IsAuditEnabled: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsAuditEnabled with scala.Double = js.native
-  /* 17 */ val IsCustomAttribute: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsCustomAttribute with scala.Double = js.native
-  /* 18 */ val IsCustomizable: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsCustomizable with scala.Double = js.native
-  /* 19 */ val IsManaged: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsManaged with scala.Double = js.native
-  /* 20 */ val IsPrimaryId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsPrimaryId with scala.Double = js.native
-  /* 21 */ val IsPrimaryName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsPrimaryName with scala.Double = js.native
-  /* 22 */ val IsRenameable: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsRenameable with scala.Double = js.native
-  /* 23 */ val IsSecured: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsSecured with scala.Double = js.native
-  /* 24 */ val IsValidForAdvancedFind: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForAdvancedFind with scala.Double = js.native
-  /* 25 */ val IsValidForCreate: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForCreate with scala.Double = js.native
-  /* 26 */ val IsValidForRead: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForRead with scala.Double = js.native
-  /* 27 */ val IsValidForUpdate: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForUpdate with scala.Double = js.native
-  /* 28 */ val LinkedAttributeId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.LinkedAttributeId with scala.Double = js.native
-  /* 29 */ val LogicalName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.LogicalName with scala.Double = js.native
-  /* 30 */ val MaxLength: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.MaxLength with scala.Double = js.native
-  /* 31 */ val MaxValue: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.MaxValue with scala.Double = js.native
-  /* 32 */ val MetadataId: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.MetadataId with scala.Double = js.native
-  /* 33 */ val MinValue: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.MinValue with scala.Double = js.native
-  /* 34 */ val Precision: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.Precision with scala.Double = js.native
-  /* 35 */ val PrecisionSource: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.PrecisionSource with scala.Double = js.native
-  /* 36 */ val RequiredLevel: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.RequiredLevel with scala.Double = js.native
-  /* 37 */ val SchemaName: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.SchemaName with scala.Double = js.native
-  /* 38 */ val YomiOf: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.SearchableAttributeMetadataProperties.YomiOf with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[SearchableAttributeMetadataProperties with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[SearchableAttributeMetadataProperties with Double] = js.native
+  /* 0 */ @js.native
+  object AttributeOf extends TopLevel[AttributeOf with Double]
+  
+  /* 1 */ @js.native
+  object AttributeType extends TopLevel[AttributeType with Double]
+  
+  /* 2 */ @js.native
+  object CalculationOf extends TopLevel[CalculationOf with Double]
+  
+  /* 3 */ @js.native
+  object CanBeSecuredForCreate extends TopLevel[CanBeSecuredForCreate with Double]
+  
+  /* 4 */ @js.native
+  object CanBeSecuredForRead extends TopLevel[CanBeSecuredForRead with Double]
+  
+  /* 5 */ @js.native
+  object CanBeSecuredForUpdate extends TopLevel[CanBeSecuredForUpdate with Double]
+  
+  /* 6 */ @js.native
+  object CanModifyAdditionalSettings extends TopLevel[CanModifyAdditionalSettings with Double]
+  
+  /* 7 */ @js.native
+  object ColumnNumber extends TopLevel[ColumnNumber with Double]
+  
+  /* 8 */ @js.native
+  object DefaultFormValue extends TopLevel[DefaultFormValue with Double]
+  
+  /* 9 */ @js.native
+  object DefaultValue extends TopLevel[DefaultValue with Double]
+  
+  /* 10 */ @js.native
+  object DeprecatedVersion extends TopLevel[DeprecatedVersion with Double]
+  
+  /* 11 */ @js.native
+  object EntityLogicalName extends TopLevel[EntityLogicalName with Double]
+  
+  /* 12 */ @js.native
+  object Format extends TopLevel[Format with Double]
+  
+  /* 13 */ @js.native
+  object FormatName extends TopLevel[FormatName with Double]
+  
+  /* 14 */ @js.native
+  object ImeMode extends TopLevel[ImeMode with Double]
+  
+  /* 15 */ @js.native
+  object IntroducedVersion extends TopLevel[IntroducedVersion with Double]
+  
+  /* 16 */ @js.native
+  object IsAuditEnabled extends TopLevel[IsAuditEnabled with Double]
+  
+  /* 17 */ @js.native
+  object IsCustomAttribute extends TopLevel[IsCustomAttribute with Double]
+  
+  /* 18 */ @js.native
+  object IsCustomizable extends TopLevel[IsCustomizable with Double]
+  
+  /* 19 */ @js.native
+  object IsManaged extends TopLevel[IsManaged with Double]
+  
+  /* 20 */ @js.native
+  object IsPrimaryId extends TopLevel[IsPrimaryId with Double]
+  
+  /* 21 */ @js.native
+  object IsPrimaryName extends TopLevel[IsPrimaryName with Double]
+  
+  /* 22 */ @js.native
+  object IsRenameable extends TopLevel[IsRenameable with Double]
+  
+  /* 23 */ @js.native
+  object IsSecured extends TopLevel[IsSecured with Double]
+  
+  /* 24 */ @js.native
+  object IsValidForAdvancedFind extends TopLevel[IsValidForAdvancedFind with Double]
+  
+  /* 25 */ @js.native
+  object IsValidForCreate extends TopLevel[IsValidForCreate with Double]
+  
+  /* 26 */ @js.native
+  object IsValidForRead extends TopLevel[IsValidForRead with Double]
+  
+  /* 27 */ @js.native
+  object IsValidForUpdate extends TopLevel[IsValidForUpdate with Double]
+  
+  /* 28 */ @js.native
+  object LinkedAttributeId extends TopLevel[LinkedAttributeId with Double]
+  
+  /* 29 */ @js.native
+  object LogicalName extends TopLevel[LogicalName with Double]
+  
+  /* 30 */ @js.native
+  object MaxLength extends TopLevel[MaxLength with Double]
+  
+  /* 31 */ @js.native
+  object MaxValue extends TopLevel[MaxValue with Double]
+  
+  /* 32 */ @js.native
+  object MetadataId extends TopLevel[MetadataId with Double]
+  
+  /* 33 */ @js.native
+  object MinValue extends TopLevel[MinValue with Double]
+  
+  /* 34 */ @js.native
+  object Precision extends TopLevel[Precision with Double]
+  
+  /* 35 */ @js.native
+  object PrecisionSource extends TopLevel[PrecisionSource with Double]
+  
+  /* 36 */ @js.native
+  object RequiredLevel extends TopLevel[RequiredLevel with Double]
+  
+  /* 37 */ @js.native
+  object SchemaName extends TopLevel[SchemaName with Double]
+  
+  /* 38 */ @js.native
+  object YomiOf extends TopLevel[YomiOf with Double]
+  
 }
 

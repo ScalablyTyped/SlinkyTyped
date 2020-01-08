@@ -1,10 +1,6 @@
 package typingsSlinky.d3DashInterpolate
 
 import typingsSlinky.d3DashColor.d3DashColorMod.ColorCommonInstance
-import typingsSlinky.d3DashInterpolate.d3DashInterpolateMod.ArrayInterpolator
-import typingsSlinky.d3DashInterpolate.d3DashInterpolateMod.ColorGammaInterpolationFactory
-import typingsSlinky.d3DashInterpolate.d3DashInterpolateMod.ZoomInterpolator
-import typingsSlinky.d3DashInterpolate.d3DashInterpolateMod.ZoomView
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`

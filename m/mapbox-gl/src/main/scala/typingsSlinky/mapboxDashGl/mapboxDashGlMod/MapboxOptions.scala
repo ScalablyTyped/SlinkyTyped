@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxDashGl.mapboxDashGlMod
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`bottom-left`
 import typingsSlinky.mapboxDashGl.mapboxDashGlStrings.`bottom-right`
@@ -10,6 +11,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait MapboxOptions extends js.Object {
+  /**
+    * If specified, map will use this token instead of the one defined in mapboxgl.accessToken.
+    * 
+    * @default null
+    */
+  var accessToken: js.UndefOr[String] = js.undefined
   /**
     * If true, the gl context will be created with MSA antialiasing, which can be useful for antialiasing custom layers.
     * This is false by default as a performance optimization.
@@ -92,6 +99,13 @@ trait MapboxOptions extends js.Object {
     * @default null
     */
   var localIdeographFontFamily: js.UndefOr[String] = js.undefined
+  /** A patch to apply to the default localization table for UI strings, e.g. control tooltips.
+    * The `locale` object maps namespaced UI string IDs to translated strings in the target language;
+    * see `src/ui/default_locale.js` for an example with all supported string IDs.
+    * The object may specify all UI strings (thereby adding support for a new translation) or
+    * only a subset of strings (thereby patching the default translation table).
+    */
+  var locale: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * A string representing the position of the Mapbox wordmark on the map.
     *
@@ -100,6 +114,8 @@ trait MapboxOptions extends js.Object {
   var logoPosition: js.UndefOr[`top-left` | `top-right` | `bottom-left` | `bottom-right`] = js.undefined
   /** If set, the map is constrained to the given bounds. */
   var maxBounds: js.UndefOr[LngLatBoundsLike] = js.undefined
+  /** Maximum pitch of the map */
+  var maxPitch: js.UndefOr[Double] = js.undefined
   /**
     * The maximum number of tiles stored in the tile cache for a given source. If omitted, the
     * cache will be dynamically sized based on the current viewport.
@@ -109,6 +125,8 @@ trait MapboxOptions extends js.Object {
   var maxTileCacheSize: js.UndefOr[Double] = js.undefined
   /** Maximum zoom of the map */
   var maxZoom: js.UndefOr[Double] = js.undefined
+  /** Minimum pitch of the map */
+  var minPitch: js.UndefOr[Double] = js.undefined
   /** Minimum zoom of the map */
   var minZoom: js.UndefOr[Double] = js.undefined
   /**
@@ -162,6 +180,7 @@ object MapboxOptions {
   @scala.inline
   def apply(
     container: String | Element,
+    accessToken: String = null,
     antialias: js.UndefOr[Boolean] = js.undefined,
     attributionControl: js.UndefOr[Boolean] = js.undefined,
     bearing: Int | Double = null,
@@ -183,10 +202,13 @@ object MapboxOptions {
     interactive: js.UndefOr[Boolean] = js.undefined,
     keyboard: js.UndefOr[Boolean] = js.undefined,
     localIdeographFontFamily: String = null,
+    locale: StringDictionary[String] = null,
     logoPosition: `top-left` | `top-right` | `bottom-left` | `bottom-right` = null,
     maxBounds: LngLatBoundsLike = null,
+    maxPitch: Int | Double = null,
     maxTileCacheSize: Int | Double = null,
     maxZoom: Int | Double = null,
+    minPitch: Int | Double = null,
     minZoom: Int | Double = null,
     pitch: Int | Double = null,
     pitchWithRotate: js.UndefOr[Boolean] = js.undefined,
@@ -201,6 +223,7 @@ object MapboxOptions {
     zoom: Int | Double = null
   ): MapboxOptions = {
     val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
     if (!js.isUndefined(antialias)) __obj.updateDynamic("antialias")(antialias.asInstanceOf[js.Any])
     if (!js.isUndefined(attributionControl)) __obj.updateDynamic("attributionControl")(attributionControl.asInstanceOf[js.Any])
     if (bearing != null) __obj.updateDynamic("bearing")(bearing.asInstanceOf[js.Any])
@@ -222,10 +245,13 @@ object MapboxOptions {
     if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
     if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
     if (localIdeographFontFamily != null) __obj.updateDynamic("localIdeographFontFamily")(localIdeographFontFamily.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     if (logoPosition != null) __obj.updateDynamic("logoPosition")(logoPosition.asInstanceOf[js.Any])
     if (maxBounds != null) __obj.updateDynamic("maxBounds")(maxBounds.asInstanceOf[js.Any])
+    if (maxPitch != null) __obj.updateDynamic("maxPitch")(maxPitch.asInstanceOf[js.Any])
     if (maxTileCacheSize != null) __obj.updateDynamic("maxTileCacheSize")(maxTileCacheSize.asInstanceOf[js.Any])
     if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
+    if (minPitch != null) __obj.updateDynamic("minPitch")(minPitch.asInstanceOf[js.Any])
     if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
     if (pitch != null) __obj.updateDynamic("pitch")(pitch.asInstanceOf[js.Any])
     if (!js.isUndefined(pitchWithRotate)) __obj.updateDynamic("pitchWithRotate")(pitchWithRotate.asInstanceOf[js.Any])

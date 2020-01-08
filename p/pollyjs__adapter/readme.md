@@ -1,7 +1,7 @@
 
 # Scala.js typings for pollyjs__adapter
 
-Typings are for version 2.0
+Typings are for version 3.0
 
 ## Library description:
 Extendable base adapter class used by @pollyjs
@@ -10,9 +10,9 @@ Extendable base adapter class used by @pollyjs
 | ------------------ | :-------------: |
 | Full name          | @pollyjs/adapter |
 | Keywords           | polly, pollyjs, adapter |
-| # releases         | 21 |
+| # releases         | 23 |
 | # dependents       | 6 |
-| # downloads        | 187618 |
+| # downloads        | 427494 |
 | # stars            | 0 |
 
 ## Links

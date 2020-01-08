@@ -11,8 +11,8 @@ Graylog2 client library for node.js
 | Full name          | graylog2 |
 | Keywords           | - |
 | # releases         | 2 |
-| # dependents       | 12 |
-| # downloads        | 463463 |
+| # dependents       | 13 |
+| # downloads        | 473882 |
 | # stars            | 1 |
 
 ## Links

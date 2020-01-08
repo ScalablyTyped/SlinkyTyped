@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.baseContainerIHashMapMod.IHashMap
 import typingsSlinky.tstl.baseContainerMapContainerMod.MapContainer
 import typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.Iterator
 import typingsSlinky.tstl.baseContainerMapElementListMod.MapElementList.ReverseIterator

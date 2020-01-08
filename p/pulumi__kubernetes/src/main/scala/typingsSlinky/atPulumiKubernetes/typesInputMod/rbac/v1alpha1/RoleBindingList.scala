@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.rbac.v1alpha1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1alpha1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1alpha1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ListMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -8,7 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * RoleBindingList is a collection of RoleBindings
+  * RoleBindingList is a collection of RoleBindings Deprecated in v1.17 in favor of
+  * rbac.authorization.k8s.io/v1 RoleBindingList, and will no longer be served in v1.20.
   */
 trait RoleBindingList extends js.Object {
   /**
@@ -17,7 +18,7 @@ trait RoleBindingList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`rbacDOTauthorizationDOTk8sDOTio/v1alpha1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1alpha1]] = js.undefined
   /**
     * Items is a list of RoleBindings
     */
@@ -41,7 +42,7 @@ object RoleBindingList {
   @scala.inline
   def apply(
     items: Input[js.Array[Input[RoleBinding]]],
-    apiVersion: Input[`rbacDOTauthorizationDOTk8sDOTio/v1alpha1`] = null,
+    apiVersion: Input[rbacDotauthorizationDotk8sDotioSlashv1alpha1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.RoleBindingList] = null,
     metadata: Input[ListMeta] = null
   ): RoleBindingList = {

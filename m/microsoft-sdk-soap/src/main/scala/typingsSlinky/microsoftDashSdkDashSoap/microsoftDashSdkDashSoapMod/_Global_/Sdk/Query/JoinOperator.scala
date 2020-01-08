@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,16 @@ object JoinOperator extends js.Object {
   @js.native
   sealed trait Natural extends JoinOperator
   
-  /* 0 */ val Inner: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.JoinOperator.Inner with scala.Double = js.native
-  /* 1 */ val LeftOuter: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.JoinOperator.LeftOuter with scala.Double = js.native
-  /* 2 */ val Natural: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Query.JoinOperator.Natural with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[JoinOperator with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[JoinOperator with Double] = js.native
+  /* 0 */ @js.native
+  object Inner extends TopLevel[Inner with Double]
+  
+  /* 1 */ @js.native
+  object LeftOuter extends TopLevel[LeftOuter with Double]
+  
+  /* 2 */ @js.native
+  object Natural extends TopLevel[Natural with Double]
+  
 }
 

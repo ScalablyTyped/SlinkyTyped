@@ -2,7 +2,7 @@ package typingsSlinky.antd.libModalModalMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.antd.antdNumbers.`false`
+import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.cancel
 import typingsSlinky.antd.antdStrings.ok
 import typingsSlinky.antd.libButtonButtonMod.ButtonType

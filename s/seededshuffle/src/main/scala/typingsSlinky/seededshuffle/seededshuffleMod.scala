@@ -1,6 +1,6 @@
 package typingsSlinky.seededshuffle
 
-import typingsSlinky.seededshuffle.seededshuffleNumbers.`true`
+import typingsSlinky.seededshuffle.seededshuffleBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

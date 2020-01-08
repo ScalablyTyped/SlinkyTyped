@@ -15,7 +15,7 @@ import typingsSlinky.atom.Anon_PreserveLeadingWhitespace
 import typingsSlinky.atom.Anon_ReversedBoolean
 import typingsSlinky.atom.Anon_Scopes
 import typingsSlinky.atom.Anon_Text
-import typingsSlinky.atom.atomNumbers.`false`
+import typingsSlinky.atom.atomBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

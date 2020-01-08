@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +20,13 @@ object LabelDesign extends js.Object {
   @js.native
   sealed trait Standard extends LabelDesign
   
-  /* 0 */ val Bold: typingsSlinky.openui5.sap.m.LabelDesign.Bold with Double = js.native
-  /* 1 */ val Standard: typingsSlinky.openui5.sap.m.LabelDesign.Standard with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[LabelDesign with Double] = js.native
+  /* 0 */ @js.native
+  object Bold extends TopLevel[Bold with Double]
+  
+  /* 1 */ @js.native
+  object Standard extends TopLevel[Standard with Double]
+  
 }
 

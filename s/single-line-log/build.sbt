@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "single-line-log"
-version := "1.1-dt-20180226Z-73d854"
+version := "1.1-dt-20180226Z-0356b3"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

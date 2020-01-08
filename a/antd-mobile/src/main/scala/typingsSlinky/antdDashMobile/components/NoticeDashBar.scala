@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NoticeDashBar extends SharedApply_NoticeWebProps_83979588[default] {
+object NoticeDashBar extends SharedApply_NoticeWebProps631670119[default] {
   @JSImport("antd-mobile/lib/notice-bar", JSImport.Default)
   @js.native
   object componentImport extends js.Object

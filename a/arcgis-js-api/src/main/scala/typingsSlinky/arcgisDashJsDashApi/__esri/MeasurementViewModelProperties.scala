@@ -14,14 +14,14 @@ import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.acres
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.area
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.ares
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.distance
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.hectares
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.imperial
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.metric
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,7 +58,7 @@ trait MeasurementViewModelProperties extends js.Object {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Measurement-MeasurementViewModel.html#linearUnit)
     */
   var linearUnit: js.UndefOr[
-    metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers
+    metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
   ] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
@@ -74,7 +74,7 @@ object MeasurementViewModelProperties {
     activeTool: area | distance | `direct-line` = null,
     activeViewModel: AreaMeasurement2DViewModel | AreaMeasurement3DViewModelProperties | DirectLineMeasurement3DViewModelProperties | DistanceMeasurement2DViewModel = null,
     areaUnit: metric | imperial | `square-inches` | `square-feet` | `square-us-feet` | `square-yards` | `square-miles` | `square-meters` | `square-kilometers` | acres | ares | hectares = null,
-    linearUnit: metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers = null,
+    linearUnit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_ = null,
     view: MapViewProperties | SceneViewProperties = null
   ): MeasurementViewModelProperties = {
     val __obj = js.Dynamic.literal()

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VerticalDivider extends SharedApply_IVerticalDividerProps1457417911 {
+object VerticalDivider extends SharedApply_IVerticalDividerProps1641033080 {
   @JSImport("office-ui-fabric-react/lib/Divider", "VerticalDivider")
   @js.native
   object componentImport extends js.Object

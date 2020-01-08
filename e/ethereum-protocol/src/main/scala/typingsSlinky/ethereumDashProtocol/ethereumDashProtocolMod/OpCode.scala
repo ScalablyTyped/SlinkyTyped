@@ -1,5 +1,6 @@
 package typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,17 +41,37 @@ object OpCode extends js.Object {
   @js.native
   sealed trait Stop extends OpCode
   
-  /* "CALL" */ val Call: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Call with String = js.native
-  /* "CALLCODE" */ val CallCode: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.CallCode with String = js.native
-  /* "CREATE" */ val Create: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Create with String = js.native
-  /* "DELEGATECALL" */ val DelegateCall: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.DelegateCall with String = js.native
-  /* "INVALID" */ val Invalid: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Invalid with String = js.native
-  /* "RETURN" */ val Return: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Return with String = js.native
-  /* "REVERT" */ val Revert: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Revert with String = js.native
-  /* "SELFDESTRUCT" */ val SelfDestruct: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.SelfDestruct with String = js.native
-  /* "STATICCALL" */ val StaticCall: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.StaticCall with String = js.native
-  /* "STOP" */ val Stop: typingsSlinky.ethereumDashProtocol.ethereumDashProtocolMod.OpCode.Stop with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[OpCode with String] = js.native
+  /* "CALL" */ @js.native
+  object Call extends TopLevel[Call with String]
+  
+  /* "CALLCODE" */ @js.native
+  object CallCode extends TopLevel[CallCode with String]
+  
+  /* "CREATE" */ @js.native
+  object Create extends TopLevel[Create with String]
+  
+  /* "DELEGATECALL" */ @js.native
+  object DelegateCall extends TopLevel[DelegateCall with String]
+  
+  /* "INVALID" */ @js.native
+  object Invalid extends TopLevel[Invalid with String]
+  
+  /* "RETURN" */ @js.native
+  object Return extends TopLevel[Return with String]
+  
+  /* "REVERT" */ @js.native
+  object Revert extends TopLevel[Revert with String]
+  
+  /* "SELFDESTRUCT" */ @js.native
+  object SelfDestruct extends TopLevel[SelfDestruct with String]
+  
+  /* "STATICCALL" */ @js.native
+  object StaticCall extends TopLevel[StaticCall with String]
+  
+  /* "STOP" */ @js.native
+  object Stop extends TopLevel[Stop with String]
+  
 }
 

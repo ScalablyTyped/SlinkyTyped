@@ -6,8 +6,8 @@ import typingsSlinky.yup.Anon_Length
 import typingsSlinky.yup.Anon_Max
 import typingsSlinky.yup.Anon_Min
 import typingsSlinky.yup.Anon_Regex
-import typingsSlinky.yup.yupNumbers.`false`
-import typingsSlinky.yup.yupNumbers.`true`
+import typingsSlinky.yup.yupBooleans.`false`
+import typingsSlinky.yup.yupBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

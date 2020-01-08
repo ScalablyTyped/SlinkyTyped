@@ -1,7 +1,6 @@
 package typingsSlinky.atIonicAngular
 
 import typingsSlinky.atAngularCore.atAngularCoreMod.NgZone
-import typingsSlinky.atIonicAngular.distProvidersPlatformMod.BackButtonEmitter
 import typingsSlinky.atIonicCore.atIonicCoreMod.BackButtonEventDetail
 import typingsSlinky.atIonicCore.distTypesUtilsPlatformMod.Platforms
 import typingsSlinky.rxjs.rxjsMod.Subject

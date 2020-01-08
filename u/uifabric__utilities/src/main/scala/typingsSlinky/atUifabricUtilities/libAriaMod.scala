@@ -1,6 +1,6 @@
 package typingsSlinky.atUifabricUtilities
 
-import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesNumbers.`false`
+import typingsSlinky.atUifabricUtilities.atUifabricUtilitiesBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

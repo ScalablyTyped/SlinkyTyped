@@ -1,6 +1,6 @@
 package typingsSlinky.atFirebaseFirestore
 
-import typingsSlinky.atFirebaseFirestore.distSrcUtilLogMod.LogLevel
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +26,17 @@ object distSrcUtilLogMod extends js.Object {
     @js.native
     sealed trait SILENT extends LogLevel
     
-    /* 0 */ val DEBUG: typingsSlinky.atFirebaseFirestore.distSrcUtilLogMod.LogLevel.DEBUG with Double = js.native
-    /* 1 */ val ERROR: typingsSlinky.atFirebaseFirestore.distSrcUtilLogMod.LogLevel.ERROR with Double = js.native
-    /* 2 */ val SILENT: typingsSlinky.atFirebaseFirestore.distSrcUtilLogMod.LogLevel.SILENT with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[LogLevel with Double] = js.native
+    /* 0 */ @js.native
+    object DEBUG extends TopLevel[DEBUG with Double]
+    
+    /* 1 */ @js.native
+    object ERROR extends TopLevel[ERROR with Double]
+    
+    /* 2 */ @js.native
+    object SILENT extends TopLevel[SILENT with Double]
+    
   }
   
 }

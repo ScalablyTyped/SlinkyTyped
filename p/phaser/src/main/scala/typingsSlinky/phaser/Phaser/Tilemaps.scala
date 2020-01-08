@@ -24,15 +24,6 @@ import typingsSlinky.phaser.Phaser.Geom.Rectangle
 import typingsSlinky.phaser.Phaser.Geom.Triangle
 import typingsSlinky.phaser.Phaser.Math.Vector2
 import typingsSlinky.phaser.Phaser.Textures.Texture
-import typingsSlinky.phaser.Phaser.Tilemaps.DynamicTilemapLayer
-import typingsSlinky.phaser.Phaser.Tilemaps.ImageCollection
-import typingsSlinky.phaser.Phaser.Tilemaps.LayerData
-import typingsSlinky.phaser.Phaser.Tilemaps.MapData
-import typingsSlinky.phaser.Phaser.Tilemaps.ObjectLayer
-import typingsSlinky.phaser.Phaser.Tilemaps.StaticTilemapLayer
-import typingsSlinky.phaser.Phaser.Tilemaps.Tile
-import typingsSlinky.phaser.Phaser.Tilemaps.Tilemap
-import typingsSlinky.phaser.Phaser.Tilemaps.Tileset
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Sprite.SpriteConfig
 import typingsSlinky.phaser.Phaser.Types.Tilemaps.FilteringOptions
 import typingsSlinky.phaser.Phaser.Types.Tilemaps.MapDataConfig

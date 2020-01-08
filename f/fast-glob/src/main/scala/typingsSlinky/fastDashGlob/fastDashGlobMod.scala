@@ -1,9 +1,5 @@
 package typingsSlinky.fastDashGlob
 
-import typingsSlinky.fastDashGlob.fastDashGlobMod.EntryObjectModePredicate
-import typingsSlinky.fastDashGlob.fastDashGlobMod.EntryObjectPredicate
-import typingsSlinky.fastDashGlob.fastDashGlobMod.EntryStatsPredicate
-import typingsSlinky.fastDashGlob.fastDashGlobMod.Task
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

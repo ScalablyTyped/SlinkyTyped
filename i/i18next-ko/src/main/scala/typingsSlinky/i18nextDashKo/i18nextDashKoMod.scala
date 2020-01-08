@@ -1,7 +1,6 @@
 package typingsSlinky.i18nextDashKo
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.i18nextDashKo.i18nextDashKoMod.i18nextkoResourceStore
 import typingsSlinky.knockout.KnockoutComputed
 import typingsSlinky.knockout.KnockoutStatic
 import scala.scalajs.js

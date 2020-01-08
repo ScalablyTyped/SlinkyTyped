@@ -10,9 +10,9 @@ Easily subclass errors
 | ------------------ | :-------------: |
 | Full name          | super-error |
 | Keywords           | error, class, subclass, inheritance |
-| # releases         | 7 |
+| # releases         | 6 |
 | # dependents       | 10 |
-| # downloads        | 239555 |
+| # downloads        | 235702 |
 | # stars            | 0 |
 
 ## Links

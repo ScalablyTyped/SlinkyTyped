@@ -1,5 +1,6 @@
 package typingsSlinky.escodegen.escodegenMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,30 +80,76 @@ object Precedence extends js.Object {
   @js.native
   sealed trait Yield extends Precedence
   
-  /* 14 */ val Additive: typingsSlinky.escodegen.escodegenMod.Precedence.Additive with Double = js.native
-  /* 5 */ val ArrowFunction: typingsSlinky.escodegen.escodegenMod.Precedence.ArrowFunction with Double = js.native
-  /* 3 */ val Assignment: typingsSlinky.escodegen.escodegenMod.Precedence.Assignment with Double = js.native
-  /* 2 */ val Await: typingsSlinky.escodegen.escodegenMod.Precedence.Await with Double = js.native
-  /* 10 */ val BitwiseAND: typingsSlinky.escodegen.escodegenMod.Precedence.BitwiseAND with Double = js.native
-  /* 8 */ val BitwiseOR: typingsSlinky.escodegen.escodegenMod.Precedence.BitwiseOR with Double = js.native
-  /* 13 */ val BitwiseSHIFT: typingsSlinky.escodegen.escodegenMod.Precedence.BitwiseSHIFT with Double = js.native
-  /* 9 */ val BitwiseXOR: typingsSlinky.escodegen.escodegenMod.Precedence.BitwiseXOR with Double = js.native
-  /* 18 */ val Call: typingsSlinky.escodegen.escodegenMod.Precedence.Call with Double = js.native
-  /* 4 */ val Conditional: typingsSlinky.escodegen.escodegenMod.Precedence.Conditional with Double = js.native
-  /* 11 */ val Equality: typingsSlinky.escodegen.escodegenMod.Precedence.Equality with Double = js.native
-  /* 7 */ val LogicalAND: typingsSlinky.escodegen.escodegenMod.Precedence.LogicalAND with Double = js.native
-  /* 6 */ val LogicalOR: typingsSlinky.escodegen.escodegenMod.Precedence.LogicalOR with Double = js.native
-  /* 21 */ val Member: typingsSlinky.escodegen.escodegenMod.Precedence.Member with Double = js.native
-  /* 15 */ val Multiplicative: typingsSlinky.escodegen.escodegenMod.Precedence.Multiplicative with Double = js.native
-  /* 19 */ val New: typingsSlinky.escodegen.escodegenMod.Precedence.New with Double = js.native
-  /* 17 */ val Postfix: typingsSlinky.escodegen.escodegenMod.Precedence.Postfix with Double = js.native
-  /* 22 */ val Primary: typingsSlinky.escodegen.escodegenMod.Precedence.Primary with Double = js.native
-  /* 12 */ val Relational: typingsSlinky.escodegen.escodegenMod.Precedence.Relational with Double = js.native
-  /* 0 */ val Sequence: typingsSlinky.escodegen.escodegenMod.Precedence.Sequence with Double = js.native
-  /* 20 */ val TaggedTemplate: typingsSlinky.escodegen.escodegenMod.Precedence.TaggedTemplate with Double = js.native
-  /* 16 */ val Unary: typingsSlinky.escodegen.escodegenMod.Precedence.Unary with Double = js.native
-  /* 1 */ val Yield: typingsSlinky.escodegen.escodegenMod.Precedence.Yield with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Precedence with Double] = js.native
+  /* 14 */ @js.native
+  object Additive extends TopLevel[Additive with Double]
+  
+  /* 5 */ @js.native
+  object ArrowFunction extends TopLevel[ArrowFunction with Double]
+  
+  /* 3 */ @js.native
+  object Assignment extends TopLevel[Assignment with Double]
+  
+  /* 2 */ @js.native
+  object Await extends TopLevel[Await with Double]
+  
+  /* 10 */ @js.native
+  object BitwiseAND extends TopLevel[BitwiseAND with Double]
+  
+  /* 8 */ @js.native
+  object BitwiseOR extends TopLevel[BitwiseOR with Double]
+  
+  /* 13 */ @js.native
+  object BitwiseSHIFT extends TopLevel[BitwiseSHIFT with Double]
+  
+  /* 9 */ @js.native
+  object BitwiseXOR extends TopLevel[BitwiseXOR with Double]
+  
+  /* 18 */ @js.native
+  object Call extends TopLevel[Call with Double]
+  
+  /* 4 */ @js.native
+  object Conditional extends TopLevel[Conditional with Double]
+  
+  /* 11 */ @js.native
+  object Equality extends TopLevel[Equality with Double]
+  
+  /* 7 */ @js.native
+  object LogicalAND extends TopLevel[LogicalAND with Double]
+  
+  /* 6 */ @js.native
+  object LogicalOR extends TopLevel[LogicalOR with Double]
+  
+  /* 21 */ @js.native
+  object Member extends TopLevel[Member with Double]
+  
+  /* 15 */ @js.native
+  object Multiplicative extends TopLevel[Multiplicative with Double]
+  
+  /* 19 */ @js.native
+  object New extends TopLevel[New with Double]
+  
+  /* 17 */ @js.native
+  object Postfix extends TopLevel[Postfix with Double]
+  
+  /* 22 */ @js.native
+  object Primary extends TopLevel[Primary with Double]
+  
+  /* 12 */ @js.native
+  object Relational extends TopLevel[Relational with Double]
+  
+  /* 0 */ @js.native
+  object Sequence extends TopLevel[Sequence with Double]
+  
+  /* 20 */ @js.native
+  object TaggedTemplate extends TopLevel[TaggedTemplate with Double]
+  
+  /* 16 */ @js.native
+  object Unary extends TopLevel[Unary with Double]
+  
+  /* 1 */ @js.native
+  object Yield extends TopLevel[Yield with Double]
+  
 }
 

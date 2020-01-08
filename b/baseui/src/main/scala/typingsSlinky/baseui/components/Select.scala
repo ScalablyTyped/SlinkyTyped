@@ -12,12 +12,13 @@ import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.baseui.Anon_LabelKey
 import typingsSlinky.baseui.Anon_Option
-import typingsSlinky.baseui.Anon_Option_666053661
+import typingsSlinky.baseui.Anon_Option_1721897024
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.search
 import typingsSlinky.baseui.baseuiStrings.select
+import typingsSlinky.baseui.selectMod.OptionsT
 import typingsSlinky.baseui.selectMod.SelectOverrides
 import typingsSlinky.baseui.selectMod.SelectProps
 import typingsSlinky.baseui.selectMod.Value
@@ -47,7 +48,7 @@ object Select
     filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[Anon_LabelKey]) => Value = null,
     filterOutSelected: js.UndefOr[Boolean] = js.undefined,
     getOptionLabel: /* args */ Anon_Option => TagMod[Any] = null,
-    getValueLabel: /* args */ Anon_Option_666053661 => TagMod[Any] = null,
+    getValueLabel: /* args */ Anon_Option_1721897024 => TagMod[Any] = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
     maxDropdownHeight: String = null,
@@ -61,7 +62,7 @@ object Select
     onOpen: () => _ = null,
     onSelectResetsInput: js.UndefOr[Boolean] = js.undefined,
     openOnClick: js.UndefOr[Boolean] = js.undefined,
-    options: Value = null,
+    options: OptionsT = null,
     overrides: SelectOverrides = null,
     placeholder: TagMod[Any] = null,
     positive: js.UndefOr[Boolean] = js.undefined,
@@ -114,6 +115,7 @@ object Select
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.Select] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.selectMod.Select](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SelectProps
 }
 

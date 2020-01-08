@@ -1,5 +1,6 @@
 package typingsSlinky.thrift.thriftMod.Thrift
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,24 +62,58 @@ object Type extends js.Object {
   @js.native
   sealed trait VOID extends Type
   
-  /* 2 */ val BOOL: typingsSlinky.thrift.thriftMod.Thrift.Type.BOOL with Double = js.native
-  /* 3 */ val BYTE: typingsSlinky.thrift.thriftMod.Thrift.Type.BYTE with Double = js.native
-  /* 4 */ val DOUBLE: typingsSlinky.thrift.thriftMod.Thrift.Type.DOUBLE with Double = js.native
-  /* 3 */ val I08: typingsSlinky.thrift.thriftMod.Thrift.Type.I08 with Double = js.native
-  /* 6 */ val I16: typingsSlinky.thrift.thriftMod.Thrift.Type.I16 with Double = js.native
-  /* 8 */ val I32: typingsSlinky.thrift.thriftMod.Thrift.Type.I32 with Double = js.native
-  /* 10 */ val I64: typingsSlinky.thrift.thriftMod.Thrift.Type.I64 with Double = js.native
-  /* 15 */ val LIST: typingsSlinky.thrift.thriftMod.Thrift.Type.LIST with Double = js.native
-  /* 13 */ val MAP: typingsSlinky.thrift.thriftMod.Thrift.Type.MAP with Double = js.native
-  /* 14 */ val SET: typingsSlinky.thrift.thriftMod.Thrift.Type.SET with Double = js.native
-  /* 0 */ val STOP: typingsSlinky.thrift.thriftMod.Thrift.Type.STOP with Double = js.native
-  /* 11 */ val STRING: typingsSlinky.thrift.thriftMod.Thrift.Type.STRING with Double = js.native
-  /* 12 */ val STRUCT: typingsSlinky.thrift.thriftMod.Thrift.Type.STRUCT with Double = js.native
-  /* 17 */ val UTF16: typingsSlinky.thrift.thriftMod.Thrift.Type.UTF16 with Double = js.native
-  /* 11 */ val UTF7: typingsSlinky.thrift.thriftMod.Thrift.Type.UTF7 with Double = js.native
-  /* 16 */ val UTF8: typingsSlinky.thrift.thriftMod.Thrift.Type.UTF8 with Double = js.native
-  /* 1 */ val VOID: typingsSlinky.thrift.thriftMod.Thrift.Type.VOID with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Type with Double] = js.native
+  /* 2 */ @js.native
+  object BOOL extends TopLevel[BOOL with Double]
+  
+  /* 3 */ @js.native
+  object BYTE extends TopLevel[BYTE with Double]
+  
+  /* 4 */ @js.native
+  object DOUBLE extends TopLevel[DOUBLE with Double]
+  
+  /* 3 */ @js.native
+  object I08 extends TopLevel[I08 with Double]
+  
+  /* 6 */ @js.native
+  object I16 extends TopLevel[I16 with Double]
+  
+  /* 8 */ @js.native
+  object I32 extends TopLevel[I32 with Double]
+  
+  /* 10 */ @js.native
+  object I64 extends TopLevel[I64 with Double]
+  
+  /* 15 */ @js.native
+  object LIST extends TopLevel[LIST with Double]
+  
+  /* 13 */ @js.native
+  object MAP extends TopLevel[MAP with Double]
+  
+  /* 14 */ @js.native
+  object SET extends TopLevel[SET with Double]
+  
+  /* 0 */ @js.native
+  object STOP extends TopLevel[STOP with Double]
+  
+  /* 11 */ @js.native
+  object STRING extends TopLevel[STRING with Double]
+  
+  /* 12 */ @js.native
+  object STRUCT extends TopLevel[STRUCT with Double]
+  
+  /* 17 */ @js.native
+  object UTF16 extends TopLevel[UTF16 with Double]
+  
+  /* 11 */ @js.native
+  object UTF7 extends TopLevel[UTF7 with Double]
+  
+  /* 16 */ @js.native
+  object UTF8 extends TopLevel[UTF8 with Double]
+  
+  /* 1 */ @js.native
+  object VOID extends TopLevel[VOID with Double]
+  
 }
 

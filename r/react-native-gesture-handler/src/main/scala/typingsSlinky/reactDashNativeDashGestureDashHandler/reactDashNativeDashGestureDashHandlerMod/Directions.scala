@@ -1,5 +1,6 @@
 package typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object Directions extends js.Object {
   @js.native
   sealed trait UP extends Directions
   
-  /* 8 */ val DOWN: typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Directions.DOWN with Double = js.native
-  /* 2 */ val LEFT: typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Directions.LEFT with Double = js.native
-  /* 1 */ val RIGHT: typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Directions.RIGHT with Double = js.native
-  /* 4 */ val UP: typingsSlinky.reactDashNativeDashGestureDashHandler.reactDashNativeDashGestureDashHandlerMod.Directions.UP with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Directions with Double] = js.native
+  /* 8 */ @js.native
+  object DOWN extends TopLevel[DOWN with Double]
+  
+  /* 2 */ @js.native
+  object LEFT extends TopLevel[LEFT with Double]
+  
+  /* 1 */ @js.native
+  object RIGHT extends TopLevel[RIGHT with Double]
+  
+  /* 4 */ @js.native
+  object UP extends TopLevel[UP with Double]
+  
 }
 

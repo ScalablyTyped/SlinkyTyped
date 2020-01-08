@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionFavoriteBorder
-  extends SharedApply_SvgIconProps657215518[typingsSlinky.materialDashUi.svgDashIconsMod.ActionFavoriteBorder] {
+  extends SharedApply_SvgIconProps221151894[typingsSlinky.materialDashUi.svgDashIconsMod.ActionFavoriteBorder] {
   @JSImport("material-ui/svg-icons", "ActionFavoriteBorder")
   @js.native
   object componentImport extends js.Object

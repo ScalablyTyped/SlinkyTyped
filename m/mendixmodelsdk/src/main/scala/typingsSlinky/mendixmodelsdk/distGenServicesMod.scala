@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.distGenServicesMod.services.HttpMethod
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractEnum
 import typingsSlinky.mendixmodelsdk.distSdkInternalVersionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distSdkInternalVersionChecksMod.StructureType

@@ -1,5 +1,6 @@
 package typingsSlinky.ejDotWebDotAll.ej.TreeGrid
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object BatchEditMode extends js.Object {
   @js.native
   sealed trait Row extends BatchEditMode
   
-  /* 0 */ val Cell: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.BatchEditMode.Cell with Double = js.native
-  /* 2 */ val Dialog: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.BatchEditMode.Dialog with Double = js.native
-  /* 1 */ val Row: typingsSlinky.ejDotWebDotAll.ej.TreeGrid.BatchEditMode.Row with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[BatchEditMode with Double] = js.native
+  /* 0 */ @js.native
+  object Cell extends TopLevel[Cell with Double]
+  
+  /* 2 */ @js.native
+  object Dialog extends TopLevel[Dialog with Double]
+  
+  /* 1 */ @js.native
+  object Row extends TopLevel[Row with Double]
+  
 }
 

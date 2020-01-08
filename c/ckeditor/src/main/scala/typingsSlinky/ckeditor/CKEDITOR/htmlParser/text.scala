@@ -11,6 +11,6 @@ class text protected () extends node {
   var `type`: Double = js.native
   def filter(filter: typingsSlinky.ckeditor.CKEDITOR.htmlParser.filter): Boolean = js.native
   def writeHtml(writer: basicWriter): Unit = js.native
-  def writeHtml(writer: basicWriter, filter: typingsSlinky.ckeditor.CKEDITOR.htmlParser.filter): Unit = js.native
+  def writeHtml(writer: basicWriter, filter: filter): Unit = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.googlemaps.google.maps.visualization
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.MVCObject
 import typingsSlinky.googlemaps.google.maps.Map
 import scala.scalajs.js
@@ -12,7 +13,7 @@ class MapsEngineLayer protected () extends MVCObject {
   def this(options: MapsEngineLayerOptions) = this()
   def getLayerId(): String = js.native
   def getLayerKey(): String = js.native
-  def getMap(): Map = js.native
+  def getMap(): Map[Element] = js.native
   def getMapId(): String = js.native
   def getOpacity(): Double = js.native
   def getProperties(): MapsEngineLayerProperties = js.native
@@ -21,7 +22,7 @@ class MapsEngineLayer protected () extends MVCObject {
   def setLayerId(layerId: String): Unit = js.native
   def setLayerKey(layerKey: String): Unit = js.native
   def setMap(): Unit = js.native
-  def setMap(map: Map): Unit = js.native
+  def setMap(map: Map[Element]): Unit = js.native
   def setMapId(mapId: String): Unit = js.native
   def setOpacity(opacity: Double): Unit = js.native
   def setOptions(options: MapsEngineLayerOptions): Unit = js.native

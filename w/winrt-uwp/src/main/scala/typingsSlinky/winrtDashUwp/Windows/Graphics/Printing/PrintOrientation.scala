@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.Printing
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +40,28 @@ object PrintOrientation extends js.Object {
   @js.native
   sealed trait printerCustom extends PrintOrientation
   
-  /* 0 */ val default: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.default with Double = js.native
-  /* 5 */ val landscape: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.landscape with Double = js.native
-  /* 6 */ val landscapeFlipped: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.landscapeFlipped with Double = js.native
-  /* 1 */ val notAvailable: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.notAvailable with Double = js.native
-  /* 3 */ val portrait: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.portrait with Double = js.native
-  /* 4 */ val portraitFlipped: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.portraitFlipped with Double = js.native
-  /* 2 */ val printerCustom: typingsSlinky.winrtDashUwp.Windows.Graphics.Printing.PrintOrientation.printerCustom with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PrintOrientation with Double] = js.native
+  /* 0 */ @js.native
+  object default extends TopLevel[default with Double]
+  
+  /* 5 */ @js.native
+  object landscape extends TopLevel[landscape with Double]
+  
+  /* 6 */ @js.native
+  object landscapeFlipped extends TopLevel[landscapeFlipped with Double]
+  
+  /* 1 */ @js.native
+  object notAvailable extends TopLevel[notAvailable with Double]
+  
+  /* 3 */ @js.native
+  object portrait extends TopLevel[portrait with Double]
+  
+  /* 4 */ @js.native
+  object portraitFlipped extends TopLevel[portraitFlipped with Double]
+  
+  /* 2 */ @js.native
+  object printerCustom extends TopLevel[printerCustom with Double]
+  
 }
 

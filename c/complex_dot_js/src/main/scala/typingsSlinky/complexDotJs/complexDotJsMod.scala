@@ -1,6 +1,5 @@
 package typingsSlinky.complexDotJs
 
-import typingsSlinky.complexDotJs.complexDotJsMod.Complex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

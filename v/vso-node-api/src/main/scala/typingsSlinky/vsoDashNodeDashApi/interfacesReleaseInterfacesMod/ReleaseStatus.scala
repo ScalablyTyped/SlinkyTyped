@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ReleaseStatus extends js.Object {
   @js.native
   sealed trait Undefined extends ReleaseStatus
   
-  /* 4 */ val Abandoned: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseStatus.Abandoned with Double = js.native
-  /* 2 */ val Active: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseStatus.Active with Double = js.native
-  /* 1 */ val Draft: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseStatus.Draft with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ReleaseStatus.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ReleaseStatus with Double] = js.native
+  /* 4 */ @js.native
+  object Abandoned extends TopLevel[Abandoned with Double]
+  
+  /* 2 */ @js.native
+  object Active extends TopLevel[Active with Double]
+  
+  /* 1 */ @js.native
+  object Draft extends TopLevel[Draft with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

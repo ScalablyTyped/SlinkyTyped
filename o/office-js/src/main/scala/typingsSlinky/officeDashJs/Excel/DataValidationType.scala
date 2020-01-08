@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJs.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,17 +97,37 @@ object DataValidationType extends js.Object {
   @js.native
   sealed trait wholeNumber extends DataValidationType
   
-  /* "Custom" */ val custom: typingsSlinky.officeDashJs.Excel.DataValidationType.custom with String = js.native
-  /* "Date" */ val date: typingsSlinky.officeDashJs.Excel.DataValidationType.date with String = js.native
-  /* "Decimal" */ val decimal: typingsSlinky.officeDashJs.Excel.DataValidationType.decimal with String = js.native
-  /* "Inconsistent" */ val inconsistent: typingsSlinky.officeDashJs.Excel.DataValidationType.inconsistent with String = js.native
-  /* "List" */ val list: typingsSlinky.officeDashJs.Excel.DataValidationType.list with String = js.native
-  /* "MixedCriteria" */ val mixedCriteria: typingsSlinky.officeDashJs.Excel.DataValidationType.mixedCriteria with String = js.native
-  /* "None" */ val none: typingsSlinky.officeDashJs.Excel.DataValidationType.none with String = js.native
-  /* "TextLength" */ val textLength: typingsSlinky.officeDashJs.Excel.DataValidationType.textLength with String = js.native
-  /* "Time" */ val time: typingsSlinky.officeDashJs.Excel.DataValidationType.time with String = js.native
-  /* "WholeNumber" */ val wholeNumber: typingsSlinky.officeDashJs.Excel.DataValidationType.wholeNumber with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DataValidationType with String] = js.native
+  /* "Custom" */ @js.native
+  object custom extends TopLevel[custom with String]
+  
+  /* "Date" */ @js.native
+  object date extends TopLevel[date with String]
+  
+  /* "Decimal" */ @js.native
+  object decimal extends TopLevel[decimal with String]
+  
+  /* "Inconsistent" */ @js.native
+  object inconsistent extends TopLevel[inconsistent with String]
+  
+  /* "List" */ @js.native
+  object list extends TopLevel[list with String]
+  
+  /* "MixedCriteria" */ @js.native
+  object mixedCriteria extends TopLevel[mixedCriteria with String]
+  
+  /* "None" */ @js.native
+  object none extends TopLevel[none with String]
+  
+  /* "TextLength" */ @js.native
+  object textLength extends TopLevel[textLength with String]
+  
+  /* "Time" */ @js.native
+  object time extends TopLevel[time with String]
+  
+  /* "WholeNumber" */ @js.native
+  object wholeNumber extends TopLevel[wholeNumber with String]
+  
 }
 

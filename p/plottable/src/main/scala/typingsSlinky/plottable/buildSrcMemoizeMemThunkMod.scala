@@ -1,6 +1,5 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.plottable.buildSrcMemoizeMemThunkMod.Thunk
 import typingsSlinky.plottable.buildSrcMemoizeMemoizeMod.MemoizedFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

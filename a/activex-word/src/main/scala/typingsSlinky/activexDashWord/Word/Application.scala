@@ -150,8 +150,9 @@ class Application protected () extends js.Object {
   var Width: Double = js.native
   var WindowState: WdWindowState = js.native
   val Windows: typingsSlinky.activexDashWord.Word.Windows = js.native
-  var `Word.Application_typekey`: typingsSlinky.activexDashWord.Word.Application = js.native
   val WordBasic: js.Any = js.native
+  @JSName("Word.Application_typekey")
+  var WordDotApplication_typekey: typingsSlinky.activexDashWord.Word.Application = js.native
   val XMLNamespaces: typingsSlinky.activexDashWord.Word.XMLNamespaces = js.native
   def Activate(): Unit = js.native
   def AddAddress(TagID: SafeArray[String], Value: SafeArray[String]): Unit = js.native

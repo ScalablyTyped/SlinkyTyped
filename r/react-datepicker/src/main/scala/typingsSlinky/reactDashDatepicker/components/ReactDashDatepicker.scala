@@ -10,7 +10,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.input.tag
+import slinky.web.html.div.tag
 import typingsSlinky.dateDashFns.dateDashFnsMod.Locale
 import typingsSlinky.popperDotJs.popperDotJsMod.Modifiers
 import typingsSlinky.reactDashDatepicker.Anon_ChangeMonth
@@ -37,6 +37,7 @@ object ReactDashDatepicker
     onChange: (js.UndefOr[js.Date | Null], js.UndefOr[SyntheticEvent[Event, _]]) => Unit,
     adjustDateOnChange: js.UndefOr[Boolean] = js.undefined,
     allowSameDay: js.UndefOr[Boolean] = js.undefined,
+    ariaLabelledBy: String = null,
     calendarClassName: String = null,
     calendarContainer: /* props */ Anon_Children => TagMod[Any] = null,
     clearButtonTitle: String = null,
@@ -70,6 +71,8 @@ object ReactDashDatepicker
     monthsShown: Int | Double = null,
     nextMonthButtonLabel: String = null,
     nextYearButtonLabel: String = null,
+    onCalendarClose: () => Unit = null,
+    onCalendarOpen: () => Unit = null,
     onChangeRaw: /* event */ SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onClickOutside: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onDayMouseEnter: /* date */ js.Date => Unit = null,
@@ -104,6 +107,7 @@ object ReactDashDatepicker
     showMonthYearDropdown: js.UndefOr[Boolean] = js.undefined,
     showMonthYearPicker: js.UndefOr[Boolean] = js.undefined,
     showPopperArrow: js.UndefOr[Boolean] = js.undefined,
+    showPreviousMonths: js.UndefOr[Boolean] = js.undefined,
     showQuarterYearPicker: js.UndefOr[Boolean] = js.undefined,
     showTimeInput: js.UndefOr[Boolean] = js.undefined,
     showTimeSelect: js.UndefOr[Boolean] = js.undefined,
@@ -131,6 +135,7 @@ object ReactDashDatepicker
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
     if (!js.isUndefined(adjustDateOnChange)) __obj.updateDynamic("adjustDateOnChange")(adjustDateOnChange.asInstanceOf[js.Any])
     if (!js.isUndefined(allowSameDay)) __obj.updateDynamic("allowSameDay")(allowSameDay.asInstanceOf[js.Any])
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (calendarClassName != null) __obj.updateDynamic("calendarClassName")(calendarClassName.asInstanceOf[js.Any])
     if (calendarContainer != null) __obj.updateDynamic("calendarContainer")(js.Any.fromFunction1(calendarContainer))
     if (clearButtonTitle != null) __obj.updateDynamic("clearButtonTitle")(clearButtonTitle.asInstanceOf[js.Any])
@@ -164,6 +169,8 @@ object ReactDashDatepicker
     if (monthsShown != null) __obj.updateDynamic("monthsShown")(monthsShown.asInstanceOf[js.Any])
     if (nextMonthButtonLabel != null) __obj.updateDynamic("nextMonthButtonLabel")(nextMonthButtonLabel.asInstanceOf[js.Any])
     if (nextYearButtonLabel != null) __obj.updateDynamic("nextYearButtonLabel")(nextYearButtonLabel.asInstanceOf[js.Any])
+    if (onCalendarClose != null) __obj.updateDynamic("onCalendarClose")(js.Any.fromFunction0(onCalendarClose))
+    if (onCalendarOpen != null) __obj.updateDynamic("onCalendarOpen")(js.Any.fromFunction0(onCalendarOpen))
     if (onChangeRaw != null) __obj.updateDynamic("onChangeRaw")(js.Any.fromFunction1(onChangeRaw))
     if (onClickOutside != null) __obj.updateDynamic("onClickOutside")(js.Any.fromFunction1(onClickOutside))
     if (onDayMouseEnter != null) __obj.updateDynamic("onDayMouseEnter")(js.Any.fromFunction1(onDayMouseEnter))
@@ -198,6 +205,7 @@ object ReactDashDatepicker
     if (!js.isUndefined(showMonthYearDropdown)) __obj.updateDynamic("showMonthYearDropdown")(showMonthYearDropdown.asInstanceOf[js.Any])
     if (!js.isUndefined(showMonthYearPicker)) __obj.updateDynamic("showMonthYearPicker")(showMonthYearPicker.asInstanceOf[js.Any])
     if (!js.isUndefined(showPopperArrow)) __obj.updateDynamic("showPopperArrow")(showPopperArrow.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPreviousMonths)) __obj.updateDynamic("showPreviousMonths")(showPreviousMonths.asInstanceOf[js.Any])
     if (!js.isUndefined(showQuarterYearPicker)) __obj.updateDynamic("showQuarterYearPicker")(showQuarterYearPicker.asInstanceOf[js.Any])
     if (!js.isUndefined(showTimeInput)) __obj.updateDynamic("showTimeInput")(showTimeInput.asInstanceOf[js.Any])
     if (!js.isUndefined(showTimeSelect)) __obj.updateDynamic("showTimeSelect")(showTimeSelect.asInstanceOf[js.Any])

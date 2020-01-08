@@ -1,7 +1,6 @@
 package typingsSlinky.humanDashInterval
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.humanDashInterval.humanDashIntervalMod.LanguageMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

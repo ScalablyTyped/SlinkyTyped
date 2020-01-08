@@ -1,11 +1,6 @@
 package typingsSlinky.plottable
 
 import typingsSlinky.plottable.buildSrcAxesAxisMod.Axis
-import typingsSlinky.plottable.buildSrcAxesTimeAxisMod.TierLabelPosition
-import typingsSlinky.plottable.buildSrcAxesTimeAxisMod.TimeAxisConfiguration
-import typingsSlinky.plottable.buildSrcAxesTimeAxisMod.TimeAxisOrientation
-import typingsSlinky.plottable.buildSrcAxesTimeAxisMod.TimeAxisTierConfiguration
-import typingsSlinky.plottable.buildSrcAxesTimeAxisMod.TimeInterval
 import typingsSlinky.plottable.buildSrcCoreFormattersMod.Formatter
 import typingsSlinky.std.Date
 import scala.scalajs.js

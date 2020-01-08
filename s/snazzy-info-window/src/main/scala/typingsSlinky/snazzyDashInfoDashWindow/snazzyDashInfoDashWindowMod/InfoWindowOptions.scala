@@ -1,5 +1,6 @@
 package typingsSlinky.snazzyDashInfoDashWindow.snazzyDashInfoDashWindowMod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
@@ -84,7 +85,7 @@ trait InfoWindowOptions extends js.Object {
     * The Google Map associated to this info window.
     * Only required if you are not using a marker.
     */
-  var map: js.UndefOr[Map] = js.undefined
+  var map: js.UndefOr[Map[Element]] = js.undefined
   /**
     * The Google Maps marker associated to this info window.
     */
@@ -187,7 +188,7 @@ object InfoWindowOptions {
     edgeOffset: EdgeOffset = null,
     fontColor: String = null,
     fontSize: String = null,
-    map: Map = null,
+    map: Map[Element] = null,
     marker: Marker = null,
     maxHeight: Int | Double = null,
     maxWidth: Int | Double = null,

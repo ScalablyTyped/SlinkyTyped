@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.expressions
 
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
+import typingsSlinky.mendixmodelsdk.distGenExpressionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.AppServiceCallParameterMapping
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.BasicCodeActionParameterValue
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.BasicJavaActionParameterValue
@@ -29,6 +30,7 @@ import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.WebServiceCa
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.WebServiceOperationParameterMapping
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ConditionalSettings
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.WidgetValidation
+import typingsSlinky.mendixmodelsdk.distGenRestMod.rest.ConsumedODataService
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
@@ -60,7 +62,7 @@ class FunctionCallExpression protected ()
 @js.native
 object FunctionCallExpression extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenExpressionsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new FunctionCallExpression instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
@@ -148,6 +150,15 @@ object FunctionCallExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): typingsSlinky.mendixmodelsdk.distGenExpressionsMod.expressions.FunctionCallExpression = js.native
+  /**
+    * Creates and returns a new FunctionCallExpression instance in the SDK and on the server.
+    * The new FunctionCallExpression will be automatically stored in the 'timeoutModel' property
+    * of the parent rest.ConsumedODataService element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.5.0 and higher
+    */
+  def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): typingsSlinky.mendixmodelsdk.distGenExpressionsMod.expressions.FunctionCallExpression = js.native
   /**
     * Creates and returns a new FunctionCallExpression instance in the SDK and on the server.
     * The new FunctionCallExpression will be automatically stored in the 'initialValueModel' property

@@ -3,11 +3,15 @@ package typingsSlinky.mendixmodelsdk.mendixmodelsdkMod.domainmodels
 import typingsSlinky.mendixmodelsdk.distGenBaseDashModelMod.IModel
 import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.EntityWidget
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.CreateObjectClientAction
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.EntityPathSource
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.NewButton
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ReferenceSetSelector
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.SelectorXPathSource
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,12 +24,12 @@ import scala.scalajs.js.annotation._
 class DirectEntityRef protected ()
   extends typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.domainmodels.DirectEntityRef {
   def this(
-    model: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel,
+    model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: typingsSlinky.mendixmodelsdk.distSdkInternalMod.ModelUnit,
-    container: typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractElement
+    unit: ModelUnit,
+    container: AbstractElement
   ) = this()
 }
 
@@ -34,7 +38,7 @@ class DirectEntityRef protected ()
 @js.native
 object DirectEntityRef extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new DirectEntityRef instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

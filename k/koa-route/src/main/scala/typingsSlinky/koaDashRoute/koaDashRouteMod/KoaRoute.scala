@@ -4,10 +4,6 @@ import typingsSlinky.koa.koaMod.Context
 import typingsSlinky.koa.koaMod.DefaultContext
 import typingsSlinky.koa.koaMod.DefaultState
 import typingsSlinky.koa.koaMod.Middleware
-import typingsSlinky.koaDashRoute.koaDashRouteMod.KoaRoute.CreateRoute
-import typingsSlinky.koaDashRoute.koaDashRouteMod.KoaRoute.Handler
-import typingsSlinky.koaDashRoute.koaDashRouteMod.KoaRoute.Method
-import typingsSlinky.koaDashRoute.koaDashRouteMod.KoaRoute.Path
 import typingsSlinky.pathDashToDashRegexp.pathDashToDashRegexpMod.ParseOptions
 import typingsSlinky.pathDashToDashRegexp.pathDashToDashRegexpMod.RegExpOptions
 import scala.scalajs.js

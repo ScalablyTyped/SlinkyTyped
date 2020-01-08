@@ -3,7 +3,6 @@ package typingsSlinky.three
 import typingsSlinky.three.srcCoreBufferGeometryMod.BufferGeometry
 import typingsSlinky.three.srcCoreGeometryMod.Geometry
 import typingsSlinky.three.srcExtrasCoreShapeMod.Shape
-import typingsSlinky.three.srcGeometriesShapeGeometryMod.ShapeGeometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

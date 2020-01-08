@@ -1,5 +1,6 @@
 package typingsSlinky.atGoogleDashCloudKms.atGoogleDashCloudKmsMod.v1
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,10 +23,16 @@ object ProtectionLevel extends js.Object {
   @js.native
   sealed trait SOFTWARE extends ProtectionLevel
   
-  /* 2 */ val HSM: typingsSlinky.atGoogleDashCloudKms.atGoogleDashCloudKmsMod.v1.ProtectionLevel.HSM with Double = js.native
-  /* 0 */ val PROTECTION_LEVEL_UNSPECIFIED: typingsSlinky.atGoogleDashCloudKms.atGoogleDashCloudKmsMod.v1.ProtectionLevel.PROTECTION_LEVEL_UNSPECIFIED with Double = js.native
-  /* 1 */ val SOFTWARE: typingsSlinky.atGoogleDashCloudKms.atGoogleDashCloudKmsMod.v1.ProtectionLevel.SOFTWARE with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ProtectionLevel with Double] = js.native
+  /* 2 */ @js.native
+  object HSM extends TopLevel[HSM with Double]
+  
+  /* 0 */ @js.native
+  object PROTECTION_LEVEL_UNSPECIFIED extends TopLevel[PROTECTION_LEVEL_UNSPECIFIED with Double]
+  
+  /* 1 */ @js.native
+  object SOFTWARE extends TopLevel[SOFTWARE with Double]
+  
 }
 

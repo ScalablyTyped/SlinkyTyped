@@ -3,7 +3,6 @@ package typingsSlinky.shopifyDashPrime
 import typingsSlinky.shopifyDashPrime.distInfrastructureMod.BaseService
 import typingsSlinky.shopifyDashPrime.distModelsPriceUnderscoreRuleUnderscoreDiscountUnderscoreCodeMod.PriceRuleDiscountCode
 import typingsSlinky.shopifyDashPrime.distOptionsBaseMod.ListOptions
-import typingsSlinky.shopifyDashPrime.distServicesPriceUnderscoreRuleUnderscoreDiscountsMod.PriceRuleDiscounts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

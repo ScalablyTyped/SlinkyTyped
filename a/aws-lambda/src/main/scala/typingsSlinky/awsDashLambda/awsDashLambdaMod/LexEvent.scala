@@ -7,7 +7,7 @@ import typingsSlinky.awsDashLambda.awsDashLambdaStrings.DialogCodeHook
 import typingsSlinky.awsDashLambda.awsDashLambdaStrings.FulfillmentCodeHook
 import typingsSlinky.awsDashLambda.awsDashLambdaStrings.Text
 import typingsSlinky.awsDashLambda.awsDashLambdaStrings.Voice
-import typingsSlinky.awsDashLambda.awsDashLambdaStrings.`1DOT0`
+import typingsSlinky.awsDashLambda.awsDashLambdaStrings.`1Dot0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait LexEvent extends js.Object {
   var currentIntent: Anon_ConfirmationStatus
   var inputTranscript: String
   var invocationSource: DialogCodeHook | FulfillmentCodeHook
-  var messageVersion: `1DOT0`
+  var messageVersion: `1Dot0`
   var outputDialogMode: Text | Voice
   var requestAttributes: StringDictionary[String] | Null
   var sessionAttributes: StringDictionary[String]
@@ -31,7 +31,7 @@ object LexEvent {
     currentIntent: Anon_ConfirmationStatus,
     inputTranscript: String,
     invocationSource: DialogCodeHook | FulfillmentCodeHook,
-    messageVersion: `1DOT0`,
+    messageVersion: `1Dot0`,
     outputDialogMode: Text | Voice,
     sessionAttributes: StringDictionary[String],
     userId: String,

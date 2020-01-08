@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Reveal extends SharedApply_Props_1510102771[reveal] {
+object Reveal extends SharedApply_Props1167272165[reveal] {
   @JSImport("react-burger-menu", "reveal")
   @js.native
   object componentImport extends js.Object

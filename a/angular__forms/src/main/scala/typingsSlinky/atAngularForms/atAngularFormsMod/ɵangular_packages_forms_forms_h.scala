@@ -4,15 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@angular/forms", "ɵangular_packages_forms_forms_h")
+@JSImport("@angular/forms", "\u0275angular_packages_forms_forms_h")
 @js.native
 object ɵangular_packages_forms_forms_h extends js.Object {
-  var `[class.ng-dirty]`: String = js.native
-  var `[class.ng-invalid]`: String = js.native
-  var `[class.ng-pending]`: String = js.native
-  var `[class.ng-pristine]`: String = js.native
-  var `[class.ng-touched]`: String = js.native
-  var `[class.ng-untouched]`: String = js.native
-  var `[class.ng-valid]`: String = js.native
+  @JSName("[class.ng-dirty]")
+  var `[classDotng-dirty]`: String = js.native
+  @JSName("[class.ng-invalid]")
+  var `[classDotng-invalid]`: String = js.native
+  @JSName("[class.ng-pending]")
+  var `[classDotng-pending]`: String = js.native
+  @JSName("[class.ng-pristine]")
+  var `[classDotng-pristine]`: String = js.native
+  @JSName("[class.ng-touched]")
+  var `[classDotng-touched]`: String = js.native
+  @JSName("[class.ng-untouched]")
+  var `[classDotng-untouched]`: String = js.native
+  @JSName("[class.ng-valid]")
+  var `[classDotng-valid]`: String = js.native
 }
 

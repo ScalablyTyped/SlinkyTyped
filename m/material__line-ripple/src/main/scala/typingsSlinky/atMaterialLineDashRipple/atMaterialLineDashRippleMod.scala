@@ -2,7 +2,6 @@ package typingsSlinky.atMaterialLineDashRipple
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.atMaterialLineDashRipple.adapterMod.MDCLineRippleAdapter
-import typingsSlinky.atMaterialLineDashRipple.atMaterialLineDashRippleMod.MDCLineRipple
 import typingsSlinky.atMaterialLineDashRipple.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

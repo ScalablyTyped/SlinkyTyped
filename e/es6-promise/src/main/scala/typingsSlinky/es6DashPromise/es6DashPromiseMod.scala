@@ -1,7 +1,5 @@
 package typingsSlinky.es6DashPromise
 
-import typingsSlinky.es6DashPromise.es6DashPromiseMod.Promise
-import typingsSlinky.es6DashPromise.es6DashPromiseMod.Thenable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

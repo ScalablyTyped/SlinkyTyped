@@ -2,7 +2,6 @@ package typingsSlinky.isotopeDashLayout.isotopeDashLayoutMod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.isotopeDashLayout.isotopeDashLayoutMod._Global_.JQuery
 import typingsSlinky.isotopeDashLayout.isotopeDashLayoutStrings.addItems
 import typingsSlinky.isotopeDashLayout.isotopeDashLayoutStrings.appended
 import typingsSlinky.isotopeDashLayout.isotopeDashLayoutStrings.destroy

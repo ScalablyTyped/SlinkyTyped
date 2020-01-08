@@ -1,5 +1,6 @@
 package typingsSlinky.jsDashClipper.ClipperLib
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object Direction extends js.Object {
   @js.native
   sealed trait dRightToLeft extends Direction
   
-  /* 1 */ val dLeftToRight: typingsSlinky.jsDashClipper.ClipperLib.Direction.dLeftToRight with Double = js.native
-  /* 0 */ val dRightToLeft: typingsSlinky.jsDashClipper.ClipperLib.Direction.dRightToLeft with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[Direction with Double] = js.native
+  /* 1 */ @js.native
+  object dLeftToRight extends TopLevel[dLeftToRight with Double]
+  
+  /* 0 */ @js.native
+  object dRightToLeft extends TopLevel[dRightToLeft with Double]
+  
 }
 

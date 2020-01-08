@@ -1,6 +1,6 @@
 package typingsSlinky.atPulumiKubernetes.typesInputMod.rbac.v1beta1
 
-import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.`rbacDOTauthorizationDOTk8sDOTio/v1beta1`
+import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.rbacDotauthorizationDotk8sDotioSlashv1beta1
 import typingsSlinky.atPulumiKubernetes.typesInputMod.meta.v1.ObjectMeta
 import typingsSlinky.atPulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 
 /**
   * Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a
-  * RoleBinding.
+  * RoleBinding. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 Role, and will no
+  * longer be served in v1.20.
   */
 trait Role extends js.Object {
   /**
@@ -18,7 +19,7 @@ trait Role extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`]] = js.undefined
+  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1beta1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -39,7 +40,7 @@ trait Role extends js.Object {
 object Role {
   @scala.inline
   def apply(
-    apiVersion: Input[`rbacDOTauthorizationDOTk8sDOTio/v1beta1`] = null,
+    apiVersion: Input[rbacDotauthorizationDotk8sDotioSlashv1beta1] = null,
     kind: Input[typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.Role] = null,
     metadata: Input[ObjectMeta] = null,
     rules: Input[js.Array[Input[PolicyRule]]] = null

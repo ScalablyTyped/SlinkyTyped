@@ -23,7 +23,7 @@ import typingsSlinky.web3DashCore.web3DashCoreMod.chain
 import typingsSlinky.web3DashCore.web3DashCoreMod.hardfork
 import typingsSlinky.web3DashCore.web3DashCoreMod.provider
 import typingsSlinky.web3DashCoreDashSubscriptions.web3DashCoreDashSubscriptionsMod.Subscription
-import typingsSlinky.web3DashEth.web3DashEthNumbers.`true`
+import typingsSlinky.web3DashEth.web3DashEthBooleans.`true`
 import typingsSlinky.web3DashEth.web3DashEthStrings.logs
 import typingsSlinky.web3DashEth.web3DashEthStrings.newBlockHeaders
 import typingsSlinky.web3DashEth.web3DashEthStrings.pendingTransactions

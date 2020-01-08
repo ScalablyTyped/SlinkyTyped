@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PrismLight
-  extends SharedApply_SyntaxHighlighterProps_1713497095[
+  extends SharedApply_SyntaxHighlighterProps_1507978106[
       typingsSlinky.reactDashSyntaxDashHighlighter.reactDashSyntaxDashHighlighterMod.PrismLight
     ] {
   @JSImport("react-syntax-highlighter", "PrismLight")

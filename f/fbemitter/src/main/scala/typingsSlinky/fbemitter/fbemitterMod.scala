@@ -1,6 +1,5 @@
 package typingsSlinky.fbemitter
 
-import typingsSlinky.fbemitter.fbemitterMod.EventSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

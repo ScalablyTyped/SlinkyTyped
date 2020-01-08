@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libDropdownListMod {
-  import slinky.core.facade.ReactElement
+  import slinky.core.ReactComponentClass
 
-  type DropdownList = ReactElement
+  type DropdownListClass = ReactComponentClass[DropdownListProps]
 }

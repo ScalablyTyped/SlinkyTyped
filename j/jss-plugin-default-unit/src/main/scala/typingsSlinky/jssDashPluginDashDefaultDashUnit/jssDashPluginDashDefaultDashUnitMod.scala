@@ -2,7 +2,6 @@ package typingsSlinky.jssDashPluginDashDefaultDashUnit
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jss.jssMod.Plugin
-import typingsSlinky.jssDashPluginDashDefaultDashUnit.jssDashPluginDashDefaultDashUnitMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

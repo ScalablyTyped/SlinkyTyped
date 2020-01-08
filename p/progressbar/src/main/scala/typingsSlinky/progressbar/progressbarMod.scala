@@ -1,6 +1,5 @@
 package typingsSlinky.progressbar
 
-import typingsSlinky.progressbar.progressbarMod.Progressbar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

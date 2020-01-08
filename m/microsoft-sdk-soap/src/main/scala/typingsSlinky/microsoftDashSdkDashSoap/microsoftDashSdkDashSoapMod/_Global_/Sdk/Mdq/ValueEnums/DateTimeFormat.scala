@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object DateTimeFormat extends js.Object {
   @js.native
   sealed trait DateOnly extends DateTimeFormat
   
-  /* 0 */ val DateAndTime: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.DateTimeFormat.DateAndTime with scala.Double = js.native
-  /* 1 */ val DateOnly: typingsSlinky.microsoftDashSdkDashSoap.microsoftDashSdkDashSoapMod._Global_.Sdk.Mdq.ValueEnums.DateTimeFormat.DateOnly with scala.Double = js.native
   @JSBracketAccess
-  def apply(value: scala.Double): js.UndefOr[DateTimeFormat with scala.Double] = js.native
+  def apply(value: Double): js.UndefOr[DateTimeFormat with Double] = js.native
+  /* 0 */ @js.native
+  object DateAndTime extends TopLevel[DateAndTime with Double]
+  
+  /* 1 */ @js.native
+  object DateOnly extends TopLevel[DateOnly with Double]
+  
 }
 

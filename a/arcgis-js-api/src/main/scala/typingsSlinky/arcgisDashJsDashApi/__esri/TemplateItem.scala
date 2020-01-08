@@ -2,7 +2,6 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.arcgisDashJsDashApi.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +45,7 @@ trait TemplateItem extends Accessor {
     *
     *
     */
-  def fetchThumbnail(): IPromise[_] = js.native
+  def fetchThumbnail(): js.Promise[_] = js.native
 }
 
 @JSGlobal("__esri.TemplateItem")

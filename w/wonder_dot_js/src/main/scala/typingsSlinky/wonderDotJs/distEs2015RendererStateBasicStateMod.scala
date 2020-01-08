@@ -1,6 +1,5 @@
 package typingsSlinky.wonderDotJs
 
-import typingsSlinky.wonderDotJs.distEs2015RendererStateBasicStateMod.BasicState
 import typingsSlinky.wonderDotJs.distEs2015RendererStateWebGLStateMod.WebGLState
 import scala.scalajs.js
 import scala.scalajs.js.`|`

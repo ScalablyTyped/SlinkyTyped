@@ -1,6 +1,5 @@
 package typingsSlinky.nodeDashHueDashApi.nodeDashHueDashApiMod
 
-import typingsSlinky.nodeDashHueDashApi.nodeDashHueDashApiMod.lightState.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

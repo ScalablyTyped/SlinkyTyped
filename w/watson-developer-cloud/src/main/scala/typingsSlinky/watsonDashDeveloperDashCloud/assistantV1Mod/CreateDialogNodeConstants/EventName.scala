@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,16 +39,34 @@ object EventName extends js.Object {
   @js.native
   sealed trait VALIDATE extends EventName
   
-  /* "digression_return_prompt" */ val DIGRESSION_RETURN_PROMPT: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.DIGRESSION_RETURN_PROMPT with String = js.native
-  /* "filled" */ val FILLED: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.FILLED with String = js.native
-  /* "filled_multiple" */ val FILLED_MULTIPLE: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.FILLED_MULTIPLE with String = js.native
-  /* "focus" */ val FOCUS: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.FOCUS with String = js.native
-  /* "generic" */ val GENERIC: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.GENERIC with String = js.native
-  /* "input" */ val INPUT: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.INPUT with String = js.native
-  /* "nomatch" */ val NOMATCH: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.NOMATCH with String = js.native
-  /* "nomatch_responses_depleted" */ val NOMATCH_RESPONSES_DEPLETED: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.NOMATCH_RESPONSES_DEPLETED with String = js.native
-  /* "validate" */ val VALIDATE: typingsSlinky.watsonDashDeveloperDashCloud.assistantV1Mod.CreateDialogNodeConstants.EventName.VALIDATE with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EventName with String] = js.native
+  /* "digression_return_prompt" */ @js.native
+  object DIGRESSION_RETURN_PROMPT extends TopLevel[DIGRESSION_RETURN_PROMPT with String]
+  
+  /* "filled" */ @js.native
+  object FILLED extends TopLevel[FILLED with String]
+  
+  /* "filled_multiple" */ @js.native
+  object FILLED_MULTIPLE extends TopLevel[FILLED_MULTIPLE with String]
+  
+  /* "focus" */ @js.native
+  object FOCUS extends TopLevel[FOCUS with String]
+  
+  /* "generic" */ @js.native
+  object GENERIC extends TopLevel[GENERIC with String]
+  
+  /* "input" */ @js.native
+  object INPUT extends TopLevel[INPUT with String]
+  
+  /* "nomatch" */ @js.native
+  object NOMATCH extends TopLevel[NOMATCH with String]
+  
+  /* "nomatch_responses_depleted" */ @js.native
+  object NOMATCH_RESPONSES_DEPLETED extends TopLevel[NOMATCH_RESPONSES_DEPLETED with String]
+  
+  /* "validate" */ @js.native
+  object VALIDATE extends TopLevel[VALIDATE with String]
+  
 }
 

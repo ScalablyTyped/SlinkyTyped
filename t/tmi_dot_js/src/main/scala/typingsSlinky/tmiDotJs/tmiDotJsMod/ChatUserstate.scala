@@ -1,7 +1,7 @@
 package typingsSlinky.tmiDotJs.tmiDotJsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tmiDotJs.tmiDotJsStrings.Empty
+import typingsSlinky.tmiDotJs.tmiDotJsStrings._empty
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.action
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.admin
 import typingsSlinky.tmiDotJs.tmiDotJsStrings.chat
@@ -40,7 +40,7 @@ object ChatUserstate {
     `tmi-sent-ts`: String = null,
     turbo: js.UndefOr[Boolean] = js.undefined,
     `user-id`: String = null,
-    `user-type`: Empty | mod | global_mod | admin | staff = null,
+    `user-type`: _empty | mod | global_mod | admin | staff = null,
     username: String = null
   ): ChatUserstate = {
     val __obj = js.Dynamic.literal()

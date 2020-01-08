@@ -28,10 +28,12 @@ object SelectInput
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, disabled, multiple, name, onBlur, onFocus, open, readOnly, tabIndex, value */
+  /* The following DOM/SVG props were specified: autoFocus, disabled, name, onBlur, onFocus, open, readOnly, tabIndex */
   def apply(
     autoWidth: Boolean,
+    multiple: Boolean,
     native: Boolean,
+    value: String | Double | Boolean | (js.Array[String | Double | Boolean]),
     IconComponent: ReactComponentClass[_] = null,
     MenuProps: PartialMenuProps = null,
     SelectDisplayProps: HTMLAttributes[HTMLDivElement] = null,
@@ -43,7 +45,7 @@ object SelectInput
     variant: standard | outlined | filled = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     if (IconComponent != null) __obj.updateDynamic("IconComponent")(IconComponent.asInstanceOf[js.Any])
     if (MenuProps != null) __obj.updateDynamic("MenuProps")(MenuProps.asInstanceOf[js.Any])
     if (SelectDisplayProps != null) __obj.updateDynamic("SelectDisplayProps")(SelectDisplayProps.asInstanceOf[js.Any])

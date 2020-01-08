@@ -2,9 +2,9 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
+import typingsSlinky.ol.featureMod.FeatureLike
 import typingsSlinky.ol.formatFeatureMod.ReadOptions
 import typingsSlinky.ol.formatFeatureMod.WriteOptions
-import typingsSlinky.ol.formatXMLFeatureMod.XMLFeature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,21 +20,21 @@ object formatXMLFeatureMod extends js.Object {
     def readFeatureFromNode(node: Node): typingsSlinky.ol.featureMod.default = js.native
     def readFeatureFromNode(node: Node, opt_options: ReadOptions): typingsSlinky.ol.featureMod.default = js.native
     @JSName("readFeature")
-    def readFeature_default(source: String): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: String): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: String, opt_options: ReadOptions): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: String, opt_options: ReadOptions): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: js.Object): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: js.Object): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: js.Object, opt_options: ReadOptions): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: js.Object, opt_options: ReadOptions): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: typingsSlinky.std.Document): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: typingsSlinky.std.Document): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: typingsSlinky.std.Document, opt_options: ReadOptions): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: typingsSlinky.std.Document, opt_options: ReadOptions): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: typingsSlinky.std.Node): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: typingsSlinky.std.Node): FeatureLike = js.native
     @JSName("readFeature")
-    def readFeature_default(source: typingsSlinky.std.Node, opt_options: ReadOptions): typingsSlinky.ol.featureMod.default = js.native
+    def readFeature_FeatureLike(source: typingsSlinky.std.Node, opt_options: ReadOptions): FeatureLike = js.native
     /* protected */ def readFeaturesFromDocument(doc: Document): js.Array[typingsSlinky.ol.featureMod.default] = js.native
     /* protected */ def readFeaturesFromDocument(doc: Document, opt_options: ReadOptions): js.Array[typingsSlinky.ol.featureMod.default] = js.native
     /* protected */ def readFeaturesFromNode(node: Node): js.Array[typingsSlinky.ol.featureMod.default] = js.native

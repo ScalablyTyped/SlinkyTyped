@@ -1,6 +1,6 @@
 package typingsSlinky.sipDotJs
 
-import typingsSlinky.sipDotJs.libApiUserDashAgentDashStateMod.UserAgentState
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +19,14 @@ object libApiUserDashAgentDashStateMod extends js.Object {
     @js.native
     sealed trait Stopped extends UserAgentState
     
-    /* "Started" */ val Started: typingsSlinky.sipDotJs.libApiUserDashAgentDashStateMod.UserAgentState.Started with String = js.native
-    /* "Stopped" */ val Stopped: typingsSlinky.sipDotJs.libApiUserDashAgentDashStateMod.UserAgentState.Stopped with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[UserAgentState with String] = js.native
+    /* "Started" */ @js.native
+    object Started extends TopLevel[Started with String]
+    
+    /* "Stopped" */ @js.native
+    object Stopped extends TopLevel[Stopped with String]
+    
   }
   
 }

@@ -2,8 +2,6 @@ package typingsSlinky.winrtDashUwp.Windows.System
 
 import typingsSlinky.winrtDashUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtDashUwp.Windows.Storage.Streams.IBuffer
-import typingsSlinky.winrtDashUwp.Windows.System.Profile.AnalyticsVersionInfo
-import typingsSlinky.winrtDashUwp.Windows.System.Profile.HardwareToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

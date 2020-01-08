@@ -1,7 +1,7 @@
 
 # Scala.js typings for onoff
 
-Typings are for version 5.0.0
+Typings are for version 5.0.1
 
 ## Library description:
 GPIO access and interrupt detection with Node.js
@@ -9,10 +9,10 @@ GPIO access and interrupt detection with Node.js
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | onoff |
-| Keywords           | gpio, embedded, interrupt, beaglebone, raspberry, raspi, rpi, pi, linux |
-| # releases         | 26 |
-| # dependents       | 125 |
-| # downloads        | 97256 |
+| Keywords           | gpio, iot, interrupt, raspberry, raspi, rpi, pi, beaglebone, beaglebone-black, linux |
+| # releases         | 25 |
+| # dependents       | 141 |
+| # downloads        | 92270 |
 | # stars            | 51 |
 
 ## Links

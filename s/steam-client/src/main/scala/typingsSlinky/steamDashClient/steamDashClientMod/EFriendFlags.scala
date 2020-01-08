@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,20 +50,46 @@ object EFriendFlags extends js.Object {
   @js.native
   sealed trait Suggested extends EFriendFlags
   
-  /* 1 */ val Blocked: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.Blocked with Double = js.native
-  /* 4096 */ val ChatMember: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.ChatMember with Double = js.native
-  /* 8 */ val ClanMember: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.ClanMember with Double = js.native
-  /* 65535 */ val FlagAll: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.FlagAll with Double = js.native
-  /* 2 */ val FriendshipRequested: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.FriendshipRequested with Double = js.native
-  /* 512 */ val Ignored: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.Ignored with Double = js.native
-  /* 1024 */ val IgnoredFriend: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.IgnoredFriend with Double = js.native
-  /* 4 */ val Immediate: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.Immediate with Double = js.native
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.None with Double = js.native
-  /* 16 */ val OnGameServer: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.OnGameServer with Double = js.native
-  /* 128 */ val RequestingFriendship: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.RequestingFriendship with Double = js.native
-  /* 256 */ val RequestingInfo: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.RequestingInfo with Double = js.native
-  /* 2048 */ val Suggested: typingsSlinky.steamDashClient.steamDashClientMod.EFriendFlags.Suggested with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EFriendFlags with Double] = js.native
+  /* 1 */ @js.native
+  object Blocked extends TopLevel[Blocked with Double]
+  
+  /* 4096 */ @js.native
+  object ChatMember extends TopLevel[ChatMember with Double]
+  
+  /* 8 */ @js.native
+  object ClanMember extends TopLevel[ClanMember with Double]
+  
+  /* 65535 */ @js.native
+  object FlagAll extends TopLevel[FlagAll with Double]
+  
+  /* 2 */ @js.native
+  object FriendshipRequested extends TopLevel[FriendshipRequested with Double]
+  
+  /* 512 */ @js.native
+  object Ignored extends TopLevel[Ignored with Double]
+  
+  /* 1024 */ @js.native
+  object IgnoredFriend extends TopLevel[IgnoredFriend with Double]
+  
+  /* 4 */ @js.native
+  object Immediate extends TopLevel[Immediate with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 16 */ @js.native
+  object OnGameServer extends TopLevel[OnGameServer with Double]
+  
+  /* 128 */ @js.native
+  object RequestingFriendship extends TopLevel[RequestingFriendship with Double]
+  
+  /* 256 */ @js.native
+  object RequestingInfo extends TopLevel[RequestingInfo with Double]
+  
+  /* 2048 */ @js.native
+  object Suggested extends TopLevel[Suggested with Double]
+  
 }
 

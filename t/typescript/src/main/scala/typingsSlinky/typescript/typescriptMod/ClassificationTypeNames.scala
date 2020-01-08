@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.typescriptMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,31 +83,79 @@ object ClassificationTypeNames extends js.Object {
   @js.native
   sealed trait whiteSpace extends ClassificationTypeNames
   
-  /* "bigint" */ val bigintLiteral: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.bigintLiteral with String = js.native
-  /* "class name" */ val className: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.className with String = js.native
-  /* "comment" */ val comment: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.comment with String = js.native
-  /* "doc comment tag name" */ val docCommentTagName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.docCommentTagName with String = js.native
-  /* "enum name" */ val enumName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.enumName with String = js.native
-  /* "identifier" */ val identifier: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.identifier with String = js.native
-  /* "interface name" */ val interfaceName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.interfaceName with String = js.native
-  /* "jsx attribute" */ val jsxAttribute: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxAttribute with String = js.native
-  /* "jsx attribute string literal value" */ val jsxAttributeStringLiteralValue: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxAttributeStringLiteralValue with String = js.native
-  /* "jsx close tag name" */ val jsxCloseTagName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxCloseTagName with String = js.native
-  /* "jsx open tag name" */ val jsxOpenTagName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxOpenTagName with String = js.native
-  /* "jsx self closing tag name" */ val jsxSelfClosingTagName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxSelfClosingTagName with String = js.native
-  /* "jsx text" */ val jsxText: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.jsxText with String = js.native
-  /* "keyword" */ val keyword: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.keyword with String = js.native
-  /* "module name" */ val moduleName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.moduleName with String = js.native
-  /* "number" */ val numericLiteral: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.numericLiteral with String = js.native
-  /* "operator" */ val operator: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.operator with String = js.native
-  /* "parameter name" */ val parameterName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.parameterName with String = js.native
-  /* "punctuation" */ val punctuation: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.punctuation with String = js.native
-  /* "string" */ val stringLiteral: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.stringLiteral with String = js.native
-  /* "text" */ val text: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.text with String = js.native
-  /* "type alias name" */ val typeAliasName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.typeAliasName with String = js.native
-  /* "type parameter name" */ val typeParameterName: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.typeParameterName with String = js.native
-  /* "whitespace" */ val whiteSpace: typingsSlinky.typescript.typescriptMod.ClassificationTypeNames.whiteSpace with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ClassificationTypeNames with String] = js.native
+  /* "bigint" */ @js.native
+  object bigintLiteral extends TopLevel[bigintLiteral with String]
+  
+  /* "class name" */ @js.native
+  object className extends TopLevel[className with String]
+  
+  /* "comment" */ @js.native
+  object comment extends TopLevel[comment with String]
+  
+  /* "doc comment tag name" */ @js.native
+  object docCommentTagName extends TopLevel[docCommentTagName with String]
+  
+  /* "enum name" */ @js.native
+  object enumName extends TopLevel[enumName with String]
+  
+  /* "identifier" */ @js.native
+  object identifier extends TopLevel[identifier with String]
+  
+  /* "interface name" */ @js.native
+  object interfaceName extends TopLevel[interfaceName with String]
+  
+  /* "jsx attribute" */ @js.native
+  object jsxAttribute extends TopLevel[jsxAttribute with String]
+  
+  /* "jsx attribute string literal value" */ @js.native
+  object jsxAttributeStringLiteralValue extends TopLevel[jsxAttributeStringLiteralValue with String]
+  
+  /* "jsx close tag name" */ @js.native
+  object jsxCloseTagName extends TopLevel[jsxCloseTagName with String]
+  
+  /* "jsx open tag name" */ @js.native
+  object jsxOpenTagName extends TopLevel[jsxOpenTagName with String]
+  
+  /* "jsx self closing tag name" */ @js.native
+  object jsxSelfClosingTagName extends TopLevel[jsxSelfClosingTagName with String]
+  
+  /* "jsx text" */ @js.native
+  object jsxText extends TopLevel[jsxText with String]
+  
+  /* "keyword" */ @js.native
+  object keyword extends TopLevel[keyword with String]
+  
+  /* "module name" */ @js.native
+  object moduleName extends TopLevel[moduleName with String]
+  
+  /* "number" */ @js.native
+  object numericLiteral extends TopLevel[numericLiteral with String]
+  
+  /* "operator" */ @js.native
+  object operator extends TopLevel[operator with String]
+  
+  /* "parameter name" */ @js.native
+  object parameterName extends TopLevel[parameterName with String]
+  
+  /* "punctuation" */ @js.native
+  object punctuation extends TopLevel[punctuation with String]
+  
+  /* "string" */ @js.native
+  object stringLiteral extends TopLevel[stringLiteral with String]
+  
+  /* "text" */ @js.native
+  object text extends TopLevel[text with String]
+  
+  /* "type alias name" */ @js.native
+  object typeAliasName extends TopLevel[typeAliasName with String]
+  
+  /* "type parameter name" */ @js.native
+  object typeParameterName extends TopLevel[typeParameterName with String]
+  
+  /* "whitespace" */ @js.native
+  object whiteSpace extends TopLevel[whiteSpace with String]
+  
 }
 

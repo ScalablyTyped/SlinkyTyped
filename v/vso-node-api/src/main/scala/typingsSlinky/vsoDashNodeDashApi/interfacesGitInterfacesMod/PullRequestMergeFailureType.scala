@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,11 +35,19 @@ object PullRequestMergeFailureType extends js.Object {
   @js.native
   sealed trait Unknown extends PullRequestMergeFailureType
   
-  /* 2 */ val CaseSensitive: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestMergeFailureType.CaseSensitive with Double = js.native
-  /* 0 */ val None: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestMergeFailureType.None with Double = js.native
-  /* 3 */ val ObjectTooLarge: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestMergeFailureType.ObjectTooLarge with Double = js.native
-  /* 1 */ val Unknown: typingsSlinky.vsoDashNodeDashApi.interfacesGitInterfacesMod.PullRequestMergeFailureType.Unknown with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PullRequestMergeFailureType with Double] = js.native
+  /* 2 */ @js.native
+  object CaseSensitive extends TopLevel[CaseSensitive with Double]
+  
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 3 */ @js.native
+  object ObjectTooLarge extends TopLevel[ObjectTooLarge with Double]
+  
+  /* 1 */ @js.native
+  object Unknown extends TopLevel[Unknown with Double]
+  
 }
 

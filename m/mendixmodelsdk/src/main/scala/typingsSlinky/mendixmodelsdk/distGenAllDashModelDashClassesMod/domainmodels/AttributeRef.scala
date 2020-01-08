@@ -5,6 +5,7 @@ import typingsSlinky.mendixmodelsdk.distGenCustomwidgetsMod.customwidgets.Widget
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.AttributeWidget
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.DataGridColumn
 import typingsSlinky.mendixmodelsdk.distGenDocumenttemplatesMod.documenttemplates.GridSortItem
+import typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenExpressionsMod.expressions.VariableRefExpression
 import typingsSlinky.mendixmodelsdk.distGenMicroflowsMod.microflows.SortItem
 import typingsSlinky.mendixmodelsdk.distGenPagesMod.pages.ClientTemplateParameter
@@ -43,7 +44,7 @@ class AttributeRef protected ()
 @js.native
 object AttributeRef extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenDomainmodelsMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates and returns a new AttributeRef instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".

@@ -1,6 +1,5 @@
 package typingsSlinky.integrateDashAdaptiveDashSimpson
 
-import typingsSlinky.integrateDashAdaptiveDashSimpson.integrateDashAdaptiveDashSimpsonMod.Func
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

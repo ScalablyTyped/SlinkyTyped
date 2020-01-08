@@ -1,7 +1,6 @@
 package typingsSlinky.atPulumiKubernetes
 
 import typingsSlinky.atPulumiKubernetes.atPulumiKubernetesStrings.v1
-import typingsSlinky.atPulumiKubernetes.coreV1NamespaceMod.Namespace
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.NamespaceSpec
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.core.v1.NamespaceStatus
 import typingsSlinky.atPulumiKubernetes.typesOutputMod.meta.v1.ObjectMeta

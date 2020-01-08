@@ -1,5 +1,6 @@
 package typingsSlinky.winrtDashUwp.Windows.Graphics.Display
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +32,22 @@ object DisplayOrientations extends js.Object {
   @js.native
   sealed trait portraitFlipped extends DisplayOrientations
   
-  /* 1 */ val landscape: typingsSlinky.winrtDashUwp.Windows.Graphics.Display.DisplayOrientations.landscape with Double = js.native
-  /* 3 */ val landscapeFlipped: typingsSlinky.winrtDashUwp.Windows.Graphics.Display.DisplayOrientations.landscapeFlipped with Double = js.native
-  /* 0 */ val none: typingsSlinky.winrtDashUwp.Windows.Graphics.Display.DisplayOrientations.none with Double = js.native
-  /* 2 */ val portrait: typingsSlinky.winrtDashUwp.Windows.Graphics.Display.DisplayOrientations.portrait with Double = js.native
-  /* 4 */ val portraitFlipped: typingsSlinky.winrtDashUwp.Windows.Graphics.Display.DisplayOrientations.portraitFlipped with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[DisplayOrientations with Double] = js.native
+  /* 1 */ @js.native
+  object landscape extends TopLevel[landscape with Double]
+  
+  /* 3 */ @js.native
+  object landscapeFlipped extends TopLevel[landscapeFlipped with Double]
+  
+  /* 0 */ @js.native
+  object none extends TopLevel[none with Double]
+  
+  /* 2 */ @js.native
+  object portrait extends TopLevel[portrait with Double]
+  
+  /* 4 */ @js.native
+  object portraitFlipped extends TopLevel[portraitFlipped with Double]
+  
 }
 

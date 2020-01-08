@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "chessboardjs"
-version := "0.3-dt-20190717Z-4560dd"
+version := "0.3-dt-20190717Z-524bc7"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,7 +1,7 @@
 package typingsSlinky.atAntDashDesignReactDashNative.libListListItemMod
 
 import slinky.core.TagMod
-import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.Empty
+import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings._empty
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.android
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.bottom
 import typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeStrings.down
@@ -38,7 +38,7 @@ object ListItemProps {
   def apply(
     activeStyle: StyleProp[ViewStyle] = null,
     align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | Empty = null,
+    arrow: horizontal | down | up | empty | _empty = null,
     children: TagMod[Any] = null,
     delayLongPress: Int | Double = null,
     disabled: js.UndefOr[Boolean] = js.undefined,

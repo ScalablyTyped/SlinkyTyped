@@ -1,5 +1,6 @@
 package typingsSlinky.steamDashClient.steamDashClientMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ELeaderboardDisplayType extends js.Object {
   @js.native
   sealed trait TimeSeconds extends ELeaderboardDisplayType
   
-  /* 0 */ val None: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDisplayType.None with Double = js.native
-  /* 1 */ val Numeric: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDisplayType.Numeric with Double = js.native
-  /* 3 */ val TimeMilliSeconds: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDisplayType.TimeMilliSeconds with Double = js.native
-  /* 2 */ val TimeSeconds: typingsSlinky.steamDashClient.steamDashClientMod.ELeaderboardDisplayType.TimeSeconds with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ELeaderboardDisplayType with Double] = js.native
+  /* 0 */ @js.native
+  object None extends TopLevel[None with Double]
+  
+  /* 1 */ @js.native
+  object Numeric extends TopLevel[Numeric with Double]
+  
+  /* 3 */ @js.native
+  object TimeMilliSeconds extends TopLevel[TimeMilliSeconds with Double]
+  
+  /* 2 */ @js.native
+  object TimeSeconds extends TopLevel[TimeSeconds with Double]
+  
 }
 

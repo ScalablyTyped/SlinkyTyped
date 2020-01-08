@@ -1,6 +1,5 @@
 package typingsSlinky.atKeystonejsAuthDashPassport
 
-import typingsSlinky.atKeystonejsAuthDashPassport.atKeystonejsAuthDashPassportMod.PassportAuthStrategy
 import typingsSlinky.atKeystonejsKeystone.atKeystonejsKeystoneMod.Keystone
 import scala.scalajs.js
 import scala.scalajs.js.`|`

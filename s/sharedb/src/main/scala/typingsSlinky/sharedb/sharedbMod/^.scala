@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("sharedb", JSImport.Namespace)
 @js.native
-class ^ ()
-  extends typingsSlinky.sharedb.sharedbMod.sharedb {
+class ^ () extends sharedb {
   def this(options: Anon_Db) = this()
 }
 

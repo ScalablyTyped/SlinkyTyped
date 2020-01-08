@@ -10,15 +10,13 @@ JupyterLab - RenderMime
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/rendermime |
 | Keywords           | - |
-| # releases         | 44 |
-| # dependents       | 53 |
-| # downloads        | 776369 |
+| # releases         | 64 |
+| # dependents       | 74 |
+| # downloads        | 1035050 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Frendermime)
     
 

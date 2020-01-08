@@ -9,10 +9,10 @@ Modern & flexible browser fingerprinting library
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | fingerprintjs2 |
-| Keywords           | browser, identification, fingerprint, fingerprinting, privacy |
-| # releases         | 16 |
-| # dependents       | 50 |
-| # downloads        | 1146197 |
+| Keywords           | fraud, fraud-detection, fraud-prevention, browser, identification, fingerprint, fingerprinting, privacy |
+| # releases         | 17 |
+| # dependents       | 66 |
+| # downloads        | 1968400 |
 | # stars            | 6 |
 
 ## Links

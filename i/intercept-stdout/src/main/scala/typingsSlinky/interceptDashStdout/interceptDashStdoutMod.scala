@@ -1,7 +1,5 @@
 package typingsSlinky.interceptDashStdout
 
-import typingsSlinky.interceptDashStdout.interceptDashStdoutMod.hookFunction
-import typingsSlinky.interceptDashStdout.interceptDashStdoutMod.unhookFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

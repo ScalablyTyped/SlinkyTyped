@@ -5,6 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.antd.antdStrings._empty
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.validating
@@ -36,7 +37,7 @@ object FormItem
     labelCol: ColProps = null,
     prefixCls: String = null,
     style: CSSProperties = null,
-    validateStatus: success | warning | error | validating | typingsSlinky.antd.antdStrings.Empty = null,
+    validateStatus: success | warning | error | validating | _empty = null,
     wrapperCol: ColProps = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
@@ -55,6 +56,7 @@ object FormItem
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libFormFormItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FormItemProps
 }
 

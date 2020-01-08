@@ -3,13 +3,13 @@ package typingsSlinky.arcgisDashJsDashApi.__esri
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`nautical-miles`
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.`us-feet`
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.feet_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.imperial
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.inches
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.kilometers_
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.meters_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.metric
-import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles
+import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.miles_
 import typingsSlinky.arcgisDashJsDashApi.arcgisDashJsDashApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ trait DistanceMeasurement2DProperties extends WidgetProperties {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D.html#unit)
     */
   var unit: js.UndefOr[
-    metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers
+    metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
   ] = js.undefined
   /**
     * List of available units and unit systems (imperial, metric) for displaying the distance values.
@@ -37,7 +37,7 @@ trait DistanceMeasurement2DProperties extends WidgetProperties {
     */
   var unitOptions: js.UndefOr[
     js.Array[
-      metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers
+      metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
     ]
   ] = js.undefined
   /**
@@ -62,9 +62,9 @@ object DistanceMeasurement2DProperties {
     iconClass: String = null,
     id: String = null,
     label: String = null,
-    unit: metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers = null,
+    unit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_ = null,
     unitOptions: js.Array[
-      metric | imperial | inches | feet | `us-feet` | yards | miles | `nautical-miles` | meters | kilometers
+      metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
     ] = null,
     view: MapViewProperties = null,
     viewModel: DistanceMeasurement2DViewModel = null

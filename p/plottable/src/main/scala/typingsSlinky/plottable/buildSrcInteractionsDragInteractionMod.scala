@@ -2,8 +2,6 @@ package typingsSlinky.plottable
 
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.plottable.buildSrcCoreInterfacesMod.Point
-import typingsSlinky.plottable.buildSrcInteractionsDragInteractionMod.DragCallback
-import typingsSlinky.plottable.buildSrcInteractionsDragInteractionMod.MouseFilter
 import typingsSlinky.plottable.buildSrcInteractionsInteractionMod.Interaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 package object atAngularCoreMod {
   import org.scalablytyped.runtime.StringDictionary
   import typingsSlinky.atAngularCore.Anon_NameTargetEventTarget
+  import typingsSlinky.atAngularCore.atAngularCoreStrings.Asterisk
 
   type CollectionChangeRecord[V] = IterableChangeRecord[V]
   type ComponentInstance = js.Object
@@ -308,7 +309,7 @@ package object atAngularCoreMod {
     * using {@link ViewContainerRef#createComponent}. The last slot that specifies the
     * wildcard selector will retrieve all projectable nodes which do not match any selector.
     */
-  type ProjectionSlots = js.Array[ɵCssSelectorList | typingsSlinky.atAngularCore.atAngularCoreStrings.`*`]
+  type ProjectionSlots = js.Array[ɵCssSelectorList | Asterisk]
   /**
     * Store the runtime input or output names for all the directives.
     *

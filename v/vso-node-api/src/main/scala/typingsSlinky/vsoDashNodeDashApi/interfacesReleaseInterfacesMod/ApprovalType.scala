@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,19 @@ object ApprovalType extends js.Object {
   @js.native
   sealed trait Undefined extends ApprovalType
   
-  /* 3 */ val All: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalType.All with Double = js.native
-  /* 2 */ val PostDeploy: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalType.PostDeploy with Double = js.native
-  /* 1 */ val PreDeploy: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalType.PreDeploy with Double = js.native
-  /* 0 */ val Undefined: typingsSlinky.vsoDashNodeDashApi.interfacesReleaseInterfacesMod.ApprovalType.Undefined with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ApprovalType with Double] = js.native
+  /* 3 */ @js.native
+  object All extends TopLevel[All with Double]
+  
+  /* 2 */ @js.native
+  object PostDeploy extends TopLevel[PostDeploy with Double]
+  
+  /* 1 */ @js.native
+  object PreDeploy extends TopLevel[PreDeploy with Double]
+  
+  /* 0 */ @js.native
+  object Undefined extends TopLevel[Undefined with Double]
+  
 }
 

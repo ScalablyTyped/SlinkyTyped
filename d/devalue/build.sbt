@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "devalue"
-version := "2.0.0-753af7"
+version := "2.0.1-87c1db"
 scalaVersion := "2.12.10"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,5 +1,6 @@
 package typingsSlinky.atGrpcGrpcDashJs.atGrpcGrpcDashJsMod
 
+import typingsSlinky.atGrpcGrpcDashJs.buildSrcChannelDashOptionsMod.ChannelOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Server ()
   extends typingsSlinky.atGrpcGrpcDashJs.buildSrcServerMod.Server {
-  def this(options: js.Object) = this()
+  def this(options: ChannelOptions) = this()
 }
 

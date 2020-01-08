@@ -1,5 +1,6 @@
 package typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,13 @@ object TaskAgentPoolType extends js.Object {
   @js.native
   sealed trait Deployment extends TaskAgentPoolType
   
-  /* 1 */ val Automation: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskAgentPoolType.Automation with Double = js.native
-  /* 2 */ val Deployment: typingsSlinky.vsoDashNodeDashApi.interfacesTaskAgentInterfacesMod.TaskAgentPoolType.Deployment with Double = js.native
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TaskAgentPoolType with Double] = js.native
+  /* 1 */ @js.native
+  object Automation extends TopLevel[Automation with Double]
+  
+  /* 2 */ @js.native
+  object Deployment extends TopLevel[Deployment with Double]
+  
 }
 

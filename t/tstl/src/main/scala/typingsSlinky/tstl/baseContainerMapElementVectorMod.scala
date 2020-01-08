@@ -1,7 +1,6 @@
 package typingsSlinky.tstl
 
 import typingsSlinky.tstl.baseContainerMapContainerMod.MapContainer
-import typingsSlinky.tstl.baseContainerMapElementVectorMod.MapElementVector
 import typingsSlinky.tstl.baseContainerMapElementVectorMod.MapElementVector.Iterator
 import typingsSlinky.tstl.baseContainerMapElementVectorMod.MapElementVector.ReverseIterator
 import typingsSlinky.tstl.baseContainerVectorContainerMod.VectorContainer
@@ -69,6 +68,21 @@ object baseContainerMapElementVectorMod extends js.Object {
         */
       /* CompleteClass */
       override var second: T = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("first")
+      def first_MIterator(): Key = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("second")
+      def second_MIterator(): T = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("second")
+      def second_MIterator(`val`: T): js.Any = js.native
     }
     
     /* import warning: RemoveDifficultInheritance.summarizeChanges 
@@ -100,6 +114,21 @@ object baseContainerMapElementVectorMod extends js.Object {
         */
       /* CompleteClass */
       override var second: T = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("first")
+      def first_MReverseIterator(): Key = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("second")
+      def second_MReverseIterator(): T = js.native
+      /**
+        * @inheritDoc
+        */
+      @JSName("second")
+      def second_MReverseIterator(`val`: T): js.Any = js.native
     }
     
   }

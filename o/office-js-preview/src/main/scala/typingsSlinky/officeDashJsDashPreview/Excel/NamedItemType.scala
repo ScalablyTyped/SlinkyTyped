@@ -1,5 +1,6 @@
 package typingsSlinky.officeDashJsDashPreview.Excel
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +35,28 @@ object NamedItemType extends js.Object {
   @js.native
   sealed trait string extends NamedItemType
   
-  /* "Array" */ val array: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.array with String = js.native
-  /* "Boolean" */ val boolean: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.boolean with String = js.native
-  /* "Double" */ val double: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.double with String = js.native
-  /* "Error" */ val error: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.error with String = js.native
-  /* "Integer" */ val integer: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.integer with String = js.native
-  /* "Range" */ val range: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.range with String = js.native
-  /* "String" */ val string: typingsSlinky.officeDashJsDashPreview.Excel.NamedItemType.string with String = js.native
   @JSBracketAccess
   def apply(value: String): js.UndefOr[NamedItemType with String] = js.native
+  /* "Array" */ @js.native
+  object array extends TopLevel[array with String]
+  
+  /* "Boolean" */ @js.native
+  object boolean extends TopLevel[boolean with String]
+  
+  /* "Double" */ @js.native
+  object double extends TopLevel[double with String]
+  
+  /* "Error" */ @js.native
+  object error extends TopLevel[error with String]
+  
+  /* "Integer" */ @js.native
+  object integer extends TopLevel[integer with String]
+  
+  /* "Range" */ @js.native
+  object range extends TopLevel[range with String]
+  
+  /* "String" */ @js.native
+  object string extends TopLevel[string with String]
+  
 }
 

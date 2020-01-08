@@ -25,6 +25,7 @@ import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsLayerLayerDotT
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsOverlayOverlayDotTypesMod.IOverlayProps
 import typingsSlinky.officeDashUiDashFabricDashReact.libComponentsPanelPanelDotBaseMod.PanelBase
 import typingsSlinky.react.Anon_Html
+import typingsSlinky.react.reactMod.Booleanish
 import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactMod.DragEvent
 import typingsSlinky.react.reactMod.HTMLAttributes
@@ -46,6 +47,7 @@ import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -78,6 +80,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IPanelProps extends HTMLAttributes[PanelBase] {
+  /**
+    * Allow body scroll on content and overlay on touch devices. Changing after mounting has no effect.
+    * @defaultvalue false
+    */
+  var allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined
   /**
     * Aria label on close button
     */
@@ -246,6 +253,7 @@ object IPanelProps {
   def apply(
     about: String = null,
     accessKey: String = null,
+    allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined,
     `aria-activedescendant`: String = null,
     `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
     `aria-autocomplete`: none | `inline` | list | both = null,
@@ -303,7 +311,7 @@ object IPanelProps {
     color: String = null,
     componentId: String = null,
     componentRef: IRefObject[IPanel] = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     customWidth: String = null,
     dangerouslySetInnerHTML: Anon_Html = null,
@@ -455,6 +463,7 @@ object IPanelProps {
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTouchBodyScroll)) __obj.updateDynamic("allowTouchBodyScroll")(allowTouchBodyScroll.asInstanceOf[js.Any])
     if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
     if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
@@ -512,7 +521,7 @@ object IPanelProps {
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (componentId != null) __obj.updateDynamic("componentId")(componentId.asInstanceOf[js.Any])
     if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (customWidth != null) __obj.updateDynamic("customWidth")(customWidth.asInstanceOf[js.Any])
     if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])

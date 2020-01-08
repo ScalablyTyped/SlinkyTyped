@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("re-reselect", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply[S, R1, T](selectors: js.Array[Selector[S, R1]], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S, T, js.Function1[/* res */ R1, T], js.Array[Selector[S, R1]]] = js.native
-  def apply[S, R1, T](selector: Selector[S, R1], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S, T, js.Function1[/* res */ R1, T], js.Array[Selector[S, R1]]] = js.native
+  def apply[S1, R1, T](selectors: js.Array[Selector[S1, R1]], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S1, T, js.Function1[/* res */ R1, T], js.Array[Selector[S1, R1]]] = js.native
+  def apply[S1, R1, T](selector: Selector[S1, R1], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S1, T, js.Function1[/* res */ R1, T], js.Array[Selector[S1, R1]]] = js.native
   def apply[S, R1, R2, T](
     selector1: Selector[S, R1],
     selector2: Selector[S, R2],

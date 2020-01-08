@@ -1,7 +1,6 @@
 package typingsSlinky.atAngularHttp
 
 import typingsSlinky.atAngularHttp.srcBackendsBrowserUnderscoreXhrMod.BrowserXhr
-import typingsSlinky.atAngularHttp.srcBackendsXhrUnderscoreBackendMod.XHRConnection
 import typingsSlinky.atAngularHttp.srcBaseUnderscoreResponseUnderscoreOptionsMod.ResponseOptions
 import typingsSlinky.atAngularHttp.srcInterfacesMod.Connection
 import typingsSlinky.atAngularHttp.srcInterfacesMod.ConnectionBackend

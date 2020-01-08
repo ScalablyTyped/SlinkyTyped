@@ -22,10 +22,11 @@ object Tab
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id */
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     header: String,
     icon: Icon,
+    id: String,
     active: js.UndefOr[Boolean] = js.undefined,
     anchor: Anchor = null,
     closeIcon: Icon = null,
@@ -36,7 +37,7 @@ object Tab
     tag.type, 
     typingsSlinky.reactDashLeafletDashSidebarv2.reactDashLeafletDashSidebarv2Mod.Tab
   ] = {
-    val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
     if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])

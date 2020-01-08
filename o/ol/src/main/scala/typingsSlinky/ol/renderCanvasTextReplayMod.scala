@@ -2,7 +2,6 @@ package typingsSlinky.ol
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.renderCanvasTextReplayMod.CanvasTextReplay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

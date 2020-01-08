@@ -3,7 +3,6 @@ package typingsSlinky.parchment
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MutationObserver
 import org.scalajs.dom.raw.MutationRecord
-import typingsSlinky.parchment.distSrcBlotScrollMod.ScrollBlot
 import typingsSlinky.parchment.distSrcRegistryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`

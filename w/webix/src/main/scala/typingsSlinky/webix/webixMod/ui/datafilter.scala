@@ -2,7 +2,6 @@ package typingsSlinky.webix.webixMod.ui
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.webix.webixMod.ui.datafilter.textFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

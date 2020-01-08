@@ -1,8 +1,6 @@
 package typingsSlinky.sweetalert
 
 import typingsSlinky.std.Partial
-import typingsSlinky.sweetalert.typingsCoreMod.SwalParams
-import typingsSlinky.sweetalert.typingsCoreMod.SweetAlert
 import typingsSlinky.sweetalert.typingsModulesOptionsMod.SwalOptions
 import typingsSlinky.sweetalert.typingsModulesStateMod.ActionOptions
 import typingsSlinky.sweetalert.typingsModulesStateMod.SwalState
@@ -21,7 +19,7 @@ object typingsCoreMod extends js.Object {
     var setDefaults: js.UndefOr[js.Function1[/* opts */ js.Object, Unit]] = js.native
     var stopLoading: js.UndefOr[js.Function0[Unit]] = js.native
     def apply(
-      /* import warning: parser.TsParser#functionParam $anonfun Dropping repeated marker of param params because its type SwalParams is not an array type */ params: SwalParams
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param params because its type SwalParams is not an array type */ params: SwalParams
     ): js.Promise[_] = js.native
   }
   

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.distGenAllDashModelDashClassesMod.navigation
 
+import typingsSlinky.mendixmodelsdk.distGenNavigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.distGenProjectsMod.projects.IProject
 import typingsSlinky.mendixmodelsdk.distSdkInternalMod.AbstractModel
 import scala.scalajs.js
@@ -27,7 +28,7 @@ class NavigationDocument protected ()
 @js.native
 object NavigationDocument extends js.Object {
   var structureTypeName: String = js.native
-  var versionInfo: typingsSlinky.mendixmodelsdk.distGenNavigationMod.StructureVersionInfo = js.native
+  var versionInfo: StructureVersionInfo = js.native
   /**
     * Creates a new NavigationDocument unit in the SDK and on the server.
     * Expects one argument, the projects.IProject in which this unit is contained.

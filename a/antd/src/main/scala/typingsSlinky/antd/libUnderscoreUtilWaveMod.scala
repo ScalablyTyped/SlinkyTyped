@@ -6,7 +6,6 @@ import slinky.core.TagMod
 import typingsSlinky.antd.antdStrings.`ant-click-animating-without-extra-node`
 import typingsSlinky.antd.antdStrings.`ant-click-animating`
 import typingsSlinky.antd.libConfigDashProviderContextMod.ConfigConsumerProps
-import typingsSlinky.antd.libUnderscoreUtilWaveMod.Wave
 import typingsSlinky.react.reactMod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

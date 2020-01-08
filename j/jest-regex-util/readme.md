@@ -9,9 +9,9 @@ Typings are for version 24.9.0
 | ------------------ | :-------------: |
 | Full name          | jest-regex-util |
 | Keywords           | - |
-| # releases         | 42 |
-| # dependents       | 27 |
-| # downloads        | 222028771 |
+| # releases         | 41 |
+| # dependents       | 28 |
+| # downloads        | 241429557 |
 | # stars            | 0 |
 
 ## Links

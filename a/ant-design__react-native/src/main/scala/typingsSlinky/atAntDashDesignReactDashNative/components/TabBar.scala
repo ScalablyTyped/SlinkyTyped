@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBar
-  extends SharedApply_TabBarNativeProps1772987524[
+  extends SharedApply_TabBarNativeProps1092410481[
       typingsSlinky.atAntDashDesignReactDashNative.atAntDashDesignReactDashNativeMod.TabBar
     ] {
   @JSImport("@ant-design/react-native", "TabBar")
